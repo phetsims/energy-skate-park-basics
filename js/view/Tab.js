@@ -20,11 +20,17 @@ define( ['model/EnergySkateParkModel', 'underscore', 'view/EnergySkateParkCanvas
         Easel.Ticker.addListener( function () {
             stats.begin();
             if ( model.playing.get() && activeTab.get() == tabID ) {
-                var subdivisions = 1;
-                for ( var i = 0; i < subdivisions; i++ ) {
-                    Physics.updatePhysics( model.skater, model.groundHeight, energySkateParkCanvas.root.splineLayer, model.slowMotion.get() ? 0.01 : 0.02 / subdivisions );
-                }
+                if ( model.playback.get() ) {
+                    model.playbackTime += 1.0 / 60.0 / 1000.0;
+                    //fire any events that happened, in the right order.
 
+                }
+                else {
+                    var subdivisions = 1;
+                    for ( var i = 0; i < subdivisions; i++ ) {
+                        Physics.updatePhysics( model.skater, model.groundHeight, energySkateParkCanvas.root.splineLayer, model.slowMotion.get() ? 0.01 : 0.02 / subdivisions );
+                    }
+                }
                 energySkateParkCanvas.root.tick();
             }
             energySkateParkCanvas.render();
@@ -61,13 +67,8 @@ define( ['model/EnergySkateParkModel', 'underscore', 'view/EnergySkateParkCanvas
         connectBoolean( $tab.find( '.gridButton' ), model.gridVisible );
         connectBoolean( $tab.find( '.speedometerButton' ), model.speedometerVisible );
 
-//        $tab.find( '.play-pause-button' ).click()
-//        new MBP.fastButton( $tab.find( '.play-pause-button' )[0], function ( e ) {
-//            model.playing.toggle();
-//            $tab.find( '.play-pause-button' ).html( !model.playing.get() ? "&#9654;" : "&#10074;&#10074;" );
-//        } );
-
         $tab.find( '.reset-all-button' ).click( model.resetAll.bind( model ) );
+        $tab.find( '.playback-button' ).click( function () {model.playback.toggle();} );
         $tab.find( '.return-skater-button' ).click( model.skater.returnSkater.bind( model.skater ) );
         connectBoolean( $tab.find( '#slow-motion-button' ), model.slowMotion );
         connectBooleanFlip( $tab.find( '#normal-button' ), model.slowMotion );
@@ -80,21 +81,6 @@ define( ['model/EnergySkateParkModel', 'underscore', 'view/EnergySkateParkCanvas
         model.playing.addObserver( function () {
             $( '.play-pause-button > .ui-btn-inner > .ui-btn-text' ).html( !model.playing.get() ? "&#9654;" : "&#10074;&#10074;" );
         } );
-//
-//        new MBP.fastButton( $tab.find( '.slow-motion-button' )[0], model.slowMotion._set( true ) );
-//        new MBP.fastButton( $tab.find( '.normal-button' )[0], function ( e ) {model.slowMotion.set( false );} );
-
-//        model.slowMotion.addObserver( function ( slowMotion ) {
-//            $tab.find( '.slow-motion-button' ).removeClass( "js-active-button" );
-//            $tab.find( '.normal-button' ).removeClass( "js-active-button" );
-//            if ( slowMotion ) {
-//                $tab.find( '.slow-motion-button' ).addClass( "js-active-button" );
-//            }
-//            else {
-//                $tab.find( '.normal-button' ).addClass( "js-active-button" );
-//            }
-//        } );
-
     }
 
     Tab.prototype.$ = function ( selector ) {
