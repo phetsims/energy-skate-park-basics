@@ -42,5 +42,5 @@ require( ['util/WebsocketRefresh',
         $( "#" + newTab ).show();
     } );
 
-    PrototypeDialog.init( "Energy Skate Park: Basics" );
+//    PrototypeDialog.init( "Energy Skate Park: Basics" );
 } );
