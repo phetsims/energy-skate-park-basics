@@ -15,18 +15,14 @@ define( ['model/EnergySkateParkModel', 'underscore', 'view/EnergySkateParkCanvas
         var $canvas = $tab.find( 'canvas' );
 
         var model = new EnergySkateParkModel();
-        model.update( "setBarChartVisible", true );
-        model.update( "toggleSetting", "barChartVisible" );
-        model.update( "toggleSetting", "gridVisible" );
         var energySkateParkCanvas = new EnergySkateParkCanvas( $canvas, Strings, analytics, model );
 
         Easel.Ticker.addListener( function () {
             stats.begin();
             if ( model.playing.get() && activeTab.get() == tabID ) {
                 if ( model.playback.get() ) {
-                    model.playbackTime += 1.0 / 60.0 / 1000.0;
                     //fire any events that happened, in the right order.
-
+                    model.stepPlayback();
                 }
                 else {
                     var subdivisions = 1;
@@ -71,7 +67,7 @@ define( ['model/EnergySkateParkModel', 'underscore', 'view/EnergySkateParkCanvas
         connectBoolean( $tab.find( '.speedometerButton' ), "speedometerVisible" );
 
         $tab.find( '.reset-all-button' ).click( model.resetAll.bind( model ) );
-        $tab.find( '.playback-button' ).click( function () {model.playback.toggle();} );
+        $tab.find( '.playback-button' ).click( function () {model.startPlayback();} );
         $tab.find( '.return-skater-button' ).click( model.skater.returnSkater.bind( model.skater ) );
         connectBoolean( $tab.find( '#slow-motion-button' ), "slowMotion" );
         connectBooleanFlip( $tab.find( '#normal-button' ), model.slowMotion );

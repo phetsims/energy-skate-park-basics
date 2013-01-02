@@ -16,11 +16,42 @@ define( ['underscore', 'model/vector2d', 'model/Skater', 'phetcommon/model/prope
         this.playback = new BooleanProperty( false );
         this.startTime = this.time;
         this.playbackTime = this.startTime;
+        this.commandIndex = 0;
 
         //Pixels
         this.groundHeight = 116;
         this.groundY = 768 - this.groundHeight;
     }
+
+    EnergySkateParkModel.prototype.stepPlayback = function () {
+        this.playbackTime += 17;//ms between frames at 60fps
+        console.log( this.playbackTime );
+        if ( this.commandIndex > this.commands.length ) {
+            this.playback.set( false );
+        }
+        else {
+            while ( true ) {
+                //find any events that passed in this time frame
+                var time = JSON.parse( this.commands[this.commandIndex] ).time;
+                if ( time < this.playbackTime ) {
+                    this.invokeStoredJSON( this.commands[this.commandIndex] );
+                    this.commandIndex++;
+                    console.log( "command index = " + this.commandIndex );
+                }
+                else {
+                    console.log( "break" );
+                    break;
+                }
+            }
+        }
+    };
+
+    EnergySkateParkModel.prototype.startPlayback = function () {
+        this.resetAll();
+        this.playback.set( true );
+        this.playbackTime = this.startTime;
+        this.commandIndex = 0;
+    };
 
     //Apply a named function to this model.  Uses the command pattern for storing the call for playback.
     EnergySkateParkModel.prototype.update = function ( /*function name*/ /*function parameters*/ ) {
@@ -33,6 +64,11 @@ define( ['underscore', 'model/vector2d', 'model/Skater', 'phetcommon/model/prope
 
         //Store the JSON value for record/playback
         var storedJSON = JSON.stringify( storedObject );
+
+        this.invokeStoredJSON( storedJSON );
+    };
+
+    EnergySkateParkModel.prototype.invokeStoredJSON = function ( storedJSON ) {
 
         //Convert back from JSON to make sure that playback will have the same behavior as live
         //TODO: This parsing can be omitted for runtime
