@@ -15,7 +15,7 @@ define( ['model/EnergySkateParkModel', 'underscore', 'view/EnergySkateParkCanvas
         var $canvas = $tab.find( 'canvas' );
 
         var model = new EnergySkateParkModel();
-//        model.update( "setBarChartVisible", true );
+        model.update( "setBarChartVisible", true );
         model.update( "toggleSetting", "barChartVisible" );
         model.update( "toggleSetting", "gridVisible" );
         var energySkateParkCanvas = new EnergySkateParkCanvas( $canvas, Strings, analytics, model );
@@ -46,13 +46,13 @@ define( ['model/EnergySkateParkModel', 'underscore', 'view/EnergySkateParkCanvas
         $tab.find( '.trackPlaygroundTabButton' ).click( function () {activeTab.set( "trackPlaygroundTab" );} );
 
         //Copied from WidgetConnector
-        var connectBoolean = function ( $component, booleanProperty ) {
+        var connectBoolean = function ( $component, propertyName ) {
 
             // sync model with check box
-            $component.bind( 'change', function () {booleanProperty.set( $component.attr( "checked" ) );} );
+            $component.bind( 'change', function () {model.update( "setBooleanProperty", propertyName, $component.attr( "checked" ) ); } );
 
             // sync check box with model
-            booleanProperty.addObserver( function ( checked ) {$component.attr( "checked", checked ).checkboxradio( "refresh" );} );
+            model[propertyName].addObserver( function ( checked ) {$component.attr( "checked", checked ).checkboxradio( "refresh" );} );
         };
 
         var connectBooleanFlip = function ( $component, booleanProperty ) {
@@ -65,15 +65,15 @@ define( ['model/EnergySkateParkModel', 'underscore', 'view/EnergySkateParkCanvas
         };
 
 
-        connectBoolean( $tab.find( '.barGraphButton' ), model.barChartVisible );
-        connectBoolean( $tab.find( '.pieChartButton' ), model.pieChartVisible );
-        connectBoolean( $tab.find( '.gridButton' ), model.gridVisible );
-        connectBoolean( $tab.find( '.speedometerButton' ), model.speedometerVisible );
+        connectBoolean( $tab.find( '.barGraphButton' ), "barChartVisible" );
+        connectBoolean( $tab.find( '.pieChartButton' ), "pieChartVisible" );
+        connectBoolean( $tab.find( '.gridButton' ), "gridVisible" );
+        connectBoolean( $tab.find( '.speedometerButton' ), "speedometerVisible" );
 
         $tab.find( '.reset-all-button' ).click( model.resetAll.bind( model ) );
         $tab.find( '.playback-button' ).click( function () {model.playback.toggle();} );
         $tab.find( '.return-skater-button' ).click( model.skater.returnSkater.bind( model.skater ) );
-        connectBoolean( $tab.find( '#slow-motion-button' ), model.slowMotion );
+        connectBoolean( $tab.find( '#slow-motion-button' ), "slowMotion" );
         connectBooleanFlip( $tab.find( '#normal-button' ), model.slowMotion );
 
         $( '.play-pause-button' ).bind( 'click', function () {

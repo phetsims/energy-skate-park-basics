@@ -22,9 +22,6 @@ define( ['underscore', 'model/vector2d', 'model/Skater', 'phetcommon/model/prope
         this.groundY = 768 - this.groundHeight;
     }
 
-    //Toggle a BooleanProperty
-    EnergySkateParkModel.prototype.toggleSetting = function ( setting ) {this[setting].toggle();};
-
     //Apply a named function to this model.  Uses the command pattern for storing the call for playback.
     EnergySkateParkModel.prototype.update = function ( /*function name*/ /*function parameters*/ ) {
         var time = new Date().getTime();
@@ -57,6 +54,10 @@ define( ['underscore', 'model/vector2d', 'model/Skater', 'phetcommon/model/prope
 
     EnergySkateParkModel.prototype.toggleBarChartVisible = function () {this.barChartVisible.toggle();};
     EnergySkateParkModel.prototype.setBarChartVisible = function ( b ) {this.barChartVisible.set( b );};
+
+    //Toggle a BooleanProperty
+    EnergySkateParkModel.prototype.toggleSetting = function ( property ) {this[property].toggle();};
+    EnergySkateParkModel.prototype.setBooleanProperty = function ( property, value ) {this[property].set( value );};
 
     EnergySkateParkModel.prototype.resetAll = function () {
         //Find all resettable fields
