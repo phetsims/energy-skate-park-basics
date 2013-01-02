@@ -15,6 +15,9 @@ define( ['model/EnergySkateParkModel', 'underscore', 'view/EnergySkateParkCanvas
         var $canvas = $tab.find( 'canvas' );
 
         var model = new EnergySkateParkModel();
+//        model.update( "setBarChartVisible", true );
+        model.update( "toggleSetting", "barChartVisible" );
+        model.update( "toggleSetting", "gridVisible" );
         var energySkateParkCanvas = new EnergySkateParkCanvas( $canvas, Strings, analytics, model );
 
         Easel.Ticker.addListener( function () {
