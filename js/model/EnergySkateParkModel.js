@@ -26,28 +26,33 @@ define( ['underscore', 'model/vector2d', 'model/Skater', 'phetcommon/model/prope
     EnergySkateParkModel.prototype.toggleSetting = function ( setting ) {this[setting].toggle();};
 
     //Apply a named function to this model.  Uses the command pattern for storing the call for playback.
-    EnergySkateParkModel.prototype.update = function ( functionName /*other arguments here*/ ) {
+    EnergySkateParkModel.prototype.update = function ( /*function name*/ /*function parameters*/ ) {
+        var time = new Date().getTime();
 
         //Turn arguments into an array
-        var args = Array.prototype.slice.call( arguments );
+        var argumentsAsArray = Array.prototype.slice.call( arguments );
+
+        var storedObject = {command: argumentsAsArray, time: time};
 
         //Store the JSON value for record/playback
-        var argsJSON = JSON.stringify( args );
+        var storedJSON = JSON.stringify( storedObject );
 
         //Convert back from JSON to make sure that playback will have the same behavior as live
-        //TODO: This line can be omitted for runtime
-        args = JSON.parse( argsJSON );
+        //TODO: This parsing can be omitted for runtime
+        var parsedJSON = JSON.parse( storedJSON ).command;
+
+        var targetFunction = parsedJSON[0];
 
         //Drop the first arg for application
-        args.splice( 0, 1 );
+        parsedJSON.splice( 0, 1 );
 
         //Lookup the specified function and apply to args with the model as the "this"
-        this[functionName].apply( this, args );
+        this[targetFunction].apply( this, parsedJSON );
 
         //Add the specified JSON arg to the command list (could also be pushed to the server)
-        this.commands.push( argsJSON );
+        this.commands.push( storedJSON );
 
-        console.log( argsJSON );
+        console.log( storedJSON );
     };
 
     EnergySkateParkModel.prototype.toggleBarChartVisible = function () {this.barChartVisible.toggle();};
