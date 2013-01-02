@@ -1,5 +1,5 @@
 //Complete model for Energy Skate Park
-define( ['underscore', 'model/vector2d', 'model/Skater', 'phetcommon/model/property/Property', 'phetcommon/model/property/BooleanProperty'], function ( _, Vector2D, Skater, Property, BooleanProperty ) {
+define( ['underscore', 'model/vector2d', 'model/Skater', 'phetcommon/model/property/Property', 'phetcommon/model/property/BooleanProperty', 'model/Physics'], function ( _, Vector2D, Skater, Property, BooleanProperty, Physics ) {
 
     function EnergySkateParkModel() {
         var self = this;
@@ -18,6 +18,12 @@ define( ['underscore', 'model/vector2d', 'model/Skater', 'phetcommon/model/prope
         this.playbackTime = this.startTime;
         this.commandIndex = 0;
 
+        this.spline = {controlPoints: [
+            {x: 100, y: 200},
+            {x: 200, y: 300},
+            {x: 300, y: 250}
+        ]};
+
         //Pixels
         this.groundHeight = 116;
         this.groundY = 768 - this.groundHeight;
@@ -25,27 +31,30 @@ define( ['underscore', 'model/vector2d', 'model/Skater', 'phetcommon/model/prope
 
     EnergySkateParkModel.prototype.stepPlayback = function () {
         this.playbackTime += 17;//ms between frames at 60fps
-        console.log( this.playbackTime );
-        if ( this.commandIndex > this.commands.length ) {
+        if ( this.commandIndex >= this.commands.length ) {
             this.playback.set( false );
         }
         else {
-            while ( true ) {
+            while ( this.commandIndex < this.commands.length - 1 ) {
                 //find any events that passed in this time frame
                 var time = JSON.parse( this.commands[this.commandIndex] ).time;
                 if ( time < this.playbackTime ) {
                     this.invokeStoredJSON( this.commands[this.commandIndex] );
                     this.commandIndex++;
-                    console.log( "command index = " + this.commandIndex );
                 }
                 else {
-                    console.log( "break" );
                     break;
                 }
             }
         }
     };
 
+    EnergySkateParkModel.prototype.stepPhysics = function () {
+        var subdivisions = 1;
+        for ( var i = 0; i < subdivisions; i++ ) {
+            Physics.updatePhysics( this.skater, this.groundHeight, this.spline, this.slowMotion.get() ? 0.01 : 0.02 / subdivisions );
+        }
+    };
     EnergySkateParkModel.prototype.startPlayback = function () {
         this.resetAll();
         this.playback.set( true );
@@ -66,6 +75,9 @@ define( ['underscore', 'model/vector2d', 'model/Skater', 'phetcommon/model/prope
         var storedJSON = JSON.stringify( storedObject );
 
         this.invokeStoredJSON( storedJSON );
+
+        //Add the specified JSON arg to the command list (could also be pushed to the server)
+        this.commands.push( storedJSON );
     };
 
     EnergySkateParkModel.prototype.invokeStoredJSON = function ( storedJSON ) {
@@ -82,10 +94,7 @@ define( ['underscore', 'model/vector2d', 'model/Skater', 'phetcommon/model/prope
         //Lookup the specified function and apply to args with the model as the "this"
         this[targetFunction].apply( this, parsedJSON );
 
-        //Add the specified JSON arg to the command list (could also be pushed to the server)
-        this.commands.push( storedJSON );
-
-        console.log( storedJSON );
+//        console.log( storedJSON );
     };
 
     EnergySkateParkModel.prototype.toggleBarChartVisible = function () {this.barChartVisible.toggle();};

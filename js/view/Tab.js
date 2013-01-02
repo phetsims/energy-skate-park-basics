@@ -25,10 +25,7 @@ define( ['model/EnergySkateParkModel', 'underscore', 'view/EnergySkateParkCanvas
                     model.stepPlayback();
                 }
                 else {
-                    var subdivisions = 1;
-                    for ( var i = 0; i < subdivisions; i++ ) {
-                        Physics.updatePhysics( model.skater, model.groundHeight, energySkateParkCanvas.root.splineLayer, model.slowMotion.get() ? 0.01 : 0.02 / subdivisions );
-                    }
+                    model.update( "stepPhysics" );
                 }
                 energySkateParkCanvas.root.tick();
             }
