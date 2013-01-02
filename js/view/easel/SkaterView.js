@@ -1,5 +1,5 @@
 define( ['easel', "model/vector2d", 'view/easel/SkaterImageBase64' ], function ( createjs, Vector2D, skaterImage ) {
-    return {createSkater: function ( skaterModel, groundHeight, groundY, analytics ) {
+    return {createSkater: function ( model, skaterModel, groundHeight, groundY, analytics ) {
 
         var metersPerPixel = 8.0 / 768.0;
 
@@ -42,12 +42,14 @@ define( ['easel', "model/vector2d", 'view/easel/SkaterImageBase64' ], function (
                     //don't let the skater go below ground
 
                     //Convert from view to model coordinates
-                    skaterModel.position.y = -(e.target.y - groundY) * metersPerPixel;
-                    skaterModel.position.x = (e.target.x) * metersPerPixel;
+                    var skaterY = -(e.target.y - groundY) * metersPerPixel;
+                    const skaterX = (e.target.x) * metersPerPixel;
 
-                    if ( skaterModel.position.y < 0 ) {
-                        skaterModel.position.y = 0;
+                    if ( skaterY < 0 ) {
+                        skaterY = 0;
                     }
+
+                    model.update( "setSkaterPosition", skaterX, skaterY );
                 }
                 skaterModel.dragging = true;
                 skaterModel.velocity = new Vector2D();

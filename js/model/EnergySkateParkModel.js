@@ -59,6 +59,11 @@ define( ['underscore', 'model/vector2d', 'model/Skater', 'phetcommon/model/prope
     EnergySkateParkModel.prototype.toggleSetting = function ( property ) {this[property].toggle();};
     EnergySkateParkModel.prototype.setBooleanProperty = function ( property, value ) {this[property].set( value );};
 
+    EnergySkateParkModel.prototype.setSkaterPosition = function ( x, y ) {
+        this.skater.position.x = x;
+        this.skater.position.y = y;
+    };
+
     EnergySkateParkModel.prototype.resetAll = function () {
         //Find all resettable fields
         var resettable = _.filter( this, function ( element ) {return typeof element.reset == 'function'} );
