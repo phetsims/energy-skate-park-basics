@@ -39,7 +39,7 @@ define( ['underscore', 'model/vector2d', 'model/Skater', 'phetcommon/model/prope
                 //find any events that passed in this time frame
                 var time = JSON.parse( this.commands[this.commandIndex] ).time;
                 if ( time < this.playbackTime ) {
-                    this.invokeStoredJSON( this.commands[this.commandIndex] );
+                    this.invokeJSON( this.commands[this.commandIndex] );
                     this.commandIndex++;
                 }
                 else {
@@ -69,21 +69,19 @@ define( ['underscore', 'model/vector2d', 'model/Skater', 'phetcommon/model/prope
         //Turn arguments into an array
         var argumentsAsArray = Array.prototype.slice.call( arguments );
 
+        //Convert the call to JSON and use that for function application.
         var storedObject = {command: argumentsAsArray, time: time};
+        var storedJSON = JSON.stringify( storedObject );
+        this.invokeJSON( storedJSON );
 
         //Store the JSON value for record/playback
-        var storedJSON = JSON.stringify( storedObject );
-
-        this.invokeStoredJSON( storedJSON );
-
         //Add the specified JSON arg to the command list (could also be pushed to the server)
         this.commands.push( storedJSON );
     };
 
-    EnergySkateParkModel.prototype.invokeStoredJSON = function ( storedJSON ) {
+    EnergySkateParkModel.prototype.invokeJSON = function ( storedJSON ) {
 
         //Convert back from JSON to make sure that playback will have the same behavior as live
-        //TODO: This parsing can be omitted for runtime
         var parsedJSON = JSON.parse( storedJSON ).command;
 
         var targetFunction = parsedJSON[0];
