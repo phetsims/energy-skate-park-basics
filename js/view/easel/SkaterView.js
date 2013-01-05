@@ -51,12 +51,12 @@ define( ['easel', "model/vector2d", 'view/easel/SkaterImageBase64' ], function (
 
                     model.update( "setSkaterPosition", skaterX, skaterY );
                 }
-                skaterModel.dragging = true;
-                skaterModel.velocity = new Vector2D();
+
+                //TODO: rewrite update so that it can take sub-objects, like model.update("skater.stop")
+                model.update( "stopSkater" );
             };
             e.onMouseUp = function ( event ) {
-                skaterModel.dragging = false;
-                skaterModel.velocity = new Vector2D();
+                model.update( "stopSkater" );
                 analytics.log( "skater", "sprite", "released", [
                     {y: skaterModel.position.y.toFixed( 2 )}
                 ] );

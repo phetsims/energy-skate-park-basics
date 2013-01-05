@@ -35,7 +35,7 @@ define( ['underscore', 'model/vector2d', 'model/Skater', 'phetcommon/model/prope
             this.playback.set( false );
         }
         else {
-            while ( this.commandIndex < this.commands.length - 1 ) {
+            while ( this.commandIndex < this.commands.length ) {
                 //find any events that passed in this time frame
                 var time = JSON.parse( this.commands[this.commandIndex] ).time;
                 if ( time < this.playbackTime ) {
@@ -55,6 +55,12 @@ define( ['underscore', 'model/vector2d', 'model/Skater', 'phetcommon/model/prope
             Physics.updatePhysics( this.skater, this.groundHeight, this.spline, this.slowMotion.get() ? 0.01 : 0.02 / subdivisions );
         }
     };
+
+    EnergySkateParkModel.prototype.stopSkater = function () {
+        this.skater.dragging = false;
+        this.skater.velocity = new Vector2D();
+    };
+
     EnergySkateParkModel.prototype.startPlayback = function () {
         this.resetAll();
         this.playback.set( true );
