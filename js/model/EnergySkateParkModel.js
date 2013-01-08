@@ -27,6 +27,8 @@ define( ['underscore', 'model/vector2d', 'model/Skater', 'phetcommon/model/prope
         //Pixels
         this.groundHeight = 116;
         this.groundY = 768 - this.groundHeight;
+        this.mouseX = 0;
+        this.mouseY = 0;
     }
 
     EnergySkateParkModel.prototype.stepPlayback = function () {
@@ -119,6 +121,11 @@ define( ['underscore', 'model/vector2d', 'model/Skater', 'phetcommon/model/prope
 
         //Call reset on them
         _.each( resettable, function ( element ) {element.reset()} );
+    };
+
+    EnergySkateParkModel.prototype.mouseMove = function ( x, y ) {
+        this.mouseX = x;
+        this.mouseY = y;
     };
 
     return EnergySkateParkModel;

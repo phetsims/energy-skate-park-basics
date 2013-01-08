@@ -15,8 +15,10 @@ define( ['model/EnergySkateParkModel', 'underscore', 'view/EnergySkateParkCanvas
         var $canvas = $tab.find( 'canvas' );
 
         var model = new EnergySkateParkModel();
+        this.model = model;
         var energySkateParkCanvas = new EnergySkateParkCanvas( $canvas, Strings, analytics, model );
 
+        const $overlay = $( "#overlay" );
         Easel.Ticker.addListener( function () {
             stats.begin();
             if ( model.playing.get() && activeTab.get() == tabID ) {
@@ -30,6 +32,13 @@ define( ['model/EnergySkateParkModel', 'underscore', 'view/EnergySkateParkCanvas
                 energySkateParkCanvas.root.tick();
             }
             energySkateParkCanvas.render();
+            $overlay.css( "top", "" + model.mouseY + "px" ).css( "left", "" + model.mouseX + "px" );
+            if ( model.playback.get() ) {
+                $overlay.show();
+            }
+            else {
+                $overlay.hide();
+            }
             stats.end();
         } );
         $tab.find( '.' + tabID + "Button" ).toggleClass( "active" );

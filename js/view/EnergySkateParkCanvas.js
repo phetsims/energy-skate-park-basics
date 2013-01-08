@@ -1,6 +1,7 @@
 define( ['easel', 'underscore', 'view/easel/EnergySkateParkRootNode'], function ( Easel, _, EnergySkateParkRootNode ) {
     function EnergySkateParkCanvas( $canvas, Strings, analytics, model ) {
         var self = this;
+        this.model = model;
         $canvas[0].onselectstart = function () { return false; }; // IE
         $canvas[0].onmousedown = function () { return false; }; // Mozilla
         console.log( $canvas );

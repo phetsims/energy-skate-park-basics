@@ -18,6 +18,7 @@ require( ['util/WebsocketRefresh',
     var activeTab = new Property( tab0 );
     var $container = $( '#container' );
 
+    var tabInstances = [];
     for ( var i = 0; i < tabs.length; i++ ) {
         var tab = tabs[i];
         var filledTemplate = tabTemplate( {id: tab,
@@ -28,7 +29,9 @@ require( ['util/WebsocketRefresh',
         console.log( filledTemplate );
         $container.append( filledTemplate ).trigger( "create" );
         var $tab = $( "#" + tab );
-        new Tab( $tab, Easel, Strings, analytics, tab, activeTab ).render();
+        const tabInstance = new Tab( $tab, Easel, Strings, analytics, tab, activeTab );
+        tabInstance.render();
+        tabInstances.push( tabInstance );
         if ( i > 0 ) {
             $tab.hide();
         }
@@ -41,6 +44,17 @@ require( ['util/WebsocketRefresh',
         }
         $( "#" + newTab ).show();
     } );
+
+    //TODO: add touchmove too
+    window.onmousemove = function () {
+        var event = event || window.event;
+        tabInstances[0].model.update( "mouseMove", event.x, event.y );
+    };
+
+    document.addEventListener( 'touchmove', preventDefault, false );
+    function preventDefault( e ) {
+        tabInstances[0].model.update( "mouseMove", e.touches[0].pageX, e.touches[0].pageY );
+    };
 
 //    PrototypeDialog.init( "Energy Skate Park: Basics" );
 } );
