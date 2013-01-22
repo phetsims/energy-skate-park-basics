@@ -13,7 +13,7 @@ require.config( {
                         underscore: '../contrib/underscore-1.4.2',
                         tpl: "../contrib/tpl-0.2",
                         numeric: "../contrib/numeric-1.2.3",
-                        i18n: "../contrib/i18n-2.0.1-phet"
+                        i18n: "../contrib/i18n/i18n"
                     },
 
                     shim: {
