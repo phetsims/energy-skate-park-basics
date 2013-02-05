@@ -19,7 +19,7 @@
 .control-panel {
     position: absolute;
     right: 10px; /*Prevent scroll bars.  This line was probably necessary after changing the default font in the buttons*/
-    top: 40px;
+    top: 50px;
     width: 20%;
     max-width: 200px;
 }
@@ -51,4 +51,34 @@
 #overlay img {
     width: 20%;
     height: auto;
+}
+
+.buttonGroupSameWidth button {
+    width: 150px;
+    display: block;
+}
+
+.controlPanelButton {
+    overflow: hidden;
+}
+
+.controlPanelButtonLabel {
+    overflow: hidden;
+}
+
+.footer div {
+    overflow: hidden;
+}
+
+.controlPanelButtonLabel input {
+    float: left;
+}
+
+.reset-buttons {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.footer .btn-group button label input {
+    margin-right: 5px;
 }
