@@ -4,3 +4,6 @@
 [submodule "contrib/i18n"]
 	path = contrib/i18n
 	url = https://github.com/phetsims/i18n.git
+[submodule ".\\contrib\\phet-scene"]
+	path = .\\contrib\\phet-scene
+	url = git://github.com/jonathanolson/phet-scene.git
