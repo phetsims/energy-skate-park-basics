@@ -1,27 +1,27 @@
 require.config( {
-                    deps: ['main'],
+                  deps: ['main'],
 
-                    paths: {
-                        common: 'common',
-                        phetcommon: '../common/phetcommon/js',
-                        phetcommon_html: '../common/phetcommon/html',
+                  paths: {
+                    common: 'common',
+                    phetcommon: '../common/phetcommon/js',
+                    phetcommon_html: '../common/phetcommon/html',
 
-                        easel: '../contrib/easel-0.5.0',
-                        image: '../contrib/image-0.2.1',
-                        jquery: '../contrib/jquery-1.8.3',
-                        'jquery.mobile': '../contrib/jquery.mobile-1.2.0',
-                        underscore: '../contrib/underscore-1.4.2',
-                        tpl: "../contrib/tpl-0.2",
-                        numeric: "../contrib/numeric-1.2.3",
-                        i18n: "../contrib/i18n/i18n"
-                    },
+                    easel: '../contrib/easel-0.5.0',
+                    image: '../contrib/image-0.2.1',
+                    jquery: '../contrib/jquery-1.8.3',
+                    'jquery.mobile': '../contrib/jquery.mobile-1.2.0',
+                    underscore: '../contrib/underscore-1.4.2',
+                    tpl: "../contrib/tpl-0.2",
+                    numeric: "../contrib/numeric-1.2.3",
+                    i18n: "../contrib/i18n/i18n"
+                  },
 
-                    shim: {
-                        underscore: { exports: "_" },
-                        easel: { exports: "createjs" },
-                        jquery: { exports: "$" },
-                        numeric: {exports: "numeric"}
-                    },
+                  shim: {
+                    underscore: { exports: "_" },
+                    easel: { exports: "createjs" },
+                    jquery: { exports: "$" },
+                    numeric: {exports: "numeric"}
+                  },
 
-                    urlArgs: new Date().getTime() // add cache buster query string to make browser refresh actually reload everything
+                  urlArgs: new Date().getTime() // add cache buster query string to make browser refresh actually reload everything
                 } );
