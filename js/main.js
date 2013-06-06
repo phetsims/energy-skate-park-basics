@@ -4,9 +4,8 @@ require( ['util/WebsocketRefresh',
            'view/Tab',
            'easel',
            'tpl!../tab.html',
-           'phetcommon/model/property/Property',
-           'phetcommon/view/PrototypeDialog'
-         ], function ( WebsocketRefresh, Analytics, Strings, Tab, Easel, tabTemplate, Property, PrototypeDialog ) {
+           'phetcommon/model/property/Property'
+         ], function ( WebsocketRefresh, Analytics, Strings, Tab, Easel, tabTemplate, Property) {
 
   WebsocketRefresh.listenForRefresh();
   var analytics = new Analytics();
@@ -56,5 +55,4 @@ require( ['util/WebsocketRefresh',
     tabInstances[0].model.update( "mouseMove", e.touches[0].pageX, e.touches[0].pageY );
   };
 
-//    PrototypeDialog.init( "Energy Skate Park: Basics" );
 } );
