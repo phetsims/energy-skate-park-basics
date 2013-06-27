@@ -1,3 +1,5 @@
+// Copyright 2002-2013, University of Colorado Boulder
+
 //Declare the skater image as base 64 so it will not cause a security exception on file:// on chrome
 //An alternative will be to overwrite the easel hit test to not use canvas getPixel calls
 define( [], function () {

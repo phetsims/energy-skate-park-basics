@@ -1,3 +1,5 @@
+// Copyright 2002-2013, University of Colorado Boulder
+
 //Listen for file changes for auto-refresh
 define( [], function () {
   return {

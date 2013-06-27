@@ -1,3 +1,5 @@
+// Copyright 2002-2013, University of Colorado Boulder
+
 define( ['easel', 'underscore', 'view/easel/EnergySkateParkRootNode'], function ( Easel, _, EnergySkateParkRootNode ) {
   function EnergySkateParkCanvas( $canvas, Strings, analytics, model ) {
     var self = this;

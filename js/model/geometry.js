@@ -1,3 +1,5 @@
+// Copyright 2002-2013, University of Colorado Boulder
+
 define( [], function () {
   return {
     //http://wiki.processing.org/w/Find_which_side_of_a_line_a_point_is_on

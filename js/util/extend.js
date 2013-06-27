@@ -1,3 +1,5 @@
+// Copyright 2002-2013, University of Colorado Boulder
+
 define( ['../../'], function () {
   Object.__proto__.extend = function ( className, subclassMethods ) {
     var subclass = function () {

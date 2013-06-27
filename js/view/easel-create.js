@@ -1,3 +1,5 @@
+// Copyright 2002-2013, University of Colorado Boulder
+
 define( ['easel', 'util/ie-support'], function ( createjs ) {
 
   createjs.DisplayObject.__proto__.create = function ( params ) {

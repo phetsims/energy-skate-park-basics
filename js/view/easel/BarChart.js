@@ -1,3 +1,5 @@
+// Copyright 2002-2013, University of Colorado Boulder
+
 define( ['easel', "view/easel-util",
           'i18n!../../../nls/energy-skate-park-strings'], function ( createjs, EaselUtil, Strings ) {
   return {createBarChart: function ( skater ) {

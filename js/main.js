@@ -1,3 +1,5 @@
+// Copyright 2002-2013, University of Colorado Boulder
+
 require( ['util/WebsocketRefresh',
            '../common/phetcommon/js/analytics/Analytics',
            'i18n!../nls/energy-skate-park-strings',

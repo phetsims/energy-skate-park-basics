@@ -1,3 +1,5 @@
+// Copyright 2002-2013, University of Colorado Boulder
+
 define( [], function () {
 
   function Vector2D( x, y ) {

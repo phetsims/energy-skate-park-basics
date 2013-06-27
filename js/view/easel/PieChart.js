@@ -1,3 +1,5 @@
+// Copyright 2002-2013, University of Colorado Boulder
+
 define( ['easel' ], function ( createjs ) {
   var PieChart = function ( skater, skaterView ) {
     this.initialize( skater, skaterView );

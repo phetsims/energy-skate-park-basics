@@ -1,3 +1,5 @@
+// Copyright 2002-2013, University of Colorado Boulder
+
 define( ['easel', "model/vector2d", 'view/easel/SkaterImageBase64' ], function ( createjs, Vector2D, skaterImage ) {
   return {createSkater: function ( model, skaterModel, groundHeight, groundY, analytics ) {
 

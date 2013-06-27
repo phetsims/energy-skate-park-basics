@@ -1,3 +1,5 @@
+// Copyright 2002-2013, University of Colorado Boulder
+
 define( ["underscore", "model/vector2d", "model/geometry"], function ( _, Vector2D, Geometry ) {
   var Physics = {};
 

@@ -1,3 +1,5 @@
+// Copyright 2002-2013, University of Colorado Boulder
+
 //One of the three tabs in Energy Skate Park
 define( ['easel',
           'model/Skater',

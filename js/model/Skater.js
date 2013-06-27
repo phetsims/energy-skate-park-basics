@@ -1,3 +1,5 @@
+// Copyright 2002-2013, University of Colorado Boulder
+
 //Model for skater, with everything in SI
 define( ["model/vector2d"], function ( Vector2D ) {
   function SkaterModel() {

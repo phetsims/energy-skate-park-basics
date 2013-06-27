@@ -1,3 +1,5 @@
+// Copyright 2002-2013, University of Colorado Boulder
+
 define( ['easel', 'numeric' ], function ( createjs, numeric ) {
 
   function showPointer( mouseEvent ) { document.body.style.cursor = "pointer"; }

@@ -1,3 +1,5 @@
+// Copyright 2002-2013, University of Colorado Boulder
+
 define( ['model/EnergySkateParkModel', 'underscore', 'view/EnergySkateParkCanvas', 'model/Physics', 'phetcommon/model/property/Property'], function ( EnergySkateParkModel, _, EnergySkateParkCanvas, Physics, Property ) {
   function Tab( $tab, Easel, Strings, analytics, tabID, activeTab ) {
 

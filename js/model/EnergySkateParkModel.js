@@ -1,3 +1,5 @@
+// Copyright 2002-2013, University of Colorado Boulder
+
 //Complete model for Energy Skate Park
 define( ['underscore', 'model/vector2d', 'model/Skater', 'phetcommon/model/property/Property', 'phetcommon/model/property/BooleanProperty', 'model/Physics'], function ( _, Vector2D, Skater, Property, BooleanProperty, Physics ) {
 
