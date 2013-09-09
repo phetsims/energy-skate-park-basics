@@ -38,7 +38,7 @@ define( function( require ) {
         translate: function() {
           // do nothing, override default behavior
         }
-      } ) )
+      } ) );
   }
 
   inherit( ScreenView, SkaterNode );
