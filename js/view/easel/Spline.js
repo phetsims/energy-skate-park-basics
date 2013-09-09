@@ -1,6 +1,6 @@
 // Copyright 2002-2013, University of Colorado Boulder
 
-define( ['easel', 'numeric' ], function ( createjs, numeric ) {
+define( ['easel', 'numeric' ], function( createjs, numeric ) {
 
   function showPointer( mouseEvent ) { document.body.style.cursor = "pointer"; }
 
@@ -13,7 +13,7 @@ define( ['easel', 'numeric' ], function ( createjs, numeric ) {
 
   var that = {};
 
-  that.createSplineLayer = function ( groundHeight, model ) {
+  that.createSplineLayer = function( groundHeight, model ) {
 
     var splineLayer = new createjs.Container();
     var line = null;
@@ -22,7 +22,7 @@ define( ['easel', 'numeric' ], function ( createjs, numeric ) {
       e.nativeEvent.preventDefault();
       //Make dragging relative to touch point
       var relativePressPoint = null;
-      e.onMouseMove = function ( event ) {
+      e.onMouseMove = function( event ) {
         var transformed = event.target.parent.globalToLocal( event.stageX, event.stageY );
         if ( relativePressPoint === null ) {
           relativePressPoint = {x: e.target.x - transformed.x, y: e.target.y - transformed.y};
@@ -56,7 +56,7 @@ define( ['easel', 'numeric' ], function ( createjs, numeric ) {
     var b = createControlPoint( 200, 300 );
     var c = createControlPoint( 300, 250 );
 
-    model.resettableSpline = {reset: function () {
+    model.resettableSpline = {reset: function() {
       a.x = 100;
       a.y = 200;
 
@@ -78,7 +78,7 @@ define( ['easel', 'numeric' ], function ( createjs, numeric ) {
     function createLine() {
       var graphics = new createjs.Graphics();
       var line = new createjs.Shape( graphics );
-      line.drawBetweenControlPoints = function () {
+      line.drawBetweenControlPoints = function() {
         graphics.clear();
         graphics.beginStroke( "#000000" ).setStrokeStyle( 20 );
 
@@ -124,7 +124,7 @@ define( ['easel', 'numeric' ], function ( createjs, numeric ) {
         line.dragging = true;
         //Make dragging relative to touch point
         var previousPoint = null;
-        e.onMouseMove = function ( event ) {
+        e.onMouseMove = function( event ) {
           var transformed = event.target.parent.globalToLocal( event.stageX, event.stageY );
           if ( previousPoint === null ) {
             previousPoint = {x: transformed.x, y: transformed.y};

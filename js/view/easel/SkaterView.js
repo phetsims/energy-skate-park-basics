@@ -1,7 +1,7 @@
 // Copyright 2002-2013, University of Colorado Boulder
 
-define( ['easel', "model/vector2d", 'view/easel/SkaterImageBase64' ], function ( createjs, Vector2D, skaterImage ) {
-  return {createSkater: function ( model, skaterModel, groundHeight, groundY, analytics ) {
+define( ['easel', "model/vector2d", 'view/easel/SkaterImageBase64' ], function( createjs, Vector2D, skaterImage ) {
+  return {createSkater: function( model, skaterModel, groundHeight, groundY, analytics ) {
 
     var metersPerPixel = 8.0 / 768.0;
 
@@ -32,7 +32,7 @@ define( ['easel', "model/vector2d", 'view/easel/SkaterImageBase64' ], function (
       skaterModel.attached = false;
       //Make dragging relative to touch point
       var relativePressPoint = null;
-      e.onMouseMove = function ( event ) {
+      e.onMouseMove = function( event ) {
         var transformed = event.target.parent.globalToLocal( event.stageX, event.stageY );
         if ( relativePressPoint === null ) {
           relativePressPoint = {x: e.target.x - transformed.x, y: e.target.y - transformed.y};
@@ -57,7 +57,7 @@ define( ['easel', "model/vector2d", 'view/easel/SkaterImageBase64' ], function (
         //TODO: rewrite update so that it can take sub-objects, like model.update("skater.stop")
         model.update( "stopSkater" );
       };
-      e.onMouseUp = function ( event ) {
+      e.onMouseUp = function( event ) {
         model.update( "stopSkater" );
         analytics.log( "skater", "sprite", "released", [
           {y: skaterModel.position.y.toFixed( 2 )}
@@ -72,7 +72,7 @@ define( ['easel', "model/vector2d", 'view/easel/SkaterImageBase64' ], function (
     skater.getThermalEnergy = skaterModel.getThermalEnergy;
     skater.getTotalEnergy = skaterModel.getTotalEnergy;
 
-    skater.updateFromModel = function () {
+    skater.updateFromModel = function() {
       this.x = skaterModel.position.x / metersPerPixel;
       this.y = -skaterModel.position.y / metersPerPixel + groundY;
       this.rotation = skaterModel.angle * 360 / 2 / Math.PI;

@@ -1,8 +1,8 @@
 // Copyright 2002-2013, University of Colorado Boulder
 
-define( ['easel', 'util/ie-support'], function ( createjs ) {
+define( ['easel', 'util/ie-support'], function( createjs ) {
 
-  createjs.DisplayObject.__proto__.create = function ( params ) {
+  createjs.DisplayObject.__proto__.create = function( params ) {
     var object = new this();
     for ( var key in params ) {
       var value = params[key];
@@ -23,9 +23,9 @@ define( ['easel', 'util/ie-support'], function ( createjs ) {
   }
 
   var Shape_superCreate = createjs.Shape.__proto__.create;
-  createjs.Shape.__proto__.create = function ( params ) {
+  createjs.Shape.__proto__.create = function( params ) {
     var gkeys = ['graphics', 'fillColor', 'strokeColor', 'strokeWidth', 'strokeCap', 'strokeJoin', 'strokeMiterLimit'],
-        gattrs = {};
+      gattrs = {};
     for ( var i = 0; i < gkeys.length; i++ ) {
       var k = gkeys[i];
       gattrs[k] = params[k];

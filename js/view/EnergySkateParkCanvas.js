@@ -1,11 +1,11 @@
 // Copyright 2002-2013, University of Colorado Boulder
 
-define( ['easel', 'underscore', 'view/easel/EnergySkateParkRootNode'], function ( Easel, _, EnergySkateParkRootNode ) {
+define( ['easel', 'underscore', 'view/easel/EnergySkateParkRootNode'], function( Easel, _, EnergySkateParkRootNode ) {
   function EnergySkateParkCanvas( $canvas, Strings, analytics, model ) {
     var self = this;
     this.model = model;
-    $canvas[0].onselectstart = function () { return false; }; // IE
-    $canvas[0].onmousedown = function () { return false; }; // Mozilla
+    $canvas[0].onselectstart = function() { return false; }; // IE
+    $canvas[0].onmousedown = function() { return false; }; // Mozilla
     console.log( $canvas );
 
     this.root = EnergySkateParkRootNode( model, analytics );
@@ -43,7 +43,7 @@ define( ['easel', 'underscore', 'view/easel/EnergySkateParkRootNode'], function 
       //Center the footer under the ground
       var $footer = $( ".footer" );
       $footer.css( "top", canvasH + top - 100 * scale + 'px' ).
-          css( "left", width / 2 - $footer.width() + $( ".play-pause-button" ).width() / 2 );
+        css( "left", width / 2 - $footer.width() + $( ".play-pause-button" ).width() / 2 );
     }
 
     $( window ).resize( handleResize );
@@ -58,7 +58,7 @@ define( ['easel', 'underscore', 'view/easel/EnergySkateParkRootNode'], function 
     this.stage.enableMouseOver();
   }
 
-  EnergySkateParkCanvas.prototype.render = function () {
+  EnergySkateParkCanvas.prototype.render = function() {
     this.stage.tick();
   };
   return EnergySkateParkCanvas;

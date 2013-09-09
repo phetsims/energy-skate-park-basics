@@ -1,7 +1,7 @@
 // Copyright 2002-2013, University of Colorado Boulder
 
-define( ['easel', "view/easel-util", "model/vector2d", 'i18n!../../../nls/energy-skate-park-strings'], function ( createjs, EaselUtil, Vector2D, Strings ) {
-  return {createSpeedometer: function ( skater ) {
+define( ['easel', "view/easel-util", "model/vector2d", 'i18n!../../../nls/energy-skate-park-strings'], function( createjs, EaselUtil, Vector2D, Strings ) {
+  return {createSpeedometer: function( skater ) {
     var that = new createjs.Container();
     var shape = new createjs.Shape();
     var radius = 100;
@@ -48,7 +48,7 @@ define( ['easel', "view/easel-util", "model/vector2d", 'i18n!../../../nls/energy
     that.x = 512;
     that.y = 160;
 
-    that.tick = function () {
+    that.tick = function() {
       var angle = skater.model.velocity.magnitude() * 25;
 
       var innerVector = Vector2D.fromAngle( toRadians( angle + 180 - degreesPerTick * 2 ) ).times( -20 );

@@ -1,7 +1,7 @@
 // Copyright 2002-2013, University of Colorado Boulder
 
 //Complete model for Energy Skate Park
-define( ['underscore', 'model/vector2d', 'model/Skater', 'phetcommon/model/property/Property', 'phetcommon/model/property/BooleanProperty', 'model/Physics'], function ( _, Vector2D, Skater, Property, BooleanProperty, Physics ) {
+define( ['underscore', 'model/vector2d', 'model/Skater', 'phetcommon/model/property/Property', 'phetcommon/model/property/BooleanProperty', 'model/Physics'], function( _, Vector2D, Skater, Property, BooleanProperty, Physics ) {
 
   function EnergySkateParkModel() {
     var self = this;
@@ -33,7 +33,7 @@ define( ['underscore', 'model/vector2d', 'model/Skater', 'phetcommon/model/prope
     this.mouseY = 0;
   }
 
-  EnergySkateParkModel.prototype.stepPlayback = function () {
+  EnergySkateParkModel.prototype.stepPlayback = function() {
     this.playbackTime += 17;//ms between frames at 60fps
     if ( this.commandIndex >= this.commands.length ) {
       this.playback.set( false );
@@ -53,19 +53,19 @@ define( ['underscore', 'model/vector2d', 'model/Skater', 'phetcommon/model/prope
     }
   };
 
-  EnergySkateParkModel.prototype.stepPhysics = function () {
+  EnergySkateParkModel.prototype.stepPhysics = function() {
     var subdivisions = 1;
     for ( var i = 0; i < subdivisions; i++ ) {
       Physics.updatePhysics( this.skater, this.groundHeight, this.spline, this.slowMotion.get() ? 0.01 : 0.02 / subdivisions );
     }
   };
 
-  EnergySkateParkModel.prototype.stopSkater = function () {
+  EnergySkateParkModel.prototype.stopSkater = function() {
     this.skater.dragging = false;
     this.skater.velocity = new Vector2D();
   };
 
-  EnergySkateParkModel.prototype.startPlayback = function () {
+  EnergySkateParkModel.prototype.startPlayback = function() {
     this.resetAll();
     this.playback.set( true );
     this.playbackTime = this.startTime;
@@ -73,7 +73,7 @@ define( ['underscore', 'model/vector2d', 'model/Skater', 'phetcommon/model/prope
   };
 
   //Apply a named function to this model.  Uses the command pattern for storing the call for playback.
-  EnergySkateParkModel.prototype.update = function ( /*function name*/ /*function parameters*/ ) {
+  EnergySkateParkModel.prototype.update = function( /*function name*/ /*function parameters*/ ) {
     var time = new Date().getTime();
 
     //Turn arguments into an array
@@ -89,7 +89,7 @@ define( ['underscore', 'model/vector2d', 'model/Skater', 'phetcommon/model/prope
     this.commands.push( storedJSON );
   };
 
-  EnergySkateParkModel.prototype.invokeJSON = function ( storedJSON ) {
+  EnergySkateParkModel.prototype.invokeJSON = function( storedJSON ) {
 
     //Convert back from JSON to make sure that playback will have the same behavior as live
     var parsedJSON = JSON.parse( storedJSON ).command;
@@ -105,27 +105,27 @@ define( ['underscore', 'model/vector2d', 'model/Skater', 'phetcommon/model/prope
 //        console.log( storedJSON );
   };
 
-  EnergySkateParkModel.prototype.toggleBarChartVisible = function () {this.barChartVisible.toggle();};
-  EnergySkateParkModel.prototype.setBarChartVisible = function ( b ) {this.barChartVisible.set( b );};
+  EnergySkateParkModel.prototype.toggleBarChartVisible = function() {this.barChartVisible.toggle();};
+  EnergySkateParkModel.prototype.setBarChartVisible = function( b ) {this.barChartVisible.set( b );};
 
   //Toggle a BooleanProperty
-  EnergySkateParkModel.prototype.toggleSetting = function ( property ) {this[property].toggle();};
-  EnergySkateParkModel.prototype.setBooleanProperty = function ( property, value ) {this[property].set( value );};
+  EnergySkateParkModel.prototype.toggleSetting = function( property ) {this[property].toggle();};
+  EnergySkateParkModel.prototype.setBooleanProperty = function( property, value ) {this[property].set( value );};
 
-  EnergySkateParkModel.prototype.setSkaterPosition = function ( x, y ) {
+  EnergySkateParkModel.prototype.setSkaterPosition = function( x, y ) {
     this.skater.position.x = x;
     this.skater.position.y = y;
   };
 
-  EnergySkateParkModel.prototype.resetAll = function () {
+  EnergySkateParkModel.prototype.resetAll = function() {
     //Find all resettable fields
-    var resettable = _.filter( this, function ( element ) {return typeof element.reset == 'function'} );
+    var resettable = _.filter( this, function( element ) {return typeof element.reset == 'function'} );
 
     //Call reset on them
-    _.each( resettable, function ( element ) {element.reset()} );
+    _.each( resettable, function( element ) {element.reset()} );
   };
 
-  EnergySkateParkModel.prototype.mouseMove = function ( x, y ) {
+  EnergySkateParkModel.prototype.mouseMove = function( x, y ) {
     this.mouseX = x;
     this.mouseY = y;
   };

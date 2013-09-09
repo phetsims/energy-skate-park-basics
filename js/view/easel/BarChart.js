@@ -1,8 +1,8 @@
 // Copyright 2002-2013, University of Colorado Boulder
 
 define( ['easel', "view/easel-util",
-          'i18n!../../../nls/energy-skate-park-strings'], function ( createjs, EaselUtil, Strings ) {
-  return {createBarChart: function ( skater ) {
+  'i18n!../../../nls/energy-skate-park-strings'], function( createjs, EaselUtil, Strings ) {
+  return {createBarChart: function( skater ) {
     var that = new createjs.Container();
     var shape = new createjs.Shape();
     shape.graphics.beginFill( "white" ).beginStroke( "black" ).setStrokeStyle( 2 ).drawRoundRect( 0, 0, 200, 600, 10 ).endStroke().endFill();
@@ -52,10 +52,10 @@ define( ['easel', "view/easel-util",
       fields[i].bar = bar;
     }
 
-    that.onMouseOver = function () { document.body.style.cursor = "pointer"; };
-    that.onMouseOut = function () { document.body.style.cursor = "default"; };
+    that.onMouseOver = function() { document.body.style.cursor = "pointer"; };
+    that.onMouseOut = function() { document.body.style.cursor = "default"; };
 
-    that.tick = function () {
+    that.tick = function() {
       for ( var k = 0; k < fields.length; k++ ) {
         var value = fields[k].getter();
         var barHeight = value / 10;

@@ -1,6 +1,6 @@
 // Copyright 2002-2013, University of Colorado Boulder
 
-define( ["underscore", "model/vector2d", "model/geometry"], function ( _, Vector2D, Geometry ) {
+define( ["underscore", "model/vector2d", "model/geometry"], function( _, Vector2D, Geometry ) {
   var Physics = {};
 
   var groundHeight = 116;
@@ -11,7 +11,7 @@ define( ["underscore", "model/vector2d", "model/geometry"], function ( _, Vector
 
   function getModelY( point ) {return -(point.y - groundY) * metersPerPixel;}
 
-  Physics.updatePhysics = function ( skater, groundHeight, splineLayer, dt ) {
+  Physics.updatePhysics = function( skater, groundHeight, splineLayer, dt ) {
     var originalX = skater.position.x;
     var originalY = skater.position.y;
     var originalMechanicalEnergy = skater.getMechanicalEnergy();
@@ -63,7 +63,7 @@ define( ["underscore", "model/vector2d", "model/geometry"], function ( _, Vector
       function binarySearch( min, max, errorFunction, numDivisions, depth ) {
         var points = numeric.linspace( min, max, numDivisions );
         var delta = (max - min) / numDivisions;
-        var bestPoint = _.min( points, function ( s ) {return errorFunction( s );} );
+        var bestPoint = _.min( points, function( s ) {return errorFunction( s );} );
         var error = errorFunction( bestPoint );
         if ( error < 1E-6 || depth > 5 ) {
           return bestPoint;
@@ -119,8 +119,8 @@ define( ["underscore", "model/vector2d", "model/geometry"], function ( _, Vector
 
         function getSides( xvalue, yvalue ) {
 
-          var splineX = numeric.spline( s, splineLayer.controlPoints.map( getModelX ).map( function ( x ) {return x - xvalue } ) );
-          var splineY = numeric.spline( s, splineLayer.controlPoints.map( getModelY ).map( function ( y ) {return y - yvalue } ) );
+          var splineX = numeric.spline( s, splineLayer.controlPoints.map( getModelX ).map( function( x ) {return x - xvalue } ) );
+          var splineY = numeric.spline( s, splineLayer.controlPoints.map( getModelY ).map( function( y ) {return y - yvalue } ) );
 
           var xRoots = splineX.roots();
           var sides = [];

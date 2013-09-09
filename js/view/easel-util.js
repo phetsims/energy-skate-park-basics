@@ -1,12 +1,12 @@
 // Copyright 2002-2013, University of Colorado Boulder
 
-define( ['easel' ], function ( createjs ) {
+define( ['easel' ], function( createjs ) {
 
-  var theRelativeDragHandler = function ( e ) {
+  var theRelativeDragHandler = function( e ) {
     e.nativeEvent.preventDefault();
     //Make dragging relative to touch point
     var relativePressPoint = null;
-    e.onMouseMove = function ( event ) {
+    e.onMouseMove = function( event ) {
       var transformed = event.target.parent.globalToLocal( event.stageX, event.stageY );
       if ( relativePressPoint === null ) {
         relativePressPoint = {x: e.target.x - transformed.x, y: e.target.y - transformed.y};
@@ -16,22 +16,22 @@ define( ['easel' ], function ( createjs ) {
         e.target.y = transformed.y + relativePressPoint.y;
       }
     };
-    e.onMouseUp = function ( event ) { };
+    e.onMouseUp = function( event ) { };
   };
   return {
     relativeDragHandler: theRelativeDragHandler,
 
     //Makes an object draggable, and uses the cursor hand
-    makeDraggable: function ( displayObject ) {
+    makeDraggable: function( displayObject ) {
 
-      displayObject.onMouseOver = function () { document.body.style.cursor = "pointer"; };
-      displayObject.onMouseOut = function () { document.body.style.cursor = "default"; };
+      displayObject.onMouseOver = function() { document.body.style.cursor = "pointer"; };
+      displayObject.onMouseOut = function() { document.body.style.cursor = "default"; };
 
       displayObject.onPress = theRelativeDragHandler;
     },
 
     //Switches Easel to use a different hit detection algorithm (instead of pixel based)
-    changeHitDetection: function () {
+    changeHitDetection: function() {
       function newTestHit( x, y, displayObject, ctx ) {
         if ( displayObject.image !== undefined ) {
           return x >= 0 && y >= 0 && x <= displayObject.image.width && y <= displayObject.image.height;
@@ -49,7 +49,7 @@ define( ['easel' ], function ( createjs ) {
         }
       }
 
-      createjs.Container.prototype._getObjectsUnderPoint = function ( x, y, arr, mouseEvents ) {
+      createjs.Container.prototype._getObjectsUnderPoint = function( x, y, arr, mouseEvents ) {
         var ctx = createjs.DisplayObject._hitTestContext;
         var canvas = createjs.DisplayObject._hitTestCanvas;
         var mtx = this._matrix;

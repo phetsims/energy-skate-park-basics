@@ -1,14 +1,14 @@
 // Copyright 2002-2013, University of Colorado Boulder
 
-define( ['easel' ], function ( createjs ) {
-  var PieChart = function ( skater, skaterView ) {
+define( ['easel' ], function( createjs ) {
+  var PieChart = function( skater, skaterView ) {
     this.initialize( skater, skaterView );
   };
   var p = PieChart.prototype = new createjs.Container(); // inherit from Container
 
   p.Container_initialize = p.initialize;
 
-  p.initialize = function ( skater, skaterView ) {
+  p.initialize = function( skater, skaterView ) {
     this.Container_initialize();
     this.skater = skater;
     this.skaterView = skaterView;
@@ -18,7 +18,7 @@ define( ['easel' ], function ( createjs ) {
     this.addChild( shape );
   };
 
-  p.tick = function () {
+  p.tick = function() {
     this.x = this.skaterView.x;
 
     var delta = 250;
@@ -39,10 +39,10 @@ define( ['easel' ], function ( createjs ) {
     var antiClockwise = false;
 
     this.shape.graphics.clear().
-        beginFill( 'green' ).moveTo( 0, 0 ).lineTo( pieRadius * Math.cos( keStartAngle ), pieRadius * Math.sin( keStartAngle ) ).arc( 0, 0, pieRadius, keStartAngle, peStartAngle, antiClockwise ).lineTo( 0, 0 ).endFill().
-        beginFill( 'blue' ).moveTo( 0, 0 ).lineTo( pieRadius * Math.cos( peStartAngle ), pieRadius * Math.sin( peStartAngle ) ).arc( 0, 0, pieRadius, peStartAngle, thermalStartAngle, antiClockwise ).lineTo( 0, 0 ).endFill().
-        beginFill( 'red' ).moveTo( 0, 0 ).lineTo( pieRadius * Math.cos( thermalStartAngle ), pieRadius * Math.sin( thermalStartAngle ) ).arc( 0, 0, pieRadius, thermalStartAngle, 2 * Math.PI, antiClockwise ).lineTo( 0, 0 ).endFill().
-        beginStroke( 'black' ).drawCircle( 0, 0, pieRadius ).endStroke();
+      beginFill( 'green' ).moveTo( 0, 0 ).lineTo( pieRadius * Math.cos( keStartAngle ), pieRadius * Math.sin( keStartAngle ) ).arc( 0, 0, pieRadius, keStartAngle, peStartAngle, antiClockwise ).lineTo( 0, 0 ).endFill().
+      beginFill( 'blue' ).moveTo( 0, 0 ).lineTo( pieRadius * Math.cos( peStartAngle ), pieRadius * Math.sin( peStartAngle ) ).arc( 0, 0, pieRadius, peStartAngle, thermalStartAngle, antiClockwise ).lineTo( 0, 0 ).endFill().
+      beginFill( 'red' ).moveTo( 0, 0 ).lineTo( pieRadius * Math.cos( thermalStartAngle ), pieRadius * Math.sin( thermalStartAngle ) ).arc( 0, 0, pieRadius, thermalStartAngle, 2 * Math.PI, antiClockwise ).lineTo( 0, 0 ).endFill().
+      beginStroke( 'black' ).drawCircle( 0, 0, pieRadius ).endStroke();
   };
 
   return PieChart;
