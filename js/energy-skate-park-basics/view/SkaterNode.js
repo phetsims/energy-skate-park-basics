@@ -34,9 +34,6 @@ define( function( require ) {
 //          console.log( event );
           var t = skaterNode.globalToParentPoint( event.pointer.point );
           skaterNode.skater.position = t;
-        },
-        translate: function() {
-          // do nothing, override default behavior
         }
       } ) );
   }
