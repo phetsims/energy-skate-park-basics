@@ -1,9 +1,16 @@
 {
-    "name": "energy-skate-park-basics-jquerymobile",
-    "version": "0.0.0",
-    "license": "BSD",
-    "dependencies": {
-        "grunt": "~0.3.17",
-        "grunt-contrib-requirejs": "~0.3.3"
-    }
+  "name": "energy-skate-park",
+  "version": "0.0.0-1",
+  "resourceDirs": "images",
+  "preload": "lib/jquery.js lib/lodash.js lib/has.js lib/PxLoader.js lib/PxLoaderImage.js ../phetcommon/js/util/query-parameters.js ../phetcommon/js/util/check-assertions.js ../phetcommon/js/analytics/google-analytics.js ../tween.js/src/Tween.js",
+  "phetLibs": "energy-skate-park assert dot joist kite phet-core phetcommon scenery scenery-phet sun axon",
+  "images": [],
+  "license": "GPLv3",
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-requirejs": "~0.3.2",
+    "grunt-contrib-jshint": "~0.5.4",
+    "uglify-js": "~2.4.0",
+    "requirejs": "~2.1.8"
+  }
 }
