@@ -8,10 +8,12 @@ define( function( require ) {
   var inherit = require( 'PHET_CORE/inherit' );
   var Node = require( 'SCENERY/nodes/Node' );
   var Rectangle = require( 'SCENERY/nodes/Rectangle' );
+  var Image = require( 'SCENERY/nodes/Image' );
   var Scene = require( 'SCENERY/Scene' );
   var ScreenView = require( 'JOIST/ScreenView' );
   var Text = require( 'SCENERY/nodes/Text' );
   var SimpleDragHandler = require( 'SCENERY/input/SimpleDragHandler' );
+  var images = require( 'ENERGY_SKATE_PARK/energy-skate-park-basics-images' );
 
   function SkaterNode( model, mvt ) {
 
@@ -19,7 +21,7 @@ define( function( require ) {
     var skaterNode = this;
     ScreenView.call( skaterNode, { renderer: 'svg' } );
 
-    this.addChild( new Rectangle( 0, 0, 100, 100, {fill: 'blue'} ) );
+    this.addChild( new Image( images.getImage( 'skater.png' ), {scale: 0.4} ) );
 
     this.skater.positionProperty.link( function( position ) {
       skaterNode.setTranslation( position );
