@@ -19,7 +19,7 @@ define( function( require ) {
 
     this.skater = model.skater;
     var skaterNode = this;
-    ScreenView.call( skaterNode, { renderer: 'svg' } );
+    Node.call( skaterNode, { renderer: 'svg' } );
 
     this.addChild( new Image( images.getImage( 'skater.png' ), {scale: 0.4} ) );
 
@@ -40,7 +40,5 @@ define( function( require ) {
       } ) );
   }
 
-  inherit( ScreenView, SkaterNode );
-
-  return SkaterNode;
+  return inherit( Node, SkaterNode );
 } );

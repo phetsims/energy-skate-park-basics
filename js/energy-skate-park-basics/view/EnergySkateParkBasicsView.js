@@ -12,6 +12,7 @@ define( function( require ) {
   var ScreenView = require( 'JOIST/ScreenView' );
   var Text = require( 'SCENERY/nodes/Text' );
   var SkaterNode = require( 'ENERGY_SKATE_PARK/energy-skate-park-basics/view/SkaterNode' );
+  var BackgroundNode = require( 'ENERGY_SKATE_PARK/energy-skate-park-basics/view/BackgroundNode' );
 
   function EnergySkateParkBasicsView( model, mvt ) {
 
@@ -19,7 +20,7 @@ define( function( require ) {
     ScreenView.call( thisView, { renderer: 'svg' } );
 
     //The background
-    this.addChild( new Rectangle( 0, 0, this.layoutBounds.width, this.layoutBounds.height, {fill: 'yellow'} ) );
+    this.addChild( new BackgroundNode( model, this ) );
 
     //The skater
     this.addChild( new SkaterNode( model ) );
