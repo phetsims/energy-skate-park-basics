@@ -86,7 +86,11 @@ define( function( require ) {
         if ( skater.t < 0 ) {
           skater.t = 1;
         }
-        skater.position = this.track.getPoint( skater.t );
+        skater.position.set( this.track.getX( skater.t ), this.track.getY( skater.t ) );
+//        skater.position.set( 0 + Math.cos( skater.t ), Math.sin( skater.t ) );
+
+//        skater.position.set( 0 + Math.cos( skater.t ), Math.sin( skater.t ) );
+        skater.positionProperty.notifyObserversUnsafe( skater.position );
       }
     }} );
 } );

@@ -66,6 +66,13 @@ define( function( require ) {
       }
       return {t: bestT, point: bestPt};
     },
+
+    getX: function( t ) {
+      return this.xSpline.at( t );
+    },
+    getY: function( t ) {
+      return this.ySpline.at( t );
+    },
     getPoint: function( t ) {
       var x = this.xSpline.at( t );
       var y = this.ySpline.at( t );
