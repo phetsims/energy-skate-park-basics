@@ -19,42 +19,68 @@ define( function( require ) {
   var Vector2 = require( 'DOT/Vector2' );
 
   function TrackNode( model, modelViewTransform ) {
-
+    var trackNode = this;
     var track = model.track;
     Node.call( this, { renderer: 'svg' } );
+    var roadLayer = new Node();
+    this.addChild( roadLayer );
 
-    var t = [];
-    var x = [];
-    var y = [];
+    var updateTrack = function() {
+      var children = [];
+      var t = [];
+      var x = [];
+      var y = [];
+
+      for ( var i = 0; i < track.length; i++ ) {
+        t.push( i / track.length );
+        x.push( track.get( i ).value.x );
+        y.push( track.get( i ).value.y );
+      }
+
+      var lastPt = (track.length - 1) / track.length;
+      var xPoints = numeric.spline( t, x ).at( numeric.linspace( 0, lastPt, 30 ) );
+      var yPoints = numeric.spline( t, y ).at( numeric.linspace( 0, lastPt, 30 ) );
+
+      for ( i = 0; i < xPoints.length - 1; i++ ) {
+        var line = new Line(
+          modelViewTransform.modelToViewPosition( new Vector2( xPoints[i], yPoints[i] ) ),
+          modelViewTransform.modelToViewPosition( new Vector2( xPoints[i + 1], yPoints[i + 1] ) ), {lineWidth: 10, stroke: 'black'} );
+        children.push( line );
+      }
+      roadLayer.children = children;
+    };
 
     for ( var i = 0; i < track.length; i++ ) {
-      t.push( i / track.length );
-      x.push( track.get( i ).x );
-      y.push( track.get( i ).y );
+      (function() {
+        var property = track.get( i );
+        var controlPoint = new Circle( 14, {opacity: 0.7, stroke: 'black', lineWidth: 2, fill: 'red', cursor: 'pointer', translation: modelViewTransform.modelToViewPosition( property.value )} );
+        property.link( function( value ) {
+          controlPoint.translation = modelViewTransform.modelToViewPosition( value );
+        } );
+        controlPoint.addInputListener( new SimpleDragHandler(
+          {
+            start: function( event ) {
+            },
+            drag: function( event ) {
+              var t = controlPoint.globalToParentPoint( event.pointer.point );
+              var modelX = modelViewTransform.viewToModelX( t.x );
+              var modelY = modelViewTransform.viewToModelY( t.y );
+              property.value = new Vector2( modelX, modelY );
+            },
+            translate: function() {
+
+            },
+            end: function( event ) {
+            }
+          } ) );
+        trackNode.addChild( controlPoint );
+      })();
     }
 
-//    for ( var i = 0; i < track.length - 1; i++ ) {
-//      console.log( modelViewTransform.modelToViewPosition( track.get( i ) ), '-->', modelViewTransform.modelToViewPosition( track.get( i + 1 ) ) );
-//      var line = new Line( modelViewTransform.modelToViewPosition( track.get( i ) ), modelViewTransform.modelToViewPosition( track.get( i + 1 ) ), {lineWidth: 10, stroke: 'gray'} );
-//      this.addChild( line );
-//    }
-
-    var lastPt = (track.length - 1) / track.length;
-    console.log( t );
-    console.log( x );
-    console.log( y );
-    console.log( 'console' );
-    var xPoints = numeric.spline( t, x ).at( numeric.linspace( 0, lastPt, 100 ) );
-    var yPoints = numeric.spline( t, y ).at( numeric.linspace( 0, lastPt, 100 ) );
-
-    console.log( xPoints );
-    console.log( yPoints );
-
-    for ( i = 0; i < xPoints.length - 1; i++ ) {
-      var line = new Line(
-        modelViewTransform.modelToViewPosition( new Vector2( xPoints[i], yPoints[i] ) ),
-        modelViewTransform.modelToViewPosition( new Vector2( xPoints[i + 1], yPoints[i + 1] ) ), {lineWidth: 10, stroke: 'black'} );
-      this.addChild( line );
+    for ( i = 0; i < track.length; i++ ) {
+      track.get( i ).link( function() {
+        updateTrack();
+      } );
     }
   }
 
