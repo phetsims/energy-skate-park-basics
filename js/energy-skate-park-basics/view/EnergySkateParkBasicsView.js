@@ -36,7 +36,7 @@ define( function( require ) {
     this.addChild( new ClosestPointNode( model, transform ) );
   }
 
-  inherit( ScreenView, EnergySkateParkBasicsView, {
+  return inherit( ScreenView, EnergySkateParkBasicsView, {
 
     //TODO: integrate this layout code with ScreenView?  Seems like it could be generally useful
     layout: function( width, height ) {
@@ -63,6 +63,4 @@ define( function( require ) {
       this.backgroundNode.layout( offsetX, offsetY, width, height, scale );
     }
   } );
-
-  return EnergySkateParkBasicsView;
 } );
