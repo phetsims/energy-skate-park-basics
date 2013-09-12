@@ -81,16 +81,16 @@ define( function( require ) {
           }
         }
       }
-      else if ( !skater.dragging && skater.track ) {
+      if ( !skater.dragging && skater.track ) {
         skater.t = skater.t - 0.01;
         if ( skater.t < 0 ) {
-          skater.t = 1;
+          skater.t = 1 * 2 / 3;
         }
         skater.position.set( this.track.getX( skater.t ), this.track.getY( skater.t ) );
+        skater.positionProperty.notifyObserversUnsafe( skater.position );
 //        skater.position.set( 0 + Math.cos( skater.t ), Math.sin( skater.t ) );
 
 //        skater.position.set( 0 + Math.cos( skater.t ), Math.sin( skater.t ) );
-        skater.positionProperty.notifyObserversUnsafe( skater.position );
       }
     }} );
 } );
