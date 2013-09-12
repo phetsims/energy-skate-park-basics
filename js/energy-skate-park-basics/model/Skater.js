@@ -25,7 +25,9 @@ define( function( require ) {
       if ( proposedPosition.y < 0 ) {
         proposedPosition.y = 0;
       }
-      this.position = proposedPosition;
+      if ( this.position.x !== proposedPosition.x || this.position.y !== proposedPosition.y ) {
+        this.position = proposedPosition;
+      }
     }
   }} );
 } );

@@ -11,6 +11,7 @@ define( function( require ) {
   var ScreenView = require( 'JOIST/ScreenView' );
   var Text = require( 'SCENERY/nodes/Text' );
   var SkaterNode = require( 'ENERGY_SKATE_PARK/energy-skate-park-basics/view/SkaterNode' );
+  var ClosestPointNode = require( 'ENERGY_SKATE_PARK/energy-skate-park-basics/view/ClosestPointNode' );
   var TrackNode = require( 'ENERGY_SKATE_PARK/energy-skate-park-basics/view/TrackNode' );
   var BackgroundNode = require( 'ENERGY_SKATE_PARK/energy-skate-park-basics/view/BackgroundNode' );
   var ModelViewTransform2 = require( 'PHETCOMMON/view/ModelViewTransform2' );
@@ -32,9 +33,7 @@ define( function( require ) {
     var transform = ModelViewTransform2.createSinglePointScaleInvertedYMapping( modelPoint, viewPoint, scale );
     this.addChild( new TrackNode( model, transform ) );
     this.addChild( new SkaterNode( model, transform ) );
-
-    //The skater
-//    this.addChild( new SkaterNode( model ) );
+    this.addChild( new ClosestPointNode( model, transform ) );
   }
 
   inherit( ScreenView, EnergySkateParkBasicsView, {
