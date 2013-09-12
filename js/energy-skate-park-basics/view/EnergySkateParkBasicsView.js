@@ -25,8 +25,11 @@ define( function( require ) {
     this.backgroundNode = new BackgroundNode( model, this );
     this.addChild( this.backgroundNode );
 
+    this.skaterLayer = new Node( {children: [new SkaterNode( model )]} );
+    this.addChild( this.skaterLayer );
+
     //The skater
-    this.addChild( new SkaterNode( model ) );
+//    this.addChild( new SkaterNode( model ) );
   }
 
   inherit( ScreenView, EnergySkateParkBasicsView, {
@@ -36,7 +39,7 @@ define( function( require ) {
       //convert the view bounds (0,0,width,height) to model bounds.
 
       //Model bounds should have same aspect ratio as layoutBounds (like iPad ratio), should have sx === sy so it doesn't stretch out
-      //nominal bounds: 768 x 504                                                                                                                                        xk
+      //nominal bounds: 768 x 504
 
       //extend the model
       var modelWidth = 7.68;//meters
@@ -46,9 +49,11 @@ define( function( require ) {
 //      var viewBounds = new Bounds2( 0, 0, 768, 504 );
 //      var scale = layoutScale * 6;
 //      console.log( scale );
-      var mapping = ModelViewTransform2.createSinglePointScaleInvertedYMapping( new Vector2( 0, -2 ), new Vector2( width / 2, height ), layoutScale * 40 );
+      var mapping = ModelViewTransform2.createSinglePointScaleInvertedYMapping( new Vector2( 0, -2 ), new Vector2( width / 2, height ), layoutScale * 100 );
 //      var visibleBounds = mapping.viewToModelX( 0 );
       this.backgroundNode.setMatrix( mapping.getMatrix() );
+
+      this.skaterLayer.setMatrix( mapping.getMatrix() );
 
       //Find the visible model coordinates so that background can be fitted exactly.
       //Note that y is inverted so model max y is view min y
