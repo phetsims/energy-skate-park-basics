@@ -19,6 +19,8 @@ define( function( require ) {
     //TODO: recompute linSpace if length of track changes
     var lastPt = (this.length - 1) / this.length;
     this.linSpace = numeric.linspace( 0, lastPt, 70 );
+
+    //TODO: when points change, update the spline instance
   }
 
   return inherit( ObservableArray, Track, {
@@ -39,17 +41,24 @@ define( function( require ) {
       var xPoints = numeric.spline( this.t, this.x ).at( this.linSpace ); //TODO: number of samples could depend on the total length of the track
       var yPoints = numeric.spline( this.t, this.y ).at( this.linSpace );
 
+      var bestT = 0;
       var best = 9999999999;
       var bestPt = new Vector2( 0, 0 );
       for ( i = 0; i < xPoints.length; i++ ) {
         var dist = point.distanceXY( xPoints[i], yPoints[i] );
         if ( dist < best ) {
           best = dist;
+          bestT = this.linSpace[i];
           bestPt.x = xPoints[i];
           bestPt.y = yPoints[i];
         }
       }
-      return bestPt;
+      return {t: bestT, point: bestPt};
+    },
+    getPoint: function( t ) {
+      var x = numeric.spline( this.t, this.x ).at( t );
+      var y = numeric.spline( this.t, this.y ).at( t );
+      return new Vector2( x, y );
     }
   } );
 } );
