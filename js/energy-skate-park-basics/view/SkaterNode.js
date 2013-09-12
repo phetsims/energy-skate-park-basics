@@ -8,21 +8,32 @@ define( function( require ) {
   var inherit = require( 'PHET_CORE/inherit' );
   var Node = require( 'SCENERY/nodes/Node' );
   var Rectangle = require( 'SCENERY/nodes/Rectangle' );
+  var Circle = require( 'SCENERY/nodes/Circle' );
   var Image = require( 'SCENERY/nodes/Image' );
   var Scene = require( 'SCENERY/Scene' );
   var ScreenView = require( 'JOIST/ScreenView' );
   var Text = require( 'SCENERY/nodes/Text' );
   var SimpleDragHandler = require( 'SCENERY/input/SimpleDragHandler' );
   var images = require( 'ENERGY_SKATE_PARK/energy-skate-park-basics-images' );
+  var Vector2 = require( 'DOT/Vector2' );
 
-  function SkaterNode( model ) {
+  function SkaterNode( model, modelViewTransform ) {
 
     this.skater = model.skater;
     var skaterNode = this;
-    Image.call( skaterNode, images.getImage( 'skater.png' ), { scale: 0.4, renderer: 'svg' } );
+    var scale = 0.4;
+    Image.call( skaterNode, images.getImage( 'skater.png' ), { scale: scale, renderer: 'svg' } );
+    var imageWidth = this.width;
+    var imageHeight = this.height;
+
+    //Show a red dot in the bottom center as the important particle model coordinate
+    this.addChild( new Circle( 4, {fill: 'red', x: imageWidth / scale / 2, y: imageHeight / scale } ) );
 
     this.skater.positionProperty.link( function( position ) {
-      skaterNode.setTranslation( position );
+      var viewX = modelViewTransform.modelToViewX( position.x );
+      var viewY = modelViewTransform.modelToViewY( position.y );
+
+      skaterNode.setTranslation( viewX - imageWidth / 2, viewY - imageHeight );
     } );
     this.addInputListener( new SimpleDragHandler(
       {
@@ -32,7 +43,9 @@ define( function( require ) {
         drag: function( event ) {
 //          console.log( event );
           var t = skaterNode.globalToParentPoint( event.pointer.point );
-          skaterNode.skater.position = t;
+          var modelX = modelViewTransform.viewToModelX( t.x );
+          var modelY = modelViewTransform.viewToModelY( t.y );
+          skaterNode.skater.position = new Vector2( modelX, modelY );
         }
       } ) );
   }

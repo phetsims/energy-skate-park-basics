@@ -25,7 +25,11 @@ define( function( require ) {
     this.backgroundNode = new BackgroundNode( model, this );
     this.addChild( this.backgroundNode );
 
-    this.addChild( new SkaterNode( model ) );
+    var modelPoint = new Vector2( 0, 0 );
+    var viewPoint = new Vector2( this.layoutBounds.width / 2, this.layoutBounds.height - 100 );//grass is 100px high in stage coordinates
+    var scale = 100;
+    var transform = ModelViewTransform2.createSinglePointScaleInvertedYMapping( modelPoint, viewPoint, scale );
+    this.addChild( new SkaterNode( model, transform ) );
 
     //The skater
 //    this.addChild( new SkaterNode( model ) );
