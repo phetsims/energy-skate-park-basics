@@ -25,12 +25,15 @@ define( function( require ) {
       var controlPoint = controlPoints[i];
       controlPoint.link( updateClosestPoint );
     }
+
+    this.bounces = 0;
   }
 
   return inherit( PropertySet, EnergySkateParkBasicsModel, {
     step: function( dt ) {
       var skater = this.skater;
-      if ( !skater.dragging ) {
+      if ( !skater.dragging && !skater.track ) {
+
         var netForce = new Vector2( 0, -9.8 * skater.mass );
         skater.acceleration = netForce.times( 1.0 / skater.mass );
         skater.velocity = skater.velocity.plus( skater.acceleration.times( dt ) );
@@ -63,12 +66,27 @@ define( function( require ) {
             //http://www.gamedev.net/topic/165537-2d-vector-reflection-/
             var newVelocity = skater.velocity.minus( normal.times( 2 * normal.dot( skater.velocity ) ) );
 
-            skater.velocity = newVelocity;
+            if ( this.bounces < 2 ) {
+              skater.velocity = newVelocity;
+              this.bounces++;
+            }
+            else {
+              //attach to track
+              skater.track = this.track;
+              skater.t = t;
+            }
           }
           else {
             skater.position = proposedPosition;
           }
         }
+      }
+      else if ( !skater.dragging && skater.track ) {
+        skater.t = skater.t - 0.01;
+        if ( skater.t < 0 ) {
+          skater.t = 1;
+        }
+        skater.position = this.track.getPoint( skater.t );
       }
     }} );
 } );

@@ -10,6 +10,7 @@ define( function( require ) {
 
   //points is Array of Property of Vector2
   function Track( points ) {
+    var track = this;
     ObservableArray.call( this, points );
     this.t = [];
     this.x = [];
@@ -21,22 +22,32 @@ define( function( require ) {
     this.linSpace = numeric.linspace( 0, lastPt, 70 );
 
     //TODO: when points change, update the spline instance
+
+    var updateSplines = function( pt ) {
+      //clear arrays, reusing them to save on garbage
+      track.t.length = 0;
+      track.x.length = 0;
+      track.y.length = 0;
+
+      for ( var i = 0; i < track.length; i++ ) {
+        track.t.push( i / track.length );
+        track.x.push( track.get( i ).value.x );
+        track.y.push( track.get( i ).value.y );
+      }
+
+      track.xSpline = numeric.spline( track.t, track.x );
+      track.ySpline = numeric.spline( track.t, track.y );
+    };
+
+    for ( var i = 0; i < points.length; i++ ) {
+      var point = points[i];
+      point.link( updateSplines );
+    }
   }
 
   return inherit( ObservableArray, Track, {
     getClosestPoint: function( point ) {
       var track = this;
-
-      //clear arrays, reusing them to save on garbage
-      this.t.length = 0;
-      this.x.length = 0;
-      this.y.length = 0;
-
-      for ( var i = 0; i < track.length; i++ ) {
-        this.t.push( i / track.length );
-        this.x.push( track.get( i ).value.x );
-        this.y.push( track.get( i ).value.y );
-      }
 
       var xPoints = numeric.spline( this.t, this.x ).at( this.linSpace ); //TODO: number of samples could depend on the total length of the track
       var yPoints = numeric.spline( this.t, this.y ).at( this.linSpace );
@@ -44,7 +55,7 @@ define( function( require ) {
       var bestT = 0;
       var best = 9999999999;
       var bestPt = new Vector2( 0, 0 );
-      for ( i = 0; i < xPoints.length; i++ ) {
+      for ( var i = 0; i < xPoints.length; i++ ) {
         var dist = point.distanceXY( xPoints[i], yPoints[i] );
         if ( dist < best ) {
           best = dist;
@@ -56,8 +67,8 @@ define( function( require ) {
       return {t: bestT, point: bestPt};
     },
     getPoint: function( t ) {
-      var x = numeric.spline( this.t, this.x ).at( t );
-      var y = numeric.spline( this.t, this.y ).at( t );
+      var x = this.xSpline.at( t );
+      var y = this.ySpline.at( t );
       return new Vector2( x, y );
     }
   } );

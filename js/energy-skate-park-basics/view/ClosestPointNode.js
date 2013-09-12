@@ -28,6 +28,9 @@ define( function( require ) {
     model.closestPointProperty.link( function( closestPoint ) {
       circle.translation = modelViewTransform.modelToViewPosition( closestPoint );
     } );
+    model.skater.trackProperty.link( function( track ) {
+      circle.fill = track ? 'green' : 'blue';
+    } );
   }
 
   return inherit( Node, ClosestPointNode );
