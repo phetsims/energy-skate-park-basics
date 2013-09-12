@@ -25,45 +25,37 @@ define( function( require ) {
     this.backgroundNode = new BackgroundNode( model, this );
     this.addChild( this.backgroundNode );
 
-    this.skaterLayer = new Node( {children: [new SkaterNode( model )]} );
-    this.addChild( this.skaterLayer );
+    this.addChild( new SkaterNode( model ) );
 
     //The skater
 //    this.addChild( new SkaterNode( model ) );
   }
 
   inherit( ScreenView, EnergySkateParkBasicsView, {
+
+    //TODO: integrate this layout code with ScreenView?  Seems like it could be generally useful
     layout: function( width, height ) {
 
-      var layoutScale = this.getLayoutScale( width, height );
-      //convert the view bounds (0,0,width,height) to model bounds.
+      this.resetTransform();
 
-      //Model bounds should have same aspect ratio as layoutBounds (like iPad ratio), should have sx === sy so it doesn't stretch out
-      //nominal bounds: 768 x 504
+      var scale = this.getLayoutScale( width, height );
+      this.setScaleMagnitude( scale );
 
-      //extend the model
-      var modelWidth = 7.68;//meters
-      var modelHeight = 5.04;//meters TODO: choose this to keep a uniform aspect ratio and make sure everything fits on the screen
-//      var groundHeight = 2;
-//      var modelBounds = new Bounds2( -modelWidth / 2, 0, modelWidth / 2, modelHeight );
-//      var viewBounds = new Bounds2( 0, 0, 768, 504 );
-//      var scale = layoutScale * 6;
-//      console.log( scale );
-      var mapping = ModelViewTransform2.createSinglePointScaleInvertedYMapping( new Vector2( 0, -2 ), new Vector2( width / 2, height ), layoutScale * 100 );
-//      var visibleBounds = mapping.viewToModelX( 0 );
-      this.backgroundNode.setMatrix( mapping.getMatrix() );
+      var offsetX = 0;
+      var offsetY = 0;
 
-      this.skaterLayer.setMatrix( mapping.getMatrix() );
+      //Move to bottom vertically
+      if ( scale === width / this.layoutBounds.width ) {
+        offsetY = (height / scale - this.layoutBounds.height);
+      }
 
-      //Find the visible model coordinates so that background can be fitted exactly.
-      //Note that y is inverted so model max y is view min y
-      var modelMinX = mapping.viewToModelX( 0 );
-      var modelMinY = mapping.viewToModelY( height );
-      var modelMaxX = mapping.viewToModelX( width );
-      var modelMaxY = mapping.viewToModelY( 0 );
+      //center horizontally
+      else if ( scale === height / this.layoutBounds.height ) {
+        offsetX = (width - this.layoutBounds.width * scale) / 2 / scale;
+      }
+      this.translate( offsetX, offsetY );
 
-      var visibleModelBounds = new Bounds2( modelMinX, modelMinY, modelMaxX, modelMaxY );
-      this.backgroundNode.setVisibleModelBounds( visibleModelBounds );
+      this.backgroundNode.layout( offsetX, offsetY, width, height, scale );
     }
   } );
 

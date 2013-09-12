@@ -21,17 +21,19 @@ define( function( require ) {
     Node.call( this, { renderer: 'svg' } );
 
     //Wait for bounds to fill in the grass
-    this.earth = new Rectangle( 0, 0, 0, 0, {fill: '#64aa64'} );
+    this.earth = new Rectangle( 0, 0, 100, 100, {fill: '#64aa64'} );
     this.addChild( this.earth );
 
-    this.grass = new Line( 0, 0, 0, 0, {stroke: '#03862c', lineWidth: 0.06} );
+    this.grass = new Line( 0, 0, 0, 0, {stroke: '#03862c', lineWidth: 3} );
     this.addChild( this.grass );
   }
 
   return inherit( Node, BackgroundNode, {
-    setVisibleModelBounds: function( bounds ) {
-      this.earth.setRect( bounds.minX, bounds.minY, bounds.width, 1 );
-      this.grass.setLine( bounds.minX, bounds.minY + 1, bounds.maxX, bounds.minY + 1 );
+
+    //Exactly fit the geometry to the screen so no matter what aspect ratio it will always show something.  Perhaps it will improve performance too?
+    layout: function( offsetX, offsetY, width, height, layoutScale ) {
+      this.earth.setRect( -offsetX, 504 - 100, width / layoutScale, 100 );
+      this.grass.setLine( -offsetX, 504 - 100, -offsetX + width / layoutScale, 504 - 100 );
     }
   } );
 } );
