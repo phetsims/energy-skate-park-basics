@@ -11,6 +11,7 @@ define( function( require ) {
   var ScreenView = require( 'JOIST/ScreenView' );
   var Text = require( 'SCENERY/nodes/Text' );
   var SkaterNode = require( 'ENERGY_SKATE_PARK/energy-skate-park-basics/view/SkaterNode' );
+  var TrackNode = require( 'ENERGY_SKATE_PARK/energy-skate-park-basics/view/TrackNode' );
   var BackgroundNode = require( 'ENERGY_SKATE_PARK/energy-skate-park-basics/view/BackgroundNode' );
   var ModelViewTransform2 = require( 'PHETCOMMON/view/ModelViewTransform2' );
   var Bounds2 = require( 'DOT/Bounds2' );
@@ -29,6 +30,7 @@ define( function( require ) {
     var viewPoint = new Vector2( this.layoutBounds.width / 2, this.layoutBounds.height - 100 );//grass is 100px high in stage coordinates
     var scale = 100;
     var transform = ModelViewTransform2.createSinglePointScaleInvertedYMapping( modelPoint, viewPoint, scale );
+    this.addChild( new TrackNode( model, transform ) );
     this.addChild( new SkaterNode( model, transform ) );
 
     //The skater
