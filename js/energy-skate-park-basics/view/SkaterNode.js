@@ -22,7 +22,7 @@ define( function( require ) {
     this.skater = model.skater;
     var skaterNode = this;
     var scale = 0.4;
-    Image.call( skaterNode, images.getImage( 'skater.png' ), { scale: scale, renderer: 'svg' } );
+    Image.call( skaterNode, images.getImage( 'skater.png' ), { scale: scale, renderer: 'svg', rendererOptions: {cssTransform: true}} );
     var imageWidth = this.width;
     var imageHeight = this.height;
 

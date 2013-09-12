@@ -8,6 +8,7 @@ define( function( require ) {
   var inherit = require( 'PHET_CORE/inherit' );
   var Node = require( 'SCENERY/nodes/Node' );
   var Rectangle = require( 'SCENERY/nodes/Rectangle' );
+  var Path = require( 'SCENERY/nodes/Path' );
   var Line = require( 'SCENERY/nodes/Line' );
   var Circle = require( 'SCENERY/nodes/Circle' );
   var Image = require( 'SCENERY/nodes/Image' );
@@ -17,6 +18,7 @@ define( function( require ) {
   var SimpleDragHandler = require( 'SCENERY/input/SimpleDragHandler' );
   var images = require( 'ENERGY_SKATE_PARK/energy-skate-park-basics-images' );
   var Vector2 = require( 'DOT/Vector2' );
+  var Shape = require( 'KITE/Shape' );
 
   function TrackNode( model, modelViewTransform ) {
     var trackNode = this;
@@ -38,16 +40,15 @@ define( function( require ) {
       }
 
       var lastPt = (track.length - 1) / track.length;
-      var xPoints = numeric.spline( t, x ).at( numeric.linspace( 0, lastPt, 30 ) );
-      var yPoints = numeric.spline( t, y ).at( numeric.linspace( 0, lastPt, 30 ) );
+      var xPoints = numeric.spline( t, x ).at( numeric.linspace( 0, lastPt, 25 ) ); //TODO: number of samples could depend on the total length of the track
+      var yPoints = numeric.spline( t, y ).at( numeric.linspace( 0, lastPt, 25 ) );
 
-      for ( i = 0; i < xPoints.length - 1; i++ ) {
-        var line = new Line(
-          modelViewTransform.modelToViewPosition( new Vector2( xPoints[i], yPoints[i] ) ),
-          modelViewTransform.modelToViewPosition( new Vector2( xPoints[i + 1], yPoints[i + 1] ) ), {lineWidth: 10, stroke: 'black'} );
-        children.push( line );
+      var shape = new Shape().
+        moveTo( modelViewTransform.modelToViewX( xPoints[0] ), modelViewTransform.modelToViewY( yPoints[0] ) );
+      for ( i = 1; i < xPoints.length; i++ ) {
+        shape.lineTo( modelViewTransform.modelToViewX( xPoints[i] ), modelViewTransform.modelToViewY( yPoints[i] ) );
       }
-      roadLayer.children = children;
+      roadLayer.children = [new Path( shape, {lineWidth: 10, stroke: 'black'} )];
     };
 
     for ( var i = 0; i < track.length; i++ ) {
