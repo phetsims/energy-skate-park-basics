@@ -43,6 +43,8 @@ define( function( require ) {
           //see if it crossed the track
 
           //TODO: return t value so they can be averaged
+
+          //TODO: extend t range just outside the track in each direction to see if the skater just "missed" the track
           var t = this.track.getClosestPoint( this.skater.position ).t;
           var t1 = t - 1E-6;
           var t2 = t + 1E-6;
@@ -50,14 +52,18 @@ define( function( require ) {
           var pt1 = this.track.getPoint( t1 );
           var pt2 = this.track.getPoint( t2 );
           var segment = pt2.minus( pt1 );
-          var normal = segment.rotated( Math.PI / 2 );
+          var normal = segment.rotated( Math.PI / 2 ).normalized();
 
           var beforeSign = normal.dot( skater.position.minus( pt ) ) > 0;
           var afterSign = normal.dot( proposedPosition.minus( pt ) ) > 0;
-          console.log( normal.dot( skater.position ), normal.dot( proposedPosition ), beforeSign, afterSign );
+//          console.log( normal.dot( skater.position ), normal.dot( proposedPosition ), beforeSign, afterSign );
           if ( beforeSign !== afterSign ) {
             //reflect the velocity vector
-            skater.velocity = skater.velocity.times( -1 );
+
+            //http://www.gamedev.net/topic/165537-2d-vector-reflection-/
+            var newVelocity = skater.velocity.minus( normal.times( 2 * normal.dot( skater.velocity ) ) );
+
+            skater.velocity = newVelocity;
           }
           else {
             skater.position = proposedPosition;
