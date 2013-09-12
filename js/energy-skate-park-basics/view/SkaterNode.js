@@ -39,6 +39,7 @@ define( function( require ) {
       {
         start: function( event ) {
 //          handleEvent( event );
+          skaterNode.skater.dragging = true;
         },
         drag: function( event ) {
 //          console.log( event );
@@ -46,6 +47,9 @@ define( function( require ) {
           var modelX = modelViewTransform.viewToModelX( t.x );
           var modelY = modelViewTransform.viewToModelY( t.y );
           skaterNode.skater.position = new Vector2( modelX, modelY );
+        },
+        end: function( event ) {
+          skaterNode.skater.dragging = false;
         }
       } ) );
   }

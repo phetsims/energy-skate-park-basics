@@ -14,5 +14,7 @@ define( function( require ) {
     this.track = new Track( [ new Vector2( -2, 2 ), new Vector2( 0, 0 ), new Vector2( 2, 2 ) ] );
   }
 
-  return inherit( PropertySet, EnergySkateParkBasicsModel, {step: function( dt ) {}} );
+  return inherit( PropertySet, EnergySkateParkBasicsModel, {step: function( dt ) {
+    this.skater.step( dt );
+  }} );
 } );
