@@ -15,27 +15,14 @@ define( function( require ) {
   var SimpleDragHandler = require( 'SCENERY/input/SimpleDragHandler' );
   var images = require( 'ENERGY_SKATE_PARK/energy-skate-park-basics-images' );
 
-  function SkaterNode( model, mvt ) {
+  function SkaterNode( model ) {
 
     this.skater = model.skater;
     var skaterNode = this;
-    Node.call( skaterNode, { renderer: 'svg' } );
-
-    var skaterImage = new Image( images.getImage( 'skater.png' ) );
-    skaterImage.scale( 1, -1 );
-    skaterImage.translate( 0, -1 );
-    var imageHeight = skaterImage.height;
-    var modelHeight = 1;
-    var sm = modelHeight / imageHeight;
-    skaterImage.setScaleMagnitude( sm );
-    console.log( sm );
-//    this.addChild( new Rectangle( 0, 0, 1, 1, {fill: 'red'} ) );
-    this.addChild( skaterImage );
+    Image.call( skaterNode, images.getImage( 'skater.png' ), { scale: 0.4, renderer: 'svg' } );
 
     this.skater.positionProperty.link( function( position ) {
       skaterNode.setTranslation( position );
-//      console.log( 'hello', position );
-//      console.log( skaterImage.globalBounds );
     } );
     this.addInputListener( new SimpleDragHandler(
       {
@@ -50,5 +37,5 @@ define( function( require ) {
       } ) );
   }
 
-  return inherit( Node, SkaterNode );
+  return inherit( Image, SkaterNode );
 } );
