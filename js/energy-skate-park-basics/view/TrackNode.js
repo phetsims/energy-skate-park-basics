@@ -24,14 +24,25 @@ define( function( require ) {
     var trackNode = this;
     var track = model.track;
     Node.call( this, { renderer: 'svg' } );
-    var roadLayer = new Node();
-    this.addChild( roadLayer );
+    var road = new Path( null, {lineWidth: 10, stroke: 'black'} );
+    this.addChild( road );
+
+    //Reuse arrays to save gc
+    var t = [];
+    var x = [];
+    var y = [];
+
+    //Store for performance
+    //TODO: recompute linSpace if length of track changes
+    var lastPt = (track.length - 1) / track.length;
+    var linSpace = numeric.linspace( 0, lastPt, 25 );
 
     var updateTrack = function() {
-      var children = [];
-      var t = [];
-      var x = [];
-      var y = [];
+
+      //clear arrays, reusing them to save on garbage
+      t.length = 0;
+      x.length = 0;
+      y.length = 0;
 
       for ( var i = 0; i < track.length; i++ ) {
         t.push( i / track.length );
@@ -39,16 +50,16 @@ define( function( require ) {
         y.push( track.get( i ).value.y );
       }
 
-      var lastPt = (track.length - 1) / track.length;
-      var xPoints = numeric.spline( t, x ).at( numeric.linspace( 0, lastPt, 25 ) ); //TODO: number of samples could depend on the total length of the track
-      var yPoints = numeric.spline( t, y ).at( numeric.linspace( 0, lastPt, 25 ) );
+      var xPoints = numeric.spline( t, x ).at( linSpace ); //TODO: number of samples could depend on the total length of the track
+      var yPoints = numeric.spline( t, y ).at( linSpace );
 
       var shape = new Shape().
         moveTo( modelViewTransform.modelToViewX( xPoints[0] ), modelViewTransform.modelToViewY( yPoints[0] ) );
       for ( i = 1; i < xPoints.length; i++ ) {
         shape.lineTo( modelViewTransform.modelToViewX( xPoints[i] ), modelViewTransform.modelToViewY( yPoints[i] ) );
       }
-      roadLayer.children = [new Path( shape, {lineWidth: 10, stroke: 'black'} )];
+
+      road.shape = shape;
     };
 
     for ( var i = 0; i < track.length; i++ ) {
@@ -78,6 +89,7 @@ define( function( require ) {
       })();
     }
 
+    //If any control point dragged, update the track
     for ( i = 0; i < track.length; i++ ) {
       track.get( i ).link( function() {
         updateTrack();
