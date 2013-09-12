@@ -16,18 +16,5 @@ define( function( require ) {
     } );
   }
 
-  return inherit( PropertySet, Skater, {step: function( dt ) {
-    if ( !this.dragging ) {
-      var netForce = new Vector2( 0, -9.8 * this.mass );
-      this.acceleration = netForce.times( 1.0 / this.mass );
-      this.velocity = this.velocity.plus( this.acceleration.times( dt ) );
-      var proposedPosition = this.position.plus( this.velocity.times( dt ) );
-      if ( proposedPosition.y < 0 ) {
-        proposedPosition.y = 0;
-      }
-      if ( this.position.x !== proposedPosition.x || this.position.y !== proposedPosition.y ) {
-        this.position = proposedPosition;
-      }
-    }
-  }} );
+  return inherit( PropertySet, Skater );
 } );

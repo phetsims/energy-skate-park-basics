@@ -27,7 +27,20 @@ define( function( require ) {
     }
   }
 
-  return inherit( PropertySet, EnergySkateParkBasicsModel, {step: function( dt ) {
-    this.skater.step( dt );
-  }} );
+  return inherit( PropertySet, EnergySkateParkBasicsModel, {
+    step: function( dt ) {
+      var skater = this.skater;
+      if ( !skater.dragging ) {
+        var netForce = new Vector2( 0, -9.8 * skater.mass );
+        skater.acceleration = netForce.times( 1.0 / skater.mass );
+        skater.velocity = skater.velocity.plus( skater.acceleration.times( dt ) );
+        var proposedPosition = skater.position.plus( skater.velocity.times( dt ) );
+        if ( proposedPosition.y < 0 ) {
+          proposedPosition.y = 0;
+        }
+        if ( skater.position.x !== proposedPosition.x || skater.position.y !== proposedPosition.y ) {
+          skater.position = proposedPosition;
+        }
+      }
+    }} );
 } );
