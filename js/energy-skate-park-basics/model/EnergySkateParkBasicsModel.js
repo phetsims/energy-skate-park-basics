@@ -89,7 +89,7 @@ define( function( require ) {
             else {
               //attach to track
               skater.track = this.track;
-              skater.t = t;
+              skater.u = t;
             }
           }
 
