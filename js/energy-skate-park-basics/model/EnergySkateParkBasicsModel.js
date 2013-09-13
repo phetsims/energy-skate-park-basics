@@ -158,16 +158,30 @@ define( function( require ) {
         skater.position = new Vector2( this.track.getX( u2 ), this.track.getY( u2 ) );
 
         console.log( 'START\n' );
+        console.log( (finalEnergy - initialEnergy).toFixed( 2 ), initialEnergy, finalEnergy );
         while ( finalEnergy < initialEnergy ) {
-          uD2 = uD2 * 1.01;
-          finalEnergy = this.track.getEnergy( u2, uD2, skater.mass, skater.gravity );
+          console.log( 'increasing' );
+          uD2 = uD2 * 1.001;
+          var newFinalEnergy = this.track.getEnergy( u2, uD2, skater.mass, skater.gravity );
           console.log( (finalEnergy - initialEnergy).toFixed( 2 ), initialEnergy, finalEnergy );
+          if ( newFinalEnergy <= finalEnergy ) {
+            finalEnergy = newFinalEnergy;
+            break;
+          }
+          finalEnergy = newFinalEnergy;
         }
         while ( finalEnergy > initialEnergy ) {
-          uD2 = uD2 * 0.99;
-          finalEnergy = this.track.getEnergy( u2, uD2, skater.mass, skater.gravity );
+          console.log( 'decreasing' );
+          uD2 = uD2 * 0.999;
+          var newFinalEnergy = this.track.getEnergy( u2, uD2, skater.mass, skater.gravity );
           console.log( (finalEnergy - initialEnergy).toFixed( 2 ), initialEnergy, finalEnergy );
+          if ( newFinalEnergy >= finalEnergy ) {
+            finalEnergy = newFinalEnergy;
+            break;
+          }
+          finalEnergy = newFinalEnergy;
         }
+        console.log( (finalEnergy - initialEnergy).toFixed( 2 ), initialEnergy, finalEnergy );
         console.log( 'END\n' );
         skater.uD = uD2;
         skater.u = u2;
