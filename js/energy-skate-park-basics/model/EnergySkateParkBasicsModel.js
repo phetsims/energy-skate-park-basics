@@ -76,21 +76,9 @@ define( function( require ) {
 //          console.log( normal.dot( skater.position ), normal.dot( proposedPosition ), beforeSign, afterSign );
           if ( beforeSign !== afterSign ) {
             //reflect the velocity vector
-
             //http://www.gamedev.net/topic/165537-2d-vector-reflection-/
-//            console.log( 'minus', skater.velocity.minus );
-//            console.log( 'times', normal.times );
-//            console.log( 'dot', normal.dot );
-
-//            if ( !skater.velocity.minus ) {
-//              console.log( 'NO MINUS' );
-//              console.log( skater.velocity );
-//              console.log( '/NO MINUS' );
-//            }
             var allok = skater.velocity && skater.velocity.minus && normal.times && normal.dot;
-            if ( !allok ) {
-              alert( 'allok === false' );
-            }
+            if ( !allok ) { alert( 'allok === false' ); }
             var newVelocity = allok ? skater.velocity.minus( normal.times( 2 * normal.dot( skater.velocity ) ) ) :
                               new Vector2( 0, 1 );
 
