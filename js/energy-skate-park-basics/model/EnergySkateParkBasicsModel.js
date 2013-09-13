@@ -30,6 +30,11 @@ define( function( require ) {
   }
 
   return inherit( PropertySet, EnergySkateParkBasicsModel, {
+
+    //See http://digitalcommons.calpoly.edu/cgi/viewcontent.cgi?article=1387&context=phy_fac
+    uDD: function( uD, xP, xPP, yP, yPP, g ) {
+      return -1 * (uD * uD * (xP * xPP + yP * yPP) - g * yP) / (xP * xP + yP * yP);
+    },
     step: function( dt ) {
       var skater = this.skater;
       if ( !skater.dragging && !skater.track ) {
@@ -96,15 +101,29 @@ define( function( require ) {
         }
       }
       if ( !skater.dragging && skater.track ) {
-        skater.t = skater.t - 0.01;
-        if ( skater.t < 0 ) {
-          skater.t = 1 * 2 / 3;
-        }
-        skater.position.set( this.track.getX( skater.t ), this.track.getY( skater.t ) );
-        skater.positionProperty.notifyObserversUnsafe();
-//        skater.position.set( 0 + Math.cos( skater.t ), Math.sin( skater.t ) );
 
-//        skater.position.set( 0 + Math.cos( skater.t ), Math.sin( skater.t ) );
+        var u = skater.u;
+        var uD = skater.uD;
+
+        //TODO: Store these diffs when traversing the track to improve performance
+        var xP = this.track.xSpline.diff().at( u );
+        var yP = this.track.ySpline.diff().at( u );
+        var xPP = this.track.xSpline.diff().diff().at( u );
+        var yPP = this.track.ySpline.diff().diff().at( u );
+        var g = -9.8;
+        var uDD1 = this.uDD( uD, xP, xPP, yP, yPP, g );
+
+        var uD2 = uD + uDD1 * dt;
+        var u2 = u + uD * dt;
+
+        skater.uD = uD2;
+        skater.u = u2;
+
+        //TODO: Fine tune based on energy conservation
+
+        //TODO: use a more accurate numerical integration scheme.  Currently forward Euler
+        skater.position.set( this.track.getX( u2 ), this.track.getY( u2 ) );
+        skater.positionProperty.notifyObserversUnsafe();
       }
     }} );
 } );
