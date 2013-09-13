@@ -17,7 +17,8 @@ define( function( require ) {
       pieChartVisible: false,
       barGraphVisible: true,
       gridVisible: false,
-      speedVisible: false
+      speedVisible: false,
+      paused: false
     } );
     this.skater = new Skater();
     var controlPoints = [ new Property( new Vector2( -2, 2 ) ), new Property( new Vector2( 0, 0 ) ), new Property( new Vector2( 2, 2 ) ) ];
@@ -41,7 +42,16 @@ define( function( require ) {
     uDD: function( uD, xP, xPP, yP, yPP, g ) {
       return -1 * (uD * uD * (xP * xPP + yP * yPP) - g * yP) / (xP * xP + yP * yP);
     },
+    manualStep: function() {
+      //step one frame, assuming 60fps
+      this.stepModel( 1.0 / 60 );
+    },
     step: function( dt ) {
+      if ( !this.paused ) {
+        this.stepModel( dt );
+      }
+    },
+    stepModel: function( dt ) {
       var skater = this.skater;
       var initialEnergy = skater.totalEnergy;
 
@@ -126,16 +136,12 @@ define( function( require ) {
         var uD2 = uD + uDD1 * dt;
         var u2 = u + (uD + uD2) / 2 * dt; //averaging here really keeps down the average.  It's not exactly forward Euler but I forget the name.
 
-        skater.uD = uD2;
-        skater.u = u2;
-
         //TODO: Fine tune based on energy conservation
 //        debugger;
         var initialEnergy = this.track.getEnergy( u, uD, skater.mass, skater.gravity );
         var finalEnergy = this.track.getEnergy( u2, uD2, skater.mass, skater.gravity );
-//        console.log( (finalEnergy - initialEnergy).toFixed( 2 ), initialEnergy, finalEnergy );
 
-        //can we just adjust the velocity to fix the energy?
+
         var count = 0;
 //        while ( finalEnergy > initialEnergy ) {
 //
@@ -151,9 +157,39 @@ define( function( require ) {
         //TODO: use a more accurate numerical integration scheme.  Currently forward Euler
         skater.position = new Vector2( this.track.getX( u2 ), this.track.getY( u2 ) );
 
-        var vx = xP * uD;
-        var vy = yP * uD;//TODO: compare to this.track.getEnergy, should we duplicate that call or reuse this value?
-        skater.velocity = new Vector2( vx, vy );
+        console.log( 'START\n' );
+        while ( finalEnergy < initialEnergy ) {
+          uD2 = uD2 * 1.01;
+          finalEnergy = this.track.getEnergy( u2, uD2, skater.mass, skater.gravity );
+          console.log( (finalEnergy - initialEnergy).toFixed( 2 ), initialEnergy, finalEnergy );
+        }
+        while ( finalEnergy > initialEnergy ) {
+          uD2 = uD2 * 0.99;
+          finalEnergy = this.track.getEnergy( u2, uD2, skater.mass, skater.gravity );
+          console.log( (finalEnergy - initialEnergy).toFixed( 2 ), initialEnergy, finalEnergy );
+        }
+        console.log( 'END\n' );
+        skater.uD = uD2;
+        skater.u = u2;
+
+        var vx = xP * uD2;
+        var vy = yP * uD2;//TODO: compare to this.track.getEnergy, should we duplicate that call or reuse this value?
+        var velocity = new Vector2( vx, vy );
+
+        //can we just adjust the velocity to fix the energy?
+        var newKineticEnergy = 0.5 * skater.mass * (vx * vx + vy * vy);
+
+        //Energy was higher and we can reduce the velocity to compensate
+//        if ( finalEnergy > initialEnergy && newKineticEnergy > (finalEnergy - initialEnergy) ) {
+//          var fixedKineticEnergy = newKineticEnergy - (finalEnergy - initialEnergy);
+//          var fixedSpeed = Math.sqrt( fixedKineticEnergy * 2 / skater.mass );
+//          velocity = Vector2.createPolar( fixedSpeed, velocity.angle() );
+//          var energy = -skater.mass * skater.position.y * skater.gravity + 0.5 * skater.mass * velocity.magnitudeSquared();
+//          var newError = energy - initialEnergy;
+//          console.log( 'corrected', newError );
+//          skater.uD = (velocity.x / xP + velocity.y / yP) / 2;
+//        }
+        skater.velocity = velocity;
         skater.updateEnergy();
       }
     }} );

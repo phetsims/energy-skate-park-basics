@@ -21,7 +21,13 @@ define( function() {
       'Mouse_pointer_or_cursor.png',
       'pieChartIcon.png',
       'skater.png',
-      'speedIcon.png'
+      'speedIcon.png',
+      'button_sim_pause.png',
+      'button_sim_play.png',
+      'button_step_deactivated.png',
+      'button_step_hover.png',
+      'button_step_pressed.png',
+      'button_step_unpressed.png'
     ]
   };
 } );
