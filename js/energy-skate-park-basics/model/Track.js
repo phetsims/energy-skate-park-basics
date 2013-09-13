@@ -37,6 +37,12 @@ define( function( require ) {
 
       track.xSpline = numeric.spline( track.t, track.x );
       track.ySpline = numeric.spline( track.t, track.y );
+
+      track.xSplineDiff = track.xSpline.diff();
+      track.ySplineDiff = track.ySpline.diff();
+
+      track.xSplineDiffDiff = track.xSplineDiff.diff();
+      track.ySplineDiffDiff = track.ySplineDiff.diff();
     };
 
     for ( var i = 0; i < points.length; i++ ) {
@@ -83,11 +89,11 @@ define( function( require ) {
     getEnergy: function( u, uD, mass, gravity ) {
       //get Euclidean velocity from parametric velocity
       //See equation 8 from the Bensky paper
-      var vx = this.xSpline.diff().at( u ) * uD;
-      var vy = this.ySpline.diff().at( u ) * uD;
-      var velocity = new Vector2( vx, vy );
+      var vx = this.xSplineDiff.at( u ) * uD;
+      var vy = this.ySplineDiff.at( u ) * uD;
+      var vSquared = vx * vx + vy * vy;
 
-      return -mass * gravity * this.ySpline.at( u ) + 1 / 2 * mass * velocity.magnitudeSquared();
+      return -mass * gravity * this.ySpline.at( u ) + 1 / 2 * mass * vSquared;
     }
   } );
 } );

@@ -126,10 +126,10 @@ define( function( require ) {
         var uD = skater.uD;
 
         //TODO: Store these diffs when traversing the track to improve performance
-        var xP = this.track.xSpline.diff().at( u );
-        var yP = this.track.ySpline.diff().at( u );
-        var xPP = this.track.xSpline.diff().diff().at( u );
-        var yPP = this.track.ySpline.diff().diff().at( u );
+        var xP = this.track.xSplineDiff.at( u );
+        var yP = this.track.ySplineDiff.at( u );
+        var xPP = this.track.xSplineDiffDiff.at( u );
+        var yPP = this.track.ySplineDiffDiff.at( u );
         var g = -9.8;
         var uDD1 = this.uDD( uD, xP, xPP, yP, yPP, g );
 
@@ -141,19 +141,6 @@ define( function( require ) {
         var initialEnergy = this.track.getEnergy( u, uD, skater.mass, skater.gravity );
         var finalEnergy = this.track.getEnergy( u2, uD2, skater.mass, skater.gravity );
 
-
-        var count = 0;
-//        while ( finalEnergy > initialEnergy ) {
-//
-//          //take the energy from the velocity vector, but try to keep uD in the same direction
-//          skater.uD = skater.uD * 0.999;
-//          finalEnergy = this.track.getEnergy( u2, uD2, skater.mass, skater.gravity );
-//          count++;
-//          if ( count > 2 ) {
-//            break;
-//          }
-//        }
-
         //TODO: use a more accurate numerical integration scheme.  Currently forward Euler
         skater.position = new Vector2( this.track.getX( u2 ), this.track.getY( u2 ) );
 
@@ -164,7 +151,7 @@ define( function( require ) {
         //Binary search on the parametric velocity to make sure energy is exactly conserved
 //        console.log( 'START BINARY' );
 //        console.log( (finalEnergy - initialEnergy).toFixed( 2 ), initialEnergy, finalEnergy );
-        while ( Math.abs( finalEnergy - initialEnergy ) > 1E-3 ) {
+        while ( Math.abs( finalEnergy - initialEnergy ) > 1E-2 ) {
 //          console.log( (finalEnergy - initialEnergy).toFixed( 2 ), 'binary search, lowerBound=', lowerBound, 'upperBound', upperBound );
           var uMid = (upperBound + lowerBound) / 2;
           var midEnergy = this.track.getEnergy( u2, uMid, skater.mass, skater.gravity );
@@ -188,14 +175,14 @@ define( function( require ) {
         skater.uD = uD2;
         skater.u = u2;
 
-        var vx = this.track.xSpline.diff().at( u2 ) * uD2;
-        var vy = this.track.ySpline.diff().at( u2 ) * uD2;
+        var vx = this.track.xSplineDiff.at( u2 ) * uD2;
+        var vy = this.track.ySplineDiff.at( u2 ) * uD2;
         var velocity = new Vector2( vx, vy );
 
         skater.velocity = velocity;
         skater.updateEnergy();
 
-        console.log( 'skater energy', skater.totalEnergy );
+//        console.log( 'skater energy', skater.totalEnergy );
       }
     }} );
 } );
