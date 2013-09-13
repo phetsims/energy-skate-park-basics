@@ -114,15 +114,34 @@ define( function( require ) {
         var uDD1 = this.uDD( uD, xP, xPP, yP, yPP, g );
 
         var uD2 = uD + uDD1 * dt;
-        var u2 = u + uD * dt;
+        var u2 = u + (uD + uD2) / 2 * dt; //averaging here really keeps down the average.  It's not exactly forward Euler but I forget the name.
 
         skater.uD = uD2;
         skater.u = u2;
 
         //TODO: Fine tune based on energy conservation
+//        debugger;
+        var initialEnergy = this.track.getEnergy( u, uD, skater.mass, skater.gravity );
+        var finalEnergy = this.track.getEnergy( u2, uD2, skater.mass, skater.gravity );
+//        console.log( (finalEnergy - initialEnergy).toFixed( 2 ), initialEnergy, finalEnergy );
+
+        //can we just adjust the velocity to fix the energy?
+        var count = 0;
+//        while ( finalEnergy > initialEnergy ) {
+//
+//          //take the energy from the velocity vector, but try to keep uD in the same direction
+//          skater.uD = skater.uD * 0.999;
+//          finalEnergy = this.track.getEnergy( u2, uD2, skater.mass, skater.gravity );
+//          count++;
+//          if ( count > 2 ) {
+//            break;
+//          }
+//        }
 
         //TODO: use a more accurate numerical integration scheme.  Currently forward Euler
-        skater.position.set( this.track.getX( u2 ), this.track.getY( u2 ) );
+        {
+          skater.position.set( this.track.getX( u2 ), this.track.getY( u2 ) );
+        }
         skater.positionProperty.notifyObserversUnsafe();
       }
     }} );

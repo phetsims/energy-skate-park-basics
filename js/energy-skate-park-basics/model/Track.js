@@ -77,6 +77,17 @@ define( function( require ) {
       var x = this.xSpline.at( t );
       var y = this.ySpline.at( t );
       return new Vector2( x, y );
+    },
+
+    //Get the total energy of a point mass with parametric position u and parametric velocity uD
+    getEnergy: function( u, uD, mass, gravity ) {
+      //get Euclidean velocity from parametric velocity
+      //See equation 8 from the Bensky paper
+      var vx = this.xSpline.diff().at( u ) * uD;
+      var vy = this.ySpline.diff().at( u ) * uD;
+      var velocity = new Vector2( vx, vy );
+
+      return -mass * gravity * this.ySpline.at( u ) + 1 / 2 * mass * velocity.magnitudeSquared();
     }
   } );
 } );
