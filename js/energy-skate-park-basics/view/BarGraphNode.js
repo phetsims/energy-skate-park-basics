@@ -44,7 +44,12 @@ define( function( require ) {
       var bar = new Rectangle( barX, originY - 50, barWidth, 50, {fill: color, stroke: 'black', lineWidth: 0.5} );
       property.link( function( value ) {
         var barHeight = value / 4;
-        bar.setRect( barX, originY - barHeight, barWidth, barHeight );
+        if ( barHeight >= 0 ) {
+          bar.setRect( barX, originY - barHeight, barWidth, barHeight );
+        }
+        else {
+          bar.setRect( barX, originY, barWidth, -barHeight );
+        }
       } );
       return bar;
     };
