@@ -43,6 +43,9 @@ define( function( require ) {
     },
     step: function( dt ) {
       var skater = this.skater;
+      var initialEnergy = skater.totalEnergy;
+
+      //Free fall
       if ( !skater.dragging && !skater.track ) {
 
         var netForce = new Vector2( 0, -9.8 * skater.mass );
@@ -101,8 +104,20 @@ define( function( require ) {
               skater.t = t;
             }
           }
+
+          //It just continued in free fall
           else {
-            skater.position = proposedPosition;
+            var energy = 0.5 * skater.mass * skater.velocity.magnitudeSquared() - skater.mass * skater.gravity * skater.position.y;
+            var deltaEnergy = energy - initialEnergy;
+            //make up for the difference by changing the y value
+            var y = (initialEnergy - 0.5 * skater.mass * skater.velocity.magnitudeSquared()) / (-1 * skater.mass * skater.gravity);
+
+            var fixedEnergy = 0.5 * skater.mass * skater.velocity.magnitudeSquared() - skater.mass * skater.gravity * y;
+            var fixedDelta = fixedEnergy - initialEnergy;
+//            console.log( fixedDelta, deltaEnergy, initialEnergy, energy );
+
+            //TODO: keep track of all of the variables in a hash so they can be set at once after verification and after energy conserved
+            skater.position = new Vector2( proposedPosition.x, y );
             skater.updateEnergy();
           }
         }
