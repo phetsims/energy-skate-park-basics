@@ -75,7 +75,7 @@ define( function( require ) {
 
     var contentNode = new Rectangle( 0, 0, contentWidth, contentHeight, {children: [
       new ArrowNode( insetX, originY, insetX, insetY ),
-      new Text( 'Energy (Joules)', {x: 5, y: insetY - 10} ),
+      new Text( 'Energy (Joules)', {x: 5, y: insetY - 10, font: new PhetFont( 14 )} ),
       new Line( insetX, originY, contentWidth - insetX, originY, {lineWidth: 1, stroke: 'gray'} ),
       kineticLabel,
       potentialLabel,
