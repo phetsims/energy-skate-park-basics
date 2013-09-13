@@ -157,54 +157,45 @@ define( function( require ) {
         //TODO: use a more accurate numerical integration scheme.  Currently forward Euler
         skater.position = new Vector2( this.track.getX( u2 ), this.track.getY( u2 ) );
 
-        console.log( 'START\n' );
-        console.log( (finalEnergy - initialEnergy).toFixed( 2 ), initialEnergy, finalEnergy );
-        while ( finalEnergy < initialEnergy ) {
-          console.log( 'increasing' );
-          uD2 = uD2 * 1.001;
-          var newFinalEnergy = this.track.getEnergy( u2, uD2, skater.mass, skater.gravity );
-          console.log( (finalEnergy - initialEnergy).toFixed( 2 ), initialEnergy, finalEnergy );
-          if ( newFinalEnergy <= finalEnergy ) {
-            finalEnergy = newFinalEnergy;
+        var count = 0;
+        var upperBound = uD2 * 1.2;
+        var lowerBound = uD2 * 0.8;
+
+        //Binary search on the parametric velocity to make sure energy is exactly conserved
+//        console.log( 'START BINARY' );
+//        console.log( (finalEnergy - initialEnergy).toFixed( 2 ), initialEnergy, finalEnergy );
+        while ( Math.abs( finalEnergy - initialEnergy ) > 1E-3 ) {
+//          console.log( (finalEnergy - initialEnergy).toFixed( 2 ), 'binary search, lowerBound=', lowerBound, 'upperBound', upperBound );
+          var uMid = (upperBound + lowerBound) / 2;
+          var midEnergy = this.track.getEnergy( u2, uMid, skater.mass, skater.gravity );
+          if ( midEnergy > initialEnergy ) {
+            upperBound = uMid;
+          }
+          else {
+            lowerBound = uMid;
+          }
+          finalEnergy = this.track.getEnergy( u2, uMid, skater.mass, skater.gravity );
+          count++;
+          if ( count >= 1000 ) {
+            console.log( 'count', count );
             break;
           }
-          finalEnergy = newFinalEnergy;
         }
-        while ( finalEnergy > initialEnergy ) {
-          console.log( 'decreasing' );
-          uD2 = uD2 * 0.999;
-          var newFinalEnergy = this.track.getEnergy( u2, uD2, skater.mass, skater.gravity );
-          console.log( (finalEnergy - initialEnergy).toFixed( 2 ), initialEnergy, finalEnergy );
-          if ( newFinalEnergy >= finalEnergy ) {
-            finalEnergy = newFinalEnergy;
-            break;
-          }
-          finalEnergy = newFinalEnergy;
-        }
-        console.log( (finalEnergy - initialEnergy).toFixed( 2 ), initialEnergy, finalEnergy );
-        console.log( 'END\n' );
+        uD2 = (upperBound + lowerBound) / 2;
+//        console.log( (finalEnergy - initialEnergy).toFixed( 2 ), initialEnergy, finalEnergy );
+//        console.log( "END BINARY, count=", count );
+
         skater.uD = uD2;
         skater.u = u2;
 
-        var vx = xP * uD2;
-        var vy = yP * uD2;//TODO: compare to this.track.getEnergy, should we duplicate that call or reuse this value?
+        var vx = this.track.xSpline.diff().at( u2 ) * uD2;
+        var vy = this.track.ySpline.diff().at( u2 ) * uD2;
         var velocity = new Vector2( vx, vy );
 
-        //can we just adjust the velocity to fix the energy?
-        var newKineticEnergy = 0.5 * skater.mass * (vx * vx + vy * vy);
-
-        //Energy was higher and we can reduce the velocity to compensate
-//        if ( finalEnergy > initialEnergy && newKineticEnergy > (finalEnergy - initialEnergy) ) {
-//          var fixedKineticEnergy = newKineticEnergy - (finalEnergy - initialEnergy);
-//          var fixedSpeed = Math.sqrt( fixedKineticEnergy * 2 / skater.mass );
-//          velocity = Vector2.createPolar( fixedSpeed, velocity.angle() );
-//          var energy = -skater.mass * skater.position.y * skater.gravity + 0.5 * skater.mass * velocity.magnitudeSquared();
-//          var newError = energy - initialEnergy;
-//          console.log( 'corrected', newError );
-//          skater.uD = (velocity.x / xP + velocity.y / yP) / 2;
-//        }
         skater.velocity = velocity;
         skater.updateEnergy();
+
+        console.log( 'skater energy', skater.totalEnergy );
       }
     }} );
 } );
