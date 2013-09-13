@@ -15,7 +15,7 @@ define( function( require ) {
     PropertySet.call( this, {
       closestPoint: new Vector2( 1, 0 ),
       pieChartVisible: false,
-      barGraphVisible: false,
+      barGraphVisible: true,
       gridVisible: false,
       speedVisible: false
     } );
@@ -103,6 +103,7 @@ define( function( require ) {
           }
           else {
             skater.position = proposedPosition;
+            skater.updateEnergy();
           }
         }
       }
@@ -145,10 +146,12 @@ define( function( require ) {
 //        }
 
         //TODO: use a more accurate numerical integration scheme.  Currently forward Euler
-        {
-          skater.position.set( this.track.getX( u2 ), this.track.getY( u2 ) );
-        }
-        skater.positionProperty.notifyObserversUnsafe();
+        skater.position = new Vector2( this.track.getX( u2 ), this.track.getY( u2 ) );
+
+        var vx = xP * uD;
+        var vy = yP * uD;//TODO: compare to this.track.getEnergy, should we duplicate that call or reuse this value?
+        skater.velocity = new Vector2( vx, vy );
+        skater.updateEnergy();
       }
     }} );
 } );

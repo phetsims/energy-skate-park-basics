@@ -23,7 +23,22 @@ define( function( require ) {
       //Gravity magnitude and direction
       gravity: -9.8,
 
-      position: new Vector2( 0, 0 ), mass: 30, velocity: new Vector2( 0, 0 ), dragging: false} );
+      position: new Vector2( 0, 0 ),
+
+      mass: 30,
+
+      velocity: new Vector2( 0, 0 ),
+
+      dragging: false,
+
+      kineticEnergy: 0,
+
+      potentialEnergy: 0,
+
+      thermalEnergy: 0,
+
+      totalEnergy: 0
+    } );
 
     this.draggingProperty.link( function( dragging ) {
       skater.velocity = new Vector2( 0, 0 );
@@ -31,11 +46,20 @@ define( function( require ) {
         skater.track = null;
       }
     } );
+
+    this.updateEnergy();
   }
 
   return inherit( PropertySet, Skater, {
-    get energy() { return this.potentialEnergy + this.kineticEnergy; },
-    get potentialEnergy() { return this.mass * this.gravity * this.position.y; },
-    get kineticEnergy() {return 0.5 * this.mass * this.velocity.magnitudeSquared();}
+//    get energy() { return this.potentialEnergy + this.kineticEnergy; },
+//    get potentialEnergy() { return this.mass * this.gravity * this.position.y; },
+//    get kineticEnergy() {return 0.5 * this.mass * this.velocity.magnitudeSquared();}
+
+    updateEnergy: function() {
+      this.kineticEnergy = 0.5 * this.mass * this.velocity.magnitudeSquared();
+      this.potentialEnergy = -this.mass * this.position.y * this.gravity;
+      this.thermalEnergy = 100;
+      this.totalEnergy = this.kineticEnergy + this.potentialEnergy;
+    }
   } );
 } );
