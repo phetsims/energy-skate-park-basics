@@ -12,7 +12,13 @@ define( function( require ) {
 
   function EnergySkateParkBasicsModel() {
     var energySkateParkBasicsModel = this;
-    PropertySet.call( this, {closestPoint: new Vector2( 1, 0 )} );
+    PropertySet.call( this, {
+      closestPoint: new Vector2( 1, 0 ),
+      pieChartVisible: false,
+      barGraphVisible: false,
+      gridVisible: false,
+      speedVisible: false
+    } );
     this.skater = new Skater();
     var controlPoints = [ new Property( new Vector2( -2, 2 ) ), new Property( new Vector2( 0, 0 ) ), new Property( new Vector2( 2, 2 ) ) ];
     this.track = new Track( controlPoints );

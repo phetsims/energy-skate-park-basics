@@ -14,6 +14,7 @@ define( function( require ) {
   var ClosestPointNode = require( 'ENERGY_SKATE_PARK/energy-skate-park-basics/view/ClosestPointNode' );
   var TrackNode = require( 'ENERGY_SKATE_PARK/energy-skate-park-basics/view/TrackNode' );
   var BackgroundNode = require( 'ENERGY_SKATE_PARK/energy-skate-park-basics/view/BackgroundNode' );
+  var EnergySkateParkBasicsControlPanel = require( 'ENERGY_SKATE_PARK/energy-skate-park-basics/view/EnergySkateParkBasicsControlPanel' );
   var ModelViewTransform2 = require( 'PHETCOMMON/view/ModelViewTransform2' );
   var Bounds2 = require( 'DOT/Bounds2' );
   var Vector2 = require( 'DOT/Vector2' );
@@ -34,6 +35,10 @@ define( function( require ) {
     this.addChild( new TrackNode( model, transform ) );
     this.addChild( new SkaterNode( model, transform ) );
     this.addChild( new ClosestPointNode( model, transform ) );
+
+    this.controlPanel = new EnergySkateParkBasicsControlPanel( model );
+    this.addChild( this.controlPanel );
+    this.controlPanel.right = this.layoutBounds.width;
   }
 
   return inherit( ScreenView, EnergySkateParkBasicsView, {
