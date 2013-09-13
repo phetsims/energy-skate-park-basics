@@ -64,7 +64,21 @@ define( function( require ) {
             //reflect the velocity vector
 
             //http://www.gamedev.net/topic/165537-2d-vector-reflection-/
-            var newVelocity = skater.velocity.minus( normal.times( 2 * normal.dot( skater.velocity ) ) );
+//            console.log( 'minus', skater.velocity.minus );
+//            console.log( 'times', normal.times );
+//            console.log( 'dot', normal.dot );
+
+//            if ( !skater.velocity.minus ) {
+//              console.log( 'NO MINUS' );
+//              console.log( skater.velocity );
+//              console.log( '/NO MINUS' );
+//            }
+            var allok = skater.velocity && skater.velocity.minus && normal.times && normal.dot;
+            if ( !allok ) {
+              alert( 'allok === false' );
+            }
+            var newVelocity = allok ? skater.velocity.minus( normal.times( 2 * normal.dot( skater.velocity ) ) ) :
+                              new Vector2( 0, 1 );
 
             if ( this.bounces < 2 ) {
               skater.velocity = newVelocity;
@@ -87,7 +101,7 @@ define( function( require ) {
           skater.t = 1 * 2 / 3;
         }
         skater.position.set( this.track.getX( skater.t ), this.track.getY( skater.t ) );
-        skater.positionProperty.notifyObserversUnsafe( skater.position );
+        skater.positionProperty.notifyObserversUnsafe();
 //        skater.position.set( 0 + Math.cos( skater.t ), Math.sin( skater.t ) );
 
 //        skater.position.set( 0 + Math.cos( skater.t ), Math.sin( skater.t ) );
