@@ -47,6 +47,7 @@ define( function( require ) {
           var modelX = modelViewTransform.viewToModelX( t.x );
           var modelY = modelViewTransform.viewToModelY( t.y );
           skaterNode.skater.position = new Vector2( modelX, modelY );
+          skaterNode.skater.updateEnergy();
         },
         end: function( event ) {
           skaterNode.skater.dragging = false;
