@@ -17,6 +17,7 @@ define( function( require ) {
   var images = require( 'ENERGY_SKATE_PARK/energy-skate-park-basics-images' );
   var Panel = require( 'SUN/Panel' );
   var ArrowNode = require( 'SCENERY_PHET/ArrowNode' );
+  var PhetFont = require( 'SCENERY_PHET/PhetFont' );
   var EnergySkateParkColorScheme = require( 'ENERGY_SKATE_PARK/energy-skate-park-basics/view/EnergySkateParkColorScheme' );
 
   function BarGraphNode( model, energySkateParkBasicsView ) {
@@ -39,6 +40,15 @@ define( function( require ) {
     //The x-coordinate of a bar chart bar
     var getBarX = function( barIndex ) { return insetX + spaceBetweenAxisAndBar + barWidth * barIndex + spaceBetweenBars * barIndex; };
 
+    var createLabel = function( index, title, color ) {
+      var text = new Text( title, {fill: color, font: new PhetFont( 14 )} );
+      text.rotate( -Math.PI / 2 );
+      text.centerX = getBarX( index ) + barWidth / 2;
+      text.top = originY + 2;
+
+      return text;
+    };
+
     var createBar = function( index, color, property ) {
       var barX = getBarX( index );
       var bar = new Rectangle( barX, originY - 50, barWidth, 50, {fill: color, stroke: 'black', lineWidth: 0.5} );
@@ -58,10 +68,20 @@ define( function( require ) {
     var thermalBar = createBar( 2, EnergySkateParkColorScheme.thermalEnergy, this.skater.thermalEnergyProperty );
     var totalBar = createBar( 3, EnergySkateParkColorScheme.totalEnergy, this.skater.totalEnergyProperty );
 
+    var kineticLabel = createLabel( 0, 'Kinetic', EnergySkateParkColorScheme.kineticEnergy );
+    var potentialLabel = createLabel( 1, 'Potential', EnergySkateParkColorScheme.potentialEnergy );
+    var thermalLabel = createLabel( 2, 'Thermal', EnergySkateParkColorScheme.thermalEnergy );
+    var totalLabel = createLabel( 3, 'Total', EnergySkateParkColorScheme.totalEnergy );
+
     var contentNode = new Rectangle( 0, 0, contentWidth, contentHeight, {children: [
       new ArrowNode( insetX, originY, insetX, insetY ),
       new Text( 'Energy (Joules)', {x: 5, y: insetY - 10} ),
       new Line( insetX, originY, contentWidth - insetX, originY, {lineWidth: 1, stroke: 'gray'} ),
+      kineticLabel,
+      potentialLabel,
+      thermalLabel,
+      totalLabel,
+
       kineticBar,
       potentialBar,
       thermalBar,
