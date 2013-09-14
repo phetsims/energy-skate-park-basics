@@ -19,6 +19,7 @@ define( function( require ) {
   var PlaybackSpeedControl = require( 'ENERGY_SKATE_PARK/energy-skate-park-basics/view/PlaybackSpeedControl' );
   var BarGraphNode = require( 'ENERGY_SKATE_PARK/energy-skate-park-basics/view/BarGraphNode' );
   var PieChartNode = require( 'ENERGY_SKATE_PARK/energy-skate-park-basics/view/PieChartNode' );
+  var GridNode = require( 'ENERGY_SKATE_PARK/energy-skate-park-basics/view/GridNode' );
   var ResetAllButton = require( 'ENERGY_SKATE_PARK/energy-skate-park-basics/view/ResetAllButton' );
   var ModelViewTransform2 = require( 'PHETCOMMON/view/ModelViewTransform2' );
   var Bounds2 = require( 'DOT/Bounds2' );
@@ -29,14 +30,18 @@ define( function( require ) {
     var thisView = this;
     ScreenView.call( thisView, { renderer: 'svg' } );
 
-    //The background
-    this.backgroundNode = new BackgroundNode( model, this );
-    this.addChild( this.backgroundNode );
-
     var modelPoint = new Vector2( 0, 0 );
     var viewPoint = new Vector2( this.layoutBounds.width / 2, this.layoutBounds.height - 100 );//grass is 100px high in stage coordinates
     var scale = 100;
     var transform = ModelViewTransform2.createSinglePointScaleInvertedYMapping( modelPoint, viewPoint, scale );
+
+    //The background
+    this.backgroundNode = new BackgroundNode( model, this );
+    this.addChild( this.backgroundNode );
+
+    this.gridNode = new GridNode( model, this, transform );
+    this.addChild( this.gridNode );
+
     this.addChild( new TrackNode( model, transform ) );
     this.addChild( new SkaterNode( model, transform ) );
 //    this.addChild( new ClosestPointNode( model, transform ) );
@@ -80,6 +85,7 @@ define( function( require ) {
       this.translate( offsetX, offsetY );
 
       this.backgroundNode.layout( offsetX, offsetY, width, height, scale );
+      this.gridNode.layout( offsetX, offsetY, width, height, scale );
     }
   } );
 } );

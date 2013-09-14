@@ -16,7 +16,7 @@ define( function( require ) {
       closestPoint: new Vector2( 1, 0 ),
       pieChartVisible: true,
       barGraphVisible: true,
-      gridVisible: false,
+      gridVisible: true,
       speedVisible: false,
       paused: false,
 
