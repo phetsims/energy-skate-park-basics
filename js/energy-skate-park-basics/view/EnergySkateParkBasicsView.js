@@ -44,6 +44,7 @@ define( function( require ) {
 
     this.addChild( new TrackNode( model, transform ) );
     this.addChild( new SkaterNode( model, transform ) );
+    this.addChild( new PieChartNode( model, this, transform ) );
 //    this.addChild( new ClosestPointNode( model, transform ) );
 
     this.controlPanel = new EnergySkateParkBasicsControlPanel( model, this );
@@ -51,7 +52,7 @@ define( function( require ) {
     this.controlPanel.right = this.layoutBounds.width;
 
     this.addChild( new BarGraphNode( model, this ) );
-    this.addChild( new PieChartNode( model, this, transform ) );
+
     var playPauseControl = new PlayPauseControlPanel( model, this );
     this.addChild( playPauseControl.mutate( {centerX: this.layoutBounds.centerX + playPauseControl.playButton.width / 2, bottom: this.layoutBounds.maxY - 10} ) );
 
