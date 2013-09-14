@@ -41,7 +41,7 @@ define( function( require ) {
     var getBarX = function( barIndex ) { return insetX + spaceBetweenAxisAndBar + barWidth * barIndex + spaceBetweenBars * barIndex; };
 
     var createLabel = function( index, title, color ) {
-      var text = new Text( title, {fill: color, font: new PhetFont( 14 )} );
+      var text = new Text( title, {fill: color, font: new PhetFont( 14 ), pickable: false} );
       text.rotate( -Math.PI / 2 );
       text.centerX = getBarX( index ) + barWidth / 2;
       text.top = originY + 2;
@@ -52,7 +52,7 @@ define( function( require ) {
     var createBar = function( index, color, property ) {
       var lastBarHeight = 0;
       var barX = getBarX( index );
-      var bar = new Rectangle( barX, originY - 50, barWidth, 50, {fill: color, stroke: 'black', lineWidth: 0.5} );
+      var bar = new Rectangle( barX, originY - 50, barWidth, 50, {fill: color, stroke: 'black', lineWidth: 0.5, pickable: false} );
       property.link( function( value ) {
         if ( barGraphNode.visible ) {
           //TODO: Possible performance improvement to avoid allocations in Rectangle.setRect
@@ -85,9 +85,9 @@ define( function( require ) {
     var totalLabel = createLabel( 3, 'Total', EnergySkateParkColorScheme.totalEnergy );
 
     var contentNode = new Rectangle( 0, 0, contentWidth, contentHeight, {children: [
-      new ArrowNode( insetX, originY, insetX, insetY ),
-      new Text( 'Energy (Joules)', {x: 5, y: insetY - 10, font: new PhetFont( 14 )} ),
-      new Line( insetX, originY, contentWidth - insetX, originY, {lineWidth: 1, stroke: 'gray'} ),
+      new ArrowNode( insetX, originY, insetX, insetY, {pickable: false} ),
+      new Text( 'Energy (Joules)', {x: 5, y: insetY - 10, font: new PhetFont( 14 ), pickable: false} ),
+      new Line( insetX, originY, contentWidth - insetX, originY, {lineWidth: 1, stroke: 'gray', pickable: false} ),
       kineticLabel,
       potentialLabel,
       thermalLabel,
@@ -99,7 +99,9 @@ define( function( require ) {
       totalBar
     ]} );
 
-    Panel.call( this, contentNode, { x: 10, y: 10, xMargin: 10, yMargin: 10, fill: 'white', stroke: 'gray', lineWidth: 1, resize: false } );
+    Panel.call( this, contentNode, { x: 10, y: 10, xMargin: 10, yMargin: 10, fill: 'white', stroke: 'gray', lineWidth: 1, resize: false, cursor: 'pointer' } );
+
+    this.addInputListener( new SimpleDragHandler() );
 
     //TODO: update the bars when the graph becomes visible
     model.barGraphVisibleProperty.linkAttribute( this, 'visible' );
