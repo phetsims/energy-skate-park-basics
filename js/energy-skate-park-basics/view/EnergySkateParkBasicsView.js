@@ -36,7 +36,7 @@ define( function( require ) {
     var transform = ModelViewTransform2.createSinglePointScaleInvertedYMapping( modelPoint, viewPoint, scale );
     this.addChild( new TrackNode( model, transform ) );
     this.addChild( new SkaterNode( model, transform ) );
-    this.addChild( new ClosestPointNode( model, transform ) );
+//    this.addChild( new ClosestPointNode( model, transform ) );
 
     this.controlPanel = new EnergySkateParkBasicsControlPanel( model, this );
     this.addChild( this.controlPanel );

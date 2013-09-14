@@ -55,6 +55,8 @@ define( function( require ) {
       var bar = new Rectangle( barX, originY - 50, barWidth, 50, {fill: color, stroke: 'black', lineWidth: 0.5} );
       property.link( function( value ) {
 
+        //TODO: Possible performance improvement to avoid allocations in Rectangle.setRect
+
         //Convert to graph coordinates, floor and protect against duplicates
         var barHeight = Math.floor( value / 4 );
         if ( barHeight !== lastBarHeight ) {
