@@ -49,6 +49,10 @@ define( function( require ) {
   }
 
   return inherit( PropertySet, Skater, {
+    reset: function() {
+      PropertySet.prototype.reset.call( this );
+      this.updateEnergy();
+    },
     updateEnergy: function() {
       this.kineticEnergy = 0.5 * this.mass * this.velocity.magnitudeSquared();
       this.potentialEnergy = -this.mass * this.position.y * this.gravity;

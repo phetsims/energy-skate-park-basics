@@ -46,17 +46,27 @@ define( function( require ) {
     var updatePaths = function() {
       var totalEnergy = skater.totalEnergy;
       var radius = totalEnergy / 40;
-      if ( skater.potentialEnergy > 0 && skater.kineticEnergy <= 0 ) {
-        kineticEnergySlice.shape = Shape.circle( 0, 0, radius );
+      //if only one component of pie chart, then show as a circle so there are no seams
+      var numberComponents = (skater.potentialEnergy > 0 ? 1 : 0) +
+                             (skater.kineticEnergy > 0 ? 1 : 0) +
+                             (skater.thermalEnergy > 0 ? 1 : 0);
+
+      if ( numberComponents === 0 ) {
         potentialEnergySlice.visible = false;
-        kineticEnergySlice.visible = true;
-      }
-      else if ( skater.kineticEnergy > 0 && skater.potentialEnergy <= 0 ) {
-        potentialEnergySlice.shape = Shape.circle( 0, 0, radius );
-        potentialEnergySlice.visible = true;
         kineticEnergySlice.visible = false;
+        thermalEnergySlice.visible = false;
       }
-      else if ( skater.kineticEnergy > 0 && skater.potentialEnergy > 0 ) {
+      else if ( numberComponents === 1 ) {
+        var selectedSlice = skater.potentialEnergy > 0 ? potentialEnergySlice :
+                            skater.kineticEnergy > 0 ? kineticEnergySlice :
+                            thermalEnergySlice;
+        potentialEnergySlice.visible = false;
+        thermalEnergySlice.visible = false;
+        kineticEnergySlice.visible = false;
+        selectedSlice.visible = true;
+        selectedSlice.shape = Shape.circle( 0, 0, radius );
+      }
+      else {
         potentialEnergySlice.visible = true;
         kineticEnergySlice.visible = true;
         var amountPotential = skater.potentialEnergy / skater.totalEnergy;
