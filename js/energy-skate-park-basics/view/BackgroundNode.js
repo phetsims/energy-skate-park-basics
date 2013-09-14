@@ -24,16 +24,21 @@ define( function( require ) {
     this.earth = new Rectangle( 0, 0, 100, 100, {fill: '#64aa64'} );
     this.addChild( this.earth );
 
+    this.grassY = 504 - 100;
     this.grass = new Line( 0, 0, 0, 0, {stroke: '#03862c', lineWidth: 3} );
     this.addChild( this.grass );
+
+    this.mountain = new Image( images.getImage( 'mountains.png' ), {bottom: this.grassY} );
+    this.addChild( this.mountain );
   }
 
   return inherit( Node, BackgroundNode, {
 
     //Exactly fit the geometry to the screen so no matter what aspect ratio it will always show something.  Perhaps it will improve performance too?
     layout: function( offsetX, offsetY, width, height, layoutScale ) {
-      this.earth.setRect( -offsetX, 504 - 100, width / layoutScale, 100 );
-      this.grass.setLine( -offsetX, 504 - 100, -offsetX + width / layoutScale, 504 - 100 );
+      var grassY = this.grassY;
+      this.earth.setRect( -offsetX, grassY, width / layoutScale, 100 );
+      this.grass.setLine( -offsetX, grassY, -offsetX + width / layoutScale, grassY );
     }
   } );
 } );
