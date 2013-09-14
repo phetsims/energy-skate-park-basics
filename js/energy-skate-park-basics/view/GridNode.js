@@ -45,9 +45,9 @@ define( function( require ) {
       for ( var x = 0; x < 100; x++ ) {
         var viewXPositive = this.modelViewTransform.modelToViewX( x / 2 );
         var viewXNegative = this.modelViewTransform.modelToViewX( -x / 2 );
-        lines.push( new Line( viewXPositive, -offsetY, viewXPositive, lineHeight - offsetY, {stroke: 'gray'} ) );
+        lines.push( new Line( viewXPositive, -offsetY, viewXPositive, lineHeight - offsetY, {stroke: '#686868'} ) );
         if ( x !== 0 ) {
-          lines.push( new Line( viewXNegative, -offsetY, viewXNegative, lineHeight - offsetY, {stroke: 'gray'} ) );
+          lines.push( new Line( viewXNegative, -offsetY, viewXNegative, lineHeight - offsetY, {stroke: '#686868'} ) );
         }
         if ( viewXNegative < -offsetX ) {
           break;
@@ -62,7 +62,7 @@ define( function( require ) {
           break;
         }
 
-        lines.push( new Line( -offsetX, viewY, lineWidth - offsetX, viewY, {stroke: 'gray', lineWidth: y % 2 === 0 ? 3 : 1 } ) );
+        lines.push( new Line( -offsetX, viewY, lineWidth - offsetX, viewY, {stroke: '#686868', lineWidth: y % 2 === 0 ? 3 : 1 } ) );
         if ( y % 2 === 0 ) {
           var text = new Text( y === 0 ? '0' : y, {font: new PhetFont( 18 ), top: viewY, right: originX - 2} );
 
