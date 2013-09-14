@@ -44,6 +44,11 @@ define( function( require ) {
 
     //TODO: instead of changing the entire pie chart whenever one energy changes, use trigger to update the whole pie
     var updatePaths = function() {
+
+      //TODO: call updatePaths when pie chart node is made visible
+      if ( !pieChartNode.visible ) {
+        return;
+      }
       var totalEnergy = skater.totalEnergy;
       var radius = totalEnergy / 40;
       //if only one component of pie chart, then show as a circle so there are no seams
