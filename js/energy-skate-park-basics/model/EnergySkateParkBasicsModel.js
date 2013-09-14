@@ -56,6 +56,10 @@ define( function( require ) {
 
     //Step the model, automatically called from Joist
     step: function( dt ) {
+      //If the delay makes dt too high, then truncate it.  This helps e.g. when clicking in the address bar on ipad, which gives a huge dt and problems for integration
+      if ( dt > 1.0 / 10 ) {
+        dt = 1.0 / 10;
+      }
       if ( !this.paused ) {
         this.stepModel( this.speed == 'normal' ? dt : dt * 0.25 );
       }
