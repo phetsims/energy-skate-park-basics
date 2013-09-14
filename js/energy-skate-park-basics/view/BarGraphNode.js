@@ -50,15 +50,22 @@ define( function( require ) {
     };
 
     var createBar = function( index, color, property ) {
+      var lastBarHeight = 0;
       var barX = getBarX( index );
       var bar = new Rectangle( barX, originY - 50, barWidth, 50, {fill: color, stroke: 'black', lineWidth: 0.5} );
       property.link( function( value ) {
-        var barHeight = value / 4;
-        if ( barHeight >= 0 ) {
-          bar.setRect( barX, originY - barHeight, barWidth, barHeight );
-        }
-        else {
-          bar.setRect( barX, originY, barWidth, -barHeight );
+
+        //Convert to graph coordinates, floor and protect against duplicates
+        var barHeight = Math.floor( value / 4 );
+        if ( barHeight !== lastBarHeight ) {
+          if ( barHeight >= 0 ) {
+            lastBarHeight = barHeight;
+            bar.setRect( barX, originY - barHeight, barWidth, barHeight );
+          }
+          else {
+            bar.setRect( barX, originY, barWidth, -barHeight );
+          }
+          lastBarHeight = barHeight;
         }
       } );
       return bar;
