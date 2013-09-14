@@ -15,10 +15,14 @@ define( function( require ) {
   var Text = require( 'SCENERY/nodes/Text' );
   var SimpleDragHandler = require( 'SCENERY/input/SimpleDragHandler' );
   var images = require( 'ENERGY_SKATE_PARK/energy-skate-park-basics-images' );
+  var LinearGradient = require( 'SCENERY/util/LinearGradient' );
 
   function BackgroundNode( model, energySkateParkBasicsView ) {
     this.skater = model.skater;
-    Node.call( this, { renderer: 'svg' } );
+    Node.call( this, { renderer: 'svg', pickable: false } );
+
+    this.sky = new Rectangle( 0, 0, 0, 0 );
+    this.addChild( this.sky );
 
     //Wait for bounds to fill in the grass
     this.earth = new Rectangle( 0, 0, 100, 100, {fill: '#64aa64'} );
@@ -39,6 +43,8 @@ define( function( require ) {
       var grassY = this.grassY;
       this.earth.setRect( -offsetX, grassY, width / layoutScale, 100 );
       this.grass.setLine( -offsetX, grassY, -offsetX + width / layoutScale, grassY );
+      this.sky.setRect( -offsetX, -offsetY, width / layoutScale, height / layoutScale - 100 );
+      this.sky.fill = new LinearGradient( 0, 0, 0, height / 2 ).addColorStop( 0, '#02ace4' ).addColorStop( 1, '#cfecfc' );
     }
   } );
 } );
