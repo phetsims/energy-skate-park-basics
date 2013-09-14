@@ -118,17 +118,12 @@ define( function( require ) {
 
         //It just continued in free fall
         else {
-          var energy = 0.5 * skater.mass * skater.velocity.magnitudeSquared() - skater.mass * skater.gravity * skater.position.y;
-          var deltaEnergy = energy - initialEnergy;
+          var energy = 0.5 * skater.mass * skater.velocity.magnitudeSquared() - skater.mass * skater.gravity * skater.position.y + skater.thermalEnergy;
           //make up for the difference by changing the y value
-          var y = (initialEnergy - 0.5 * skater.mass * skater.velocity.magnitudeSquared()) / (-1 * skater.mass * skater.gravity);
+          var y = (initialEnergy - 0.5 * skater.mass * skater.velocity.magnitudeSquared() - skater.thermalEnergy) / (-1 * skater.mass * skater.gravity);
           if ( y < 0 ) {
             y = 0;
           }
-
-          var fixedEnergy = 0.5 * skater.mass * skater.velocity.magnitudeSquared() - skater.mass * skater.gravity * y;
-          var fixedDelta = fixedEnergy - initialEnergy;
-//            console.log( fixedDelta, deltaEnergy, initialEnergy, energy );
 
           //TODO: keep track of all of the variables in a hash so they can be set at once after verification and after energy conserved
           skater.position = new Vector2( proposedPosition.x, y );

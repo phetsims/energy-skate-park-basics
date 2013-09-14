@@ -42,9 +42,7 @@ define( function( require ) {
 
     this.draggingProperty.link( function( dragging ) {
       skater.velocity = new Vector2( 0, 0 );
-      if ( dragging ) {
-        skater.track = null;
-      }
+      skater.track = null;
     } );
 
     this.updateEnergy();
