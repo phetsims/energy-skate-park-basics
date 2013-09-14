@@ -3,20 +3,11 @@
 define( function( require ) {
   'use strict';
 
-  // imports
-  var Bounds2 = require( 'DOT/Bounds2' );
   var inherit = require( 'PHET_CORE/inherit' );
   var Node = require( 'SCENERY/nodes/Node' );
-  var Rectangle = require( 'SCENERY/nodes/Rectangle' );
   var Path = require( 'SCENERY/nodes/Path' );
-  var Line = require( 'SCENERY/nodes/Line' );
   var Circle = require( 'SCENERY/nodes/Circle' );
-  var Image = require( 'SCENERY/nodes/Image' );
-  var Scene = require( 'SCENERY/Scene' );
-  var ScreenView = require( 'JOIST/ScreenView' );
-  var Text = require( 'SCENERY/nodes/Text' );
   var SimpleDragHandler = require( 'SCENERY/input/SimpleDragHandler' );
-  var images = require( 'ENERGY_SKATE_PARK/energy-skate-park-basics-images' );
   var Vector2 = require( 'DOT/Vector2' );
   var Shape = require( 'KITE/Shape' );
 

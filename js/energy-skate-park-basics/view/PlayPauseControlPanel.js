@@ -10,7 +10,6 @@
 define( function( require ) {
   'use strict';
 
-  // imports
   var inherit = require( 'PHET_CORE/inherit' );
   var Node = require( 'SCENERY/nodes/Node' );
   var PushButton = require( 'SUN/PushButton' );

@@ -3,26 +3,11 @@
 define( function( require ) {
   'use strict';
 
-  // imports
-  var Bounds2 = require( 'DOT/Bounds2' );
-  var Vector2 = require( 'DOT/Vector2' );
   var inherit = require( 'PHET_CORE/inherit' );
   var Node = require( 'SCENERY/nodes/Node' );
-  var Rectangle = require( 'SCENERY/nodes/Rectangle' );
-  var Circle = require( 'SCENERY/nodes/Circle' );
-  var Shape = require( 'KITE/Shape' );
   var Line = require( 'SCENERY/nodes/Line' );
-  var Image = require( 'SCENERY/nodes/Image' );
-  var Scene = require( 'SCENERY/Scene' );
-  var ScreenView = require( 'JOIST/ScreenView' );
   var Text = require( 'SCENERY/nodes/Text' );
-  var Path = require( 'SCENERY/nodes/Path' );
-  var SimpleDragHandler = require( 'SCENERY/input/SimpleDragHandler' );
-  var images = require( 'ENERGY_SKATE_PARK/energy-skate-park-basics-images' );
-  var Panel = require( 'SUN/Panel' );
-  var ArrowNode = require( 'SCENERY_PHET/ArrowNode' );
   var PhetFont = require( 'SCENERY_PHET/PhetFont' );
-  var EnergySkateParkColorScheme = require( 'ENERGY_SKATE_PARK/energy-skate-park-basics/view/EnergySkateParkColorScheme' );
 
   function GridNode( model, energySkateParkBasicsView, modelViewTransform ) {
     var gridNode = this;

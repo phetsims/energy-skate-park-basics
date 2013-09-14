@@ -1,15 +1,9 @@
 define( function( require ) {
   'use strict';
 
-  // imports
   var inherit = require( 'PHET_CORE/inherit' );
-  var Node = require( 'SCENERY/nodes/Node' );
   var VBox = require( 'SCENERY/nodes/VBox' );
-  var PushButton = require( 'SUN/PushButton' );
   var AquaRadioButton = require( 'SUN/AquaRadioButton' );
-  var imageLoader = require( 'ENERGY_SKATE_PARK/energy-skate-park-basics-images' );
-  var Image = require( 'SCENERY/nodes/Image' );
-  var ToggleButton = require( 'SUN/ToggleButton' );
   var Text = require( 'SCENERY/nodes/Text' );
 
   function PlayPauseControlPanel( model, options ) {

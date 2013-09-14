@@ -7,7 +7,6 @@
 define( function( require ) {
   'use strict';
 
-  // imports
   var images = require( 'ENERGY_SKATE_PARK/energy-skate-park-basics-images' );
   var Image = require( 'SCENERY/nodes/Image' );
   var inherit = require( 'PHET_CORE/inherit' );

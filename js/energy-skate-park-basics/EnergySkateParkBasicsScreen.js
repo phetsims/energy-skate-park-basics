@@ -3,7 +3,6 @@
 define( function( require ) {
   'use strict';
 
-  // imports
   var EnergySkateParkBasicsModel = require( 'ENERGY_SKATE_PARK/energy-skate-park-basics/model/EnergySkateParkBasicsModel' );
   var EnergySkateParkBasicsView = require( 'ENERGY_SKATE_PARK/energy-skate-park-basics/view/EnergySkateParkBasicsView' );
   var Image = require( 'SCENERY/nodes/Image' );

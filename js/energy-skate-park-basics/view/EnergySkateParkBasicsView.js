@@ -3,13 +3,9 @@
 define( function( require ) {
   'use strict';
 
-  // imports
   var inherit = require( 'PHET_CORE/inherit' );
-  var Node = require( 'SCENERY/nodes/Node' );
   var Rectangle = require( 'SCENERY/nodes/Rectangle' );
-  var Scene = require( 'SCENERY/Scene' );
   var ScreenView = require( 'JOIST/ScreenView' );
-  var Text = require( 'SCENERY/nodes/Text' );
   var SkaterNode = require( 'ENERGY_SKATE_PARK/energy-skate-park-basics/view/SkaterNode' );
   var ClosestPointNode = require( 'ENERGY_SKATE_PARK/energy-skate-park-basics/view/ClosestPointNode' );
   var TrackNode = require( 'ENERGY_SKATE_PARK/energy-skate-park-basics/view/TrackNode' );
@@ -22,7 +18,6 @@ define( function( require ) {
   var GridNode = require( 'ENERGY_SKATE_PARK/energy-skate-park-basics/view/GridNode' );
   var ResetAllButton = require( 'ENERGY_SKATE_PARK/energy-skate-park-basics/view/ResetAllButton' );
   var ModelViewTransform2 = require( 'PHETCOMMON/view/ModelViewTransform2' );
-  var Bounds2 = require( 'DOT/Bounds2' );
   var Vector2 = require( 'DOT/Vector2' );
 
   function EnergySkateParkBasicsView( model ) {
