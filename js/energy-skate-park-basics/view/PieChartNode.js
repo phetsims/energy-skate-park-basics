@@ -32,7 +32,7 @@ define( function( require ) {
     var kineticEnergySlice = new Path( null, {fill: EnergySkateParkColorScheme.kineticEnergy, stroke: 'black', lineWidth: 1} );
     var potentialEnergySlice = new Path( null, {fill: EnergySkateParkColorScheme.potentialEnergy, stroke: 'black', lineWidth: 1} );
     var thermalEnergySlice = new Path( null, {fill: EnergySkateParkColorScheme.thermalEnergy, stroke: 'black', lineWidth: 1} );
-    Node.call( this, {children: [kineticEnergySlice, potentialEnergySlice, thermalEnergySlice]} );
+    Node.call( this, {children: [kineticEnergySlice, potentialEnergySlice, thermalEnergySlice], pickable: false} );
 
     this.skater.positionProperty.link( function( position ) {
       var view = modelViewTransform.modelToViewPosition( position );
