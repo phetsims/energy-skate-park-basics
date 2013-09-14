@@ -18,7 +18,10 @@ define( function( require ) {
       barGraphVisible: true,
       gridVisible: false,
       speedVisible: false,
-      paused: false
+      paused: false,
+
+      //speed of the model, either 'normal' or 'slow'
+      speed: 'normal'
     } );
     this.skater = new Skater();
     var controlPoints = [ new Property( new Vector2( -2, 2 ) ), new Property( new Vector2( 0, 0 ) ), new Property( new Vector2( 2, 2 ) ) ];
@@ -54,7 +57,7 @@ define( function( require ) {
     //Step the model, automatically called from Joist
     step: function( dt ) {
       if ( !this.paused ) {
-        this.stepModel( dt );
+        this.stepModel( this.speed == 'normal' ? dt : dt * 0.25 );
       }
     },
 

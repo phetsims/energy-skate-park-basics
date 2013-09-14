@@ -16,6 +16,7 @@ define( function( require ) {
   var BackgroundNode = require( 'ENERGY_SKATE_PARK/energy-skate-park-basics/view/BackgroundNode' );
   var EnergySkateParkBasicsControlPanel = require( 'ENERGY_SKATE_PARK/energy-skate-park-basics/view/EnergySkateParkBasicsControlPanel' );
   var PlayPauseControlPanel = require( 'ENERGY_SKATE_PARK/energy-skate-park-basics/view/PlayPauseControlPanel' );
+  var PlaybackSpeedControl = require( 'ENERGY_SKATE_PARK/energy-skate-park-basics/view/PlaybackSpeedControl' );
   var BarGraphNode = require( 'ENERGY_SKATE_PARK/energy-skate-park-basics/view/BarGraphNode' );
   var ResetAllButton = require( 'ENERGY_SKATE_PARK/energy-skate-park-basics/view/ResetAllButton' );
   var ModelViewTransform2 = require( 'PHETCOMMON/view/ModelViewTransform2' );
@@ -45,9 +46,11 @@ define( function( require ) {
 
     this.addChild( new BarGraphNode( model, this ) );
     var playPauseControl = new PlayPauseControlPanel( model, this );
-    this.addChild( playPauseControl.mutate( {centerX: this.layoutBounds.centerX + playPauseControl.playButton.width / 2, bottom: this.layoutBounds.maxY} ) );
+    this.addChild( playPauseControl.mutate( {centerX: this.layoutBounds.centerX + playPauseControl.playButton.width / 2, bottom: this.layoutBounds.maxY - 10} ) );
 
     this.addChild( new ResetAllButton( model.reset.bind( model ) ).mutate( {top: this.controlPanel.bottom, centerX: this.controlPanel.centerX} ) );
+
+    this.addChild( new PlaybackSpeedControl( model ).mutate( {right: playPauseControl.left, centerY: playPauseControl.centerY} ) );
   }
 
   return inherit( ScreenView, EnergySkateParkBasicsView, {
