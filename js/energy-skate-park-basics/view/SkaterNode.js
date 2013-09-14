@@ -30,10 +30,8 @@ define( function( require ) {
     this.addChild( new Circle( 4, {fill: 'red', x: imageWidth / scale / 2, y: imageHeight / scale } ) );
 
     this.skater.positionProperty.link( function( position ) {
-      var viewX = modelViewTransform.modelToViewX( position.x );
-      var viewY = modelViewTransform.modelToViewY( position.y );
-
-      skaterNode.setTranslation( viewX - imageWidth / 2, viewY - imageHeight );
+      var view = modelViewTransform.modelToViewPosition( position );
+      skaterNode.setTranslation( view.x - imageWidth / 2, view.y - imageHeight );
     } );
     this.addInputListener( new SimpleDragHandler(
       {
@@ -44,9 +42,8 @@ define( function( require ) {
         drag: function( event ) {
 //          console.log( event );
           var t = skaterNode.globalToParentPoint( event.pointer.point );
-          var modelX = modelViewTransform.viewToModelX( t.x );
-          var modelY = modelViewTransform.viewToModelY( t.y );
-          skaterNode.skater.position = new Vector2( modelX, modelY );
+          var model = modelViewTransform.viewToModelPosition( t );
+          skaterNode.skater.position = model;
           skaterNode.skater.updateEnergy();
         },
         end: function( event ) {
