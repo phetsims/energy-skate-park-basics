@@ -107,7 +107,6 @@ define( function( require ) {
             var newEnergy = this.track.getEnergy( t, skater.uD, skater.mass, skater.gravity );
             var delta = newEnergy - initialEnergy;
             if ( delta < 0 ) {
-              console.log( 'lost', delta );
               var lostEnergy = Math.abs( delta );
               skater.thermalEnergy = skater.thermalEnergy + lostEnergy;
             }
