@@ -147,7 +147,7 @@ define( function( require ) {
       var uDD1 = this.uDD( uD, xP, xPP, yP, yPP, g );
 
       var uD2 = uD + uDD1 * dt;
-      var u2 = u + (uD + uD2) / 2 * dt; //averaging here really keeps down the average.  It's not exactly forward Euler but I forget the name.
+      var u2 = u + (uD + uD2) / 2 * dt; //averaging here really keeps down the average error.  It's not exactly forward Euler but I forget the name.
 
       //TODO: Fine tune based on energy conservation
 //        debugger;
@@ -196,6 +196,10 @@ define( function( require ) {
       skater.updateEnergy();
 //        console.log( 'skater energy', skater.totalEnergy );
 
+      //Fly off the left side of the track
+      if ( u2 < 0 || u2 > skater.track.getMaxU() ) {
+        skater.track = null;
+      }
     },
     stepModel: function( dt ) {
       var skater = this.skater;

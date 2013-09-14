@@ -94,6 +94,9 @@ define( function( require ) {
       var vSquared = vx * vx + vy * vy;
 
       return -mass * gravity * this.ySpline.at( u ) + 1 / 2 * mass * vSquared;
-    }
+    },
+
+    //Get the maximum parametric value at the rightmost end of the track (left end is 0)
+    getMaxU: function() { return (this.length - 1) / this.length; }
   } );
 } );
