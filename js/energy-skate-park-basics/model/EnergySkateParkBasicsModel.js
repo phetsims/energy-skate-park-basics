@@ -46,143 +46,156 @@ define( function( require ) {
       //step one frame, assuming 60fps
       this.stepModel( 1.0 / 60 );
     },
+
+    //Step the model, automatically called from Joist
     step: function( dt ) {
       if ( !this.paused ) {
         this.stepModel( dt );
       }
     },
-    stepModel: function( dt ) {
+
+    //Update the skater in free fall
+    stepFreeFall: function( dt ) {
       var skater = this.skater;
       var initialEnergy = skater.totalEnergy;
+      var netForce = new Vector2( 0, -9.8 * skater.mass );
+      skater.acceleration = netForce.times( 1.0 / skater.mass );
+      skater.velocity = skater.velocity.plus( skater.acceleration.times( dt ) );
+      var proposedPosition = skater.position.plus( skater.velocity.times( dt ) );
+      if ( proposedPosition.y < 0 ) {
+        proposedPosition.y = 0;
+      }
+      if ( skater.position.x !== proposedPosition.x || skater.position.y !== proposedPosition.y ) {
 
-      //Free fall
-      if ( !skater.dragging && !skater.track ) {
+        //see if it crossed the track
 
-        var netForce = new Vector2( 0, -9.8 * skater.mass );
-        skater.acceleration = netForce.times( 1.0 / skater.mass );
-        skater.velocity = skater.velocity.plus( skater.acceleration.times( dt ) );
-        var proposedPosition = skater.position.plus( skater.velocity.times( dt ) );
-        if ( proposedPosition.y < 0 ) {
-          proposedPosition.y = 0;
-        }
-        if ( skater.position.x !== proposedPosition.x || skater.position.y !== proposedPosition.y ) {
+        //TODO: return t value so they can be averaged
 
-          //see if it crossed the track
+        //TODO: extend t range just outside the track in each direction to see if the skater just "missed" the track
+        var t = this.track.getClosestPoint( this.skater.position ).t;
+        var t1 = t - 1E-6;
+        var t2 = t + 1E-6;
+        var pt = this.track.getPoint( t );
+        var pt1 = this.track.getPoint( t1 );
+        var pt2 = this.track.getPoint( t2 );
+        var segment = pt2.minus( pt1 );
+        var normal = segment.rotated( Math.PI / 2 ).normalized();
 
-          //TODO: return t value so they can be averaged
-
-          //TODO: extend t range just outside the track in each direction to see if the skater just "missed" the track
-          var t = this.track.getClosestPoint( this.skater.position ).t;
-          var t1 = t - 1E-6;
-          var t2 = t + 1E-6;
-          var pt = this.track.getPoint( t );
-          var pt1 = this.track.getPoint( t1 );
-          var pt2 = this.track.getPoint( t2 );
-          var segment = pt2.minus( pt1 );
-          var normal = segment.rotated( Math.PI / 2 ).normalized();
-
-          var beforeSign = normal.dot( skater.position.minus( pt ) ) > 0;
-          var afterSign = normal.dot( proposedPosition.minus( pt ) ) > 0;
+        var beforeSign = normal.dot( skater.position.minus( pt ) ) > 0;
+        var afterSign = normal.dot( proposedPosition.minus( pt ) ) > 0;
 //          console.log( normal.dot( skater.position ), normal.dot( proposedPosition ), beforeSign, afterSign );
-          if ( beforeSign !== afterSign ) {
-            //reflect the velocity vector
-            //http://www.gamedev.net/topic/165537-2d-vector-reflection-/
-            var allok = skater.velocity && skater.velocity.minus && normal.times && normal.dot;
-            if ( !allok ) { alert( 'allok === false' ); }
-            var newVelocity = allok ? skater.velocity.minus( normal.times( 2 * normal.dot( skater.velocity ) ) ) :
-                              new Vector2( 0, 1 );
+        if ( beforeSign !== afterSign ) {
+          //reflect the velocity vector
+          //http://www.gamedev.net/topic/165537-2d-vector-reflection-/
+          var allok = skater.velocity && skater.velocity.minus && normal.times && normal.dot;
+          if ( !allok ) { alert( 'allok === false' ); }
+          var newVelocity = allok ? skater.velocity.minus( normal.times( 2 * normal.dot( skater.velocity ) ) ) :
+                            new Vector2( 0, 1 );
 
-            if ( this.bounces < 2 ) {
-              skater.velocity = newVelocity;
-              this.bounces++;
-            }
-            else {
-              //attach to track
-              skater.track = this.track;
-              skater.u = t;
-            }
+          if ( this.bounces < 2 ) {
+            skater.velocity = newVelocity;
+            this.bounces++;
           }
-
-          //It just continued in free fall
           else {
-            var energy = 0.5 * skater.mass * skater.velocity.magnitudeSquared() - skater.mass * skater.gravity * skater.position.y;
-            var deltaEnergy = energy - initialEnergy;
-            //make up for the difference by changing the y value
-            var y = (initialEnergy - 0.5 * skater.mass * skater.velocity.magnitudeSquared()) / (-1 * skater.mass * skater.gravity);
+            //attach to track
+            skater.track = this.track;
+            skater.u = t;
+            this.stepTrack( dt );
+          }
+        }
 
-            var fixedEnergy = 0.5 * skater.mass * skater.velocity.magnitudeSquared() - skater.mass * skater.gravity * y;
-            var fixedDelta = fixedEnergy - initialEnergy;
+        //It just continued in free fall
+        else {
+          var energy = 0.5 * skater.mass * skater.velocity.magnitudeSquared() - skater.mass * skater.gravity * skater.position.y;
+          var deltaEnergy = energy - initialEnergy;
+          //make up for the difference by changing the y value
+          var y = (initialEnergy - 0.5 * skater.mass * skater.velocity.magnitudeSquared()) / (-1 * skater.mass * skater.gravity);
+
+          var fixedEnergy = 0.5 * skater.mass * skater.velocity.magnitudeSquared() - skater.mass * skater.gravity * y;
+          var fixedDelta = fixedEnergy - initialEnergy;
 //            console.log( fixedDelta, deltaEnergy, initialEnergy, energy );
 
-            //TODO: keep track of all of the variables in a hash so they can be set at once after verification and after energy conserved
-            skater.position = new Vector2( proposedPosition.x, y );
-            skater.updateEnergy();
-          }
+          //TODO: keep track of all of the variables in a hash so they can be set at once after verification and after energy conserved
+          skater.position = new Vector2( proposedPosition.x, y );
+          skater.updateEnergy();
         }
       }
-      if ( !skater.dragging && skater.track ) {
+    },
 
-        var u = skater.u;
-        var uD = skater.uD;
+    //Update the skater if he is on the track
+    stepTrack: function( dt ) {
+      var skater = this.skater;
+      var u = skater.u;
+      var uD = skater.uD;
 
-        //TODO: Store these diffs when traversing the track to improve performance
-        var xP = this.track.xSplineDiff.at( u );
-        var yP = this.track.ySplineDiff.at( u );
-        var xPP = this.track.xSplineDiffDiff.at( u );
-        var yPP = this.track.ySplineDiffDiff.at( u );
-        var g = -9.8;
-        var uDD1 = this.uDD( uD, xP, xPP, yP, yPP, g );
+      //TODO: Store these diffs when traversing the track to improve performance
+      var xP = this.track.xSplineDiff.at( u );
+      var yP = this.track.ySplineDiff.at( u );
+      var xPP = this.track.xSplineDiffDiff.at( u );
+      var yPP = this.track.ySplineDiffDiff.at( u );
+      var g = -9.8;
+      var uDD1 = this.uDD( uD, xP, xPP, yP, yPP, g );
 
-        var uD2 = uD + uDD1 * dt;
-        var u2 = u + (uD + uD2) / 2 * dt; //averaging here really keeps down the average.  It's not exactly forward Euler but I forget the name.
+      var uD2 = uD + uDD1 * dt;
+      var u2 = u + (uD + uD2) / 2 * dt; //averaging here really keeps down the average.  It's not exactly forward Euler but I forget the name.
 
-        //TODO: Fine tune based on energy conservation
+      //TODO: Fine tune based on energy conservation
 //        debugger;
-        var initialEnergy = this.track.getEnergy( u, uD, skater.mass, skater.gravity );
-        var finalEnergy = this.track.getEnergy( u2, uD2, skater.mass, skater.gravity );
+      var initialEnergy = this.track.getEnergy( u, uD, skater.mass, skater.gravity );
+      var finalEnergy = this.track.getEnergy( u2, uD2, skater.mass, skater.gravity );
 
-        //TODO: use a more accurate numerical integration scheme.  Currently forward Euler
-        skater.position = new Vector2( this.track.getX( u2 ), this.track.getY( u2 ) );
+      //TODO: use a more accurate numerical integration scheme.  Currently forward Euler
+      skater.position = new Vector2( this.track.getX( u2 ), this.track.getY( u2 ) );
 
-        var count = 0;
-        var upperBound = uD2 * 1.2;
-        var lowerBound = uD2 * 0.8;
+      var count = 0;
+      var upperBound = uD2 * 1.2;
+      var lowerBound = uD2 * 0.8;
 
-        //Binary search on the parametric velocity to make sure energy is exactly conserved
+      //Binary search on the parametric velocity to make sure energy is exactly conserved
 //        console.log( 'START BINARY' );
 //        console.log( (finalEnergy - initialEnergy).toFixed( 2 ), initialEnergy, finalEnergy );
-        while ( Math.abs( finalEnergy - initialEnergy ) > 1E-2 ) {
+      while ( Math.abs( finalEnergy - initialEnergy ) > 1E-2 ) {
 //          console.log( (finalEnergy - initialEnergy).toFixed( 2 ), 'binary search, lowerBound=', lowerBound, 'upperBound', upperBound );
-          var uMid = (upperBound + lowerBound) / 2;
-          var midEnergy = this.track.getEnergy( u2, uMid, skater.mass, skater.gravity );
-          if ( midEnergy > initialEnergy ) {
-            upperBound = uMid;
-          }
-          else {
-            lowerBound = uMid;
-          }
-          finalEnergy = this.track.getEnergy( u2, uMid, skater.mass, skater.gravity );
-          count++;
-          if ( count >= 1000 ) {
-            console.log( 'count', count );
-            break;
-          }
+        var uMid = (upperBound + lowerBound) / 2;
+        var midEnergy = this.track.getEnergy( u2, uMid, skater.mass, skater.gravity );
+        if ( midEnergy > initialEnergy ) {
+          upperBound = uMid;
         }
-        uD2 = (upperBound + lowerBound) / 2;
+        else {
+          lowerBound = uMid;
+        }
+        finalEnergy = this.track.getEnergy( u2, uMid, skater.mass, skater.gravity );
+        count++;
+        if ( count >= 1000 ) {
+          console.log( 'count', count );
+          break;
+        }
+      }
+      uD2 = (upperBound + lowerBound) / 2;
 //        console.log( (finalEnergy - initialEnergy).toFixed( 2 ), initialEnergy, finalEnergy );
 //        console.log( "END BINARY, count=", count );
 
-        skater.uD = uD2;
-        skater.u = u2;
+      skater.uD = uD2;
+      skater.u = u2;
 
-        var vx = this.track.xSplineDiff.at( u2 ) * uD2;
-        var vy = this.track.ySplineDiff.at( u2 ) * uD2;
-        var velocity = new Vector2( vx, vy );
+      var vx = this.track.xSplineDiff.at( u2 ) * uD2;
+      var vy = this.track.ySplineDiff.at( u2 ) * uD2;
+      var velocity = new Vector2( vx, vy );
 
-        skater.velocity = velocity;
-        skater.updateEnergy();
-
+      skater.velocity = velocity;
+      skater.updateEnergy();
 //        console.log( 'skater energy', skater.totalEnergy );
+
+    },
+    stepModel: function( dt ) {
+      var skater = this.skater;
+
+      //Free fall
+      if ( !skater.dragging && !skater.track ) {
+        this.stepFreeFall( dt );
+      }
+      else if ( !skater.dragging && skater.track ) {
+        this.stepTrack( dt );
       }
     }} );
 } );
