@@ -37,6 +37,10 @@ define( function( require ) {
   }
 
   return inherit( PropertySet, EnergySkateParkBasicsModel, {
+    reset: function() {
+      PropertySet.prototype.reset.call( this );
+      this.skater.reset();
+    },
 
     //See http://digitalcommons.calpoly.edu/cgi/viewcontent.cgi?article=1387&context=phy_fac
     uDD: function( uD, xP, xPP, yP, yPP, g ) {

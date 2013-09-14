@@ -27,7 +27,11 @@ define( function() {
       'button_step_deactivated.png',
       'button_step_hover.png',
       'button_step_pressed.png',
-      'button_step_unpressed.png'
+      'button_step_unpressed.png',
+      'reset_button_disabled.png',
+      'reset_button_down.png',
+      'reset_button_over.png',
+      'reset_button_up.png'
     ]
   };
 } );
