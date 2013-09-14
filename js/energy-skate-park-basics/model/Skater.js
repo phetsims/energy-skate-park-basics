@@ -53,6 +53,9 @@ define( function( require ) {
       this.kineticEnergy = 0.5 * this.mass * this.velocity.magnitudeSquared();
       this.potentialEnergy = -this.mass * this.position.y * this.gravity;
       this.totalEnergy = this.kineticEnergy + this.potentialEnergy + this.thermalEnergy;
+
+      //Signal that energies have changed for coarse-grained listeners like PieChartNode that should not get updated 3-4 times per times step
+      this.trigger( 'energy-changed' );
     }
   } );
 } );
