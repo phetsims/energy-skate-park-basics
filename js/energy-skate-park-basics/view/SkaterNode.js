@@ -1,5 +1,9 @@
 // Copyright 2002-2013, University of Colorado Boulder
 
+/**
+ * Scenery node for the skater, which is draggable.
+ * @author Sam Reid
+ */
 define( function( require ) {
   'use strict';
 

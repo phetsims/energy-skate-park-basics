@@ -1,5 +1,9 @@
 // Copyright 2002-2013, University of Colorado Boulder
 
+/**
+ * Scenery node for the control panel, with view settings and controls.
+ * @author Sam Reid
+ */
 define( function( require ) {
   'use strict';
 

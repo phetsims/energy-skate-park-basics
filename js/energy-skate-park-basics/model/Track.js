@@ -1,5 +1,9 @@
 // Copyright 2002-2013, University of Colorado Boulder
 
+/**
+ * Model for one track in Energy Skate Park Basics, which contains the control points and cubic splines for interpolating between them.
+ * @author Sam Reid
+ */
 define( function( require ) {
   'use strict';
 

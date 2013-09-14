@@ -1,3 +1,9 @@
+// Copyright 2002-2013, University of Colorado Boulder
+
+/**
+ * Scenery node for the speed controls, with "normal" and "slow motion" radio buttons.
+ * @author Sam Reid
+ */
 define( function( require ) {
   'use strict';
 

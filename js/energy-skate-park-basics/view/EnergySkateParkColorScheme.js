@@ -1,5 +1,9 @@
 // Copyright 2002-2013, University of Colorado Boulder
 
+/**
+ * Colors used in Energy Skate Park: Basics, based on the original Java sim colors.
+ * @author Sam Reid
+ */
 define( function( require ) {
   'use strict';
 

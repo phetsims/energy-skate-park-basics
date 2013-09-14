@@ -1,5 +1,9 @@
 // Copyright 2002-2013, University of Colorado Boulder
 
+/**
+ * Scenery node that shows the bar graph, and the animating bars for each energy type.
+ * @author Sam Reid
+ */
 define( function( require ) {
   'use strict';
 

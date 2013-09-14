@@ -1,5 +1,9 @@
 // Copyright 2002-2013, University of Colorado Boulder
 
+/**
+ * Scenery node for the energy skate park basics view (includes everything you see)
+ * @author Sam Reid
+ */
 define( function( require ) {
   'use strict';
 

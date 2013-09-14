@@ -1,5 +1,9 @@
 // Copyright 2002-2013, University of Colorado Boulder
 
+/**
+ * Scenery node for the track, which can be translated by dragging the track, or manipulated by dragging its control points.
+ * @author Sam Reid
+ */
 define( function( require ) {
   'use strict';
 

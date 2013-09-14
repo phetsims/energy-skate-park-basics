@@ -1,5 +1,10 @@
 // Copyright 2002-2013, University of Colorado Boulder
 
+/**
+ * Model for the Energy Skate Park: Basics sim, including model values for the view settings, such as whether the grid is visible.
+ * All units are in metric.
+ * @author Sam Reid
+ */
 define( function( require ) {
   'use strict';
 
