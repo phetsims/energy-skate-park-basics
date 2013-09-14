@@ -54,24 +54,26 @@ define( function( require ) {
       var barX = getBarX( index );
       var bar = new Rectangle( barX, originY - 50, barWidth, 50, {fill: color, stroke: 'black', lineWidth: 0.5} );
       property.link( function( value ) {
+        if ( barGraphNode.visible ) {
+          //TODO: Possible performance improvement to avoid allocations in Rectangle.setRect
 
-        //TODO: Possible performance improvement to avoid allocations in Rectangle.setRect
-
-        //Convert to graph coordinates, floor and protect against duplicates
-        var barHeight = Math.floor( value / 4 );
-        if ( barHeight !== lastBarHeight ) {
-          if ( barHeight >= 0 ) {
+          //Convert to graph coordinates, floor and protect against duplicates
+          var barHeight = Math.floor( value / 4 );
+          if ( barHeight !== lastBarHeight ) {
+            if ( barHeight >= 0 ) {
+              lastBarHeight = barHeight;
+              bar.setRect( barX, originY - barHeight, barWidth, barHeight );
+            }
+            else {
+              bar.setRect( barX, originY, barWidth, -barHeight );
+            }
             lastBarHeight = barHeight;
-            bar.setRect( barX, originY - barHeight, barWidth, barHeight );
           }
-          else {
-            bar.setRect( barX, originY, barWidth, -barHeight );
-          }
-          lastBarHeight = barHeight;
         }
       } );
       return bar;
     };
+
     var kineticBar = createBar( 0, EnergySkateParkColorScheme.kineticEnergy, this.skater.kineticEnergyProperty );
     var potentialBar = createBar( 1, EnergySkateParkColorScheme.potentialEnergy, this.skater.potentialEnergyProperty );
     var thermalBar = createBar( 2, EnergySkateParkColorScheme.thermalEnergy, this.skater.thermalEnergyProperty );
@@ -99,6 +101,7 @@ define( function( require ) {
 
     Panel.call( this, contentNode, { x: 10, y: 10, xMargin: 10, yMargin: 10, fill: 'white', stroke: 'gray', lineWidth: 1, resize: false } );
 
+    //TODO: update the bars when the graph becomes visible
     model.barGraphVisibleProperty.linkAttribute( this, 'visible' );
   }
 
