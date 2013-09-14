@@ -58,8 +58,7 @@ define( function( require ) {
     updateEnergy: function() {
       this.kineticEnergy = 0.5 * this.mass * this.velocity.magnitudeSquared();
       this.potentialEnergy = -this.mass * this.position.y * this.gravity;
-      this.thermalEnergy = 100;
-      this.totalEnergy = this.kineticEnergy + this.potentialEnergy;
+      this.totalEnergy = this.kineticEnergy + this.potentialEnergy + this.thermalEnergy;
     }
   } );
 } );

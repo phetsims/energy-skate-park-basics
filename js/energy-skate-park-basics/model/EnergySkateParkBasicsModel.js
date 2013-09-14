@@ -104,6 +104,14 @@ define( function( require ) {
             //attach to track
             skater.track = this.track;
             skater.u = t;
+            var newEnergy = this.track.getEnergy( t, skater.uD, skater.mass, skater.gravity );
+            var delta = newEnergy - initialEnergy;
+            if ( delta < 0 ) {
+              console.log( 'lost', delta );
+              var lostEnergy = Math.abs( delta );
+              skater.thermalEnergy = skater.thermalEnergy + lostEnergy;
+            }
+
             this.stepTrack( dt );
           }
         }
@@ -114,6 +122,9 @@ define( function( require ) {
           var deltaEnergy = energy - initialEnergy;
           //make up for the difference by changing the y value
           var y = (initialEnergy - 0.5 * skater.mass * skater.velocity.magnitudeSquared()) / (-1 * skater.mass * skater.gravity);
+          if ( y < 0 ) {
+            y = 0;
+          }
 
           var fixedEnergy = 0.5 * skater.mass * skater.velocity.magnitudeSquared() - skater.mass * skater.gravity * y;
           var fixedDelta = fixedEnergy - initialEnergy;
