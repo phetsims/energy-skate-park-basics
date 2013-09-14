@@ -46,6 +46,8 @@ define( function( require ) {
     },
 
     //See http://digitalcommons.calpoly.edu/cgi/viewcontent.cgi?article=1387&context=phy_fac
+    //Computational problems in introductory physics: Lessons from a bead on a wire
+    //Thomas J. Bensky and Matthew J. Moelter
     uDD: function( uD, xP, xPP, yP, yPP, g ) {
       return -1 * (uD * uD * (xP * xPP + yP * yPP) - g * yP) / (xP * xP + yP * yP);
     },
