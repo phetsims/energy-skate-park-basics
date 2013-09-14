@@ -14,7 +14,7 @@ define( function( require ) {
     var energySkateParkBasicsModel = this;
     PropertySet.call( this, {
       closestPoint: new Vector2( 1, 0 ),
-      pieChartVisible: false,
+      pieChartVisible: true,
       barGraphVisible: true,
       gridVisible: false,
       speedVisible: false,

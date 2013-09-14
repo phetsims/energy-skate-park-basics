@@ -18,12 +18,13 @@ define( function( require ) {
   var PlayPauseControlPanel = require( 'ENERGY_SKATE_PARK/energy-skate-park-basics/view/PlayPauseControlPanel' );
   var PlaybackSpeedControl = require( 'ENERGY_SKATE_PARK/energy-skate-park-basics/view/PlaybackSpeedControl' );
   var BarGraphNode = require( 'ENERGY_SKATE_PARK/energy-skate-park-basics/view/BarGraphNode' );
+  var PieChartNode = require( 'ENERGY_SKATE_PARK/energy-skate-park-basics/view/PieChartNode' );
   var ResetAllButton = require( 'ENERGY_SKATE_PARK/energy-skate-park-basics/view/ResetAllButton' );
   var ModelViewTransform2 = require( 'PHETCOMMON/view/ModelViewTransform2' );
   var Bounds2 = require( 'DOT/Bounds2' );
   var Vector2 = require( 'DOT/Vector2' );
 
-  function EnergySkateParkBasicsView( model, mvt ) {
+  function EnergySkateParkBasicsView( model ) {
 
     var thisView = this;
     ScreenView.call( thisView, { renderer: 'svg' } );
@@ -45,6 +46,7 @@ define( function( require ) {
     this.controlPanel.right = this.layoutBounds.width;
 
     this.addChild( new BarGraphNode( model, this ) );
+    this.addChild( new PieChartNode( model, this, transform ) );
     var playPauseControl = new PlayPauseControlPanel( model, this );
     this.addChild( playPauseControl.mutate( {centerX: this.layoutBounds.centerX + playPauseControl.playButton.width / 2, bottom: this.layoutBounds.maxY - 10} ) );
 
