@@ -49,6 +49,8 @@ define( function( require ) {
       skater.track = null;
     } );
 
+    this.addDerivedProperty( 'speed', ['velocity'], function( velocity ) {return velocity.magnitude();} );
+
     this.updateEnergy();
   }
 

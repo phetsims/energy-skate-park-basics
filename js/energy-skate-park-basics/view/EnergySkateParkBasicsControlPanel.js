@@ -20,7 +20,7 @@ define( function( require ) {
       new CheckBox( new Text( 'Bar Graph' ), model.barGraphVisibleProperty ),
       new CheckBox( new Text( 'Pie Chart' ), model.pieChartVisibleProperty ),
       new CheckBox( new Text( 'Grid' ), model.gridVisibleProperty ),
-      new CheckBox( new Text( 'Speed' ), model.speedVisibleProperty )]} );
+      new CheckBox( new Text( 'Speed' ), model.speedometerVisibleProperty )]} );
 
     Panel.call( this, contentNode, { xMargin: 10, yMargin: 10, fill: '#F0F0F0', stroke: 'gray', lineWidth: 1, resize: false } );
   }

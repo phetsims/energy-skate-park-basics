@@ -23,6 +23,7 @@ define( function( require ) {
   var ResetAllButton = require( 'ENERGY_SKATE_PARK/energy-skate-park-basics/view/ResetAllButton' );
   var ModelViewTransform2 = require( 'PHETCOMMON/view/ModelViewTransform2' );
   var Vector2 = require( 'DOT/Vector2' );
+  var SpeedometerNode = require( 'SCENERY_PHET/SpeedometerNode' );
 
   function EnergySkateParkBasicsView( model ) {
 
@@ -45,6 +46,12 @@ define( function( require ) {
     this.addChild( new SkaterNode( model, transform ) );
     this.addChild( new PieChartNode( model, this, transform ) );
 //    this.addChild( new ClosestPointNode( model, transform ) );
+
+    var speedometerNode = new SpeedometerNode( model.skater.speedProperty, 'Speed', 20 );
+    model.speedometerVisibleProperty.linkAttribute( speedometerNode, 'visible' );
+    speedometerNode.centerX = this.layoutBounds.centerX;
+    speedometerNode.top = this.layoutBounds.minY + 5;
+    this.addChild( speedometerNode );
 
     this.controlPanel = new EnergySkateParkBasicsControlPanel( model, this );
     this.addChild( this.controlPanel );

@@ -22,7 +22,7 @@ define( function( require ) {
       pieChartVisible: true,
       barGraphVisible: true,
       gridVisible: true,
-      speedVisible: false,
+      speedometerVisible: false,
       paused: false,
 
       //speed of the model, either 'normal' or 'slow'
