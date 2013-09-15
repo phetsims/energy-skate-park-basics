@@ -23,7 +23,7 @@ define( function( require ) {
     var kineticEnergySlice = new Path( null, {fill: EnergySkateParkColorScheme.kineticEnergy, stroke: 'black', lineWidth: 1} );
     var potentialEnergySlice = new Path( null, {fill: EnergySkateParkColorScheme.potentialEnergy, stroke: 'black', lineWidth: 1} );
     var thermalEnergySlice = new Path( null, {fill: EnergySkateParkColorScheme.thermalEnergy, stroke: 'black', lineWidth: 1} );
-    Node.call( this, {children: [kineticEnergySlice, potentialEnergySlice, thermalEnergySlice], pickable: false} );
+    Node.call( this, {children: [thermalEnergySlice, potentialEnergySlice, kineticEnergySlice ], pickable: false} );
 
     this.skater.positionProperty.link( function( position ) {
       var view = modelViewTransform.modelToViewPosition( position );
@@ -66,15 +66,15 @@ define( function( require ) {
         potentialEnergySlice.visible = true;
         kineticEnergySlice.visible = true;
         thermalEnergySlice.visible = true;
-        var amountPotential = skater.potentialEnergy / skater.totalEnergy;
-        var thermalAmount = skater.thermalEnergy / skater.totalEnergy;
+        var fractionPotential = skater.potentialEnergy / skater.totalEnergy;
+        var fractionThermal = skater.thermalEnergy / skater.totalEnergy;
+        var fractionKinetic = skater.kineticEnergy / skater.totalEnergy;
 
         //Show one of them in the background instead of pieces for each one for performance
-        kineticEnergySlice.shape = Shape.circle( 0, 0, radius );//TODO: this shouldn't change too much if energy conserved
-        potentialEnergySlice.shape = new Shape().moveTo( 0, 0 ).ellipticalArc( 0, 0, radius, radius, 0, -Math.PI / 2, Math.PI * 2 * amountPotential - Math.PI / 2, false ).lineTo( 0, 0 );
+        thermalEnergySlice.shape = Shape.circle( 0, 0, radius );//TODO: this shouldn't change too much if energy conserved
+        potentialEnergySlice.shape = new Shape().moveTo( 0, 0 ).ellipticalArc( 0, 0, radius, radius, 0, -Math.PI / 2, Math.PI * 2 * fractionPotential - Math.PI / 2, false ).lineTo( 0, 0 );
 
-        //TODO: Thermal part should be stationary so it is not always moving about too much
-        thermalEnergySlice.shape = new Shape().moveTo( 0, 0 ).ellipticalArc( 0, 0, radius, radius, 0, Math.PI * 2 * amountPotential - Math.PI / 2, Math.PI * 2 * amountPotential - Math.PI / 2 + thermalAmount * Math.PI * 2, false ).lineTo( 0, 0 );
+        kineticEnergySlice.shape = new Shape().moveTo( 0, 0 ).ellipticalArc( 0, 0, radius, radius, 0, Math.PI * 2 * fractionPotential - Math.PI / 2, Math.PI * 2 * fractionPotential - Math.PI / 2 + fractionKinetic * Math.PI * 2, false ).lineTo( 0, 0 );
       }
     };
     model.skater.on( 'energy-changed', updatePaths );
