@@ -55,14 +55,14 @@ define( function( require ) {
 
     this.controlPanel = new EnergySkateParkBasicsControlPanel( model, this );
     this.addChild( this.controlPanel );
-    this.controlPanel.right = this.layoutBounds.width;
+    this.controlPanel.right = this.layoutBounds.width - 5;
 
     this.addChild( new BarGraphNode( model, this ) );
 
     var playPauseControl = new PlayPauseControlPanel( model, this );
     this.addChild( playPauseControl.mutate( {centerX: this.layoutBounds.centerX + playPauseControl.playButton.width / 2, bottom: this.layoutBounds.maxY - 10} ) );
 
-    this.addChild( new ResetAllButton( model.reset.bind( model ) ).mutate( {top: this.controlPanel.bottom, centerX: this.controlPanel.centerX} ) );
+    this.addChild( new ResetAllButton( model.reset.bind( model ) ).mutate( {scale: 0.7, top: transform.modelToViewY( 0 ) + 5, centerX: this.controlPanel.centerX} ) );
 
     this.addChild( new PlaybackSpeedControl( model ).mutate( {right: playPauseControl.left, centerY: playPauseControl.centerY} ) );
   }
