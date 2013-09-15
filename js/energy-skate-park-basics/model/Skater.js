@@ -55,6 +55,11 @@ define( function( require ) {
   }
 
   return inherit( PropertySet, Skater, {
+    clearThermal: function() {
+      this.thermalEnergy = 0.0;
+      this.updateEnergy();
+    },
+
     reset: function() {
       PropertySet.prototype.reset.call( this );
       this.updateEnergy();

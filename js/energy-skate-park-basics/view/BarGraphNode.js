@@ -16,6 +16,7 @@ define( function( require ) {
   var ArrowNode = require( 'SCENERY_PHET/ArrowNode' );
   var PhetFont = require( 'SCENERY_PHET/PhetFont' );
   var EnergySkateParkColorScheme = require( 'ENERGY_SKATE_PARK/energy-skate-park-basics/view/EnergySkateParkColorScheme' );
+  var UndoButton = require( 'ENERGY_SKATE_PARK/energy-skate-park-basics/view/UndoButton' );
 
   function BarGraphNode( model, energySkateParkBasicsView ) {
     var barGraphNode = this;
@@ -49,13 +50,13 @@ define( function( require ) {
     var createBar = function( index, color, property ) {
       var lastBarHeight = 0;
       var barX = getBarX( index );
-      var bar = new Rectangle( barX, originY - 50, barWidth, 50, {fill: color, stroke: 'black', lineWidth: 0.5, pickable: false} );
-      property.link( function( value ) {
+      var bar = new Rectangle( barX, 0, barWidth, 0, {fill: color, stroke: 'black', lineWidth: 0.5, pickable: false} );
+      var update = function() {
         if ( barGraphNode.visible ) {
           //TODO: Possible performance improvement to avoid allocations in Rectangle.setRect
 
           //Convert to graph coordinates, floor and protect against duplicates
-          var barHeight = Math.floor( value / 4 );
+          var barHeight = Math.floor( property.value / 4 );
           if ( barHeight !== lastBarHeight ) {
             if ( barHeight >= 0 ) {
               lastBarHeight = barHeight;
@@ -66,6 +67,14 @@ define( function( require ) {
             }
             lastBarHeight = barHeight;
           }
+        }
+      };
+      property.link( update );
+
+      //update the bars when the graph becomes visible
+      model.barGraphVisibleProperty.link( function( visible ) {
+        if ( visible ) {
+          update();
         }
       } );
       return bar;
@@ -81,6 +90,9 @@ define( function( require ) {
     var thermalLabel = createLabel( 2, 'Thermal', EnergySkateParkColorScheme.thermalEnergy );
     var totalLabel = createLabel( 3, 'Total', EnergySkateParkColorScheme.totalEnergy );
 
+    var undoButton = new UndoButton( model.clearThermal.bind( model ), model.skater, {centerX: thermalLabel.centerX, y: thermalLabel.bottom + 15} );
+    model.skater.thermalEnergyProperty.linkAttribute( undoButton, 'enabled' );
+
     var contentNode = new Rectangle( 0, 0, contentWidth, contentHeight, {children: [
       new ArrowNode( insetX, originY, insetX, insetY, {pickable: false} ),
       new Text( 'Energy (Joules)', {x: 5, y: insetY - 10, font: new PhetFont( 14 ), pickable: false} ),
@@ -93,14 +105,14 @@ define( function( require ) {
       kineticBar,
       potentialBar,
       thermalBar,
-      totalBar
+      totalBar,
+      undoButton
     ]} );
 
     Panel.call( this, contentNode, { x: 10, y: 10, xMargin: 10, yMargin: 10, fill: 'white', stroke: 'gray', lineWidth: 1, resize: false, cursor: 'pointer' } );
 
     this.addInputListener( new SimpleDragHandler() );
 
-    //TODO: update the bars when the graph becomes visible
     model.barGraphVisibleProperty.linkAttribute( this, 'visible' );
   }
 
