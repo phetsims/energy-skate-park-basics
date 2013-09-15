@@ -10,25 +10,78 @@ define( function( require ) {
   var inherit = require( 'PHET_CORE/inherit' );
   var Node = require( 'SCENERY/nodes/Node' );
   var VBox = require( 'SCENERY/nodes/VBox' );
+  var HBox = require( 'SCENERY/nodes/HBox' );
+  var Path = require( 'SCENERY/nodes/Path' );
+  var Shape = require( 'KITE/Shape' );
+  var Rectangle = require( 'SCENERY/nodes/Rectangle' );
+  var Line = require( 'SCENERY/nodes/Line' );
+  var Circle = require( 'SCENERY/nodes/Circle' );
   var Panel = require( 'SUN/Panel' );
   var CheckBox = require( 'SUN/CheckBox' );
   var Text = require( 'SCENERY/nodes/Text' );
   var images = require( 'ENERGY_SKATE_PARK/energy-skate-park-basics-images' );
   var MassSlider = require( 'ENERGY_SKATE_PARK/energy-skate-park-basics/view/MassSlider' );
+  var EnergySkateParkColorScheme = require( 'ENERGY_SKATE_PARK/energy-skate-park-basics/view/EnergySkateParkColorScheme' );
+  var SpeedometerNode = require( 'SCENERY_PHET/SpeedometerNode' );
+  var Property = require( 'AXON/Property' );
 
   function EnergySkateParkBasicsControlPanel( model, view ) {
+    var barGraphSet = [new Text( 'Bar Graph' ), this.createBarGraphIcon()];
+    var pieChartSet = [new Text( 'Pie Chart' ), this.createPieChartIcon()];
+    var gridSet = [new Text( 'Grid' ), this.createGridIcon()];
+    var speedometerSet = [new Text( 'Speed' ), this.createSpeedometerIcon()];
+
+    var sets = [barGraphSet, pieChartSet, gridSet, speedometerSet];
+    var maxTextWidth = _.max( sets, function( itemSet ) { return itemSet[0].width; } )[0].width;
+
+    //In the absence of any sun (or other) layout packages, just manually space them out so they will have the icons aligned
+    var pad = function( itemSet ) {
+      var padWidth = maxTextWidth - itemSet[0].width;
+      console.log( padWidth );
+      return [itemSet[0], new Rectangle( 0, 0, padWidth + 20, 20 ), itemSet[1]];
+    };
+
     var checkBoxes = new VBox( {align: 'left', spacing: 10, children: [
-      new CheckBox( new Text( 'Bar Graph' ), model.barGraphVisibleProperty ),
-      new CheckBox( new Text( 'Pie Chart' ), model.pieChartVisibleProperty ),
-      new CheckBox( new Text( 'Grid' ), model.gridVisibleProperty ),
-      new CheckBox( new Text( 'Speed' ), model.speedometerVisibleProperty )]} );
+      new CheckBox( new HBox( {children: pad( barGraphSet )} ), model.barGraphVisibleProperty ),
+      new CheckBox( new HBox( {children: pad( pieChartSet )} ), model.pieChartVisibleProperty ),
+      new CheckBox( new HBox( {children: pad( gridSet )} ), model.gridVisibleProperty ),
+      new CheckBox( new HBox( {children: pad( speedometerSet )} ), model.speedometerVisibleProperty )]} );
 
     var slider = new MassSlider( model );
 
-    var content = new VBox( {align: 'left', spacing: 10, children: [checkBoxes, slider]} );
+    var content = new VBox( {spacing: 10, children: [checkBoxes, slider]} );
 
     Panel.call( this, content, { xMargin: 10, yMargin: 10, fill: '#F0F0F0', stroke: 'gray', lineWidth: 1, resize: false } );
   }
 
-  return inherit( Node, EnergySkateParkBasicsControlPanel );
+  return inherit( Node, EnergySkateParkBasicsControlPanel, {
+    createBarGraphIcon: function() {
+      return new Node( {children: [
+        new Rectangle( 0, 0, 20, 20, {fill: 'white', stroke: 'black', lineWidth: 0.5} ),
+        new Rectangle( 3, 14, 5, 6, {fill: EnergySkateParkColorScheme.kineticEnergy, stroke: 'black', lineWidth: 0.5} ),
+        new Rectangle( 11, 8, 5, 12, {fill: EnergySkateParkColorScheme.potentialEnergy, stroke: 'black', lineWidth: 0.5} )
+      ]} );
+    },
+    createPieChartIcon: function() {
+      var radius = 10;
+      var x = new Shape().moveTo( 0, 0 ).ellipticalArc( 0, 0, radius, radius, 0, -Math.PI / 2, Math.PI * 2 * 0.25 - Math.PI / 2, false ).lineTo( 0, 0 );
+      return new Node( {children: [new Circle( radius, {fill: EnergySkateParkColorScheme.potentialEnergy, lineWidth: 0.5, stroke: 'black' } ), new Path( x, {fill: EnergySkateParkColorScheme.kineticEnergy, lineWidth: 0.5, stroke: 'black'} )]} );
+    },
+    createGridIcon: function() {
+      return new Node( {children: [
+        new Rectangle( 0, 0, 20, 20, {fill: 'white', stroke: 'black', lineWidth: 0.5} ),
+        new Line( 0, 10, 20, 10, {stroke: 'black', lineWidth: 1} ),
+        new Line( 0, 5, 20, 5, {stroke: 'black', lineWidth: 0.5} ),
+        new Line( 0, 15, 20, 15, {stroke: 'black', lineWidth: 0.5} ),
+        new Line( 10, 0, 10, 20, {stroke: 'black', lineWidth: 1} ),
+        new Line( 5, 0, 5, 20, {stroke: 'black', lineWidth: 0.5} ),
+        new Line( 15, 0, 15, 20, {stroke: 'black', lineWidth: 0.5} )
+      ]} );
+    },
+    createSpeedometerIcon: function() {
+      var node = new SpeedometerNode( new Property( 0 ), 'Speed', 10, {} );
+      node.scale( 20 / node.width );
+      return  node;
+    }
+  } );
 } );

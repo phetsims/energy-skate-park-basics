@@ -32,6 +32,7 @@ define( function( require ) {
     var controlPoints = [ new Property( new Vector2( -2, 2 ) ), new Property( new Vector2( 0, 0 ) ), new Property( new Vector2( 2, 1 ) ), new Property( new Vector2( 2.5, 1 ) ), new Property( new Vector2( 3, 1 ) )];
     this.track = new Track( controlPoints );
 
+    //TODO: Remove 'closest point' debugging tool to improve performance
     var updateClosestPoint = function() {
       energySkateParkBasicsModel.closestPoint = energySkateParkBasicsModel.track.getClosestPoint( energySkateParkBasicsModel.skater.position ).point;
     };
