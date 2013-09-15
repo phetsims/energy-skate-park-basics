@@ -15,22 +15,36 @@ define( function( require ) {
   var images = require( 'ENERGY_SKATE_PARK/energy-skate-park-basics-images' );
   var Vector2 = require( 'DOT/Vector2' );
   var Matrix3 = require( 'DOT/Matrix3' );
+  var LinearFunction = require( 'DOT/LinearFunction' );
 
   function SkaterNode( model, modelViewTransform ) {
 
     this.skater = model.skater;
     var skaterNode = this;
 
+    //Map from mass(kg) to scale
+    var linearFunction = new LinearFunction( 60, 100, 0.33, 0.4 );
+
     //Make him 2 meters tall, with skateboard
-    var scale = 0.33;
+    var scale = linearFunction( this.skater.mass );
     Image.call( skaterNode, images.getImage( 'skater.png' ), { scale: scale, renderer: 'svg', rendererOptions: {cssTransform: true}, cursor: 'pointer'} );
     var imageWidth = this.width;
     var imageHeight = this.height;
 
+    this.skater.massProperty.link( function( mass ) {
+      skaterNode.setScaleMagnitude( linearFunction( mass ) );
+      skaterNode.setRotation( 0 );
+      imageWidth = skaterNode.width;
+      imageHeight = skaterNode.height;
+      if ( positionChanged ) {
+        positionChanged( skaterNode.skater.position );
+      }
+    } );
+
     //Show a red dot in the bottom center as the important particle model coordinate
     this.addChild( new Circle( 4, {fill: 'red', x: imageWidth / scale / 2, y: imageHeight / scale } ) );
 
-    this.skater.positionProperty.link( function( position ) {
+    var positionChanged = function( position ) {
       var view = modelViewTransform.modelToViewPosition( position );
 
       //TODO: Coalesce all of these calls into a single matrix for performance?
@@ -40,7 +54,8 @@ define( function( require ) {
         var angle = skaterNode.skater.track.getViewAngleAt( skaterNode.skater.u );
         skaterNode.rotateAround( new Vector2( view.x, view.y ), angle );
       }
-    } );
+    };
+    this.skater.positionProperty.link( positionChanged );
     this.addInputListener( new SimpleDragHandler(
       {
         start: function( event ) {

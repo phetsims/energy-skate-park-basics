@@ -21,10 +21,10 @@ define( function( require ) {
   var Property = require( 'AXON/Property' );
 
   function MassSlider( model, view ) {
-    var slider = new HSlider( new Range( 0.01, 30 ), new Dimension2( 100, 4 ), model.skater.massProperty, new Property( true ), {} );
+    var slider = new HSlider( new Range( 10, 110 ), new Dimension2( 100, 4 ), model.skater.massProperty, new Property( true ), {} );
     var tickFont = new PhetFont( 10 );
-    slider.addMajorTick( 0.01, new Text( 'Small', { font: tickFont } ) );
-    slider.addMajorTick( 30, new Text( 'Large', { font: tickFont } ) );
+    slider.addMajorTick( 10, new Text( 'Small', { font: tickFont } ) );
+    slider.addMajorTick( 110, new Text( 'Large', { font: tickFont } ) );
     VBox.call( this, {children: [new Text( "Skater Mass", new PhetFont( 14 ) ), slider]} );
   }
 

@@ -29,7 +29,7 @@ define( function( require ) {
 
       position: new Vector2( 0, 0 ),
 
-      mass: 30,
+      mass: 60,
 
       velocity: new Vector2( 0, 0 ),
 
@@ -50,6 +50,7 @@ define( function( require ) {
     } );
 
     this.addDerivedProperty( 'speed', ['velocity'], function( velocity ) {return velocity.magnitude();} );
+    this.massProperty.link( function( mass ) { skater.updateEnergy(); } );
 
     this.updateEnergy();
   }
