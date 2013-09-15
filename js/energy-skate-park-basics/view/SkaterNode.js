@@ -20,7 +20,9 @@ define( function( require ) {
 
     this.skater = model.skater;
     var skaterNode = this;
-    var scale = 0.4;
+
+    //Make him 2 meters tall, with skateboard
+    var scale = 0.33;
     Image.call( skaterNode, images.getImage( 'skater.png' ), { scale: scale, renderer: 'svg', rendererOptions: {cssTransform: true}, cursor: 'pointer'} );
     var imageWidth = this.width;
     var imageHeight = this.height;

@@ -15,6 +15,7 @@ define( function( require ) {
   var Path = require( 'SCENERY/nodes/Path' );
   var EnergySkateParkColorScheme = require( 'ENERGY_SKATE_PARK/energy-skate-park-basics/view/EnergySkateParkColorScheme' );
 
+  //TODO: Should be centered over his head not his feet so it doesn't look awkward when skating in a parabola
   function PieChartNode( model, energySkateParkBasicsView, modelViewTransform ) {
     var pieChartNode = this;
     this.skater = model.skater;

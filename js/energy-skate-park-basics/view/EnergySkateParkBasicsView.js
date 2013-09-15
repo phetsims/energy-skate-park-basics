@@ -60,6 +60,7 @@ define( function( require ) {
     this.controlPanel = new EnergySkateParkBasicsControlPanel( model, this );
     this.addChild( this.controlPanel );
     this.controlPanel.right = this.layoutBounds.width - 5;
+    this.controlPanel.top = 5;
 
     pieChartLegend.mutate( {top: this.controlPanel.top, right: this.controlPanel.left - 20} );
 
