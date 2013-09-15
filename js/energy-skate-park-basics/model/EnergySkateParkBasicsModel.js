@@ -48,6 +48,7 @@ define( function( require ) {
     reset: function() {
       PropertySet.prototype.reset.call( this );
       this.skater.reset();
+      this.track.reset();
     },
 
     //See http://digitalcommons.calpoly.edu/cgi/viewcontent.cgi?article=1387&context=phy_fac

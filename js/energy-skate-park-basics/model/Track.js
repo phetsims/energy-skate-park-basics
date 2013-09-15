@@ -55,6 +55,12 @@ define( function( require ) {
   }
 
   return inherit( ObservableArray, Track, {
+    reset: function() {
+      ObservableArray.prototype.reset.call( this );
+      for ( var i = 0; i < this.length; i++ ) {
+        this.get( i ).reset();
+      }
+    },
     getClosestPoint: function( point ) {
       var track = this;
 
