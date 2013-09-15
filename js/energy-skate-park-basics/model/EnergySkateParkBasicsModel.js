@@ -71,7 +71,8 @@ define( function( require ) {
         this.stepModel( this.speed == 'normal' ? dt : dt * 0.25 );
       }
     },
-
+    stepGround: function( dt ) {
+    },
     //Update the skater in free fall
     stepFreeFall: function( dt ) {
       var skater = this.skater;
@@ -218,8 +219,11 @@ define( function( require ) {
       var skater = this.skater;
 
       //Free fall
-      if ( !skater.dragging && !skater.track ) {
+      if ( !skater.dragging && !skater.track && skater.position.y > 0 ) {
         this.stepFreeFall( dt );
+      }
+      else if ( !skater.dragging && !skater.track && skater.position.y <= 0 ) {
+        this.stepGround( dt );
       }
       else if ( !skater.dragging && skater.track ) {
         this.stepTrack( dt );
