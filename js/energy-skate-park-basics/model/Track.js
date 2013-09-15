@@ -126,6 +126,16 @@ define( function( require ) {
       //batch update for performance
       //TODO: This is still pretty slow, consider translating the entire function directly instead of recomputing splines
       this.updateSplines();
+    },
+
+    //TODO: optimize
+    //For purposes of showing the skater angle, get the view angle of the track here.  Note this means inverting the y values
+    getViewAngleAt: function( u ) {
+      var a = this.getPoint( u - 1E-6 );
+      a.y = -a.y;
+      var b = this.getPoint( u + 1E-6 );
+      b.y = -b.y;
+      return b.minus( a ).angle();
     }
   } );
 } );

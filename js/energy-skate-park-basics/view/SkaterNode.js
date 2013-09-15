@@ -13,6 +13,8 @@ define( function( require ) {
   var Image = require( 'SCENERY/nodes/Image' );
   var SimpleDragHandler = require( 'SCENERY/input/SimpleDragHandler' );
   var images = require( 'ENERGY_SKATE_PARK/energy-skate-park-basics-images' );
+  var Vector2 = require( 'DOT/Vector2' );
+  var Matrix3 = require( 'DOT/Matrix3' );
 
   function SkaterNode( model, modelViewTransform ) {
 
@@ -28,7 +30,14 @@ define( function( require ) {
 
     this.skater.positionProperty.link( function( position ) {
       var view = modelViewTransform.modelToViewPosition( position );
+
+      //TODO: Coalesce all of these calls into a single matrix for performance?
       skaterNode.setTranslation( view.x - imageWidth / 2, view.y - imageHeight );
+      skaterNode.setRotation( 0 );
+      if ( skaterNode.skater.track ) {
+        var angle = skaterNode.skater.track.getViewAngleAt( skaterNode.skater.u );
+        skaterNode.rotateAround( new Vector2( view.x, view.y ), angle );
+      }
     } );
     this.addInputListener( new SimpleDragHandler(
       {
