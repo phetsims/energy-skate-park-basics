@@ -13,6 +13,7 @@ define( function( require ) {
   var Line = require( 'SCENERY/nodes/Line' );
   var Text = require( 'SCENERY/nodes/Text' );
   var PhetFont = require( 'SCENERY_PHET/PhetFont' );
+  var BackgroundNode = require( 'ENERGY_SKATE_PARK/energy-skate-park-basics/view/BackgroundNode' );
 
   function GridNode( model, energySkateParkBasicsView, modelViewTransform ) {
     var gridNode = this;
@@ -31,10 +32,11 @@ define( function( require ) {
 
       var lines = [];
       var texts = [];
-      var lineHeight = height / layoutScale - 100;//TODO: factor out magic number '100'
+      var lineHeight = height / layoutScale - BackgroundNode.grassHeight;
       for ( var x = 0; x < 100; x++ ) {
         var viewXPositive = this.modelViewTransform.modelToViewX( x / 2 );
         var viewXNegative = this.modelViewTransform.modelToViewX( -x / 2 );
+        var yOrigin = this.modelViewTransform.modelToViewY( 0 );
         lines.push( new Line( viewXPositive, -offsetY, viewXPositive, lineHeight - offsetY, {stroke: '#686868'} ) );
         if ( x !== 0 ) {
           lines.push( new Line( viewXNegative, -offsetY, viewXNegative, lineHeight - offsetY, {stroke: '#686868'} ) );

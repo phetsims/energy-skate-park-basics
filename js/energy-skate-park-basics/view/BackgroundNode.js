@@ -15,6 +15,8 @@ define( function( require ) {
   var images = require( 'ENERGY_SKATE_PARK/energy-skate-park-basics-images' );
   var LinearGradient = require( 'SCENERY/util/LinearGradient' );
 
+  var grassHeight = 70;
+
   function BackgroundNode( model, energySkateParkBasicsView ) {
     this.skater = model.skater;
     Node.call( this, { renderer: 'svg', pickable: false } );
@@ -23,10 +25,10 @@ define( function( require ) {
     this.addChild( this.sky );
 
     //Wait for bounds to fill in the grass
-    this.earth = new Rectangle( 0, 0, 100, 100, {fill: '#64aa64'} );
+    this.earth = new Rectangle( 0, 0, 0, 0, {fill: '#64aa64'} );
     this.addChild( this.earth );
 
-    this.grassY = 504 - 100;
+    this.grassY = energySkateParkBasicsView.layoutBounds.height - grassHeight;
     this.grass = new Line( 0, 0, 0, 0, {stroke: '#03862c', lineWidth: 3} );
     this.addChild( this.grass );
 
@@ -36,13 +38,18 @@ define( function( require ) {
 
   return inherit( Node, BackgroundNode, {
 
-    //Exactly fit the geometry to the screen so no matter what aspect ratio it will always show something.  Perhaps it will improve performance too?
-    layout: function( offsetX, offsetY, width, height, layoutScale ) {
-      var grassY = this.grassY;
-      this.earth.setRect( -offsetX, grassY, width / layoutScale, 100 );
-      this.grass.setLine( -offsetX, grassY, -offsetX + width / layoutScale, grassY );
-      this.sky.setRect( -offsetX, -offsetY, width / layoutScale, height / layoutScale - 100 );
-      this.sky.fill = new LinearGradient( 0, 0, 0, height / 2 ).addColorStop( 0, '#02ace4' ).addColorStop( 1, '#cfecfc' );
-    }
-  } );
+      //Exactly fit the geometry to the screen so no matter what aspect ratio it will always show something.  Perhaps it will improve performance too?
+      layout: function( offsetX, offsetY, width, height, layoutScale ) {
+        var grassY = this.grassY;
+        this.earth.setRect( -offsetX, grassY, width / layoutScale, grassHeight );
+        this.grass.setLine( -offsetX, grassY, -offsetX + width / layoutScale, grassY );
+        this.sky.setRect( -offsetX, -offsetY, width / layoutScale, height / layoutScale - grassHeight );
+        this.sky.fill = new LinearGradient( 0, 0, 0, height / 2 ).addColorStop( 0, '#02ace4' ).addColorStop( 1, '#cfecfc' );
+      }
+    },
+
+    //Statics
+    {
+      grassHeight: grassHeight
+    } );
 } );
