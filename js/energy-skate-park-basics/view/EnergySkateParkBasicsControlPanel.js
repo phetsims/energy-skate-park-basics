@@ -37,7 +37,6 @@ define( function( require ) {
     //In the absence of any sun (or other) layout packages, just manually space them out so they will have the icons aligned
     var pad = function( itemSet ) {
       var padWidth = maxTextWidth - itemSet[0].width;
-      console.log( padWidth );
       return [itemSet[0], new Rectangle( 0, 0, padWidth + 20, 20 ), itemSet[1]];
     };
 
