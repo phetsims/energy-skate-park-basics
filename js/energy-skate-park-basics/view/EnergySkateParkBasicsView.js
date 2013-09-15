@@ -62,7 +62,8 @@ define( function( require ) {
     this.controlPanel.right = this.layoutBounds.width - 5;
     this.controlPanel.top = 5;
 
-    pieChartLegend.mutate( {top: this.controlPanel.top, right: this.controlPanel.left - 20} );
+    //center the pie chart legend between the control panel and speedometer
+    pieChartLegend.mutate( {top: this.controlPanel.top, right: this.controlPanel.left - 9} );
 
     var returnSkaterButton = new TextButton( 'Return Skater', model.returnSkater.bind( model ), {centerX: this.controlPanel.centerX, top: this.controlPanel.bottom + 10} );
     this.addChild( returnSkaterButton );
