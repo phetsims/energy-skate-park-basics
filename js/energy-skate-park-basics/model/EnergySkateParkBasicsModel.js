@@ -69,7 +69,7 @@ define( function( require ) {
         dt = 1.0 / 10;
       }
       if ( !this.paused ) {
-        this.stepModel( this.speed == 'normal' ? dt : dt * 0.25 );
+        this.stepModel( this.speed === 'normal' ? dt : dt * 0.25 );
       }
     },
     stepGround: function( dt ) {

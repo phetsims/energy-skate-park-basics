@@ -19,6 +19,7 @@ define( function( require ) {
   var PlaybackSpeedControl = require( 'ENERGY_SKATE_PARK/energy-skate-park-basics/view/PlaybackSpeedControl' );
   var BarGraphNode = require( 'ENERGY_SKATE_PARK/energy-skate-park-basics/view/BarGraphNode' );
   var PieChartNode = require( 'ENERGY_SKATE_PARK/energy-skate-park-basics/view/PieChartNode' );
+  var PieChartLegend = require( 'ENERGY_SKATE_PARK/energy-skate-park-basics/view/PieChartLegend' );
   var GridNode = require( 'ENERGY_SKATE_PARK/energy-skate-park-basics/view/GridNode' );
   var ResetAllButton = require( 'ENERGY_SKATE_PARK/energy-skate-park-basics/view/ResetAllButton' );
   var ModelViewTransform2 = require( 'PHETCOMMON/view/ModelViewTransform2' );
@@ -46,6 +47,8 @@ define( function( require ) {
     this.addChild( new TrackNode( model, transform ) );
     this.addChild( new SkaterNode( model, transform ) );
     this.addChild( new PieChartNode( model, this, transform ) );
+    var pieChartLegend = new PieChartLegend( model );
+    this.addChild( pieChartLegend );
 //    this.addChild( new ClosestPointNode( model, transform ) );
 
     var speedometerNode = new SpeedometerNode( model.skater.speedProperty, 'Speed', 20 );
@@ -57,6 +60,8 @@ define( function( require ) {
     this.controlPanel = new EnergySkateParkBasicsControlPanel( model, this );
     this.addChild( this.controlPanel );
     this.controlPanel.right = this.layoutBounds.width - 5;
+
+    pieChartLegend.mutate( {top: this.controlPanel.top, right: this.controlPanel.left - 20} );
 
     var returnSkaterButton = new TextButton( 'Return Skater', model.returnSkater.bind( model ), {centerX: this.controlPanel.centerX, top: this.controlPanel.bottom + 10} );
     this.addChild( returnSkaterButton );
