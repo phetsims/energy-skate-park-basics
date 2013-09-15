@@ -25,6 +25,9 @@ define( function( require ) {
       speedometerVisible: false,
       paused: false,
 
+      //For screens 1-2, the index of the selected scene (and track) within the screen
+      scene: 0,
+
       //speed of the model, either 'normal' or 'slow'
       speed: 'normal'
     } );

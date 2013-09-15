@@ -22,6 +22,7 @@ define( function( require ) {
   var PieChartLegend = require( 'ENERGY_SKATE_PARK/energy-skate-park-basics/view/PieChartLegend' );
   var GridNode = require( 'ENERGY_SKATE_PARK/energy-skate-park-basics/view/GridNode' );
   var ResetAllButton = require( 'ENERGY_SKATE_PARK/energy-skate-park-basics/view/ResetAllButton' );
+  var SceneSelectionPanel = require( 'ENERGY_SKATE_PARK/energy-skate-park-basics/view/SceneSelectionPanel' );
   var ModelViewTransform2 = require( 'PHETCOMMON/view/ModelViewTransform2' );
   var Vector2 = require( 'DOT/Vector2' );
   var SpeedometerNode = require( 'SCENERY_PHET/SpeedometerNode' );
@@ -76,6 +77,8 @@ define( function( require ) {
     this.addChild( new ResetAllButton( model.reset.bind( model ) ).mutate( {scale: 0.7, centerY: (transform.modelToViewY( 0 ) + this.layoutBounds.maxY) / 2, centerX: this.controlPanel.centerX} ) );
 
     this.addChild( new PlaybackSpeedControl( model ).mutate( {right: playPauseControl.left, centerY: playPauseControl.centerY} ) );
+
+    this.addChild( new SceneSelectionPanel( model ).mutate( {left: 0, centerY: playPauseControl.centerY} ) );
   }
 
   return inherit( ScreenView, EnergySkateParkBasicsView, {
