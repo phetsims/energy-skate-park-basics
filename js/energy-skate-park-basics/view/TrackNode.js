@@ -19,8 +19,20 @@ define( function( require ) {
     var trackNode = this;
     var track = model.track;
     Node.call( this, { renderer: 'svg' } );
-    var road = new Path( null, {lineWidth: 10, stroke: 'black'} );
+    var road = new Path( null, {lineWidth: 10, stroke: 'black', cursor: 'pointer'} );
     this.addChild( road );
+    var clickOffset = null;
+
+    var dragHandler = new SimpleDragHandler( {
+        allowTouchSnag: true,
+        translate: function( options ) {
+          var delta = options.delta;
+          var modelDelta = modelViewTransform.viewToModelDelta( delta );
+          track.translate( modelDelta.x, modelDelta.y );
+        }
+      }
+    );
+    road.addInputListener( dragHandler );
 
     //Reuse arrays to save gc
     var t = [];
@@ -66,13 +78,12 @@ define( function( require ) {
         } );
         controlPoint.addInputListener( new SimpleDragHandler(
           {
+            allowTouchSnag: true,
             start: function( event ) {
             },
             drag: function( event ) {
               var t = controlPoint.globalToParentPoint( event.pointer.point );
-              var modelX = modelViewTransform.viewToModelX( t.x );
-              var modelY = modelViewTransform.viewToModelY( t.y );
-              property.value = new Vector2( modelX, modelY );
+              property.value = modelViewTransform.viewToModelPosition( t );
             },
             translate: function() {
 

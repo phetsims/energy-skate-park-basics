@@ -26,7 +26,7 @@ define( function( require ) {
 
     //TODO: when points change, update the spline instance
 
-    var updateSplines = function( pt ) {
+    this.updateSplines = function( pt ) {
       //clear arrays, reusing them to save on garbage
       track.t.length = 0;
       track.x.length = 0;
@@ -49,8 +49,7 @@ define( function( require ) {
     };
 
     for ( var i = 0; i < points.length; i++ ) {
-      var point = points[i];
-      point.link( updateSplines );
+      points[i].link( this.updateSplines );
     }
   }
 
@@ -106,6 +105,27 @@ define( function( require ) {
     },
 
     //Get the maximum parametric value at the rightmost end of the track (left end is 0)
-    getMaxU: function() { return (this.length - 1) / this.length; }
+    getMaxU: function() { return (this.length - 1) / this.length; },
+
+    translate: function( dx, dy ) {
+
+      //Unlink and relink later to avoid unnecessary spline computation
+      for ( var i = 0; i < this.length; i++ ) {
+        this.get( i ).unlink( this.updateSplines );
+      }
+
+      for ( i = 0; i < this.length; i++ ) {
+        var point = this.get( i );
+        point.set( point.value.plus( new Vector2( dx, dy ) ) );
+      }
+
+      for ( i = 0; i < this.length; i++ ) {
+        this.get( i ).lazyLink( this.updateSplines );
+      }
+
+      //batch update for performance
+      //TODO: This is still pretty slow, consider translating the entire function directly instead of recomputing splines
+      this.updateSplines();
+    }
   } );
 } );
