@@ -72,7 +72,7 @@ define( function( require ) {
     var playPauseControl = new PlayPauseControlPanel( model, this );
     this.addChild( playPauseControl.mutate( {centerX: this.layoutBounds.centerX + playPauseControl.playButton.width / 2, bottom: this.layoutBounds.maxY - 10} ) );
 
-    this.addChild( new ResetAllButton( model.reset.bind( model ) ).mutate( {scale: 0.7, top: transform.modelToViewY( 0 ) + 5, centerX: this.controlPanel.centerX} ) );
+    this.addChild( new ResetAllButton( model.reset.bind( model ) ).mutate( {scale: 0.7, centerY: (transform.modelToViewY( 0 ) + this.layoutBounds.maxY) / 2, centerX: this.controlPanel.centerX} ) );
 
     this.addChild( new PlaybackSpeedControl( model ).mutate( {right: playPauseControl.left, centerY: playPauseControl.centerY} ) );
   }
