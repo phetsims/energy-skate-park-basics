@@ -24,6 +24,7 @@ define( function( require ) {
   var ModelViewTransform2 = require( 'PHETCOMMON/view/ModelViewTransform2' );
   var Vector2 = require( 'DOT/Vector2' );
   var SpeedometerNode = require( 'SCENERY_PHET/SpeedometerNode' );
+  var TextButton = require( 'SUN/TextButton' );
 
   function EnergySkateParkBasicsView( model ) {
 
@@ -56,6 +57,9 @@ define( function( require ) {
     this.controlPanel = new EnergySkateParkBasicsControlPanel( model, this );
     this.addChild( this.controlPanel );
     this.controlPanel.right = this.layoutBounds.width - 5;
+
+    var returnSkaterButton = new TextButton( 'Return Skater', model.returnSkater.bind( model ), {centerX: this.controlPanel.centerX, top: this.controlPanel.bottom + 10} );
+    this.addChild( returnSkaterButton );
 
     this.addChild( new BarGraphNode( model, this ) );
 

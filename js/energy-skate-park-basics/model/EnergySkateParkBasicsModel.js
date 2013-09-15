@@ -229,5 +229,10 @@ define( function( require ) {
       else if ( !skater.dragging && skater.track ) {
         this.stepTrack( dt );
       }
+    },
+
+    //TODO: Return to the place he was last released by the user
+    returnSkater: function() {
+      this.skater.reset();
     }} );
 } );
