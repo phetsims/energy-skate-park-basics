@@ -21,7 +21,7 @@ define( function( require ) {
       //Parameter along the parametric spline
       u: 0,
 
-      //Speed along the parametric spline dimension
+      //Speed along the parametric spline dimension, formally 'u dot'
       uD: 0.01,
 
       //Gravity magnitude and direction

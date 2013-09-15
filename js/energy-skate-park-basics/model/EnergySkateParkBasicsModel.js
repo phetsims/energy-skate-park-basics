@@ -212,6 +212,7 @@ define( function( require ) {
       //Fly off the left side of the track
       if ( u2 < 0 || u2 > skater.track.getMaxU() ) {
         skater.track = null;
+        skater.uD = 0;
       }
     },
     stepModel: function( dt ) {
