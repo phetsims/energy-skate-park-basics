@@ -73,7 +73,6 @@ define( function( require ) {
         //Show one of them in the background instead of pieces for each one for performance
         thermalEnergySlice.shape = Shape.circle( 0, 0, radius );//TODO: this shouldn't change too much if energy conserved
         potentialEnergySlice.shape = new Shape().moveTo( 0, 0 ).ellipticalArc( 0, 0, radius, radius, 0, -Math.PI / 2, Math.PI * 2 * fractionPotential - Math.PI / 2, false ).lineTo( 0, 0 );
-
         kineticEnergySlice.shape = new Shape().moveTo( 0, 0 ).ellipticalArc( 0, 0, radius, radius, 0, Math.PI * 2 * fractionPotential - Math.PI / 2, Math.PI * 2 * fractionPotential - Math.PI / 2 + fractionKinetic * Math.PI * 2, false ).lineTo( 0, 0 );
       }
     };
