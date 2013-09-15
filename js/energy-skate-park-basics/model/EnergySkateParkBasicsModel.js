@@ -18,10 +18,10 @@ define( function( require ) {
   function EnergySkateParkBasicsModel() {
     var energySkateParkBasicsModel = this;
     PropertySet.call( this, {
-      closestPoint: new Vector2( 1, 0 ),
-      pieChartVisible: true,
-      barGraphVisible: true,
-      gridVisible: true,
+      closestPoint: new Vector2( 0, 0 ),
+      pieChartVisible: false,
+      barGraphVisible: false,
+      gridVisible: false,
       speedometerVisible: false,
       paused: false,
 
@@ -29,7 +29,7 @@ define( function( require ) {
       speed: 'normal'
     } );
     this.skater = new Skater();
-    var controlPoints = [ new Property( new Vector2( -2, 2 ) ), new Property( new Vector2( 0, 0 ) ), new Property( new Vector2( 2, 1 ) ), new Property( new Vector2( 2.5, 2 ) ), new Property( new Vector2( 3, 1 ) )];
+    var controlPoints = [ new Property( new Vector2( -2, 2 ) ), new Property( new Vector2( 0, 0 ) ), new Property( new Vector2( 2, 1 ) ), new Property( new Vector2( 2.5, 1 ) ), new Property( new Vector2( 3, 1 ) )];
     this.track = new Track( controlPoints );
 
     var updateClosestPoint = function() {
