@@ -34,7 +34,6 @@ define( function( require ) {
     //TODO: update when the graph becomes visible
     model.pieChartVisibleProperty.linkAttribute( this, 'visible' );
 
-    //TODO: instead of changing the entire pie chart whenever one energy changes, use trigger to update the whole pie
     var updatePaths = function() {
 
       //TODO: call updatePaths when pie chart node is made visible
@@ -77,6 +76,8 @@ define( function( require ) {
         kineticEnergySlice.shape = new Shape().moveTo( 0, 0 ).ellipticalArc( 0, 0, radius, radius, 0, Math.PI * 2 * fractionPotential - Math.PI / 2, Math.PI * 2 * fractionPotential - Math.PI / 2 + fractionKinetic * Math.PI * 2, false ).lineTo( 0, 0 );
       }
     };
+
+    //instead of changing the entire pie chart whenever one energy changes, use trigger to update the whole pie
     model.skater.on( 'energy-changed', updatePaths );
     updatePaths();
   }

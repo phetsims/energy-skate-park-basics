@@ -154,7 +154,6 @@ define( function( require ) {
       var u = skater.u;
       var uD = skater.uD;
 
-      //TODO: Store these diffs when traversing the track to improve performance
       var xP = this.track.xSplineDiff.at( u );
       var yP = this.track.ySplineDiff.at( u );
       var xPP = this.track.xSplineDiffDiff.at( u );
@@ -165,8 +164,6 @@ define( function( require ) {
       var uD2 = uD + uDD1 * dt;
       var u2 = u + (uD + uD2) / 2 * dt; //averaging here really keeps down the average error.  It's not exactly forward Euler but I forget the name.
 
-      //TODO: Fine tune based on energy conservation
-//        debugger;
       var initialEnergy = this.track.getEnergy( u, uD, skater.mass, skater.gravity );
       var finalEnergy = this.track.getEnergy( u2, uD2, skater.mass, skater.gravity );
 
