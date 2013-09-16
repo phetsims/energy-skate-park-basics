@@ -38,7 +38,7 @@ define( function( require ) {
       this.addProperty( 'scene', 0 );
       var parabola = [new Vector2( -2, 3 ), new Vector2( 0, 0 ), new Vector2( 2, 3 )];
       var slope = [new Vector2( -2, 2 ), new Vector2( -1, 1 ), new Vector2( 1, 0.5 )];
-      var doubleWell = [new Vector2( -2.5, 4 ), new Vector2( -1.5, 0 ), new Vector2( 0, 3 ), new Vector2( 1.5, 2 ), new Vector2( 3, 4 ) ];
+      var doubleWell = [new Vector2( -2, 2.5 ), new Vector2( -1, 0 ), new Vector2( 0, 1 ), new Vector2( 1, 0.5 ), new Vector2( 2, 2.5 ) ];
       var toProperty = function( pt ) {return new Property( pt );};
       this.sceneTracks = [new Track( _.map( parabola, toProperty ), false ), new Track( _.map( slope, toProperty ), false ), new Track( _.map( doubleWell, toProperty ), false )];
 
