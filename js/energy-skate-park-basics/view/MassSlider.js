@@ -8,12 +8,8 @@ define( function( require ) {
   'use strict';
 
   var inherit = require( 'PHET_CORE/inherit' );
-  var Node = require( 'SCENERY/nodes/Node' );
   var VBox = require( 'SCENERY/nodes/VBox' );
-  var Panel = require( 'SUN/Panel' );
-  var CheckBox = require( 'SUN/CheckBox' );
   var Text = require( 'SCENERY/nodes/Text' );
-  var images = require( 'ENERGY_SKATE_PARK/energy-skate-park-basics-images' );
   var PhetFont = require( 'SCENERY_PHET/PhetFont' );
   var HSlider = require( 'SUN/HSlider' );
   var Range = require( 'DOT/Range' );

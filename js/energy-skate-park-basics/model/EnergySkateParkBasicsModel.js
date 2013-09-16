@@ -15,8 +15,10 @@ define( function( require ) {
   var Track = require( 'ENERGY_SKATE_PARK/energy-skate-park-basics/model/Track' );
   var Vector2 = require( 'DOT/Vector2' );
 
-  function EnergySkateParkBasicsModel( draggableTracks, friction ) {
-    this.friction = friction;
+  function EnergySkateParkBasicsModel( draggableTracks, frictionAllowed ) {
+
+    //True if this is screen 2-3, where friction is allowed to be on or off
+    this.frictionAllowed = frictionAllowed;
     this.draggableTracks = draggableTracks;
     var energySkateParkBasicsModel = this;
     PropertySet.call( this, {
@@ -28,7 +30,10 @@ define( function( require ) {
       paused: false,
 
       //speed of the model, either 'normal' or 'slow'
-      speed: 'normal'
+      speed: 'normal',
+
+      frictionEnabled: false,
+      friction: 1
     } );
     this.skater = new Skater();
 
