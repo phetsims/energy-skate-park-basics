@@ -17,7 +17,7 @@ define( function( require ) {
   var Property = require( 'AXON/Property' );
 
   function MassSlider( model, view ) {
-    var slider = new HSlider( new Range( 10, 110 ), new Dimension2( 100, 4 ), model.skater.massProperty, new Property( true ), {} );
+    var slider = new HSlider( model.skater.massProperty, new Range( 10, 110 ) );
     var tickFont = new PhetFont( 10 );
     slider.addMajorTick( 10, new Text( 'Small', { font: tickFont } ) );
     slider.addMajorTick( 110, new Text( 'Large', { font: tickFont } ) );

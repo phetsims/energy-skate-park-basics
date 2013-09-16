@@ -19,7 +19,7 @@ define( function( require ) {
 
   function FrictionControl( model, view ) {
     var frictionRange = new Range( 0, 2 );
-    var slider = new HSlider( frictionRange, new Dimension2( 100, 4 ), model.frictionProperty, model.frictionEnabledProperty, {} );
+    var slider = new HSlider( model.frictionProperty, frictionRange, {enabledProperty: model.frictionEnabledProperty} );
     var tickFont = new PhetFont( 10 );
     slider.addMajorTick( frictionRange.min, new Text( 'None', { font: tickFont } ) );
     slider.addMajorTick( frictionRange.max, new Text( 'Lots', { font: tickFont } ) );
