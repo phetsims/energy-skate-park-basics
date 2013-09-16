@@ -11,12 +11,14 @@ define( function( require ) {
 
   var inherit = require( 'PHET_CORE/inherit' );
   var ObservableArray = require( 'AXON/ObservableArray' );
+  var Property = require( 'AXON/Property' );
   var Vector2 = require( 'DOT/Vector2' );
 
   //points is Array of Property of Vector2
-  function Track( points ) {
+  function Track( points, interactive ) {
     var track = this;
     ObservableArray.call( this, points );
+    this.interactive = interactive;
     this.t = [];
     this.x = [];
     this.y = [];
@@ -28,7 +30,7 @@ define( function( require ) {
 
     //TODO: when points change, update the spline instance
 
-    this.updateSplines = function( pt ) {
+    this.updateSplines = function() {
       //clear arrays, reusing them to save on garbage
       track.t.length = 0;
       track.x.length = 0;
@@ -138,6 +140,24 @@ define( function( require ) {
       var b = this.getPoint( u + 1E-6 );
       b.y = -b.y;
       return b.minus( a ).angle();
+    },
+
+    setControlPoints: function( points ) {
+      var lengthChanged = points.length !== this.length;
+      while ( this.length < points.length ) {
+        this.push( new Property( new Vector2( 0, 0 ) ) );
+      }
+      while ( this.length > points.length ) {
+        this.pop();
+      }
+      for ( var i = 0; i < points.length; i++ ) {
+        this.get( i ).value = new Vector2( points[i].x, points[i].y );
+      }
+      if ( lengthChanged ) {
+        var lastPt = (this.length - 1) / this.length;
+        this.linSpace = numeric.linspace( 0, lastPt, 70 );
+      }
+      this.updateSplines();
     }
   } );
 } );

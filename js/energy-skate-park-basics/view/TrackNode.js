@@ -15,11 +15,10 @@ define( function( require ) {
   var Vector2 = require( 'DOT/Vector2' );
   var Shape = require( 'KITE/Shape' );
 
-  function TrackNode( model, modelViewTransform ) {
+  function TrackNode( model, track, modelViewTransform ) {
     var trackNode = this;
-    var track = model.track;
     Node.call( this, { renderer: 'svg' } );
-    var road = new Path( null, {lineWidth: 10, stroke: 'black', cursor: 'pointer'} );
+    var road = new Path( null, {lineWidth: 10, stroke: 'black', cursor: track.interactive ? 'pointer' : 'default'} );
     this.addChild( road );
     var clickOffset = null;
 
@@ -32,7 +31,9 @@ define( function( require ) {
         }
       }
     );
-    road.addInputListener( dragHandler );
+    if ( track.interactive ) {
+      road.addInputListener( dragHandler );
+    }
 
     //Reuse arrays to save gc
     var t = [];
@@ -69,38 +70,54 @@ define( function( require ) {
       road.shape = shape;
     };
 
-    for ( var i = 0; i < track.length; i++ ) {
-      (function() {
-        var property = track.get( i );
-        var controlPoint = new Circle( 14, {opacity: 0.7, stroke: 'black', lineWidth: 2, fill: 'red', cursor: 'pointer', translation: modelViewTransform.modelToViewPosition( property.value )} );
-        property.link( function( value ) {
-          controlPoint.translation = modelViewTransform.modelToViewPosition( value );
-        } );
-        controlPoint.addInputListener( new SimpleDragHandler(
-          {
-            allowTouchSnag: true,
-            start: function( event ) {
-            },
-            drag: function( event ) {
-              var t = controlPoint.globalToParentPoint( event.pointer.point );
-              property.value = modelViewTransform.viewToModelPosition( t );
-            },
-            translate: function() {
+    if ( track.interactive ) {
+      for ( var i = 0; i < track.length; i++ ) {
+        (function() {
+          var property = track.get( i );
+          var controlPoint = new Circle( 14, {opacity: 0.7, stroke: 'black', lineWidth: 2, fill: 'red', cursor: 'pointer', translation: modelViewTransform.modelToViewPosition( property.value )} );
+          property.link( function( value ) {
+            controlPoint.translation = modelViewTransform.modelToViewPosition( value );
+          } );
+          controlPoint.addInputListener( new SimpleDragHandler(
+            {
+              allowTouchSnag: true,
+              start: function( event ) {
+              },
+              drag: function( event ) {
+                var t = controlPoint.globalToParentPoint( event.pointer.point );
+                property.value = modelViewTransform.viewToModelPosition( t );
+              },
+              translate: function() {
 
-            },
-            end: function( event ) {
-            }
-          } ) );
-        trackNode.addChild( controlPoint );
-      })();
+              },
+              end: function( event ) {
+              }
+            } ) );
+          trackNode.addChild( controlPoint );
+        })();
+      }
     }
-
     //If any control point dragged, update the track
     for ( i = 0; i < track.length; i++ ) {
-      track.get( i ).link( function() {
-        updateTrack();
-      } );
+      track.get( i ).link( updateTrack );
     }
+
+    track.addItemAddedListener( function( item ) {
+      item.link( updateTrack );
+
+      var lastPt = (track.length - 1) / track.length;
+      var linSpace = numeric.linspace( 0, lastPt, 25 );
+
+      updateTrack();
+    } );
+
+    track.addItemRemovedListener( function( item ) {
+      item.unlink( updateTrack );
+
+      var lastPt = (track.length - 1) / track.length;
+      var linSpace = numeric.linspace( 0, lastPt, 25 );
+      updateTrack();
+    } );
   }
 
   return inherit( Node, TrackNode );

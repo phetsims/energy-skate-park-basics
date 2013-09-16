@@ -15,7 +15,9 @@ define( function( require ) {
   var Track = require( 'ENERGY_SKATE_PARK/energy-skate-park-basics/model/Track' );
   var Vector2 = require( 'DOT/Vector2' );
 
-  function EnergySkateParkBasicsModel() {
+  function EnergySkateParkBasicsModel( draggableTracks, friction ) {
+    this.friction = friction;
+    this.draggableTracks = draggableTracks;
     var energySkateParkBasicsModel = this;
     PropertySet.call( this, {
       closestPoint: new Vector2( 0, 0 ),
@@ -25,25 +27,42 @@ define( function( require ) {
       speedometerVisible: false,
       paused: false,
 
-      //For screens 1-2, the index of the selected scene (and track) within the screen
-      scene: 0,
-
       //speed of the model, either 'normal' or 'slow'
       speed: 'normal'
     } );
     this.skater = new Skater();
-    var controlPoints = [ new Property( new Vector2( -2, 2 ) ), new Property( new Vector2( 0, 0 ) ), new Property( new Vector2( 2, 1 ) ), new Property( new Vector2( 2.5, 1 ) ), new Property( new Vector2( 3, 1 ) )];
-    this.track = new Track( controlPoints );
+
+    if ( !draggableTracks ) {
+
+      //For screens 1-2, the index of the selected scene (and track) within the screen
+      this.addProperty( 'scene', 0 );
+      var parabola = [new Vector2( -2, 3 ), new Vector2( 0, 0 ), new Vector2( 2, 3 )];
+      var slope = [new Vector2( -2, 2 ), new Vector2( -1, 1 ), new Vector2( 1, 0.5 )];
+      var doubleWell = [new Vector2( -2.5, 4 ), new Vector2( -1.5, 0 ), new Vector2( 0, 3 ), new Vector2( 1.5, 2 ), new Vector2( 3, 4 ) ];
+      var toProperty = function( pt ) {return new Property( pt );};
+      this.sceneTracks = [new Track( _.map( parabola, toProperty ), false ), new Track( _.map( slope, toProperty ), false ), new Track( _.map( doubleWell, toProperty ), false )];
+
+      this.track = this.sceneTracks[0];
+
+      this.sceneProperty.link( function( scene ) {
+        energySkateParkBasicsModel.track = energySkateParkBasicsModel.sceneTracks[scene];
+        energySkateParkBasicsModel.skater.track = null;
+      } );
+    }
+    else {
+      var controlPoints = [ new Property( new Vector2( -2, 2 ) ), new Property( new Vector2( 0, 0 ) ), new Property( new Vector2( 2, 1 ) ), new Property( new Vector2( 2.5, 1 ) ), new Property( new Vector2( 3, 1 ) )];
+      this.track = new Track( controlPoints, true );
+    }
 
     //TODO: Remove 'closest point' debugging tool to improve performance
-    var updateClosestPoint = function() {
-      energySkateParkBasicsModel.closestPoint = energySkateParkBasicsModel.track.getClosestPoint( energySkateParkBasicsModel.skater.position ).point;
-    };
-    this.skater.positionProperty.link( updateClosestPoint );
-    for ( var i = 0; i < controlPoints.length; i++ ) {
-      var controlPoint = controlPoints[i];
-      controlPoint.link( updateClosestPoint );
-    }
+//    var updateClosestPoint = function() {
+//      energySkateParkBasicsModel.closestPoint = energySkateParkBasicsModel.track.getClosestPoint( energySkateParkBasicsModel.skater.position ).point;
+//    };
+//    this.skater.positionProperty.link( updateClosestPoint );
+//    for ( var i = 0; i < controlPoints.length; i++ ) {
+//      var controlPoint = controlPoints[i];
+//      controlPoint.link( updateClosestPoint );
+//    }
 
     this.bounces = 0;
   }

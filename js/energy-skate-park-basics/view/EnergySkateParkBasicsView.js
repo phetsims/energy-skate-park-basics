@@ -45,7 +45,27 @@ define( function( require ) {
     this.gridNode = new GridNode( model, this, transform );
     this.addChild( this.gridNode );
 
-    this.addChild( new TrackNode( model, transform ) );
+    //Switch between selectable tracks
+    if ( !model.draggableTracks ) {
+
+      var trackNodes = [
+        new TrackNode( model, model.sceneTracks[0], transform ),
+        new TrackNode( model, model.sceneTracks[1], transform ),
+        new TrackNode( model, model.sceneTracks[2], transform )];
+      for ( var i = 0; i < trackNodes.length; i++ ) {
+        this.addChild( trackNodes[i] );
+      }
+
+      model.sceneProperty.link( function( scene ) {
+        trackNodes[0].visible = (scene === 0);
+        trackNodes[1].visible = (scene === 1);
+        trackNodes[2].visible = (scene === 2);
+      } );
+    }
+    else {
+      this.addChild( new TrackNode( model, model.track, transform ) );
+    }
+
     this.addChild( new SkaterNode( model, transform ) );
     this.addChild( new PieChartNode( model, this, transform ) );
     var pieChartLegend = new PieChartLegend( model );
@@ -78,7 +98,9 @@ define( function( require ) {
 
     this.addChild( new PlaybackSpeedControl( model ).mutate( {right: playPauseControl.left, centerY: playPauseControl.centerY} ) );
 
-    this.addChild( new SceneSelectionPanel( model ).mutate( {left: 0, centerY: playPauseControl.centerY} ) );
+    if ( !model.draggableTracks ) {
+      this.addChild( new SceneSelectionPanel( model ).mutate( {left: 0, centerY: playPauseControl.centerY} ) );
+    }
   }
 
   return inherit( ScreenView, EnergySkateParkBasicsView, {

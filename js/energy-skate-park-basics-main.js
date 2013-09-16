@@ -26,6 +26,9 @@ require( [
   SimLauncher.launch( images, function() {
 
     //Create and start the sim
-    new Sim( 'Energy Skate Park: Basics', [ new EnergySkateParkBasicsScreen() ], simOptions ).start();
+    new Sim( 'Energy Skate Park: Basics', [
+      new EnergySkateParkBasicsScreen( 'Intro', false, false ),
+      new EnergySkateParkBasicsScreen( 'Friction', false, true ),
+      new EnergySkateParkBasicsScreen( 'Playground', true, true ) ], simOptions ).start();
   } );
 } );

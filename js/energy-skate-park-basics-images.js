@@ -11,17 +11,10 @@ define( function() {
 
   return {
     imageNames: [
-      'barChartIcon.png',
       'close-button.png',
-      'gridIcon.png',
-      'house.png',
-      'image001.gif',
-      'image002.gif',
       'mountains.png',
       'Mouse_pointer_or_cursor.png',
-      'pieChartIcon.png',
       'skater.png',
-      'speedIcon.png',
       'button_sim_pause.png',
       'button_sim_play.png',
       'button_step_deactivated.png',

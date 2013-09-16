@@ -9,20 +9,13 @@ define( function( require ) {
   var Rectangle = require( 'SCENERY/nodes/Rectangle' );
   var Vector2 = require( 'DOT/Vector2' );
 
-  function EnergySkateParkBasicsScreen() {
-    this.name = 'Energy Skate Park: Basics';
+  function EnergySkateParkBasicsScreen( name, draggableTracks, friction ) {
+    this.name = name;
     this.icon = new Rectangle( 0, 0, 200, 100, {fill: 'blue'} );
 
-    // No offset, scale 125x when going from model to view (1cm == 125 pixels)
-//    var mvt = ModelViewTransform2.createOffsetScaleMapping( new Vector2( 0, 0 ), 125 );
+    this.createModel = function() { return new EnergySkateParkBasicsModel( draggableTracks, friction ); };
 
-    this.createModel = function() {
-      return new EnergySkateParkBasicsModel();
-    };
-
-    this.createView = function( model ) {
-      return new EnergySkateParkBasicsView( model );
-    };
+    this.createView = function( model ) { return new EnergySkateParkBasicsView( model ); };
   }
 
   return EnergySkateParkBasicsScreen;
