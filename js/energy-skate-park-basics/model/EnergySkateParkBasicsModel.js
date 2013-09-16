@@ -158,7 +158,7 @@ define( function( require ) {
       for ( var i = 0; i < physicalTracks.length; i++ ) {
         var track = physicalTracks[i];
 
-        //TODO: maybe get closest point shouldn't return a new object allocation each time, or use polling for it.?
+        //TODO: maybe get closest point shouldn't return a new object allocation each time, or use pooling for it.?
         var bestMatch = track.getClosestPoint( skaterPosition );
         var distance = skaterPosition.distance( bestMatch.point );
         if ( closestDistance === null || distance < closestDistance ) {
@@ -174,10 +174,16 @@ define( function( require ) {
 
       //Find the closest track
       var track = physicalTracks.length === 1 ? physicalTracks[0] : this.getClosestTrack( skater, physicalTracks );
-      var t = track.getClosestPoint( this.skater.position ).t;
+      var closestPointHash = track.getClosestPoint( this.skater.position );
+      var t = closestPointHash.t;
+
+      if ( !track.isParameterInBounds( t ) ) {
+        this.continueFreeFall( skater, initialEnergy, proposedPosition );
+        return;
+      }
       var t1 = t - 1E-6;
       var t2 = t + 1E-6;
-      var pt = track.getPoint( t );
+      var pt = closestPointHash.point;
       var pt1 = track.getPoint( t1 );
       var pt2 = track.getPoint( t2 );
       var segment = pt2.minus( pt1 );

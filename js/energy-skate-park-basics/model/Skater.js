@@ -46,6 +46,8 @@ define( function( require ) {
 
     this.draggingProperty.link( function( dragging ) {
       skater.velocity = new Vector2( 0, 0 );
+      skater.u = 0;
+      skater.uD = 0;
       skater.track = null;
     } );
 

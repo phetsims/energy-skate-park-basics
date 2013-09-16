@@ -27,10 +27,7 @@ define( function( require ) {
     this.x = [];
     this.y = [];
 
-    //Store for performance
-    //TODO: recompute linSpace if length of track changes
-    var lastPt = (this.length - 1) / this.length;
-    this.linSpace = numeric.linspace( 0, lastPt, 70 );
+    this.updateLinSpace();
 
     //TODO: when points change, update the spline instance
 
@@ -69,11 +66,14 @@ define( function( require ) {
       }
       this.physicalProperty.reset();
     },
+
+    //Returns the closest point on the track, as an object with {t,point}
+    //also checks 1E-6 beyond each side of the track to see if the skater is beyond the edge of the track
     getClosestPoint: function( point ) {
       var track = this;
 
-      var xPoints = numeric.spline( this.t, this.x ).at( this.linSpace ); //TODO: number of samples could depend on the total length of the track
-      var yPoints = numeric.spline( this.t, this.y ).at( this.linSpace );
+      var xPoints = numeric.spline( this.t, this.x ).at( this.searchLinSpace ); //TODO: number of samples could depend on the total length of the track
+      var yPoints = numeric.spline( this.t, this.y ).at( this.searchLinSpace );
 
       var bestT = 0;
       var best = 9999999999;
@@ -82,7 +82,7 @@ define( function( require ) {
         var dist = point.distanceXY( xPoints[i], yPoints[i] );
         if ( dist < best ) {
           best = dist;
-          bestT = this.linSpace[i];
+          bestT = this.searchLinSpace[i];
           bestPt.x = xPoints[i];
           bestPt.y = yPoints[i];
         }
@@ -147,6 +147,19 @@ define( function( require ) {
       return b.minus( a ).angle();
     },
 
+    updateLinSpace: function() {
+      this.minPoint = 0;
+      this.maxPoint = (this.length - 1) / this.length;
+      var prePoint = this.minPoint - 1E-6;
+      var postPoint = this.maxPoint + 1E-6;
+
+      //Store for performance
+      this.searchLinSpace = numeric.linspace( prePoint, postPoint, 70 );
+    },
+
+    //Detect whether a parametric point is in bounds of this track, for purposes of telling whether the skater fell past the edge of the track
+    isParameterInBounds: function( t ) { return t >= this.minPoint && t <= this.maxPoint; },
+
     setControlPoints: function( points ) {
       var lengthChanged = points.length !== this.length;
       while ( this.length < points.length ) {
@@ -159,8 +172,7 @@ define( function( require ) {
         this.get( i ).value = new Vector2( points[i].x, points[i].y );
       }
       if ( lengthChanged ) {
-        var lastPt = (this.length - 1) / this.length;
-        this.linSpace = numeric.linspace( 0, lastPt, 70 );
+        this.updateLinSpace();
       }
       this.updateSplines();
     }
