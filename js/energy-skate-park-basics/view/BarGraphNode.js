@@ -23,7 +23,7 @@ define( function( require ) {
     this.skater = model.skater;
 
     var contentWidth = 140;
-    var contentHeight = 400;
+    var contentHeight = 325;
     var insetX = 10;
     var insetY = 25;
 
@@ -56,7 +56,7 @@ define( function( require ) {
           //TODO: Possible performance improvement to avoid allocations in Rectangle.setRect
 
           //Convert to graph coordinates, floor and protect against duplicates
-          var barHeight = Math.floor( property.value / 4 );
+          var barHeight = Math.floor( property.value / 10 );
           if ( barHeight !== lastBarHeight ) {
             if ( barHeight >= 0 ) {
               lastBarHeight = barHeight;
