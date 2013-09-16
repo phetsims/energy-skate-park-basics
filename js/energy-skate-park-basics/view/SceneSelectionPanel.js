@@ -25,12 +25,8 @@ define( function( require ) {
       var unselectedNode = new Text( name, {fill: 'gray'} );
       var property = new Property( model.scene === index );
 
-      property.link( function( scene0Selected ) {
-        if ( scene0Selected ) { model.scene = index; }
-      } );
-      model.sceneProperty.link( function( scene ) {
-        property.value = scene === index;
-      } );
+      property.link( function( scene0Selected ) { if ( scene0Selected ) { model.scene = index; } } );
+      model.sceneProperty.link( function( scene ) { property.value = scene === index; } );
       return new ToggleButton( selectedNode, unselectedNode, property, {radioButton: true} );
     };
 
