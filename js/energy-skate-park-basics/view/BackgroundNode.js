@@ -29,11 +29,12 @@ define( function( require ) {
     this.addChild( this.earth );
 
     this.grassY = energySkateParkBasicsView.layoutBounds.height - grassHeight;
-    this.grass = new Line( 0, 0, 0, 0, {stroke: '#03862c', lineWidth: 3} );
-    this.addChild( this.grass );
 
     this.mountain = new Image( images.getImage( 'mountains.png' ), {bottom: this.grassY} );
     this.addChild( this.mountain );
+
+    this.grass = new Line( 0, 0, 0, 0, {stroke: '#03862c', lineWidth: 3} );
+    this.addChild( this.grass );
   }
 
   return inherit( Node, BackgroundNode, {
