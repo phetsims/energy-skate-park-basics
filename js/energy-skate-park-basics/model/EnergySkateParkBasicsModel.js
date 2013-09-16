@@ -59,7 +59,10 @@ define( function( require ) {
     else {
       this.tracks = [];
       for ( var i = 0; i < 4; i++ ) {
-        var controlPoints = [ new Property( new Vector2( -1, 0 ) ), new Property( new Vector2( 0, 0 ) ), new Property( new Vector2( 1, 0 ) )];
+        //Move the tracks over so they will be in the right position in the view coordinates, under the grass to the left of the clock controls
+        //TODO: Could use view transform for this, but it would require creating the view first, so just eyeballing it for now.
+        var offset = new Vector2( -5, -0.7 );
+        var controlPoints = [ new Property( new Vector2( -1, 0 ).plus( offset ) ), new Property( new Vector2( 0, 0 ).plus( offset ) ), new Property( new Vector2( 1, 0 ).plus( offset ) )];
         this.tracks.push( new Track( controlPoints, true ) );
       }
     }
