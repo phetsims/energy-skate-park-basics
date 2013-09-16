@@ -98,8 +98,8 @@ define( function( require ) {
       }
     }
     //If any control point dragged, update the track
-    for ( i = 0; i < track.length; i++ ) {
-      track.get( i ).link( updateTrack );
+    for ( var index = 0; index < track.length; index++ ) {
+      track.get( index ).link( updateTrack );
     }
 
     track.addItemAddedListener( function( item ) {
