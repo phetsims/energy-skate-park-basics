@@ -29,6 +29,8 @@ define( function( require ) {
   var SpeedometerNode = require( 'SCENERY_PHET/SpeedometerNode' );
   var TextButton = require( 'SUN/TextButton' );
 
+  //TODO: Consider floating panels to the side when space is available.  For instance, the control panel could float to the right if there is extra space there on a wide screen
+  //TODO: (but don't float arbitrarily far because it could get too far from the play area).
   function EnergySkateParkBasicsView( model ) {
 
     var view = this;
