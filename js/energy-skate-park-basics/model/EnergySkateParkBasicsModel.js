@@ -150,9 +150,30 @@ define( function( require ) {
       }
     },
 
+    //Find the closest track to the skater, to see what he can bounce off of or attach to
+    getClosestTrack: function( skater, physicalTracks ) {
+      var closestTrack = null;
+      var closestDistance = null;
+      var skaterPosition = skater.position;
+      for ( var i = 0; i < physicalTracks.length; i++ ) {
+        var track = physicalTracks[i];
+
+        //TODO: maybe get closest point shouldn't return a new object allocation each time, or use polling for it.?
+        var bestMatch = track.getClosestPoint( skaterPosition );
+        var distance = skaterPosition.distance( bestMatch.point );
+        if ( closestDistance === null || distance < closestDistance ) {
+          closestDistance = distance;
+          closestTrack = track;
+        }
+      }
+      return closestTrack;
+    },
+
     //Check to see if it should hit or attach to track during free fall
     interactWithTracksWhileFalling: function( physicalTracks, skater, proposedPosition, initialEnergy, dt ) {
-      var track = physicalTracks[0];
+
+      //Find the closest track
+      var track = physicalTracks.length === 1 ? physicalTracks[0] : this.getClosestTrack( skater, physicalTracks );
       var t = track.getClosestPoint( this.skater.position ).t;
       var t1 = t - 1E-6;
       var t2 = t + 1E-6;
