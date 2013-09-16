@@ -92,6 +92,9 @@ define( function( require ) {
         dt = 1.0 / 10;
       }
       if ( !this.paused ) {
+
+        //TODO: on the iPad3 if all features are turned on, the model will have numerical integration problems and buggy behavior.
+        //TODO: We should subdivide dt or find another solution
         this.stepModel( this.speed === 'normal' ? dt : dt * 0.25 );
       }
     },
