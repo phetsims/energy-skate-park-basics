@@ -56,7 +56,7 @@ define( function( require ) {
           //TODO: Possible performance improvement to avoid allocations in Rectangle.setRect
 
           //Convert to graph coordinates, floor and protect against duplicates
-          var barHeight = Math.floor( property.value / 10 );
+          var barHeight = Math.floor( property.value / 15 );
           if ( barHeight !== lastBarHeight ) {
             if ( barHeight >= 0 ) {
               lastBarHeight = barHeight;
