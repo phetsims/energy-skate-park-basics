@@ -20,7 +20,7 @@ define( function( require ) {
     //True if this is screen 2-3, where friction is allowed to be on or off
     this.frictionAllowed = frictionAllowed;
     this.draggableTracks = draggableTracks;
-    var energySkateParkBasicsModel = this;
+    var model = this;
     PropertySet.call( this, {
       closestPoint: new Vector2( 0, 0 ),
       pieChartVisible: false,
@@ -50,10 +50,10 @@ define( function( require ) {
       this.tracks = [new Track( _.map( parabola, toProperty ), false ), new Track( _.map( slope, toProperty ), false ), new Track( _.map( doubleWell, toProperty ), false )];
 
       this.sceneProperty.link( function( scene ) {
-        for ( var i = 0; i < energySkateParkBasicsModel.tracks.length; i++ ) {
-          energySkateParkBasicsModel.tracks[i].physicalProperty.value = (i === scene);
+        for ( var i = 0; i < model.tracks.length; i++ ) {
+          model.tracks[i].physicalProperty.value = (i === scene);
         }
-        energySkateParkBasicsModel.skater.track = null;
+        model.skater.track = null;
       } );
     }
     else {
@@ -136,60 +136,75 @@ define( function( require ) {
 
         //TODO: extend t range just outside the track in each direction to see if the skater just "missed" the track
         var physicalTracks = this.getPhysicalTracks();
-        var track = physicalTracks[0];
-        var t = track.getClosestPoint( this.skater.position ).t;
-        var t1 = t - 1E-6;
-        var t2 = t + 1E-6;
-        var pt = track.getPoint( t );
-        var pt1 = track.getPoint( t1 );
-        var pt2 = track.getPoint( t2 );
-        var segment = pt2.minus( pt1 );
-        var normal = segment.rotated( Math.PI / 2 ).normalized();
-
-        var beforeSign = normal.dot( skater.position.minus( pt ) ) > 0;
-        var afterSign = normal.dot( proposedPosition.minus( pt ) ) > 0;
-//          console.log( normal.dot( skater.position ), normal.dot( proposedPosition ), beforeSign, afterSign );
-        if ( beforeSign !== afterSign ) {
-          //reflect the velocity vector
-          //http://www.gamedev.net/topic/165537-2d-vector-reflection-/
-          var allok = skater.velocity && skater.velocity.minus && normal.times && normal.dot;
-          if ( !allok ) { alert( 'allok === false' ); }
-          var newVelocity = allok ? skater.velocity.minus( normal.times( 2 * normal.dot( skater.velocity ) ) ) :
-                            new Vector2( 0, 1 );
-
-          if ( this.bounces < 2 ) {
-            skater.velocity = newVelocity;
-            this.bounces++;
-          }
-          else {
-            //attach to track
-            skater.track = track;
-            skater.u = t;
-            var newEnergy = track.getEnergy( t, skater.uD, skater.mass, skater.gravity );
-            var delta = newEnergy - initialEnergy;
-            if ( delta < 0 ) {
-              var lostEnergy = Math.abs( delta );
-              skater.thermalEnergy = skater.thermalEnergy + lostEnergy;
-            }
-
-            this.stepTrack( dt );
-          }
+        if ( physicalTracks.length ) {
+          this.interactWithTracksWhileFalling( physicalTracks, skater, proposedPosition, initialEnergy, dt );
         }
-
-        //It just continued in free fall
         else {
-          var energy = 0.5 * skater.mass * skater.velocity.magnitudeSquared() - skater.mass * skater.gravity * skater.position.y + skater.thermalEnergy;
-          //make up for the difference by changing the y value
-          var y = (initialEnergy - 0.5 * skater.mass * skater.velocity.magnitudeSquared() - skater.thermalEnergy) / (-1 * skater.mass * skater.gravity);
-          if ( y < 0 ) {
-            y = 0;
-          }
-
-          //TODO: keep track of all of the variables in a hash so they can be set at once after verification and after energy conserved
-          skater.position = new Vector2( proposedPosition.x, y );
-          skater.updateEnergy();
+          this.continueFreeFall( skater, initialEnergy, proposedPosition );
         }
       }
+    },
+
+    //Check to see if it should hit or attach to track during free fall
+    interactWithTracksWhileFalling: function( physicalTracks, skater, proposedPosition, initialEnergy, dt ) {
+      var track = physicalTracks[0];
+      var t = track.getClosestPoint( this.skater.position ).t;
+      var t1 = t - 1E-6;
+      var t2 = t + 1E-6;
+      var pt = track.getPoint( t );
+      var pt1 = track.getPoint( t1 );
+      var pt2 = track.getPoint( t2 );
+      var segment = pt2.minus( pt1 );
+      var normal = segment.rotated( Math.PI / 2 ).normalized();
+
+      var beforeSign = normal.dot( skater.position.minus( pt ) ) > 0;
+      var afterSign = normal.dot( proposedPosition.minus( pt ) ) > 0;
+//          console.log( normal.dot( skater.position ), normal.dot( proposedPosition ), beforeSign, afterSign );
+      if ( beforeSign !== afterSign ) {
+        //reflect the velocity vector
+        //http://www.gamedev.net/topic/165537-2d-vector-reflection-/
+        var allOK = skater.velocity && skater.velocity.minus && normal.times && normal.dot;
+        if ( !allOK ) { alert( 'allOK === false' ); }
+        var newVelocity = allOK ? skater.velocity.minus( normal.times( 2 * normal.dot( skater.velocity ) ) ) :
+                          new Vector2( 0, 1 );
+
+        if ( this.bounces < 2 ) {
+          skater.velocity = newVelocity;
+          this.bounces++;
+        }
+        else {
+          //attach to track
+          skater.track = track;
+          skater.u = t;
+          var newEnergy = track.getEnergy( t, skater.uD, skater.mass, skater.gravity );
+          var delta = newEnergy - initialEnergy;
+          if ( delta < 0 ) {
+            var lostEnergy = Math.abs( delta );
+            skater.thermalEnergy = skater.thermalEnergy + lostEnergy;
+          }
+
+          this.stepTrack( dt );
+        }
+      }
+
+      //It just continued in free fall
+      else {
+        this.continueFreeFall( skater, initialEnergy, proposedPosition );
+      }
+    },
+
+    //Started in free fall and did not interact with a track
+    continueFreeFall: function( skater, initialEnergy, proposedPosition ) {
+      var energy = 0.5 * skater.mass * skater.velocity.magnitudeSquared() - skater.mass * skater.gravity * skater.position.y + skater.thermalEnergy;
+      //make up for the difference by changing the y value
+      var y = (initialEnergy - 0.5 * skater.mass * skater.velocity.magnitudeSquared() - skater.thermalEnergy) / (-1 * skater.mass * skater.gravity);
+      if ( y < 0 ) {
+        y = 0;
+      }
+
+      //TODO: keep track of all of the variables in a hash so they can be set at once after verification and after energy conserved
+      skater.position = new Vector2( proposedPosition.x, y );
+      skater.updateEnergy();
     },
 
     //Update the skater if he is on the track
