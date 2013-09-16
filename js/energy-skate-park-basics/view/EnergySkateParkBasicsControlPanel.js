@@ -25,6 +25,7 @@ define( function( require ) {
   var SpeedometerNode = require( 'SCENERY_PHET/SpeedometerNode' );
   var Property = require( 'AXON/Property' );
   var FrictionControl = require( 'ENERGY_SKATE_PARK/energy-skate-park-basics/view/FrictionControl' );
+  var StickToTrackControl = require( 'ENERGY_SKATE_PARK/energy-skate-park-basics/view/StickToTrackControl' );
 
   function EnergySkateParkBasicsControlPanel( model, view ) {
     var barGraphSet = [new Text( 'Bar Graph' ), this.createBarGraphIcon()];
@@ -50,7 +51,7 @@ define( function( require ) {
     var content = new VBox( {spacing: 10,
       children: !model.frictionAllowed ?
                 [checkBoxes, new MassSlider( model )] :
-                [checkBoxes, new FrictionControl( model, view ), this.createStickToTrackControl()]} );
+                [checkBoxes, new FrictionControl( model, view ), new StickToTrackControl( model )]} );
 
     Panel.call( this, content, { xMargin: 10, yMargin: 10, fill: '#F0F0F0', stroke: 'gray', lineWidth: 1, resize: false } );
   }
@@ -83,9 +84,6 @@ define( function( require ) {
       var node = new SpeedometerNode( new Property( 0 ), 'Speed', 10, {} );
       node.scale( 20 / node.width );
       return  node;
-    },
-    createStickToTrackControl: function() {
-      return new Node();
     }
   } );
 } );

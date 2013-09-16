@@ -33,7 +33,9 @@ define( function( require ) {
       speed: 'normal',
 
       frictionEnabled: false,
-      friction: 1
+      friction: 1,
+
+      stickToTrack: true
     } );
     this.skater = new Skater();
 
