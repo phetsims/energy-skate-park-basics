@@ -65,6 +65,16 @@ define( function( require ) {
       PropertySet.prototype.reset.call( this );
       this.updateEnergy();
     },
+
+    returnSkater: function() {
+      this.positionProperty.reset();
+      this.uProperty.reset();
+      this.uDProperty.reset();
+      this.clearThermal();
+    },
+
+    //Update the energies as a batch.  This is an explicit method instead of linked to all dependencies so that it can be called in a controlled fashion \
+    //When multiple dependencies have changed, for performance.
     updateEnergy: function() {
       this.kineticEnergy = 0.5 * this.mass * this.velocity.magnitudeSquared();
       this.potentialEnergy = -this.mass * this.position.y * this.gravity;
