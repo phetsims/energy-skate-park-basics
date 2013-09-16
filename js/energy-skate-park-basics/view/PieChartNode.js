@@ -41,7 +41,7 @@ define( function( require ) {
         return;
       }
       var totalEnergy = skater.totalEnergy;
-      var radius = totalEnergy / 40;
+      var radius = totalEnergy / 100;
       //if only one component of pie chart, then show as a circle so there are no seams
       var numberComponents = (skater.potentialEnergy > 0 ? 1 : 0) +
                              (skater.kineticEnergy > 0 ? 1 : 0) +

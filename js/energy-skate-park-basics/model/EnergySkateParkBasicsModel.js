@@ -36,9 +36,9 @@ define( function( require ) {
 
       //For screens 1-2, the index of the selected scene (and track) within the screen
       this.addProperty( 'scene', 0 );
-      var parabola = [new Vector2( -2, 3 ), new Vector2( 0, 0 ), new Vector2( 2, 3 )];
-      var slope = [new Vector2( -2, 2 ), new Vector2( -1, 1 ), new Vector2( 1, 0.5 )];
-      var doubleWell = [new Vector2( -2, 2.5 ), new Vector2( -1, 0 ), new Vector2( 0, 1 ), new Vector2( 1, 0.5 ), new Vector2( 2, 2.5 ) ];
+      var parabola = [new Vector2( -4, 6 ), new Vector2( 0, 0 ), new Vector2( 4, 6 )];
+      var slope = [new Vector2( -4, 4 ), new Vector2( -2, 2 ), new Vector2( 2, 1 )];
+      var doubleWell = [new Vector2( -4, 5 ), new Vector2( -2, 0 ), new Vector2( 0, 2 ), new Vector2( 2, 1 ), new Vector2( 4, 5 ) ];
       var toProperty = function( pt ) {return new Property( pt );};
       this.sceneTracks = [new Track( _.map( parabola, toProperty ), false ), new Track( _.map( slope, toProperty ), false ), new Track( _.map( doubleWell, toProperty ), false )];
 

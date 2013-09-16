@@ -35,7 +35,7 @@ define( function( require ) {
 
     var modelPoint = new Vector2( 0, 0 );
     var viewPoint = new Vector2( this.layoutBounds.width / 2, this.layoutBounds.height - BackgroundNode.grassHeight );//grass is 70px high in stage coordinates
-    var scale = 100;
+    var scale = 50;
     var transform = ModelViewTransform2.createSinglePointScaleInvertedYMapping( modelPoint, viewPoint, scale );
 
     //The background

@@ -34,9 +34,8 @@ define( function( require ) {
       var texts = [];
       var lineHeight = height / layoutScale - BackgroundNode.grassHeight;
       for ( var x = 0; x < 100; x++ ) {
-        var viewXPositive = this.modelViewTransform.modelToViewX( x / 2 );
-        var viewXNegative = this.modelViewTransform.modelToViewX( -x / 2 );
-        var yOrigin = this.modelViewTransform.modelToViewY( 0 );
+        var viewXPositive = this.modelViewTransform.modelToViewX( x );
+        var viewXNegative = this.modelViewTransform.modelToViewX( -x );
         lines.push( new Line( viewXPositive, -offsetY, viewXPositive, lineHeight - offsetY, {stroke: '#686868'} ) );
         if ( x !== 0 ) {
           lines.push( new Line( viewXNegative, -offsetY, viewXNegative, lineHeight - offsetY, {stroke: '#686868'} ) );
@@ -49,7 +48,7 @@ define( function( require ) {
       var lineWidth = width / layoutScale;
       for ( var y = 0; y < 100; y++ ) {
         var originX = this.modelViewTransform.modelToViewX( -2.5 );
-        var viewY = this.modelViewTransform.modelToViewY( y / 2 );
+        var viewY = this.modelViewTransform.modelToViewY( y );
         if ( viewY < -offsetY ) {
           break;
         }
