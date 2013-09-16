@@ -99,7 +99,7 @@ define( function( require ) {
     this.addChild( new PlaybackSpeedControl( model ).mutate( {right: playPauseControl.left, centerY: playPauseControl.centerY} ) );
 
     if ( !model.draggableTracks ) {
-      this.addChild( new SceneSelectionPanel( model ).mutate( {left: 0, centerY: playPauseControl.centerY} ) );
+      this.addChild( new SceneSelectionPanel( model, this, transform ).mutate( {left: 0, centerY: playPauseControl.centerY} ) );
     }
   }
 
