@@ -67,6 +67,7 @@ define( function( require ) {
     },
 
     returnSkater: function() {
+      this.track = null;//Have to reset track before changing position so view angle gets updated properly
       this.positionProperty.reset();
       this.uProperty.reset();
       this.uDProperty.reset();
