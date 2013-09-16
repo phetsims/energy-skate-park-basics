@@ -51,9 +51,7 @@ define( function( require ) {
 
       this.sceneProperty.link( function( scene ) {
         for ( var i = 0; i < energySkateParkBasicsModel.tracks.length; i++ ) {
-          var track = energySkateParkBasicsModel.tracks[i];
-          track.physicalProperty.value = (i === scene);
-          console.log( 'set ', i, 'to physical: ', (i === scene) );
+          energySkateParkBasicsModel.tracks[i].physicalProperty.value = (i === scene);
         }
         energySkateParkBasicsModel.skater.track = null;
       } );
@@ -85,6 +83,11 @@ define( function( require ) {
       this.skater.reset();
       for ( var i = 0; i < this.tracks.length; i++ ) {
         this.tracks[i].reset();
+      }
+
+      //For the first two screens, make the default track physical
+      if ( !this.draggableTracks ) {
+        this.tracks[0].physicalProperty.value = true;
       }
     },
 

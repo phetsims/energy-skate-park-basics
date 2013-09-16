@@ -67,6 +67,7 @@ define( function( require ) {
       for ( var i = 0; i < this.length; i++ ) {
         this.get( i ).reset();
       }
+      this.physicalProperty.reset();
     },
     getClosestPoint: function( point ) {
       var track = this;
