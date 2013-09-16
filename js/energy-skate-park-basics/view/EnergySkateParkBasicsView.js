@@ -9,6 +9,7 @@ define( function( require ) {
 
   var inherit = require( 'PHET_CORE/inherit' );
   var Rectangle = require( 'SCENERY/nodes/Rectangle' );
+  var Panel = require( 'SUN/Panel' );
   var ScreenView = require( 'JOIST/ScreenView' );
   var SkaterNode = require( 'ENERGY_SKATE_PARK/energy-skate-park-basics/view/SkaterNode' );
   var ClosestPointNode = require( 'ENERGY_SKATE_PARK/energy-skate-park-basics/view/ClosestPointNode' );
@@ -62,10 +63,17 @@ define( function( require ) {
       } );
     }
     else {
-      for ( var index = 0; index < model.tracks.length; index++ ) {
-        var track = model.tracks[index];
-        this.addChild( new TrackNode( model, track, transform ) );
-      }
+
+      //Create the tracks for the control panel
+      var interactiveTrackNodes = _.map( model.tracks, function( track ) {
+        return new TrackNode( model, track, transform );
+      } );
+
+      //Add a panel behind the tracks
+      var margin = 5;
+      this.addChild( new Panel( new Rectangle( 0, 0, interactiveTrackNodes[0].width, interactiveTrackNodes[0].height ), {xMargin: margin, yMargin: margin, x: interactiveTrackNodes[0].left - margin, y: interactiveTrackNodes[0].top - margin} ) );
+
+      interactiveTrackNodes.forEach( function( trackNode ) { view.addChild( trackNode ); } );
     }
 
     this.addChild( new SkaterNode( model, transform ) );
