@@ -122,6 +122,8 @@ define( function( require ) {
       var skater = this.skater;
       var initialEnergy = skater.totalEnergy;
       var netForce = new Vector2( 0, -9.8 * skater.mass );
+
+      //TODO: instead of changing skater attributes throughout the function, consider changing all at the end, so we can do an atomic update (should be easier to maintain)
       skater.acceleration = netForce.times( 1.0 / skater.mass );
       skater.velocity = skater.velocity.plus( skater.acceleration.times( dt ) );
       var proposedPosition = skater.position.plus( skater.velocity.times( dt ) );
