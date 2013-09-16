@@ -24,7 +24,7 @@ define( function( require ) {
 
     var createNode = function( name, index ) {
 
-      var track = model.sceneTracks[index];
+      var track = model.tracks[index];
       var background = new BackgroundNode( model, view );
       background.layout( 0, 0, view.layoutBounds.width, view.layoutBounds.height, 1 );
       var trackNode = new TrackNode( model, track, transform );

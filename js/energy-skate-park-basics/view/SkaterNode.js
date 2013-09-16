@@ -71,6 +71,8 @@ define( function( require ) {
         },
         end: function( event ) {
           skaterNode.skater.dragging = false;
+
+          //TODO: search up to see if the skater's hot spot is right below a track.  Bump him up if the user meant to put him on the track
         }
       } ) );
   }

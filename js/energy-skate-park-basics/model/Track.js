@@ -17,6 +17,10 @@ define( function( require ) {
   //points is Array of Property of Vector2
   function Track( points, interactive ) {
     var track = this;
+
+    //True if the track can be interacted with.  For screens 1-2 only one track will be physical (and hence visible).
+    // For screen 3, tracks in the control panel are visible but non-physical until dragged to the play area
+    this.physicalProperty = new Property( false );
     ObservableArray.call( this, points );
     this.interactive = interactive;
     this.t = [];

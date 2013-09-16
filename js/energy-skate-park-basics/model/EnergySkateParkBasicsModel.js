@@ -47,18 +47,23 @@ define( function( require ) {
       var slope = [new Vector2( -4, 4 ), new Vector2( -2, 2 ), new Vector2( 2, 1 )];
       var doubleWell = [new Vector2( -4, 5 ), new Vector2( -2, 0 ), new Vector2( 0, 2 ), new Vector2( 2, 1 ), new Vector2( 4, 5 ) ];
       var toProperty = function( pt ) {return new Property( pt );};
-      this.sceneTracks = [new Track( _.map( parabola, toProperty ), false ), new Track( _.map( slope, toProperty ), false ), new Track( _.map( doubleWell, toProperty ), false )];
-
-      this.track = this.sceneTracks[0];
+      this.tracks = [new Track( _.map( parabola, toProperty ), false ), new Track( _.map( slope, toProperty ), false ), new Track( _.map( doubleWell, toProperty ), false )];
 
       this.sceneProperty.link( function( scene ) {
-        energySkateParkBasicsModel.track = energySkateParkBasicsModel.sceneTracks[scene];
+        for ( var i = 0; i < energySkateParkBasicsModel.tracks.length; i++ ) {
+          var track = energySkateParkBasicsModel.tracks[i];
+          track.physicalProperty.value = (i === scene);
+          console.log( 'set ', i, 'to physical: ', (i === scene) );
+        }
         energySkateParkBasicsModel.skater.track = null;
       } );
     }
     else {
-      var controlPoints = [ new Property( new Vector2( -2, 2 ) ), new Property( new Vector2( 0, 0 ) ), new Property( new Vector2( 2, 1 ) ), new Property( new Vector2( 2.5, 1 ) ), new Property( new Vector2( 3, 1 ) )];
-      this.track = new Track( controlPoints, true );
+      this.tracks = [];
+      for ( var i = 0; i < 4; i++ ) {
+        var controlPoints = [ new Property( new Vector2( -1, 0 ) ), new Property( new Vector2( 0, 0 ) ), new Property( new Vector2( 1, 0 ) )];
+        this.tracks.push( new Track( controlPoints, true ) );
+      }
     }
 
     //TODO: Remove 'closest point' debugging tool to improve performance
@@ -78,7 +83,9 @@ define( function( require ) {
     reset: function() {
       PropertySet.prototype.reset.call( this );
       this.skater.reset();
-      this.track.reset();
+      for ( var i = 0; i < this.tracks.length; i++ ) {
+        this.tracks[i].reset();
+      }
     },
 
     //See http://digitalcommons.calpoly.edu/cgi/viewcontent.cgi?article=1387&context=phy_fac
@@ -125,12 +132,14 @@ define( function( require ) {
         //TODO: return t value so they can be averaged
 
         //TODO: extend t range just outside the track in each direction to see if the skater just "missed" the track
-        var t = this.track.getClosestPoint( this.skater.position ).t;
+        var physicalTracks = this.getPhysicalTracks();
+        var track = physicalTracks[0];
+        var t = track.getClosestPoint( this.skater.position ).t;
         var t1 = t - 1E-6;
         var t2 = t + 1E-6;
-        var pt = this.track.getPoint( t );
-        var pt1 = this.track.getPoint( t1 );
-        var pt2 = this.track.getPoint( t2 );
+        var pt = track.getPoint( t );
+        var pt1 = track.getPoint( t1 );
+        var pt2 = track.getPoint( t2 );
         var segment = pt2.minus( pt1 );
         var normal = segment.rotated( Math.PI / 2 ).normalized();
 
@@ -151,9 +160,9 @@ define( function( require ) {
           }
           else {
             //attach to track
-            skater.track = this.track;
+            skater.track = track;
             skater.u = t;
-            var newEnergy = this.track.getEnergy( t, skater.uD, skater.mass, skater.gravity );
+            var newEnergy = track.getEnergy( t, skater.uD, skater.mass, skater.gravity );
             var delta = newEnergy - initialEnergy;
             if ( delta < 0 ) {
               var lostEnergy = Math.abs( delta );
@@ -183,24 +192,25 @@ define( function( require ) {
     //Update the skater if he is on the track
     stepTrack: function( dt ) {
       var skater = this.skater;
+      var track = skater.track;
       var u = skater.u;
       var uD = skater.uD;
 
-      var xP = this.track.xSplineDiff.at( u );
-      var yP = this.track.ySplineDiff.at( u );
-      var xPP = this.track.xSplineDiffDiff.at( u );
-      var yPP = this.track.ySplineDiffDiff.at( u );
+      var xP = track.xSplineDiff.at( u );
+      var yP = track.ySplineDiff.at( u );
+      var xPP = track.xSplineDiffDiff.at( u );
+      var yPP = track.ySplineDiffDiff.at( u );
       var g = -9.8;
       var uDD1 = this.uDD( uD, xP, xPP, yP, yPP, g );
 
       var uD2 = uD + uDD1 * dt;
       var u2 = u + (uD + uD2) / 2 * dt; //averaging here really keeps down the average error.  It's not exactly forward Euler but I forget the name.
 
-      var initialEnergy = this.track.getEnergy( u, uD, skater.mass, skater.gravity );
-      var finalEnergy = this.track.getEnergy( u2, uD2, skater.mass, skater.gravity );
+      var initialEnergy = track.getEnergy( u, uD, skater.mass, skater.gravity );
+      var finalEnergy = track.getEnergy( u2, uD2, skater.mass, skater.gravity );
 
       //TODO: use a more accurate numerical integration scheme.  Currently forward Euler
-      skater.position = new Vector2( this.track.getX( u2 ), this.track.getY( u2 ) );
+      skater.position = new Vector2( track.getX( u2 ), track.getY( u2 ) );
 
       var count = 0;
       var upperBound = uD2 * 1.2;
@@ -212,14 +222,14 @@ define( function( require ) {
       while ( Math.abs( finalEnergy - initialEnergy ) > 1E-2 ) {
 //          console.log( (finalEnergy - initialEnergy).toFixed( 2 ), 'binary search, lowerBound=', lowerBound, 'upperBound', upperBound );
         var uMid = (upperBound + lowerBound) / 2;
-        var midEnergy = this.track.getEnergy( u2, uMid, skater.mass, skater.gravity );
+        var midEnergy = track.getEnergy( u2, uMid, skater.mass, skater.gravity );
         if ( midEnergy > initialEnergy ) {
           upperBound = uMid;
         }
         else {
           lowerBound = uMid;
         }
-        finalEnergy = this.track.getEnergy( u2, uMid, skater.mass, skater.gravity );
+        finalEnergy = track.getEnergy( u2, uMid, skater.mass, skater.gravity );
         count++;
         if ( count >= 1000 ) {
           console.log( 'count', count );
@@ -233,8 +243,8 @@ define( function( require ) {
       skater.uD = uD2;
       skater.u = u2;
 
-      var vx = this.track.xSplineDiff.at( u2 ) * uD2;
-      var vy = this.track.ySplineDiff.at( u2 ) * uD2;
+      var vx = track.xSplineDiff.at( u2 ) * uD2;
+      var vy = track.ySplineDiff.at( u2 ) * uD2;
       var velocity = new Vector2( vx, vy );
 
       skater.velocity = velocity;
@@ -269,6 +279,19 @@ define( function( require ) {
 
     clearThermal: function() {
       this.skater.clearThermal();
+    },
+
+    getPhysicalTracks: function() {
+      var physicalTracks = [];
+      for ( var i = 0; i < this.tracks.length; i++ ) {
+        var track = this.tracks[i];
+
+        //TODO: mimic PropertySet better or use mixin?
+        if ( track.physicalProperty.value ) {
+          physicalTracks.push( track );
+        }
+      }
+      return physicalTracks;
     }
   } );
 } );

@@ -28,6 +28,9 @@ define( function( require ) {
           var delta = options.delta;
           var modelDelta = modelViewTransform.viewToModelDelta( delta );
           track.translate( modelDelta.x, modelDelta.y );
+
+          //If the user moved it out of the toolbox, then make it physically interactive
+          track.physicalProperty.value = true;
         }
       }
     );
@@ -86,6 +89,9 @@ define( function( require ) {
               drag: function( event ) {
                 var t = controlPoint.globalToParentPoint( event.pointer.point );
                 property.value = modelViewTransform.viewToModelPosition( t );
+
+                //If the user moved it out of the toolbox, then make it physically interactive
+                track.physicalProperty.value = true;
               },
               translate: function() {
 

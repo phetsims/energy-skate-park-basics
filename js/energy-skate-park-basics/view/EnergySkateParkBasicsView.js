@@ -30,8 +30,8 @@ define( function( require ) {
 
   function EnergySkateParkBasicsView( model ) {
 
-    var thisView = this;
-    ScreenView.call( thisView, { renderer: 'svg' } );
+    var view = this;
+    ScreenView.call( view, { renderer: 'svg' } );
 
     var modelPoint = new Vector2( 0, 0 );
     var viewPoint = new Vector2( this.layoutBounds.width / 2, this.layoutBounds.height - BackgroundNode.grassHeight );//grass is 70px high in stage coordinates
@@ -48,13 +48,12 @@ define( function( require ) {
     //Switch between selectable tracks
     if ( !model.draggableTracks ) {
 
-      var trackNodes = [
-        new TrackNode( model, model.sceneTracks[0], transform ),
-        new TrackNode( model, model.sceneTracks[1], transform ),
-        new TrackNode( model, model.sceneTracks[2], transform )];
-      for ( var i = 0; i < trackNodes.length; i++ ) {
-        this.addChild( trackNodes[i] );
-      }
+      var trackNodes = _.map( model.tracks, function( track ) {
+        return new TrackNode( model, track, transform );
+      } );
+      trackNodes.forEach( function( trackNode ) {
+        view.addChild( trackNode );
+      } );
 
       model.sceneProperty.link( function( scene ) {
         trackNodes[0].visible = (scene === 0);
@@ -63,7 +62,10 @@ define( function( require ) {
       } );
     }
     else {
-      this.addChild( new TrackNode( model, model.track, transform ) );
+      for ( var index = 0; index < model.tracks.length; index++ ) {
+        var track = model.tracks[index];
+        this.addChild( new TrackNode( model, track, transform ) );
+      }
     }
 
     this.addChild( new SkaterNode( model, transform ) );
