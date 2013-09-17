@@ -41,7 +41,10 @@ define( function( require ) {
         return;
       }
       var totalEnergy = skater.totalEnergy;
-      var radius = totalEnergy / 100;
+
+      //Make the radius proportional to the square root of the energy so that the area will grow linearly with energy
+      var radius = 0.4 * Math.sqrt( totalEnergy );
+
       //if only one component of pie chart, then show as a circle so there are no seams
       var numberComponents = (skater.potentialEnergy > 0 ? 1 : 0) +
                              (skater.kineticEnergy > 0 ? 1 : 0) +
