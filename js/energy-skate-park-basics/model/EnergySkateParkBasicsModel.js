@@ -102,8 +102,7 @@ define( function( require ) {
       }
       if ( !this.paused ) {
 
-        //TODO: on the iPad3 if all features are turned on, the model will have numerical integration problems and buggy behavior.
-        //TODO: We should subdivide dt or find another solution
+        //TODO: on the iPad3 if all features are turned on, the model will have numerical integration problems and buggy behavior.  We should subdivide dt or find another solution
         this.stepModel( this.speed === 'normal' ? dt : dt * 0.25 );
       }
     },
@@ -115,7 +114,7 @@ define( function( require ) {
       var initialEnergy = skater.totalEnergy;
       var netForce = new Vector2( 0, -9.8 * skater.mass );
 
-      //TODO: instead of changing skater attributes throughout the function, consider changing all at the end, so we can do an atomic update (should be easier to maintain)
+      //TODO: instead of changing skater attributes throughout the function, consider changing all at the end, so we can do an atomic update (should be easier to understand & maintain)
       skater.acceleration = netForce.times( 1.0 / skater.mass );
       skater.velocity = skater.velocity.plus( skater.acceleration.times( dt ) );
       var proposedPosition = skater.position.plus( skater.velocity.times( dt ) );
@@ -125,10 +124,6 @@ define( function( require ) {
       if ( skater.position.x !== proposedPosition.x || skater.position.y !== proposedPosition.y ) {
 
         //see if it crossed the track
-
-        //TODO: return t value so they can be averaged
-
-        //TODO: extend t range just outside the track in each direction to see if the skater just "missed" the track
         var physicalTracks = this.getPhysicalTracks();
         if ( physicalTracks.length ) {
           this.interactWithTracksWhileFalling( physicalTracks, skater, proposedPosition, initialEnergy, dt );
