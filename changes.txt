@@ -1,3 +1,5 @@
+# 0.0.0-dev.5
+Use window.innerWidth in Sim.js
 Test unfuddle hook V
 Test unfuddle hook IV
 Test unfuddle hook III
