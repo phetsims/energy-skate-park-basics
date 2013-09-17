@@ -112,10 +112,6 @@ define( function( require ) {
       return -mass * gravity * this.ySpline.at( u ) + 1 / 2 * mass * vSquared;
     },
 
-    //Get the maximum parametric value at the rightmost end of the track (left end is 0)
-    //TODO: replace usages with isParameterInBounds
-    getMaxU: function() { return (this.length - 1) / this.length; },
-
     translate: function( dx, dy ) {
 
       //Unlink and relink later to avoid unnecessary spline computation

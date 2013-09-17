@@ -310,7 +310,7 @@ define( function( require ) {
       skater.angle = skater.track.getViewAngleAt( skater.u );
 
       //Fly off the left or right side of the track
-      if ( u2 < 0 || u2 > skater.track.getMaxU() ) {
+      if ( !skater.track.isParameterInBounds( u2 ) ) {
         skater.track = null;
         skater.uD = 0;
       }

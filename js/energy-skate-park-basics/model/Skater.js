@@ -71,6 +71,9 @@ define( function( require ) {
     },
 
     reset: function() {
+      //set the angle to zero before calling PropertySet.prototype.reset so that the optimization for SkaterNode.updatePosition is maintained,
+      //Without showing the skater at the wrong angle
+      this.angle = 0;
       PropertySet.prototype.reset.call( this );
       this.updateEnergy();
     },

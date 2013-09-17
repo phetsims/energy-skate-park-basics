@@ -45,6 +45,8 @@ define( function( require ) {
     //Show a red dot in the bottom center as the important particle model coordinate
     this.addChild( new Circle( 4, {fill: 'red', x: imageWidth / scale / 2, y: imageHeight / scale } ) );
 
+    //Update the position and angle.  Normally the angle would only change if the position has also changed.
+    //TODO: Once on reset all the angle didn't update
     var positionChanged = function( position ) {
       var view = modelViewTransform.modelToViewPosition( position );
 
