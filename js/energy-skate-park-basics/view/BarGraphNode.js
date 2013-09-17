@@ -77,6 +77,7 @@ define( function( require ) {
           update();
         }
       } );
+      bar.update = update;
       return bar;
     };
 
@@ -93,6 +94,7 @@ define( function( require ) {
     var undoButton = new UndoButton( model.clearThermal.bind( model ), model.skater, {centerX: thermalLabel.centerX, y: thermalLabel.bottom + 15} );
     model.skater.thermalEnergyProperty.linkAttribute( undoButton, 'enabled' );
 
+    this.bars = [kineticBar, potentialBar, thermalBar, totalBar];
     var contentNode = new Rectangle( 0, 0, contentWidth, contentHeight, {children: [
       new ArrowNode( insetX, originY, insetX, insetY, {pickable: false} ),
       new Text( 'Energy (Joules)', {x: 5, y: insetY - 10, font: new PhetFont( 14 ), pickable: false} ),
@@ -113,7 +115,13 @@ define( function( require ) {
 
     this.addInputListener( new SimpleDragHandler() );
 
-    model.barGraphVisibleProperty.linkAttribute( this, 'visible' );
+    //When the bar graph is shown, update the bars (because they do not get updated when invisible for performance reasons)
+    model.barGraphVisibleProperty.link( function( visible ) {
+      barGraphNode.visible = visible;
+      if ( visible ) {
+        barGraphNode.bars.forEach( function( bar ) {bar.update()} );
+      }
+    } );
   }
 
   return inherit( Panel, BarGraphNode );

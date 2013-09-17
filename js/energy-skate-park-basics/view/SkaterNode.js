@@ -49,6 +49,7 @@ define( function( require ) {
       var view = modelViewTransform.modelToViewPosition( position );
 
       //TODO: Coalesce all of these calls into a single matrix for performance?
+      //TODO: Or at least cache rotation value?
       skaterNode.setTranslation( view.x - imageWidth / 2, view.y - imageHeight );
       skaterNode.setRotation( 0 );
 
