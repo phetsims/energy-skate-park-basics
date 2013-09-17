@@ -176,6 +176,10 @@ define( function( require ) {
         this.updateLinSpace();
       }
       this.updateSplines();
-    }
+    },
+
+    //Mimic the PropertySet pattern
+    get physical() { return this.physicalProperty.get(); },
+    set physical( p ) {this.physicalProperty.set( p );}
   } );
 } );

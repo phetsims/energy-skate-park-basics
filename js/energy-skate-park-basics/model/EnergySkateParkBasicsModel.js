@@ -50,7 +50,7 @@ define( function( require ) {
 
       this.sceneProperty.link( function( scene ) {
         for ( var i = 0; i < model.tracks.length; i++ ) {
-          model.tracks[i].physicalProperty.value = (i === scene);
+          model.tracks[i].physical = (i === scene);
         }
         model.skater.track = null;
       } );
@@ -79,7 +79,7 @@ define( function( require ) {
 
       //For the first two screens, make the default track physical
       if ( !this.draggableTracks ) {
-        this.tracks[0].physicalProperty.value = true;
+        this.tracks[0].physical = true;
       }
     },
 
@@ -342,7 +342,7 @@ define( function( require ) {
         var track = this.tracks[i];
 
         //TODO: mimic PropertySet better or use mixin?
-        if ( track.physicalProperty.value ) {
+        if ( track.physical ) {
           physicalTracks.push( track );
         }
       }

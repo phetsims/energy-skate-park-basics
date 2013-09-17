@@ -30,7 +30,7 @@ define( function( require ) {
           track.translate( modelDelta.x, modelDelta.y );
 
           //If the user moved it out of the toolbox, then make it physically interactive
-          track.physicalProperty.value = true;
+          track.physical = true;
         }
       }
     );
@@ -94,7 +94,7 @@ define( function( require ) {
                 property.value = modelViewTransform.viewToModelPosition( t );
 
                 //If the user moved it out of the toolbox, then make it physically interactive
-                track.physicalProperty.value = true;
+                track.physical = true;
               },
               translate: function() {
 
