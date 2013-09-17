@@ -244,12 +244,16 @@ define( function( require ) {
     },
 
     //Started in free fall and did not interact with a track
+    //TODO: handle the case where the skater is moving to the left/right when landing on the ground
     continueFreeFall: function( skater, initialEnergy, proposedPosition ) {
-      var energy = 0.5 * skater.mass * skater.velocity.magnitudeSquared() - skater.mass * skater.gravity * skater.position.y + skater.thermalEnergy;
       //make up for the difference by changing the y value
       var y = (initialEnergy - 0.5 * skater.mass * skater.velocity.magnitudeSquared() - skater.thermalEnergy) / (-1 * skater.mass * skater.gravity);
       if ( y < 0 ) {
         y = 0;
+
+        //When falling straight down, stop completely and convert all energy to thermal
+        skater.velocity = new Vector2( 0, 0 );
+        skater.thermalEnergy = initialEnergy;
       }
 
       //TODO: keep track of all of the variables in a hash so they can be set at once after verification and after energy conserved
