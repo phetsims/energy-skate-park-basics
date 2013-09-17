@@ -16,11 +16,9 @@ define( function( require ) {
   var BackgroundNode = require( 'ENERGY_SKATE_PARK/energy-skate-park-basics/view/BackgroundNode' );
 
   function GridNode( model, energySkateParkBasicsView, modelViewTransform ) {
-    var gridNode = this;
     this.modelViewTransform = modelViewTransform;
     Node.call( this, {pickable: false} );
 
-    //TODO: update when the graph becomes visible
     model.gridVisibleProperty.linkAttribute( this, 'visible' );
   }
 
@@ -28,6 +26,7 @@ define( function( require ) {
 
     //Exactly fit the geometry to the screen so no matter what aspect ratio it will always show something.  Perhaps it will improve performance too?
     //TODO: Could performance optimize by using visible instead of add/remove child if necessary (would only change performance on screen size change)
+    //TODO: For more performance improvements on screen size change, only update when the graph is visible, then again when it becomes visible
     layout: function( offsetX, offsetY, width, height, layoutScale ) {
 
       var lines = [];

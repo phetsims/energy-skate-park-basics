@@ -64,7 +64,10 @@ define( function( require ) {
         y.push( track.get( i ).value.y );
       }
 
-      var xPoints = numeric.spline( t, x ).at( linSpace ); //TODO: number of samples could depend on the total length of the track
+      //Compute points for lineTo
+      //TODO: number of samples could depend on the total length of the track
+      //TODO: See if there is a way to use the KITE SVG/Canvas curve APIs to render this
+      var xPoints = numeric.spline( t, x ).at( linSpace );
       var yPoints = numeric.spline( t, y ).at( linSpace );
 
       var shape = new Shape().
