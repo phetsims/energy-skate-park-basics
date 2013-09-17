@@ -67,8 +67,8 @@ define( function( require ) {
       //Compute points for lineTo
       //TODO: number of samples could depend on the total length of the track
       //TODO: See if there is a way to use the KITE SVG/Canvas curve APIs to render this
-      var xPoints = numeric.spline( t, x ).at( linSpace );
-      var yPoints = numeric.spline( t, y ).at( linSpace );
+      var xPoints = track.xSpline.at( linSpace );
+      var yPoints = track.ySpline.at( linSpace );
 
       var shape = new Shape().
         moveTo( modelViewTransform.modelToViewX( xPoints[0] ), modelViewTransform.modelToViewY( yPoints[0] ) );
