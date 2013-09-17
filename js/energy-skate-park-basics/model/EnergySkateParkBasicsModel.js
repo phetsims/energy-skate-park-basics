@@ -268,8 +268,7 @@ define( function( require ) {
       var yP = track.ySplineDiff.at( u );
       var xPP = track.xSplineDiffDiff.at( u );
       var yPP = track.ySplineDiffDiff.at( u );
-      var g = -9.8;
-      var uDD1 = this.uDD( uD, xP, xPP, yP, yPP, g );
+      var uDD1 = this.uDD( uD, xP, xPP, yP, yPP, skater.gravity );
 
       var uD2 = uD + uDD1 * dt;
       var u2 = u + (uD + uD2) / 2 * dt; //averaging here really keeps down the average error.  It's not exactly forward Euler but I forget the name.
