@@ -29,8 +29,7 @@ define( function( require ) {
 
     this.updateLinSpace();
 
-    //TODO: when points change, update the spline instance
-
+    //when points change, update the spline instance
     this.updateSplines = function() {
       //clear arrays, reusing them to save on garbage
       track.t.length = 0;
@@ -70,10 +69,10 @@ define( function( require ) {
     //Returns the closest point on the track, as an object with {t,point}
     //also checks 1E-6 beyond each side of the track to see if the skater is beyond the edge of the track
     getClosestPoint: function( point ) {
-      var track = this;
 
-      var xPoints = numeric.spline( this.t, this.x ).at( this.searchLinSpace ); //TODO: number of samples could depend on the total length of the track
-      var yPoints = numeric.spline( this.t, this.y ).at( this.searchLinSpace );
+      //Compute the spline points for purposes of getting closest points.
+      var xPoints = this.xSpline.at( this.searchLinSpace );
+      var yPoints = this.ySpline.at( this.searchLinSpace );
 
       var bestT = 0;
       var best = 9999999999;
@@ -155,6 +154,7 @@ define( function( require ) {
       var postPoint = this.maxPoint + 1E-6;
 
       //Store for performance
+      //TODO: number of samples could depend on the total length of the track
       this.searchLinSpace = numeric.linspace( prePoint, postPoint, 70 );
     },
 
