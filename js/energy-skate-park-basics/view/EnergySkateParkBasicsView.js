@@ -12,7 +12,6 @@ define( function( require ) {
   var Panel = require( 'SUN/Panel' );
   var ScreenView = require( 'JOIST/ScreenView' );
   var SkaterNode = require( 'ENERGY_SKATE_PARK/energy-skate-park-basics/view/SkaterNode' );
-  var ClosestPointNode = require( 'ENERGY_SKATE_PARK/energy-skate-park-basics/view/ClosestPointNode' );
   var TrackNode = require( 'ENERGY_SKATE_PARK/energy-skate-park-basics/view/TrackNode' );
   var BackgroundNode = require( 'ENERGY_SKATE_PARK/energy-skate-park-basics/view/BackgroundNode' );
   var EnergySkateParkBasicsControlPanel = require( 'ENERGY_SKATE_PARK/energy-skate-park-basics/view/EnergySkateParkBasicsControlPanel' );
@@ -82,7 +81,6 @@ define( function( require ) {
     this.addChild( new PieChartNode( model, this, transform ) );
     var pieChartLegend = new PieChartLegend( model );
     this.addChild( pieChartLegend );
-//    this.addChild( new ClosestPointNode( model, transform ) );
 
     var speedometerNode = new SpeedometerNode( model.skater.speedProperty, 'Speed', 20 );
     model.speedometerVisibleProperty.linkAttribute( speedometerNode, 'visible' );
