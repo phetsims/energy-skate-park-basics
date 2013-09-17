@@ -118,9 +118,7 @@ define( function( require ) {
     //When the bar graph is shown, update the bars (because they do not get updated when invisible for performance reasons)
     model.barGraphVisibleProperty.link( function( visible ) {
       barGraphNode.visible = visible;
-      if ( visible ) {
-        barGraphNode.bars.forEach( function( bar ) {bar.update();} );
-      }
+      barGraphNode.bars.forEach( function( bar ) {bar.update();} );
     } );
   }
 

@@ -31,9 +31,6 @@ define( function( require ) {
       pieChartNode.setTranslation( view.x, view.y - 150 );
     } );
 
-    //TODO: update when the graph becomes visible
-    model.pieChartVisibleProperty.linkAttribute( this, 'visible' );
-
     var updatePaths = function() {
 
       //TODO: call updatePaths when pie chart node is made visible
@@ -82,7 +79,12 @@ define( function( require ) {
 
     //instead of changing the entire pie chart whenever one energy changes, use trigger to update the whole pie
     model.skater.on( 'energy-changed', updatePaths );
-    updatePaths();
+
+    //Synchronize visibility with the model, and also update when visibility changes because it is guarded against in updatePaths
+    model.pieChartVisibleProperty.link( function( visible ) {
+      pieChartNode.visible = visible;
+      updatePaths();
+    } );
   }
 
   return inherit( Node, PieChartNode );
