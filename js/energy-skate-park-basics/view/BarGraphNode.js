@@ -119,7 +119,7 @@ define( function( require ) {
     model.barGraphVisibleProperty.link( function( visible ) {
       barGraphNode.visible = visible;
       if ( visible ) {
-        barGraphNode.bars.forEach( function( bar ) {bar.update()} );
+        barGraphNode.bars.forEach( function( bar ) {bar.update();} );
       }
     } );
   }
