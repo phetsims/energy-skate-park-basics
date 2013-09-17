@@ -12,12 +12,11 @@ define( function( require ) {
   var Text = require( 'SCENERY/nodes/Text' );
   var PhetFont = require( 'SCENERY_PHET/PhetFont' );
   var HSlider = require( 'SUN/HSlider' );
-  var Range = require( 'DOT/Range' );
   var Dimension2 = require( 'DOT/Dimension2' );
   var Property = require( 'AXON/Property' );
 
   function MassSlider( model, view ) {
-    var slider = new HSlider( model.skater.massProperty, new Range( 10, 110 ) );
+    var slider = new HSlider( model.skater.massProperty, {min: 10, max: 110} );
     var tickFont = new PhetFont( 10 );
     slider.addMajorTick( 10, new Text( 'Small', { font: tickFont } ) );
     slider.addMajorTick( 110, new Text( 'Large', { font: tickFont } ) );

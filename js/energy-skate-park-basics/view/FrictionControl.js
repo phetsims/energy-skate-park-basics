@@ -13,12 +13,11 @@ define( function( require ) {
   var Text = require( 'SCENERY/nodes/Text' );
   var PhetFont = require( 'SCENERY_PHET/PhetFont' );
   var HSlider = require( 'SUN/HSlider' );
-  var Range = require( 'DOT/Range' );
   var Dimension2 = require( 'DOT/Dimension2' );
   var AquaRadioButton = require( 'SUN/AquaRadioButton' );
 
   function FrictionControl( model, view ) {
-    var frictionRange = new Range( 0, 2 );
+    var frictionRange = {min: 0, max: 2};
     var slider = new HSlider( model.frictionProperty, frictionRange, {enabledProperty: model.frictionEnabledProperty} );
     var tickFont = new PhetFont( 10 );
     slider.addMajorTick( frictionRange.min, new Text( 'None', { font: tickFont } ) );
