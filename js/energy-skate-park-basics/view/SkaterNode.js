@@ -68,15 +68,19 @@ define( function( require ) {
         },
         drag: function( event ) {
 //          console.log( event );
+
+          //TODO: Translate based on deltas?  Or move the skater up so a bit above the finger/mouse?
           var t = skaterNode.globalToParentPoint( event.pointer.point );
           var model = modelViewTransform.viewToModelPosition( t );
+
+
           skaterNode.skater.position = model;
           skaterNode.skater.updateEnergy();
+          //TODO: search up to see if the skater's hot spot is right below a track.  Bump him up if the user meant to put him on the track
+
         },
         end: function( event ) {
           skaterNode.skater.dragging = false;
-
-          //TODO: search up to see if the skater's hot spot is right below a track.  Bump him up if the user meant to put him on the track
         }
       } ) );
   }
