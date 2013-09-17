@@ -133,14 +133,17 @@ define( function( require ) {
       this.updateSplines();
     },
 
-    //TODO: optimize
     //For purposes of showing the skater angle, get the view angle of the track here.  Note this means inverting the y values
+    //This is called every step while animating on the track, so it was optimized to avoid new allocations
     getViewAngleAt: function( u ) {
-      var a = this.getPoint( u - 1E-6 );
-      a.y = -a.y;
-      var b = this.getPoint( u + 1E-6 );
-      b.y = -b.y;
-      return b.minus( a ).angle();
+      var tolerance = 1E-6;
+      var ax = this.xSpline.at( u - tolerance );
+      var ay = -this.ySpline.at( u - tolerance );
+
+      var bx = this.xSpline.at( u + tolerance );
+      var by = -this.ySpline.at( u + tolerance );
+
+      return Math.atan2( by - ay, bx - ax );
     },
 
     updateLinSpace: function() {
