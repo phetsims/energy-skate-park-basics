@@ -247,6 +247,7 @@ define( function( require ) {
     },
 
     //Update the skater if he is on the track
+    //TODO: Add support for friction
     stepTrack: function( dt ) {
       var skater = this.skater;
       var track = skater.track;
