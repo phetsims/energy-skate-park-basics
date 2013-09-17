@@ -68,6 +68,7 @@ define( function( require ) {
 
     //Returns the closest point on the track, as an object with {t,point}
     //also checks 1E-6 beyond each side of the track to see if the skater is beyond the edge of the track
+    //TODO: it is confusing that the method is named getClosestPoint get it returns a {t,point}
     getClosestPoint: function( point ) {
 
       //Compute the spline points for purposes of getting closest points.

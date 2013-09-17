@@ -16,6 +16,7 @@ define( function( require ) {
     PropertySet.call( this, {track: null,
 
       //Scalar indicating speed and direction (+/-) along the track spline
+      //TODO: is this replaced by uD?
       trackSpeed: 0,
 
       //Parameter along the parametric spline
@@ -50,9 +51,7 @@ define( function( require ) {
 
     this.draggingProperty.link( function( dragging ) {
       skater.velocity = new Vector2( 0, 0 );
-      skater.u = 0;
       skater.uD = 0;
-      skater.track = null;
       if ( !dragging ) {
         skater.startingPosition = new Vector2( skater.position.x, skater.position.y );
       }

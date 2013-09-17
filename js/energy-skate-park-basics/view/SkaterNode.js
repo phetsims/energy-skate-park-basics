@@ -19,7 +19,7 @@ define( function( require ) {
   var LinearFunction = require( 'DOT/LinearFunction' );
 
   function SkaterNode( model, modelViewTransform ) {
-
+    var skater = model.skater;
     this.skater = model.skater;
     var skaterNode = this;
 
@@ -38,7 +38,7 @@ define( function( require ) {
       imageWidth = skaterNode.width;
       imageHeight = skaterNode.height;
       if ( positionChanged ) {
-        positionChanged( skaterNode.skater.position );
+        positionChanged( skater.position );
       }
     } );
 
@@ -55,32 +55,57 @@ define( function( require ) {
       skaterNode.setRotation( 0 );
 
       //Keep angle when leaving a track, but optimize for straight up and down skater
-      if ( skaterNode.skater.angle !== 0 ) {
-        skaterNode.rotateAround( new Vector2( view.x, view.y ), skaterNode.skater.angle );
+      if ( skater.angle !== 0 ) {
+        skaterNode.rotateAround( new Vector2( view.x, view.y ), skater.angle );
       }
     };
     this.skater.positionProperty.link( positionChanged );
+    var targetTrack = null;
+
+    //TODO: Some places it is 'u' some places it is 't', please unify, probably based on the paper (so 'u')
+    var targetT = null;
     this.addInputListener( new SimpleDragHandler(
       {
         start: function( event ) {
-//          handleEvent( event );
-          skaterNode.skater.dragging = true;
+          skater.dragging = true;
         },
         drag: function( event ) {
-//          console.log( event );
 
           //TODO: Translate based on deltas?  Or move the skater up so a bit above the finger/mouse?
           var t = skaterNode.globalToParentPoint( event.pointer.point );
-          var model = modelViewTransform.viewToModelPosition( t );
+          var modelPoint = modelViewTransform.viewToModelPosition( t );
 
+          //TODO: lots of unnecessary allocations and computation here
+          var closestTrack = model.getClosestTrack( skater, model.getPhysicalTracks() );
+          var closestPointHash = closestTrack.getClosestPoint( skater.position );
+          var closestPoint = closestPointHash.point;
+          var distance = closestPoint.distance( modelPoint );
+          if ( distance < 0.5 ) {
+            modelPoint = closestPoint;
+            targetTrack = closestTrack;
+            targetT = closestPointHash.t;
+            skater.angle = targetTrack.getViewAngleAt( targetT );
+          }
+          else {
+            targetTrack = null;
+            targetT = null;
+          }
 
-          skaterNode.skater.position = model;
-          skaterNode.skater.updateEnergy();
-          //TODO: search up to see if the skater's hot spot is right below a track.  Bump him up if the user meant to put him on the track
-
+          skater.position = modelPoint;
+          skater.updateEnergy();
         },
         end: function( event ) {
-          skaterNode.skater.dragging = false;
+          skater.dragging = false;
+          if ( targetTrack ) {
+            skater.track = targetTrack;
+            skater.u = targetT;
+            skater.uD = 0;
+          }
+          else {
+            skater.track = null;
+            skater.u = 0;
+            skater.uD = 0;
+          }
         }
       } ) );
   }
