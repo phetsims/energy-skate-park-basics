@@ -96,15 +96,21 @@ define( function( require ) {
         },
         end: function( event ) {
           skater.dragging = false;
+          skater.velocity = new Vector2( 0, 0 );
+          skater.uD = 0;
+          skater.startingPosition = new Vector2( skater.position.x, skater.position.y );
+
           if ( targetTrack ) {
             skater.track = targetTrack;
             skater.u = targetT;
-            skater.uD = 0;
+            skater.startingU = targetT;
+            skater.startingTrack = targetTrack;
           }
           else {
             skater.track = null;
             skater.u = 0;
-            skater.uD = 0;
+            skater.startingU = null;
+            skater.startingTrack = null;
           }
         }
       } ) );
