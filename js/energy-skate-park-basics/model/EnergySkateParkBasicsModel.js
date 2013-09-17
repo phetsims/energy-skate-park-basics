@@ -201,10 +201,11 @@ define( function( require ) {
         var newVelocity = allOK ? skater.velocity.minus( normal.times( 2 * normal.dot( skater.velocity ) ) ) :
                           new Vector2( 0, 1 );
 
-        //If friction is not allowed, then either attach to the track with no change in speed, or bounce with no change in speed
-
         //Attach to track if velocity is close enough to parallel to the track
         var dot = Math.abs( skater.velocity.normalized().dot( segment ) );
+
+        //If friction is allowed, then bounce with elasticity <1.
+        //If friction is not allowed, then bounce with elasticity = 1.
         if ( dot < 0.4 ) {
           skater.velocity = newVelocity;
           this.bounces++;
@@ -214,7 +215,17 @@ define( function( require ) {
           skater.track = track;
           skater.u = t;
 
-          //choose uD to keep velocity in the same direction.
+          //If friction is allowed, keep the parallel component of velocity.
+          //If friction is not allowed, then either attach to the track with no change in speed
+
+          //Estimate u dot from equations (8) & (9) in the paper
+          var uDx = skater.velocity.x / track.xSplineDiff.at( t );
+          var uDy = skater.velocity.y / track.ySplineDiff.at( t );
+          var uD = (uDx + uDy) / 2;
+          skater.uD = uD;
+
+          //TODO: Refine uD estimate based on energy conservation
+
           var newEnergy = track.getEnergy( t, skater.uD, skater.mass, skater.gravity );
           var delta = newEnergy - initialEnergy;
           if ( delta < 0 ) {
