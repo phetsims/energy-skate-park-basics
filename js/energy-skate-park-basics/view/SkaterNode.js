@@ -77,7 +77,7 @@ define( function( require ) {
 
           //TODO: lots of unnecessary allocations and computation here
           var closestTrack = model.getClosestTrack( skater, model.getPhysicalTracks() );
-          var closestPointHash = closestTrack.getClosestPoint( skater.position );
+          var closestPointHash = closestTrack.getClosestPoint( modelPoint );
           var closestPoint = closestPointHash.point;
           var distance = closestPoint.distance( modelPoint );
           if ( distance < 0.5 ) {
@@ -90,8 +90,9 @@ define( function( require ) {
             targetTrack = null;
             targetT = null;
 
-            //TODO: make skater upright if not near the track
-//            skater.angle = 0;
+            //make skater upright if not near the track
+            //TODO: make this continuous so it is a smooth motion?
+            skater.angle = 0;
           }
 
           skater.position = modelPoint;
