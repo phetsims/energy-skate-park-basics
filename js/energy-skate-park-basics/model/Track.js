@@ -50,6 +50,10 @@ define( function( require ) {
 
       track.xSplineDiffDiff = track.xSplineDiff.diff();
       track.ySplineDiffDiff = track.ySplineDiff.diff();
+
+      //Mark search points as dirty
+      track.xSearchPoints = null;
+      track.ySearchPoints = null;
     };
 
     for ( var i = 0; i < points.length; i++ ) {
@@ -72,19 +76,22 @@ define( function( require ) {
     getClosestPoint: function( point ) {
 
       //Compute the spline points for purposes of getting closest points.
-      var xPoints = this.xSpline.at( this.searchLinSpace );
-      var yPoints = this.ySpline.at( this.searchLinSpace );
+      //keep these points around and invalidate only when necessary
+      if ( !this.xSearchPoints ) {
+        this.xSearchPoints = this.xSpline.at( this.searchLinSpace );
+        this.ySearchPoints = this.ySpline.at( this.searchLinSpace );
+      }
 
       var bestT = 0;
       var best = 9999999999;
       var bestPt = new Vector2( 0, 0 );
-      for ( var i = 0; i < xPoints.length; i++ ) {
-        var dist = point.distanceXY( xPoints[i], yPoints[i] );
+      for ( var i = 0; i < this.xSearchPoints.length; i++ ) {
+        var dist = point.distanceXY( this.xSearchPoints[i], this.ySearchPoints[i] );
         if ( dist < best ) {
           best = dist;
           bestT = this.searchLinSpace[i];
-          bestPt.x = xPoints[i];
-          bestPt.y = yPoints[i];
+          bestPt.x = this.xSearchPoints[i];
+          bestPt.y = this.ySearchPoints[i];
         }
       }
       return {t: bestT, point: bestPt};
