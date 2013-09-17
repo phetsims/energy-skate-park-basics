@@ -89,6 +89,9 @@ define( function( require ) {
           else {
             targetTrack = null;
             targetT = null;
+
+            //TODO: make skater upright if not near the track
+//            skater.angle = 0;
           }
 
           skater.position = modelPoint;
