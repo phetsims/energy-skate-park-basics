@@ -23,16 +23,16 @@ define( function( require ) {
     var skaterNode = this;
 
     //Map from mass(kg) to scale
-    var linearFunction = new LinearFunction( 60, 100, 0.33, 0.4 );
+    var massToScale = new LinearFunction( 60, 100, 0.33, 0.4 );
 
     //Make him 2 meters tall, with skateboard
-    var scale = linearFunction( this.skater.mass );
+    var scale = massToScale( this.skater.mass );
     Image.call( skaterNode, images.getImage( 'skater.png' ), { scale: scale, renderer: 'svg', rendererOptions: {cssTransform: true}, cursor: 'pointer'} );
     var imageWidth = this.width;
     var imageHeight = this.height;
 
     this.skater.massProperty.link( function( mass ) {
-      skaterNode.setScaleMagnitude( linearFunction( mass ) );
+      skaterNode.setScaleMagnitude( massToScale( mass ) );
       skaterNode.setRotation( 0 );
       imageWidth = skaterNode.width;
       imageHeight = skaterNode.height;
