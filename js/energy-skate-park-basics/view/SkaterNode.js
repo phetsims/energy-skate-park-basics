@@ -51,9 +51,10 @@ define( function( require ) {
       //TODO: Coalesce all of these calls into a single matrix for performance?
       skaterNode.setTranslation( view.x - imageWidth / 2, view.y - imageHeight );
       skaterNode.setRotation( 0 );
-      if ( skaterNode.skater.track ) {
-        var angle = skaterNode.skater.track.getViewAngleAt( skaterNode.skater.u );
-        skaterNode.rotateAround( new Vector2( view.x, view.y ), angle );
+
+      //Keep angle when leaving a track, but optimize for straight up and down skater
+      if ( skaterNode.skater.angle !== 0 ) {
+        skaterNode.rotateAround( new Vector2( view.x, view.y ), skaterNode.skater.angle );
       }
     };
     this.skater.positionProperty.link( positionChanged );

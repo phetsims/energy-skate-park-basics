@@ -114,6 +114,7 @@ define( function( require ) {
     },
 
     //Get the maximum parametric value at the rightmost end of the track (left end is 0)
+    //TODO: replace usages with isParameterInBounds
     getMaxU: function() { return (this.length - 1) / this.length; },
 
     translate: function( dx, dy ) {

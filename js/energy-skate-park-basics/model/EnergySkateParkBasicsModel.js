@@ -254,6 +254,7 @@ define( function( require ) {
         //When falling straight down, stop completely and convert all energy to thermal
         skater.velocity = new Vector2( 0, 0 );
         skater.thermalEnergy = initialEnergy;
+        skater.angle = 0;
       }
 
       //TODO: keep track of all of the variables in a hash so they can be set at once after verification and after energy conserved
@@ -321,8 +322,9 @@ define( function( require ) {
       skater.velocity = velocity;
       skater.updateEnergy();
 //        console.log( 'skater energy', skater.totalEnergy );
+      skater.angle = skater.track.getViewAngleAt( skater.u );
 
-      //Fly off the left side of the track
+      //Fly off the left or right side of the track
       if ( u2 < 0 || u2 > skater.track.getMaxU() ) {
         skater.track = null;
         skater.uD = 0;

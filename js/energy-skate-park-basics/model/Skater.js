@@ -41,7 +41,9 @@ define( function( require ) {
 
       thermalEnergy: 0,
 
-      totalEnergy: 0
+      totalEnergy: 0,
+
+      angle: 0
     } );
 
     this.draggingProperty.link( function( dragging ) {
