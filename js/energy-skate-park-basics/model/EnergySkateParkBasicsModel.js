@@ -329,10 +329,8 @@ define( function( require ) {
       }
     },
 
-    //TODO: Return to the place he was last released by the user
-    returnSkater: function() {
-      this.skater.returnSkater();
-    },
+    //Return to the place he was last released by the user
+    returnSkater: function() { this.skater.returnSkater(); },
 
     clearThermal: function() {
       this.skater.clearThermal();

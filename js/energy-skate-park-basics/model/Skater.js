@@ -43,7 +43,9 @@ define( function( require ) {
 
       totalEnergy: 0,
 
-      angle: 0
+      angle: 0,
+
+      startingPosition: new Vector2( 0, 0 )
     } );
 
     this.draggingProperty.link( function( dragging ) {
@@ -51,6 +53,9 @@ define( function( require ) {
       skater.u = 0;
       skater.uD = 0;
       skater.track = null;
+      if ( !dragging ) {
+        skater.startingPosition = new Vector2( skater.position.x, skater.position.y );
+      }
     } );
 
     this.addDerivedProperty( 'speed', ['velocity'], function( velocity ) {return velocity.magnitude();} );
@@ -70,9 +75,11 @@ define( function( require ) {
       this.updateEnergy();
     },
 
+    //Return the skater to the last location it was released by the user (or its starting location)
     returnSkater: function() {
       this.track = null;//Have to reset track before changing position so view angle gets updated properly
-      this.positionProperty.reset();
+      this.positionProperty.set( new Vector2( this.startingPosition.x, this.startingPosition.y ) );
+      this.velocity = new Vector2( 0, 0 );
       this.uProperty.reset();
       this.uDProperty.reset();
       this.clearThermal();
