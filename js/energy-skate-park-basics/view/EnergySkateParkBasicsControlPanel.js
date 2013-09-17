@@ -2,6 +2,8 @@
 
 /**
  * Scenery node for the control panel, with view settings and controls.
+ *
+ * //TODO: The bottom controls look very disorganized.  Perhaps a titled border around them?
  * @author Sam Reid
  */
 define( function( require ) {
