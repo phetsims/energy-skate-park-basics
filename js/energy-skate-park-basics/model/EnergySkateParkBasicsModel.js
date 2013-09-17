@@ -186,13 +186,14 @@ define( function( require ) {
       var pt = closestPointHash.point;
       var pt1 = track.getPoint( t1 );
       var pt2 = track.getPoint( t2 );
-      var segment = pt2.minus( pt1 );
-      var normal = segment.rotated( Math.PI / 2 ).normalized();
+      var segment = pt2.minus( pt1 ).normalized();
+      var normal = segment.rotated( Math.PI / 2 );
 
       var beforeSign = normal.dot( skater.position.minus( pt ) ) > 0;
       var afterSign = normal.dot( proposedPosition.minus( pt ) ) > 0;
 //          console.log( normal.dot( skater.position ), normal.dot( proposedPosition ), beforeSign, afterSign );
       if ( beforeSign !== afterSign ) {
+
         //reflect the velocity vector
         //http://www.gamedev.net/topic/165537-2d-vector-reflection-/
         var allOK = skater.velocity && skater.velocity.minus && normal.times && normal.dot;
@@ -200,7 +201,11 @@ define( function( require ) {
         var newVelocity = allOK ? skater.velocity.minus( normal.times( 2 * normal.dot( skater.velocity ) ) ) :
                           new Vector2( 0, 1 );
 
-        if ( this.bounces < 2 ) {
+        //If friction is not allowed, then either attach to the track with no change in speed, or bounce with no change in speed
+
+        //Attach to track if velocity is close enough to parallel to the track
+        var dot = Math.abs( skater.velocity.normalized().dot( segment ) );
+        if ( dot < 0.4 ) {
           skater.velocity = newVelocity;
           this.bounces++;
         }
@@ -208,6 +213,8 @@ define( function( require ) {
           //attach to track
           skater.track = track;
           skater.u = t;
+
+          //choose uD to keep velocity in the same direction.
           var newEnergy = track.getEnergy( t, skater.uD, skater.mass, skater.gravity );
           var delta = newEnergy - initialEnergy;
           if ( delta < 0 ) {
