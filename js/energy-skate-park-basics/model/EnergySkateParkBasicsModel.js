@@ -342,7 +342,6 @@ define( function( require ) {
       for ( var i = 0; i < this.tracks.length; i++ ) {
         var track = this.tracks[i];
 
-        //TODO: mimic PropertySet better or use mixin?
         if ( track.physical ) {
           physicalTracks.push( track );
         }
