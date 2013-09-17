@@ -2,6 +2,7 @@
 
 /**
  * Scenery node for the skater, which is draggable.
+ * TODO: if the skater is dragged close to the track, align him with the track so you can release him right on the track, with no energy loss.
  * @author Sam Reid
  */
 define( function( require ) {
