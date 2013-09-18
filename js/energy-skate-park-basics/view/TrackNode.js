@@ -42,30 +42,37 @@ define( function( require ) {
     }
 
     //Reuse arrays to save gc
-    var t = [];
     var x = [];
     var y = [];
 
     //Store for performance
     //TODO: recompute linSpace if length of track changes
     var lastPt = (track.length - 1) / track.length;
-    var linSpace = numeric.linspace( 0, lastPt, 25 );
+
+    //made number of sample points depend on the length of the track, to make it smooth enough no matter how long it is
+    var linSpace = numeric.linspace( 0, lastPt, 20 * (track.length - 1) );
+    var lengthForLinSpace = track.length;
 
     var updateTrack = function() {
 
+      var i = 0;
+      //Update the sample range when the number of control points has changed
+      if ( lengthForLinSpace !== track.length ) {
+        lastPt = (track.length - 1) / track.length;
+        linSpace = numeric.linspace( 0, lastPt, 20 * (track.length - 1) );
+        lengthForLinSpace = track.length;
+      }
+
       //clear arrays, reusing them to save on garbage
-      t.length = 0;
       x.length = 0;
       y.length = 0;
 
-      for ( var i = 0; i < track.length; i++ ) {
-        t.push( i / track.length );
+      for ( i = 0; i < track.length; i++ ) {
         x.push( track.get( i ).value.x );
         y.push( track.get( i ).value.y );
       }
 
       //Compute points for lineTo
-      //TODO: number of samples could depend on the total length of the track
       //TODO: See if there is a way to use the KITE SVG/Canvas curve APIs to render this
       var xPoints = track.xSpline.at( linSpace );
       var yPoints = track.ySpline.at( linSpace );
@@ -116,18 +123,11 @@ define( function( require ) {
 
     track.addItemAddedListener( function( item ) {
       item.link( updateTrack );
-
-      var lastPt = (track.length - 1) / track.length;
-      var linSpace = numeric.linspace( 0, lastPt, 25 );
-
       updateTrack();
     } );
 
     track.addItemRemovedListener( function( item ) {
       item.unlink( updateTrack );
-
-      var lastPt = (track.length - 1) / track.length;
-      var linSpace = numeric.linspace( 0, lastPt, 25 );
       updateTrack();
     } );
   }
