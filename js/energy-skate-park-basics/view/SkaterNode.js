@@ -105,19 +105,10 @@ define( function( require ) {
           skater.velocity = new Vector2( 0, 0 );
           skater.uD = 0;
           skater.startingPosition = new Vector2( skater.position.x, skater.position.y );
-
-          if ( targetTrack ) {
-            skater.track = targetTrack;
-            skater.u = targetT;
-            skater.startingU = targetT;
-            skater.startingTrack = targetTrack;
-          }
-          else {
-            skater.track = null;
-            skater.u = 0;
-            skater.startingU = null;
-            skater.startingTrack = null;
-          }
+          skater.track = targetTrack;
+          skater.u = targetT;
+          skater.startingU = targetT;
+          skater.startingTrack = targetTrack;
         }
       } ) );
   }
