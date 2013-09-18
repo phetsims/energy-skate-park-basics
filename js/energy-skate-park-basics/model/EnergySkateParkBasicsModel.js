@@ -143,7 +143,7 @@ define( function( require ) {
         var track = physicalTracks[i];
 
         //TODO: maybe get closest point shouldn't return a new object allocation each time, or use pooling for it.?
-        var bestMatch = track.getClosestPoint( skaterPosition );
+        var bestMatch = track.getClosestPositionAndParameter( skaterPosition );
         var distance = skaterPosition.distance( bestMatch.point );
         if ( closestDistance === null || distance < closestDistance ) {
           closestDistance = distance;
@@ -158,7 +158,7 @@ define( function( require ) {
 
       //Find the closest track
       var track = physicalTracks.length === 1 ? physicalTracks[0] : this.getClosestTrack( skater, physicalTracks );
-      var closestPointHash = track.getClosestPoint( this.skater.position );
+      var closestPointHash = track.getClosestPositionAndParameter( this.skater.position );
       var u = closestPointHash.u;
 
       if ( !track.isParameterInBounds( u ) ) {

@@ -78,7 +78,7 @@ define( function( require ) {
           //TODO: lots of unnecessary allocations and computation here
           var closestTrack = model.getClosestTrack( skater, model.getPhysicalTracks() );
           if ( closestTrack ) {
-            var closestPointHash = closestTrack.getClosestPoint( modelPoint );
+            var closestPointHash = closestTrack.getClosestPositionAndParameter( modelPoint );
             var closestPoint = closestPointHash.point;
             var distance = closestPoint.distance( modelPoint );
           }

@@ -71,10 +71,10 @@ define( function( require ) {
       this.physicalProperty.reset();
     },
 
-    //Returns the closest point on the track, as an object with {u,point}
+    //Returns the closest point (Euclidean) and position (parametric) on the track, as an object with {u,point}
     //also checks 1E-6 beyond each side of the track to see if the skater is beyond the edge of the track
-    //TODO: it is confusing that the method is named getClosestPoint get it returns a {t,point}
-    getClosestPoint: function( point ) {
+    //TODO: Could binary search after coarse serach
+    getClosestPositionAndParameter: function( point ) {
 
       //Compute the spline points for purposes of getting closest points.
       //keep these points around and invalidate only when necessary
