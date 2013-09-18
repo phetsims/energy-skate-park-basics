@@ -162,8 +162,8 @@ define( function( require ) {
       var postPoint = this.maxPoint + 1E-6;
 
       //Store for performance
-      //TODO: number of samples could depend on the total length of the track
-      this.searchLinSpace = numeric.linspace( prePoint, postPoint, 70 );
+      //made number of sample points depend on the length of the track, to make it smooth enough no matter how long it is
+      this.searchLinSpace = numeric.linspace( prePoint, postPoint, 20 * (this.length - 1) );
     },
 
     //Detect whether a parametric point is in bounds of this track, for purposes of telling whether the skater fell past the edge of the track
