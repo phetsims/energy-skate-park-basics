@@ -15,15 +15,11 @@ define( function( require ) {
     var skater = this;
     PropertySet.call( this, {track: null,
 
-      //Scalar indicating speed and direction (+/-) along the track spline
-      //TODO: is this replaced by uD?
-      trackSpeed: 0,
-
       //Parameter along the parametric spline
       u: 0,
 
-      //Speed along the parametric spline dimension, formally 'u dot'
-      uD: 0.01,
+      //Speed along the parametric spline dimension, formally 'u dot', indicating speed and direction (+/-) along the track spline
+      uD: 0,
 
       //Gravity magnitude and direction
       gravity: -9.8,
