@@ -96,6 +96,9 @@ define( function( require ) {
     //center the pie chart legend between the control panel and speedometer
     pieChartLegend.mutate( {top: this.controlPanel.top, right: this.controlPanel.left - 9} );
 
+    //The button to return the skater
+    //TODO: Highlight return skater button when offscreen? Or make another one?  Make it big then small?
+    //TODO: Disable this button when the skater is already at his initial coordinates?
     var returnSkaterButton = new TextButton( 'Return Skater', model.returnSkater.bind( model ), {centerX: this.controlPanel.centerX, top: this.controlPanel.bottom + 10} );
     this.addChild( returnSkaterButton );
 
