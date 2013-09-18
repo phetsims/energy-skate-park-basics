@@ -71,7 +71,7 @@ define( function( require ) {
         var fractionKinetic = skater.kineticEnergy / skater.totalEnergy;
 
         //Show one of them in the background instead of pieces for each one for performance
-        //TODO: this shouldn't change too much if energy conserved, perhaps it could be optimized somehow?
+        //TODO: this shouldn't change too much if energy conserved, perhaps it could be optimized somehow?  Perhaps a guard?
         thermalEnergySlice.shape = Shape.circle( 0, 0, radius );
         potentialEnergySlice.shape = new Shape().moveTo( 0, 0 ).ellipticalArc( 0, 0, radius, radius, 0, -Math.PI / 2, Math.PI * 2 * fractionPotential - Math.PI / 2, false ).lineTo( 0, 0 );
         kineticEnergySlice.shape = new Shape().moveTo( 0, 0 ).ellipticalArc( 0, 0, radius, radius, 0, Math.PI * 2 * fractionPotential - Math.PI / 2, Math.PI * 2 * fractionPotential - Math.PI / 2 + fractionKinetic * Math.PI * 2, false ).lineTo( 0, 0 );

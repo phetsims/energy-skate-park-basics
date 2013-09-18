@@ -2,7 +2,7 @@
 
 /**
  * Scenery node for the skater, which is draggable.
- * TODO: if the skater is dragged close to the track, align him with the track so you can release him right on the track, with no energy loss.
+ *
  * @author Sam Reid
  */
 define( function( require ) {
@@ -49,8 +49,7 @@ define( function( require ) {
     var positionChanged = function( position ) {
       var view = modelViewTransform.modelToViewPosition( position );
 
-      //TODO: Coalesce all of these calls into a single matrix for performance?
-      //TODO: Or at least cache rotation value?
+      //TODO: Coalesce all of these calls into a single matrix for performance, or at least cache rotation value?
       skaterNode.setTranslation( view.x - imageWidth / 2, view.y - imageHeight );
       skaterNode.setRotation( 0 );
 
@@ -75,7 +74,7 @@ define( function( require ) {
           var globalPoint = skaterNode.globalToParentPoint( event.pointer.point );
           var modelPoint = modelViewTransform.viewToModelPosition( globalPoint );
 
-          //TODO: lots of unnecessary allocations and computation here
+          //TODO: lots of unnecessary allocations and computation here, biggest improvement could be to use binary search for position on the track
           var closestTrack = model.getClosestTrack( skater, model.getPhysicalTracks() );
           if ( closestTrack ) {
             var closestPointHash = closestTrack.getClosestPositionAndParameter( modelPoint );

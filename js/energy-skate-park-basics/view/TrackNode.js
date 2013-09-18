@@ -46,10 +46,9 @@ define( function( require ) {
     var y = [];
 
     //Store for performance
-    //TODO: recompute linSpace if length of track changes
     var lastPt = (track.length - 1) / track.length;
 
-    //made number of sample points depend on the length of the track, to make it smooth enough no matter how long it is
+    //Sample space, which is recomputed if the track gets longer, to keep it looking smooth no matter how many control points
     var linSpace = numeric.linspace( 0, lastPt, 20 * (track.length - 1) );
     var lengthForLinSpace = track.length;
 
