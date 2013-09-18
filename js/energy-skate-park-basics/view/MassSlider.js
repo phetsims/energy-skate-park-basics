@@ -12,7 +12,6 @@ define( function( require ) {
   var Text = require( 'SCENERY/nodes/Text' );
   var PhetFont = require( 'SCENERY_PHET/PhetFont' );
   var HSlider = require( 'SUN/HSlider' );
-  var Dimension2 = require( 'DOT/Dimension2' );
   var Property = require( 'AXON/Property' );
 
   function MassSlider( model, view ) {

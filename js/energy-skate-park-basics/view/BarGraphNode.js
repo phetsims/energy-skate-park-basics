@@ -38,6 +38,7 @@ define( function( require ) {
     //The x-coordinate of a bar chart bar
     var getBarX = function( barIndex ) { return insetX + spaceBetweenAxisAndBar + barWidth * barIndex + spaceBetweenBars * barIndex; };
 
+    //Create a label that appears under one of the bars
     var createLabel = function( index, title, color ) {
       var text = new Text( title, {fill: color, font: new PhetFont( 14 ), pickable: false} );
       text.rotate( -Math.PI / 2 );
@@ -47,6 +48,7 @@ define( function( require ) {
       return text;
     };
 
+    //Create an energy bar that animates as the skater moves
     var createBar = function( index, color, property ) {
       var lastBarHeight = 0;
       var barX = getBarX( index );
@@ -113,6 +115,7 @@ define( function( require ) {
 
     Panel.call( this, contentNode, { x: 10, y: 10, xMargin: 10, yMargin: 10, fill: 'white', stroke: 'gray', lineWidth: 1, resize: false, cursor: 'pointer', backgroundPickable: true } );
 
+    //Allow the user to move the BarGraphNode about
     this.addInputListener( new SimpleDragHandler() );
 
     //When the bar graph is shown, update the bars (because they do not get updated when invisible for performance reasons)

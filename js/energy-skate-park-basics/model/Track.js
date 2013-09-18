@@ -98,12 +98,8 @@ define( function( require ) {
       return {u: bestT, point: bestPt};
     },
 
-    getX: function( u ) {
-      return this.xSpline.at( u );
-    },
-    getY: function( u ) {
-      return this.ySpline.at( u );
-    },
+    getX: function( u ) { return this.xSpline.at( u ); },
+    getY: function( u ) { return this.ySpline.at( u ); },
     getPoint: function( u ) {
       var x = this.xSpline.at( u );
       var y = this.ySpline.at( u );
@@ -112,6 +108,7 @@ define( function( require ) {
 
     //Get the total energy of a point mass with parametric position u and parametric velocity uD
     getEnergy: function( u, uD, mass, gravity ) {
+
       //get Euclidean velocity from parametric velocity
       //See equation 8 from the Bensky paper
       var vx = this.xSplineDiff.at( u ) * uD;
@@ -186,7 +183,7 @@ define( function( require ) {
       this.updateSplines();
     },
 
-    //Mimic the PropertySet pattern
+    //Setter/getter for physical property, mimic the PropertySet pattern instead of using PropertySet multiple inheritance
     get physical() { return this.physicalProperty.get(); },
     set physical( p ) {this.physicalProperty.set( p );}
   } );

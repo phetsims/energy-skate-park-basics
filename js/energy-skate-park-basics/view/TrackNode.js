@@ -46,7 +46,7 @@ define( function( require ) {
       road.addInputListener( dragHandler );
     }
 
-    //Reuse arrays to save gc
+    //Reuse arrays to save allocations and prevent garbage collections
     var x = [];
     var y = [];
 

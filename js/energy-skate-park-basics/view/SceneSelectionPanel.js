@@ -10,11 +10,7 @@ define( function( require ) {
   var Panel = require( 'SUN/Panel' );
   var inherit = require( 'PHET_CORE/inherit' );
   var Node = require( 'SCENERY/nodes/Node' );
-  var Text = require( 'SCENERY/nodes/Text' );
   var HBox = require( 'SCENERY/nodes/HBox' );
-  var PushButton = require( 'SUN/PushButton' );
-  var imageLoader = require( 'ENERGY_SKATE_PARK/energy-skate-park-basics-images' );
-  var Image = require( 'SCENERY/nodes/Image' );
   var ToggleButton = require( 'SUN/ToggleButton' );
   var Property = require( 'AXON/Property' );
   var TrackNode = require( 'ENERGY_SKATE_PARK/energy-skate-park-basics/view/TrackNode' );
@@ -22,8 +18,8 @@ define( function( require ) {
 
   function SceneSelectionPanel( model, view, transform ) {
 
-    var createNode = function( name, index ) {
-
+    //Create a button with a scene like the track in the index
+    var createNode = function( index ) {
       var track = model.tracks[index];
       var background = new BackgroundNode( model, view );
       background.layout( 0, 0, view.layoutBounds.width, view.layoutBounds.height, 1 );
@@ -43,9 +39,9 @@ define( function( require ) {
     var content = new HBox( {
       spacing: 10,
       children: [
-        createNode( 'Scene 1', 0 ),
-        createNode( 'Scene 2', 1 ) ,
-        createNode( 'Scene 3', 2 )
+        createNode( 0 ),
+        createNode( 1 ) ,
+        createNode( 2 )
       ]} );
     Panel.call( this, content, {xMargin: 10} );
   }

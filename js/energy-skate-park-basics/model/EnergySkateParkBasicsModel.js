@@ -15,11 +15,17 @@ define( function( require ) {
   var Track = require( 'ENERGY_SKATE_PARK/energy-skate-park-basics/model/Track' );
   var Vector2 = require( 'DOT/Vector2' );
 
+  /**
+   * Main constructor for the EnergySkateParkBasicsModel
+   *
+   * @param {Boolean} draggableTracks True if this is screen 2-3, where friction is allowed to be on or off
+   * @param {Boolean} frictionAllowed True in screen 3 where the user can drag the tracks
+   * @constructor
+   */
   function EnergySkateParkBasicsModel( draggableTracks, frictionAllowed ) {
-
-    //True if this is screen 2-3, where friction is allowed to be on or off
     this.frictionAllowed = frictionAllowed;
     this.draggableTracks = draggableTracks;
+
     var model = this;
     PropertySet.call( this, {
       pieChartVisible: false,
@@ -33,7 +39,6 @@ define( function( require ) {
 
       frictionEnabled: false,
       friction: 1,
-
       stickToTrack: true
     } );
     this.skater = new Skater();
@@ -333,11 +338,13 @@ define( function( require ) {
     //Return to the place he was last released by the user
     returnSkater: function() { this.skater.returnSkater(); },
 
-    clearThermal: function() {
-      this.skater.clearThermal();
-    },
+    //Clear the thermal energy from the model
+    clearThermal: function() { this.skater.clearThermal(); },
 
+    //Get all of the tracks marked as physical (i.e. that the skater could interact with).
     getPhysicalTracks: function() {
+
+      //Use vanilla instead of lodash for speed since this is in an inner loop
       var physicalTracks = [];
       for ( var i = 0; i < this.tracks.length; i++ ) {
         var track = this.tracks[i];

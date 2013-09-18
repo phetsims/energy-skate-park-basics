@@ -59,6 +59,8 @@ define( function( require ) {
   }
 
   return inherit( Node, EnergySkateParkBasicsControlPanel, {
+
+    //Create an icon for the bar graph check box
     createBarGraphIcon: function() {
       return new Node( {children: [
         new Rectangle( 0, 0, 20, 20, {fill: 'white', stroke: 'black', lineWidth: 0.5} ),
@@ -66,11 +68,15 @@ define( function( require ) {
         new Rectangle( 11, 8, 5, 12, {fill: EnergySkateParkColorScheme.potentialEnergy, stroke: 'black', lineWidth: 0.5} )
       ]} );
     },
+
+    //Create an icon for the pie chart check box
     createPieChartIcon: function() {
       var radius = 10;
       var x = new Shape().moveTo( 0, 0 ).ellipticalArc( 0, 0, radius, radius, 0, -Math.PI / 2, Math.PI * 2 * 0.25 - Math.PI / 2, false ).lineTo( 0, 0 );
       return new Node( {children: [new Circle( radius, {fill: EnergySkateParkColorScheme.potentialEnergy, lineWidth: 0.5, stroke: 'black' } ), new Path( x, {fill: EnergySkateParkColorScheme.kineticEnergy, lineWidth: 0.5, stroke: 'black'} )]} );
     },
+
+    //Create an icon for the grid check box
     createGridIcon: function() {
       return new Node( {children: [
         new Rectangle( 0, 0, 20, 20, {fill: 'white', stroke: 'black', lineWidth: 0.5} ),
@@ -82,10 +88,12 @@ define( function( require ) {
         new Line( 15, 0, 15, 20, {stroke: 'black', lineWidth: 0.5} )
       ]} );
     },
+
+    //Create an icon for the speedometer check box
     createSpeedometerIcon: function() {
       var node = new SpeedometerNode( new Property( 0 ), 'Speed', 10, {} );
       node.scale( 20 / node.width );
-      return  node;
+      return node;
     }
   } );
 } );

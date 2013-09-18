@@ -118,6 +118,8 @@ define( function( require ) {
 
   return inherit( ScreenView, EnergySkateParkBasicsView, {
 
+    //Layout the EnergySkateParkBasicsView, scaling it up and down with the size of the screen to ensure a minimially visible area,
+    //But keeping it centered at the bottom of the screen, so there is more area in the +y direction to build tracks and move the skater
     //TODO: integrate this layout code with ScreenView?  Seems like it could be generally useful
     layout: function( width, height ) {
 

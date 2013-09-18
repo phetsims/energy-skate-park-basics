@@ -67,7 +67,6 @@ define( function( require ) {
         }
       }
       this.children = lines.concat( texts );
-//      console.log( lines.length, 'lines' );
     }
   } );
 } );

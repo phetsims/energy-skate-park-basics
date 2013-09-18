@@ -21,18 +21,7 @@ define( function( require ) {
   function PieChartLegend( model ) {
     this.skater = model.skater;
 
-    var contentWidth = 140;
-    var insetX = 10;
-
-    var numBars = 4;
-    var spaceBetweenBars = 10;
-    var spaceBetweenAxisAndBar = 10;
-    var spaceBetweenRightSideAndBar = 5;
-    var barWidth = (contentWidth - insetX * 2 - (numBars - 1) * spaceBetweenBars - spaceBetweenAxisAndBar - spaceBetweenRightSideAndBar) / numBars;
-
     //The x-coordinate of a bar chart bar
-    var getBarX = function( barIndex ) { return insetX + spaceBetweenAxisAndBar + barWidth * barIndex + spaceBetweenBars * barIndex; };
-
     var createLabel = function( index, title, color ) { return new Text( title, {fill: color, font: new PhetFont( 14 ), pickable: false} ); };
 
     var createBar = function( index, color ) { return new Rectangle( 0, 0, 25, 25, {fill: color, stroke: 'black', lineWidth: 1} ); };
