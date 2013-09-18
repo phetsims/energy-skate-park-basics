@@ -41,6 +41,7 @@ define( function( require ) {
 
     //TODO: KITE currently reports the wrong interaction bounds for the cubic splines.  Why?  Create a scenery ticket.  If necessary, we could build an adapter that uses svg listeners?
     //TODO: Or we could employ a workaround (piecewise segments for example)
+    //TODO: Another workaround would be to put a giant rectangle around the entire track and use that for picking bounds (maybe even highlight it on mouseover so it is clear what is happening)
     if ( track.interactive ) {
       road.addInputListener( dragHandler );
     }
