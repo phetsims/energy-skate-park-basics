@@ -2,6 +2,10 @@
 
 /**
  * Scenery node for the track, which can be translated by dragging the track, or manipulated by dragging its control points.
+ *
+ * TODO: Link tracks together by connecting them.
+ * TODO: Depict 'open' control points as a different color so you know they can be connected
+ * TODO: Show a dotted line along the track in 'roller coaster' mode.
  * @author Sam Reid
  */
 define( function( require ) {
