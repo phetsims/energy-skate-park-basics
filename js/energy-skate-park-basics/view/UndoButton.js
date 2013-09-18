@@ -1,6 +1,5 @@
 // Copyright 2002-2013, University of Colorado Boulder
 
-//TODO this should extend sun.Button
 /**
  * The Undo button that can be used to remove thermal energy from the system.
  * @author Sam Reid
