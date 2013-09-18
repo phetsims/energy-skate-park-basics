@@ -100,8 +100,8 @@ define( function( require ) {
               start: function( event ) {
               },
               drag: function( event ) {
-                var t = controlPoint.globalToParentPoint( event.pointer.point );
-                property.value = modelViewTransform.viewToModelPosition( t );
+                var globalPoint = controlPoint.globalToParentPoint( event.pointer.point );
+                property.value = modelViewTransform.viewToModelPosition( globalPoint );
 
                 //If the user moved it out of the toolbox, then make it physically interactive
                 track.physical = true;

@@ -23,7 +23,7 @@ define( function( require ) {
     this.physicalProperty = new Property( false );
     ObservableArray.call( this, points );
     this.interactive = interactive;
-    this.t = [];
+    this.u = [];
     this.x = [];
     this.y = [];
 
@@ -32,18 +32,18 @@ define( function( require ) {
     //when points change, update the spline instance
     this.updateSplines = function() {
       //clear arrays, reusing them to save on garbage
-      track.t.length = 0;
+      track.u.length = 0;
       track.x.length = 0;
       track.y.length = 0;
 
       for ( var i = 0; i < track.length; i++ ) {
-        track.t.push( i / track.length );
+        track.u.push( i / track.length );
         track.x.push( track.get( i ).value.x );
         track.y.push( track.get( i ).value.y );
       }
 
-      track.xSpline = numeric.spline( track.t, track.x );
-      track.ySpline = numeric.spline( track.t, track.y );
+      track.xSpline = numeric.spline( track.u, track.x );
+      track.ySpline = numeric.spline( track.u, track.y );
 
       track.xSplineDiff = track.xSpline.diff();
       track.ySplineDiff = track.ySpline.diff();
@@ -70,7 +70,7 @@ define( function( require ) {
       this.physicalProperty.reset();
     },
 
-    //Returns the closest point on the track, as an object with {t,point}
+    //Returns the closest point on the track, as an object with {u,point}
     //also checks 1E-6 beyond each side of the track to see if the skater is beyond the edge of the track
     //TODO: it is confusing that the method is named getClosestPoint get it returns a {t,point}
     getClosestPoint: function( point ) {
@@ -94,18 +94,18 @@ define( function( require ) {
           bestPt.y = this.ySearchPoints[i];
         }
       }
-      return {t: bestT, point: bestPt};
+      return {u: bestT, point: bestPt};
     },
 
-    getX: function( t ) {
-      return this.xSpline.at( t );
+    getX: function( u ) {
+      return this.xSpline.at( u );
     },
-    getY: function( t ) {
-      return this.ySpline.at( t );
+    getY: function( u ) {
+      return this.ySpline.at( u );
     },
-    getPoint: function( t ) {
-      var x = this.xSpline.at( t );
-      var y = this.ySpline.at( t );
+    getPoint: function( u ) {
+      var x = this.xSpline.at( u );
+      var y = this.ySpline.at( u );
       return new Vector2( x, y );
     },
 
@@ -166,7 +166,7 @@ define( function( require ) {
     },
 
     //Detect whether a parametric point is in bounds of this track, for purposes of telling whether the skater fell past the edge of the track
-    isParameterInBounds: function( t ) { return t >= this.minPoint && t <= this.maxPoint; },
+    isParameterInBounds: function( u ) { return u >= this.minPoint && u <= this.maxPoint; },
 
     setControlPoints: function( points ) {
       var lengthChanged = points.length !== this.length;

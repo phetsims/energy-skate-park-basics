@@ -159,14 +159,14 @@ define( function( require ) {
       //Find the closest track
       var track = physicalTracks.length === 1 ? physicalTracks[0] : this.getClosestTrack( skater, physicalTracks );
       var closestPointHash = track.getClosestPoint( this.skater.position );
-      var t = closestPointHash.t;
+      var u = closestPointHash.u;
 
-      if ( !track.isParameterInBounds( t ) ) {
+      if ( !track.isParameterInBounds( u ) ) {
         this.continueFreeFall( skater, initialEnergy, proposedPosition );
         return;
       }
-      var t1 = t - 1E-6;
-      var t2 = t + 1E-6;
+      var t1 = u - 1E-6;
+      var t2 = u + 1E-6;
       var pt = closestPointHash.point;
       var pt1 = track.getPoint( t1 );
       var pt2 = track.getPoint( t2 );
@@ -197,20 +197,20 @@ define( function( require ) {
         else {
           //attach to track
           skater.track = track;
-          skater.u = t;
+          skater.u = u;
 
           //If friction is allowed, keep the parallel component of velocity.
           //If friction is not allowed, then either attach to the track with no change in speed
 
           //Estimate u dot from equations (8) & (9) in the paper
-          var uDx = skater.velocity.x / track.xSplineDiff.at( t );
-          var uDy = skater.velocity.y / track.ySplineDiff.at( t );
+          var uDx = skater.velocity.x / track.xSplineDiff.at( u );
+          var uDy = skater.velocity.y / track.ySplineDiff.at( u );
           var uD = (uDx + uDy) / 2;
           skater.uD = uD;
 
           //TODO: Refine uD estimate based on energy conservation
 
-          var newEnergy = track.getEnergy( t, skater.uD, skater.mass, skater.gravity );
+          var newEnergy = track.getEnergy( u, skater.uD, skater.mass, skater.gravity );
           var delta = newEnergy - initialEnergy;
           if ( delta < 0 ) {
             var lostEnergy = Math.abs( delta );

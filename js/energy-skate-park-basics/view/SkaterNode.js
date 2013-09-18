@@ -62,8 +62,7 @@ define( function( require ) {
     this.skater.positionProperty.link( positionChanged );
     var targetTrack = null;
 
-    //TODO: Some places it is 'u' some places it is 't', please unify, probably based on the paper (so 'u')
-    var targetT = null;
+    var targetU = null;
     this.addInputListener( new SimpleDragHandler(
       {
         start: function( event ) {
@@ -73,23 +72,25 @@ define( function( require ) {
 
           //TODO: Translate based on deltas?  Or move the skater up so a bit above the finger/mouse?
           //TODO: It is nice to have the skater centered above the finger, but maybe he should move there gradually instead of jumping there?
-          var t = skaterNode.globalToParentPoint( event.pointer.point );
-          var modelPoint = modelViewTransform.viewToModelPosition( t );
+          var globalPoint = skaterNode.globalToParentPoint( event.pointer.point );
+          var modelPoint = modelViewTransform.viewToModelPosition( globalPoint );
 
           //TODO: lots of unnecessary allocations and computation here
           var closestTrack = model.getClosestTrack( skater, model.getPhysicalTracks() );
-          var closestPointHash = closestTrack.getClosestPoint( modelPoint );
-          var closestPoint = closestPointHash.point;
-          var distance = closestPoint.distance( modelPoint );
-          if ( distance < 0.5 ) {
+          if ( closestTrack ) {
+            var closestPointHash = closestTrack.getClosestPoint( modelPoint );
+            var closestPoint = closestPointHash.point;
+            var distance = closestPoint.distance( modelPoint );
+          }
+          if ( closestTrack && distance < 0.5 ) {
             modelPoint = closestPoint;
             targetTrack = closestTrack;
-            targetT = closestPointHash.t;
-            skater.angle = targetTrack.getViewAngleAt( targetT );
+            targetU = closestPointHash.u;
+            skater.angle = targetTrack.getViewAngleAt( targetU );
           }
           else {
             targetTrack = null;
-            targetT = null;
+            targetU = null;
 
             //make skater upright if not near the track
             //TODO: make this continuous so it is a smooth motion?
@@ -107,8 +108,8 @@ define( function( require ) {
           skater.uD = 0;
           skater.startingPosition = new Vector2( skater.position.x, skater.position.y );
           skater.track = targetTrack;
-          skater.u = targetT;
-          skater.startingU = targetT;
+          skater.u = targetU;
+          skater.startingU = targetU;
           skater.startingTrack = targetTrack;
         }
       } ) );
