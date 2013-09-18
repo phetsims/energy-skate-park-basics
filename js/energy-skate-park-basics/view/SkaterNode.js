@@ -98,6 +98,8 @@ define( function( require ) {
           skater.position = modelPoint;
           skater.updateEnergy();
         },
+
+        //TODO: The skater pops up sometimes when released, after being at an angle
         end: function( event ) {
           skater.dragging = false;
           skater.velocity = new Vector2( 0, 0 );
