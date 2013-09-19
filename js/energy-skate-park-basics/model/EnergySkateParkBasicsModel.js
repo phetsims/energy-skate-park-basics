@@ -321,8 +321,8 @@ define( function( require ) {
       skater.uD = uD2;
       skater.u = u2;
 
-      var vx = track.xSplineDiff.at( u2 ) * uD2;
-      var vy = track.ySplineDiff.at( u2 ) * uD2;
+      var vx = xPrime2 * uD2;
+      var vy = yPrime2 * uD2;
 
       skater.velocity = new Vector2( vx, vy );
       skater.angle = skater.track.getViewAngleAt( skater.u );
