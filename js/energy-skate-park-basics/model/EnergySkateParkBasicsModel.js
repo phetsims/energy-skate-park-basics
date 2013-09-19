@@ -139,11 +139,12 @@ define( function( require ) {
       }
     },
 
-    //Find the closest track to the skater, to see what he can bounce off of or attach to
-    getClosestTrack: function( skater, physicalTracks ) {
+    //Find the closest track to the skater, to see what he can bounce off of or attach to, and return the closest point on that track took
+    getClosestTrackAndPositionAndParameter: function( skater, physicalTracks ) {
       var closestTrack = null;
       var closestDistance = null;
       var skaterPosition = skater.position;
+      var closestMatch = null;
       for ( var i = 0; i < physicalTracks.length; i++ ) {
         var track = physicalTracks[i];
 
@@ -153,18 +154,24 @@ define( function( require ) {
         if ( closestDistance === null || distance < closestDistance ) {
           closestDistance = distance;
           closestTrack = track;
+          closestMatch = bestMatch;
         }
       }
-      return closestTrack;
+      if ( closestTrack ) {
+        return {track: closestTrack, u: closestMatch.u, point: closestMatch.point};
+      }
+      else {
+        return null;
+      }
     },
 
     //Check to see if it should hit or attach to track during free fall
     interactWithTracksWhileFalling: function( physicalTracks, skater, proposedPosition, initialEnergy, dt ) {
 
       //Find the closest track
-      var track = physicalTracks.length === 1 ? physicalTracks[0] : this.getClosestTrack( skater, physicalTracks );
-      var closestPointHash = track.getClosestPositionAndParameter( this.skater.position );
-      var u = closestPointHash.u;
+      var closestTrackAndPositionAndParameter = this.getClosestTrackAndPositionAndParameter( skater, physicalTracks );
+      var track = closestTrackAndPositionAndParameter.track;
+      var u = closestTrackAndPositionAndParameter.u;
 
       if ( !track.isParameterInBounds( u ) ) {
         this.continueFreeFall( skater, initialEnergy, proposedPosition );
@@ -172,7 +179,7 @@ define( function( require ) {
       }
       var t1 = u - 1E-6;
       var t2 = u + 1E-6;
-      var pt = closestPointHash.point;
+      var pt = closestTrackAndPositionAndParameter.point;
       var pt1 = track.getPoint( t1 );
       var pt2 = track.getPoint( t2 );
       var segment = pt2.minus( pt1 ).normalized();

@@ -75,15 +75,15 @@ define( function( require ) {
           var modelPoint = modelViewTransform.viewToModelPosition( globalPoint );
 
           //TODO: lots of unnecessary allocations and computation here, biggest improvement could be to use binary search for position on the track
-          var closestTrack = model.getClosestTrack( skater, model.getPhysicalTracks() );
+          var closestTrackAndPositionAndParameter = model.getClosestTrackAndPositionAndParameter( skater, model.getPhysicalTracks() );
           var closeEnough = false;
-          if ( closestTrack ) {
-            var closestPointHash = closestTrack.getClosestPositionAndParameter( modelPoint );
+          if ( closestTrackAndPositionAndParameter ) {
+            var closestPointHash = closestTrackAndPositionAndParameter;
             var closestPoint = closestPointHash.point;
             var distance = closestPoint.distance( modelPoint );
             if ( distance < 0.5 ) {
               modelPoint = closestPoint;
-              targetTrack = closestTrack;
+              targetTrack = closestTrackAndPositionAndParameter.track;
               targetU = closestPointHash.u;
               skater.angle = targetTrack.getViewAngleAt( targetU );
               closeEnough = true;
