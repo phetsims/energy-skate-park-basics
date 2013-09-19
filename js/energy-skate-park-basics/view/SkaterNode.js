@@ -80,7 +80,6 @@ define( function( require ) {
           if ( closestTrackAndPositionAndParameter ) {
             var closestPoint = closestTrackAndPositionAndParameter.point;
             var distance = closestPoint.distance( position );
-            console.log( distance );
             if ( distance < 0.5 ) {
               position = closestPoint;
               targetTrack = closestTrackAndPositionAndParameter.track;
