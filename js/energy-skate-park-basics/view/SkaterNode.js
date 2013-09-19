@@ -76,18 +76,20 @@ define( function( require ) {
 
           //TODO: lots of unnecessary allocations and computation here, biggest improvement could be to use binary search for position on the track
           var closestTrack = model.getClosestTrack( skater, model.getPhysicalTracks() );
+          var closeEnough = false;
           if ( closestTrack ) {
             var closestPointHash = closestTrack.getClosestPositionAndParameter( modelPoint );
             var closestPoint = closestPointHash.point;
             var distance = closestPoint.distance( modelPoint );
+            if ( distance < 0.5 ) {
+              modelPoint = closestPoint;
+              targetTrack = closestTrack;
+              targetU = closestPointHash.u;
+              skater.angle = targetTrack.getViewAngleAt( targetU );
+              closeEnough = true;
+            }
           }
-          if ( closestTrack && distance < 0.5 ) {
-            modelPoint = closestPoint;
-            targetTrack = closestTrack;
-            targetU = closestPointHash.u;
-            skater.angle = targetTrack.getViewAngleAt( targetU );
-          }
-          else {
+          if ( !closeEnough ) {
             targetTrack = null;
             targetU = null;
 

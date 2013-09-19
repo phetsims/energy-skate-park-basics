@@ -2,13 +2,29 @@
   "name": "energy-skate-park",
   "version": "0.0.0-dev.6",
   "resourceDirs": "images",
-  "preload": "lib/jquery.js lib/lodash.js lib/has.js lib/numeric-1.2.6.js lib/PxLoader.js lib/PxLoaderImage.js ../phetcommon/js/util/query-parameters.js ../phetcommon/js/util/check-assertions.js ../phetcommon/js/analytics/google-analytics.js ../tween.js/src/Tween.js",
+  "preload": "../sherpa/lib/jquery-2.0.3.js ../sherpa/lib/lodash.js ../sherpa/lib/has.js ../sherpa/lib/numeric-1.2.6.js ../sherpa/lib/PxLoader.js ../sherpa/lib/PxLoaderImage.js ../phetcommon/js/util/query-parameters.js ../phetcommon/js/util/check-assertions.js ../phetcommon/js/analytics/google-analytics.js ../tween.js/src/Tween.js",
   "phetLibs": "energy-skate-park assert dot joist kite phet-core phetcommon scenery scenery-phet sun axon",
-  "images": [],
   "license": "GPLv3",
+  "images": [
+    "images/button_sim_pause.png",
+    "images/button_sim_play.png",
+    "images/button_step_deactivated.png",
+    "images/button_step_hover.png",
+    "images/button_step_pressed.png",
+    "images/button_step_unpressed.png",
+    "images/close-button.png",
+    "images/mountains.png",
+    "images/reset_button_disabled.png",
+    "images/reset_button_down.png",
+    "images/reset_button_over.png",
+    "images/reset_button_up.png",
+    "images/skater.png"
+  ],
   "devDependencies": {
     "grunt": "~0.4.1",
     "grunt-requirejs": "~0.4.0",
-    "grunt-contrib-jshint": "~0.6.4"
+    "grunt-contrib-jshint": "~0.6.4",
+    "uglify-js": "~2.4.0",
+    "requirejs": "~2.1.8"
   }
 }

@@ -186,7 +186,7 @@ define( function( require ) {
         //reflect the velocity vector
         //http://www.gamedev.net/topic/165537-2d-vector-reflection-/
         var allOK = skater.velocity && skater.velocity.minus && normal.times && normal.dot;
-        if ( !allOK ) { alert( 'allOK === false' ); }
+//        if ( !allOK ) { alert( 'allOK === false' ); }
         var newVelocity = allOK ? skater.velocity.minus( normal.times( 2 * normal.dot( skater.velocity ) ) ) :
                           new Vector2( 0, 1 );
 
