@@ -265,19 +265,23 @@ define( function( require ) {
       var u = skater.u;
       var uD = skater.uD;
 
+      //Factor out constants for inner loops
+      var mass = skater.mass;
+      var gravity = skater.gravity;
+
       var xP = track.xSplineDiff.at( u );
       var yP = track.ySplineDiff.at( u );
       var xPP = track.xSplineDiffDiff.at( u );
       var yPP = track.ySplineDiffDiff.at( u );
-      var uDD1 = this.uDD( uD, xP, xPP, yP, yPP, skater.gravity );
+      var uDD1 = this.uDD( uD, xP, xPP, yP, yPP, gravity );
 
       var uD2 = uD + uDD1 * dt;
       var u2 = u + (uD + uD2) / 2 * dt; //averaging here really keeps down the average error.  It's not exactly forward Euler but I forget the name.
 
       var x = track.getX( u2 );
       var y = track.getY( u2 );
-      var initialEnergy = track.getEnergy( u, uD, skater.mass, skater.gravity );
-      var finalEnergy = track.getEnergy( u2, uD2, skater.mass, skater.gravity );
+      var initialEnergy = track.getEnergy( u, uD, mass, gravity );
+      var finalEnergy = track.getEnergy( u2, uD2, mass, gravity );
 
       //TODO: use a more accurate numerical integration scheme.  Currently forward Euler
 
@@ -291,14 +295,14 @@ define( function( require ) {
       while ( Math.abs( finalEnergy - initialEnergy ) > 1E-2 ) {
 //          console.log( (finalEnergy - initialEnergy).toFixed( 2 ), 'binary search, lowerBound=', lowerBound, 'upperBound', upperBound );
         var uMid = (upperBound + lowerBound) / 2;
-        var midEnergy = track.getEnergy( u2, uMid, skater.mass, skater.gravity );
+        var midEnergy = track.getEnergy( u2, uMid, mass, gravity );
         if ( midEnergy > initialEnergy ) {
           upperBound = uMid;
         }
         else {
           lowerBound = uMid;
         }
-        finalEnergy = track.getEnergy( u2, uMid, skater.mass, skater.gravity );
+        finalEnergy = midEnergy;
         count++;
         if ( count >= 1000 ) {
           console.log( 'count', count );
