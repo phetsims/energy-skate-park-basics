@@ -118,6 +118,14 @@ define( function( require ) {
       return -mass * gravity * this.ySpline.at( u ) + 1 / 2 * mass * vSquared;
     },
 
+    //Get the total energy of a point mass with parametric position u and parametric velocity uD
+    getEnergyShortcut: function( xPrime2, yPrime2, y, uD, mass, gravity ) {
+
+      //get Euclidean velocity from parametric velocity
+      //See equation 8 from the Bensky paper
+      return -mass * gravity * y + 1 / 2 * mass * (xPrime2 * xPrime2 + yPrime2 * yPrime2) * uD * uD;
+    },
+
     translate: function( dx, dy ) {
 
       //Unlink and relink later to avoid unnecessary spline computation

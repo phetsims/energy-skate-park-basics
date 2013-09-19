@@ -292,10 +292,15 @@ define( function( require ) {
       //Binary search on the parametric velocity to make sure energy is exactly conserved
 //        console.log( 'START BINARY' );
 //        console.log( (finalEnergy - initialEnergy).toFixed( 2 ), initialEnergy, finalEnergy );
+
+      var xPrime2 = track.xSplineDiff.at( u2 );
+      var yPrime2 = track.ySplineDiff.at( u2 );
+      var gravEnergy = -mass * gravity * y;
+      var factoredEnergy = 1 / 2 * mass * (xPrime2 * xPrime2 + yPrime2 * yPrime2);
       while ( Math.abs( finalEnergy - initialEnergy ) > 1E-2 ) {
 //          console.log( (finalEnergy - initialEnergy).toFixed( 2 ), 'binary search, lowerBound=', lowerBound, 'upperBound', upperBound );
         var uMid = (upperBound + lowerBound) / 2;
-        var midEnergy = track.getEnergy( u2, uMid, mass, gravity );
+        var midEnergy = gravEnergy + factoredEnergy * uMid * uMid;//TODO: if we need to tweak u as well as uD then we may need to use track.getEnergy and forego some optimizations
         if ( midEnergy > initialEnergy ) {
           upperBound = uMid;
         }
