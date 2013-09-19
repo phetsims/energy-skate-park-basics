@@ -140,17 +140,16 @@ define( function( require ) {
     },
 
     //Find the closest track to the skater, to see what he can bounce off of or attach to, and return the closest point on that track took
-    getClosestTrackAndPositionAndParameter: function( skater, physicalTracks ) {
+    getClosestTrackAndPositionAndParameter: function( position, physicalTracks ) {
       var closestTrack = null;
       var closestDistance = null;
-      var skaterPosition = skater.position;
       var closestMatch = null;
       for ( var i = 0; i < physicalTracks.length; i++ ) {
         var track = physicalTracks[i];
 
         //TODO: maybe get closest point shouldn't return a new object allocation each time, or use pooling for it.?
-        var bestMatch = track.getClosestPositionAndParameter( skaterPosition );
-        var distance = skaterPosition.distance( bestMatch.point );
+        var bestMatch = track.getClosestPositionAndParameter( position );
+        var distance = position.distance( bestMatch.point );
         if ( closestDistance === null || distance < closestDistance ) {
           closestDistance = distance;
           closestTrack = track;
@@ -169,7 +168,7 @@ define( function( require ) {
     interactWithTracksWhileFalling: function( physicalTracks, skater, proposedPosition, initialEnergy, dt ) {
 
       //Find the closest track
-      var closestTrackAndPositionAndParameter = this.getClosestTrackAndPositionAndParameter( skater, physicalTracks );
+      var closestTrackAndPositionAndParameter = this.getClosestTrackAndPositionAndParameter( skater.position, physicalTracks );
       var track = closestTrackAndPositionAndParameter.track;
       var u = closestTrackAndPositionAndParameter.u;
 

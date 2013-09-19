@@ -72,19 +72,19 @@ define( function( require ) {
           //TODO: Translate based on deltas?  Or move the skater up so a bit above the finger/mouse?
           //TODO: It is nice to have the skater centered above the finger, but maybe he should move there gradually instead of jumping there?
           var globalPoint = skaterNode.globalToParentPoint( event.pointer.point );
-          var modelPoint = modelViewTransform.viewToModelPosition( globalPoint );
+          var position = modelViewTransform.viewToModelPosition( globalPoint );
 
           //TODO: lots of unnecessary allocations and computation here, biggest improvement could be to use binary search for position on the track
-          var closestTrackAndPositionAndParameter = model.getClosestTrackAndPositionAndParameter( skater, model.getPhysicalTracks() );
+          var closestTrackAndPositionAndParameter = model.getClosestTrackAndPositionAndParameter( position, model.getPhysicalTracks() );
           var closeEnough = false;
           if ( closestTrackAndPositionAndParameter ) {
-            var closestPointHash = closestTrackAndPositionAndParameter;
-            var closestPoint = closestPointHash.point;
-            var distance = closestPoint.distance( modelPoint );
+            var closestPoint = closestTrackAndPositionAndParameter.point;
+            var distance = closestPoint.distance( position );
+            console.log( distance );
             if ( distance < 0.5 ) {
-              modelPoint = closestPoint;
+              position = closestPoint;
               targetTrack = closestTrackAndPositionAndParameter.track;
-              targetU = closestPointHash.u;
+              targetU = closestTrackAndPositionAndParameter.u;
               skater.angle = targetTrack.getViewAngleAt( targetU );
               closeEnough = true;
             }
@@ -98,7 +98,7 @@ define( function( require ) {
             skater.angle = 0;
           }
 
-          skater.position = modelPoint;
+          skater.position = position;
           skater.updateEnergy();
         },
 
