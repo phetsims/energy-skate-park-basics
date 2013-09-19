@@ -13,7 +13,6 @@ define( function() {
     imageNames: [
       'close-button.png',
       'mountains.png',
-      'Mouse_pointer_or_cursor.png',
       'skater.png',
       'button_sim_pause.png',
       'button_sim_play.png',
