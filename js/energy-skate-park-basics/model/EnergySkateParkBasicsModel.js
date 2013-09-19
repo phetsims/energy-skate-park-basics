@@ -274,11 +274,12 @@ define( function( require ) {
       var uD2 = uD + uDD1 * dt;
       var u2 = u + (uD + uD2) / 2 * dt; //averaging here really keeps down the average error.  It's not exactly forward Euler but I forget the name.
 
+      var x = track.getX( u2 );
+      var y = track.getY( u2 );
       var initialEnergy = track.getEnergy( u, uD, skater.mass, skater.gravity );
       var finalEnergy = track.getEnergy( u2, uD2, skater.mass, skater.gravity );
 
       //TODO: use a more accurate numerical integration scheme.  Currently forward Euler
-      skater.position = new Vector2( track.getX( u2 ), track.getY( u2 ) );
 
       var count = 0;
       var upperBound = uD2 * 1.2;
@@ -313,12 +314,11 @@ define( function( require ) {
 
       var vx = track.xSplineDiff.at( u2 ) * uD2;
       var vy = track.ySplineDiff.at( u2 ) * uD2;
-      var velocity = new Vector2( vx, vy );
 
-      skater.velocity = velocity;
-      skater.updateEnergy();
-//        console.log( 'skater energy', skater.totalEnergy );
+      skater.velocity = new Vector2( vx, vy );
       skater.angle = skater.track.getViewAngleAt( skater.u );
+      skater.position = new Vector2( x, y );
+      skater.updateEnergy();
 
       //Fly off the left or right side of the track
       if ( !skater.track.isParameterInBounds( u2 ) ) {
