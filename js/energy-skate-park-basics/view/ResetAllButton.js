@@ -12,7 +12,7 @@ define( function( require ) {
   var inherit = require( 'PHET_CORE/inherit' );
   var PushButton = require( 'SUN/PushButton' );
   var Vector2 = require( 'DOT/Vector2' );
-  var resetButtonUp = require( 'image!SCENERY_PHET/../images/reset_button_ups.png' );
+  var resetButtonUp = require( 'image!SCENERY_PHET/../images/reset_button_up.png' );
   var resetButtonOver = require( 'image!SCENERY_PHET/../images/reset_button_over.png' );
   var resetButtonDown = require( 'image!SCENERY_PHET/../images/reset_button_down.png' );
   var resetButtonDisabled = require( 'image!SCENERY_PHET/../images/reset_button_disabled.png' );
