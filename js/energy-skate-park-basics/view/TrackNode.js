@@ -18,11 +18,12 @@ define( function( require ) {
   var SimpleDragHandler = require( 'SCENERY/input/SimpleDragHandler' );
   var Vector2 = require( 'DOT/Vector2' );
   var Shape = require( 'KITE/Shape' );
+  var LineStyles = require( 'KITE/util/LineStyles' );
 
   function TrackNode( model, track, modelViewTransform ) {
     var trackNode = this;
     Node.call( this, { renderer: 'svg' } );
-    var road = new Path( null, {lineWidth: 10, stroke: 'black', cursor: track.interactive ? 'pointer' : 'default'} );
+    var road = new Path( null, {fill: 'black', cursor: track.interactive ? 'pointer' : 'default'} );
     this.addChild( road );
     var clickOffset = null;
 
@@ -87,7 +88,13 @@ define( function( require ) {
         shape.lineTo( modelViewTransform.modelToViewX( xPoints[i] ), modelViewTransform.modelToViewY( yPoints[i] ) );
       }
 
-      road.shape = shape;
+      var strokeStyles = new LineStyles( {
+        lineWidth: 10,
+        lineCap: 'butt',
+        lineJoin: 'miter',
+        miterLimit: 10
+      } );
+      road.shape = shape.getStrokedShape( strokeStyles );
     };
 
     if ( track.interactive ) {
