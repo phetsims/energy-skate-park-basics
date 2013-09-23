@@ -21,7 +21,6 @@ define( function( require ) {
   var Panel = require( 'SUN/Panel' );
   var CheckBox = require( 'SUN/CheckBox' );
   var Text = require( 'SCENERY/nodes/Text' );
-  var images = require( 'ENERGY_SKATE_PARK/energy-skate-park-basics-images' );
   var MassSlider = require( 'ENERGY_SKATE_PARK/energy-skate-park-basics/view/MassSlider' );
   var EnergySkateParkColorScheme = require( 'ENERGY_SKATE_PARK/energy-skate-park-basics/view/EnergySkateParkColorScheme' );
   var SpeedometerNode = require( 'SCENERY_PHET/SpeedometerNode' );

@@ -21,7 +21,7 @@ define( function( require ) {
   var PieChartNode = require( 'ENERGY_SKATE_PARK/energy-skate-park-basics/view/PieChartNode' );
   var PieChartLegend = require( 'ENERGY_SKATE_PARK/energy-skate-park-basics/view/PieChartLegend' );
   var GridNode = require( 'ENERGY_SKATE_PARK/energy-skate-park-basics/view/GridNode' );
-  var ResetAllButton = require( 'ENERGY_SKATE_PARK/energy-skate-park-basics/view/ResetAllButton' );
+  var ResetAllButton = require( 'SCENERY_PHET/ResetAllButton' );
   var SceneSelectionPanel = require( 'ENERGY_SKATE_PARK/energy-skate-park-basics/view/SceneSelectionPanel' );
   var ModelViewTransform2 = require( 'PHETCOMMON/view/ModelViewTransform2' );
   var Vector2 = require( 'DOT/Vector2' );

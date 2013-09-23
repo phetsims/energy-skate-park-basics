@@ -12,8 +12,8 @@ define( function( require ) {
   var Rectangle = require( 'SCENERY/nodes/Rectangle' );
   var Line = require( 'SCENERY/nodes/Line' );
   var Image = require( 'SCENERY/nodes/Image' );
-  var images = require( 'ENERGY_SKATE_PARK/energy-skate-park-basics-images' );
   var LinearGradient = require( 'SCENERY/util/LinearGradient' );
+  var mountainImage = require( 'image!ENERGY_SKATE_PARK/../images/mountains.png' );
 
   var grassHeight = 70;
 
@@ -30,7 +30,7 @@ define( function( require ) {
 
     this.grassY = energySkateParkBasicsView.layoutBounds.height - grassHeight;
 
-    this.mountain = new Image( images.getImage( 'mountains.png' ), {bottom: this.grassY} );
+    this.mountain = new Image( mountainImage, {bottom: this.grassY} );
     this.addChild( this.mountain );
 
     this.grass = new Line( 0, 0, 0, 0, {stroke: '#03862c', lineWidth: 3} );

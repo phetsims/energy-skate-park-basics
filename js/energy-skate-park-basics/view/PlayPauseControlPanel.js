@@ -13,7 +13,12 @@ define( function( require ) {
   var inherit = require( 'PHET_CORE/inherit' );
   var Node = require( 'SCENERY/nodes/Node' );
   var PushButton = require( 'SUN/PushButton' );
-  var imageLoader = require( 'ENERGY_SKATE_PARK/energy-skate-park-basics-images' );
+  var playButtonImage = require( 'image!ENERGY_SKATE_PARK/../images/button_sim_play.png' );
+  var pauseButtonImage = require( 'image!ENERGY_SKATE_PARK/../images/button_sim_pause.png' );
+  var stepButtonUnpressedImage = require( 'image!ENERGY_SKATE_PARK/../images/button_step_unpressed.png' );
+  var stepButtonHoverImage = require( 'image!ENERGY_SKATE_PARK/../images/button_step_hover.png' );
+  var stepButtonPressedImage = require( 'image!ENERGY_SKATE_PARK/../images/button_step_pressed.png' );
+  var stepButtonDeactivatedImage = require( 'image!ENERGY_SKATE_PARK/../images/button_step_deactivated.png' );
   var Image = require( 'SCENERY/nodes/Image' );
   var ToggleButton = require( 'SUN/ToggleButton' );
 
@@ -26,17 +31,17 @@ define( function( require ) {
     };
 
     this.addChild( playPauseButton = new ToggleButton(
-      new Image( imageLoader.getImage( 'button_sim_play.png' ) ),
-      new Image( imageLoader.getImage( 'button_sim_pause.png' ) ),
+      new Image( playButtonImage ),
+      new Image( pauseButtonImage ),
       model.pausedProperty,
       {scale: 0.7} ) );
     this.playButton = playPauseButton;
 
     this.addChild( stepButton = new PushButton(
-      new Image( imageLoader.getImage( 'button_step_unpressed.png' ) ),
-      new Image( imageLoader.getImage( 'button_step_hover.png' ) ),
-      new Image( imageLoader.getImage( 'button_step_pressed.png' ) ),
-      new Image( imageLoader.getImage( 'button_step_deactivated.png' ) ),
+      new Image( stepButtonUnpressedImage ),
+      new Image( stepButtonHoverImage ),
+      new Image( stepButtonPressedImage ),
+      new Image( stepButtonDeactivatedImage ),
       step, {scale: 0.7, x: 50, y: 7} ) );
     stepButton.enabled = false;
 

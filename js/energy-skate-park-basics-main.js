@@ -9,10 +9,9 @@ require( [
   'SCENERY/nodes/Image',
   'JOIST/Sim',
   'JOIST/SimLauncher',
-  'ENERGY_SKATE_PARK/energy-skate-park-basics-images',
   'ENERGY_SKATE_PARK/energy-skate-park-basics-strings',
   'ENERGY_SKATE_PARK/energy-skate-park-basics/EnergySkateParkBasicsScreen'
-], function( Image, Sim, SimLauncher, images, strings, EnergySkateParkBasicsScreen ) {
+], function( Image, Sim, SimLauncher, strings, EnergySkateParkBasicsScreen ) {
   'use strict';
 
   var simOptions = {
@@ -23,7 +22,7 @@ require( [
              'Interviews: Danielle Harlow, Noah Podolefsky & Ariel Paul'
   };
 
-  SimLauncher.launch( images, function() {
+  SimLauncher.launch( {imageNames: []}, function() {
 
     //Create and start the sim
     new Sim( 'Energy Skate Park: Basics', [

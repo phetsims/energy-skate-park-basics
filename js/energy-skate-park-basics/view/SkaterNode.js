@@ -13,7 +13,7 @@ define( function( require ) {
   var Circle = require( 'SCENERY/nodes/Circle' );
   var Image = require( 'SCENERY/nodes/Image' );
   var SimpleDragHandler = require( 'SCENERY/input/SimpleDragHandler' );
-  var images = require( 'ENERGY_SKATE_PARK/energy-skate-park-basics-images' );
+  var skaterImage = require( 'image!ENERGY_SKATE_PARK/../images/skater.png' );
   var Vector2 = require( 'DOT/Vector2' );
   var Matrix3 = require( 'DOT/Matrix3' );
   var LinearFunction = require( 'DOT/LinearFunction' );
@@ -28,7 +28,7 @@ define( function( require ) {
 
     //Make him 2 meters tall, with skateboard
     var scale = massToScale( this.skater.mass );
-    Image.call( skaterNode, images.getImage( 'skater.png' ), { scale: scale, renderer: 'svg', rendererOptions: {cssTransform: true}, cursor: 'pointer'} );
+    Image.call( skaterNode, skaterImage, { scale: scale, renderer: 'svg', rendererOptions: {cssTransform: true}, cursor: 'pointer'} );
     var imageWidth = this.width;
     var imageHeight = this.height;
 
