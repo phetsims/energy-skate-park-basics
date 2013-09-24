@@ -22,7 +22,7 @@ require( [
              'Interviews: Danielle Harlow, Noah Podolefsky & Ariel Paul'
   };
 
-  SimLauncher.launch( {imageNames: []}, function() {
+  SimLauncher.launch( function() {
 
     //Create and start the sim
     new Sim( 'Energy Skate Park: Basics', [
