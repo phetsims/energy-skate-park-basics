@@ -2,7 +2,7 @@
 
 /**
  * Returns version identifier for the simulation.
- * TODO: generate this file at build time, reading package.json
+ * Automatically updated with grunt bump-version
  */
 define( function() {
   'use strict';
