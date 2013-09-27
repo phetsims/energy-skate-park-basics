@@ -22,7 +22,7 @@ require.config( {
     PHETCOMMON: '../../phetcommon/js',
     SUN: '../../sun/js',
     JOIST: '../../joist/js',
-    ENERGY_SKATE_PARK: '../../energy-skate-park/js',
+    ENERGY_SKATE_PARK: '.',
 
     //Load plugins
     i18n: '../../i18n/i18n',
