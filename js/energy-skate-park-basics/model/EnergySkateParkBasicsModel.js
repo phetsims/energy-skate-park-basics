@@ -103,7 +103,7 @@ define( function( require ) {
     step: function( dt ) {
       //If the delay makes dt too high, then truncate it.  This helps e.g. when clicking in the address bar on ipad, which gives a huge dt and problems for integration
       //TODO: on the iPad3 if all features are turned on, the model will have numerical integration problems and buggy behavior.  We should subdivide dt or find another solution
-      //TODO: For subdividing, make sure it is only operating on model instances and not calling view update code, for performance
+      //TODO: For subdividing, make sure it is only operating on model instances and not calling view update code, for performance.  This could be done best by computing a hash of deltas to apply to the model.
       if ( dt > 1.0 / 10 ) {
         dt = 1.0 / 10;
       }
@@ -120,7 +120,6 @@ define( function( require ) {
       var initialEnergy = skater.totalEnergy;
       var netForce = new Vector2( 0, -9.8 * skater.mass );
 
-      //TODO: instead of changing skater attributes throughout the function, consider changing all at the end, so we can do an atomic update (should be easier to understand & maintain)
       var acceleration = netForce.times( 1.0 / skater.mass );
       var proposedVelocity = skater.velocity.plus( acceleration.times( dt ) );
       var proposedPosition = skater.position.plus( proposedVelocity.times( dt ) );
@@ -150,9 +149,8 @@ define( function( require ) {
 
         //TODO: maybe get closest point shouldn't return a new object allocation each time, or use pooling for it.?
         var bestMatch = track.getClosestPositionAndParameter( position );
-        var distance = position.distance( bestMatch.point );
-        if ( closestDistance === null || distance < closestDistance ) {
-          closestDistance = distance;
+        if ( closestDistance === null || bestMatch.distance < closestDistance ) {
+          closestDistance = bestMatch.distance;
           closestTrack = track;
           closestMatch = bestMatch;
         }

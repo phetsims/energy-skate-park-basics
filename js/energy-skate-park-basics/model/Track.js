@@ -95,7 +95,7 @@ define( function( require ) {
           bestPt.y = this.ySearchPoints[i];
         }
       }
-      return {u: bestT, point: bestPt};
+      return {u: bestT, point: bestPt, distance: best};
     },
 
     getX: function( u ) { return this.xSpline.at( u ); },
