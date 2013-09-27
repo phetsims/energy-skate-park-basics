@@ -103,6 +103,7 @@ define( function( require ) {
     step: function( dt ) {
       //If the delay makes dt too high, then truncate it.  This helps e.g. when clicking in the address bar on ipad, which gives a huge dt and problems for integration
       //TODO: on the iPad3 if all features are turned on, the model will have numerical integration problems and buggy behavior.  We should subdivide dt or find another solution
+      //TODO: For subdividing, make sure it is only operating on model instances and not calling view update code, for performance
       if ( dt > 1.0 / 10 ) {
         dt = 1.0 / 10;
       }
@@ -111,8 +112,8 @@ define( function( require ) {
         this.stepModel( this.speed === 'normal' ? dt : dt * 0.25 );
       }
     },
-    stepGround: function( dt ) {
-    },
+    stepGround: function( dt ) { },
+
     //Update the skater in free fall
     stepFreeFall: function( dt ) {
       var skater = this.skater;
@@ -120,9 +121,9 @@ define( function( require ) {
       var netForce = new Vector2( 0, -9.8 * skater.mass );
 
       //TODO: instead of changing skater attributes throughout the function, consider changing all at the end, so we can do an atomic update (should be easier to understand & maintain)
-      skater.acceleration = netForce.times( 1.0 / skater.mass );
-      skater.velocity = skater.velocity.plus( skater.acceleration.times( dt ) );
-      var proposedPosition = skater.position.plus( skater.velocity.times( dt ) );
+      var acceleration = netForce.times( 1.0 / skater.mass );
+      var proposedVelocity = skater.velocity.plus( acceleration.times( dt ) );
+      var proposedPosition = skater.position.plus( proposedVelocity.times( dt ) );
       if ( proposedPosition.y < 0 ) {
         proposedPosition.y = 0;
       }
@@ -131,10 +132,10 @@ define( function( require ) {
         //see if it crossed the track
         var physicalTracks = this.getPhysicalTracks();
         if ( physicalTracks.length ) {
-          this.interactWithTracksWhileFalling( physicalTracks, skater, proposedPosition, initialEnergy, dt );
+          this.interactWithTracksWhileFalling( physicalTracks, skater, proposedPosition, initialEnergy, dt, proposedVelocity );
         }
         else {
-          this.continueFreeFall( skater, initialEnergy, proposedPosition );
+          this.continueFreeFall( skater, initialEnergy, proposedPosition, proposedVelocity );
         }
       }
     },
@@ -165,7 +166,7 @@ define( function( require ) {
     },
 
     //Check to see if it should hit or attach to track during free fall
-    interactWithTracksWhileFalling: function( physicalTracks, skater, proposedPosition, initialEnergy, dt ) {
+    interactWithTracksWhileFalling: function( physicalTracks, skater, proposedPosition, initialEnergy, dt, proposedVelocity ) {
 
       //Find the closest track
       var closestTrackAndPositionAndParameter = this.getClosestTrackAndPositionAndParameter( skater.position, physicalTracks );
@@ -173,7 +174,7 @@ define( function( require ) {
       var u = closestTrackAndPositionAndParameter.u;
 
       if ( !track.isParameterInBounds( u ) ) {
-        this.continueFreeFall( skater, initialEnergy, proposedPosition );
+        this.continueFreeFall( skater, initialEnergy, proposedPosition, proposedVelocity );
         return;
       }
       var t1 = u - 1E-6;
@@ -191,32 +192,32 @@ define( function( require ) {
 
         //reflect the velocity vector
         //http://www.gamedev.net/topic/165537-2d-vector-reflection-/
-        var allOK = skater.velocity && skater.velocity.minus && normal.times && normal.dot;
+        var allOK = proposedVelocity && proposedVelocity.minus && normal.times && normal.dot;
 //        if ( !allOK ) { alert( 'allOK === false' ); }
-        var newVelocity = allOK ? skater.velocity.minus( normal.times( 2 * normal.dot( skater.velocity ) ) ) :
-                          new Vector2( 0, 1 );
+        var bounceVelocity = allOK ? proposedVelocity.minus( normal.times( 2 * normal.dot( proposedVelocity ) ) ) :
+                             new Vector2( 0, 1 );
 
         //Attach to track if velocity is close enough to parallel to the track
-        var dot = Math.abs( skater.velocity.normalized().dot( segment ) );
+        var dot = Math.abs( proposedVelocity.normalized().dot( segment ) );
 
         //If friction is allowed, then bounce with elasticity <1.
         //If friction is not allowed, then bounce with elasticity = 1.
         if ( dot < 0.4 ) {
-          skater.velocity = newVelocity;
+          skater.velocity = bounceVelocity;
           this.bounces++;
         }
         else {
-          //attach to track
-          skater.track = track;
-          skater.u = u;
-
           //If friction is allowed, keep the parallel component of velocity.
           //If friction is not allowed, then either attach to the track with no change in speed
 
           //Estimate u dot from equations (8) & (9) in the paper
-          var uDx = skater.velocity.x / track.xSplineDiff.at( u );
-          var uDy = skater.velocity.y / track.ySplineDiff.at( u );
+          var uDx = proposedVelocity.x / track.xSplineDiff.at( u );
+          var uDy = proposedVelocity.y / track.ySplineDiff.at( u );
           var uD = (uDx + uDy) / 2;
+
+          //update skater variables
+          skater.track = track;
+          skater.u = u;
           skater.uD = uD;
 
           //TODO: Refine uD estimate based on energy conservation
@@ -234,26 +235,29 @@ define( function( require ) {
 
       //It just continued in free fall
       else {
-        this.continueFreeFall( skater, initialEnergy, proposedPosition );
+        this.continueFreeFall( skater, initialEnergy, proposedPosition, proposedVelocity );
       }
     },
 
     //Started in free fall and did not interact with a track
     //TODO: handle the case where the skater is moving to the left/right when landing on the ground
-    continueFreeFall: function( skater, initialEnergy, proposedPosition ) {
+    continueFreeFall: function( skater, initialEnergy, proposedPosition, proposedVelocity ) {
+
       //make up for the difference by changing the y value
-      var y = (initialEnergy - 0.5 * skater.mass * skater.velocity.magnitudeSquared() - skater.thermalEnergy) / (-1 * skater.mass * skater.gravity);
+      var y = (initialEnergy - 0.5 * skater.mass * proposedVelocity.magnitudeSquared() - skater.thermalEnergy) / (-1 * skater.mass * skater.gravity);
       if ( y < 0 ) {
-        y = 0;
 
         //When falling straight down, stop completely and convert all energy to thermal
         skater.velocity = new Vector2( 0, 0 );
         skater.thermalEnergy = initialEnergy;
         skater.angle = 0;
       }
+      else {
 
-      //TODO: keep track of all of the variables in a hash so they can be set at once after verification and after energy conserved
-      skater.position = new Vector2( proposedPosition.x, y );
+        //TODO: keep track of all of the variables in a hash so they can be set at once after verification and after energy conserved
+        skater.position = new Vector2( proposedPosition.x, y );
+        skater.velocity = proposedVelocity;
+      }
       skater.updateEnergy();
     },
 
