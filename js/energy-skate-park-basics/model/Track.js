@@ -9,22 +9,26 @@ define( function( require ) {
   'use strict';
 
   var inherit = require( 'PHET_CORE/inherit' );
-  var ObservableArray = require( 'AXON/ObservableArray' );
+  var PropertySet = require( 'AXON/PropertySet' );
   var Property = require( 'AXON/Property' );
   var Vector2 = require( 'DOT/Vector2' );
 
   //points is Array of Property of Vector2
+  //TODO: Track has a fixed number of points.  If you added a point to a Track, you need a new track.
   function Track( points, interactive ) {
     var track = this;
 
-    //True if the track can be interacted with.  For screens 1-2 only one track will be physical (and hence visible).
-    // For screen 3, tracks in the control panel are visible but non-physical until dragged to the play area
-    this.physicalProperty = new Property( false );
+    PropertySet.call( this, {
 
-    //Store the offset in a separate field for translation, to improve performance when dragging the track
-    this.offsetProperty = new Property( new Vector2() );
+      //True if the track can be interacted with.  For screens 1-2 only one track will be physical (and hence visible).
+      //For screen 3, tracks in the control panel are visible but non-physical until dragged to the play area
+      physical: false,
 
-    ObservableArray.call( this, points );
+      //Store the offset in a separate field for translation, to improve performance when dragging the track
+      offset: new Vector2()
+    } );
+
+    this.points = points;
     this.interactive = interactive;
     this.u = [];
     this.x = [];
@@ -42,10 +46,10 @@ define( function( require ) {
       var x = this.offsetProperty.get().x;
       var y = this.offsetProperty.get().y;
 
-      for ( var i = 0; i < track.length; i++ ) {
-        track.u.push( i / track.length );
-        track.x.push( track.get( i ).value.x + x );
-        track.y.push( track.get( i ).value.y + y );
+      for ( var i = 0; i < track.points.length; i++ ) {
+        track.u.push( i / track.points.length );
+        track.x.push( track.points[i].value.x + x );
+        track.y.push( track.points[i].value.y + y );
       }
 
       track.xSpline = numeric.spline( track.u, track.x );
@@ -70,13 +74,12 @@ define( function( require ) {
     this.updateSplines();
   }
 
-  return inherit( ObservableArray, Track, {
+  return inherit( PropertySet, Track, {
     reset: function() {
-      ObservableArray.prototype.reset.call( this );
-      for ( var i = 0; i < this.length; i++ ) {
-        this.get( i ).reset();
+      PropertySet.prototype.reset.call( this );
+      for ( var i = 0; i < this.points.length; i++ ) {
+        this.points[i].reset();
       }
-      this.physicalProperty.reset();
     },
 
     //Returns the closest point (Euclidean) and position (parametric) on the track, as an object with {u,point}
@@ -160,34 +163,17 @@ define( function( require ) {
 
     updateLinSpace: function() {
       this.minPoint = 0;
-      this.maxPoint = (this.length - 1) / this.length;
+      this.maxPoint = (this.points.length - 1) / this.points.length;
       var prePoint = this.minPoint - 1E-6;
       var postPoint = this.maxPoint + 1E-6;
 
       //Store for performance
       //made number of sample points depend on the length of the track, to make it smooth enough no matter how long it is
-      this.searchLinSpace = numeric.linspace( prePoint, postPoint, 20 * (this.length - 1) );
+      this.searchLinSpace = numeric.linspace( prePoint, postPoint, 20 * (this.points.length - 1) );
     },
 
     //Detect whether a parametric point is in bounds of this track, for purposes of telling whether the skater fell past the edge of the track
     isParameterInBounds: function( u ) { return u >= this.minPoint && u <= this.maxPoint; },
-
-    setControlPoints: function( points ) {
-      var lengthChanged = points.length !== this.length;
-      while ( this.length < points.length ) {
-        this.push( new Property( new Vector2( 0, 0 ) ) );
-      }
-      while ( this.length > points.length ) {
-        this.pop();
-      }
-      for ( var i = 0; i < points.length; i++ ) {
-        this.get( i ).value = new Vector2( points[i].x, points[i].y );
-      }
-      if ( lengthChanged ) {
-        this.updateLinSpace();
-      }
-      this.updateSplines();
-    },
 
     //Setter/getter for physical property, mimic the PropertySet pattern instead of using PropertySet multiple inheritance
     get physical() { return this.physicalProperty.get(); },

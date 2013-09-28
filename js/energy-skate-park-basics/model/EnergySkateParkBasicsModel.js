@@ -302,7 +302,9 @@ define( function( require ) {
       while ( Math.abs( finalEnergy - initialEnergy ) > 1E-2 ) {
 //          console.log( (finalEnergy - initialEnergy).toFixed( 2 ), 'binary search, lowerBound=', lowerBound, 'upperBound', upperBound );
         var uMid = (upperBound + lowerBound) / 2;
-        var midEnergy = gravEnergy + factoredEnergy * uMid * uMid;//TODO: if we need to tweak u as well as uD then we may need to use track.getEnergy and forego some optimizations
+
+        //TODO: if we need to tweak u as well as uD then we may need to use track.getEnergy and forego some optimizations
+        var midEnergy = gravEnergy + factoredEnergy * uMid * uMid;
         if ( midEnergy > initialEnergy ) {
           upperBound = uMid;
         }

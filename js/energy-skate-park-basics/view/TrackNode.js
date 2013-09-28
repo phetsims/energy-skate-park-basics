@@ -51,29 +51,29 @@ define( function( require ) {
     var y = [];
 
     //Store for performance
-    var lastPt = (track.length - 1) / track.length;
+    var lastPt = (track.points.length - 1) / track.points.length;
 
     //Sample space, which is recomputed if the track gets longer, to keep it looking smooth no matter how many control points
-    var linSpace = numeric.linspace( 0, lastPt, 20 * (track.length - 1) );
-    var lengthForLinSpace = track.length;
+    var linSpace = numeric.linspace( 0, lastPt, 20 * (track.points.length - 1) );
+    var lengthForLinSpace = track.points.length;
 
     var updateTrackShape = function() {
 
       var i = 0;
       //Update the sample range when the number of control points has changed
-      if ( lengthForLinSpace !== track.length ) {
-        lastPt = (track.length - 1) / track.length;
-        linSpace = numeric.linspace( 0, lastPt, 20 * (track.length - 1) );
-        lengthForLinSpace = track.length;
+      if ( lengthForLinSpace !== track.points.length ) {
+        lastPt = (track.points.length - 1) / track.points.length;
+        linSpace = numeric.linspace( 0, lastPt, 20 * (track.points.length - 1) );
+        lengthForLinSpace = track.points.length;
       }
 
       //clear arrays, reusing them to save on garbage
       x.length = 0;
       y.length = 0;
 
-      for ( i = 0; i < track.length; i++ ) {
-        x.push( track.get( i ).value.x );
-        y.push( track.get( i ).value.y );
+      for ( i = 0; i < track.points.length; i++ ) {
+        x.push( track.points[i].value.x );
+        y.push( track.points[i].value.y );
       }
 
       //Compute points for lineTo
@@ -97,9 +97,9 @@ define( function( require ) {
     };
 
     if ( track.interactive ) {
-      for ( var i = 0; i < track.length; i++ ) {
+      for ( var i = 0; i < track.points.length; i++ ) {
         (function() {
-          var controlPoint = track.get( i );
+          var controlPoint = track.points[i];
           var controlPointNode = new Circle( 14, {pickable: false, opacity: 0.7, stroke: 'black', lineWidth: 2, fill: 'red', cursor: 'pointer', translation: modelViewTransform.modelToViewPosition( controlPoint.value )} );
 
           //Make it so you can only translate the track to bring it out of the toolbox, but once it is out of the toolbox it can be reshaped
@@ -134,19 +134,9 @@ define( function( require ) {
       }
     }
     //If any control point dragged, update the track
-    for ( var index = 0; index < track.length; index++ ) {
-      track.get( index ).link( updateTrackShape );
+    for ( var index = 0; index < track.points.length; index++ ) {
+      track.points[index].link( updateTrackShape );
     }
-
-    track.addItemAddedListener( function( item ) {
-      item.link( updateTrackShape );
-      updateTrackShape();
-    } );
-
-    track.addItemRemovedListener( function( item ) {
-      item.unlink( updateTrackShape );
-      updateTrackShape();
-    } );
 
     track.addTranslationListener( function( dx, dy ) {
       trackNode.translate( modelViewTransform.modelToViewDelta( {x: dx, y: dy} ) );
