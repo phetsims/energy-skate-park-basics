@@ -37,6 +37,8 @@ define( function( require ) {
           //If the user moved it out of the toolbox, then make it physically interactive
           track.physical = true;
         }
+
+        //TODO: When dropping the track in the toolbox, make nonphysical and reset coordinates
       }
     );
 
@@ -58,7 +60,7 @@ define( function( require ) {
     var linSpace = numeric.linspace( 0, lastPt, 20 * (track.length - 1) );
     var lengthForLinSpace = track.length;
 
-    var updateTrack = function() {
+    var updateTrackShape = function() {
 
       var i = 0;
       //Update the sample range when the number of control points has changed
@@ -82,10 +84,10 @@ define( function( require ) {
       var xPoints = track.xSpline.at( linSpace );
       var yPoints = track.ySpline.at( linSpace );
 
-      var shape = new Shape().
-        moveTo( modelViewTransform.modelToViewX( xPoints[0] ), modelViewTransform.modelToViewY( yPoints[0] ) );
+      var tx = trackNode.getTranslation();
+      var shape = new Shape().moveTo( modelViewTransform.modelToViewX( xPoints[0] ) - tx.x, modelViewTransform.modelToViewY( yPoints[0] ) - tx.y );
       for ( i = 1; i < xPoints.length; i++ ) {
-        shape.lineTo( modelViewTransform.modelToViewX( xPoints[i] ), modelViewTransform.modelToViewY( yPoints[i] ) );
+        shape.lineTo( modelViewTransform.modelToViewX( xPoints[i] ) - tx.x, modelViewTransform.modelToViewY( yPoints[i] ) - tx.y );
       }
 
       var strokeStyles = new LineStyles( {
@@ -100,19 +102,22 @@ define( function( require ) {
     if ( track.interactive ) {
       for ( var i = 0; i < track.length; i++ ) {
         (function() {
-          var property = track.get( i );
-          var controlPoint = new Circle( 14, {opacity: 0.7, stroke: 'black', lineWidth: 2, fill: 'red', cursor: 'pointer', translation: modelViewTransform.modelToViewPosition( property.value )} );
-          property.link( function( value ) {
-            controlPoint.translation = modelViewTransform.modelToViewPosition( value );
+          var controlPoint = track.get( i );
+          var controlPointNode = new Circle( 14, {opacity: 0.7, stroke: 'black', lineWidth: 2, fill: 'red', cursor: 'pointer', translation: modelViewTransform.modelToViewPosition( controlPoint.value )} );
+          controlPoint.link( function( position ) {
+            controlPointNode.translation = modelViewTransform.modelToViewPosition( position );
           } );
-          controlPoint.addInputListener( new SimpleDragHandler(
+          controlPointNode.addInputListener( new SimpleDragHandler(
             {
               allowTouchSnag: true,
               start: function( event ) {
               },
               drag: function( event ) {
-                var globalPoint = controlPoint.globalToParentPoint( event.pointer.point );
-                property.value = modelViewTransform.viewToModelPosition( globalPoint );
+
+                var globalPoint = controlPointNode.globalToParentPoint( event.pointer.point );
+
+                //trigger reconstruction of the track shape based on the control points
+                controlPoint.value = modelViewTransform.viewToModelPosition( globalPoint );
 
                 //If the user moved it out of the toolbox, then make it physically interactive
                 track.physical = true;
@@ -123,23 +128,27 @@ define( function( require ) {
               end: function( event ) {
               }
             } ) );
-          trackNode.addChild( controlPoint );
+          trackNode.addChild( controlPointNode );
         })();
       }
     }
     //If any control point dragged, update the track
     for ( var index = 0; index < track.length; index++ ) {
-      track.get( index ).link( updateTrack );
+      track.get( index ).link( updateTrackShape );
     }
 
     track.addItemAddedListener( function( item ) {
-      item.link( updateTrack );
-      updateTrack();
+      item.link( updateTrackShape );
+      updateTrackShape();
     } );
 
     track.addItemRemovedListener( function( item ) {
-      item.unlink( updateTrack );
-      updateTrack();
+      item.unlink( updateTrackShape );
+      updateTrackShape();
+    } );
+
+    track.addTranslationListener( function( dx, dy ) {
+      trackNode.translate( modelViewTransform.modelToViewDelta( {x: dx, y: dy} ) );
     } );
   }
 

@@ -147,7 +147,7 @@ define( function( require ) {
       for ( var i = 0; i < physicalTracks.length; i++ ) {
         var track = physicalTracks[i];
 
-        //TODO: maybe get closest point shouldn't return a new object allocation each time, or use pooling for it.?
+        //TODO: maybe get closest point shouldn't return a new object allocation each time, or use pooling for it, or pass in reference as an arg?
         var bestMatch = track.getClosestPositionAndParameter( position );
         if ( closestDistance === null || bestMatch.distance < closestDistance ) {
           closestDistance = bestMatch.distance;
@@ -252,7 +252,7 @@ define( function( require ) {
       }
       else {
 
-        //TODO: keep track of all of the variables in a hash so they can be set at once after verification and after energy conserved
+        //TODO: keep track of all of the variables in a hash so they can be set at once after verification and after energy conserved, which will also help with dt subdivisions
         skater.position = new Vector2( proposedPosition.x, y );
         skater.velocity = proposedVelocity;
       }

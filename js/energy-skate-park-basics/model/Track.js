@@ -22,6 +22,10 @@ define( function( require ) {
     //True if the track can be interacted with.  For screens 1-2 only one track will be physical (and hence visible).
     // For screen 3, tracks in the control panel are visible but non-physical until dragged to the play area
     this.physicalProperty = new Property( false );
+
+    //Store the offset in a separate field for translation, to improve performance when dragging the track
+    this.offsetProperty = new Property( new Vector2() );
+
     ObservableArray.call( this, points );
     this.interactive = interactive;
     this.u = [];
@@ -37,10 +41,13 @@ define( function( require ) {
       track.x.length = 0;
       track.y.length = 0;
 
+      var x = this.offsetProperty.get().x;
+      var y = this.offsetProperty.get().y;
+
       for ( var i = 0; i < track.length; i++ ) {
         track.u.push( i / track.length );
-        track.x.push( track.get( i ).value.x );
-        track.y.push( track.get( i ).value.y );
+        track.x.push( track.get( i ).value.x + x );
+        track.y.push( track.get( i ).value.y + y );
       }
 
       track.xSpline = numeric.spline( track.u, track.x );
@@ -58,8 +65,11 @@ define( function( require ) {
     };
 
     for ( var i = 0; i < points.length; i++ ) {
-      points[i].link( this.updateSplines );
+      points[i].lazyLink( this.updateSplines.bind( this ) );
     }
+
+    this.translationListeners = [];
+    this.updateSplines();
   }
 
   return inherit( ObservableArray, Track, {
@@ -127,25 +137,15 @@ define( function( require ) {
     },
 
     translate: function( dx, dy ) {
-
-      //Unlink and relink later to avoid unnecessary spline computation
-      for ( var i = 0; i < this.length; i++ ) {
-        this.get( i ).unlink( this.updateSplines );
+      this.offsetProperty.set( this.offsetProperty.get().plusXY( dx, dy ) );
+      for ( var i = 0; i < this.translationListeners.length; i++ ) {
+        var listener = this.translationListeners[i];
+        listener( dx, dy );
       }
-
-      for ( i = 0; i < this.length; i++ ) {
-        var point = this.get( i );
-        point.set( point.value.plus( new Vector2( dx, dy ) ) );
-      }
-
-      for ( i = 0; i < this.length; i++ ) {
-        this.get( i ).lazyLink( this.updateSplines );
-      }
-
-      //batch update for performance
-      //TODO: This is still pretty slow, consider translating the entire function directly instead of recomputing splines
       this.updateSplines();
     },
+
+    addTranslationListener: function( listener ) { this.translationListeners.push( listener ); },
 
     //For purposes of showing the skater angle, get the view angle of the track here.  Note this means inverting the y values
     //This is called every step while animating on the track, so it was optimized to avoid new allocations
