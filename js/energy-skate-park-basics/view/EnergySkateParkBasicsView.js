@@ -9,6 +9,8 @@ define( function( require ) {
 
   var inherit = require( 'PHET_CORE/inherit' );
   var Rectangle = require( 'SCENERY/nodes/Rectangle' );
+  var Rect = require( 'DOT/Rectangle' );
+  var Shape = require( 'KITE/Shape' );
   var Panel = require( 'SUN/Panel' );
   var ScreenView = require( 'JOIST/ScreenView' );
   var SkaterNode = require( 'ENERGY_SKATE_PARK/energy-skate-park-basics/view/SkaterNode' );
@@ -27,6 +29,8 @@ define( function( require ) {
   var Vector2 = require( 'DOT/Vector2' );
   var SpeedometerNode = require( 'SCENERY_PHET/SpeedometerNode' );
   var TextButton = require( 'SUN/TextButton' );
+  var DerivedProperty = require( 'AXON/DerivedProperty' );
+  var Path = require( 'SCENERY/nodes/Path' );
 
   //TODO: Consider floating panels to the side when space is available.  For instance, the control panel could float to the right if there is extra space there on a wide screen
   //TODO: (but don't float arbitrarily far because it could get too far from the play area).
@@ -39,6 +43,7 @@ define( function( require ) {
     var viewPoint = new Vector2( this.layoutBounds.width / 2, this.layoutBounds.height - BackgroundNode.grassHeight );//grass is 70px high in stage coordinates
     var scale = 50;
     var transform = ModelViewTransform2.createSinglePointScaleInvertedYMapping( modelPoint, viewPoint, scale );
+    this.modelViewTransform = transform;
 
     //The background
     this.backgroundNode = new BackgroundNode( model, this );
@@ -77,7 +82,8 @@ define( function( require ) {
       interactiveTrackNodes.forEach( function( trackNode ) { view.addChild( trackNode ); } );
     }
 
-    this.addChild( new SkaterNode( model, transform ) );
+    var skaterNode = new SkaterNode( model, transform );
+    this.addChild( skaterNode );
     this.addChild( new PieChartNode( model, this, transform ) );
     var pieChartLegend = new PieChartLegend( model );
     this.addChild( pieChartLegend );
@@ -97,10 +103,23 @@ define( function( require ) {
     pieChartLegend.mutate( {top: this.controlPanel.top, right: this.controlPanel.left - 9} );
 
     //The button to return the skater
-    //TODO: Highlight return skater button when offscreen? Or make another one?  Make it big then small?
     //TODO: Disable this button when the skater is already at his initial coordinates?
     var returnSkaterButton = new TextButton( 'Return Skater', model.returnSkater.bind( model ), {centerX: this.controlPanel.centerX, top: this.controlPanel.bottom + 10} );
     this.addChild( returnSkaterButton );
+
+    //Determine if the skater is onscreen or offscreen for purposes of highlighting the 'return skater' button.
+    //TODO: Do not let the user release the skater offscreen, or 'return skater' won't work
+    var onscreenProperty = new DerivedProperty( [model.skater.positionProperty], function( position ) {
+      return view.visibleModelBounds && view.visibleModelBounds.containsPoint( position );
+    } );
+
+    //When the skater goes off screen, make the "return skater" button big
+    onscreenProperty.lazyLink( function( onscreen ) {
+      var center = returnSkaterButton.center;
+      console.log( onscreen );
+      returnSkaterButton.setScaleMagnitude( onscreen ? 1 : 1.5 );
+      returnSkaterButton.center = center;
+    } );
 
     this.addChild( new BarGraphNode( model, this ) );
 
@@ -114,6 +133,10 @@ define( function( require ) {
     if ( !model.draggableTracks ) {
       this.addChild( new SceneSelectionPanel( model, this, transform ).mutate( {left: 0, centerY: playPauseControl.centerY} ) );
     }
+
+    //For debugging the visible bounds
+//    this.viewBoundsPath = new Path( null, {pickable: false, stroke: 'red', lineWidth: 10} );
+//    this.addChild( this.viewBoundsPath );
   }
 
   return inherit( ScreenView, EnergySkateParkBasicsView, {
@@ -144,6 +167,14 @@ define( function( require ) {
 
       this.backgroundNode.layout( offsetX, offsetY, width, height, scale );
       this.gridNode.layout( offsetX, offsetY, width, height, scale );
+
+      this.visibleViewBounds = new Rect( -offsetX, -offsetY, width / scale, height / scale );
+
+      //Show it for debugging
+//      this.viewBoundsPath.shape = Shape.bounds( this.visibleViewBounds );
+
+      //Compute the visible model bounds so we will know when a model object like the skater has gone offscreen
+      this.visibleModelBounds = this.modelViewTransform.viewToModelBounds( this.visibleViewBounds );
     }
   } );
 } );

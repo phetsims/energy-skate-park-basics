@@ -3,8 +3,6 @@
 /**
  * Model for one track in Energy Skate Park Basics, which contains the control points and cubic splines for interpolating between them.
  *
- * TODO: For performance in dragging, consider storing an 'offset' x,y value which would add to the position.
- * TODO: Or make sure to get only one 'update' callback when all points are translated
  * @author Sam Reid
  */
 define( function( require ) {
