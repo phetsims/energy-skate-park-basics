@@ -102,6 +102,11 @@ define( function( require ) {
           var controlPoint = track.points[i];
           var controlPointNode = new Circle( 14, {pickable: false, opacity: 0.7, stroke: 'black', lineWidth: 2, fill: 'red', cursor: 'pointer', translation: modelViewTransform.modelToViewPosition( controlPoint.value )} );
 
+          //Show a dotted line for the exterior track points, which can be connected to other track
+          if ( i === 0 || i === track.points.length - 1 ) {
+            controlPointNode.lineDash = [ 4, 5 ];
+          }
+
           //Make it so you can only translate the track to bring it out of the toolbox, but once it is out of the toolbox it can be reshaped
           track.physicalProperty.link( function( physical ) { controlPointNode.pickable = physical; } );
 
