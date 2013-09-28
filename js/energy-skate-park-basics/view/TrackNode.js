@@ -103,7 +103,11 @@ define( function( require ) {
       for ( var i = 0; i < track.length; i++ ) {
         (function() {
           var controlPoint = track.get( i );
-          var controlPointNode = new Circle( 14, {opacity: 0.7, stroke: 'black', lineWidth: 2, fill: 'red', cursor: 'pointer', translation: modelViewTransform.modelToViewPosition( controlPoint.value )} );
+          var controlPointNode = new Circle( 14, {pickable: false, opacity: 0.7, stroke: 'black', lineWidth: 2, fill: 'red', cursor: 'pointer', translation: modelViewTransform.modelToViewPosition( controlPoint.value )} );
+
+          //Make it so you can only translate the track to bring it out of the toolbox, but once it is out of the toolbox it can be reshaped
+          track.physicalProperty.link( function( physical ) { controlPointNode.pickable = physical; } );
+
           controlPoint.link( function( position ) {
             controlPointNode.translation = modelViewTransform.modelToViewPosition( position );
           } );
