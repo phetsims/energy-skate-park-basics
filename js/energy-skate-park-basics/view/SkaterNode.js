@@ -67,6 +67,8 @@ define( function( require ) {
         start: function( event ) {
           skater.dragging = true;
         },
+
+        //TODO: Don't allow skater to be dragged outside of the visible bounds
         drag: function( event ) {
 
           //TODO: Translate based on deltas?  Or move the skater up so a bit above the finger/mouse?
@@ -93,7 +95,7 @@ define( function( require ) {
             targetU = null;
 
             //make skater upright if not near the track
-            //TODO: make this continuous so it is a smooth motion?
+            //TODO: make this continuous based on deltas so it is a smooth motion?
             skater.angle = 0;
           }
 

@@ -11,6 +11,7 @@ define( function( require ) {
   var inherit = require( 'PHET_CORE/inherit' );
   var Node = require( 'SCENERY/nodes/Node' );
   var Circle = require( 'SCENERY/nodes/Circle' );
+  var Vector2 = require( 'DOT/Vector2' );
   var Shape = require( 'KITE/Shape' );
   var Path = require( 'SCENERY/nodes/Path' );
   var EnergySkateParkColorScheme = require( 'ENERGY_SKATE_PARK/energy-skate-park-basics/view/EnergySkateParkColorScheme' );
@@ -28,8 +29,10 @@ define( function( require ) {
     this.skater.positionProperty.link( function( position ) {
       var view = modelViewTransform.modelToViewPosition( position );
 
-      //TODO: Should be centered over his head not his feet so it doesn't look awkward when skating in a parabola
-      pieChartNode.setTranslation( view.x, view.y - 150 );
+      //Center pie chart over skater's head not his feet so it doesn't look awkward when skating in a parabola
+      var angle = pieChartNode.skater.angle;
+      var location = Vector2.createPolar( 150, angle - Math.PI / 2 );
+      pieChartNode.setTranslation( view.plus( location ) );
     } );
 
     var updatePaths = function() {
