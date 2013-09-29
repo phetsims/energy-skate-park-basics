@@ -4,7 +4,7 @@
  * Scenery node for the track, which can be translated by dragging the track, or manipulated by dragging its control points.
  *
  * TODO: Link tracks together by connecting them.
- * TODO: Show a dotted line along the track in 'roller coaster' mode.
+ * TODO: Show a dotted line along the track in 'stick to track' mode.
  * @author Sam Reid
  */
 define( function( require ) {
@@ -76,7 +76,6 @@ define( function( require ) {
       }
 
       //Compute points for lineTo
-      //TODO: See if there is a way to use the KITE SVG/Canvas curve APIs to render this
       var xPoints = track.xSpline.at( linSpace );
       var yPoints = track.ySpline.at( linSpace );
 
