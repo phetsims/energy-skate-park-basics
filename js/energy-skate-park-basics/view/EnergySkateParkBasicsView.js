@@ -68,16 +68,34 @@ define( function( require ) {
     }
     else {
 
+      var addTrackNode = function( track ) {
+
+        var trackNode = new TrackNode( model, track, transform );
+        view.addChild( trackNode );
+
+        //When track removed, remove its view
+        var itemRemovedListener = function( removed ) {
+          if ( removed === track ) {
+            view.removeChild( trackNode );
+            model.tracks.removeItemRemovedListener( itemRemovedListener );//Clean up memory leak
+          }
+        };
+        model.tracks.addItemRemovedListener( itemRemovedListener );
+
+        return trackNode;
+      };
+
       //Create the tracks for the track toolbox
-      var interactiveTrackNodes = model.tracks.map(function( track ) { return new TrackNode( model, track, transform ); } ).getArray();
+      var interactiveTrackNodes = model.tracks.map( addTrackNode ).getArray();
 
       //Add a panel behind the tracks
       var margin = 5;
-      this.addChild( new Panel( new Rectangle( 0, 0, interactiveTrackNodes[0].width, interactiveTrackNodes[0].height ), {xMargin: margin, yMargin: margin, x: interactiveTrackNodes[0].left - margin, y: interactiveTrackNodes[0].top - margin} ) );
+      var panel = new Panel( new Rectangle( 0, 0, interactiveTrackNodes[0].width, interactiveTrackNodes[0].height ), {xMargin: margin, yMargin: margin, x: interactiveTrackNodes[0].left - margin, y: interactiveTrackNodes[0].top - margin} );
+      this.addChild( panel );
 
-      interactiveTrackNodes.forEach( function( trackNode ) { view.addChild( trackNode ); } );
+      interactiveTrackNodes.forEach( function( trackNode ) { trackNode.moveToFront(); } );
 
-      model.tracks.addItemAddedListener( function( track ) { view.addChild( new TrackNode( model, track, transform ) ); } );
+      model.tracks.addItemAddedListener( addTrackNode );
     }
 
     var skaterNode = new SkaterNode( model, transform );

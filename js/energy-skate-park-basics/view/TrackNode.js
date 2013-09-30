@@ -179,7 +179,7 @@ define( function( require ) {
                 var globalPoint = controlPointNode.globalToParentPoint( event.pointer.point );
 
                 //trigger reconstruction of the track shape based on the control points
-                controlPoint.position = modelViewTransform.viewToModelPosition( globalPoint );
+                controlPoint.sourcePosition = modelViewTransform.viewToModelPosition( globalPoint );
 
                 //If the user moved it out of the toolbox, then make it physically interactive
                 track.physical = true;
