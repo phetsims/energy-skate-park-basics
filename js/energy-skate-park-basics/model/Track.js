@@ -199,8 +199,8 @@ define( function( require ) {
     },
 
     getSnapTarget: function() {
-      for ( var i = 0; i < this.points.length; i++ ) {
-        var o = this.points[i];
+      for ( var i = 0; i < this.controlPoints.length; i++ ) {
+        var o = this.controlPoints[i];
         if ( o.snapTarget ) {
           return o.snapTarget;
         }
@@ -209,8 +209,8 @@ define( function( require ) {
     },
 
     containsControlPoint: function( controlPoint ) {
-      for ( var i = 0; i < this.points.length; i++ ) {
-        if ( this.points[i] === controlPoint ) {
+      for ( var i = 0; i < this.controlPoints.length; i++ ) {
+        if ( this.controlPoints[i] === controlPoint ) {
           return true;
         }
       }

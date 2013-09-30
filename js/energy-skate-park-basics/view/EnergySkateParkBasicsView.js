@@ -76,6 +76,8 @@ define( function( require ) {
       this.addChild( new Panel( new Rectangle( 0, 0, interactiveTrackNodes[0].width, interactiveTrackNodes[0].height ), {xMargin: margin, yMargin: margin, x: interactiveTrackNodes[0].left - margin, y: interactiveTrackNodes[0].top - margin} ) );
 
       interactiveTrackNodes.forEach( function( trackNode ) { view.addChild( trackNode ); } );
+
+      model.tracks.addItemAddedListener( function( track ) { view.addChild( new TrackNode( model, track, transform ) ); } );
     }
 
     var skaterNode = new SkaterNode( model, transform );

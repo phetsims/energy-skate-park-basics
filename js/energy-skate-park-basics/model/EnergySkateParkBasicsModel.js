@@ -396,41 +396,38 @@ define( function( require ) {
       var newControlPoints = [];
 
       //TODO: Join in the right direction for a & b so that the joined point is in the middle
+
+      //Only include one copy of the snapped point
       //Forward Forward
-      if ( a.controlPoints[a.controlPoints.length - 1].snapTarget && b.controlPoints[0].snapTarget ) {
-        for ( var i = 0; i < a.controlPoints.length; i++ ) {
+      if ( a.controlPoints[a.controlPoints.length - 1].snapTarget === b.controlPoints[0] ) {
+        for ( var i = 0; i < a.controlPoints.length - 1; i++ ) {
           newControlPoints.push( a.controlPoints[i].copy() );
         }
 
-        for ( i = 0; b.controlPoints.length; i++ ) {
+        //Midpoint
+        newControlPoints.push( a.controlPoints[a.controlPoints.length - 1].snapTarget.copy() );
+
+        for (
+
+          //Only include one copy of the snapped point
+          i = 1;
+
+          i < b.controlPoints.length; i++ ) {
           newControlPoints.push( b.controlPoints[i].copy() );
         }
       }
 
       var newTrack = new Track( newControlPoints, true );
       newTrack.physical = true;
-      this.removeTrack( a );
-      this.removeTrack( b );
-      this.addTrack( newTrack );
+      this.tracks.remove( a );
+      this.tracks.remove( b );
+      this.tracks.add( newTrack );
 
       //TODO: Move skater to new track if he was on the old track
 
       //TODO: trigger old tracks removed
 
       //TODO: trigger new track added
-    },
-
-    removeTrack: function( track ) {
-      this.tracks.remove( track );
-//      var index = this.tracks.indexOf( track );
-//      if ( index !== -1 ) {
-//        this.tracks.splice( index, index + 1 );
-//      }
-//
-//      //TODO: use observable array for tracks added/removed?
-    },
-    addTrack: function( track ) {
-      this.tracks.add( track );
     }
   } );
 } );
