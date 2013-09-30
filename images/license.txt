@@ -1,1 +1,3 @@
-http://upload.wikimedia.org/wikipedia/commons/b/b3/Mouse_pointer_or_cursor.png public domain
+ESP_icon_one_big.png source=PhET Author=SST
+ESP_icon_two_big.png source=PhET Author=SST
+ESP_icon_three_big.png source=PhET Author=SST

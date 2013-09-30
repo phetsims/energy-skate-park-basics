@@ -9,12 +9,10 @@ define( function( require ) {
   var Rectangle = require( 'SCENERY/nodes/Rectangle' );
   var Vector2 = require( 'DOT/Vector2' );
 
-  function EnergySkateParkBasicsScreen( name, draggableTracks, friction ) {
+  function EnergySkateParkBasicsScreen( name, icon, draggableTracks, friction ) {
     this.name = name;
-    this.icon = new Rectangle( 0, 0, 200, 100, {fill: 'blue'} );
-
+    this.icon = new Image( icon );
     this.createModel = function() { return new EnergySkateParkBasicsModel( draggableTracks, friction ); };
-
     this.createView = function( model ) { return new EnergySkateParkBasicsView( model ); };
   }
 
