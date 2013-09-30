@@ -28,6 +28,9 @@ define( function( require ) {
 
     var dragHandler = new SimpleDragHandler( {
         allowTouchSnag: true,
+
+        //Drag an entire track
+        //TODO: optimize so it is not recreating shape or getting called back once per control point
         translate: function( options ) {
           var delta = options.delta;
           var modelDelta = modelViewTransform.viewToModelDelta( delta );
