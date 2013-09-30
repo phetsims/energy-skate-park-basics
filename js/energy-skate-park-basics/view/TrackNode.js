@@ -4,7 +4,6 @@
  * Scenery node for the track, which can be translated by dragging the track, or manipulated by dragging its control points.
  * If the track's length is changed (by deleting a control point or linking two tracks together) and new TrackNode is created.
  *
- * TODO: Link tracks together by connecting them.
  * TODO: Show a dotted line along the track in 'stick to track' mode.
  * @author Sam Reid
  */
@@ -37,7 +36,7 @@ define( function( require ) {
           //If the user moved it out of the toolbox, then make it physically interactive
           track.physical = true;
 
-          //TODO: if one of the control points is close enough to link to another track, do so
+          //If one of the control points is close enough to link to another track, do so
           var tracks = model.getPhysicalTracks();
 
           var bestDistance = null;
@@ -89,7 +88,6 @@ define( function( require ) {
         },
 
         //TODO: When dropping the track in the toolbox, make nonphysical and reset coordinates
-        //TODO: Connect tracks when released
         end: function() {
           var myPoints = [track.controlPoints[0], track.controlPoints[track.controlPoints.length - 1]];
           if ( myPoints[0].snapTarget || myPoints[1].snapTarget ) {
