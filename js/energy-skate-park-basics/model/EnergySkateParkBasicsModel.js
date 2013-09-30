@@ -393,31 +393,37 @@ define( function( require ) {
     },
 
     joinTrackToTrack: function( a, b ) {
-      var newControlPoints = [];
+      var points = [];
+      var i;
 
       //TODO: Join in the right direction for a & b so that the joined point is in the middle
 
       //Only include one copy of the snapped point
       //Forward Forward
       if ( a.controlPoints[a.controlPoints.length - 1].snapTarget === b.controlPoints[0] ) {
-        for ( var i = 0; i < a.controlPoints.length - 1; i++ ) {
-          newControlPoints.push( a.controlPoints[i].copy() );
-        }
-
-        //Midpoint
-        newControlPoints.push( a.controlPoints[a.controlPoints.length - 1].snapTarget.copy() );
-
-        for (
-
-          //Only include one copy of the snapped point
-          i = 1;
-
-          i < b.controlPoints.length; i++ ) {
-          newControlPoints.push( b.controlPoints[i].copy() );
-        }
+        for ( i = 0; i < a.controlPoints.length; i++ ) { points.push( a.controlPoints[i].copy() ); }
+        for ( i = 1; i < b.controlPoints.length; i++ ) {points.push( b.controlPoints[i].copy() ); }
       }
 
-      var newTrack = new Track( newControlPoints, true );
+      //Forward Backward
+      else if ( a.controlPoints[a.controlPoints.length - 1].snapTarget === b.controlPoints[b.controlPoints.length - 1] ) {
+        for ( i = 0; i < a.controlPoints.length; i++ ) { points.push( a.controlPoints[i].copy() ); }
+        for ( i = b.controlPoints.length - 2; i >= 0; i-- ) {points.push( b.controlPoints[i].copy() ); }
+      }
+
+      //Backward Forward
+      else if ( a.controlPoints[0].snapTarget === b.controlPoints[0] ) {
+        for ( i = a.controlPoints.length - 1; i >= 0; i-- ) { points.push( a.controlPoints[i].copy() ); }
+        for ( i = 1; i < b.controlPoints.length; i++ ) {points.push( b.controlPoints[i].copy() ); }
+      }
+
+      //Backward backward
+      else if ( a.controlPoints[0].snapTarget === b.controlPoints[b.controlPoints.length - 1] ) {
+        for ( i = a.controlPoints.length - 1; i >= 0; i-- ) { points.push( a.controlPoints[i].copy() ); }
+        for ( i = b.controlPoints.length - 2; i >= 0; i-- ) {points.push( b.controlPoints[i].copy() ); }
+      }
+
+      var newTrack = new Track( points, true );
       newTrack.physical = true;
       this.tracks.remove( a );
       this.tracks.remove( b );

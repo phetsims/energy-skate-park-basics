@@ -30,6 +30,6 @@ define( function( require ) {
   }
 
   return inherit( PropertySet, ControlPoint, {
-    copy: function() { return new ControlPoint( this.sourcePosition.x, this.sourcePosition.y ); }
+    copy: function() { return new ControlPoint( this.position.x, this.position.y ); }
   } );
 } );
