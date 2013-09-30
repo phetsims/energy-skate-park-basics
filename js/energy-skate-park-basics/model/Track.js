@@ -15,7 +15,7 @@ define( function( require ) {
 
   //points is Array of Property of Vector2
   //TODO: Track has a fixed number of points.  If you added a point to a Track, you need a new track.
-  function Track( points, interactive ) {
+  function Track( controlPoints, interactive ) {
     var track = this;
 
     PropertySet.call( this, {
@@ -28,7 +28,8 @@ define( function( require ) {
       offset: new Vector2()
     } );
 
-    this.points = points;
+    this.controlPoints = controlPoints;
+
     this.interactive = interactive;
     this.u = [];
     this.x = [];
@@ -46,10 +47,10 @@ define( function( require ) {
       var x = this.offsetProperty.get().x;
       var y = this.offsetProperty.get().y;
 
-      for ( var i = 0; i < track.points.length; i++ ) {
-        track.u.push( i / track.points.length );
-        track.x.push( track.points[i].value.x + x );
-        track.y.push( track.points[i].value.y + y );
+      for ( var i = 0; i < track.controlPoints.length; i++ ) {
+        track.u.push( i / track.controlPoints.length );
+        track.x.push( track.controlPoints[i].position.x + x );
+        track.y.push( track.controlPoints[i].position.y + y );
       }
 
       track.xSpline = numeric.spline( track.u, track.x );
@@ -66,8 +67,8 @@ define( function( require ) {
       track.ySearchPoints = null;
     };
 
-    for ( var i = 0; i < points.length; i++ ) {
-      points[i].lazyLink( this.updateSplines.bind( this ) );
+    for ( var i = 0; i < controlPoints.length; i++ ) {
+      controlPoints[i].positionProperty.lazyLink( this.updateSplines.bind( this ) );
     }
 
     this.translationListeners = [];
@@ -77,8 +78,8 @@ define( function( require ) {
   return inherit( PropertySet, Track, {
     reset: function() {
       PropertySet.prototype.reset.call( this );
-      for ( var i = 0; i < this.points.length; i++ ) {
-        this.points[i].reset();
+      for ( var i = 0; i < this.controlPoints.length; i++ ) {
+        this.controlPoints[i].reset();
       }
     },
 
@@ -138,11 +139,20 @@ define( function( require ) {
     },
 
     translate: function( dx, dy ) {
-      this.offsetProperty.set( this.offsetProperty.get().plusXY( dx, dy ) );
-      for ( var i = 0; i < this.translationListeners.length; i++ ) {
-        var listener = this.translationListeners[i];
-        listener( dx, dy );
+      //move all the control points
+      for ( var i = 0; i < this.controlPoints.length; i++ ) {
+        var point = this.controlPoints[i];
+        point.sourcePosition = point.sourcePosition.plusXY( dx, dy );
       }
+
+
+//      this.offsetProperty.set( this.offsetProperty.get().plusXY( dx, dy ) );
+//      for ( var i = 0; i < this.translationListeners.length; i++ ) {
+//        var listener = this.translationListeners[i];
+//        listener( dx, dy );
+//      }
+
+      //TODO: just translate the splines, do not recompute everything?
       this.updateSplines();
     },
 
@@ -163,13 +173,13 @@ define( function( require ) {
 
     updateLinSpace: function() {
       this.minPoint = 0;
-      this.maxPoint = (this.points.length - 1) / this.points.length;
+      this.maxPoint = (this.controlPoints.length - 1) / this.controlPoints.length;
       var prePoint = this.minPoint - 1E-6;
       var postPoint = this.maxPoint + 1E-6;
 
       //Store for performance
       //made number of sample points depend on the length of the track, to make it smooth enough no matter how long it is
-      this.searchLinSpace = numeric.linspace( prePoint, postPoint, 20 * (this.points.length - 1) );
+      this.searchLinSpace = numeric.linspace( prePoint, postPoint, 20 * (this.controlPoints.length - 1) );
     },
 
     //Detect whether a parametric point is in bounds of this track, for purposes of telling whether the skater fell past the edge of the track
@@ -177,6 +187,15 @@ define( function( require ) {
 
     //Setter/getter for physical property, mimic the PropertySet pattern instead of using PropertySet multiple inheritance
     get physical() { return this.physicalProperty.get(); },
-    set physical( p ) {this.physicalProperty.set( p );}
+    set physical( p ) {this.physicalProperty.set( p );},
+
+    toString: function() {
+      var string = '';
+      for ( var i = 0; i < this.controlPoints.length; i++ ) {
+        var point = this.controlPoints[i];
+        string = string + '(' + point.position.x + ',' + point.position.y + ')';
+      }
+      return string;
+    }
   } );
 } );

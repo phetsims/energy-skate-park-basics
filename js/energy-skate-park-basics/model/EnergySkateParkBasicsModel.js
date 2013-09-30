@@ -13,6 +13,7 @@ define( function( require ) {
   var Property = require( 'AXON/Property' );
   var Skater = require( 'ENERGY_SKATE_PARK/energy-skate-park-basics/model/Skater' );
   var Track = require( 'ENERGY_SKATE_PARK/energy-skate-park-basics/model/Track' );
+  var ControlPoint = require( 'ENERGY_SKATE_PARK/energy-skate-park-basics/model/ControlPoint' );
   var Vector2 = require( 'DOT/Vector2' );
 
   /**
@@ -50,8 +51,8 @@ define( function( require ) {
       var parabola = [new Vector2( -4, 6 ), new Vector2( 0, 0 ), new Vector2( 4, 6 )];
       var slope = [new Vector2( -4, 4 ), new Vector2( -2, 2 ), new Vector2( 2, 1 )];
       var doubleWell = [new Vector2( -4, 5 ), new Vector2( -2, 0 ), new Vector2( 0, 2 ), new Vector2( 2, 1 ), new Vector2( 4, 5 ) ];
-      var toProperty = function( pt ) {return new Property( pt );};
-      this.tracks = [new Track( _.map( parabola, toProperty ), false ), new Track( _.map( slope, toProperty ), false ), new Track( _.map( doubleWell, toProperty ), false )];
+      var toControlPoint = function( pt ) {return new ControlPoint( pt.x, pt.y );};
+      this.tracks = [new Track( _.map( parabola, toControlPoint ), false ), new Track( _.map( slope, toControlPoint ), false ), new Track( _.map( doubleWell, toControlPoint ), false )];
 
       this.sceneProperty.link( function( scene ) {
         for ( var i = 0; i < model.tracks.length; i++ ) {
@@ -66,7 +67,10 @@ define( function( require ) {
         //Move the tracks over so they will be in the right position in the view coordinates, under the grass to the left of the clock controls
         //Could use view transform for this, but it would require creating the view first, so just eyeballing it for now.
         var offset = new Vector2( -5, -0.7 );
-        var controlPoints = [ new Property( new Vector2( -1, 0 ).plus( offset ) ), new Property( new Vector2( 0, 0 ).plus( offset ) ), new Property( new Vector2( 1, 0 ).plus( offset ) )];
+        var a = new Vector2( -1, 0 ).plus( offset );
+        var b = new Vector2( 0, 0 ).plus( offset );
+        var c = new Vector2( 1, 0 ).plus( offset );
+        var controlPoints = [ new ControlPoint( a.x, a.y ), new ControlPoint( b.x, b.y ), new ControlPoint( c.x, c.y )];
         this.tracks.push( new Track( controlPoints, true ) );
       }
     }
