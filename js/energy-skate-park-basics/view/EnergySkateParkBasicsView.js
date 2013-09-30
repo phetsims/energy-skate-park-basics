@@ -68,10 +68,8 @@ define( function( require ) {
     }
     else {
 
-      //Create the tracks for the control panel
-      var interactiveTrackNodes = model.tracks.map(function( track ) {
-        return new TrackNode( model, track, transform );
-      } ).getArray();
+      //Create the tracks for the track toolbox
+      var interactiveTrackNodes = model.tracks.map(function( track ) { return new TrackNode( model, track, transform ); } ).getArray();
 
       //Add a panel behind the tracks
       var margin = 5;
