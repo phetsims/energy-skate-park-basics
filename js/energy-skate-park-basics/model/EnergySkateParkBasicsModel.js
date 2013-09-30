@@ -396,7 +396,7 @@ define( function( require ) {
       var points = [];
       var i;
 
-      //TODO: Join in the right direction for a & b so that the joined point is in the middle
+      //Join in the right direction for a & b so that the joined point is in the middle
 
       var firstTrackForward = function() {for ( i = 0; i < a.controlPoints.length; i++ ) { points.push( a.controlPoints[i].copy() ); }};
       var firstTrackBackward = function() {for ( i = a.controlPoints.length - 1; i >= 0; i-- ) { points.push( a.controlPoints[i].copy() ); }};
