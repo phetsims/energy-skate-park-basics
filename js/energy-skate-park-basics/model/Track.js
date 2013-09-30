@@ -196,6 +196,25 @@ define( function( require ) {
         string = string + '(' + point.position.x + ',' + point.position.y + ')';
       }
       return string;
+    },
+
+    getSnapTarget: function() {
+      for ( var i = 0; i < this.points.length; i++ ) {
+        var o = this.points[i];
+        if ( o.snapTarget ) {
+          return o.snapTarget;
+        }
+      }
+      return null;
+    },
+
+    containsControlPoint: function( controlPoint ) {
+      for ( var i = 0; i < this.points.length; i++ ) {
+        if ( this.points[i] === controlPoint ) {
+          return true;
+        }
+      }
+      return false;
     }
   } );
 } );

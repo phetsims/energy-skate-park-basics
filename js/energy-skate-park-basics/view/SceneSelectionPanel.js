@@ -20,7 +20,7 @@ define( function( require ) {
 
     //Create a button with a scene like the track in the index
     var createNode = function( index ) {
-      var track = model.tracks[index];
+      var track = model.tracks.get( index );
       var background = new BackgroundNode( model, view );
       background.layout( 0, 0, view.layoutBounds.width, view.layoutBounds.height, 1 );
       var trackNode = new TrackNode( model, track, transform );

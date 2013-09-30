@@ -15,6 +15,7 @@ define( function( require ) {
   var Track = require( 'ENERGY_SKATE_PARK/energy-skate-park-basics/model/Track' );
   var ControlPoint = require( 'ENERGY_SKATE_PARK/energy-skate-park-basics/model/ControlPoint' );
   var Vector2 = require( 'DOT/Vector2' );
+  var ObservableArray = require( 'AXON/ObservableArray' );
 
   /**
    * Main constructor for the EnergySkateParkBasicsModel
@@ -43,6 +44,7 @@ define( function( require ) {
       stickToTrack: true
     } );
     this.skater = new Skater();
+    this.tracks = new ObservableArray();
 
     if ( !draggableTracks ) {
 
@@ -52,17 +54,16 @@ define( function( require ) {
       var slope = [new Vector2( -4, 4 ), new Vector2( -2, 2 ), new Vector2( 2, 1 )];
       var doubleWell = [new Vector2( -4, 5 ), new Vector2( -2, 0 ), new Vector2( 0, 2 ), new Vector2( 2, 1 ), new Vector2( 4, 5 ) ];
       var toControlPoint = function( pt ) {return new ControlPoint( pt.x, pt.y );};
-      this.tracks = [new Track( _.map( parabola, toControlPoint ), false ), new Track( _.map( slope, toControlPoint ), false ), new Track( _.map( doubleWell, toControlPoint ), false )];
+      this.tracks.addAll( [new Track( _.map( parabola, toControlPoint ), false ), new Track( _.map( slope, toControlPoint ), false ), new Track( _.map( doubleWell, toControlPoint ), false )] );
 
       this.sceneProperty.link( function( scene ) {
         for ( var i = 0; i < model.tracks.length; i++ ) {
-          model.tracks[i].physical = (i === scene);
+          model.tracks.get( i ).physical = (i === scene);
         }
         model.skater.track = null;
       } );
     }
     else {
-      this.tracks = [];
       for ( var i = 0; i < 4; i++ ) {
         //Move the tracks over so they will be in the right position in the view coordinates, under the grass to the left of the clock controls
         //Could use view transform for this, but it would require creating the view first, so just eyeballing it for now.
@@ -71,7 +72,7 @@ define( function( require ) {
         var b = new Vector2( 0, 0 ).plus( offset );
         var c = new Vector2( 1, 0 ).plus( offset );
         var controlPoints = [ new ControlPoint( a.x, a.y ), new ControlPoint( b.x, b.y ), new ControlPoint( c.x, c.y )];
-        this.tracks.push( new Track( controlPoints, true ) );
+        this.tracks.add( new Track( controlPoints, true ) );
       }
     }
 
@@ -83,12 +84,12 @@ define( function( require ) {
       PropertySet.prototype.reset.call( this );
       this.skater.reset();
       for ( var i = 0; i < this.tracks.length; i++ ) {
-        this.tracks[i].reset();
+        this.tracks.get( i ).reset();
       }
 
       //For the first two screens, make the default track physical
       if ( !this.draggableTracks ) {
-        this.tracks[0].physical = true;
+        this.tracks.get( 0 ).physical = true;
       }
     },
 
@@ -370,13 +371,66 @@ define( function( require ) {
       //Use vanilla instead of lodash for speed since this is in an inner loop
       var physicalTracks = [];
       for ( var i = 0; i < this.tracks.length; i++ ) {
-        var track = this.tracks[i];
+        var track = this.tracks.get( i );
 
         if ( track.physical ) {
           physicalTracks.push( track );
         }
       }
       return physicalTracks;
+    },
+
+    //Find whatever track is connected to the specified track and join them together to a new track
+    joinTracks: function( track ) {
+      var connectedPoint = track.getSnapTarget();
+      for ( var i = 0; i < this.getPhysicalTracks().length; i++ ) {
+        var otherTrack = this.getPhysicalTracks()[i];
+        if ( otherTrack.containsControlPoint( connectedPoint ) ) {
+          this.joinTrackToTrack( track, otherTrack );
+          break;
+        }
+      }
+    },
+
+    joinTrackToTrack: function( a, b ) {
+      var newControlPoints = [];
+
+      //TODO: Join in the right direction for a & b so that the joined point is in the middle
+      //Forward Forward
+      if ( a.controlPoints[a.controlPoints.length - 1].snapTarget && b.controlPoints[0].snapTarget ) {
+        for ( var i = 0; i < a.controlPoints.length; i++ ) {
+          newControlPoints.push( a.controlPoints[i].copy() );
+        }
+
+        for ( i = 0; b.controlPoints.length; i++ ) {
+          newControlPoints.push( b.controlPoints[i].copy() );
+        }
+      }
+
+      var newTrack = new Track( newControlPoints, true );
+      newTrack.physical = true;
+      this.removeTrack( a );
+      this.removeTrack( b );
+      this.addTrack( newTrack );
+
+      //TODO: Move skater to new track if he was on the old track
+
+      //TODO: trigger old tracks removed
+
+      //TODO: trigger new track added
+    },
+
+    removeTrack: function( track ) {
+      this.tracks.remove( track );
+//      var index = this.tracks.indexOf( track );
+//      if ( index !== -1 ) {
+//        this.tracks.splice( index, index + 1 );
+//      }
+//
+//      //TODO: use observable array for tracks added/removed?
+    },
+    addTrack: function( track ) {
+      this.tracks.add( track );
     }
   } );
 } );

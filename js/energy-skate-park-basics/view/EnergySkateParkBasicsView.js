@@ -55,9 +55,7 @@ define( function( require ) {
     //Switch between selectable tracks
     if ( !model.draggableTracks ) {
 
-      var trackNodes = _.map( model.tracks, function( track ) {
-        return new TrackNode( model, track, transform );
-      } );
+      var trackNodes = model.tracks.map(function( track ) { return new TrackNode( model, track, transform ); } ).getArray();
       trackNodes.forEach( function( trackNode ) {
         view.addChild( trackNode );
       } );
@@ -71,9 +69,9 @@ define( function( require ) {
     else {
 
       //Create the tracks for the control panel
-      var interactiveTrackNodes = _.map( model.tracks, function( track ) {
+      var interactiveTrackNodes = model.tracks.map(function( track ) {
         return new TrackNode( model, track, transform );
-      } );
+      } ).getArray();
 
       //Add a panel behind the tracks
       var margin = 5;

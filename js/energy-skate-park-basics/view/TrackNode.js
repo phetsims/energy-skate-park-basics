@@ -89,7 +89,13 @@ define( function( require ) {
         },
 
         //TODO: When dropping the track in the toolbox, make nonphysical and reset coordinates
-        end: function() {}
+        //TODO: Connect tracks when released
+        end: function() {
+          var myPoints = [track.controlPoints[0], track.controlPoints[track.controlPoints.length - 1]];
+          if ( myPoints[0].snapTarget || myPoints[1].snapTarget ) {
+            model.joinTracks( track );
+          }
+        }
       }
     );
 
