@@ -155,7 +155,7 @@ define( function( require ) {
 
     if ( track.interactive ) {
       for ( var i = 0; i < track.controlPoints.length; i++ ) {
-        (function() {
+        (function( isEndPoint ) {
           var controlPoint = track.controlPoints[i];
           var controlPointNode = new Circle( 14, {pickable: false, opacity: 0.7, stroke: 'black', lineWidth: 2, fill: 'red', cursor: 'pointer', translation: modelViewTransform.modelToViewPosition( controlPoint.position )} );
 
@@ -182,17 +182,45 @@ define( function( require ) {
                 //trigger reconstruction of the track shape based on the control points
                 controlPoint.sourcePosition = modelViewTransform.viewToModelPosition( globalPoint );
 
-                //If the user moved it out of the toolbox, then make it physically interactive
-                track.physical = true;
+                if ( isEndPoint ) {
+                  //If one of the control points is close enough to link to another track, do so
+                  var tracks = model.getPhysicalTracks();
+
+                  var bestDistance = null;
+                  var bestMatch = null;
+
+                  for ( var i = 0; i < tracks.length; i++ ) {
+                    var t = tracks[i];
+                    if ( t !== track ) {
+
+                      //don't match inner points
+                      var otherPoints = [t.controlPoints[0], t.controlPoints[t.controlPoints.length - 1]];
+
+                      for ( var k = 0; k < otherPoints.length; k++ ) {
+                        var otherPoint = otherPoints[k];
+                        var distance = controlPoint.sourcePosition.distance( otherPoint.position );
+                        if ( (bestDistance === null && distance > 1E-6) || (distance < bestDistance ) ) {
+                          bestDistance = distance;
+                          bestMatch = otherPoint;
+                        }
+                      }
+                    }
+                  }
+
+                  controlPoint.snapTarget = bestDistance !== null && bestDistance < 1 ? bestMatch : null;
+                }
               },
               translate: function() {
 
               },
               end: function( event ) {
+                if ( isEndPoint && controlPoint.snapTarget ) {
+                  model.joinTracks( track );
+                }
               }
             } ) );
           trackNode.addChild( controlPointNode );
-        })();
+        })( i === 0 || i === track.controlPoints.length - 1 );
       }
     }
     //If any control point dragged, update the track
