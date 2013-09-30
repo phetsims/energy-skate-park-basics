@@ -423,11 +423,10 @@ define( function( require ) {
       this.tracks.remove( b );
       this.tracks.add( newTrack );
 
-      //TODO: Move skater to new track if he was on the old track
-
-      //TODO: trigger old tracks removed
-
-      //TODO: trigger new track added
+      //TODO: Move skater to new track if he was on the old track, by searching for the best fit point on the new track
+      if ( this.skater.track === a || this.skater.track === b ) {
+        this.skater.track = null;
+      }
     }
   } );
 } );
