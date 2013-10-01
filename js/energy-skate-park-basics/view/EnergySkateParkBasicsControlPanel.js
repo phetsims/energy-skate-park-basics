@@ -26,15 +26,17 @@ define( function( require ) {
   var SpeedometerNode = require( 'SCENERY_PHET/SpeedometerNode' );
   var Property = require( 'AXON/Property' );
   var FrictionControl = require( 'ENERGY_SKATE_PARK/energy-skate-park-basics/view/FrictionControl' );
-  var StickToTrackControl = require( 'ENERGY_SKATE_PARK/energy-skate-park-basics/view/StickToTrackControl' );
 
   function EnergySkateParkBasicsControlPanel( model, view ) {
     var barGraphSet = [new Text( 'Bar Graph' ), this.createBarGraphIcon()];
     var pieChartSet = [new Text( 'Pie Chart' ), this.createPieChartIcon()];
     var gridSet = [new Text( 'Grid' ), this.createGridIcon()];
     var speedometerSet = [new Text( 'Speed' ), this.createSpeedometerIcon()];
+    var stickToTrackSet = [new Text( 'Stick to Track' ), new Rectangle( 0, 0, 20, 10, {fill: 'black'} )];//TODO: dotted yellow line for icon
 
-    var sets = [barGraphSet, pieChartSet, gridSet, speedometerSet];
+    var sets = model.frictionAllowed ?
+               [barGraphSet, pieChartSet, gridSet, speedometerSet, stickToTrackSet] :
+               [barGraphSet, pieChartSet, gridSet, speedometerSet];
     var maxTextWidth = _.max( sets, function( itemSet ) { return itemSet[0].width; } )[0].width;
 
     //In the absence of any sun (or other) layout packages, just manually space them out so they will have the icons aligned
@@ -43,16 +45,20 @@ define( function( require ) {
       return [itemSet[0], new Rectangle( 0, 0, padWidth + 20, 20 ), itemSet[1]];
     };
 
-    var checkBoxes = new VBox( {align: 'left', spacing: 10, children: [
+    var checkBoxChildren = [
       new CheckBox( new HBox( {children: pad( barGraphSet )} ), model.barGraphVisibleProperty ),
       new CheckBox( new HBox( {children: pad( pieChartSet )} ), model.pieChartVisibleProperty ),
       new CheckBox( new HBox( {children: pad( gridSet )} ), model.gridVisibleProperty ),
-      new CheckBox( new HBox( {children: pad( speedometerSet )} ), model.speedometerVisibleProperty )]} );
+      new CheckBox( new HBox( {children: pad( speedometerSet )} ), model.speedometerVisibleProperty )];
+    if ( model.frictionAllowed ) {
+      checkBoxChildren.push( new CheckBox( new HBox( {children: pad( stickToTrackSet )} ), model.stickToTrackProperty ) );
+    }
+    var checkBoxes = new VBox( {align: 'left', spacing: 10, children: checkBoxChildren} );
 
     var content = new VBox( {spacing: 10,
       children: !model.frictionAllowed ?
                 [checkBoxes, new MassSlider( model )] :
-                [checkBoxes, new FrictionControl( model, view ), new StickToTrackControl( model )]} );
+                [checkBoxes, new FrictionControl( model, view )]} );
 
     Panel.call( this, content, { xMargin: 10, yMargin: 10, fill: '#F0F0F0', stroke: 'gray', lineWidth: 1, resize: false } );
   }
