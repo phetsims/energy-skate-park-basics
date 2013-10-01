@@ -13,8 +13,12 @@ define( function( require ) {
   var Property = require( 'AXON/Property' );
   var Vector2 = require( 'DOT/Vector2' );
 
-  //points is Array of Property of Vector2
-  //TODO: Track has a fixed number of points.  If you added a point to a Track, you need a new track.
+  /**
+   * Model for a track, which has a fixed number of points.  If you added a point to a Track, you need a new track.
+   * @param {Array<ControlPoint>} controlPoints
+   * @param {Boolean} interactive
+   * @constructor
+   */
   function Track( controlPoints, interactive ) {
     var track = this;
 
@@ -144,7 +148,6 @@ define( function( require ) {
         var point = this.controlPoints[i];
         point.sourcePosition = point.sourcePosition.plusXY( dx, dy );
       }
-
 
 //      this.offsetProperty.set( this.offsetProperty.get().plusXY( dx, dy ) );
 //      for ( var i = 0; i < this.translationListeners.length; i++ ) {
