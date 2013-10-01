@@ -25,8 +25,8 @@ define( function( require ) {
   return inherit( Node, GridNode, {
 
     //Exactly fit the geometry to the screen so no matter what aspect ratio it will always show something.  Perhaps it will improve performance too?
-    //TODO: Could performance optimize by using visible instead of add/remove child if necessary (would only change performance on screen size change)
-    //TODO: For more performance improvements on screen size change, only update when the graph is visible, then again when it becomes visible
+    //Could performance optimize by using visible instead of add/remove child if necessary (would only change performance on screen size change)
+    //For more performance improvements on screen size change, only update when the graph is visible, then again when it becomes visible
     layout: function( offsetX, offsetY, width, height, layoutScale ) {
 
       var lines = [];
