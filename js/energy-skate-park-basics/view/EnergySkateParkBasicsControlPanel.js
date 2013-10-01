@@ -3,7 +3,6 @@
 /**
  * Scenery node for the control panel, with view settings and controls.
  *
- * //TODO: The bottom controls look very disorganized.  Perhaps a titled border around them?  See https://github.com/phetsims/energy-skate-park-basics/issues/3
  * @author Sam Reid
  */
 define( function( require ) {
