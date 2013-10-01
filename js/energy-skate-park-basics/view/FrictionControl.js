@@ -17,15 +17,13 @@ define( function( require ) {
 
   function FrictionControl( model, view ) {
     var frictionRange = {min: 0, max: 2};
-    var slider = new HSlider( model.frictionProperty, frictionRange, {enabledProperty: model.frictionEnabledProperty} );
+    var slider = new HSlider( model.frictionProperty, frictionRange, {tickLabelSpacing: 0} );
     var tickFont = new PhetFont( 10 );
     slider.addMajorTick( frictionRange.min, new Text( 'None', { font: tickFont } ) );
     slider.addMajorTick( frictionRange.max, new Text( 'Lots', { font: tickFont } ) );
-    var radioButtons = new HBox( {spacing: 15, children: [
-      new AquaRadioButton( model.frictionEnabledProperty, false, new Text( 'Off' ), {radius: 10} ),
-      new AquaRadioButton( model.frictionEnabledProperty, true, new Text( 'On' ), {radius: 10} )
-    ]} );
-    VBox.call( this, {children: [new Text( "Friction", new PhetFont( 14 ) ), radioButtons, slider]} );
+
+    //Space the friction label above the tick labels so that it won't overlap for i18n
+    VBox.call( this, {spacing: -4, children: [new Text( "Friction", new PhetFont( 14 ) ), slider]} );
   }
 
   return inherit( VBox, FrictionControl );
