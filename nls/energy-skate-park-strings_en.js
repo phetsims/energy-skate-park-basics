@@ -8,7 +8,7 @@ define( {
   "controls.path": "Path",
   "units.joules": "Joules",
   "tab.trackPlayground": "Playground",
-  "controls.mass": "Mass",
+  "controls.mass": "Skater Mass",
   "plots.energy-vs-time": "Energy vs. Time",
   "energy-skate-park-basics.name": "Energy Skate Park: Basics",
   "controls.skater.restore-defaults": "Restore Defaults",

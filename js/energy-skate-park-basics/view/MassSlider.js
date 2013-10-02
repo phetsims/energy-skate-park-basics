@@ -13,13 +13,16 @@ define( function( require ) {
   var PhetFont = require( 'SCENERY_PHET/PhetFont' );
   var HSlider = require( 'SUN/HSlider' );
   var Property = require( 'AXON/Property' );
+  var skaterMassString = require( 'string!ENERGY_SKATE_PARK/controls.mass' );
+  var smallString = require( 'string!ENERGY_SKATE_PARK/small' );
+  var largeString = require( 'string!ENERGY_SKATE_PARK/large' );
 
   function MassSlider( model, view ) {
     var slider = new HSlider( model.skater.massProperty, {min: 10, max: 110} );
     var tickFont = new PhetFont( 10 );
-    slider.addMajorTick( 10, new Text( 'Small', { font: tickFont } ) );
-    slider.addMajorTick( 110, new Text( 'Large', { font: tickFont } ) );
-    VBox.call( this, {children: [new Text( "Skater Mass", new PhetFont( 14 ) ), slider]} );
+    slider.addMajorTick( 10, new Text( smallString, { font: tickFont } ) );
+    slider.addMajorTick( 110, new Text( largeString, { font: tickFont } ) );
+    VBox.call( this, {children: [new Text( skaterMassString, new PhetFont( 14 ) ), slider]} );
   }
 
   return inherit( VBox, MassSlider );
