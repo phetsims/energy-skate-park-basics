@@ -17,6 +17,11 @@ define( function( require ) {
   var PhetFont = require( 'SCENERY_PHET/PhetFont' );
   var EnergySkateParkColorScheme = require( 'ENERGY_SKATE_PARK/energy-skate-park-basics/view/EnergySkateParkColorScheme' );
   var UndoButton = require( 'ENERGY_SKATE_PARK/energy-skate-park-basics/view/UndoButton' );
+  var kineticString = require( 'string!ENERGY_SKATE_PARK/energy.kinetic' );
+  var potentialString = require( 'string!ENERGY_SKATE_PARK/energy.potential' );
+  var thermalString = require( 'string!ENERGY_SKATE_PARK/energy.thermal' );
+  var totalString = require( 'string!ENERGY_SKATE_PARK/energy.total' );
+  var energyString = require( 'string!ENERGY_SKATE_PARK/plots.energy-vs-time.energy' );
 
   function BarGraphNode( model, energySkateParkBasicsView ) {
     var barGraphNode = this;
@@ -88,10 +93,10 @@ define( function( require ) {
     var thermalBar = createBar( 2, EnergySkateParkColorScheme.thermalEnergy, this.skater.thermalEnergyProperty );
     var totalBar = createBar( 3, EnergySkateParkColorScheme.totalEnergy, this.skater.totalEnergyProperty );
 
-    var kineticLabel = createLabel( 0, 'Kinetic', EnergySkateParkColorScheme.kineticEnergy );
-    var potentialLabel = createLabel( 1, 'Potential', EnergySkateParkColorScheme.potentialEnergy );
-    var thermalLabel = createLabel( 2, 'Thermal', EnergySkateParkColorScheme.thermalEnergy );
-    var totalLabel = createLabel( 3, 'Total', EnergySkateParkColorScheme.totalEnergy );
+    var kineticLabel = createLabel( 0, kineticString, EnergySkateParkColorScheme.kineticEnergy );
+    var potentialLabel = createLabel( 1, potentialString, EnergySkateParkColorScheme.potentialEnergy );
+    var thermalLabel = createLabel( 2, thermalString, EnergySkateParkColorScheme.thermalEnergy );
+    var totalLabel = createLabel( 3, totalString, EnergySkateParkColorScheme.totalEnergy );
 
     var undoButton = new UndoButton( model.clearThermal.bind( model ), model.skater, {centerX: thermalLabel.centerX, y: thermalLabel.bottom + 15} );
     model.skater.thermalEnergyProperty.linkAttribute( undoButton, 'enabled' );
@@ -99,7 +104,7 @@ define( function( require ) {
     this.bars = [kineticBar, potentialBar, thermalBar, totalBar];
     var contentNode = new Rectangle( 0, 0, contentWidth, contentHeight, {children: [
       new ArrowNode( insetX, originY, insetX, insetY, {pickable: false} ),
-      new Text( 'Energy (Joules)', {x: 5, y: insetY - 10, font: new PhetFont( 14 ), pickable: false} ),
+      new Text( energyString, {x: 5, y: insetY - 10, font: new PhetFont( 14 ), pickable: false} ),
       new Line( insetX, originY, contentWidth - insetX, originY, {lineWidth: 1, stroke: 'gray', pickable: false} ),
       kineticLabel,
       potentialLabel,
