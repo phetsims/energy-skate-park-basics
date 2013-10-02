@@ -17,6 +17,9 @@ define( function( require ) {
   var PhetFont = require( 'SCENERY_PHET/PhetFont' );
   var EnergySkateParkColorScheme = require( 'ENERGY_SKATE_PARK/energy-skate-park-basics/view/EnergySkateParkColorScheme' );
   var UndoButton = require( 'ENERGY_SKATE_PARK/energy-skate-park-basics/view/UndoButton' );
+  var kineticString = require( 'string!ENERGY_SKATE_PARK/energy.kinetic' );
+  var potentialString = require( 'string!ENERGY_SKATE_PARK/energy.potential' );
+  var thermalString = require( 'string!ENERGY_SKATE_PARK/energy.thermal' );
 
   function PieChartLegend( model ) {
     this.skater = model.skater;
@@ -30,9 +33,9 @@ define( function( require ) {
     var potentialBar = createBar( 1, EnergySkateParkColorScheme.potentialEnergy );
     var thermalBar = createBar( 2, EnergySkateParkColorScheme.thermalEnergy );
 
-    var kineticLabel = createLabel( 0, 'Kinetic', EnergySkateParkColorScheme.kineticEnergy );
-    var potentialLabel = createLabel( 1, 'Potential', EnergySkateParkColorScheme.potentialEnergy );
-    var thermalLabel = createLabel( 2, 'Thermal', EnergySkateParkColorScheme.thermalEnergy );
+    var kineticLabel = createLabel( 0, kineticString, EnergySkateParkColorScheme.kineticEnergy );
+    var potentialLabel = createLabel( 1, potentialString, EnergySkateParkColorScheme.potentialEnergy );
+    var thermalLabel = createLabel( 2, thermalString, EnergySkateParkColorScheme.thermalEnergy );
 
     var undoButton = new UndoButton( model.clearThermal.bind( model ), model.skater, {centerX: thermalLabel.centerX, y: thermalLabel.bottom + 15} );
     model.skater.thermalEnergyProperty.linkAttribute( undoButton, 'enabled' );

@@ -25,13 +25,18 @@ define( function( require ) {
   var SpeedometerNode = require( 'SCENERY_PHET/SpeedometerNode' );
   var Property = require( 'AXON/Property' );
   var FrictionControl = require( 'ENERGY_SKATE_PARK/energy-skate-park-basics/view/FrictionControl' );
+  var barGraphString = require( 'string!ENERGY_SKATE_PARK/plots.bar-graph' );
+  var pieChartString = require( 'string!ENERGY_SKATE_PARK/pieChart' );
+  var speedString = require( 'string!ENERGY_SKATE_PARK/properties.speed' );
+  var gridString = require( 'string!ENERGY_SKATE_PARK/controls.show-grid' );
+  var stickToTrackString = require( 'string!ENERGY_SKATE_PARK/stickToTrack' );
 
   function EnergySkateParkBasicsControlPanel( model, view ) {
-    var barGraphSet = [new Text( 'Bar Graph' ), this.createBarGraphIcon()];
-    var pieChartSet = [new Text( 'Pie Chart' ), this.createPieChartIcon()];
-    var gridSet = [new Text( 'Grid' ), this.createGridIcon()];
-    var speedometerSet = [new Text( 'Speed' ), this.createSpeedometerIcon()];
-    var stickToTrackSet = [new Text( 'Stick to Track' ), new Rectangle( 0, 0, 20, 10, {fill: 'black'} )];//TODO: dotted yellow line for icon
+    var barGraphSet = [new Text( barGraphString ), this.createBarGraphIcon()];
+    var pieChartSet = [new Text( pieChartString ), this.createPieChartIcon()];
+    var gridSet = [new Text( gridString ), this.createGridIcon()];
+    var speedometerSet = [new Text( speedString ), this.createSpeedometerIcon()];
+    var stickToTrackSet = [new Text( stickToTrackString ), new Rectangle( 0, 0, 20, 10, {fill: 'black'} )];//TODO: dotted yellow line for icon
 
     var sets = model.frictionAllowed ?
                [barGraphSet, pieChartSet, gridSet, speedometerSet, stickToTrackSet] :
@@ -95,7 +100,7 @@ define( function( require ) {
 
     //Create an icon for the speedometer check box
     createSpeedometerIcon: function() {
-      var node = new SpeedometerNode( new Property( 0 ), 'Speed', 10, {} );
+      var node = new SpeedometerNode( new Property( 0 ), speedString, 10, {} );
       node.scale( 20 / node.width );
       return node;
     }

@@ -31,6 +31,8 @@ define( function( require ) {
   var TextButton = require( 'SUN/TextButton' );
   var DerivedProperty = require( 'AXON/DerivedProperty' );
   var Path = require( 'SCENERY/nodes/Path' );
+  var returnSkaterString = require( 'string!ENERGY_SKATE_PARK/controls.reset-character' );
+  var speedString = require( 'string!ENERGY_SKATE_PARK/properties.speed' );
 
   //TODO: Consider floating panels to the side when space is available.  For instance, the control panel could float to the right if there is extra space there on a wide screen
   //TODO: (but don't float arbitrarily far because it could get too far from the play area).
@@ -104,7 +106,7 @@ define( function( require ) {
     var pieChartLegend = new PieChartLegend( model );
     this.addChild( pieChartLegend );
 
-    var speedometerNode = new SpeedometerNode( model.skater.speedProperty, 'Speed', 20 );
+    var speedometerNode = new SpeedometerNode( model.skater.speedProperty, speedString, 20 );
     model.speedometerVisibleProperty.linkAttribute( speedometerNode, 'visible' );
     speedometerNode.centerX = this.layoutBounds.centerX;
     speedometerNode.top = this.layoutBounds.minY + 5;
@@ -120,7 +122,7 @@ define( function( require ) {
 
     //The button to return the skater
     //TODO: Disable this button when the skater is already at his initial coordinates?
-    var returnSkaterButton = new TextButton( 'Return Skater', model.returnSkater.bind( model ), {centerX: this.controlPanel.centerX, top: this.controlPanel.bottom + 10} );
+    var returnSkaterButton = new TextButton( returnSkaterString, model.returnSkater.bind( model ), {centerX: this.controlPanel.centerX, top: this.controlPanel.bottom + 10} );
     this.addChild( returnSkaterButton );
 
     //Determine if the skater is onscreen or offscreen for purposes of highlighting the 'return skater' button.

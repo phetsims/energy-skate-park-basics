@@ -14,16 +14,19 @@ define( function( require ) {
   var PhetFont = require( 'SCENERY_PHET/PhetFont' );
   var HSlider = require( 'SUN/HSlider' );
   var AquaRadioButton = require( 'SUN/AquaRadioButton' );
+  var frictionString = require( 'string!ENERGY_SKATE_PARK/controls.friction.title' );
+  var noneString = require( 'string!ENERGY_SKATE_PARK/controls.gravity.none' );
+  var lotsString = require( 'string!ENERGY_SKATE_PARK/controls.gravity.lots' );
 
   function FrictionControl( model, view ) {
     var frictionRange = {min: 0, max: 2};
     var slider = new HSlider( model.frictionProperty, frictionRange, {tickLabelSpacing: 0} );
     var tickFont = new PhetFont( 10 );
-    slider.addMajorTick( frictionRange.min, new Text( 'None', { font: tickFont } ) );
-    slider.addMajorTick( frictionRange.max, new Text( 'Lots', { font: tickFont } ) );
+    slider.addMajorTick( frictionRange.min, new Text( noneString, { font: tickFont } ) );
+    slider.addMajorTick( frictionRange.max, new Text( lotsString, { font: tickFont } ) );
 
     //Space the friction label above the tick labels so that it won't overlap for i18n
-    VBox.call( this, {spacing: -4, children: [new Text( "Friction", new PhetFont( 14 ) ), slider]} );
+    VBox.call( this, {spacing: -4, children: [new Text( frictionString, new PhetFont( 14 ) ), slider]} );
   }
 
   return inherit( VBox, FrictionControl );
