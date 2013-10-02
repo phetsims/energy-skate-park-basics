@@ -103,7 +103,7 @@ define( {
   "controls.stop-recording-path": "Stop",
   "controls.measuring-tape": "Measuring Tape",
   "location": "Location",
-  "tab.introduction": "Introduction",
+  "tab.introduction": "Intro",
   "controls.edit-skater": "Edit Skater",
   "units.joules.abbreviation": "J"
 } );
