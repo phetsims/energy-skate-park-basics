@@ -9,12 +9,12 @@ require( [
   'SCENERY/nodes/Image',
   'JOIST/Sim',
   'JOIST/SimLauncher',
-  'ENERGY_SKATE_PARK/energy-skate-park-basics-strings',
   'ENERGY_SKATE_PARK/energy-skate-park-basics/EnergySkateParkBasicsScreen',
   'image!ENERGY_SKATE_PARK/../images/ESP_icon_one_big.png',
   'image!ENERGY_SKATE_PARK/../images/ESP_icon_two_big.png',
-  'image!ENERGY_SKATE_PARK/../images/ESP_icon_three_big.png'
-], function( Image, Sim, SimLauncher, strings, EnergySkateParkBasicsScreen, icon1, icon2, icon3 ) {
+  'image!ENERGY_SKATE_PARK/../images/ESP_icon_three_big.png',
+  'string!ENERGY_SKATE_PARK/tab.introduction'
+], function( Image, Sim, SimLauncher, EnergySkateParkBasicsScreen, icon1, icon2, icon3, intro ) {
   'use strict';
 
   var simOptions = {
@@ -29,7 +29,7 @@ require( [
 
     //Create and start the sim
     new Sim( 'Energy Skate Park: Basics', [
-      new EnergySkateParkBasicsScreen( 'Intro', icon1, false, false ),
+      new EnergySkateParkBasicsScreen( intro, icon1, false, false ),
       new EnergySkateParkBasicsScreen( 'Friction', icon2, false, true ),
       new EnergySkateParkBasicsScreen( 'Playground', icon3, true, true ) ], simOptions ).start();
   } );
