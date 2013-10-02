@@ -7,7 +7,7 @@ define( {
   "controls.show-friction": "Track Friction",
   "controls.path": "Path",
   "units.joules": "Joules",
-  "tab.trackPlayground": "Track Playground",
+  "tab.trackPlayground": "Playground",
   "controls.mass": "Mass",
   "plots.energy-vs-time": "Energy vs. Time",
   "energy-skate-park-basics.name": "Energy Skate Park: Basics",
