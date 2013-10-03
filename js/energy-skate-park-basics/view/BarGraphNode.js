@@ -2,6 +2,8 @@
 
 /**
  * Scenery node that shows the bar graph, and the animating bars for each energy type.
+ *
+ * TODO: more modern energy bar chart zoom, see gravity and orbits or something
  * @author Sam Reid
  */
 define( function( require ) {
