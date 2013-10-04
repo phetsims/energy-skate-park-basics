@@ -27,7 +27,9 @@ require.config( {
     //Load plugins
     image: '../../chipper/requirejs-plugins/image',
     audio: '../../chipper/requirejs-plugins/audio',
-    string: '../../chipper/requirejs-plugins/string'
+    string: '../../chipper/requirejs-plugins/string',
+
+    text: '../../sherpa/text'
   },
 
   urlArgs: new Date().getTime() // add cache buster query string to make browser refresh actually reload everything
