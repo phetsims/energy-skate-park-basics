@@ -3,6 +3,9 @@
 /**
  * Model for the Energy Skate Park: Basics sim, including model values for the view settings, such as whether the grid is visible.
  * All units are in metric.
+ *
+ * The step functions focus on making computations up front and applying changes to the skater at the end of each method, to
+ * simplify the logic and make it communicate with the Axon+View as little as possible (for performance reasons).
  * @author Sam Reid
  */
 define( function( require ) {
@@ -108,12 +111,10 @@ define( function( require ) {
     step: function( dt ) {
       //If the delay makes dt too high, then truncate it.  This helps e.g. when clicking in the address bar on ipad, which gives a huge dt and problems for integration
       //TODO: on the iPad3 if all features are turned on, the model will have numerical integration problems and buggy behavior.  We should subdivide dt or find another solution
-      //TODO: For subdividing, make sure it is only operating on model instances and not calling view update code, for performance.  This could be done best by computing a hash of deltas to apply to the model.
       if ( dt > 1.0 / 10 ) {
         dt = 1.0 / 10;
       }
       if ( !this.paused ) {
-
         this.stepModel( this.speed === 'normal' ? dt : dt * 0.25 );
       }
     },
