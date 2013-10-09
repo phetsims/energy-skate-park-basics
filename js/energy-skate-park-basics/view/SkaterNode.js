@@ -76,8 +76,7 @@ define( function( require ) {
           var position = modelViewTransform.viewToModelPosition( globalPoint );
 
           //make sure it is within the visible bounds
-          //TODO: Rename visibleModelBounds to availableModelBounds
-          position = view.visibleModelBounds.getClosestPoint( position.x, position.y, position );
+          position = view.availableModelBounds.getClosestPoint( position.x, position.y, position );
 
           //TODO: lots of unnecessary allocations and computation here, biggest improvement could be to use binary search for position on the track
           var closestTrackAndPositionAndParameter = model.getClosestTrackAndPositionAndParameter( position, model.getPhysicalTracks() );

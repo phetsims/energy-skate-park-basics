@@ -130,7 +130,7 @@ define( function( require ) {
 
     //Determine if the skater is onscreen or offscreen for purposes of highlighting the 'return skater' button.
     var onscreenProperty = new DerivedProperty( [model.skater.positionProperty], function( position ) {
-      return view.visibleModelBounds && view.visibleModelBounds.containsPoint( position );
+      return view.availableModelBounds && view.availableModelBounds.containsPoint( position );
     } );
 
     //When the skater goes off screen, make the "return skater" button big
@@ -190,15 +190,15 @@ define( function( require ) {
       this.backgroundNode.layout( offsetX, offsetY, width, height, scale );
       this.gridNode.layout( offsetX, offsetY, width, height, scale );
 
-      this.visibleViewBounds = new Rect( -offsetX, -offsetY, width / scale, this.modelViewTransform.modelToViewY( 0 ) - Math.abs( offsetY ) );
+      this.availableViewBounds = new Rect( -offsetX, -offsetY, width / scale, this.modelViewTransform.modelToViewY( 0 ) - Math.abs( offsetY ) );
 
       //Show it for debugging
       if ( showViewBounds ) {
-        this.viewBoundsPath.shape = Shape.bounds( this.visibleViewBounds );
+        this.viewBoundsPath.shape = Shape.bounds( this.availableViewBounds );
       }
 
       //Compute the visible model bounds so we will know when a model object like the skater has gone offscreen
-      this.visibleModelBounds = this.modelViewTransform.viewToModelBounds( this.visibleViewBounds );
+      this.availableModelBounds = this.modelViewTransform.viewToModelBounds( this.availableViewBounds );
     }
   } );
 } );
