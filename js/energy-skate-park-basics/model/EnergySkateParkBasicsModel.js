@@ -258,7 +258,6 @@ define( function( require ) {
       }
       else {
 
-        //TODO: keep track of all of the variables in a hash so they can be set at once after verification and after energy conserved, which will also help with dt subdivisions
         skater.position = new Vector2( proposedPosition.x, y );
         skater.velocity = proposedVelocity;
       }
@@ -268,6 +267,7 @@ define( function( require ) {
     //Update the skater if he is on the track
     //TODO: Add support for friction
     stepTrack: function( dt ) {
+
       var skater = this.skater;
       var track = skater.track;
       var u = skater.u;
@@ -277,13 +277,15 @@ define( function( require ) {
       var mass = skater.mass;
       var gravity = skater.gravity;
 
+      //P means Prime (i.e. derivative with respect to time)
+      //2 means after the step
       var xP = track.xSplineDiff.at( u );
       var yP = track.ySplineDiff.at( u );
       var xPP = track.xSplineDiffDiff.at( u );
       var yPP = track.ySplineDiffDiff.at( u );
-      var uDD1 = this.uDD( uD, xP, xPP, yP, yPP, gravity );
+      var uDD = this.uDD( uD, xP, xPP, yP, yPP, gravity );
 
-      var uD2 = uD + uDD1 * dt;
+      var uD2 = uD + uDD * dt;
       var u2 = u + (uD + uD2) / 2 * dt; //averaging here really keeps down the average error.  It's not exactly forward Euler but I forget the name.
 
       var x = track.getX( u2 );
