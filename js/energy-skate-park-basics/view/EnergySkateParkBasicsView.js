@@ -100,7 +100,7 @@ define( function( require ) {
       model.tracks.addItemAddedListener( addTrackNode );
     }
 
-    var skaterNode = new SkaterNode( model, transform );
+    var skaterNode = new SkaterNode( model, this, transform );
     this.addChild( skaterNode );
     this.addChild( new PieChartNode( model, this, transform ) );
     var pieChartLegend = new PieChartLegend( model );
@@ -126,7 +126,6 @@ define( function( require ) {
     this.addChild( returnSkaterButton );
 
     //Determine if the skater is onscreen or offscreen for purposes of highlighting the 'return skater' button.
-    //TODO: Do not let the user release the skater offscreen, or 'return skater' won't work
     var onscreenProperty = new DerivedProperty( [model.skater.positionProperty], function( position ) {
       return view.visibleModelBounds && view.visibleModelBounds.containsPoint( position );
     } );

@@ -18,7 +18,7 @@ define( function( require ) {
   var Matrix3 = require( 'DOT/Matrix3' );
   var LinearFunction = require( 'DOT/LinearFunction' );
 
-  function SkaterNode( model, modelViewTransform ) {
+  function SkaterNode( model, view, modelViewTransform ) {
     var skater = model.skater;
     this.skater = model.skater;
     var skaterNode = this;
@@ -68,13 +68,16 @@ define( function( require ) {
           skater.dragging = true;
         },
 
-        //TODO: Don't allow skater to be dragged outside of the visible bounds
         drag: function( event ) {
 
           //TODO: Translate based on deltas?  Or move the skater up so a bit above the finger/mouse?
           //TODO: It is nice to have the skater centered above the finger, but maybe he should move there gradually instead of jumping there?
           var globalPoint = skaterNode.globalToParentPoint( event.pointer.point );
           var position = modelViewTransform.viewToModelPosition( globalPoint );
+
+          //make sure it is within the visible bounds
+          //TODO: don't let him be dragged below ground
+          position = view.visibleModelBounds.getClosestPoint( position.x, position.y, position );
 
           //TODO: lots of unnecessary allocations and computation here, biggest improvement could be to use binary search for position on the track
           var closestTrackAndPositionAndParameter = model.getClosestTrackAndPositionAndParameter( position, model.getPhysicalTracks() );
