@@ -348,14 +348,22 @@ define( function( require ) {
     stepModel: function( dt ) {
       var skater = this.skater;
 
+      //User is dragging the skater, nothing to update here
+      if ( skater.dragging ) {
+      }
+
       //Free fall
-      if ( !skater.dragging && !skater.track && skater.position.y > 0 ) {
+      else if ( !skater.track && skater.position.y > 0 ) {
         this.stepFreeFall( dt );
       }
-      else if ( !skater.dragging && !skater.track && skater.position.y <= 0 ) {
+
+      //On the ground
+      else if ( !skater.track && skater.position.y <= 0 ) {
         this.stepGround( dt );
       }
-      else if ( !skater.dragging && skater.track ) {
+
+      //On a track
+      else if ( skater.track ) {
         this.stepTrack( dt );
       }
     },

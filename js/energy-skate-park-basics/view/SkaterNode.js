@@ -105,7 +105,6 @@ define( function( require ) {
           skater.updateEnergy();
         },
 
-        //TODO: The skater pops up sometimes when released, after being at an angle
         end: function( event ) {
           skater.dragging = false;
           skater.velocity = new Vector2( 0, 0 );
@@ -115,6 +114,9 @@ define( function( require ) {
           skater.u = targetU;
           skater.startingU = targetU;
           skater.startingTrack = targetTrack;
+
+          //Update the energy on skater release so it won't try to move to a different height to make up for the delta
+          skater.updateEnergy();
         }
       } ) );
   }
