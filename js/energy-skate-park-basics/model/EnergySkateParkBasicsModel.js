@@ -289,8 +289,8 @@ define( function( require ) {
       var uD2 = uD + uDD * dt;
       var u2 = u + (uD + uD2) / 2 * dt; //averaging here really keeps down the average error.  It's not exactly forward Euler but I forget the name.
 
-      var x = track.getX( u2 );
-      var y = track.getY( u2 );
+      var x2 = track.getX( u2 );
+      var y2 = track.getY( u2 );
       var initialEnergy = track.getEnergy( u, uD, mass, gravity );
       var finalEnergy = track.getEnergy( u2, uD2, mass, gravity );
 
@@ -306,14 +306,14 @@ define( function( require ) {
 
       var xPrime2 = track.xSplineDiff.at( u2 );
       var yPrime2 = track.ySplineDiff.at( u2 );
-      var gravEnergy = -mass * gravity * y;
+      var potentialEnergy = -mass * gravity * y2;
       var factoredEnergy = 1 / 2 * mass * (xPrime2 * xPrime2 + yPrime2 * yPrime2);
       while ( Math.abs( finalEnergy - initialEnergy ) > 1E-2 ) {
 //          console.log( (finalEnergy - initialEnergy).toFixed( 2 ), 'binary search, lowerBound=', lowerBound, 'upperBound', upperBound );
         var uMid = (upperBound + lowerBound) / 2;
 
         //TODO: if we need to tweak u as well as uD then we may need to use track.getEnergy and forego some optimizations
-        var midEnergy = gravEnergy + factoredEnergy * uMid * uMid;
+        var midEnergy = potentialEnergy + factoredEnergy * uMid * uMid;
         if ( midEnergy > initialEnergy ) {
           upperBound = uMid;
         }
@@ -339,7 +339,7 @@ define( function( require ) {
 
       skater.velocity = new Vector2( vx, vy );
       skater.angle = skater.track.getViewAngleAt( skater.u );
-      skater.position = new Vector2( x, y );
+      skater.position = new Vector2( x2, y2 );
       skater.updateEnergy();
 
       //Fly off the left or right side of the track
