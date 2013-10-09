@@ -174,6 +174,20 @@ define( function( require ) {
       return Math.atan2( by - ay, bx - ax );
     },
 
+    //For purposes of showing the skater angle, get the view angle of the track here.  Note this means inverting the y values
+    //This is called every step while animating on the track, so it was optimized to avoid new allocations
+    getUnitNormalVector: function( u ) {
+      var tolerance = 1E-6;
+      var ax = this.xSpline.at( u - tolerance );
+      var ay = this.ySpline.at( u - tolerance );
+
+      var bx = this.xSpline.at( u + tolerance );
+      var by = this.ySpline.at( u + tolerance );
+
+      var angle = Math.atan2( by - ay, bx - ax );
+      return Vector2.createPolar( 1, angle + Math.PI / 2 );
+    },
+
     updateLinSpace: function() {
       this.minPoint = 0;
       this.maxPoint = (this.controlPoints.length - 1) / this.controlPoints.length;

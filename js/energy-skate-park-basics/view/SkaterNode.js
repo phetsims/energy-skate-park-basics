@@ -54,8 +54,9 @@ define( function( require ) {
       skaterNode.setRotation( 0 );
 
       //Keep angle when leaving a track, but optimize for straight up and down skater
-      if ( skater.angle !== 0 ) {
-        skaterNode.rotateAround( new Vector2( view.x, view.y ), skater.angle );
+      var displayAngle = skater.angle + (skater.up ? 0 : Math.PI );
+      if ( displayAngle !== 0 ) {
+        skaterNode.rotateAround( new Vector2( view.x, view.y ), displayAngle );
       }
     };
     this.skater.positionProperty.link( positionChanged );
@@ -75,6 +76,7 @@ define( function( require ) {
           //TODO: or maybe jump there when grabbed (not when dragged)?
           var globalPoint = skaterNode.globalToParentPoint( event.pointer.point );
           var position = modelViewTransform.viewToModelPosition( globalPoint );
+          var dragPosition = position;
 
           //make sure it is within the visible bounds
           position = view.availableModelBounds.getClosestPoint( position.x, position.y, position );
@@ -90,6 +92,13 @@ define( function( require ) {
               targetTrack = closestTrackAndPositionAndParameter.track;
               targetU = closestTrackAndPositionAndParameter.u;
               skater.angle = targetTrack.getViewAngleAt( targetU );
+
+              //Choose the right side of the track.
+              //TODO: This should be the side of the track that would have the skater upside up
+              var normal = targetTrack.getUnitNormalVector( targetU );
+              var vectorToSkater = dragPosition.minus( closestPoint );
+              skater.up = normal.dot( vectorToSkater ) > 0;
+
               closeEnough = true;
             }
           }
@@ -100,6 +109,7 @@ define( function( require ) {
             //make skater upright if not near the track
             //TODO: make this continuous based on deltas so it is a smooth motion?
             skater.angle = 0;
+            skater.up = true;
           }
 
           skater.position = position;
