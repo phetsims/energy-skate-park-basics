@@ -13,12 +13,12 @@ define( function( require ) {
   var inherit = require( 'PHET_CORE/inherit' );
   var Node = require( 'SCENERY/nodes/Node' );
   var PushButton = require( 'SUN/PushButton' );
-  var playButtonImage = require( 'image!ENERGY_SKATE_PARK/../images/button_sim_play.png' );
-  var pauseButtonImage = require( 'image!ENERGY_SKATE_PARK/../images/button_sim_pause.png' );
-  var stepButtonUnpressedImage = require( 'image!ENERGY_SKATE_PARK/../images/button_step_unpressed.png' );
-  var stepButtonHoverImage = require( 'image!ENERGY_SKATE_PARK/../images/button_step_hover.png' );
-  var stepButtonPressedImage = require( 'image!ENERGY_SKATE_PARK/../images/button_step_pressed.png' );
-  var stepButtonDeactivatedImage = require( 'image!ENERGY_SKATE_PARK/../images/button_step_deactivated.png' );
+  var playButtonImage = require( 'image!ENERGY_SKATE_PARK/button_sim_play.png' );
+  var pauseButtonImage = require( 'image!ENERGY_SKATE_PARK/button_sim_pause.png' );
+  var stepButtonUnpressedImage = require( 'image!ENERGY_SKATE_PARK/button_step_unpressed.png' );
+  var stepButtonHoverImage = require( 'image!ENERGY_SKATE_PARK/button_step_hover.png' );
+  var stepButtonPressedImage = require( 'image!ENERGY_SKATE_PARK/button_step_pressed.png' );
+  var stepButtonDeactivatedImage = require( 'image!ENERGY_SKATE_PARK/button_step_deactivated.png' );
   var Image = require( 'SCENERY/nodes/Image' );
   var ToggleButton = require( 'SUN/ToggleButton' );
 

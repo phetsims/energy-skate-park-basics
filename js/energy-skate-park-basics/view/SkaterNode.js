@@ -13,7 +13,7 @@ define( function( require ) {
   var Circle = require( 'SCENERY/nodes/Circle' );
   var Image = require( 'SCENERY/nodes/Image' );
   var SimpleDragHandler = require( 'SCENERY/input/SimpleDragHandler' );
-  var skaterImage = require( 'image!ENERGY_SKATE_PARK/../images/skater.png' );
+  var skaterImage = require( 'image!ENERGY_SKATE_PARK/skater.png' );
   var Vector2 = require( 'DOT/Vector2' );
   var Matrix3 = require( 'DOT/Matrix3' );
   var LinearFunction = require( 'DOT/LinearFunction' );
