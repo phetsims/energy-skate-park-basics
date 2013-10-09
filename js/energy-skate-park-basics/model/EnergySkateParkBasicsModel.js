@@ -443,9 +443,14 @@ define( function( require ) {
       this.tracks.remove( b );
       this.tracks.add( newTrack );
 
-      //TODO: Move skater to new track if he was on the old track, by searching for the best fit point on the new track
+      //Move skater to new track if he was on the old track, by searching for the best fit point on the new track
+      //Note: Energy is not conserved when tracks joined since the user has added or removed energy from the system
       if ( this.skater.track === a || this.skater.track === b ) {
-        this.skater.track = null;
+        var p = newTrack.getClosestPositionAndParameter( this.skater.position );
+        this.skater.track = newTrack;
+        this.skater.u = p.u;
+
+        //TODO: Skater sometimes flips upside down when tracks joined, see TODO in Skater.js
       }
     }
   } );
