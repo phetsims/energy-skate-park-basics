@@ -6,6 +6,8 @@
  *
  * The step functions focus on making computations up front and applying changes to the skater at the end of each method, to
  * simplify the logic and make it communicate with the Axon+View as little as possible (for performance reasons).
+ *
+ * //TODO: repackage classes now that the repo was renamed to energy-skate-park-basics, get rid of the energy-skate-park-basics subpackage
  * @author Sam Reid
  */
 define( function( require ) {
@@ -17,6 +19,7 @@ define( function( require ) {
   var Skater = require( 'ENERGY_SKATE_PARK/energy-skate-park-basics/model/Skater' );
   var Track = require( 'ENERGY_SKATE_PARK/energy-skate-park-basics/model/Track' );
   var ControlPoint = require( 'ENERGY_SKATE_PARK/energy-skate-park-basics/model/ControlPoint' );
+  var circularRegression = require( 'ENERGY_SKATE_PARK/energy-skate-park-basics/model/circularRegression' );
   var Vector2 = require( 'DOT/Vector2' );
   var ObservableArray = require( 'AXON/ObservableArray' );
 
@@ -43,7 +46,7 @@ define( function( require ) {
       speed: 'normal',
 
       frictionEnabled: false,
-      friction: 1,
+      friction: 0.2,
       stickToTrack: true
     } );
     this.skater = new Skater();
@@ -265,7 +268,8 @@ define( function( require ) {
     },
 
     //Update the skater if he is on the track
-    //TODO: Add support for friction
+    //TODO: Add support for friction.  Could try deriving the parametric equations with a friction term, but may be difficult since we have to account for the
+    //normal force in the friction computation.
     stepTrack: function( dt ) {
 
       var skater = this.skater;
@@ -337,10 +341,21 @@ define( function( require ) {
       var vx = xPrime2 * uD2;
       var vy = yPrime2 * uD2;
 
+      if ( this.frictionAllowed && this.frictionEnabled && this.friction > 0 ) {
+//        var normalForce = this.getNormalForce( vx, vy );
+      }
+
       skater.velocity = new Vector2( vx, vy );
       skater.angle = skater.track.getViewAngleAt( skater.u );
       skater.position = new Vector2( x2, y2 );
       skater.updateEnergy();
+
+      //check out the radius of curvature
+      var result = circularRegression( [
+        new Vector2( track.getX( skater.u ), track.getY( skater.u ) ),
+        new Vector2( track.getX( skater.u - 1E-6 ), track.getY( skater.u - 1E-6 ) ),
+        new Vector2( track.getX( skater.u + 1E-6 ), track.getY( skater.u + 1E-6 ) )] );
+      console.log( result );
 
       //Fly off the left or right side of the track
       if ( !skater.track.isParameterInBounds( u2 ) ) {
@@ -348,6 +363,21 @@ define( function( require ) {
         skater.uD = 0;
       }
     },
+
+    getRadiusOfCurvature: function() {},
+
+    getCurvatureDirection: function() {},
+
+    getNormalForce: function( vx, vy ) {
+      var v = Math.sqrt( vx * vx + vy * vy );
+      var radiusOfCurvature = this.getRadiusOfCurvature();
+      var curvatureDirection = this.getCurvatureDirection();
+      var netForceRadial = new Vector2( 0, this.skater.mass * this.skater.gravity );
+//      netForceRadial.add( new MutableVector2D( xThrust * mass, yThrust * mass ) );//thrust
+      var normalForce = this.skater.mass * v * v / Math.abs( radiusOfCurvature ) - netForceRadial.dot( curvatureDirection );
+      return Vector2.createPolar( normalForce, curvatureDirection.angle );
+    },
+
     stepModel: function( dt ) {
       var skater = this.skater;
 
