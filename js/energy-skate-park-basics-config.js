@@ -3,12 +3,6 @@
 require.config( {
   deps: ['energy-skate-park-basics-main'],
 
-  config: {
-    i18n: {
-      locale: 'en_us'
-    }
-  },
-
   paths: {
 
     //Load dependencies from sibling directories
