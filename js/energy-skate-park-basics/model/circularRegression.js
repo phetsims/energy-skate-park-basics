@@ -19,7 +19,7 @@ define( function( require ) {
   var sum = function( points, term ) {
     var total = 0;
     for ( var i = 0; i < points.length; i++ ) {
-      total += term( points[i] )
+      total += term( points[i] );
     }
     return total;
   };
