@@ -35,6 +35,9 @@ define( function( require ) {
 
     var model = this;
     PropertySet.call( this, {
+
+      //For debugging the circular regression
+      circularRegression: {},
       pieChartVisible: false,
       barGraphVisible: false,
       gridVisible: false,
@@ -355,6 +358,7 @@ define( function( require ) {
         new Vector2( track.getX( skater.u - 1E-6 ), track.getY( skater.u - 1E-6 ) ),
         new Vector2( track.getX( skater.u + 1E-6 ), track.getY( skater.u + 1E-6 ) )] );
       console.log( result );
+      this.circularRegression = result;
 
       //Fly off the left or right side of the track
       if ( !skater.track.isParameterInBounds( u2 ) ) {

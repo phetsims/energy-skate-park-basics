@@ -23,6 +23,7 @@ define( function( require ) {
   var PieChartNode = require( 'ENERGY_SKATE_PARK_BASICS/view/PieChartNode' );
   var PieChartLegend = require( 'ENERGY_SKATE_PARK_BASICS/view/PieChartLegend' );
   var GridNode = require( 'ENERGY_SKATE_PARK_BASICS/view/GridNode' );
+  var CircularRegressionNode = require( 'ENERGY_SKATE_PARK_BASICS/view/CircularRegressionNode' );
   var ResetAllButton = require( 'SCENERY_PHET/ResetAllButton' );
   var SceneSelectionPanel = require( 'ENERGY_SKATE_PARK_BASICS/view/SceneSelectionPanel' );
   var ModelViewTransform2 = require( 'PHETCOMMON/view/ModelViewTransform2' );
@@ -158,6 +159,11 @@ define( function( require ) {
     if ( showViewBounds ) {
       this.viewBoundsPath = new Path( null, {pickable: false, stroke: 'red', lineWidth: 10} );
       this.addChild( this.viewBoundsPath );
+    }
+
+    var showCircularRegression = true;
+    if ( showCircularRegression ) {
+      this.addChild( new CircularRegressionNode( model.circularRegressionProperty, transform ) );
     }
   }
 
