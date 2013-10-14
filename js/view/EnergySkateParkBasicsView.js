@@ -36,7 +36,7 @@ define( function( require ) {
   var speedString = require( 'string!ENERGY_SKATE_PARK_BASICS/properties.speed' );
 
   //Debug flag to show the view bounds, the region within which the skater can move
-  var showViewBounds = false;
+  var showAvailableBounds = false;
 
   //TODO: Consider floating panels to the side when space is available.  For instance, the control panel could float to the right if there is extra space there on a wide screen
   //TODO: (but don't float arbitrarily far because it could get too far from the play area).
@@ -159,7 +159,7 @@ define( function( require ) {
     }
 
     //For debugging the visible bounds
-    if ( showViewBounds ) {
+    if ( showAvailableBounds ) {
       this.viewBoundsPath = new Path( null, {pickable: false, stroke: 'red', lineWidth: 10} );
       this.addChild( this.viewBoundsPath );
     }
@@ -199,15 +199,16 @@ define( function( require ) {
       this.backgroundNode.layout( offsetX, offsetY, width, height, scale );
       this.gridNode.layout( offsetX, offsetY, width, height, scale );
 
-      this.availableViewBounds = new Rect( -offsetX, -offsetY, width / scale, this.modelViewTransform.modelToViewY( 0 ) - Math.abs( offsetY ) );
-
-      //Show it for debugging
-      if ( showViewBounds ) {
-        this.viewBoundsPath.shape = Shape.bounds( this.availableViewBounds );
-      }
+      this.availableViewBounds = new Rect( -offsetX, -offsetY, width / scale, this.modelViewTransform.modelToViewY( 0 ) + Math.abs( offsetY ) );
 
       //Compute the visible model bounds so we will know when a model object like the skater has gone offscreen
       this.availableModelBounds = this.modelViewTransform.viewToModelBounds( this.availableViewBounds );
+
+      //Show it for debugging
+      if ( showAvailableBounds ) {
+//        this.viewBoundsPath.shape = Shape.bounds( this.modelViewTransform.modelToViewBounds( this.availableModelBounds ) );
+        this.viewBoundsPath.shape = Shape.bounds( this.availableViewBounds );
+      }
     }
   } );
 } );
