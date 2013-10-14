@@ -21,6 +21,7 @@ define( function( require ) {
   var circularRegression = require( 'ENERGY_SKATE_PARK_BASICS/model/circularRegression' );
   var Vector2 = require( 'DOT/Vector2' );
   var ObservableArray = require( 'AXON/ObservableArray' );
+  var Util = require( 'DOT/Util' );
 
   /**
    * Main constructor for the EnergySkateParkBasicsModel
@@ -341,8 +342,11 @@ define( function( require ) {
 
       if ( this.friction > 0 ) {
 
+        var coefficient = Util.linear( 0, 1, 1, 0.95, this.friction );
         //TODO: this is technically incorrect because it is in parametric units, but is it close enough?  When will it break down?  When the metric space of the track is radically different (control points differently spaced)
-        skater.uD = uD2 * 0.97;
+        //But perhaps since friction is qualitative in this sim it will be okay.
+        //If we do need the full friction treatment, perhaps we could modify the parametric equation uDD above to account for friction as it accounts for gravity force.
+        skater.uD = uD2 * coefficient;
       }
       else {
         skater.uD = uD2;
