@@ -137,7 +137,7 @@ define( function( require ) {
     //When the skater goes off screen, make the "return skater" button big
     onscreenProperty.lazyLink( function( onscreen ) {
       var center = returnSkaterButton.center;
-      console.log( onscreen );
+      console.log( 'onscreen', onscreen );
       returnSkaterButton.setScaleMagnitude( onscreen ? 1 : 1.5 );
       returnSkaterButton.center = center;
     } );
@@ -161,6 +161,7 @@ define( function( require ) {
       this.addChild( this.viewBoundsPath );
     }
 
+    //For debugging the circular regression computation
     var showCircularRegression = true;
     if ( showCircularRegression ) {
       this.addChild( new CircularRegressionNode( model.circularRegressionProperty, transform ) );

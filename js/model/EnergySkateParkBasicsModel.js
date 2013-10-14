@@ -47,7 +47,6 @@ define( function( require ) {
       //speed of the model, either 'normal' or 'slow'
       speed: 'normal',
 
-      frictionEnabled: false,
       friction: 0.2,
       stickToTrack: true
     } );
@@ -343,22 +342,22 @@ define( function( require ) {
       var vx = xPrime2 * uD2;
       var vy = yPrime2 * uD2;
 
-      if ( this.frictionAllowed && this.frictionEnabled && this.friction > 0 ) {
-//        var normalForce = this.getNormalForce( vx, vy );
+      //check out the radius of curvature
+      var curvature = circularRegression( [
+        new Vector2( track.getX( skater.u ), track.getY( skater.u ) ),
+        new Vector2( track.getX( skater.u - 1E-6 ), track.getY( skater.u - 1E-6 ) ),
+        new Vector2( track.getX( skater.u + 1E-6 ), track.getY( skater.u + 1E-6 ) )] );
+      this.circularRegression = curvature;
+
+      if ( this.frictionAllowed && this.friction > 0 ) {
+        var normalForce = this.getNormalForce( x2, y2, vx, vy, curvature );
+        console.log( 'normalForce', normalForce.magnitude() );
       }
 
       skater.velocity = new Vector2( vx, vy );
       skater.angle = skater.track.getViewAngleAt( skater.u );
       skater.position = new Vector2( x2, y2 );
       skater.updateEnergy();
-
-      //check out the radius of curvature
-      var result = circularRegression( [
-        new Vector2( track.getX( skater.u ), track.getY( skater.u ) ),
-        new Vector2( track.getX( skater.u - 1E-6 ), track.getY( skater.u - 1E-6 ) ),
-        new Vector2( track.getX( skater.u + 1E-6 ), track.getY( skater.u + 1E-6 ) )] );
-      console.log( result );
-      this.circularRegression = result;
 
       //Fly off the left or right side of the track
       if ( !skater.track.isParameterInBounds( u2 ) ) {
@@ -367,18 +366,22 @@ define( function( require ) {
       }
     },
 
-    getRadiusOfCurvature: function() {},
+    getRadiusOfCurvature: function( curvature ) {
+      return curvature.r;
+    },
 
-    getCurvatureDirection: function() {},
+    //TODO: allocation
+    getCurvatureDirection: function( curvature, x2, y2 ) {
+      return new Vector2( curvature.x - x2, curvature.y - y2 ).normalized();
+    },
 
-    getNormalForce: function( vx, vy ) {
+    getNormalForce: function( x2, y2, vx, vy, curvature ) {
       var v = Math.sqrt( vx * vx + vy * vy );
-      var radiusOfCurvature = this.getRadiusOfCurvature();
-      var curvatureDirection = this.getCurvatureDirection();
-      var netForceRadial = new Vector2( 0, this.skater.mass * this.skater.gravity );
+      var curvatureDirection = this.getCurvatureDirection( curvature, x2, y2 );
+      var netForce = new Vector2( 0, -this.skater.mass * this.skater.gravity );
 //      netForceRadial.add( new MutableVector2D( xThrust * mass, yThrust * mass ) );//thrust
-      var normalForce = this.skater.mass * v * v / Math.abs( radiusOfCurvature ) - netForceRadial.dot( curvatureDirection );
-      return Vector2.createPolar( normalForce, curvatureDirection.angle );
+      var normalForceMagnitude = this.skater.mass * v * v / curvature.r - netForce.dot( curvatureDirection );
+      return Vector2.createPolar( normalForceMagnitude, curvatureDirection.angle() );
     },
 
     stepModel: function( dt ) {
