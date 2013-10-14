@@ -63,7 +63,7 @@ define( function( require ) {
       var slope = [new Vector2( -4, 4 ), new Vector2( -2, 2 ), new Vector2( 2, 1 )];
       var doubleWell = [new Vector2( -4, 5 ), new Vector2( -2, 0 ), new Vector2( 0, 2 ), new Vector2( 2, 1 ), new Vector2( 4, 5 ) ];
       var toControlPoint = function( pt ) {return new ControlPoint( pt.x, pt.y );};
-      this.tracks.addAll( [new Track( _.map( parabola, toControlPoint ), false ), new Track( _.map( slope, toControlPoint ), false ), new Track( _.map( doubleWell, toControlPoint ), false )] );
+      this.tracks.addAll( [new Track( this.tracks, _.map( parabola, toControlPoint ), false ), new Track( this.tracks, _.map( slope, toControlPoint ), false ), new Track( _.map( doubleWell, toControlPoint ), false )] );
 
       this.sceneProperty.link( function( scene ) {
         for ( var i = 0; i < model.tracks.length; i++ ) {
@@ -81,7 +81,7 @@ define( function( require ) {
         var b = new Vector2( 0, 0 ).plus( offset );
         var c = new Vector2( 1, 0 ).plus( offset );
         var controlPoints = [ new ControlPoint( a.x, a.y ), new ControlPoint( b.x, b.y ), new ControlPoint( c.x, c.y )];
-        this.tracks.add( new Track( controlPoints, true ) );
+        this.tracks.add( new Track( this.tracks, controlPoints, true ) );
       }
     }
 
@@ -514,7 +514,7 @@ define( function( require ) {
         secondTrackBackward();
       }
 
-      var newTrack = new Track( points, true );
+      var newTrack = new Track( this.tracks, points, true, a.getParentsOrSelf().concat( b.getParentsOrSelf() ) );
       newTrack.physical = true;
       this.tracks.remove( a );
       this.tracks.remove( b );

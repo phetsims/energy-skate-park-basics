@@ -15,12 +15,16 @@ define( function( require ) {
 
   /**
    * Model for a track, which has a fixed number of points.  If you added a point to a Track, you need a new track.
+   * @param {ObservableArray<Track>} all model tracks
    * @param {Array<ControlPoint>} controlPoints
    * @param {Boolean} interactive
+   * @param {Array<Number>} parents the original tracks that were used to make this track (if any) so they can be broken apart when dragged back to control panel
    * @constructor
    */
-  function Track( controlPoints, interactive ) {
+  function Track( modelTracks, controlPoints, interactive, parents ) {
     var track = this;
+    this.parents = parents;
+    this.modelTracks = modelTracks;
 
     PropertySet.call( this, {
 
@@ -249,6 +253,23 @@ define( function( require ) {
         }
       }
       return false;
+    },
+
+    //Return an array which contains all of the Tracks that would need to be reset if this track was reset.
+    getParentsOrSelf: function() { return this.parents || [this]; },
+
+    returnToControlPanel: function() {
+      if ( this.parents ) {
+        this.modelTracks.remove( this );
+        for ( var i = 0; i < this.parents.length; i++ ) {
+          var parent = this.parents[i];
+          parent.reset();
+          this.modelTracks.add( parent );
+        }
+      }
+      else {
+        this.reset();
+      }
     }
   } );
 } );

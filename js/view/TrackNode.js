@@ -123,7 +123,7 @@ define( function( require ) {
           //Return the track.
           //TODO: if it was a combination of two tracks, split them and return both, or keep track of parents, or something
           else if ( track.readyToReturn ) {
-            track.reset();
+            track.returnToControlPanel();
           }
         }
       }
