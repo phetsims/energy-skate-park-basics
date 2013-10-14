@@ -28,13 +28,11 @@ define( function( require ) {
     var thermalEnergySlice = new Path( null, {fill: EnergySkateParkColorScheme.thermalEnergy, stroke: 'black', lineWidth: 1} );
     Node.call( this, {children: [thermalEnergySlice, potentialEnergySlice, kineticEnergySlice ], pickable: false} );
 
-    this.skater.positionProperty.link( function( position ) {
-      var view = modelViewTransform.modelToViewPosition( position );
+    this.skater.headPositionProperty.link( function( headPosition ) {
+      var view = modelViewTransform.modelToViewPosition( headPosition );
 
       //Center pie chart over skater's head not his feet so it doesn't look awkward when skating in a parabola
-      var angle = pieChartNode.skater.angle;
-      var location = Vector2.createPolar( 150, angle - Math.PI / 2 );
-      pieChartNode.setTranslation( view.plus( location ) );
+      pieChartNode.setTranslation( view.x, view.y - 50 );
     } );
 
     var updatePaths = function() {

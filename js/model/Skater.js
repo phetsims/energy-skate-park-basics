@@ -10,6 +10,7 @@ define( function( require ) {
   var inherit = require( 'PHET_CORE/inherit' );
   var PropertySet = require( 'AXON/PropertySet' );
   var Vector2 = require( 'DOT/Vector2' );
+  var Util = require( 'DOT/Util' );
 
   function Skater() {
     var skater = this;
@@ -57,6 +58,15 @@ define( function( require ) {
     } );
 
     this.addDerivedProperty( 'speed', ['velocity'], function( velocity ) {return velocity.magnitude();} );
+    this.addDerivedProperty( 'headPosition', ['position', 'mass', 'angle'], function( position, mass, angle ) {
+
+      //TODO: Center pie chart over skater's head not his feet so it doesn't look awkward when skating in a parabola
+      //when mass is minimum, the skater height is 1.5
+      //when mass is max, the skater height is 2.5
+      var skaterHeight = Util.linear( 10, 110, 1.5, 2.5, mass );
+      var vector = Vector2.createPolar( skaterHeight, angle - Math.PI / 2 );
+      return position.plusXY( vector.x, -vector.y );
+    } );
     this.massProperty.link( function( mass ) { skater.updateEnergy(); } );
 
     this.updateEnergy();
