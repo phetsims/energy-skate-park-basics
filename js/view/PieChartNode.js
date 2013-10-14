@@ -3,6 +3,8 @@
 /**
  * Scenery node for the pie chart, which moves with the skater and shows a pie chart representation of the energies by type.
  * The size of the pie chart is proportional to the total energy.
+ *
+ * TODO: Sometimes a 'seam' is shown when the energy is all of one type (or nearly (off by 10E-6) all of one type)
  * @author Sam Reid
  */
 define( function( require ) {

@@ -14,7 +14,6 @@ define( function( require ) {
   function Skater() {
     var skater = this;
 
-    //TODO: Make it so the skater can go on top or bottom of track
     PropertySet.call( this, {track: null,
 
       //Parameter along the parametric spline

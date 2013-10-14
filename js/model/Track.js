@@ -15,7 +15,7 @@ define( function( require ) {
 
   /**
    * Model for a track, which has a fixed number of points.  If you added a point to a Track, you need a new track.
-   * @param {ObservableArray<Track>} all model tracks
+   * @param {ObservableArray<Track>} modelTracks all model tracks, so this track can add and remove others when joined/split
    * @param {Array<ControlPoint>} controlPoints
    * @param {Boolean} interactive
    * @param {Array<Number>} parents the original tracks that were used to make this track (if any) so they can be broken apart when dragged back to control panel

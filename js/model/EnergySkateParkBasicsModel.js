@@ -63,7 +63,10 @@ define( function( require ) {
       var slope = [new Vector2( -4, 4 ), new Vector2( -2, 2 ), new Vector2( 2, 1 )];
       var doubleWell = [new Vector2( -4, 5 ), new Vector2( -2, 0 ), new Vector2( 0, 2 ), new Vector2( 2, 1 ), new Vector2( 4, 5 ) ];
       var toControlPoint = function( pt ) {return new ControlPoint( pt.x, pt.y );};
-      this.tracks.addAll( [new Track( this.tracks, _.map( parabola, toControlPoint ), false ), new Track( this.tracks, _.map( slope, toControlPoint ), false ), new Track( _.map( doubleWell, toControlPoint ), false )] );
+      this.tracks.addAll( [
+        new Track( this.tracks, _.map( parabola, toControlPoint ), false ),
+        new Track( this.tracks, _.map( slope, toControlPoint ), false ),
+        new Track( this.tracks, _.map( doubleWell, toControlPoint ), false )] );
 
       this.sceneProperty.link( function( scene ) {
         for ( var i = 0; i < model.tracks.length; i++ ) {
@@ -105,7 +108,7 @@ define( function( require ) {
     //See http://digitalcommons.calpoly.edu/cgi/viewcontent.cgi?article=1387&context=phy_fac
     //Computational problems in introductory physics: Lessons from a bead on a wire
     //Thomas J. Bensky and Matthew J. Moelter
-    //TODO: We probably need to add friction here
+    //TODO: We probably need to add friction here.  Could be easy if is symmetric in x & y, factor out an ax, ay term
     uDD: function( uD, xP, xPP, yP, yPP, g ) {
       return -1 * (uD * uD * (xP * xPP + yP * yPP) - g * yP) / (xP * xP + yP * yP);
     },
