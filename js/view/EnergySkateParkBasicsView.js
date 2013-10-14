@@ -76,7 +76,9 @@ define( function( require ) {
 
       var addTrackNode = function( track ) {
 
-        var trackNode = new TrackNode( model, track, transform );
+        var trackNode = new TrackNode( model, track, transform, function( point ) {
+          return view.trackCreationPanel.bounds.containsPoint( view.globalToLocalPoint( point ) );
+        } );
         view.addChild( trackNode );
 
         //When track removed, remove its view
@@ -96,8 +98,8 @@ define( function( require ) {
 
       //Add a panel behind the tracks
       var margin = 5;
-      var panel = new Panel( new Rectangle( 0, 0, interactiveTrackNodes[0].width, interactiveTrackNodes[0].height ), {xMargin: margin, yMargin: margin, x: interactiveTrackNodes[0].left - margin, y: interactiveTrackNodes[0].top - margin} );
-      this.addChild( panel );
+      this.trackCreationPanel = new Panel( new Rectangle( 0, 0, interactiveTrackNodes[0].width, interactiveTrackNodes[0].height ), {xMargin: margin, yMargin: margin, x: interactiveTrackNodes[0].left - margin, y: interactiveTrackNodes[0].top - margin} );
+      this.addChild( this.trackCreationPanel );
 
       interactiveTrackNodes.forEach( function( trackNode ) { trackNode.moveToFront(); } );
 

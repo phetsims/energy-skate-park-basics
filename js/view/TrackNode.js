@@ -26,13 +26,21 @@ define( function( require ) {
     this.addChild( road );
     var clickOffset = null;
 
-    var dragHandler = new SimpleDragHandler( {
+    var lastDragPoint;
+    var handler = new SimpleDragHandler( {
         allowTouchSnag: true,
+
+        start: function( event, trail ) {
+          lastDragPoint = event.pointer.point;
+        },
 
         //Drag an entire track
         //TODO: optimize so it is not recreating shape or getting called back once per control point
-        translate: function( options ) {
-          var delta = options.delta;
+        drag: function( event, trail ) {
+
+          var dragPoint = event.pointer.point;
+          var delta = handler.transform.inverseDelta2( dragPoint.minus( lastDragPoint ) );
+          lastDragPoint = dragPoint;
           var modelDelta = modelViewTransform.viewToModelDelta( delta );
           track.translate( modelDelta.x, modelDelta.y );
 
@@ -89,6 +97,7 @@ define( function( require ) {
             myPoints[1].snapTarget = null;
           }
         },
+        translate: function() {},
 
         //TODO: When dropping the track in the toolbox, make nonphysical and reset coordinates
         end: function() {
@@ -101,7 +110,7 @@ define( function( require ) {
     );
 
     if ( track.interactive ) {
-      road.addInputListener( dragHandler );
+      road.addInputListener( handler );
     }
 
     //Reuse arrays to save allocations and prevent garbage collections
@@ -210,9 +219,7 @@ define( function( require ) {
                   controlPoint.snapTarget = bestDistance !== null && bestDistance < 1 ? bestMatch : null;
                 }
               },
-              translate: function() {
-
-              },
+              translate: function() { },
               end: function( event ) {
                 if ( isEndPoint && controlPoint.snapTarget ) {
                   model.joinTracks( track );
