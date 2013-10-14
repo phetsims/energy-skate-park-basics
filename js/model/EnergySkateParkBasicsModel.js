@@ -122,8 +122,8 @@ define( function( require ) {
     step: function( dt ) {
       //If the delay makes dt too high, then truncate it.  This helps e.g. when clicking in the address bar on ipad, which gives a huge dt and problems for integration
       //TODO: on the iPad3 if all features are turned on, the model will have numerical integration problems and buggy behavior.  We should subdivide dt or find another solution
-      if ( dt > 1.0 / 10 ) {
-        dt = 1.0 / 10;
+      if ( dt > 1.0 / 30 ) {
+        dt = 1.0 / 30;
       }
       if ( !this.paused ) {
         this.stepModel( this.speed === 'normal' ? dt : dt * 0.25 );
@@ -328,7 +328,7 @@ define( function( require ) {
 //          console.log( (finalEnergy - initialEnergy).toFixed( 2 ), 'binary search, lowerBound=', lowerBound, 'upperBound', upperBound );
         var uMid = (upperBound + lowerBound) / 2;
 
-        //TODO: if we need to tweak u as well as uD then we may need to use track.getEnergy and forego some optimizations
+        //For future, if we need to tweak u as well as uD then we may need to use track.getEnergy and forego some optimizations
         var midEnergy = potentialEnergy + factoredEnergy * uMid * uMid;
         if ( midEnergy > initialEnergy ) {
           upperBound = uMid;

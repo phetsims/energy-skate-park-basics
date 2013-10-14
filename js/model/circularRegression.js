@@ -31,8 +31,6 @@ define( function( require ) {
       return point.minus( average );
     } );
 
-//    uv.forEach( function( pt ) {//console.log( pt.x, pt.y )} );
-
     //TODO: performance
     var suu = sum( uv, function( point ) { return point.x * point.x; } );
     var suv = sum( uv, function( point ) { return point.x * point.y; } );
@@ -42,27 +40,17 @@ define( function( require ) {
     var suvv = sum( uv, function( point ) { return point.x * point.y * point.y; } );
     var svuu = sum( uv, function( point ) { return point.y * point.x * point.x; } );
 
-    //console.log( suu, suv, svv, suuu, svvv, suvv, svuu );
-
     var a = (suuu + suvv) / 2;
     var b = (svvv + svuu) / 2;
     var q = svv - suv * suv / suu;
     var vc = (b - a * suv / suu) / q;
     var uc = (a - vc * suv) / suu;
 
-    //console.log( 'a', a );
-    //console.log( 'b', b );
-    //console.log( 'uc', uc );
-    //console.log( 'vc', vc );
     var center = new Vector2( uc, vc ).plus( average );
-    //2x2 linear system
-    //console.log( 'center', center );
 
+    //2x2 linear system, solve by gaussian elimination
     var alpha = uc * uc + vc * vc + (suu + svv) / points.length;
     var r = Math.sqrt( alpha );
-    //console.log( r );
-
-    //convert u,v back to x,y
     return {r: r, x: uc + average.x, y: vc + average.y};
   };
 
