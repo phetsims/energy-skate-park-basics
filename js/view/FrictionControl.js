@@ -14,9 +14,9 @@ define( function( require ) {
   var PhetFont = require( 'SCENERY_PHET/PhetFont' );
   var HSlider = require( 'SUN/HSlider' );
   var AquaRadioButton = require( 'SUN/AquaRadioButton' );
-  var frictionString = require( 'string!ENERGY_SKATE_PARK/controls.friction.title' );
-  var noneString = require( 'string!ENERGY_SKATE_PARK/controls.gravity.none' );
-  var lotsString = require( 'string!ENERGY_SKATE_PARK/controls.gravity.lots' );
+  var frictionString = require( 'string!ENERGY_SKATE_PARK_BASICS/controls.friction.title' );
+  var noneString = require( 'string!ENERGY_SKATE_PARK_BASICS/controls.gravity.none' );
+  var lotsString = require( 'string!ENERGY_SKATE_PARK_BASICS/controls.gravity.lots' );
 
   function FrictionControl( model, view ) {
     var frictionRange = {min: 0, max: 2};

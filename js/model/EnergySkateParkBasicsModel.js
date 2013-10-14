@@ -15,10 +15,10 @@ define( function( require ) {
   var inherit = require( 'PHET_CORE/inherit' );
   var PropertySet = require( 'AXON/PropertySet' );
   var Property = require( 'AXON/Property' );
-  var Skater = require( 'ENERGY_SKATE_PARK/model/Skater' );
-  var Track = require( 'ENERGY_SKATE_PARK/model/Track' );
-  var ControlPoint = require( 'ENERGY_SKATE_PARK/model/ControlPoint' );
-  var circularRegression = require( 'ENERGY_SKATE_PARK/model/circularRegression' );
+  var Skater = require( 'ENERGY_SKATE_PARK_BASICS/model/Skater' );
+  var Track = require( 'ENERGY_SKATE_PARK_BASICS/model/Track' );
+  var ControlPoint = require( 'ENERGY_SKATE_PARK_BASICS/model/ControlPoint' );
+  var circularRegression = require( 'ENERGY_SKATE_PARK_BASICS/model/circularRegression' );
   var Vector2 = require( 'DOT/Vector2' );
   var ObservableArray = require( 'AXON/ObservableArray' );
 

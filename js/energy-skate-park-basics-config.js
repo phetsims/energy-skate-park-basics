@@ -16,7 +16,7 @@ require.config( {
     PHETCOMMON: '../../phetcommon/js',
     SUN: '../../sun/js',
     JOIST: '../../joist/js',
-    ENERGY_SKATE_PARK: '.',
+    ENERGY_SKATE_PARK_BASICS: '.',
 
     //Load plugins
     image: '../../chipper/requirejs-plugins/image',

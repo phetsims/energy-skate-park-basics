@@ -13,7 +13,7 @@ define( function( require ) {
   var Line = require( 'SCENERY/nodes/Line' );
   var Text = require( 'SCENERY/nodes/Text' );
   var PhetFont = require( 'SCENERY_PHET/PhetFont' );
-  var BackgroundNode = require( 'ENERGY_SKATE_PARK/view/BackgroundNode' );
+  var BackgroundNode = require( 'ENERGY_SKATE_PARK_BASICS/view/BackgroundNode' );
 
   function GridNode( model, energySkateParkBasicsView, modelViewTransform ) {
     this.modelViewTransform = modelViewTransform;

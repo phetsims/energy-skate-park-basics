@@ -13,9 +13,9 @@ define( function( require ) {
   var PhetFont = require( 'SCENERY_PHET/PhetFont' );
   var HSlider = require( 'SUN/HSlider' );
   var Property = require( 'AXON/Property' );
-  var skaterMassString = require( 'string!ENERGY_SKATE_PARK/controls.mass' );
-  var smallString = require( 'string!ENERGY_SKATE_PARK/small' );
-  var largeString = require( 'string!ENERGY_SKATE_PARK/large' );
+  var skaterMassString = require( 'string!ENERGY_SKATE_PARK_BASICS/controls.mass' );
+  var smallString = require( 'string!ENERGY_SKATE_PARK_BASICS/small' );
+  var largeString = require( 'string!ENERGY_SKATE_PARK_BASICS/large' );
 
   function MassSlider( model, view ) {
     var slider = new HSlider( model.skater.massProperty, {min: 10, max: 110} );

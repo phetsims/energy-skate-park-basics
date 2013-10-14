@@ -12,8 +12,8 @@ define( function( require ) {
   var AquaRadioButton = require( 'SUN/AquaRadioButton' );
   var Text = require( 'SCENERY/nodes/Text' );
   var PhetFont = require( 'SCENERY_PHET/PhetFont' );
-  var normalString = require( 'string!ENERGY_SKATE_PARK/normal' );
-  var slowMotionString = require( 'string!ENERGY_SKATE_PARK/slow.motion' );
+  var normalString = require( 'string!ENERGY_SKATE_PARK_BASICS/normal' );
+  var slowMotionString = require( 'string!ENERGY_SKATE_PARK_BASICS/slow.motion' );
 
   function PlayPauseControlPanel( model, options ) {
     VBox.call( this, {align: 'left', spacing: 4, children: [

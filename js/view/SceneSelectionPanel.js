@@ -13,8 +13,8 @@ define( function( require ) {
   var HBox = require( 'SCENERY/nodes/HBox' );
   var ToggleButton = require( 'SUN/ToggleButton' );
   var Property = require( 'AXON/Property' );
-  var TrackNode = require( 'ENERGY_SKATE_PARK/view/TrackNode' );
-  var BackgroundNode = require( 'ENERGY_SKATE_PARK/view/BackgroundNode' );
+  var TrackNode = require( 'ENERGY_SKATE_PARK_BASICS/view/TrackNode' );
+  var BackgroundNode = require( 'ENERGY_SKATE_PARK_BASICS/view/BackgroundNode' );
 
   function SceneSelectionPanel( model, view, transform ) {
 

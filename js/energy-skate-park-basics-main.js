@@ -9,14 +9,14 @@ require( [
   'SCENERY/nodes/Image',
   'JOIST/Sim',
   'JOIST/SimLauncher',
-  'ENERGY_SKATE_PARK/EnergySkateParkBasicsScreen',
-  'image!ENERGY_SKATE_PARK/ESP_icon_one_big.png',
-  'image!ENERGY_SKATE_PARK/ESP_icon_two_big.png',
-  'image!ENERGY_SKATE_PARK/ESP_icon_three_big.png',
-  'string!ENERGY_SKATE_PARK/tab.introduction',
-  'string!ENERGY_SKATE_PARK/tab.friction',
-  'string!ENERGY_SKATE_PARK/tab.trackPlayground',
-  'string!ENERGY_SKATE_PARK/energy-skate-park-basics.name'
+  'ENERGY_SKATE_PARK_BASICS/EnergySkateParkBasicsScreen',
+  'image!ENERGY_SKATE_PARK_BASICS/ESP_icon_one_big.png',
+  'image!ENERGY_SKATE_PARK_BASICS/ESP_icon_two_big.png',
+  'image!ENERGY_SKATE_PARK_BASICS/ESP_icon_three_big.png',
+  'string!ENERGY_SKATE_PARK_BASICS/tab.introduction',
+  'string!ENERGY_SKATE_PARK_BASICS/tab.friction',
+  'string!ENERGY_SKATE_PARK_BASICS/tab.trackPlayground',
+  'string!ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics.name'
 ], function( Image, Sim, SimLauncher, EnergySkateParkBasicsScreen, icon1, icon2, icon3, intro, friction, playground, title ) {
   'use strict';
 

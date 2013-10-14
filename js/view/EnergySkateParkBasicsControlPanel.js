@@ -20,16 +20,16 @@ define( function( require ) {
   var Panel = require( 'SUN/Panel' );
   var CheckBox = require( 'SUN/CheckBox' );
   var Text = require( 'SCENERY/nodes/Text' );
-  var MassSlider = require( 'ENERGY_SKATE_PARK/view/MassSlider' );
-  var EnergySkateParkColorScheme = require( 'ENERGY_SKATE_PARK/view/EnergySkateParkColorScheme' );
+  var MassSlider = require( 'ENERGY_SKATE_PARK_BASICS/view/MassSlider' );
+  var EnergySkateParkColorScheme = require( 'ENERGY_SKATE_PARK_BASICS/view/EnergySkateParkColorScheme' );
   var SpeedometerNode = require( 'SCENERY_PHET/SpeedometerNode' );
   var Property = require( 'AXON/Property' );
-  var FrictionControl = require( 'ENERGY_SKATE_PARK/view/FrictionControl' );
-  var barGraphString = require( 'string!ENERGY_SKATE_PARK/plots.bar-graph' );
-  var pieChartString = require( 'string!ENERGY_SKATE_PARK/pieChart' );
-  var speedString = require( 'string!ENERGY_SKATE_PARK/properties.speed' );
-  var gridString = require( 'string!ENERGY_SKATE_PARK/controls.show-grid' );
-  var stickToTrackString = require( 'string!ENERGY_SKATE_PARK/stickToTrack' );
+  var FrictionControl = require( 'ENERGY_SKATE_PARK_BASICS/view/FrictionControl' );
+  var barGraphString = require( 'string!ENERGY_SKATE_PARK_BASICS/plots.bar-graph' );
+  var pieChartString = require( 'string!ENERGY_SKATE_PARK_BASICS/pieChart' );
+  var speedString = require( 'string!ENERGY_SKATE_PARK_BASICS/properties.speed' );
+  var gridString = require( 'string!ENERGY_SKATE_PARK_BASICS/controls.show-grid' );
+  var stickToTrackString = require( 'string!ENERGY_SKATE_PARK_BASICS/stickToTrack' );
 
   function EnergySkateParkBasicsControlPanel( model, view ) {
     var barGraphSet = [new Text( barGraphString ), this.createBarGraphIcon()];
