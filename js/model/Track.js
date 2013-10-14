@@ -29,7 +29,24 @@ define( function( require ) {
       physical: false,
 
       //Store the offset in a separate field for translation, to improve performance when dragging the track
-      offset: new Vector2()
+      offset: new Vector2(),
+
+      //Flag that indicates whether the user is about to drop the track into the track creation panel
+      overTrackPanel: false,
+
+      //Flag that shows whether the track has been dragged fully out of the panel
+      leftThePanel: false
+    } );
+
+    //A track is ready to be returned to the track panel iff it has been taken out once and dragged over the panel
+    this.addDerivedProperty( 'readyToReturn', ['overTrackPanel', 'leftThePanel'], function( overTrackPanel, leftThePanel ) {
+      return overTrackPanel && leftThePanel;
+    } );
+
+    this.overTrackPanelProperty.lazyLink( function( overTrackPanel ) {
+      if ( !overTrackPanel ) {
+        track.leftThePanel = true;
+      }
     } );
 
     this.controlPoints = controlPoints;

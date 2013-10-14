@@ -19,10 +19,20 @@ define( function( require ) {
   var Shape = require( 'KITE/Shape' );
   var LineStyles = require( 'KITE/util/LineStyles' );
 
-  function TrackNode( model, track, modelViewTransform ) {
+  /**
+   * Constructor for TrackNode
+   * @param model the entire model
+   * @param track the track for this track node
+   * @param modelViewTransform the model view transform for the view
+   * @param panelContainsPoint optional function for determining whether the user tried to put a track back in the control panel.
+   * @constructor
+   */
+  function TrackNode( model, track, modelViewTransform, panelContainsPoint ) {
     var trackNode = this;
     Node.call( this, { renderer: 'svg' } );
     var road = new Path( null, {fill: 'black', cursor: track.interactive ? 'pointer' : 'default'} );
+
+    track.readyToReturnProperty.link( function( readyToReturn ) { road.fill = readyToReturn ? 'gray' : 'black'; } );
     this.addChild( road );
     var clickOffset = null;
 
@@ -41,6 +51,10 @@ define( function( require ) {
           var dragPoint = event.pointer.point;
           var delta = handler.transform.inverseDelta2( dragPoint.minus( lastDragPoint ) );
           lastDragPoint = dragPoint;
+
+          //Is the user trying to return the track?
+          track.overTrackPanel = panelContainsPoint( dragPoint );
+
           var modelDelta = modelViewTransform.viewToModelDelta( delta );
           track.translate( modelDelta.x, modelDelta.y );
 
@@ -104,6 +118,12 @@ define( function( require ) {
           var myPoints = [track.controlPoints[0], track.controlPoints[track.controlPoints.length - 1]];
           if ( myPoints[0].snapTarget || myPoints[1].snapTarget ) {
             model.joinTracks( track );
+          }
+
+          //Return the track.
+          //TODO: if it was a combination of two tracks, split them and return both, or keep track of parents, or something
+          else if ( track.readyToReturn ) {
+            track.reset();
           }
         }
       }

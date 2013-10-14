@@ -77,7 +77,8 @@ define( function( require ) {
       var addTrackNode = function( track ) {
 
         var trackNode = new TrackNode( model, track, transform, function( point ) {
-          return view.trackCreationPanel.bounds.containsPoint( view.globalToLocalPoint( point ) );
+          var globalBounds = view.trackCreationPanel.parentToGlobalBounds( view.trackCreationPanel.bounds );
+          return globalBounds.containsPoint( point );
         } );
         view.addChild( trackNode );
 
