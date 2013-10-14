@@ -395,6 +395,20 @@ define( function( require ) {
 //        vy = vy / 2;
       }
 
+      var flyOffMidTrack = false;
+      if ( !this.stickToTrack ) {
+        //compare a to v/r^2 to see if it leaves the track
+        var sideVector = track.getUnitNormalVector( u2 );
+        var outsideCircle = sideVector.dot( this.getCurvatureDirection( curvature, x2, y2 ) ) < 0;
+        var r = curvature.r;
+        var speedSquared = vx * vx + vy * vy;
+        var centripetalForce = mass * speedSquared / r;
+        var netForce = new Vector2( 0, mass * gravity );//no need for friction here since perpendicular to curvature (?)
+        var netForceRadial = netForce.dot( this.getCurvatureDirection( curvature, x2, y2 ) );
+
+        flyOffMidTrack = netForceRadial < centripetalForce && outsideCircle || netForceRadial > centripetalForce && !outsideCircle;
+      }
+
       skater.velocity = new Vector2( vx, vy );
       skater.angle = skater.track.getViewAngleAt( skater.u );
       skater.position = new Vector2( x2, y2 );
@@ -402,6 +416,11 @@ define( function( require ) {
 
       //Fly off the left or right side of the track
       if ( !skater.track.isParameterInBounds( u2 ) ) {
+        skater.track = null;
+        skater.uD = 0;
+      }
+      else if ( flyOffMidTrack ) {
+        console.log( 'leaving track' );
         skater.track = null;
         skater.uD = 0;
       }
