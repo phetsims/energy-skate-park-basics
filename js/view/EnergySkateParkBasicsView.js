@@ -162,8 +162,7 @@ define( function( require ) {
     }
 
     //For debugging the circular regression computation
-    var showCircularRegression = true;
-    if ( showCircularRegression ) {
+    if ( model.showCircularRegression ) {
       this.addChild( new CircularRegressionNode( model.circularRegressionProperty, transform ) );
     }
   }

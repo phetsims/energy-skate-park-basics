@@ -34,6 +34,7 @@ define( function( require ) {
     this.frictionAllowed = frictionAllowed;
     this.draggableTracks = draggableTracks;
 
+    this.showCircularRegression = false;
     var model = this;
     PropertySet.call( this, {
 
@@ -361,7 +362,11 @@ define( function( require ) {
         new Vector2( track.getX( skater.u ), track.getY( skater.u ) ),
         new Vector2( track.getX( skater.u - 1E-6 ), track.getY( skater.u - 1E-6 ) ),
         new Vector2( track.getX( skater.u + 1E-6 ), track.getY( skater.u + 1E-6 ) )] );
-      this.circularRegression = curvature;
+
+      //Debugging facility for showing the curvature
+      if ( this.showCircularRegression ) {
+        this.circularRegression = curvature;
+      }
 
       if ( this.friction > 0 ) {
 
