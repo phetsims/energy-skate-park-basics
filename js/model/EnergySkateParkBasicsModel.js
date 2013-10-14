@@ -7,7 +7,6 @@
  * The step functions focus on making computations up front and applying changes to the skater at the end of each method, to
  * simplify the logic and make it communicate with the Axon+View as little as possible (for performance reasons).
  *
- * //TODO: repackage classes now that the repo was renamed to energy-skate-park-basics, get rid of the energy-skate-park-basics subpackage
  * @author Sam Reid
  */
 define( function( require ) {
@@ -16,10 +15,10 @@ define( function( require ) {
   var inherit = require( 'PHET_CORE/inherit' );
   var PropertySet = require( 'AXON/PropertySet' );
   var Property = require( 'AXON/Property' );
-  var Skater = require( 'ENERGY_SKATE_PARK/energy-skate-park-basics/model/Skater' );
-  var Track = require( 'ENERGY_SKATE_PARK/energy-skate-park-basics/model/Track' );
-  var ControlPoint = require( 'ENERGY_SKATE_PARK/energy-skate-park-basics/model/ControlPoint' );
-  var circularRegression = require( 'ENERGY_SKATE_PARK/energy-skate-park-basics/model/circularRegression' );
+  var Skater = require( 'ENERGY_SKATE_PARK/model/Skater' );
+  var Track = require( 'ENERGY_SKATE_PARK/model/Track' );
+  var ControlPoint = require( 'ENERGY_SKATE_PARK/model/ControlPoint' );
+  var circularRegression = require( 'ENERGY_SKATE_PARK/model/circularRegression' );
   var Vector2 = require( 'DOT/Vector2' );
   var ObservableArray = require( 'AXON/ObservableArray' );
 

@@ -9,7 +9,7 @@ require( [
   'SCENERY/nodes/Image',
   'JOIST/Sim',
   'JOIST/SimLauncher',
-  'ENERGY_SKATE_PARK/energy-skate-park-basics/EnergySkateParkBasicsScreen',
+  'ENERGY_SKATE_PARK/EnergySkateParkBasicsScreen',
   'image!ENERGY_SKATE_PARK/ESP_icon_one_big.png',
   'image!ENERGY_SKATE_PARK/ESP_icon_two_big.png',
   'image!ENERGY_SKATE_PARK/ESP_icon_three_big.png',

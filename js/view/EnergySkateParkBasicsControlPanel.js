@@ -20,11 +20,11 @@ define( function( require ) {
   var Panel = require( 'SUN/Panel' );
   var CheckBox = require( 'SUN/CheckBox' );
   var Text = require( 'SCENERY/nodes/Text' );
-  var MassSlider = require( 'ENERGY_SKATE_PARK/energy-skate-park-basics/view/MassSlider' );
-  var EnergySkateParkColorScheme = require( 'ENERGY_SKATE_PARK/energy-skate-park-basics/view/EnergySkateParkColorScheme' );
+  var MassSlider = require( 'ENERGY_SKATE_PARK/view/MassSlider' );
+  var EnergySkateParkColorScheme = require( 'ENERGY_SKATE_PARK/view/EnergySkateParkColorScheme' );
   var SpeedometerNode = require( 'SCENERY_PHET/SpeedometerNode' );
   var Property = require( 'AXON/Property' );
-  var FrictionControl = require( 'ENERGY_SKATE_PARK/energy-skate-park-basics/view/FrictionControl' );
+  var FrictionControl = require( 'ENERGY_SKATE_PARK/view/FrictionControl' );
   var barGraphString = require( 'string!ENERGY_SKATE_PARK/plots.bar-graph' );
   var pieChartString = require( 'string!ENERGY_SKATE_PARK/pieChart' );
   var speedString = require( 'string!ENERGY_SKATE_PARK/properties.speed' );

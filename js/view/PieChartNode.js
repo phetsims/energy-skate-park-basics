@@ -14,7 +14,7 @@ define( function( require ) {
   var Vector2 = require( 'DOT/Vector2' );
   var Shape = require( 'KITE/Shape' );
   var Path = require( 'SCENERY/nodes/Path' );
-  var EnergySkateParkColorScheme = require( 'ENERGY_SKATE_PARK/energy-skate-park-basics/view/EnergySkateParkColorScheme' );
+  var EnergySkateParkColorScheme = require( 'ENERGY_SKATE_PARK/view/EnergySkateParkColorScheme' );
 
   function PieChartNode( model, energySkateParkBasicsView, modelViewTransform ) {
     var pieChartNode = this;
