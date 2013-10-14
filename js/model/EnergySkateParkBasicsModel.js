@@ -34,6 +34,7 @@ define( function( require ) {
     this.frictionAllowed = frictionAllowed;
     this.draggableTracks = draggableTracks;
 
+    //Flag for debugging whether the circular regression steps should be shown
     this.showCircularRegression = false;
     var model = this;
     PropertySet.call( this, {
@@ -398,7 +399,7 @@ define( function( require ) {
       var flyOffMidTrack = false;
       if ( !this.stickToTrack ) {
         //compare a to v/r^2 to see if it leaves the track
-        var sideVector = track.getUnitNormalVector( u2 );
+        var sideVector = track.getUnitNormalVector( u2 ).timesScalar( skater.top ? -1 : 1 );
         var outsideCircle = sideVector.dot( this.getCurvatureDirection( curvature, x2, y2 ) ) < 0;
         var r = curvature.r;
         var speedSquared = vx * vx + vy * vy;

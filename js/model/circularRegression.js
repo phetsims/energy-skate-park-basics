@@ -62,7 +62,8 @@ define( function( require ) {
     var r = Math.sqrt( alpha );
     //console.log( r );
 
-    return {r: r, x: uc, y: vc};
+    //convert u,v back to x,y
+    return {r: r, x: uc + average.x, y: vc + average.y};
   };
 
   //Test case
