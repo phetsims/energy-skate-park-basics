@@ -322,7 +322,9 @@ define( function( require ) {
       var yPrime2 = track.ySplineDiff.at( u2 );
       var potentialEnergy = -mass * gravity * y2;
       var factoredEnergy = 1 / 2 * mass * (xPrime2 * xPrime2 + yPrime2 * yPrime2);
-      while ( Math.abs( finalEnergy - initialEnergy ) > 1E-2 ) {
+
+      //Tuning this error criterion lower and lower guarantees better conservation of energy when traveling along the track
+      while ( Math.abs( finalEnergy - initialEnergy ) > 1E-10 ) {
 //          console.log( (finalEnergy - initialEnergy).toFixed( 2 ), 'binary search, lowerBound=', lowerBound, 'upperBound', upperBound );
         var uMid = (upperBound + lowerBound) / 2;
 
@@ -447,6 +449,7 @@ define( function( require ) {
 
     stepModel: function( dt ) {
       var skater = this.skater;
+      var initialEnergy = skater.totalEnergy;
 
       //User is dragging the skater, nothing to update here
       if ( skater.dragging ) {
@@ -465,6 +468,12 @@ define( function( require ) {
       //On a track
       else if ( skater.track ) {
         this.stepTrack( dt );
+      }
+
+      var finalEnergy = skater.totalEnergy;
+      var energyDifference = (finalEnergy - initialEnergy);
+      if ( energyDifference > 1E-6 ) {
+        console.log( "Energy not conserved", energyDifference );
       }
     },
 
