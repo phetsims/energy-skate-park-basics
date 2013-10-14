@@ -47,7 +47,7 @@ define( function( require ) {
       //speed of the model, either 'normal' or 'slow'
       speed: 'normal',
 
-      friction: 0.2,
+      friction: frictionAllowed ? 0.2 : 0,
       stickToTrack: true
     } );
     this.skater = new Skater();
@@ -103,6 +103,7 @@ define( function( require ) {
     //See http://digitalcommons.calpoly.edu/cgi/viewcontent.cgi?article=1387&context=phy_fac
     //Computational problems in introductory physics: Lessons from a bead on a wire
     //Thomas J. Bensky and Matthew J. Moelter
+    //TODO: We probably need to add friction here
     uDD: function( uD, xP, xPP, yP, yPP, g ) {
       return -1 * (uD * uD * (xP * xPP + yP * yPP) - g * yP) / (xP * xP + yP * yP);
     },
@@ -274,6 +275,8 @@ define( function( require ) {
     stepTrack: function( dt ) {
 
       var skater = this.skater;
+      var x1 = skater.position.x;
+      var y1 = skater.position.y;
       var track = skater.track;
       var u = skater.u;
       var uD = skater.uD;
@@ -336,7 +339,14 @@ define( function( require ) {
 //        console.log( (finalEnergy - initialEnergy).toFixed( 2 ), initialEnergy, finalEnergy );
 //        console.log( "END BINARY, count=", count );
 
-      skater.uD = uD2;
+      if ( this.friction > 0 ) {
+
+        //TODO: this is technically incorrect because it is in parametric units, but is it close enough?  When will it break down?  When the metric space of the track is radically different (control points differently spaced)
+        skater.uD = uD2 * 0.97;
+      }
+      else {
+        skater.uD = uD2;
+      }
       skater.u = u2;
 
       var vx = xPrime2 * uD2;
@@ -349,9 +359,28 @@ define( function( require ) {
         new Vector2( track.getX( skater.u + 1E-6 ), track.getY( skater.u + 1E-6 ) )] );
       this.circularRegression = curvature;
 
-      if ( this.frictionAllowed && this.friction > 0 ) {
-        var normalForce = this.getNormalForce( x2, y2, vx, vy, curvature );
-        console.log( 'normalForce', normalForce.magnitude() );
+      if ( this.friction > 0 ) {
+
+        //make up for energy losses due to friction
+        var finalEnergy2 = track.getEnergy( u2, skater.uD, mass, gravity );
+        var thermalEnergy = finalEnergy - finalEnergy2;
+        if ( thermalEnergy > 0 ) {
+          skater.thermalEnergy = skater.thermalEnergy + thermalEnergy;
+        }
+
+        //TODO: we may use this code for integrating the friction with the above computation
+//        var normalForce = this.getNormalForce( x2, y2, vx, vy, curvature );
+//        console.log( 'normalForce', normalForce.magnitude() );
+
+//        var frictionForce = new Vector2( vx, vy ).normalized().timesScalar( -this.friction * normalForce.magnitude() * 25 );
+//        var thermalEnergy = frictionForce.magnitude() * new Vector2( x2, y2 ).distance( new Vector2( x1, y1 ) );
+//        skater.thermalEnergy = skater.thermalEnergy + thermalEnergy;
+//        console.log( thermalEnergy );
+
+        //reduce velocity to account for loss of energy to thermal
+        //0.5mvv=e
+//        vx = vx / 2;
+//        vy = vy / 2;
       }
 
       skater.velocity = new Vector2( vx, vy );
