@@ -38,8 +38,6 @@ define( function( require ) {
   //Debug flag to show the view bounds, the region within which the skater can move
   var showAvailableBounds = false;
 
-  //TODO: Consider floating panels to the side when space is available.  For instance, the control panel could float to the right if there is extra space there on a wide screen
-  //TODO: (but don't float arbitrarily far because it could get too far from the play area).
   function EnergySkateParkBasicsView( model ) {
 
     var view = this;
@@ -129,8 +127,9 @@ define( function( require ) {
 
     //The button to return the skater
     //TODO: Disable this button when the skater is already at his initial coordinates?
-    var returnSkaterButton = new TextButton( returnSkaterString, model.returnSkater.bind( model ), {centerX: this.controlPanel.centerX, top: this.controlPanel.bottom + 10} );
-    this.addChild( returnSkaterButton );
+    //TODO: When pressing return skater, and he was on a different track, he will ride a phantom track
+    this.returnSkaterButton = new TextButton( returnSkaterString, model.returnSkater.bind( model ), {centerX: this.controlPanel.centerX, top: this.controlPanel.bottom + 10} );
+    this.addChild( this.returnSkaterButton );
 
     //Determine if the skater is onscreen or offscreen for purposes of highlighting the 'return skater' button.
     var onscreenProperty = new DerivedProperty( [model.skater.positionProperty], function( position ) {
@@ -139,10 +138,9 @@ define( function( require ) {
 
     //When the skater goes off screen, make the "return skater" button big
     onscreenProperty.lazyLink( function( onscreen ) {
-      var center = returnSkaterButton.center;
-      console.log( 'onscreen', onscreen );
-      returnSkaterButton.setScaleMagnitude( onscreen ? 1 : 1.5 );
-      returnSkaterButton.center = center;
+      var center = view.returnSkaterButton.center;
+      view.returnSkaterButton.setScaleMagnitude( onscreen ? 1 : 1.5 );
+      view.returnSkaterButton.center = center;
     } );
 
     this.addChild( new BarGraphNode( model, this ) );
@@ -150,7 +148,8 @@ define( function( require ) {
     var playPauseControl = new PlayPauseControlPanel( model, this );
     this.addChild( playPauseControl.mutate( {centerX: this.layoutBounds.centerX + playPauseControl.playButton.width / 2, bottom: this.layoutBounds.maxY - 10} ) );
 
-    this.addChild( new ResetAllButton( model.reset.bind( model ) ).mutate( {scale: 0.7, centerY: (transform.modelToViewY( 0 ) + this.layoutBounds.maxY) / 2, centerX: this.controlPanel.centerX} ) );
+    this.resetAllButton = new ResetAllButton( model.reset.bind( model ) ).mutate( {scale: 0.7, centerY: (transform.modelToViewY( 0 ) + this.layoutBounds.maxY) / 2, centerX: this.controlPanel.centerX} );
+    this.addChild( this.resetAllButton );
 
     this.addChild( new PlaybackSpeedControl( model ).mutate( {right: playPauseControl.left, centerY: playPauseControl.centerY} ) );
 
@@ -201,6 +200,10 @@ define( function( require ) {
 
       this.availableViewBounds = new Rect( -offsetX, -offsetY, width / scale, this.modelViewTransform.modelToViewY( 0 ) + Math.abs( offsetY ) );
 
+      //Float the control panel to the right (but not arbitrarily far because it could get too far from the play area)
+      this.controlPanel.right = Math.min( 890, this.availableViewBounds.maxX ) - 5;
+      this.returnSkaterButton.centerX = this.controlPanel.centerX;
+      this.resetAllButton.centerX = this.controlPanel.centerX;
       //Compute the visible model bounds so we will know when a model object like the skater has gone offscreen
       this.availableModelBounds = this.modelViewTransform.viewToModelBounds( this.availableViewBounds );
 
