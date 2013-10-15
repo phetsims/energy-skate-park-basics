@@ -113,15 +113,15 @@ define( function( require ) {
         },
         translate: function() {},
 
-        //TODO: When dropping the track in the toolbox, make nonphysical and reset coordinates
+        //End the drag
         end: function() {
           var myPoints = [track.controlPoints[0], track.controlPoints[track.controlPoints.length - 1]];
           if ( myPoints[0].snapTarget || myPoints[1].snapTarget ) {
             model.joinTracks( track );
           }
 
-          //Return the track.
-          //TODO: if it was a combination of two tracks, split them and return both, or keep track of parents, or something
+          //Return the track.  If it was a combination of two tracks, split them and return both, or keep track of parents, or something
+          //When dropping the track in the toolbox, make nonphysical and reset coordinates
           else if ( track.readyToReturn ) {
             track.returnToControlPanel();
           }

@@ -164,7 +164,7 @@ define( function( require ) {
       for ( var i = 0; i < physicalTracks.length; i++ ) {
         var track = physicalTracks[i];
 
-        //TODO: maybe get closest point shouldn't return a new object allocation each time, or use pooling for it, or pass in reference as an arg?
+        //PERFORMANCE/ALLOCATION maybe get closest point shouldn't return a new object allocation each time, or use pooling for it, or pass in reference as an arg?
         var bestMatch = track.getClosestPositionAndParameter( position );
         if ( closestDistance === null || bestMatch.distance < closestDistance ) {
           closestDistance = bestMatch.distance;
@@ -433,7 +433,7 @@ define( function( require ) {
       return curvature.r;
     },
 
-    //TODO: allocation
+    //PERFORMANCE/ALLOCATION
     getCurvatureDirection: function( curvature, x2, y2 ) {
       return new Vector2( curvature.x - x2, curvature.y - y2 ).normalized();
     },

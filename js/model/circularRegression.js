@@ -6,7 +6,7 @@ define( function( require ) {
 
   var Vector2 = require( 'DOT/Vector2' );
 
-  //TODO: could pass in the Vector2 as an arg, to avoid allocation
+  //PERFORMANCE/ALLOCATION: could pass in the Vector2 as an arg, to avoid allocation
   var centroid = function( points ) {
     var sumX = 0;
     var sumY = 0;

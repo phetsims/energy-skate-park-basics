@@ -49,7 +49,7 @@ define( function( require ) {
     var positionChanged = function( position ) {
       var view = modelViewTransform.modelToViewPosition( position );
 
-      //TODO: Coalesce all of these calls into a single matrix for performance, or at least cache rotation value?
+      //PERFORMANCE/ALLOCATION: Coalesce all of these calls into a single matrix for performance, or at least cache rotation value?
       skaterNode.setTranslation( view.x - imageWidth / 2, view.y - imageHeight );
       skaterNode.setRotation( 0 );
 
@@ -81,7 +81,7 @@ define( function( require ) {
           //make sure it is within the visible bounds
           position = view.availableModelBounds.getClosestPoint( position.x, position.y, position );
 
-          //TODO: lots of unnecessary allocations and computation here, biggest improvement could be to use binary search for position on the track
+          //PERFORMANCE/ALLOCATION: lots of unnecessary allocations and computation here, biggest improvement could be to use binary search for position on the track
           var closestTrackAndPositionAndParameter = model.getClosestTrackAndPositionAndParameter( position, model.getPhysicalTracks() );
           var closeEnough = false;
           if ( closestTrackAndPositionAndParameter ) {

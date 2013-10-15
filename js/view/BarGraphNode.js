@@ -63,7 +63,7 @@ define( function( require ) {
       var bar = new Rectangle( barX, 0, barWidth, 0, {fill: color, stroke: 'black', lineWidth: 0.5, pickable: false} );
       var update = function() {
         if ( barGraphNode.visible ) {
-          //TODO: Possible performance improvement to avoid allocations in Rectangle.setRect
+          ////PERFORMANCE/ALLOCATION: Possible performance improvement to avoid allocations in Rectangle.setRect
 
           //Convert to graph coordinates, floor and protect against duplicates
           var barHeight = Math.floor( property.value / 15 );
