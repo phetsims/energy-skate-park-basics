@@ -6,6 +6,7 @@ define( function( require ) {
 
   var Vector2 = require( 'DOT/Vector2' );
 
+  //TODO: could pass in the Vector2 as an arg, to avoid allocation
   var centroid = function( points ) {
     var sumX = 0;
     var sumY = 0;
@@ -16,13 +17,23 @@ define( function( require ) {
     }
     return new Vector2( sumX / points.length, sumY / points.length );
   };
+
   var sum = function( points, term ) {
     var total = 0;
-    for ( var i = 0; i < points.length; i++ ) {
+    var length = points.length;
+    for ( var i = 0; i < length; i++ ) {
       total += term( points[i] );
     }
     return total;
   };
+
+  var fuu = function( point ) { return point.x * point.x; };
+  var fuv = function( point ) { return point.x * point.y; };
+  var fvv = function( point ) { return point.y * point.y; };
+  var fuuu = function( point ) { return point.x * point.x * point.x; };
+  var fvvv = function( point ) { return point.y * point.y * point.y; };
+  var fuvv = function( point ) { return point.x * point.y * point.y; };
+  var fvuu = function( point ) { return point.y * point.x * point.x; };
 
   var circularRegression = function( points ) {
     var average = centroid( points );
@@ -31,22 +42,19 @@ define( function( require ) {
       return point.minus( average );
     } );
 
-    //TODO: performance
-    var suu = sum( uv, function( point ) { return point.x * point.x; } );
-    var suv = sum( uv, function( point ) { return point.x * point.y; } );
-    var svv = sum( uv, function( point ) { return point.y * point.y; } );
-    var suuu = sum( uv, function( point ) { return point.x * point.x * point.x; } );
-    var svvv = sum( uv, function( point ) { return point.y * point.y * point.y; } );
-    var suvv = sum( uv, function( point ) { return point.x * point.y * point.y; } );
-    var svuu = sum( uv, function( point ) { return point.y * point.x * point.x; } );
+    var suu = sum( uv, fuu );
+    var suv = sum( uv, fuv );
+    var svv = sum( uv, fvv );
+    var suuu = sum( uv, fuuu );
+    var svvv = sum( uv, fvvv );
+    var suvv = sum( uv, fuvv );
+    var svuu = sum( uv, fvuu );
 
     var a = (suuu + suvv) / 2;
     var b = (svvv + svuu) / 2;
     var q = svv - suv * suv / suu;
     var vc = (b - a * suv / suu) / q;
     var uc = (a - vc * suv) / suu;
-
-    var center = new Vector2( uc, vc ).plus( average );
 
     //2x2 linear system, solve by gaussian elimination
     var alpha = uc * uc + vc * vc + (suu + svv) / points.length;
