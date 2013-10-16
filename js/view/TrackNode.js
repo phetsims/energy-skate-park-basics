@@ -111,7 +111,6 @@ define( function( require ) {
             myPoints[1].snapTarget = null;
           }
         },
-        translate: function() {},
 
         //End the drag
         end: function() {
@@ -239,7 +238,6 @@ define( function( require ) {
                   controlPoint.snapTarget = bestDistance !== null && bestDistance < 1 ? bestMatch : null;
                 }
               },
-              translate: function() { },
               end: function( event ) {
                 if ( isEndPoint && controlPoint.snapTarget ) {
                   model.joinTracks( track );
