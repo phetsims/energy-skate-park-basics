@@ -21,11 +21,12 @@ require( [
   'use strict';
 
   var simOptions = {
-    credits: 'PhET Development Team -\n' +
-             'Lead Design: Sam Reid (Energy Skate Park) & Noah Podolefsky (Energy Skate Park: Basics)\n' +
-             'Software Development: Sam Reid\n' +
-             'Design Team: Wendy Adams, Michael Dubson, Trish Loeblein, Emily Moore, Ariel Paul, Kathy Perkins, Carl Wieman\n' +
-             'Interviews: Danielle Harlow, Noah Podolefsky & Ariel Paul'
+    credits: {
+      leadDesign: 'Sam Reid (Energy Skate Park), Noah Podolefsky (Energy Skate Park: Basics)',
+      softwareDevelopment: 'Sam Reid',
+      designTeam: 'Wendy Adams, Michael Dubson, Trish Loeblein, Emily Moore, Ariel Paul, Kathy Perkins, Carl Wieman',
+      interviews: 'Danielle Harlow, Noah Podolefsky, Ariel Paul'
+    }
   };
 
   SimLauncher.launch( function() {
