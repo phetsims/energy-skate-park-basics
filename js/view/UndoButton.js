@@ -8,7 +8,7 @@ define( function( require ) {
   'use strict';
 
   var FontAwesomeNode = require( 'SUN/FontAwesomeNode' );
-  var RectangleButton = require( 'SUN/RectangleButton' );
+  var RectanglePushButton = require( 'SUN/RectanglePushButton' );
   var inherit = require( 'PHET_CORE/inherit' );
   var Node = require( 'SCENERY/nodes/Node' );
   var Shape = require( 'KITE/Shape' );
@@ -23,11 +23,11 @@ define( function( require ) {
       icon.fill = hasThermalEnergy ? 'white' : 'lightGray';
     } );
 
-    RectangleButton.call( this, icon, {listener: callback, rectangleFillUp: new Color( 255, 85, 0 )} );
+    RectanglePushButton.call( this, icon, {listener: callback, rectangleFillUp: new Color( 255, 85, 0 )} );
     this.mouseArea = this.touchArea = Shape.rectangle( icon.bounds.minX, icon.bounds.minY, icon.bounds.width, icon.bounds.height );
     this.addChild( icon );
     this.mutate( options );
   }
 
-  return inherit( RectangleButton, UndoButton );
+  return inherit( RectanglePushButton, UndoButton );
 } );

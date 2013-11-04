@@ -29,7 +29,7 @@ define( function( require ) {
   var ModelViewTransform2 = require( 'PHETCOMMON/view/ModelViewTransform2' );
   var Vector2 = require( 'DOT/Vector2' );
   var SpeedometerNode = require( 'SCENERY_PHET/SpeedometerNode' );
-  var TextButton = require( 'SUN/TextButton' );
+  var TextPushButton = require( 'SUN/TextPushButton' );
   var DerivedProperty = require( 'AXON/DerivedProperty' );
   var Path = require( 'SCENERY/nodes/Path' );
   var returnSkaterString = require( 'string!ENERGY_SKATE_PARK_BASICS/controls.reset-character' );
@@ -128,7 +128,7 @@ define( function( require ) {
     //The button to return the skater
     //TODO: Disable this button when the skater is already at his initial coordinates?
     //TODO: When pressing return skater, and he was on a different track, he will ride a phantom track
-    this.returnSkaterButton = new TextButton( returnSkaterString, {listener: model.returnSkater.bind( model ), centerX: this.controlPanel.centerX, top: this.controlPanel.bottom + 10} );
+    this.returnSkaterButton = new TextPushButton( returnSkaterString, {listener: model.returnSkater.bind( model ), centerX: this.controlPanel.centerX, top: this.controlPanel.bottom + 10} );
     this.addChild( this.returnSkaterButton );
 
     //Determine if the skater is onscreen or offscreen for purposes of highlighting the 'return skater' button.
