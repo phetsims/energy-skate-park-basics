@@ -23,7 +23,7 @@ define( function( require ) {
       icon.fill = hasThermalEnergy ? 'white' : 'lightGray';
     } );
 
-    RectangleButton.call( this, icon, callback, {rectangleFillUp: new Color( 255, 85, 0 )} );
+    RectangleButton.call( this, icon, {callback: callback, rectangleFillUp: new Color( 255, 85, 0 )} );
     this.mouseArea = this.touchArea = Shape.rectangle( icon.bounds.minX, icon.bounds.minY, icon.bounds.width, icon.bounds.height );
     this.addChild( icon );
     this.mutate( options );
