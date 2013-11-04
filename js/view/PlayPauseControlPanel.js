@@ -42,7 +42,7 @@ define( function( require ) {
       new Image( stepButtonHoverImage ),
       new Image( stepButtonPressedImage ),
       new Image( stepButtonDeactivatedImage ),
-      {scale: 0.7, x: 50, y: 7, callback: step} ) );
+      {scale: 0.7, x: 50, y: 7, listener: step} ) );
     stepButton.enabled = false;
 
     model.pausedProperty.link( function updatePlayPauseButton( value ) {
