@@ -11,9 +11,9 @@ define( function( require ) {
 
   return {
     SLIDER_OPTIONS: {
-      thumbSize: new Dimension2( 22, 35 ),
+      thumbSize: new Dimension2( 16, 35 ),
       tickLabelSpacing: 0,
-      majorTickLength: 20
+      majorTickLength: 18
     }
   };
 } );
