@@ -17,10 +17,11 @@ define( function( require ) {
   var frictionString = require( 'string!ENERGY_SKATE_PARK_BASICS/controls.friction.title' );
   var noneString = require( 'string!ENERGY_SKATE_PARK_BASICS/controls.gravity.none' );
   var lotsString = require( 'string!ENERGY_SKATE_PARK_BASICS/controls.gravity.lots' );
+  var Constants = require( 'ENERGY_SKATE_PARK_BASICS/Constants' );
 
   function FrictionControl( model, view ) {
     var frictionRange = {min: 0, max: 2};
-    var slider = new HSlider( model.frictionProperty, frictionRange, {tickLabelSpacing: 0} );
+    var slider = new HSlider( model.frictionProperty, frictionRange, {tickLabelSpacing: 0, thumbSize: Constants.THUMB_SIZE} );
     var tickFont = new PhetFont( 10 );
     slider.addMajorTick( frictionRange.min, new Text( noneString, { font: tickFont } ) );
     slider.addMajorTick( frictionRange.max, new Text( lotsString, { font: tickFont } ) );

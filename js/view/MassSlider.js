@@ -16,9 +16,11 @@ define( function( require ) {
   var skaterMassString = require( 'string!ENERGY_SKATE_PARK_BASICS/controls.mass' );
   var smallString = require( 'string!ENERGY_SKATE_PARK_BASICS/small' );
   var largeString = require( 'string!ENERGY_SKATE_PARK_BASICS/large' );
+  var Constants = require( 'ENERGY_SKATE_PARK_BASICS/Constants' );
 
   function MassSlider( model, view ) {
-    var slider = new HSlider( model.skater.massProperty, {min: 10, max: 110} );
+    var range = {min: 10, max: 110};
+    var slider = new HSlider( model.skater.massProperty, range, {thumbSize: Constants.THUMB_SIZE} );
     var tickFont = new PhetFont( 10 );
     slider.addMajorTick( 10, new Text( smallString, { font: tickFont } ) );
     slider.addMajorTick( 110, new Text( largeString, { font: tickFont } ) );
