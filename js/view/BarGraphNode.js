@@ -124,7 +124,7 @@ define( function( require ) {
     Panel.call( this, contentNode, { x: 10, y: 10, xMargin: 10, yMargin: 10, fill: 'white', stroke: 'gray', lineWidth: 1, resize: false, cursor: 'pointer', backgroundPickable: true } );
 
     //Allow the user to move the BarGraphNode about
-    this.addInputListener( new SimpleDragHandler() );
+    this.addInputListener( new SimpleDragHandler( {translate: function( args ) {barGraphNode.translate( args.delta.x, args.delta.y );}} ) );
 
     //When the bar graph is shown, update the bars (because they do not get updated when invisible for performance reasons)
     model.barGraphVisibleProperty.link( function( visible ) {

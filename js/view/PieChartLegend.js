@@ -22,6 +22,7 @@ define( function( require ) {
   var thermalString = require( 'string!ENERGY_SKATE_PARK_BASICS/energy.thermal' );
 
   function PieChartLegend( model ) {
+    var pieChartLegend = this;
     this.skater = model.skater;
 
     //The x-coordinate of a bar chart bar
@@ -48,7 +49,7 @@ define( function( require ) {
 
     Panel.call( this, contentNode, { x: 10, y: 10, xMargin: 10, yMargin: 10, fill: 'white', stroke: 'gray', lineWidth: 1, resize: false, cursor: 'pointer', backgroundPickable: true} );
 
-    this.addInputListener( new SimpleDragHandler() );
+    this.addInputListener( new SimpleDragHandler( {translate: function( args ) {pieChartLegend.translate( args.delta.x, args.delta.y );}} ) );
 
     model.pieChartVisibleProperty.linkAttribute( this, 'visible' );
   }
