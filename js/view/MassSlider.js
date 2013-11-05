@@ -20,7 +20,7 @@ define( function( require ) {
 
   function MassSlider( model, view ) {
     var range = {min: 10, max: 110};
-    var slider = new HSlider( model.skater.massProperty, range, {thumbSize: Constants.THUMB_SIZE} );
+    var slider = new HSlider( model.skater.massProperty, range, Constants.SLIDER_OPTIONS );
     var tickFont = new PhetFont( 10 );
     slider.addMajorTick( 10, new Text( smallString, { font: tickFont } ) );
     slider.addMajorTick( 110, new Text( largeString, { font: tickFont } ) );

@@ -10,6 +10,10 @@ define( function( require ) {
   var Dimension2 = require( 'DOT/Dimension2' );
 
   return {
-    THUMB_SIZE: new Dimension2( 22, 45 )
+    SLIDER_OPTIONS: {
+      thumbSize: new Dimension2( 22, 35 ),
+      tickLabelSpacing: 0,
+      majorTickLength: 20
+    }
   };
 } );
