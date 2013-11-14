@@ -67,6 +67,8 @@ define( function( require ) {
       {
         start: function( event ) {
           skater.dragging = true;
+
+          //Jump to the input location when dragged
           this.drag( event );
         },
 
