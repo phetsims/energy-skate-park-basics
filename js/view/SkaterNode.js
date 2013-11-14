@@ -74,9 +74,6 @@ define( function( require ) {
 
         drag: function( event ) {
 
-          //TODO: Translate based on deltas?  Or move the skater up so a bit above the finger/mouse?
-          //TODO: It is nice to have the skater centered above the finger, but maybe he should move there gradually instead of jumping there?
-          //TODO: or maybe jump there when grabbed (not when dragged)?
           var globalPoint = skaterNode.globalToParentPoint( event.pointer.point );
           var position = modelViewTransform.viewToModelPosition( globalPoint );
           var dragPosition = position;
