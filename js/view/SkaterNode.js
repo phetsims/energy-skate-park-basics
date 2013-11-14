@@ -67,6 +67,7 @@ define( function( require ) {
       {
         start: function( event ) {
           skater.dragging = true;
+          this.drag( event );
         },
 
         drag: function( event ) {
@@ -107,7 +108,6 @@ define( function( require ) {
             targetU = null;
 
             //make skater upright if not near the track
-            //TODO: make this continuous based on deltas so it is a smooth motion?
             skater.angle = 0;
             skater.up = true;
           }

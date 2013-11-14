@@ -308,8 +308,6 @@ define( function( require ) {
       var initialEnergy = track.getEnergy( u, uD, mass, gravity );
       var finalEnergy = track.getEnergy( u2, uD2, mass, gravity );
 
-      //TODO: use a more accurate numerical integration scheme.  Currently forward Euler
-
       var count = 0;
       var upperBound = uD2 * 1.2;
       var lowerBound = uD2 * 0.8;
