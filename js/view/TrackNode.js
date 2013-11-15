@@ -170,7 +170,9 @@ define( function( require ) {
 
       var tx = trackNode.getTranslation();
       var shape = new Shape().moveTo( modelViewTransform.modelToViewX( xPoints[0] ) - tx.x, modelViewTransform.modelToViewY( yPoints[0] ) - tx.y );
-      var delta = track.dragging ? 4 : 1;
+
+      //Show the track at reduced resolution while dragging so it will be smooth and responsive while dragging (whether updating the entire track, some of the control points or both)
+      var delta = track.dragging ? 3 : 1;
       for ( i = 1; i < xPoints.length; i = i + delta ) {
         shape.lineTo( modelViewTransform.modelToViewX( xPoints[i] ) - tx.x, modelViewTransform.modelToViewY( yPoints[i] ) - tx.y );
       }
