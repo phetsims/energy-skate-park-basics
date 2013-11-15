@@ -4,7 +4,6 @@
  *
  * @author Anton Ulyanov (Mlearner)
  * Copied from wave-on-a-string\js\view\control\PlayPauseButton.js on 9/13/2013
- * TODO: Factor out the copied code
  * TODO: render these buttons programmatically
  */
 define( function( require ) {
