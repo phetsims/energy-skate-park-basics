@@ -4,7 +4,7 @@
  *
  * @author Anton Ulyanov (Mlearner)
  * Copied from wave-on-a-string\js\view\control\PlayPauseButton.js on 9/13/2013
- * TODO: render these buttons programmatically
+ * See https://github.com/phetsims/energy-skate-park-basics/issues/7
  */
 define( function( require ) {
   'use strict';
