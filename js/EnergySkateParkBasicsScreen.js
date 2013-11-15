@@ -1,5 +1,10 @@
 // Copyright 2002-2013, University of Colorado Boulder
 
+/**
+ * A single screen for the Energy Skate Park: Basics sim.
+ *
+ * @author Sam Reid
+ */
 define( function( require ) {
   'use strict';
 
