@@ -93,11 +93,9 @@ define( function( require ) {
               targetU = closestTrackAndPositionAndParameter.u;
               skater.angle = targetTrack.getViewAngleAt( targetU );
 
-              //Choose the right side of the track.
-              //TODO: This should be the side of the track that would have the skater upside up
+              //Choose the right side of the track, i.e. the side of the track that would have the skater upside up
               var normal = targetTrack.getUnitNormalVector( targetU );
-              var vectorToSkater = dragPosition.minus( closestPoint );
-              skater.up = normal.dot( vectorToSkater ) > 0;
+              skater.up = normal.y > 0;
 
               closeEnough = true;
             }
