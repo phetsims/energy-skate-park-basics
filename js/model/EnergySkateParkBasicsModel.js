@@ -134,7 +134,7 @@ define( function( require ) {
         var scaleFactor = dt * 60;
 
         //If they switched windows or tabs, just bail on that delta
-        if ( dt > 1000 ) {
+        if ( dt > 1000 || dt <= 0 ) {
           dt = 1.0 / 60.0;
         }
 
