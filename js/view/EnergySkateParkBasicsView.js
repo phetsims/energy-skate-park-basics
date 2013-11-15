@@ -81,6 +81,11 @@ define( function( require ) {
         } );
         view.addChild( trackNode );
 
+        //Make sure the skater stays in front of the tracks when tracks are joined
+        if ( skaterNode ) {
+          skaterNode.moveToFront();
+        }
+
         //When track removed, remove its view
         var itemRemovedListener = function( removed ) {
           if ( removed === track ) {
