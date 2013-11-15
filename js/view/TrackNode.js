@@ -6,7 +6,6 @@
  * Keep track of whether the track is dragging, so performance can be optimized while dragging
  *
  * TODO: Show a dotted line along the track in 'stick to track' mode.
- * TODO: On the Playground screen, sometimes the skater goes behind the track nodes
  * @author Sam Reid
  */
 define( function( require ) {
