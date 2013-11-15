@@ -125,8 +125,14 @@ define( function( require ) {
     step: function( dt ) {
       //If the delay makes dt too high, then truncate it.  This helps e.g. when clicking in the address bar on ipad, which gives a huge dt and problems for integration
       //TODO: For dt subdivision, make sure not updating any view code.  Just update a model structure for numDivisions times, then update all views only once
+      //TODO: A possible shortcut might be to suspend all listener calls, and trigger them later.  Not sure how this would work exactly, perhaps with Property overrides, and could have problems if there are order dependencies.
       if ( !this.paused ) {
         var scaleFactor = dt * 60;
+
+        //If they switched windows or tabs, just bail on that delta
+        if ( dt > 1000 ) {
+          dt = 1.0 / 60.0;
+        }
 
         //dt has to run at 1/55.0 or less or we will have numerical problems in the integration
         var numDivisions = dt < 1 / 55 ? 1 :
