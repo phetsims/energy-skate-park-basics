@@ -19,7 +19,7 @@ define( function( require ) {
   var largeString = require( 'string!ENERGY_SKATE_PARK_BASICS/large' );
   var Constants = require( 'ENERGY_SKATE_PARK_BASICS/Constants' );
 
-  function MassSlider( model, view ) {
+  function MassSlider( model ) {
     var range = {min: 10, max: 110};
     var slider = new HSlider( model.skater.massProperty, range, Constants.SLIDER_OPTIONS );
     var tickFont = new PhetFont( 10 );

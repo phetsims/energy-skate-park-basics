@@ -16,7 +16,7 @@ define( function( require ) {
   var PhetFont = require( 'SCENERY_PHET/PhetFont' );
   var BackgroundNode = require( 'ENERGY_SKATE_PARK_BASICS/view/BackgroundNode' );
 
-  function GridNode( model, energySkateParkBasicsView, modelViewTransform ) {
+  function GridNode( model, modelViewTransform ) {
     this.modelViewTransform = modelViewTransform;
     Node.call( this, {pickable: false} );
 

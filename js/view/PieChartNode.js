@@ -19,7 +19,7 @@ define( function( require ) {
   var Path = require( 'SCENERY/nodes/Path' );
   var EnergySkateParkColorScheme = require( 'ENERGY_SKATE_PARK_BASICS/view/EnergySkateParkColorScheme' );
 
-  function PieChartNode( model, energySkateParkBasicsView, modelViewTransform ) {
+  function PieChartNode( model, modelViewTransform ) {
     var pieChartNode = this;
     this.skater = model.skater;
     var skater = model.skater;
@@ -72,7 +72,6 @@ define( function( require ) {
         kineticEnergySlice.visible = true;
         thermalEnergySlice.visible = true;
         var fractionPotential = skater.potentialEnergy / skater.totalEnergy;
-        var fractionThermal = skater.thermalEnergy / skater.totalEnergy;
         var fractionKinetic = skater.kineticEnergy / skater.totalEnergy;
 
         //Show one of them in the background instead of pieces for each one for performance

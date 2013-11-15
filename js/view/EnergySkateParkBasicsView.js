@@ -55,7 +55,7 @@ define( function( require ) {
     this.backgroundNode = new BackgroundNode( model, this );
     this.addChild( this.backgroundNode );
 
-    this.gridNode = new GridNode( model, this, transform );
+    this.gridNode = new GridNode( model, transform );
     this.addChild( this.gridNode );
 
     //Switch between selectable tracks
@@ -114,7 +114,7 @@ define( function( require ) {
 
     var skaterNode = new SkaterNode( model, this, transform );
     this.addChild( skaterNode );
-    this.addChild( new PieChartNode( model, this, transform ) );
+    this.addChild( new PieChartNode( model, transform ) );
     var pieChartLegend = new PieChartLegend( model );
     this.addChild( pieChartLegend );
 
@@ -151,7 +151,7 @@ define( function( require ) {
 
     this.addChild( new BarGraphNode( model ) );
 
-    var playPauseControl = new PlayPauseControlPanel( model, this );
+    var playPauseControl = new PlayPauseControlPanel( model, {x: 0, y: 0} );
     this.addChild( playPauseControl.mutate( {centerX: this.layoutBounds.centerX + playPauseControl.playButton.width / 2, bottom: this.layoutBounds.maxY - 10} ) );
 
     this.resetAllButton = new ResetAllButton( model.reset.bind( model ) ).mutate( {scale: 0.7, centerY: (transform.modelToViewY( 0 ) + this.layoutBounds.maxY) / 2, centerX: this.controlPanel.centerX} );
