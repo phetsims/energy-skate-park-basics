@@ -5,6 +5,7 @@
  * If the track's length is changed (by deleting a control point or linking two tracks together) and new TrackNode is created.
  *
  * TODO: Show a dotted line along the track in 'stick to track' mode.
+ * TODO: On the Playground screen, sometimes the skater goes behind the track nodes
  * @author Sam Reid
  */
 define( function( require ) {
