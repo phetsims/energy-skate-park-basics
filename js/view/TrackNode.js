@@ -176,6 +176,8 @@ define( function( require ) {
       for ( i = 1; i < xPoints.length; i = i + delta ) {
         shape.lineTo( modelViewTransform.modelToViewX( xPoints[i] ) - tx.x, modelViewTransform.modelToViewY( yPoints[i] ) - tx.y );
       }
+
+      //If at reduced resolution, still make sure we draw to the end point
       if ( i !== xPoints.length - 1 ) {
         i = xPoints.length - 1;
         shape.lineTo( modelViewTransform.modelToViewX( xPoints[i] ) - tx.x, modelViewTransform.modelToViewY( yPoints[i] ) - tx.y );
