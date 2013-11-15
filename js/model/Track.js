@@ -39,7 +39,10 @@ define( function( require ) {
       overTrackPanel: false,
 
       //Flag that shows whether the track has been dragged fully out of the panel
-      leftThePanel: false
+      leftThePanel: false,
+
+      //Keep track of whether the track is dragging, so performance can be optimized while dragging
+      dragging: false
     } );
 
     //A track is ready to be returned to the track panel iff it has been taken out once and dragged over the panel
@@ -102,6 +105,10 @@ define( function( require ) {
       for ( var i = 0; i < this.controlPoints.length; i++ ) {
         this.controlPoints[i].reset();
       }
+
+      //Broadcast message so that TrackNode can update the shape
+      this.updateSplines();
+      this.trigger( 'reset' );
     },
 
     //Returns the closest point (Euclidean) and position (parametric) on the track, as an object with {u,point}

@@ -3,6 +3,7 @@
 /**
  * Scenery node for the track, which can be translated by dragging the track, or manipulated by dragging its control points.
  * If the track's length is changed (by deleting a control point or linking two tracks together) a new TrackNode is created.
+ * Keep track of whether the track is dragging, so performance can be optimized while dragging
  *
  * TODO: Show a dotted line along the track in 'stick to track' mode.
  * TODO: On the Playground screen, sometimes the skater goes behind the track nodes
@@ -43,11 +44,12 @@ define( function( require ) {
 
           start: function( event, trail ) {
             lastDragPoint = event.pointer.point;
+            track.dragging = true;
           },
 
           //Drag an entire track
           drag: function( event, trail ) {
-
+            track.dragging = true;
             var dragPoint = event.pointer.point;
             var delta = handler.transform.inverseDelta2( dragPoint.minus( lastDragPoint ) );
             lastDragPoint = dragPoint;
@@ -124,6 +126,7 @@ define( function( require ) {
             else if ( track.readyToReturn ) {
               track.returnToControlPanel();
             }
+            track.dragging = false;
           }
         }
       );
@@ -144,7 +147,7 @@ define( function( require ) {
 
     var updateTrackShape = function() {
 
-      var i = 0;
+      var i;
       //Update the sample range when the number of control points has changed
       if ( lengthForLinSpace !== track.controlPoints.length ) {
         lastPt = (track.controlPoints.length - 1) / track.controlPoints.length;
@@ -167,7 +170,12 @@ define( function( require ) {
 
       var tx = trackNode.getTranslation();
       var shape = new Shape().moveTo( modelViewTransform.modelToViewX( xPoints[0] ) - tx.x, modelViewTransform.modelToViewY( yPoints[0] ) - tx.y );
-      for ( i = 1; i < xPoints.length; i++ ) {
+      var delta = track.dragging ? 4 : 1;
+      for ( i = 1; i < xPoints.length; i = i + delta ) {
+        shape.lineTo( modelViewTransform.modelToViewX( xPoints[i] ) - tx.x, modelViewTransform.modelToViewY( yPoints[i] ) - tx.y );
+      }
+      if ( i !== xPoints.length - 1 ) {
+        i = xPoints.length - 1;
         shape.lineTo( modelViewTransform.modelToViewX( xPoints[i] ) - tx.x, modelViewTransform.modelToViewY( yPoints[i] ) - tx.y );
       }
 
@@ -201,9 +209,10 @@ define( function( require ) {
             {
               allowTouchSnag: true,
               start: function( event ) {
+                track.dragging = true;
               },
               drag: function( event ) {
-
+                track.dragging = true;
                 var globalPoint = controlPointNode.globalToParentPoint( event.pointer.point );
 
                 //trigger reconstruction of the track shape based on the control points
@@ -245,6 +254,7 @@ define( function( require ) {
                 if ( isEndPoint && controlPoint.snapTarget ) {
                   model.joinTracks( track );
                 }
+                track.dragging = false;
               }
             } ) );
           trackNode.addChild( controlPointNode );
@@ -259,6 +269,14 @@ define( function( require ) {
     //Just observing the control points individually would lead to N expensive callbacks (instead of 1) for each of the N points
     //So we use this broadcast mechanism instead
     track.on( 'translated', updateTrackShape );
+
+    track.draggingProperty.link( function( dragging ) {
+      if ( !dragging ) {
+        updateTrackShape();
+      }
+    } );
+
+    track.on( 'reset', updateTrackShape );
   }
 
   return inherit( Node, TrackNode );
