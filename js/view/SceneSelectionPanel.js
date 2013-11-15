@@ -25,7 +25,7 @@ define( function( require ) {
       background.layout( 0, 0, view.layoutBounds.width, view.layoutBounds.height, 1 );
       var trackNode = new TrackNode( model, track, transform );
       var a = new Node( {children: [background, trackNode ]} );
-      a.scale( 38 / a.height );
+      a.scale( 28 / a.height );
       var selectedNode = new Panel( a, {stroke: 'black', lineWidth: 3, xMargin: 0, yMargin: 0, cornerRadius: 0} );
 
       var unselectedNode = new Panel( a, {stroke: 'gray', lineWidth: 0, xMargin: 0, yMargin: 0, cornerRadius: 0, opacity: 0.6} );

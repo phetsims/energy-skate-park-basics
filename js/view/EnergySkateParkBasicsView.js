@@ -154,7 +154,7 @@ define( function( require ) {
     this.addChild( new PlaybackSpeedControl( model ).mutate( {right: playPauseControl.left, centerY: playPauseControl.centerY} ) );
 
     if ( !model.draggableTracks ) {
-      this.addChild( new SceneSelectionPanel( model, this, transform ).mutate( {left: 0, centerY: playPauseControl.centerY} ) );
+      this.addChild( new SceneSelectionPanel( model, this, transform ).mutate( {left: 5, bottom: this.layoutBounds.maxY - 5} ) );
     }
 
     //For debugging the visible bounds
