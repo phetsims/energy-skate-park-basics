@@ -59,13 +59,17 @@ define( function( require ) {
     } );
 
     this.addDerivedProperty( 'speed', ['velocity'], function( velocity ) {return velocity.magnitude();} );
-    this.addDerivedProperty( 'headPosition', ['position', 'mass', 'angle'], function( position, mass, angle ) {
+    this.addDerivedProperty( 'headPosition', ['position', 'mass', 'angle', 'up'], function( position, mass, angle, up ) {
 
       //Center pie chart over skater's head not his feet so it doesn't look awkward when skating in a parabola
       //when mass is minimum, the skater height is 1.5
       //when mass is max, the skater height is 2.5
       var skaterHeight = Util.linear( 10, 110, 1.5, 2.5, mass );
       var vector = Vector2.createPolar( skaterHeight, angle - Math.PI / 2 );
+
+      if ( !up ) {
+        vector.multiplyScalar( -1 );
+      }
       return position.plusXY( vector.x, -vector.y );
     } );
 
