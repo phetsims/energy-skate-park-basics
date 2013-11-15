@@ -274,7 +274,7 @@ define( function( require ) {
 
       //make up for the difference by changing the y value
       var y = (initialEnergy - 0.5 * skater.mass * proposedVelocity.magnitudeSquared() - skater.thermalEnergy) / (-1 * skater.mass * skater.gravity);
-      if ( y < 0 ) {
+      if ( y <= 0 ) {
 
         //When falling straight down, stop completely and convert all energy to thermal
         skater.velocity = new Vector2( 0, 0 );
