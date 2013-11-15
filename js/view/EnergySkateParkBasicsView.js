@@ -133,8 +133,13 @@ define( function( require ) {
     pieChartLegend.mutate( {top: this.controlPanel.top, right: this.controlPanel.left - 9} );
 
     //The button to return the skater
-    //TODO: Disable this button when the skater is already at his initial coordinates?
-    this.returnSkaterButton = new TextPushButton( returnSkaterString, {listener: model.returnSkater.bind( model ), centerX: this.controlPanel.centerX, top: this.controlPanel.bottom + 10} );
+    this.returnSkaterButton = new TextPushButton( returnSkaterString, {
+      listener: model.returnSkater.bind( model ),
+      centerX: this.controlPanel.centerX, top: this.controlPanel.bottom + 10
+    } );
+
+    //Disable the return skater button when the skater is already at his initial coordinates
+    model.skater.movedProperty.link( function( moved ) {view.returnSkaterButton.enabled = moved;} );
     this.addChild( this.returnSkaterButton );
 
     //Determine if the skater is onscreen or offscreen for purposes of highlighting the 'return skater' button.

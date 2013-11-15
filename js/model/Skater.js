@@ -68,6 +68,12 @@ define( function( require ) {
       var vector = Vector2.createPolar( skaterHeight, angle - Math.PI / 2 );
       return position.plusXY( vector.x, -vector.y );
     } );
+
+    //Boolean flag that indicates whether the skater has moved from his initial position, and hence can be 'returned',
+    //For making the 'return skater' button enabled/disabled
+    //If this is a performance concern, perhaps it could just be dropped as a feature
+    this.addDerivedProperty( 'moved', ['position', 'startingPosition'], function( x, x0 ) { return x.x !== x0.x || x.y !== x0.y; } );
+
     this.massProperty.link( function() { skater.updateEnergy(); } );
 
     this.updateEnergy();
@@ -104,6 +110,7 @@ define( function( require ) {
       this.positionProperty.set( new Vector2( this.startingPosition.x, this.startingPosition.y ) );
       this.velocity = new Vector2( 0, 0 );
       this.clearThermal();
+      this.moved = false;
     },
 
     //Update the energies as a batch.  This is an explicit method instead of linked to all dependencies so that it can be called in a controlled fashion \
