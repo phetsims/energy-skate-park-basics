@@ -1,6 +1,11 @@
 // Copyright 2002-2013, University of Colorado Boulder
 
-//See http://www.dtcenter.org/met/users/docs/write_ups/circle_fit.pdf
+/**
+ * Determine the radius of curvature at a point in the track, so we can see if the skater would fly off or not.
+ * See http://www.dtcenter.org/met/users/docs/write_ups/circle_fit.pdf (or our copy on Unfuddle)
+ *
+ * @author Sam Reid
+ */
 define( function( require ) {
   'use strict';
 

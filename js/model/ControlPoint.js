@@ -1,7 +1,7 @@
 // Copyright 2002-2013, University of Colorado Boulder
 
 /**
- * Data structure for a control point
+ * Data structure for a control point, which allows the user to change the track shape in the 'playground' screen.
  *
  * @author Sam Reid
  */

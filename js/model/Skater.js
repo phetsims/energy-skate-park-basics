@@ -2,6 +2,7 @@
 
 /**
  * Model for the skater in Energy Skate Park: Basics, including position, velocity, energy, etc..  All units are in meters.
+ *
  * @author Sam Reid
  */
 define( function( require ) {
