@@ -133,7 +133,6 @@ define( function( require ) {
 
     //The button to return the skater
     //TODO: Disable this button when the skater is already at his initial coordinates?
-    //TODO: When pressing return skater, and he was on a different track, he will ride a phantom track
     this.returnSkaterButton = new TextPushButton( returnSkaterString, {listener: model.returnSkater.bind( model ), centerX: this.controlPanel.centerX, top: this.controlPanel.bottom + 10} );
     this.addChild( this.returnSkaterButton );
 
