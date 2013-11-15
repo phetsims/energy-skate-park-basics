@@ -2,6 +2,7 @@
 
 /**
  * The Undo button that can be used to remove thermal energy from the system.
+ *
  * @author Sam Reid
  */
 define( function( require ) {

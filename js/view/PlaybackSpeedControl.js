@@ -2,6 +2,7 @@
 
 /**
  * Scenery node for the speed controls, with "normal" and "slow motion" radio buttons.
+ *
  * @author Sam Reid
  */
 define( function( require ) {

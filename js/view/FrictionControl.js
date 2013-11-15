@@ -2,6 +2,7 @@
 
 /**
  * Scenery node for the friction control, including on/off radio buttons and a slider. Only shown in screens 2-3.
+ *
  * @author Sam Reid
  */
 define( function( require ) {

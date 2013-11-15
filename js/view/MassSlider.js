@@ -2,6 +2,7 @@
 
 /**
  * Scenery node for the mass slider.
+ *
  * @author Sam Reid
  */
 define( function( require ) {

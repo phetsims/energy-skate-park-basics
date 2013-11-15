@@ -3,6 +3,7 @@
 /**
  * Scenery node that shows the grid lines and labels, when enabled in the control panel.
  * Every other horizontal line is labeled and highlighted to make it easy to count.
+ *
  * @author Sam Reid
  */
 define( function( require ) {

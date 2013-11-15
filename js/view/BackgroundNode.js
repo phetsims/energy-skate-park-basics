@@ -2,6 +2,7 @@
 
 /**
  * Scenery node that shows the background, including the mountains, sky, ground and grass.
+ *
  * @author Sam Reid
  */
 define( function( require ) {

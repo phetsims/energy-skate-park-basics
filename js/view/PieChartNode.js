@@ -5,6 +5,7 @@
  * The size of the pie chart is proportional to the total energy.
  *
  * TODO: Pie chart shows under the skater if top===false
+ *
  * @author Sam Reid
  */
 define( function( require ) {

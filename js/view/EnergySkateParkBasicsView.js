@@ -2,6 +2,7 @@
 
 /**
  * Scenery node for the energy skate park basics view (includes everything you see)
+ *
  * @author Sam Reid
  */
 define( function( require ) {

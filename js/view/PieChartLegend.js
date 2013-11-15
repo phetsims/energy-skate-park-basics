@@ -2,6 +2,7 @@
 
 /**
  * Scenery node that shows the legend for the pie chart, and a reset button for thermal energy.
+ *
  * @author Sam Reid
  */
 define( function( require ) {

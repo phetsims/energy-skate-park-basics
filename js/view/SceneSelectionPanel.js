@@ -2,6 +2,7 @@
 
 /**
  * Panel with radio buttons for choosing one of three tracks, in the first 2 screens of Energy Skate Park: Basics
+ *
  * @author Sam Reid
  */
 define( function( require ) {
