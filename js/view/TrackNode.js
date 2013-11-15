@@ -2,7 +2,7 @@
 
 /**
  * Scenery node for the track, which can be translated by dragging the track, or manipulated by dragging its control points.
- * If the track's length is changed (by deleting a control point or linking two tracks together) and new TrackNode is created.
+ * If the track's length is changed (by deleting a control point or linking two tracks together) a new TrackNode is created.
  *
  * TODO: Show a dotted line along the track in 'stick to track' mode.
  * TODO: On the Playground screen, sometimes the skater goes behind the track nodes
@@ -46,7 +46,6 @@ define( function( require ) {
           },
 
           //Drag an entire track
-          //TODO: optimize so it is not recreating shape or getting called back once per control point
           drag: function( event, trail ) {
 
             var dragPoint = event.pointer.point;
@@ -237,6 +236,10 @@ define( function( require ) {
 
                   controlPoint.snapTarget = bestDistance !== null && bestDistance < 1 ? bestMatch : null;
                 }
+
+                //When one control point dragged, update the track and the node shape
+                track.updateSplines();
+                updateTrackShape();
               },
               end: function( event ) {
                 if ( isEndPoint && controlPoint.snapTarget ) {
@@ -248,10 +251,14 @@ define( function( require ) {
         })( i === 0 || i === track.controlPoints.length - 1 );
       }
     }
-    //If any control point dragged, update the track
-    for ( var index = 0; index < track.controlPoints.length; index++ ) {
-      track.controlPoints[index].positionProperty.link( updateTrackShape );
-    }
+
+    //Init the track shape
+    updateTrackShape();
+
+    //Update the track shape when the whole track is translated
+    //Just observing the control points individually would lead to N expensive callbacks (instead of 1) for each of the N points
+    //So we use this broadcast mechanism instead
+    track.on( 'translated', updateTrackShape );
   }
 
   return inherit( Node, TrackNode );

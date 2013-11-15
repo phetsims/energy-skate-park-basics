@@ -92,10 +92,6 @@ define( function( require ) {
       track.ySearchPoints = null;
     };
 
-    for ( var i = 0; i < controlPoints.length; i++ ) {
-      controlPoints[i].positionProperty.lazyLink( this.updateSplines.bind( this ) );
-    }
-
     this.translationListeners = [];
     this.updateSplines();
   }
@@ -170,14 +166,11 @@ define( function( require ) {
         point.sourcePosition = point.sourcePosition.plusXY( dx, dy );
       }
 
-//      this.offsetProperty.set( this.offsetProperty.get().plusXY( dx, dy ) );
-//      for ( var i = 0; i < this.translationListeners.length; i++ ) {
-//        var listener = this.translationListeners[i];
-//        listener( dx, dy );
-//      }
-
-      //TODO: just translate the splines, do not recompute everything?
       this.updateSplines();
+
+      //Just observing the control points individually would lead to N expensive callbacks (instead of 1) for each of the N points
+      //So we use this broadcast mechanism instead
+      this.trigger( 'translated' );
     },
 
     addTranslationListener: function( listener ) { this.translationListeners.push( listener ); },
