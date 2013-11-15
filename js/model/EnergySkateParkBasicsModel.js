@@ -77,6 +77,7 @@ define( function( require ) {
       this.sceneProperty.link( function( scene ) {
         for ( var i = 0; i < model.tracks.length; i++ ) {
           model.tracks.get( i ).physical = (i === scene);
+          model.tracks.get( i ).scene = i;
         }
         model.skater.track = null;
       } );
@@ -493,8 +494,13 @@ define( function( require ) {
       }
     },
 
-    //Return to the place he was last released by the user
-    returnSkater: function() { this.skater.returnSkater(); },
+    //Return to the place he was last released by the user.  Also restores the track the skater was on so the initial conditions are the same as the previous release
+    returnSkater: function() {
+      if ( this.skater.startingTrack.scene !== undefined ) {
+        this.scene = this.skater.startingTrack.scene;
+      }
+      this.skater.returnSkater();
+    },
 
     //Clear the thermal energy from the model
     clearThermal: function() { this.skater.clearThermal(); },
