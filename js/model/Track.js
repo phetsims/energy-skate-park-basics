@@ -113,7 +113,9 @@ define( function( require ) {
 
     //Returns the closest point (Euclidean) and position (parametric) on the track, as an object with {u,point}
     //also checks 1E-6 beyond each side of the track to see if the skater is beyond the edge of the track
-    //TODO: Could binary search after coarse serach
+    //This currently does a flat search, but if more precision is needed, a finer-grained binary search could be done afterwards
+    //This code is used when dragging the skater (to see if he is dragged near the track) and while the skater is falling toward the track
+    // (to see if he should bounce/attach)
     getClosestPositionAndParameter: function( point ) {
 
       //Compute the spline points for purposes of getting closest points.
