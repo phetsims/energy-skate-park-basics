@@ -168,13 +168,6 @@ define( function( require ) {
     if ( model.showCircularRegression ) {
       this.addChild( new CircularRegressionNode( model.circularRegressionProperty, transform ) );
     }
-
-    //For debugging//TODO: Remove
-//    var text = new Text( 'hello', {top: 5} );
-//    window.phetModel.textProperty.link( function( t ) {
-//      text.text = t;
-//    } );
-//    this.addChild( text );
   }
 
   return inherit( ScreenView, EnergySkateParkBasicsView, {

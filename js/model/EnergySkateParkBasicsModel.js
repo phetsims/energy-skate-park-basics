@@ -138,8 +138,6 @@ define( function( require ) {
         var numDivisions = dt < 1 / 55 ? 1 :
                            Math.ceil( scaleFactor );
 
-        //For debugging//TODO: Remove
-//        window.phetModel.text = 'dt = ' + dt.toFixed( 5 ) + ', scaleFactor=' + scaleFactor.toFixed( 5 ) + ', numDivisions=' + numDivisions;
         for ( var i = 0; i < numDivisions; i++ ) {
           this.stepModel( this.speed === 'normal' ? dt / numDivisions : dt / numDivisions * 0.25 );
         }
