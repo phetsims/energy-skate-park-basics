@@ -19,7 +19,7 @@ define( function( require ) {
 
   function BackgroundNode( model, energySkateParkBasicsView ) {
     this.skater = model.skater;
-    Node.call( this, { renderer: 'svg', pickable: false } );
+    Node.call( this, { pickable: false } );
 
     this.sky = new Rectangle( 0, 0, 0, 0 );
     this.addChild( this.sky );

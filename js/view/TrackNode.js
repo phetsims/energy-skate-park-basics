@@ -29,7 +29,7 @@ define( function( require ) {
    */
   function TrackNode( model, track, modelViewTransform, panelContainsPoint ) {
     var trackNode = this;
-    Node.call( this, { renderer: 'svg' } );
+    Node.call( this );
     var road = new Path( null, {fill: 'black', cursor: track.interactive ? 'pointer' : 'default'} );
 
     track.readyToReturnProperty.link( function( readyToReturn ) { road.fill = readyToReturn ? 'gray' : 'black'; } );
