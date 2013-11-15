@@ -83,7 +83,7 @@ define( function( require ) {
       for ( var i = 0; i < 4; i++ ) {
         //Move the tracks over so they will be in the right position in the view coordinates, under the grass to the left of the clock controls
         //Could use view transform for this, but it would require creating the view first, so just eyeballing it for now.
-        var offset = new Vector2( -5, -0.7 );
+        var offset = new Vector2( -5.5, -0.8 );
         var a = new Vector2( -1, 0 ).plus( offset );
         var b = new Vector2( 0, 0 ).plus( offset );
         var c = new Vector2( 1, 0 ).plus( offset );
