@@ -112,7 +112,7 @@ define( function( require ) {
           skater.updateEnergy();
         },
 
-        end: function( event ) {
+        end: function() {
           skater.dragging = false;
           skater.velocity = new Vector2( 0, 0 );
           skater.uD = 0;

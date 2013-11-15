@@ -41,13 +41,13 @@ define( function( require ) {
       var handler = new SimpleDragHandler( {
           allowTouchSnag: true,
 
-          start: function( event, trail ) {
+          start: function( event ) {
             lastDragPoint = event.pointer.point;
             track.dragging = true;
           },
 
           //Drag an entire track
-          drag: function( event, trail ) {
+          drag: function( event ) {
             track.dragging = true;
             var dragPoint = event.pointer.point;
             var delta = handler.transform.inverseDelta2( dragPoint.minus( lastDragPoint ) );
@@ -211,7 +211,7 @@ define( function( require ) {
           controlPointNode.addInputListener( new SimpleDragHandler(
             {
               allowTouchSnag: true,
-              start: function( event ) {
+              start: function() {
                 track.dragging = true;
               },
               drag: function( event ) {
@@ -253,7 +253,7 @@ define( function( require ) {
                 track.updateSplines();
                 updateTrackShape();
               },
-              end: function( event ) {
+              end: function() {
                 if ( isEndPoint && controlPoint.snapTarget ) {
                   model.joinTracks( track );
                 }

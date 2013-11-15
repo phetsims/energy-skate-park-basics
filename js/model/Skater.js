@@ -68,7 +68,7 @@ define( function( require ) {
       var vector = Vector2.createPolar( skaterHeight, angle - Math.PI / 2 );
       return position.plusXY( vector.x, -vector.y );
     } );
-    this.massProperty.link( function( mass ) { skater.updateEnergy(); } );
+    this.massProperty.link( function() { skater.updateEnergy(); } );
 
     this.updateEnergy();
   }
