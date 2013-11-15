@@ -266,6 +266,7 @@ define( function( require ) {
         skater.velocity = new Vector2( 0, 0 );
         skater.thermalEnergy = initialEnergy;
         skater.angle = 0;
+        skater.position = new Vector2( proposedPosition.x, 0 );
       }
       else {
 
@@ -453,14 +454,14 @@ define( function( require ) {
       if ( skater.dragging ) {
       }
 
-      //Free fall
-      else if ( !skater.track && skater.position.y > 0 ) {
-        this.stepFreeFall( dt );
-      }
-
       //On the ground
       else if ( !skater.track && skater.position.y <= 0 ) {
         this.stepGround( dt );
+      }
+
+      //Free fall
+      else if ( !skater.track && skater.position.y > 0 ) {
+        this.stepFreeFall( dt );
       }
 
       //On a track
