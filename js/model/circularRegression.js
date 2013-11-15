@@ -11,6 +11,8 @@ define( function( require ) {
 
   var Vector2 = require( 'DOT/Vector2' );
 
+  var test = false;
+
   //PERFORMANCE/ALLOCATION: could pass in the Vector2 as an arg, to avoid allocation
   var centroid = function( points ) {
     var sumX = 0;
@@ -67,16 +69,18 @@ define( function( require ) {
     return {r: r, x: uc + average.x, y: vc + average.y};
   };
 
-  //Test case
-//  var result = circularRegression( [
-//    new Vector2( 0, 0 ),
-//    new Vector2( 0.5, 0.25 ),
-//    new Vector2( 1.0, 1.0 ),
-//    new Vector2( 1.5, 2.25 ),
-//    new Vector2( 2.0, 4.0 ),
-//    new Vector2( 2.5, 6.25 ),
-//    new Vector2( 3, 9 )
-//  ] );
+  if ( test ) {
+    //Test case
+    var result = circularRegression( [
+      new Vector2( 0, 0 ),
+      new Vector2( 0.5, 0.25 ),
+      new Vector2( 1.0, 1.0 ),
+      new Vector2( 1.5, 2.25 ),
+      new Vector2( 2.0, 4.0 ),
+      new Vector2( 2.5, 6.25 ),
+      new Vector2( 3, 9 )
+    ] );
+  }
 
   return circularRegression;
 } );

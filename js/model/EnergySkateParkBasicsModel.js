@@ -300,8 +300,6 @@ define( function( require ) {
     stepTrack: function( dt ) {
 
       var skater = this.skater;
-      var x1 = skater.position.x;
-      var y1 = skater.position.y;
       var track = skater.track;
       var u = skater.u;
       var uD = skater.uD;
@@ -446,22 +444,9 @@ define( function( require ) {
       }
     },
 
-    getRadiusOfCurvature: function( curvature ) {
-      return curvature.r;
-    },
-
     //PERFORMANCE/ALLOCATION
     getCurvatureDirection: function( curvature, x2, y2 ) {
       return new Vector2( curvature.x - x2, curvature.y - y2 ).normalized();
-    },
-
-    getNormalForce: function( x2, y2, vx, vy, curvature ) {
-      var v = Math.sqrt( vx * vx + vy * vy );
-      var curvatureDirection = this.getCurvatureDirection( curvature, x2, y2 );
-      var netForce = new Vector2( 0, -this.skater.mass * this.skater.gravity );
-//      netForceRadial.add( new MutableVector2D( xThrust * mass, yThrust * mass ) );//thrust
-      var normalForceMagnitude = this.skater.mass * v * v / curvature.r - netForce.dot( curvatureDirection );
-      return Vector2.createPolar( normalForceMagnitude, curvatureDirection.angle() );
     },
 
     stepModel: function( dt ) {

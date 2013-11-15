@@ -31,7 +31,7 @@ define( function( require ) {
   var gridString = require( 'string!ENERGY_SKATE_PARK_BASICS/controls.show-grid' );
   var stickToTrackString = require( 'string!ENERGY_SKATE_PARK_BASICS/stickToTrack' );
 
-  function EnergySkateParkBasicsControlPanel( model, view ) {
+  function EnergySkateParkBasicsControlPanel( model ) {
     var barGraphSet = [new Text( barGraphString ), this.createBarGraphIcon()];
     var pieChartSet = [new Text( pieChartString ), this.createPieChartIcon()];
     var gridSet = [new Text( gridString ), this.createGridIcon()];
@@ -62,7 +62,7 @@ define( function( require ) {
     var content = new VBox( {spacing: 10,
       children: !model.frictionAllowed ?
                 [checkBoxes, new MassSlider( model )] :
-                [checkBoxes, new FrictionControl( model, view )]} );
+                [checkBoxes, new FrictionControl( model )]} );
 
     Panel.call( this, content, { xMargin: 10, yMargin: 10, fill: '#F0F0F0', stroke: 'gray', lineWidth: 1, resize: false } );
   }

@@ -95,7 +95,6 @@ define( function( require ) {
       track.ySearchPoints = null;
     };
 
-    this.translationListeners = [];
     this.updateSplines();
   }
 
@@ -160,14 +159,6 @@ define( function( require ) {
       return -mass * gravity * this.ySpline.at( u ) + 1 / 2 * mass * vSquared;
     },
 
-    //Get the total energy of a point mass with parametric position u and parametric velocity uD
-    getEnergyShortcut: function( xPrime2, yPrime2, y, uD, mass, gravity ) {
-
-      //get Euclidean velocity from parametric velocity
-      //See equation 8 from the Bensky paper
-      return -mass * gravity * y + 1 / 2 * mass * (xPrime2 * xPrime2 + yPrime2 * yPrime2) * uD * uD;
-    },
-
     translate: function( dx, dy ) {
       //move all the control points
       for ( var i = 0; i < this.controlPoints.length; i++ ) {
@@ -181,8 +172,6 @@ define( function( require ) {
       //So we use this broadcast mechanism instead
       this.trigger( 'translated' );
     },
-
-    addTranslationListener: function( listener ) { this.translationListeners.push( listener ); },
 
     //For purposes of showing the skater angle, get the view angle of the track here.  Note this means inverting the y values
     //This is called every step while animating on the track, so it was optimized to avoid new allocations

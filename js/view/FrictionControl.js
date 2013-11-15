@@ -20,7 +20,7 @@ define( function( require ) {
   var lotsString = require( 'string!ENERGY_SKATE_PARK_BASICS/controls.gravity.lots' );
   var Constants = require( 'ENERGY_SKATE_PARK_BASICS/Constants' );
 
-  function FrictionControl( model, view ) {
+  function FrictionControl( model ) {
     var frictionRange = {min: 0, max: 2};
     var slider = new HSlider( model.frictionProperty, frictionRange, Constants.SLIDER_OPTIONS );
     var tickFont = new PhetFont( 10 );

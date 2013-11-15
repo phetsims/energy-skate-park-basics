@@ -124,7 +124,7 @@ define( function( require ) {
     speedometerNode.top = this.layoutBounds.minY + 5;
     this.addChild( speedometerNode );
 
-    this.controlPanel = new EnergySkateParkBasicsControlPanel( model, this );
+    this.controlPanel = new EnergySkateParkBasicsControlPanel( model );
     this.addChild( this.controlPanel );
     this.controlPanel.right = this.layoutBounds.width - 5;
     this.controlPanel.top = 5;
@@ -149,7 +149,7 @@ define( function( require ) {
       view.returnSkaterButton.center = center;
     } );
 
-    this.addChild( new BarGraphNode( model, this ) );
+    this.addChild( new BarGraphNode( model ) );
 
     var playPauseControl = new PlayPauseControlPanel( model, this );
     this.addChild( playPauseControl.mutate( {centerX: this.layoutBounds.centerX + playPauseControl.playButton.width / 2, bottom: this.layoutBounds.maxY - 10} ) );

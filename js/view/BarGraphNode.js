@@ -24,7 +24,7 @@ define( function( require ) {
   var totalString = require( 'string!ENERGY_SKATE_PARK_BASICS/energy.total' );
   var energyString = require( 'string!ENERGY_SKATE_PARK_BASICS/plots.energy-vs-time.energy' );
 
-  function BarGraphNode( model, energySkateParkBasicsView ) {
+  function BarGraphNode( model ) {
     var barGraphNode = this;
     this.skater = model.skater;
 
