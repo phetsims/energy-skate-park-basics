@@ -31,6 +31,9 @@ define( function( require ) {
    * @constructor
    */
   function EnergySkateParkBasicsModel( draggableTracks, frictionAllowed ) {
+    if ( !window.phetModel ) {
+      window.phetModel = new PropertySet( {text: ''} );
+    }
     this.frictionAllowed = frictionAllowed;
     this.draggableTracks = draggableTracks;
 
@@ -121,12 +124,19 @@ define( function( require ) {
     //Step the model, automatically called from Joist
     step: function( dt ) {
       //If the delay makes dt too high, then truncate it.  This helps e.g. when clicking in the address bar on ipad, which gives a huge dt and problems for integration
-      //TODO: on the iPad3 if all features are turned on, the model will have numerical integration problems and buggy behavior.  We should subdivide dt or find another solution
-      if ( dt > 1.0 / 30 ) {
-        dt = 1.0 / 30;
-      }
+      //TODO: For dt subdivision, make sure not updating any view code
       if ( !this.paused ) {
-        this.stepModel( this.speed === 'normal' ? dt : dt * 0.25 );
+        var scaleFactor = dt * 60;
+
+        //dt has to run at 1/55.0 or less or we will have numerical problems in the integration
+        var numDivisions = dt < 1 / 55 ? 1 :
+                           Math.ceil( scaleFactor );
+
+        //For debugging//TODO: Remove
+//        window.phetModel.text = 'dt = ' + dt.toFixed( 5 ) + ', scaleFactor=' + scaleFactor.toFixed( 5 ) + ', numDivisions=' + numDivisions;
+        for ( var i = 0; i < numDivisions; i++ ) {
+          this.stepModel( this.speed === 'normal' ? dt / numDivisions : dt / numDivisions * 0.25 );
+        }
       }
     },
     stepGround: function( dt ) { },
