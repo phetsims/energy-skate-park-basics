@@ -24,7 +24,9 @@ define( function( require ) {
 
     var kineticEnergySlice = new Path( null, {fill: EnergySkateParkColorScheme.kineticEnergy, stroke: 'black', lineWidth: 1} );
     var potentialEnergySlice = new Path( null, {fill: EnergySkateParkColorScheme.potentialEnergy, stroke: 'black', lineWidth: 1} );
-    var thermalEnergySlice = new Path( null, {fill: EnergySkateParkColorScheme.thermalEnergy, stroke: 'black', lineWidth: 1} );
+
+    //Back layer is always a circle, so use the optimized version.
+    var thermalEnergySlice = new Circle( 1, {fill: EnergySkateParkColorScheme.thermalEnergy, stroke: 'black', lineWidth: 1} );
     Node.call( this, {children: [thermalEnergySlice, potentialEnergySlice, kineticEnergySlice ], pickable: false} );
 
     this.skater.headPositionProperty.link( function( headPosition ) {
@@ -63,7 +65,16 @@ define( function( require ) {
         thermalEnergySlice.visible = false;
         kineticEnergySlice.visible = false;
         selectedSlice.visible = true;
-        selectedSlice.shape = Shape.circle( 0, 0, radius );
+
+        //Performance optimization for background circle
+        if ( selectedSlice instanceof Circle ) {
+
+          //Round the radius so it will only update the graphics when it changed by a px or more
+          selectedSlice.radius = Math.round( radius );
+        }
+        else {
+          selectedSlice.shape = Shape.circle( 0, 0, radius );
+        }
       }
       else {
         potentialEnergySlice.visible = true;
@@ -73,8 +84,8 @@ define( function( require ) {
         var fractionKinetic = skater.kineticEnergy / skater.totalEnergy;
 
         //Show one of them in the background instead of pieces for each one for performance
-        //TODO: this shouldn't change too much if energy conserved, perhaps it could be optimized somehow?  Perhaps a guard?
-        thermalEnergySlice.shape = Shape.circle( 0, 0, radius );
+        //Round the radius so it will only update the graphics when it changed by a px or more
+        thermalEnergySlice.radius = Math.round( radius );
         potentialEnergySlice.shape = new Shape().moveTo( 0, 0 ).ellipticalArc( 0, 0, radius, radius, 0, -Math.PI / 2, Math.PI * 2 * fractionPotential - Math.PI / 2, false ).lineTo( 0, 0 );
         kineticEnergySlice.shape = new Shape().moveTo( 0, 0 ).ellipticalArc( 0, 0, radius, radius, 0, Math.PI * 2 * fractionPotential - Math.PI / 2, Math.PI * 2 * fractionPotential - Math.PI / 2 + fractionKinetic * Math.PI * 2, false ).lineTo( 0, 0 );
       }
