@@ -481,7 +481,7 @@ define( function( require ) {
 
     //Return to the place he was last released by the user.  Also restores the track the skater was on so the initial conditions are the same as the previous release
     returnSkater: function() {
-      if ( this.skater.startingTrack.scene !== undefined ) {
+      if ( this.skater.startingTrack && this.skater.startingTrack.scene !== undefined ) {
         this.scene = this.skater.startingTrack.scene;
       }
       this.skater.returnSkater();
