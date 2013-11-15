@@ -35,101 +35,100 @@ define( function( require ) {
 
     track.readyToReturnProperty.link( function( readyToReturn ) { road.fill = readyToReturn ? 'gray' : 'black'; } );
     this.addChild( road );
-    var clickOffset = null;
 
-    var lastDragPoint;
-    var handler = new SimpleDragHandler( {
-        allowTouchSnag: true,
+    if ( track.interactive ) {
+      var lastDragPoint;
+      var handler = new SimpleDragHandler( {
+          allowTouchSnag: true,
 
-        start: function( event, trail ) {
-          lastDragPoint = event.pointer.point;
-        },
+          start: function( event, trail ) {
+            lastDragPoint = event.pointer.point;
+          },
 
-        //Drag an entire track
-        //TODO: optimize so it is not recreating shape or getting called back once per control point
-        drag: function( event, trail ) {
+          //Drag an entire track
+          //TODO: optimize so it is not recreating shape or getting called back once per control point
+          drag: function( event, trail ) {
 
-          var dragPoint = event.pointer.point;
-          var delta = handler.transform.inverseDelta2( dragPoint.minus( lastDragPoint ) );
-          lastDragPoint = dragPoint;
+            var dragPoint = event.pointer.point;
+            var delta = handler.transform.inverseDelta2( dragPoint.minus( lastDragPoint ) );
+            lastDragPoint = dragPoint;
 
-          //Is the user trying to return the track?
-          track.overTrackPanel = panelContainsPoint( dragPoint );
+            //Is the user trying to return the track?
+            track.overTrackPanel = panelContainsPoint( dragPoint );
 
-          var modelDelta = modelViewTransform.viewToModelDelta( delta );
-          track.translate( modelDelta.x, modelDelta.y );
+            var modelDelta = modelViewTransform.viewToModelDelta( delta );
+            track.translate( modelDelta.x, modelDelta.y );
 
-          //If the user moved it out of the toolbox, then make it physically interactive
-          track.physical = true;
+            //If the user moved it out of the toolbox, then make it physically interactive
+            track.physical = true;
 
-          //If one of the control points is close enough to link to another track, do so
-          var tracks = model.getPhysicalTracks();
+            //If one of the control points is close enough to link to another track, do so
+            var tracks = model.getPhysicalTracks();
 
-          var bestDistance = null;
-          var myBestPoint = null;
-          var otherBestPoint = null;
+            var bestDistance = null;
+            var myBestPoint = null;
+            var otherBestPoint = null;
 
-          var myPoints = [track.controlPoints[0], track.controlPoints[track.controlPoints.length - 1]];
+            var myPoints = [track.controlPoints[0], track.controlPoints[track.controlPoints.length - 1]];
 
-          for ( var i = 0; i < tracks.length; i++ ) {
-            var t = tracks[i];
-            if ( t !== track ) {
+            for ( var i = 0; i < tracks.length; i++ ) {
+              var t = tracks[i];
+              if ( t !== track ) {
 
 //              console.log( "comparing this = ", track.toString(), 'to', t.toString() );
 
-              //4 cases 00, 01, 10, 11
-              var otherPoints = [t.controlPoints[0], t.controlPoints[t.controlPoints.length - 1]];
+                //4 cases 00, 01, 10, 11
+                var otherPoints = [t.controlPoints[0], t.controlPoints[t.controlPoints.length - 1]];
 
-              //don't match inner points
+                //don't match inner points
 
-              for ( var j = 0; j < myPoints.length; j++ ) {
-                var myPoint = myPoints[j];
-                for ( var k = 0; k < otherPoints.length; k++ ) {
-                  var otherPoint = otherPoints[k];
+                for ( var j = 0; j < myPoints.length; j++ ) {
+                  var myPoint = myPoints[j];
+                  for ( var k = 0; k < otherPoints.length; k++ ) {
+                    var otherPoint = otherPoints[k];
 //                  debugger;
-                  var distance = myPoint.sourcePosition.distance( otherPoint.position );
+                    var distance = myPoint.sourcePosition.distance( otherPoint.position );
 //                  console.log( distance );
-                  if ( (bestDistance === null && distance > 1E-6) || (distance < bestDistance ) ) {
-                    bestDistance = distance;
-                    myBestPoint = myPoint;
-                    otherBestPoint = otherPoint;
+                    if ( (bestDistance === null && distance > 1E-6) || (distance < bestDistance ) ) {
+                      bestDistance = distance;
+                      myBestPoint = myPoint;
+                      otherBestPoint = otherPoint;
+                    }
                   }
                 }
               }
             }
-          }
 
 
-          if ( bestDistance !== null && bestDistance < 1 ) {
-            console.log( 'setting best to ', otherBestPoint.position.x, otherBestPoint.position.x, 'bestDistance', bestDistance );
-            myBestPoint.snapTarget = otherBestPoint;
+            if ( bestDistance !== null && bestDistance < 1 ) {
+              console.log( 'setting best to ', otherBestPoint.position.x, otherBestPoint.position.x, 'bestDistance', bestDistance );
+              myBestPoint.snapTarget = otherBestPoint;
 
-            //Set the opposite point to be unsnapped, you can only snap one at a time
-            (myBestPoint === myPoints[0] ? myPoints[1] : myPoints[0]).snapTarget = null;
-          }
-          else {
-            myPoints[0].snapTarget = null;
-            myPoints[1].snapTarget = null;
-          }
-        },
+              //Set the opposite point to be unsnapped, you can only snap one at a time
+              (myBestPoint === myPoints[0] ? myPoints[1] : myPoints[0]).snapTarget = null;
+            }
+            else {
+              myPoints[0].snapTarget = null;
+              myPoints[1].snapTarget = null;
+            }
+          },
 
-        //End the drag
-        end: function() {
-          var myPoints = [track.controlPoints[0], track.controlPoints[track.controlPoints.length - 1]];
-          if ( myPoints[0].snapTarget || myPoints[1].snapTarget ) {
-            model.joinTracks( track );
-          }
+          //End the drag
+          end: function() {
+            var myPoints = [track.controlPoints[0], track.controlPoints[track.controlPoints.length - 1]];
+            if ( myPoints[0].snapTarget || myPoints[1].snapTarget ) {
+              model.joinTracks( track );
+            }
 
-          //Return the track.  If it was a combination of two tracks, split them and return both, or keep track of parents, or something
-          //When dropping the track in the toolbox, make nonphysical and reset coordinates
-          else if ( track.readyToReturn ) {
-            track.returnToControlPanel();
+            //Return the track.  If it was a combination of two tracks, split them and return both, or keep track of parents, or something
+            //When dropping the track in the toolbox, make nonphysical and reset coordinates
+            else if ( track.readyToReturn ) {
+              track.returnToControlPanel();
+            }
           }
         }
-      }
-    );
+      );
 
-    if ( track.interactive ) {
       road.addInputListener( handler );
     }
 
@@ -253,10 +252,6 @@ define( function( require ) {
     for ( var index = 0; index < track.controlPoints.length; index++ ) {
       track.controlPoints[index].positionProperty.link( updateTrackShape );
     }
-
-    track.addTranslationListener( function( dx, dy ) {
-      trackNode.translate( modelViewTransform.modelToViewDelta( {x: dx, y: dy} ) );
-    } );
   }
 
   return inherit( Node, TrackNode );
