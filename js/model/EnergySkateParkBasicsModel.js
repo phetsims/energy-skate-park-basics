@@ -65,7 +65,9 @@ define( function( require ) {
       this.addProperty( 'scene', 0 );
       var parabola = [new Vector2( -4, 6 ), new Vector2( 0, 0 ), new Vector2( 4, 6 )];
       var slope = [new Vector2( -4, 4 ), new Vector2( -2, 2 ), new Vector2( 2, 1 )];
-      var doubleWell = [new Vector2( -4, 5 ), new Vector2( -2, 0 ), new Vector2( 0, 2 ), new Vector2( 2, 1 ), new Vector2( 4, 5 ) ];
+
+      //Move the left well up a bit since the interpolation moves it down by that much, and we don't want the skater to go to y<0 while on the track
+      var doubleWell = [new Vector2( -4, 5 ), new Vector2( -2, 0.0166015 ), new Vector2( 0, 2 ), new Vector2( 2, 1 ), new Vector2( 4, 5 ) ];
       var toControlPoint = function( pt ) {return new ControlPoint( pt.x, pt.y );};
       this.tracks.addAll( [
         new Track( this.tracks, _.map( parabola, toControlPoint ), false ),
