@@ -76,7 +76,6 @@ define( function( require ) {
 
           var globalPoint = skaterNode.globalToParentPoint( event.pointer.point );
           var position = modelViewTransform.viewToModelPosition( globalPoint );
-          var dragPosition = position;
 
           //make sure it is within the visible bounds
           position = view.availableModelBounds.getClosestPoint( position.x, position.y, position );
