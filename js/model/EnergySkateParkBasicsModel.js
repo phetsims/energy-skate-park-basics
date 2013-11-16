@@ -115,7 +115,6 @@ define( function( require ) {
     //See http://digitalcommons.calpoly.edu/cgi/viewcontent.cgi?article=1387&context=phy_fac
     //Computational problems in introductory physics: Lessons from a bead on a wire
     //Thomas J. Bensky and Matthew J. Moelter
-    //TODO: We probably need to add friction here.  Could be easy if is symmetric in x & y, factor out an ax, ay term
     uDD: function( uD, xP, xPP, yP, yPP, g ) {
       return -1 * (uD * uD * (xP * xPP + yP * yPP) - g * yP) / (xP * xP + yP * yP);
     },
@@ -295,8 +294,6 @@ define( function( require ) {
     },
 
     //Update the skater if he is on the track
-    //TODO: Add support for friction.  Could try deriving the parametric equations with a friction term, but may be difficult since we have to account for the
-    //normal force in the friction computation.
     stepTrack: function( dt ) {
 
       var skater = this.skater;
@@ -365,7 +362,6 @@ define( function( require ) {
       if ( this.friction > 0 ) {
 
         var coefficient = Util.linear( 0, 1, 1, 0.95, this.friction );
-        //TODO: this is technically incorrect because it is in parametric units, but is it close enough?  When will it break down?  When the metric space of the track is radically different (control points differently spaced)
         //But perhaps since friction is qualitative in this sim it will be okay.
         //If we do need the full friction treatment, perhaps we could modify the parametric equation uDD above to account for friction as it accounts for gravity force.
         skater.uD = uD2 * coefficient;
@@ -397,20 +393,6 @@ define( function( require ) {
         if ( thermalEnergy > 0 ) {
           skater.thermalEnergy = skater.thermalEnergy + thermalEnergy;
         }
-
-        //TODO: we may use this code for integrating the friction with the above computation
-//        var normalForce = this.getNormalForce( x2, y2, vx, vy, curvature );
-//        console.log( 'normalForce', normalForce.magnitude() );
-
-//        var frictionForce = new Vector2( vx, vy ).normalized().timesScalar( -this.friction * normalForce.magnitude() * 25 );
-//        var thermalEnergy = frictionForce.magnitude() * new Vector2( x2, y2 ).distance( new Vector2( x1, y1 ) );
-//        skater.thermalEnergy = skater.thermalEnergy + thermalEnergy;
-//        console.log( thermalEnergy );
-
-        //reduce velocity to account for loss of energy to thermal
-        //0.5mvv=e
-//        vx = vx / 2;
-//        vy = vy / 2;
       }
 
       var flyOffMidTrack = false;
