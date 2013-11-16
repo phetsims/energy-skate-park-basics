@@ -267,7 +267,6 @@ define( function( require ) {
     },
 
     //Started in free fall and did not interact with a track
-    //TODO: handle the case where the skater is moving to the left/right when landing on the ground
     continueFreeFall: function( skater, initialEnergy, proposedPosition, proposedVelocity ) {
 
       //make up for the difference by changing the y value
