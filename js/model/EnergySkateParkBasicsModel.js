@@ -249,8 +249,6 @@ define( function( require ) {
           skater.u = u;
           skater.uD = uD;
 
-          //TODO: Refine uD estimate based on energy conservation
-
           var newEnergy = track.getEnergy( u, skater.uD, skater.mass, skater.gravity );
           var delta = newEnergy - initialEnergy;
           if ( delta < 0 ) {
