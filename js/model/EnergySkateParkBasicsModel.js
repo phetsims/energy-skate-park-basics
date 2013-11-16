@@ -541,8 +541,6 @@ define( function( require ) {
         var p = newTrack.getClosestPositionAndParameter( this.skater.position );
         this.skater.track = newTrack;
         this.skater.u = p.u;
-
-        //TODO: Skater sometimes flips upside down when tracks joined, see TODO in Skater.js
       }
     }
   } );
