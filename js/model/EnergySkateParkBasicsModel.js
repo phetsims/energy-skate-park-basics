@@ -126,7 +126,6 @@ define( function( require ) {
     //Step the model, automatically called from Joist
     step: function( dt ) {
       //If the delay makes dt too high, then truncate it.  This helps e.g. when clicking in the address bar on ipad, which gives a huge dt and problems for integration
-      //TODO: For dt subdivision, make sure not updating any view code.  Just update a model structure for numDivisions times, then update all views only once
       if ( !this.paused ) {
         var scaleFactor = dt * 60;
 
