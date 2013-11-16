@@ -84,6 +84,10 @@ define( function( require ) {
   }
 
   return inherit( PropertySet, Skater, {
+
+    //Get the vector from feet to head, so that when tracks are joined we can make sure he is still pointing up
+    get upVector() { return this.headPosition.minus( this.position ); },
+
     clearThermal: function() {
       this.thermalEnergy = 0.0;
       this.updateEnergy();

@@ -538,9 +538,22 @@ define( function( require ) {
       //Move skater to new track if he was on the old track, by searching for the best fit point on the new track
       //Note: Energy is not conserved when tracks joined since the user has added or removed energy from the system
       if ( this.skater.track === a || this.skater.track === b ) {
+
+        //Keep track of the skater direction so we can toggle the 'up' flag if the track orientation changed
+        var originalNormal = this.skater.upVector;
         var p = newTrack.getClosestPositionAndParameter( this.skater.position );
         this.skater.track = newTrack;
         this.skater.u = p.u;
+        var x2 = newTrack.getX( p.u );
+        var y2 = newTrack.getY( p.u );
+        this.skater.position = new Vector2( x2, y2 );
+        this.skater.angle = newTrack.getViewAngleAt( p.u );
+        var newNormal = this.skater.upVector;
+
+        //If the skater flipped upside down because the track directionality is different, toggle his 'up' flag
+        if ( originalNormal.dot( newNormal ) < 0 ) {
+          this.skater.up = !this.skater.up;
+        }
       }
     }
   } );
