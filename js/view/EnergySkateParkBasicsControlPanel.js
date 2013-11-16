@@ -36,7 +36,10 @@ define( function( require ) {
     var pieChartSet = [new Text( pieChartString ), this.createPieChartIcon()];
     var gridSet = [new Text( gridString ), this.createGridIcon()];
     var speedometerSet = [new Text( speedString ), this.createSpeedometerIcon()];
-    var stickToTrackSet = [new Text( stickToTrackString ), new Rectangle( 0, 0, 20, 10, {fill: 'black'} )];//TODO: dotted yellow line for icon
+    var stickToTrackSet = [new Text( stickToTrackString ), new Node( {children: [
+      new Rectangle( 0, 0, 20, 10, {fill: 'black'} ),
+      new Line( 0, 5, 20, 5, {stroke: 'yellow', lineWidth: '2', lineDash: [4, 2]} )
+    ]} )];
 
     var sets = model.frictionAllowed ?
                [barGraphSet, pieChartSet, gridSet, speedometerSet, stickToTrackSet] :

@@ -43,7 +43,7 @@ define( function( require ) {
     } );
 
     //Show a red dot in the bottom center as the important particle model coordinate
-    this.addChild( new Circle( 4, {fill: 'red', x: imageWidth / scale / 2, y: imageHeight / scale } ) );
+    this.addChild( new Circle( 8, {fill: 'red', x: imageWidth / scale / 2, y: imageHeight / scale } ) );
 
     //Update the position and angle.  Normally the angle would only change if the position has also changed.
     var positionChanged = function( position ) {

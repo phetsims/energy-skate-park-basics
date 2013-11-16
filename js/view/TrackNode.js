@@ -5,7 +5,6 @@
  * If the track's length is changed (by deleting a control point or linking two tracks together) a new TrackNode is created.
  * Keep track of whether the track is dragging, so performance can be optimized while dragging
  *
- * TODO: Show a dotted line along the track in 'stick to track' mode.
  * @author Sam Reid
  */
 define( function( require ) {
@@ -32,9 +31,12 @@ define( function( require ) {
     var trackNode = this;
     Node.call( this );
     var road = new Path( null, {fill: 'black', cursor: track.interactive ? 'pointer' : 'default'} );
+    var dashedLine = new Path( null, {stroke: 'yellow', lineWidth: '2', lineDash: [4, 10]} );
+    model.stickToTrackProperty.link( function( stickToTrack ) { dashedLine.visible = stickToTrack; } );
 
     track.readyToReturnProperty.link( function( readyToReturn ) { road.fill = readyToReturn ? 'gray' : 'black'; } );
     this.addChild( road );
+    this.addChild( dashedLine );
 
     if ( track.interactive ) {
       var lastDragPoint;
@@ -189,6 +191,7 @@ define( function( require ) {
         miterLimit: 10
       } );
       road.shape = shape.getStrokedShape( strokeStyles );
+      dashedLine.shape = shape;
     };
 
     if ( track.interactive ) {
