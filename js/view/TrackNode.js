@@ -103,7 +103,7 @@ define( function( require ) {
 
 
             if ( bestDistance !== null && bestDistance < 1 ) {
-              console.log( 'setting best to ', otherBestPoint.position.x, otherBestPoint.position.x, 'bestDistance', bestDistance );
+//              console.log( 'setting best to ', otherBestPoint.position.x, otherBestPoint.position.x, 'bestDistance', bestDistance );
               myBestPoint.snapTarget = otherBestPoint;
 
               //Set the opposite point to be unsnapped, you can only snap one at a time

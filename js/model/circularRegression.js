@@ -44,7 +44,6 @@ define( function( require ) {
 
   var circularRegression = function( points ) {
     var average = centroid( points );
-    //console.log( 'average', average );
     var uv = points.map( function( point ) {
       return point.minus( average );
     } );

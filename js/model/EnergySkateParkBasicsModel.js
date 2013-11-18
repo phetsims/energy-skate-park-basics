@@ -219,7 +219,6 @@ define( function( require ) {
 
       var beforeSign = normal.dot( skater.position.minus( pt ) ) > 0;
       var afterSign = normal.dot( proposedPosition.minus( pt ) ) > 0;
-//          console.log( normal.dot( skater.position ), normal.dot( proposedPosition ), beforeSign, afterSign );
       if ( beforeSign !== afterSign ) {
 
         //reflect the velocity vector
@@ -348,7 +347,7 @@ define( function( require ) {
         finalEnergy = midEnergy;
         count++;
         if ( count >= 1000 ) {
-          console.log( 'count', count );
+//          console.log( 'count', count );
           break;
         }
       }
@@ -417,7 +416,6 @@ define( function( require ) {
         skater.uD = 0;
       }
       else if ( flyOffMidTrack ) {
-        console.log( 'leaving track' );
         skater.track = null;
         skater.uD = 0;
       }
@@ -454,7 +452,7 @@ define( function( require ) {
       var finalEnergy = skater.totalEnergy;
       var energyDifference = (finalEnergy - initialEnergy);
       if ( energyDifference > 1E-6 ) {
-        console.log( "Energy not conserved", energyDifference );
+//        console.log( "Energy not conserved", energyDifference );
       }
     },
 
