@@ -156,6 +156,9 @@ define( function( require ) {
       var proposedPosition = skater.position.plus( proposedVelocity.times( dt ) );
       if ( proposedPosition.y < 0 ) {
         proposedPosition.y = 0;
+
+        //Make sure the skater doesn't flip upside down when landing on the ground, see https://github.com/phetsims/energy-skate-park-basics/issues/14
+        skater.up = true;
       }
       if ( skater.position.x !== proposedPosition.x || skater.position.y !== proposedPosition.y ) {
 
