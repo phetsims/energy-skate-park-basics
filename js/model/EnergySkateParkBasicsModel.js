@@ -450,9 +450,9 @@ define( function( require ) {
       }
 
       var finalEnergy = skater.totalEnergy;
-      var energyDifference = (finalEnergy - initialEnergy);
+      var energyDifference = Math.abs( finalEnergy - initialEnergy );
       if ( energyDifference > 1E-6 ) {
-//        console.log( "Energy not conserved", energyDifference );
+        console.log( "Energy not conserved", energyDifference );
       }
     },
 
