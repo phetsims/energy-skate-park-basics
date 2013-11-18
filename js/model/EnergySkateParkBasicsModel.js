@@ -302,7 +302,7 @@ define( function( require ) {
       var gravity = skater.gravity;
 
       //P means Prime (i.e. derivative with respect to time)
-      //D means Dot (i.e. derivative with repsect to x)
+      //D means Dot (i.e. derivative with respect to x)
       //2 means after the step
       var xP = track.xSplineDiff.at( u );
       var yP = track.ySplineDiff.at( u );
