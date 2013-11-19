@@ -241,10 +241,11 @@ define( function( require ) {
 
         //reflect the velocity vector
         //http://www.gamedev.net/topic/165537-2d-vector-reflection-/
+
+        //Possible heisenbug workaround
         var allOK = proposedVelocity && proposedVelocity.minus && normal.times && normal.dot;
-//        if ( !allOK ) { alert( 'allOK === false' ); }
-        var bounceVelocity = allOK ? proposedVelocity.minus( normal.times( 2 * normal.dot( proposedVelocity ) ) ) :
-                             new Vector2( 0, 1 );
+
+        var bounceVelocity = allOK ? proposedVelocity.minus( normal.times( 2 * normal.dot( proposedVelocity ) ) ) : new Vector2( 0, 1 );
 
         //Attach to track if velocity is close enough to parallel to the track
         var dot = Math.abs( proposedVelocity.normalized().dot( segment ) );
@@ -264,19 +265,49 @@ define( function( require ) {
           var uDy = proposedVelocity.y / track.ySplineDiff.at( u );
           var uD = (uDx + uDy) / 2;
 
-          var newEnergy = track.getEnergy( u, skaterState.uD, skaterState.mass, skaterState.gravity );
+          var newEnergy = track.getEnergy( u, uD, skaterState.mass, skaterState.gravity );
           var delta = newEnergy - initialEnergy;
           var newThermalEnergy = skaterState.thermalEnergy;
           if ( delta < 0 ) {
             var lostEnergy = Math.abs( delta );
             newThermalEnergy = skaterState.thermalEnergy + lostEnergy;
           }
+          else {
+
+//            debugger;
+
+            var count = 0;
+            //Gained energy in landing.  Need to fine tune velocity
+            var upperBound = uD;
+            var lowerBound = 0;
+            var uDMid = (upperBound + lowerBound) / 2;
+            var midEnergy = track.getEnergy( u, uDMid, skaterState.mass, skaterState.gravity );
+            while ( Math.abs( midEnergy - initialEnergy ) > 1E-6 ) {
+              uDMid = (upperBound + lowerBound) / 2;
+              midEnergy = track.getEnergy( u, uDMid, skaterState.mass, skaterState.gravity );
+              if ( midEnergy > initialEnergy ) {
+                upperBound = uDMid;
+              }
+              else {
+                lowerBound = uDMid;
+              }
+              count++;
+//              console.log( '>>> count', count, 'energyDelta', Math.abs( midEnergy - initialEnergy ) );
+              if ( count >= 200 ) {
+                console.log( 'landing: iterations=', count );
+                break;
+              }
+            }
+            uD = (upperBound + lowerBound) / 2;
+          }
 
           return skaterState.update( {
             thermalEnergy: newThermalEnergy,
             track: track,
             u: u,
-            uD: uD
+            uD: uD,
+            velocity: proposedVelocity,
+            position: new Vector2( track.getX( u ), track.getY( u ) )
           } );
         }
       }
