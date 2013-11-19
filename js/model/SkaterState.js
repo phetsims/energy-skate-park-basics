@@ -14,13 +14,15 @@ define( function() {
     this.dragging = overrides.dragging || source.dragging;
     this.thermalEnergy = overrides.thermalEnergy || source.thermalEnergy;
     this.gravity = overrides.gravity || source.gravity;
-    this.track = overrides.track || source.track;
     this.position = overrides.position || source.position;
     this.velocity = overrides.velocity || source.velocity;
     this.mass = overrides.mass || source.mass;
     this.up = overrides.up || source.up;
     this.u = overrides.u || source.u;
     this.uD = overrides.uD || source.uD;
+
+    //Special handling for values that can be null
+    this.track = 'track' in overrides ? overrides.track : source.track;
   }
 
   SkaterState.prototype.getTotalEnergy = function() {
