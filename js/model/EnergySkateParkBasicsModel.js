@@ -174,7 +174,7 @@ define( function( require ) {
         proposedPosition.y = 0;
 
         //Make sure the skater doesn't flip upside down when landing on the ground, see https://github.com/phetsims/energy-skate-park-basics/issues/14
-        return new SkaterState( skaterState, {
+        return skaterState.with( {
           up: true,
           position: proposedPosition,
           velocity: new Vector2()
@@ -254,10 +254,7 @@ define( function( require ) {
         //If friction is not allowed, then bounce with elasticity = 1.
         if ( dot < 0.4 ) {
           this.bounces++;
-
-          return new SkaterState( skaterState, {
-            velocity: bounceVelocity
-          } );
+          return skaterState.with( {velocity: bounceVelocity} );
         }
         else {
           //If friction is allowed, keep the parallel component of velocity.
@@ -276,7 +273,7 @@ define( function( require ) {
             newThermalEnergy = skaterState.thermalEnergy + lostEnergy;
           }
 
-          return new SkaterState( skaterState, {
+          return skaterState.with( {
             thermalEnergy: newThermalEnergy,
             track: track,
             u: u,
@@ -299,7 +296,7 @@ define( function( require ) {
       if ( y <= 0 ) {
 
         //When falling straight down, stop completely and convert all energy to thermal
-        return new SkaterState( skaterState, {
+        return skaterState.with( {
           velocity: new Vector2( 0, 0 ),
           thermalEnergy: initialEnergy,
           angle: 0,
@@ -307,7 +304,7 @@ define( function( require ) {
         } );
       }
       else {
-        return new SkaterState( skaterState, {
+        return skaterState.with( {
           velocity: proposedVelocity,
           position: new Vector2( proposedPosition.x, y )
         } );
@@ -424,24 +421,18 @@ define( function( require ) {
 
       //Fly off the left or right side of the track
       if ( !skaterState.track.isParameterInBounds( u2 ) ) {
-
-        return new SkaterState( skaterState, {
+        return skaterState.with( {
           track: null,
           thermalEnergy: newThermalEnergy,
-          uD: 0,
           velocity: new Vector2( vx, vy ),
           position: new Vector2( x2, y2 )
         } );
-
       }
       else if ( flyOffMidTrack ) {
-        return new SkaterState( skaterState, {
-          track: null,
-          uD: 0
-        } );
+        return skaterState.with( {track: null} );
       }
       else {
-        return new SkaterState( skaterState, {
+        return skaterState.with( {
           u: u2,
           uD: uD2,
           thermalEnergy: newThermalEnergy,
