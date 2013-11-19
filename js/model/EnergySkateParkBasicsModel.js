@@ -121,8 +121,8 @@ define( function( require ) {
     },
     manualStep: function() {
       //step one frame, assuming 60fps
-      var result = this.stepModel( 1.0 / 60, this.getSkaterState() );
-      this.setSkaterState( result );
+      var result = this.stepModel( 1.0 / 60, new SkaterState( this.skater, {} ) );
+      result.setToSkater( this.skater );
     },
 
     //Step the model, automatically called from Joist
@@ -140,7 +140,7 @@ define( function( require ) {
 //        var numDivisions = dt < 1 / 55 ? 1 : Math.ceil( scaleFactor );
         var numDivisions = 10;
 
-        var skaterState = this.getSkaterState();
+        var skaterState = new SkaterState( this.skater, {} );
         var initialEnergy = skaterState.getTotalEnergy();
         for ( var i = 0; i < numDivisions; i++ ) {
           skaterState = this.stepModel( this.speed === 'normal' ? dt / numDivisions : dt / numDivisions * 0.25, skaterState );
@@ -151,28 +151,8 @@ define( function( require ) {
             console.log( "Energy not conserved", energyDifference );
           }
         }
-        this.setSkaterState( skaterState );
+        skaterState.setToSkater( this.skater );
       }
-    },
-
-    //To improve performance, operate solely on a skaterState instance without updating the real skater,
-    //so that the skater model itself can be set only once, and trigger callbacks only once (no matter how many subdivisions)
-    //This can also facilitate debugging and ensuring energy is conserved
-    getSkaterState: function() { return new SkaterState( this.skater, {} ); },
-
-    //Only set values that have changed
-    setSkaterState: function( skaterState ) {
-      this.skater.track = skaterState.track;
-      this.skater.position = skaterState.position;
-      this.skater.velocity = skaterState.velocity;
-      this.skater.up = skaterState.up;
-      this.skater.u = skaterState.u;
-      this.skater.uD = skaterState.uD;
-      this.skater.thermalEnergy = skaterState.thermalEnergy;
-      if ( this.skater.track ) {
-        this.skater.angle = this.skater.track.getViewAngleAt( this.skater.u );
-      }
-      this.skater.updateEnergy();
     },
 
     stepGround: function( dt, skaterState ) {

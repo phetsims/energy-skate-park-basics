@@ -26,5 +26,20 @@ define( function() {
   SkaterState.prototype.getTotalEnergy = function() {
     return 0.5 * this.mass * this.velocity.magnitudeSquared() + this.mass * this.gravity * this.position.y + this.thermalEnergy;
   };
+
+  //Only set values that have changed
+  SkaterState.prototype.setToSkater = function( skater ) {
+    skater.track = this.track;
+    skater.position = this.position;
+    skater.velocity = this.velocity;
+    skater.up = this.up;
+    skater.u = this.u;
+    skater.uD = this.uD;
+    skater.thermalEnergy = this.thermalEnergy;
+    if ( skater.track ) {
+      skater.angle = skater.track.getViewAngleAt( skater.u );
+    }
+    skater.updateEnergy();
+  };
   return SkaterState;
 } );
