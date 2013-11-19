@@ -151,7 +151,7 @@ define( function( require ) {
           error = Math.abs( finalEnergy - initialEnergy );
           if ( numDivisions >= 30 ) {
             console.log( 'numDivisions', numDivisions, 'dt', dt / numDivisions, 'error', error );
-            debugger;
+//            debugger;
           }
           numDivisions = numDivisions * 2;
         }
@@ -258,7 +258,7 @@ define( function( require ) {
           return skaterState.update( {velocity: bounceVelocity} );
         }
         else {
-          debugger;
+//          debugger;
           //If friction is allowed, keep the parallel component of velocity.
           //If friction is not allowed, then either attach to the track with no change in speed
 
@@ -299,8 +299,8 @@ define( function( require ) {
                                  skaterState.thermalEnergy;
 
           if ( newThermalEnergy < skaterState.thermalEnergy ) {
-            console.log( 'lost thermal energy' );
-            debugger;
+            console.log( 'lost thermal energy in landing' );
+//            debugger;
           }
 
           var result = skaterState.update( {
@@ -312,7 +312,7 @@ define( function( require ) {
             position: new Vector2( track.getX( u ), track.getY( u ) )
           } );
 
-          console.log( 'finished landing, ', result.getTotalEnergy(), skaterState.getTotalEnergy() );
+//          console.log( 'finished landing, ', result.getTotalEnergy(), skaterState.getTotalEnergy() );
           return result;
         }
       }
@@ -328,7 +328,7 @@ define( function( require ) {
 
       //make up for the difference by changing the y value
       var y = (initialEnergy - 0.5 * skaterState.mass * proposedVelocity.magnitudeSquared() - skaterState.thermalEnergy) / (-1 * skaterState.mass * skaterState.gravity);
-      console.log( y, proposedPosition.y );
+//      console.log( y, proposedPosition.y );
       if ( y <= 0 ) {
         //When falling straight down, stop completely and convert all energy to thermal
         return skaterState.update( {
