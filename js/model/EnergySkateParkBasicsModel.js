@@ -139,9 +139,10 @@ define( function( require ) {
 
         var error = 100000;
         var numDivisions = 1;
+        var skaterState = null;
         while ( error > 1 && numDivisions <= 64 ) {
 
-          var skaterState = new SkaterState( this.skater, {} );
+          skaterState = new SkaterState( this.skater, {} );
           var initialEnergy = skaterState.getTotalEnergy();
           for ( var i = 0; i < numDivisions; i++ ) {
             skaterState = this.stepModel( this.speed === 'normal' ? dt / numDivisions : dt / numDivisions * 0.25, skaterState );
