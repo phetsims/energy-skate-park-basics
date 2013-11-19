@@ -173,12 +173,8 @@ define( function( require ) {
       if ( proposedPosition.y < 0 ) {
         proposedPosition.y = 0;
 
-        //Make sure the skater doesn't flip upside down when landing on the ground, see https://github.com/phetsims/energy-skate-park-basics/issues/14
-        return skaterState.update( {
-          up: true,
-          position: proposedPosition,
-          velocity: new Vector2()
-        } );
+        //TODO: Make sure the skater doesn't flip upside down when landing on the ground, see https://github.com/phetsims/energy-skate-park-basics/issues/1
+        return this.continueFreeFall( skaterState, initialEnergy, proposedPosition, proposedVelocity );
       }
       else if ( skaterState.position.x !== proposedPosition.x || skaterState.position.y !== proposedPosition.y ) {
 
@@ -296,13 +292,15 @@ define( function( require ) {
 
       //make up for the difference by changing the y value
       var y = (initialEnergy - 0.5 * skaterState.mass * proposedVelocity.magnitudeSquared() - skaterState.thermalEnergy) / (-1 * skaterState.mass * skaterState.gravity);
+      console.log( y, proposedPosition.y );
       if ( y <= 0 ) {
-
+        debugger;
         //When falling straight down, stop completely and convert all energy to thermal
         return skaterState.update( {
           velocity: new Vector2( 0, 0 ),
           thermalEnergy: initialEnergy,
           angle: 0,
+          up: true,
           position: new Vector2( proposedPosition.x, 0 )
         } );
       }

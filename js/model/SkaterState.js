@@ -11,18 +11,19 @@ define( function() {
   'use strict';
 
   function SkaterState( source, overrides ) {
-    this.dragging = overrides.dragging || source.dragging;
-    this.thermalEnergy = overrides.thermalEnergy || source.thermalEnergy;
     this.gravity = overrides.gravity || source.gravity;
     this.position = overrides.position || source.position;
     this.velocity = overrides.velocity || source.velocity;
     this.mass = overrides.mass || source.mass;
-    this.up = overrides.up || source.up;
-    this.u = overrides.u || source.u;
-    this.uD = overrides.uD || source.uD;
 
-    //Special handling for values that can be null
+    //Special handling for values that can be null, false or zero
     this.track = 'track' in overrides ? overrides.track : source.track;
+    this.angle = 'angle' in overrides ? overrides.angle : source.angle;
+    this.up = 'up' in overrides ? overrides.up : source.up;
+    this.u = 'u' in overrides ? overrides.u : source.u;
+    this.uD = 'uD' in overrides ? overrides.uD : source.uD;
+    this.dragging = 'dragging' in overrides ? overrides.dragging : source.dragging;
+    this.thermalEnergy = 'thermalEnergy' in overrides ? overrides.thermalEnergy : source.thermalEnergy;
   }
 
   SkaterState.prototype.getTotalEnergy = function() {
@@ -33,6 +34,7 @@ define( function() {
 
   //Only set values that have changed
   SkaterState.prototype.setToSkater = function( skater ) {
+    skater.angle = this.angle;
     skater.track = this.track;
     skater.position = this.position;
     skater.velocity = this.velocity;
