@@ -21,6 +21,7 @@ define( function( require ) {
   var circularRegression = require( 'ENERGY_SKATE_PARK_BASICS/model/circularRegression' );
   var Vector2 = require( 'DOT/Vector2' );
   var ObservableArray = require( 'AXON/ObservableArray' );
+  var SkaterState = require( 'ENERGY_SKATE_PARK_BASICS/model/SkaterState' );
   var Util = require( 'DOT/Util' );
 
   /**
@@ -120,7 +121,8 @@ define( function( require ) {
     },
     manualStep: function() {
       //step one frame, assuming 60fps
-      this.stepModel( 1.0 / 60 );
+      var result = this.stepModel( 1.0 / 60, this.getSkaterState() );
+      this.setSkaterState( result );
     },
 
     //Step the model, automatically called from Joist
@@ -135,40 +137,75 @@ define( function( require ) {
         }
 
         //dt has to run at 1/55.0 or less or we will have numerical problems in the integration
-        var numDivisions = dt < 1 / 55 ? 1 :
-                           Math.ceil( scaleFactor );
+//        var numDivisions = dt < 1 / 55 ? 1 : Math.ceil( scaleFactor );
+        var numDivisions = 10;
 
+        var skaterState = this.getSkaterState();
+        var initialEnergy = skaterState.getTotalEnergy();
         for ( var i = 0; i < numDivisions; i++ ) {
-          this.stepModel( this.speed === 'normal' ? dt / numDivisions : dt / numDivisions * 0.25 );
+          skaterState = this.stepModel( this.speed === 'normal' ? dt / numDivisions : dt / numDivisions * 0.25, skaterState );
+
+          var finalEnergy = skaterState.getTotalEnergy();
+          var energyDifference = Math.abs( finalEnergy - initialEnergy );
+          if ( energyDifference > 1E-6 ) {
+            console.log( "Energy not conserved", energyDifference );
+          }
         }
+        this.setSkaterState( skaterState );
       }
     },
-    stepGround: function( dt ) { },
+
+    //To improve performance, operate solely on a skaterState instance without updating the real skater,
+    //so that the skater model itself can be set only once, and trigger callbacks only once (no matter how many subdivisions)
+    //This can also facilitate debugging and ensuring energy is conserved
+    getSkaterState: function() { return new SkaterState( this.skater, {} ); },
+
+    //Only set values that have changed
+    setSkaterState: function( skaterState ) {
+      this.skater.track = skaterState.track;
+      this.skater.position = skaterState.position;
+      this.skater.velocity = skaterState.velocity;
+      this.skater.up = skaterState.up;
+      this.skater.u = skaterState.u;
+      this.skater.uD = skaterState.uD;
+      this.skater.thermalEnergy = skaterState.thermalEnergy;
+      if ( this.skater.track ) {
+        this.skater.angle = this.skater.track.getViewAngleAt( this.skater.u );
+      }
+      this.skater.updateEnergy();
+    },
+
+    stepGround: function( dt, skaterState ) {
+      return skaterState;
+    },
 
     //Update the skater in free fall
-    stepFreeFall: function( dt ) {
-      var skater = this.skater;
-      var initialEnergy = skater.totalEnergy;
-      var netForce = new Vector2( 0, -9.8 * skater.mass );
+    stepFreeFall: function( dt, skaterState ) {
+      var initialEnergy = skaterState.totalEnergy;
+      var netForce = new Vector2( 0, -9.8 * skaterState.mass );
 
-      var acceleration = netForce.times( 1.0 / skater.mass );
-      var proposedVelocity = skater.velocity.plus( acceleration.times( dt ) );
-      var proposedPosition = skater.position.plus( proposedVelocity.times( dt ) );
+      var acceleration = netForce.times( 1.0 / skaterState.mass );
+      var proposedVelocity = skaterState.velocity.plus( acceleration.times( dt ) );
+      var proposedPosition = skaterState.position.plus( proposedVelocity.times( dt ) );
       if ( proposedPosition.y < 0 ) {
         proposedPosition.y = 0;
 
         //Make sure the skater doesn't flip upside down when landing on the ground, see https://github.com/phetsims/energy-skate-park-basics/issues/14
-        skater.up = true;
+        return new SkaterState( skaterState, {
+          up: true,
+          position: proposedPosition,
+          velocity: new Vector2()
+        } );
       }
-      if ( skater.position.x !== proposedPosition.x || skater.position.y !== proposedPosition.y ) {
+      if ( skaterState.position.x !== proposedPosition.x || skaterState.position.y !== proposedPosition.y ) {
 
         //see if it crossed the track
         var physicalTracks = this.getPhysicalTracks();
         if ( physicalTracks.length ) {
-          this.interactWithTracksWhileFalling( physicalTracks, skater, proposedPosition, initialEnergy, dt, proposedVelocity );
+          return this.interactWithTracksWhileFalling( physicalTracks, skaterState, proposedPosition, initialEnergy, dt, proposedVelocity );
         }
         else {
-          this.continueFreeFall( skater, initialEnergy, proposedPosition, proposedVelocity );
+          return this.continueFreeFall( skaterState, initialEnergy, proposedPosition, proposedVelocity );
         }
       }
     },
@@ -198,16 +235,15 @@ define( function( require ) {
     },
 
     //Check to see if it should hit or attach to track during free fall
-    interactWithTracksWhileFalling: function( physicalTracks, skater, proposedPosition, initialEnergy, dt, proposedVelocity ) {
+    interactWithTracksWhileFalling: function( physicalTracks, skaterState, proposedPosition, initialEnergy, dt, proposedVelocity ) {
 
       //Find the closest track
-      var closestTrackAndPositionAndParameter = this.getClosestTrackAndPositionAndParameter( skater.position, physicalTracks );
+      var closestTrackAndPositionAndParameter = this.getClosestTrackAndPositionAndParameter( skaterState.position, physicalTracks );
       var track = closestTrackAndPositionAndParameter.track;
       var u = closestTrackAndPositionAndParameter.u;
 
       if ( !track.isParameterInBounds( u ) ) {
-        this.continueFreeFall( skater, initialEnergy, proposedPosition, proposedVelocity );
-        return;
+        return this.continueFreeFall( skaterState, initialEnergy, proposedPosition, proposedVelocity );
       }
       var t1 = u - 1E-6;
       var t2 = u + 1E-6;
@@ -217,7 +253,7 @@ define( function( require ) {
       var segment = pt2.minus( pt1 ).normalized();
       var normal = segment.rotated( Math.PI / 2 );
 
-      var beforeSign = normal.dot( skater.position.minus( pt ) ) > 0;
+      var beforeSign = normal.dot( skaterState.position.minus( pt ) ) > 0;
       var afterSign = normal.dot( proposedPosition.minus( pt ) ) > 0;
       if ( beforeSign !== afterSign ) {
 
@@ -234,8 +270,11 @@ define( function( require ) {
         //If friction is allowed, then bounce with elasticity <1.
         //If friction is not allowed, then bounce with elasticity = 1.
         if ( dot < 0.4 ) {
-          skater.velocity = bounceVelocity;
           this.bounces++;
+
+          return new SkaterState( skaterState, {
+            velocity: bounceVelocity
+          } );
         }
         else {
           //If friction is allowed, keep the parallel component of velocity.
@@ -246,60 +285,62 @@ define( function( require ) {
           var uDy = proposedVelocity.y / track.ySplineDiff.at( u );
           var uD = (uDx + uDy) / 2;
 
-          //update skater variables
-          skater.track = track;
-          skater.u = u;
-          skater.uD = uD;
-
-          var newEnergy = track.getEnergy( u, skater.uD, skater.mass, skater.gravity );
+          var newEnergy = track.getEnergy( u, skaterState.uD, skaterState.mass, skaterState.gravity );
           var delta = newEnergy - initialEnergy;
+          var newThermalEnergy = skaterState.thermalEnergy;
           if ( delta < 0 ) {
             var lostEnergy = Math.abs( delta );
-            skater.thermalEnergy = skater.thermalEnergy + lostEnergy;
+            newThermalEnergy = skaterState.thermalEnergy + lostEnergy;
           }
 
-          this.stepTrack( dt );
+          return new SkaterState( skaterState, {
+            thermalEnergy: newThermalEnergy,
+            track: track,
+            u: u,
+            uD: uD
+          } );
         }
       }
 
       //It just continued in free fall
       else {
-        this.continueFreeFall( skater, initialEnergy, proposedPosition, proposedVelocity );
+        return this.continueFreeFall( skaterState, initialEnergy, proposedPosition, proposedVelocity );
       }
     },
 
     //Started in free fall and did not interact with a track
-    continueFreeFall: function( skater, initialEnergy, proposedPosition, proposedVelocity ) {
+    continueFreeFall: function( skaterState, initialEnergy, proposedPosition, proposedVelocity ) {
 
       //make up for the difference by changing the y value
-      var y = (initialEnergy - 0.5 * skater.mass * proposedVelocity.magnitudeSquared() - skater.thermalEnergy) / (-1 * skater.mass * skater.gravity);
+      var y = (initialEnergy - 0.5 * skaterState.mass * proposedVelocity.magnitudeSquared() - skaterState.thermalEnergy) / (-1 * skaterState.mass * skaterState.gravity);
       if ( y <= 0 ) {
 
         //When falling straight down, stop completely and convert all energy to thermal
-        skater.velocity = new Vector2( 0, 0 );
-        skater.thermalEnergy = initialEnergy;
-        skater.angle = 0;
-        skater.position = new Vector2( proposedPosition.x, 0 );
+        return new SkaterState( skaterState, {
+          velocity: new Vector2( 0, 0 ),
+          thermalEnergy: initialEnergy,
+          angle: 0,
+          position: new Vector2( proposedPosition.x, 0 )
+        } );
       }
       else {
-
-        skater.position = new Vector2( proposedPosition.x, y );
-        skater.velocity = proposedVelocity;
+        return new SkaterState( skaterState, {
+          velocity: proposedVelocity,
+          position: new Vector2( proposedPosition.x, y )
+        } );
       }
-      skater.updateEnergy();
     },
 
     //Update the skater if he is on the track
-    stepTrack: function( dt ) {
+    stepTrack: function( dt, skaterState ) {
 
-      var skater = this.skater;
-      var track = skater.track;
-      var u = skater.u;
-      var uD = skater.uD;
+      var track = skaterState.track;
+      var u = skaterState.u;
+      var uD = skaterState.uD;
 
       //Factor out constants for inner loops
-      var mass = skater.mass;
-      var gravity = skater.gravity;
+      var mass = skaterState.mass;
+      var gravity = skaterState.gravity;
 
       //P means Prime (i.e. derivative with respect to time)
       //D means Dot (i.e. derivative with respect to x)
@@ -360,41 +401,38 @@ define( function( require ) {
         var coefficient = Util.linear( 0, 1, 1, 0.95, this.friction );
         //But perhaps since friction is qualitative in this sim it will be okay.
         //If we do need the full friction treatment, perhaps we could modify the parametric equation uDD above to account for friction as it accounts for gravity force.
-        skater.uD = uD2 * coefficient;
+        uD2 = uD2 * coefficient;
       }
-      else {
-        skater.uD = uD2;
-      }
-      skater.u = u2;
 
       var vx = xPrime2 * uD2;
       var vy = yPrime2 * uD2;
 
       //check out the radius of curvature
       var curvature = circularRegression( [
-        new Vector2( track.getX( skater.u ), track.getY( skater.u ) ),
-        new Vector2( track.getX( skater.u - 1E-6 ), track.getY( skater.u - 1E-6 ) ),
-        new Vector2( track.getX( skater.u + 1E-6 ), track.getY( skater.u + 1E-6 ) )] );
+        new Vector2( track.getX( skaterState.u ), track.getY( skaterState.u ) ),
+        new Vector2( track.getX( skaterState.u - 1E-6 ), track.getY( skaterState.u - 1E-6 ) ),
+        new Vector2( track.getX( skaterState.u + 1E-6 ), track.getY( skaterState.u + 1E-6 ) )] );
 
       //Debugging facility for showing the curvature
       if ( this.showCircularRegression ) {
         this.circularRegression = curvature;
       }
 
+      var newThermalEnergy = skaterState.thermalEnergy;
       if ( this.friction > 0 ) {
 
         //make up for energy losses due to friction
-        var finalEnergy2 = track.getEnergy( u2, skater.uD, mass, gravity );
+        var finalEnergy2 = track.getEnergy( u2, skaterState.uD, mass, gravity );
         var thermalEnergy = finalEnergy - finalEnergy2;
         if ( thermalEnergy > 0 ) {
-          skater.thermalEnergy = skater.thermalEnergy + thermalEnergy;
+          newThermalEnergy = skaterState.thermalEnergy + thermalEnergy;
         }
       }
 
       var flyOffMidTrack = false;
       if ( !this.stickToTrack ) {
         //compare a to v/r^2 to see if it leaves the track
-        var sideVector = track.getUnitNormalVector( u2 ).timesScalar( skater.top ? -1 : 1 );
+        var sideVector = track.getUnitNormalVector( u2 ).timesScalar( skaterState.top ? -1 : 1 );
         var outsideCircle = sideVector.dot( this.getCurvatureDirection( curvature, x2, y2 ) ) < 0;
         var r = curvature.r;
         var speedSquared = vx * vx + vy * vy;
@@ -405,19 +443,36 @@ define( function( require ) {
         flyOffMidTrack = netForceRadial < centripetalForce && outsideCircle || netForceRadial > centripetalForce && !outsideCircle;
       }
 
-      skater.velocity = new Vector2( vx, vy );
-      skater.angle = skater.track.getViewAngleAt( skater.u );
-      skater.position = new Vector2( x2, y2 );
-      skater.updateEnergy();
-
       //Fly off the left or right side of the track
-      if ( !skater.track.isParameterInBounds( u2 ) ) {
-        skater.track = null;
-        skater.uD = 0;
+      if ( !skaterState.track.isParameterInBounds( u2 ) ) {
+        skaterState.track = null;
+        skaterState.uD = 0;
+
+        return new SkaterState( skaterState, {
+          track: null,
+          uD: 0,
+          thermalEnergy: newThermalEnergy,
+          u: u2,
+          velocity: new Vector2( vx, vy ),
+          position: new Vector2( x2, y2 )
+        } );
+
       }
       else if ( flyOffMidTrack ) {
-        skater.track = null;
-        skater.uD = 0;
+        return new SkaterState( skaterState, {
+          track: null,
+          uD: 0
+        } );
+      }
+      else {
+        return new SkaterState( skaterState, {
+          track: null,
+          uD: uD2,
+          thermalEnergy: newThermalEnergy,
+          u: u2,
+          velocity: new Vector2( vx, vy ),
+          position: new Vector2( x2, y2 )
+        } );
       }
     },
 
@@ -426,34 +481,12 @@ define( function( require ) {
       return new Vector2( curvature.x - x2, curvature.y - y2 ).normalized();
     },
 
-    stepModel: function( dt ) {
-      var skater = this.skater;
-      var initialEnergy = skater.totalEnergy;
-
-      //User is dragging the skater, nothing to update here
-      if ( skater.dragging ) {
-      }
-
-      //On the ground
-      else if ( !skater.track && skater.position.y <= 0 ) {
-        this.stepGround( dt );
-      }
-
-      //Free fall
-      else if ( !skater.track && skater.position.y > 0 ) {
-        this.stepFreeFall( dt );
-      }
-
-      //On a track
-      else if ( skater.track ) {
-        this.stepTrack( dt );
-      }
-
-      var finalEnergy = skater.totalEnergy;
-      var energyDifference = Math.abs( finalEnergy - initialEnergy );
-      if ( energyDifference > 1E-6 ) {
-        console.log( "Energy not conserved", energyDifference );
-      }
+    stepModel: function( dt, skaterState ) {
+      return skaterState.dragging ? skaterState : //User is dragging the skater, nothing to update here
+             !skaterState.track && skaterState.position.y <= 0 ? this.stepGround( dt, skaterState ) :
+             !skaterState.track && skaterState.position.y > 0 ? this.stepFreeFall( dt, skaterState ) :
+             skaterState.track ? this.stepTrack( dt, skaterState ) :
+             skaterState;
     },
 
     //Return to the place he was last released by the user.  Also restores the track the skater was on so the initial conditions are the same as the previous release
