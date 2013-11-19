@@ -137,19 +137,21 @@ define( function( require ) {
         }
 
         //dt has to run at 1/55.0 or less or we will have numerical problems in the integration
-//        var numDivisions = dt < 1 / 55 ? 1 : Math.ceil( scaleFactor );
-        var numDivisions = 10;
 
-        var skaterState = new SkaterState( this.skater, {} );
-        var initialEnergy = skaterState.getTotalEnergy();
-        for ( var i = 0; i < numDivisions; i++ ) {
-          skaterState = this.stepModel( this.speed === 'normal' ? dt / numDivisions : dt / numDivisions * 0.25, skaterState );
+        var error = 100000;
+        var numDivisions = 1;
+        while ( error > 100 && numDivisions < 5 ) {
+
+          var skaterState = new SkaterState( this.skater, {} );
+          var initialEnergy = skaterState.getTotalEnergy();
+          for ( var i = 0; i < numDivisions; i++ ) {
+            skaterState = this.stepModel( this.speed === 'normal' ? dt / numDivisions : dt / numDivisions * 0.25, skaterState );
+          }
 
           var finalEnergy = skaterState.getTotalEnergy();
-          var energyDifference = Math.abs( finalEnergy - initialEnergy );
-          if ( energyDifference > 1E-6 ) {
-            console.log( "Energy not conserved", energyDifference );
-          }
+          error = Math.abs( finalEnergy - initialEnergy );
+          console.log( 'numDivisions', numDivisions, 'dt', dt / numDivisions, 'error', error );
+          numDivisions++;
         }
         skaterState.setToSkater( this.skater );
       }
@@ -387,22 +389,11 @@ define( function( require ) {
       var vx = xPrime2 * uD2;
       var vy = yPrime2 * uD2;
 
-      //check out the radius of curvature
-      var curvature = circularRegression( [
-        new Vector2( track.getX( skaterState.u ), track.getY( skaterState.u ) ),
-        new Vector2( track.getX( skaterState.u - 1E-6 ), track.getY( skaterState.u - 1E-6 ) ),
-        new Vector2( track.getX( skaterState.u + 1E-6 ), track.getY( skaterState.u + 1E-6 ) )] );
-
-      //Debugging facility for showing the curvature
-      if ( this.showCircularRegression ) {
-        this.circularRegression = curvature;
-      }
-
       var newThermalEnergy = skaterState.thermalEnergy;
       if ( this.friction > 0 ) {
 
         //make up for energy losses due to friction
-        var finalEnergy2 = track.getEnergy( u2, skaterState.uD, mass, gravity );
+        var finalEnergy2 = track.getEnergy( u2, uD2, mass, gravity );
         var thermalEnergy = finalEnergy - finalEnergy2;
         if ( thermalEnergy > 0 ) {
           newThermalEnergy = skaterState.thermalEnergy + thermalEnergy;
@@ -411,6 +402,13 @@ define( function( require ) {
 
       var flyOffMidTrack = false;
       if ( !this.stickToTrack ) {
+
+        //check out the radius of curvature
+        var curvature = circularRegression( [
+          new Vector2( track.getX( skaterState.u ), track.getY( skaterState.u ) ),
+          new Vector2( track.getX( skaterState.u - 1E-6 ), track.getY( skaterState.u - 1E-6 ) ),
+          new Vector2( track.getX( skaterState.u + 1E-6 ), track.getY( skaterState.u + 1E-6 ) )] );
+
         //compare a to v/r^2 to see if it leaves the track
         var sideVector = track.getUnitNormalVector( u2 ).timesScalar( skaterState.top ? -1 : 1 );
         var outsideCircle = sideVector.dot( this.getCurvatureDirection( curvature, x2, y2 ) ) < 0;
@@ -425,14 +423,11 @@ define( function( require ) {
 
       //Fly off the left or right side of the track
       if ( !skaterState.track.isParameterInBounds( u2 ) ) {
-        skaterState.track = null;
-        skaterState.uD = 0;
 
         return new SkaterState( skaterState, {
           track: null,
-          uD: 0,
           thermalEnergy: newThermalEnergy,
-          u: u2,
+          uD: 0,
           velocity: new Vector2( vx, vy ),
           position: new Vector2( x2, y2 )
         } );
@@ -446,10 +441,9 @@ define( function( require ) {
       }
       else {
         return new SkaterState( skaterState, {
-          track: null,
+          u: u2,
           uD: uD2,
           thermalEnergy: newThermalEnergy,
-          u: u2,
           velocity: new Vector2( vx, vy ),
           position: new Vector2( x2, y2 )
         } );
