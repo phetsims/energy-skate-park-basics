@@ -403,7 +403,12 @@ define( function( require ) {
         finalEnergy = midEnergy;
         count++;
 //        console.log( 'count', count, 'energyDelta', Math.abs( finalEnergy - initialEnergy ) );
-        if ( count >= 200 ) {
+        if ( count === 200 ) {
+          console.log( 'COUNT=', count, 'resetting limits' );
+          upperBound = uD2 * 10;
+          lowerBound = 0;
+        }
+        if ( count >= 400 ) {
           console.log( 'count', count );
           break;
         }
@@ -468,13 +473,20 @@ define( function( require ) {
         return skaterState.update( {track: null} );
       }
       else {
-        return skaterState.update( {
+        var result = skaterState.update( {
           u: u2,
           uD: uD2,
           thermalEnergy: newThermalEnergy,
           velocity: new Vector2( vx, vy ),
           position: new Vector2( x2, y2 )
         } );
+
+        console.log( skaterState.getTotalEnergy(), result.getTotalEnergy(), result.getTotalEnergy() - skaterState.getTotalEnergy() );
+        if ( Math.abs( result.getTotalEnergy() - skaterState.getTotalEnergy() ) > 100 ) {
+//          debugger;
+          console.log( 'big error at the end of stepTrack', Math.abs( result.getTotalEnergy() - skaterState.getTotalEnergy() ) );
+        }
+        return result;
       }
     },
 
