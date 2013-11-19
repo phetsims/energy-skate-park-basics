@@ -139,7 +139,7 @@ define( function( require ) {
 
         var error = 100000;
         var numDivisions = 1;
-        while ( error > 1000 && numDivisions < 100 ) {
+        while ( error > 1 && numDivisions <= 64 ) {
 
           var skaterState = new SkaterState( this.skater, {} );
           var initialEnergy = skaterState.getTotalEnergy();
@@ -149,7 +149,7 @@ define( function( require ) {
 
           var finalEnergy = skaterState.getTotalEnergy();
           error = Math.abs( finalEnergy - initialEnergy );
-          if ( numDivisions > 5 ) {
+          if ( numDivisions > 0 ) {
             console.log( 'numDivisions', numDivisions, 'dt', dt / numDivisions, 'error', error );
           }
           numDivisions = numDivisions * 2;
@@ -341,6 +341,8 @@ define( function( require ) {
       var y2 = track.getY( u2 );
       var initialEnergy = track.getEnergy( u, uD, mass, gravity );
       var finalEnergy = track.getEnergy( u2, uD2, mass, gravity );
+//      var te = skaterState.getTotalEnergy();
+//      console.log( "teif", te, initialEnergy, finalEnergy );
 
       var count = 0;
       var upperBound = uD2 * 2;
@@ -356,7 +358,7 @@ define( function( require ) {
 //      var factoredEnergy = 1 / 2 * mass * (xPrime2 * xPrime2 + yPrime2 * yPrime2);
 
       //Tuning this error criterion lower and lower guarantees better conservation of energy when traveling along the track
-      while ( Math.abs( finalEnergy - initialEnergy ) > 1E-10 ) {
+      while ( Math.abs( finalEnergy - initialEnergy ) > 1E-6 ) {
         var uDMid = (upperBound + lowerBound) / 2;
         var midEnergy = track.getEnergy( u2, uDMid, mass, gravity );
         if ( midEnergy > initialEnergy ) {
@@ -367,8 +369,9 @@ define( function( require ) {
         }
         finalEnergy = midEnergy;
         count++;
-        if ( count >= 500 ) {
-//          console.log( 'count', count );
+//        console.log( 'count', count, 'energyDelta', Math.abs( finalEnergy - initialEnergy ) );
+        if ( count >= 200 ) {
+          console.log( 'count', count );
           break;
         }
       }

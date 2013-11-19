@@ -24,7 +24,7 @@ define( function() {
   }
 
   SkaterState.prototype.getTotalEnergy = function() {
-    return 0.5 * this.mass * this.velocity.magnitudeSquared() + this.mass * this.gravity * this.position.y + this.thermalEnergy;
+    return 0.5 * this.mass * this.velocity.magnitudeSquared() - this.mass * this.gravity * this.position.y + this.thermalEnergy;
   };
 
   //Only set values that have changed
