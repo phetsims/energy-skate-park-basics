@@ -164,8 +164,8 @@ define( function( require ) {
 
     //Update the skater in free fall
     stepFreeFall: function( dt, skaterState ) {
-      var initialEnergy = skaterState.totalEnergy;
-      var netForce = new Vector2( 0, -9.8 * skaterState.mass );
+      var initialEnergy = skaterState.getTotalEnergy();
+      var netForce = new Vector2( 0, skaterState.gravity * skaterState.mass );
 
       var acceleration = netForce.times( 1.0 / skaterState.mass );
       var proposedVelocity = skaterState.velocity.plus( acceleration.times( dt ) );
@@ -180,7 +180,7 @@ define( function( require ) {
           velocity: new Vector2()
         } );
       }
-      if ( skaterState.position.x !== proposedPosition.x || skaterState.position.y !== proposedPosition.y ) {
+      else if ( skaterState.position.x !== proposedPosition.x || skaterState.position.y !== proposedPosition.y ) {
 
         //see if it crossed the track
         var physicalTracks = this.getPhysicalTracks();
@@ -190,6 +190,9 @@ define( function( require ) {
         else {
           return this.continueFreeFall( skaterState, initialEnergy, proposedPosition, proposedVelocity );
         }
+      }
+      else {
+        return skaterState;
       }
     },
 
