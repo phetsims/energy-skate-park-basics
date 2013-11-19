@@ -149,7 +149,7 @@ define( function( require ) {
 
           var finalEnergy = skaterState.getTotalEnergy();
           error = Math.abs( finalEnergy - initialEnergy );
-          if ( numDivisions > 0 ) {
+          if ( numDivisions >= 30 ) {
             console.log( 'numDivisions', numDivisions, 'dt', dt / numDivisions, 'error', error );
           }
           numDivisions = numDivisions * 2;
