@@ -129,7 +129,6 @@ define( function( require ) {
     step: function( dt ) {
       //If the delay makes dt too high, then truncate it.  This helps e.g. when clicking in the address bar on ipad, which gives a huge dt and problems for integration
       if ( !this.paused ) {
-        var scaleFactor = dt * 60;
 
         //If they switched windows or tabs, just bail on that delta
         if ( dt > 1 || dt <= 0 ) {
@@ -140,7 +139,7 @@ define( function( require ) {
 
         var error = 100000;
         var numDivisions = 1;
-        while ( error > 100 && numDivisions < 5 ) {
+        while ( error > 1000 && numDivisions < 100 ) {
 
           var skaterState = new SkaterState( this.skater, {} );
           var initialEnergy = skaterState.getTotalEnergy();
@@ -150,8 +149,10 @@ define( function( require ) {
 
           var finalEnergy = skaterState.getTotalEnergy();
           error = Math.abs( finalEnergy - initialEnergy );
-          console.log( 'numDivisions', numDivisions, 'dt', dt / numDivisions, 'error', error );
-          numDivisions++;
+          if ( numDivisions > 5 ) {
+            console.log( 'numDivisions', numDivisions, 'dt', dt / numDivisions, 'error', error );
+          }
+          numDivisions = numDivisions * 2;
         }
         skaterState.setToSkater( this.skater );
       }
@@ -342,8 +343,8 @@ define( function( require ) {
       var finalEnergy = track.getEnergy( u2, uD2, mass, gravity );
 
       var count = 0;
-      var upperBound = uD2 * 1.2;
-      var lowerBound = uD2 * 0.8;
+      var upperBound = uD2 * 2;
+      var lowerBound = uD2 * 0.5;
 
       //Binary search on the parametric velocity to make sure energy is exactly conserved
 //        console.log( 'START BINARY' );
@@ -351,25 +352,22 @@ define( function( require ) {
 
       var xPrime2 = track.xSplineDiff.at( u2 );
       var yPrime2 = track.ySplineDiff.at( u2 );
-      var potentialEnergy = -mass * gravity * y2;
-      var factoredEnergy = 1 / 2 * mass * (xPrime2 * xPrime2 + yPrime2 * yPrime2);
+//      var potentialEnergy = -mass * gravity * y2;
+//      var factoredEnergy = 1 / 2 * mass * (xPrime2 * xPrime2 + yPrime2 * yPrime2);
 
       //Tuning this error criterion lower and lower guarantees better conservation of energy when traveling along the track
       while ( Math.abs( finalEnergy - initialEnergy ) > 1E-10 ) {
-//          console.log( (finalEnergy - initialEnergy).toFixed( 2 ), 'binary search, lowerBound=', lowerBound, 'upperBound', upperBound );
-        var uMid = (upperBound + lowerBound) / 2;
-
-        //For future, if we need to tweak u as well as uD then we may need to use track.getEnergy and forego some optimizations
-        var midEnergy = potentialEnergy + factoredEnergy * uMid * uMid;
+        var uDMid = (upperBound + lowerBound) / 2;
+        var midEnergy = track.getEnergy( u2, uDMid, mass, gravity );
         if ( midEnergy > initialEnergy ) {
-          upperBound = uMid;
+          upperBound = uDMid;
         }
         else {
-          lowerBound = uMid;
+          lowerBound = uDMid;
         }
         finalEnergy = midEnergy;
         count++;
-        if ( count >= 1000 ) {
+        if ( count >= 500 ) {
 //          console.log( 'count', count );
           break;
         }
