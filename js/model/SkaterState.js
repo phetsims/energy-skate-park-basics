@@ -29,7 +29,7 @@ define( function() {
     return 0.5 * this.mass * this.velocity.magnitudeSquared() - this.mass * this.gravity * this.position.y + this.thermalEnergy;
   };
 
-  SkaterState.prototype.with = function( overrides ) { return new SkaterState( this, overrides ); };
+  SkaterState.prototype.update = function( overrides ) { return new SkaterState( this, overrides ); };
 
   //Only set values that have changed
   SkaterState.prototype.setToSkater = function( skater ) {
