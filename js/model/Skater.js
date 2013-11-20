@@ -32,7 +32,8 @@ define( function( require ) {
 
       position: new Vector2( 0, 0 ),
 
-      mass: 60,
+      //Start in the middle of the MassSlider range
+      mass: (25 + 100) / 2,
 
       //Which way the skater is facing, right or left.  Coded as strings instead of boolean in case we add other states later like 'forward'
       direction: 'right',
