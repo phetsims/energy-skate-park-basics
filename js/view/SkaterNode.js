@@ -27,34 +27,32 @@ define( function( require ) {
     var massToScale = new LinearFunction( 60, 100, 0.33, 0.4 );
 
     //Make him 2 meters tall, with skateboard
-    var scale = massToScale( this.skater.mass );
-    Image.call( skaterNode, skaterImage, { scale: scale, cursor: 'pointer'} );
+    Image.call( skaterNode, skaterImage, { cursor: 'pointer'} );
     var imageWidth = this.width;
     var imageHeight = this.height;
 
     //Update the position and angle.  Normally the angle would only change if the position has also changed, so no need for a duplicate callback there
-    this.skater.multilink( ['mass', 'position', 'direction', 'up'], function( mass, position, direction, up ) {
+    this.skater.multilink( ['mass', 'position', 'direction', 'up' ], function( mass, position, direction, up ) {
       var matrix = Matrix3.IDENTITY;
 
       var view = modelViewTransform.modelToViewPosition( position );
       var displayAngle = skater.angle + (up ? 0 : Math.PI );
 
-      if ( direction === 'left' ) {
-        matrix = matrix.multiplyMatrix( Matrix3.translation( view.x - imageWidth / 2, view.y - imageHeight ) );
-        matrix = matrix.multiplyMatrix( Matrix3.rotationAround( displayAngle, imageWidth / 2, imageHeight ) );
-        matrix = matrix.multiplyMatrix( Matrix3.scaling( massToScale( mass ), massToScale( mass ) ) );
-      }
-      else if ( direction === 'right' ) {
-        matrix = matrix.multiplyMatrix( Matrix3.translation( view.x - imageWidth / 2, view.y - imageHeight ) );
-        matrix = matrix.multiplyMatrix( Matrix3.rotationAround( displayAngle, imageWidth / 2, imageHeight ) );
-        matrix = matrix.multiplyMatrix( Matrix3.scaling( -massToScale( mass ), massToScale( mass ) ) );
-      }
+      //Translate to the desired location
+      matrix = matrix.multiplyMatrix( Matrix3.translation( view.x, view.y ) );
+
+      //Rotation and translation can happen in any order
+      matrix = matrix.multiplyMatrix( Matrix3.rotation2( displayAngle ) );
+      matrix = matrix.multiplyMatrix( Matrix3.scaling( (direction === 'left' ? 1 : -1 ) * massToScale( mass ), massToScale( mass ) ) );
+
+      //Think of it as a multiplying the Vector2 to the right, so this step happens first actually.  Use it to center the registration point
+      matrix = matrix.multiplyMatrix( Matrix3.translation( -imageWidth / 2, -imageHeight ) );
 
       skaterNode.setMatrix( matrix );
     } );
 
     //Show a red dot in the bottom center as the important particle model coordinate
-    this.addChild( new Circle( 8, {fill: 'red', x: imageWidth / scale / 2, y: imageHeight / scale } ) );
+    this.addChild( new Circle( 8, {fill: 'red', x: imageWidth / 2, y: imageHeight } ) );
 
     var targetTrack = null;
 
