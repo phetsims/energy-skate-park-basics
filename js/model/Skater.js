@@ -34,6 +34,9 @@ define( function( require ) {
 
       mass: 60,
 
+      //Which way the skater is facing, right or left.  Coded as strings instead of boolean in case we add other states later like 'forward'
+      direction: 'right',
+
       velocity: new Vector2( 0, 0 ),
 
       dragging: false,
@@ -75,6 +78,18 @@ define( function( require ) {
 
     //Zero the kinetic energy when dragging, see https://github.com/phetsims/energy-skate-park-basics/issues/22
     this.draggingProperty.link( function( dragging ) { if ( dragging ) { skater.velocity = new Vector2( 0, 0 ); } } );
+
+    this.uDProperty.link( function( uD ) {
+      if ( uD > 0 ) {
+        skater.direction = 'right';
+      }
+      else if ( uD < 0 ) {
+        skater.direction = 'left';
+      }
+      else {
+        //Keep the same direction
+      }
+    } );
 
     //Boolean flag that indicates whether the skater has moved from his initial position, and hence can be 'returned',
     //For making the 'return skater' button enabled/disabled

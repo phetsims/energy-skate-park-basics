@@ -32,34 +32,23 @@ define( function( require ) {
     var imageWidth = this.width;
     var imageHeight = this.height;
 
-    this.skater.massProperty.link( function( mass ) {
-      skaterNode.setScaleMagnitude( massToScale( mass ) );
-      skaterNode.setRotation( 0 );
-      imageWidth = skaterNode.width;
-      imageHeight = skaterNode.height;
-      if ( positionChanged ) {
-        positionChanged( skater.position );
-      }
+    //Update the position and angle.  Normally the angle would only change if the position has also changed.
+    this.skater.multilink( ['mass', 'position', 'direction'], function( mass, position, direction ) {
+      var matrix = Matrix3.IDENTITY;
+
+      var view = modelViewTransform.modelToViewPosition( position );
+      matrix = matrix.multiplyMatrix( Matrix3.translation( view.x - imageWidth / 2, view.y - imageHeight ) );
+
+      var displayAngle = skater.angle + (skater.up ? 0 : Math.PI );
+      matrix = matrix.multiplyMatrix( Matrix3.rotationAround( displayAngle, imageWidth / 2, imageHeight ) );
+      matrix = matrix.multiplyMatrix( Matrix3.scaling( massToScale( mass ), massToScale( mass ) ) );
+
+      skaterNode.setMatrix( matrix );
     } );
 
     //Show a red dot in the bottom center as the important particle model coordinate
     this.addChild( new Circle( 8, {fill: 'red', x: imageWidth / scale / 2, y: imageHeight / scale } ) );
 
-    //Update the position and angle.  Normally the angle would only change if the position has also changed.
-    var positionChanged = function( position ) {
-      var view = modelViewTransform.modelToViewPosition( position );
-
-      //PERFORMANCE/ALLOCATION: Coalesce all of these calls into a single matrix for performance, or at least cache rotation value?
-      skaterNode.setTranslation( view.x - imageWidth / 2, view.y - imageHeight );
-      skaterNode.setRotation( 0 );
-
-      //Keep angle when leaving a track, but optimize for straight up and down skater
-      var displayAngle = skater.angle + (skater.up ? 0 : Math.PI );
-      if ( displayAngle !== 0 ) {
-        skaterNode.rotateAround( new Vector2( view.x, view.y ), displayAngle );
-      }
-    };
-    this.skater.positionProperty.link( positionChanged );
     var targetTrack = null;
 
     var targetU = null;
