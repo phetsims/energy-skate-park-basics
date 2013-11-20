@@ -13,7 +13,6 @@ define( function( require ) {
   var Text = require( 'SCENERY/nodes/Text' );
   var PhetFont = require( 'SCENERY_PHET/PhetFont' );
   var HSlider = require( 'SUN/HSlider' );
-  var Property = require( 'AXON/Property' );
   var skaterMassString = require( 'string!ENERGY_SKATE_PARK_BASICS/controls.mass' );
   var smallString = require( 'string!ENERGY_SKATE_PARK_BASICS/small' );
   var largeString = require( 'string!ENERGY_SKATE_PARK_BASICS/large' );
