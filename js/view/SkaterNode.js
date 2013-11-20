@@ -37,9 +37,9 @@ define( function( require ) {
       var matrix = Matrix3.IDENTITY;
 
       var view = modelViewTransform.modelToViewPosition( position );
-      matrix = matrix.multiplyMatrix( Matrix3.translation( view.x - imageWidth / 2, view.y - imageHeight ) );
-
       var displayAngle = skater.angle + (skater.up ? 0 : Math.PI );
+
+      matrix = matrix.multiplyMatrix( Matrix3.translation( view.x - imageWidth / 2, view.y - imageHeight ) );
       matrix = matrix.multiplyMatrix( Matrix3.rotationAround( displayAngle, imageWidth / 2, imageHeight ) );
       matrix = matrix.multiplyMatrix( Matrix3.scaling( massToScale( mass ), massToScale( mass ) ) );
 
