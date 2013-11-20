@@ -166,7 +166,8 @@ define( function( require ) {
     this.addChild( new PlaybackSpeedControl( model ).mutate( {right: playPauseControl.left, centerY: playPauseControl.centerY} ) );
 
     if ( !model.draggableTracks ) {
-      this.addChild( new SceneSelectionPanel( model, this, transform ).mutate( {left: 5, bottom: this.layoutBounds.maxY - 5} ) );
+      this.sceneSelectionPanel = new SceneSelectionPanel( model, this, transform );//layout done in layout bounds
+      this.addChild( this.sceneSelectionPanel );
     }
 
     //For debugging the visible bounds
@@ -213,6 +214,11 @@ define( function( require ) {
 
       //Float the control panel to the right (but not arbitrarily far because it could get too far from the play area)
       this.controlPanel.right = Math.min( 890, this.availableViewBounds.maxX ) - 5;
+
+      if ( this.sceneSelectionPanel ) {
+        this.sceneSelectionPanel.centerX = this.controlPanel.centerX;
+        this.sceneSelectionPanel.top = this.controlPanel.bottom + 10;
+      }
       this.resetAllButton.centerX = this.controlPanel.centerX;
       this.returnSkaterButton.right = this.resetAllButton.left - 10;
       //Compute the visible model bounds so we will know when a model object like the skater has gone offscreen

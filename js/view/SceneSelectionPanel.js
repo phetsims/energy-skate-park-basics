@@ -11,7 +11,7 @@ define( function( require ) {
   var Panel = require( 'SUN/Panel' );
   var inherit = require( 'PHET_CORE/inherit' );
   var Node = require( 'SCENERY/nodes/Node' );
-  var HBox = require( 'SCENERY/nodes/HBox' );
+  var VBox = require( 'SCENERY/nodes/VBox' );
   var ToggleButton = require( 'SUN/ToggleButton' );
   var Property = require( 'AXON/Property' );
   var TrackNode = require( 'ENERGY_SKATE_PARK_BASICS/view/TrackNode' );
@@ -26,7 +26,7 @@ define( function( require ) {
       background.layout( 0, 0, view.layoutBounds.width, view.layoutBounds.height, 1 );
       var trackNode = new TrackNode( model, track, transform );
       var a = new Node( {children: [background, trackNode ]} );
-      a.scale( 28 / a.height );
+      a.scale( 45 / a.height );
       var selectedNode = new Panel( a, {stroke: 'black', lineWidth: 3, xMargin: 0, yMargin: 0, cornerRadius: 0} );
 
       var unselectedNode = new Panel( a, {stroke: 'gray', lineWidth: 0, xMargin: 0, yMargin: 0, cornerRadius: 0, opacity: 0.6} );
@@ -37,7 +37,7 @@ define( function( require ) {
       return new ToggleButton( selectedNode, unselectedNode, property, {radioButton: true} );
     };
 
-    var content = new HBox( {
+    var content = new VBox( {
       spacing: 10,
       children: [
         createNode( 0 ),
@@ -47,5 +47,5 @@ define( function( require ) {
     Panel.call( this, content, {xMargin: 10} );
   }
 
-  return inherit( HBox, SceneSelectionPanel );
+  return inherit( VBox, SceneSelectionPanel );
 } );
