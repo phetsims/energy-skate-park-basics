@@ -132,26 +132,9 @@ define( function( require ) {
     //center the pie chart legend between the control panel and speedometer
     pieChartLegend.mutate( {top: this.controlPanel.top, right: this.controlPanel.left - 9} );
 
-    //The button to return the skater
-    this.returnSkaterButton = new TextPushButton( returnSkaterString, {
-      listener: model.returnSkater.bind( model ),
-      centerX: this.controlPanel.centerX, top: this.controlPanel.bottom + 10
-    } );
-
-    //Disable the return skater button when the skater is already at his initial coordinates
-    model.skater.movedProperty.link( function( moved ) {view.returnSkaterButton.enabled = moved;} );
-    this.addChild( this.returnSkaterButton );
-
     //Determine if the skater is onscreen or offscreen for purposes of highlighting the 'return skater' button.
     var onscreenProperty = new DerivedProperty( [model.skater.positionProperty], function( position ) {
       return view.availableModelBounds && view.availableModelBounds.containsPoint( position );
-    } );
-
-    //When the skater goes off screen, make the "return skater" button big
-    onscreenProperty.lazyLink( function( onscreen ) {
-      var center = view.returnSkaterButton.center;
-      view.returnSkaterButton.setScaleMagnitude( onscreen ? 1 : 1.5 );
-      view.returnSkaterButton.center = center;
     } );
 
     this.addChild( new BarGraphNode( model ) );
@@ -161,6 +144,24 @@ define( function( require ) {
 
     this.resetAllButton = new ResetAllButton( model.reset.bind( model ) ).mutate( {scale: 0.7, centerY: (transform.modelToViewY( 0 ) + this.layoutBounds.maxY) / 2, centerX: this.controlPanel.centerX} );
     this.addChild( this.resetAllButton );
+
+    //The button to return the skater
+    this.returnSkaterButton = new TextPushButton( returnSkaterString, {
+      listener: model.returnSkater.bind( model ),
+      centerY: this.resetAllButton.centerY
+      //X updated in layoutBounds since the reset all button can move horizontally
+    } );
+
+    //Disable the return skater button when the skater is already at his initial coordinates
+    model.skater.movedProperty.link( function( moved ) {view.returnSkaterButton.enabled = moved;} );
+    this.addChild( this.returnSkaterButton );
+
+    //When the skater goes off screen, make the "return skater" button big
+    onscreenProperty.lazyLink( function( onscreen ) {
+      view.returnSkaterButton.setScaleMagnitude( onscreen ? 1 : 1.5 );
+      view.returnSkaterButton.centerY = view.resetAllButton.centerY;
+      view.returnSkaterButton.right = view.resetAllButton.left - 10;
+    } );
 
     this.addChild( new PlaybackSpeedControl( model ).mutate( {right: playPauseControl.left, centerY: playPauseControl.centerY} ) );
 
@@ -212,8 +213,8 @@ define( function( require ) {
 
       //Float the control panel to the right (but not arbitrarily far because it could get too far from the play area)
       this.controlPanel.right = Math.min( 890, this.availableViewBounds.maxX ) - 5;
-      this.returnSkaterButton.centerX = this.controlPanel.centerX;
       this.resetAllButton.centerX = this.controlPanel.centerX;
+      this.returnSkaterButton.right = this.resetAllButton.left - 10;
       //Compute the visible model bounds so we will know when a model object like the skater has gone offscreen
       this.availableModelBounds = this.modelViewTransform.viewToModelBounds( this.availableViewBounds );
 
