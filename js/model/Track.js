@@ -32,9 +32,6 @@ define( function( require ) {
       //For screen 3, tracks in the control panel are visible but non-physical until dragged to the play area
       physical: false,
 
-      //Store the offset in a separate field for translation, to improve performance when dragging the track
-      offset: new Vector2(),
-
       //Flag that indicates whether the user is about to drop the track into the track creation panel
       overTrackPanel: false,
 
@@ -72,13 +69,10 @@ define( function( require ) {
       track.x.length = 0;
       track.y.length = 0;
 
-      var x = this.offsetProperty.get().x;
-      var y = this.offsetProperty.get().y;
-
       for ( var i = 0; i < track.controlPoints.length; i++ ) {
         track.u.push( i / track.controlPoints.length );
-        track.x.push( track.controlPoints[i].position.x + x );
-        track.y.push( track.controlPoints[i].position.y + y );
+        track.x.push( track.controlPoints[i].position.x );
+        track.y.push( track.controlPoints[i].position.y );
       }
 
       track.xSpline = numeric.spline( track.u, track.x );
