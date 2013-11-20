@@ -32,16 +32,23 @@ define( function( require ) {
     var imageWidth = this.width;
     var imageHeight = this.height;
 
-    //Update the position and angle.  Normally the angle would only change if the position has also changed.
-    this.skater.multilink( ['mass', 'position', 'direction'], function( mass, position, direction ) {
+    //Update the position and angle.  Normally the angle would only change if the position has also changed, so no need for a duplicate callback there
+    this.skater.multilink( ['mass', 'position', 'direction', 'up'], function( mass, position, direction, up ) {
       var matrix = Matrix3.IDENTITY;
 
       var view = modelViewTransform.modelToViewPosition( position );
-      var displayAngle = skater.angle + (skater.up ? 0 : Math.PI );
+      var displayAngle = skater.angle + (up ? 0 : Math.PI );
 
-      matrix = matrix.multiplyMatrix( Matrix3.translation( view.x - imageWidth / 2, view.y - imageHeight ) );
-      matrix = matrix.multiplyMatrix( Matrix3.rotationAround( displayAngle, imageWidth / 2, imageHeight ) );
-      matrix = matrix.multiplyMatrix( Matrix3.scaling( massToScale( mass ), massToScale( mass ) ) );
+      if ( direction === 'left' ) {
+        matrix = matrix.multiplyMatrix( Matrix3.translation( view.x - imageWidth / 2, view.y - imageHeight ) );
+        matrix = matrix.multiplyMatrix( Matrix3.rotationAround( displayAngle, imageWidth / 2, imageHeight ) );
+        matrix = matrix.multiplyMatrix( Matrix3.scaling( massToScale( mass ), massToScale( mass ) ) );
+      }
+      else if ( direction === 'right' ) {
+        matrix = matrix.multiplyMatrix( Matrix3.translation( view.x - imageWidth / 2, view.y - imageHeight ) );
+        matrix = matrix.multiplyMatrix( Matrix3.rotationAround( displayAngle, imageWidth / 2, imageHeight ) );
+        matrix = matrix.multiplyMatrix( Matrix3.scaling( -massToScale( mass ), massToScale( mass ) ) );
+      }
 
       skaterNode.setMatrix( matrix );
     } );
