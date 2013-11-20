@@ -21,7 +21,7 @@ define( function( require ) {
   var Constants = require( 'ENERGY_SKATE_PARK_BASICS/Constants' );
 
   function FrictionControl( model ) {
-    var frictionRange = {min: 0, max: 2};
+    var frictionRange = {min: 0, max: model.friction * 2};
     var slider = new HSlider( model.frictionProperty, frictionRange, Constants.SLIDER_OPTIONS );
     var tickFont = new PhetFont( 10 );
     slider.addMajorTick( frictionRange.min, new Text( noneString, { font: tickFont } ) );
