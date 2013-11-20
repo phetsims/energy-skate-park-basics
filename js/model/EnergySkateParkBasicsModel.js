@@ -84,6 +84,15 @@ define( function( require ) {
       } );
     }
     else {
+      this.addDraggableTracks();
+    }
+
+    this.bounces = 0;
+  }
+
+  return inherit( PropertySet, EnergySkateParkBasicsModel, {
+
+    addDraggableTracks: function() {
       for ( var i = 0; i < 4; i++ ) {
         //Move the tracks over so they will be in the right position in the view coordinates, under the grass to the left of the clock controls
         //Could use view transform for this, but it would require creating the view first, so just eyeballing it for now.
@@ -94,22 +103,15 @@ define( function( require ) {
         var controlPoints = [ new ControlPoint( a.x, a.y ), new ControlPoint( b.x, b.y ), new ControlPoint( c.x, c.y )];
         this.tracks.add( new Track( this.tracks, controlPoints, true ) );
       }
-    }
-
-    this.bounces = 0;
-  }
-
-  return inherit( PropertySet, EnergySkateParkBasicsModel, {
+    },
     reset: function() {
       PropertySet.prototype.reset.call( this );
       this.skater.reset();
-      for ( var i = 0; i < this.tracks.length; i++ ) {
-        this.tracks.get( i ).reset();
-      }
 
       //For the first two screens, make the default track physical
-      if ( !this.draggableTracks ) {
-        this.tracks.get( 0 ).physical = true;
+      if ( this.draggableTracks ) {
+        this.tracks.clear();
+        this.addDraggableTracks();
       }
     },
 
