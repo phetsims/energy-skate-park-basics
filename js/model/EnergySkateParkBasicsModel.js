@@ -130,7 +130,7 @@ define( function( require ) {
     //Step the model, automatically called from Joist
     step: function( dt ) {
       //If the delay makes dt too high, then truncate it.  This helps e.g. when clicking in the address bar on ipad, which gives a huge dt and problems for integration
-      if ( !this.paused ) {
+      if ( !this.paused && !this.skater.dragging ) {
 
         //If they switched windows or tabs, just bail on that delta
         if ( dt > 1 || dt <= 0 ) {

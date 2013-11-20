@@ -73,6 +73,9 @@ define( function( require ) {
       return position.plusXY( vector.x, -vector.y );
     } );
 
+    //Zero the kinetic energy when dragging, see https://github.com/phetsims/energy-skate-park-basics/issues/22
+    this.draggingProperty.link( function( dragging ) { if ( dragging ) { skater.velocity = new Vector2( 0, 0 ); } } );
+
     //Boolean flag that indicates whether the skater has moved from his initial position, and hence can be 'returned',
     //For making the 'return skater' button enabled/disabled
     //If this is a performance concern, perhaps it could just be dropped as a feature
