@@ -484,7 +484,7 @@ define( function( require ) {
           position: new Vector2( x2, y2 )
         } );
 
-        console.log( skaterState.getTotalEnergy(), result.getTotalEnergy(), result.getTotalEnergy() - skaterState.getTotalEnergy() );
+//        console.log( skaterState.getTotalEnergy(), result.getTotalEnergy(), result.getTotalEnergy() - skaterState.getTotalEnergy() );
         if ( Math.abs( result.getTotalEnergy() - skaterState.getTotalEnergy() ) > 100 ) {
 //          debugger;
           console.log( 'big error at the end of stepTrack', Math.abs( result.getTotalEnergy() - skaterState.getTotalEnergy() ) );
