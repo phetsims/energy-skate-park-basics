@@ -30,13 +30,16 @@ define( function( require ) {
   var speedString = require( 'string!ENERGY_SKATE_PARK_BASICS/properties.speed' );
   var gridString = require( 'string!ENERGY_SKATE_PARK_BASICS/controls.show-grid' );
   var stickToTrackString = require( 'string!ENERGY_SKATE_PARK_BASICS/stickToTrack' );
+  var PhetFont = require( 'SCENERY_PHET/PhetFont' );
 
   function EnergySkateParkBasicsControlPanel( model ) {
-    var barGraphSet = [new Text( barGraphString ), this.createBarGraphIcon()];
-    var pieChartSet = [new Text( pieChartString ), this.createPieChartIcon()];
-    var gridSet = [new Text( gridString ), this.createGridIcon()];
-    var speedometerSet = [new Text( speedString ), this.createSpeedometerIcon()];
-    var stickToTrackSet = [new Text( stickToTrackString ), new Node( {children: [
+    var textOptions = {font: new PhetFont( 14 )};
+
+    var barGraphSet = [new Text( barGraphString, textOptions ), this.createBarGraphIcon()];
+    var pieChartSet = [new Text( pieChartString, textOptions ), this.createPieChartIcon()];
+    var gridSet = [new Text( gridString, textOptions ), this.createGridIcon()];
+    var speedometerSet = [new Text( speedString, textOptions ), this.createSpeedometerIcon()];
+    var stickToTrackSet = [new Text( stickToTrackString, textOptions ), new Node( {children: [
       new Rectangle( 0, 0, 20, 10, {fill: 'black'} ),
       new Line( 0, 5, 20, 5, {stroke: 'yellow', lineWidth: '2', lineDash: [4, 2]} )
     ]} )];
@@ -52,11 +55,13 @@ define( function( require ) {
       return [itemSet[0], new Rectangle( 0, 0, padWidth + 20, 20 ), itemSet[1]];
     };
 
+    var options = {boxScale: 0.5};
+
     var checkBoxChildren = [
-      new CheckBox( new HBox( {children: pad( barGraphSet )} ), model.barGraphVisibleProperty ),
-      new CheckBox( new HBox( {children: pad( pieChartSet )} ), model.pieChartVisibleProperty ),
-      new CheckBox( new HBox( {children: pad( gridSet )} ), model.gridVisibleProperty ),
-      new CheckBox( new HBox( {children: pad( speedometerSet )} ), model.speedometerVisibleProperty )];
+      new CheckBox( new HBox( {children: pad( barGraphSet )} ), model.barGraphVisibleProperty, options ),
+      new CheckBox( new HBox( {children: pad( pieChartSet )} ), model.pieChartVisibleProperty, options ),
+      new CheckBox( new HBox( {children: pad( gridSet )} ), model.gridVisibleProperty, options ),
+      new CheckBox( new HBox( {children: pad( speedometerSet )} ), model.speedometerVisibleProperty, options )];
     if ( model.frictionAllowed ) {
       checkBoxChildren.push( new CheckBox( new HBox( {children: pad( stickToTrackSet )} ), model.stickToTrackProperty ) );
     }
