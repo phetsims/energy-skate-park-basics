@@ -62,6 +62,9 @@ define( function( require ) {
         start: function( event ) {
           skater.dragging = true;
 
+          //Clear thermal energy whenever skater is grabbed, see https://github.com/phetsims/energy-skate-park-basics/issues/32
+          skater.thermalEnergy = 0;
+
           //Jump to the input location when dragged
           this.drag( event );
         },
