@@ -194,6 +194,10 @@ define( function( require ) {
       return Vector2.createPolar( 1, angle + Math.PI / 2 );
     },
 
+    getUnitParallelVector: function( u ) {
+      return this.getUnitNormalVector( u ).perpendicular();
+    },
+
     updateLinSpace: function() {
       this.minPoint = 0;
       this.maxPoint = (this.controlPoints.length - 1) / this.controlPoints.length;

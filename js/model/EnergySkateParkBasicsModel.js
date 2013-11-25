@@ -142,7 +142,7 @@ define( function( require ) {
         var error = 100000;
         var numDivisions = 1;
         var skaterState = null;
-        while ( error > 1 && numDivisions <= 64 ) {
+        while ( error > 1E-6 && numDivisions <= 1000 ) {
 
           skaterState = new SkaterState( this.skater, {} );
           var initialEnergy = skaterState.getTotalEnergy();
@@ -350,8 +350,175 @@ define( function( require ) {
       }
     },
 
-    //Update the skater if he is on the track
+    getNetForce: function( skaterState ) {
+      var netForce = new Vector2();
+      netForce.addXY( 0, skaterState.mass * skaterState.gravity );//gravity
+      netForce.add( this.getFrictionForce( skaterState ) );
+      return netForce;
+    },
+
+    getFrictionForce: function( skaterState ) {
+      if ( this.friction == 0 || skaterState.velocity.magnitude() < 1E-2 ) {
+        return new Vector2();
+      }
+      else {
+        var magnitude = -this.friction * this.getNormalForce( skaterState ).magnitude() * 25;
+        return Vector2.createPolar( magnitude, skaterState.velocity.angle() - Math.PI );
+      }
+    },
+
+    getCurvature: function( skaterState ) {
+      var track = skaterState.track;
+      var curvature = circularRegression( [
+        new Vector2( track.getX( skaterState.u ), track.getY( skaterState.u ) ),
+        new Vector2( track.getX( skaterState.u - 1E-6 ), track.getY( skaterState.u - 1E-6 ) ),
+        new Vector2( track.getX( skaterState.u + 1E-6 ), track.getY( skaterState.u + 1E-6 ) )] );
+      return curvature;
+    },
+
+    //todo: store the radius of curvature on the skaterState, only recompute if undefined
+    getNormalForce: function( skaterState ) {
+      var curvature = this.getCurvature( skaterState );
+      var radiusOfCurvature = curvature.r;
+      if ( false && Double.isInfinite( radiusOfCurvature ) ) { // TODO: handle infinite
+        radiusOfCurvature = 100000;
+        var netForceRadial = new MutableVector2D();
+        netForceRadial.add( new MutableVector2D( 0, mass * g ) );//gravity
+        netForceRadial.add( new MutableVector2D( xThrust * mass, yThrust * mass ) );//thrust
+        var normalForce = mass * velocity * velocity / Math.abs( radiusOfCurvature ) - netForceRadial.dot( getCurvatureDirection() );
+
+        return MutableVector2D.createPolar( normalForce, getCurvatureDirection().getAngle() );
+      }
+      else {
+        var netForceRadial = new Vector2();
+
+        netForceRadial.addXY( 0, skaterState.mass * skaterState.gravity );//gravity
+//        netForceRadial.add( new MutableVector2D( xThrust * mass, yThrust * mass ) );//thrust
+        var curvatureDirection = this.getCurvatureDirection( curvature, skaterState.position.x, skaterState.position.y );
+        var normalForce = skaterState.mass * skaterState.velocity.magnitudeSquared() / Math.abs( radiusOfCurvature ) - netForceRadial.dot( curvatureDirection );
+        return Vector2.createPolar( normalForce, curvatureDirection.angle() );
+      }
+    },
+
     stepTrack: function( dt, skaterState ) {
+//      debugger;
+      var origEnergy = skaterState.getTotalEnergy();
+      var origLoc = skaterState.position;
+      var netForce = this.getNetForce( skaterState );
+
+//      console.log( netForce );
+
+      //Velocity in the direction of the track
+      var velocity = skaterState.velocity.magnitude();
+
+      //acceleration in the direction of the track (linearized segment)
+      var trackUnitParallelVector = skaterState.track.getUnitParallelVector( skaterState.u );
+      var a = trackUnitParallelVector.dot( netForce ) / skaterState.mass;
+      velocity += a * dt;
+
+      //New position in the linearized track
+      var euclideanPositionDelta = velocity * dt + 1 / 2 * a * dt * dt;
+
+      //Find the parametric coordinates corresponding to the proposed position
+
+      //Search the track to find a point on the track that has the right euclidean position delta
+      var direction = trackUnitParallelVector.dot( skaterState.velocity ) ? +1 : -1;
+
+      var iteration = 0;
+      var uDelta = 1E-6;
+
+      var previousError = 1E6;
+      var previousUDelta = 0;
+
+      var previousError2 = 1E6;
+      var previousUDelta2 = 0;
+      while ( true ) {
+        iteration++;
+        uDelta *= 2;
+
+        var u2 = skaterState.u + uDelta * direction;
+        var pt = skaterState.track.getPoint( u2 );
+        var distance = pt.distance( skaterState.position );
+        var error = Math.abs( distance - euclideanPositionDelta );
+        if ( iteration > 100 ) {
+          console.log( 'iteration', iteration, 'uDelta', uDelta, 'error', error, 'previousError', previousError, 'prev2', previousError2 );
+        }
+        if ( error > previousError || iteration > 100 ) {
+          break;
+        }
+
+        previousError2 = previousError;
+        previousUDelta2 = previousUDelta;
+
+        previousError = error;
+        previousUDelta = uDelta;
+      }
+
+//      console.log( 'binary searching in bounds', previousError2, error );
+      var uDeltaMin = previousUDelta2;
+      var uDeltaMax = uDelta;
+
+      iteration = 0;
+      while ( true ) {
+        uDelta = (uDeltaMin + uDeltaMax) / 2;
+        u2 = skaterState.u + uDelta * direction;
+        pt = skaterState.track.getPoint( u2 );
+        distance = pt.distance( skaterState.position );
+        if ( distance > euclideanPositionDelta ) {
+          uDeltaMax = uDelta;
+        }
+        else {
+          uDeltaMin = uDelta;
+        }
+        error = Math.abs( distance - euclideanPositionDelta );
+        if ( iteration > 100 ) {
+          console.log( 'BIN: iteration', iteration, 'error', error, 'uDeltaMin', uDeltaMin, 'uDeltaMax', uDeltaMax );
+          break;
+        }
+        if ( error < 1E-6 ) {
+          break;
+        }
+        iteration++;
+      }
+
+      var newPosition = skaterState.track.getPoint( u2 );
+      var velocity = newPosition.minus( skaterState.position ).timesScalar( 1.0 / dt );
+      //todo: update velocity in both spaces
+      return skaterState.update( {
+        u: u2,
+        position: newPosition,
+        velocity: velocity
+      } );
+
+//      if ( this.friction > 0 ) {
+//        var frictionForce = getFrictionForce();
+//        if ( ( Double.isNaN( frictionForce.magnitude() ) ) ) { throw new IllegalArgumentException();}
+//        var therm = frictionForce.magnitude() * getLocation().distance( skaterState.position );
+//        thermalEnergy += therm;
+//        if ( getEnergy() < origEnergy ) {
+//          thermalEnergy += Math.abs( getEnergy() - origEnergy );//add some thermal to exactly match
+//          if ( Math.abs( getEnergy() - origEnergy ) > 1E-6 ) {
+//            EnergySkateParkLogging.println( "Added thermal, dE=" + ( getEnergy() - origEnergy ) );
+//          }
+//        }
+//        if ( getEnergy() > origEnergy ) {
+//          if ( Math.abs( getEnergy() - origEnergy ) < therm ) {
+//            debug( "gained energy, removing thermal (Would have to remove more than we gained)" );
+//          }
+//          else {
+//            var editThermal = Math.abs( getEnergy() - origEnergy );
+//            thermalEnergy -= editThermal;
+//            if ( Math.abs( getEnergy() - origEnergy ) > 1E-6 ) {
+//              EnergySkateParkLogging.println( "Removed thermal, dE=" + ( getEnergy() - origEnergy ) );
+//            }
+//          }
+//        }
+//      }
+//      handleBoundary();
+    },
+
+    //Update the skater if he is on the track
+    stepTrackORIG: function( dt, skaterState ) {
 
       var track = skaterState.track;
       var u = skaterState.u;
