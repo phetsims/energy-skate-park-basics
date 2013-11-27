@@ -143,7 +143,7 @@ define( function( require ) {
         var error = 100000;
         var numDivisions = 1;
         var skaterState = null;
-        while ( error > 1E-6 && numDivisions <= 1000 ) {
+        while ( error > 1E-6 && numDivisions <= 1 ) {
 
           skaterState = new SkaterState( this.skater, {} );
           var initialEnergy = skaterState.getTotalEnergy();
@@ -412,42 +412,50 @@ define( function( require ) {
       var a = skaterState.track.getUnitParallelVector( alpha ).dot( netForce ) / skaterState.mass;
       velocity += a * dt;
       var thrust = new Vector2();
-      alpha += track.getFractionalDistance( alpha, velocity * dt + 1 / 2 * a * dt * dt );
+      var deltaAlpha = track.getFractionalDistance( alpha, velocity * dt + 1 / 2 * a * dt * dt );
+      alpha += deltaAlpha;
+      var newPoint = skaterState.track.getPoint( alpha );
+      var newState = skaterState.update( {
+        u: alpha,
+        uD: velocity,
+        velocity: new Vector2( (newPoint.x - skaterState.position.x) / dt, (newPoint.y - skaterState.position.y) / dt ),
+        position: newPoint
+      } );
       if ( this.friction > 0 ) {
         var frictionForce = this.getFrictionForce( skaterState );
         if ( ( isNaN( frictionForce.magnitude() ) ) ) { throw new Error( 'nan' );}
-        var therm = frictionForce.magnitude() * getLocation().distance( origLoc );
+        var therm = frictionForce.magnitude() * newPoint.distance( origLoc );
         thermalEnergy += therm;
-        if ( thrust.magnitude() == 0 ) {//only conserve energy if the user is not adding energy
-          if ( getEnergy() < origEnergy ) {
-            thermalEnergy += Math.abs( getEnergy() - origEnergy );//add some thermal to exactly match
-            if ( Math.abs( getEnergy() - origEnergy ) > 1E-6 ) {
-              EnergySkateParkLogging.println( "Added thermal, dE=" + ( getEnergy() - origEnergy ) );
+        if ( thrust.magnitude() === 0 ) {//only conserve energy if the user is not adding energy
+          if ( newState.getTotalEnergy() < origEnergy ) {
+            thermalEnergy += Math.abs( newState.getTotalEnergy() - origEnergy );//add some thermal to exactly match
+            if ( Math.abs( newState.getTotalEnergy() - origEnergy ) > 1E-6 ) {
+              console.log( "Added thermal, dE=" + ( newState.getTotalEnergy() - origEnergy ) );
             }
           }
-          if ( getEnergy() > origEnergy ) {
-            if ( Math.abs( getEnergy() - origEnergy ) < therm ) {
-              debug( "gained energy, removing thermal (Would have to remove more than we gained)" );
+          if ( newState.getTotalEnergy() > origEnergy ) {
+            if ( Math.abs( newState.getTotalEnergy() - origEnergy ) < therm ) {
+              console.log( "gained energy, removing thermal (Would have to remove more than we gained)" );
             }
             else {
-              var editThermal = Math.abs( getEnergy() - origEnergy );
+              var editThermal = Math.abs( newState.getTotalEnergy() - origEnergy );
               thermalEnergy -= editThermal;
-              if ( Math.abs( getEnergy() - origEnergy ) > 1E-6 ) {
-                EnergySkateParkLogging.println( "Removed thermal, dE=" + ( getEnergy() - origEnergy ) );
+              if ( Math.abs( newState.getTotalEnergy() - origEnergy ) > 1E-6 ) {
+                console.log( "Removed thermal, dE=" + ( newState.getTotalEnergy() - origEnergy ) );
               }
             }
           }
         }
+        return newState.update( {thermalEnergy: thermalEnergy} );
+      }
+      else {
+        return newState;
       }
       //TODO: Error checking
 //      if ( ( isNaN( getKineticEnergy() ) ) ) { throw new IllegalArgumentException();}
 //      if ( ( isInfinite( getKineticEnergy() ) ) ) { throw new IllegalArgumentException();}
 //      if ( ( isNaN( getVelocity2D().magnitude() ) ) ) { throw new IllegalArgumentException();}
 //      handleBoundary();
-      return skaterState.update( {
-        u: alpha,
-        position: skaterState.track.getPoint( alpha )
-      } );
     },
 
     stepTrack: function( dt, skaterState ) {
@@ -477,7 +485,7 @@ define( function( require ) {
 //        Particle.this.stepInTime( dt );
       }
       else {
-        skaterState = this.updateEuler( dt, skaterState );
+        return this.updateEuler( dt, skaterState );
 //        particle1D.stepInTime( dt );
 //        updateStateFrom1D();
 //        if ( !particle1D.isReflect() && ( particle1D.getAlpha() < 0 || particle1D.getAlpha() > 1.0 ) ) {
