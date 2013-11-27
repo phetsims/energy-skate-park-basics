@@ -259,6 +259,57 @@ define( function( require ) {
       else {
         this.reset();
       }
+    },
+
+    getMetricDelta: function( a0, a1 ) {
+      if ( a1 == a0 ) {
+        return 0;
+      }
+      if ( a1 < a0 ) {
+        return -this.getMetricDelta( a1, a0 );
+      }
+      var numSegments = 10;
+      var da = ( a1 - a0 ) / ( numSegments - 1 );
+      var prev = this.getPoint( a0 );
+      var sum = 0;
+      for ( var i = 1; i < numSegments; i++ ) {
+        var a = a0 + i * da;
+        var pt = this.getPoint( a );
+        var dist = pt.distance( prev );
+        sum += dist;
+        prev = pt;
+      }
+      return sum;
+    },
+
+    getFractionalDistance: function( alpha0, ds ) {
+      var lowerBound = -1;
+      var upperBound = 2;
+
+      var guess = ( upperBound + lowerBound ) / 2.0;
+
+      var metricDelta = this.getMetricDelta( alpha0, guess );
+      var epsilon = 1E-8;
+//        double epsilon = 1E-10;
+
+      var count = 0;
+      while ( Math.abs( metricDelta - ds ) > epsilon ) {
+        if ( metricDelta > ds ) {
+          upperBound = guess;
+        }
+        else {
+          lowerBound = guess;
+        }
+        guess = ( upperBound + lowerBound ) / 2.0;
+        metricDelta = this.getMetricDelta( alpha0, guess );
+        count++;
+        if ( count > 100 ) {
+          console.log( "binary search failed: count=" + count );
+          break;
+        }
+      }
+//        EnergySkateParkLogging.println( "count = " + count );
+      return guess - alpha0;
     }
   } );
 } );

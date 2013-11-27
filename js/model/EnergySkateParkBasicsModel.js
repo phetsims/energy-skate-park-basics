@@ -23,6 +23,7 @@ define( function( require ) {
   var ObservableArray = require( 'AXON/ObservableArray' );
   var SkaterState = require( 'ENERGY_SKATE_PARK_BASICS/model/SkaterState' );
   var Util = require( 'DOT/Util' );
+  var Particle1D = require( 'ENERGY_SKATE_PARK_BASICS/model/Particle1D' );
 
   /**
    * Main constructor for the EnergySkateParkBasicsModel
@@ -400,121 +401,218 @@ define( function( require ) {
       }
     },
 
-    stepTrack: function( dt, skaterState ) {
-//      debugger;
+    updateEuler: function( dt, skaterState ) {
+      var track = skaterState.track;
       var origEnergy = skaterState.getTotalEnergy();
       var origLoc = skaterState.position;
       var netForce = this.getNetForce( skaterState );
-
-//      console.log( netForce );
-
-      //Velocity in the direction of the track
-      var velocity = skaterState.velocity.magnitude();
-
-      //acceleration in the direction of the track (linearized segment)
-      var trackUnitParallelVector = skaterState.track.getUnitParallelVector( skaterState.u );
-      var a = trackUnitParallelVector.dot( netForce ) / skaterState.mass;
+      var thermalEnergy = skaterState.thermalEnergy;
+      var velocity = skaterState.uD;
+      var alpha = skaterState.u;
+      var a = skaterState.track.getUnitParallelVector( alpha ).dot( netForce ) / skaterState.mass;
       velocity += a * dt;
-
-      //New position in the linearized track
-      var euclideanPositionDelta = velocity * dt + 1 / 2 * a * dt * dt;
-
-      //Find the parametric coordinates corresponding to the proposed position
-
-      //Search the track to find a point on the track that has the right euclidean position delta
-      var direction = trackUnitParallelVector.dot( skaterState.velocity ) ? +1 : -1;
-
-      var iteration = 0;
-      var uDelta = 1E-6;
-
-      var previousError = 1E6;
-      var previousUDelta = 0;
-
-      var previousError2 = 1E6;
-      var previousUDelta2 = 0;
-      while ( true ) {
-        iteration++;
-        uDelta *= 2;
-
-        var u2 = skaterState.u + uDelta * direction;
-        var pt = skaterState.track.getPoint( u2 );
-        var distance = pt.distance( skaterState.position );
-        var error = Math.abs( distance - euclideanPositionDelta );
-        if ( iteration > 100 ) {
-          console.log( 'iteration', iteration, 'uDelta', uDelta, 'error', error, 'previousError', previousError, 'prev2', previousError2 );
+      var thrust = new Vector2();
+      alpha += track.getFractionalDistance( alpha, velocity * dt + 1 / 2 * a * dt * dt );
+      if ( this.friction > 0 ) {
+        var frictionForce = this.getFrictionForce( skaterState );
+        if ( ( isNaN( frictionForce.magnitude() ) ) ) { throw new Error( 'nan' );}
+        var therm = frictionForce.magnitude() * getLocation().distance( origLoc );
+        thermalEnergy += therm;
+        if ( thrust.magnitude() == 0 ) {//only conserve energy if the user is not adding energy
+          if ( getEnergy() < origEnergy ) {
+            thermalEnergy += Math.abs( getEnergy() - origEnergy );//add some thermal to exactly match
+            if ( Math.abs( getEnergy() - origEnergy ) > 1E-6 ) {
+              EnergySkateParkLogging.println( "Added thermal, dE=" + ( getEnergy() - origEnergy ) );
+            }
+          }
+          if ( getEnergy() > origEnergy ) {
+            if ( Math.abs( getEnergy() - origEnergy ) < therm ) {
+              debug( "gained energy, removing thermal (Would have to remove more than we gained)" );
+            }
+            else {
+              var editThermal = Math.abs( getEnergy() - origEnergy );
+              thermalEnergy -= editThermal;
+              if ( Math.abs( getEnergy() - origEnergy ) > 1E-6 ) {
+                EnergySkateParkLogging.println( "Removed thermal, dE=" + ( getEnergy() - origEnergy ) );
+              }
+            }
+          }
         }
-        if ( error > previousError || iteration > 100 ) {
-          break;
-        }
-
-        previousError2 = previousError;
-        previousUDelta2 = previousUDelta;
-
-        previousError = error;
-        previousUDelta = uDelta;
       }
-
-//      console.log( 'binary searching in bounds', previousError2, error );
-      var uDeltaMin = previousUDelta2;
-      var uDeltaMax = uDelta;
-
-      iteration = 0;
-      while ( true ) {
-        uDelta = (uDeltaMin + uDeltaMax) / 2;
-        u2 = skaterState.u + uDelta * direction;
-        pt = skaterState.track.getPoint( u2 );
-        distance = pt.distance( skaterState.position );
-        if ( distance > euclideanPositionDelta ) {
-          uDeltaMax = uDelta;
-        }
-        else {
-          uDeltaMin = uDelta;
-        }
-        error = Math.abs( distance - euclideanPositionDelta );
-        if ( iteration > 100 ) {
-          console.log( 'BIN: iteration', iteration, 'error', error, 'uDeltaMin', uDeltaMin, 'uDeltaMax', uDeltaMax );
-          break;
-        }
-        if ( error < 1E-6 ) {
-          break;
-        }
-        iteration++;
-      }
-
-      var newPosition = skaterState.track.getPoint( u2 );
-      var velocity = newPosition.minus( skaterState.position ).timesScalar( 1.0 / dt );
-      //todo: update velocity in both spaces
+      //TODO: Error checking
+//      if ( ( isNaN( getKineticEnergy() ) ) ) { throw new IllegalArgumentException();}
+//      if ( ( isInfinite( getKineticEnergy() ) ) ) { throw new IllegalArgumentException();}
+//      if ( ( isNaN( getVelocity2D().magnitude() ) ) ) { throw new IllegalArgumentException();}
+//      handleBoundary();
       return skaterState.update( {
-        u: u2,
-        position: newPosition,
-        velocity: velocity
+        u: alpha,
+        position: skaterState.track.getPoint( alpha )
       } );
+    },
 
-//      if ( this.friction > 0 ) {
-//        var frictionForce = getFrictionForce();
-//        if ( ( Double.isNaN( frictionForce.magnitude() ) ) ) { throw new IllegalArgumentException();}
-//        var therm = frictionForce.magnitude() * getLocation().distance( skaterState.position );
-//        thermalEnergy += therm;
-//        if ( getEnergy() < origEnergy ) {
-//          thermalEnergy += Math.abs( getEnergy() - origEnergy );//add some thermal to exactly match
-//          if ( Math.abs( getEnergy() - origEnergy ) > 1E-6 ) {
-//            EnergySkateParkLogging.println( "Added thermal, dE=" + ( getEnergy() - origEnergy ) );
-//          }
-//        }
-//        if ( getEnergy() > origEnergy ) {
-//          if ( Math.abs( getEnergy() - origEnergy ) < therm ) {
-//            debug( "gained energy, removing thermal (Would have to remove more than we gained)" );
+    stepTrack: function( dt, skaterState ) {
+
+      var particle1D = new Particle1D( skaterState );
+
+      //From Particle1DUpdate
+      var sideVector = particle1D.getSideVector();
+      var outsideCircle = sideVector.dot( particle1D.getCurvatureDirection() ) < 0;
+
+      //compare a to v/r^2 to see if it leaves the track
+      var r = Math.abs( particle1D.getRadiusOfCurvature() );
+      var centripForce = skaterState.mass * particle1D.getSpeed() * particle1D.getSpeed() / r;
+      var netForceRadial = this.getNetForce( skaterState ).dot( particle1D.getCurvatureDirection() );
+
+      var leaveTrack = false;
+      if ( netForceRadial < centripForce && outsideCircle ) {
+        leaveTrack = true;
+      }
+      if ( netForceRadial > centripForce && !outsideCircle ) {
+        leaveTrack = true;
+      }
+      if ( leaveTrack && !this.stickToTrack ) {
+
+        //TODO: Switch to free fall
+//        switchToFreeFall();
+//        Particle.this.stepInTime( dt );
+      }
+      else {
+        skaterState = this.updateEuler( dt, skaterState );
+//        particle1D.stepInTime( dt );
+//        updateStateFrom1D();
+//        if ( !particle1D.isReflect() && ( particle1D.getAlpha() < 0 || particle1D.getAlpha() > 1.0 ) ) {
+//
+//          //Check to see if it can immediately attach to the floor without going through free fall first
+//          //Otherwise it causes a glitch in the thermal energy which is problematic in Energy Skate Park Basics
+//          if ( isReadyToAttachToFloor() ) {
+//            attachToFloor();
 //          }
 //          else {
-//            var editThermal = Math.abs( getEnergy() - origEnergy );
-//            thermalEnergy -= editThermal;
-//            if ( Math.abs( getEnergy() - origEnergy ) > 1E-6 ) {
-//              EnergySkateParkLogging.println( "Removed thermal, dE=" + ( getEnergy() - origEnergy ) );
+//
+//            //Fall off the edge, but not of the world
+//            if ( getSpline() != particleStage.getFloorSpline() ) {
+//              switchToFreeFall();
 //            }
 //          }
 //        }
+      }
+      return skaterState;
+
+
+//      debugger;
+//      var origEnergy = skaterState.getTotalEnergy();
+//      var origLoc = skaterState.position;
+//      var netForce = this.getNetForce( skaterState );
+//
+////      console.log( netForce );
+//
+//      //Velocity in the direction of the track
+//      var velocity = skaterState.velocity.magnitude();
+//
+//      //acceleration in the direction of the track (linearized segment)
+//      var trackUnitParallelVector = skaterState.track.getUnitParallelVector( skaterState.u );
+//      var a = trackUnitParallelVector.dot( netForce ) / skaterState.mass;
+//      velocity += a * dt;
+//
+//      //New position in the linearized track
+//      var euclideanPositionDelta = velocity * dt + 1 / 2 * a * dt * dt;
+//
+//      //Find the parametric coordinates corresponding to the proposed position
+//
+//      //Search the track to find a point on the track that has the right euclidean position delta
+//      var direction = trackUnitParallelVector.dot( skaterState.velocity ) ? +1 : -1;
+//
+//      var iteration = 0;
+//      var uDelta = 1E-6;
+//
+//      var previousError = 1E6;
+//      var previousUDelta = 0;
+//
+//      var previousError2 = 1E6;
+//      var previousUDelta2 = 0;
+//      while ( true ) {
+//        iteration++;
+//        uDelta *= 2;
+//
+//        var u2 = skaterState.u + uDelta * direction;
+//        var pt = skaterState.track.getPoint( u2 );
+//        var distance = pt.distance( skaterState.position );
+//        var error = Math.abs( distance - euclideanPositionDelta );
+//        if ( iteration > 100 ) {
+//          console.log( 'iteration', iteration, 'uDelta', uDelta, 'error', error, 'previousError', previousError, 'prev2', previousError2 );
+//        }
+//        if ( error > previousError || iteration > 100 ) {
+//          break;
+//        }
+//
+//        previousError2 = previousError;
+//        previousUDelta2 = previousUDelta;
+//
+//        previousError = error;
+//        previousUDelta = uDelta;
 //      }
-//      handleBoundary();
+//
+////      console.log( 'binary searching in bounds', previousError2, error );
+//      var uDeltaMin = previousUDelta2;
+//      var uDeltaMax = uDelta;
+//
+//      iteration = 0;
+//      while ( true ) {
+//        uDelta = (uDeltaMin + uDeltaMax) / 2;
+//        u2 = skaterState.u + uDelta * direction;
+//        pt = skaterState.track.getPoint( u2 );
+//        distance = pt.distance( skaterState.position );
+//        if ( distance > euclideanPositionDelta ) {
+//          uDeltaMax = uDelta;
+//        }
+//        else {
+//          uDeltaMin = uDelta;
+//        }
+//        error = Math.abs( distance - euclideanPositionDelta );
+//        if ( iteration > 100 ) {
+//          console.log( 'BIN: iteration', iteration, 'error', error, 'uDeltaMin', uDeltaMin, 'uDeltaMax', uDeltaMax );
+//          break;
+//        }
+//        if ( error < 1E-6 ) {
+//          break;
+//        }
+//        iteration++;
+//      }
+//
+//      var newPosition = skaterState.track.getPoint( u2 );
+//      var velocity = newPosition.minus( skaterState.position ).timesScalar( 1.0 / dt );
+//      //todo: update velocity in both spaces
+//      return skaterState.update( {
+//        u: u2,
+//        position: newPosition,
+//        velocity: velocity
+//      } );
+//
+////      if ( this.friction > 0 ) {
+////        var frictionForce = getFrictionForce();
+////        if ( ( Double.isNaN( frictionForce.magnitude() ) ) ) { throw new IllegalArgumentException();}
+////        var therm = frictionForce.magnitude() * getLocation().distance( skaterState.position );
+////        thermalEnergy += therm;
+////        if ( getEnergy() < origEnergy ) {
+////          thermalEnergy += Math.abs( getEnergy() - origEnergy );//add some thermal to exactly match
+////          if ( Math.abs( getEnergy() - origEnergy ) > 1E-6 ) {
+////            EnergySkateParkLogging.println( "Added thermal, dE=" + ( getEnergy() - origEnergy ) );
+////          }
+////        }
+////        if ( getEnergy() > origEnergy ) {
+////          if ( Math.abs( getEnergy() - origEnergy ) < therm ) {
+////            debug( "gained energy, removing thermal (Would have to remove more than we gained)" );
+////          }
+////          else {
+////            var editThermal = Math.abs( getEnergy() - origEnergy );
+////            thermalEnergy -= editThermal;
+////            if ( Math.abs( getEnergy() - origEnergy ) > 1E-6 ) {
+////              EnergySkateParkLogging.println( "Removed thermal, dE=" + ( getEnergy() - origEnergy ) );
+////            }
+////          }
+////        }
+////      }
+////      handleBoundary();
     },
 
     //Update the skater if he is on the track
