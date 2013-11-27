@@ -22,7 +22,7 @@ define( function( require ) {
   var Text = require( 'SCENERY/nodes/Text' );
   var MassSlider = require( 'ENERGY_SKATE_PARK_BASICS/view/MassSlider' );
   var EnergySkateParkColorScheme = require( 'ENERGY_SKATE_PARK_BASICS/view/EnergySkateParkColorScheme' );
-  var SpeedometerNode = require( 'SCENERY_PHET/SpeedometerNode' );
+  var GaugeNode = require( 'SCENERY_PHET/GaugeNode' );
   var Property = require( 'AXON/Property' );
   var FrictionControl = require( 'ENERGY_SKATE_PARK_BASICS/view/FrictionControl' );
   var barGraphString = require( 'string!ENERGY_SKATE_PARK_BASICS/plots.bar-graph' );
@@ -108,7 +108,7 @@ define( function( require ) {
 
     //Create an icon for the speedometer check box
     createSpeedometerIcon: function() {
-      var node = new SpeedometerNode( new Property( 0 ), speedString, 10, {} );
+      var node = new GaugeNode( new Property( 0 ), speedString, {min: 0, max: 10} );
       node.scale( 20 / node.width );
       return node;
     }

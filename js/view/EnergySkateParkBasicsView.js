@@ -30,7 +30,7 @@ define( function( require ) {
   var SceneSelectionPanel = require( 'ENERGY_SKATE_PARK_BASICS/view/SceneSelectionPanel' );
   var ModelViewTransform2 = require( 'PHETCOMMON/view/ModelViewTransform2' );
   var Vector2 = require( 'DOT/Vector2' );
-  var SpeedometerNode = require( 'SCENERY_PHET/SpeedometerNode' );
+  var GaugeNode = require( 'SCENERY_PHET/GaugeNode' );
   var TextPushButton = require( 'SUN/TextPushButton' );
   var DerivedProperty = require( 'AXON/DerivedProperty' );
   var Path = require( 'SCENERY/nodes/Path' );
@@ -118,7 +118,7 @@ define( function( require ) {
     var pieChartLegend = new PieChartLegend( model );
     this.addChild( pieChartLegend );
 
-    var speedometerNode = new SpeedometerNode( model.skater.speedProperty, speedString, 20 );
+    var speedometerNode = new GaugeNode( model.skater.speedProperty, speedString, {min: 0, max: 20} );
     model.speedometerVisibleProperty.linkAttribute( speedometerNode, 'visible' );
     speedometerNode.centerX = this.layoutBounds.centerX;
     speedometerNode.top = this.layoutBounds.minY + 5;
