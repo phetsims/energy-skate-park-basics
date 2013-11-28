@@ -25,6 +25,8 @@ define( function( require ) {
   var Util = require( 'DOT/Util' );
   var Particle1D = require( 'ENERGY_SKATE_PARK_BASICS/model/Particle1D' );
 
+  var thrust = new Vector2();
+
   /**
    * Main constructor for the EnergySkateParkBasicsModel
    *
@@ -363,8 +365,8 @@ define( function( require ) {
         return new Vector2();
       }
       else {
-        var magnitude = -this.friction * this.getNormalForce( skaterState ).magnitude() * 25;
-        return Vector2.createPolar( magnitude, skaterState.velocity.angle() - Math.PI );
+        var magnitude = this.friction * this.getNormalForce( skaterState ).magnitude();
+        return Vector2.createPolar( magnitude, skaterState.velocity.angle() + Math.PI );
       }
     },
 
@@ -381,22 +383,25 @@ define( function( require ) {
     getNormalForce: function( skaterState ) {
       var curvature = this.getCurvature( skaterState );
       var radiusOfCurvature = curvature.r;
-      if ( false && Double.isInfinite( radiusOfCurvature ) ) { // TODO: handle infinite
+      var netForceRadial = new Vector2();
+
+      //TODO: Handle large or infinite radius of curvature
+      if ( radiusOfCurvature > 100000 ) {
         radiusOfCurvature = 100000;
-        var netForceRadial = new MutableVector2D();
-        netForceRadial.add( new MutableVector2D( 0, mass * g ) );//gravity
-        netForceRadial.add( new MutableVector2D( xThrust * mass, yThrust * mass ) );//thrust
-        var normalForce = mass * velocity * velocity / Math.abs( radiusOfCurvature ) - netForceRadial.dot( getCurvatureDirection() );
+
+        netForceRadial.add( new Vector2( 0, mass * g ) );//gravity
+//        netForceRadial.add( new Vector2( xThrust * mass, yThrust * mass ) );//thrust
+        var normalForce = skaterState.mass * skaterState.velocity.magnitudeSquared() / Math.abs( radiusOfCurvature ) - netForceRadial.dot( getCurvatureDirection() );
 
         return MutableVector2D.createPolar( normalForce, getCurvatureDirection().getAngle() );
       }
       else {
-        var netForceRadial = new Vector2();
 
         netForceRadial.addXY( 0, skaterState.mass * skaterState.gravity );//gravity
 //        netForceRadial.add( new MutableVector2D( xThrust * mass, yThrust * mass ) );//thrust
         var curvatureDirection = this.getCurvatureDirection( curvature, skaterState.position.x, skaterState.position.y );
         var normalForce = skaterState.mass * skaterState.velocity.magnitudeSquared() / Math.abs( radiusOfCurvature ) - netForceRadial.dot( curvatureDirection );
+        console.log( normalForce );
         return Vector2.createPolar( normalForce, curvatureDirection.angle() );
       }
     },
@@ -411,9 +416,7 @@ define( function( require ) {
       var alpha = skaterState.u;
       var a = skaterState.track.getUnitParallelVector( alpha ).dot( netForce ) / skaterState.mass;
       velocity += a * dt;
-      var thrust = new Vector2();
-      var deltaAlpha = track.getFractionalDistance( alpha, velocity * dt + 1 / 2 * a * dt * dt );
-      alpha += deltaAlpha;
+      alpha += track.getFractionalDistance( alpha, velocity * dt + 1 / 2 * a * dt * dt );
       var newPoint = skaterState.track.getPoint( alpha );
       var newState = skaterState.update( {
         u: alpha,
@@ -423,7 +426,6 @@ define( function( require ) {
       } );
       if ( this.friction > 0 ) {
         var frictionForce = this.getFrictionForce( skaterState );
-        if ( ( isNaN( frictionForce.magnitude() ) ) ) { throw new Error( 'nan' );}
         var therm = frictionForce.magnitude() * newPoint.distance( origLoc );
         thermalEnergy += therm;
         if ( thrust.magnitude() === 0 ) {//only conserve energy if the user is not adding energy
