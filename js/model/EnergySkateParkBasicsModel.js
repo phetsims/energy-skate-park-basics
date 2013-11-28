@@ -487,9 +487,17 @@ define( function( require ) {
 //        Particle.this.stepInTime( dt );
       }
       else {
-        return this.updateEuler( dt, skaterState );
-//        particle1D.stepInTime( dt );
-//        updateStateFrom1D();
+        var newState = skaterState;
+        for ( var i = 0; i < 10; i++ ) {
+          newState = this.updateEuler( dt, newState );
+        }
+
+        //Correct energy
+        newState = this.correctEnergy( skaterState, newState );
+
+        return newState;
+
+        //TODO: Fly off end of track
 //        if ( !particle1D.isReflect() && ( particle1D.getAlpha() < 0 || particle1D.getAlpha() > 1.0 ) ) {
 //
 //          //Check to see if it can immediately attach to the floor without going through free fall first
@@ -507,6 +515,80 @@ define( function( require ) {
 //        }
       }
       return skaterState;
+    },
+
+    correctEnergy: function( skaterState, newState ) {
+      var alpha0 = skaterState.u;
+      var e0 = skaterState.getTotalEnergy();
+
+      //TODO: factor out value
+      var getEnergy = function() {
+        return newState.getTotalEnergy();
+      };
+      if ( isNaN( getEnergy() ) ) { throw new Error( 'nan' );}
+      var dE = getEnergy() - e0;
+      if ( Math.abs( dE ) < 1E-6 ) {
+        //small enough
+      }
+      if ( getEnergy() > e0 ) {
+        console.log( "Energy too high" );
+        //can we reduce the velocity enough?
+        if ( Math.abs( getKineticEnergy() ) > Math.abs( dE ) ) {//amount we could reduce the energy if we deleted all the kinetic energy:
+          console.log( "Could fix all energy by changing velocity." );//todo: maybe should only do this if all velocity is not converted
+          correctEnergyReduceVelocity( e0 );
+          console.log( "changed velocity: dE=" + ( getEnergy() - e0 ) );
+          if ( !MathUtil.isApproxEqual( e0, getEnergy(), 1E-8 ) ) {
+            new RuntimeException( "Energy error[0]" ).printStackTrace();
+          }
+        }
+        else {
+          console.log( "Not enough KE to fix with velocity alone: normal:" + getCubicSpline2D().getUnitNormalVector( alpha ) );
+          console.log( "changed position alpha: dE=" + ( getEnergy() - e0 ) );
+          //search for a place between alpha and alpha0 with a better energy
+
+          var numRecursiveSearches = 10;
+          var bestAlpha = ( alpha + alpha0 ) / 2.0;
+          var da = ( alpha - alpha0 ) / 2;
+          for ( var i = 0; i < numRecursiveSearches; i++ ) {
+            var numSteps = 10;
+            bestAlpha = searchAlpha( bestAlpha - da, bestAlpha + da, e0, numSteps );
+            da = ( ( bestAlpha - da ) - ( bestAlpha + da ) ) / numSteps;
+          }
+
+          this.alpha = bestAlpha;
+          console.log( "changed position alpha: dE=" + ( getEnergy() - e0 ) );
+          if ( !MathUtil.isApproxEqual( e0, getEnergy(), 1E-8 ) ) {
+            if ( Math.abs( getKineticEnergy() ) > Math.abs( dE ) ) {//amount we could reduce the energy if we deleted all the kinetic energy:
+              console.log( "Fixed position some, still need to fix velocity as well." );//todo: maybe should only do this if all velocity is not converted
+              correctEnergyReduceVelocity( e0 );
+              if ( !MathUtil.isApproxEqual( e0, getEnergy(), 1E-8 ) ) {
+                console.log( "Changed position & Velocity and still had energy error" );
+                new Error( "Energy error[123]" ).printStackTrace();
+              }
+            }
+            else {
+
+              //TODO: removed this logging output, but this case can still occur, especially with friction turned on
+              console.log( "Changed position, wanted to change velocity, but didn't have enough to fix it..., dE=" + ( getEnergy() - e0 ) );
+//                        new RuntimeException( "Energy error[456]" ).printStackTrace();
+            }
+          }
+        }
+      }
+      else {
+        if ( Double.isNaN( getEnergy() ) ) { throw new IllegalArgumentException();}
+        console.log( "Energy too low" );
+        //increasing the kinetic energy
+        //Choose the exact velocity in the same direction as current velocity to ensure total energy conserved.
+        var vSq = Math.abs( 2 / mass * ( e0 - getPotentialEnergy() - thermalEnergy ) );
+        var v = Math.sqrt( vSq );
+        this.velocity = v * MathUtil.getSign( velocity );
+        console.log( "Set velocity to match energy, when energy was low: " );
+        console.log( "INC changed velocity: dE=" + ( getEnergy() - e0 ) );
+        if ( !MathUtil.isApproxEqual( e0, getEnergy(), 1E-8 ) ) {
+          new Error( "Energy error[2]" ).printStackTrace();
+        }
+      }
     },
 
     //PERFORMANCE/ALLOCATION
