@@ -164,7 +164,6 @@ define( function( require ) {
           error = Math.abs( finalEnergy - initialEnergy );
           if ( numDivisions >= 30 ) {
             debug.log( 'numDivisions', numDivisions, 'dt', dt / numDivisions, 'error', error );
-//            debugger;
           }
           numDivisions = numDivisions * 2;
         }
@@ -313,7 +312,6 @@ define( function( require ) {
 
           if ( newThermalEnergy < skaterState.thermalEnergy ) {
             debug.log( 'lost thermal energy in landing' );
-//            debugger;
           }
 
           var result = skaterState.update( {
@@ -341,7 +339,6 @@ define( function( require ) {
 
       //make up for the difference by changing the y value
       var y = (initialEnergy - 0.5 * skaterState.mass * proposedVelocity.magnitudeSquared() - skaterState.thermalEnergy) / (-1 * skaterState.mass * skaterState.gravity);
-//      debug.log( y, proposedPosition.y );
       if ( y <= 0 ) {
         //When falling straight down, stop completely and convert all energy to thermal
         return skaterState.update( {
@@ -389,7 +386,10 @@ define( function( require ) {
     //todo: store the radius of curvature on the skaterState, only recompute if undefined
     getNormalForce: function( skaterState ) {
       var curvature = this.getCurvature( skaterState );
-      var radiusOfCurvature = curvature.r;
+      if ( curvature < 0 ) {
+        console.log( 'curvature was less than zero, therefore the straight line code below must be changed' );
+      }
+      var radiusOfCurvature = Math.min( curvature.r, 100000 );
       var netForceRadial = new Vector2();
 
       var normalForce;
@@ -565,10 +565,6 @@ define( function( require ) {
       var alpha0 = skaterState.u;
       var e0 = skaterState.getTotalEnergy();
 
-      //TODO: factor out value
-//      var getEnergy = function() {
-//        return newState.getTotalEnergy();
-//      };
       if ( isNaN( newState.getTotalEnergy() ) ) { throw new Error( 'nan' );}
       var dE = newState.getTotalEnergy() - e0;
       if ( Math.abs( dE ) < 1E-6 ) {
@@ -620,8 +616,6 @@ define( function( require ) {
 
               //TODO: removed this logging output, but this case can still occur, especially with friction turned on
               debug.log( "Changed position, wanted to change velocity, but didn't have enough to fix it..., dE=" + ( newState.getTotalEnergy() - e0 ) );
-
-//                        new RuntimeException( "Energy error[456]" ).printStackTrace();
             }
           }
           return correctedState;
@@ -637,7 +631,7 @@ define( function( require ) {
         var newVelocity = v * getSign( newState.uD );
         var fixedState = newState.update( {
           uD: newVelocity,
-          velocity: newState.track.getUnitParallelVector( newState.u ).normalized().times( newVelocity )//track.getUnitParallelVector( alpha ).getInstanceOfMagnitude( velocity )
+          velocity: newState.track.getUnitParallelVector( newState.u ).normalized().times( newVelocity )
         } );
         debug.log( "Set velocity to match energy, when energy was low: " );
         debug.log( "INC changed velocity: dE=" + ( fixedState.getTotalEnergy() - e0 ) );
