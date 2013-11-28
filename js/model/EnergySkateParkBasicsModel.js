@@ -31,7 +31,7 @@ define( function( require ) {
 
   function getSign( a ) {return a > 0 ? +1 : -1;}
 
-  var debugLogEnabled = true;
+  var debugLogEnabled = false;
   var debug = {log: debugLogEnabled ? function( string ) { console.log( string ); } : function( string ) {}};
 
   /**
@@ -166,7 +166,7 @@ define( function( require ) {
 //            debugger;
           }
           if ( numDivisions >= 30 ) {
-            debug.log( 'numDivisions', numDivisions, 'dt', dt / numDivisions, 'error', error );
+            console.log( 'numDivisions', numDivisions, 'dt', dt / numDivisions, 'error', error );
           }
           numDivisions = numDivisions * 2;
         }
