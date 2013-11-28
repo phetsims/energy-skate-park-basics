@@ -30,6 +30,14 @@ define( function() {
     return 0.5 * this.mass * this.velocity.magnitudeSquared() - this.mass * this.gravity * this.position.y + this.thermalEnergy;
   };
 
+  SkaterState.prototype.getKineticEnergy = function() {
+    return 0.5 * this.mass * this.velocity.magnitudeSquared();
+  };
+
+  SkaterState.prototype.getPotentialEnergy = function() {
+    return -this.mass * this.gravity * this.position.y;
+  };
+
   SkaterState.prototype.update = function( overrides ) { return new SkaterState( this, overrides ); };
 
   //Only set values that have changed
