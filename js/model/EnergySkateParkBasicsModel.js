@@ -31,6 +31,9 @@ define( function( require ) {
 
   function getSign( a ) {return a > 0 ? +1 : -1;}
 
+  var debugLogEnabled = false;
+  var debug = {log: debugLogEnabled ? function( string ) { console.log( string ); } : function( string ) {}};
+
   /**
    * Main constructor for the EnergySkateParkBasicsModel
    *
@@ -154,13 +157,13 @@ define( function( require ) {
           skaterState = new SkaterState( this.skater, {} );
           var initialEnergy = skaterState.getTotalEnergy();
           for ( var i = 0; i < numDivisions; i++ ) {
-            skaterState = this.stepModel( this.speed === 'normal' ? dt / numDivisions / 10.0 : dt / numDivisions * 0.25 / 10.0, skaterState );
+            skaterState = this.stepModel( this.speed === 'normal' ? dt / numDivisions : dt / numDivisions * 0.25, skaterState );
           }
 
           var finalEnergy = skaterState.getTotalEnergy();
           error = Math.abs( finalEnergy - initialEnergy );
           if ( numDivisions >= 30 ) {
-            console.log( 'numDivisions', numDivisions, 'dt', dt / numDivisions, 'error', error );
+            debug.log( 'numDivisions', numDivisions, 'dt', dt / numDivisions, 'error', error );
 //            debugger;
           }
           numDivisions = numDivisions * 2;
@@ -295,9 +298,9 @@ define( function( require ) {
               lowerBound = uDMid;
             }
             count++;
-//              console.log( '>>> count', count, 'energyDelta', Math.abs( midEnergy - initialEnergy ) );
+//              debug.log( '>>> count', count, 'energyDelta', Math.abs( midEnergy - initialEnergy ) );
             if ( count >= 200 ) {
-              console.log( 'landing: iterations=', count );
+              debug.log( 'landing: iterations=', count );
               break;
             }
           }
@@ -309,7 +312,7 @@ define( function( require ) {
                                  skaterState.thermalEnergy;
 
           if ( newThermalEnergy < skaterState.thermalEnergy ) {
-            console.log( 'lost thermal energy in landing' );
+            debug.log( 'lost thermal energy in landing' );
 //            debugger;
           }
 
@@ -322,7 +325,7 @@ define( function( require ) {
             position: new Vector2( track.getX( u ), track.getY( u ) )
           } );
 
-//          console.log( 'finished landing, ', result.getTotalEnergy(), skaterState.getTotalEnergy() );
+//          debug.log( 'finished landing, ', result.getTotalEnergy(), skaterState.getTotalEnergy() );
           return result;
         }
       }
@@ -338,7 +341,7 @@ define( function( require ) {
 
       //make up for the difference by changing the y value
       var y = (initialEnergy - 0.5 * skaterState.mass * proposedVelocity.magnitudeSquared() - skaterState.thermalEnergy) / (-1 * skaterState.mass * skaterState.gravity);
-//      console.log( y, proposedPosition.y );
+//      debug.log( y, proposedPosition.y );
       if ( y <= 0 ) {
         //When falling straight down, stop completely and convert all energy to thermal
         return skaterState.update( {
@@ -365,7 +368,7 @@ define( function( require ) {
     },
 
     getFrictionForce: function( skaterState ) {
-      if ( this.friction == 0 || skaterState.velocity.magnitude() < 1E-2 ) {
+      if ( this.friction === 0 || skaterState.velocity.magnitude() < 1E-2 ) {
         return new Vector2();
       }
       else {
@@ -389,13 +392,14 @@ define( function( require ) {
       var radiusOfCurvature = curvature.r;
       var netForceRadial = new Vector2();
 
+      var normalForce;
       //TODO: Handle large or infinite radius of curvature
       if ( radiusOfCurvature > 100000 ) {
         radiusOfCurvature = 100000;
 
         netForceRadial.add( new Vector2( 0, mass * g ) );//gravity
 //        netForceRadial.add( new Vector2( xThrust * mass, yThrust * mass ) );//thrust
-        var normalForce = skaterState.mass * skaterState.velocity.magnitudeSquared() / Math.abs( radiusOfCurvature ) - netForceRadial.dot( getCurvatureDirection() );
+        normalForce = skaterState.mass * skaterState.velocity.magnitudeSquared() / Math.abs( radiusOfCurvature ) - netForceRadial.dot( getCurvatureDirection() );
 
         return MutableVector2D.createPolar( normalForce, getCurvatureDirection().getAngle() );
       }
@@ -404,8 +408,8 @@ define( function( require ) {
         netForceRadial.addXY( 0, skaterState.mass * skaterState.gravity );//gravity
 //        netForceRadial.add( new MutableVector2D( xThrust * mass, yThrust * mass ) );//thrust
         var curvatureDirection = this.getCurvatureDirection( curvature, skaterState.position.x, skaterState.position.y );
-        var normalForce = skaterState.mass * skaterState.velocity.magnitudeSquared() / Math.abs( radiusOfCurvature ) - netForceRadial.dot( curvatureDirection );
-        console.log( normalForce );
+        normalForce = skaterState.mass * skaterState.velocity.magnitudeSquared() / Math.abs( radiusOfCurvature ) - netForceRadial.dot( curvatureDirection );
+        debug.log( normalForce );
         return Vector2.createPolar( normalForce, curvatureDirection.angle() );
       }
     },
@@ -436,18 +440,18 @@ define( function( require ) {
           if ( newState.getTotalEnergy() < origEnergy ) {
             thermalEnergy += Math.abs( newState.getTotalEnergy() - origEnergy );//add some thermal to exactly match
             if ( Math.abs( newState.getTotalEnergy() - origEnergy ) > 1E-6 ) {
-              console.log( "Added thermal, dE=" + ( newState.getTotalEnergy() - origEnergy ) );
+              debug.log( "Added thermal, dE=" + ( newState.getTotalEnergy() - origEnergy ) );
             }
           }
           if ( newState.getTotalEnergy() > origEnergy ) {
             if ( Math.abs( newState.getTotalEnergy() - origEnergy ) < therm ) {
-              console.log( "gained energy, removing thermal (Would have to remove more than we gained)" );
+              debug.log( "gained energy, removing thermal (Would have to remove more than we gained)" );
             }
             else {
               var editThermal = Math.abs( newState.getTotalEnergy() - origEnergy );
               thermalEnergy -= editThermal;
               if ( Math.abs( newState.getTotalEnergy() - origEnergy ) > 1E-6 ) {
-                console.log( "Removed thermal, dE=" + ( newState.getTotalEnergy() - origEnergy ) );
+                debug.log( "Removed thermal, dE=" + ( newState.getTotalEnergy() - origEnergy ) );
               }
             }
           }
@@ -493,7 +497,7 @@ define( function( require ) {
       else {
         var newState = skaterState;
         for ( var i = 0; i < 10; i++ ) {
-          newState = this.updateEuler( dt, newState );
+          newState = this.updateEuler( dt / 10, newState );
         }
 
         //Correct energy
@@ -553,7 +557,7 @@ define( function( require ) {
           bestAlpha = proposedAlpha;
         }//continue to find best value closest to proposed alpha, even if several values give dE=0.0
       }
-      console.log( "After " + numSteps + " steps, origAlpha=" + alpha0 + ", bestAlpha=" + bestAlpha + ", dE=" + bestDE );
+      debug.log( "After " + numSteps + " steps, origAlpha=" + alpha0 + ", bestAlpha=" + bestAlpha + ", dE=" + bestDE );
       return bestAlpha;
     },
 
@@ -571,20 +575,20 @@ define( function( require ) {
         //small enough
       }
       if ( newState.getTotalEnergy() > e0 ) {
-        console.log( "Energy too high" );
+        debug.log( "Energy too high" );
         //can we reduce the velocity enough?
         if ( Math.abs( newState.getKineticEnergy() ) > Math.abs( dE ) ) {//amount we could reduce the energy if we deleted all the kinetic energy:
-          console.log( "Could fix all energy by changing velocity." );//todo: maybe should only do this if all velocity is not converted
+          debug.log( "Could fix all energy by changing velocity." );//todo: maybe should only do this if all velocity is not converted
           var correctedState = this.correctEnergyReduceVelocity( skaterState, newState );
-          console.log( "changed velocity: dE=" + ( correctedState.getTotalEnergy() - e0 ) );
+          debug.log( "changed velocity: dE=" + ( correctedState.getTotalEnergy() - e0 ) );
           if ( !isApproxEqual( e0, correctedState.getTotalEnergy(), 1E-8 ) ) {
-            console.log( "Energy error[0]" );
+            debug.log( "Energy error[0]" );
           }
           return correctedState;
         }
         else {
-          console.log( "Not enough KE to fix with velocity alone: normal:" );
-          console.log( "changed position alpha: dE=" + ( newState.getTotalEnergy() - e0 ) );
+          debug.log( "Not enough KE to fix with velocity alone: normal:" );
+          debug.log( "changed position alpha: dE=" + ( newState.getTotalEnergy() - e0 ) );
           //search for a place between alpha and alpha0 with a better energy
 
           var numRecursiveSearches = 10;
@@ -601,21 +605,21 @@ define( function( require ) {
             u: bestAlpha,
             position: newState.track.getPoint( bestAlpha )
           } );
-          console.log( "changed position alpha: dE=" + ( correctedState.getTotalEnergy() - e0 ) );
+          debug.log( "changed position alpha: dE=" + ( correctedState.getTotalEnergy() - e0 ) );
           if ( !isApproxEqual( e0, correctedState.getTotalEnergy(), 1E-8 ) ) {
             if ( Math.abs( correctedState.getKineticEnergy() ) > Math.abs( dE ) ) {//amount we could reduce the energy if we deleted all the kinetic energy:
-              console.log( "Fixed position some, still need to fix velocity as well." );//todo: maybe should only do this if all velocity is not converted
+              debug.log( "Fixed position some, still need to fix velocity as well." );//todo: maybe should only do this if all velocity is not converted
               var correctedState2 = this.correctEnergyReduceVelocity( skaterState, correctedState );
               if ( !isApproxEqual( e0, correctedState2.getTotalEnergy(), 1E-8 ) ) {
-                console.log( "Changed position & Velocity and still had energy error" );
-                console.log( "Energy error[123]" );
+                debug.log( "Changed position & Velocity and still had energy error" );
+                debug.log( "Energy error[123]" );
               }
               return correctedState2;
             }
             else {
 
               //TODO: removed this logging output, but this case can still occur, especially with friction turned on
-              console.log( "Changed position, wanted to change velocity, but didn't have enough to fix it..., dE=" + ( newState.getTotalEnergy() - e0 ) );
+              debug.log( "Changed position, wanted to change velocity, but didn't have enough to fix it..., dE=" + ( newState.getTotalEnergy() - e0 ) );
 
 //                        new RuntimeException( "Energy error[456]" ).printStackTrace();
             }
@@ -625,7 +629,7 @@ define( function( require ) {
       }
       else {
         if ( isNaN( newState.getTotalEnergy() ) ) { throw new Error( 'nan' );}
-        console.log( "Energy too low" );
+        debug.log( "Energy too low" );
         //increasing the kinetic energy
         //Choose the exact velocity in the same direction as current velocity to ensure total energy conserved.
         var vSq = Math.abs( 2 / newState.mass * ( e0 - newState.getPotentialEnergy() - newState.thermalEnergy ) );
@@ -635,8 +639,8 @@ define( function( require ) {
           uD: newVelocity,
           velocity: newState.track.getUnitParallelVector( newState.u ).normalized().times( newVelocity )//track.getUnitParallelVector( alpha ).getInstanceOfMagnitude( velocity )
         } );
-        console.log( "Set velocity to match energy, when energy was low: " );
-        console.log( "INC changed velocity: dE=" + ( fixedState.getTotalEnergy() - e0 ) );
+        debug.log( "Set velocity to match energy, when energy was low: " );
+        debug.log( "INC changed velocity: dE=" + ( fixedState.getTotalEnergy() - e0 ) );
         if ( !isApproxEqual( e0, fixedState.getTotalEnergy(), 1E-8 ) ) {
           new Error( "Energy error[2]" ).printStackTrace();
         }
