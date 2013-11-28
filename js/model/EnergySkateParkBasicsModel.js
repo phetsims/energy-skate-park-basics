@@ -393,25 +393,12 @@ define( function( require ) {
       var netForceRadial = new Vector2();
 
       var normalForce;
-      //TODO: Handle large or infinite radius of curvature
-      if ( radiusOfCurvature > 100000 ) {
-        radiusOfCurvature = 100000;
-
-        netForceRadial.add( new Vector2( 0, mass * g ) );//gravity
-//        netForceRadial.add( new Vector2( xThrust * mass, yThrust * mass ) );//thrust
-        normalForce = skaterState.mass * skaterState.velocity.magnitudeSquared() / Math.abs( radiusOfCurvature ) - netForceRadial.dot( getCurvatureDirection() );
-
-        return MutableVector2D.createPolar( normalForce, getCurvatureDirection().getAngle() );
-      }
-      else {
-
-        netForceRadial.addXY( 0, skaterState.mass * skaterState.gravity );//gravity
+      netForceRadial.addXY( 0, skaterState.mass * skaterState.gravity );//gravity
 //        netForceRadial.add( new MutableVector2D( xThrust * mass, yThrust * mass ) );//thrust
-        var curvatureDirection = this.getCurvatureDirection( curvature, skaterState.position.x, skaterState.position.y );
-        normalForce = skaterState.mass * skaterState.velocity.magnitudeSquared() / Math.abs( radiusOfCurvature ) - netForceRadial.dot( curvatureDirection );
-        debug.log( normalForce );
-        return Vector2.createPolar( normalForce, curvatureDirection.angle() );
-      }
+      var curvatureDirection = this.getCurvatureDirection( curvature, skaterState.position.x, skaterState.position.y );
+      normalForce = skaterState.mass * skaterState.velocity.magnitudeSquared() / Math.abs( radiusOfCurvature ) - netForceRadial.dot( curvatureDirection );
+      debug.log( normalForce );
+      return Vector2.createPolar( normalForce, curvatureDirection.angle() );
     },
 
     updateEuler: function( dt, skaterState ) {
@@ -575,12 +562,12 @@ define( function( require ) {
         //can we reduce the velocity enough?
         if ( Math.abs( newState.getKineticEnergy() ) > Math.abs( dE ) ) {//amount we could reduce the energy if we deleted all the kinetic energy:
           debug.log( "Could fix all energy by changing velocity." );//todo: maybe should only do this if all velocity is not converted
-          var correctedState = this.correctEnergyReduceVelocity( skaterState, newState );
-          debug.log( "changed velocity: dE=" + ( correctedState.getTotalEnergy() - e0 ) );
-          if ( !isApproxEqual( e0, correctedState.getTotalEnergy(), 1E-8 ) ) {
+          var correctedStateA = this.correctEnergyReduceVelocity( skaterState, newState );
+          debug.log( "changed velocity: dE=" + ( correctedStateA.getTotalEnergy() - e0 ) );
+          if ( !isApproxEqual( e0, correctedStateA.getTotalEnergy(), 1E-8 ) ) {
             debug.log( "Energy error[0]" );
           }
-          return correctedState;
+          return correctedStateA;
         }
         else {
           debug.log( "Not enough KE to fix with velocity alone: normal:" );

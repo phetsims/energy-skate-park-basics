@@ -262,7 +262,7 @@ define( function( require ) {
     },
 
     getMetricDelta: function( a0, a1 ) {
-      if ( a1 == a0 ) {
+      if ( a1 === a0 ) {
         return 0;
       }
       if ( a1 < a0 ) {
