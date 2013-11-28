@@ -31,7 +31,7 @@ define( function( require ) {
 
   function getSign( a ) {return a > 0 ? +1 : -1;}
 
-  var debugLogEnabled = false;
+  var debugLogEnabled = true;
   var debug = {log: debugLogEnabled ? function( string ) { console.log( string ); } : function( string ) {}};
 
   /**
@@ -152,7 +152,7 @@ define( function( require ) {
         var error = 100000;
         var numDivisions = 1;
         var skaterState = null;
-        while ( error > 1E-6 && numDivisions <= 1 ) {
+        while ( error > 1E-6 && numDivisions <= 2 ) {
 
           skaterState = new SkaterState( this.skater, {} );
           var initialEnergy = skaterState.getTotalEnergy();
@@ -162,6 +162,9 @@ define( function( require ) {
 
           var finalEnergy = skaterState.getTotalEnergy();
           error = Math.abs( finalEnergy - initialEnergy );
+          if ( error > 1E-6 ) {
+//            debugger;
+          }
           if ( numDivisions >= 30 ) {
             debug.log( 'numDivisions', numDivisions, 'dt', dt / numDivisions, 'error', error );
           }
@@ -279,52 +282,18 @@ define( function( require ) {
           var uDy = proposedVelocity.y / track.ySplineDiff.at( u );
           var uD = (uDx + uDy) / 2;
 
-          var newEnergy = track.getEnergy( u, uD, skaterState.mass, skaterState.gravity );
-
-          var count = 0;
-          //Gained energy in landing.  Need to fine tune velocity
-          var upperBound = uD;
-          var lowerBound = 0;
-          var uDMid = (upperBound + lowerBound) / 2;
-          var midEnergy = track.getEnergy( u, uDMid, skaterState.mass, skaterState.gravity );
-          while ( Math.abs( midEnergy - initialEnergy ) > 1E-6 ) {
-            uDMid = (upperBound + lowerBound) / 2;
-            midEnergy = track.getEnergy( u, uDMid, skaterState.mass, skaterState.gravity );
-            if ( midEnergy > initialEnergy ) {
-              upperBound = uDMid;
-            }
-            else {
-              lowerBound = uDMid;
-            }
-            count++;
-//              debug.log( '>>> count', count, 'energyDelta', Math.abs( midEnergy - initialEnergy ) );
-            if ( count >= 200 ) {
-              debug.log( 'landing: iterations=', count );
-              break;
-            }
-          }
-          uD = (upperBound + lowerBound) / 2;
-
-          var finalEnergy = track.getEnergy( u, uD, skaterState.mass, skaterState.gravity );
-
-          var newThermalEnergy = finalEnergy < initialEnergy ? (initialEnergy - finalEnergy) :
-                                 skaterState.thermalEnergy;
-
-          if ( newThermalEnergy < skaterState.thermalEnergy ) {
-            debug.log( 'lost thermal energy in landing' );
-          }
-
+          //TODO: gain some thermal energy in the landing, but not too much!
+          var newThermalEnergy = skaterState.thermalEnergy;
           var result = skaterState.update( {
             thermalEnergy: newThermalEnergy,
             track: track,
             u: u,
             uD: uD,
             velocity: proposedVelocity,
-            position: new Vector2( track.getX( u ), track.getY( u ) )
+            position: track.getPoint( u )
           } );
 
-//          debug.log( 'finished landing, ', result.getTotalEnergy(), skaterState.getTotalEnergy() );
-          return result;
+          return this.correctEnergyReduceVelocity( skaterState, result );
         }
       }
 
