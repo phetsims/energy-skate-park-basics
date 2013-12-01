@@ -239,17 +239,13 @@ define( function( require ) {
       var closestTrackAndPositionAndParameter = this.getClosestTrackAndPositionAndParameter( skaterState.position, physicalTracks );
       var track = closestTrackAndPositionAndParameter.track;
       var u = closestTrackAndPositionAndParameter.u;
+      var pt = closestTrackAndPositionAndParameter.point;
 
       if ( !track.isParameterInBounds( u ) ) {
         return this.continueFreeFall( skaterState, initialEnergy, proposedPosition, proposedVelocity );
       }
-      var t1 = u - 1E-6;
-      var t2 = u + 1E-6;
-      var pt = closestTrackAndPositionAndParameter.point;
-      var pt1 = track.getPoint( t1 );
-      var pt2 = track.getPoint( t2 );
-      var segment = pt2.minus( pt1 ).normalized();
-      var normal = segment.rotated( Math.PI / 2 );
+      var normal = track.getUnitNormalVector( u );
+      var segment = normal.perpendicular();
 
       var beforeSign = normal.dot( skaterState.position.minus( pt ) ) > 0;
       var afterSign = normal.dot( proposedPosition.minus( pt ) ) > 0;
@@ -264,11 +260,12 @@ define( function( require ) {
         var bounceVelocity = allOK ? proposedVelocity.minus( normal.times( 2 * normal.dot( proposedVelocity ) ) ) : new Vector2( 0, 1 );
 
         //Attach to track if velocity is close enough to parallel to the track
-        var dot = Math.abs( proposedVelocity.normalized().dot( segment ) );
+        var normalized = proposedVelocity.normalized();
+        var dot = normalized.dot( segment );
 
         //If friction is allowed, then bounce with elasticity <1.
         //If friction is not allowed, then bounce with elasticity = 1.
-        if ( dot < 0.4 ) {
+        if ( Math.abs( dot ) < 0.4 ) {
           this.bounces++;
           return skaterState.update( {velocity: bounceVelocity} );
         }
@@ -277,10 +274,7 @@ define( function( require ) {
           //If friction is allowed, keep the parallel component of velocity.
           //If friction is not allowed, then either attach to the track with no change in speed
 
-          //Estimate u dot from equations (8) & (9) in the paper
-          var uDx = proposedVelocity.x / track.xSplineDiff.at( u );
-          var uDy = proposedVelocity.y / track.ySplineDiff.at( u );
-          var uD = (uDx + uDy) / 2;
+          var uD = (dot > 0 ? +1 : -1) * proposedVelocity.magnitude();
 
           //TODO: gain some thermal energy in the landing, but not too much!
           var newThermalEnergy = skaterState.thermalEnergy;
@@ -446,9 +440,11 @@ define( function( require ) {
       }
       if ( leaveTrack && !this.stickToTrack ) {
 
-        //TODO: Switch to free fall
-//        switchToFreeFall();
-//        Particle.this.stepInTime( dt );
+        //TODO: Step after switching to free fall?
+        return skaterState.update( {
+          track: null,
+          uD: 0
+        } );
       }
       else {
         var newState = skaterState;
@@ -459,26 +455,15 @@ define( function( require ) {
         //Correct energy
         newState = this.correctEnergy( skaterState, newState );
 
+        //Fly off the left or right side of the track
+        if ( !skaterState.track.isParameterInBounds( newState.u ) ) {
+          return skaterState.update( {
+            track: null,
+            uD: 0
+          } );
+        }
         return newState;
-
-        //TODO: Fly off end of track
-//        if ( !particle1D.isReflect() && ( particle1D.getAlpha() < 0 || particle1D.getAlpha() > 1.0 ) ) {
-//
-//          //Check to see if it can immediately attach to the floor without going through free fall first
-//          //Otherwise it causes a glitch in the thermal energy which is problematic in Energy Skate Park Basics
-//          if ( isReadyToAttachToFloor() ) {
-//            attachToFloor();
-//          }
-//          else {
-//
-//            //Fall off the edge, but not of the world
-//            if ( getSpline() != particleStage.getFloorSpline() ) {
-//              switchToFreeFall();
-//            }
-//          }
-//        }
       }
-      return skaterState;
     },
 
     correctEnergyReduceVelocity: function( skaterState, newSkaterState ) {
