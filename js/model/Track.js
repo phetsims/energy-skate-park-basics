@@ -274,10 +274,15 @@ define( function( require ) {
       var sum = 0;
       for ( var i = 1; i < numSegments; i++ ) {
         var a = a0 + i * da;
-        var pt = this.getPoint( a );
-        var dist = pt.distance( prev );
-        sum += dist;
-        prev = pt;
+        var ptX = this.xSpline.at( a );
+        var ptY = this.ySpline.at( a );
+
+        var dx = prev.x - ptX;
+        var dy = prev.y - ptY;
+
+        sum += Math.sqrt( dx * dx + dy * dy );
+        prev.x = ptX;
+        prev.y = ptY;
       }
       return sum;
     },
