@@ -417,14 +417,18 @@ define( function( require ) {
 
       var particle1D = new Particle1D( skaterState );
 
+      var curvature = particle1D.getCurvature();
+      var curvatureDirection = this.getCurvatureDirection( curvature, skaterState.position.x, skaterState.position.y );
+
       //From Particle1DUpdate
       var sideVector = particle1D.getSideVector();
-      var outsideCircle = sideVector.dot( particle1D.getCurvatureDirection() ) < 0;
+
+      var outsideCircle = sideVector.dot( curvatureDirection ) < 0;
 
       //compare a to v/r^2 to see if it leaves the track
-      var r = Math.abs( particle1D.getRadiusOfCurvature() );
+      var r = Math.abs( curvature.r );
       var centripForce = skaterState.mass * skaterState.uD * skaterState.uD / r;
-      var netForceRadial = this.getNetForceWithoutNormal( skaterState ).dot( particle1D.getCurvatureDirection() );
+      var netForceRadial = this.getNetForceWithoutNormal( skaterState ).dot( curvatureDirection );
 
       var leaveTrack = (netForceRadial < centripForce && outsideCircle) || (netForceRadial > centripForce && !outsideCircle);
       if ( leaveTrack && !this.stickToTrack ) {
@@ -577,7 +581,8 @@ define( function( require ) {
 
     //PERFORMANCE/ALLOCATION
     getCurvatureDirection: function( curvature, x2, y2 ) {
-      return new Vector2( curvature.x - x2, curvature.y - y2 ).normalized();
+      var v = new Vector2( curvature.x - x2, curvature.y - y2 );
+      return v.x !== 0 || v.y !== 0 ? v.normalized() : v;
     },
 
     stepModel: function( dt, skaterState ) {

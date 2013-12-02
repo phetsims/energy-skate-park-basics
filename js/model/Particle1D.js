@@ -33,19 +33,6 @@ define( function( require ) {
         new Vector2( track.getX( skaterState.u ), track.getY( skaterState.u ) ),
         new Vector2( track.getX( skaterState.u - 1E-6 ), track.getY( skaterState.u - 1E-6 ) ),
         new Vector2( track.getX( skaterState.u + 1E-6 ), track.getY( skaterState.u + 1E-6 ) )] );
-    },
-
-    getCurvatureDirection: function() {
-
-      var curvature = this.getCurvature();
-
-      //compare a to v/r^2 to see if it leaves the track
-      var v = new Vector2( curvature.x - this.skaterState.position.x, curvature.y - this.skaterState.position.y );
-      return v.x !== 0 || v.y !== 0 ? v.normalized() : v;
-    },
-
-    getRadiusOfCurvature: function() {
-      return this.getCurvature().r;
     }
   } );
 } );
