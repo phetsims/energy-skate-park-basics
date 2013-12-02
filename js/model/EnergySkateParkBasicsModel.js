@@ -321,7 +321,7 @@ define( function( require ) {
 
     //Gets the net force discluding normal force
     //TODO: rename to indicate no normal
-    getNetForce: function( skaterState ) {
+    getNetForceWithoutNormal: function( skaterState ) {
       var netForce = new Vector2();
       netForce.addXY( 0, skaterState.mass * skaterState.gravity );//gravity
       netForce.add( this.getFrictionForce( skaterState ) );
@@ -368,7 +368,7 @@ define( function( require ) {
       var track = skaterState.track;
       var origEnergy = skaterState.getTotalEnergy();
       var origLoc = skaterState.position;
-      var netForce = this.getNetForce( skaterState );//discludes normal
+      var netForce = this.getNetForceWithoutNormal( skaterState );
       var thermalEnergy = skaterState.thermalEnergy;
       var velocity = skaterState.uD;
       var alpha = skaterState.u;
@@ -425,7 +425,7 @@ define( function( require ) {
       //compare a to v/r^2 to see if it leaves the track
       var r = Math.abs( particle1D.getRadiusOfCurvature() );
       var centripForce = skaterState.mass * skaterState.uD * skaterState.uD / r;
-      var netForceRadial = this.getNetForce( skaterState ).dot( particle1D.getCurvatureDirection() );
+      var netForceRadial = this.getNetForceWithoutNormal( skaterState ).dot( particle1D.getCurvatureDirection() );
 
       var leaveTrack = (netForceRadial < centripForce && outsideCircle) || (netForceRadial > centripForce && !outsideCircle);
       //TODO: physics is broken when stickToTrack is false
