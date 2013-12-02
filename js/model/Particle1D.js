@@ -21,9 +21,10 @@ define( function( require ) {
   return inherit( Object, Particle1D, {
     getSideVector: function() {
       var track = this.skaterState.track;
-      var u2 = this.skaterState.u;
-      var top = this.skaterState.top;
-      return track.getUnitNormalVector( u2 ).timesScalar( top ? -1 : 1 );
+      var up = this.skaterState.up;
+
+      //TODO: could reduce allocations here 1/2 the time
+      return track.getUnitNormalVector( this.skaterState.u ).timesScalar( up ? 1 : -1 );
     },
     getCurvatureDirection: function() {
 
@@ -47,8 +48,10 @@ define( function( require ) {
         new Vector2( track.getX( skaterState.u + 1E-6 ), track.getY( skaterState.u + 1E-6 ) )] );
       return curvature.r;
     },
+
+    //TODO: Make sure direction not used by callers
     getSpeed: function() {
-      return this.skaterState.velocity.magnitude();
+      return Math.abs( this.skaterState.uD );
     }
   } );
 } );

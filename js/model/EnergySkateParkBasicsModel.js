@@ -319,12 +319,12 @@ define( function( require ) {
       }
     },
 
-    //TODO: Where is the normal force?
+    //Gets the net force discluding normal force
+    //TODO: rename to indicate no normal
     getNetForce: function( skaterState ) {
       var netForce = new Vector2();
       netForce.addXY( 0, skaterState.mass * skaterState.gravity );//gravity
       netForce.add( this.getFrictionForce( skaterState ) );
-      netForce.add( this.getNormalForce( skaterState ) );
       return netForce;
     },
 
@@ -368,7 +368,7 @@ define( function( require ) {
       var track = skaterState.track;
       var origEnergy = skaterState.getTotalEnergy();
       var origLoc = skaterState.position;
-      var netForce = this.getNetForce( skaterState );
+      var netForce = this.getNetForce( skaterState );//discludes normal
       var thermalEnergy = skaterState.thermalEnergy;
       var velocity = skaterState.uD;
       var alpha = skaterState.u;
@@ -427,7 +427,6 @@ define( function( require ) {
       var centripForce = skaterState.mass * particle1D.getSpeed() * particle1D.getSpeed() / r;
       var netForceRadial = this.getNetForce( skaterState ).dot( particle1D.getCurvatureDirection() );
 
-      console.log( r, centripForce, netForceRadial );
       var leaveTrack = (netForceRadial < centripForce && outsideCircle) || (netForceRadial > centripForce && !outsideCircle);
       //TODO: physics is broken when stickToTrack is false
       if ( leaveTrack && !this.stickToTrack ) {

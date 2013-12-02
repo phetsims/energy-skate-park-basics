@@ -180,7 +180,7 @@ define( function( require ) {
       return Math.atan2( by - ay, bx - ax );
     },
 
-    //For purposes of showing the skater angle, get the view angle of the track here.  Note this means inverting the y values
+    //For purposes of showing the skater angle, get the model angle of the track here.
     //This is called every step while animating on the track, so it was optimized to avoid new allocations
     getUnitNormalVector: function( u ) {
       var tolerance = 1E-6;
