@@ -418,6 +418,7 @@ define( function( require ) {
 //      handleBoundary();
     },
 
+    //TODO: Reduce garbage collection and improve performance
     stepTrack: function( dt, skaterState ) {
 
       var particle1D = new Particle1D( skaterState );
