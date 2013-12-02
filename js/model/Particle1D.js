@@ -46,11 +46,6 @@ define( function( require ) {
 
     getRadiusOfCurvature: function() {
       return this.getCurvature().r;
-    },
-
-    //TODO: Make sure direction not used by callers
-    getSpeed: function() {
-      return Math.abs( this.skaterState.uD );
     }
   } );
 } );

@@ -424,7 +424,7 @@ define( function( require ) {
 
       //compare a to v/r^2 to see if it leaves the track
       var r = Math.abs( particle1D.getRadiusOfCurvature() );
-      var centripForce = skaterState.mass * particle1D.getSpeed() * particle1D.getSpeed() / r;
+      var centripForce = skaterState.mass * skaterState.uD * skaterState.uD / r;
       var netForceRadial = this.getNetForce( skaterState ).dot( particle1D.getCurvatureDirection() );
 
       var leaveTrack = (netForceRadial < centripForce && outsideCircle) || (netForceRadial > centripForce && !outsideCircle);
