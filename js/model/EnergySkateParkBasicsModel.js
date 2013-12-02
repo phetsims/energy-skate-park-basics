@@ -345,7 +345,7 @@ define( function( require ) {
       return curvature;
     },
 
-    //todo: store the radius of curvature on the skaterState, only recompute if undefined
+    //todo: to improve performance, store the radius of curvature on the skaterState, only recompute if undefined
     getNormalForce: function( skaterState ) {
       var curvature = this.getCurvature( skaterState );
       if ( curvature < 0 ) {
@@ -410,11 +410,6 @@ define( function( require ) {
       else {
         return newState;
       }
-      //TODO: Error checking
-//      if ( ( isNaN( getKineticEnergy() ) ) ) { throw new IllegalArgumentException();}
-//      if ( ( isInfinite( getKineticEnergy() ) ) ) { throw new IllegalArgumentException();}
-//      if ( ( isNaN( getVelocity2D().magnitude() ) ) ) { throw new IllegalArgumentException();}
-//      handleBoundary();
     },
 
     //TODO: Reduce garbage collection and improve performance
