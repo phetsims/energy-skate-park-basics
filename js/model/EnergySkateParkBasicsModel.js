@@ -319,13 +319,16 @@ define( function( require ) {
       }
     },
 
+    //TODO: Where is the normal force?
     getNetForce: function( skaterState ) {
       var netForce = new Vector2();
       netForce.addXY( 0, skaterState.mass * skaterState.gravity );//gravity
       netForce.add( this.getFrictionForce( skaterState ) );
+      netForce.add( this.getNormalForce( skaterState ) );
       return netForce;
     },
 
+    //TODO: Friction force should not exceed sum of other forces, otherwise the friction could start a stopped object moving
     getFrictionForce: function( skaterState ) {
       if ( this.friction === 0 || skaterState.velocity.magnitude() < 1E-2 ) {
         return new Vector2();
@@ -354,11 +357,9 @@ define( function( require ) {
       var radiusOfCurvature = Math.min( curvature.r, 100000 );
       var netForceRadial = new Vector2();
 
-      var normalForce;
       netForceRadial.addXY( 0, skaterState.mass * skaterState.gravity );//gravity
-//        netForceRadial.add( new MutableVector2D( xThrust * mass, yThrust * mass ) );//thrust
       var curvatureDirection = this.getCurvatureDirection( curvature, skaterState.position.x, skaterState.position.y );
-      normalForce = skaterState.mass * skaterState.velocity.magnitudeSquared() / Math.abs( radiusOfCurvature ) - netForceRadial.dot( curvatureDirection );
+      var normalForce = skaterState.mass * skaterState.velocity.magnitudeSquared() / Math.abs( radiusOfCurvature ) - netForceRadial.dot( curvatureDirection );
       debug.log( normalForce );
       return Vector2.createPolar( normalForce, curvatureDirection.angle() );
     },
@@ -426,13 +427,9 @@ define( function( require ) {
       var centripForce = skaterState.mass * particle1D.getSpeed() * particle1D.getSpeed() / r;
       var netForceRadial = this.getNetForce( skaterState ).dot( particle1D.getCurvatureDirection() );
 
-      var leaveTrack = false;
-      if ( netForceRadial < centripForce && outsideCircle ) {
-        leaveTrack = true;
-      }
-      if ( netForceRadial > centripForce && !outsideCircle ) {
-        leaveTrack = true;
-      }
+      console.log( r, centripForce, netForceRadial );
+      var leaveTrack = (netForceRadial < centripForce && outsideCircle) || (netForceRadial > centripForce && !outsideCircle);
+      //TODO: physics is broken when stickToTrack is false
       if ( leaveTrack && !this.stickToTrack ) {
 
         //TODO: Step after switching to free fall?
@@ -443,6 +440,8 @@ define( function( require ) {
       }
       else {
         var newState = skaterState;
+
+        //TODO: Can this number of divisions be reduced?
         for ( var i = 0; i < 10; i++ ) {
           newState = this.updateEuler( dt / 10, newState );
         }
