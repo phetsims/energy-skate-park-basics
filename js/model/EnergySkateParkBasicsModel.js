@@ -320,7 +320,6 @@ define( function( require ) {
     },
 
     //Gets the net force discluding normal force
-    //TODO: rename to indicate no normal
     getNetForceWithoutNormal: function( skaterState ) {
       var netForce = new Vector2();
       netForce.addXY( 0, skaterState.mass * skaterState.gravity );//gravity
