@@ -427,7 +427,6 @@ define( function( require ) {
       var netForceRadial = this.getNetForceWithoutNormal( skaterState ).dot( particle1D.getCurvatureDirection() );
 
       var leaveTrack = (netForceRadial < centripForce && outsideCircle) || (netForceRadial > centripForce && !outsideCircle);
-      //TODO: physics is broken when stickToTrack is false
       if ( leaveTrack && !this.stickToTrack ) {
 
         //TODO: Step after switching to free fall?
