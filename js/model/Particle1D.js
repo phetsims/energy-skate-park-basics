@@ -26,6 +26,8 @@ define( function( require ) {
       //TODO: could reduce allocations here 1/2 the time
       return track.getUnitNormalVector( this.skaterState.u ).timesScalar( up ? 1 : -1 );
     },
+
+    //TODO: Duplicates code with below
     getCurvatureDirection: function() {
 
       var track = this.skaterState.track;
