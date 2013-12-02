@@ -35,7 +35,8 @@ define( function( require ) {
         new Vector2( track.getX( skaterState.u + 1E-6 ), track.getY( skaterState.u + 1E-6 ) )] );
 
       //compare a to v/r^2 to see if it leaves the track
-      return new Vector2( curvature.x - skaterState.position.x, curvature.y - skaterState.position.y ).normalized();
+      var v = new Vector2( curvature.x - skaterState.position.x, curvature.y - skaterState.position.y );
+      return v.x !== 0 || v.y !== 0 ? v.normalized() : v;
     },
     getRadiusOfCurvature: function() {
       var track = this.skaterState.track;
