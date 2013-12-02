@@ -439,8 +439,9 @@ define( function( require ) {
         var newState = skaterState;
 
         //TODO: Can this number of divisions be reduced?
-        for ( var i = 0; i < 10; i++ ) {
-          newState = this.updateEuler( dt / 10, newState );
+        var numDivisions = 10;
+        for ( var i = 0; i < numDivisions; i++ ) {
+          newState = this.updateEuler( dt / numDivisions, newState );
         }
 
         //Correct energy
