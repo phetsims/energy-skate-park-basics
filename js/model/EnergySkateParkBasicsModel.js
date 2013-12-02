@@ -421,8 +421,8 @@ define( function( require ) {
       var curvatureDirection = this.getCurvatureDirection( curvature, skaterState.position.x, skaterState.position.y );
 
       //From Particle1DUpdate
+      //TODO: Could remove this allocation
       var sideVector = particle1D.getSideVector();
-
       var outsideCircle = sideVector.dot( curvatureDirection ) < 0;
 
       //compare a to v/r^2 to see if it leaves the track
