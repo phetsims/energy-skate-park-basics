@@ -26,28 +26,26 @@ define( function( require ) {
              track.getUnitNormalVector( this.skaterState.u ).timesScalar( -1 );
     },
 
-    //TODO: Duplicates code with below
+    getCurvature: function() {
+      var track = this.skaterState.track;
+      var skaterState = this.skaterState;
+      return circularRegression( [
+        new Vector2( track.getX( skaterState.u ), track.getY( skaterState.u ) ),
+        new Vector2( track.getX( skaterState.u - 1E-6 ), track.getY( skaterState.u - 1E-6 ) ),
+        new Vector2( track.getX( skaterState.u + 1E-6 ), track.getY( skaterState.u + 1E-6 ) )] );
+    },
+
     getCurvatureDirection: function() {
 
-      var track = this.skaterState.track;
-      var skaterState = this.skaterState;
-      var curvature = circularRegression( [
-        new Vector2( track.getX( skaterState.u ), track.getY( skaterState.u ) ),
-        new Vector2( track.getX( skaterState.u - 1E-6 ), track.getY( skaterState.u - 1E-6 ) ),
-        new Vector2( track.getX( skaterState.u + 1E-6 ), track.getY( skaterState.u + 1E-6 ) )] );
+      var curvature = this.getCurvature();
 
       //compare a to v/r^2 to see if it leaves the track
-      var v = new Vector2( curvature.x - skaterState.position.x, curvature.y - skaterState.position.y );
+      var v = new Vector2( curvature.x - this.skaterState.position.x, curvature.y - this.skaterState.position.y );
       return v.x !== 0 || v.y !== 0 ? v.normalized() : v;
     },
+
     getRadiusOfCurvature: function() {
-      var track = this.skaterState.track;
-      var skaterState = this.skaterState;
-      var curvature = circularRegression( [
-        new Vector2( track.getX( skaterState.u ), track.getY( skaterState.u ) ),
-        new Vector2( track.getX( skaterState.u - 1E-6 ), track.getY( skaterState.u - 1E-6 ) ),
-        new Vector2( track.getX( skaterState.u + 1E-6 ), track.getY( skaterState.u + 1E-6 ) )] );
-      return curvature.r;
+      return this.getCurvature().r;
     },
 
     //TODO: Make sure direction not used by callers
