@@ -55,7 +55,7 @@ define( function( require ) {
       return [itemSet[0], new Rectangle( 0, 0, padWidth + 20, 20 ), itemSet[1]];
     };
 
-    var options = {boxScale: 0.5};
+    var options = {boxWidth: 18};
 
     var checkBoxChildren = [
       new CheckBox( new HBox( {children: pad( barGraphSet )} ), model.barGraphVisibleProperty, options ),
