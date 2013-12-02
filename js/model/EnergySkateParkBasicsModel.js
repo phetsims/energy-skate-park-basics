@@ -189,7 +189,6 @@ define( function( require ) {
       if ( proposedPosition.y < 0 ) {
         proposedPosition.y = 0;
 
-        //TODO: Make sure the skater doesn't flip upside down when landing on the ground, see https://github.com/phetsims/energy-skate-park-basics/issues/1
         return this.continueFreeFall( skaterState, initialEnergy, proposedPosition, proposedVelocity );
       }
       else if ( skaterState.position.x !== proposedPosition.x || skaterState.position.y !== proposedPosition.y ) {
