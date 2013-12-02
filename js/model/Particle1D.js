@@ -21,10 +21,9 @@ define( function( require ) {
   return inherit( Object, Particle1D, {
     getSideVector: function() {
       var track = this.skaterState.track;
-      var up = this.skaterState.up;
 
-      //TODO: could reduce allocations here 1/2 the time
-      return track.getUnitNormalVector( this.skaterState.u ).timesScalar( up ? 1 : -1 );
+      return this.skaterState.up ? track.getUnitNormalVector( this.skaterState.u ) :
+             track.getUnitNormalVector( this.skaterState.u ).timesScalar( -1 );
     },
 
     //TODO: Duplicates code with below
