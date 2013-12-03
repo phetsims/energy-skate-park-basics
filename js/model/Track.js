@@ -268,6 +268,8 @@ define( function( require ) {
       if ( a1 < a0 ) {
         return -this.getMetricDelta( a1, a0 );
       }
+
+      //TODO: Perhaps this can be reduced to improve performance
       var numSegments = 10;
       var da = ( a1 - a0 ) / ( numSegments - 1 );
       var prev = this.getPoint( a0 );

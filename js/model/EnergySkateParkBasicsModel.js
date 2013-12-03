@@ -381,6 +381,8 @@ define( function( require ) {
       var newState = skaterState.update( {
         u: alpha,
         uD: velocity,
+
+        //TODO: choose velocity by using the unit parallel vector to the track, not by sampling deltas
         velocity: new Vector2( (newPoint.x - skaterState.position.x) / dt, (newPoint.y - skaterState.position.y) / dt ),
         position: newPoint
       } );
