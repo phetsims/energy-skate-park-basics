@@ -270,7 +270,7 @@ define( function( require ) {
       }
 
       //TODO: Perhaps this can be reduced to improve performance
-      var numSegments = 10;
+      var numSegments = 10;//ORIGINAL ENERGY SKATE PARK BASICS HAD VALUE 10
       var da = ( a1 - a0 ) / ( numSegments - 1 );
       var prev = this.getPoint( a0 );
       var sum = 0;
@@ -296,8 +296,7 @@ define( function( require ) {
       var guess = ( upperBound + lowerBound ) / 2.0;
 
       var metricDelta = this.getMetricDelta( alpha0, guess );
-      var epsilon = 1E-8;
-//        double epsilon = 1E-10;
+      var epsilon = 1E-8; //ORIGINAL ENERGY SKATE PARK BASICS HAD VALUE 1E-8
 
       var count = 0;
       while ( Math.abs( metricDelta - ds ) > epsilon ) {

@@ -446,7 +446,7 @@ define( function( require ) {
         var newState = skaterState;
 
         //TODO: Can this number of divisions be reduced?  When putting it to 1, motion stalls near the top of main parabola
-        var numDivisions = 10;
+        var numDivisions = 10;//ORIGINAL ENERGY SKATE PARK BASICS HAD VALUE 10
         for ( var i = 0; i < numDivisions; i++ ) {
           newState = this.updateEuler( dt / numDivisions, newState );
         }
