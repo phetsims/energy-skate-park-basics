@@ -26,7 +26,6 @@ define( function( require ) {
     //Map from mass(kg) to scale
     var massToScale = new LinearFunction( (100 + 25) / 2, 100, 0.34, 0.43 );
 
-    //Make him 2 meters tall, with skateboard
     Image.call( skaterNode, skaterImage, { cursor: 'pointer'} );
     var imageWidth = this.width;
     var imageHeight = this.height;
