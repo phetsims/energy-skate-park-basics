@@ -96,8 +96,6 @@ define( function( require ) {
     else {
       this.addDraggableTracks();
     }
-
-    this.bounces = 0;
   }
 
   return inherit( PropertySet, EnergySkateParkBasicsModel, {
@@ -259,13 +257,11 @@ define( function( require ) {
         var bounceVelocity = allOK ? proposedVelocity.minus( normal.times( 2 * normal.dot( proposedVelocity ) ) ) : new Vector2( 0, 1 );
 
         //Attach to track if velocity is close enough to parallel to the track
-        var normalized = proposedVelocity.normalized();
-        var dot = normalized.dot( segment );
+        var dot = proposedVelocity.normalized().dot( segment );
 
         //If friction is allowed, then bounce with elasticity <1.
         //If friction is not allowed, then bounce with elasticity = 1.
         if ( Math.abs( dot ) < 0.4 ) {
-          this.bounces++;
           return skaterState.update( {velocity: bounceVelocity} );
         }
         else {
