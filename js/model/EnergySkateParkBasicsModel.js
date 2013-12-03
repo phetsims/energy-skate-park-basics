@@ -24,6 +24,7 @@ define( function( require ) {
   var SkaterState = require( 'ENERGY_SKATE_PARK_BASICS/model/SkaterState' );
   var Util = require( 'DOT/Util' );
   var Particle1D = require( 'ENERGY_SKATE_PARK_BASICS/model/Particle1D' );
+  var LinearFunction = require( 'DOT/LinearFunction' );
 
   var thrust = new Vector2();
 
@@ -261,24 +262,31 @@ define( function( require ) {
 
         //If friction is allowed, then bounce with elasticity <1.
         //If friction is not allowed, then bounce with elasticity = 1.
-        if ( Math.abs( dot ) < 0.4 ) {
+        if ( Math.abs( dot ) < 0.6 ) {
           return skaterState.update( {velocity: bounceVelocity} );
         }
         else {
-//          debugger;
-          //If friction is allowed, keep the parallel component of velocity.
-          //If friction is not allowed, then either attach to the track with no change in speed
 
-          var uD = (dot > 0 ? +1 : -1) * proposedVelocity.magnitude();
+          //Gain some thermal energy in the landing, but not too much!
+          //dot product of 0 converts to 0% thermal
+          //dot product of 0.6 converts to 10% thermal
+          //More than 0.6 is a bounce
+          var fractionOfKEToConvertToThermal = new LinearFunction( 0, 0.6, 0, 0.1 )( Math.abs( dot ) );
 
-          //TODO: gain some thermal energy in the landing, but not too much!
-          var newThermalEnergy = skaterState.thermalEnergy;
+          var KE = 0.5 * proposedVelocity.magnitudeSquared() * skaterState.mass;
+          var addedThermalEnergy = KE * fractionOfKEToConvertToThermal;
+          var newKE = KE - addedThermalEnergy;
+          var newSpeed = Math.sqrt( 2 * newKE / skaterState.mass );
+          var uD = (dot > 0 ? +1 : -1) * newSpeed;
+
+          var newThermalEnergy = skaterState.thermalEnergy + addedThermalEnergy;
+          if ( isNaN( newThermalEnergy ) ) { throw new Error( "nan" ); }
           var result = skaterState.update( {
             thermalEnergy: newThermalEnergy,
             track: track,
             u: u,
             uD: uD,
-            velocity: proposedVelocity,
+            velocity: proposedVelocity.normalized().timesScalar( Math.abs( uD ) ),
             position: track.getPoint( u )
           } );
 
