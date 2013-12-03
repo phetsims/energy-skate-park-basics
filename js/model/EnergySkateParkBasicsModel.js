@@ -465,19 +465,23 @@ define( function( require ) {
       }
     },
 
-    correctEnergyReduceVelocity: function( skaterState, newSkaterState ) {
+    correctEnergyReduceVelocity: function( skaterState, _newSkaterState ) {
+
+      //Make a clone we can mutate and return, to protect the input argument
+      var newSkaterState = _newSkaterState.update( {} );
       var e0 = skaterState.getTotalEnergy();
       var mass = skaterState.mass;
+      var unit = newSkaterState.track.getUnitParallelVector( newSkaterState.u ).normalized();
 
       for ( var i = 0; i < 100; i++ ) {
         var dv = ( newSkaterState.getTotalEnergy() - e0 ) / ( mass * newSkaterState.uD );
 
-        //TODO: Could be much faster
         var newVelocity = newSkaterState.uD - dv;
-        newSkaterState = newSkaterState.update( {
-          uD: newVelocity,
-          velocity: newSkaterState.track.getUnitParallelVector( newSkaterState.u ).normalized().times( newVelocity )
-        } );
+
+        //We can just set the state directly instead of calling update since we are keeping a protected clone of the newSkaterState
+        newSkaterState.uD = newVelocity;
+        newSkaterState.velocity = unit.times( newVelocity );
+
         if ( isApproxEqual( e0, newSkaterState.getTotalEnergy(), 1E-8 ) ) {
           break;
         }
