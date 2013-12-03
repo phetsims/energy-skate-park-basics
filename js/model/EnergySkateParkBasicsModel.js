@@ -64,7 +64,7 @@ define( function( require ) {
       //speed of the model, either 'normal' or 'slow'
       speed: 'normal',
 
-      friction: frictionAllowed ? 0.2 : 0,
+      friction: frictionAllowed ? 0.05 : 0,
       stickToTrack: true
     } );
     this.skater = new Skater();
