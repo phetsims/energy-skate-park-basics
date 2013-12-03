@@ -455,13 +455,15 @@ define( function( require ) {
         newState = this.correctEnergy( skaterState, newState );
 
         //Fly off the left or right side of the track
-        if ( !skaterState.track.isParameterInBounds( newState.u ) ) {
+        if ( skaterState.track.isParameterInBounds( newState.u ) ) {
+          return newState;
+        }
+        else {
           return skaterState.update( {
             track: null,
             uD: 0
           } );
         }
-        return newState;
       }
     },
 
