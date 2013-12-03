@@ -331,7 +331,8 @@ define( function( require ) {
       return netForce;
     },
 
-    //TODO: Friction force should not exceed sum of other forces, otherwise the friction could start a stopped object moving
+    //TODO: Friction force should not exceed sum of other forces (in the direction of motion), otherwise the friction could start a stopped object moving
+    //The only other force on the object in the direction of motion is the gravity force
     getFrictionForce: function( skaterState ) {
       if ( this.friction === 0 || skaterState.velocity.magnitude() < 1E-2 ) {
         return new Vector2();
@@ -344,11 +345,10 @@ define( function( require ) {
 
     getCurvature: function( skaterState ) {
       var track = skaterState.track;
-      var curvature = circularRegression( [
+      return circularRegression( [
         new Vector2( track.getX( skaterState.u ), track.getY( skaterState.u ) ),
         new Vector2( track.getX( skaterState.u - 1E-6 ), track.getY( skaterState.u - 1E-6 ) ),
         new Vector2( track.getX( skaterState.u + 1E-6 ), track.getY( skaterState.u + 1E-6 ) )] );
-      return curvature;
     },
 
     //todo: to improve performance, store the radius of curvature on the skaterState, only recompute if undefined
