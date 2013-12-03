@@ -22,6 +22,7 @@ define( function( require ) {
       u: 0,
 
       //Speed along the parametric spline dimension, formally 'u dot', indicating speed and direction (+/-) along the track spline
+      //In meters per second
       uD: 0,
 
       //True if the skater is pointing up on the track, false if attached to underside of track
