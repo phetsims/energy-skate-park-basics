@@ -261,6 +261,8 @@ define( function( require ) {
       }
     },
 
+    //Returns the euclidean distance between two points on a parametric curve.
+    //This function is at the heart of many nested loops, so it must be heavily optimized
     getMetricDelta: function( a0, a1 ) {
       if ( a1 === a0 ) {
         return 0;
@@ -272,19 +274,20 @@ define( function( require ) {
       //TODO: Perhaps this can be reduced to improve performance
       var numSegments = 10;//ORIGINAL ENERGY SKATE PARK BASICS HAD VALUE 10
       var da = ( a1 - a0 ) / ( numSegments - 1 );
-      var prev = this.getPoint( a0 );
+      var prevX = this.xSpline.at( a0 );
+      var prevY = this.ySpline.at( a0 );
       var sum = 0;
       for ( var i = 1; i < numSegments; i++ ) {
         var a = a0 + i * da;
         var ptX = this.xSpline.at( a );
         var ptY = this.ySpline.at( a );
 
-        var dx = prev.x - ptX;
-        var dy = prev.y - ptY;
+        var dx = prevX - ptX;
+        var dy = prevY - ptY;
 
         sum += Math.sqrt( dx * dx + dy * dy );
-        prev.x = ptX;
-        prev.y = ptY;
+        prevX = ptX;
+        prevY = ptY;
       }
       return sum;
     },
