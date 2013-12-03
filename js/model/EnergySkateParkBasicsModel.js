@@ -417,7 +417,6 @@ define( function( require ) {
       }
     },
 
-    //TODO: Reduce garbage collection and improve performance
     stepTrack: function( dt, skaterState ) {
 
       var curvature = this.getCurvature( skaterState );
@@ -445,7 +444,6 @@ define( function( require ) {
       else {
         var newState = skaterState;
 
-        //TODO: Can this number of divisions be reduced?  When putting it to 1, motion stalls near the top of main parabola
         var numDivisions = 10;//ORIGINAL ENERGY SKATE PARK BASICS HAD VALUE 10
         for ( var i = 0; i < numDivisions; i++ ) {
           newState = this.updateEuler( dt / numDivisions, newState );
@@ -520,7 +518,9 @@ define( function( require ) {
         debug.log( "Energy too high" );
         //can we reduce the velocity enough?
         if ( Math.abs( newState.getKineticEnergy() ) > Math.abs( dE ) ) {//amount we could reduce the energy if we deleted all the kinetic energy:
-          debug.log( "Could fix all energy by changing velocity." );//todo: maybe should only do this if all velocity is not converted
+
+          //TODO: maybe should only do this if all velocity is not converted
+          debug.log( "Could fix all energy by changing velocity." );
           var correctedStateA = this.correctEnergyReduceVelocity( skaterState, newState );
           debug.log( "changed velocity: dE=" + ( correctedStateA.getTotalEnergy() - e0 ) );
           if ( !isApproxEqual( e0, correctedStateA.getTotalEnergy(), 1E-8 ) ) {
@@ -550,7 +550,9 @@ define( function( require ) {
           debug.log( "changed position alpha: dE=" + ( correctedState.getTotalEnergy() - e0 ) );
           if ( !isApproxEqual( e0, correctedState.getTotalEnergy(), 1E-8 ) ) {
             if ( Math.abs( correctedState.getKineticEnergy() ) > Math.abs( dE ) ) {//amount we could reduce the energy if we deleted all the kinetic energy:
-              debug.log( "Fixed position some, still need to fix velocity as well." );//todo: maybe should only do this if all velocity is not converted
+
+              //TODO: maybe should only do this if all velocity is not converted
+              debug.log( "Fixed position some, still need to fix velocity as well." );
               var correctedState2 = this.correctEnergyReduceVelocity( skaterState, correctedState );
               if ( !isApproxEqual( e0, correctedState2.getTotalEnergy(), 1E-8 ) ) {
                 debug.log( "Changed position & Velocity and still had energy error" );
