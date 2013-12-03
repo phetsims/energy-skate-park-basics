@@ -23,7 +23,6 @@ define( function( require ) {
   var ObservableArray = require( 'AXON/ObservableArray' );
   var SkaterState = require( 'ENERGY_SKATE_PARK_BASICS/model/SkaterState' );
   var Util = require( 'DOT/Util' );
-  var Particle1D = require( 'ENERGY_SKATE_PARK_BASICS/model/Particle1D' );
   var LinearFunction = require( 'DOT/LinearFunction' );
 
   var thrust = new Vector2();
@@ -419,14 +418,12 @@ define( function( require ) {
     //TODO: Reduce garbage collection and improve performance
     stepTrack: function( dt, skaterState ) {
 
-      var particle1D = new Particle1D( skaterState );
-
-      var curvature = particle1D.getCurvature();
+      var curvature = this.getCurvature( skaterState );
       var curvatureDirection = this.getCurvatureDirection( curvature, skaterState.position.x, skaterState.position.y );
 
-      //From Particle1DUpdate
-      //TODO: Could remove this allocation
-      var sideVector = particle1D.getSideVector();
+      var track = skaterState.track;
+      var sideVector = skaterState.up ? track.getUnitNormalVector( skaterState.u ) :
+                       track.getUnitNormalVector( skaterState.u ).timesScalar( -1 );
       var outsideCircle = sideVector.dot( curvatureDirection ) < 0;
 
       //compare a to v/r^2 to see if it leaves the track
