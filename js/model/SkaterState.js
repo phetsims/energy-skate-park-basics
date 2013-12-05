@@ -24,6 +24,7 @@ define( function() {
     this.uD = 'uD' in overrides ? overrides.uD : source.uD;
     this.dragging = 'dragging' in overrides ? overrides.dragging : source.dragging;
     this.thermalEnergy = 'thermalEnergy' in overrides ? overrides.thermalEnergy : source.thermalEnergy;
+    this.curvature = null;//Lazily computed
   }
 
   SkaterState.prototype.getTotalEnergy = function() {
@@ -40,6 +41,12 @@ define( function() {
 
   SkaterState.prototype.update = function( overrides ) { return new SkaterState( this, overrides ); };
 
+  SkaterState.prototype.getCurvature = function() {
+    if ( !this.curvature ) {
+      this.curvature = this.track.getCurvature( this.u );
+    }
+    return this.curvature;
+  };
   //Only set values that have changed
   SkaterState.prototype.setToSkater = function( skater ) {
     skater.angle = this.angle;

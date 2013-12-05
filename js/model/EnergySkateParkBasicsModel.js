@@ -25,7 +25,6 @@ define( function( require ) {
   var Skater = require( 'ENERGY_SKATE_PARK_BASICS/model/Skater' );
   var Track = require( 'ENERGY_SKATE_PARK_BASICS/model/Track' );
   var ControlPoint = require( 'ENERGY_SKATE_PARK_BASICS/model/ControlPoint' );
-  var circularRegression = require( 'ENERGY_SKATE_PARK_BASICS/model/circularRegression' );
   var Vector2 = require( 'DOT/Vector2' );
   var ObservableArray = require( 'AXON/ObservableArray' );
   var SkaterState = require( 'ENERGY_SKATE_PARK_BASICS/model/SkaterState' );
@@ -55,13 +54,9 @@ define( function( require ) {
     this.frictionAllowed = frictionAllowed;
     this.draggableTracks = draggableTracks;
 
-    //Flag for debugging whether the circular regression steps should be shown
-    this.showCircularRegression = false;
     var model = this;
     PropertySet.call( this, {
 
-      //For debugging the circular regression
-      circularRegression: {},
       pieChartVisible: false,
       barGraphVisible: false,
       gridVisible: false,
@@ -343,17 +338,9 @@ define( function( require ) {
       }
     },
 
-    getCurvature: function( skaterState ) {
-      var track = skaterState.track;
-      return circularRegression( [
-        new Vector2( track.getX( skaterState.u ), track.getY( skaterState.u ) ),
-        new Vector2( track.getX( skaterState.u - 1E-6 ), track.getY( skaterState.u - 1E-6 ) ),
-        new Vector2( track.getX( skaterState.u + 1E-6 ), track.getY( skaterState.u + 1E-6 ) )] );
-    },
-
     //todo: to improve performance, store the radius of curvature on the skaterState, only recompute if undefined
     getNormalForce: function( skaterState ) {
-      var curvature = this.getCurvature( skaterState );
+      var curvature = skaterState.getCurvature();
       if ( curvature < 0 ) {
         console.log( 'curvature was less than zero, therefore the straight line code below must be changed' );
       }
@@ -420,7 +407,7 @@ define( function( require ) {
 
     stepTrack: function( dt, skaterState ) {
 
-      var curvature = this.getCurvature( skaterState );
+      var curvature = skaterState.getCurvature();
       var curvatureDirection = this.getCurvatureDirection( curvature, skaterState.position.x, skaterState.position.y );
 
       var track = skaterState.track;

@@ -12,6 +12,7 @@ define( function( require ) {
   var PropertySet = require( 'AXON/PropertySet' );
   var Property = require( 'AXON/Property' );
   var Vector2 = require( 'DOT/Vector2' );
+  var circularRegression = require( 'ENERGY_SKATE_PARK_BASICS/model/circularRegression' );
 
   /**
    * Model for a track, which has a fixed number of points.  If you added a point to a Track, you need a new track.
@@ -319,6 +320,14 @@ define( function( require ) {
       }
 //        EnergySkateParkLogging.println( "count = " + count );
       return guess - alpha0;
+    },
+
+    //TODO: avoid Vector2 alloc, perhaps write a customized 3-point circular regression
+    getCurvature: function( u ) {
+      return circularRegression( [
+        new Vector2( this.getX( u ), this.getY( u ) ),
+        new Vector2( this.getX( u - 1E-6 ), this.getY( u - 1E-6 ) ),
+        new Vector2( this.getX( u + 1E-6 ), this.getY( u + 1E-6 ) )] );
     }
   } );
 } );
