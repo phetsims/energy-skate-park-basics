@@ -156,7 +156,7 @@ define( function( require ) {
       }
     },
 
-    //TODO: Perhaps the skater should move along the ground with a high coefficient of friction (as if it were grass).
+    //TODO: Perhaps the skater should move along the ground with a high coefficient of friction (as if it were grass), see https://github.com/phetsims/energy-skate-park-basics/issues/11
     stepGround: function( dt, skaterState ) {
       return skaterState;
     },
@@ -327,7 +327,7 @@ define( function( require ) {
       }
     },
 
-    //todo: to improve performance, store the radius of curvature on the skaterState, only recompute if undefined
+    //Get the normal force (Newtons) on the skater
     getNormalForce: function( skaterState ) {
       var curvature = skaterState.getCurvature();
       if ( curvature < 0 ) {
