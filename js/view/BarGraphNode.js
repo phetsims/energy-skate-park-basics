@@ -28,6 +28,7 @@ define( function( require ) {
     var barGraphNode = this;
     this.skater = model.skater;
 
+    //Free layout parameters
     var contentWidth = 140;
     var contentHeight = 325;
     var insetX = 10;

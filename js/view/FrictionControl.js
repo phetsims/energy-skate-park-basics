@@ -10,11 +10,9 @@ define( function( require ) {
 
   var inherit = require( 'PHET_CORE/inherit' );
   var VBox = require( 'SCENERY/nodes/VBox' );
-  var HBox = require( 'SCENERY/nodes/HBox' );
   var Text = require( 'SCENERY/nodes/Text' );
   var PhetFont = require( 'SCENERY_PHET/PhetFont' );
   var HSlider = require( 'SUN/HSlider' );
-  var AquaRadioButton = require( 'SUN/AquaRadioButton' );
   var frictionString = require( 'string!ENERGY_SKATE_PARK_BASICS/controls.friction.title' );
   var noneString = require( 'string!ENERGY_SKATE_PARK_BASICS/controls.gravity.none' );
   var lotsString = require( 'string!ENERGY_SKATE_PARK_BASICS/controls.gravity.lots' );

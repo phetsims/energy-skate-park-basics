@@ -8,17 +8,17 @@
 define( function( require ) {
   'use strict';
 
-  var Image = require( 'SCENERY/nodes/Image' ),
-    Sim = require( 'JOIST/Sim' ),
-    SimLauncher = require( 'JOIST/SimLauncher' ),
-    EnergySkateParkBasicsScreen = require( 'ENERGY_SKATE_PARK_BASICS/EnergySkateParkBasicsScreen' ),
-    icon1 = require( 'image!ENERGY_SKATE_PARK_BASICS/ESP_icon_one_big.png' ),
-    icon2 = require( 'image!ENERGY_SKATE_PARK_BASICS/ESP_icon_two_big.png' ),
-    icon3 = require( 'image!ENERGY_SKATE_PARK_BASICS/ESP_icon_three_big.png' ),
-    intro = require( 'string!ENERGY_SKATE_PARK_BASICS/tab.introduction' ),
-    friction = require( 'string!ENERGY_SKATE_PARK_BASICS/tab.friction' ),
-    playground = require( 'string!ENERGY_SKATE_PARK_BASICS/tab.trackPlayground' ),
-    title = require( 'string!ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics.name' );
+  var Image = require( 'SCENERY/nodes/Image' );
+  var Sim = require( 'JOIST/Sim' );
+  var SimLauncher = require( 'JOIST/SimLauncher' );
+  var EnergySkateParkBasicsScreen = require( 'ENERGY_SKATE_PARK_BASICS/EnergySkateParkBasicsScreen' );
+  var icon1 = require( 'image!ENERGY_SKATE_PARK_BASICS/ESP_icon_one_big.png' );
+  var icon2 = require( 'image!ENERGY_SKATE_PARK_BASICS/ESP_icon_two_big.png' );
+  var icon3 = require( 'image!ENERGY_SKATE_PARK_BASICS/ESP_icon_three_big.png' );
+  var intro = require( 'string!ENERGY_SKATE_PARK_BASICS/tab.introduction' );
+  var friction = require( 'string!ENERGY_SKATE_PARK_BASICS/tab.friction' );
+  var playground = require( 'string!ENERGY_SKATE_PARK_BASICS/tab.trackPlayground' );
+  var title = require( 'string!ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics.name' );
 
   var simOptions = {
     credits: {
