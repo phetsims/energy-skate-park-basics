@@ -419,11 +419,14 @@ define( function( require ) {
       var leaveTrack = (netForceRadial < centripForce && outsideCircle) || (netForceRadial > centripForce && !outsideCircle);
       if ( leaveTrack && !this.stickToTrack ) {
 
-        //TODO: Step after switching to free fall?
-        return skaterState.update( {
+        //Leave the track
+        var freeSkater = skaterState.update( {
           track: null,
           uD: 0
         } );
+
+        //Step after switching to free fall, so it doesn't look like it pauses
+        return this.stepFreeFall( dt, freeSkater );
       }
       else {
         var newState = skaterState;
