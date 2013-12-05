@@ -2,6 +2,7 @@
 
 /**
  * Determine the radius of curvature at a point in the track, so we can see if the skater would fly off or not.
+ * Also used to compute the normal force.
  * See http://www.dtcenter.org/met/users/docs/write_ups/circle_fit.pdf (or our copy on Unfuddle)
  *
  * @author Sam Reid
@@ -42,6 +43,11 @@ define( function( require ) {
   var fuvv = function( point ) { return point.x * point.y * point.y; };
   var fvuu = function( point ) { return point.y * point.x * point.x; };
 
+  /**
+   * Returns a circular regression result, with the radius and center
+   * @param points
+   * @returns {{r: number, x: number, y: number}}
+   */
   var circularRegression = function( points ) {
     var average = centroid( points );
     var uv = points.map( function( point ) {
@@ -69,7 +75,7 @@ define( function( require ) {
   };
 
   if ( test ) {
-    //Test case
+    //Test case, see the paper linked above for answers
     var result = circularRegression( [
       new Vector2( 0, 0 ),
       new Vector2( 0.5, 0.25 ),

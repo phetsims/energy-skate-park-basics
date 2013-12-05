@@ -7,6 +7,13 @@
  * The step functions focus on making computations up front and applying changes to the skater at the end of each method, to
  * simplify the logic and make it communicate with the Axon+View as little as possible (for performance reasons).
  *
+ * For an analytical model, see http://digitalcommons.calpoly.edu/cgi/viewcontent.cgi?article=1387&context=phy_fac
+ * Computational problems in introductory physics: Lessons from a bead on a wire
+ * Thomas J. Bensky and Matthew J. Moelter
+ *
+ * We experimented with the analytical model, but ran into problems with discontinuous tracks, see https://github.com/phetsims/energy-skate-park-basics/issues/15
+ * so reverted to using the euclidean model from the original Java version.
+ *
  * @author Sam Reid
  */
 define( function( require ) {
@@ -123,12 +130,6 @@ define( function( require ) {
       }
     },
 
-    //See http://digitalcommons.calpoly.edu/cgi/viewcontent.cgi?article=1387&context=phy_fac
-    //Computational problems in introductory physics: Lessons from a bead on a wire
-    //Thomas J. Bensky and Matthew J. Moelter
-    uDD: function( uD, xP, xPP, yP, yPP, g ) {
-      return -1 * (uD * uD * (xP * xPP + yP * yPP) - g * yP) / (xP * xP + yP * yP);
-    },
     manualStep: function() {
       //step one frame, assuming 60fps
       var result = this.stepModel( 1.0 / 60, new SkaterState( this.skater, {} ) );
