@@ -58,16 +58,22 @@ define( function( require ) {
     var model = this;
     PropertySet.call( this, {
 
+      //Model for visibility of various view parameters
       pieChartVisible: false,
       barGraphVisible: false,
       gridVisible: false,
       speedometerVisible: false,
+
+      //Whether the sim is paused or running
       paused: false,
 
       //speed of the model, either 'normal' or 'slow'
       speed: 'normal',
 
+      //Coefficient of friction (unitless) between skater and track
       friction: frictionAllowed ? 0.05 : 0,
+
+      //Whether the skater should stick to the track like a roller coaster, or be able to fly off like a street
       stickToTrack: true
     } );
     this.skater = new Skater();
