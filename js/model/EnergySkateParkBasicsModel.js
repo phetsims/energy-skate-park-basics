@@ -31,6 +31,7 @@ define( function( require ) {
   var Util = require( 'DOT/Util' );
   var LinearFunction = require( 'DOT/LinearFunction' );
 
+  //Thrust is not currently implemented in Energy Skate Park: Basics but may be used in a future version, so left in here
   var thrust = new Vector2();
 
   function isApproxEqual( a, b, tolerance ) { return Math.abs( a - b ) <= tolerance; }
@@ -79,7 +80,7 @@ define( function( require ) {
       var parabola = [new Vector2( -4, 6 ), new Vector2( 0, 0 ), new Vector2( 4, 6 )];
       var slope = [new Vector2( -4, 4 ), new Vector2( -2, 2 ), new Vector2( 2, 1 )];
 
-      //Move the left well up a bit since the interpolation moves it down by that much, and we don't want the skater to go to y<0 while on the track
+      //Move the left well up a bit since the interpolation moves it down by that much, and we don't want the skater to go to y<0 while on the track.  Numbers determined by trial and error.
       var doubleWell = [new Vector2( -4, 5 ), new Vector2( -2, 0.0166015 ), new Vector2( 0, 2 ), new Vector2( 2, 1 ), new Vector2( 4, 5 ) ];
       var toControlPoint = function( pt ) {return new ControlPoint( pt.x, pt.y );};
       this.tracks.addAll( [
@@ -102,6 +103,7 @@ define( function( require ) {
 
   return inherit( PropertySet, EnergySkateParkBasicsModel, {
 
+    //Add the tracks that will be in the track toolbox for the "Playground" screen
     addDraggableTracks: function() {
       for ( var i = 0; i < 4; i++ ) {
         //Move the tracks over so they will be in the right position in the view coordinates, under the grass to the left of the clock controls
@@ -114,6 +116,8 @@ define( function( require ) {
         this.tracks.add( new Track( this.tracks, controlPoints, true ) );
       }
     },
+
+    //Reset the model, including the skater, tracks, visualizations, etc.
     reset: function() {
       PropertySet.prototype.reset.call( this );
       this.skater.reset();
@@ -125,13 +129,14 @@ define( function( require ) {
       }
     },
 
+    //step one frame, assuming 60fps
     manualStep: function() {
-      //step one frame, assuming 60fps
       var result = this.stepModel( 1.0 / 60, new SkaterState( this.skater, {} ) );
       result.setToSkater( this.skater );
     },
 
     //Step the model, automatically called from Joist
+    //dt has to run at 1/55.0 or less or we will have numerical problems in the integration
     step: function( dt ) {
       //If the delay makes dt too high, then truncate it.  This helps e.g. when clicking in the address bar on ipad, which gives a huge dt and problems for integration
       if ( !this.paused && !this.skater.dragging ) {
@@ -141,33 +146,17 @@ define( function( require ) {
           dt = 1.0 / 60.0;
         }
 
-        //dt has to run at 1/55.0 or less or we will have numerical problems in the integration
+        var skaterState = new SkaterState( this.skater, {} );
+        var initialEnergy = skaterState.getTotalEnergy();
+        skaterState = this.stepModel( this.speed === 'normal' ? dt : dt * 0.25, skaterState );
 
-        var error = 100000;
-        var numDivisions = 1;
-        var skaterState = null;
-        while ( error > 1E-6 && numDivisions <= 2 ) {
-
-          skaterState = new SkaterState( this.skater, {} );
-          var initialEnergy = skaterState.getTotalEnergy();
-          for ( var i = 0; i < numDivisions; i++ ) {
-            skaterState = this.stepModel( this.speed === 'normal' ? dt / numDivisions : dt / numDivisions * 0.25, skaterState );
-          }
-
-          var finalEnergy = skaterState.getTotalEnergy();
-          error = Math.abs( finalEnergy - initialEnergy );
-          if ( error > 1E-6 ) {
-//            debugger;
-          }
-          if ( numDivisions >= 30 ) {
-            console.log( 'numDivisions', numDivisions, 'dt', dt / numDivisions, 'error', error );
-          }
-          numDivisions = numDivisions * 2;
-        }
+        //Uncomment this line if you want to debug energy problems
+//        if ( Math.abs( skaterState.getTotalEnergy() - initialEnergy ) > 1E-6 ) { debugger; }
         skaterState.setToSkater( this.skater );
       }
     },
 
+    //TODO: Perhaps the skater should move along the ground with a high coefficient of friction (as if it were grass).
     stepGround: function( dt, skaterState ) {
       return skaterState;
     },
@@ -354,6 +343,7 @@ define( function( require ) {
       return Vector2.createPolar( normalForce, curvatureDirection.angle() );
     },
 
+    //Use an Euler integration step to move the skater along the track in Euclidean space
     updateEuler: function( dt, skaterState ) {
       var track = skaterState.track;
       var origEnergy = skaterState.getTotalEnergy();
@@ -390,8 +380,7 @@ define( function( require ) {
               debug.log( "gained energy, removing thermal (Would have to remove more than we gained)" );
             }
             else {
-              var editThermal = Math.abs( newState.getTotalEnergy() - origEnergy );
-              thermalEnergy -= editThermal;
+              thermalEnergy -= Math.abs( newState.getTotalEnergy() - origEnergy );
               if ( Math.abs( newState.getTotalEnergy() - origEnergy ) > 1E-6 ) {
                 debug.log( "Removed thermal, dE=" + ( newState.getTotalEnergy() - origEnergy ) );
               }
@@ -405,6 +394,7 @@ define( function( require ) {
       }
     },
 
+    //Update the skater as it moves along the track, and fly off the track if it goes over a jump or off the end of the track
     stepTrack: function( dt, skaterState ) {
 
       var curvature = skaterState.getCurvature();
@@ -453,14 +443,16 @@ define( function( require ) {
       }
     },
 
-    correctEnergyReduceVelocity: function( skaterState, _newSkaterState ) {
+    //Try to match the target energy by reducing the velocity of the skaterState
+    correctEnergyReduceVelocity: function( skaterState, targetState ) {
 
       //Make a clone we can mutate and return, to protect the input argument
-      var newSkaterState = _newSkaterState.update( {} );
+      var newSkaterState = targetState.update( {} );
       var e0 = skaterState.getTotalEnergy();
       var mass = skaterState.mass;
       var unit = newSkaterState.track.getUnitParallelVector( newSkaterState.u ).normalized();
 
+      //Binary search, but bail after too many iterations
       for ( var i = 0; i < 100; i++ ) {
         var dv = ( newSkaterState.getTotalEnergy() - e0 ) / ( mass * newSkaterState.uD );
 
@@ -477,6 +469,7 @@ define( function( require ) {
       return newSkaterState;
     },
 
+    //Binary search to find the parametric coordinate along the track that matches the e0 energy
     searchAlpha: function( skaterState, alpha0, alpha1, e0, numSteps ) {
       var da = ( alpha1 - alpha0 ) / numSteps;
       var bestAlpha = ( alpha1 - alpha0 ) / 2;
@@ -493,6 +486,7 @@ define( function( require ) {
       return bestAlpha;
     },
 
+    //A number of heuristic energy correction steps to ensure energy is conserved while keeping the motion smooth and accurate
     correctEnergy: function( skaterState, newState ) {
       var alpha0 = skaterState.u;
       var e0 = skaterState.getTotalEnergy();
@@ -584,6 +578,7 @@ define( function( require ) {
       return v.x !== 0 || v.y !== 0 ? v.normalized() : v;
     },
 
+    //Update the skater based on which state it is in
     stepModel: function( dt, skaterState ) {
       return skaterState.dragging ? skaterState : //User is dragging the skater, nothing to update here
              !skaterState.track && skaterState.position.y <= 0 ? this.stepGround( dt, skaterState ) :
@@ -630,6 +625,12 @@ define( function( require ) {
       }
     },
 
+    /**
+     * Join the specified tracks together into a single new track and delete the old tracks.
+     *
+     * @param a {Track}
+     * @param b {Track}
+     */
     joinTrackToTrack: function( a, b ) {
       var points = [];
       var i;

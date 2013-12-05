@@ -27,40 +27,47 @@ define( function() {
     this.curvature = null;//Lazily computed
   }
 
-  SkaterState.prototype.getTotalEnergy = function() {
-    return 0.5 * this.mass * this.velocity.magnitudeSquared() - this.mass * this.gravity * this.position.y + this.thermalEnergy;
-  };
+  SkaterState.prototype = {
 
-  SkaterState.prototype.getKineticEnergy = function() {
-    return 0.5 * this.mass * this.velocity.magnitudeSquared();
-  };
+    //Get the total energy in this state.  Computed directly instead of using other methods to (hopefully) improve performance
+    getTotalEnergy: function() {
+      return 0.5 * this.mass * this.velocity.magnitudeSquared() - this.mass * this.gravity * this.position.y + this.thermalEnergy;
+    },
 
-  SkaterState.prototype.getPotentialEnergy = function() {
-    return -this.mass * this.gravity * this.position.y;
-  };
+    getKineticEnergy: function() {
+      return 0.5 * this.mass * this.velocity.magnitudeSquared();
+    },
 
-  SkaterState.prototype.update = function( overrides ) { return new SkaterState( this, overrides ); };
+    getPotentialEnergy: function() {
+      return -this.mass * this.gravity * this.position.y;
+    },
 
-  SkaterState.prototype.getCurvature = function() {
-    if ( !this.curvature ) {
-      this.curvature = this.track.getCurvature( this.u );
+    update: function( overrides ) { return new SkaterState( this, overrides ); },
+
+    //Get the curvature at the skater's point on the track, caching the value.
+    getCurvature: function() {
+      if ( !this.curvature ) {
+        this.curvature = this.track.getCurvature( this.u );
+      }
+      return this.curvature;
+    },
+
+    //Only set values that have changed
+    setToSkater: function( skater ) {
+      skater.angle = this.angle;
+      skater.track = this.track;
+      skater.position = this.position;
+      skater.velocity = this.velocity;
+      skater.up = this.up;
+      skater.u = this.u;
+      skater.uD = this.uD;
+      skater.thermalEnergy = this.thermalEnergy;
+      if ( skater.track ) {
+        skater.angle = skater.track.getViewAngleAt( skater.u );
+      }
+      skater.updateEnergy();
     }
-    return this.curvature;
   };
-  //Only set values that have changed
-  SkaterState.prototype.setToSkater = function( skater ) {
-    skater.angle = this.angle;
-    skater.track = this.track;
-    skater.position = this.position;
-    skater.velocity = this.velocity;
-    skater.up = this.up;
-    skater.u = this.u;
-    skater.uD = this.uD;
-    skater.thermalEnergy = this.thermalEnergy;
-    if ( skater.track ) {
-      skater.angle = skater.track.getViewAngleAt( skater.u );
-    }
-    skater.updateEnergy();
-  };
+
   return SkaterState;
 } );
