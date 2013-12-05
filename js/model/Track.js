@@ -79,12 +79,6 @@ define( function( require ) {
       track.xSpline = numeric.spline( track.u, track.x );
       track.ySpline = numeric.spline( track.u, track.y );
 
-      track.xSplineDiff = track.xSpline.diff();
-      track.ySplineDiff = track.ySpline.diff();
-
-      track.xSplineDiffDiff = track.xSplineDiff.diff();
-      track.ySplineDiffDiff = track.ySplineDiff.diff();
-
       //Mark search points as dirty
       track.xSearchPoints = null;
       track.ySearchPoints = null;
@@ -140,18 +134,6 @@ define( function( require ) {
       var x = this.xSpline.at( u );
       var y = this.ySpline.at( u );
       return new Vector2( x, y );
-    },
-
-    //Get the total energy of a point mass with parametric position u and parametric velocity uD
-    getEnergy: function( u, uD, mass, gravity ) {
-
-      //get Euclidean velocity from parametric velocity
-      //See equation 8 from the Bensky paper
-      var vx = this.xSplineDiff.at( u ) * uD;
-      var vy = this.ySplineDiff.at( u ) * uD;
-      var vSquared = vx * vx + vy * vy;
-
-      return -mass * gravity * this.ySpline.at( u ) + 1 / 2 * mass * vSquared;
     },
 
     translate: function( dx, dy ) {
@@ -293,6 +275,12 @@ define( function( require ) {
       return sum;
     },
 
+    /**
+     * Find the parametric distance along the track, starting at alpha0 and moving ds meters
+     * @param alpha0 the starting point along the track in parametric coordinates
+     * @param {number} ds meters to traverse along the track
+     * @returns {number}
+     */
     getFractionalDistance: function( alpha0, ds ) {
       var lowerBound = -1;
       var upperBound = 2;
