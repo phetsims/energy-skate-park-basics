@@ -170,9 +170,8 @@ define( function( require ) {
     //Update the skater in free fall
     stepFreeFall: function( dt, skaterState ) {
       var initialEnergy = skaterState.getTotalEnergy();
-      var netForce = new Vector2( 0, skaterState.gravity * skaterState.mass );
 
-      var acceleration = netForce.times( 1.0 / skaterState.mass );
+      var acceleration = new Vector2( 0, skaterState.gravity );
       var proposedVelocity = skaterState.velocity.plus( acceleration.times( dt ) );
       var proposedPosition = skaterState.position.plus( proposedVelocity.times( dt ) );
       if ( proposedPosition.y < 0 ) {
