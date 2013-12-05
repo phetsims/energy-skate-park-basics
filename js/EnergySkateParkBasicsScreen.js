@@ -31,7 +31,7 @@ define( function( require ) {
     //The most important function in numeric.js is just too slow because it uses tensor versions of all functions.
     //This version inlines everything.
 
-    //TODO: Replace monkey patch with our own utility functions
+    //TODO: Replace monkey patch with our own utility functions, see https://github.com/phetsims/energy-skate-park-basics/issues/34
     numeric.Spline.prototype._at = function _at( x1, p ) {
       var x = this.x;
       var yl = this.yl;
