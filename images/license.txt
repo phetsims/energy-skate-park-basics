@@ -1,3 +1,11 @@
+button_sim_pause.png source=PhET Author=SST
+button_sim_play.png source=PhET Author=SST
+button_step_deactivated.png source=PhET Author=SST
+button_step_hover.png source=PhET Author=SST
+button_step_unpressed.png source=PhET Author=SST
+close-button.png source=PhET Author=SST
 ESP_icon_one_big.png source=PhET Author=SST
 ESP_icon_two_big.png source=PhET Author=SST
 ESP_icon_three_big.png source=PhET Author=SST
+mountains.png source=PhET Author=Noah P
+skater.png source=PhET
