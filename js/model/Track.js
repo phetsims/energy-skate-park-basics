@@ -276,18 +276,18 @@ define( function( require ) {
     },
 
     /**
-     * Find the parametric distance along the track, starting at alpha0 and moving ds meters
-     * @param alpha0 the starting point along the track in parametric coordinates
+     * Find the parametric distance along the track, starting at u0 and moving ds meters
+     * @param {number} u0 the starting point along the track in parametric coordinates
      * @param {number} ds meters to traverse along the track
      * @returns {number}
      */
-    getFractionalDistance: function( alpha0, ds ) {
+    getFractionalDistance: function( u0, ds ) {
       var lowerBound = -1;
       var upperBound = 2;
 
       var guess = ( upperBound + lowerBound ) / 2.0;
 
-      var metricDelta = this.getMetricDelta( alpha0, guess );
+      var metricDelta = this.getMetricDelta( u0, guess );
       var epsilon = 1E-8; //ORIGINAL ENERGY SKATE PARK BASICS HAD VALUE 1E-8
 
       var count = 0;
@@ -299,7 +299,7 @@ define( function( require ) {
           lowerBound = guess;
         }
         guess = ( upperBound + lowerBound ) / 2.0;
-        metricDelta = this.getMetricDelta( alpha0, guess );
+        metricDelta = this.getMetricDelta( u0, guess );
         count++;
         if ( count > 100 ) {
           console.log( "binary search failed: count=" + count );
@@ -307,7 +307,7 @@ define( function( require ) {
         }
       }
 //        EnergySkateParkLogging.println( "count = " + count );
-      return guess - alpha0;
+      return guess - u0;
     },
 
     //TODO: avoid Vector2 alloc, perhaps write a customized 3-point circular regression

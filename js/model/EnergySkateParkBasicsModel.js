@@ -351,13 +351,13 @@ define( function( require ) {
       var netForce = this.getNetForceWithoutNormal( skaterState );
       var thermalEnergy = skaterState.thermalEnergy;
       var velocity = skaterState.uD;
-      var alpha = skaterState.u;
-      var a = skaterState.track.getUnitParallelVector( alpha ).dot( netForce ) / skaterState.mass;
+      var u = skaterState.u;
+      var a = skaterState.track.getUnitParallelVector( u ).dot( netForce ) / skaterState.mass;
       velocity += a * dt;
-      alpha += track.getFractionalDistance( alpha, velocity * dt + 1 / 2 * a * dt * dt );
-      var newPoint = skaterState.track.getPoint( alpha );
+      u += track.getFractionalDistance( u, velocity * dt + 1 / 2 * a * dt * dt );
+      var newPoint = skaterState.track.getPoint( u );
       var newState = skaterState.update( {
-        u: alpha,
+        u: u,
         uD: velocity,
 
         //TODO: choose velocity by using the unit parallel vector to the track, not by sampling deltas
@@ -470,25 +470,25 @@ define( function( require ) {
     },
 
     //Binary search to find the parametric coordinate along the track that matches the e0 energy
-    searchAlpha: function( skaterState, alpha0, alpha1, e0, numSteps ) {
-      var da = ( alpha1 - alpha0 ) / numSteps;
-      var bestAlpha = ( alpha1 - alpha0 ) / 2;
+    searchSplineForEnergy: function( skaterState, u0, u1, e0, numSteps ) {
+      var da = ( u1 - u0 ) / numSteps;
+      var bestAlpha = ( u1 - u0 ) / 2;
       var bestDE = skaterState.update( {position: skaterState.track.getPoint( bestAlpha )} ).getTotalEnergy();
       for ( var i = 0; i < numSteps; i++ ) {
-        var proposedAlpha = alpha0 + da * i;
+        var proposedAlpha = u0 + da * i;
         var e = skaterState.update( {position: skaterState.track.getPoint( bestAlpha )} ).getTotalEnergy();
         if ( Math.abs( e - e0 ) <= Math.abs( bestDE ) ) {
           bestDE = e - e0;
           bestAlpha = proposedAlpha;
-        }//continue to find best value closest to proposed alpha, even if several values give dE=0.0
+        }//continue to find best value closest to proposed u, even if several values give dE=0.0
       }
-      debug.log( "After " + numSteps + " steps, origAlpha=" + alpha0 + ", bestAlpha=" + bestAlpha + ", dE=" + bestDE );
+      debug.log( "After " + numSteps + " steps, origAlpha=" + u0 + ", bestAlpha=" + bestAlpha + ", dE=" + bestDE );
       return bestAlpha;
     },
 
     //A number of heuristic energy correction steps to ensure energy is conserved while keeping the motion smooth and accurate
     correctEnergy: function( skaterState, newState ) {
-      var alpha0 = skaterState.u;
+      var u0 = skaterState.u;
       var e0 = skaterState.getTotalEnergy();
 
       if ( isNaN( newState.getTotalEnergy() ) ) { throw new Error( 'nan' );}
@@ -512,16 +512,16 @@ define( function( require ) {
         }
         else {
           debug.log( "Not enough KE to fix with velocity alone: normal:" );
-          debug.log( "changed position alpha: dE=" + ( newState.getTotalEnergy() - e0 ) );
-          //search for a place between alpha and alpha0 with a better energy
+          debug.log( "changed position u: dE=" + ( newState.getTotalEnergy() - e0 ) );
+          //search for a place between u and u0 with a better energy
 
           var numRecursiveSearches = 10;
-          var alpha = newState.u;
-          var bestAlpha = ( alpha + alpha0 ) / 2.0;
-          var da = ( alpha - alpha0 ) / 2;
+          var u = newState.u;
+          var bestAlpha = ( u + u0 ) / 2.0;
+          var da = ( u - u0 ) / 2;
           for ( var i = 0; i < numRecursiveSearches; i++ ) {
             var numSteps = 10;
-            bestAlpha = this.searchAlpha( newState, bestAlpha - da, bestAlpha + da, e0, numSteps );
+            bestAlpha = this.searchSplineForEnergy( newState, bestAlpha - da, bestAlpha + da, e0, numSteps );
             da = ( ( bestAlpha - da ) - ( bestAlpha + da ) ) / numSteps;
           }
 
@@ -529,7 +529,7 @@ define( function( require ) {
             u: bestAlpha,
             position: newState.track.getPoint( bestAlpha )
           } );
-          debug.log( "changed position alpha: dE=" + ( correctedState.getTotalEnergy() - e0 ) );
+          debug.log( "changed position u: dE=" + ( correctedState.getTotalEnergy() - e0 ) );
           if ( !isApproxEqual( e0, correctedState.getTotalEnergy(), 1E-8 ) ) {
             if ( Math.abs( correctedState.getKineticEnergy() ) > Math.abs( dE ) ) {//amount we could reduce the energy if we deleted all the kinetic energy:
 
