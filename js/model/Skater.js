@@ -18,7 +18,7 @@ define( function( require ) {
 
     PropertySet.call( this, {track: null,
 
-      //Parameter along the parametric spline
+      //Parameter along the parametric spline, unitless since it is in parametric space
       u: 0,
 
       //Speed along the parametric spline dimension, formally 'u dot', indicating speed and direction (+/-) along the track spline
