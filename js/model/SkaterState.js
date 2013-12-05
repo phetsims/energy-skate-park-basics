@@ -17,6 +17,7 @@ define( function() {
     this.mass = overrides.mass || source.mass;
 
     //Special handling for values that can be null, false or zero
+    this.stepsSinceJump = 'stepsSinceJump' in overrides ? overrides.stepsSinceJump : source.stepsSinceJump;
     this.track = 'track' in overrides ? overrides.track : source.track;
     this.angle = 'angle' in overrides ? overrides.angle : source.angle;
     this.up = 'up' in overrides ? overrides.up : source.up;
@@ -54,6 +55,7 @@ define( function() {
 
     //Only set values that have changed
     setToSkater: function( skater ) {
+      skater.stepsSinceJump = this.stepsSinceJump;
       skater.angle = this.angle;
       skater.track = this.track;
       skater.position = this.position;

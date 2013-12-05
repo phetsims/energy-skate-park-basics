@@ -63,6 +63,9 @@ define( function( require ) {
       startingTrack: null
     } );
 
+    //Number of model updates since leaving the middle of the track, so it doesn't immediately re-collide
+    this.stepsSinceJump = 0;
+
     this.addDerivedProperty( 'speed', ['velocity'], function( velocity ) {return velocity.magnitude();} );
     this.addDerivedProperty( 'headPosition', ['position', 'mass', 'angle', 'up'], function( position, mass, angle, up ) {
 

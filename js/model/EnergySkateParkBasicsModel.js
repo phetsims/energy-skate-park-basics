@@ -183,7 +183,7 @@ define( function( require ) {
 
         //see if it crossed the track
         var physicalTracks = this.getPhysicalTracks();
-        if ( physicalTracks.length ) {
+        if ( physicalTracks.length && skaterState.stepsSinceJump > 10 ) {
           return this.interactWithTracksWhileFalling( physicalTracks, skaterState, proposedPosition, initialEnergy, dt, proposedVelocity );
         }
         else {
@@ -301,13 +301,15 @@ define( function( require ) {
           thermalEnergy: initialEnergy,
           angle: 0,
           up: true,
-          position: new Vector2( proposedPosition.x, 0 )
+          position: new Vector2( proposedPosition.x, 0 ),
+          stepsSinceJump: 0
         } );
       }
       else {
         return skaterState.update( {
           velocity: proposedVelocity,
-          position: new Vector2( proposedPosition.x, y )
+          position: new Vector2( proposedPosition.x, y ),
+          stepsSinceJump: skaterState.stepsSinceJump + 1
         } );
       }
     },
@@ -418,10 +420,14 @@ define( function( require ) {
       var leaveTrack = (netForceRadial < centripForce && outsideCircle) || (netForceRadial > centripForce && !outsideCircle);
       if ( leaveTrack && !this.stickToTrack ) {
 
-        //Leave the track
+        //Leave the track.  Make sure the velocity is pointing away from the track or keep track of frames away from the track so it doesn't immediately recollide
+        //Or project a ray and see if a collision is imminent
         var freeSkater = skaterState.update( {
           track: null,
-          uD: 0
+          uD: 0,
+
+          //Keep track of the steps since jumping, otherwise it can run into the track again immediately, which increases thermal energy
+          stepsSinceJump: 0
         } );
 
         //Step after switching to free fall, so it doesn't look like it pauses
