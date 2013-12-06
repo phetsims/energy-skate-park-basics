@@ -314,9 +314,14 @@ define( function( require ) {
       }
     },
 
-    //Gets the net force discluding normal force
-    getNetForceWithoutNormal: function( skaterState ) {
-      var netForce = new Vector2();
+    /**
+     * Gets the net force discluding normal force.
+     *
+     * @param {SkaterState} skaterState the state
+     * @param {Vector2} netForce the return value, should be allocated beforehand using Vector2.createFromPool.
+     * @returns {Vector2} netForce
+     */
+    getNetForceWithoutNormal: function( skaterState, netForce ) {
       netForce.addXY( 0, skaterState.mass * skaterState.gravity );//gravity
       netForce.add( this.getFrictionForce( skaterState ) );
       return netForce;
@@ -355,11 +360,14 @@ define( function( require ) {
       var track = skaterState.track;
       var origEnergy = skaterState.getTotalEnergy();
       var origLoc = skaterState.position;
-      var netForce = this.getNetForceWithoutNormal( skaterState );
       var thermalEnergy = skaterState.thermalEnergy;
       var velocity = skaterState.uD;
       var u = skaterState.u;
+
+      var netForce = this.getNetForceWithoutNormal( skaterState, Vector2.createFromPool( 0, 0 ) );
       var a = skaterState.track.getUnitParallelVector( u ).dot( netForce ) / skaterState.mass;
+      netForce.freeToPool();
+
       velocity += a * dt;
       u += track.getFractionalDistance( u, velocity * dt + 1 / 2 * a * dt * dt );
       var newPoint = skaterState.track.getPoint( u );
@@ -415,7 +423,10 @@ define( function( require ) {
       //compare a to v/r^2 to see if it leaves the track
       var r = Math.abs( curvature.r );
       var centripForce = skaterState.mass * skaterState.uD * skaterState.uD / r;
-      var netForceRadial = this.getNetForceWithoutNormal( skaterState ).dot( curvatureDirection );
+
+      var netForce = Vector2.createFromPool( 0, 0 );
+      var netForceRadial = this.getNetForceWithoutNormal( skaterState, netForce ).dot( curvatureDirection );
+      netForce.freeToPool();
 
       var leaveTrack = (netForceRadial < centripForce && outsideCircle) || (netForceRadial > centripForce && !outsideCircle);
       if ( leaveTrack && !this.stickToTrack ) {
