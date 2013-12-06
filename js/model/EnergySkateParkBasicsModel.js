@@ -331,7 +331,7 @@ define( function( require ) {
     //The only other force on the object in the direction of motion is the gravity force
     getFrictionForce: function( skaterState ) {
       if ( this.friction === 0 || skaterState.velocity.magnitude() < 1E-2 ) {
-        return new Vector2();
+        return Vector2.ZERO;
       }
       else {
         var magnitude = this.friction * this.getNormalForce( skaterState ).magnitude();
