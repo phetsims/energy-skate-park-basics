@@ -13,6 +13,7 @@ define( function( require ) {
   var Property = require( 'AXON/Property' );
   var Vector2 = require( 'DOT/Vector2' );
   var circularRegression = require( 'ENERGY_SKATE_PARK_BASICS/model/circularRegression' );
+  var SplineEvaluation = require( 'ENERGY_SKATE_PARK_BASICS/model/SplineEvaluation' );
 
   /**
    * Model for a track, which has a fixed number of points.  If you added a point to a Track, you need a new track.
@@ -109,8 +110,8 @@ define( function( require ) {
       //Compute the spline points for purposes of getting closest points.
       //keep these points around and invalidate only when necessary
       if ( !this.xSearchPoints ) {
-        this.xSearchPoints = this.xSpline.at( this.searchLinSpace );
-        this.ySearchPoints = this.ySpline.at( this.searchLinSpace );
+        this.xSearchPoints = SplineEvaluation.at( this.xSpline, this.searchLinSpace );
+        this.ySearchPoints = SplineEvaluation.at( this.ySpline, this.searchLinSpace );
       }
 
       var bestT = 0;
@@ -128,11 +129,11 @@ define( function( require ) {
       return {u: bestT, point: bestPt, distance: best};
     },
 
-    getX: function( u ) { return this.xSpline.at( u ); },
-    getY: function( u ) { return this.ySpline.at( u ); },
+    getX: function( u ) { return SplineEvaluation.at( this.xSpline, u ); },
+    getY: function( u ) { return SplineEvaluation.at( this.ySpline, u ); },
     getPoint: function( u ) {
-      var x = this.xSpline.at( u );
-      var y = this.ySpline.at( u );
+      var x = SplineEvaluation.at( this.xSpline, u );
+      var y = SplineEvaluation.at( this.ySpline, u );
       return new Vector2( x, y );
     },
 
@@ -154,11 +155,11 @@ define( function( require ) {
     //This is called every step while animating on the track, so it was optimized to avoid new allocations
     getViewAngleAt: function( u ) {
       var tolerance = 1E-6;
-      var ax = this.xSpline.at( u - tolerance );
-      var ay = -this.ySpline.at( u - tolerance );
+      var ax = SplineEvaluation.at( this.xSpline, u - tolerance );
+      var ay = -SplineEvaluation.at( this.ySpline, u - tolerance );
 
-      var bx = this.xSpline.at( u + tolerance );
-      var by = -this.ySpline.at( u + tolerance );
+      var bx = SplineEvaluation.at( this.xSpline, u + tolerance );
+      var by = -SplineEvaluation.at( this.ySpline, u + tolerance );
 
       return Math.atan2( by - ay, bx - ax );
     },
@@ -167,11 +168,11 @@ define( function( require ) {
     //This is called every step while animating on the track, so it was optimized to avoid new allocations
     getUnitNormalVector: function( u ) {
       var tolerance = 1E-6;
-      var ax = this.xSpline.at( u - tolerance );
-      var ay = this.ySpline.at( u - tolerance );
+      var ax = SplineEvaluation.at( this.xSpline, u - tolerance );
+      var ay = SplineEvaluation.at( this.ySpline, u - tolerance );
 
-      var bx = this.xSpline.at( u + tolerance );
-      var by = this.ySpline.at( u + tolerance );
+      var bx = SplineEvaluation.at( this.xSpline, u + tolerance );
+      var by = SplineEvaluation.at( this.ySpline, u + tolerance );
 
       var angle = Math.atan2( by - ay, bx - ax );
       return Vector2.createPolar( 1, angle + Math.PI / 2 );
@@ -262,13 +263,13 @@ define( function( require ) {
       //TODO: Perhaps this can be reduced to improve performance
       var numSegments = 10;//ORIGINAL ENERGY SKATE PARK BASICS HAD VALUE 10
       var da = ( u1 - u0 ) / ( numSegments - 1 );
-      var prevX = this.xSpline.at( u0 );
-      var prevY = this.ySpline.at( u0 );
+      var prevX = SplineEvaluation.at( this.xSpline, u0 );
+      var prevY = SplineEvaluation.at( this.ySpline, u0 );
       var sum = 0;
       for ( var i = 1; i < numSegments; i++ ) {
         var a = u0 + i * da;
-        var ptX = this.xSpline.at( a );
-        var ptY = this.ySpline.at( a );
+        var ptX = SplineEvaluation.at( this.xSpline, a );
+        var ptY = SplineEvaluation.at( this.ySpline, a );
 
         var dx = prevX - ptX;
         var dy = prevY - ptY;

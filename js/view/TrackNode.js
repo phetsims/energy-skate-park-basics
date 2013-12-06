@@ -18,6 +18,7 @@ define( function( require ) {
   var Vector2 = require( 'DOT/Vector2' );
   var Shape = require( 'KITE/Shape' );
   var LineStyles = require( 'KITE/util/LineStyles' );
+  var SplineEvaluation = require( 'ENERGY_SKATE_PARK_BASICS/model/SplineEvaluation' );
 
   /**
    * Constructor for TrackNode
@@ -166,8 +167,8 @@ define( function( require ) {
       }
 
       //Compute points for lineTo
-      var xPoints = track.xSpline.at( linSpace );
-      var yPoints = track.ySpline.at( linSpace );
+      var xPoints = SplineEvaluation.at( track.xSpline, linSpace );
+      var yPoints = SplineEvaluation.at( track.ySpline, linSpace );
 
       var tx = trackNode.getTranslation();
       var shape = new Shape().moveTo( modelViewTransform.modelToViewX( xPoints[0] ) - tx.x, modelViewTransform.modelToViewY( yPoints[0] ) - tx.y );
