@@ -58,23 +58,20 @@ define( function( require ) {
     this.controlPoints = controlPoints;
 
     this.interactive = interactive;
-    this.u = [];
-    this.x = [];
-    this.y = [];
+    this.u = new Array( track.controlPoints.length );
+    this.x = new Array( track.controlPoints.length );
+    this.y = new Array( track.controlPoints.length );
 
     this.updateLinSpace();
 
     //when points change, update the spline instance
     this.updateSplines = function() {
-      //clear arrays, reusing them to save on garbage
-      track.u.length = 0;
-      track.x.length = 0;
-      track.y.length = 0;
 
+      //Arrays are fixed length, so just overwrite values, see #38
       for ( var i = 0; i < track.controlPoints.length; i++ ) {
-        track.u.push( i / track.controlPoints.length );
-        track.x.push( track.controlPoints[i].position.x );
-        track.y.push( track.controlPoints[i].position.y );
+        track.u[i] = i / track.controlPoints.length;
+        track.x[i] = track.controlPoints[i].position.x;
+        track.y[i] = track.controlPoints[i].position.y;
       }
 
       track.xSpline = numeric.spline( track.u, track.x );

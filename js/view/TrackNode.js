@@ -136,9 +136,9 @@ define( function( require ) {
       road.addInputListener( handler );
     }
 
-    //Reuse arrays to save allocations and prevent garbage collections
-    var x = [];
-    var y = [];
+    //Reuse arrays to save allocations and prevent garbage collections, see #38
+    var x = new Array( track.controlPoints.length );
+    var y = new Array( track.controlPoints.length );
 
     //Store for performance
     var lastPt = (track.controlPoints.length - 1) / track.controlPoints.length;
@@ -157,13 +157,10 @@ define( function( require ) {
         lengthForLinSpace = track.controlPoints.length;
       }
 
-      //clear arrays, reusing them to save on garbage
-      x.length = 0;
-      y.length = 0;
-
+      //Arrays are fixed length, so just overwrite values
       for ( i = 0; i < track.controlPoints.length; i++ ) {
-        x.push( track.controlPoints[i].position.x );
-        y.push( track.controlPoints[i].position.y );
+        x[i] = track.controlPoints[i].position.x;
+        y[i] = track.controlPoints[i].position.y;
       }
 
       //Compute points for lineTo
