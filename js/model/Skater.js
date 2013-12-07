@@ -12,6 +12,7 @@ define( function( require ) {
   var PropertySet = require( 'AXON/PropertySet' );
   var Vector2 = require( 'DOT/Vector2' );
   var Util = require( 'DOT/Util' );
+  var Constants = require( 'ENERGY_SKATE_PARK_BASICS/Constants' );
 
   function Skater() {
     var skater = this;
@@ -35,7 +36,7 @@ define( function( require ) {
       position: new Vector2( 0, 0 ),
 
       //Start in the middle of the MassSlider range
-      mass: (25 + 100) / 2,
+      mass: Constants.DEFAULT_MASS,
 
       //Which way the skater is facing, right or left.  Coded as strings instead of boolean in case we add other states later like 'forward'
       direction: 'right',

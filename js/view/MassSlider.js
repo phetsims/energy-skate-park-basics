@@ -19,11 +19,11 @@ define( function( require ) {
   var Constants = require( 'ENERGY_SKATE_PARK_BASICS/Constants' );
 
   function MassSlider( model ) {
-    var range = {min: 25, max: 100};
+    var range = {min: Constants.MIN_MASS, max: Constants.MAX_MASS};
     var slider = new HSlider( model.skater.massProperty, range, Constants.SLIDER_OPTIONS );
     var tickFont = new PhetFont( 10 );
-    slider.addMajorTick( 10, new Text( smallString, { font: tickFont } ) );
-    slider.addMajorTick( 110, new Text( largeString, { font: tickFont } ) );
+    slider.addMajorTick( Constants.MIN_MASS, new Text( smallString, { font: tickFont } ) );
+    slider.addMajorTick( Constants.MAX_MASS, new Text( largeString, { font: tickFont } ) );
     VBox.call( this, {children: [new Text( skaterMassString, new PhetFont( 14 ) ), slider]} );
   }
 
