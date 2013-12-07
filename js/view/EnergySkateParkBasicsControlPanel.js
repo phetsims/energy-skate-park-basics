@@ -90,7 +90,10 @@ define( function( require ) {
     createPieChartIcon: function() {
       var radius = 10;
       var x = new Shape().moveTo( 0, 0 ).ellipticalArc( 0, 0, radius, radius, 0, -Math.PI / 2, Math.PI * 2 * 0.25 - Math.PI / 2, false ).lineTo( 0, 0 );
-      return new Node( {children: [new Circle( radius, {fill: EnergySkateParkColorScheme.potentialEnergy, lineWidth: 0.5, stroke: 'black' } ), new Path( x, {fill: EnergySkateParkColorScheme.kineticEnergy, lineWidth: 0.5, stroke: 'black'} )]} );
+      return new Node( {children: [
+        new Circle( radius, {fill: EnergySkateParkColorScheme.potentialEnergy, lineWidth: 0.5, stroke: 'black' } ),
+        new Path( x, {fill: EnergySkateParkColorScheme.kineticEnergy, lineWidth: 0.5, stroke: 'black'} )
+      ]} );
     },
 
     //Create an icon for the grid check box

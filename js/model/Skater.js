@@ -16,7 +16,8 @@ define( function( require ) {
   function Skater() {
     var skater = this;
 
-    PropertySet.call( this, {track: null,
+    PropertySet.call( this, {
+      track: null,
 
       //Parameter along the parametric spline, unitless since it is in parametric space
       u: 0,
