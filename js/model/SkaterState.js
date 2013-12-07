@@ -10,7 +10,15 @@
 define( function() {
   'use strict';
 
+  /**
+   * Create a SkaterSate from a SkaterState or Skater
+   * @param {Skater|SkaterSate} source
+   * @param {*] overrides
+   * @constructor
+   */
   function SkaterState( source, overrides ) {
+
+    //This code is called many times from the physics loop, so must be optimized for speed and memory
     this.gravity = overrides.gravity || source.gravity;
     this.position = overrides.position || source.position;
     this.velocity = overrides.velocity || source.velocity;
