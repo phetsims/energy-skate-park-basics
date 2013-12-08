@@ -80,6 +80,10 @@ define( function( require ) {
       //Mark search points as dirty
       track.xSearchPoints = null;
       track.ySearchPoints = null;
+
+      //Mark derivatives as dirty
+      track.xSplineDiff = null;
+      track.ySplineDiff = null;
     };
 
     this.updateSplines();
@@ -151,32 +155,29 @@ define( function( require ) {
     //For purposes of showing the skater angle, get the view angle of the track here.  Note this means inverting the y values
     //This is called every step while animating on the track, so it was optimized to avoid new allocations
     getViewAngleAt: function( u ) {
-      var tolerance = 1E-6;
-      var ax = SplineEvaluation.at( this.xSpline, u - tolerance );
-      var ay = -SplineEvaluation.at( this.ySpline, u - tolerance );
+      if ( this.xSplineDiff === null ) {
+        this.xSplineDiff = this.xSpline.diff();
+        this.ySplineDiff = this.ySpline.diff();
+      }
+      return Math.atan2( -SplineEvaluation.at( this.ySplineDiff, u ), SplineEvaluation.at( this.xSplineDiff, u ) );
+    },
 
-      var bx = SplineEvaluation.at( this.xSpline, u + tolerance );
-      var by = -SplineEvaluation.at( this.ySpline, u + tolerance );
-
-      return Math.atan2( by - ay, bx - ax );
+    getModelAngleAt: function( u ) {
+      if ( this.xSplineDiff === null ) {
+        this.xSplineDiff = this.xSpline.diff();
+        this.ySplineDiff = this.ySpline.diff();
+      }
+      return Math.atan2( SplineEvaluation.at( this.ySplineDiff, u ), SplineEvaluation.at( this.xSplineDiff, u ) );
     },
 
     //For purposes of showing the skater angle, get the model angle of the track here.
     //This is called every step while animating on the track, so it was optimized to avoid new allocations
     getUnitNormalVector: function( u ) {
-      var tolerance = 1E-6;
-      var ax = SplineEvaluation.at( this.xSpline, u - tolerance );
-      var ay = SplineEvaluation.at( this.ySpline, u - tolerance );
-
-      var bx = SplineEvaluation.at( this.xSpline, u + tolerance );
-      var by = SplineEvaluation.at( this.ySpline, u + tolerance );
-
-      var angle = Math.atan2( by - ay, bx - ax );
-      return Vector2.createPolar( 1, angle + Math.PI / 2 );
+      return Vector2.createPolar( 1, this.getModelAngleAt( u ) + Math.PI / 2 );
     },
 
     getUnitParallelVector: function( u ) {
-      return this.getUnitNormalVector( u ).perpendicular();
+      return Vector2.createPolar( 1, this.getModelAngleAt( u ) );
     },
 
     updateLinSpace: function() {
