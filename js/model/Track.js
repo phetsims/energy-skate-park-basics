@@ -112,7 +112,7 @@ define( function( require ) {
       }
 
       var bestT = 0;
-      var best = 9999999999;
+      var best = Number.POSITIVE_INFINITY;
       var bestPt = new Vector2( 0, 0 );
       for ( var i = 0; i < this.xSearchPoints.length; i++ ) {
         var dist = point.distanceXY( this.xSearchPoints[i], this.ySearchPoints[i] );

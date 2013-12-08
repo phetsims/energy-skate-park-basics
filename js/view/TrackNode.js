@@ -226,7 +226,7 @@ define( function( require ) {
                   //If one of the control points is close enough to link to another track, do so
                   var tracks = model.getPhysicalTracks();
 
-                  var bestDistance = null;
+                  var bestDistance = Number.POSITIVE_INFINITY;
                   var bestMatch = null;
 
                   for ( var i = 0; i < tracks.length; i++ ) {
@@ -239,7 +239,8 @@ define( function( require ) {
                       for ( var k = 0; k < otherPoints.length; k++ ) {
                         var otherPoint = otherPoints[k];
                         var distance = controlPoint.sourcePosition.distance( otherPoint.position );
-                        if ( (bestDistance === null && distance > 1E-6) || (distance < bestDistance ) ) {
+
+                        if ( distance < bestDistance ) {
                           bestDistance = distance;
                           bestMatch = otherPoint;
                         }
