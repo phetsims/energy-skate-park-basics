@@ -162,6 +162,7 @@ define( function( require ) {
       return Math.atan2( -SplineEvaluation.at( this.ySplineDiff, u ), SplineEvaluation.at( this.xSplineDiff, u ) );
     },
 
+    //Get the model angle at the specified position on the track
     getModelAngleAt: function( u ) {
       if ( this.xSplineDiff === null ) {
         this.xSplineDiff = this.xSpline.diff();
@@ -170,12 +171,12 @@ define( function( require ) {
       return Math.atan2( SplineEvaluation.at( this.ySplineDiff, u ), SplineEvaluation.at( this.xSplineDiff, u ) );
     },
 
-    //For purposes of showing the skater angle, get the model angle of the track here.
-    //This is called every step while animating on the track, so it was optimized to avoid new allocations
+    //Get the model unit vector at the specified position on the track
     getUnitNormalVector: function( u ) {
       return Vector2.createPolar( 1, this.getModelAngleAt( u ) + Math.PI / 2 );
     },
 
+    //Get the model parallel vector at the specified position on the track
     getUnitParallelVector: function( u ) {
       return Vector2.createPolar( 1, this.getModelAngleAt( u ) );
     },
