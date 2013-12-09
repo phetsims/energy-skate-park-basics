@@ -475,7 +475,7 @@ define( function( require ) {
       var newSkaterState = targetState.update( {} );
       var e0 = skaterState.getTotalEnergy();
       var mass = skaterState.mass;
-      var unit = newSkaterState.track.getUnitParallelVector( newSkaterState.u ).normalized();
+      var unit = newSkaterState.track.getUnitParallelVector( newSkaterState.u );
 
       //Binary search, but bail after too many iterations
       for ( var i = 0; i < 100; i++ ) {
