@@ -586,7 +586,7 @@ define( function( require ) {
         var newVelocity = v * getSign( newState.uD );
         var fixedState = newState.update( {
           uD: newVelocity,
-          velocity: newState.track.getUnitParallelVector( newState.u ).normalized().times( newVelocity )
+          velocity: newState.track.getUnitParallelVector( newState.u ).times( newVelocity )
         } );
         debug.log( "Set velocity to match energy, when energy was low: " );
         debug.log( "INC changed velocity: dE=" + ( fixedState.getTotalEnergy() - e0 ) );
