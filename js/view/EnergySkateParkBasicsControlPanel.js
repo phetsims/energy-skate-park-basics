@@ -111,7 +111,7 @@ define( function( require ) {
 
     //Create an icon for the speedometer check box
     createSpeedometerIcon: function() {
-      var node = new GaugeNode( new Property( 0 ), speedString, {min: 0, max: 10} );
+      var node = new GaugeNode( new Property( 0 ), speedString, {min: 0, max: 10, pickable: false} );
       node.scale( 20 / node.width );
       return node;
     }
