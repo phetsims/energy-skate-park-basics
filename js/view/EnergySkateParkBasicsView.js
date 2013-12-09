@@ -117,6 +117,7 @@ define( function( require ) {
     this.addChild( pieChartLegend );
 
     var speedometerNode = new GaugeNode( model.skater.speedProperty, speedString, {min: 0, max: 20, pickable: false, gaugeVisibleProperty: model.speedometerVisibleProperty} );
+    model.speedometerVisibleProperty.linkAttribute( speedometerNode, 'visible' );
     speedometerNode.centerX = this.layoutBounds.centerX;
     speedometerNode.top = this.layoutBounds.minY + 5;
     this.addChild( speedometerNode );
