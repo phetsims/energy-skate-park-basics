@@ -365,7 +365,9 @@ define( function( require ) {
       var u = skaterState.u;
 
       var netForce = this.getNetForceWithoutNormal( skaterState, Vector2.createFromPool( 0, 0 ) );
-      var a = skaterState.track.getUnitParallelVector( u ).dot( netForce ) / skaterState.mass;
+
+      //Get the net force in the direction of the track.  Dot product is a x b x cos(theta)
+      var a = netForce.magnitude() * Math.cos( skaterState.track.getModelAngleAt( u ) - netForce.angle() ) / skaterState.mass;
       netForce.freeToPool();
 
       velocity += a * dt;
@@ -485,7 +487,7 @@ define( function( require ) {
 
         //We can just set the state directly instead of calling update since we are keeping a protected clone of the newSkaterState
         newSkaterState.uD = newVelocity;
-        newSkaterState.velocity = unit.multiplyScalar( newVelocity );
+        newSkaterState.velocity = unit.times( newVelocity );
 
         if ( isApproxEqual( e0, newSkaterState.getTotalEnergy(), 1E-8 ) ) {
           break;
