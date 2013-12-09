@@ -449,7 +449,7 @@ define( function( require ) {
       else {
         var newState = skaterState;
 
-        var numDivisions = 10;//ORIGINAL ENERGY SKATE PARK BASICS HAD VALUE 10
+        var numDivisions = 10;//ORIGINAL ENERGY SKATE PARK BASICS HAD VALUE 10  //TODO: Can this be reduced to speed things up?
         for ( var i = 0; i < numDivisions; i++ ) {
           newState = this.updateEuler( dt / numDivisions, newState );
         }
