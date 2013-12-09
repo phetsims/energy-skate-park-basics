@@ -141,7 +141,6 @@ define( function( require ) {
     },
 
     //Step the model, automatically called from Joist
-    //dt has to run at 1/55.0 or less or we will have numerical problems in the integration
     step: function( dt ) {
       //If the delay makes dt too high, then truncate it.  This helps e.g. when clicking in the address bar on ipad, which gives a huge dt and problems for integration
       if ( !this.paused && !this.skater.dragging ) {
