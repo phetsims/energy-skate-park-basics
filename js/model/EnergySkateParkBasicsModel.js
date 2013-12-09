@@ -83,16 +83,18 @@ define( function( require ) {
 
       //For screens 1-2, the index of the selected scene (and track) within the screen
       this.addProperty( 'scene', 0 );
-      var parabola = [new Vector2( -4, 6 ), new Vector2( 0, 0 ), new Vector2( 4, 6 )];
-      var slope = [new Vector2( -4, 4 ), new Vector2( -2, 2 ), new Vector2( 2, 1 )];
 
-      //Move the left well up a bit since the interpolation moves it down by that much, and we don't want the skater to go to y<0 while on the track.  Numbers determined by trial and error.
-      var doubleWell = [new Vector2( -4, 5 ), new Vector2( -2, 0.0166015 ), new Vector2( 0, 2 ), new Vector2( 2, 1 ), new Vector2( 4, 5 ) ];
-      var toControlPoint = function( pt ) {return new ControlPoint( pt.x, pt.y );};
-      this.tracks.addAll( [
-        new Track( this.tracks, _.map( parabola, toControlPoint ), false ),
-        new Track( this.tracks, _.map( slope, toControlPoint ), false ),
-        new Track( this.tracks, _.map( doubleWell, toControlPoint ), false )] );
+      //Shape types
+      //For the double well, move the left well up a bit since the interpolation moves it down by that much, and we don't want the skater to go to y<0 while on the track.  Numbers determined by trial and error.
+      var parabola = [new ControlPoint( -4, 6 ), new ControlPoint( 0, 0 ), new ControlPoint( 4, 6 )];
+      var slope = [new ControlPoint( -4, 4 ), new ControlPoint( -2, 2 ), new ControlPoint( 2, 1 )];
+      var doubleWell = [new ControlPoint( -4, 5 ), new ControlPoint( -2, 0.0166015 ), new ControlPoint( 0, 2 ), new ControlPoint( 2, 1 ), new ControlPoint( 4, 5 ) ];
+
+      this.tracks.addAll(
+        [ new Track( this.tracks, parabola, false ),
+          new Track( this.tracks, slope, false ),
+          new Track( this.tracks, doubleWell, false )
+        ] );
 
       this.sceneProperty.link( function( scene ) {
         for ( var i = 0; i < model.tracks.length; i++ ) {
@@ -115,10 +117,7 @@ define( function( require ) {
         //Move the tracks over so they will be in the right position in the view coordinates, under the grass to the left of the clock controls
         //Could use view transform for this, but it would require creating the view first, so just eyeballing it for now.
         var offset = new Vector2( -5.5, -0.8 );
-        var a = new Vector2( -1, 0 ).plus( offset );
-        var b = new Vector2( 0, 0 ).plus( offset );
-        var c = new Vector2( 1, 0 ).plus( offset );
-        var controlPoints = [ new ControlPoint( a.x, a.y ), new ControlPoint( b.x, b.y ), new ControlPoint( c.x, c.y )];
+        var controlPoints = [ new ControlPoint( offset.x - 1, offset.y ), new ControlPoint( offset.x, offset.y ), new ControlPoint( offset.x + 1, offset.y )];
         this.tracks.add( new Track( this.tracks, controlPoints, true ) );
       }
     },
