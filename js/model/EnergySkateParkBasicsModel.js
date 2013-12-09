@@ -485,7 +485,7 @@ define( function( require ) {
 
         //We can just set the state directly instead of calling update since we are keeping a protected clone of the newSkaterState
         newSkaterState.uD = newVelocity;
-        newSkaterState.velocity = unit.times( newVelocity );
+        newSkaterState.velocity = unit.multiplyScalar( newVelocity );
 
         if ( isApproxEqual( e0, newSkaterState.getTotalEnergy(), 1E-8 ) ) {
           break;
