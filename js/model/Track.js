@@ -245,18 +245,18 @@ define( function( require ) {
     },
 
     /**
-     * Returns the euclidean distance between two points on a parametric curve.
+     * Returns the arc length (in meters) between two points on a parametric curve.
      * This function is at the heart of many nested loops, so it must be heavily optimized
      * @param {number} u0
      * @param {number} u1
      * @returns {number}
      */
-    getMetricDelta: function( u0, u1 ) {
+    getArcLength: function( u0, u1 ) {
       if ( u1 === u0 ) {
         return 0;
       }
       if ( u1 < u0 ) {
-        return -this.getMetricDelta( u1, u0 );
+        return -this.getArcLength( u1, u0 );
       }
 
       //TODO: Perhaps this can be reduced to improve performance
@@ -292,7 +292,7 @@ define( function( require ) {
 
       var guess = ( upperBound + lowerBound ) / 2.0;
 
-      var metricDelta = this.getMetricDelta( u0, guess );
+      var metricDelta = this.getArcLength( u0, guess );
       var epsilon = 1E-8; //ORIGINAL ENERGY SKATE PARK BASICS HAD VALUE 1E-8
 
       var count = 0;
@@ -304,7 +304,7 @@ define( function( require ) {
           lowerBound = guess;
         }
         guess = ( upperBound + lowerBound ) / 2.0;
-        metricDelta = this.getMetricDelta( u0, guess );
+        metricDelta = this.getArcLength( u0, guess );
         count++;
         if ( count > 100 ) {
           console.log( "binary search failed: count=" + count );
