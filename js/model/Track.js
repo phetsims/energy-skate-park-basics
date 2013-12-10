@@ -259,7 +259,7 @@ define( function( require ) {
         return -this.getArcLength( u1, u0 );
       }
 
-      //TODO: Perhaps this can be reduced to improve performance
+      //TODO: Perhaps this can be reduced to improve performance.  In some small-scale tests, 2 seemed fine
       var numSegments = 10;//ORIGINAL ENERGY SKATE PARK BASICS HAD VALUE 10
       var da = ( u1 - u0 ) / ( numSegments - 1 );
       var prevX = SplineEvaluation.at( this.xSpline, u0 );
