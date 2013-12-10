@@ -364,7 +364,7 @@ define( function( require ) {
 
       var netForce = this.getNetForceWithoutNormal( skaterState, Vector2.createFromPool( 0, 0 ) );
 
-      //Get the net force in the direction of the track.  Dot product is a x b x cos(theta)
+      //Get the net force in the direction of the track.  Dot product is a * b * cos(theta)
       var a = netForce.magnitude() * Math.cos( skaterState.track.getModelAngleAt( u ) - netForce.angle() ) / skaterState.mass;
       netForce.freeToPool();
 
