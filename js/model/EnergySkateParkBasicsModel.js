@@ -406,7 +406,10 @@ define( function( require ) {
             }
           }
         }
-        return newState.update( {thermalEnergy: thermalEnergy} );
+
+        //Discrepancy with original version: original version allowed drop of thermal energy here, to be fixed in the heuristic patch
+        //We have clamped it here to make it amenable to a smaller number of euler updates, to improve performance
+        return newState.update( {thermalEnergy: Math.max( thermalEnergy, skaterState.thermalEnergy )} );
       }
       else {
         return newState;
@@ -451,9 +454,9 @@ define( function( require ) {
       else {
         var newState = skaterState;
 
-        //ORIGINAL ENERGY SKATE PARK BASICS HAD VALUE 10
         //Turning this value to 5 or less causes thermal energy to decrease on some time steps
-        var numDivisions = 10;
+        //Discrepancy with original version: original version had 10 divisions here.  We have reduced it to make it more smooth and less GC
+        var numDivisions = 4;
         for ( var i = 0; i < numDivisions; i++ ) {
           newState = this.updateEuler( dt / numDivisions, newState );
         }
