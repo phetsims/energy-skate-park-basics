@@ -383,21 +383,25 @@ define( function( require ) {
         var frictionForce = this.getFrictionForce( skaterState );
         var therm = frictionForce.magnitude() * newPoint.distance( origLoc );
         thermalEnergy += therm;
-        if ( thrust.magnitude() === 0 ) {//only conserve energy if the user is not adding energy
-          if ( newState.getTotalEnergy() < origEnergy ) {
-            thermalEnergy += Math.abs( newState.getTotalEnergy() - origEnergy );//add some thermal to exactly match
-            if ( Math.abs( newState.getTotalEnergy() - origEnergy ) > 1E-6 ) {
+
+        var newTotalEnergy = newState.getTotalEnergy() + therm;
+
+        //Conserve energy, but only if the user is not adding energy
+        if ( thrust.magnitude() === 0 ) {
+          if ( newTotalEnergy < origEnergy ) {
+            thermalEnergy += Math.abs( newTotalEnergy - origEnergy );//add some thermal to exactly match
+            if ( Math.abs( newTotalEnergy - origEnergy ) > 1E-6 ) {
               debug.log( "Added thermal, dE=" + ( newState.getTotalEnergy() - origEnergy ) );
             }
           }
-          if ( newState.getTotalEnergy() > origEnergy ) {
-            if ( Math.abs( newState.getTotalEnergy() - origEnergy ) < therm ) {
+          if ( newTotalEnergy > origEnergy ) {
+            if ( Math.abs( newTotalEnergy - origEnergy ) < therm ) {
               debug.log( "gained energy, removing thermal (Would have to remove more than we gained)" );
             }
             else {
-              thermalEnergy -= Math.abs( newState.getTotalEnergy() - origEnergy );
-              if ( Math.abs( newState.getTotalEnergy() - origEnergy ) > 1E-6 ) {
-                debug.log( "Removed thermal, dE=" + ( newState.getTotalEnergy() - origEnergy ) );
+              thermalEnergy -= Math.abs( newTotalEnergy - origEnergy );
+              if ( Math.abs( newTotalEnergy - origEnergy ) > 1E-6 ) {
+                debug.log( "Removed thermal, dE=" + ( newTotalEnergy - origEnergy ) );
               }
             }
           }
