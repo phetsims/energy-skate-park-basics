@@ -522,80 +522,83 @@ define( function( require ) {
       var dE = newState.getTotalEnergy() - e0;
       if ( Math.abs( dE ) < 1E-6 ) {
         //small enough
-      }
-      if ( newState.getTotalEnergy() > e0 ) {
-        debug.log( "Energy too high" );
-        //can we reduce the velocity enough?
-        if ( Math.abs( newState.getKineticEnergy() ) > Math.abs( dE ) ) {//amount we could reduce the energy if we deleted all the kinetic energy:
-
-          //TODO: maybe should only do this if all velocity is not converted
-          debug.log( "Could fix all energy by changing velocity." );
-          var correctedStateA = this.correctEnergyReduceVelocity( skaterState, newState );
-          debug.log( "changed velocity: dE=" + ( correctedStateA.getTotalEnergy() - e0 ) );
-          if ( !isApproxEqual( e0, correctedStateA.getTotalEnergy(), 1E-8 ) ) {
-            debug.log( "Energy error[0]" );
-          }
-          return correctedStateA;
-        }
-        else {
-          debug.log( "Not enough KE to fix with velocity alone: normal:" );
-          debug.log( "changed position u: dE=" + ( newState.getTotalEnergy() - e0 ) );
-          //search for a place between u and u0 with a better energy
-
-          var numRecursiveSearches = 10;
-          var u = newState.u;
-          var bestAlpha = ( u + u0 ) / 2.0;
-          var da = ( u - u0 ) / 2;
-          for ( var i = 0; i < numRecursiveSearches; i++ ) {
-            var numSteps = 10;
-            bestAlpha = this.searchSplineForEnergy( newState, bestAlpha - da, bestAlpha + da, e0, numSteps );
-            da = ( ( bestAlpha - da ) - ( bestAlpha + da ) ) / numSteps;
-          }
-
-          var correctedState = newState.update( {
-            u: bestAlpha,
-            position: newState.track.getPoint( bestAlpha )
-          } );
-          debug.log( "changed position u: dE=" + ( correctedState.getTotalEnergy() - e0 ) );
-          if ( !isApproxEqual( e0, correctedState.getTotalEnergy(), 1E-8 ) ) {
-            if ( Math.abs( correctedState.getKineticEnergy() ) > Math.abs( dE ) ) {//amount we could reduce the energy if we deleted all the kinetic energy:
-
-              //TODO: maybe should only do this if all velocity is not converted
-              debug.log( "Fixed position some, still need to fix velocity as well." );
-              var correctedState2 = this.correctEnergyReduceVelocity( skaterState, correctedState );
-              if ( !isApproxEqual( e0, correctedState2.getTotalEnergy(), 1E-8 ) ) {
-                debug.log( "Changed position & Velocity and still had energy error" );
-                debug.log( "Energy error[123]" );
-              }
-              return correctedState2;
-            }
-            else {
-
-              //TODO: removed this logging output, but this case can still occur, especially with friction turned on
-              debug.log( "Changed position, wanted to change velocity, but didn't have enough to fix it..., dE=" + ( newState.getTotalEnergy() - e0 ) );
-            }
-          }
-          return correctedState;
-        }
+        return newState;
       }
       else {
-        if ( isNaN( newState.getTotalEnergy() ) ) { throw new Error( 'nan' );}
-        debug.log( "Energy too low" );
-        //increasing the kinetic energy
-        //Choose the exact velocity in the same direction as current velocity to ensure total energy conserved.
-        var vSq = Math.abs( 2 / newState.mass * ( e0 - newState.getPotentialEnergy() - newState.thermalEnergy ) );
-        var v = Math.sqrt( vSq );
-        var newVelocity = v * getSign( newState.uD );
-        var fixedState = newState.update( {
-          uD: newVelocity,
-          velocity: newState.track.getUnitParallelVector( newState.u ).multiplyScalar( newVelocity )
-        } );
-        debug.log( "Set velocity to match energy, when energy was low: " );
-        debug.log( "INC changed velocity: dE=" + ( fixedState.getTotalEnergy() - e0 ) );
-        if ( !isApproxEqual( e0, fixedState.getTotalEnergy(), 1E-8 ) ) {
-          new Error( "Energy error[2]" ).printStackTrace();
+        if ( newState.getTotalEnergy() > e0 ) {
+          debug.log( "Energy too high" );
+          //can we reduce the velocity enough?
+          if ( Math.abs( newState.getKineticEnergy() ) > Math.abs( dE ) ) {//amount we could reduce the energy if we deleted all the kinetic energy:
+
+            //TODO: maybe should only do this if all velocity is not converted
+            debug.log( "Could fix all energy by changing velocity." );
+            var correctedStateA = this.correctEnergyReduceVelocity( skaterState, newState );
+            debug.log( "changed velocity: dE=" + ( correctedStateA.getTotalEnergy() - e0 ) );
+            if ( !isApproxEqual( e0, correctedStateA.getTotalEnergy(), 1E-8 ) ) {
+              debug.log( "Energy error[0]" );
+            }
+            return correctedStateA;
+          }
+          else {
+            debug.log( "Not enough KE to fix with velocity alone: normal:" );
+            debug.log( "changed position u: dE=" + ( newState.getTotalEnergy() - e0 ) );
+            //search for a place between u and u0 with a better energy
+
+            var numRecursiveSearches = 10;
+            var u = newState.u;
+            var bestAlpha = ( u + u0 ) / 2.0;
+            var da = ( u - u0 ) / 2;
+            for ( var i = 0; i < numRecursiveSearches; i++ ) {
+              var numSteps = 10;
+              bestAlpha = this.searchSplineForEnergy( newState, bestAlpha - da, bestAlpha + da, e0, numSteps );
+              da = ( ( bestAlpha - da ) - ( bestAlpha + da ) ) / numSteps;
+            }
+
+            var correctedState = newState.update( {
+              u: bestAlpha,
+              position: newState.track.getPoint( bestAlpha )
+            } );
+            debug.log( "changed position u: dE=" + ( correctedState.getTotalEnergy() - e0 ) );
+            if ( !isApproxEqual( e0, correctedState.getTotalEnergy(), 1E-8 ) ) {
+              if ( Math.abs( correctedState.getKineticEnergy() ) > Math.abs( dE ) ) {//amount we could reduce the energy if we deleted all the kinetic energy:
+
+                //TODO: maybe should only do this if all velocity is not converted
+                debug.log( "Fixed position some, still need to fix velocity as well." );
+                var correctedState2 = this.correctEnergyReduceVelocity( skaterState, correctedState );
+                if ( !isApproxEqual( e0, correctedState2.getTotalEnergy(), 1E-8 ) ) {
+                  debug.log( "Changed position & Velocity and still had energy error" );
+                  debug.log( "Energy error[123]" );
+                }
+                return correctedState2;
+              }
+              else {
+
+                //TODO: removed this logging output, but this case can still occur, especially with friction turned on
+                debug.log( "Changed position, wanted to change velocity, but didn't have enough to fix it..., dE=" + ( newState.getTotalEnergy() - e0 ) );
+              }
+            }
+            return correctedState;
+          }
         }
-        return fixedState;
+        else {
+          if ( isNaN( newState.getTotalEnergy() ) ) { throw new Error( 'nan' );}
+          debug.log( "Energy too low" );
+          //increasing the kinetic energy
+          //Choose the exact velocity in the same direction as current velocity to ensure total energy conserved.
+          var vSq = Math.abs( 2 / newState.mass * ( e0 - newState.getPotentialEnergy() - newState.thermalEnergy ) );
+          var v = Math.sqrt( vSq );
+          var newVelocity = v * getSign( newState.uD );
+          var fixedState = newState.update( {
+            uD: newVelocity,
+            velocity: newState.track.getUnitParallelVector( newState.u ).multiplyScalar( newVelocity )
+          } );
+          debug.log( "Set velocity to match energy, when energy was low: " );
+          debug.log( "INC changed velocity: dE=" + ( fixedState.getTotalEnergy() - e0 ) );
+          if ( !isApproxEqual( e0, fixedState.getTotalEnergy(), 1E-8 ) ) {
+            new Error( "Energy error[2]" ).printStackTrace();
+          }
+          return fixedState;
+        }
       }
     },
 
