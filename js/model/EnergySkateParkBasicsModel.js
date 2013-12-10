@@ -447,7 +447,9 @@ define( function( require ) {
       else {
         var newState = skaterState;
 
-        var numDivisions = 10;//ORIGINAL ENERGY SKATE PARK BASICS HAD VALUE 10  //TODO: Can this be reduced to speed things up?
+        //ORIGINAL ENERGY SKATE PARK BASICS HAD VALUE 10
+        //Turning this value to 5 or less causes thermal energy to decrease on some time steps
+        var numDivisions = 10;
         for ( var i = 0; i < numDivisions; i++ ) {
           newState = this.updateEuler( dt / numDivisions, newState );
         }
