@@ -32,13 +32,12 @@ define( function( require ) {
 
     //Update the position and angle.  Normally the angle would only change if the position has also changed, so no need for a duplicate callback there
     this.skater.multilink( ['mass', 'position', 'direction', 'up' ], function( mass, position, direction, up ) {
-      var matrix = Matrix3.IDENTITY;
 
       var view = modelViewTransform.modelToViewPosition( position );
       var displayAngle = skater.angle + (up ? 0 : Math.PI );
 
       //Translate to the desired location
-      matrix = matrix.multiplyMatrix( Matrix3.translation( view.x, view.y ) );
+      var matrix = Matrix3.translation( view.x, view.y );
 
       //Rotation and translation can happen in any order
       matrix = matrix.multiplyMatrix( Matrix3.rotation2( displayAngle ) );
