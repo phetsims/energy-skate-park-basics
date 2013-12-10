@@ -48,7 +48,7 @@ define( function( require ) {
       new HBox( {spacing: 10, children: [thermalBar, thermalLabel, undoButton]} )
     ]} );
 
-    Panel.call( this, contentNode, { x: 10, y: 10, xMargin: 10, yMargin: 10, fill: 'white', stroke: 'gray', lineWidth: 1, resize: false, cursor: 'pointer', backgroundPickable: true} );
+    Panel.call( this, contentNode, { x: 10, y: 10, xMargin: 10, yMargin: 10, fill: 'white', stroke: 'gray', lineWidth: 1, resize: false, cursor: 'pointer'} );
 
     model.pieChartVisibleProperty.linkAttribute( this, 'visible' );
   }

@@ -127,15 +127,16 @@ define( function( require ) {
     this.controlPanel.right = this.layoutBounds.width - 5;
     this.controlPanel.top = 5;
 
-    //center the pie chart legend between the control panel and speedometer
-    pieChartLegend.mutate( {top: this.controlPanel.top, right: this.controlPanel.left - 9} );
-
     //Determine if the skater is onscreen or offscreen for purposes of highlighting the 'return skater' button.
     var onscreenProperty = new DerivedProperty( [model.skater.positionProperty], function( position ) {
       return view.availableModelBounds && view.availableModelBounds.containsPoint( position );
     } );
 
-    this.addChild( new BarGraphNode( model ) );
+    var barGraphNode = new BarGraphNode( model );
+    this.addChild( barGraphNode );
+
+    //align the pie chart legend to the immediate right of the bar graph
+    pieChartLegend.mutate( {top: barGraphNode.top, left: barGraphNode.right + 2} );
 
     var playPauseControl = new PlayPauseControlPanel( model, {x: 0, y: 0} );
     this.addChild( playPauseControl.mutate( {centerX: this.layoutBounds.centerX + playPauseControl.playButton.width / 2, bottom: this.layoutBounds.maxY - 10} ) );
