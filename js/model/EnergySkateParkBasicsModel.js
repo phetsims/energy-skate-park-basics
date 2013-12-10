@@ -353,7 +353,7 @@ define( function( require ) {
       return Vector2.createPolar( normalForce, curvatureDirection.angle() );
     },
 
-    //Use an Euler integration step to move the skater along the track in Euclidean space
+    //Use an Euler integration step to move the skater along the track
     updateEuler: function( dt, skaterState ) {
       var track = skaterState.track;
       var origEnergy = skaterState.getTotalEnergy();
