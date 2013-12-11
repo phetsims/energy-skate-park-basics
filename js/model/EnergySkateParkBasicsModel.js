@@ -196,14 +196,14 @@ define( function( require ) {
     //Find the closest track to the skater, to see what he can bounce off of or attach to, and return the closest point on that track took
     getClosestTrackAndPositionAndParameter: function( position, physicalTracks ) {
       var closestTrack = null;
-      var closestDistance = null;
       var closestMatch = null;
+      var closestDistance = Number.POSITIVE_INFINITY;
       for ( var i = 0; i < physicalTracks.length; i++ ) {
         var track = physicalTracks[i];
 
         //PERFORMANCE/ALLOCATION maybe get closest point shouldn't return a new object allocation each time, or use pooling for it, or pass in reference as an arg?
         var bestMatch = track.getClosestPositionAndParameter( position );
-        if ( closestDistance === null || bestMatch.distance < closestDistance ) {
+        if ( bestMatch.distance < closestDistance ) {
           closestDistance = bestMatch.distance;
           closestTrack = track;
           closestMatch = bestMatch;
@@ -395,7 +395,6 @@ define( function( require ) {
             }
           }
           if ( newTotalEnergy > origEnergy ) {
-            debugger;
             if ( Math.abs( newTotalEnergy - origEnergy ) < therm ) {
               debug.log( "gained energy, removing thermal (Would have to remove more than we gained)" );
             }

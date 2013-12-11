@@ -101,9 +101,14 @@ define( function( require ) {
             //make skater upright if not near the track
             skater.angle = 0;
             skater.up = true;
+
+            skater.position = position;
           }
 
-          skater.position = position;
+          else {
+            skater.position = targetTrack.getPoint( targetU );
+          }
+
           skater.updateEnergy();
         },
 
@@ -111,9 +116,12 @@ define( function( require ) {
           skater.dragging = false;
           skater.velocity = new Vector2( 0, 0 );
           skater.uD = 0;
-          skater.startingPosition = new Vector2( skater.position.x, skater.position.y );
           skater.track = targetTrack;
           skater.u = targetU;
+          if ( targetTrack ) {
+            skater.position = targetTrack.getPoint( skater.u );
+          }
+          skater.startingPosition = skater.position.copy();
           skater.startingU = targetU;
           skater.startingTrack = targetTrack;
 

@@ -150,15 +150,18 @@ define( function( require ) {
           bottomU = bottomU + (topU - bottomU) / 4;  //move halfway up
           bottomX = SplineEvaluation.at( this.xSpline, bottomU );
           bottomY = SplineEvaluation.at( this.ySpline, bottomU );
+          bestDistanceSquared = topDistanceSquared;
         }
         else {
           topU = topU - (topU - bottomU) / 4;  //move halfway down
           topX = SplineEvaluation.at( this.xSpline, topU );
           topY = SplineEvaluation.at( this.ySpline, topU );
+          bestDistanceSquared = bottomDistanceSquared;
         }
       }
-      bestPoint.x = SplineEvaluation.at( this.xSpline, (topU + bottomU) / 2 );
-      bestPoint.y = SplineEvaluation.at( this.ySpline, (topU + bottomU) / 2 );
+      bestU = (topU + bottomU) / 2;
+      bestPoint.x = SplineEvaluation.at( this.xSpline, bestU );
+      bestPoint.y = SplineEvaluation.at( this.ySpline, bestU );
 
       return {u: bestU, point: bestPoint, distance: bestDistanceSquared};
     },
