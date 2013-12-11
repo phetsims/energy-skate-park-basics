@@ -12,7 +12,6 @@ define( function( require ) {
   var PropertySet = require( 'AXON/PropertySet' );
   var Property = require( 'AXON/Property' );
   var Vector2 = require( 'DOT/Vector2' );
-  var circularRegression = require( 'ENERGY_SKATE_PARK_BASICS/model/circularRegression' );
   var SplineEvaluation = require( 'ENERGY_SKATE_PARK_BASICS/model/SplineEvaluation' );
 
   /**
@@ -84,6 +83,9 @@ define( function( require ) {
       //Mark derivatives as dirty
       track.xSplineDiff = null;
       track.ySplineDiff = null;
+
+      track.xSplineDiffDiff = null;
+      track.ySplineDiffDiff = null;
     };
 
     this.updateSplines();
@@ -351,12 +353,33 @@ define( function( require ) {
       return guess - u0;
     },
 
-    //TODO: avoid Vector2 alloc, perhaps write a customized 3-point circular regression
+    //Compute the signed curvature as defined here: http://en.wikipedia.org/wiki/Curvature#Local_expressions
+    //Used for centripetal force and determining whether the skater flies off the track
     getCurvature: function( u ) {
-      return circularRegression( [
-        new Vector2( this.getX( u ), this.getY( u ) ),
-        new Vector2( this.getX( u - 1E-6 ), this.getY( u - 1E-6 ) ),
-        new Vector2( this.getX( u + 1E-6 ), this.getY( u + 1E-6 ) )] );
+
+      if ( this.xSplineDiff === null ) {
+        this.xSplineDiff = this.xSpline.diff();
+        this.ySplineDiff = this.ySpline.diff();
+      }
+
+      if ( this.xSplineDiffDiff === null ) {
+        this.xSplineDiffDiff = this.xSplineDiff.diff();
+        this.ySplineDiffDiff = this.ySplineDiff.diff();
+      }
+
+      var xP = SplineEvaluation.at( this.xSplineDiff, u );
+      var xPP = SplineEvaluation.at( this.xSplineDiffDiff, u );
+      var yP = SplineEvaluation.at( this.ySplineDiff, u );
+      var yPP = SplineEvaluation.at( this.ySplineDiffDiff, u );
+
+      var k = (xP * yPP - yP * xPP) /
+              Math.pow( (xP * xP + yP * yP), 3 / 2 );
+
+      var center = this.getPoint( u );
+
+      var vector = this.getUnitNormalVector( u ).multiplyScalar( 1 / k ).add( center );
+
+      return {r: 1 / k, x: vector.x, y: vector.y};
     }
   } );
 } );
