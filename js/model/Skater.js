@@ -86,11 +86,15 @@ define( function( require ) {
     //Zero the kinetic energy when dragging, see https://github.com/phetsims/energy-skate-park-basics/issues/22
     this.draggingProperty.link( function( dragging ) { if ( dragging ) { skater.velocity = new Vector2( 0, 0 ); } } );
 
-    this.uDProperty.link( function( uD ) {
-      if ( uD > 0 ) {
+    this.link( 'uD', function( uD ) {
+
+      //Require the skater to overcome a speed threshold so he won't toggle back and forth rapidly at the bottom of a well with friction, see #51
+      var speedThreshold = 0.01;
+
+      if ( uD > speedThreshold ) {
         skater.direction = 'right';
       }
-      else if ( uD < 0 ) {
+      else if ( uD < -speedThreshold ) {
         skater.direction = 'left';
       }
       else {
