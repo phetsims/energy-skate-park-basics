@@ -115,19 +115,51 @@ define( function( require ) {
         this.ySearchPoints = SplineEvaluation.at( this.ySpline, this.searchLinSpace );
       }
 
-      var bestT = 0;
-      var best = Number.POSITIVE_INFINITY;
-      var bestPt = new Vector2( 0, 0 );
+      var bestU = 0;
+      var bestDistanceSquared = Number.POSITIVE_INFINITY;
+      var bestPoint = new Vector2( 0, 0 );
       for ( var i = 0; i < this.xSearchPoints.length; i++ ) {
-        var dist = point.distanceXY( this.xSearchPoints[i], this.ySearchPoints[i] );
-        if ( dist < best ) {
-          best = dist;
-          bestT = this.searchLinSpace[i];
-          bestPt.x = this.xSearchPoints[i];
-          bestPt.y = this.ySearchPoints[i];
+        var distanceSquared = point.distanceSquaredXY( this.xSearchPoints[i], this.ySearchPoints[i] );
+        if ( distanceSquared < bestDistanceSquared ) {
+          bestDistanceSquared = distanceSquared;
+          bestU = this.searchLinSpace[i];
+          bestPoint.x = this.xSearchPoints[i];
+          bestPoint.y = this.ySearchPoints[i];
         }
       }
-      return {u: bestT, point: bestPt, distance: best};
+
+      //Binary search in the neighborhood of the best point, to refine the search
+      var distanceBetweenSearchPoints = Math.abs( this.xSearchPoints[1] - this.xSearchPoints[0] );
+      var topU = bestU + distanceBetweenSearchPoints / 2;
+      var bottomU = bestU - distanceBetweenSearchPoints / 2;
+
+      var topX = SplineEvaluation.at( this.xSpline, topU );
+      var topY = SplineEvaluation.at( this.ySpline, topU );
+
+      var bottomX = SplineEvaluation.at( this.xSpline, bottomU );
+      var bottomY = SplineEvaluation.at( this.ySpline, bottomU );
+
+      var maxBinarySearchIterations = 40;
+      for ( i = 0; i < maxBinarySearchIterations; i++ ) {
+
+        var topDistanceSquared = point.distanceSquaredXY( topX, topY );
+        var bottomDistanceSquared = point.distanceSquaredXY( bottomX, bottomY );
+
+        if ( topDistanceSquared < bottomDistanceSquared ) {
+          bottomU = bottomU + (topU - bottomU) / 4;  //move halfway up
+          bottomX = SplineEvaluation.at( this.xSpline, bottomU );
+          bottomY = SplineEvaluation.at( this.ySpline, bottomU );
+        }
+        else {
+          topU = topU - (topU - bottomU) / 4;  //move halfway down
+          topX = SplineEvaluation.at( this.xSpline, topU );
+          topY = SplineEvaluation.at( this.ySpline, topU );
+        }
+      }
+      bestPoint.x = SplineEvaluation.at( this.xSpline, (topU + bottomU) / 2 );
+      bestPoint.y = SplineEvaluation.at( this.ySpline, (topU + bottomU) / 2 );
+
+      return {u: bestU, point: bestPoint, distance: bestDistanceSquared};
     },
 
     getX: function( u ) { return SplineEvaluation.at( this.xSpline, u ); },
