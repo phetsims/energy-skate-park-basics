@@ -354,12 +354,12 @@ define( function( require ) {
     },
 
     //Use an Euler integration step to move the skater along the track
-    updateEuler: function( dt, skaterState ) {
+    stepEuler: function( dt, skaterState ) {
       var track = skaterState.track;
       var origEnergy = skaterState.getTotalEnergy();
       var origLoc = skaterState.position;
       var thermalEnergy = skaterState.thermalEnergy;
-      var velocity = skaterState.uD;
+      var uD = skaterState.uD;
       var u = skaterState.u;
 
       var netForce = this.getNetForceWithoutNormal( skaterState, Vector2.createFromPool( 0, 0 ) );
@@ -368,15 +368,15 @@ define( function( require ) {
       var a = netForce.magnitude() * Math.cos( skaterState.track.getModelAngleAt( u ) - netForce.angle() ) / skaterState.mass;
       netForce.freeToPool();
 
-      velocity += a * dt;
-      u += track.getParametricDistance( u, velocity * dt + 1 / 2 * a * dt * dt );
+      uD += a * dt;
+      u += track.getParametricDistance( u, uD * dt + 1 / 2 * a * dt * dt );
       var newPoint = skaterState.track.getPoint( u );
       var newState = skaterState.update( {
         u: u,
-        uD: velocity,
+        uD: uD,
 
-        //TODO: choose velocity by using the unit parallel vector to the track, not by sampling deltas
-        velocity: new Vector2( (newPoint.x - skaterState.position.x) / dt, (newPoint.y - skaterState.position.y) / dt ),
+        //choose velocity by using the unit parallel vector to the track
+        velocity: skaterState.track.getUnitParallelVector( u ).multiplyScalar( uD ),
         position: newPoint
       } );
       if ( this.friction > 0 ) {
@@ -395,6 +395,7 @@ define( function( require ) {
             }
           }
           if ( newTotalEnergy > origEnergy ) {
+            debugger;
             if ( Math.abs( newTotalEnergy - origEnergy ) < therm ) {
               debug.log( "gained energy, removing thermal (Would have to remove more than we gained)" );
             }
@@ -458,7 +459,7 @@ define( function( require ) {
         //Discrepancy with original version: original version had 10 divisions here.  We have reduced it to make it more smooth and less GC
         var numDivisions = 4;
         for ( var i = 0; i < numDivisions; i++ ) {
-          newState = this.updateEuler( dt / numDivisions, newState );
+          newState = this.stepEuler( dt / numDivisions, newState );
         }
 
         //Correct energy
