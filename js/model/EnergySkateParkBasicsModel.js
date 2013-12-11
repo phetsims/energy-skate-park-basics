@@ -369,7 +369,7 @@ define( function( require ) {
       netForce.freeToPool();
 
       velocity += a * dt;
-      u += track.getFractionalDistance( u, velocity * dt + 1 / 2 * a * dt * dt );
+      u += track.getParametricDistance( u, velocity * dt + 1 / 2 * a * dt * dt );
       var newPoint = skaterState.track.getPoint( u );
       var newState = skaterState.update( {
         u: u,

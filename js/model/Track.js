@@ -319,7 +319,7 @@ define( function( require ) {
      * @param {number} ds meters to traverse along the track
      * @returns {number}
      */
-    getFractionalDistance: function( u0, ds ) {
+    getParametricDistance: function( u0, ds ) {
       var lowerBound = -1;
       var upperBound = 2;
 
