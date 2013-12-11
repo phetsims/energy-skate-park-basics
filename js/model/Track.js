@@ -139,6 +139,7 @@ define( function( require ) {
       var bottomX = SplineEvaluation.at( this.xSpline, bottomU );
       var bottomY = SplineEvaluation.at( this.ySpline, bottomU );
 
+      //Even at 400 binary search iterations, performance is smooth on iPad3, so this loop doesn't seem too invasive
       var maxBinarySearchIterations = 40;
       for ( i = 0; i < maxBinarySearchIterations; i++ ) {
 
