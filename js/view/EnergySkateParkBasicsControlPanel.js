@@ -58,12 +58,12 @@ define( function( require ) {
     var options = {boxWidth: 18};
 
     var checkBoxChildren = [
-      new CheckBox( new HBox( {children: pad( barGraphSet )} ), model.barGraphVisibleProperty, options ),
-      new CheckBox( new HBox( {children: pad( pieChartSet )} ), model.pieChartVisibleProperty, options ),
-      new CheckBox( new HBox( {children: pad( gridSet )} ), model.gridVisibleProperty, options ),
-      new CheckBox( new HBox( {children: pad( speedometerSet )} ), model.speedometerVisibleProperty, options )];
+      new CheckBox( new HBox( {children: pad( barGraphSet )} ), model.property( 'barGraphVisible' ), options ),
+      new CheckBox( new HBox( {children: pad( pieChartSet )} ), model.property( 'pieChartVisible' ), options ),
+      new CheckBox( new HBox( {children: pad( gridSet )} ), model.property( 'gridVisible' ), options ),
+      new CheckBox( new HBox( {children: pad( speedometerSet )} ), model.property( 'speedometerVisible' ), options )];
     if ( model.frictionAllowed ) {
-      checkBoxChildren.push( new CheckBox( new HBox( {children: pad( stickToTrackSet )} ), model.stickToTrackProperty, options ) );
+      checkBoxChildren.push( new CheckBox( new HBox( {children: pad( stickToTrackSet )} ), model.property( 'stickToTrack' ), options ) );
     }
     var checkBoxes = new VBox( {align: 'left', spacing: 10, children: checkBoxChildren} );
 
