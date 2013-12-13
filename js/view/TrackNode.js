@@ -220,7 +220,11 @@ define( function( require ) {
                 var globalPoint = controlPointNode.globalToParentPoint( event.pointer.point );
 
                 //trigger reconstruction of the track shape based on the control points
-                controlPoint.sourcePosition = modelViewTransform.viewToModelPosition( globalPoint );
+                var pt = modelViewTransform.viewToModelPosition( globalPoint );
+
+                //Constrain the control points to remain in y>0, see #71
+                pt.y = Math.max( pt.y, 0 );
+                controlPoint.sourcePosition = pt;
 
                 if ( isEndPoint ) {
                   //If one of the control points is close enough to link to another track, do so
