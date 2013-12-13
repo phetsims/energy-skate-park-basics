@@ -267,7 +267,6 @@ define( function( require ) {
             var newSpeed = Math.sqrt( 2 * newKE / skaterState.mass );
             var uD = (dot > 0 ? +1 : -1) * newSpeed;
             var up = beforeVector.dot( normal ) > 0;
-            console.log( 'up', up );
             var direction = dot > 0 ? 'right' : 'left';
             if ( !up ) {
               direction = (direction === 'right' ? 'left' : 'right');
