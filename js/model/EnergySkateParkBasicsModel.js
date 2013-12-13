@@ -229,61 +229,63 @@ define( function( require ) {
       if ( !track.isParameterInBounds( u ) ) {
         return this.continueFreeFall( skaterState, initialEnergy, proposedPosition, proposedVelocity );
       }
-      var normal = track.getUnitNormalVector( u );
-      var segment = normal.perpendicular();
-
-      var beforeSign = normal.dot( skaterState.position.minus( pt ) ) > 0;
-      var afterSign = normal.dot( proposedPosition.minus( pt ) ) > 0;
-      if ( beforeSign !== afterSign ) {
-
-        //reflect the velocity vector
-        //http://www.gamedev.net/topic/165537-2d-vector-reflection-/
-
-        //Possible heisenbug workaround
-        var allOK = proposedVelocity && proposedVelocity.minus && normal.times && normal.dot;
-
-        var bounceVelocity = allOK ? proposedVelocity.minus( normal.times( 2 * normal.dot( proposedVelocity ) ) ) : new Vector2( 0, 1 );
-
-        //Attach to track if velocity is close enough to parallel to the track
-        var dot = proposedVelocity.normalized().dot( segment );
-
-        //If friction is allowed, then bounce with elasticity <1.
-        //If friction is not allowed, then bounce with elasticity = 1.
-        if ( Math.abs( dot ) < 0.6 ) {
-          return skaterState.update( {velocity: bounceVelocity} );
-        }
-        else {
-
-          //Gain some thermal energy in the landing, but not too much!
-          //dot product of 0 converts to 0% thermal
-          //dot product of 0.6 converts to 10% thermal
-          //More than 0.6 is a bounce
-          var fractionOfKEToConvertToThermal = new LinearFunction( 0, 0.6, 0, 0.1 )( Math.abs( dot ) );
-
-          var KE = 0.5 * proposedVelocity.magnitudeSquared() * skaterState.mass;
-          var addedThermalEnergy = KE * fractionOfKEToConvertToThermal;
-          var newKE = KE - addedThermalEnergy;
-          var newSpeed = Math.sqrt( 2 * newKE / skaterState.mass );
-          var uD = (dot > 0 ? +1 : -1) * newSpeed;
-
-          var newThermalEnergy = skaterState.thermalEnergy + addedThermalEnergy;
-          if ( isNaN( newThermalEnergy ) ) { throw new Error( "nan" ); }
-          var result = skaterState.update( {
-            thermalEnergy: newThermalEnergy,
-            track: track,
-            u: u,
-            uD: uD,
-            velocity: proposedVelocity.normalized().timesScalar( Math.abs( uD ) ),
-            position: track.getPoint( u )
-          } );
-
-          return this.correctEnergyReduceVelocity( skaterState, result );
-        }
-      }
-
-      //It just continued in free fall
       else {
-        return this.continueFreeFall( skaterState, initialEnergy, proposedPosition, proposedVelocity );
+        var normal = track.getUnitNormalVector( u );
+        var segment = normal.perpendicular();
+
+        var beforeSign = normal.dot( skaterState.position.minus( pt ) ) > 0;
+        var afterSign = normal.dot( proposedPosition.minus( pt ) ) > 0;
+        if ( beforeSign !== afterSign ) {
+
+          //reflect the velocity vector
+          //http://www.gamedev.net/topic/165537-2d-vector-reflection-/
+
+          //Possible heisenbug workaround
+          var allOK = proposedVelocity && proposedVelocity.minus && normal.times && normal.dot;
+
+          var bounceVelocity = allOK ? proposedVelocity.minus( normal.times( 2 * normal.dot( proposedVelocity ) ) ) : new Vector2( 0, 1 );
+
+          //Attach to track if velocity is close enough to parallel to the track
+          var dot = proposedVelocity.normalized().dot( segment );
+
+          //If friction is allowed, then bounce with elasticity <1.
+          //If friction is not allowed, then bounce with elasticity = 1.
+          if ( Math.abs( dot ) < 0.6 ) {
+            return skaterState.update( {velocity: bounceVelocity} );
+          }
+          else {
+
+            //Gain some thermal energy in the landing, but not too much!
+            //dot product of 0 converts to 0% thermal
+            //dot product of 0.6 converts to 10% thermal
+            //More than 0.6 is a bounce
+            var fractionOfKEToConvertToThermal = new LinearFunction( 0, 0.6, 0, 0.1 )( Math.abs( dot ) );
+
+            var KE = 0.5 * proposedVelocity.magnitudeSquared() * skaterState.mass;
+            var addedThermalEnergy = KE * fractionOfKEToConvertToThermal;
+            var newKE = KE - addedThermalEnergy;
+            var newSpeed = Math.sqrt( 2 * newKE / skaterState.mass );
+            var uD = (dot > 0 ? +1 : -1) * newSpeed;
+
+            var newThermalEnergy = skaterState.thermalEnergy + addedThermalEnergy;
+            if ( isNaN( newThermalEnergy ) ) { throw new Error( "nan" ); }
+            var result = skaterState.update( {
+              thermalEnergy: newThermalEnergy,
+              track: track,
+              u: u,
+              uD: uD,
+              velocity: proposedVelocity.normalized().timesScalar( Math.abs( uD ) ),
+              position: track.getPoint( u )
+            } );
+
+            return this.correctEnergyReduceVelocity( skaterState, result );
+          }
+        }
+
+        //It just continued in free fall
+        else {
+          return this.continueFreeFall( skaterState, initialEnergy, proposedPosition, proposedVelocity );
+        }
       }
     },
 
