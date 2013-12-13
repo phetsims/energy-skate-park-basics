@@ -135,8 +135,8 @@ define( function( require ) {
     var barGraphNode = new BarGraphNode( model );
     this.addChild( barGraphNode );
 
-    //align the pie chart legend to the immediate right of the bar graph
-    pieChartLegend.mutate( {top: barGraphNode.top, left: barGraphNode.right + 2} );
+    //Center the pie chart legend between the bar chart and speedometer, see #60
+    pieChartLegend.mutate( {top: barGraphNode.top, centerX: (barGraphNode.right + speedometerNode.left) / 2} );
 
     var playPauseControl = new PlayPauseControlPanel( model, {x: 0, y: 0} );
     this.addChild( playPauseControl.mutate( {centerX: this.layoutBounds.centerX + playPauseControl.playButton.width / 2, bottom: this.layoutBounds.maxY - 10} ) );
