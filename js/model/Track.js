@@ -227,7 +227,9 @@ define( function( require ) {
 
       //Store for performance
       //made number of sample points depend on the length of the track, to make it smooth enough no matter how long it is
-      this.searchLinSpace = numeric.linspace( prePoint, postPoint, 20 * (this.controlPoints.length - 1) );
+      var n = 20 * (this.controlPoints.length - 1);
+      this.searchLinSpace = numeric.linspace( prePoint, postPoint, n );
+      this.distanceBetweenSamplePoints = (postPoint - prePoint) / n;
     },
 
     //Detect whether a parametric point is in bounds of this track, for purposes of telling whether the skater fell past the edge of the track
@@ -391,6 +393,52 @@ define( function( require ) {
       var vector = this.getUnitNormalVector( u ).multiplyScalar( 1 / k ).add( center );
 
       return {r: 1 / k, x: vector.x, y: vector.y};
+    },
+
+    //Find the lowest y-point on the spline by sampling, used when dropping the track or a control point to ensure it won't go below y=0
+    getLowestY: function() {
+      if ( !this.xSearchPoints ) {
+        this.xSearchPoints = SplineEvaluation.at( this.xSpline, this.searchLinSpace );
+        this.ySearchPoints = SplineEvaluation.at( this.ySpline, this.searchLinSpace );
+      }
+
+      var min = Number.POSITIVE_INFINITY;
+      var minIndex = -1;
+      for ( var i = 0; i < this.ySearchPoints.length; i++ ) {
+        var y = this.ySearchPoints[i];
+        if ( y < min ) {
+          min = y;
+          minIndex = i;
+        }
+      }
+
+      //Increase resolution in the neighborhood of y
+      var foundU = this.searchLinSpace[minIndex];
+
+      var minBound = foundU - this.distanceBetweenSamplePoints;
+      var maxBound = foundU + this.distanceBetweenSamplePoints;
+
+      var smallerSpace = numeric.linspace( minBound, maxBound, 200 );
+      var refinedSearchPoints = SplineEvaluation.at( this.ySpline, smallerSpace );
+
+      min = Number.POSITIVE_INFINITY;
+      for ( i = 0; i < refinedSearchPoints.length; i++ ) {
+        y = refinedSearchPoints[i];
+        if ( y < min ) {
+          min = y;
+        }
+      }
+
+      return min;
+    },
+
+    //If any part of the track is below ground, move the whole track up so it rests at y=0 at its minimum, see #71
+    //Called when user releases track or a control point after dragging
+    bumpAboveGround: function() {
+      var lowestY = this.getLowestY();
+      if ( lowestY < 0 ) {
+        this.translate( 0, -lowestY );
+      }
     }
   } );
 } );

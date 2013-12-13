@@ -136,6 +136,7 @@ define( function( require ) {
             else if ( track.readyToReturn ) {
               track.returnToControlPanel();
             }
+            track.bumpAboveGround();
             track.dragging = false;
           }
         }
@@ -271,6 +272,7 @@ define( function( require ) {
                 if ( isEndPoint && controlPoint.snapTarget ) {
                   model.joinTracks( track );
                 }
+                track.bumpAboveGround();
                 track.dragging = false;
               }
             } ) );
