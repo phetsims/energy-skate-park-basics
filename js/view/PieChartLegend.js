@@ -24,7 +24,6 @@ define( function( require ) {
   var energyString = require( 'string!ENERGY_SKATE_PARK_BASICS/energy.energy' );
 
   function PieChartLegend( model ) {
-    var pieChartLegend = this;
     this.skater = model.skater;
 
     //The x-coordinate of a bar chart bar
@@ -41,7 +40,7 @@ define( function( require ) {
     var thermalLabel = createLabel( 2, thermalString, EnergySkateParkColorScheme.thermalEnergy );
 
     var undoButton = new UndoButton( model.clearThermal.bind( model ), model.skater, {centerX: thermalLabel.centerX, y: thermalLabel.bottom + 15} );
-    model.skater.thermalEnergyProperty.linkAttribute( undoButton, 'enabled' );
+    model.skater.linkAttribute( 'thermalEnergy', undoButton, 'enabled' );
 
     var contentNode = new VBox( {spacing: 10, align: 'left', children: [
       new HBox( {spacing: 10, children: [kineticBar, kineticLabel]} ),
@@ -56,7 +55,7 @@ define( function( require ) {
 
     Panel.call( this, contentWithTitle, { x: 10, y: 10, xMargin: 10, yMargin: 10, fill: 'white', stroke: 'gray', lineWidth: 1, resize: false, cursor: 'pointer'} );
 
-    model.pieChartVisibleProperty.linkAttribute( this, 'visible' );
+    model.linkAttribute( 'pieChartVisible', this, 'visible' );
   }
 
   return inherit( Panel, PieChartLegend );
