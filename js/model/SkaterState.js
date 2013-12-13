@@ -23,7 +23,6 @@ define( function() {
     this.position = overrides.position || source.position;
     this.velocity = overrides.velocity || source.velocity;
     this.mass = overrides.mass || source.mass;
-    this.direction = overrides.direction || source.direction;
 
     //Special handling for values that can be null, false or zero
     this.stepsSinceJump = 'stepsSinceJump' in overrides ? overrides.stepsSinceJump : source.stepsSinceJump;
@@ -66,24 +65,16 @@ define( function() {
 
     //Only set values that have changed
     setToSkater: function( skater ) {
-//      skater.up = this.up;
       skater.stepsSinceJump = this.stepsSinceJump;
       skater.track = this.track;
       skater.position = this.position;
       skater.velocity = this.velocity;
-//      skater.direction = this.direction;
       skater.u = this.u;
       skater.uD = this.uD;
       skater.thermalEnergy = this.thermalEnergy;
       if ( skater.track ) {
-        var a = skater.track.getViewAngleAt( skater.u );
-
-        //TODO: I cannot figure out why the angle must be set twice here.  But if you drop the skater to an inverted track without doubly setting angle, he will flicker to the wrong side of the track for a frame
-        //see #74
-        skater.angle = a;
+        skater.angle = skater.track.getViewAngleAt( skater.u );
         skater.up = this.up;
-        skater.direction = this.direction;
-        skater.angle = a;
       }
       else {
         skater.angle = this.angle;
