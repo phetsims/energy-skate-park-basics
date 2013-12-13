@@ -24,6 +24,7 @@ define( function( require ) {
   var energyString = require( 'string!ENERGY_SKATE_PARK_BASICS/energy.energy' );
 
   function PieChartLegend( model ) {
+    var pieChartLegend = this;
     this.skater = model.skater;
 
     //The x-coordinate of a bar chart bar
@@ -64,6 +65,9 @@ define( function( require ) {
     undoButton.center = buttonLocal;
 
     model.linkAttribute( 'pieChartVisible', this, 'visible' );
+
+    //Only show the pie chart legend when selected and when the bar graph is not shown, see #64
+    model.multilink( ['pieChartVisible', 'barGraphVisible'], function( pieChartVisible, barGraphVisible ) { pieChartLegend.visible = pieChartVisible && !barGraphVisible; } );
   }
 
   return inherit( Panel, PieChartLegend );
