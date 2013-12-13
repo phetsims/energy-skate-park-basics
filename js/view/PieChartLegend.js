@@ -27,9 +27,9 @@ define( function( require ) {
     this.skater = model.skater;
 
     //The x-coordinate of a bar chart bar
-    var createLabel = function( index, title, color ) { return new Text( title, {fill: color, font: new PhetFont( 14 ), pickable: false} ); };
+    var createLabel = function( index, title, color ) { return new Text( title, {fill: color, font: new PhetFont( 12 ), pickable: false} ); };
 
-    var createBar = function( index, color ) { return new Rectangle( 0, 0, 25, 25, {fill: color, stroke: 'black', lineWidth: 1} ); };
+    var createBar = function( index, color ) { return new Rectangle( 0, 0, 16.5, 16.5, {fill: color, stroke: 'black', lineWidth: 1} ); };
 
     var kineticBar = createBar( 0, EnergySkateParkColorScheme.kineticEnergy );
     var potentialBar = createBar( 1, EnergySkateParkColorScheme.potentialEnergy );
@@ -42,18 +42,26 @@ define( function( require ) {
     var undoButton = new UndoButton( model.clearThermal.bind( model ), model.skater, {centerX: thermalLabel.centerX, y: thermalLabel.bottom + 15} );
     model.skater.linkAttribute( 'thermalEnergy', undoButton, 'enabled' );
 
-    var contentNode = new VBox( {spacing: 10, align: 'left', children: [
-      new HBox( {spacing: 10, children: [kineticBar, kineticLabel]} ),
-      new HBox( {spacing: 10, children: [potentialBar, potentialLabel]} ),
-      new HBox( {spacing: 10, children: [thermalBar, thermalLabel, undoButton]} )
+    //Don't let the undoButton participate in the layout since it is too big vertically.  Just use a strut to get the width right, then add the undo button later
+    var undoButtonStrut = new Rectangle( 0, 0, undoButton.width, 1, {} );
+
+    var contentNode = new VBox( {spacing: 4, align: 'left', children: [
+      new HBox( {spacing: 4, children: [kineticBar, kineticLabel]} ),
+      new HBox( {spacing: 4, children: [potentialBar, potentialLabel]} ),
+      new HBox( {spacing: 4, children: [thermalBar, thermalLabel, undoButtonStrut]} )
     ]} );
 
-    var contentWithTitle = new VBox( {spacing: 10, align: 'center', children: [
+    var contentWithTitle = new VBox( {spacing: 5, align: 'center', children: [
       new Text( energyString, {fill: 'black', font: new PhetFont( 14 ), pickable: false} ),
       contentNode
     ]} );
 
-    Panel.call( this, contentWithTitle, { x: 10, y: 10, xMargin: 10, yMargin: 10, fill: 'white', stroke: 'gray', lineWidth: 1, resize: false, cursor: 'pointer'} );
+    Panel.call( this, contentWithTitle, { x: 4, y: 4, xMargin: 4, yMargin: 6, fill: 'white', stroke: 'gray', lineWidth: 1, resize: false, cursor: 'pointer'} );
+
+    this.addChild( undoButton );
+    var strutGlobal = undoButtonStrut.parentToGlobalPoint( undoButtonStrut.center );
+    var buttonLocal = undoButton.globalToParentPoint( strutGlobal );
+    undoButton.center = buttonLocal;
 
     model.linkAttribute( 'pieChartVisible', this, 'visible' );
   }
