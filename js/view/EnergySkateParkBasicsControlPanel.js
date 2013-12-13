@@ -63,7 +63,7 @@ define( function( require ) {
       new CheckBox( new HBox( {children: pad( gridSet )} ), model.gridVisibleProperty, options ),
       new CheckBox( new HBox( {children: pad( speedometerSet )} ), model.speedometerVisibleProperty, options )];
     if ( model.frictionAllowed ) {
-      checkBoxChildren.push( new CheckBox( new HBox( {children: pad( stickToTrackSet )} ), model.stickToTrackProperty ) );
+      checkBoxChildren.push( new CheckBox( new HBox( {children: pad( stickToTrackSet )} ), model.stickToTrackProperty, options ) );
     }
     var checkBoxes = new VBox( {align: 'left', spacing: 10, children: checkBoxChildren} );
 
