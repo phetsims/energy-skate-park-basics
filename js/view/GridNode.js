@@ -36,16 +36,16 @@ define( function( require ) {
       for ( var x = 0; x < 100; x++ ) {
         var viewXPositive = this.modelViewTransform.modelToViewX( x );
         var viewXNegative = this.modelViewTransform.modelToViewX( -x );
-        lines.push( new Line( viewXPositive, -offsetY, viewXPositive, lineHeight - offsetY, {stroke: '#686868'} ) );
+        lines.push( new Line( viewXPositive, -offsetY, viewXPositive, lineHeight - offsetY, {stroke: 'gray'} ) );
         if ( x !== 0 ) {
-          lines.push( new Line( viewXNegative, -offsetY, viewXNegative, lineHeight - offsetY, {stroke: '#686868'} ) );
+          lines.push( new Line( viewXNegative, -offsetY, viewXNegative, lineHeight - offsetY, {stroke: 'gray'} ) );
         }
         if ( viewXNegative < -offsetX ) {
           break;
         }
       }
 
-      var lineWidth = width / layoutScale;
+      var separation = width / layoutScale;
       for ( var y = 0; y < 100; y++ ) {
         var originX = this.modelViewTransform.modelToViewX( -4 );
         var viewY = this.modelViewTransform.modelToViewY( y );
@@ -53,7 +53,7 @@ define( function( require ) {
           break;
         }
 
-        lines.push( new Line( -offsetX, viewY, lineWidth - offsetX, viewY, {stroke: '#686868', lineWidth: y % 2 === 0 ? 3 : 1 } ) );
+        lines.push( new Line( -offsetX, viewY, separation - offsetX, viewY, {stroke: '#686868', lineWidth: y % 2 === 0 ? 1.8 : 0.8 } ) );
         if ( y % 2 === 0 ) {
           var text = new Text( y, {font: new PhetFont( 18 ), top: viewY, right: originX - 2} );
 
