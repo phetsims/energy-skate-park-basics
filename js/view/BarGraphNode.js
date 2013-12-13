@@ -104,9 +104,10 @@ define( function( require ) {
     model.skater.thermalEnergyProperty.linkAttribute( undoButton, 'enabled' );
 
     this.bars = [kineticBar, potentialBar, thermalBar, totalBar];
+    var title = new Text( energyString, {x: 5, y: insetY - 10, font: new PhetFont( 14 ), pickable: false} );
     var contentNode = new Rectangle( 0, 0, contentWidth, contentHeight, {children: [
       new ArrowNode( insetX, originY, insetX, insetY, {pickable: false} ),
-      new Text( energyString, {x: 5, y: insetY - 10, font: new PhetFont( 14 ), pickable: false} ),
+      title,
       new Line( insetX, originY, contentWidth - insetX, originY, {lineWidth: 1, stroke: 'gray', pickable: false} ),
       kineticLabel,
       potentialLabel,
@@ -119,6 +120,9 @@ define( function( require ) {
       totalBar,
       undoButton
     ]} );
+
+    //Center the bar chart title, see #62
+    title.centerX = contentNode.centerX;
 
     Panel.call( this, contentNode, { x: 10, y: 10, xMargin: 10, yMargin: 10, fill: 'white', stroke: 'gray', lineWidth: 1, resize: false, cursor: 'pointer'} );
 
