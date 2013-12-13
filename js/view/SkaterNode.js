@@ -82,7 +82,7 @@ define( function( require ) {
           //PERFORMANCE/ALLOCATION: lots of unnecessary allocations and computation here, biggest improvement could be to use binary search for position on the track
           var closestTrackAndPositionAndParameter = model.getClosestTrackAndPositionAndParameter( position, model.getPhysicalTracks() );
           var closeEnough = false;
-          if ( closestTrackAndPositionAndParameter ) {
+          if ( closestTrackAndPositionAndParameter.track.isParameterInBounds( closestTrackAndPositionAndParameter.u ) ) {
             var closestPoint = closestTrackAndPositionAndParameter.point;
             var distance = closestPoint.distance( position );
             if ( distance < 0.5 ) {
