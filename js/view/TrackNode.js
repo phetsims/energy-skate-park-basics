@@ -31,11 +31,11 @@ define( function( require ) {
   function TrackNode( model, track, modelViewTransform, panelContainsPoint ) {
     var trackNode = this;
     Node.call( this );
-    var road = new Path( null, {fill: 'black', cursor: track.interactive ? 'pointer' : 'default'} );
-    var dashedLine = new Path( null, {stroke: 'yellow', lineWidth: '2', lineDash: [4, 10]} );
+    var road = new Path( null, {fill: 'gray', cursor: track.interactive ? 'pointer' : 'default'} );
+    var dashedLine = new Path( null, {stroke: '#EBC138', lineWidth: '2', lineDash: [7, 4]} );
     model.stickToTrackProperty.link( function( stickToTrack ) { dashedLine.visible = stickToTrack; } );
 
-    track.readyToReturnProperty.link( function( readyToReturn ) { road.fill = readyToReturn ? 'gray' : 'black'; } );
+    track.readyToReturnProperty.link( function( readyToReturn ) { road.fill = readyToReturn ? 'yellow' : 'gray'; } );
     this.addChild( road );
     this.addChild( dashedLine );
 
