@@ -8,18 +8,19 @@
 define( function( require ) {
   'use strict';
 
-  var FontAwesomeNode = require( 'SUN/FontAwesomeNode' );
   var RectanglePushButton = require( 'SUN/RectanglePushButton' );
   var inherit = require( 'PHET_CORE/inherit' );
   var Node = require( 'SCENERY/nodes/Node' );
+  var Image = require( 'SCENERY/nodes/Image' );
   var Shape = require( 'KITE/Shape' );
   var EnergySkateParkColorScheme = require( 'ENERGY_SKATE_PARK_BASICS/view/EnergySkateParkColorScheme' );
   var Color = require( 'SCENERY/util/Color' );
+  var resetArrowImage = require( 'image!ENERGY_SKATE_PARK_BASICS/reset_arrow.svg' );
 
-  function UndoButton( callback, skater, options ) {
+  function ClearThermalButton( callback, skater, options ) {
 
     options = _.extend( { cursor: 'pointer' }, options );
-    var icon = new FontAwesomeNode( 'undo', { fill: 'white', scale: 0.4 } );
+    var icon = new Image( resetArrowImage );
     skater.toDerivedProperty( ['thermalEnergy'],function( thermalEnergy ) {return thermalEnergy > 0;} ).link( function( hasThermalEnergy ) {
       icon.fill = hasThermalEnergy ? 'white' : 'lightGray';
     } );
@@ -30,5 +31,5 @@ define( function( require ) {
     this.mutate( options );
   }
 
-  return inherit( RectanglePushButton, UndoButton );
+  return inherit( RectanglePushButton, ClearThermalButton );
 } );

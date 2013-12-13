@@ -17,7 +17,7 @@ define( function( require ) {
   var ArrowNode = require( 'SCENERY_PHET/ArrowNode' );
   var PhetFont = require( 'SCENERY_PHET/PhetFont' );
   var EnergySkateParkColorScheme = require( 'ENERGY_SKATE_PARK_BASICS/view/EnergySkateParkColorScheme' );
-  var UndoButton = require( 'ENERGY_SKATE_PARK_BASICS/view/UndoButton' );
+  var ClearThermalButton = require( 'ENERGY_SKATE_PARK_BASICS/view/ClearThermalButton' );
   var kineticString = require( 'string!ENERGY_SKATE_PARK_BASICS/energy.kinetic' );
   var potentialString = require( 'string!ENERGY_SKATE_PARK_BASICS/energy.potential' );
   var thermalString = require( 'string!ENERGY_SKATE_PARK_BASICS/energy.thermal' );
@@ -100,8 +100,8 @@ define( function( require ) {
     var thermalLabel = createLabel( 2, thermalString, EnergySkateParkColorScheme.thermalEnergy );
     var totalLabel = createLabel( 3, totalString, EnergySkateParkColorScheme.totalEnergy );
 
-    var undoButton = new UndoButton( model.clearThermal.bind( model ), model.skater, {centerX: thermalLabel.centerX, y: thermalLabel.bottom + 15} );
-    model.skater.thermalEnergyProperty.linkAttribute( undoButton, 'enabled' );
+    var clearThermalButton = new ClearThermalButton( model.clearThermal.bind( model ), model.skater, {centerX: thermalLabel.centerX, y: thermalLabel.bottom + 15} );
+    model.skater.thermalEnergyProperty.linkAttribute( clearThermalButton, 'enabled' );
 
     this.bars = [kineticBar, potentialBar, thermalBar, totalBar];
     var titleNode = new Text( energyString, {x: 5, y: insetY - 10, font: new PhetFont( 14 ), pickable: false} );
@@ -118,7 +118,7 @@ define( function( require ) {
       potentialBar,
       thermalBar,
       totalBar,
-      undoButton
+      clearThermalButton
     ]} );
 
     //Center the bar chart title, see #62

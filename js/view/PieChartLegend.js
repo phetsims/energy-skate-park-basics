@@ -17,7 +17,7 @@ define( function( require ) {
   var Panel = require( 'SUN/Panel' );
   var PhetFont = require( 'SCENERY_PHET/PhetFont' );
   var EnergySkateParkColorScheme = require( 'ENERGY_SKATE_PARK_BASICS/view/EnergySkateParkColorScheme' );
-  var UndoButton = require( 'ENERGY_SKATE_PARK_BASICS/view/UndoButton' );
+  var ClearThermalButton = require( 'ENERGY_SKATE_PARK_BASICS/view/ClearThermalButton' );
   var kineticString = require( 'string!ENERGY_SKATE_PARK_BASICS/energy.kinetic' );
   var potentialString = require( 'string!ENERGY_SKATE_PARK_BASICS/energy.potential' );
   var thermalString = require( 'string!ENERGY_SKATE_PARK_BASICS/energy.thermal' );
@@ -40,16 +40,16 @@ define( function( require ) {
     var potentialLabel = createLabel( 1, potentialString, EnergySkateParkColorScheme.potentialEnergy );
     var thermalLabel = createLabel( 2, thermalString, EnergySkateParkColorScheme.thermalEnergy );
 
-    var undoButton = new UndoButton( model.clearThermal.bind( model ), model.skater, {centerX: thermalLabel.centerX, y: thermalLabel.bottom + 15} );
-    model.skater.linkAttribute( 'thermalEnergy', undoButton, 'enabled' );
+    var clearThermalButton = new ClearThermalButton( model.clearThermal.bind( model ), model.skater, {centerX: thermalLabel.centerX, y: thermalLabel.bottom + 15} );
+    model.skater.linkAttribute( 'thermalEnergy', clearThermalButton, 'enabled' );
 
-    //Don't let the undoButton participate in the layout since it is too big vertically.  Just use a strut to get the width right, then add the undo button later
-    var undoButtonStrut = new Rectangle( 0, 0, undoButton.width, 1, {} );
+    //Don't let the ClearThermalButton participate in the layout since it is too big vertically.  Just use a strut to get the width right, then add the undo button later
+    var clearThermalButtonStrut = new Rectangle( 0, 0, clearThermalButton.width, 1, {} );
 
     var contentNode = new VBox( {spacing: 4, align: 'left', children: [
       new HBox( {spacing: 4, children: [kineticBar, kineticLabel]} ),
       new HBox( {spacing: 4, children: [potentialBar, potentialLabel]} ),
-      new HBox( {spacing: 4, children: [thermalBar, thermalLabel, undoButtonStrut]} )
+      new HBox( {spacing: 4, children: [thermalBar, thermalLabel, clearThermalButtonStrut]} )
     ]} );
 
     var contentWithTitle = new VBox( {spacing: 5, align: 'center', children: [
@@ -59,10 +59,10 @@ define( function( require ) {
 
     Panel.call( this, contentWithTitle, { x: 4, y: 4, xMargin: 4, yMargin: 6, fill: 'white', stroke: 'gray', lineWidth: 1, resize: false, cursor: 'pointer'} );
 
-    this.addChild( undoButton );
-    var strutGlobal = undoButtonStrut.parentToGlobalPoint( undoButtonStrut.center );
-    var buttonLocal = undoButton.globalToParentPoint( strutGlobal );
-    undoButton.center = buttonLocal;
+    this.addChild( clearThermalButton );
+    var strutGlobal = clearThermalButtonStrut.parentToGlobalPoint( clearThermalButtonStrut.center );
+    var buttonLocal = clearThermalButton.globalToParentPoint( strutGlobal );
+    clearThermalButton.center = buttonLocal;
 
     model.linkAttribute( 'pieChartVisible', this, 'visible' );
 
