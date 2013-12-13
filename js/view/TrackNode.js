@@ -60,6 +60,14 @@ define( function( require ) {
             track.overTrackPanel = panelContainsPoint( dragPoint );
 
             var modelDelta = modelViewTransform.viewToModelDelta( delta );
+
+            //When dragging track, make sure the control points don't go below ground, see #71
+            var bottomControlPointY = track.getBottomControlPointY();
+            var translatedBottomControlPointY = bottomControlPointY + modelDelta.y;
+            if ( translatedBottomControlPointY < 0 ) {
+              modelDelta.y += Math.abs( translatedBottomControlPointY );
+            }
+
             track.translate( modelDelta.x, modelDelta.y );
 
             //If the user moved it out of the toolbox, then make it physically interactive

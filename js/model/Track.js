@@ -256,6 +256,17 @@ define( function( require ) {
       return null;
     },
 
+    getBottomControlPointY: function() {
+      var best = Number.POSITIVE_INFINITY;
+      var length = this.controlPoints.length;
+      for ( var i = 0; i < length; i++ ) {
+        if ( this.controlPoints[i].sourcePosition.y < best ) {
+          best = this.controlPoints[i].sourcePosition.y;
+        }
+      }
+      return best;
+    },
+
     containsControlPoint: function( controlPoint ) {
       for ( var i = 0; i < this.controlPoints.length; i++ ) {
         if ( this.controlPoints[i] === controlPoint ) {
