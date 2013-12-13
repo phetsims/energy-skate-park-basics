@@ -123,6 +123,7 @@ define( function( require ) {
           }
           skater.startingPosition = skater.position.copy();
           skater.startingU = targetU;
+          skater.up = skater.up;
           skater.startingTrack = targetTrack;
 
           //Update the energy on skater release so it won't try to move to a different height to make up for the delta

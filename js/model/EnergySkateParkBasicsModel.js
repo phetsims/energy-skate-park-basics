@@ -266,13 +266,21 @@ define( function( require ) {
             var newKE = KE - addedThermalEnergy;
             var newSpeed = Math.sqrt( 2 * newKE / skaterState.mass );
             var uD = (dot > 0 ? +1 : -1) * newSpeed;
+            var up = beforeVector.dot( normal ) > 0;
+            console.log( 'up', up );
+            var direction = dot > 0 ? 'right' : 'left';
+            if ( !up ) {
+              direction = (direction === 'right' ? 'left' : 'right');
+            }
 
             var newThermalEnergy = skaterState.thermalEnergy + addedThermalEnergy;
             if ( isNaN( newThermalEnergy ) ) { throw new Error( "nan" ); }
             var result = skaterState.update( {
               thermalEnergy: newThermalEnergy,
               track: track,
+              up: up,
               u: u,
+              direction: direction,
               uD: uD,
               velocity: proposedVelocity.normalized().timesScalar( Math.abs( uD ) ),
               position: track.getPoint( u )

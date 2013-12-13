@@ -61,6 +61,8 @@ define( function( require ) {
       //Returns to this parametric position along the track when pressing "return skater"
       startingU: 0,
 
+      startingUp: true,
+
       //Returns to this track when pressing "return skater"
       startingTrack: null
     } );
@@ -86,6 +88,9 @@ define( function( require ) {
     //Zero the kinetic energy when dragging, see https://github.com/phetsims/energy-skate-park-basics/issues/22
     this.draggingProperty.link( function( dragging ) { if ( dragging ) { skater.velocity = new Vector2( 0, 0 ); } } );
 
+    this.link( 'up', function( up ) {
+      console.log( 'callback up', up );
+    } );
     this.link( 'uD', function( uD ) {
 
       //Require the skater to overcome a speed threshold so he won't toggle back and forth rapidly at the bottom of a well with friction, see #51
@@ -139,6 +144,7 @@ define( function( require ) {
         this.track = this.startingTrack;
         this.u = this.startingU;
         this.angle = this.startingTrack.getViewAngleAt( this.u );
+        this.up = this.startingUp;
         this.uD = 0;
       }
       else {
