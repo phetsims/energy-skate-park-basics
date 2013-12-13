@@ -224,7 +224,7 @@ define( function( require ) {
       var closestTrackAndPositionAndParameter = this.getClosestTrackAndPositionAndParameter( skaterState.position, physicalTracks );
       var track = closestTrackAndPositionAndParameter.track;
       var u = closestTrackAndPositionAndParameter.u;
-      var pt = closestTrackAndPositionAndParameter.point;
+      var trackPoint = closestTrackAndPositionAndParameter.point;
 
       if ( !track.isParameterInBounds( u ) ) {
         return this.continueFreeFall( skaterState, initialEnergy, proposedPosition, proposedVelocity );
@@ -233,9 +233,9 @@ define( function( require ) {
         var normal = track.getUnitNormalVector( u );
         var segment = normal.perpendicular();
 
-        var beforeSign = normal.dot( skaterState.position.minus( pt ) ) > 0;
-        var afterSign = normal.dot( proposedPosition.minus( pt ) ) > 0;
-        if ( beforeSign !== afterSign ) {
+        var beforeVector = skaterState.position.minus( trackPoint );
+        var afterVector = proposedPosition.minus( trackPoint );
+        if ( beforeVector.dot( afterVector ) < 0 ) {
 
           //reflect the velocity vector
           //http://www.gamedev.net/topic/165537-2d-vector-reflection-/
