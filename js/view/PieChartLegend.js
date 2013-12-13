@@ -21,6 +21,7 @@ define( function( require ) {
   var kineticString = require( 'string!ENERGY_SKATE_PARK_BASICS/energy.kinetic' );
   var potentialString = require( 'string!ENERGY_SKATE_PARK_BASICS/energy.potential' );
   var thermalString = require( 'string!ENERGY_SKATE_PARK_BASICS/energy.thermal' );
+  var energyString = require( 'string!ENERGY_SKATE_PARK_BASICS/energy.energy' );
 
   function PieChartLegend( model ) {
     var pieChartLegend = this;
@@ -48,7 +49,12 @@ define( function( require ) {
       new HBox( {spacing: 10, children: [thermalBar, thermalLabel, undoButton]} )
     ]} );
 
-    Panel.call( this, contentNode, { x: 10, y: 10, xMargin: 10, yMargin: 10, fill: 'white', stroke: 'gray', lineWidth: 1, resize: false, cursor: 'pointer'} );
+    var contentWithTitle = new VBox( {spacing: 10, align: 'center', children: [
+      new Text( energyString, {fill: 'black', font: new PhetFont( 14 ), pickable: false} ),
+      contentNode
+    ]} );
+
+    Panel.call( this, contentWithTitle, { x: 10, y: 10, xMargin: 10, yMargin: 10, fill: 'white', stroke: 'gray', lineWidth: 1, resize: false, cursor: 'pointer'} );
 
     model.pieChartVisibleProperty.linkAttribute( this, 'visible' );
   }
