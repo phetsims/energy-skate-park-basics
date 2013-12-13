@@ -22,7 +22,7 @@ define( function( require ) {
   var potentialString = require( 'string!ENERGY_SKATE_PARK_BASICS/energy.potential' );
   var thermalString = require( 'string!ENERGY_SKATE_PARK_BASICS/energy.thermal' );
   var totalString = require( 'string!ENERGY_SKATE_PARK_BASICS/energy.total' );
-  var energyString = require( 'string!ENERGY_SKATE_PARK_BASICS/plots.energy-vs-time.energy' );
+  var energyString = require( 'string!ENERGY_SKATE_PARK_BASICS/energy.energy' );
 
   function BarGraphNode( model ) {
     var barGraphNode = this;
@@ -104,10 +104,10 @@ define( function( require ) {
     model.skater.thermalEnergyProperty.linkAttribute( undoButton, 'enabled' );
 
     this.bars = [kineticBar, potentialBar, thermalBar, totalBar];
-    var title = new Text( energyString, {x: 5, y: insetY - 10, font: new PhetFont( 14 ), pickable: false} );
+    var titleNode = new Text( energyString, {x: 5, y: insetY - 10, font: new PhetFont( 14 ), pickable: false} );
     var contentNode = new Rectangle( 0, 0, contentWidth, contentHeight, {children: [
       new ArrowNode( insetX, originY, insetX, insetY, {pickable: false} ),
-      title,
+      titleNode,
       new Line( insetX, originY, contentWidth - insetX, originY, {lineWidth: 1, stroke: 'gray', pickable: false} ),
       kineticLabel,
       potentialLabel,
@@ -122,7 +122,7 @@ define( function( require ) {
     ]} );
 
     //Center the bar chart title, see #62
-    title.centerX = contentNode.centerX;
+    titleNode.centerX = contentNode.centerX;
 
     Panel.call( this, contentNode, { x: 10, y: 10, xMargin: 10, yMargin: 10, fill: 'white', stroke: 'gray', lineWidth: 1, resize: false, cursor: 'pointer'} );
 
