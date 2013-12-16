@@ -154,8 +154,12 @@ define( function( require ) {
         var initialEnergy = skaterState.getTotalEnergy();
         skaterState = this.stepModel( this.speed === 'normal' ? dt : dt * 0.25, skaterState );
 
-        //Uncomment this line if you want to debug energy problems
-//        if ( Math.abs( skaterState.getTotalEnergy() - initialEnergy ) > 1E-6 ) { debugger; }
+        //Set this flag to true to debug energy issues
+        var debugEnergy = false;
+        if ( debugEnergy && Math.abs( skaterState.getTotalEnergy() - initialEnergy ) > 1E-6 ) {
+          debugger;
+          var redo = this.stepModel( this.speed === 'normal' ? dt : dt * 0.25, new SkaterState( this.skater, {} ) );
+        }
         skaterState.setToSkater( this.skater );
       }
     },
@@ -244,6 +248,7 @@ define( function( require ) {
           var allOK = proposedVelocity && proposedVelocity.minus && normal.times && normal.dot;
 
           var bounceVelocity = allOK ? proposedVelocity.minus( normal.times( 2 * normal.dot( proposedVelocity ) ) ) : new Vector2( 0, 1 );
+          bounceVelocity.setMagnitude( skaterState.velocity.magnitude() );
 
           //Attach to track if velocity is close enough to parallel to the track
           var dot = proposedVelocity.normalized().dot( segment );
