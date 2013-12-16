@@ -404,8 +404,9 @@ define( function( require ) {
 
       var min = Number.POSITIVE_INFINITY;
       var minIndex = -1;
+      var y;
       for ( var i = 0; i < this.ySearchPoints.length; i++ ) {
-        var y = this.ySearchPoints[i];
+        y = this.ySearchPoints[i];
         if ( y < min ) {
           min = y;
           minIndex = i;
