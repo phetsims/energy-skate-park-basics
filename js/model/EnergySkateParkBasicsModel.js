@@ -154,12 +154,11 @@ define( function( require ) {
         var initialEnergy = skaterState.getTotalEnergy();
         skaterState = this.stepModel( this.speed === 'normal' ? dt : dt * 0.25, skaterState );
 
-        //Set this flag to true to debug energy issues
-        var debugEnergy = false;
-        if ( debugEnergy && Math.abs( skaterState.getTotalEnergy() - initialEnergy ) > 1E-6 ) {
-          debugger;
-          var redo = this.stepModel( this.speed === 'normal' ? dt : dt * 0.25, new SkaterState( this.skater, {} ) );
-        }
+        //Uncomment this block to debug energy issues.  Commented out instead of blocked with a flag so debugger statement will pass jshint
+//        if ( Math.abs( skaterState.getTotalEnergy() - initialEnergy ) > 1E-6 ) {
+//          debugger;
+//          var redo = this.stepModel( this.speed === 'normal' ? dt : dt * 0.25, new SkaterState( this.skater, {} ) );
+//        }
         skaterState.setToSkater( this.skater );
       }
     },
