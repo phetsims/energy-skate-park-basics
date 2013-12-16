@@ -41,11 +41,12 @@ define( function( require ) {
 
       //Rotation and translation can happen in any order
       matrix = matrix.multiplyMatrix( Matrix3.rotation2( displayAngle ) );
+      var scale = massToScale( mass );
       matrix = matrix.multiplyMatrix( Matrix3.scaling( (direction === 'left' && up ? 1 :
                                                         direction === 'right' && up ? -1 :
                                                         direction === 'left' && !up ? -1 :
                                                         direction === 'right' && !up ? 1 :
-                                                        999) * massToScale( mass ), massToScale( mass ) ) );
+                                                        999) * scale, scale ) );
 
       //Think of it as a multiplying the Vector2 to the right, so this step happens first actually.  Use it to center the registration point
       matrix = matrix.multiplyMatrix( Matrix3.translation( -imageWidth / 2, -imageHeight ) );

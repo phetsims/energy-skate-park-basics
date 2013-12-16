@@ -163,9 +163,45 @@ define( function( require ) {
       }
     },
 
-    //TODO: Perhaps the skater should move along the ground with a high coefficient of friction (as if it were grass), see https://github.com/phetsims/energy-skate-park-basics/issues/11
+    //The skater moves along the ground with the same coefficient of fraction as the tracks, see https://github.com/phetsims/energy-skate-park-basics/issues/11
     stepGround: function( dt, skaterState ) {
-      return skaterState;
+      var x0 = skaterState.position.x;
+      var frictionMagnitude = (this.friction === 0 || skaterState.velocity.magnitude() < 1E-2) ? 0 : this.friction * skaterState.mass * skaterState.gravity;
+      var acceleration = Math.abs( frictionMagnitude ) * (skaterState.velocity.x > 0 ? -1 : 1) / skaterState.mass;
+      var v1 = skaterState.velocity.x + acceleration * dt;
+      var x1 = x0 + v1 * dt;
+      var newPosition = new Vector2( x1, 0 );
+      return skaterState.update( {
+        position: newPosition,
+        angle: 0,
+        up: true,
+        velocity: new Vector2( v1, 0 )
+      } );
+    },
+
+    switchToGround: function( skaterState, initialEnergy, proposedPosition, proposedVelocity ) {
+      var dot = proposedVelocity.dotXY( 0, 1 );
+      //Gain some thermal energy in the landing, but not too much!
+      //dot product of 0 converts to 0% thermal
+      //dot product of 0.6 converts to 10% thermal
+      //More than 0.6 is a bounce
+      var fractionOfKEToConvertToThermal = new LinearFunction( 0, 0.6, 0, 0.1 )( Math.abs( dot ) );
+
+      var KE = 0.5 * proposedVelocity.magnitudeSquared() * skaterState.mass;
+      var addedThermalEnergy = KE * fractionOfKEToConvertToThermal;
+      var newKE = KE - addedThermalEnergy;
+      var newSpeed = Math.sqrt( 2 * newKE / skaterState.mass );
+
+      var newThermalEnergy = skaterState.thermalEnergy + addedThermalEnergy;
+      if ( isNaN( newThermalEnergy ) ) { throw new Error( "nan" ); }
+      return skaterState.update( {
+        thermalEnergy: newThermalEnergy,
+        track: null,
+        up: true,
+        angle: 0,
+        velocity: proposedVelocity.normalized().timesScalar( newSpeed ),
+        position: proposedPosition
+      } );
     },
 
     //Update the skater in free fall
@@ -178,7 +214,7 @@ define( function( require ) {
       if ( proposedPosition.y < 0 ) {
         proposedPosition.y = 0;
 
-        return this.continueFreeFall( skaterState, initialEnergy, proposedPosition, proposedVelocity );
+        return this.switchToGround( skaterState, initialEnergy, proposedPosition, proposedVelocity );
       }
       else if ( skaterState.position.x !== proposedPosition.x || skaterState.position.y !== proposedPosition.y ) {
 
