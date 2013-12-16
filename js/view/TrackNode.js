@@ -64,14 +64,19 @@ define( function( require ) {
             //When dragging track, make sure the control points don't go below ground, see #71
             var bottomControlPointY = track.getBottomControlPointY();
             var translatedBottomControlPointY = bottomControlPointY + modelDelta.y;
-            if ( translatedBottomControlPointY < 0 ) {
-              modelDelta.y += Math.abs( translatedBottomControlPointY );
+
+            //If the user moved it out of the toolbox above y=0, then make it physically interactive
+            if ( !track.physical && track.getBottomControlPointY() > 0 ) {
+              track.physical = true;
+            }
+
+            if ( track.physical ) {
+              if ( translatedBottomControlPointY < 0 ) {
+                modelDelta.y += Math.abs( translatedBottomControlPointY );
+              }
             }
 
             track.translate( modelDelta.x, modelDelta.y );
-
-            //If the user moved it out of the toolbox, then make it physically interactive
-            track.physical = true;
 
             //If one of the control points is close enough to link to another track, do so
             var tracks = model.getPhysicalTracks();
