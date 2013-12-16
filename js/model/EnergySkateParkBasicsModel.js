@@ -87,7 +87,7 @@ define( function( require ) {
       //Shape types
       //For the double well, move the left well up a bit since the interpolation moves it down by that much, and we don't want the skater to go to y<0 while on the track.  Numbers determined by trial and error.
       var parabola = [new ControlPoint( -4, 6 ), new ControlPoint( 0, 0 ), new ControlPoint( 4, 6 )];
-      var slope = [new ControlPoint( -4, 4 ), new ControlPoint( -2, 2 ), new ControlPoint( 2, 1 )];
+      var slope = [new ControlPoint( -4, 6 ), new ControlPoint( -2, 1.2 ), new ControlPoint( 2, 0.05 )];
       var doubleWell = [new ControlPoint( -4, 5 ), new ControlPoint( -2, 0.0166015 ), new ControlPoint( 0, 2 ), new ControlPoint( 2, 1 ), new ControlPoint( 4, 5 ) ];
 
       this.tracks.addAll(
