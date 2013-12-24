@@ -222,7 +222,6 @@ define( function( require ) {
 
         //see if it crossed the track
         var physicalTracks = this.getPhysicalTracks();
-        console.log( 'steps since jump', skaterState.stepsSinceJump );
         if ( physicalTracks.length && skaterState.stepsSinceJump > 10 ) {
           return this.interactWithTracksWhileFalling( physicalTracks, skaterState, proposedPosition, initialEnergy, dt, proposedVelocity );
         }
