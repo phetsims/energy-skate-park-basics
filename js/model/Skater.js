@@ -94,10 +94,10 @@ define( function( require ) {
       var speedThreshold = 0.01;
 
       if ( uD > speedThreshold ) {
-        skater.direction = 'right';
+        skater.direction = skater.up ? 'right' : 'left';
       }
       else if ( uD < -speedThreshold ) {
-        skater.direction = 'left';
+        skater.direction = skater.up ? 'left' : 'right';
       }
       else {
         //Keep the same direction

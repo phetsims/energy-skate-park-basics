@@ -138,6 +138,7 @@ define( function( require ) {
     manualStep: function() {
       var result = this.stepModel( 1.0 / 60, new SkaterState( this.skater, {} ) );
       result.setToSkater( this.skater );
+      this.skater.trigger( 'updated' );
     },
 
     //Step the model, automatically called from Joist
@@ -160,6 +161,7 @@ define( function( require ) {
 //          var redo = this.stepModel( this.speed === 'normal' ? dt : dt * 0.25, new SkaterState( this.skater, {} ) );
 //        }
         skaterState.setToSkater( this.skater );
+        this.skater.trigger( 'updated' );
       }
     },
 
@@ -220,6 +222,7 @@ define( function( require ) {
 
         //see if it crossed the track
         var physicalTracks = this.getPhysicalTracks();
+        console.log( 'steps since jump', skaterState.stepsSinceJump );
         if ( physicalTracks.length && skaterState.stepsSinceJump > 10 ) {
           return this.interactWithTracksWhileFalling( physicalTracks, skaterState, proposedPosition, initialEnergy, dt, proposedVelocity );
         }
@@ -308,6 +311,7 @@ define( function( require ) {
             var uD = (dot > 0 ? +1 : -1) * newSpeed;
             var up = beforeVector.dot( normal ) > 0;
 
+            console.log( 'IWTWF', up );
             var newThermalEnergy = skaterState.thermalEnergy + addedThermalEnergy;
             if ( isNaN( newThermalEnergy ) ) { throw new Error( "nan" ); }
             var result = skaterState.update( {
@@ -515,7 +519,8 @@ define( function( require ) {
         else {
           return skaterState.update( {
             track: null,
-            uD: 0
+            uD: 0,
+            stepsSinceJump: 0
           } );
         }
       }

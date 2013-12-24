@@ -18,9 +18,8 @@ define( function( require ) {
   var Matrix3 = require( 'DOT/Matrix3' );
   var LinearFunction = require( 'DOT/LinearFunction' );
 
-  function SkaterNode( model, view, modelViewTransform ) {
-    var skater = model.skater;
-    this.skater = model.skater;
+  function SkaterNode( model, skater, view, modelViewTransform ) {
+    this.skater = skater;
     var skaterNode = this;
 
     //Map from mass(kg) to scale
@@ -31,9 +30,11 @@ define( function( require ) {
     var imageHeight = this.height;
 
     //Update the position and angle.  Normally the angle would only change if the position has also changed, so no need for a duplicate callback there
-    //TODO: This is probably too many callbacks, if position changes then angle changes it will be called twice
-    //TODO: Perhaps just switch to Events
-    this.skater.multilink( ['mass', 'position', 'direction', 'angle' ], function( mass, position, direction, angle ) {
+    this.skater.on( 'updated', function() {
+      var mass = skater.mass;
+      var position = skater.position;
+      var direction = skater.direction;
+      var angle = skater.angle;
 
       var view = modelViewTransform.modelToViewPosition( position );
 
@@ -113,6 +114,7 @@ define( function( require ) {
           }
 
           skater.updateEnergy();
+          skater.trigger( 'updated' );
         },
 
         end: function() {
@@ -131,6 +133,7 @@ define( function( require ) {
 
           //Update the energy on skater release so it won't try to move to a different height to make up for the delta
           skater.updateEnergy();
+          skater.trigger( 'updated' );
         }
       } ) );
   }
