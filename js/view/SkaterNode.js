@@ -33,22 +33,20 @@ define( function( require ) {
     //Update the position and angle.  Normally the angle would only change if the position has also changed, so no need for a duplicate callback there
     //TODO: This is probably too many callbacks, if position changes then angle changes it will be called twice
     //TODO: Perhaps just switch to Events
-    this.skater.multilink( ['mass', 'position', 'direction', 'up', 'angle' ], function( mass, position, direction, up, angle ) {
+    this.skater.multilink( ['mass', 'position', 'direction', 'angle' ], function( mass, position, direction, angle ) {
 
       var view = modelViewTransform.modelToViewPosition( position );
-      var displayAngle = angle + (up ? 0 : Math.PI );
+//      var displayAngle = angle + (up ? 0 : Math.PI );
+//
+//      console.log( up, displayAngle );
 
       //Translate to the desired location
       var matrix = Matrix3.translation( view.x, view.y );
 
       //Rotation and translation can happen in any order
-      matrix = matrix.multiplyMatrix( Matrix3.rotation2( displayAngle ) );
+      matrix = matrix.multiplyMatrix( Matrix3.rotation2( angle ) );
       var scale = massToScale( mass );
-      matrix = matrix.multiplyMatrix( Matrix3.scaling( (direction === 'left' && up ? 1 :
-                                                        direction === 'right' && up ? -1 :
-                                                        direction === 'left' && !up ? -1 :
-                                                        direction === 'right' && !up ? 1 :
-                                                        999) * scale, scale ) );
+      matrix = matrix.multiplyMatrix( Matrix3.scaling( scale, scale ) );
 
       //Think of it as a multiplying the Vector2 to the right, so this step happens first actually.  Use it to center the registration point
       matrix = matrix.multiplyMatrix( Matrix3.translation( -imageWidth / 2, -imageHeight ) );
@@ -92,11 +90,12 @@ define( function( require ) {
               position = closestPoint;
               targetTrack = closestTrackAndPositionAndParameter.track;
               targetU = closestTrackAndPositionAndParameter.u;
-              skater.angle = targetTrack.getViewAngleAt( targetU );
 
               //Choose the right side of the track, i.e. the side of the track that would have the skater upside up
               var normal = targetTrack.getUnitNormalVector( targetU );
               skater.up = normal.y > 0;
+
+              skater.angle = targetTrack.getViewAngleAt( targetU ) + (skater.up ? 0 : Math.PI);
 
               closeEnough = true;
             }
