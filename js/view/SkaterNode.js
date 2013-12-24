@@ -36,9 +36,6 @@ define( function( require ) {
     this.skater.multilink( ['mass', 'position', 'direction', 'angle' ], function( mass, position, direction, angle ) {
 
       var view = modelViewTransform.modelToViewPosition( position );
-//      var displayAngle = angle + (up ? 0 : Math.PI );
-//
-//      console.log( up, displayAngle );
 
       //Translate to the desired location
       var matrix = Matrix3.translation( view.x, view.y );
@@ -46,7 +43,7 @@ define( function( require ) {
       //Rotation and translation can happen in any order
       matrix = matrix.multiplyMatrix( Matrix3.rotation2( angle ) );
       var scale = massToScale( mass );
-      matrix = matrix.multiplyMatrix( Matrix3.scaling( scale, scale ) );
+      matrix = matrix.multiplyMatrix( Matrix3.scaling( (direction === 'left' ? 1 : -1) * scale, scale ) );
 
       //Think of it as a multiplying the Vector2 to the right, so this step happens first actually.  Use it to center the registration point
       matrix = matrix.multiplyMatrix( Matrix3.translation( -imageWidth / 2, -imageHeight ) );
