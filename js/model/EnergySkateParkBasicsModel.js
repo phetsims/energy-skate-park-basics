@@ -173,11 +173,18 @@ define( function( require ) {
       var v1 = skaterState.velocity.x + acceleration * dt;
       var x1 = x0 + v1 * dt;
       var newPosition = new Vector2( x1, 0 );
-      return skaterState.update( {
+      var originalEnergy = skaterState.getTotalEnergy();
+
+      var updated = skaterState.update( {
         position: newPosition,
         angle: 0,
         up: true,
         velocity: new Vector2( v1, 0 )
+      } );
+
+      var newEnergy = updated.getTotalEnergy();
+      return updated.update( {
+        thermalEnergy: updated.thermalEnergy + (originalEnergy - newEnergy)
       } );
     },
 
