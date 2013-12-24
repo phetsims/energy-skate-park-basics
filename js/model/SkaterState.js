@@ -72,13 +72,8 @@ define( function() {
       skater.u = this.u;
       skater.uD = this.uD;
       skater.thermalEnergy = this.thermalEnergy;
-      if ( skater.track ) {
-        skater.angle = skater.track.getViewAngleAt( skater.u );
-      }
-      else {
-        skater.angle = this.angle;
-      }
       skater.up = this.up;
+      skater.angle = skater.track ? skater.track.getViewAngleAt( this.u ) : this.angle;
       skater.updateEnergy();
     }
   };

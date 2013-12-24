@@ -31,10 +31,12 @@ define( function( require ) {
     var imageHeight = this.height;
 
     //Update the position and angle.  Normally the angle would only change if the position has also changed, so no need for a duplicate callback there
-    this.skater.multilink( ['mass', 'position', 'direction', 'up' ], function( mass, position, direction, up ) {
+    //TODO: This is probably too many callbacks, if position changes then angle changes it will be called twice
+    //TODO: Perhaps just switch to Events
+    this.skater.multilink( ['mass', 'position', 'direction', 'up', 'angle' ], function( mass, position, direction, up, angle ) {
 
       var view = modelViewTransform.modelToViewPosition( position );
-      var displayAngle = skater.angle + (up ? 0 : Math.PI );
+      var displayAngle = angle + (up ? 0 : Math.PI );
 
       //Translate to the desired location
       var matrix = Matrix3.translation( view.x, view.y );
