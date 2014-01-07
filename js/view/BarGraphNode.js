@@ -12,7 +12,6 @@ define( function( require ) {
   var Rectangle = require( 'SCENERY/nodes/Rectangle' );
   var Line = require( 'SCENERY/nodes/Line' );
   var Text = require( 'SCENERY/nodes/Text' );
-  var SimpleDragHandler = require( 'SCENERY/input/SimpleDragHandler' );
   var Panel = require( 'SUN/Panel' );
   var ArrowNode = require( 'SCENERY_PHET/ArrowNode' );
   var PhetFont = require( 'SCENERY_PHET/PhetFont' );

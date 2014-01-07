@@ -21,14 +21,12 @@ define( function( require ) {
 
   var inherit = require( 'PHET_CORE/inherit' );
   var PropertySet = require( 'AXON/PropertySet' );
-  var Property = require( 'AXON/Property' );
   var Skater = require( 'ENERGY_SKATE_PARK_BASICS/model/Skater' );
   var Track = require( 'ENERGY_SKATE_PARK_BASICS/model/Track' );
   var ControlPoint = require( 'ENERGY_SKATE_PARK_BASICS/model/ControlPoint' );
   var Vector2 = require( 'DOT/Vector2' );
   var ObservableArray = require( 'AXON/ObservableArray' );
   var SkaterState = require( 'ENERGY_SKATE_PARK_BASICS/model/SkaterState' );
-  var Util = require( 'DOT/Util' );
   var LinearFunction = require( 'DOT/LinearFunction' );
 
   //Thrust is not currently implemented in Energy Skate Park: Basics but may be used in a future version, so left in here
@@ -152,6 +150,7 @@ define( function( require ) {
         }
 
         var skaterState = new SkaterState( this.skater, {} );
+        //TODO this is flagged by jshint as unused, but appears in a commented-out chunk of code below.
         var initialEnergy = skaterState.getTotalEnergy();
         skaterState = this.stepModel( this.speed === 'normal' ? dt : dt * 0.25, skaterState );
 

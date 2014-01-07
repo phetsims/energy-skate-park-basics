@@ -31,7 +31,6 @@ define( function( require ) {
   var GaugeNode = require( 'SCENERY_PHET/GaugeNode' );
   var TextPushButton = require( 'SUN/TextPushButton' );
   var DerivedProperty = require( 'AXON/DerivedProperty' );
-  var Skater = require( 'ENERGY_SKATE_PARK_BASICS/model/Skater' );
   var Path = require( 'SCENERY/nodes/Path' );
   var returnSkaterString = require( 'string!ENERGY_SKATE_PARK_BASICS/controls.reset-character' );
   var speedString = require( 'string!ENERGY_SKATE_PARK_BASICS/properties.speed' );

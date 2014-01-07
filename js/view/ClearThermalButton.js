@@ -10,10 +10,8 @@ define( function( require ) {
 
   var RectanglePushButton = require( 'SUN/RectanglePushButton' );
   var inherit = require( 'PHET_CORE/inherit' );
-  var Node = require( 'SCENERY/nodes/Node' );
   var Image = require( 'SCENERY/nodes/Image' );
   var Shape = require( 'KITE/Shape' );
-  var EnergySkateParkColorScheme = require( 'ENERGY_SKATE_PARK_BASICS/view/EnergySkateParkColorScheme' );
   var Color = require( 'SCENERY/util/Color' );
   var resetArrowImage = require( 'image!ENERGY_SKATE_PARK_BASICS/reset_arrow.svg' );
 

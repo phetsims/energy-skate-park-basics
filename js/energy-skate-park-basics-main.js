@@ -8,7 +8,6 @@
 define( function( require ) {
   'use strict';
 
-  var Image = require( 'SCENERY/nodes/Image' );
   var Sim = require( 'JOIST/Sim' );
   var SimLauncher = require( 'JOIST/SimLauncher' );
   var EnergySkateParkBasicsScreen = require( 'ENERGY_SKATE_PARK_BASICS/EnergySkateParkBasicsScreen' );
