@@ -141,7 +141,7 @@ define( function( require ) {
     pieChartLegend.mutate( {top: barGraphNode.top, centerX: (barGraphNode.right + speedometerNode.left) / 2} );
 
     var playProperty = model.property( 'paused' ).not();
-    var playPauseButton = new PlayPauseButton( playProperty, {scale: 0.8} );
+    var playPauseButton = new PlayPauseButton( playProperty, {elementScale: 0.8} );
     var stepButton = new StepButton( function() { model.manualStep(); }, playProperty );
     model.property( 'paused' ).linkAttribute( stepButton, 'enabled' );
 
