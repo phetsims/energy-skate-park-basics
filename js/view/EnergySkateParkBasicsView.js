@@ -18,7 +18,6 @@ define( function( require ) {
   var TrackNode = require( 'ENERGY_SKATE_PARK_BASICS/view/TrackNode' );
   var BackgroundNode = require( 'ENERGY_SKATE_PARK_BASICS/view/BackgroundNode' );
   var EnergySkateParkBasicsControlPanel = require( 'ENERGY_SKATE_PARK_BASICS/view/EnergySkateParkBasicsControlPanel' );
-  var PlayPauseControlPanel = require( 'ENERGY_SKATE_PARK_BASICS/view/PlayPauseControlPanel' );
   var PlaybackSpeedControl = require( 'ENERGY_SKATE_PARK_BASICS/view/PlaybackSpeedControl' );
   var BarGraphNode = require( 'ENERGY_SKATE_PARK_BASICS/view/BarGraphNode' );
   var PieChartNode = require( 'ENERGY_SKATE_PARK_BASICS/view/PieChartNode' );
@@ -34,6 +33,9 @@ define( function( require ) {
   var Path = require( 'SCENERY/nodes/Path' );
   var returnSkaterString = require( 'string!ENERGY_SKATE_PARK_BASICS/controls.reset-character' );
   var speedString = require( 'string!ENERGY_SKATE_PARK_BASICS/properties.speed' );
+  var PlayPauseButton = require( 'SCENERY_PHET/PlayPauseButton' );
+  var StepButton = require( 'SCENERY_PHET/StepButton' );
+  var HBox = require( 'SCENERY/nodes/HBox' );
 
   //Debug flag to show the view bounds, the region within which the skater can move
   var showAvailableBounds = false;
@@ -138,8 +140,13 @@ define( function( require ) {
     //Center the pie chart legend between the bar chart and speedometer, see #60
     pieChartLegend.mutate( {top: barGraphNode.top, centerX: (barGraphNode.right + speedometerNode.left) / 2} );
 
-    var playPauseControl = new PlayPauseControlPanel( model, {x: 0, y: 0} );
-    this.addChild( playPauseControl.mutate( {centerX: this.layoutBounds.centerX + playPauseControl.playButton.width / 2, bottom: this.layoutBounds.maxY - 2} ) );
+    var playProperty = model.property( 'paused' ).not();
+    var playPauseButton = new PlayPauseButton( playProperty, {scale: 0.8} );
+    var stepButton = new StepButton( function() { model.manualStep(); }, playProperty );
+    model.property( 'paused' ).linkAttribute( stepButton, 'enabled' );
+
+    this.addChild( playPauseButton.mutate( {centerX: this.layoutBounds.centerX, bottom: this.layoutBounds.maxY - 2} ) );
+    this.addChild( stepButton.mutate( {left: playPauseButton.right + 5, centerY: playPauseButton.centerY} ) );
 
     this.resetAllButton = new ResetAllButton( model.reset.bind( model ) ).mutate( {scale: 0.7, centerY: (transform.modelToViewY( 0 ) + this.layoutBounds.maxY) / 2, centerX: this.controlPanel.centerX} );
     this.addChild( this.resetAllButton );
@@ -162,7 +169,7 @@ define( function( require ) {
       view.returnSkaterButton.right = view.resetAllButton.left - 10;
     } );
 
-    this.addChild( new PlaybackSpeedControl( model ).mutate( {right: playPauseControl.left, centerY: playPauseControl.centerY} ) );
+    this.addChild( new PlaybackSpeedControl( model ).mutate( {right: playPauseButton.left - 10, centerY: playPauseButton.centerY} ) );
 
     if ( !model.draggableTracks ) {
       this.sceneSelectionPanel = new SceneSelectionPanel( model, this, transform );//layout done in layout bounds
