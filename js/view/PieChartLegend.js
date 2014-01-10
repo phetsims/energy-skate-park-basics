@@ -66,7 +66,7 @@ define( function( require ) {
     model.linkAttribute( 'pieChartVisible', this, 'visible' );
 
     //Only show the pie chart legend when selected and when the bar graph is not shown, see #64
-    model.multilink( ['pieChartVisible', 'barGraphVisible'], function( pieChartVisible, barGraphVisible ) { pieChartLegend.visible = pieChartVisible && !barGraphVisible; } );
+    model.multilink( ['pieChartVisible', 'barGraphVisible'], function( pieChartVisible, barGraphVisible ) { pieChartLegend.visible = pieChartVisible; } );
   }
 
   return inherit( Panel, PieChartLegend );
