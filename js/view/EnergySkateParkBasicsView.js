@@ -39,6 +39,7 @@ define( function( require ) {
   var StepButton = require( 'SCENERY_PHET/StepButton' );
   var HBox = require( 'SCENERY/nodes/HBox' );
   var VBox = require( 'SCENERY/nodes/VBox' );
+  var Node = require( 'SCENERY/nodes/Node' );
   var FontAwesomeNode = require( 'SUN/FontAwesomeNode' );
 
   //Debug flag to show the view bounds, the region within which the skater can move
@@ -116,8 +117,32 @@ define( function( require ) {
       model.tracks.addItemAddedListener( addTrackNode );
 
       var editNode = new FontAwesomeNode( 'cut', {scale: 0.45} );
-      var clearNode = new FontAwesomeNode( 'trash', {scale: 0.45} );
+      var clearNode = new FontAwesomeNode( 'ban_circle', {scale: 0.45} );
       var doneNode = new FontAwesomeNode( 'cut', {scale: 0.45, fill: 'white'} );
+
+//      var xTip = 20;
+//      var yTip = 8;
+//      var xControl = 12;
+//      var yControl = -5;
+//
+//      var createArrowhead = function( angle, tail ) {
+//        var headWidth = 10;
+//        var headHeight = 10;
+//        var directionUnitVector = Vector2.createPolar( 1, angle );
+//        var orthogonalUnitVector = directionUnitVector.perpendicular();
+//        var tip = directionUnitVector.times( headHeight ).plus( tail );
+//        return new Path( new Shape().moveToPoint( tail ).
+//          lineToPoint( tail.plus( orthogonalUnitVector.times( headWidth / 2 ) ) ).
+//          lineToPoint( tip ).
+//          lineToPoint( tail.plus( orthogonalUnitVector.times( -headWidth / 2 ) ) ).
+//          lineToPoint( tail ).close(),
+//          {fill: 'black'} );
+//      };
+//
+//      var rightCurve = new Path( new Shape().moveTo( 0, 0 ).quadraticCurveTo( -xControl, yControl, -xTip, yTip ), { stroke: 'black', lineWidth: 3 } );
+//      var leftCurve = new Path( new Shape().moveTo( 0, 0 ).quadraticCurveTo( xControl, yControl, xTip, yTip ), { stroke: 'black', lineWidth: 3 } );
+
+//      var clearNode = new Node( {children: [rightCurve, createArrowhead( Math.PI - Math.PI / 3, new Vector2( -xTip, yTip ) )], scale: 0.8} );
 
       var nodes = [editNode, clearNode, doneNode];
 
