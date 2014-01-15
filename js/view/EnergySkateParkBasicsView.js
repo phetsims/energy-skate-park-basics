@@ -41,6 +41,7 @@ define( function( require ) {
   var VBox = require( 'SCENERY/nodes/VBox' );
   var Node = require( 'SCENERY/nodes/Node' );
   var FontAwesomeNode = require( 'SUN/FontAwesomeNode' );
+  var Property = require( 'AXON/Property' );
 
   //Debug flag to show the view bounds, the region within which the skater can move
   var showAvailableBounds = false;
@@ -117,8 +118,15 @@ define( function( require ) {
       model.tracks.addItemAddedListener( addTrackNode );
 
       var editNode = new FontAwesomeNode( 'cut', {scale: 0.45} );
+
+      var editButtonEnabledProperty = new Property( false );
+      editButtonEnabledProperty.link( function( editButtonEnabled ) { editNode.fill = editButtonEnabled ? 'black' : 'gray'; } );
+
       var clearNode = new FontAwesomeNode( 'ban_circle', {scale: 0.45} );
       var doneNode = new FontAwesomeNode( 'cut', {scale: 0.45, fill: 'white'} );
+
+      var clearButtonEnabledProperty = new Property( false );
+      clearButtonEnabledProperty.link( function( clearButtonEnabled ) { clearNode.fill = clearButtonEnabled ? 'black' : 'gray'; } );
 
 //      var xTip = 20;
 //      var yTip = 8;
@@ -156,9 +164,11 @@ define( function( require ) {
       };
 
       var editButton = new RectanglePushButton( pad( editNode, nodes ) );
+      editButtonEnabledProperty.linkAttribute( editButton, 'enabled' );
+
       var clearButton = new RectanglePushButton( pad( clearNode, nodes ) );
+      clearButtonEnabledProperty.linkAttribute( clearButton, 'enabled' );
       clearButton.addListener( function() {model.clearTracks()} );
-      var doneButton = new RectanglePushButton( pad( doneNode, nodes ) );
 
       var editClearButtons = new VBox( {children: [editButton, clearButton], spacing: 2, right: this.trackCreationPanel.left - 5, centerY: this.trackCreationPanel.centerY} );
       this.addChild( editClearButtons );
