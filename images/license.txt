@@ -10,3 +10,6 @@ ESP_icon_three_big.png source=PhET Author=SST
 mountains.png source=PhET Author=Noah P
 reset_arrow.svg source=PhET
 skater.png source=PhET
+scissors.png source=Open Clip Art license=PUBLIC DOMAIN notes=Modified from http://www.openclipart.org/detail/32341
+scissors-closed.png source=Open Clip Art license=PUBLIC DOMAIN notes=Modified from http://www.openclipart.org/detail/32341
+scissors-gray.png source=Open Clip Art license=PUBLIC DOMAIN notes=Modified from http://www.openclipart.org/detail/32341

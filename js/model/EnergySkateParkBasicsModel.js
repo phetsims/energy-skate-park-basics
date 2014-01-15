@@ -62,7 +62,9 @@ define( function( require ) {
       gridVisible: false,
       speedometerVisible: false,
 
+      //Enabled/disabled for the track editing buttons
       editButtonEnabled: false,
+      clearButtonEnabled: false,
 
       //Whether the sim is paused or running
       paused: false,
@@ -74,27 +76,32 @@ define( function( require ) {
       friction: frictionAllowed ? 0.05 : 0,
 
       //Whether the skater should stick to the track like a roller coaster, or be able to fly off like a street
-      stickToTrack: true
+      stickToTrack: true,
+
+      //True if the user has pressed 'edit' to modify connected tracks, and the sim is in an "editing" mode
+      editing: false
     } );
     this.skater = new Skater();
     this.tracks = new ObservableArray();
 
-    var updateEditButtonEnabledProperty = function() {
-      var enabled = false;
+    var updateTrackEditingButtonProperties = function() {
+      var editEnabled = false;
+      var clearEnabled = false;
       var physicalTracks = model.getPhysicalTracks();
       for ( var i = 0; i < physicalTracks.length; i++ ) {
+        clearEnabled = true;
         var physicalTrack = physicalTracks[i];
         if ( physicalTrack.controlPoints.length >= 3 ) {
-          enabled = true;
+          editEnabled = true;
         }
       }
-      console.log( enabled );
-      model.editButtonEnabled = enabled;
+      model.editButtonEnabled = editEnabled;
+      model.clearButtonEnabled = clearEnabled;
     };
-    this.tracks.addItemAddedListener( updateEditButtonEnabledProperty );
-    this.tracks.addItemRemovedListener( updateEditButtonEnabledProperty );
-    this.on( 'track-cut', updateEditButtonEnabledProperty );
-    this.on( 'track-changed', updateEditButtonEnabledProperty );
+    this.tracks.addItemAddedListener( updateTrackEditingButtonProperties );
+    this.tracks.addItemRemovedListener( updateTrackEditingButtonProperties );
+    this.on( 'track-cut', updateTrackEditingButtonProperties );
+    this.on( 'track-changed', updateTrackEditingButtonProperties );
 
     if ( !draggableTracks ) {
 

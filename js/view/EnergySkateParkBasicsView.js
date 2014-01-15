@@ -10,6 +10,7 @@ define( function( require ) {
 
   var inherit = require( 'PHET_CORE/inherit' );
   var RectanglePushButton = require( 'SUN/RectanglePushButton' );
+  var Image = require( 'SCENERY/nodes/Image' );
   var Rectangle = require( 'SCENERY/nodes/Rectangle' );
   var Rect = require( 'DOT/Rectangle' );
   var Shape = require( 'KITE/Shape' );
@@ -42,6 +43,9 @@ define( function( require ) {
   var Node = require( 'SCENERY/nodes/Node' );
   var FontAwesomeNode = require( 'SUN/FontAwesomeNode' );
   var Property = require( 'AXON/Property' );
+  var scissorsImage = require( 'image!ENERGY_SKATE_PARK_BASICS/scissors.png' );
+  var scissorsClosedImage = require( 'image!ENERGY_SKATE_PARK_BASICS/scissors-closed.png' );
+  var scissorsGrayImage = require( 'image!ENERGY_SKATE_PARK_BASICS/scissors-gray.png' );
 
   //Debug flag to show the view bounds, the region within which the skater can move
   var showAvailableBounds = false;
@@ -117,10 +121,13 @@ define( function( require ) {
 
       model.tracks.addItemAddedListener( addTrackNode );
 
-      var editNode = new FontAwesomeNode( 'cut', {scale: 0.45} );
+      var editNode = new Image( scissorsImage );
 
       var editButtonEnabledProperty = model.property( 'editButtonEnabled' );
-      editButtonEnabledProperty.link( function( editButtonEnabled ) { editNode.fill = editButtonEnabled ? 'black' : 'gray'; } );
+      model.multilink( ['editButtonEnabled', 'editing'], function( editButtonEnabled, editing ) {
+        editNode.image = editButtonEnabled ? (editing ? scissorsClosedImage : scissorsImage) : scissorsGrayImage;
+        editNode.y = editNode.image == scissorsClosedImage ? 2.5 : 0;
+      } );
 
       var xTip = 20;
       var yTip = 8;
@@ -147,7 +154,7 @@ define( function( require ) {
       var clearNode = new Node( {children: [rightCurve, arrowHead], scale: 0.8} );
       var doneNode = new FontAwesomeNode( 'cut', {scale: 0.45, fill: 'white'} );
 
-      var clearButtonEnabledProperty = new Property( false );
+      var clearButtonEnabledProperty = model.property( 'clearButtonEnabled' );
       clearButtonEnabledProperty.link( function( clearButtonEnabled ) {
         rightCurve.stroke = clearButtonEnabled ? 'black' : 'gray';
         arrowHead.fill = clearButtonEnabled ? 'black' : 'gray';
@@ -165,6 +172,7 @@ define( function( require ) {
       };
 
       var editButton = new RectanglePushButton( pad( editNode, nodes ) );
+      editButton.addListener( function() {model.editing = !model.editing;} );
       editButtonEnabledProperty.linkAttribute( editButton, 'enabled' );
 
       var clearButton = new RectanglePushButton( pad( clearNode, nodes ) );
