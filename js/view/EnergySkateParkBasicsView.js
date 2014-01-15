@@ -119,38 +119,39 @@ define( function( require ) {
 
       var editNode = new FontAwesomeNode( 'cut', {scale: 0.45} );
 
-      var editButtonEnabledProperty = new Property( false );
+      var editButtonEnabledProperty = model.property( 'editButtonEnabled' );
       editButtonEnabledProperty.link( function( editButtonEnabled ) { editNode.fill = editButtonEnabled ? 'black' : 'gray'; } );
 
-      var clearNode = new FontAwesomeNode( 'ban_circle', {scale: 0.45} );
+      var xTip = 20;
+      var yTip = 8;
+      var xControl = 12;
+      var yControl = -5;
+
+      var createArrowhead = function( angle, tail ) {
+        var headWidth = 10;
+        var headHeight = 10;
+        var directionUnitVector = Vector2.createPolar( 1, angle );
+        var orthogonalUnitVector = directionUnitVector.perpendicular();
+        var tip = directionUnitVector.times( headHeight ).plus( tail );
+        return new Path( new Shape().moveToPoint( tail ).
+          lineToPoint( tail.plus( orthogonalUnitVector.times( headWidth / 2 ) ) ).
+          lineToPoint( tip ).
+          lineToPoint( tail.plus( orthogonalUnitVector.times( -headWidth / 2 ) ) ).
+          lineToPoint( tail ).close(),
+          {fill: 'black'} );
+      };
+
+      var rightCurve = new Path( new Shape().moveTo( 0, 0 ).quadraticCurveTo( -xControl, yControl, -xTip, yTip ), { stroke: 'black', lineWidth: 3 } );
+      var arrowHead = createArrowhead( Math.PI - Math.PI / 3, new Vector2( -xTip, yTip ) );
+
+      var clearNode = new Node( {children: [rightCurve, arrowHead], scale: 0.8} );
       var doneNode = new FontAwesomeNode( 'cut', {scale: 0.45, fill: 'white'} );
 
       var clearButtonEnabledProperty = new Property( false );
-      clearButtonEnabledProperty.link( function( clearButtonEnabled ) { clearNode.fill = clearButtonEnabled ? 'black' : 'gray'; } );
-
-//      var xTip = 20;
-//      var yTip = 8;
-//      var xControl = 12;
-//      var yControl = -5;
-//
-//      var createArrowhead = function( angle, tail ) {
-//        var headWidth = 10;
-//        var headHeight = 10;
-//        var directionUnitVector = Vector2.createPolar( 1, angle );
-//        var orthogonalUnitVector = directionUnitVector.perpendicular();
-//        var tip = directionUnitVector.times( headHeight ).plus( tail );
-//        return new Path( new Shape().moveToPoint( tail ).
-//          lineToPoint( tail.plus( orthogonalUnitVector.times( headWidth / 2 ) ) ).
-//          lineToPoint( tip ).
-//          lineToPoint( tail.plus( orthogonalUnitVector.times( -headWidth / 2 ) ) ).
-//          lineToPoint( tail ).close(),
-//          {fill: 'black'} );
-//      };
-//
-//      var rightCurve = new Path( new Shape().moveTo( 0, 0 ).quadraticCurveTo( -xControl, yControl, -xTip, yTip ), { stroke: 'black', lineWidth: 3 } );
-//      var leftCurve = new Path( new Shape().moveTo( 0, 0 ).quadraticCurveTo( xControl, yControl, xTip, yTip ), { stroke: 'black', lineWidth: 3 } );
-
-//      var clearNode = new Node( {children: [rightCurve, createArrowhead( Math.PI - Math.PI / 3, new Vector2( -xTip, yTip ) )], scale: 0.8} );
+      clearButtonEnabledProperty.link( function( clearButtonEnabled ) {
+        rightCurve.stroke = clearButtonEnabled ? 'black' : 'gray';
+        arrowHead.fill = clearButtonEnabled ? 'black' : 'gray';
+      } );
 
       var nodes = [editNode, clearNode, doneNode];
 

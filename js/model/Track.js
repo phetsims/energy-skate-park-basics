@@ -15,14 +15,16 @@ define( function( require ) {
 
   /**
    * Model for a track, which has a fixed number of points.  If you added a point to a Track, you need a new track.
+   * @param {Events} trackEvents event source for sending messages
    * @param {ObservableArray<Track>} modelTracks all model tracks, so this track can add and remove others when joined/split
    * @param {Array<ControlPoint>} controlPoints
    * @param {Boolean} interactive
    * @param {Array<Number>} parents the original tracks that were used to make this track (if any) so they can be broken apart when dragged back to control panel
    * @constructor
    */
-  function Track( modelTracks, controlPoints, interactive, parents ) {
+  function Track( events, modelTracks, controlPoints, interactive, parents ) {
     var track = this;
+    this.events = events;
     this.parents = parents;
     this.modelTracks = modelTracks;
 
@@ -41,6 +43,8 @@ define( function( require ) {
       //Keep track of whether the track is dragging, so performance can be optimized while dragging
       dragging: false
     } );
+
+    this.property( 'physical' ).link( function() { events.trigger( 'track-changed' ); } );
 
     //A track is ready to be returned to the track panel iff it has been taken out once and dragged over the panel
     this.addDerivedProperty( 'readyToReturn', ['overTrackPanel', 'leftThePanel'], function( overTrackPanel, leftThePanel ) {

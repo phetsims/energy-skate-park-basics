@@ -62,6 +62,8 @@ define( function( require ) {
       gridVisible: false,
       speedometerVisible: false,
 
+      editButtonEnabled: false,
+
       //Whether the sim is paused or running
       paused: false,
 
@@ -77,6 +79,23 @@ define( function( require ) {
     this.skater = new Skater();
     this.tracks = new ObservableArray();
 
+    var updateEditButtonEnabledProperty = function() {
+      var enabled = false;
+      var physicalTracks = model.getPhysicalTracks();
+      for ( var i = 0; i < physicalTracks.length; i++ ) {
+        var physicalTrack = physicalTracks[i];
+        if ( physicalTrack.controlPoints.length >= 3 ) {
+          enabled = true;
+        }
+      }
+      console.log( enabled );
+      model.editButtonEnabled = enabled;
+    };
+    this.tracks.addItemAddedListener( updateEditButtonEnabledProperty );
+    this.tracks.addItemRemovedListener( updateEditButtonEnabledProperty );
+    this.on( 'track-cut', updateEditButtonEnabledProperty );
+    this.on( 'track-changed', updateEditButtonEnabledProperty );
+
     if ( !draggableTracks ) {
 
       //For screens 1-2, the index of the selected scene (and track) within the screen
@@ -89,9 +108,9 @@ define( function( require ) {
       var doubleWell = [new ControlPoint( -4, 5 ), new ControlPoint( -2, 0.0166015 ), new ControlPoint( 0, 2 ), new ControlPoint( 2, 1 ), new ControlPoint( 4, 5 ) ];
 
       this.tracks.addAll(
-        [ new Track( this.tracks, parabola, false ),
-          new Track( this.tracks, slope, false ),
-          new Track( this.tracks, doubleWell, false )
+        [ new Track( this.reduced( 'track-changed' ), this.tracks, parabola, false ),
+          new Track( this.reduced( 'track-changed' ), this.tracks, slope, false ),
+          new Track( this.reduced( 'track-changed' ), this.tracks, doubleWell, false )
         ] );
 
       this.sceneProperty.link( function( scene ) {
@@ -116,7 +135,7 @@ define( function( require ) {
         //Could use view transform for this, but it would require creating the view first, so just eyeballing it for now.
         var offset = new Vector2( -5.5, -0.73 );
         var controlPoints = [ new ControlPoint( offset.x - 1, offset.y ), new ControlPoint( offset.x, offset.y ), new ControlPoint( offset.x + 1, offset.y )];
-        this.tracks.add( new Track( this.tracks, controlPoints, true ) );
+        this.tracks.add( new Track( this.reduced( 'track-changed' ), this.tracks, controlPoints, true ) );
       }
     },
 
@@ -763,7 +782,7 @@ define( function( require ) {
         secondTrackBackward();
       }
 
-      var newTrack = new Track( this.tracks, points, true, a.getParentsOrSelf().concat( b.getParentsOrSelf() ) );
+      var newTrack = new Track( this.reduced( 'track-changed' ), this.tracks, points, true, a.getParentsOrSelf().concat( b.getParentsOrSelf() ) );
       newTrack.physical = true;
       this.tracks.remove( a );
       this.tracks.remove( b );
