@@ -9,6 +9,7 @@ define( function( require ) {
   'use strict';
 
   var inherit = require( 'PHET_CORE/inherit' );
+  var RectanglePushButton = require( 'SUN/RectanglePushButton' );
   var Rectangle = require( 'SCENERY/nodes/Rectangle' );
   var Rect = require( 'DOT/Rectangle' );
   var Shape = require( 'KITE/Shape' );
@@ -29,6 +30,7 @@ define( function( require ) {
   var Vector2 = require( 'DOT/Vector2' );
   var GaugeNode = require( 'SCENERY_PHET/GaugeNode' );
   var TextPushButton = require( 'SUN/TextPushButton' );
+  var Text = require( 'SCENERY/nodes/Text' );
   var DerivedProperty = require( 'AXON/DerivedProperty' );
   var Path = require( 'SCENERY/nodes/Path' );
   var returnSkaterString = require( 'string!ENERGY_SKATE_PARK_BASICS/controls.reset-character' );
@@ -36,6 +38,8 @@ define( function( require ) {
   var PlayPauseButton = require( 'SCENERY_PHET/PlayPauseButton' );
   var StepButton = require( 'SCENERY_PHET/StepButton' );
   var HBox = require( 'SCENERY/nodes/HBox' );
+  var VBox = require( 'SCENERY/nodes/VBox' );
+  var FontAwesomeNode = require( 'SUN/FontAwesomeNode' );
 
   //Debug flag to show the view bounds, the region within which the skater can move
   var showAvailableBounds = false;
@@ -110,6 +114,29 @@ define( function( require ) {
       interactiveTrackNodes.forEach( function( trackNode ) { trackNode.moveToFront(); } );
 
       model.tracks.addItemAddedListener( addTrackNode );
+
+      var editNode = new FontAwesomeNode( 'cut', {scale: 0.45} );
+      var clearNode = new FontAwesomeNode( 'trash', {scale: 0.45} );
+      var doneNode = new FontAwesomeNode( 'cut', {scale: 0.45, fill: 'white'} );
+
+      var nodes = [editNode, clearNode, doneNode];
+
+      //Make all buttons the same dimension
+      var pad = function( node, nodes ) {
+        var maxWidth = _.max( nodes,function( node ) {return node.width;} ).width;
+        var maxHeight = _.max( nodes,function( node ) {return node.height;} ).height;
+        node.centerX = maxWidth / 2;
+        node.centerY = maxHeight / 2;
+        return new Rectangle( 0, 0, maxWidth, maxHeight, {children: [node]} );
+      };
+
+      var editButton = new RectanglePushButton( pad( editNode, nodes ) );
+      var clearButton = new RectanglePushButton( pad( clearNode, nodes ) );
+      clearButton.addListener( function() {model.clearTracks()} );
+      var doneButton = new RectanglePushButton( pad( doneNode, nodes ) );
+
+      var editClearButtons = new VBox( {children: [editButton, clearButton], spacing: 2, right: this.trackCreationPanel.left - 5, centerY: this.trackCreationPanel.centerY} );
+      this.addChild( editClearButtons );
     }
 
     var skaterNode = new SkaterNode( model, model.skater, this, transform );
