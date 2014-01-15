@@ -141,11 +141,11 @@ define( function( require ) {
     pieChartLegend.mutate( {top: barGraphNode.top, centerX: (barGraphNode.right + speedometerNode.left) / 2} );
 
     var playProperty = model.property( 'paused' ).not();
-    var playPauseButton = new PlayPauseButton( playProperty, {elementScale: 0.8} );
+    var playPauseButton = new PlayPauseButton( playProperty, {elementScale: 0.73} );
     var stepButton = new StepButton( function() { model.manualStep(); }, playProperty );
     model.property( 'paused' ).linkAttribute( stepButton, 'enabled' );
 
-    this.addChild( playPauseButton.mutate( {centerX: this.layoutBounds.centerX, bottom: this.layoutBounds.maxY - 2} ) );
+    this.addChild( playPauseButton.mutate( {centerX: this.layoutBounds.centerX, bottom: this.layoutBounds.maxY - 6} ) );
     this.addChild( stepButton.mutate( {left: playPauseButton.right + 5, centerY: playPauseButton.centerY} ) );
 
     this.resetAllButton = new ResetAllButton( model.reset.bind( model ) ).mutate( {scale: 0.7, centerY: (transform.modelToViewY( 0 ) + this.layoutBounds.maxY) / 2, centerX: this.controlPanel.centerX} );
