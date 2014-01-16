@@ -28,20 +28,21 @@ define( function( require ) {
     for ( var i = 0; i < tracks.length; i++ ) {
       var track = tracks[i];
       for ( var k = 1; k < track.controlPoints.length - 1; k++ ) {
-//      for ( var k = 0; k < track.controlPoints.length; k++ ) {
-        var maxPoint = track.maxPoint;
-        var minPoint = track.minPoint;
-        var alpha = new LinearFunction( 0, track.controlPoints.length - 1, minPoint, maxPoint )( k ); //a1, a2, b1, b2, clamp
-        var position = track.getPoint( alpha );
-        var angle = track.getViewAngleAt( alpha );
-        var image = new Image( scissorsImage );
-        image.rotate( Math.PI / 2 + angle );
+        (function( track, k ) {
+          var alpha = new LinearFunction( 0, track.controlPoints.length - 1, track.minPoint, track.maxPoint )( k ); //a1, a2, b1, b2, clamp
+          var position = track.getPoint( alpha );
+          var angle = track.getViewAngleAt( alpha );
+          var image = new Image( scissorsImage );
+          image.rotate( Math.PI / 2 + angle );
 
-        var cutButton = new RectanglePushButton( image, {center: transform.modelToViewPosition( position ).plus( Vector2.createPolar( 40, angle - Math.PI / 2 ) )} );
-        children.push( cutButton );
+          var cutButton = new RectanglePushButton( image, {center: transform.modelToViewPosition( position ).plus( Vector2.createPolar( 40, angle - Math.PI / 2 ) )} );
+          cutButton.addListener( function() {} );
+          children.push( cutButton );
 
-        var deleteButton = new RectanglePushButton( new FontAwesomeNode( 'times_circle', {fill: 'red', scale: 0.6} ), {center: transform.modelToViewPosition( position ).plus( Vector2.createPolar( 40, angle + Math.PI / 2 ) )} );
-        children.push( deleteButton );
+          var deleteButton = new RectanglePushButton( new FontAwesomeNode( 'times_circle', {fill: 'red', scale: 0.6} ), {center: transform.modelToViewPosition( position ).plus( Vector2.createPolar( 40, angle + Math.PI / 2 ) )} );
+          deleteButton.addListener( function() { model.deleteControlPoint( track, k ); } );
+          children.push( deleteButton );
+        })( track, k );
       }
     }
     Node.call( this, {children: children} );

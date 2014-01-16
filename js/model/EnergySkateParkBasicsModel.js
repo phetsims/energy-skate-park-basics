@@ -747,6 +747,17 @@ define( function( require ) {
       }
     },
 
+    //The user has pressed the "delete" button for the specified track's specified control point, and it should be deleted.
+    //It should be an inner point of a track (not an end point)
+    deleteControlPoint: function( track, controlPointIndex ) {
+      debugger;
+      var points = _.without( track.controlPoints, track.controlPoints[controlPointIndex] );
+      var newTrack = new Track( this.reduced( 'track-changed' ), this.tracks, points, true, track.getParentsOrSelf() );
+      newTrack.physical = true;
+      this.tracks.remove( track );
+      this.tracks.add( newTrack );
+    },
+
     /**
      * Join the specified tracks together into a single new track and delete the old tracks.
      *
