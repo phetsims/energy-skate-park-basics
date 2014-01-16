@@ -32,11 +32,12 @@ define( function( require ) {
           var alpha = new LinearFunction( 0, track.controlPoints.length - 1, track.minPoint, track.maxPoint )( k ); //a1, a2, b1, b2, clamp
           var position = track.getPoint( alpha );
           var angle = track.getViewAngleAt( alpha );
+          var modelAngle = track.getModelAngleAt( alpha );
           var image = new Image( scissorsImage );
           image.rotate( Math.PI / 2 + angle );
 
           var cutButton = new RectanglePushButton( image, {center: transform.modelToViewPosition( position ).plus( Vector2.createPolar( 40, angle - Math.PI / 2 ) )} );
-          cutButton.addListener( function() {model.splitControlPoint( track, k );} );
+          cutButton.addListener( function() {model.splitControlPoint( track, k, modelAngle );} );
           children.push( cutButton );
 
           var deleteButton = new RectanglePushButton( new FontAwesomeNode( 'times_circle', {fill: 'red', scale: 0.6} ), {center: transform.modelToViewPosition( position ).plus( Vector2.createPolar( 40, angle + Math.PI / 2 ) )} );

@@ -763,13 +763,15 @@ define( function( require ) {
       this.trigger( 'track-edited' );
 
       //TODO: Replenish the track toolbox as appropriate (to keep about the same number of control points available)
+      //TODO: If the skater was on track, then update position
     },
 
     //The user has pressed the "delete" button for the specified track's specified control point, and it should be deleted.
     //It should be an inner point of a track (not an end point)
-    splitControlPoint: function( track, controlPointIndex ) {
-      var newPoint1 = new ControlPoint( track.controlPoints[controlPointIndex].sourcePosition.x, track.controlPoints[controlPointIndex].sourcePosition.y - 1 );
-      var newPoint2 = new ControlPoint( track.controlPoints[controlPointIndex].sourcePosition.x, track.controlPoints[controlPointIndex].sourcePosition.y + 1 );
+    splitControlPoint: function( track, controlPointIndex, modelAngle ) {
+      var vector = Vector2.createPolar( 0.5, modelAngle );
+      var newPoint1 = new ControlPoint( track.controlPoints[controlPointIndex].sourcePosition.x - vector.x, track.controlPoints[controlPointIndex].sourcePosition.y - vector.y );
+      var newPoint2 = new ControlPoint( track.controlPoints[controlPointIndex].sourcePosition.x + vector.x, track.controlPoints[controlPointIndex].sourcePosition.y + vector.y );
 
       var points1 = track.controlPoints.slice( 0, controlPointIndex );
       var points2 = track.controlPoints.slice( controlPointIndex + 1, track.controlPoints.length );
@@ -792,6 +794,7 @@ define( function( require ) {
       this.trigger( 'track-edited' );
 
       //TODO: Don't show the split gui if there are already too many control points total
+      //TODO: If the skater was on track, then move to track1 or track2
     },
 
     /**
