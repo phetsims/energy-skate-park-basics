@@ -140,7 +140,7 @@ define( function( require ) {
       for ( var i = 0; i < 4; i++ ) {
         //Move the tracks over so they will be in the right position in the view coordinates, under the grass to the left of the clock controls
         //Could use view transform for this, but it would require creating the view first, so just eyeballing it for now.
-        var offset = new Vector2( -5.5, -0.73 );
+        var offset = new Vector2( -5.5 + 0.1, -0.73 );
         var controlPoints = [ new ControlPoint( offset.x - 1, offset.y ), new ControlPoint( offset.x, offset.y ), new ControlPoint( offset.x + 1, offset.y )];
         this.tracks.add( new Track( this.reduced( 'track-changed' ), this.tracks, controlPoints, true ) );
       }
@@ -182,7 +182,7 @@ define( function( require ) {
 
         var skaterState = new SkaterState( this.skater, {} );
         //TODO this is flagged by jshint as unused, but appears in a commented-out chunk of code below.
-        var initialEnergy = skaterState.getTotalEnergy();
+//        var initialEnergy = skaterState.getTotalEnergy();
         skaterState = this.stepModel( this.speed === 'normal' ? dt : dt * 0.25, skaterState );
 
         //Uncomment this block to debug energy issues.  Commented out instead of blocked with a flag so debugger statement will pass jshint

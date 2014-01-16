@@ -32,7 +32,7 @@ define( function() {
     if ( typeof x0 === "number" ) {
       var x = spline.x;
       n = x.length;
-      var p, q, mid, floor = Math.floor, a, b, t;
+      var p, q, mid, floor = Math.floor;
       p = 0;
       q = n - 1;
       while ( q - p > 1 ) {

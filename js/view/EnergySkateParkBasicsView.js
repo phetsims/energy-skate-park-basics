@@ -31,21 +31,19 @@ define( function( require ) {
   var Vector2 = require( 'DOT/Vector2' );
   var GaugeNode = require( 'SCENERY_PHET/GaugeNode' );
   var TextPushButton = require( 'SUN/TextPushButton' );
-  var Text = require( 'SCENERY/nodes/Text' );
   var DerivedProperty = require( 'AXON/DerivedProperty' );
   var Path = require( 'SCENERY/nodes/Path' );
   var returnSkaterString = require( 'string!ENERGY_SKATE_PARK_BASICS/controls.reset-character' );
   var speedString = require( 'string!ENERGY_SKATE_PARK_BASICS/properties.speed' );
   var PlayPauseButton = require( 'SCENERY_PHET/PlayPauseButton' );
   var StepButton = require( 'SCENERY_PHET/StepButton' );
-  var HBox = require( 'SCENERY/nodes/HBox' );
   var VBox = require( 'SCENERY/nodes/VBox' );
   var Node = require( 'SCENERY/nodes/Node' );
   var FontAwesomeNode = require( 'SUN/FontAwesomeNode' );
-  var Property = require( 'AXON/Property' );
   var scissorsImage = require( 'image!ENERGY_SKATE_PARK_BASICS/scissors.png' );
   var scissorsClosedImage = require( 'image!ENERGY_SKATE_PARK_BASICS/scissors-closed.png' );
   var scissorsGrayImage = require( 'image!ENERGY_SKATE_PARK_BASICS/scissors-gray.png' );
+  var TrackEditingNode = require( 'ENERGY_SKATE_PARK_BASICS/view/TrackEditingNode' );
 
   //Debug flag to show the view bounds, the region within which the skater can move
   var showAvailableBounds = false;
@@ -126,7 +124,7 @@ define( function( require ) {
       var editButtonEnabledProperty = model.property( 'editButtonEnabled' );
       model.multilink( ['editButtonEnabled', 'editing'], function( editButtonEnabled, editing ) {
         editNode.image = editButtonEnabled ? (editing ? scissorsClosedImage : scissorsImage) : scissorsGrayImage;
-        editNode.y = editNode.image == scissorsClosedImage ? 2.5 : 0;
+        editNode.y = editNode.image === scissorsClosedImage ? 2.5 : 0;
       } );
 
       var xTip = 20;
@@ -177,7 +175,7 @@ define( function( require ) {
 
       var clearButton = new RectanglePushButton( pad( clearNode, nodes ) );
       clearButtonEnabledProperty.linkAttribute( clearButton, 'enabled' );
-      clearButton.addListener( function() {model.clearTracks()} );
+      clearButton.addListener( function() {model.clearTracks();} );
 
       var editClearButtons = new VBox( {children: [editButton, clearButton], spacing: 2, right: this.trackCreationPanel.left - 5, centerY: this.trackCreationPanel.centerY} );
       this.addChild( editClearButtons );
@@ -252,6 +250,19 @@ define( function( require ) {
       this.viewBoundsPath = new Path( null, {pickable: false, stroke: 'red', lineWidth: 10} );
       this.addChild( this.viewBoundsPath );
     }
+
+    var trackEditingNode = null;
+    model.property( 'editing' ).link( function( editing ) {
+      if ( editing ) {
+        trackEditingNode = new TrackEditingNode( model, transform );
+        view.addChild( trackEditingNode );
+      }
+      else {
+        if ( trackEditingNode ) {
+          view.removeChild( trackEditingNode );
+        }
+      }
+    } );
   }
 
   return inherit( ScreenView, EnergySkateParkBasicsView, {
