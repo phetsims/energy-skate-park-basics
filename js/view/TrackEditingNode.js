@@ -18,11 +18,28 @@ define( function( require ) {
   var LinearFunction = require( 'DOT/LinearFunction' );
   var FontAwesomeNode = require( 'SUN/FontAwesomeNode' );
 
-  function TrackEditingNode( model, transform ) {
+  function TrackEditingNode( parentNode, model, transform ) {
 
-    var plane = new Plane( {fill: 'gray', opacity: 0.2} );
-    plane.addInputListener( {down: function() {model.editing = false;}} );
-    var children = [  plane ];
+    //See ComboxBox.js
+    var enableClickToDismissListener = true;
+
+    // listener for 'click outside to dismiss'
+    var clickToDismissListener = {
+      down: function() {
+        if ( enableClickToDismissListener ) {
+          sceneNode.removeInputListener( clickToDismissListener );
+          model.editing = false;
+        }
+        else {
+          enableClickToDismissListener = true;
+        }
+      }
+    };
+
+    var sceneNode = parentNode.getUniqueTrail().rootNode();
+    sceneNode.addInputListener( clickToDismissListener );
+
+    var children = [ ];
 
     var tracks = model.getPhysicalTracks();
     for ( var i = 0; i < tracks.length; i++ ) {
@@ -37,10 +54,13 @@ define( function( require ) {
           image.rotate( Math.PI / 2 + angle );
 
           var cutButton = new RectanglePushButton( image, {center: transform.modelToViewPosition( position ).plus( Vector2.createPolar( 40, angle - Math.PI / 2 ) )} );
-          cutButton.addListener( function() {model.splitControlPoint( track, k, modelAngle );} );
+          var disableDismissAction = { down: function() { enableClickToDismissListener = false; } };
+          cutButton.addInputListener( disableDismissAction );
+          cutButton.addListener( function() { model.splitControlPoint( track, k, modelAngle ); } );
           children.push( cutButton );
 
           var deleteButton = new RectanglePushButton( new FontAwesomeNode( 'times_circle', {fill: 'red', scale: 0.6} ), {center: transform.modelToViewPosition( position ).plus( Vector2.createPolar( 40, angle + Math.PI / 2 ) )} );
+          deleteButton.addInputListener( disableDismissAction );
           deleteButton.addListener( function() { model.deleteControlPoint( track, k ); } );
           children.push( deleteButton );
         })( track, k );

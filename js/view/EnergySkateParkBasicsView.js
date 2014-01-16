@@ -254,7 +254,7 @@ define( function( require ) {
     var trackEditingNode = null;
     model.property( 'editing' ).link( function( editing ) {
       if ( editing ) {
-        trackEditingNode = new TrackEditingNode( model, transform );
+        trackEditingNode = new TrackEditingNode( view, model, transform );
         view.addChild( trackEditingNode );
       }
       else {
@@ -266,7 +266,7 @@ define( function( require ) {
     model.on( 'track-edited', function() {
       view.removeChild( trackEditingNode );
       if ( model.editing && model.editButtonEnabled ) {
-        trackEditingNode = new TrackEditingNode( model, transform );
+        trackEditingNode = new TrackEditingNode( view, model, transform );
         view.addChild( trackEditingNode );
       }
     } );
