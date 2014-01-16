@@ -765,6 +765,35 @@ define( function( require ) {
       //TODO: Replenish the track toolbox as appropriate (to keep about the same number of control points available)
     },
 
+    //The user has pressed the "delete" button for the specified track's specified control point, and it should be deleted.
+    //It should be an inner point of a track (not an end point)
+    splitControlPoint: function( track, controlPointIndex ) {
+      var newPoint1 = new ControlPoint( track.controlPoints[controlPointIndex].sourcePosition.x, track.controlPoints[controlPointIndex].sourcePosition.y - 1 );
+      var newPoint2 = new ControlPoint( track.controlPoints[controlPointIndex].sourcePosition.x, track.controlPoints[controlPointIndex].sourcePosition.y + 1 );
+
+      var points1 = track.controlPoints.slice( 0, controlPointIndex );
+      var points2 = track.controlPoints.slice( controlPointIndex + 1, track.controlPoints.length );
+
+      points1.push( newPoint1 );
+      points2.unshift( newPoint2 );
+
+      var newTrack1 = new Track( this.reduced( ['track-changed' , 'track-edited'] ), this.tracks, points1, true, track.getParentsOrSelf() );
+      newTrack1.physical = true;
+      var newTrack2 = new Track( this.reduced( ['track-changed' , 'track-edited'] ), this.tracks, points2, true, track.getParentsOrSelf() );
+      newTrack2.physical = true;
+      this.tracks.remove( track );
+      this.tracks.add( newTrack1 );
+      this.tracks.add( newTrack2 );
+
+      //Trigger track changed first to update the edit enabled properties
+      this.trigger( 'track-changed' );
+
+      //Trigger track edited to rebulid the editing gui layer
+      this.trigger( 'track-edited' );
+
+      //TODO: Don't show the split gui if there are already too many control points total
+    },
+
     /**
      * Join the specified tracks together into a single new track and delete the old tracks.
      *

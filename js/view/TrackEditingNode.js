@@ -36,7 +36,7 @@ define( function( require ) {
           image.rotate( Math.PI / 2 + angle );
 
           var cutButton = new RectanglePushButton( image, {center: transform.modelToViewPosition( position ).plus( Vector2.createPolar( 40, angle - Math.PI / 2 ) )} );
-          cutButton.addListener( function() {} );
+          cutButton.addListener( function() {model.splitControlPoint( track, k );} );
           children.push( cutButton );
 
           var deleteButton = new RectanglePushButton( new FontAwesomeNode( 'times_circle', {fill: 'red', scale: 0.6} ), {center: transform.modelToViewPosition( position ).plus( Vector2.createPolar( 40, angle + Math.PI / 2 ) )} );
