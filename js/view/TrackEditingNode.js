@@ -22,12 +22,15 @@ define( function( require ) {
 
     //See ComboxBox.js
     var enableClickToDismissListener = true;
+    var sceneListenerAdded = false;
 
     // listener for 'click outside to dismiss'
     var clickToDismissListener = {
       down: function() {
+        console.log( 'clickToDismissListener.down, enableClickToDismiss = ', enableClickToDismissListener );
         if ( enableClickToDismissListener ) {
           sceneNode.removeInputListener( clickToDismissListener );
+          sceneListenerAdded = false;
           model.editing = false;
         }
         else {
@@ -38,6 +41,7 @@ define( function( require ) {
 
     var sceneNode = parentNode.getUniqueTrail().rootNode();
     sceneNode.addInputListener( clickToDismissListener );
+    sceneListenerAdded = true;
 
     var children = [ ];
 
@@ -67,6 +71,11 @@ define( function( require ) {
       }
     }
     Node.call( this, {children: children} );
+
+    this.cleanup = function() {
+      sceneNode.removeInputListener( clickToDismissListener );
+      sceneListenerAdded = false;
+    };
   }
 
   return inherit( Node, TrackEditingNode );

@@ -251,6 +251,7 @@ define( function( require ) {
       this.addChild( this.viewBoundsPath );
     }
 
+    //Add new TrackEditingNode when the user presses "edit".  The TrackEditingNode is deleted and re-created if the track is edited, to have it automatically update.
     var trackEditingNode = null;
     model.property( 'editing' ).link( function( editing ) {
       if ( editing ) {
@@ -259,12 +260,16 @@ define( function( require ) {
       }
       else {
         if ( trackEditingNode ) {
+          trackEditingNode.cleanup();
           view.removeChild( trackEditingNode );
+          trackEditingNode = null;
         }
       }
     } );
     model.on( 'track-edited', function() {
+      trackEditingNode.cleanup();
       view.removeChild( trackEditingNode );
+      trackEditingNode = null;
       if ( model.editing && model.editButtonEnabled ) {
         trackEditingNode = new TrackEditingNode( view, model, transform );
         view.addChild( trackEditingNode );
