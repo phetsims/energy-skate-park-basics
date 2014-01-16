@@ -263,6 +263,13 @@ define( function( require ) {
         }
       }
     } );
+    model.on( 'track-edited', function() {
+      view.removeChild( trackEditingNode );
+      if ( model.editing && model.editButtonEnabled ) {
+        trackEditingNode = new TrackEditingNode( model, transform );
+        view.addChild( trackEditingNode );
+      }
+    } );
   }
 
   return inherit( ScreenView, EnergySkateParkBasicsView, {
