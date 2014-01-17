@@ -9,7 +9,6 @@ define( function( require ) {
   'use strict';
 
   var inherit = require( 'PHET_CORE/inherit' );
-  var Plane = require( 'SCENERY/nodes/Plane' );
   var Vector2 = require( 'DOT/Vector2' );
   var Node = require( 'SCENERY/nodes/Node' );
   var Image = require( 'SCENERY/nodes/Image' );
