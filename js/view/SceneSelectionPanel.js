@@ -47,5 +47,5 @@ define( function( require ) {
     Panel.call( this, content, {xMargin: 10} );
   }
 
-  return inherit( VBox, SceneSelectionPanel );
+  return inherit( Panel, SceneSelectionPanel );
 } );
