@@ -5,6 +5,8 @@ button_step_hover.png source=PhET Author=SST
 button_step_unpressed.png source=PhET Author=SST
 cement-texture-dark.jpg source=http://www.public-domain-image.com/full-image/textures-and-patterns-public-domain-images-pictures/concrete-texture-public-domain-images-pictures/cement-texture.jpg-royalty-free-stock-image.html license=public domain
 close-button.png source=PhET Author=SST
+eraser.png source=PhET Author=SST
+eraser-icon.png source=PhET Author=SST
 ESP_icon_one_big.png source=PhET Author=SST
 ESP_icon_two_big.png source=PhET Author=SST
 ESP_icon_three_big.png source=PhET Author=SST
