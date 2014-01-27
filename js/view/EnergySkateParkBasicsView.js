@@ -39,8 +39,6 @@ define( function( require ) {
   var PlayPauseButton = require( 'SCENERY_PHET/PlayPauseButton' );
   var StepButton = require( 'SCENERY_PHET/StepButton' );
   var VBox = require( 'SCENERY/nodes/VBox' );
-  var Node = require( 'SCENERY/nodes/Node' );
-  var FontAwesomeNode = require( 'SUN/FontAwesomeNode' );
   var eraser = require( 'image!ENERGY_SKATE_PARK_BASICS/eraser.png' );
   var TrackEditingNode = require( 'ENERGY_SKATE_PARK_BASICS/view/TrackEditingNode' );
 

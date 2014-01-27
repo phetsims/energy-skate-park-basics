@@ -12,13 +12,11 @@ define( function( require ) {
   var Node = require( 'SCENERY/nodes/Node' );
   var Rectangle = require( 'SCENERY/nodes/Rectangle' );
   var Line = require( 'SCENERY/nodes/Line' );
-  var Path = require( 'SCENERY/nodes/Path' );
   var Image = require( 'SCENERY/nodes/Image' );
   var LinearGradient = require( 'SCENERY/util/LinearGradient' );
   var mountainImage = require( 'image!ENERGY_SKATE_PARK_BASICS/mountains.png' );
   var cementImg = require( 'image!ENERGY_SKATE_PARK_BASICS/cement-texture-dark.jpg' );
   var Pattern = require( 'SCENERY/util/Pattern' );
-  var Shape = require( 'KITE/Shape' );
 
   var earthHeight = 70;
   var cementWidth = 4;
