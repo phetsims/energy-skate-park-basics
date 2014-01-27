@@ -8,6 +8,7 @@
 define( function( require ) {
   'use strict';
 
+  var Color = require( 'SCENERY/util/Color' );
   var inherit = require( 'PHET_CORE/inherit' );
   var RectanglePushButton = require( 'SUN/RectanglePushButton' );
   var Image = require( 'SCENERY/nodes/Image' );
@@ -40,9 +41,7 @@ define( function( require ) {
   var VBox = require( 'SCENERY/nodes/VBox' );
   var Node = require( 'SCENERY/nodes/Node' );
   var FontAwesomeNode = require( 'SUN/FontAwesomeNode' );
-  var scissorsImage = require( 'image!ENERGY_SKATE_PARK_BASICS/scissors.png' );
-  var scissorsClosedImage = require( 'image!ENERGY_SKATE_PARK_BASICS/scissors-closed.png' );
-  var scissorsGrayImage = require( 'image!ENERGY_SKATE_PARK_BASICS/scissors-gray.png' );
+  var eraser = require( 'image!ENERGY_SKATE_PARK_BASICS/eraser.png' );
   var TrackEditingNode = require( 'ENERGY_SKATE_PARK_BASICS/view/TrackEditingNode' );
 
   //Debug flag to show the view bounds, the region within which the skater can move
@@ -74,7 +73,7 @@ define( function( require ) {
         view.addChild( trackNode );
       } );
 
-      model.sceneProperty.link( function( scene ) {
+      model.property( 'scene' ).link( function( scene ) {
         trackNodes[0].visible = (scene === 0);
         trackNodes[1].visible = (scene === 1);
         trackNodes[2].visible = (scene === 2);
@@ -119,14 +118,6 @@ define( function( require ) {
 
       model.tracks.addItemAddedListener( addTrackNode );
 
-      var editNode = new Image( scissorsImage );
-
-      var editButtonEnabledProperty = model.property( 'editButtonEnabled' );
-      model.multilink( ['editButtonEnabled', 'editing'], function( editButtonEnabled, editing ) {
-        editNode.image = editButtonEnabled ? (editing ? scissorsClosedImage : scissorsImage) : scissorsGrayImage;
-        editNode.y = editNode.image === scissorsClosedImage ? 2.5 : 0;
-      } );
-
       var xTip = 20;
       var yTip = 8;
       var xControl = 12;
@@ -149,8 +140,7 @@ define( function( require ) {
       var rightCurve = new Path( new Shape().moveTo( 0, 0 ).quadraticCurveTo( -xControl, yControl, -xTip, yTip ), { stroke: 'black', lineWidth: 3 } );
       var arrowHead = createArrowhead( Math.PI - Math.PI / 3, new Vector2( -xTip, yTip ) );
 
-      var clearNode = new Node( {children: [rightCurve, arrowHead], scale: 0.8} );
-      var doneNode = new FontAwesomeNode( 'cut', {scale: 0.45, fill: 'white'} );
+      var clearNode = new Image( eraser, {scale: 0.1} );
 
       var clearButtonEnabledProperty = model.property( 'clearButtonEnabled' );
       clearButtonEnabledProperty.link( function( clearButtonEnabled ) {
@@ -158,26 +148,11 @@ define( function( require ) {
         arrowHead.fill = clearButtonEnabled ? 'black' : 'gray';
       } );
 
-      var nodes = [editNode, clearNode, doneNode];
-
-      //Make all buttons the same dimension
-      var pad = function( node, nodes ) {
-        var maxWidth = _.max( nodes,function( node ) {return node.width;} ).width;
-        var maxHeight = _.max( nodes,function( node ) {return node.height;} ).height;
-        node.centerX = maxWidth / 2;
-        node.centerY = maxHeight / 2;
-        return new Rectangle( 0, 0, maxWidth, maxHeight, {children: [node]} );
-      };
-
-      var editButton = new RectanglePushButton( pad( editNode, nodes ) );
-      editButton.addListener( function() {model.editing = !model.editing;} );
-      editButtonEnabledProperty.linkAttribute( editButton, 'enabled' );
-
-      var clearButton = new RectanglePushButton( pad( clearNode, nodes ) );
+      var clearButton = new RectanglePushButton( clearNode, {rectangleFillUp: new Color( 215, 232, 224 )} );
       clearButtonEnabledProperty.linkAttribute( clearButton, 'enabled' );
       clearButton.addListener( function() {model.clearTracks();} );
 
-      var editClearButtons = new VBox( {children: [editButton, clearButton], spacing: 2, right: this.trackCreationPanel.left - 5, centerY: this.trackCreationPanel.centerY} );
+      var editClearButtons = new VBox( {children: [clearButton], spacing: 2, right: this.trackCreationPanel.left - 5, centerY: this.trackCreationPanel.centerY} );
       this.addChild( editClearButtons );
     }
 
@@ -187,8 +162,8 @@ define( function( require ) {
     var pieChartLegend = new PieChartLegend( model );
     this.addChild( pieChartLegend );
 
-    var speedometerNode = new GaugeNode( model.skater.speedProperty, speedString, {min: 0, max: 20}, {updateEnabledProperty: model.speedometerVisibleProperty, pickable: false} );
-    model.speedometerVisibleProperty.linkAttribute( speedometerNode, 'visible' );
+    var speedometerNode = new GaugeNode( model.skater.property( 'speed' ), speedString, {min: 0, max: 20}, {updateEnabledProperty: model.property( 'speedometerVisible' ), pickable: false} );
+    model.property( 'speedometerVisible' ).linkAttribute( speedometerNode, 'visible' );
     speedometerNode.centerX = this.layoutBounds.centerX;
     speedometerNode.top = this.layoutBounds.minY + 5;
     this.addChild( speedometerNode );
@@ -228,7 +203,7 @@ define( function( require ) {
     } );
 
     //Disable the return skater button when the skater is already at his initial coordinates
-    model.skater.movedProperty.link( function( moved ) {view.returnSkaterButton.enabled = moved;} );
+    model.skater.property( 'moved' ).link( function( moved ) {view.returnSkaterButton.enabled = moved;} );
     this.addChild( this.returnSkaterButton );
 
     //When the skater goes off screen, make the "return skater" button big
