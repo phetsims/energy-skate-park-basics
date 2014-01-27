@@ -49,7 +49,9 @@ define( function( require ) {
       layout: function( offsetX, offsetY, width, height, layoutScale ) {
         var cementY = this.cementY;
         this.earth.setRect( -offsetX, cementY, width / layoutScale, earthHeight );
-        this.cement.setLine( -offsetX, cementY + cementWidth / 2, -offsetX + width / layoutScale, cementY + cementWidth / 2 );
+
+        //Work around scenery horizontal line pattern problem, see https://github.com/phetsims/scenery/issues/196
+        this.cement.setLine( -offsetX, cementY + cementWidth / 2, -offsetX + width / layoutScale, cementY + cementWidth / 2 + 0.01 );
         this.sky.setRect( -offsetX, -offsetY, width / layoutScale, height / layoutScale - earthHeight );
         this.sky.fill = new LinearGradient( 0, 0, 0, height / 2 ).addColorStop( 0, '#02ace4' ).addColorStop( 1, '#cfecfc' );
       }
