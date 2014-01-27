@@ -54,7 +54,7 @@ define( function( require ) {
     ScreenView.call( view, { renderer: 'svg' } );
 
     var modelPoint = new Vector2( 0, 0 );
-    var viewPoint = new Vector2( this.layoutBounds.width / 2, this.layoutBounds.height - BackgroundNode.grassHeight );//grass is 70px high in stage coordinates
+    var viewPoint = new Vector2( this.layoutBounds.width / 2, this.layoutBounds.height - BackgroundNode.earthHeight );//earth is 70px high in stage coordinates
     var scale = 50;
     var transform = ModelViewTransform2.createSinglePointScaleInvertedYMapping( modelPoint, viewPoint, scale );
     this.modelViewTransform = transform;

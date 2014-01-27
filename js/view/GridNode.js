@@ -32,7 +32,7 @@ define( function( require ) {
 
       var lines = [];
       var texts = [];
-      var lineHeight = height / layoutScale - BackgroundNode.grassHeight;
+      var lineHeight = height / layoutScale - BackgroundNode.earthHeight;
       for ( var x = 0; x < 100; x++ ) {
         var viewXPositive = this.modelViewTransform.modelToViewX( x );
         var viewXNegative = this.modelViewTransform.modelToViewX( -x );
