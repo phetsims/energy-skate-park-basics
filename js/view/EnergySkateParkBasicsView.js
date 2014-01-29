@@ -41,6 +41,7 @@ define( function( require ) {
   var VBox = require( 'SCENERY/nodes/VBox' );
   var eraser = require( 'image!ENERGY_SKATE_PARK_BASICS/eraser.png' );
   var TrackEditingNode = require( 'ENERGY_SKATE_PARK_BASICS/view/TrackEditingNode' );
+  var SaveLoadNode = require( 'ENERGY_SKATE_PARK_BASICS/view/SaveLoadNode' );
 
   //Debug flag to show the view bounds, the region within which the skater can move
   var showAvailableBounds = false;
@@ -150,8 +151,10 @@ define( function( require ) {
       clearButtonEnabledProperty.linkAttribute( clearButton, 'enabled' );
       clearButton.addListener( function() {model.clearTracks();} );
 
-      var editClearButtons = new VBox( {children: [clearButton], spacing: 2, right: this.trackCreationPanel.left - 5, centerY: this.trackCreationPanel.centerY} );
-      this.addChild( editClearButtons );
+      var saveLoadNode = new SaveLoadNode( model );
+
+      var buttons = new VBox( {children: [clearButton, saveLoadNode], spacing: 2, right: this.trackCreationPanel.left - 5, centerY: this.trackCreationPanel.centerY} );
+      this.addChild( buttons );
     }
 
     var skaterNode = new SkaterNode( model, model.skater, this, transform );
