@@ -28,9 +28,9 @@ define( function( require ) {
     this.skater = model.skater;
 
     //Free layout parameters
-    var contentWidth = 140;
+    var contentWidth = 110;
     var contentHeight = 325;
-    var insetX = 10;
+    var insetX = 2;
     var insetY = 25;
 
     var numBars = 4;
