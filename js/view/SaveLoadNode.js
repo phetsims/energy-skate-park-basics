@@ -1,7 +1,7 @@
 // Copyright 2002-2013, University of Colorado Boulder
 
 /**
- * Scenery node for the energy skate park basics view (includes everything you see)
+ * Scenery node UI for save and load.
  *
  * @author Sam Reid
  */
@@ -24,7 +24,7 @@ define( function( require ) {
       location.href = "data:application/octet-stream," + encodeURIComponent( JSON.stringify( state ) );
     } );
 
-//DND directly, or use file load button
+    //DND directly, or use file load button
     var loadButton = new TextPushButton( 'Load', {} );
     loadButton.addListener( function() {
 
