@@ -8,40 +8,9 @@
 define( function( require ) {
   'use strict';
 
-  var Color = require( 'SCENERY/util/Color' );
   var inherit = require( 'PHET_CORE/inherit' );
-  var RectanglePushButton = require( 'SUN/RectanglePushButton' );
-  var Image = require( 'SCENERY/nodes/Image' );
-  var Rectangle = require( 'SCENERY/nodes/Rectangle' );
-  var Rect = require( 'DOT/Rectangle' );
-  var Shape = require( 'KITE/Shape' );
-  var Panel = require( 'SUN/Panel' );
-  var ScreenView = require( 'JOIST/ScreenView' );
-  var SkaterNode = require( 'ENERGY_SKATE_PARK_BASICS/view/SkaterNode' );
-  var TrackNode = require( 'ENERGY_SKATE_PARK_BASICS/view/TrackNode' );
-  var BackgroundNode = require( 'ENERGY_SKATE_PARK_BASICS/view/BackgroundNode' );
-  var EnergySkateParkBasicsControlPanel = require( 'ENERGY_SKATE_PARK_BASICS/view/EnergySkateParkBasicsControlPanel' );
-  var PlaybackSpeedControl = require( 'ENERGY_SKATE_PARK_BASICS/view/PlaybackSpeedControl' );
-  var BarGraphNode = require( 'ENERGY_SKATE_PARK_BASICS/view/BarGraphNode' );
-  var PieChartNode = require( 'ENERGY_SKATE_PARK_BASICS/view/PieChartNode' );
-  var PieChartLegend = require( 'ENERGY_SKATE_PARK_BASICS/view/PieChartLegend' );
-  var GridNode = require( 'ENERGY_SKATE_PARK_BASICS/view/GridNode' );
-  var ResetAllButton = require( 'SCENERY_PHET/ResetAllButton' );
-  var SceneSelectionPanel = require( 'ENERGY_SKATE_PARK_BASICS/view/SceneSelectionPanel' );
-  var ModelViewTransform2 = require( 'PHETCOMMON/view/ModelViewTransform2' );
-  var Vector2 = require( 'DOT/Vector2' );
-  var GaugeNode = require( 'SCENERY_PHET/GaugeNode' );
   var TextPushButton = require( 'SUN/TextPushButton' );
-  var DerivedProperty = require( 'AXON/DerivedProperty' );
-  var Path = require( 'SCENERY/nodes/Path' );
-  var returnSkaterString = require( 'string!ENERGY_SKATE_PARK_BASICS/controls.reset-character' );
-  var speedString = require( 'string!ENERGY_SKATE_PARK_BASICS/properties.speed' );
-  var PlayPauseButton = require( 'SCENERY_PHET/PlayPauseButton' );
-  var StepButton = require( 'SCENERY_PHET/StepButton' );
   var VBox = require( 'SCENERY/nodes/VBox' );
-  var HBox = require( 'SCENERY/nodes/HBox' );
-  var eraser = require( 'image!ENERGY_SKATE_PARK_BASICS/eraser.png' );
-  var TrackEditingNode = require( 'ENERGY_SKATE_PARK_BASICS/view/TrackEditingNode' );
 
   function SaveLoadNode( model ) {
 
@@ -68,15 +37,6 @@ define( function( require ) {
       var files = evt.dataTransfer.files; // FileList object.
       var f = null;
       // files is a FileList of File objects. List some properties.
-      var output = [];
-      for ( var i = 0; f = files[i]; i++ ) {
-        output.push( '<li><strong>', escape( f.name ), '</strong> (', f.type || 'n/a', ') - ',
-          f.size, ' bytes, last modified: ',
-          f.lastModifiedDate ? f.lastModifiedDate.toLocaleDateString() : 'n/a',
-          '</li>' );
-      }
-      console.log( output.join( '' ) );
-//        document.getElementById( 'list' ).innerHTML = '<ul>' + output.join( '' ) + '</ul>';
 
       var reader = new FileReader();
 
