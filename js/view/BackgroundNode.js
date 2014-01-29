@@ -21,7 +21,7 @@ define( function( require ) {
   var earthHeight = 70;
   var cementWidth = 4;
 
-  function BackgroundNode( model, energySkateParkBasicsView ) {
+  function BackgroundNode( model, energySkateParkBasicsView, options ) {
     this.skater = model.skater;
     Node.call( this, { pickable: false } );
 
@@ -39,6 +39,10 @@ define( function( require ) {
 
     this.cement = new Line( 0, 0, 0, 0, {stroke: new Pattern( cementImg ), lineWidth: cementWidth} );
     this.addChild( this.cement );
+
+    if ( options ) {
+      this.mutate( options );
+    }
   }
 
   return inherit( Node, BackgroundNode, {
