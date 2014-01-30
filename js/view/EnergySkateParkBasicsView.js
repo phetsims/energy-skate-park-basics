@@ -41,7 +41,6 @@ define( function( require ) {
   var VBox = require( 'SCENERY/nodes/VBox' );
   var eraser = require( 'image!ENERGY_SKATE_PARK_BASICS/eraser.png' );
   var TrackEditingNode = require( 'ENERGY_SKATE_PARK_BASICS/view/TrackEditingNode' );
-  var SaveLoadNode = require( 'ENERGY_SKATE_PARK_BASICS/view/SaveLoadNode' );
 
   //Debug flag to show the view bounds, the region within which the skater can move
   var showAvailableBounds = false;
@@ -151,9 +150,7 @@ define( function( require ) {
       clearButtonEnabledProperty.linkAttribute( clearButton, 'enabled' );
       clearButton.addListener( function() {model.clearTracks();} );
 
-      var saveLoadNode = new SaveLoadNode( model );
-
-      var buttons = new VBox( {children: [clearButton, saveLoadNode], spacing: 2, right: this.trackCreationPanel.left - 5, centerY: this.trackCreationPanel.centerY} );
+      var buttons = new VBox( {children: [clearButton], spacing: 2, right: this.trackCreationPanel.left - 5, centerY: this.trackCreationPanel.centerY} );
       this.addChild( buttons );
     }
 
@@ -254,6 +251,10 @@ define( function( require ) {
   }
 
   return inherit( ScreenView, EnergySkateParkBasicsView, {
+
+    //No state that is specific to the view, in this case
+    getState: function() {},
+    setState: function() {},
 
     //Layout the EnergySkateParkBasicsView, scaling it up and down with the size of the screen to ensure a minimially visible area,
     //But keeping it centered at the bottom of the screen, so there is more area in the +y direction to build tracks and move the skater

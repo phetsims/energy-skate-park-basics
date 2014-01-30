@@ -21,5 +21,18 @@ define( function( require ) {
     );
   }
 
-  return inherit( Screen, EnergySkateParkBasicsScreen );
+  return inherit( Screen, EnergySkateParkBasicsScreen, {
+
+    //TODO: abstract this to Sim?
+    getState: function() {
+      return {
+        model: this.model.getState(),
+        view: this.view.getState()
+      };
+    },
+    setState: function( state ) {
+      this.model.setState( state.model );
+      this.view.setState( state.view );
+    }
+  } );
 } );

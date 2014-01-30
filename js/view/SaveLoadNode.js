@@ -30,48 +30,6 @@ define( function( require ) {
 
     } );
 
-    var handleFileSelect = function( evt ) {
-      evt.stopPropagation();
-      evt.preventDefault();
-
-      var files = evt.dataTransfer.files; // FileList object.
-      var f = null;
-      // files is a FileList of File objects. List some properties.
-
-      var reader = new FileReader();
-
-      f = files[0];
-      console.log( 'f=' + f );
-      // Closure to capture the file information.
-      reader.onload = (function( theFile ) {
-        return function( e ) {
-          console.log( 'read file' );
-          console.log( theFile );
-          console.log( 'result', reader.result );
-
-          var parsed = JSON.parse( reader.result );
-          console.log( parsed );
-
-          model.set( parsed );
-        };
-      })( f );
-
-      // Read in the image file as a data URL.
-      reader.readAsText( f );
-    };
-
-    var handleDragOver = function( evt ) {
-      evt.stopPropagation();
-      evt.preventDefault();
-      evt.dataTransfer.dropEffect = 'copy'; // Explicitly show this is a copy.
-      console.log( 'dragover!' );
-    };
-
-// Setup the dnd listeners.
-    var dropZone = document.getElementById( 'sim' );
-    dropZone.addEventListener( 'dragover', handleDragOver, false );
-    dropZone.addEventListener( 'drop', handleFileSelect, false );
-
     VBox.call( this, {children: [saveButton, loadButton]} );
   }
 

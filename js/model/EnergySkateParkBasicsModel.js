@@ -866,6 +866,44 @@ define( function( require ) {
           this.skater.up = !this.skater.up;
         }
       }
+    },
+
+    //Bindings to PropertySet
+    getState: function() {
+      var state = this.get();
+      state.skater = this.skater.get();
+      state.tracks = this.tracks.getArray().map( function( track ) {
+        return {physical: track.physical, points: track.controlPoints.map( function( controlPoint ) { return controlPoint.sourcePosition; } )};
+      } );
+      return state;
+    },
+
+    setState: function( state ) {
+      this.skater.set( state.skater );
+
+      // Remove the state property before passing along to PropertySet, which fails for unknown properties
+      // TODO: use underscore
+      delete state.skater;
+
+      //Clear old tracks
+      this.tracks.clear();
+      for ( var i = 0; i < state.tracks.length; i++ ) {
+        var controlPoints = state.tracks[i].points.map( function( point ) {
+          return new ControlPoint( point.x, point.y );
+        } );
+        var newTrack = new Track( this, this.tracks, controlPoints, true, null );
+        newTrack.physical = state.tracks[i].physical;
+        this.tracks.add( newTrack );
+      }
+      delete state.tracks;
+
+      //Trigger track changed first to update the edit enabled properties
+      this.trigger( 'track-changed' );
+
+      //Trigger track edited to rebulid the editing gui layer
+//      this.trigger( 'track-edited' );
+
+      this.set( state );
     }
   } );
 } );
