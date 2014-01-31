@@ -884,6 +884,7 @@ define( function( require ) {
 
     setState: function( state ) {
       this.skater.set( state.skater );
+      this.skater.trigger( 'updated' );
 
       //Clear old tracks
       this.tracks.clear();
@@ -900,8 +901,6 @@ define( function( require ) {
       this.trigger( 'track-changed' );
 
       this.set( state.modelProperties );
-
-      this.skater.trigger( 'updated' );
     }
   } );
 } );
