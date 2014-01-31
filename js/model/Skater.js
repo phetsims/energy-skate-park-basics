@@ -161,6 +161,25 @@ define( function( require ) {
 
       //Signal that energies have changed for coarse-grained listeners like PieChartNode that should not get updated 3-4 times per times step
       this.trigger( 'energy-changed' );
+    },
+
+    //Pass in tracks so it can use indices for serialization
+    getState: function( tracks ) {
+      var state = {
+        properties: this.get(),
+        stepsSinceJump: this.stepsSinceJump
+      };
+      //Replace the circularity problem
+      state.properties.track = tracks.indexOf( this.track );
+      state.properties.startingTrack = tracks.indexOf( this.startingTrack );
+      return state;
+    },
+    setState: function( state, tracks ) {
+      this.set( state.properties );
+      this.stepsSinceJump = state.stepsSinceJump;
+      this.track = tracks[state.properties.track];
+      this.startingTrack = tracks[state.properties.startingTrack];
+      this.trigger( 'updated' );
     }
   } );
 } );

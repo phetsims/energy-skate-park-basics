@@ -871,21 +871,16 @@ define( function( require ) {
     //Bindings to PropertySet
     getState: function() {
       var state = {
-        modelProperties: this.get(),
-        skater: this.skater.get(),//TODO: use a replacer/reviver paradigm?
+        properties: this.get(),
+        skater: this.skater.getState( this.tracks ),
         tracks: this.tracks.getArray().map( function( track ) {
           return {physical: track.physical, points: track.controlPoints.map( function( controlPoint ) { return controlPoint.sourcePosition; } )};
         } )
       };
-      //Replace the circularity problem
-      state.skater.track = this.tracks.indexOf( state.skater.track );
       return state;
     },
 
     setState: function( state ) {
-      this.skater.set( state.skater );
-      this.skater.trigger( 'updated' );
-
       //Clear old tracks
       this.tracks.clear();
       for ( var i = 0; i < state.tracks.length; i++ ) {
@@ -900,7 +895,9 @@ define( function( require ) {
       //Trigger track changed first to update the edit enabled properties
       this.trigger( 'track-changed' );
 
-      this.set( state.modelProperties );
+      this.set( state.properties );
+
+      this.skater.setState( state.skater, this.tracks );
     }
   } );
 } );
