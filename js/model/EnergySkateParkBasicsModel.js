@@ -870,14 +870,13 @@ define( function( require ) {
 
     //Bindings to PropertySet
     getState: function() {
-      var state = {
+      return {
         properties: this.get(),
         skater: this.skater.getState( this.tracks ),
         tracks: this.tracks.getArray().map( function( track ) {
           return {physical: track.physical, points: track.controlPoints.map( function( controlPoint ) { return controlPoint.sourcePosition; } )};
         } )
       };
-      return state;
     },
 
     setState: function( state ) {
