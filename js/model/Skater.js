@@ -177,7 +177,7 @@ define( function( require ) {
     setState: function( state, tracks ) {
       this.set( state.properties );
       this.stepsSinceJump = state.stepsSinceJump;
-      this.track = tracks[state.properties.track];
+      this.track = tracks.getArray()[state.properties.track];
       this.startingTrack = tracks[state.properties.startingTrack];
       this.trigger( 'updated' );
     }
