@@ -115,9 +115,9 @@ define( function( require ) {
       var doubleWell = [new ControlPoint( -4, 5 ), new ControlPoint( -2, 0.0166015 ), new ControlPoint( 0, 2 ), new ControlPoint( 2, 1 ), new ControlPoint( 4, 5 ) ];
 
       this.tracks.addAll(
-        [ new Track( this.reduced( ['track-changed' , 'track-edited'] ), this.tracks, parabola, false ),
-          new Track( this.reduced( ['track-changed' , 'track-edited'] ), this.tracks, slope, false ),
-          new Track( this.reduced( ['track-changed' , 'track-edited'] ), this.tracks, doubleWell, false )
+        [ new Track( this, this.tracks, parabola, false ),
+          new Track( this, this.tracks, slope, false ),
+          new Track( this, this.tracks, doubleWell, false )
         ] );
 
       this.sceneProperty.link( function( scene ) {
@@ -142,7 +142,7 @@ define( function( require ) {
         //Could use view transform for this, but it would require creating the view first, so just eyeballing it for now.
         var offset = new Vector2( -5.5 + 0.1, -0.73 );
         var controlPoints = [ new ControlPoint( offset.x - 1, offset.y ), new ControlPoint( offset.x, offset.y ), new ControlPoint( offset.x + 1, offset.y )];
-        this.tracks.add( new Track( this.reduced( ['track-changed' , 'track-edited'] ), this.tracks, controlPoints, true ) );
+        this.tracks.add( new Track( this, this.tracks, controlPoints, true ) );
       }
     },
 
@@ -751,7 +751,7 @@ define( function( require ) {
     //It should be an inner point of a track (not an end point)
     deleteControlPoint: function( track, controlPointIndex ) {
       var points = _.without( track.controlPoints, track.controlPoints[controlPointIndex] );
-      var newTrack = new Track( this.reduced( ['track-changed' , 'track-edited'] ), this.tracks, points, true, track.getParentsOrSelf() );
+      var newTrack = new Track( this, this.tracks, points, true, track.getParentsOrSelf() );
       newTrack.physical = true;
       this.tracks.remove( track );
       this.tracks.add( newTrack );
@@ -759,7 +759,7 @@ define( function( require ) {
       //Trigger track changed first to update the edit enabled properties
       this.trigger( 'track-changed' );
 
-      //Trigger track edited to rebulid the editing gui layer
+      //Trigger track edited to rebuild the editing gui layer
       this.trigger( 'track-edited' );
 
       //TODO: Replenish the track toolbox as appropriate (to keep about the same number of control points available)
@@ -779,9 +779,9 @@ define( function( require ) {
       points1.push( newPoint1 );
       points2.unshift( newPoint2 );
 
-      var newTrack1 = new Track( this.reduced( ['track-changed' , 'track-edited'] ), this.tracks, points1, true, track.getParentsOrSelf() );
+      var newTrack1 = new Track( this, this.tracks, points1, true, track.getParentsOrSelf() );
       newTrack1.physical = true;
-      var newTrack2 = new Track( this.reduced( ['track-changed' , 'track-edited'] ), this.tracks, points2, true, track.getParentsOrSelf() );
+      var newTrack2 = new Track( this, this.tracks, points2, true, track.getParentsOrSelf() );
       newTrack2.physical = true;
       this.tracks.remove( track );
       this.tracks.add( newTrack1 );
@@ -840,7 +840,7 @@ define( function( require ) {
       }
 
       //TODO: create and use a getTrackAPI() function
-      var newTrack = new Track( this.reduced( ['track-changed' , 'track-edited'] ), this.tracks, points, true, a.getParentsOrSelf().concat( b.getParentsOrSelf() ) );
+      var newTrack = new Track( this, this.tracks, points, true, a.getParentsOrSelf().concat( b.getParentsOrSelf() ) );
       newTrack.physical = true;
       this.tracks.remove( a );
       this.tracks.remove( b );
