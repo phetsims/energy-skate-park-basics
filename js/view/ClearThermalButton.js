@@ -10,17 +10,15 @@ define( function( require ) {
 
   var RectanglePushButton = require( 'SUN/RectanglePushButton' );
   var inherit = require( 'PHET_CORE/inherit' );
-  var Image = require( 'SCENERY/nodes/Image' );
   var Shape = require( 'KITE/Shape' );
   var Color = require( 'SCENERY/util/Color' );
   var Node = require( 'SCENERY/nodes/Node' );
-  var Rectangle = require( 'SCENERY/nodes/Rectangle' );
   var Path = require( 'SCENERY/nodes/Path' );
   var Line = require( 'SCENERY/nodes/Line' );
   var Vector2 = require( 'DOT/Vector2' );
+  var RoundShinyButton = require( 'SCENERY_PHET/RoundShinyButton' );
 
   function ClearThermalButton( callback, skater, options ) {
-
     options = _.extend( { cursor: 'pointer' }, options );
 
     var xTip = 24;
@@ -94,21 +92,24 @@ define( function( require ) {
 //    }, 3000 );
 
     skater.toDerivedProperty( ['thermalEnergy'],function( thermalEnergy ) {return thermalEnergy > 0;} ).link( function( hasThermalEnergy ) {
-      icon.fill = hasThermalEnergy ? 'white' : 'lightGray';
       for ( var i = 0; i < icon.children.length; i++ ) {
         var child = icon.children[i];
-        child.stroke = hasThermalEnergy ? 'black' : 'gray'
+        child.stroke = hasThermalEnergy ? 'black' : 'gray';
       }
+      icon.children[0].fill = hasThermalEnergy ? 'lightgray' : null;
       arrowhead.fill = hasThermalEnergy ? new Color( 255, 85, 0 ) : 'gray';
       arrowTail.stroke = hasThermalEnergy ? new Color( 255, 85, 0 ) : 'gray';
       arrowhead.stroke = null;
     } );
 
-    RectanglePushButton.call( this, icon, {listener: callback, rectangleFillUp: new Color( 255, 255, 250 )} );
+    RectanglePushButton.call( this, icon, {
+      listener: callback, rectangleFillUp: new Color( 230, 230, 240 ),
+      rectangleFillDisabled: 'white',
+      rectangleXMargin: 3,
+      rectangleYMargin: 3 } );
     this.mouseArea = this.touchArea = Shape.rectangle( icon.bounds.minX, icon.bounds.minY, icon.bounds.width, icon.bounds.height );
-    this.addChild( icon );
     this.mutate( options );
   }
 
-  return inherit( RectanglePushButton, ClearThermalButton );
+  return inherit( RoundShinyButton, ClearThermalButton );
 } );
