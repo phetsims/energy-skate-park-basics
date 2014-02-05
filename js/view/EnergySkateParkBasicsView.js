@@ -40,7 +40,6 @@ define( function( require ) {
   var StepButton = require( 'SCENERY_PHET/StepButton' );
   var VBox = require( 'SCENERY/nodes/VBox' );
   var eraser = require( 'image!ENERGY_SKATE_PARK_BASICS/eraser.png' );
-  var TrackEditingNode = require( 'ENERGY_SKATE_PARK_BASICS/view/TrackEditingNode' );
 
   //Debug flag to show the view bounds, the region within which the skater can move
   var showAvailableBounds = false;
@@ -223,31 +222,6 @@ define( function( require ) {
       this.viewBoundsPath = new Path( null, {pickable: false, stroke: 'red', lineWidth: 10} );
       this.addChild( this.viewBoundsPath );
     }
-
-    //Add new TrackEditingNode when the user presses "edit".  The TrackEditingNode is deleted and re-created if the track is edited, to have it automatically update.
-    var trackEditingNode = null;
-    model.property( 'editing' ).link( function( editing ) {
-      if ( editing ) {
-        trackEditingNode = new TrackEditingNode( view, model, transform );
-        view.addChild( trackEditingNode );
-      }
-      else {
-        if ( trackEditingNode ) {
-          trackEditingNode.cleanup();
-          view.removeChild( trackEditingNode );
-          trackEditingNode = null;
-        }
-      }
-    } );
-    model.on( 'track-edited', function() {
-      trackEditingNode.cleanup();
-      view.removeChild( trackEditingNode );
-      trackEditingNode = null;
-      if ( model.editing && model.editButtonEnabled ) {
-        trackEditingNode = new TrackEditingNode( view, model, transform );
-        view.addChild( trackEditingNode );
-      }
-    } );
   }
 
   return inherit( ScreenView, EnergySkateParkBasicsView, {

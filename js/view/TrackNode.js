@@ -18,6 +18,11 @@ define( function( require ) {
   var Shape = require( 'KITE/Shape' );
   var LineStyles = require( 'KITE/util/LineStyles' );
   var SplineEvaluation = require( 'ENERGY_SKATE_PARK_BASICS/model/SplineEvaluation' );
+  var Vector2 = require( 'DOT/Vector2' );
+  var Image = require( 'SCENERY/nodes/Image' );
+  var RectanglePushButton = require( 'SUN/RectanglePushButton' );
+  var scissorsImage = require( 'image!ENERGY_SKATE_PARK_BASICS/scissors.png' );
+  var FontAwesomeNode = require( 'SUN/FontAwesomeNode' );
 
   /**
    * Constructor for TrackNode
@@ -285,6 +290,23 @@ define( function( require ) {
                 }
                 track.bumpAboveGround();
                 track.dragging = false;
+
+                //Show the 'control point editing' ui
+                var angle = Math.PI;
+                var modelAngle = Math.PI;
+                var image = new Image( scissorsImage );
+                image.rotate( Math.PI / 2 + angle );
+
+                var cutButton = new RectanglePushButton( new FontAwesomeNode( 'cut', {fill: 'black', scale: 0.6, rotation: Math.PI / 2} ), {center: controlPointNode.center.plus( Vector2.createPolar( 40, angle - Math.PI / 2 ) )} );
+//                var disableDismissAction = { down: function() { enableClickToDismissListener = false; } };
+//                cutButton.addInputListener( disableDismissAction );
+                cutButton.addListener( function() { model.splitControlPoint( track, i, modelAngle ); } );
+                trackNode.addChild( cutButton );
+
+                var deleteButton = new RectanglePushButton( new FontAwesomeNode( 'times_circle', {fill: 'red', scale: 0.6} ), {center: controlPointNode.center.plus( Vector2.createPolar( 40, angle + Math.PI / 2 ) )} );
+//                deleteButton.addInputListener( disableDismissAction );
+                deleteButton.addListener( function() { model.deleteControlPoint( track, i ); } );
+                trackNode.addChild( deleteButton );
               }
             } ) );
           trackNode.addChild( controlPointNode );
