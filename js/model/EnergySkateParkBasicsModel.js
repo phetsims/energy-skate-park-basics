@@ -232,6 +232,12 @@ define( function( require ) {
       var newKE = KE - addedThermalEnergy;
       var newSpeed = Math.sqrt( 2 * newKE / skaterState.mass );
 
+      //Make sure energy perfectly conserved when falling to the ground.
+      if ( fractionOfKEToConvertToThermal === 1 ) {
+        newSpeed = 0;
+        addedThermalEnergy = skaterState.getKineticEnergy() + skaterState.getPotentialEnergy();
+      }
+
       var newThermalEnergy = skaterState.thermalEnergy + addedThermalEnergy;
       if ( isNaN( newThermalEnergy ) ) { throw new Error( "nan" ); }
       return skaterState.update( {
