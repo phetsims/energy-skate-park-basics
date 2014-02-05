@@ -225,6 +225,7 @@ define( function( require ) {
       //dot product of 0.6 converts to 10% thermal
       //More than 0.6 is a bounce
       var fractionOfKEToConvertToThermal = new LinearFunction( 0, 0.6, 0, 0.1 )( Math.abs( dot ) );
+      fractionOfKEToConvertToThermal = Math.min( fractionOfKEToConvertToThermal, 1 );
 
       var KE = 0.5 * proposedVelocity.magnitudeSquared() * skaterState.mass;
       var addedThermalEnergy = KE * fractionOfKEToConvertToThermal;
