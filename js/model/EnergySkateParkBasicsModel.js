@@ -756,6 +756,7 @@ define( function( require ) {
 
     //The user has pressed the "delete" button for the specified track's specified control point, and it should be deleted.
     //It should be an inner point of a track (not an end point)
+    //If there were only 2 points on the track, just delete the entire track
     deleteControlPoint: function( track, controlPointIndex ) {
       var points = _.without( track.controlPoints, track.controlPoints[controlPointIndex] );
       var newTrack = new Track( this, this.tracks, points, true, track.getParentsOrSelf() );

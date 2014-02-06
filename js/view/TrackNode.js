@@ -24,6 +24,8 @@ define( function( require ) {
   var scissorsImage = require( 'image!ENERGY_SKATE_PARK_BASICS/scissors.png' );
   var FontAwesomeNode = require( 'SUN/FontAwesomeNode' );
   var LinearFunction = require( 'DOT/LinearFunction' );
+  var RoundShinyButton = require( 'SCENERY_PHET/RoundShinyButton' );
+  var Color = require( 'SCENERY/util/Color' );
 
   /**
    * Constructor for TrackNode
@@ -297,23 +299,37 @@ define( function( require ) {
                 var angle = track.getViewAngleAt( alpha );
                 var modelAngle = track.getModelAngleAt( alpha );
 
-                var scissorNode = new FontAwesomeNode( 'cut', {fill: 'black', scale: 0.6, rotation: Math.PI / 2 - angle} );
-                var cutButton = new RectanglePushButton( scissorNode, {center: controlPointNode.center.plus( Vector2.createPolar( 40, angle + Math.PI / 2 ) )} );
+                if ( !isEndPoint ) {
+                  var scissorNode = new FontAwesomeNode( 'cut', {fill: 'black', scale: 0.6, rotation: Math.PI / 2 - angle} );
+                  var cutButton = new RoundShinyButton( function() { model.splitControlPoint( track, i, modelAngle ); }, scissorNode, {
+                    center: controlPointNode.center.plus( Vector2.createPolar( 40, angle + Math.PI / 2 ) ),
+                    radius: 20,
+                    touchAreaRadius: 20 * 1.3,
+
+                    //yellow color scheme
+                    upFill: new Color( '#fefd53' ),
+                    overFill: new Color( '#fffe08' ),
+                    downFill: new Color( '#e9e824' )
+                  } );
+//                var cutButton = new RectanglePushButton( scissorNode, {center: controlPointNode.center.plus( Vector2.createPolar( 40, angle + Math.PI / 2 ) )} );
 //                var disableDismissAction = { down: function() { enableClickToDismissListener = false; } };
 //                cutButton.addInputListener( disableDismissAction );
-                cutButton.addListener( function() { model.splitControlPoint( track, i, modelAngle ); } );
-                trackNode.addChild( cutButton );
+                  cutButton.addListener( function() { model.splitControlPoint( track, i, modelAngle ); } );
+                  trackNode.addChild( cutButton );
+                }
 
+                //TODO: If it is down to 2 points, just delete the entire track.
                 var deleteNode = new FontAwesomeNode( 'times_circle', {fill: 'red', scale: 0.6} );
-                var xMargin = (scissorNode.width - deleteNode.width) / 2 + 5;
-                var yMargin = (scissorNode.height - deleteNode.height) / 2 + 5;
-                var deleteButton = new RectanglePushButton( deleteNode, {
-                  //Give a margin to match the scissor node
-                  rectangleXMargin: Math.max( xMargin, yMargin ),
-                  rectangleYMargin: Math.max( xMargin, yMargin ),
-                  center: controlPointNode.center.plus( Vector2.createPolar( 40, angle - Math.PI / 2 ) )} );
+                var deleteButton = new RoundShinyButton( function() { model.deleteControlPoint( track, i ); }, deleteNode, {
+                  center: controlPointNode.center.plus( Vector2.createPolar( 40, angle - Math.PI / 2 ) ),
+                  radius: 20,
+                  touchAreaRadius: 20 * 1.3,
+
+                  //yellow color scheme
+                  upFill: new Color( '#fefd53' ),
+                  overFill: new Color( '#fffe08' ),
+                  downFill: new Color( '#e9e824' )} );
 //                deleteButton.addInputListener( disableDismissAction );
-                deleteButton.addListener( function() { model.deleteControlPoint( track, i ); } );
                 trackNode.addChild( deleteButton );
               }
             } ) );
