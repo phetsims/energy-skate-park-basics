@@ -219,7 +219,7 @@ define( function( require ) {
 
     if ( track.interactive ) {
       for ( var i = 0; i < track.controlPoints.length; i++ ) {
-        (function( isEndPoint ) {
+        (function( i, isEndPoint ) {
           var controlPoint = track.controlPoints[i];
           var controlPointNode = new Circle( 14, {pickable: false, opacity: 0.7, stroke: 'black', lineWidth: 2, fill: 'red', cursor: 'pointer', translation: modelViewTransform.modelToViewPosition( controlPoint.position )} );
 
@@ -310,7 +310,7 @@ define( function( require ) {
               }
             } ) );
           trackNode.addChild( controlPointNode );
-        })( i === 0 || i === track.controlPoints.length - 1 );
+        })( i, i === 0 || i === track.controlPoints.length - 1 );
       }
     }
 
