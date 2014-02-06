@@ -23,6 +23,7 @@ define( function( require ) {
   var RectanglePushButton = require( 'SUN/RectanglePushButton' );
   var scissorsImage = require( 'image!ENERGY_SKATE_PARK_BASICS/scissors.png' );
   var FontAwesomeNode = require( 'SUN/FontAwesomeNode' );
+  var LinearFunction = require( 'DOT/LinearFunction' );
 
   /**
    * Constructor for TrackNode
@@ -292,18 +293,25 @@ define( function( require ) {
                 track.dragging = false;
 
                 //Show the 'control point editing' ui
-                var angle = Math.PI;
-                var modelAngle = Math.PI;
-                var image = new Image( scissorsImage );
-                image.rotate( Math.PI / 2 + angle );
+                var alpha = new LinearFunction( 0, track.controlPoints.length - 1, track.minPoint, track.maxPoint )( i ); //a1, a2, b1, b2, clamp
+                var angle = track.getViewAngleAt( alpha );
+                var modelAngle = track.getModelAngleAt( alpha );
 
-                var cutButton = new RectanglePushButton( new FontAwesomeNode( 'cut', {fill: 'black', scale: 0.6, rotation: Math.PI / 2} ), {center: controlPointNode.center.plus( Vector2.createPolar( 40, angle - Math.PI / 2 ) )} );
+                var scissorNode = new FontAwesomeNode( 'cut', {fill: 'black', scale: 0.6, rotation: Math.PI / 2 - angle} );
+                var cutButton = new RectanglePushButton( scissorNode, {center: controlPointNode.center.plus( Vector2.createPolar( 40, angle + Math.PI / 2 ) )} );
 //                var disableDismissAction = { down: function() { enableClickToDismissListener = false; } };
 //                cutButton.addInputListener( disableDismissAction );
                 cutButton.addListener( function() { model.splitControlPoint( track, i, modelAngle ); } );
                 trackNode.addChild( cutButton );
 
-                var deleteButton = new RectanglePushButton( new FontAwesomeNode( 'times_circle', {fill: 'red', scale: 0.6} ), {center: controlPointNode.center.plus( Vector2.createPolar( 40, angle + Math.PI / 2 ) )} );
+                var deleteNode = new FontAwesomeNode( 'times_circle', {fill: 'red', scale: 0.6} );
+                var xMargin = (scissorNode.width - deleteNode.width) / 2 + 5;
+                var yMargin = (scissorNode.height - deleteNode.height) / 2 + 5;
+                var deleteButton = new RectanglePushButton( deleteNode, {
+                  //Give a margin to match the scissor node
+                  rectangleXMargin: Math.max( xMargin, yMargin ),
+                  rectangleYMargin: Math.max( xMargin, yMargin ),
+                  center: controlPointNode.center.plus( Vector2.createPolar( 40, angle - Math.PI / 2 ) )} );
 //                deleteButton.addInputListener( disableDismissAction );
                 deleteButton.addListener( function() { model.deleteControlPoint( track, i ); } );
                 trackNode.addChild( deleteButton );
