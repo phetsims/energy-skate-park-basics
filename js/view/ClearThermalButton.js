@@ -43,16 +43,25 @@ define( function( require ) {
     var arrowTail = new Path( new Shape().moveTo( 0, 0 ).quadraticCurveTo( xControl, yControl, xTip, yTip ), { stroke: 'black', lineWidth: 3 } );
 
     var arrowhead = createArrowhead( Math.PI / 3, new Vector2( xTip, yTip ) ).mutate( {x: -18, y: -16} );
+
+    var lidVector = Vector2.createPolar( 20, -Math.PI / 4 );
+    var lidStart = new Vector2( 22, 0 );
+    var lidCenter = lidVector.times( 0.5 ).plus( lidStart );
+    var lidEnd = lidStart.plus( lidVector );
+    var handleWidth = 8;
+    var handleStart = lidStart.plus( lidVector.times( 0.5 ).minus( lidVector.normalized().times( -handleWidth / 2 ) ) );
+    var handleEnd = lidStart.plus( lidVector.times( 0.5 ).minus( lidVector.normalized().times( handleWidth / 2 ) ) );
+
     var icon = new Node( {scale: 0.5, x: -0.125, children: [
       new Path( new Shape().moveTo( 0, 0 ).lineTo( 20, 0 ).lineTo( 20, 24 ).lineTo( 0, 24 ).close(), {stroke: 'black', lineWidth: 1} ),
       new Line( 4, 3, 4, 21, {lineWidth: 1, stroke: 'black'} ),
       new Line( 10, 3, 10, 21, {lineWidth: 1, stroke: 'black'} ),
       new Line( 16, 3, 16, 21, {lineWidth: 1, stroke: 'black'} ),
       //Lid
-      new Line( 24, -12, 24, 12, {lineWidth: 1, stroke: 'black'} ),
+      new Line( lidStart.x, lidStart.y, lidEnd.x, lidEnd.y, {lineWidth: 2, stroke: 'black'} ),
 
       //Handle
-      new Line( 25, -3, 25, 3, {lineWidth: 2, stroke: 'black'} ),
+      new Line( handleStart.x + 1, handleStart.y + 1, handleEnd.x + 1, handleEnd.y + 1, {lineWidth: 2, stroke: 'black'} ),
       arrowTail.mutate( {x: -18, y: -16} ),
       arrowhead
     ]} );
