@@ -46,7 +46,6 @@ define( function( require ) {
 
     var lidVector = Vector2.createPolar( 20, -Math.PI / 4 );
     var lidStart = new Vector2( 22, 0 );
-    var lidCenter = lidVector.times( 0.5 ).plus( lidStart );
     var lidEnd = lidStart.plus( lidVector );
     var handleWidth = 8;
     var handleStart = lidStart.plus( lidVector.times( 0.5 ).minus( lidVector.normalized().times( -handleWidth / 2 ) ) );

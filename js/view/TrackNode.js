@@ -19,9 +19,6 @@ define( function( require ) {
   var LineStyles = require( 'KITE/util/LineStyles' );
   var SplineEvaluation = require( 'ENERGY_SKATE_PARK_BASICS/model/SplineEvaluation' );
   var Vector2 = require( 'DOT/Vector2' );
-  var Image = require( 'SCENERY/nodes/Image' );
-  var RectanglePushButton = require( 'SUN/RectanglePushButton' );
-  var scissorsImage = require( 'image!ENERGY_SKATE_PARK_BASICS/scissors.png' );
   var FontAwesomeNode = require( 'SUN/FontAwesomeNode' );
   var LinearFunction = require( 'DOT/LinearFunction' );
   var RoundShinyButton = require( 'SCENERY_PHET/RoundShinyButton' );
