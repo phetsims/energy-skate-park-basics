@@ -137,7 +137,8 @@ define( function( require ) {
       var rightCurve = new Path( new Shape().moveTo( 0, 0 ).quadraticCurveTo( -xControl, yControl, -xTip, yTip ), { stroke: 'black', lineWidth: 3 } );
       var arrowHead = createArrowhead( Math.PI - Math.PI / 3, new Vector2( -xTip, yTip ) );
 
-      var clearNode = new Image( eraser, {scale: 0.1} );
+      //Create the clear button, and match the size to the size of the track toolbox
+      var clearNode = new Image( eraser, {scale: 0.088} );
 
       var clearButtonEnabledProperty = model.property( 'clearButtonEnabled' );
       clearButtonEnabledProperty.link( function( clearButtonEnabled ) {
