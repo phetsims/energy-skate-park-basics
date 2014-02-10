@@ -16,7 +16,7 @@ define( function( require ) {
   var RoundShinyButton = require( 'SCENERY_PHET/RoundShinyButton' );
   var Color = require( 'SCENERY/util/Color' );
 
-  function ControlPointUI( model, track, i, controlPointNode, parentNode ) {
+  function ControlPointUI( model, track, controlPointIndex, transform, parentNode ) {
 
     var controlPointUI = this;
 
@@ -45,16 +45,18 @@ define( function( require ) {
     sceneListenerAdded = true;
 
     Node.call( this );
-    var isEndPoint = i === 0 || i === track.controlPoints.length - 1;
-    var alpha = new LinearFunction( 0, track.controlPoints.length - 1, track.minPoint, track.maxPoint )( i ); //a1, a2, b1, b2, clamp
+
+    var isEndPoint = controlPointIndex === 0 || controlPointIndex === track.controlPoints.length - 1;
+    var alpha = new LinearFunction( 0, track.controlPoints.length - 1, track.minPoint, track.maxPoint )( controlPointIndex ); //a1, a2, b1, b2, clamp
+    var position = track.getPoint( alpha );
     var angle = track.getViewAngleAt( alpha );
     var modelAngle = track.getModelAngleAt( alpha );
 
     var disableDismissAction = { down: function() { enableClickToDismissListener = false; } };
     if ( !isEndPoint ) {
       var scissorNode = new FontAwesomeNode( 'cut', {fill: 'black', scale: 0.6, rotation: Math.PI / 2 - angle} );
-      var cutButton = new RoundShinyButton( function() { model.splitControlPoint( track, i, modelAngle ); }, scissorNode, {
-        center: controlPointNode.center.plus( Vector2.createPolar( 40, angle + Math.PI / 2 ) ),
+      var cutButton = new RoundShinyButton( function() { model.splitControlPoint( track, controlPointIndex, modelAngle ); }, scissorNode, {
+        center: transform.modelToViewPosition( position ).plus( Vector2.createPolar( 40, angle + Math.PI / 2 ) ),
         radius: 20,
         touchAreaRadius: 20 * 1.3,
 
@@ -64,14 +66,14 @@ define( function( require ) {
         downFill: new Color( '#e9e824' )
       } );
       cutButton.addInputListener( disableDismissAction );
-      cutButton.addListener( function() { model.splitControlPoint( track, i, modelAngle ); } );
+      cutButton.addListener( function() { model.splitControlPoint( track, controlPointIndex, modelAngle ); } );
       this.addChild( cutButton );
     }
 
 //Show the delete button.
     var deleteNode = new FontAwesomeNode( 'times_circle', {fill: 'red', scale: 0.6} );
-    var deleteButton = new RoundShinyButton( function() { model.deleteControlPoint( track, i ); }, deleteNode, {
-      center: controlPointNode.center.plus( Vector2.createPolar( 40, angle - Math.PI / 2 ) ),
+    var deleteButton = new RoundShinyButton( function() { model.deleteControlPoint( track, controlPointIndex ); }, deleteNode, {
+      center: transform.modelToViewPosition( position ).plus( Vector2.createPolar( 40, angle - Math.PI / 2 ) ),
       radius: 20,
       touchAreaRadius: 20 * 1.3,
 
