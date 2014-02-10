@@ -288,7 +288,7 @@ define( function( require ) {
                 track.dragging = false;
 
                 //Show the 'control point editing' ui
-                var controlPointUI = new ControlPointUI( model, track, i, controlPointNode );
+                var controlPointUI = new ControlPointUI( model, track, i, controlPointNode, trackNode );
                 trackNode.addChild( controlPointUI );
               }
             } ) );
