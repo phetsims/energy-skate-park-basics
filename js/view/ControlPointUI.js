@@ -66,7 +66,6 @@ define( function( require ) {
         downFill: new Color( '#e9e824' )
       } );
       cutButton.addInputListener( disableDismissAction );
-      cutButton.addListener( function() { model.splitControlPoint( track, controlPointIndex, modelAngle ); } );
       this.addChild( cutButton );
     }
 
