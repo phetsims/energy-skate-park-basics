@@ -758,20 +758,27 @@ define( function( require ) {
     //It should be an inner point of a track (not an end point)
     //If there were only 2 points on the track, just delete the entire track
     deleteControlPoint: function( track, controlPointIndex ) {
-      var points = _.without( track.controlPoints, track.controlPoints[controlPointIndex] );
-      var newTrack = new Track( this, this.tracks, points, true, track.getParentsOrSelf() );
-      newTrack.physical = true;
-      this.tracks.remove( track );
-      this.tracks.add( newTrack );
+      if ( track.controlPoints.length <= 2 ) {
+        this.tracks.remove( track );
+        this.trigger( 'track-changed' );
+        this.trigger( 'track-edited' );
+      }
+      else {
+        var points = _.without( track.controlPoints, track.controlPoints[controlPointIndex] );
+        var newTrack = new Track( this, this.tracks, points, true, track.getParentsOrSelf() );
+        newTrack.physical = true;
+        this.tracks.remove( track );
+        this.tracks.add( newTrack );
 
-      //Trigger track changed first to update the edit enabled properties
-      this.trigger( 'track-changed' );
+        //Trigger track changed first to update the edit enabled properties
+        this.trigger( 'track-changed' );
 
-      //Trigger track edited to rebuild the editing gui layer
-      this.trigger( 'track-edited' );
+        //Trigger track edited to rebuild the editing gui layer
+        this.trigger( 'track-edited' );
 
-      //TODO: Replenish the track toolbox as appropriate (to keep about the same number of control points available)
-      //TODO: If the skater was on track, then update position
+        //TODO: Replenish the track toolbox as appropriate (to keep about the same number of control points available)
+        //TODO: If the skater was on track, then update position
+      }
     },
 
     //The user has pressed the "delete" button for the specified track's specified control point, and it should be deleted.
