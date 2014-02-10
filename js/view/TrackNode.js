@@ -315,7 +315,7 @@ define( function( require ) {
                   trackNode.addChild( cutButton );
                 }
 
-                //TODO: If it is down to 2 points, just delete the entire track.
+                //Show the delete button.
                 var deleteNode = new FontAwesomeNode( 'times_circle', {fill: 'red', scale: 0.6} );
                 var deleteButton = new RoundShinyButton( function() { model.deleteControlPoint( track, i ); }, deleteNode, {
                   center: controlPointNode.center.plus( Vector2.createPolar( 40, angle - Math.PI / 2 ) ),
