@@ -146,7 +146,7 @@ define( function( require ) {
         arrowHead.fill = clearButtonEnabled ? 'black' : 'gray';
       } );
 
-      var clearButton = new RectanglePushButton( clearNode, {rectangleFillUp: new Color( 215, 232, 224 )} );
+      var clearButton = new RectanglePushButton( clearNode, {rectangleFillUp: new Color( 221, 210, 32 )} );
       clearButtonEnabledProperty.linkAttribute( clearButton, 'enabled' );
       clearButton.addListener( function() {model.clearTracks();} );
 
