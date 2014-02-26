@@ -109,7 +109,7 @@ define( function( require ) {
     //If this is a performance concern, perhaps it could just be dropped as a feature
     this.addDerivedProperty( 'moved', ['position', 'startingPosition', 'dragging'], function( x, x0, dragging ) { return !dragging && (x.x !== x0.x || x.y !== x0.y); } );
 
-    this.massProperty.link( function() { skater.updateEnergy(); } );
+    this.property( 'mass' ).link( function() { skater.updateEnergy(); } );
 
     this.updateEnergy();
   }
@@ -146,6 +146,7 @@ define( function( require ) {
       }
       else {
         this.track = null;
+        this.angle = this.startingAngle;
       }
       this.positionProperty.set( new Vector2( this.startingPosition.x, this.startingPosition.y ) );
       this.velocity = new Vector2( 0, 0 );
