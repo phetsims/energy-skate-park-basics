@@ -107,7 +107,7 @@ define( function( require ) {
     //Boolean flag that indicates whether the skater has moved from his initial position, and hence can be 'returned',
     //For making the 'return skater' button enabled/disabled
     //If this is a performance concern, perhaps it could just be dropped as a feature
-    this.addDerivedProperty( 'moved', ['position', 'startingPosition'], function( x, x0 ) { return x.x !== x0.x || x.y !== x0.y; } );
+    this.addDerivedProperty( 'moved', ['position', 'startingPosition', 'dragging'], function( x, x0, dragging ) { return !dragging && (x.x !== x0.x || x.y !== x0.y); } );
 
     this.massProperty.link( function() { skater.updateEnergy(); } );
 
