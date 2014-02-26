@@ -201,7 +201,7 @@ define( function( require ) {
     } );
 
     //Disable the return skater button when the skater is already at his initial coordinates
-    model.skater.property( 'moved' ).link( function( moved ) {view.returnSkaterButton.enabled = moved;} );
+    model.skater.linkAttribute( 'moved', view.returnSkaterButton, 'enabled' );
     this.addChild( this.returnSkaterButton );
 
     //When the skater goes off screen, make the "return skater" button big
