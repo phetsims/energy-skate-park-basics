@@ -16,3 +16,5 @@ skater.png source=PhET
 scissors.png source=Open Clip Art license=PUBLIC DOMAIN notes=Modified from http://www.openclipart.org/detail/32341
 scissors-closed.png source=Open Clip Art license=PUBLIC DOMAIN notes=Modified from http://www.openclipart.org/detail/32341
 scissors-gray.png source=Open Clip Art license=PUBLIC DOMAIN notes=Modified from http://www.openclipart.org/detail/32341
+trash-can-open.png source=Font Awesome notes=modified by SR on 2/6/2014
+trash-can-open-gray.png source=Font Awesome notes=modified by SR on 2/6/2014
