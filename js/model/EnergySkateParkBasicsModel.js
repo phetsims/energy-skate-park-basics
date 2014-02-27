@@ -39,6 +39,8 @@ define( function( require ) {
   var debugLogEnabled = false;
   var debug = {log: debugLogEnabled ? function( string ) { console.log( string ); } : function( string ) {}};
 
+  var MAX_NUMBER_CONTROL_POINTS = 12;
+
   /**
    * Main constructor for the EnergySkateParkBasicsModel
    *
@@ -138,12 +140,18 @@ define( function( require ) {
     //Add the tracks that will be in the track toolbox for the "Playground" screen
     addDraggableTracks: function() {
       for ( var i = 0; i < 4; i++ ) {
-        //Move the tracks over so they will be in the right position in the view coordinates, under the grass to the left of the clock controls
-        //Could use view transform for this, but it would require creating the view first, so just eyeballing it for now.
-        var offset = new Vector2( -5.5 + 0.27, -0.73 );
-        var controlPoints = [ new ControlPoint( offset.x - 1, offset.y ), new ControlPoint( offset.x, offset.y ), new ControlPoint( offset.x + 1, offset.y )];
-        this.tracks.add( new Track( this, this.tracks, controlPoints, true ) );
+        this.addDraggableTrack();
       }
+    },
+
+    //Add a single track to the track control panel.
+    addDraggableTrack: function() {
+
+      //Move the tracks over so they will be in the right position in the view coordinates, under the grass to the left of the clock controls
+      //Could use view transform for this, but it would require creating the view first, so just eyeballing it for now.
+      var offset = new Vector2( -5.5 + 0.27, -0.73 );
+      var controlPoints = [ new ControlPoint( offset.x - 1, offset.y ), new ControlPoint( offset.x, offset.y ), new ControlPoint( offset.x + 1, offset.y )];
+      this.tracks.add( new Track( this, this.tracks, controlPoints, true ) );
     },
 
     //Reset the model, including the skater, tracks, visualizations, etc.
@@ -742,6 +750,21 @@ define( function( require ) {
       return physicalTracks;
     },
 
+    getNonPhysicalTracks: function() {
+
+      //Use vanilla instead of lodash for speed since this is in an inner loop
+      var nonphysicalTracks = [];
+      for ( var i = 0; i < this.tracks.length; i++ ) {
+        var track = this.tracks.get( i );
+
+        if ( !track.physical ) {
+          nonphysicalTracks.push( track );
+        }
+      }
+      return nonphysicalTracks;
+    },
+
+
     //Find whatever track is connected to the specified track and join them together to a new track
     joinTracks: function( track ) {
       var connectedPoint = track.getSnapTarget();
@@ -751,6 +774,11 @@ define( function( require ) {
           this.joinTrackToTrack( track, otherTrack );
           break;
         }
+      }
+
+      //if the number of control points is low enough, replenish the toolbox
+      if ( this.getNumberOfControlPoints() <= MAX_NUMBER_CONTROL_POINTS - 3 ) {
+        this.addDraggableTrack();
       }
     },
 
@@ -778,6 +806,11 @@ define( function( require ) {
 
         //TODO: Replenish the track toolbox as appropriate (to keep about the same number of control points available)
         //TODO: If the skater was on track, then update position
+      }
+
+      //if the number of control points is low enough, replenish the toolbox
+      if ( this.getNumberOfControlPoints() <= MAX_NUMBER_CONTROL_POINTS - 3 ) {
+        this.addDraggableTrack();
       }
     },
 
@@ -810,6 +843,13 @@ define( function( require ) {
 
       //TODO: Don't show the split gui if there are already too many control points total
       //TODO: If the skater was on track, then move to track1 or track2
+
+      //If a control point was split and that makes too many "live" control points total, remove a piece of track from the toolbox to keep the total number of control points low enough.
+      if ( this.getNumberOfControlPoints() > MAX_NUMBER_CONTROL_POINTS ) {
+        //find a nonphysical track, then remove it
+
+        this.tracks.remove( this.getNonPhysicalTracks()[0] );
+      }
     },
 
     /**
@@ -912,6 +952,25 @@ define( function( require ) {
       this.set( state.properties );
 
       this.skater.setState( state.skater, this.tracks );
+    },
+
+    //Get the number of physical control points (i.e. control points outside of the toolbox)
+    getNumberOfPhysicalControlPoints: function() {
+      var numberOfPointsInEachTrack = _.map( this.getPhysicalTracks(), function( track ) {return track.controlPoints.length;} );
+      return _.reduce( numberOfPointsInEachTrack, function( memo, num ) { return memo + num; }, 0 );
+    },
+
+    getNumberOfControlPoints: function() {
+      var numberOfPointsInEachTrack = _.map( this.tracks.getArray(), function( track ) {return track.controlPoints.length;} );
+      return _.reduce( numberOfPointsInEachTrack, function( memo, num ) { return memo + num; }, 0 );
+    },
+
+    //Logic to determine whether a control point can be added by cutting a track's control point in two
+    //This is feasible if the number of control points in the play area (above y>0) is less than the maximum
+    //TODO: Will it be confusing if cutting a track makes the last piece from the toolbox disappear?
+    //TODO: Alternately, should we only allow cutting a track if it won't make a toolbox piece disappear?
+    canCutTrackControlPoint: function() {
+      return this.getNumberOfPhysicalControlPoints() < MAX_NUMBER_CONTROL_POINTS;
     }
   } );
 } );

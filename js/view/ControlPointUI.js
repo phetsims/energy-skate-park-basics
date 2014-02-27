@@ -53,9 +53,13 @@ define( function( require ) {
     var modelAngle = track.getModelAngleAt( alpha );
 
     var disableDismissAction = { down: function() { enableClickToDismissListener = false; } };
-    if ( !isEndPoint ) {
+
+    //Add a scissors cut button, but only for interior points and only if there aren't too many control points already
+    if ( !isEndPoint && model.canCutTrackControlPoint() ) {
       var scissorNode = new FontAwesomeNode( 'cut', {fill: 'black', scale: 0.6, rotation: Math.PI / 2 - angle} );
-      var cutButton = new RoundShinyButton( function() { model.splitControlPoint( track, controlPointIndex, modelAngle ); }, scissorNode, {
+      var cutButton = new RoundShinyButton( function() {
+        model.splitControlPoint( track, controlPointIndex, modelAngle );
+      }, scissorNode, {
         center: transform.modelToViewPosition( position ).plus( Vector2.createPolar( 40, angle + Math.PI / 2 ) ),
         radius: 20,
         touchAreaRadius: 20 * 1.3,
@@ -69,7 +73,7 @@ define( function( require ) {
       this.addChild( cutButton );
     }
 
-//Show the delete button.
+    //Show the delete button.
     var deleteNode = new FontAwesomeNode( 'times_circle', {fill: 'red', scale: 0.6} );
     var deleteButton = new RoundShinyButton( function() { model.deleteControlPoint( track, controlPointIndex ); }, deleteNode, {
       center: transform.modelToViewPosition( position ).plus( Vector2.createPolar( 40, angle - Math.PI / 2 ) ),
