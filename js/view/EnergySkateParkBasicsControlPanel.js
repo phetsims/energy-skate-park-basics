@@ -17,6 +17,7 @@ define( function( require ) {
   var Rectangle = require( 'SCENERY/nodes/Rectangle' );
   var Line = require( 'SCENERY/nodes/Line' );
   var Circle = require( 'SCENERY/nodes/Circle' );
+  var Image = require( 'SCENERY/nodes/Image' );
   var Panel = require( 'SUN/Panel' );
   var CheckBox = require( 'SUN/CheckBox' );
   var Text = require( 'SCENERY/nodes/Text' );
@@ -31,6 +32,7 @@ define( function( require ) {
   var gridString = require( 'string!ENERGY_SKATE_PARK_BASICS/controls.show-grid' );
   var detachString = require( 'string!ENERGY_SKATE_PARK_BASICS/detach' );
   var PhetFont = require( 'SCENERY_PHET/PhetFont' );
+  var detachIcon = require( 'image!ENERGY_SKATE_PARK_BASICS/detach.png' );
 
   function EnergySkateParkBasicsControlPanel( model ) {
     var textOptions = {font: new PhetFont( 14 )};
@@ -39,10 +41,8 @@ define( function( require ) {
     var pieChartSet = [new Text( pieChartString, textOptions ), this.createPieChartIcon()];
     var gridSet = [new Text( gridString, textOptions ), this.createGridIcon()];
     var speedometerSet = [new Text( speedString, textOptions ), this.createSpeedometerIcon()];
-    var stickToTrackSet = [new Text( detachString, textOptions ), new Node( {children: [
-      new Rectangle( 0, 0, 20, 10, {fill: 'black'} ),
-      new Line( 0, 5, 20, 5, {stroke: 'yellow', lineWidth: '2', lineDash: [4, 2]} )
-    ]} )];
+//    var stickToTrackSet = [new Text( detachString, textOptions ), new Image( detachIcon, {scale: 0.27} )];
+    var stickToTrackSet = [new Text( detachString, textOptions ), new Image( detachIcon, {scale: 0.32} )];
 
     var sets = model.frictionAllowed ?
                [barGraphSet, pieChartSet, gridSet, speedometerSet, stickToTrackSet] :
