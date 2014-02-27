@@ -32,8 +32,8 @@ define( function( require ) {
     };
 
     Sim.call( this, title, [
-//      new EnergySkateParkBasicsScreen( intro, icon1, false, false ),
-//      new EnergySkateParkBasicsScreen( friction, icon2, false, true ),
+      new EnergySkateParkBasicsScreen( intro, icon1, false, false ),
+      new EnergySkateParkBasicsScreen( friction, icon2, false, true ),
       new EnergySkateParkBasicsScreen( playground, icon3, true, true ) ], options );
   }
 
