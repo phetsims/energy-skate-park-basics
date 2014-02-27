@@ -78,7 +78,7 @@ define( function( require ) {
       friction: frictionAllowed ? 0.05 : 0,
 
       //Whether the skater should stick to the track like a roller coaster, or be able to fly off like a street
-      stickToTrack: true,
+      detachable: false,
 
       //True if the user has pressed 'edit' to modify connected tracks, and the sim is in an "editing" mode
       editing: false
@@ -535,7 +535,7 @@ define( function( require ) {
       netForce.freeToPool();
 
       var leaveTrack = (netForceRadial < centripForce && outsideCircle) || (netForceRadial > centripForce && !outsideCircle);
-      if ( leaveTrack && !this.stickToTrack ) {
+      if ( leaveTrack && this.detachable ) {
 
         //Leave the track.  Make sure the velocity is pointing away from the track or keep track of frames away from the track so it doesn't immediately recollide
         //Or project a ray and see if a collision is imminent

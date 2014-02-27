@@ -1,7 +1,7 @@
 {
   "properties.position": "Position",
   "properties.speed": "Speed",
-  "stickToTrack": "Stick to Track",
+  "detach": "Detach",
   "small": "Small",
   "controls.show-friction": "Track Friction",
   "controls.path": "Path",

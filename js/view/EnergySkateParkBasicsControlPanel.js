@@ -29,7 +29,7 @@ define( function( require ) {
   var pieChartString = require( 'string!ENERGY_SKATE_PARK_BASICS/pieChart' );
   var speedString = require( 'string!ENERGY_SKATE_PARK_BASICS/properties.speed' );
   var gridString = require( 'string!ENERGY_SKATE_PARK_BASICS/controls.show-grid' );
-  var stickToTrackString = require( 'string!ENERGY_SKATE_PARK_BASICS/stickToTrack' );
+  var detachString = require( 'string!ENERGY_SKATE_PARK_BASICS/detach' );
   var PhetFont = require( 'SCENERY_PHET/PhetFont' );
 
   function EnergySkateParkBasicsControlPanel( model ) {
@@ -39,7 +39,7 @@ define( function( require ) {
     var pieChartSet = [new Text( pieChartString, textOptions ), this.createPieChartIcon()];
     var gridSet = [new Text( gridString, textOptions ), this.createGridIcon()];
     var speedometerSet = [new Text( speedString, textOptions ), this.createSpeedometerIcon()];
-    var stickToTrackSet = [new Text( stickToTrackString, textOptions ), new Node( {children: [
+    var stickToTrackSet = [new Text( detachString, textOptions ), new Node( {children: [
       new Rectangle( 0, 0, 20, 10, {fill: 'black'} ),
       new Line( 0, 5, 20, 5, {stroke: 'yellow', lineWidth: '2', lineDash: [4, 2]} )
     ]} )];
@@ -63,7 +63,7 @@ define( function( require ) {
       new CheckBox( new HBox( {children: pad( gridSet )} ), model.property( 'gridVisible' ), options ),
       new CheckBox( new HBox( {children: pad( speedometerSet )} ), model.property( 'speedometerVisible' ), options )];
     if ( model.frictionAllowed ) {
-      checkBoxChildren.push( new CheckBox( new HBox( {children: pad( stickToTrackSet )} ), model.property( 'stickToTrack' ), options ) );
+      checkBoxChildren.push( new CheckBox( new HBox( {children: pad( stickToTrackSet )} ), model.property( 'detachable' ), options ) );
     }
     var checkBoxes = new VBox( {align: 'left', spacing: 10, children: checkBoxChildren} );
 
