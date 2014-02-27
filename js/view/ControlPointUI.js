@@ -27,7 +27,6 @@ define( function( require ) {
     // listener for 'click outside to dismiss'
     var clickToDismissListener = {
       down: function() {
-        console.log( 'clickToDismissListener.down, enableClickToDismiss = ', enableClickToDismissListener );
         if ( enableClickToDismissListener ) {
           sceneNode.removeInputListener( clickToDismissListener );
           sceneListenerAdded = false;
