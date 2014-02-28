@@ -12,10 +12,7 @@ define( function( require ) {
   var inherit = require( 'PHET_CORE/inherit' );
   var Shape = require( 'KITE/Shape' );
   var Color = require( 'SCENERY/util/Color' );
-  var Node = require( 'SCENERY/nodes/Node' );
   var Image = require( 'SCENERY/nodes/Image' );
-  var Path = require( 'SCENERY/nodes/Path' );
-  var Vector2 = require( 'DOT/Vector2' );
   var RoundShinyButton = require( 'SCENERY_PHET/RoundShinyButton' );
   var trashCanImage = require( 'image!ENERGY_SKATE_PARK_BASICS/trash-can.png' );
   var trashCanGrayImage = require( 'image!ENERGY_SKATE_PARK_BASICS/trash-can.png' );
