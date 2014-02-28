@@ -913,13 +913,15 @@ define( function( require ) {
         var x2 = newTrack.getX( p.u );
         var y2 = newTrack.getY( p.u );
         this.skater.position = new Vector2( x2, y2 );
-        this.skater.angle = newTrack.getViewAngleAt( p.u );
+        this.skater.angle = newTrack.getViewAngleAt( p.u ) + (this.skater.up ? 0 : Math.PI);
         var newNormal = this.skater.upVector;
 
         //If the skater flipped upside down because the track directionality is different, toggle his 'up' flag
         if ( originalNormal.dot( newNormal ) < 0 ) {
           this.skater.up = !this.skater.up;
+          this.skater.angle = newTrack.getViewAngleAt( p.u ) + (this.skater.up ? 0 : Math.PI);
         }
+        this.skater.trigger( 'updated' );
       }
     },
 
