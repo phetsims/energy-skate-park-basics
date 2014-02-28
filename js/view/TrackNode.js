@@ -32,7 +32,7 @@ define( function( require ) {
     var trackNode = this;
     Node.call( this );
     var road = new Path( null, {fill: 'gray', cursor: track.interactive ? 'pointer' : 'default'} );
-    var dashedLine = new Path( null, {stroke: '#EBC138', lineWidth: '2', lineDash: [7, 4]} );
+    var dashedLine = new Path( null, {stroke: 'black', lineWidth: '1.2', lineDash: [11, 8]} );
     model.property( 'detachable' ).link( function( detachable ) { dashedLine.visible = !detachable; } );
 
     track.readyToReturnProperty.link( function( readyToReturn ) { road.fill = readyToReturn ? 'yellow' : 'gray'; } );
