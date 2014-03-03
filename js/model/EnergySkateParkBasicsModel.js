@@ -182,6 +182,7 @@ define( function( require ) {
     step: function( dt ) {
 
       var debugEnergy = false;
+      var initialEnergy = null;
 
       //If the delay makes dt too high, then truncate it.  This helps e.g. when clicking in the address bar on ipad, which gives a huge dt and problems for integration
       if ( !this.paused && !this.skater.dragging ) {
@@ -193,7 +194,7 @@ define( function( require ) {
 
         var skaterState = new SkaterState( this.skater, {} );
         if ( debugEnergy ) {
-          var initialEnergy = skaterState.getTotalEnergy();
+          initialEnergy = skaterState.getTotalEnergy();
         }
 
         skaterState = this.stepModel( this.speed === 'normal' ? dt : dt * 0.25, skaterState );
