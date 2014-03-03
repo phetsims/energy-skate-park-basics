@@ -17,7 +17,6 @@ define( function( require ) {
   var Rectangle = require( 'SCENERY/nodes/Rectangle' );
   var Line = require( 'SCENERY/nodes/Line' );
   var Circle = require( 'SCENERY/nodes/Circle' );
-  var Image = require( 'SCENERY/nodes/Image' );
   var Panel = require( 'SUN/Panel' );
   var CheckBox = require( 'SUN/CheckBox' );
   var Text = require( 'SCENERY/nodes/Text' );
@@ -30,9 +29,8 @@ define( function( require ) {
   var pieChartString = require( 'string!ENERGY_SKATE_PARK_BASICS/pieChart' );
   var speedString = require( 'string!ENERGY_SKATE_PARK_BASICS/properties.speed' );
   var gridString = require( 'string!ENERGY_SKATE_PARK_BASICS/controls.show-grid' );
-  var detachString = require( 'string!ENERGY_SKATE_PARK_BASICS/detach' );
   var PhetFont = require( 'SCENERY_PHET/PhetFont' );
-  var detachIcon = require( 'image!ENERGY_SKATE_PARK_BASICS/detach.png' );
+  var AttachDetachToggleButtons = require( 'ENERGY_SKATE_PARK_BASICS/view/AttachDetachToggleButtons' );
 
   function EnergySkateParkBasicsControlPanel( model ) {
     var textOptions = {font: new PhetFont( 14 )};
@@ -41,12 +39,8 @@ define( function( require ) {
     var pieChartSet = [new Text( pieChartString, textOptions ), this.createPieChartIcon()];
     var gridSet = [new Text( gridString, textOptions ), this.createGridIcon()];
     var speedometerSet = [new Text( speedString, textOptions ), this.createSpeedometerIcon()];
-//    var stickToTrackSet = [new Text( detachString, textOptions ), new Image( detachIcon, {scale: 0.27} )];
-    var stickToTrackSet = [new Text( detachString, textOptions ), new Image( detachIcon, {scale: 0.32} )];
 
-    var sets = model.frictionAllowed ?
-               [barGraphSet, pieChartSet, gridSet, speedometerSet, stickToTrackSet] :
-               [barGraphSet, pieChartSet, gridSet, speedometerSet];
+    var sets = [barGraphSet, pieChartSet, gridSet, speedometerSet];
     var maxTextWidth = _.max( sets, function( itemSet ) { return itemSet[0].width; } )[0].width;
 
     //In the absence of any sun (or other) layout packages, just manually space them out so they will have the icons aligned
@@ -62,20 +56,16 @@ define( function( require ) {
       new CheckBox( new HBox( {children: pad( pieChartSet )} ), model.property( 'pieChartVisible' ), options ),
       new CheckBox( new HBox( {children: pad( gridSet )} ), model.property( 'gridVisible' ), options ),
       new CheckBox( new HBox( {children: pad( speedometerSet )} ), model.property( 'speedometerVisible' ), options )];
-    if ( model.frictionAllowed ) {
-      checkBoxChildren.push( new CheckBox( new HBox( {children: pad( stickToTrackSet )} ), model.property( 'detachable' ), options ) );
-    }
     var checkBoxes = new VBox( {align: 'left', spacing: 10, children: checkBoxChildren} );
 
-    var content = new VBox( {spacing: 10,
-      children: !model.frictionAllowed ?
-                [checkBoxes, new MassSlider( model )] :
-                [checkBoxes, new FrictionControl( model )]} );
+    var content = new VBox( {spacing: 4,
+      children: !model.frictionAllowed ? [checkBoxes, new MassSlider( model )] :
+                [checkBoxes, new AttachDetachToggleButtons( model ), new FrictionControl( model )]} );
 
-    Panel.call( this, content, { xMargin: 10, yMargin: 10, fill: '#F0F0F0', stroke: 'gray', lineWidth: 1, resize: false } );
+    Panel.call( this, content, { xMargin: 10, yMargin: 5, fill: '#F0F0F0', stroke: 'gray', lineWidth: 1, resize: false } );
   }
 
-  return inherit( Node, EnergySkateParkBasicsControlPanel, {
+  return inherit( Panel, EnergySkateParkBasicsControlPanel, {
 
     //Create an icon for the bar graph check box
     createBarGraphIcon: function() {

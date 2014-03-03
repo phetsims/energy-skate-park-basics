@@ -14,6 +14,7 @@ define( function( require ) {
   var HBox = require( 'SCENERY/nodes/HBox' );
   var Text = require( 'SCENERY/nodes/Text' );
   var Panel = require( 'SUN/Panel' );
+  var VStrut = require( 'SUN/VStrut' );
   var PhetFont = require( 'SCENERY_PHET/PhetFont' );
   var EnergySkateParkColorScheme = require( 'ENERGY_SKATE_PARK_BASICS/view/EnergySkateParkColorScheme' );
   var ClearThermalButton = require( 'ENERGY_SKATE_PARK_BASICS/view/ClearThermalButton' );
@@ -48,7 +49,8 @@ define( function( require ) {
     var contentNode = new VBox( {spacing: 4, align: 'left', children: [
       new HBox( {spacing: 4, children: [kineticBar, kineticLabel]} ),
       new HBox( {spacing: 4, children: [potentialBar, potentialLabel]} ),
-      new HBox( {spacing: 4, children: [thermalBar, thermalLabel, clearThermalButtonStrut]} )
+      new HBox( {spacing: 4, children: [thermalBar, thermalLabel, clearThermalButtonStrut]} ),
+      new VStrut( 1 )
     ]} );
 
     var contentWithTitle = new VBox( {spacing: 5, align: 'center', children: [
@@ -56,7 +58,7 @@ define( function( require ) {
       contentNode
     ]} );
 
-    Panel.call( this, contentWithTitle, { x: 4, y: 4, xMargin: 4, yMargin: 6, fill: 'white', stroke: 'gray', lineWidth: 1, resize: false, cursor: 'pointer'} );
+    Panel.call( this, contentWithTitle, { x: 4, y: 4, xMargin: 4, yMargin: 4, fill: 'white', stroke: 'gray', lineWidth: 1, resize: false, cursor: 'pointer'} );
 
     this.addChild( clearThermalButton );
     var strutGlobal = clearThermalButtonStrut.parentToGlobalPoint( clearThermalButtonStrut.center );

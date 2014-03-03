@@ -264,7 +264,7 @@ define( function( require ) {
 
       if ( this.sceneSelectionPanel ) {
         this.sceneSelectionPanel.centerX = this.controlPanel.centerX;
-        this.sceneSelectionPanel.top = this.controlPanel.bottom + 10;
+        this.sceneSelectionPanel.top = this.controlPanel.bottom + 5;
       }
       this.resetAllButton.centerX = this.controlPanel.centerX;
       this.returnSkaterButton.right = this.resetAllButton.left - 10;
