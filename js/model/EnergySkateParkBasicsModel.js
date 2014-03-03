@@ -685,8 +685,8 @@ define( function( require ) {
               }
               else {
 
-                //TODO: removed this logging output, but this case can still occur, especially with friction turned on
-                debug.log( "Changed position, wanted to change velocity, but didn't have enough to fix it..., dE=" + ( newState.getTotalEnergy() - e0 ) );
+                //TODO: This error case can still occur, especially with friction turned on
+                console.log( "Changed position, wanted to change velocity, but didn't have enough to fix it..., dE=" + ( newState.getTotalEnergy() - e0 ) );
               }
             }
             return correctedState;
@@ -809,7 +809,6 @@ define( function( require ) {
         //Trigger track edited to rebuild the editing gui layer
         this.trigger( 'track-edited' );
 
-        //TODO: Replenish the track toolbox as appropriate (to keep about the same number of control points available)
         //TODO: If the skater was on track, then update position
       }
 
