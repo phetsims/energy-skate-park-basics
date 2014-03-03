@@ -76,6 +76,12 @@ define( function( require ) {
               }
             }
 
+            //TODO: Don't allow the track to be dragged offscreen
+
+            //TODO: If screen aspect ratio changes, bring all tracks back where they can be seen?
+
+            //TODO: Track gets away from the mouse when dragged below ground
+
             track.translate( modelDelta.x, modelDelta.y );
 
             //If one of the control points is close enough to link to another track, do so
