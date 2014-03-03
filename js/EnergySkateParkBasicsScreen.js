@@ -23,7 +23,6 @@ define( function( require ) {
 
   return inherit( Screen, EnergySkateParkBasicsScreen, {
 
-    //TODO: abstract this to Sim?
     getState: function() {
       return {
         model: this.model.getState(),
