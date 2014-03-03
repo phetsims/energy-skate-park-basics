@@ -17,11 +17,18 @@ define( function( require ) {
   var RadioButton = require( 'SUN/RadioButton' );
 
   function AttachDetachToggleButtons( model ) {
-    var scale = 0.060;
+    var scale = 0.32;
     var selectedStroke = 'black';
-    var deselectedStroke = 'white';
-    var attachButton = new RadioButton( model.property( 'detachable' ), false, new Panel( new Image( attachIcon, {scale: scale} ), {stroke: selectedStroke} ), new Panel( new Image( attachIcon, {scale: scale} ), {stroke: deselectedStroke} ) );
-    var detachButton = new RadioButton( model.property( 'detachable' ), true, new Panel( new Image( detachIcon, {scale: scale} ), {stroke: selectedStroke} ), new Panel( new Image( detachIcon, {scale: scale} ), {stroke: deselectedStroke} ) );
+    var deselectedStroke = null;
+    var panelOptions = {
+      xMargin: 0,
+      yMargin: 0,
+      cornerRadius: 6
+    };
+    var selectedOptions = _.extend( {stroke: selectedStroke}, panelOptions );
+    var deselectedOptions = _.extend( {stroke: deselectedStroke}, panelOptions );
+    var attachButton = new RadioButton( model.property( 'detachable' ), false, new Panel( new Image( attachIcon, {scale: scale} ), selectedOptions ), new Panel( new Image( attachIcon, {scale: scale} ), deselectedOptions ) );
+    var detachButton = new RadioButton( model.property( 'detachable' ), true, new Panel( new Image( detachIcon, {scale: scale} ), selectedOptions ), new Panel( new Image( detachIcon, {scale: scale} ), deselectedOptions ) );
     var hbox = new HBox( {spacing: 20, align: 'top', children: [attachButton, detachButton]} );
     Panel.call( this, hbox, {fill: '#dddddd', stroke: null} );
   }
