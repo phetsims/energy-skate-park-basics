@@ -897,7 +897,6 @@ define( function( require ) {
         secondTrackBackward();
       }
 
-      //TODO: create and use a getTrackAPI() function
       var newTrack = new Track( this, this.tracks, points, true, a.getParentsOrSelf().concat( b.getParentsOrSelf() ) );
       newTrack.physical = true;
       this.tracks.remove( a );
@@ -972,8 +971,6 @@ define( function( require ) {
 
     //Logic to determine whether a control point can be added by cutting a track's control point in two
     //This is feasible if the number of control points in the play area (above y>0) is less than the maximum
-    //TODO: Will it be confusing if cutting a track makes the last piece from the toolbox disappear?
-    //TODO: Alternately, should we only allow cutting a track if it won't make a toolbox piece disappear?
     canCutTrackControlPoint: function() {
       return this.getNumberOfPhysicalControlPoints() < MAX_NUMBER_CONTROL_POINTS;
     }
