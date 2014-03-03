@@ -180,6 +180,9 @@ define( function( require ) {
 
     //Step the model, automatically called from Joist
     step: function( dt ) {
+
+      var debugEnergy = false;
+
       //If the delay makes dt too high, then truncate it.  This helps e.g. when clicking in the address bar on ipad, which gives a huge dt and problems for integration
       if ( !this.paused && !this.skater.dragging ) {
 
@@ -189,15 +192,17 @@ define( function( require ) {
         }
 
         var skaterState = new SkaterState( this.skater, {} );
-        //TODO this is flagged by jshint as unused, but appears in a commented-out chunk of code below.
-//        var initialEnergy = skaterState.getTotalEnergy();
+        if ( debugEnergy ) {
+          var initialEnergy = skaterState.getTotalEnergy();
+        }
+
         skaterState = this.stepModel( this.speed === 'normal' ? dt : dt * 0.25, skaterState );
 
         //Uncomment this block to debug energy issues.  Commented out instead of blocked with a flag so debugger statement will pass jshint
-//        if ( Math.abs( skaterState.getTotalEnergy() - initialEnergy ) > 1E-6 ) {
-//          debugger;
-//          var redo = this.stepModel( this.speed === 'normal' ? dt : dt * 0.25, new SkaterState( this.skater, {} ) );
-//        }
+        if ( debugEnergy && Math.abs( skaterState.getTotalEnergy() - initialEnergy ) > 1E-6 ) {
+          var redo = this.stepModel( this.speed === 'normal' ? dt : dt * 0.25, new SkaterState( this.skater, {} ) );
+          console.log( redo );
+        }
         skaterState.setToSkater( this.skater );
         this.skater.trigger( 'updated' );
       }
