@@ -794,7 +794,6 @@ define( function( require ) {
       if ( track.controlPoints.length <= 2 ) {
         this.tracks.remove( track );
         this.trigger( 'track-changed' );
-        this.trigger( 'track-edited' );
       }
       else {
         var points = _.without( track.controlPoints, track.controlPoints[controlPointIndex] );
@@ -805,9 +804,6 @@ define( function( require ) {
 
         //Trigger track changed first to update the edit enabled properties
         this.trigger( 'track-changed' );
-
-        //Trigger track edited to rebuild the editing gui layer
-        this.trigger( 'track-edited' );
 
         //TODO: If the skater was on track, then update position
       }
@@ -841,9 +837,6 @@ define( function( require ) {
 
       //Trigger track changed first to update the edit enabled properties
       this.trigger( 'track-changed' );
-
-      //Trigger track edited to rebulid the editing gui layer
-      this.trigger( 'track-edited' );
 
       //TODO: If the skater was on track, then move to track1 or track2
 
