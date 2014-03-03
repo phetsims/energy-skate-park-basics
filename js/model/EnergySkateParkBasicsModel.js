@@ -841,7 +841,6 @@ define( function( require ) {
       //Trigger track edited to rebulid the editing gui layer
       this.trigger( 'track-edited' );
 
-      //TODO: Don't show the split gui if there are already too many control points total
       //TODO: If the skater was on track, then move to track1 or track2
 
       //If a control point was split and that makes too many "live" control points total, remove a piece of track from the toolbox to keep the total number of control points low enough.
