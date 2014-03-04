@@ -35,7 +35,6 @@ define( function( require ) {
     var dashedLine = new Path( null, {stroke: 'black', lineWidth: '1.2', lineDash: [11, 8]} );
     model.property( 'detachable' ).link( function( detachable ) { dashedLine.visible = !detachable; } );
 
-    track.readyToReturnProperty.link( function( readyToReturn ) { road.fill = readyToReturn ? 'yellow' : 'gray'; } );
     this.addChild( road );
     this.addChild( dashedLine );
 
@@ -55,9 +54,6 @@ define( function( require ) {
             var dragPoint = event.pointer.point;
             var delta = trackSegmentDragHandler.transform.inverseDelta2( dragPoint.minus( lastDragPoint ) );
             lastDragPoint = dragPoint;
-
-            //Is the user trying to return the track?
-            track.overTrackPanel = panelContainsPoint( dragPoint );
 
             var modelDelta = modelViewTransform.viewToModelDelta( delta );
 
@@ -142,11 +138,6 @@ define( function( require ) {
               model.joinTracks( track );
             }
 
-            //Return the track.  If it was a combination of two tracks, split them and return both, or keep track of parents, or something
-            //When dropping the track in the toolbox, make nonphysical and reset coordinates
-            else if ( track.readyToReturn ) {
-              track.returnToControlPanel();
-            }
             track.bumpAboveGround();
             track.dragging = false;
           }
