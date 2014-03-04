@@ -41,7 +41,7 @@ define( function( require ) {
 
     if ( track.interactive ) {
       var lastDragPoint;
-      var handler = new SimpleDragHandler( {
+      var trackSegmentDragHandler = new SimpleDragHandler( {
           allowTouchSnag: true,
 
           start: function( event ) {
@@ -53,7 +53,7 @@ define( function( require ) {
           drag: function( event ) {
             track.dragging = true;
             var dragPoint = event.pointer.point;
-            var delta = handler.transform.inverseDelta2( dragPoint.minus( lastDragPoint ) );
+            var delta = trackSegmentDragHandler.transform.inverseDelta2( dragPoint.minus( lastDragPoint ) );
             lastDragPoint = dragPoint;
 
             //Is the user trying to return the track?
@@ -153,7 +153,7 @@ define( function( require ) {
         }
       );
 
-      road.addInputListener( handler );
+      road.addInputListener( trackSegmentDragHandler );
     }
 
     //Reuse arrays to save allocations and prevent garbage collections, see #38
