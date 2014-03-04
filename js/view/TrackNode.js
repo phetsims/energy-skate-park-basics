@@ -20,7 +20,7 @@ define( function( require ) {
   var SplineEvaluation = require( 'ENERGY_SKATE_PARK_BASICS/model/SplineEvaluation' );
   var ControlPointUI = require( 'ENERGY_SKATE_PARK_BASICS/view/ControlPointUI' );
 
-  /**
+  /*
    * Constructor for TrackNode
    * @param model the entire model
    * @param track the track for this track node
