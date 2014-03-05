@@ -268,6 +268,16 @@ define( function( require ) {
 
                 //Constrain the control points to remain in y>0, see #71
                 pt.y = Math.max( pt.y, 0 );
+
+                if ( availableBoundsProperty.value ) {
+                  var availableBounds = availableBoundsProperty.value;
+
+                  //Constrain the control points to be onscreen, see #94
+                  pt.x = Math.max( pt.x, availableBounds.minX );
+                  pt.x = Math.min( pt.x, availableBounds.maxX );
+                  pt.y = Math.min( pt.y, availableBounds.maxY );
+                }
+
                 controlPoint.sourcePosition = pt;
 
                 if ( isEndPoint ) {
