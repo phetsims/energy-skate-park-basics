@@ -18,14 +18,13 @@ define( function( require ) {
   var PhetFont = require( 'SCENERY_PHET/PhetFont' );
   var EnergySkateParkColorScheme = require( 'ENERGY_SKATE_PARK_BASICS/view/EnergySkateParkColorScheme' );
   var ClearThermalButton = require( 'ENERGY_SKATE_PARK_BASICS/view/ClearThermalButton' );
+  var DerivedProperty = require( 'AXON/DerivedProperty' );
   var kineticString = require( 'string!ENERGY_SKATE_PARK_BASICS/energy.kinetic' );
   var potentialString = require( 'string!ENERGY_SKATE_PARK_BASICS/energy.potential' );
   var thermalString = require( 'string!ENERGY_SKATE_PARK_BASICS/energy.thermal' );
   var energyString = require( 'string!ENERGY_SKATE_PARK_BASICS/energy.energy' );
 
-  function PieChartLegend( model ) {
-    var pieChartLegend = this;
-    this.skater = model.skater;
+  function PieChartLegend( skater, clearThermal, pieChartVisibleProperty ) {
 
     //The x-coordinate of a bar chart bar
     var createLabel = function( index, title, color ) { return new Text( title, {fill: color, font: new PhetFont( 12 ), pickable: false} ); };
@@ -40,8 +39,8 @@ define( function( require ) {
     var potentialLabel = createLabel( 1, potentialString, EnergySkateParkColorScheme.potentialEnergy );
     var thermalLabel = createLabel( 2, thermalString, EnergySkateParkColorScheme.thermalEnergy );
 
-    var clearThermalButton = new ClearThermalButton( model.clearThermal.bind( model ), model.skater, {centerX: thermalLabel.centerX, y: thermalLabel.bottom + 15} );
-    model.skater.linkAttribute( 'thermalEnergy', clearThermalButton, 'enabled' );
+    var clearThermalButton = new ClearThermalButton( clearThermal, skater, {centerX: thermalLabel.centerX, y: thermalLabel.bottom + 15} );
+    skater.linkAttribute( 'thermalEnergy', clearThermalButton, 'enabled' );
 
     //Don't let the ClearThermalButton participate in the layout since it is too big vertically.  Just use a strut to get the width right, then add the undo button later
     var clearThermalButtonStrut = new Rectangle( 0, 0, clearThermalButton.width, 1, {} );
@@ -65,10 +64,7 @@ define( function( require ) {
     var buttonLocal = clearThermalButton.globalToParentPoint( strutGlobal );
     clearThermalButton.center = buttonLocal;
 
-    model.linkAttribute( 'pieChartVisible', this, 'visible' );
-
-    //Only show the pie chart legend when selected and when the bar graph is not shown, see #64
-    model.multilink( ['pieChartVisible', 'barGraphVisible'], function( pieChartVisible, barGraphVisible ) { pieChartLegend.visible = pieChartVisible; } );
+    pieChartVisibleProperty.linkAttribute( this, 'visible' );
   }
 
   return inherit( Panel, PieChartLegend );

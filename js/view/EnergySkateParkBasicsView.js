@@ -157,7 +157,7 @@ define( function( require ) {
     var skaterNode = new SkaterNode( model, model.skater, this, transform );
     this.addChild( skaterNode );
     this.addChild( new PieChartNode( model, transform ) );
-    var pieChartLegend = new PieChartLegend( model );
+    var pieChartLegend = new PieChartLegend( model.skater, model.clearThermal.bind( model ), model.property( 'pieChartVisible' ) );
     this.addChild( pieChartLegend );
 
     var speedometerNode = new GaugeNode( model.skater.property( 'speed' ), speedString, {min: 0, max: 20}, {updateEnabledProperty: model.property( 'speedometerVisible' ), pickable: false} );
