@@ -799,24 +799,21 @@ define( function( require ) {
     //It should be an inner point of a track (not an end point)
     //If there were only 2 points on the track, just delete the entire track
     deleteControlPoint: function( track, controlPointIndex ) {
-      if ( track.controlPoints.length <= 2 ) {
-        this.tracks.remove( track );
-        this.trigger( 'track-changed' );
-      }
-      else {
+      this.tracks.remove( track );
+
+      if ( track.controlPoints.length > 2 ) {
         var points = _.without( track.controlPoints, track.controlPoints[controlPointIndex] );
         var newTrack = new Track( this, this.tracks, points, true, track.getParentsOrSelf() );
         newTrack.physical = true;
-        this.tracks.remove( track );
         this.tracks.add( newTrack );
+      }
 
-        //Trigger track changed first to update the edit enabled properties
-        this.trigger( 'track-changed' );
+      //Trigger track changed first to update the edit enabled properties
+      this.trigger( 'track-changed' );
 
-        //If the skater was on track, then he should fall off
-        if ( this.skater.track === track ) {
-          this.skater.track = null;
-        }
+      //If the skater was on track, then he should fall off
+      if ( this.skater.track === track ) {
+        this.skater.track = null;
       }
 
       //if the number of control points is low enough, replenish the toolbox
