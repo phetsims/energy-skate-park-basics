@@ -22,7 +22,7 @@ define( function( require ) {
 
   /*
    * Constructor for TrackNode
-   * @param model the entire model
+   * @param model the entire model.  Not absolutely necessary, but so many methods are called on it for joining and splitting tracks that we pass the entire model anyways.
    * @param track the track for this track node
    * @param modelViewTransform the model view transform for the view
    * @constructor

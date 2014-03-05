@@ -17,7 +17,17 @@ define( function( require ) {
   var Matrix3 = require( 'DOT/Matrix3' );
   var LinearFunction = require( 'DOT/LinearFunction' );
 
-  function SkaterNode( model, skater, view, modelViewTransform ) {
+  /**
+   * SkaterNode constructor
+   *
+   * @param {Skater} skater
+   * @param {EnergySkateParkBasicsView} view
+   * @param {ModelViewTransform} modelViewTransform
+   * @param {function} getClosestTrackAndPositionAndParameter function that gets the closest track properties, used when the skater is being dragged close to the track
+   * @param {function} getPhysicalTracks function that returns the physical tracks in the model, so the skater can try to attach to them while dragging
+   * @constructor
+   */
+  function SkaterNode( skater, view, modelViewTransform, getClosestTrackAndPositionAndParameter, getPhysicalTracks ) {
     this.skater = skater;
     var skaterNode = this;
 
@@ -78,7 +88,7 @@ define( function( require ) {
           position = view.availableModelBounds.getClosestPoint( position.x, position.y, position );
 
           //PERFORMANCE/ALLOCATION: lots of unnecessary allocations and computation here, biggest improvement could be to use binary search for position on the track
-          var closestTrackAndPositionAndParameter = model.getClosestTrackAndPositionAndParameter( position, model.getPhysicalTracks() );
+          var closestTrackAndPositionAndParameter = getClosestTrackAndPositionAndParameter( position, getPhysicalTracks() );
           var closeEnough = false;
           if ( closestTrackAndPositionAndParameter && closestTrackAndPositionAndParameter.track && closestTrackAndPositionAndParameter.track.isParameterInBounds( closestTrackAndPositionAndParameter.u ) ) {
             var closestPoint = closestTrackAndPositionAndParameter.point;
