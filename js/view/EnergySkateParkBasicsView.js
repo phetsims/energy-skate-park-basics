@@ -80,10 +80,7 @@ define( function( require ) {
 
       var addTrackNode = function( track ) {
 
-        var trackNode = new TrackNode( model, track, transform, function( point ) {
-          var globalBounds = view.trackCreationPanel.parentToGlobalBounds( view.trackCreationPanel.bounds );
-          return globalBounds.containsPoint( point );
-        } );
+        var trackNode = new TrackNode( model, track, transform );
         view.addChild( trackNode );
 
         //Make sure the skater stays in front of the tracks when tracks are joined

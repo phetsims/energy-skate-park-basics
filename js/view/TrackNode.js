@@ -25,10 +25,9 @@ define( function( require ) {
    * @param model the entire model
    * @param track the track for this track node
    * @param modelViewTransform the model view transform for the view
-   * @param panelContainsPoint optional function for determining whether the user tried to put a track back in the control panel.
    * @constructor
    */
-  function TrackNode( model, track, modelViewTransform, panelContainsPoint ) {
+  function TrackNode( model, track, modelViewTransform ) {
     var trackNode = this;
     Node.call( this );
     var road = new Path( null, {fill: 'gray', cursor: track.interactive ? 'pointer' : 'default'} );
