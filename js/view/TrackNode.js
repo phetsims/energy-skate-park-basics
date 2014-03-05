@@ -109,7 +109,7 @@ define( function( require ) {
             var myBestPoint = null;
             var otherBestPoint = null;
 
-            var myPoints = [track.controlPoints[0], track.controlPoints[track.controlPoints.length - 1]];
+            var points = [track.controlPoints[0], track.controlPoints[track.controlPoints.length - 1]];
 
             for ( var i = 0; i < tracks.length; i++ ) {
               var t = tracks[i];
@@ -119,14 +119,14 @@ define( function( require ) {
                 var otherPoints = [t.controlPoints[0], t.controlPoints[t.controlPoints.length - 1]];
 
                 //don't match inner points
-                for ( var j = 0; j < myPoints.length; j++ ) {
-                  var myPoint = myPoints[j];
+                for ( var j = 0; j < points.length; j++ ) {
+                  var point = points[j];
                   for ( var k = 0; k < otherPoints.length; k++ ) {
                     var otherPoint = otherPoints[k];
-                    var distance = myPoint.sourcePosition.distance( otherPoint.position );
+                    var distance = point.sourcePosition.distance( otherPoint.position );
                     if ( (bestDistance === null && distance > 1E-6) || (distance < bestDistance ) ) {
                       bestDistance = distance;
-                      myBestPoint = myPoint;
+                      myBestPoint = point;
                       otherBestPoint = otherPoint;
                     }
                   }
@@ -138,11 +138,11 @@ define( function( require ) {
               myBestPoint.snapTarget = otherBestPoint;
 
               //Set the opposite point to be unsnapped, you can only snap one at a time
-              (myBestPoint === myPoints[0] ? myPoints[1] : myPoints[0]).snapTarget = null;
+              (myBestPoint === points[0] ? points[1] : points[0]).snapTarget = null;
             }
             else {
-              myPoints[0].snapTarget = null;
-              myPoints[1].snapTarget = null;
+              points[0].snapTarget = null;
+              points[1].snapTarget = null;
             }
           },
 
