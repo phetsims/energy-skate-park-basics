@@ -151,6 +151,8 @@ define( function( require ) {
       this.positionProperty.set( new Vector2( this.startingPosition.x, this.startingPosition.y ) );
       this.velocity = new Vector2( 0, 0 );
       this.clearThermal();
+      this.updateEnergy();
+      this.trigger( 'updated' );
     },
 
     //Update the energies as a batch.  This is an explicit method instead of linked to all dependencies so that it can be called in a controlled fashion \
