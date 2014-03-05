@@ -168,6 +168,11 @@ define( function( require ) {
       if ( this.draggableTracks ) {
         this.tracks.clear();
         this.addDraggableTracks();
+
+        //If the skater was on a track, then he should fall off, see #97
+        if ( this.skater.track ) {
+          this.skater.track = null;
+        }
       }
     },
 
@@ -842,7 +847,10 @@ define( function( require ) {
       //Trigger track changed first to update the edit enabled properties
       this.trigger( 'track-changed' );
 
-      //TODO: If the skater was on track, then move to track1 or track2
+      //If the skater was on track, then he should fall off, see #97
+      if ( this.skater.track === track ) {
+        this.skater.track = null;
+      }
 
       //If a control point was split and that makes too many "live" control points total, remove a piece of track from the toolbox to keep the total number of control points low enough.
       if ( this.getNumberOfControlPoints() > MAX_NUMBER_CONTROL_POINTS ) {
