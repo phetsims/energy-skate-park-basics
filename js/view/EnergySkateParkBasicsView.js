@@ -183,11 +183,11 @@ define( function( require ) {
     pieChartLegend.mutate( {top: barGraphNode.top, centerX: (barGraphNode.right + speedometerNode.left) / 2} );
 
     var playProperty = model.property( 'paused' ).not();
-    var playPauseButton = new PlayPauseButton( playProperty, {elementScale: 0.75} );
-    var stepButton = new StepButton( function() { model.manualStep(); }, playProperty );
+    var playPauseButton = new PlayPauseButton( playProperty, {elementScale: 0.75} ).mutate( {scale: 0.75} );
+    var stepButton = new StepButton( function() { model.manualStep(); }, playProperty ).mutate( {scale: 0.75} );
     model.property( 'paused' ).linkAttribute( stepButton, 'enabled' );
 
-    this.addChild( playPauseButton.mutate( {centerX: this.layoutBounds.centerX, bottom: this.layoutBounds.maxY - 6} ) );
+    this.addChild( playPauseButton.mutate( {centerX: this.layoutBounds.centerX, bottom: this.layoutBounds.maxY - 12.5} ) );
     this.addChild( stepButton.mutate( {left: playPauseButton.right + 5, centerY: playPauseButton.centerY} ) );
 
     this.resetAllButton = new ResetAllButton( model.reset.bind( model ) ).mutate( {scale: 0.7, centerY: (transform.modelToViewY( 0 ) + this.layoutBounds.maxY) / 2, centerX: this.controlPanel.centerX} );
@@ -211,7 +211,7 @@ define( function( require ) {
       view.returnSkaterButton.right = view.resetAllButton.left - 10;
     } );
 
-    this.addChild( new PlaybackSpeedControl( model.property( 'speed' ) ).mutate( {right: playPauseButton.left - 10, centerY: playPauseButton.centerY} ) );
+    this.addChild( new PlaybackSpeedControl( model.property( 'speed' ) ).mutate( {right: playPauseButton.left - 10, bottom: playPauseButton.bottom} ) );
 
     if ( !model.draggableTracks ) {
       this.sceneSelectionPanel = new SceneSelectionPanel( model, this, transform );//layout done in layout bounds
