@@ -27,6 +27,7 @@ define( function( require ) {
     } );
 
     RectanglePushButton.call( this, icon, {
+      rectangleCornerRadius: 6,
       listener: callback, rectangleFillUp: new Color( 230, 230, 240 ),
       rectangleFillDisabled: 'white',
       rectangleXMargin: 7,
