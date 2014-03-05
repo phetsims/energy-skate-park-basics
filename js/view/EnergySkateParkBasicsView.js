@@ -176,7 +176,7 @@ define( function( require ) {
       return view.availableModelBounds && view.availableModelBounds.containsPoint( position );
     } );
 
-    var barGraphNode = new BarGraphNode( model );
+    var barGraphNode = new BarGraphNode( model.skater, model.property( 'barGraphVisible' ), model.clearThermal.bind( model ) );
     this.addChild( barGraphNode );
 
     //Center the pie chart legend between the bar chart and speedometer, see #60

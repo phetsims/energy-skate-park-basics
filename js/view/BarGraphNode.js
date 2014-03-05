@@ -23,9 +23,8 @@ define( function( require ) {
   var totalString = require( 'string!ENERGY_SKATE_PARK_BASICS/energy.total' );
   var energyString = require( 'string!ENERGY_SKATE_PARK_BASICS/energy.energy' );
 
-  function BarGraphNode( model ) {
+  function BarGraphNode( skater, barGraphVisibleProperty, clearThermal ) {
     var barGraphNode = this;
-    this.skater = model.skater;
 
     //Free layout parameters
     var contentWidth = 110;
@@ -80,7 +79,7 @@ define( function( require ) {
       property.link( update );
 
       //update the bars when the graph becomes visible
-      model.barGraphVisibleProperty.link( function( visible ) {
+      barGraphVisibleProperty.link( function( visible ) {
         if ( visible ) {
           update();
         }
@@ -89,18 +88,18 @@ define( function( require ) {
       return bar;
     };
 
-    var kineticBar = createBar( 0, EnergySkateParkColorScheme.kineticEnergy, this.skater.kineticEnergyProperty );
-    var potentialBar = createBar( 1, EnergySkateParkColorScheme.potentialEnergy, this.skater.potentialEnergyProperty );
-    var thermalBar = createBar( 2, EnergySkateParkColorScheme.thermalEnergy, this.skater.thermalEnergyProperty );
-    var totalBar = createBar( 3, EnergySkateParkColorScheme.totalEnergy, this.skater.totalEnergyProperty );
+    var kineticBar = createBar( 0, EnergySkateParkColorScheme.kineticEnergy, skater.kineticEnergyProperty );
+    var potentialBar = createBar( 1, EnergySkateParkColorScheme.potentialEnergy, skater.potentialEnergyProperty );
+    var thermalBar = createBar( 2, EnergySkateParkColorScheme.thermalEnergy, skater.thermalEnergyProperty );
+    var totalBar = createBar( 3, EnergySkateParkColorScheme.totalEnergy, skater.totalEnergyProperty );
 
     var kineticLabel = createLabel( 0, kineticString, EnergySkateParkColorScheme.kineticEnergy );
     var potentialLabel = createLabel( 1, potentialString, EnergySkateParkColorScheme.potentialEnergy );
     var thermalLabel = createLabel( 2, thermalString, EnergySkateParkColorScheme.thermalEnergy );
     var totalLabel = createLabel( 3, totalString, EnergySkateParkColorScheme.totalEnergy );
 
-    var clearThermalButton = new ClearThermalButton( model.clearThermal.bind( model ), model.skater, {centerX: thermalLabel.centerX, y: thermalLabel.bottom + 15} );
-    model.skater.thermalEnergyProperty.linkAttribute( clearThermalButton, 'enabled' );
+    var clearThermalButton = new ClearThermalButton( clearThermal, skater, {centerX: thermalLabel.centerX, y: thermalLabel.bottom + 15} );
+    skater.thermalEnergyProperty.linkAttribute( clearThermalButton, 'enabled' );
 
     this.bars = [kineticBar, potentialBar, thermalBar, totalBar];
     var titleNode = new Text( energyString, {x: 5, y: insetY - 10, font: new PhetFont( 14 ), pickable: false} );
@@ -126,7 +125,7 @@ define( function( require ) {
     Panel.call( this, contentNode, { x: 10, y: 10, xMargin: 10, yMargin: 10, fill: 'white', stroke: 'gray', lineWidth: 1, resize: false, cursor: 'pointer'} );
 
     //When the bar graph is shown, update the bars (because they do not get updated when invisible for performance reasons)
-    model.barGraphVisibleProperty.link( function( visible ) {
+    barGraphVisibleProperty.link( function( visible ) {
       barGraphNode.visible = visible;
       barGraphNode.bars.forEach( function( bar ) {bar.update();} );
     } );
