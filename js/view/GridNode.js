@@ -16,11 +16,11 @@ define( function( require ) {
   var PhetFont = require( 'SCENERY_PHET/PhetFont' );
   var BackgroundNode = require( 'ENERGY_SKATE_PARK_BASICS/view/BackgroundNode' );
 
-  function GridNode( model, modelViewTransform ) {
+  function GridNode( gridVisibleProperty, modelViewTransform ) {
     this.modelViewTransform = modelViewTransform;
     Node.call( this, {pickable: false} );
 
-    model.gridVisibleProperty.linkAttribute( this, 'visible' );
+    gridVisibleProperty.linkAttribute( this, 'visible' );
   }
 
   return inherit( Node, GridNode, {

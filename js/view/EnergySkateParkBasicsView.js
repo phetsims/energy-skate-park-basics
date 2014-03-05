@@ -62,7 +62,7 @@ define( function( require ) {
     this.backgroundNode = new BackgroundNode( this.layoutBounds );
     this.addChild( this.backgroundNode );
 
-    this.gridNode = new GridNode( model, transform );
+    this.gridNode = new GridNode( model.property( 'gridVisible' ), transform );
     this.addChild( this.gridNode );
 
     //Switch between selectable tracks
