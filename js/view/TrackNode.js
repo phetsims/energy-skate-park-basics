@@ -244,13 +244,16 @@ define( function( require ) {
           controlPoint.positionProperty.link( function( position ) {
             controlPointNode.translation = modelViewTransform.modelToViewPosition( position );
           } );
+          var dragEvents = 0;
           controlPointNode.addInputListener( new SimpleDragHandler(
             {
               allowTouchSnag: true,
               start: function() {
                 track.dragging = true;
+                dragEvents = 0;
               },
               drag: function( event ) {
+                dragEvents++;
                 track.dragging = true;
                 var globalPoint = controlPointNode.globalToParentPoint( event.pointer.point );
 
@@ -311,8 +314,11 @@ define( function( require ) {
                 track.bumpAboveGround();
                 track.dragging = false;
 
-                //Show the 'control point editing' ui
-                trackNode.addChild( new ControlPointUI( model, track, i, modelViewTransform, trackNode ) );
+                //Show the 'control point editing' ui, but only if the user didn't drag the control point.
+                //Threshold at a few drag events in case the user didn't mean to drag it but accidentally moved it a few pixels.
+                if ( dragEvents <= 3 ) {
+                  trackNode.addChild( new ControlPointUI( model, track, i, modelViewTransform, trackNode ) );
+                }
               }
             } ) );
           trackNode.addChild( controlPointNode );
