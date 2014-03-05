@@ -21,8 +21,7 @@ define( function( require ) {
   var earthHeight = 70;
   var cementWidth = 4;
 
-  function BackgroundNode( model, energySkateParkBasicsView, options ) {
-    this.skater = model.skater;
+  function BackgroundNode( layoutBounds, options ) {
     Node.call( this, { pickable: false } );
 
     this.sky = new Rectangle( 0, 0, 0, 0 );
@@ -32,7 +31,7 @@ define( function( require ) {
     this.earth = new Rectangle( 0, 0, 0, 0, {fill: '#93774c'} );
     this.addChild( this.earth );
 
-    this.cementY = energySkateParkBasicsView.layoutBounds.height - earthHeight;
+    this.cementY = layoutBounds.height - earthHeight;
 
     this.mountain = new Image( mountainImage, {bottom: this.cementY} );
     this.addChild( this.mountain );

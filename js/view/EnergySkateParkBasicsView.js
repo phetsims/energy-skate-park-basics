@@ -59,7 +59,7 @@ define( function( require ) {
     this.availableModelBoundsProperty = new Property();
 
     //The background
-    this.backgroundNode = new BackgroundNode( model, this );
+    this.backgroundNode = new BackgroundNode( this.layoutBounds );
     this.addChild( this.backgroundNode );
 
     this.gridNode = new GridNode( model, transform );
