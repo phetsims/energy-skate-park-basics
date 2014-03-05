@@ -16,7 +16,7 @@ define( function( require ) {
   var attachIcon = require( 'image!ENERGY_SKATE_PARK_BASICS/attach.png' );
   var RadioButton = require( 'SUN/RadioButton' );
 
-  function AttachDetachToggleButtons( model ) {
+  function AttachDetachToggleButtons( detachableProperty ) {
     var scale = 0.32;
     var selectedStroke = 'black';
     var deselectedStroke = null;
@@ -27,8 +27,8 @@ define( function( require ) {
     };
     var selectedOptions = _.extend( {stroke: selectedStroke}, panelOptions );
     var deselectedOptions = _.extend( {stroke: deselectedStroke}, panelOptions );
-    var attachButton = new RadioButton( model.property( 'detachable' ), false, new Panel( new Image( attachIcon, {scale: scale} ), selectedOptions ), new Panel( new Image( attachIcon, {scale: scale} ), deselectedOptions ) );
-    var detachButton = new RadioButton( model.property( 'detachable' ), true, new Panel( new Image( detachIcon, {scale: scale} ), selectedOptions ), new Panel( new Image( detachIcon, {scale: scale} ), deselectedOptions ) );
+    var attachButton = new RadioButton( detachableProperty, false, new Panel( new Image( attachIcon, {scale: scale} ), selectedOptions ), new Panel( new Image( attachIcon, {scale: scale} ), deselectedOptions ) );
+    var detachButton = new RadioButton( detachableProperty, true, new Panel( new Image( detachIcon, {scale: scale} ), selectedOptions ), new Panel( new Image( detachIcon, {scale: scale} ), deselectedOptions ) );
     var hbox = new HBox( {spacing: 20, align: 'top', children: [attachButton, detachButton]} );
     Panel.call( this, hbox, {fill: '#dddddd', stroke: null} );
   }
