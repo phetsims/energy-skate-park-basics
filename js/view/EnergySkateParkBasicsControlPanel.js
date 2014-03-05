@@ -59,7 +59,7 @@ define( function( require ) {
     var checkBoxes = new VBox( {align: 'left', spacing: 10, children: checkBoxChildren} );
 
     var content = new VBox( {spacing: 4,
-      children: !model.frictionAllowed ? [checkBoxes, new MassSlider( model )] :
+      children: !model.frictionAllowed ? [checkBoxes, new MassSlider( model.skater.massProperty )] :
                 [checkBoxes, new AttachDetachToggleButtons( model.property( 'detachable' ) ), new FrictionControl( model.property( 'friction' ) )]} );
 
     Panel.call( this, content, { xMargin: 10, yMargin: 5, fill: '#F0F0F0', stroke: 'gray', lineWidth: 1, resize: false } );

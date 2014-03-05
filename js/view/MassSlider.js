@@ -1,7 +1,7 @@
 // Copyright 2002-2013, University of Colorado Boulder
 
 /**
- * Scenery node for the mass slider.
+ * Scenery node for the mass slider, which changes the skater's mass.
  *
  * @author Sam Reid
  */
@@ -18,9 +18,9 @@ define( function( require ) {
   var largeString = require( 'string!ENERGY_SKATE_PARK_BASICS/large' );
   var Constants = require( 'ENERGY_SKATE_PARK_BASICS/Constants' );
 
-  function MassSlider( model ) {
+  function MassSlider( massProperty ) {
     var range = {min: Constants.MIN_MASS, max: Constants.MAX_MASS};
-    var slider = new HSlider( model.skater.massProperty, range, Constants.SLIDER_OPTIONS );
+    var slider = new HSlider( massProperty, range, Constants.SLIDER_OPTIONS );
     var tickFont = new PhetFont( 10 );
     slider.addMajorTick( Constants.MIN_MASS, new Text( smallString, { font: tickFont } ) );
     slider.addMajorTick( Constants.MAX_MASS, new Text( largeString, { font: tickFont } ) );
