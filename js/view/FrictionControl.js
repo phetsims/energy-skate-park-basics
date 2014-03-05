@@ -18,9 +18,9 @@ define( function( require ) {
   var lotsString = require( 'string!ENERGY_SKATE_PARK_BASICS/controls.gravity.lots' );
   var Constants = require( 'ENERGY_SKATE_PARK_BASICS/Constants' );
 
-  function FrictionControl( model ) {
-    var frictionRange = {min: 0, max: model.friction * 2};
-    var slider = new HSlider( model.frictionProperty, frictionRange, Constants.SLIDER_OPTIONS );
+  function FrictionControl( frictionProperty ) {
+    var frictionRange = {min: 0, max: frictionProperty.value * 2};
+    var slider = new HSlider( frictionProperty, frictionRange, Constants.SLIDER_OPTIONS );
     var tickFont = new PhetFont( 10 );
     slider.addMajorTick( frictionRange.min, new Text( noneString, { font: tickFont } ) );
     slider.addMajorTick( frictionRange.max, new Text( lotsString, { font: tickFont } ) );
