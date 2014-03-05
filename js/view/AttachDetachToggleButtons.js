@@ -18,15 +18,16 @@ define( function( require ) {
 
   function AttachDetachToggleButtons( detachableProperty ) {
     var scale = 0.32;
-    var selectedStroke = 'black';
+    var selectedStroke = '#3291b8';//Same color as slider knob
     var deselectedStroke = null;
     var panelOptions = {
       xMargin: 0,
       yMargin: 0,
       cornerRadius: 6
     };
-    var selectedOptions = _.extend( {stroke: selectedStroke}, panelOptions );
-    var deselectedOptions = _.extend( {stroke: deselectedStroke}, panelOptions );
+    var lineWidth = 1.6;
+    var selectedOptions = _.extend( {stroke: selectedStroke, lineWidth: lineWidth, opacity: 1}, panelOptions );
+    var deselectedOptions = _.extend( {stroke: deselectedStroke, lineWidth: lineWidth, opacity: 0.5}, panelOptions );
     var attachButton = new RadioButton( detachableProperty, false, new Panel( new Image( attachIcon, {scale: scale} ), selectedOptions ), new Panel( new Image( attachIcon, {scale: scale} ), deselectedOptions ) );
     var detachButton = new RadioButton( detachableProperty, true, new Panel( new Image( detachIcon, {scale: scale} ), selectedOptions ), new Panel( new Image( detachIcon, {scale: scale} ), deselectedOptions ) );
     var hbox = new HBox( {spacing: 20, align: 'top', children: [attachButton, detachButton]} );
