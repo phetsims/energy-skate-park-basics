@@ -211,7 +211,7 @@ define( function( require ) {
       view.returnSkaterButton.right = view.resetAllButton.left - 10;
     } );
 
-    this.addChild( new PlaybackSpeedControl( model ).mutate( {right: playPauseButton.left - 10, centerY: playPauseButton.centerY} ) );
+    this.addChild( new PlaybackSpeedControl( model.property( 'speed' ) ).mutate( {right: playPauseButton.left - 10, centerY: playPauseButton.centerY} ) );
 
     if ( !model.draggableTracks ) {
       this.sceneSelectionPanel = new SceneSelectionPanel( model, this, transform );//layout done in layout bounds
