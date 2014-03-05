@@ -806,7 +806,10 @@ define( function( require ) {
         //Trigger track changed first to update the edit enabled properties
         this.trigger( 'track-changed' );
 
-        //TODO: If the skater was on track, then update position
+        //If the skater was on track, then he should fall off
+        if ( this.skater.track === track ) {
+          this.skater.track = null;
+        }
       }
 
       //if the number of control points is low enough, replenish the toolbox
