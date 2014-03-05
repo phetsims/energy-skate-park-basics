@@ -15,7 +15,7 @@ define( function( require ) {
   var Image = require( 'SCENERY/nodes/Image' );
   var RoundShinyButton = require( 'SCENERY_PHET/RoundShinyButton' );
   var trashCanImage = require( 'image!ENERGY_SKATE_PARK_BASICS/trash-can.png' );
-  var trashCanGrayImage = require( 'image!ENERGY_SKATE_PARK_BASICS/trash-can.png' );
+  var trashCanGrayImage = require( 'image!ENERGY_SKATE_PARK_BASICS/trash-can-gray.png' );
 
   function ClearThermalButton( callback, skater, options ) {
     options = _.extend( { cursor: 'pointer' }, options );
