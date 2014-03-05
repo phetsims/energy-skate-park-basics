@@ -27,7 +27,7 @@ define( function( require ) {
    * @param modelViewTransform the model view transform for the view
    * @constructor
    */
-  function TrackNode( model, track, modelViewTransform ) {
+  function TrackNode( model, track, modelViewTransform, availableBoundsProperty ) {
     var trackNode = this;
     Node.call( this );
     var road = new Path( null, {fill: 'gray', cursor: track.interactive ? 'pointer' : 'default'} );
@@ -53,7 +53,6 @@ define( function( require ) {
 
             var location = modelViewTransform.modelToViewPosition( track.position );
             startOffset = event.currentTarget.globalToParentPoint( event.pointer.point ).minus( location );
-            console.log( startOffset.x, startOffset.y, 'at', location.x, location.y );
           },
 
           //Drag an entire track
@@ -64,22 +63,44 @@ define( function( require ) {
             var location = modelViewTransform.viewToModelPosition( parentPoint );
 
             //If the user moved it out of the toolbox above y=0, then make it physically interactive
-            if ( !track.physical && track.getBottomControlPointY() > 0 ) {
+            var bottomControlPointY = track.getBottomControlPointY();
+            if ( !track.physical && bottomControlPointY > 0 ) {
               track.physical = true;
             }
 
             //When dragging track, make sure the control points don't go below ground, see #71
             var modelDelta = location.minus( track.position );
-            var bottomControlPointY = track.getBottomControlPointY();
             var translatedBottomControlPointY = bottomControlPointY + modelDelta.y;
 
             if ( track.physical && translatedBottomControlPointY < 0 ) {
               location.y += Math.abs( translatedBottomControlPointY );
             }
 
-            track.position = location;
+            if ( availableBoundsProperty.value ) {
 
-            //TODO: Don't allow the track to be dragged offscreen
+              //constrain each point to lie within the available bounds
+              var availableBounds = availableBoundsProperty.value;
+
+              //Constrain the top
+              var topControlPointY = track.getTopControlPointY();
+              if ( topControlPointY + modelDelta.y > availableBounds.maxY ) {
+                location.y = availableBounds.maxY - (topControlPointY - track.position.y);
+              }
+
+              //Constrain the left side
+              var leftControlPointX = track.getLeftControlPointX();
+              if ( leftControlPointX + modelDelta.x < availableBounds.minX ) {
+                location.x = availableBounds.minX - (leftControlPointX - track.position.x);
+              }
+
+              //Constrain the right side
+              var rightControlPointX = track.getRightControlPointX();
+              if ( rightControlPointX + modelDelta.x > availableBounds.maxX ) {
+                location.x = availableBounds.maxX - (rightControlPointX - track.position.x);
+              }
+            }
+
+            track.position = location;
 
             //TODO: If screen aspect ratio changes, bring all tracks back where they can be seen?
 
@@ -217,6 +238,8 @@ define( function( require ) {
       for ( var i = 0; i < track.controlPoints.length; i++ ) {
         (function( i, isEndPoint ) {
           var controlPoint = track.controlPoints[i];
+
+          //TODO: Don't allow the control points to be dragged offscreen
           var controlPointNode = new Circle( 14, {pickable: false, opacity: 0.7, stroke: 'black', lineWidth: 2, fill: 'red', cursor: 'pointer', translation: modelViewTransform.modelToViewPosition( controlPoint.position )} );
 
           //Show a dotted line for the exterior track points, which can be connected to other track

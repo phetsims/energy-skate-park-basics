@@ -258,6 +258,39 @@ define( function( require ) {
       return best;
     },
 
+    getTopControlPointY: function() {
+      var best = Number.NEGATIVE_INFINITY;
+      var length = this.controlPoints.length;
+      for ( var i = 0; i < length; i++ ) {
+        if ( this.controlPoints[i].sourcePosition.y > best ) {
+          best = this.controlPoints[i].sourcePosition.y;
+        }
+      }
+      return best;
+    },
+
+    getLeftControlPointX: function() {
+      var best = Number.POSITIVE_INFINITY;
+      var length = this.controlPoints.length;
+      for ( var i = 0; i < length; i++ ) {
+        if ( this.controlPoints[i].sourcePosition.x < best ) {
+          best = this.controlPoints[i].sourcePosition.x;
+        }
+      }
+      return best;
+    },
+
+    getRightControlPointX: function() {
+      var best = Number.NEGATIVE_INFINITY;
+      var length = this.controlPoints.length;
+      for ( var i = 0; i < length; i++ ) {
+        if ( this.controlPoints[i].sourcePosition.x > best ) {
+          best = this.controlPoints[i].sourcePosition.x;
+        }
+      }
+      return best;
+    },
+
     containsControlPoint: function( controlPoint ) {
       for ( var i = 0; i < this.controlPoints.length; i++ ) {
         if ( this.controlPoints[i] === controlPoint ) {

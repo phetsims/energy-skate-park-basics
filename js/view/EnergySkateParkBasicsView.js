@@ -40,6 +40,7 @@ define( function( require ) {
   var StepButton = require( 'SCENERY_PHET/StepButton' );
   var VBox = require( 'SCENERY/nodes/VBox' );
   var eraser = require( 'image!ENERGY_SKATE_PARK_BASICS/eraser.png' );
+  var Property = require( 'AXON/Property' );
 
   //Debug flag to show the view bounds, the region within which the skater can move
   var showAvailableBounds = false;
@@ -55,6 +56,8 @@ define( function( require ) {
     var transform = ModelViewTransform2.createSinglePointScaleInvertedYMapping( modelPoint, viewPoint, scale );
     this.modelViewTransform = transform;
 
+    this.availableModelBoundsProperty = new Property();
+
     //The background
     this.backgroundNode = new BackgroundNode( model, this );
     this.addChild( this.backgroundNode );
@@ -65,7 +68,7 @@ define( function( require ) {
     //Switch between selectable tracks
     if ( !model.draggableTracks ) {
 
-      var trackNodes = model.tracks.map(function( track ) { return new TrackNode( model, track, transform ); } ).getArray();
+      var trackNodes = model.tracks.map(function( track ) { return new TrackNode( model, track, transform, view.availableModelBoundsProperty ); } ).getArray();
       trackNodes.forEach( function( trackNode ) {
         view.addChild( trackNode );
       } );
@@ -80,7 +83,7 @@ define( function( require ) {
 
       var addTrackNode = function( track ) {
 
-        var trackNode = new TrackNode( model, track, transform );
+        var trackNode = new TrackNode( model, track, transform, view.availableModelBoundsProperty );
         view.addChild( trackNode );
 
         //Make sure the skater stays in front of the tracks when tracks are joined
@@ -267,6 +270,7 @@ define( function( require ) {
       this.returnSkaterButton.right = this.resetAllButton.left - 10;
       //Compute the visible model bounds so we will know when a model object like the skater has gone offscreen
       this.availableModelBounds = this.modelViewTransform.viewToModelBounds( this.availableViewBounds );
+      this.availableModelBoundsProperty.value = this.availableModelBounds;
 
       //Show it for debugging
       if ( showAvailableBounds ) {

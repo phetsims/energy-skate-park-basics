@@ -24,7 +24,7 @@ define( function( require ) {
       var track = model.tracks.get( index );
       var background = new BackgroundNode( model, view, {pickable: true} );
       background.layout( 0, 0, view.layoutBounds.width, view.layoutBounds.height, 1 );
-      var trackNode = new TrackNode( model, track, transform );
+      var trackNode = new TrackNode( model, track, transform, new Property() );
       var a = new Node( {children: [background, trackNode ]} );
       a.scale( 45 / a.height );
       var selectedNode = new Panel( a, {stroke: 'black', lineWidth: 3, xMargin: 0, yMargin: 0, cornerRadius: 0} );
