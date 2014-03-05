@@ -16,15 +16,15 @@ define( function( require ) {
   var normalString = require( 'string!ENERGY_SKATE_PARK_BASICS/normal' );
   var slowMotionString = require( 'string!ENERGY_SKATE_PARK_BASICS/slow.motion' );
 
-  function PlayPauseControlPanel( speedProperty ) {
+  function PlaybackSpeedControl( speedProperty ) {
     VBox.call( this, {
       align: 'left',
-      spacing: 4,
+      spacing: 2,
       children: [
-        new AquaRadioButton( speedProperty, 'normal', new Text( normalString, {font: new PhetFont( 15 )} ), {radius: 12, x: 130} ),
-        new AquaRadioButton( speedProperty, 'slow', new Text( slowMotionString, {font: new PhetFont( 15 )} ), {radius: 12} )
+        new AquaRadioButton( speedProperty, 'normal', new Text( normalString, {font: new PhetFont( 15 )} ), {radius: 9.5, x: 130} ),
+        new AquaRadioButton( speedProperty, 'slow', new Text( slowMotionString, {font: new PhetFont( 15 )} ), {radius: 9.5} )
       ]} );
   }
 
-  return inherit( VBox, PlayPauseControlPanel );
+  return inherit( VBox, PlaybackSpeedControl );
 } );
