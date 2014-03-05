@@ -156,7 +156,7 @@ define( function( require ) {
 
     var skaterNode = new SkaterNode( model, model.skater, this, transform );
     this.addChild( skaterNode );
-    this.addChild( new PieChartNode( model, transform ) );
+    this.addChild( new PieChartNode( model.skater, model.property( 'pieChartVisible' ), transform ) );
     var pieChartLegend = new PieChartLegend( model.skater, model.clearThermal.bind( model ), model.property( 'pieChartVisible' ) );
     this.addChild( pieChartLegend );
 

@@ -16,10 +16,8 @@ define( function( require ) {
   var Path = require( 'SCENERY/nodes/Path' );
   var EnergySkateParkColorScheme = require( 'ENERGY_SKATE_PARK_BASICS/view/EnergySkateParkColorScheme' );
 
-  function PieChartNode( model, modelViewTransform ) {
+  function PieChartNode( skater, pieChartVisibleProperty, modelViewTransform ) {
     var pieChartNode = this;
-    this.skater = model.skater;
-    var skater = model.skater;
 
     var kineticEnergySlice = new Path( null, {fill: EnergySkateParkColorScheme.kineticEnergy, stroke: 'black', lineWidth: 1} );
     var potentialEnergySlice = new Path( null, {fill: EnergySkateParkColorScheme.potentialEnergy, stroke: 'black', lineWidth: 1} );
@@ -28,7 +26,7 @@ define( function( require ) {
     var thermalEnergySlice = new Circle( 1, {fill: EnergySkateParkColorScheme.thermalEnergy, stroke: 'black', lineWidth: 1} );
     Node.call( this, {children: [thermalEnergySlice, potentialEnergySlice, kineticEnergySlice ], pickable: false} );
 
-    this.skater.headPositionProperty.link( function( headPosition ) {
+    skater.headPositionProperty.link( function( headPosition ) {
       var view = modelViewTransform.modelToViewPosition( headPosition );
 
       //Center pie chart over skater's head not his feet so it doesn't look awkward when skating in a parabola
@@ -91,10 +89,10 @@ define( function( require ) {
     };
 
     //instead of changing the entire pie chart whenever one energy changes, use trigger to update the whole pie
-    model.skater.on( 'energy-changed', updatePaths );
+    skater.on( 'energy-changed', updatePaths );
 
     //Synchronize visibility with the model, and also update when visibility changes because it is guarded against in updatePaths
-    model.pieChartVisibleProperty.link( function( visible ) {
+    pieChartVisibleProperty.link( function( visible ) {
       pieChartNode.visible = visible;
       updatePaths();
     } );
