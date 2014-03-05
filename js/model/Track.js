@@ -384,7 +384,6 @@ define( function( require ) {
           break;
         }
       }
-//        EnergySkateParkLogging.println( "count = " + count );
       return guess - u0;
     },
 

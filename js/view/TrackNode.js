@@ -115,20 +115,15 @@ define( function( require ) {
               var t = tracks[i];
               if ( t !== track ) {
 
-//              console.log( "comparing this = ", track.toString(), 'to', t.toString() );
-
                 //4 cases 00, 01, 10, 11
                 var otherPoints = [t.controlPoints[0], t.controlPoints[t.controlPoints.length - 1]];
 
                 //don't match inner points
-
                 for ( var j = 0; j < myPoints.length; j++ ) {
                   var myPoint = myPoints[j];
                   for ( var k = 0; k < otherPoints.length; k++ ) {
                     var otherPoint = otherPoints[k];
-//                  debugger;
                     var distance = myPoint.sourcePosition.distance( otherPoint.position );
-//                  console.log( distance );
                     if ( (bestDistance === null && distance > 1E-6) || (distance < bestDistance ) ) {
                       bestDistance = distance;
                       myBestPoint = myPoint;
@@ -139,9 +134,7 @@ define( function( require ) {
               }
             }
 
-
             if ( bestDistance !== null && bestDistance < 1 ) {
-//              console.log( 'setting best to ', otherBestPoint.position.x, otherBestPoint.position.x, 'bestDistance', bestDistance );
               myBestPoint.snapTarget = otherBestPoint;
 
               //Set the opposite point to be unsnapped, you can only snap one at a time

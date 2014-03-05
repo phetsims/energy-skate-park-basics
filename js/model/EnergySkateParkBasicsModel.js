@@ -239,6 +239,7 @@ define( function( require ) {
 
     switchToGround: function( skaterState, initialEnergy, proposedPosition, proposedVelocity ) {
       var dot = proposedVelocity.dotXY( 0, 1 );
+
       //Gain some thermal energy in the landing, but not too much!
       //dot product of 0 converts to 0% thermal
       //dot product of 0.6 converts to 10% thermal
@@ -341,10 +342,9 @@ define( function( require ) {
         var afterVector = proposedPosition.minus( trackPoint );
         if ( beforeVector.dot( afterVector ) < 0 ) {
 
-          //reflect the velocity vector
-          //http://www.gamedev.net/topic/165537-2d-vector-reflection-/
+          //reflect the velocity vector, see http://www.gamedev.net/topic/165537-2d-vector-reflection-/
 
-          //Possible heisenbug workaround
+          //Possible heisenbug workaround.  Probably no longer an issue in Mobile Safari in iOS7
           var allOK = proposedVelocity && proposedVelocity.minus && normal.times && normal.dot;
 
           var bounceVelocity = allOK ? proposedVelocity.minus( normal.times( 2 * normal.dot( proposedVelocity ) ) ) : new Vector2( 0, 1 );
@@ -645,6 +645,7 @@ define( function( require ) {
       else {
         if ( newState.getTotalEnergy() > e0 ) {
           debug.log( "Energy too high" );
+
           //can we reduce the velocity enough?
           if ( Math.abs( newState.getKineticEnergy() ) > Math.abs( dE ) ) {//amount we could reduce the energy if we deleted all the kinetic energy:
 
@@ -701,6 +702,7 @@ define( function( require ) {
         else {
           if ( isNaN( newState.getTotalEnergy() ) ) { throw new Error( 'nan' );}
           debug.log( "Energy too low" );
+
           //increasing the kinetic energy
           //Choose the exact velocity in the same direction as current velocity to ensure total energy conserved.
           var vSq = Math.abs( 2 / newState.mass * ( e0 - newState.getPotentialEnergy() - newState.thermalEnergy ) );
