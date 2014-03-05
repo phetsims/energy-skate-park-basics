@@ -40,45 +40,49 @@ define( function( require ) {
 
     if ( track.interactive ) {
       var lastDragPoint;
+      var startOffset = null;
+
+      //Drag handler for dragging the track segment itself (not one of the control points)
+      //Uses a similar strategy as MovableDragHandler but requires a separate implementation because its bounds are determined by the shape of the track (so it cannot go below ground)
+      //And so it can be dragged out of the toolbox but not back into it (so it won't be dragged below ground)
       var trackSegmentDragHandler = new SimpleDragHandler( {
           allowTouchSnag: true,
 
           start: function( event ) {
             lastDragPoint = event.pointer.point;
             track.dragging = true;
+
+            var location = modelViewTransform.modelToViewPosition( track.position );
+            startOffset = event.currentTarget.globalToParentPoint( event.pointer.point ).minus( location );
+            console.log( startOffset.x, startOffset.y, 'at', location.x, location.y );
           },
 
           //Drag an entire track
           drag: function( event ) {
             track.dragging = true;
-            var dragPoint = event.pointer.point;
-            var delta = trackSegmentDragHandler.transform.inverseDelta2( dragPoint.minus( lastDragPoint ) );
-            lastDragPoint = dragPoint;
 
-            var modelDelta = modelViewTransform.viewToModelDelta( delta );
-
-            //When dragging track, make sure the control points don't go below ground, see #71
-            var bottomControlPointY = track.getBottomControlPointY();
-            var translatedBottomControlPointY = bottomControlPointY + modelDelta.y;
+            var parentPoint = event.currentTarget.globalToParentPoint( event.pointer.point ).minus( startOffset );
+            var location = modelViewTransform.viewToModelPosition( parentPoint );
 
             //If the user moved it out of the toolbox above y=0, then make it physically interactive
             if ( !track.physical && track.getBottomControlPointY() > 0 ) {
               track.physical = true;
             }
 
-            if ( track.physical ) {
-              if ( translatedBottomControlPointY < 0 ) {
-                modelDelta.y += Math.abs( translatedBottomControlPointY );
-              }
+            //When dragging track, make sure the control points don't go below ground, see #71
+            var modelDelta = location.minus( track.position );
+            var bottomControlPointY = track.getBottomControlPointY();
+            var translatedBottomControlPointY = bottomControlPointY + modelDelta.y;
+
+            if ( track.physical && translatedBottomControlPointY < 0 ) {
+              location.y += Math.abs( translatedBottomControlPointY );
             }
+
+            track.position = location;
 
             //TODO: Don't allow the track to be dragged offscreen
 
             //TODO: If screen aspect ratio changes, bring all tracks back where they can be seen?
-
-            //TODO: Track gets away from the mouse when dragged below ground
-
-            track.translate( modelDelta.x, modelDelta.y );
 
             //If one of the control points is close enough to link to another track, do so
             var tracks = model.getPhysicalTracks();

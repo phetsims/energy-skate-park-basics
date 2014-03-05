@@ -429,6 +429,17 @@ define( function( require ) {
       if ( lowestY < 0 ) {
         this.translate( 0, -lowestY );
       }
+    },
+
+    //Use the position of the 0th control point as the position of the track, used when dragging the track
+    get position() {
+      return this.controlPoints[0].position;
+    },
+
+    set position( p ) {
+      var delta = p.minus( this.position );
+      this.translate( delta.x, delta.y );
     }
+
   } );
 } );
