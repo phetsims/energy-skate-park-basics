@@ -102,8 +102,6 @@ define( function( require ) {
 
             track.position = location;
 
-            //TODO: If screen aspect ratio changes, bring all tracks back where they can be seen?
-
             //If one of the control points is close enough to link to another track, do so
             var tracks = model.getPhysicalTracks();
 
