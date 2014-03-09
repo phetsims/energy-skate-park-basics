@@ -138,7 +138,7 @@ define( function( require ) {
       var arrowHead = createArrowhead( Math.PI - Math.PI / 3, new Vector2( -xTip, yTip ) );
 
       //Create the clear button, and match the size to the size of the track toolbox
-      var clearNode = new Image( eraser, {scale: 0.088} );
+      var clearNode = new Image( eraser, {scale: 0.4475} );
 
       var clearButtonEnabledProperty = model.property( 'clearButtonEnabled' );
       clearButtonEnabledProperty.link( function( clearButtonEnabled ) {
