@@ -347,7 +347,8 @@ define( function( require ) {
           //Possible heisenbug workaround.  Probably no longer an issue in Mobile Safari in iOS7
           var allOK = proposedVelocity && proposedVelocity.minus && normal.times && normal.dot;
 
-          var bounceVelocity = allOK ? proposedVelocity.minus( normal.times( 2 * normal.dot( proposedVelocity ) ) ) : new Vector2( 0, 1 );
+          var normalDotVelocity = normal.dot( proposedVelocity );
+          var bounceVelocity = allOK ? proposedVelocity.minus( normal.times( 2 * normalDotVelocity ) ) : new Vector2( 0, 1 );
           bounceVelocity.setMagnitude( skaterState.velocity.magnitude() );
 
           //Attach to track if velocity is close enough to parallel to the track
@@ -355,8 +356,24 @@ define( function( require ) {
 
           //If friction is allowed, then bounce with elasticity <1.
           //If friction is not allowed, then bounce with elasticity = 1.
-          if ( Math.abs( dot ) < 0.6 ) {
-            return skaterState.update( {velocity: bounceVelocity} );
+
+          var elasticity = 0.6;
+          var newNormalVelocity = normal.times( elasticity * normal.dot( proposedVelocity ) );
+          var parallelVelocity = segment.times( segment.dot( proposedVelocity ) );
+          var newVelocity = parallelVelocity.minus( newNormalVelocity );
+
+          var testVal = Math.abs( newNormalVelocity.magnitude() / newVelocity.magnitude() );
+
+          var p = Math.abs( proposedVelocity.magnitude() / skaterState.gravity / dt );
+
+          var bounce = testVal >= 0.9;
+          var GRAB_THRESHOLD = 3.0;
+          if ( p < GRAB_THRESHOLD ) {
+            bounce = false;
+          }
+
+          if ( bounce ) {
+            return skaterState.update( {velocity: newVelocity} );
           }
           else {
 
