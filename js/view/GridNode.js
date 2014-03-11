@@ -55,7 +55,7 @@ define( function( require ) {
 
         lines.push( new Line( -offsetX, viewY, separation - offsetX, viewY, {stroke: '#686868', lineWidth: y % 2 === 0 ? 1.8 : 0.8 } ) );
         if ( y % 2 === 0 ) {
-          var text = new Text( y, {font: new PhetFont( 18 ), top: viewY, right: originX - 2} );
+          var text = new Text( '' + y, {font: new PhetFont( 18 ), top: viewY, right: originX - 2} );
 
           //For the "0 meters" readout, we still need the 0 to line up perfectly (while still using a single internationalizable string), so use the 0 text bounds
           if ( y === 0 ) {
