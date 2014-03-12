@@ -237,28 +237,27 @@ define( function( require ) {
       } );
     },
 
-    switchToGround: function( skaterState, initialEnergy, proposedPosition, proposedVelocity ) {
+    //No bouncing on the ground, but the code is very similar to attachment part of interactWithTracksWhileFalling
+    switchToGround: function( skaterState, initialEnergy, proposedPosition, proposedVelocity, dt ) {
+      var segment = new Vector2( 1, 0 );
+      var normal = new Vector2( 0, 1 );
       var dot = proposedVelocity.dotXY( 0, 1 );
 
-      //Gain some thermal energy in the landing, but not too much!
-      //dot product of 0 converts to 0% thermal
-      //dot product of 0.6 converts to 10% thermal
-      //More than 0.6 is a bounce
-      var fractionOfKEToConvertToThermal = new LinearFunction( 0, 0.6, 0, 0.1 )( Math.abs( dot ) );
-      fractionOfKEToConvertToThermal = Math.min( fractionOfKEToConvertToThermal, 1 );
+      //If friction is allowed, then bounce with elasticity <1.
+      //If friction is not allowed, then bounce with elasticity = 1.
 
-      var KE = 0.5 * proposedVelocity.magnitudeSquared() * skaterState.mass;
-      var addedThermalEnergy = KE * fractionOfKEToConvertToThermal;
-      var newKE = KE - addedThermalEnergy;
-      var newSpeed = Math.sqrt( 2 * newKE / skaterState.mass );
+      var elasticity = 0.6;
+      var newNormalVelocity = normal.times( elasticity * normal.dot( proposedVelocity ) );
+      var parallelVelocity = segment.times( segment.dot( proposedVelocity ) );
+      var newVelocity = parallelVelocity.minus( newNormalVelocity );
+
+      var newSpeed = newVelocity.magnitude();
 
       //Make sure energy perfectly conserved when falling to the ground.
-      if ( fractionOfKEToConvertToThermal === 1 ) {
-        newSpeed = 0;
-        addedThermalEnergy = skaterState.getKineticEnergy() + skaterState.getPotentialEnergy();
-      }
+      var newKineticEnergy = 0.5 * newSpeed * newSpeed * skaterState.mass;
+      var newPotentialEnergy = 0;
+      var newThermalEnergy = initialEnergy - newKineticEnergy - newPotentialEnergy;
 
-      var newThermalEnergy = skaterState.thermalEnergy + addedThermalEnergy;
       if ( isNaN( newThermalEnergy ) ) { throw new Error( "nan" ); }
       return skaterState.update( {
         thermalEnergy: newThermalEnergy,
@@ -280,7 +279,7 @@ define( function( require ) {
       if ( proposedPosition.y < 0 ) {
         proposedPosition.y = 0;
 
-        return this.switchToGround( skaterState, initialEnergy, proposedPosition, proposedVelocity );
+        return this.switchToGround( skaterState, initialEnergy, proposedPosition, proposedVelocity, dt );
       }
       else if ( skaterState.position.x !== proposedPosition.x || skaterState.position.y !== proposedPosition.y ) {
 
