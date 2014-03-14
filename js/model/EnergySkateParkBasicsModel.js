@@ -388,7 +388,6 @@ define( function( require ) {
             var uD = (dot > 0 ? +1 : -1) * newSpeed;
             var up = beforeVector.dot( normal ) > 0;
 
-            console.log( 'IWTWF', up );
             var newThermalEnergy = skaterState.thermalEnergy + addedThermalEnergy;
             if ( isNaN( newThermalEnergy ) ) { throw new Error( "nan" ); }
             var result = skaterState.update( {
