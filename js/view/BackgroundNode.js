@@ -36,7 +36,7 @@ define( function( require ) {
     this.mountain = new Image( mountainImage, {bottom: this.cementY} );
     this.addChild( this.mountain );
 
-    this.cement = new Line( 0, 0, 0, 0, {stroke: new Pattern( cementImg ), lineWidth: cementWidth} );
+    this.cement = new Rectangle( 0, 0, 0, cementWidth, {fill: new Pattern( cementImg )} );
     this.addChild( this.cement );
 
     if ( options ) {
@@ -52,7 +52,7 @@ define( function( require ) {
         this.earth.setRect( -offsetX, cementY, width / layoutScale, earthHeight );
 
         //Work around scenery horizontal line pattern problem, see https://github.com/phetsims/scenery/issues/196
-        this.cement.setLine( -offsetX, cementY + cementWidth / 2, -offsetX + width / layoutScale, cementY + cementWidth / 2 + 0.01 );
+        this.cement.setRect( -offsetX, cementY, width / layoutScale, cementWidth );
         this.sky.setRect( -offsetX, -offsetY, width / layoutScale, height / layoutScale - earthHeight );
         this.sky.fill = new LinearGradient( 0, 0, 0, height / 2 ).addColorStop( 0, '#02ace4' ).addColorStop( 1, '#cfecfc' );
       }
