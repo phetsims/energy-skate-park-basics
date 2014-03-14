@@ -99,7 +99,7 @@ define( function( require ) {
     var totalLabel = createLabel( 3, totalString, EnergySkateParkColorScheme.totalEnergy );
 
     var clearThermalButton = new ClearThermalButton( clearThermal, skater, {centerX: thermalLabel.centerX, y: thermalLabel.bottom + 15} );
-    skater.thermalEnergyProperty.linkAttribute( clearThermalButton, 'enabled' );
+    skater.link( 'thermalEnergy', function( thermalEnergy ) { clearThermalButton.enabled = thermalEnergy > 0; } );
 
     this.bars = [kineticBar, potentialBar, thermalBar, totalBar];
     var titleNode = new Text( energyString, {x: 5, y: insetY - 10, font: new PhetFont( 14 ), pickable: false} );
