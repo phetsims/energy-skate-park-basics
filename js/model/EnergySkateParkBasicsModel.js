@@ -241,7 +241,6 @@ define( function( require ) {
     switchToGround: function( skaterState, initialEnergy, proposedPosition, proposedVelocity, dt ) {
       var segment = new Vector2( 1, 0 );
       var normal = new Vector2( 0, 1 );
-      var dot = proposedVelocity.dotXY( 0, 1 );
 
       //If friction is allowed, then bounce with elasticity <1.
       //If friction is not allowed, then bounce with elasticity = 1.

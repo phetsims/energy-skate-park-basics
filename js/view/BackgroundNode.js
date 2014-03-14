@@ -11,7 +11,6 @@ define( function( require ) {
   var inherit = require( 'PHET_CORE/inherit' );
   var Node = require( 'SCENERY/nodes/Node' );
   var Rectangle = require( 'SCENERY/nodes/Rectangle' );
-  var Line = require( 'SCENERY/nodes/Line' );
   var Image = require( 'SCENERY/nodes/Image' );
   var LinearGradient = require( 'SCENERY/util/LinearGradient' );
   var mountainImage = require( 'image!ENERGY_SKATE_PARK_BASICS/mountains.png' );
