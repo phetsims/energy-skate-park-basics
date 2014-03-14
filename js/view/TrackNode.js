@@ -230,7 +230,6 @@ define( function( require ) {
         (function( i, isEndPoint ) {
           var controlPoint = track.controlPoints[i];
 
-          //TODO: Don't allow the control points to be dragged offscreen
           var controlPointNode = new Circle( 14, {pickable: false, opacity: 0.7, stroke: 'black', lineWidth: 2, fill: 'red', cursor: 'pointer', translation: modelViewTransform.modelToViewPosition( controlPoint.position )} );
 
           //Show a dotted line for the exterior track points, which can be connected to other track
