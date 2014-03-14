@@ -15,6 +15,7 @@ define( function( require ) {
   var Text = require( 'SCENERY/nodes/Text' );
   var Panel = require( 'SUN/Panel' );
   var VStrut = require( 'SUN/VStrut' );
+  var HStrut = require( 'SUN/HStrut' );
   var PhetFont = require( 'SCENERY_PHET/PhetFont' );
   var EnergySkateParkColorScheme = require( 'ENERGY_SKATE_PARK_BASICS/view/EnergySkateParkColorScheme' );
   var ClearThermalButton = require( 'ENERGY_SKATE_PARK_BASICS/view/ClearThermalButton' );
@@ -44,10 +45,10 @@ define( function( require ) {
     //Don't let the ClearThermalButton participate in the layout since it is too big vertically.  Just use a strut to get the width right, then add the undo button later
     var clearThermalButtonStrut = new Rectangle( 0, 0, clearThermalButton.width, 1, {} );
 
-    var contentNode = new VBox( {spacing: 4, align: 'left', children: [
+    var contentNode = new VBox( {spacing: 10, align: 'left', children: [
       new HBox( {spacing: 4, children: [kineticBar, kineticLabel]} ),
       new HBox( {spacing: 4, children: [potentialBar, potentialLabel]} ),
-      new HBox( {spacing: 4, children: [thermalBar, thermalLabel, clearThermalButtonStrut]} ),
+      new HBox( {spacing: 4, children: [thermalBar, thermalLabel, new HStrut( 1 ), clearThermalButtonStrut, new HStrut( 3 )]} ),
       new VStrut( 1 )
     ]} );
 
