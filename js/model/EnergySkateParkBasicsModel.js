@@ -450,9 +450,11 @@ define( function( require ) {
       return netForce;
     },
 
-    //TODO: Friction force should not exceed sum of other forces (in the direction of motion), otherwise the friction could start a stopped object moving
     //The only other force on the object in the direction of motion is the gravity force
     getFrictionForce: function( skaterState ) {
+
+      //Friction force should not exceed sum of other forces (in the direction of motion), otherwise the friction could start a stopped object moving
+      //Hence we check to see if the object is already stopped and don't add friction in that case
       if ( this.friction === 0 || skaterState.velocity.magnitude() < 1E-2 ) {
         return Vector2.ZERO;
       }
