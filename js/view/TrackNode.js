@@ -31,11 +31,11 @@ define( function( require ) {
     var trackNode = this;
     Node.call( this );
     var road = new Path( null, {fill: 'gray', cursor: track.interactive ? 'pointer' : 'default'} );
-    var dashedLine = new Path( null, {stroke: 'black', lineWidth: '1.2', lineDash: [11, 8]} );
-    model.property( 'detachable' ).link( function( detachable ) { dashedLine.visible = !detachable; } );
+    var centerLine = new Path( null, {stroke: 'black', lineWidth: '1.2', lineDash: [11, 8]} );
+    model.property( 'detachable' ).link( function( detachable ) { centerLine.lineDash = detachable ? null : [11, 8]; } );
 
     this.addChild( road );
-    this.addChild( dashedLine );
+    this.addChild( centerLine );
 
     if ( track.interactive ) {
       var lastDragPoint;
@@ -215,7 +215,7 @@ define( function( require ) {
         miterLimit: 10
       } );
       road.shape = shape.getStrokedShape( strokeStyles );
-      dashedLine.shape = shape;
+      centerLine.shape = shape;
 
       //Update the skater if the track is moved while the sim is paused, see https://github.com/phetsims/energy-skate-park-basics/issues/84
       if ( model.skater.track === track && model.paused ) {
