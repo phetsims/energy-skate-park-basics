@@ -316,7 +316,9 @@ define( function( require ) {
                 //Show the 'control point editing' ui, but only if the user didn't drag the control point.
                 //Threshold at a few drag events in case the user didn't mean to drag it but accidentally moved it a few pixels.
                 if ( dragEvents <= 3 ) {
-                  trackNode.addChild( new ControlPointUI( model, track, i, modelViewTransform, trackNode ) );
+                  var controlPointUI = new ControlPointUI( model, track, i, modelViewTransform, trackNode.parents[0] );
+                  track.on( 'remove', function() { controlPointUI.detach(); } );
+                  trackNode.parents[0].addChild( controlPointUI );
                 }
               }
             } ) );

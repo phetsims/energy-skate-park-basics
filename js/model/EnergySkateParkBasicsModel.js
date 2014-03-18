@@ -815,6 +815,7 @@ define( function( require ) {
     //It should be an inner point of a track (not an end point)
     //If there were only 2 points on the track, just delete the entire track
     deleteControlPoint: function( track, controlPointIndex ) {
+      track.trigger( 'remove' );
       this.tracks.remove( track );
 
       if ( track.controlPoints.length > 2 ) {
@@ -855,6 +856,8 @@ define( function( require ) {
       newTrack1.physical = true;
       var newTrack2 = new Track( this, this.tracks, points2, true, track.getParentsOrSelf() );
       newTrack2.physical = true;
+
+      track.trigger( 'remove' );
       this.tracks.remove( track );
       this.tracks.add( newTrack1 );
       this.tracks.add( newTrack2 );
@@ -871,7 +874,9 @@ define( function( require ) {
       if ( this.getNumberOfControlPoints() > MAX_NUMBER_CONTROL_POINTS ) {
         //find a nonphysical track, then remove it
 
-        this.tracks.remove( this.getNonPhysicalTracks()[0] );
+        var trackToRemove = this.getNonPhysicalTracks()[0];
+        trackToRemove.trigger( 'remove' );
+        this.tracks.remove( trackToRemove );
       }
     },
 
@@ -919,8 +924,13 @@ define( function( require ) {
 
       var newTrack = new Track( this, this.tracks, points, true, a.getParentsOrSelf().concat( b.getParentsOrSelf() ) );
       newTrack.physical = true;
+
+      a.trigger( 'remove' );
       this.tracks.remove( a );
+
+      b.trigger( 'remove' );
       this.tracks.remove( b );
+
       this.tracks.add( newTrack );
 
       //Move skater to new track if he was on the old track, by searching for the best fit point on the new track
