@@ -12,10 +12,14 @@ define( function( require ) {
   var Circle = require( 'SCENERY/nodes/Circle' );
   var Image = require( 'SCENERY/nodes/Image' );
   var SimpleDragHandler = require( 'SCENERY/input/SimpleDragHandler' );
-  var skaterImage = require( 'image!ENERGY_SKATE_PARK_BASICS/skater.png' );
+  var skaterLeftImage = require( 'image!ENERGY_SKATE_PARK_BASICS/skater-left.png' );
+  var skaterRightImage = require( 'image!ENERGY_SKATE_PARK_BASICS/skater-right.png' );
   var Vector2 = require( 'DOT/Vector2' );
   var Matrix3 = require( 'DOT/Matrix3' );
   var LinearFunction = require( 'DOT/LinearFunction' );
+
+  //Map from mass(kg) to scale
+  var massToScale = new LinearFunction( (100 + 25) / 2, 100, 0.34, 0.43 );
 
   /**
    * SkaterNode constructor
@@ -31,10 +35,7 @@ define( function( require ) {
     this.skater = skater;
     var skaterNode = this;
 
-    //Map from mass(kg) to scale
-    var massToScale = new LinearFunction( (100 + 25) / 2, 100, 0.34, 0.43 );
-
-    Image.call( skaterNode, skaterImage, { cursor: 'pointer'} );
+    Image.call( skaterNode, skaterRightImage, { cursor: 'pointer'} );
     var imageWidth = this.width;
     var imageHeight = this.height;
 
@@ -53,7 +54,8 @@ define( function( require ) {
       //Rotation and translation can happen in any order
       matrix = matrix.multiplyMatrix( Matrix3.rotation2( angle ) );
       var scale = massToScale( mass );
-      matrix = matrix.multiplyMatrix( Matrix3.scaling( (direction === 'left' ? 1 : -1) * scale, scale ) );
+      skaterNode.image = direction === 'left' ? skaterLeftImage : skaterRightImage;
+      matrix = matrix.multiplyMatrix( Matrix3.scaling( scale, scale ) );
 
       //Think of it as a multiplying the Vector2 to the right, so this step happens first actually.  Use it to center the registration point
       matrix = matrix.multiplyMatrix( Matrix3.translation( -imageWidth / 2, -imageHeight ) );
