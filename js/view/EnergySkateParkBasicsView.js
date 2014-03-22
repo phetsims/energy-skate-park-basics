@@ -154,9 +154,6 @@ define( function( require ) {
       this.addChild( buttons );
     }
 
-    var skaterNode = new SkaterNode( model.skater, this, transform, model.getClosestTrackAndPositionAndParameter.bind( model ), model.getPhysicalTracks.bind( model ) );
-    this.addChild( skaterNode );
-    this.addChild( new PieChartNode( model.skater, model.property( 'pieChartVisible' ), transform ) );
     var pieChartLegend = new PieChartLegend( model.skater, model.clearThermal.bind( model ), model.property( 'pieChartVisible' ) );
     this.addChild( pieChartLegend );
 
@@ -178,6 +175,15 @@ define( function( require ) {
 
     var barGraphNode = new BarGraphNode( model.skater, model.property( 'barGraphVisible' ), model.clearThermal.bind( model ) );
     this.addChild( barGraphNode );
+
+    if ( !model.draggableTracks ) {
+      this.sceneSelectionPanel = new SceneSelectionPanel( model, this, transform );//layout done in layout bounds
+      this.addChild( this.sceneSelectionPanel );
+    }
+
+    var skaterNode = new SkaterNode( model.skater, this, transform, model.getClosestTrackAndPositionAndParameter.bind( model ), model.getPhysicalTracks.bind( model ) );
+    this.addChild( skaterNode );
+    this.addChild( new PieChartNode( model.skater, model.property( 'pieChartVisible' ), transform ) );
 
     //Center the pie chart legend between the bar chart and speedometer, see #60
     pieChartLegend.mutate( {top: barGraphNode.top, centerX: (barGraphNode.right + speedometerNode.left) / 2} );
@@ -212,11 +218,6 @@ define( function( require ) {
     } );
 
     this.addChild( new PlaybackSpeedControl( model.property( 'speed' ) ).mutate( {right: playPauseButton.left - 10, bottom: playPauseButton.bottom} ) );
-
-    if ( !model.draggableTracks ) {
-      this.sceneSelectionPanel = new SceneSelectionPanel( model, this, transform );//layout done in layout bounds
-      this.addChild( this.sceneSelectionPanel );
-    }
 
     //For debugging the visible bounds
     if ( showAvailableBounds ) {
