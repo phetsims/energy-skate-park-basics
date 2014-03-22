@@ -26,8 +26,8 @@ define( function( require ) {
       cornerRadius: 6
     };
     var lineWidth = 1.6;
-    var selectedOptions = _.extend( {stroke: selectedStroke, lineWidth: lineWidth, opacity: 1}, panelOptions );
-    var deselectedOptions = _.extend( {stroke: deselectedStroke, lineWidth: lineWidth, opacity: 0.5}, panelOptions );
+    var selectedOptions = _.extend( {stroke: selectedStroke, lineWidth: lineWidth}, panelOptions );
+    var deselectedOptions = _.extend( {stroke: deselectedStroke, lineWidth: lineWidth}, panelOptions );
     var attachButton = new RadioButton( detachableProperty, false, new Panel( new Image( attachIcon, {scale: scale} ), selectedOptions ), new Panel( new Image( attachIcon, {scale: scale} ), deselectedOptions ) );
     var detachButton = new RadioButton( detachableProperty, true, new Panel( new Image( detachIcon, {scale: scale} ), selectedOptions ), new Panel( new Image( detachIcon, {scale: scale} ), deselectedOptions ) );
     var hbox = new HBox( {spacing: 20, align: 'top', children: [attachButton, detachButton]} );
