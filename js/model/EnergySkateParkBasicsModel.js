@@ -244,16 +244,8 @@ define( function( require ) {
     //No bouncing on the ground, but the code is very similar to attachment part of interactWithTracksWhileFalling
     switchToGround: function( skaterState, initialEnergy, proposedPosition, proposedVelocity, dt ) {
       var segment = new Vector2( 1, 0 );
-      var normal = new Vector2( 0, 1 );
 
-      //If friction is allowed, then bounce with elasticity <1.
-      //If friction is not allowed, then bounce with elasticity = 1.
-
-      var elasticity = 0.6;
-      var newNormalVelocity = normal.times( elasticity * normal.dot( proposedVelocity ) );
-      var parallelVelocity = segment.times( segment.dot( proposedVelocity ) );
-      var newVelocity = parallelVelocity.minus( newNormalVelocity );
-
+      var newVelocity = segment.times( segment.dot( proposedVelocity ) );
       var newSpeed = newVelocity.magnitude();
 
       //Make sure energy perfectly conserved when falling to the ground.
@@ -342,70 +334,37 @@ define( function( require ) {
 
         var beforeVector = skaterState.position.minus( trackPoint );
         var afterVector = proposedPosition.minus( trackPoint );
+
+        //If crossed the track, attach to it.
         if ( beforeVector.dot( afterVector ) < 0 ) {
 
-          //reflect the velocity vector, see http://www.gamedev.net/topic/165537-2d-vector-reflection-/
+          var newVelocity = segment.times( segment.dot( proposedVelocity ) );
+          var newSpeed = newVelocity.magnitude();
+          var newKineticEnergy = 0.5 * skaterState.mass * newVelocity.magnitudeSquared();
+          var newPosition = track.getPoint( u );
+          var newPotentialEnergy = -skaterState.mass * skaterState.gravity * newPosition.y;
+          var newThermalEnergy = initialEnergy - newKineticEnergy - newPotentialEnergy;
 
-          //Possible heisenbug workaround.  Probably no longer an issue in Mobile Safari in iOS7
-          var allOK = proposedVelocity && proposedVelocity.minus && normal.times && normal.dot;
-
-          var normalDotVelocity = normal.dot( proposedVelocity );
-          var bounceVelocity = allOK ? proposedVelocity.minus( normal.times( 2 * normalDotVelocity ) ) : new Vector2( 0, 1 );
-          bounceVelocity.setMagnitude( skaterState.velocity.magnitude() );
-
-          //Attach to track if velocity is close enough to parallel to the track
           var dot = proposedVelocity.normalized().dot( segment );
 
-          //If friction is allowed, then bounce with elasticity <1.
-          //If friction is not allowed, then bounce with elasticity = 1.
+          //Sanity test
+          assert && assert( !isNaN( dot ) );
+          assert && assert( !isNaN( newVelocity.x ) );
+          assert && assert( !isNaN( newVelocity.y ) );
+          assert && assert( !isNaN( newThermalEnergy ) );
 
-          var elasticity = 0.6;
-          var newNormalVelocity = normal.times( elasticity * normal.dot( proposedVelocity ) );
-          var parallelVelocity = segment.times( segment.dot( proposedVelocity ) );
-          var newVelocity = parallelVelocity.minus( newNormalVelocity );
+          var uD = (dot > 0 ? +1 : -1) * newSpeed;
+          var up = beforeVector.dot( normal ) > 0;
 
-          var testVal = Math.abs( newNormalVelocity.magnitude() / newVelocity.magnitude() );
-
-          var p = Math.abs( proposedVelocity.magnitude() / skaterState.gravity / dt );
-
-          var bounce = testVal >= 0.9;
-          var GRAB_THRESHOLD = 3.0;
-          if ( p < GRAB_THRESHOLD ) {
-            bounce = false;
-          }
-
-          if ( bounce ) {
-            return skaterState.update( {velocity: newVelocity} );
-          }
-          else {
-
-            //Gain some thermal energy in the landing, but not too much!
-            //dot product of 0 converts to 0% thermal
-            //dot product of 0.6 converts to 10% thermal
-            //More than 0.6 is a bounce
-            var fractionOfKEToConvertToThermal = new LinearFunction( 0, 0.6, 0, 0.1 )( Math.abs( dot ) );
-
-            var KE = 0.5 * proposedVelocity.magnitudeSquared() * skaterState.mass;
-            var addedThermalEnergy = KE * fractionOfKEToConvertToThermal;
-            var newKE = KE - addedThermalEnergy;
-            var newSpeed = Math.sqrt( 2 * newKE / skaterState.mass );
-            var uD = (dot > 0 ? +1 : -1) * newSpeed;
-            var up = beforeVector.dot( normal ) > 0;
-
-            var newThermalEnergy = skaterState.thermalEnergy + addedThermalEnergy;
-            if ( isNaN( newThermalEnergy ) ) { throw new Error( "nan" ); }
-            var result = skaterState.update( {
-              thermalEnergy: newThermalEnergy,
-              track: track,
-              up: up,
-              u: u,
-              uD: uD,
-              velocity: proposedVelocity.normalized().timesScalar( Math.abs( uD ) ),
-              position: track.getPoint( u )
-            } );
-
-            return this.correctEnergyReduceVelocity( skaterState, result );
-          }
+          return skaterState.update( {
+            thermalEnergy: newThermalEnergy,
+            track: track,
+            up: up,
+            u: u,
+            uD: uD,
+            velocity: newVelocity,
+            position: newPosition
+          } );
         }
 
         //It just continued in free fall

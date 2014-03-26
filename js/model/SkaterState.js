@@ -36,6 +36,12 @@ define( function() {
     this.curvature = null;//Lazily computed
 
     phetAllocation && phetAllocation( 'SkaterState' );
+
+    //Some sanity tests
+    assert && assert( !isNaN( this.thermalEnergy ) );
+    assert && assert( !isNaN( this.velocity.x ) );
+    assert && assert( !isNaN( this.velocity.y ) );
+    assert && assert( !isNaN( this.uD ) );
   }
 
   SkaterState.prototype = {
