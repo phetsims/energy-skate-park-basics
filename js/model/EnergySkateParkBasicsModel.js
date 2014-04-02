@@ -27,7 +27,6 @@ define( function( require ) {
   var Vector2 = require( 'DOT/Vector2' );
   var ObservableArray = require( 'AXON/ObservableArray' );
   var SkaterState = require( 'ENERGY_SKATE_PARK_BASICS/model/SkaterState' );
-  var LinearFunction = require( 'DOT/LinearFunction' );
 
   //Thrust is not currently implemented in Energy Skate Park: Basics but may be used in a future version, so left in here
   var thrust = new Vector2();
