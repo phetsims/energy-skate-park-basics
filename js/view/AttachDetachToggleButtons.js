@@ -39,8 +39,8 @@ define( function( require ) {
     Panel.call( this, hbox, {fill: '#dddddd', stroke: null} );
 
     enabledProperty.linkAttribute( this, 'pickable' );
-    enabledProperty.map( {true: 1, false: 0.3} ).linkAttribute( this, 'opacity' );
-    var highlightColorProperty = enabledProperty.map( {true: selectedStroke, false: 'gray'} );
+    enabledProperty.mapValues( {true: 1, false: 0.3} ).linkAttribute( this, 'opacity' );
+    var highlightColorProperty = enabledProperty.mapValues( {true: selectedStroke, false: 'gray'} );
     highlightColorProperty.linkAttribute( attachPanel, 'stroke' );
     highlightColorProperty.linkAttribute( detachPanel, 'stroke' );
   }
