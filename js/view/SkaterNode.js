@@ -3,6 +3,8 @@
 /**
  * Scenery node for the skater, which is draggable.
  *
+ * Converted to composition instead of inheritance for SkaterNode to work around updateSVGFragment problem, see #123
+ *
  * @author Sam Reid
  */
 define( function( require ) {
@@ -17,6 +19,7 @@ define( function( require ) {
   var Vector2 = require( 'DOT/Vector2' );
   var Matrix3 = require( 'DOT/Matrix3' );
   var LinearFunction = require( 'DOT/LinearFunction' );
+  var Node = require( 'SCENERY/nodes/Node' );
 
   //Map from mass(kg) to scale
   var massToScale = new LinearFunction( (100 + 25) / 2, 100, 0.34, 0.43 );
@@ -35,7 +38,8 @@ define( function( require ) {
     this.skater = skater;
     var skaterNode = this;
 
-    Image.call( skaterNode, skaterRightImage, { cursor: 'pointer'} );
+    var skaterImageNode = new Image( skaterRightImage, { cursor: 'pointer'} );
+    Node.call( this, {children: [skaterImageNode]} );
     var imageWidth = this.width;
     var imageHeight = this.height;
 
@@ -54,7 +58,7 @@ define( function( require ) {
       //Rotation and translation can happen in any order
       matrix = matrix.multiplyMatrix( Matrix3.rotation2( angle ) );
       var scale = massToScale( mass );
-      skaterNode.image = direction === 'left' ? skaterLeftImage : skaterRightImage;
+      skaterImageNode.image = direction === 'left' ? skaterLeftImage : skaterRightImage;
       matrix = matrix.multiplyMatrix( Matrix3.scaling( scale, scale ) );
 
       //Think of it as a multiplying the Vector2 to the right, so this step happens first actually.  Use it to center the registration point
@@ -150,5 +154,5 @@ define( function( require ) {
       } ) );
   }
 
-  return inherit( Image, SkaterNode );
+  return inherit( Node, SkaterNode );
 } );
