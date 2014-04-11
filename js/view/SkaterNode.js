@@ -38,7 +38,7 @@ define( function( require ) {
     this.skater = skater;
     var skaterNode = this;
 
-    var skaterImageNode = new Image( skaterRightImage, { cursor: 'pointer'} );
+    var skaterImageNode = new Image( skaterRightImage, { cursor: 'pointer', rendererOptions: { cssTransform: true } } );
     Node.call( this, {children: [skaterImageNode]} );
     var imageWidth = this.width;
     var imageHeight = this.height;
