@@ -190,8 +190,8 @@ define( function( require ) {
       }
 
       //Compute points for lineTo
-      var xPoints = SplineEvaluation.at( track.xSpline, linSpace );
-      var yPoints = SplineEvaluation.at( track.ySpline, linSpace );
+      var xPoints = SplineEvaluation.atArray( track.xSpline, linSpace );
+      var yPoints = SplineEvaluation.atArray( track.ySpline, linSpace );
 
       var tx = trackNode.getTranslation();
       var shape = new Shape().moveTo( modelViewTransform.modelToViewX( xPoints[0] ) - tx.x, modelViewTransform.modelToViewY( yPoints[0] ) - tx.y );

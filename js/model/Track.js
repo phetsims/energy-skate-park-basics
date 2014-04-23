@@ -102,8 +102,8 @@ define( function( require ) {
       //Compute the spline points for purposes of getting closest points.
       //keep these points around and invalidate only when necessary
       if ( !this.xSearchPoints ) {
-        this.xSearchPoints = SplineEvaluation.at( this.xSpline, this.searchLinSpace );
-        this.ySearchPoints = SplineEvaluation.at( this.ySpline, this.searchLinSpace );
+        this.xSearchPoints = SplineEvaluation.atArray( this.xSpline, this.searchLinSpace );
+        this.ySearchPoints = SplineEvaluation.atArray( this.ySpline, this.searchLinSpace );
       }
 
       var bestU = 0;
@@ -124,11 +124,11 @@ define( function( require ) {
       var topU = bestU + distanceBetweenSearchPoints / 2;
       var bottomU = bestU - distanceBetweenSearchPoints / 2;
 
-      var topX = SplineEvaluation.at( this.xSpline, topU );
-      var topY = SplineEvaluation.at( this.ySpline, topU );
+      var topX = SplineEvaluation.atNumber( this.xSpline, topU );
+      var topY = SplineEvaluation.atNumber( this.ySpline, topU );
 
-      var bottomX = SplineEvaluation.at( this.xSpline, bottomU );
-      var bottomY = SplineEvaluation.at( this.ySpline, bottomU );
+      var bottomX = SplineEvaluation.atNumber( this.xSpline, bottomU );
+      var bottomY = SplineEvaluation.atNumber( this.ySpline, bottomU );
 
       //Even at 400 binary search iterations, performance is smooth on iPad3, so this loop doesn't seem too invasive
       var maxBinarySearchIterations = 40;
@@ -139,29 +139,29 @@ define( function( require ) {
 
         if ( topDistanceSquared < bottomDistanceSquared ) {
           bottomU = bottomU + (topU - bottomU) / 4;  //move halfway up
-          bottomX = SplineEvaluation.at( this.xSpline, bottomU );
-          bottomY = SplineEvaluation.at( this.ySpline, bottomU );
+          bottomX = SplineEvaluation.atNumber( this.xSpline, bottomU );
+          bottomY = SplineEvaluation.atNumber( this.ySpline, bottomU );
           bestDistanceSquared = topDistanceSquared;
         }
         else {
           topU = topU - (topU - bottomU) / 4;  //move halfway down
-          topX = SplineEvaluation.at( this.xSpline, topU );
-          topY = SplineEvaluation.at( this.ySpline, topU );
+          topX = SplineEvaluation.atNumber( this.xSpline, topU );
+          topY = SplineEvaluation.atNumber( this.ySpline, topU );
           bestDistanceSquared = bottomDistanceSquared;
         }
       }
       bestU = (topU + bottomU) / 2;
-      bestPoint.x = SplineEvaluation.at( this.xSpline, bestU );
-      bestPoint.y = SplineEvaluation.at( this.ySpline, bestU );
+      bestPoint.x = SplineEvaluation.atNumber( this.xSpline, bestU );
+      bestPoint.y = SplineEvaluation.atNumber( this.ySpline, bestU );
 
       return {u: bestU, point: bestPoint, distance: bestDistanceSquared};
     },
 
-    getX: function( u ) { return SplineEvaluation.at( this.xSpline, u ); },
-    getY: function( u ) { return SplineEvaluation.at( this.ySpline, u ); },
+    getX: function( u ) { return SplineEvaluation.atNumber( this.xSpline, u ); },
+    getY: function( u ) { return SplineEvaluation.atNumber( this.ySpline, u ); },
     getPoint: function( u ) {
-      var x = SplineEvaluation.at( this.xSpline, u );
-      var y = SplineEvaluation.at( this.ySpline, u );
+      var x = SplineEvaluation.atNumber( this.xSpline, u );
+      var y = SplineEvaluation.atNumber( this.ySpline, u );
       return new Vector2( x, y );
     },
 
@@ -186,7 +186,7 @@ define( function( require ) {
         this.xSplineDiff = this.xSpline.diff();
         this.ySplineDiff = this.ySpline.diff();
       }
-      return Math.atan2( -SplineEvaluation.at( this.ySplineDiff, u ), SplineEvaluation.at( this.xSplineDiff, u ) );
+      return Math.atan2( -SplineEvaluation.atNumber( this.ySplineDiff, u ), SplineEvaluation.atNumber( this.xSplineDiff, u ) );
     },
 
     //Get the model angle at the specified position on the track
@@ -195,7 +195,7 @@ define( function( require ) {
         this.xSplineDiff = this.xSpline.diff();
         this.ySplineDiff = this.ySpline.diff();
       }
-      return Math.atan2( SplineEvaluation.at( this.ySplineDiff, u ), SplineEvaluation.at( this.xSplineDiff, u ) );
+      return Math.atan2( SplineEvaluation.atNumber( this.ySplineDiff, u ), SplineEvaluation.atNumber( this.xSplineDiff, u ) );
     },
 
     //Get the model unit vector at the specified position on the track
@@ -335,13 +335,13 @@ define( function( require ) {
       //Discrepancy with original version: original version had 10 subdivisions here.  We have reduced it to improve performance at the cost of numerical precision
       var numSegments = 4;
       var da = ( u1 - u0 ) / ( numSegments - 1 );
-      var prevX = SplineEvaluation.at( this.xSpline, u0 );
-      var prevY = SplineEvaluation.at( this.ySpline, u0 );
+      var prevX = SplineEvaluation.atNumber( this.xSpline, u0 );
+      var prevY = SplineEvaluation.atNumber( this.ySpline, u0 );
       var sum = 0;
       for ( var i = 1; i < numSegments; i++ ) {
         var a = u0 + i * da;
-        var ptX = SplineEvaluation.at( this.xSpline, a );
-        var ptY = SplineEvaluation.at( this.ySpline, a );
+        var ptX = SplineEvaluation.atNumber( this.xSpline, a );
+        var ptY = SplineEvaluation.atNumber( this.ySpline, a );
 
         var dx = prevX - ptX;
         var dy = prevY - ptY;
@@ -401,10 +401,10 @@ define( function( require ) {
         this.ySplineDiffDiff = this.ySplineDiff.diff();
       }
 
-      var xP = SplineEvaluation.at( this.xSplineDiff, u );
-      var xPP = SplineEvaluation.at( this.xSplineDiffDiff, u );
-      var yP = SplineEvaluation.at( this.ySplineDiff, u );
-      var yPP = SplineEvaluation.at( this.ySplineDiffDiff, u );
+      var xP = SplineEvaluation.atNumber( this.xSplineDiff, u );
+      var xPP = SplineEvaluation.atNumber( this.xSplineDiffDiff, u );
+      var yP = SplineEvaluation.atNumber( this.ySplineDiff, u );
+      var yPP = SplineEvaluation.atNumber( this.ySplineDiffDiff, u );
 
       var k = (xP * yPP - yP * xPP) /
               Math.pow( (xP * xP + yP * yP), 3 / 2 );
@@ -419,8 +419,8 @@ define( function( require ) {
     //Find the lowest y-point on the spline by sampling, used when dropping the track or a control point to ensure it won't go below y=0
     getLowestY: function() {
       if ( !this.xSearchPoints ) {
-        this.xSearchPoints = SplineEvaluation.at( this.xSpline, this.searchLinSpace );
-        this.ySearchPoints = SplineEvaluation.at( this.ySpline, this.searchLinSpace );
+        this.xSearchPoints = SplineEvaluation.atArray( this.xSpline, this.searchLinSpace );
+        this.ySearchPoints = SplineEvaluation.atArray( this.ySpline, this.searchLinSpace );
       }
 
       var min = Number.POSITIVE_INFINITY;
@@ -441,7 +441,7 @@ define( function( require ) {
       var maxBound = foundU + this.distanceBetweenSamplePoints;
 
       var smallerSpace = numeric.linspace( minBound, maxBound, 200 );
-      var refinedSearchPoints = SplineEvaluation.at( this.ySpline, smallerSpace );
+      var refinedSearchPoints = SplineEvaluation.atArray( this.ySpline, smallerSpace );
 
       min = Number.POSITIVE_INFINITY;
       for ( i = 0; i < refinedSearchPoints.length; i++ ) {

@@ -27,32 +27,32 @@ define( function() {
            b * s * t;
   };
 
-  var at = function( spline, x0 ) {
-    var n;
-    if ( typeof x0 === "number" ) {
-      var x = spline.x;
-      n = x.length;
-      var p, q, mid, floor = Math.floor;
-      p = 0;
-      q = n - 1;
-      while ( q - p > 1 ) {
-        mid = floor( (p + q) / 2 );
-        if ( x[mid] <= x0 ) {
-          p = mid;
-        }
-        else {
-          q = mid;
-        }
+  var atNumber = function( spline, x0 ) {
+    var x = spline.x;
+    var n = x.length;
+    var p, q, mid, floor = Math.floor;
+    p = 0;
+    q = n - 1;
+    while ( q - p > 1 ) {
+      mid = floor( (p + q) / 2 );
+      if ( x[mid] <= x0 ) {
+        p = mid;
       }
-      return _at( spline, x0, p );
+      else {
+        q = mid;
+      }
     }
-    n = x0.length;
+    return _at( spline, x0, p );
+  };
+
+  var atArray = function( spline, x0 ) {
+    var n = x0.length;
     var i, ret = new Array( n );
     for ( i = n - 1; i !== -1; --i ) {
-      ret[i] = at( spline, x0[i] );
+      ret[i] = atNumber( spline, x0[i] );
     }
     return ret;
   };
 
-  return {at: at};
+  return {atNumber: atNumber, atArray: atArray};
 } );
