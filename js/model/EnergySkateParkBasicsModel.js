@@ -55,6 +55,12 @@ define( function( require ) {
     this.draggableTracks = draggableTracks;
 
     var model = this;
+
+    //Temporary flag that keeps track of whether the track was changed in the step before the physics update.
+    //true if the skater's track is being dragged by the user, so that energy conservation no longer applies.
+    //Only applies to one frame at a time (for the immediate next update).
+    //See https://github.com/phetsims/energy-skate-park-basics/issues/127
+    this.trackChangePending = false;
     PropertySet.call( this, {
 
       //Model for visibility of various view parameters
@@ -215,6 +221,9 @@ define( function( require ) {
         skaterState.setToSkater( this.skater );
         this.skater.trigger( 'updated' );
       }
+
+      //Clear the track change pending flag for the next step
+      this.trackChangePending = false;
     },
 
     //The skater moves along the ground with the same coefficient of fraction as the tracks, see https://github.com/phetsims/energy-skate-park-basics/issues/11
@@ -611,6 +620,9 @@ define( function( require ) {
 
     //A number of heuristic energy correction steps to ensure energy is conserved while keeping the motion smooth and accurate
     correctEnergy: function( skaterState, newState ) {
+      if ( this.trackChangePending ) {
+        return newState;
+      }
       var u0 = skaterState.u;
       var e0 = skaterState.getTotalEnergy();
 
@@ -931,10 +943,13 @@ define( function( require ) {
     },
 
     //When a track is dragged, update the skater's energy (if the sim was paused), since it wouldn't be handled in the update loop.
-    trackDragged: function( track ) {
+    trackModified: function( track ) {
       if ( this.paused && this.skater.track === track ) {
         this.skater.updateEnergy();
       }
+
+      //Flag the track as having changed *this frame* so energy doesn't need to be conserved during this frame, see https://github.com/phetsims/energy-skate-park-basics/issues/127
+      this.trackChangePending = true;
     },
 
     //Bindings to PropertySet

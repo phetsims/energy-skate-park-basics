@@ -145,7 +145,7 @@ define( function( require ) {
               points[1].snapTarget = null;
             }
 
-            model.trackDragged( track );
+            model.trackModified( track );
           },
 
           //End the drag
@@ -307,7 +307,7 @@ define( function( require ) {
                 //When one control point dragged, update the track and the node shape
                 track.updateSplines();
                 updateTrackShape();
-                model.trackDragged( track );
+                model.trackModified( track );
               },
               end: function() {
                 if ( isEndPoint && controlPoint.snapTarget ) {
