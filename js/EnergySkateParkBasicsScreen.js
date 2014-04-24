@@ -14,11 +14,11 @@ define( function( require ) {
   var inherit = require( 'PHET_CORE/inherit' );
   var Screen = require( 'JOIST/Screen' );
 
-  function EnergySkateParkBasicsScreen( name, icon, draggableTracks, friction ) {
-    Screen.call( this, name, new Image( icon ),
+  function EnergySkateParkBasicsScreen( name, homescreenIcon, navbarIcon, draggableTracks, friction ) {
+    Screen.call( this, name, new Image( homescreenIcon ),
       function() { return new EnergySkateParkBasicsModel( draggableTracks, friction ); },
       function( model ) { return new EnergySkateParkBasicsView( model ); }
-    );
+      , {navigationBarIcon: new Image( navbarIcon )} );
   }
 
   return inherit( Screen, EnergySkateParkBasicsScreen, {

@@ -11,9 +11,12 @@ define( function( require ) {
   var inherit = require( 'PHET_CORE/inherit' );
   var EnergySkateParkBasicsScreen = require( 'ENERGY_SKATE_PARK_BASICS/EnergySkateParkBasicsScreen' );
   var Sim = require( 'JOIST/Sim' );
-  var icon1 = require( 'image!ENERGY_SKATE_PARK_BASICS/ESP_icon_one_big.png' );
-  var icon2 = require( 'image!ENERGY_SKATE_PARK_BASICS/ESP_icon_two_big.png' );
-  var icon3 = require( 'image!ENERGY_SKATE_PARK_BASICS/ESP_icon_three_big.png' );
+  var iconIntroHomescreen = require( 'image!ENERGY_SKATE_PARK_BASICS/icon-intro-homescreen.png' );
+  var iconFrictionHomescreen = require( 'image!ENERGY_SKATE_PARK_BASICS/icon-friction-homescreen.png' );
+  var iconPlaygroundHomescreen = require( 'image!ENERGY_SKATE_PARK_BASICS/icon-playground-homescreen.png' );
+  var iconIntroNavbar = require( 'image!ENERGY_SKATE_PARK_BASICS/icon-intro-navbar.png' );
+  var iconFrictionNavbar = require( 'image!ENERGY_SKATE_PARK_BASICS/icon-friction-navbar.png' );
+  var iconPlaygroundNavbar = require( 'image!ENERGY_SKATE_PARK_BASICS/icon-playground-navbar.png' );
   var intro = require( 'string!ENERGY_SKATE_PARK_BASICS/tab.introduction' );
   var friction = require( 'string!ENERGY_SKATE_PARK_BASICS/tab.friction' );
   var playground = require( 'string!ENERGY_SKATE_PARK_BASICS/tab.trackPlayground' );
@@ -32,9 +35,9 @@ define( function( require ) {
     };
 
     Sim.call( this, title, [
-      new EnergySkateParkBasicsScreen( intro, icon1, false, false ),
-      new EnergySkateParkBasicsScreen( friction, icon2, false, true ),
-      new EnergySkateParkBasicsScreen( playground, icon3, true, true ) ], options );
+      new EnergySkateParkBasicsScreen( intro, iconIntroHomescreen, iconIntroNavbar, false, false ),
+      new EnergySkateParkBasicsScreen( friction, iconFrictionHomescreen, iconFrictionNavbar, false, true ),
+      new EnergySkateParkBasicsScreen( playground, iconPlaygroundHomescreen, iconPlaygroundNavbar, true, true ) ], options );
   }
 
   return inherit( Sim, EnergySkateParkBasicsSim, {
