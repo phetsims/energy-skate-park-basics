@@ -930,6 +930,13 @@ define( function( require ) {
       }
     },
 
+    //When a track is dragged, update the skater's energy (if the sim was paused), since it wouldn't be handled in the update loop.
+    trackDragged: function( track ) {
+      if ( this.paused && this.skater.track === track ) {
+        this.skater.updateEnergy();
+      }
+    },
+
     //Bindings to PropertySet
     getState: function() {
       return {
