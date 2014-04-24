@@ -55,28 +55,27 @@ define( function( require ) {
 
     //Create an energy bar that animates as the skater moves
     var createBar = function( index, color, property ) {
-      var lastBarHeight = 0;
+
+      //Convert to graph coordinates, floor and protect against duplicates
+      var barHeightProperty = property.map( function( value ) {
+        return Math.floor( value / 30 );
+      } );
       var barX = getBarX( index );
       var bar = new Rectangle( barX, 0, barWidth, 0, {fill: color, stroke: 'black', lineWidth: 0.5, pickable: false} );
       var update = function() {
         if ( barGraphNode.visible ) {
-          ////PERFORMANCE/ALLOCATION: Possible performance improvement to avoid allocations in Rectangle.setRect
+          //PERFORMANCE/ALLOCATION: Possible performance improvement to avoid allocations in Rectangle.setRect
 
-          //Convert to graph coordinates, floor and protect against duplicates
-          var barHeight = Math.floor( property.value / 30 );
-          if ( barHeight !== lastBarHeight ) {
-            if ( barHeight >= 0 ) {
-              lastBarHeight = barHeight;
-              bar.setRect( barX, originY - barHeight, barWidth, barHeight );
-            }
-            else {
-              bar.setRect( barX, originY, barWidth, -barHeight );
-            }
-            lastBarHeight = barHeight;
+          var barHeight = barHeightProperty.value;
+          if ( barHeight >= 0 ) {
+            bar.setRect( barX, originY - barHeight, barWidth, barHeight );
+          }
+          else {
+            bar.setRect( barX, originY, barWidth, -barHeight );
           }
         }
       };
-      property.link( update );
+      barHeightProperty.link( update );
 
       //update the bars when the graph becomes visible
       barGraphVisibleProperty.link( function( visible ) {
