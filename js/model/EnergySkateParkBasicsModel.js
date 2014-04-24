@@ -726,7 +726,9 @@ define( function( require ) {
 
         //Restore the skater's track, see #126
         else {
-          this.tracks.add( this.skater.startingTrack );
+          if ( !this.tracks.contains( this.skater.startingTrack ) ) {
+            this.tracks.add( this.skater.startingTrack );
+          }
         }
       }
       this.skater.returnSkater();
