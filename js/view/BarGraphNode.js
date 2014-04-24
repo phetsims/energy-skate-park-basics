@@ -25,7 +25,6 @@ define( function( require ) {
   var DerivedProperty = require( 'AXON/DerivedProperty' );
 
   function BarGraphNode( skater, barGraphVisibleProperty, clearThermal ) {
-    var barGraphNode = this;
 
     //Free layout parameters
     var contentWidth = 110;
@@ -70,7 +69,6 @@ define( function( require ) {
           //PERFORMANCE/ALLOCATION: Possible performance improvement to avoid allocations in Rectangle.setRect
 
           //TODO: just omit negative bars altogether?
-          var barHeight = barHeightProperty.value;
           if ( barHeight >= 0 ) {
             bar.setRect( barX, originY - barHeight, barWidth, barHeight );
           }
