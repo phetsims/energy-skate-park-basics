@@ -6,5 +6,5 @@
  */
 define( function() {
   'use strict';
-  return function() { return '1.0.0-dev.49'; };
+  return function() { return '1.0.0-dev.50'; };
 } );
