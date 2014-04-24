@@ -22,6 +22,7 @@ define( function( require ) {
   var thermalString = require( 'string!ENERGY_SKATE_PARK_BASICS/energy.thermal' );
   var totalString = require( 'string!ENERGY_SKATE_PARK_BASICS/energy.total' );
   var energyString = require( 'string!ENERGY_SKATE_PARK_BASICS/energy.energy' );
+  var DerivedProperty = require( 'AXON/DerivedProperty' );
 
   function BarGraphNode( skater, barGraphVisibleProperty, clearThermal ) {
     var barGraphNode = this;
@@ -62,10 +63,13 @@ define( function( require ) {
       } );
       var barX = getBarX( index );
       var bar = new Rectangle( barX, 0, barWidth, 0, {fill: color, stroke: 'black', lineWidth: 0.5, pickable: false} );
-      var update = function() {
-        if ( barGraphNode.visible ) {
+
+      //update the bars when the graph becomes visible, and skip update when they are invisible
+      DerivedProperty.multilink( [barHeightProperty, barGraphVisibleProperty], function( barHeight, visible ) {
+        if ( visible ) {
           //PERFORMANCE/ALLOCATION: Possible performance improvement to avoid allocations in Rectangle.setRect
 
+          //TODO: just omit negative bars altogether?
           var barHeight = barHeightProperty.value;
           if ( barHeight >= 0 ) {
             bar.setRect( barX, originY - barHeight, barWidth, barHeight );
@@ -74,16 +78,7 @@ define( function( require ) {
             bar.setRect( barX, originY, barWidth, -barHeight );
           }
         }
-      };
-      barHeightProperty.link( update );
-
-      //update the bars when the graph becomes visible
-      barGraphVisibleProperty.link( function( visible ) {
-        if ( visible ) {
-          update();
-        }
       } );
-      bar.update = update;
       return bar;
     };
 
@@ -124,10 +119,7 @@ define( function( require ) {
     Panel.call( this, contentNode, { x: 10, y: 10, xMargin: 10, yMargin: 10, fill: 'white', stroke: 'gray', lineWidth: 1, resize: false} );
 
     //When the bar graph is shown, update the bars (because they do not get updated when invisible for performance reasons)
-    barGraphVisibleProperty.link( function( visible ) {
-      barGraphNode.visible = visible;
-      barGraphNode.bars.forEach( function( bar ) {bar.update();} );
-    } );
+    barGraphVisibleProperty.linkAttribute( this, 'visible' );
   }
 
   return inherit( Panel, BarGraphNode );
