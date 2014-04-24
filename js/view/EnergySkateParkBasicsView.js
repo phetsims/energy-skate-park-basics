@@ -65,10 +65,71 @@ define( function( require ) {
     this.gridNode = new GridNode( model.property( 'gridVisible' ), transform );
     this.addChild( this.gridNode );
 
+    var pieChartLegend = new PieChartLegend( model.skater, model.clearThermal.bind( model ), model.property( 'pieChartVisible' ) );
+    this.addChild( pieChartLegend );
+
+    var speedometerNode = new GaugeNode( model.skater.property( 'speed' ), speedString, {min: 0, max: 20}, {updateEnabledProperty: model.property( 'speedometerVisible' ), pickable: false} );
+    model.property( 'speedometerVisible' ).linkAttribute( speedometerNode, 'visible' );
+    speedometerNode.centerX = this.layoutBounds.centerX;
+    speedometerNode.top = this.layoutBounds.minY + 5;
+    this.addChild( speedometerNode );
+
+    this.controlPanel = new EnergySkateParkBasicsControlPanel( model );
+    this.addChild( this.controlPanel );
+    this.controlPanel.right = this.layoutBounds.width - 5;
+    this.controlPanel.top = 5;
+
+    //Determine if the skater is onscreen or offscreen for purposes of highlighting the 'return skater' button.
+    var onscreenProperty = new DerivedProperty( [model.skater.positionProperty], function( position ) {
+      return view.availableModelBounds && view.availableModelBounds.containsPoint( position );
+    } );
+
+    var barGraphNode = new BarGraphNode( model.skater, model.property( 'barGraphVisible' ), model.clearThermal.bind( model ) );
+    this.addChild( barGraphNode );
+
+    if ( !model.draggableTracks ) {
+      this.sceneSelectionPanel = new SceneSelectionPanel( model, this, transform );//layout done in layout bounds
+      this.addChild( this.sceneSelectionPanel );
+    }
+
+    //Center the pie chart legend between the bar chart and speedometer, see #60
+    pieChartLegend.mutate( {top: barGraphNode.top, centerX: (barGraphNode.right + speedometerNode.left) / 2} );
+
+    var playProperty = model.property( 'paused' ).not();
+    var playPauseButton = new PlayPauseButton( playProperty, {elementScale: 0.75} ).mutate( {scale: 0.75} );
+    var stepButton = new StepButton( function() { model.manualStep(); }, playProperty ).mutate( {scale: 0.75} );
+    model.property( 'paused' ).linkAttribute( stepButton, 'enabled' );
+
+    this.addChild( playPauseButton.mutate( {centerX: this.layoutBounds.centerX, bottom: this.layoutBounds.maxY - 12.5} ) );
+    this.addChild( stepButton.mutate( {left: playPauseButton.right + 5, centerY: playPauseButton.centerY} ) );
+
+    this.resetAllButton = new ResetAllButton( model.reset.bind( model ) ).mutate( {scale: 0.7, centerY: (transform.modelToViewY( 0 ) + this.layoutBounds.maxY) / 2, centerX: this.controlPanel.centerX} );
+    this.addChild( this.resetAllButton );
+
+    //The button to return the skater
+    this.returnSkaterButton = new TextPushButton( returnSkaterString, {
+      listener: model.returnSkater.bind( model ),
+      centerY: this.resetAllButton.centerY
+      //X updated in layoutBounds since the reset all button can move horizontally
+    } );
+
+    //Disable the return skater button when the skater is already at his initial coordinates
+    model.skater.linkAttribute( 'moved', view.returnSkaterButton, 'enabled' );
+    this.addChild( this.returnSkaterButton );
+
+    //When the skater goes off screen, make the "return skater" button big
+    onscreenProperty.lazyLink( function( onscreen ) {
+      view.returnSkaterButton.setScaleMagnitude( onscreen ? 1 : 1.5 );
+      view.returnSkaterButton.centerY = view.resetAllButton.centerY;
+      view.returnSkaterButton.right = view.resetAllButton.left - 10;
+    } );
+
+    this.addChild( new PlaybackSpeedControl( model.property( 'speed' ) ).mutate( {right: playPauseButton.left - 10, bottom: playPauseButton.bottom} ) );
+
     //Switch between selectable tracks
     if ( !model.draggableTracks ) {
 
-      var trackNodes = model.tracks.map(function( track ) { return new TrackNode( model, track, transform, view.availableModelBoundsProperty ); } ).getArray();
+      var trackNodes = model.tracks.map( function( track ) { return new TrackNode( model, track, transform, view.availableModelBoundsProperty ); } ).getArray();
       trackNodes.forEach( function( trackNode ) {
         view.addChild( trackNode );
       } );
@@ -89,6 +150,7 @@ define( function( require ) {
         //Make sure the skater stays in front of the tracks when tracks are joined
         if ( skaterNode ) {
           skaterNode.moveToFront();
+          pieChartNode.moveToFront();
         }
 
         //When track removed, remove its view
@@ -127,10 +189,10 @@ define( function( require ) {
         var orthogonalUnitVector = directionUnitVector.perpendicular();
         var tip = directionUnitVector.times( headHeight ).plus( tail );
         return new Path( new Shape().moveToPoint( tail ).
-          lineToPoint( tail.plus( orthogonalUnitVector.times( headWidth / 2 ) ) ).
-          lineToPoint( tip ).
-          lineToPoint( tail.plus( orthogonalUnitVector.times( -headWidth / 2 ) ) ).
-          lineToPoint( tail ).close(),
+            lineToPoint( tail.plus( orthogonalUnitVector.times( headWidth / 2 ) ) ).
+            lineToPoint( tip ).
+            lineToPoint( tail.plus( orthogonalUnitVector.times( -headWidth / 2 ) ) ).
+            lineToPoint( tail ).close(),
           {fill: 'black'} );
       };
 
@@ -154,70 +216,11 @@ define( function( require ) {
       this.addChild( buttons );
     }
 
-    var pieChartLegend = new PieChartLegend( model.skater, model.clearThermal.bind( model ), model.property( 'pieChartVisible' ) );
-    this.addChild( pieChartLegend );
-
-    var speedometerNode = new GaugeNode( model.skater.property( 'speed' ), speedString, {min: 0, max: 20}, {updateEnabledProperty: model.property( 'speedometerVisible' ), pickable: false} );
-    model.property( 'speedometerVisible' ).linkAttribute( speedometerNode, 'visible' );
-    speedometerNode.centerX = this.layoutBounds.centerX;
-    speedometerNode.top = this.layoutBounds.minY + 5;
-    this.addChild( speedometerNode );
-
-    this.controlPanel = new EnergySkateParkBasicsControlPanel( model );
-    this.addChild( this.controlPanel );
-    this.controlPanel.right = this.layoutBounds.width - 5;
-    this.controlPanel.top = 5;
-
-    //Determine if the skater is onscreen or offscreen for purposes of highlighting the 'return skater' button.
-    var onscreenProperty = new DerivedProperty( [model.skater.positionProperty], function( position ) {
-      return view.availableModelBounds && view.availableModelBounds.containsPoint( position );
-    } );
-
-    var barGraphNode = new BarGraphNode( model.skater, model.property( 'barGraphVisible' ), model.clearThermal.bind( model ) );
-    this.addChild( barGraphNode );
-
-    if ( !model.draggableTracks ) {
-      this.sceneSelectionPanel = new SceneSelectionPanel( model, this, transform );//layout done in layout bounds
-      this.addChild( this.sceneSelectionPanel );
-    }
 
     var skaterNode = new SkaterNode( model.skater, this, transform, model.getClosestTrackAndPositionAndParameter.bind( model ), model.getPhysicalTracks.bind( model ) );
     this.addChild( skaterNode );
-    this.addChild( new PieChartNode( model.skater, model.property( 'pieChartVisible' ), transform ) );
-
-    //Center the pie chart legend between the bar chart and speedometer, see #60
-    pieChartLegend.mutate( {top: barGraphNode.top, centerX: (barGraphNode.right + speedometerNode.left) / 2} );
-
-    var playProperty = model.property( 'paused' ).not();
-    var playPauseButton = new PlayPauseButton( playProperty, {elementScale: 0.75} ).mutate( {scale: 0.75} );
-    var stepButton = new StepButton( function() { model.manualStep(); }, playProperty ).mutate( {scale: 0.75} );
-    model.property( 'paused' ).linkAttribute( stepButton, 'enabled' );
-
-    this.addChild( playPauseButton.mutate( {centerX: this.layoutBounds.centerX, bottom: this.layoutBounds.maxY - 12.5} ) );
-    this.addChild( stepButton.mutate( {left: playPauseButton.right + 5, centerY: playPauseButton.centerY} ) );
-
-    this.resetAllButton = new ResetAllButton( model.reset.bind( model ) ).mutate( {scale: 0.7, centerY: (transform.modelToViewY( 0 ) + this.layoutBounds.maxY) / 2, centerX: this.controlPanel.centerX} );
-    this.addChild( this.resetAllButton );
-
-    //The button to return the skater
-    this.returnSkaterButton = new TextPushButton( returnSkaterString, {
-      listener: model.returnSkater.bind( model ),
-      centerY: this.resetAllButton.centerY
-      //X updated in layoutBounds since the reset all button can move horizontally
-    } );
-
-    //Disable the return skater button when the skater is already at his initial coordinates
-    model.skater.linkAttribute( 'moved', view.returnSkaterButton, 'enabled' );
-    this.addChild( this.returnSkaterButton );
-
-    //When the skater goes off screen, make the "return skater" button big
-    onscreenProperty.lazyLink( function( onscreen ) {
-      view.returnSkaterButton.setScaleMagnitude( onscreen ? 1 : 1.5 );
-      view.returnSkaterButton.centerY = view.resetAllButton.centerY;
-      view.returnSkaterButton.right = view.resetAllButton.left - 10;
-    } );
-
-    this.addChild( new PlaybackSpeedControl( model.property( 'speed' ) ).mutate( {right: playPauseButton.left - 10, bottom: playPauseButton.bottom} ) );
+    var pieChartNode = new PieChartNode( model.skater, model.property( 'pieChartVisible' ), transform );
+    this.addChild( pieChartNode );
 
     //For debugging the visible bounds
     if ( showAvailableBounds ) {
