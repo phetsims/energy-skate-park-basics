@@ -39,7 +39,6 @@ define( function() {
     this.uD = 'uD' in overrides ? overrides.uD : source.uD;
     this.dragging = 'dragging' in overrides ? overrides.dragging : source.dragging;
     this.thermalEnergy = 'thermalEnergy' in overrides ? overrides.thermalEnergy : source.thermalEnergy;
-    this.curvature = null;//Lazily computed
 
     phetAllocation && phetAllocation( 'SkaterState' );
 
