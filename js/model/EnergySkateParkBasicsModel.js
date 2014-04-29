@@ -190,9 +190,11 @@ define( function( require ) {
 
     //step one frame, assuming 60fps
     manualStep: function() {
-      var result = this.stepModel( 1.0 / 60, SkaterState.createFromPool( this.skater, EMPTY_OBJECT ) );
+      var skaterState = SkaterState.createFromPool( this.skater, EMPTY_OBJECT );
+      var result = this.stepModel( 1.0 / 60, skaterState );
       result.setToSkater( this.skater );
       this.skater.trigger( 'updated' );
+      skaterState.freeToPool();
     },
 
     //Step the model, automatically called from Joist
@@ -214,15 +216,18 @@ define( function( require ) {
           initialEnergy = skaterState.getTotalEnergy();
         }
 
-        skaterState = this.stepModel( this.speed === 'normal' ? dt : dt * 0.25, skaterState );
+        var updatedState = this.stepModel( this.speed === 'normal' ? dt : dt * 0.25, skaterState );
 
         //Uncomment this block to debug energy issues.  Commented out instead of blocked with a flag so debugger statement will pass jshint
-        if ( debugEnergy && Math.abs( skaterState.getTotalEnergy() - initialEnergy ) > 1E-6 ) {
+        if ( debugEnergy && Math.abs( updatedState.getTotalEnergy() - initialEnergy ) > 1E-6 ) {
           var redo = this.stepModel( this.speed === 'normal' ? dt : dt * 0.25, SkaterState.createFromPool( this.skater, EMPTY_OBJECT ) );
           console.log( redo );
         }
-        skaterState.setToSkater( this.skater );
+        updatedState.setToSkater( this.skater );
         this.skater.trigger( 'updated' );
+
+        skaterState.freeToPool();
+        updatedState.freeToPool();
       }
 
       //Clear the track change pending flag for the next step
@@ -588,7 +593,7 @@ define( function( require ) {
       var sideVectorY = skaterState.up ? track.getUnitNormalVectorY( skaterState.u ) :
                         track.getUnitNormalVectorY( skaterState.u ) * -1;
 
-      //Dot product written out componentwise to avoid allocations, see #50
+      //Dot product written out component-wise to avoid allocations, see #50
       var outsideCircle = sideVectorX * curvatureDirectionX + sideVectorY * curvatureDirectionY < 0;
 
       //compare a to v/r^2 to see if it leaves the track
@@ -635,11 +640,11 @@ define( function( require ) {
         }
 
         //Correct energy
-        newState = this.correctEnergy( skaterState, newState );
+        var correctedState = this.correctEnergy( skaterState, newState );
 
         //Fly off the left or right side of the track
-        if ( skaterState.track.isParameterInBounds( newState.u ) ) {
-          return newState;
+        if ( skaterState.track.isParameterInBounds( correctedState.u ) ) {
+          return correctedState;
         }
         else {
           return skaterState.updateTrackUDStepsSinceJump( null, 0, 0 );
@@ -722,6 +727,7 @@ define( function( require ) {
             if ( !isApproxEqual( e0, correctedStateA.getTotalEnergy(), 1E-8 ) ) {
               debug.log( "Energy error[0]" );
             }
+            newState.freeToPool();
             return correctedStateA;
           }
           else {

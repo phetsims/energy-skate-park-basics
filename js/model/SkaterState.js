@@ -155,13 +155,16 @@ define( function( require ) {
     //TODO: Allocations
     getVelocity: function() {
       return new Vector2( this.velocityX, this.velocityY );
-    }
+    },
+
+    constructor: SkaterState
   };
 
   // Object pooling to prevent allocations, see #50
   //TODO: 3 SkaterState still allocated per frame.  Why?
   /* jshint -W064 */
   Poolable( SkaterState, {
+    debug: true,
     constructorDuplicateFactory: function( pool ) {
       return function( source, overrides ) {
         if ( pool.length ) {
