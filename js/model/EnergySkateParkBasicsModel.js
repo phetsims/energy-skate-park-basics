@@ -190,7 +190,7 @@ define( function( require ) {
 
     //step one frame, assuming 60fps
     manualStep: function() {
-      var result = this.stepModel( 1.0 / 60, new SkaterState( this.skater, {} ) );
+      var result = this.stepModel( 1.0 / 60, SkaterState.createFromPool( this.skater, EMPTY_OBJECT ) );
       result.setToSkater( this.skater );
       this.skater.trigger( 'updated' );
     },
@@ -209,7 +209,7 @@ define( function( require ) {
           dt = 1.0 / 60.0;
         }
 
-        var skaterState = new SkaterState( this.skater, EMPTY_OBJECT );
+        var skaterState = SkaterState.createFromPool( this.skater, EMPTY_OBJECT );
         if ( debugEnergy ) {
           initialEnergy = skaterState.getTotalEnergy();
         }
@@ -218,7 +218,7 @@ define( function( require ) {
 
         //Uncomment this block to debug energy issues.  Commented out instead of blocked with a flag so debugger statement will pass jshint
         if ( debugEnergy && Math.abs( skaterState.getTotalEnergy() - initialEnergy ) > 1E-6 ) {
-          var redo = this.stepModel( this.speed === 'normal' ? dt : dt * 0.25, new SkaterState( this.skater, {} ) );
+          var redo = this.stepModel( this.speed === 'normal' ? dt : dt * 0.25, SkaterState.createFromPool( this.skater, EMPTY_OBJECT ) );
           console.log( redo );
         }
         skaterState.setToSkater( this.skater );
@@ -227,6 +227,8 @@ define( function( require ) {
 
       //Clear the track change pending flag for the next step
       this.trackChangePending = false;
+
+      SkaterState.clearAllocated();
     },
 
     //The skater moves along the ground with the same coefficient of fraction as the tracks, see https://github.com/phetsims/energy-skate-park-basics/issues/11
