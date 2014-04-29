@@ -64,27 +64,15 @@ define( function( require ) {
       startingUp: true,
 
       //Returns to this track when pressing "return skater"
-      startingTrack: null
+      startingTrack: null,
+
+      headPosition: new Vector2( 0, 0 )
     } );
 
     //Number of model updates since leaving the middle of the track, so it doesn't immediately re-collide
     this.stepsSinceJump = 0;
 
     this.addDerivedProperty( 'speed', ['velocity'], function( velocity ) {return velocity.magnitude();} );
-
-    //Update the head position for showing the pie chart.
-    //Doesn't depend on "up" because it already depends on the angle of the skater.
-    this.addDerivedProperty( 'headPosition', ['position', 'mass', 'angle'], function( position, mass, angle ) {
-
-      //Center pie chart over skater's head not his feet so it doesn't look awkward when skating in a parabola
-      //when mass is minimum, the skater height is 1.5
-      //when mass is max, the skater height is 2.5
-      var skaterHeight = Util.linear( 10, 110, 1.5, 2.5, mass );
-      var vectorX = skaterHeight * Math.cos( angle - Math.PI / 2 );
-      var vectorY = skaterHeight * Math.sin( angle - Math.PI / 2 );
-
-      return position.plusXY( vectorX, -vectorY );
-    } );
 
     //Zero the kinetic energy when dragging, see https://github.com/phetsims/energy-skate-park-basics/issues/22
     this.draggingProperty.link( function( dragging ) { if ( dragging ) { skater.velocity = new Vector2( 0, 0 ); } } );
@@ -113,6 +101,10 @@ define( function( require ) {
     this.property( 'mass' ).link( function() { skater.updateEnergy(); } );
 
     this.updateEnergy();
+
+    this.on( 'updated', function() {
+      skater.updateHeadPosition();
+    } );
   }
 
   return inherit( PropertySet, Skater, {
@@ -184,6 +176,23 @@ define( function( require ) {
       this.track = tracks.getArray()[state.properties.track];
       this.startingTrack = tracks[state.properties.startingTrack];
       this.trigger( 'updated' );
+    },
+
+    //Update the head position for showing the pie chart.
+    //Doesn't depend on "up" because it already depends on the angle of the skater.
+    //Would be better if headPosition were a derived property, but created too many allocations, see #50
+    updateHeadPosition: function() {
+      //Center pie chart over skater's head not his feet so it doesn't look awkward when skating in a parabola
+      //when mass is minimum, the skater height is 1.5
+      //when mass is max, the skater height is 2.5
+      var skaterHeight = Util.linear( 10, 110, 1.5, 2.5, this.mass );
+      var vectorX = skaterHeight * Math.cos( this.angle - Math.PI / 2 );
+      var vectorY = skaterHeight * Math.sin( this.angle - Math.PI / 2 );
+
+      //Manually trigger notifications to avoid allocations, see #50
+      this.headPosition.x = this.position.x + vectorX;
+      this.headPosition.y = this.position.y - vectorY;
+      this.headPositionProperty.notifyObserversUnsafe();
     }
   } );
 } );
