@@ -234,9 +234,9 @@ define( function( require ) {
     //The skater moves along the ground with the same coefficient of fraction as the tracks, see https://github.com/phetsims/energy-skate-park-basics/issues/11
     stepGround: function( dt, skaterState ) {
       var x0 = skaterState.positionX;
-      var frictionMagnitude = (this.friction === 0 || skaterState.velocity.magnitude() < 1E-2) ? 0 : this.friction * skaterState.mass * skaterState.gravity;
-      var acceleration = Math.abs( frictionMagnitude ) * (skaterState.velocity.x > 0 ? -1 : 1) / skaterState.mass;
-      var v1 = skaterState.velocity.x + acceleration * dt;
+      var frictionMagnitude = (this.friction === 0 || skaterState.getSpeed() < 1E-2) ? 0 : this.friction * skaterState.mass * skaterState.gravity;
+      var acceleration = Math.abs( frictionMagnitude ) * (skaterState.velocityX > 0 ? -1 : 1) / skaterState.mass;
+      var v1 = skaterState.velocityX + acceleration * dt;
       var x1 = x0 + v1 * dt;
       var newPosition = new Vector2( x1, 0 );
       var originalEnergy = skaterState.getTotalEnergy();
@@ -246,7 +246,8 @@ define( function( require ) {
         positionY: newPosition.y,
         angle: 0,
         up: true,
-        velocity: new Vector2( v1, 0 )
+        velocityX: v1,
+        velocityY: 0
       } );
 
       var newEnergy = updated.getTotalEnergy();
@@ -273,7 +274,9 @@ define( function( require ) {
         track: null,
         up: true,
         angle: 0,
-        velocity: proposedVelocity.normalized().timesScalar( newSpeed ),
+        //TODO: Allocations
+        velocityX: proposedVelocity.normalized().timesScalar( newSpeed ).x,
+        velocityY: proposedVelocity.normalized().timesScalar( newSpeed ).y,
         positionX: proposedPosition.x,
         positionY: proposedPosition.y
       } );
@@ -284,7 +287,7 @@ define( function( require ) {
       var initialEnergy = skaterState.getTotalEnergy();
 
       var acceleration = new Vector2( 0, skaterState.gravity );
-      var proposedVelocity = skaterState.velocity.plus( acceleration.times( dt ) );
+      var proposedVelocity = skaterState.getVelocity().plus( acceleration.times( dt ) );
       var position = new Vector2( skaterState.positionX, skaterState.positionY );
       var proposedPosition = position.plus( proposedVelocity.times( dt ) );
       if ( proposedPosition.y < 0 ) {
@@ -379,7 +382,8 @@ define( function( require ) {
             up: up,
             u: u,
             uD: uD,
-            velocity: newVelocity,
+            velocityX: newVelocity.x,
+            velocityY: newVelocity.y,
             positionX: newPosition.x,
             positionY: newPosition.y
           } );
@@ -400,7 +404,8 @@ define( function( require ) {
       if ( y <= 0 ) {
         //When falling straight down, stop completely and convert all energy to thermal
         return skaterState.update( {
-          velocity: new Vector2( 0, 0 ),
+          velocityX: 0,
+          velocityY: 0,
           thermalEnergy: initialEnergy,
           angle: 0,
           up: true,
@@ -411,7 +416,8 @@ define( function( require ) {
       }
       else {
         return skaterState.update( {
-          velocity: proposedVelocity,
+          velocityX: proposedVelocity.x,
+          velocityY: proposedVelocity.y,
           positionX: proposedPosition.x,
           positionY: y,
           stepsSinceJump: skaterState.stepsSinceJump + 1
@@ -448,12 +454,12 @@ define( function( require ) {
     getFrictionForceX: function( skaterState ) {
       //Friction force should not exceed sum of other forces (in the direction of motion), otherwise the friction could start a stopped object moving
       //Hence we check to see if the object is already stopped and don't add friction in that case
-      if ( this.friction === 0 || skaterState.velocity.magnitude() < 1E-2 ) {
+      if ( this.friction === 0 || skaterState.getSpeed() < 1E-2 ) {
         return 0;
       }
       else {
         var magnitude = this.friction * this.getNormalForce( skaterState ).magnitude();
-        var angleComponent = Math.cos( skaterState.velocity.angle() + Math.PI );
+        var angleComponent = Math.cos( skaterState.getVelocity().angle() + Math.PI );
         return magnitude * angleComponent;
       }
     },
@@ -463,12 +469,12 @@ define( function( require ) {
     getFrictionForceY: function( skaterState ) {
       //Friction force should not exceed sum of other forces (in the direction of motion), otherwise the friction could start a stopped object moving
       //Hence we check to see if the object is already stopped and don't add friction in that case
-      if ( this.friction === 0 || skaterState.velocity.magnitude() < 1E-2 ) {
+      if ( this.friction === 0 || skaterState.getSpeed() < 1E-2 ) {
         return 0;
       }
       else {
         var magnitude = this.friction * this.getNormalForce( skaterState ).magnitude();
-        return magnitude * Math.sin( skaterState.velocity.angle() + Math.PI );
+        return magnitude * Math.sin( skaterState.getVelocity().angle() + Math.PI );
       }
     },
 
@@ -483,7 +489,7 @@ define( function( require ) {
 
       netForceRadial.addXY( 0, skaterState.mass * skaterState.gravity );//gravity
       var curvatureDirection = this.getCurvatureDirection( this.curvatureTemp2, skaterState.positionX, skaterState.positionY );
-      var normalForce = skaterState.mass * skaterState.velocity.magnitudeSquared() / Math.abs( radiusOfCurvature ) - netForceRadial.dot( curvatureDirection );
+      var normalForce = skaterState.mass * skaterState.getSpeed() * skaterState.getSpeed() / Math.abs( radiusOfCurvature ) - netForceRadial.dot( curvatureDirection );
       debug.log( normalForce );
 
       var n = Vector2.createPolar( normalForce, curvatureDirection.angle() );
@@ -521,7 +527,7 @@ define( function( require ) {
       var newVelocityY = parallelUnitY * uD;
 
       //choose velocity by using the unit parallel vector to the track
-      var newState = skaterState.updateUUDVelocityPosition( u, uD, new Vector2( newVelocityX, newVelocityY ), newPointX, newPointY );
+      var newState = skaterState.updateUUDVelocityPosition( u, uD, newVelocityX, newVelocityY, newPointX, newPointY );
       if ( this.friction > 0 ) {
 
         //Compute friction force magnitude component-wise to prevent allocations, see #50
@@ -658,7 +664,9 @@ define( function( require ) {
 
         //We can just set the state directly instead of calling update since we are keeping a protected clone of the newSkaterState
         newSkaterState.uD = newVelocity;
-        newSkaterState.velocity = unit.times( newVelocity );
+        var result = unit.times( newVelocity );
+        newSkaterState.velocityX = result.x;
+        newSkaterState.velocityY = result.y;
 
         if ( isApproxEqual( e0, newSkaterState.getTotalEnergy(), 1E-8 ) ) {
           break;
@@ -766,9 +774,11 @@ define( function( require ) {
           var vSq = Math.abs( 2 / newState.mass * ( e0 - newState.getPotentialEnergy() - newState.thermalEnergy ) );
           var v = Math.sqrt( vSq );
           var newVelocity = v * getSign( newState.uD );
+          var updatedVelocity = newState.track.getUnitParallelVector( newState.u ).multiplyScalar( newVelocity );
           var fixedState = newState.update( {
             uD: newVelocity,
-            velocity: newState.track.getUnitParallelVector( newState.u ).multiplyScalar( newVelocity )
+            velocityX: updatedVelocity.x,
+            velocityY: updatedVelocity.y
           } );
           debug.log( "Set velocity to match energy, when energy was low: " );
           debug.log( "INC changed velocity: dE=" + ( fixedState.getTotalEnergy() - e0 ) );

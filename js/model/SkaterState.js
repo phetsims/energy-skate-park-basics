@@ -13,6 +13,7 @@ define( function( require ) {
   var EMPTY_OBJECT = {};
 
   var Poolable = require( 'PHET_CORE/Poolable' );
+  var Vector2 = require( 'DOT/Vector2' );
 
   /**
    * Create a SkaterSate from a SkaterState or Skater
@@ -51,13 +52,18 @@ define( function( require ) {
       if ( source.position ) {
         this.positionX = overrides.positionX || source.position.x;
         this.positionY = overrides.positionY || source.position.y;
+
+        this.velocityX = overrides.velocityX || source.velocity.x;
+        this.velocityY = overrides.velocityY || source.velocity.y;
       }
       else {
         this.positionX = overrides.positionX || source.positionX;
         this.positionY = overrides.positionY || source.positionY;
+
+        this.velocityX = overrides.velocityX || source.velocityX;
+        this.velocityY = overrides.velocityY || source.velocityY;
       }
 
-      this.velocity = overrides.velocity || source.velocity;
       this.mass = overrides.mass || source.mass;
 
       //Special handling for values that can be null, false or zero
@@ -72,8 +78,8 @@ define( function( require ) {
 
       //Some sanity tests
       assert && assert( !isNaN( this.thermalEnergy ) );
-      assert && assert( !isNaN( this.velocity.x ) );
-      assert && assert( !isNaN( this.velocity.y ) );
+      assert && assert( !isNaN( this.velocityX ) );
+      assert && assert( !isNaN( this.velocityY ) );
       assert && assert( !isNaN( this.uD ) );
 
       return this;
@@ -81,11 +87,11 @@ define( function( require ) {
 
     //Get the total energy in this state.  Computed directly instead of using other methods to (hopefully) improve performance
     getTotalEnergy: function() {
-      return 0.5 * this.mass * this.velocity.magnitudeSquared() - this.mass * this.gravity * this.positionY + this.thermalEnergy;
+      return 0.5 * this.mass * (this.velocityX * this.velocityX + this.velocityY * this.velocityY) - this.mass * this.gravity * this.positionY + this.thermalEnergy;
     },
 
     getKineticEnergy: function() {
-      return 0.5 * this.mass * this.velocity.magnitudeSquared();
+      return 0.5 * this.mass * (this.velocityX * this.velocityX + this.velocityY * this.velocityY);
     },
 
     getPotentialEnergy: function() {
@@ -109,7 +115,10 @@ define( function( require ) {
       skater.position.y = this.positionY;
       skater.positionProperty.notifyObserversUnsafe();
 
-      skater.velocity = this.velocity;
+      skater.velocity.x = this.velocityX;
+      skater.velocity.y = this.velocityY;
+      skater.velocityProperty.notifyObserversUnsafe();
+
       skater.u = this.u;
       skater.uD = this.uD;
       skater.thermalEnergy = this.thermalEnergy;
@@ -128,14 +137,24 @@ define( function( require ) {
     },
 
     //Create a new SkaterState with the new values.  Provided as a convenience to avoid allocating options argument (as in update)
-    updateUUDVelocityPosition: function( u, uD, velocity, positionX, positionY ) {
+    updateUUDVelocityPosition: function( u, uD, velocityX, velocityY, positionX, positionY ) {
       var state = SkaterState.createFromPool( this, EMPTY_OBJECT );
       state.u = u;
       state.uD = uD;
-      state.velocity = velocity;
+      state.velocityX = velocityX;
+      state.velocityY = velocityY;
       state.positionX = positionX;
       state.positionY = positionY;
       return state;
+    },
+
+    getSpeed: function() {
+      return Math.sqrt( this.velocityX * this.velocityX + this.velocityY * this.velocityY );
+    },
+
+    //TODO: Allocations
+    getVelocity: function() {
+      return new Vector2( this.velocityX, this.velocityY );
     }
   };
 
