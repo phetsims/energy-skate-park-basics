@@ -61,12 +61,9 @@ define( function() {
 
     update: function( overrides ) { return new SkaterState( this, overrides ); },
 
-    //Get the curvature at the skater's point on the track, caching the value.
-    getCurvature: function() {
-      if ( !this.curvature ) {
-        this.curvature = this.track.getCurvature( this.u );
-      }
-      return this.curvature;
+    //Get the curvature at the skater's point on the track, by setting it to the pass-by-reference argument
+    getCurvature: function( curvature ) {
+      this.track.getCurvature( this.u, curvature );
     },
 
     //Only set values that have changed

@@ -397,7 +397,8 @@ define( function( require ) {
 
     //Compute the signed curvature as defined here: http://en.wikipedia.org/wiki/Curvature#Local_expressions
     //Used for centripetal force and determining whether the skater flies off the track
-    getCurvature: function( u ) {
+    //Curvature parameter is for storing the result as pass-by-value.  Sorry, see https://github.com/phetsims/energy-skate-park-basics/issues/50 regarding GC
+    getCurvature: function( u, curvature ) {
 
       if ( this.xSplineDiff === null ) {
         this.xSplineDiff = this.xSpline.diff();
@@ -424,7 +425,9 @@ define( function( require ) {
       var vectorX = this.getUnitNormalVectorX( u ) * 1 / k + centerX;
       var vectorY = this.getUnitNormalVectorY( u ) * 1 / k + centerY;
 
-      return {r: 1 / k, x: vectorX, y: vectorY};
+      curvature.r = 1 / k;
+      curvature.x = vectorX;
+      curvature.y = vectorY;
     },
 
     //Find the lowest y-point on the spline by sampling, used when dropping the track or a control point to ensure it won't go below y=0

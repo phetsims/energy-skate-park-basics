@@ -437,17 +437,17 @@ define( function( require ) {
       }
     },
 
+    //Use a separate pooled curvature variable
+    curvatureTemp2: {r: 1, x: 0, y: 0},
+
     //Get the normal force (Newtons) on the skater
     getNormalForce: function( skaterState ) {
-      var curvature = skaterState.getCurvature();
-      if ( curvature < 0 ) {
-        console.log( 'curvature was less than zero, therefore the straight line code below must be changed' );
-      }
-      var radiusOfCurvature = Math.min( curvature.r, 100000 );
+      skaterState.getCurvature( this.curvatureTemp2 );
+      var radiusOfCurvature = Math.min( this.curvatureTemp2, 100000 );
       var netForceRadial = new Vector2();
 
       netForceRadial.addXY( 0, skaterState.mass * skaterState.gravity );//gravity
-      var curvatureDirection = this.getCurvatureDirection( curvature, skaterState.position.x, skaterState.position.y );
+      var curvatureDirection = this.getCurvatureDirection( this.curvatureTemp2, skaterState.position.x, skaterState.position.y );
       var normalForce = skaterState.mass * skaterState.velocity.magnitudeSquared() / Math.abs( radiusOfCurvature ) - netForceRadial.dot( curvatureDirection );
       debug.log( normalForce );
       return Vector2.createPolar( normalForce, curvatureDirection.angle() );
@@ -516,11 +516,14 @@ define( function( require ) {
       }
     },
 
+    curvatureTemp: {r: 1, x: 0, y: 0},
+
     //Update the skater as it moves along the track, and fly off the track if it goes over a jump or off the end of the track
     stepTrack: function( dt, skaterState ) {
 
-      var curvature = skaterState.getCurvature();
-      var curvatureDirection = this.getCurvatureDirection( curvature, skaterState.position.x, skaterState.position.y );
+      skaterState.getCurvature( this.curvatureTemp );
+
+      var curvatureDirection = this.getCurvatureDirection( this.curvatureTemp, skaterState.position.x, skaterState.position.y );
 
       var track = skaterState.track;
       var sideVector = skaterState.up ? track.getUnitNormalVector( skaterState.u ) :
@@ -528,7 +531,7 @@ define( function( require ) {
       var outsideCircle = sideVector.dot( curvatureDirection ) < 0;
 
       //compare a to v/r^2 to see if it leaves the track
-      var r = Math.abs( curvature.r );
+      var r = Math.abs( this.curvatureTemp.r );
       var centripForce = skaterState.mass * skaterState.uD * skaterState.uD / r;
 
       var netForce = Vector2.createFromPool( 0, 0 );
