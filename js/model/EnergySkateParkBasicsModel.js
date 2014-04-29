@@ -618,7 +618,14 @@ define( function( require ) {
         //Discrepancy with original version: original version had 10 divisions here.  We have reduced it to make it more smooth and less GC
         var numDivisions = 4;
         for ( var i = 0; i < numDivisions; i++ ) {
-          newState = this.stepEuler( dt / numDivisions, newState );
+          var nextState = this.stepEuler( dt / numDivisions, newState );
+
+          //Reclaim the SkaterState, but not for the initial one which must be stored for error correction outside of this method
+          //Note this freeToPool call is duplicated with the clear at the end of step, but shouldn't hurt anything (and somehow catches some SkaterStates missed in step)
+          if ( i > 0 ) {
+            newState.freeToPool();
+          }
+          newState = nextState;
         }
 
         //Correct energy
