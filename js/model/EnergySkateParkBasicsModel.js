@@ -510,14 +510,8 @@ define( function( require ) {
       var newVelocityX = parallelUnitX * uD;
       var newVelocityY = parallelUnitY * uD;
 
-      var newState = skaterState.update( {
-        u: u,
-        uD: uD,
-
-        //choose velocity by using the unit parallel vector to the track
-        velocity: new Vector2( newVelocityX, newVelocityY ),
-        position: new Vector2( newPointX, newPointY )
-      } );
+      //choose velocity by using the unit parallel vector to the track
+      var newState = skaterState.updateUUDVelocityPosition( u, uD, new Vector2( newVelocityX, newVelocityY ), new Vector2( newPointX, newPointY ) );
       if ( this.friction > 0 ) {
 
         //Compute friction force magnitude component-wise to prevent allocations, see #50

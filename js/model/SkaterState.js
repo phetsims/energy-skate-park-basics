@@ -85,12 +85,22 @@ define( function() {
       skater.updateEnergy();
     },
 
-    //Create a new SkaterState with the new values.  Provided as a convenience to avoid allocating options argument
+    //Create a new SkaterState with the new values.  Provided as a convenience to avoid allocating options argument (as in update)
     updateTrackUDStepsSinceJump: function( track, uD, stepsSinceJump ) {
       var state = new SkaterState( this );
       state.track = track;
       state.uD = uD;
       state.stepsSinceJump = stepsSinceJump;
+      return state;
+    },
+
+    //Create a new SkaterState with the new values.  Provided as a convenience to avoid allocating options argument (as in update)
+    updateUUDVelocityPosition: function( u, uD, velocity, position ) {
+      var state = new SkaterState( this );
+      state.u = u;
+      state.uD = uD;
+      state.velocity = velocity;
+      state.position = position;
       return state;
     }
   };
