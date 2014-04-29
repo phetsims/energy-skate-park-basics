@@ -194,7 +194,6 @@ define( function( require ) {
       var result = this.stepModel( 1.0 / 60, skaterState );
       result.setToSkater( this.skater );
       this.skater.trigger( 'updated' );
-      skaterState.freeToPool();
     },
 
     //Step the model, automatically called from Joist
@@ -225,9 +224,6 @@ define( function( require ) {
         }
         updatedState.setToSkater( this.skater );
         this.skater.trigger( 'updated' );
-
-        skaterState.freeToPool();
-        updatedState.freeToPool();
       }
 
       //Clear the track change pending flag for the next step
@@ -629,14 +625,7 @@ define( function( require ) {
         //Discrepancy with original version: original version had 10 divisions here.  We have reduced it to make it more smooth and less GC
         var numDivisions = 4;
         for ( var i = 0; i < numDivisions; i++ ) {
-          var nextState = this.stepEuler( dt / numDivisions, newState );
-
-          //Reclaim the SkaterState, but not for the initial one which must be stored for error correction outside of this method
-          //Note this freeToPool call is duplicated with the clear at the end of step, but shouldn't hurt anything (and somehow catches some SkaterStates missed in step)
-          if ( i > 0 ) {
-            newState.freeToPool();
-          }
-          newState = nextState;
+          newState = this.stepEuler( dt / numDivisions, newState );
         }
 
         //Correct energy
@@ -727,7 +716,6 @@ define( function( require ) {
             if ( !isApproxEqual( e0, correctedStateA.getTotalEnergy(), 1E-8 ) ) {
               debug.log( "Energy error[0]" );
             }
-            newState.freeToPool();
             return correctedStateA;
           }
           else {

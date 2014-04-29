@@ -161,18 +161,19 @@ define( function( require ) {
   };
 
   // Object pooling to prevent allocations, see #50
-  //TODO: 3 SkaterState still allocated per frame.  Why?
   /* jshint -W064 */
   Poolable( SkaterState, {
-    debug: true,
+    debug: false,
     constructorDuplicateFactory: function( pool ) {
       return function( source, overrides ) {
         if ( pool.length ) {
-//          console.log( 'loaded from pool' );
-          return pool.pop().setState( source, overrides );
+          var result = pool.pop().setState( source, overrides );
+
+          //All SkaterStates are cleared each frame, so track each available one so they can be cleared, see #50
+          SkaterState.allocated.push( result );
+          return result;
         }
         else {
-//          console.log( 'loaded from heap' );
           return new SkaterState( source, overrides );
         }
       };
