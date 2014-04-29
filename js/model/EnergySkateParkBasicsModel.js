@@ -28,6 +28,9 @@ define( function( require ) {
   var ObservableArray = require( 'AXON/ObservableArray' );
   var SkaterState = require( 'ENERGY_SKATE_PARK_BASICS/model/SkaterState' );
 
+  //Reuse empty object for creating SkaterStates to avoid allocations
+  var EMPTY_OBJECT = {};
+
   //Thrust is not currently implemented in Energy Skate Park: Basics but may be used in a future version, so left in here
   var thrust = new Vector2();
 
@@ -206,7 +209,7 @@ define( function( require ) {
           dt = 1.0 / 60.0;
         }
 
-        var skaterState = new SkaterState( this.skater, {} );
+        var skaterState = new SkaterState( this.skater, EMPTY_OBJECT );
         if ( debugEnergy ) {
           initialEnergy = skaterState.getTotalEnergy();
         }

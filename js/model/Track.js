@@ -203,6 +203,14 @@ define( function( require ) {
       return Vector2.createPolar( 1, this.getModelAngleAt( u ) + Math.PI / 2 );
     },
 
+    getUnitNormalVectorX: function( u ) {
+      return Math.cos( this.getModelAngleAt( u ) + Math.PI / 2 );
+    },
+
+    getUnitNormalVectorY: function( u ) {
+      return Math.sin( this.getModelAngleAt( u ) + Math.PI / 2 );
+    },
+
     //Get the model parallel vector at the specified position on the track
     getUnitParallelVector: function( u ) {
       return Vector2.createPolar( 1, this.getModelAngleAt( u ) );
@@ -409,11 +417,14 @@ define( function( require ) {
       var k = (xP * yPP - yP * xPP) /
               Math.pow( (xP * xP + yP * yP), 3 / 2 );
 
-      var center = this.getPoint( u );
+      //Using component-wise maths to avoid allocations, see #50
+      var centerX = this.getX( u );
+      var centerY = this.getY( u );
 
-      var vector = this.getUnitNormalVector( u ).multiplyScalar( 1 / k ).add( center );
+      var vectorX = this.getUnitNormalVectorX( u ) * 1 / k + centerX;
+      var vectorY = this.getUnitNormalVectorY( u ) * 1 / k + centerY;
 
-      return {r: 1 / k, x: vector.x, y: vector.y};
+      return {r: 1 / k, x: vectorX, y: vectorY};
     },
 
     //Find the lowest y-point on the spline by sampling, used when dropping the track or a control point to ensure it won't go below y=0
