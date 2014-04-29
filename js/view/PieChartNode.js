@@ -26,11 +26,17 @@ define( function( require ) {
     var thermalEnergySlice = new Circle( 1, {fill: EnergySkateParkColorScheme.thermalEnergy, stroke: 'black', lineWidth: 1} );
     Node.call( this, {children: [thermalEnergySlice, potentialEnergySlice, kineticEnergySlice ], pickable: false} );
 
-    skater.headPositionProperty.link( function( headPosition ) {
-      var view = modelViewTransform.modelToViewPosition( headPosition );
+    var updatePieChartLocation = function() {
+
+      var view = modelViewTransform.modelToViewPosition( skater.headPosition );
 
       //Center pie chart over skater's head not his feet so it doesn't look awkward when skating in a parabola
       pieChartNode.setTranslation( view.x, view.y - 50 );
+    };
+    skater.headPositionProperty.link( function() {
+      if ( pieChartNode.visible ) {
+        updatePieChartLocation();
+      }
     } );
 
     var updatePaths = function() {
@@ -95,6 +101,9 @@ define( function( require ) {
     pieChartVisibleProperty.link( function( visible ) {
       pieChartNode.visible = visible;
       updatePaths();
+      if ( visible ) {
+        updatePieChartLocation();
+      }
     } );
   }
 
