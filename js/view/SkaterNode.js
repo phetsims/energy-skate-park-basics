@@ -24,6 +24,8 @@ define( function( require ) {
   //Map from mass(kg) to scale
   var massToScale = new LinearFunction( (100 + 25) / 2, 100, 0.34, 0.43 );
 
+  var LEFT_STRING = 'left';
+
   /**
    * SkaterNode constructor
    *
@@ -56,13 +58,20 @@ define( function( require ) {
       var matrix = Matrix3.translation( view.x, view.y );
 
       //Rotation and translation can happen in any order
-      matrix = matrix.multiplyMatrix( Matrix3.rotation2( angle ) );
+      var rotationMatrix = Matrix3.rotation2( angle );
+      matrix.multiplyMatrix( rotationMatrix );
+      rotationMatrix.freeToPool();
+
       var scale = massToScale( mass );
-      skaterImageNode.image = direction === 'left' ? skaterLeftImage : skaterRightImage;
-      matrix = matrix.multiplyMatrix( Matrix3.scaling( scale, scale ) );
+      skaterImageNode.image = direction === LEFT_STRING ? skaterLeftImage : skaterRightImage;
+      var scalingMatrix = Matrix3.scaling( scale, scale );
+      matrix.multiplyMatrix( scalingMatrix );
+      scalingMatrix.freeToPool();
 
       //Think of it as a multiplying the Vector2 to the right, so this step happens first actually.  Use it to center the registration point
-      matrix = matrix.multiplyMatrix( Matrix3.translation( -imageWidth / 2, -imageHeight ) );
+      var translation = Matrix3.translation( -imageWidth / 2, -imageHeight );
+      matrix.multiplyMatrix( translation );
+      translation.freeToPool();
 
       skaterNode.setMatrix( matrix );
     } );
