@@ -774,11 +774,12 @@ define( function( require ) {
           var vSq = Math.abs( 2 / newState.mass * ( e0 - newState.getPotentialEnergy() - newState.thermalEnergy ) );
           var v = Math.sqrt( vSq );
           var newVelocity = v * getSign( newState.uD );
-          var updatedVelocity = newState.track.getUnitParallelVector( newState.u ).multiplyScalar( newVelocity );
+          var updatedVelocityX = newState.track.getUnitParallelVectorX( newState.u ) * newVelocity;
+          var updatedVelocityY = newState.track.getUnitParallelVectorY( newState.u ) * newVelocity;
           var fixedState = newState.update( {
             uD: newVelocity,
-            velocityX: updatedVelocity.x,
-            velocityY: updatedVelocity.y
+            velocityX: updatedVelocityX,
+            velocityY: updatedVelocityY
           } );
           debug.log( "Set velocity to match energy, when energy was low: " );
           debug.log( "INC changed velocity: dE=" + ( fixedState.getTotalEnergy() - e0 ) );
