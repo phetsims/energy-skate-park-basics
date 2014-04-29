@@ -413,14 +413,25 @@ define( function( require ) {
     /**
      * Gets the net force discluding normal force.
      *
+     * Split into component-wise to prevent allocations, see #50
+     *
      * @param {SkaterState} skaterState the state
-     * @param {Vector2} netForce the return value, should be allocated beforehand using Vector2.createFromPool.
-     * @returns {Vector2} netForce
+     * @return {Number} netForce in the X direction
      */
-    getNetForceWithoutNormal: function( skaterState, netForce ) {
-      netForce.addXY( 0, skaterState.mass * skaterState.gravity );//gravity
-      netForce.addXY( this.getFrictionForceX( skaterState ), this.getFrictionForceY( skaterState ) );
-      return netForce;
+    getNetForceWithoutNormalX: function( skaterState ) {
+      return this.getFrictionForceX( skaterState );
+    },
+
+    /**
+     * Gets the net force discluding normal force.
+     *
+     * Split into component-wise to prevent allocations, see #50
+     *
+     * @param {SkaterState} skaterState the state
+     * @return {Number} netForce in the Y direction
+     */
+    getNetForceWithoutNormalY: function( skaterState ) {
+      return skaterState.mass * skaterState.gravity + this.getFrictionForceY( skaterState );
     },
 
     //The only other force on the object in the direction of motion is the gravity force
@@ -433,7 +444,8 @@ define( function( require ) {
       }
       else {
         var magnitude = this.friction * this.getNormalForce( skaterState ).magnitude();
-        return magnitude * Math.cos( skaterState.velocity.angle() + Math.PI );
+        var angleComponent = Math.cos( skaterState.velocity.angle() + Math.PI );
+        return magnitude * angleComponent;
       }
     },
 
@@ -457,14 +469,16 @@ define( function( require ) {
     //Get the normal force (Newtons) on the skater
     getNormalForce: function( skaterState ) {
       skaterState.getCurvature( this.curvatureTemp2 );
-      var radiusOfCurvature = Math.min( this.curvatureTemp2, 100000 );
+      var radiusOfCurvature = Math.min( this.curvatureTemp2.r, 100000 );
       var netForceRadial = new Vector2();
 
       netForceRadial.addXY( 0, skaterState.mass * skaterState.gravity );//gravity
       var curvatureDirection = this.getCurvatureDirection( this.curvatureTemp2, skaterState.position.x, skaterState.position.y );
       var normalForce = skaterState.mass * skaterState.velocity.magnitudeSquared() / Math.abs( radiusOfCurvature ) - netForceRadial.dot( curvatureDirection );
       debug.log( normalForce );
-      return Vector2.createPolar( normalForce, curvatureDirection.angle() );
+
+      var n = Vector2.createPolar( normalForce, curvatureDirection.angle() );
+      return n;
     },
 
     //Use an Euler integration step to move the skater along the track
@@ -474,23 +488,30 @@ define( function( require ) {
       var origLoc = skaterState.position;
       var thermalEnergy = skaterState.thermalEnergy;
       var uD = skaterState.uD;
+      assert && assert( !isNaN( uD ) );
       var u = skaterState.u;
 
-      var netForce = this.getNetForceWithoutNormal( skaterState, Vector2.createFromPool( 0, 0 ) );
+      //Component-wise math to prevent allocations, see #50
+      var netForceX = this.getNetForceWithoutNormalX( skaterState );
+      var netForceY = this.getNetForceWithoutNormalY( skaterState );
+      var netForceMagnitude = Math.sqrt( netForceX * netForceX + netForceY * netForceY );
+      var netForceAngle = Math.atan2( netForceY, netForceX );
 
       //Get the net force in the direction of the track.  Dot product is a * b * cos(theta)
-      var a = netForce.magnitude() * Math.cos( skaterState.track.getModelAngleAt( u ) - netForce.angle() ) / skaterState.mass;
-      netForce.freeToPool();
+      var a = netForceMagnitude * Math.cos( skaterState.track.getModelAngleAt( u ) - netForceAngle ) / skaterState.mass;
 
       uD += a * dt;
+      assert && assert( !isNaN( uD ) );
       u += track.getParametricDistance( u, uD * dt + 1 / 2 * a * dt * dt );
       var newPoint = skaterState.track.getPoint( u );
+      var parallelUnit = skaterState.track.getUnitParallelVector( u );
+      var newVelocity = parallelUnit.multiplyScalar( uD );
       var newState = skaterState.update( {
         u: u,
         uD: uD,
 
         //choose velocity by using the unit parallel vector to the track
-        velocity: skaterState.track.getUnitParallelVector( u ).multiplyScalar( uD ),
+        velocity: newVelocity,
         position: newPoint
       } );
       if ( this.friction > 0 ) {
@@ -558,9 +579,11 @@ define( function( require ) {
       var r = Math.abs( this.curvatureTemp.r );
       var centripForce = skaterState.mass * skaterState.uD * skaterState.uD / r;
 
-      var netForce = Vector2.createFromPool( 0, 0 );
-      var netForceRadial = this.getNetForceWithoutNormal( skaterState, netForce ).dotXY( curvatureDirectionX, curvatureDirectionY );
-      netForce.freeToPool();
+      var netForceWithoutNormalX = this.getNetForceWithoutNormalX( skaterState );
+      var netForceWithoutNormalY = this.getNetForceWithoutNormalY( skaterState );
+
+      //Net force in the radial direction is the dot product.  Component-wise to avoid allocations, see #50
+      var netForceRadial = netForceWithoutNormalX * curvatureDirectionX + netForceWithoutNormalY * curvatureDirectionY;
 
       var leaveTrack = (netForceRadial < centripForce && outsideCircle) || (netForceRadial > centripForce && !outsideCircle);
       if ( leaveTrack && this.detachable ) {
