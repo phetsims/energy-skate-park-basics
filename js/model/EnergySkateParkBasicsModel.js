@@ -233,7 +233,7 @@ define( function( require ) {
 
     //The skater moves along the ground with the same coefficient of fraction as the tracks, see https://github.com/phetsims/energy-skate-park-basics/issues/11
     stepGround: function( dt, skaterState ) {
-      var x0 = skaterState.position.x;
+      var x0 = skaterState.positionX;
       var frictionMagnitude = (this.friction === 0 || skaterState.velocity.magnitude() < 1E-2) ? 0 : this.friction * skaterState.mass * skaterState.gravity;
       var acceleration = Math.abs( frictionMagnitude ) * (skaterState.velocity.x > 0 ? -1 : 1) / skaterState.mass;
       var v1 = skaterState.velocity.x + acceleration * dt;
@@ -242,7 +242,8 @@ define( function( require ) {
       var originalEnergy = skaterState.getTotalEnergy();
 
       var updated = skaterState.update( {
-        position: newPosition,
+        positionX: newPosition.x,
+        positionY: newPosition.y,
         angle: 0,
         up: true,
         velocity: new Vector2( v1, 0 )
@@ -273,7 +274,8 @@ define( function( require ) {
         up: true,
         angle: 0,
         velocity: proposedVelocity.normalized().timesScalar( newSpeed ),
-        position: proposedPosition
+        positionX: proposedPosition.x,
+        positionY: proposedPosition.y
       } );
     },
 
@@ -283,13 +285,14 @@ define( function( require ) {
 
       var acceleration = new Vector2( 0, skaterState.gravity );
       var proposedVelocity = skaterState.velocity.plus( acceleration.times( dt ) );
-      var proposedPosition = skaterState.position.plus( proposedVelocity.times( dt ) );
+      var position = new Vector2( skaterState.positionX, skaterState.positionY );
+      var proposedPosition = position.plus( proposedVelocity.times( dt ) );
       if ( proposedPosition.y < 0 ) {
         proposedPosition.y = 0;
 
         return this.switchToGround( skaterState, initialEnergy, proposedPosition, proposedVelocity, dt );
       }
-      else if ( skaterState.position.x !== proposedPosition.x || skaterState.position.y !== proposedPosition.y ) {
+      else if ( position.x !== proposedPosition.x || position.y !== proposedPosition.y ) {
 
         //see if it crossed the track
         var physicalTracks = this.getPhysicalTracks();
@@ -333,7 +336,8 @@ define( function( require ) {
     interactWithTracksWhileFalling: function( physicalTracks, skaterState, proposedPosition, initialEnergy, dt, proposedVelocity ) {
 
       //Find the closest track
-      var closestTrackAndPositionAndParameter = this.getClosestTrackAndPositionAndParameter( skaterState.position, physicalTracks );
+      //TODO: Allocations
+      var closestTrackAndPositionAndParameter = this.getClosestTrackAndPositionAndParameter( new Vector2( skaterState.positionX, skaterState.positionY ), physicalTracks );
       var track = closestTrackAndPositionAndParameter.track;
       var u = closestTrackAndPositionAndParameter.u;
       var trackPoint = closestTrackAndPositionAndParameter.point;
@@ -345,7 +349,7 @@ define( function( require ) {
         var normal = track.getUnitNormalVector( u );
         var segment = normal.perpendicular();
 
-        var beforeVector = skaterState.position.minus( trackPoint );
+        var beforeVector = new Vector2( skaterState.positionX, skaterState.positionY ).minus( trackPoint );
         var afterVector = proposedPosition.minus( trackPoint );
 
         //If crossed the track, attach to it.
@@ -376,7 +380,8 @@ define( function( require ) {
             u: u,
             uD: uD,
             velocity: newVelocity,
-            position: newPosition
+            positionX: newPosition.x,
+            positionY: newPosition.y
           } );
         }
 
@@ -399,14 +404,16 @@ define( function( require ) {
           thermalEnergy: initialEnergy,
           angle: 0,
           up: true,
-          position: new Vector2( proposedPosition.x, 0 ),
+          positionX: proposedPosition.x,
+          positionY: 0,
           stepsSinceJump: 0
         } );
       }
       else {
         return skaterState.update( {
           velocity: proposedVelocity,
-          position: new Vector2( proposedPosition.x, y ),
+          positionX: proposedPosition.x,
+          positionY: y,
           stepsSinceJump: skaterState.stepsSinceJump + 1
         } );
       }
@@ -475,7 +482,7 @@ define( function( require ) {
       var netForceRadial = new Vector2();
 
       netForceRadial.addXY( 0, skaterState.mass * skaterState.gravity );//gravity
-      var curvatureDirection = this.getCurvatureDirection( this.curvatureTemp2, skaterState.position.x, skaterState.position.y );
+      var curvatureDirection = this.getCurvatureDirection( this.curvatureTemp2, skaterState.positionX, skaterState.positionY );
       var normalForce = skaterState.mass * skaterState.velocity.magnitudeSquared() / Math.abs( radiusOfCurvature ) - netForceRadial.dot( curvatureDirection );
       debug.log( normalForce );
 
@@ -487,7 +494,8 @@ define( function( require ) {
     stepEuler: function( dt, skaterState ) {
       var track = skaterState.track;
       var origEnergy = skaterState.getTotalEnergy();
-      var origLoc = skaterState.position;
+      var origLocX = skaterState.positionX;
+      var origLocY = skaterState.positionY;
       var thermalEnergy = skaterState.thermalEnergy;
       var uD = skaterState.uD;
       assert && assert( !isNaN( uD ) );
@@ -513,7 +521,7 @@ define( function( require ) {
       var newVelocityY = parallelUnitY * uD;
 
       //choose velocity by using the unit parallel vector to the track
-      var newState = skaterState.updateUUDVelocityPosition( u, uD, new Vector2( newVelocityX, newVelocityY ), new Vector2( newPointX, newPointY ) );
+      var newState = skaterState.updateUUDVelocityPosition( u, uD, new Vector2( newVelocityX, newVelocityY ), newPointX, newPointY );
       if ( this.friction > 0 ) {
 
         //Compute friction force magnitude component-wise to prevent allocations, see #50
@@ -523,7 +531,7 @@ define( function( require ) {
 
         var newPoint = new Vector2( newPointX, newPointY );
 
-        var therm = frictionForceMagnitude * newPoint.distance( origLoc );
+        var therm = frictionForceMagnitude * newPoint.distanceXY( origLocX, origLocY );
         thermalEnergy += therm;
 
         var newTotalEnergy = newState.getTotalEnergy() + therm;
@@ -565,8 +573,8 @@ define( function( require ) {
 
       skaterState.getCurvature( this.curvatureTemp );
 
-      var curvatureDirectionX = this.getCurvatureDirectionX( this.curvatureTemp, skaterState.position.x, skaterState.position.y );
-      var curvatureDirectionY = this.getCurvatureDirectionY( this.curvatureTemp, skaterState.position.x, skaterState.position.y );
+      var curvatureDirectionX = this.getCurvatureDirectionX( this.curvatureTemp, skaterState.positionX, skaterState.positionY );
+      var curvatureDirectionY = this.getCurvatureDirectionY( this.curvatureTemp, skaterState.positionX, skaterState.positionY );
 
       var track = skaterState.track;
       var sideVectorX = skaterState.up ? track.getUnitNormalVectorX( skaterState.u ) :
@@ -656,10 +664,12 @@ define( function( require ) {
     searchSplineForEnergy: function( skaterState, u0, u1, e0, numSteps ) {
       var da = ( u1 - u0 ) / numSteps;
       var bestAlpha = ( u1 - u0 ) / 2;
-      var bestDE = skaterState.update( {position: skaterState.track.getPoint( bestAlpha )} ).getTotalEnergy();
+      var p = skaterState.track.getPoint( bestAlpha );
+      var bestDE = skaterState.update( {positionX: p.x, positionY: p.y} ).getTotalEnergy();
       for ( var i = 0; i < numSteps; i++ ) {
         var proposedAlpha = u0 + da * i;
-        var e = skaterState.update( {position: skaterState.track.getPoint( bestAlpha )} ).getTotalEnergy();
+        var p2 = skaterState.track.getPoint( bestAlpha );
+        var e = skaterState.update( {positionX: p2.x, positionY: p2.y} ).getTotalEnergy();
         if ( Math.abs( e - e0 ) <= Math.abs( bestDE ) ) {
           bestDE = e - e0;
           bestAlpha = proposedAlpha;
@@ -784,8 +794,8 @@ define( function( require ) {
     //Update the skater based on which state it is in
     stepModel: function( dt, skaterState ) {
       return skaterState.dragging ? skaterState : //User is dragging the skater, nothing to update here
-             !skaterState.track && skaterState.position.y <= 0 ? this.stepGround( dt, skaterState ) :
-             !skaterState.track && skaterState.position.y > 0 ? this.stepFreeFall( dt, skaterState ) :
+             !skaterState.track && skaterState.positionY <= 0 ? this.stepGround( dt, skaterState ) :
+             !skaterState.track && skaterState.positionY > 0 ? this.stepFreeFall( dt, skaterState ) :
              skaterState.track ? this.stepTrack( dt, skaterState ) :
              skaterState;
     },
@@ -987,7 +997,7 @@ define( function( require ) {
 
         //Keep track of the skater direction so we can toggle the 'up' flag if the track orientation changed
         var originalNormal = this.skater.upVector;
-        var p = newTrack.getClosestPositionAndParameter( this.skater.position );
+        var p = newTrack.getClosestPositionAndParameter( new Vector2( this.skater.positionX, this.skater.positionY ) );//TODO: Allocations
         this.skater.track = newTrack;
         this.skater.u = p.u;
         var x2 = newTrack.getX( p.u );

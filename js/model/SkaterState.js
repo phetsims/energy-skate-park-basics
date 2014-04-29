@@ -46,7 +46,17 @@ define( function( require ) {
 
       //This code is called many times from the physics loop, so must be optimized for speed and memory
       this.gravity = overrides.gravity || source.gravity;
-      this.position = overrides.position || source.position;
+
+      //Handle the case of a skater passed in (which has a position vector) or a SkaterState passed in, which has a number
+      if ( source.position ) {
+        this.positionX = overrides.positionX || source.position.x;
+        this.positionY = overrides.positionY || source.position.y;
+      }
+      else {
+        this.positionX = overrides.positionX || source.positionX;
+        this.positionY = overrides.positionY || source.positionY;
+      }
+
       this.velocity = overrides.velocity || source.velocity;
       this.mass = overrides.mass || source.mass;
 
@@ -71,7 +81,7 @@ define( function( require ) {
 
     //Get the total energy in this state.  Computed directly instead of using other methods to (hopefully) improve performance
     getTotalEnergy: function() {
-      return 0.5 * this.mass * this.velocity.magnitudeSquared() - this.mass * this.gravity * this.position.y + this.thermalEnergy;
+      return 0.5 * this.mass * this.velocity.magnitudeSquared() - this.mass * this.gravity * this.positionY + this.thermalEnergy;
     },
 
     getKineticEnergy: function() {
@@ -79,7 +89,7 @@ define( function( require ) {
     },
 
     getPotentialEnergy: function() {
-      return -this.mass * this.gravity * this.position.y;
+      return -this.mass * this.gravity * this.positionY;
     },
 
     update: function( overrides ) { return SkaterState.createFromPool( this, overrides ); },
@@ -93,7 +103,12 @@ define( function( require ) {
     setToSkater: function( skater ) {
       skater.stepsSinceJump = this.stepsSinceJump;
       skater.track = this.track;
-      skater.position = this.position;
+
+      //Set property values manually to avoid allocations, see #50
+      skater.position.x = this.positionX;
+      skater.position.y = this.positionY;
+      skater.positionProperty.notifyObserversUnsafe();
+
       skater.velocity = this.velocity;
       skater.u = this.u;
       skater.uD = this.uD;
@@ -113,12 +128,13 @@ define( function( require ) {
     },
 
     //Create a new SkaterState with the new values.  Provided as a convenience to avoid allocating options argument (as in update)
-    updateUUDVelocityPosition: function( u, uD, velocity, position ) {
+    updateUUDVelocityPosition: function( u, uD, velocity, positionX, positionY ) {
       var state = SkaterState.createFromPool( this, EMPTY_OBJECT );
       state.u = u;
       state.uD = uD;
       state.velocity = velocity;
-      state.position = position;
+      state.positionX = positionX;
+      state.positionY = positionY;
       return state;
     }
   };
