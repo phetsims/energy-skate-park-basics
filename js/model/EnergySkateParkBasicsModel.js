@@ -619,11 +619,7 @@ define( function( require ) {
           return newState;
         }
         else {
-          return skaterState.update( {
-            track: null,
-            uD: 0,
-            stepsSinceJump: 0
-          } );
+          return skaterState.updateTrackUDStepsSinceJump( null, 0, 0 );
         }
       }
     },

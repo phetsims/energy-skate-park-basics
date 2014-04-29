@@ -10,6 +10,8 @@
 define( function() {
   'use strict';
 
+  var EMPTY_OBJECT = {};
+
   /**
    * Create a SkaterSate from a SkaterState or Skater
    * @param {Skater|SkaterSate} source
@@ -17,6 +19,10 @@ define( function() {
    * @constructor
    */
   function SkaterState( source, overrides ) {
+
+    if ( !overrides ) {
+      overrides = EMPTY_OBJECT;
+    }
 
     //This code is called many times from the physics loop, so must be optimized for speed and memory
     this.gravity = overrides.gravity || source.gravity;
@@ -78,6 +84,15 @@ define( function() {
       skater.up = this.up;
       skater.angle = skater.track ? skater.track.getViewAngleAt( this.u ) + (this.up ? 0 : Math.PI) : this.angle;
       skater.updateEnergy();
+    },
+
+    //Create a new SkaterState with the new values.  Provided as a convenience to avoid allocating options argument
+    updateTrackUDStepsSinceJump: function( track, uD, stepsSinceJump ) {
+      var state = new SkaterState( this );
+      state.track = track;
+      state.uD = uD;
+      state.stepsSinceJump = stepsSinceJump;
+      return state;
     }
   };
 
