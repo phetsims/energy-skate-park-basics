@@ -80,9 +80,10 @@ define( function( require ) {
       //when mass is minimum, the skater height is 1.5
       //when mass is max, the skater height is 2.5
       var skaterHeight = Util.linear( 10, 110, 1.5, 2.5, mass );
-      var vector = Vector2.createPolar( skaterHeight, angle - Math.PI / 2 );
+      var vectorX = skaterHeight * Math.cos( angle - Math.PI / 2 );
+      var vectorY = skaterHeight * Math.sin( angle - Math.PI / 2 );
 
-      return position.plusXY( vector.x, -vector.y );
+      return position.plusXY( vectorX, -vectorY );
     } );
 
     //Zero the kinetic energy when dragging, see https://github.com/phetsims/energy-skate-park-basics/issues/22
