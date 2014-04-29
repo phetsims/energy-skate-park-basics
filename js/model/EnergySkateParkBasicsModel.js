@@ -523,19 +523,24 @@ define( function( require ) {
 
       skaterState.getCurvature( this.curvatureTemp );
 
-      var curvatureDirection = this.getCurvatureDirection( this.curvatureTemp, skaterState.position.x, skaterState.position.y );
+      var curvatureDirectionX = this.getCurvatureDirectionX( this.curvatureTemp, skaterState.position.x, skaterState.position.y );
+      var curvatureDirectionY = this.getCurvatureDirectionY( this.curvatureTemp, skaterState.position.x, skaterState.position.y );
 
       var track = skaterState.track;
-      var sideVector = skaterState.up ? track.getUnitNormalVector( skaterState.u ) :
-                       track.getUnitNormalVector( skaterState.u ).timesScalar( -1 );
-      var outsideCircle = sideVector.dot( curvatureDirection ) < 0;
+      var sideVectorX = skaterState.up ? track.getUnitNormalVectorX( skaterState.u ) :
+                        track.getUnitNormalVectorX( skaterState.u ) * -1;
+      var sideVectorY = skaterState.up ? track.getUnitNormalVectorY( skaterState.u ) :
+                        track.getUnitNormalVectorY( skaterState.u ) * -1;
+
+      //Dot product written out componentwise to avoid allocations, see #50
+      var outsideCircle = sideVectorX * curvatureDirectionX + sideVectorY * curvatureDirectionY < 0;
 
       //compare a to v/r^2 to see if it leaves the track
       var r = Math.abs( this.curvatureTemp.r );
       var centripForce = skaterState.mass * skaterState.uD * skaterState.uD / r;
 
       var netForce = Vector2.createFromPool( 0, 0 );
-      var netForceRadial = this.getNetForceWithoutNormal( skaterState, netForce ).dot( curvatureDirection );
+      var netForceRadial = this.getNetForceWithoutNormal( skaterState, netForce ).dotXY( curvatureDirectionX, curvatureDirectionY );
       netForce.freeToPool();
 
       var leaveTrack = (netForceRadial < centripForce && outsideCircle) || (netForceRadial > centripForce && !outsideCircle);
@@ -722,6 +727,18 @@ define( function( require ) {
     getCurvatureDirection: function( curvature, x2, y2 ) {
       var v = new Vector2( curvature.x - x2, curvature.y - y2 );
       return v.x !== 0 || v.y !== 0 ? v.normalized() : v;
+    },
+
+    getCurvatureDirectionX: function( curvature, x2, y2 ) {
+      var vx = curvature.x - x2;
+      var vy = curvature.y - y2;
+      return vx !== 0 || vy !== 0 ? vx / Math.sqrt( vx * vx + vy * vy ) : vx;
+    },
+
+    getCurvatureDirectionY: function( curvature, x2, y2 ) {
+      var vx = curvature.x - x2;
+      var vy = curvature.y - y2;
+      return vx !== 0 || vy !== 0 ? vy / Math.sqrt( vx * vx + vy * vy ) : vy;
     },
 
     //Update the skater based on which state it is in
