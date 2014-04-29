@@ -216,6 +216,16 @@ define( function( require ) {
       return Vector2.createPolar( 1, this.getModelAngleAt( u ) );
     },
 
+    //Get the model parallel vector at the specified position on the track
+    getUnitParallelVectorX: function( u ) {
+      return Math.cos( this.getModelAngleAt( u ) );
+    },
+
+    //Get the model parallel vector at the specified position on the track
+    getUnitParallelVectorY: function( u ) {
+      return Math.sin( this.getModelAngleAt( u ) );
+    },
+
     updateLinSpace: function() {
       this.minPoint = 0;
       this.maxPoint = (this.controlPoints.length - 1) / this.controlPoints.length;

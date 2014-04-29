@@ -503,16 +503,20 @@ define( function( require ) {
       uD += a * dt;
       assert && assert( !isNaN( uD ) );
       u += track.getParametricDistance( u, uD * dt + 1 / 2 * a * dt * dt );
-      var newPoint = skaterState.track.getPoint( u );
-      var parallelUnit = skaterState.track.getUnitParallelVector( u );
-      var newVelocity = parallelUnit.multiplyScalar( uD );
+      var newPointX = skaterState.track.getX( u );
+      var newPointY = skaterState.track.getY( u );
+      var parallelUnitX = skaterState.track.getUnitParallelVectorX( u );
+      var parallelUnitY = skaterState.track.getUnitParallelVectorY( u );
+      var newVelocityX = parallelUnitX * uD;
+      var newVelocityY = parallelUnitY * uD;
+
       var newState = skaterState.update( {
         u: u,
         uD: uD,
 
         //choose velocity by using the unit parallel vector to the track
-        velocity: newVelocity,
-        position: newPoint
+        velocity: new Vector2( newVelocityX, newVelocityY ),
+        position: new Vector2( newPointX, newPointY )
       } );
       if ( this.friction > 0 ) {
 
@@ -520,6 +524,8 @@ define( function( require ) {
         var frictionForceX = this.getFrictionForceX( skaterState );
         var frictionForceY = this.getFrictionForceY( skaterState );
         var frictionForceMagnitude = Math.sqrt( frictionForceX * frictionForceX + frictionForceY * frictionForceY );
+
+        var newPoint = new Vector2( newPointX, newPointY );
 
         var therm = frictionForceMagnitude * newPoint.distance( origLoc );
         thermalEnergy += therm;
