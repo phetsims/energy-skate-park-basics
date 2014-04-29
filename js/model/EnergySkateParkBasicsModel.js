@@ -419,21 +419,35 @@ define( function( require ) {
      */
     getNetForceWithoutNormal: function( skaterState, netForce ) {
       netForce.addXY( 0, skaterState.mass * skaterState.gravity );//gravity
-      netForce.add( this.getFrictionForce( skaterState ) );
+      netForce.addXY( this.getFrictionForceX( skaterState ), this.getFrictionForceY( skaterState ) );
       return netForce;
     },
 
     //The only other force on the object in the direction of motion is the gravity force
-    getFrictionForce: function( skaterState ) {
-
+    //Component-wise to reduce allocations, see #50
+    getFrictionForceX: function( skaterState ) {
       //Friction force should not exceed sum of other forces (in the direction of motion), otherwise the friction could start a stopped object moving
       //Hence we check to see if the object is already stopped and don't add friction in that case
       if ( this.friction === 0 || skaterState.velocity.magnitude() < 1E-2 ) {
-        return Vector2.ZERO;
+        return 0;
       }
       else {
         var magnitude = this.friction * this.getNormalForce( skaterState ).magnitude();
-        return Vector2.createPolar( magnitude, skaterState.velocity.angle() + Math.PI );
+        return magnitude * Math.cos( skaterState.velocity.angle() + Math.PI );
+      }
+    },
+
+    //The only other force on the object in the direction of motion is the gravity force
+    //Component-wise to reduce allocations, see #50
+    getFrictionForceY: function( skaterState ) {
+      //Friction force should not exceed sum of other forces (in the direction of motion), otherwise the friction could start a stopped object moving
+      //Hence we check to see if the object is already stopped and don't add friction in that case
+      if ( this.friction === 0 || skaterState.velocity.magnitude() < 1E-2 ) {
+        return 0;
+      }
+      else {
+        var magnitude = this.friction * this.getNormalForce( skaterState ).magnitude();
+        return magnitude * Math.sin( skaterState.velocity.angle() + Math.PI );
       }
     },
 
@@ -480,8 +494,13 @@ define( function( require ) {
         position: newPoint
       } );
       if ( this.friction > 0 ) {
-        var frictionForce = this.getFrictionForce( skaterState );
-        var therm = frictionForce.magnitude() * newPoint.distance( origLoc );
+
+        //Compute friction force magnitude component-wise to prevent allocations, see #50
+        var frictionForceX = this.getFrictionForceX( skaterState );
+        var frictionForceY = this.getFrictionForceY( skaterState );
+        var frictionForceMagnitude = Math.sqrt( frictionForceX * frictionForceX + frictionForceY * frictionForceY );
+
+        var therm = frictionForceMagnitude * newPoint.distance( origLoc );
         thermalEnergy += therm;
 
         var newTotalEnergy = newState.getTotalEnergy() + therm;
