@@ -113,11 +113,11 @@ define( function( require ) {
       //Set property values manually to avoid allocations, see #50
       skater.position.x = this.positionX;
       skater.position.y = this.positionY;
-      skater.positionProperty.notifyObserversUnsafe();
+      skater.positionProperty.notifyObserversStatic();
 
       skater.velocity.x = this.velocityX;
       skater.velocity.y = this.velocityY;
-      skater.velocityProperty.notifyObserversUnsafe();
+      skater.velocityProperty.notifyObserversStatic();
 
       skater.u = this.u;
       skater.uD = this.uD;

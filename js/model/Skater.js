@@ -192,7 +192,7 @@ define( function( require ) {
       //Manually trigger notifications to avoid allocations, see #50
       this.headPosition.x = this.position.x + vectorX;
       this.headPosition.y = this.position.y - vectorY;
-      this.headPositionProperty.notifyObserversUnsafe();
+      this.headPositionProperty.notifyObserversStatic();
     }
   } );
 } );
