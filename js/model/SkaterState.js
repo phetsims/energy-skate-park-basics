@@ -50,18 +50,18 @@ define( function( require ) {
 
       //Handle the case of a skater passed in (which has a position vector) or a SkaterState passed in, which has a number
       if ( source.position ) {
-        this.positionX = overrides.positionX || source.position.x;
-        this.positionY = overrides.positionY || source.position.y;
+        this.positionX = 'positionX' in overrides ? overrides.positionX : source.position.x;
+        this.positionY = 'positionY' in overrides ? overrides.positionY : source.position.y;
 
-        this.velocityX = overrides.velocityX || source.velocity.x;
-        this.velocityY = overrides.velocityY || source.velocity.y;
+        this.velocityX = 'velocityX' in overrides ? overrides.velocityX : source.velocity.x;
+        this.velocityY = 'velocityY' in overrides ? overrides.velocityY : source.velocity.y;
       }
       else {
-        this.positionX = overrides.positionX || source.positionX;
-        this.positionY = overrides.positionY || source.positionY;
+        this.positionX = 'positionX' in overrides ? overrides.positionX : source.positionX;
+        this.positionY = 'positionY' in overrides ? overrides.positionY : source.positionY;
 
-        this.velocityX = overrides.velocityX || source.velocityX;
-        this.velocityY = overrides.velocityY || source.velocityY;
+        this.velocityX = 'velocityX' in overrides ? overrides.velocityX : source.velocityX;
+        this.velocityY = 'velocityY' in overrides ? overrides.velocityY : source.velocityY;
       }
 
       this.mass = overrides.mass || source.mass;
