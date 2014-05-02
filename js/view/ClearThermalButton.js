@@ -8,7 +8,7 @@
 define( function( require ) {
   'use strict';
 
-  var RectanglePushButton = require( 'SUN/RectanglePushButton' );
+  var RectanglePushButtonDeprecated = require( 'SUN/RectanglePushButtonDeprecated' );
   var inherit = require( 'PHET_CORE/inherit' );
   var Shape = require( 'KITE/Shape' );
   var Color = require( 'SCENERY/util/Color' );
@@ -26,7 +26,7 @@ define( function( require ) {
       icon.image = hasThermalEnergy ? trashCanImage : trashCanGrayImage;
     } );
 
-    RectanglePushButton.call( this, icon, {
+    RectanglePushButtonDeprecated.call( this, icon, {
       rectangleCornerRadius: 6,
       listener: callback, rectangleFillUp: new Color( 230, 230, 240 ),
       rectangleFillDisabled: 'white',

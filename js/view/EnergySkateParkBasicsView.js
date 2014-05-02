@@ -10,7 +10,7 @@ define( function( require ) {
 
   var Color = require( 'SCENERY/util/Color' );
   var inherit = require( 'PHET_CORE/inherit' );
-  var RectanglePushButton = require( 'SUN/RectanglePushButton' );
+  var RectanglePushButtonDeprecated = require( 'SUN/RectanglePushButtonDeprecated' );
   var Image = require( 'SCENERY/nodes/Image' );
   var Rectangle = require( 'SCENERY/nodes/Rectangle' );
   var Rect = require( 'DOT/Rectangle' );
@@ -208,7 +208,7 @@ define( function( require ) {
         arrowHead.fill = clearButtonEnabled ? 'black' : 'gray';
       } );
 
-      var clearButton = new RectanglePushButton( clearNode, {rectangleFillUp: new Color( 221, 210, 32 )} );
+      var clearButton = new RectanglePushButtonDeprecated( clearNode, {rectangleFillUp: new Color( 221, 210, 32 )} );
       clearButtonEnabledProperty.linkAttribute( clearButton, 'enabled' );
       clearButton.addListener( function() {model.clearTracks();} );
 
