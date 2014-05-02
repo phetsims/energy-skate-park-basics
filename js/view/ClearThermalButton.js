@@ -13,7 +13,6 @@ define( function( require ) {
   var Shape = require( 'KITE/Shape' );
   var Color = require( 'SCENERY/util/Color' );
   var Image = require( 'SCENERY/nodes/Image' );
-  var RoundShinyButtonDeprecated = require( 'SCENERY_PHET/RoundShinyButtonDeprecated' );
   var trashCanImage = require( 'image!ENERGY_SKATE_PARK_BASICS/trash-can.png' );
   var trashCanGrayImage = require( 'image!ENERGY_SKATE_PARK_BASICS/trash-can-gray.png' );
 
@@ -22,7 +21,7 @@ define( function( require ) {
 
     var icon = new Image( trashCanImage, {scale: 0.22} );
 
-    skater.toDerivedProperty( ['thermalEnergy'],function( thermalEnergy ) {return thermalEnergy > 0;} ).link( function( hasThermalEnergy ) {
+    skater.toDerivedProperty( ['thermalEnergy'], function( thermalEnergy ) {return thermalEnergy > 0;} ).link( function( hasThermalEnergy ) {
       icon.image = hasThermalEnergy ? trashCanImage : trashCanGrayImage;
     } );
 
@@ -36,5 +35,5 @@ define( function( require ) {
     this.mutate( options );
   }
 
-  return inherit( RoundShinyButtonDeprecated, ClearThermalButton );
+  return inherit( RectanglePushButtonDeprecated, ClearThermalButton );
 } );
