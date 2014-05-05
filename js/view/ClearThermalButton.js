@@ -8,13 +8,13 @@
 define( function( require ) {
   'use strict';
 
-  var RectanglePushButtonDeprecated = require( 'SUN/RectanglePushButtonDeprecated' );
+  var RectangularPushButton = require( 'SUN/buttons/RectangularPushButton' );
   var inherit = require( 'PHET_CORE/inherit' );
   var Shape = require( 'KITE/Shape' );
   var Color = require( 'SCENERY/util/Color' );
   var Image = require( 'SCENERY/nodes/Image' );
   var trashCanImage = require( 'image!ENERGY_SKATE_PARK_BASICS/trash-can.png' );
-  var trashCanGrayImage = require( 'image!ENERGY_SKATE_PARK_BASICS/trash-can-gray.png' );
+  var trashCanGrayImage = require( 'image!ENERGY_SKATE_PARK_BASICS/trash-can-disabled.png' );
 
   function ClearThermalButton( callback, skater, options ) {
     options = _.extend( { cursor: 'pointer' }, options );
@@ -25,15 +25,19 @@ define( function( require ) {
       icon.image = hasThermalEnergy ? trashCanImage : trashCanGrayImage;
     } );
 
-    RectanglePushButtonDeprecated.call( this, icon, {
-      rectangleCornerRadius: 6,
-      listener: callback, rectangleFillUp: new Color( 230, 230, 240 ),
-      rectangleFillDisabled: 'white',
-      rectangleXMargin: 7,
-      rectangleYMargin: 3 } );
+    RectangularPushButton.call( this, {
+      content: icon,
+      listener: callback,
+      baseColor: new Color( 230, 230, 240 ),
+      disabledBaseColor: new Color( 255, 255, 255 ),
+      xMargin: 7,
+      yMargin: 3,
+      stroke: new Color( 0, 0, 0 ),
+      lineWidth: 0.3
+    } );
     this.mouseArea = this.touchArea = Shape.rectangle( icon.bounds.minX, icon.bounds.minY, icon.bounds.width, icon.bounds.height );
     this.mutate( options );
   }
 
-  return inherit( RectanglePushButtonDeprecated, ClearThermalButton );
+  return inherit( RectangularPushButton, ClearThermalButton );
 } );
