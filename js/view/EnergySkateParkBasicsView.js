@@ -41,6 +41,8 @@ define( function( require ) {
   var VBox = require( 'SCENERY/nodes/VBox' );
   var eraser = require( 'image!ENERGY_SKATE_PARK_BASICS/eraser.png' );
   var Property = require( 'AXON/Property' );
+  var RectangularPushButton = require( 'SUN/buttons/RectangularPushButton' );
+  var Text = require( 'SCENERY/nodes/Text' );
 
   //Debug flag to show the view bounds, the region within which the skater can move
   var showAvailableBounds = false;
@@ -107,7 +109,8 @@ define( function( require ) {
     this.addChild( this.resetAllButton );
 
     //The button to return the skater
-    this.returnSkaterButton = new TextPushButton( returnSkaterString, {
+    this.returnSkaterButton = new RectangularPushButton( {
+      content: new Text( returnSkaterString ),
       listener: model.returnSkater.bind( model ),
       centerY: this.resetAllButton.centerY
       //X updated in layoutBounds since the reset all button can move horizontally
