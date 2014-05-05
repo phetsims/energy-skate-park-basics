@@ -30,6 +30,10 @@ define( function( require ) {
   function TrackNode( model, track, modelViewTransform, availableBoundsProperty ) {
     var trackNode = this;
     Node.call( this );
+
+    //When dragging the track out of the toolbox, the control points should be able to drag the track.  However, don't use that feature if the track is already in the play area (physical) when created.
+    var trackDropped = track.physical;
+
     var road = new Path( null, {fill: 'gray', cursor: track.interactive ? 'pointer' : 'default'} );
     var centerLine = new Path( null, {stroke: 'black', lineWidth: '1.2', lineDash: [11, 8]} );
     model.property( 'detachable' ).link( function( detachable ) { centerLine.lineDash = detachable ? null : [11, 8]; } );
@@ -44,122 +48,123 @@ define( function( require ) {
       //Drag handler for dragging the track segment itself (not one of the control points)
       //Uses a similar strategy as MovableDragHandler but requires a separate implementation because its bounds are determined by the shape of the track (so it cannot go below ground)
       //And so it can be dragged out of the toolbox but not back into it (so it won't be dragged below ground)
-      var trackSegmentDragHandler = new SimpleDragHandler( {
-          allowTouchSnag: true,
+      var trackSegmentDragHandlerOptions = {
+        allowTouchSnag: true,
 
-          start: function( event ) {
-            lastDragPoint = event.pointer.point;
-            track.dragging = true;
+        start: function( event ) {
+          lastDragPoint = event.pointer.point;
+          track.dragging = true;
 
-            var location = modelViewTransform.modelToViewPosition( track.position );
-            startOffset = event.currentTarget.globalToParentPoint( event.pointer.point ).minus( location );
-          },
+          var location = modelViewTransform.modelToViewPosition( track.position );
+          startOffset = event.currentTarget.globalToParentPoint( event.pointer.point ).minus( location );
+        },
 
-          //Drag an entire track
-          drag: function( event ) {
-            track.dragging = true;
+        //Drag an entire track
+        drag: function( event ) {
+          track.dragging = true;
 
-            var parentPoint = event.currentTarget.globalToParentPoint( event.pointer.point ).minus( startOffset );
-            var location = modelViewTransform.viewToModelPosition( parentPoint );
+          var parentPoint = event.currentTarget.globalToParentPoint( event.pointer.point ).minus( startOffset );
+          var location = modelViewTransform.viewToModelPosition( parentPoint );
 
-            //If the user moved it out of the toolbox above y=0, then make it physically interactive
-            var bottomControlPointY = track.getBottomControlPointY();
-            if ( !track.physical && bottomControlPointY > 0 ) {
-              track.physical = true;
+          //If the user moved it out of the toolbox above y=0, then make it physically interactive
+          var bottomControlPointY = track.getBottomControlPointY();
+          if ( !track.physical && bottomControlPointY > 0 ) {
+            track.physical = true;
+          }
+
+          //When dragging track, make sure the control points don't go below ground, see #71
+          var modelDelta = location.minus( track.position );
+          var translatedBottomControlPointY = bottomControlPointY + modelDelta.y;
+
+          if ( track.physical && translatedBottomControlPointY < 0 ) {
+            location.y += Math.abs( translatedBottomControlPointY );
+          }
+
+          if ( availableBoundsProperty.value ) {
+
+            //constrain each point to lie within the available bounds
+            var availableBounds = availableBoundsProperty.value;
+
+            //Constrain the top
+            var topControlPointY = track.getTopControlPointY();
+            if ( topControlPointY + modelDelta.y > availableBounds.maxY ) {
+              location.y = availableBounds.maxY - (topControlPointY - track.position.y);
             }
 
-            //When dragging track, make sure the control points don't go below ground, see #71
-            var modelDelta = location.minus( track.position );
-            var translatedBottomControlPointY = bottomControlPointY + modelDelta.y;
-
-            if ( track.physical && translatedBottomControlPointY < 0 ) {
-              location.y += Math.abs( translatedBottomControlPointY );
+            //Constrain the left side
+            var leftControlPointX = track.getLeftControlPointX();
+            if ( leftControlPointX + modelDelta.x < availableBounds.minX ) {
+              location.x = availableBounds.minX - (leftControlPointX - track.position.x);
             }
 
-            if ( availableBoundsProperty.value ) {
-
-              //constrain each point to lie within the available bounds
-              var availableBounds = availableBoundsProperty.value;
-
-              //Constrain the top
-              var topControlPointY = track.getTopControlPointY();
-              if ( topControlPointY + modelDelta.y > availableBounds.maxY ) {
-                location.y = availableBounds.maxY - (topControlPointY - track.position.y);
-              }
-
-              //Constrain the left side
-              var leftControlPointX = track.getLeftControlPointX();
-              if ( leftControlPointX + modelDelta.x < availableBounds.minX ) {
-                location.x = availableBounds.minX - (leftControlPointX - track.position.x);
-              }
-
-              //Constrain the right side
-              var rightControlPointX = track.getRightControlPointX();
-              if ( rightControlPointX + modelDelta.x > availableBounds.maxX ) {
-                location.x = availableBounds.maxX - (rightControlPointX - track.position.x);
-              }
+            //Constrain the right side
+            var rightControlPointX = track.getRightControlPointX();
+            if ( rightControlPointX + modelDelta.x > availableBounds.maxX ) {
+              location.x = availableBounds.maxX - (rightControlPointX - track.position.x);
             }
+          }
 
-            track.position = location;
+          track.position = location;
 
-            //If one of the control points is close enough to link to another track, do so
-            var tracks = model.getPhysicalTracks();
+          //If one of the control points is close enough to link to another track, do so
+          var tracks = model.getPhysicalTracks();
 
-            var bestDistance = null;
-            var myBestPoint = null;
-            var otherBestPoint = null;
+          var bestDistance = null;
+          var myBestPoint = null;
+          var otherBestPoint = null;
 
-            var points = [track.controlPoints[0], track.controlPoints[track.controlPoints.length - 1]];
+          var points = [track.controlPoints[0], track.controlPoints[track.controlPoints.length - 1]];
 
-            for ( var i = 0; i < tracks.length; i++ ) {
-              var t = tracks[i];
-              if ( t !== track ) {
+          for ( var i = 0; i < tracks.length; i++ ) {
+            var t = tracks[i];
+            if ( t !== track ) {
 
-                //4 cases 00, 01, 10, 11
-                var otherPoints = [t.controlPoints[0], t.controlPoints[t.controlPoints.length - 1]];
+              //4 cases 00, 01, 10, 11
+              var otherPoints = [t.controlPoints[0], t.controlPoints[t.controlPoints.length - 1]];
 
-                //don't match inner points
-                for ( var j = 0; j < points.length; j++ ) {
-                  var point = points[j];
-                  for ( var k = 0; k < otherPoints.length; k++ ) {
-                    var otherPoint = otherPoints[k];
-                    var distance = point.sourcePosition.distance( otherPoint.position );
-                    if ( (bestDistance === null && distance > 1E-6) || (distance < bestDistance ) ) {
-                      bestDistance = distance;
-                      myBestPoint = point;
-                      otherBestPoint = otherPoint;
-                    }
+              //don't match inner points
+              for ( var j = 0; j < points.length; j++ ) {
+                var point = points[j];
+                for ( var k = 0; k < otherPoints.length; k++ ) {
+                  var otherPoint = otherPoints[k];
+                  var distance = point.sourcePosition.distance( otherPoint.position );
+                  if ( (bestDistance === null && distance > 1E-6) || (distance < bestDistance ) ) {
+                    bestDistance = distance;
+                    myBestPoint = point;
+                    otherBestPoint = otherPoint;
                   }
                 }
               }
             }
-
-            if ( bestDistance !== null && bestDistance < 1 ) {
-              myBestPoint.snapTarget = otherBestPoint;
-
-              //Set the opposite point to be unsnapped, you can only snap one at a time
-              (myBestPoint === points[0] ? points[1] : points[0]).snapTarget = null;
-            }
-            else {
-              points[0].snapTarget = null;
-              points[1].snapTarget = null;
-            }
-
-            model.trackModified( track );
-          },
-
-          //End the drag
-          end: function() {
-            var myPoints = [track.controlPoints[0], track.controlPoints[track.controlPoints.length - 1]];
-            if ( myPoints[0].snapTarget || myPoints[1].snapTarget ) {
-              model.joinTracks( track );
-            }
-
-            track.bumpAboveGround();
-            track.dragging = false;
           }
+
+          if ( bestDistance !== null && bestDistance < 1 ) {
+            myBestPoint.snapTarget = otherBestPoint;
+
+            //Set the opposite point to be unsnapped, you can only snap one at a time
+            (myBestPoint === points[0] ? points[1] : points[0]).snapTarget = null;
+          }
+          else {
+            points[0].snapTarget = null;
+            points[1].snapTarget = null;
+          }
+
+          model.trackModified( track );
+        },
+
+        //End the drag
+        end: function() {
+          var myPoints = [track.controlPoints[0], track.controlPoints[track.controlPoints.length - 1]];
+          if ( myPoints[0].snapTarget || myPoints[1].snapTarget ) {
+            model.joinTracks( track );
+          }
+
+          track.bumpAboveGround();
+          track.dragging = false;
+          trackDropped = true;
         }
-      );
+      };
+      var trackSegmentDragHandler = new SimpleDragHandler( trackSegmentDragHandlerOptions );
 
       road.addInputListener( trackSegmentDragHandler );
     }
@@ -233,7 +238,7 @@ define( function( require ) {
         (function( i, isEndPoint ) {
           var controlPoint = track.controlPoints[i];
 
-          var controlPointNode = new Circle( 14, {pickable: false, opacity: 0.7, stroke: 'black', lineWidth: 2, fill: 'red', cursor: 'pointer', translation: modelViewTransform.modelToViewPosition( controlPoint.position )} );
+          var controlPointNode = new Circle( 14, {pickable: true, opacity: 0.7, stroke: 'black', lineWidth: 2, fill: 'red', cursor: 'pointer', translation: modelViewTransform.modelToViewPosition( controlPoint.position )} );
 
           //Show a dotted line for the exterior track points, which can be connected to other track
           if ( i === 0 || i === track.controlPoints.length - 1 ) {
@@ -241,7 +246,8 @@ define( function( require ) {
           }
 
           //Make it so you can only translate the track to bring it out of the toolbox, but once it is out of the toolbox it can be reshaped
-          track.physicalProperty.link( function( physical ) { controlPointNode.pickable = physical; } );
+//          track.physicalProperty.link( function( physical ) { controlPointNode.pickable = physical; } );
+//          controlPointNode.pickable = true;
 
           controlPoint.positionProperty.link( function( position ) {
             controlPointNode.translation = modelViewTransform.modelToViewPosition( position );
@@ -250,11 +256,23 @@ define( function( require ) {
           controlPointNode.addInputListener( new SimpleDragHandler(
             {
               allowTouchSnag: true,
-              start: function() {
+              start: function( event ) {
+
+                //If control point dragged out of the control panel, translate the entire track, see #130
+                if ( !track.physical || !trackDropped ) {
+                  trackSegmentDragHandlerOptions.start( event );
+                  return;
+                }
                 track.dragging = true;
                 dragEvents = 0;
               },
               drag: function( event ) {
+
+                //If control point dragged out of the control panel, translate the entire track, see #130
+                if ( !track.physical || !trackDropped ) {
+                  trackSegmentDragHandlerOptions.drag( event );
+                  return;
+                }
                 dragEvents++;
                 track.dragging = true;
                 var globalPoint = controlPointNode.globalToParentPoint( event.pointer.point );
@@ -310,7 +328,13 @@ define( function( require ) {
                 updateTrackShape();
                 model.trackModified( track );
               },
-              end: function() {
+              end: function( event ) {
+
+                //If control point dragged out of the control panel, translate the entire track, see #130
+                if ( !track.physical || !trackDropped ) {
+                  trackSegmentDragHandlerOptions.end( event );
+                  return;
+                }
                 if ( isEndPoint && controlPoint.snapTarget ) {
                   model.joinTracks( track );
                 }
