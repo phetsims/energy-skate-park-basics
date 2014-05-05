@@ -219,7 +219,6 @@ define( function( require ) {
       this.addChild( buttons );
     }
 
-
     var skaterNode = new SkaterNode( model.skater, this, transform, model.getClosestTrackAndPositionAndParameter.bind( model ), model.getPhysicalTracks.bind( model ) );
     this.addChild( skaterNode );
     var pieChartNode = new PieChartNode( model.skater, model.property( 'pieChartVisible' ), transform );
