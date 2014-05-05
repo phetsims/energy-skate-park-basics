@@ -227,6 +227,7 @@ define( function( require ) {
       }
     };
 
+    //Add the control points
     if ( track.interactive ) {
       for ( var i = 0; i < track.controlPoints.length; i++ ) {
         (function( i, isEndPoint ) {
