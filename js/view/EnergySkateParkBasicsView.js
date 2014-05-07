@@ -98,7 +98,7 @@ define( function( require ) {
     pieChartLegend.mutate( {top: barGraphNode.top, centerX: (barGraphNode.right + speedometerNode.left) / 2} );
 
     var playProperty = model.property( 'paused' ).not();
-    var playPauseButton = new PlayPauseButton( playProperty, {elementScale: 0.75} ).mutate( {scale: 0.75} );
+    var playPauseButton = new PlayPauseButton( playProperty ).mutate( {scale: 0.75} );
     var stepButton = new StepButton( function() { model.manualStep(); }, playProperty ).mutate( {scale: 0.75} );
     model.property( 'paused' ).linkAttribute( stepButton, 'enabled' );
 
