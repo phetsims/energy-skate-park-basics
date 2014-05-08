@@ -31,7 +31,7 @@ define( function( require ) {
   var ModelViewTransform2 = require( 'PHETCOMMON/view/ModelViewTransform2' );
   var Vector2 = require( 'DOT/Vector2' );
   var GaugeNode = require( 'SCENERY_PHET/GaugeNode' );
-  var TextPushButton = require( 'SUN/TextPushButton' );
+  var TextPushButtonDeprecated = require( 'SUN/TextPushButtonDeprecated' );
   var DerivedProperty = require( 'AXON/DerivedProperty' );
   var Path = require( 'SCENERY/nodes/Path' );
   var returnSkaterString = require( 'string!ENERGY_SKATE_PARK_BASICS/controls.reset-character' );
