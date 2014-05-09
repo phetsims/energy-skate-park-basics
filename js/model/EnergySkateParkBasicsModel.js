@@ -15,7 +15,7 @@
  * so reverted to using the euclidean model from the original Java version.
  *
  * Please note: Many modifications were made to this file to reduce allocations and garbage collections on iPad, see https://github.com/phetsims/energy-skate-park-basics/issues/50
- * The main changes were: Using pooling, pass by reference, and componentwise math.
+ * The main changes were: Using pooling, pass by reference, and component-wise math.
  * Unfortunately, these are often compromises in the readability/maintainability of the code, but they seemed important to attain good performance.
  *
  * @author Sam Reid
@@ -502,6 +502,7 @@ define( function( require ) {
     },
 
     //Use an Euler integration step to move the skater along the track
+    //This code is in an inner loop of the model physics and has been heavily optimized
     stepEuler: function( dt, skaterState ) {
       var track = skaterState.track;
       var origEnergy = skaterState.getTotalEnergy();
@@ -1041,7 +1042,7 @@ define( function( require ) {
       this.trackChangePending = true;
     },
 
-    //Bindings to PropertySet
+    //Get the state, say, to put in a query parameter
     getState: function() {
       return {
         properties: this.get(),
@@ -1052,6 +1053,7 @@ define( function( require ) {
       };
     },
 
+    //Set the state, say from a query parameter
     setState: function( state ) {
       //Clear old tracks
       this.tracks.clear();

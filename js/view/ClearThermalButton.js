@@ -1,7 +1,8 @@
 // Copyright 2002-2013, University of Colorado Boulder
 
 /**
- * The Undo button that can be used to remove thermal energy from the system.
+ * The clear thermal button that can be used to remove thermal energy from the system.
+ * Looks like a trash can with an orange arrow pointing into it.
  *
  * @author Sam Reid
  */

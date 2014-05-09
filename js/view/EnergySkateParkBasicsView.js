@@ -272,13 +272,13 @@ define( function( require ) {
       }
       this.resetAllButton.centerX = this.controlPanel.centerX;
       this.returnSkaterButton.right = this.resetAllButton.left - 10;
+
       //Compute the visible model bounds so we will know when a model object like the skater has gone offscreen
       this.availableModelBounds = this.modelViewTransform.viewToModelBounds( this.availableViewBounds );
       this.availableModelBoundsProperty.value = this.availableModelBounds;
 
       //Show it for debugging
       if ( showAvailableBounds ) {
-//        this.viewBoundsPath.shape = Shape.bounds( this.modelViewTransform.modelToViewBounds( this.availableModelBounds ) );
         this.viewBoundsPath.shape = Shape.bounds( this.availableViewBounds );
       }
     }

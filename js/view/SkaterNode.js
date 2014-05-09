@@ -46,6 +46,7 @@ define( function( require ) {
     var imageHeight = this.height;
 
     //Update the position and angle.  Normally the angle would only change if the position has also changed, so no need for a duplicate callback there
+    //Uses pooling to avoid allocations, see #50
     this.skater.on( 'updated', function() {
       var mass = skater.mass;
       var position = skater.position;

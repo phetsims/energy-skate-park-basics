@@ -489,12 +489,13 @@ define( function( require ) {
 
     //Use the position of the 0th control point as the position of the track, used when dragging the track.  Only used for relative positioning and translation, so an exact "position" is irrelevant
     //Use the source position instead of the snapped position or buggy "jumpy" behavior will occur, see #98
-    get position() { return this.controlPoints[0].sourcePosition; },
+    get position() {
+      return this.controlPoints[0].sourcePosition;
+    },
 
     set position( p ) {
       var delta = p.minus( this.position );
       this.translate( delta.x, delta.y );
     }
-
   } );
 } );

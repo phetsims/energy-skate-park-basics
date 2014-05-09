@@ -182,6 +182,7 @@ define( function( require ) {
     //Doesn't depend on "up" because it already depends on the angle of the skater.
     //Would be better if headPosition were a derived property, but created too many allocations, see #50
     updateHeadPosition: function() {
+
       //Center pie chart over skater's head not his feet so it doesn't look awkward when skating in a parabola
       //when mass is minimum, the skater height is 1.5
       //when mass is max, the skater height is 2.5

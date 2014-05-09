@@ -1,7 +1,8 @@
 // Copyright 2002-2013, University of Colorado Boulder
 
 /**
- * Scenery node for the control panel, with view settings and controls.
+ * Scenery node for the Attach/Detach toggle buttons which determine whether the skater can fly off the track or not.
+ * This was formerly called "roller coaster mode"
  *
  * @author Sam Reid
  */
