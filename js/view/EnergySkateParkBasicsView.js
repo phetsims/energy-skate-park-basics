@@ -103,7 +103,12 @@ define( function( require ) {
     this.addChild( playPauseButton.mutate( {centerX: this.layoutBounds.centerX, bottom: this.layoutBounds.maxY - 12.5} ) );
     this.addChild( stepButton.mutate( {left: playPauseButton.right + 5, centerY: playPauseButton.centerY} ) );
 
-    this.resetAllButton = new ResetAllButton( {listener: model.reset.bind( model )} ).mutate( {scale: 0.7, centerY: (transform.modelToViewY( 0 ) + this.layoutBounds.maxY) / 2, centerX: this.controlPanel.centerX} );
+    this.resetAllButton = new ResetAllButton( {
+      listener: model.reset.bind( model ),
+      scale: 0.85,
+      centerX: this.controlPanel.centerX,
+      centerY: (transform.modelToViewY( 0 ) + this.layoutBounds.maxY) / 2
+    } );
     this.addChild( this.resetAllButton );
 
     //The button to return the skater
