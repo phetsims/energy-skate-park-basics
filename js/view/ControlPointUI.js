@@ -13,7 +13,7 @@ define( function( require ) {
   var Vector2 = require( 'DOT/Vector2' );
   var FontAwesomeNode = require( 'SUN/FontAwesomeNode' );
   var LinearFunction = require( 'DOT/LinearFunction' );
-  var RoundShinyButtonDeprecated = require( 'SCENERY_PHET/RoundShinyButtonDeprecated' );
+  var RoundPushButton = require( 'SUN/buttons/RoundPushButton' );
   var Color = require( 'SCENERY/util/Color' );
 
   function ControlPointUI( model, track, controlPointIndex, transform, parentNode ) {
@@ -56,17 +56,17 @@ define( function( require ) {
     //Add a scissors cut button, but only for interior points and only if there aren't too many control points already
     if ( !isEndPoint && model.canCutTrackControlPoint() ) {
       var scissorNode = new FontAwesomeNode( 'cut', {fill: 'black', scale: 0.6, rotation: Math.PI / 2 - angle} );
-      var cutButton = new RoundShinyButtonDeprecated( function() {
-        model.splitControlPoint( track, controlPointIndex, modelAngle );
-      }, scissorNode, {
+      var cutButton = new RoundPushButton( {
+        content: scissorNode,
+        listener: function() {
+          model.splitControlPoint( track, controlPointIndex, modelAngle );
+        },
         center: transform.modelToViewPosition( position ).plus( Vector2.createPolar( 40, angle + Math.PI / 2 ) ),
         radius: 20,
         touchAreaRadius: 20 * 1.3,
 
         //yellow color scheme
-        upFill: new Color( '#fefd53' ),
-        overFill: new Color( '#fffe08' ),
-        downFill: new Color( '#e9e824' )
+        baseColor: new Color( '#fefd53' )
       } );
       cutButton.addInputListener( disableDismissAction );
       this.addChild( cutButton );
@@ -74,15 +74,19 @@ define( function( require ) {
 
     //Show the delete button.
     var deleteNode = new FontAwesomeNode( 'times_circle', {fill: 'red', scale: 0.6} );
-    var deleteButton = new RoundShinyButtonDeprecated( function() { model.deleteControlPoint( track, controlPointIndex ); }, deleteNode, {
+    var deleteButton = new RoundPushButton( {
+      listener: function() { model.deleteControlPoint( track, controlPointIndex ); },
+      content: deleteNode,
       center: transform.modelToViewPosition( position ).plus( Vector2.createPolar( 40, angle - Math.PI / 2 ) ),
       radius: 20,
       touchAreaRadius: 20 * 1.3,
 
+      //Doesn't look exactly centered due to button shading, so adjust it slightly
+      xContentOffset: -0.5,
+
       //yellow color scheme
-      upFill: new Color( '#fefd53' ),
-      overFill: new Color( '#fffe08' ),
-      downFill: new Color( '#e9e824' )} );
+      baseColor: new Color( '#fefd53' )
+    } );
     deleteButton.addInputListener( disableDismissAction );
     this.addChild( deleteButton );
   }
