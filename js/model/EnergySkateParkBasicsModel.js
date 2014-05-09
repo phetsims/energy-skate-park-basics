@@ -14,6 +14,10 @@
  * We experimented with the analytical model, but ran into problems with discontinuous tracks, see https://github.com/phetsims/energy-skate-park-basics/issues/15
  * so reverted to using the euclidean model from the original Java version.
  *
+ * Please note: Many modifications were made to this file to reduce allocations and garbage collections on iPad, see https://github.com/phetsims/energy-skate-park-basics/issues/50
+ * The main changes were: Using pooling, pass by reference, and componentwise math.
+ * Unfortunately, these are often compromises in the readability/maintainability of the code, but they seemed important to attain good performance.
+ *
  * @author Sam Reid
  */
 define( function( require ) {

@@ -8,6 +8,7 @@
 define( function( require ) {
   'use strict';
 
+  // modules
   var inherit = require( 'PHET_CORE/inherit' );
   var PropertySet = require( 'AXON/PropertySet' );
   var Vector2 = require( 'DOT/Vector2' );
@@ -16,7 +17,7 @@ define( function( require ) {
 
     PropertySet.call( this, {
 
-      //Where it would be if it hadn't snapped
+      //Where it would be if it hadn't snapped to another point during dragging
       sourcePosition: new Vector2( x, y ),
 
       snapTarget: null
