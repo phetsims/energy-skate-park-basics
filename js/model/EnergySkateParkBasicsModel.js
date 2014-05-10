@@ -67,6 +67,7 @@ define( function( require ) {
     //true if the skater's track is being dragged by the user, so that energy conservation no longer applies.
     //Only applies to one frame at a time (for the immediate next update).
     //See https://github.com/phetsims/energy-skate-park-basics/issues/127
+    //Also applies to https://github.com/phetsims/energy-skate-park-basics/issues/135
     this.trackChangePending = false;
     PropertySet.call( this, {
 
@@ -548,8 +549,8 @@ define( function( require ) {
 
         var newTotalEnergy = newState.getTotalEnergy() + therm;
 
-        //Conserve energy, but only if the user is not adding energy
-        if ( thrust.magnitude() === 0 ) {
+        //Conserve energy, but only if the user is not adding energy, see https://github.com/phetsims/energy-skate-park-basics/issues/135
+        if ( thrust.magnitude() === 0 && !this.trackChangePending ) {
           if ( newTotalEnergy < origEnergy ) {
             thermalEnergy += Math.abs( newTotalEnergy - origEnergy );//add some thermal to exactly match
             if ( Math.abs( newTotalEnergy - origEnergy ) > 1E-6 ) {
