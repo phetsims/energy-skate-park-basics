@@ -388,17 +388,7 @@ define( function( require ) {
           var uD = (dot > 0 ? +1 : -1) * newSpeed;
           var up = beforeVector.dot( normal ) > 0;
 
-          return skaterState.update( {
-            thermalEnergy: newThermalEnergy,
-            track: track,
-            up: up,
-            u: u,
-            uD: uD,
-            velocityX: newVelocity.x,
-            velocityY: newVelocity.y,
-            positionX: newPosition.x,
-            positionY: newPosition.y
-          } );
+          return skaterState.attachToTrack( newThermalEnergy, track, up, u, uD, newVelocity.x, newVelocity.y, newPosition.x, newPosition.y );
         }
 
         //It just continued in free fall

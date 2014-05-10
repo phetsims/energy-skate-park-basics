@@ -150,6 +150,20 @@ define( function( require ) {
       return state;
     },
 
+    attachToTrack: function( thermalEnergy, track, up, u, uD, velocityX, velocityY, positionX, positionY ) {
+      var state = SkaterState.createFromPool( this, EMPTY_OBJECT );
+      state.thermalEnergy = thermalEnergy;
+      state.track = track;
+      state.up = up;
+      state.u = u;
+      state.uD = uD;
+      state.velocityX = velocityX;
+      state.velocityY = velocityY;
+      state.positionX = positionX;
+      state.positionY = positionY;
+      return state;
+    },
+
     getSpeed: function() {
       return Math.sqrt( this.velocityX * this.velocityX + this.velocityY * this.velocityY );
     },
