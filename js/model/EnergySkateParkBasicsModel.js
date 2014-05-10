@@ -242,7 +242,13 @@ define( function( require ) {
       var x0 = skaterState.positionX;
       var frictionMagnitude = (this.friction === 0 || skaterState.getSpeed() < 1E-2) ? 0 : this.friction * skaterState.mass * skaterState.gravity;
       var acceleration = Math.abs( frictionMagnitude ) * (skaterState.velocityX > 0 ? -1 : 1) / skaterState.mass;
+
       var v1 = skaterState.velocityX + acceleration * dt;
+
+      //Exponentially decay the velocity if already nearly zero, see https://github.com/phetsims/energy-skate-park-basics/issues/138
+      if ( this.friction !== 0 && skaterState.getSpeed() < 1E-2 ) {
+        v1 = v1 / 2;
+      }
       var x1 = x0 + v1 * dt;
       var newPosition = new Vector2( x1, 0 );
       var originalEnergy = skaterState.getTotalEnergy();
