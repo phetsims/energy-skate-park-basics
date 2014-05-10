@@ -50,10 +50,13 @@ define( function( require ) {
       //Make the radius proportional to the square root of the energy so that the area will grow linearly with energy
       var radius = 0.4 * Math.sqrt( totalEnergy );
 
+      //If any value is too low, then don't show it, see https://github.com/phetsims/energy-skate-park-basics/issues/136
+      var THRESHOLD = 1E-4;
+
       //if only one component of pie chart, then show as a circle so there are no seams
-      var numberComponents = (skater.potentialEnergy > 0 ? 1 : 0) +
-                             (skater.kineticEnergy > 0 ? 1 : 0) +
-                             (skater.thermalEnergy > 0 ? 1 : 0);
+      var numberComponents = (skater.potentialEnergy > THRESHOLD ? 1 : 0) +
+                             (skater.kineticEnergy > THRESHOLD ? 1 : 0) +
+                             (skater.thermalEnergy > THRESHOLD ? 1 : 0);
 
       if ( numberComponents === 0 ) {
         potentialEnergySlice.visible = false;
@@ -61,8 +64,8 @@ define( function( require ) {
         thermalEnergySlice.visible = false;
       }
       else if ( numberComponents === 1 ) {
-        var selectedSlice = skater.potentialEnergy > 0 ? potentialEnergySlice :
-                            skater.kineticEnergy > 0 ? kineticEnergySlice :
+        var selectedSlice = skater.potentialEnergy > THRESHOLD ? potentialEnergySlice :
+                            skater.kineticEnergy > THRESHOLD ? kineticEnergySlice :
                             thermalEnergySlice;
         potentialEnergySlice.visible = false;
         thermalEnergySlice.visible = false;
