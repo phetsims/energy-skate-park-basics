@@ -539,6 +539,12 @@ define( function( require ) {
       var newVelocityX = parallelUnitX * uD;
       var newVelocityY = parallelUnitY * uD;
 
+      //Exponentially decay the velocity if already nearly zero and on a flat slope, see https://github.com/phetsims/energy-skate-park-basics/issues/129
+      if ( parallelUnitX / parallelUnitY > 5 && Math.sqrt( newVelocityX * newVelocityX + newVelocityY * newVelocityY ) < 1E-2 ) {
+        newVelocityX /= 2;
+        newVelocityY /= 2;
+      }
+
       //choose velocity by using the unit parallel vector to the track
       var newState = skaterState.updateUUDVelocityPosition( u, uD, newVelocityX, newVelocityY, newPointX, newPointY );
       if ( this.friction > 0 ) {
