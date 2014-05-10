@@ -89,8 +89,13 @@ define( function( require ) {
         //Show one of them in the background instead of pieces for each one for performance
         //Round the radius so it will only update the graphics when it changed by a px or more
         thermalEnergySlice.radius = Math.round( radius );
-        potentialEnergySlice.shape = new Shape().moveTo( 0, 0 ).ellipticalArc( 0, 0, radius, radius, 0, -Math.PI / 2, Math.PI * 2 * fractionPotential - Math.PI / 2, false ).lineTo( 0, 0 );
-        kineticEnergySlice.shape = new Shape().moveTo( 0, 0 ).ellipticalArc( 0, 0, radius, radius, 0, Math.PI * 2 * fractionPotential - Math.PI / 2, Math.PI * 2 * fractionPotential - Math.PI / 2 + fractionKinetic * Math.PI * 2, false ).lineTo( 0, 0 );
+
+        //Start thermal at the right and wind counter clockwise, see https://github.com/phetsims/energy-skate-park-basics/issues/133
+        //Order is thermal (in the background), kinetic, potential
+        var potentialStartAngle = 0;
+        var kineticStartAngle = Math.PI * 2 * fractionPotential;
+        potentialEnergySlice.shape = new Shape().moveTo( 0, 0 ).ellipticalArc( 0, 0, radius, radius, 0, potentialStartAngle, kineticStartAngle, false ).lineTo( 0, 0 );
+        kineticEnergySlice.shape = new Shape().moveTo( 0, 0 ).ellipticalArc( 0, 0, radius, radius, 0, kineticStartAngle, kineticStartAngle + fractionKinetic * Math.PI * 2, false ).lineTo( 0, 0 );
       }
     };
 
