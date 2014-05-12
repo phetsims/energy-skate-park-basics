@@ -1,15 +1,18 @@
 // Copyright 2002-2013, University of Colorado Boulder
 
 /**
- * The clear thermal button that can be used to remove thermal energy from the system.
- * Looks like a trash can with an orange arrow pointing into it.
+ * The Undo button that can be used to remove thermal energy from the system.
+ *
+ * TODO: This button should be using the new sun buttons, but there is a long delay on iPad3 that should be solved.
+ * See https://github.com/phetsims/energy-skate-park-basics/issues/137
+ * Once that is resolved, check the history of this file for an implementation that uses the sun buttons (so you don't have to start from scratch).
  *
  * @author Sam Reid
  */
 define( function( require ) {
   'use strict';
 
-  var RectangularPushButton = require( 'SUN/buttons/RectangularPushButton' );
+  var RectanglePushButtonDeprecated = require( 'SUN/RectanglePushButtonDeprecated' );
   var inherit = require( 'PHET_CORE/inherit' );
   var Shape = require( 'KITE/Shape' );
   var Color = require( 'SCENERY/util/Color' );
@@ -24,21 +27,18 @@ define( function( require ) {
 
     skater.toDerivedProperty( ['thermalEnergy'], function( thermalEnergy ) {return thermalEnergy > 0;} ).link( function( hasThermalEnergy ) {
       icon.image = hasThermalEnergy ? trashCanImage : trashCanGrayImage;
+      icon.opacity = hasThermalEnergy ? 1 : 0.3;
     } );
 
-    RectangularPushButton.call( this, {
-      content: icon,
-      listener: callback,
-      baseColor: new Color( 230, 230, 240 ),
-      disabledBaseColor: new Color( 255, 255, 255 ),
-      xMargin: 7,
-      yMargin: 3,
-      stroke: new Color( 0, 0, 0 ),
-      lineWidth: 0.3
-    } );
+    RectanglePushButtonDeprecated.call( this, icon, {
+      rectangleCornerRadius: 6,
+      listener: callback, rectangleFillUp: new Color( 230, 230, 240 ),
+      rectangleFillDisabled: 'white',
+      rectangleXMargin: 7,
+      rectangleYMargin: 3 } );
     this.mouseArea = this.touchArea = Shape.rectangle( icon.bounds.minX, icon.bounds.minY, icon.bounds.width, icon.bounds.height );
     this.mutate( options );
   }
 
-  return inherit( RectangularPushButton, ClearThermalButton );
+  return inherit( RectanglePushButtonDeprecated, ClearThermalButton );
 } );
