@@ -1,6 +1,6 @@
 {
   "chipper": {
-    "sha": "71946ee25bf91334c0b724f77b8f4f77c6b0e09c",
+    "sha": "989a6f31a9d76b07a0afe017e79e32efaba5a80d",
     "branch": "master"
   },
   "sherpa": {
@@ -12,15 +12,15 @@
     "branch": "master"
   },
   "sun": {
-    "sha": "6d5660b57a1a2f6c450d8666ba0ad8c9053383e8",
+    "sha": "335ccd4298ecfb2068304c452a01925ed4333149",
     "branch": "master"
   },
   "scenery-phet": {
-    "sha": "3fb2b89534872004f67aae0859995dfbf8a8df1f",
+    "sha": "db2320f2c7508155191bd6df36944a2b99b37d4e",
     "branch": "master"
   },
   "scenery": {
-    "sha": "741329b1af32a5e7a6cc91e7220b703a89b0ce5f",
+    "sha": "ec7384000e8cfe7dd07115fdbc9993c1e69033ec",
     "branch": "master"
   },
   "phetcommon": {
@@ -52,8 +52,8 @@
     "branch": "master"
   },
   "energy-skate-park-basics": {
-    "sha": "72fec524679d16705494ef3df1547b99eb5705e2",
+    "sha": "624ad2363923bc089bf02a967be9fcfc47380c1d",
     "branch": "1.0"
   },
-  "comment": "# energy-skate-park-basics 1.0.0-rc.1 Fri May 09 2014 10:29:30 GMT-0600 (Mountain Daylight Time)"
+  "comment": "# energy-skate-park-basics 1.0.0-rc.2 Mon May 12 2014 13:20:35 GMT-0600 (Mountain Daylight Time)"
 }
