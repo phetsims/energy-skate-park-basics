@@ -100,10 +100,17 @@ define( function( require ) {
     var stepButton = new StepButton( function() { model.manualStep(); }, playProperty ).mutate( {scale: 0.75} );
     model.property( 'paused' ).linkAttribute( stepButton, 'enabled' );
 
-    this.addChild( playPauseButton.mutate( {centerX: this.layoutBounds.centerX, bottom: this.layoutBounds.maxY - 12.5} ) );
+    this.addChild( playPauseButton.mutate( {centerX: this.layoutBounds.centerX, bottom: this.layoutBounds.maxY - 7} ) );
     this.addChild( stepButton.mutate( {left: playPauseButton.right + 5, centerY: playPauseButton.centerY} ) );
 
-    this.resetAllButton = new ResetAllButton( {listener: model.reset.bind( model )} ).mutate( {scale: 0.7, centerY: (transform.modelToViewY( 0 ) + this.layoutBounds.maxY) / 2, centerX: this.controlPanel.centerX} );
+    this.resetAllButton = new ResetAllButton( {
+      listener: model.reset.bind( model ),
+      scale: 0.85,
+      centerX: this.controlPanel.centerX,
+
+      //Align vertically with other controls, see https://github.com/phetsims/energy-skate-park-basics/issues/134
+      centerY: (transform.modelToViewY( 0 ) + this.layoutBounds.maxY) / 2 + 8
+    } );
     this.addChild( this.resetAllButton );
 
     //The button to return the skater

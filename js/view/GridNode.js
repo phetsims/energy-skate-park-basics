@@ -15,6 +15,7 @@ define( function( require ) {
   var Text = require( 'SCENERY/nodes/Text' );
   var PhetFont = require( 'SCENERY_PHET/PhetFont' );
   var BackgroundNode = require( 'ENERGY_SKATE_PARK_BASICS/view/BackgroundNode' );
+  var zeroMetersString = require( 'string!ENERGY_SKATE_PARK_BASICS/zeroMeters' );
 
   function GridNode( gridVisibleProperty, modelViewTransform ) {
     this.modelViewTransform = modelViewTransform;
@@ -58,8 +59,9 @@ define( function( require ) {
           var text = new Text( '' + y, {font: new PhetFont( 18 ), top: viewY, right: originX - 2} );
 
           //For the "0 meters" readout, we still need the 0 to line up perfectly (while still using a single internationalizable string), so use the 0 text bounds
+          //And shift it down a bit so it isn't touching the concrete, see #134
           if ( y === 0 ) {
-            var replacementText = new Text( '0 meters', {font: new PhetFont( 18 ), top: viewY, x: text.x} );
+            var replacementText = new Text( zeroMetersString, {font: new PhetFont( 18 ), top: viewY + 2, x: text.x} );
             texts.push( replacementText );
           }
           else {

@@ -67,6 +67,7 @@ define( function( require ) {
     //true if the skater's track is being dragged by the user, so that energy conservation no longer applies.
     //Only applies to one frame at a time (for the immediate next update).
     //See https://github.com/phetsims/energy-skate-park-basics/issues/127
+    //Also applies to https://github.com/phetsims/energy-skate-park-basics/issues/135
     this.trackChangePending = false;
     PropertySet.call( this, {
 
@@ -165,7 +166,7 @@ define( function( require ) {
 
       //Move the tracks over so they will be in the right position in the view coordinates, under the grass to the left of the clock controls
       //Could use view transform for this, but it would require creating the view first, so just eyeballing it for now.
-      var offset = new Vector2( -5.5 + 0.27, -0.73 );
+      var offset = new Vector2( -5.5 + 0.27, -0.85 );
       var controlPoints = [ new ControlPoint( offset.x - 1, offset.y ), new ControlPoint( offset.x, offset.y ), new ControlPoint( offset.x + 1, offset.y )];
       this.tracks.add( new Track( this, this.tracks, controlPoints, true ) );
     },
@@ -241,7 +242,13 @@ define( function( require ) {
       var x0 = skaterState.positionX;
       var frictionMagnitude = (this.friction === 0 || skaterState.getSpeed() < 1E-2) ? 0 : this.friction * skaterState.mass * skaterState.gravity;
       var acceleration = Math.abs( frictionMagnitude ) * (skaterState.velocityX > 0 ? -1 : 1) / skaterState.mass;
+
       var v1 = skaterState.velocityX + acceleration * dt;
+
+      //Exponentially decay the velocity if already nearly zero, see https://github.com/phetsims/energy-skate-park-basics/issues/138
+      if ( this.friction !== 0 && skaterState.getSpeed() < 1E-2 ) {
+        v1 = v1 / 2;
+      }
       var x1 = x0 + v1 * dt;
       var newPosition = new Vector2( x1, 0 );
       var originalEnergy = skaterState.getTotalEnergy();
@@ -381,17 +388,7 @@ define( function( require ) {
           var uD = (dot > 0 ? +1 : -1) * newSpeed;
           var up = beforeVector.dot( normal ) > 0;
 
-          return skaterState.update( {
-            thermalEnergy: newThermalEnergy,
-            track: track,
-            up: up,
-            u: u,
-            uD: uD,
-            velocityX: newVelocity.x,
-            velocityY: newVelocity.y,
-            positionX: newPosition.x,
-            positionY: newPosition.y
-          } );
+          return skaterState.attachToTrack( newThermalEnergy, track, up, u, uD, newVelocity.x, newVelocity.y, newPosition.x, newPosition.y );
         }
 
         //It just continued in free fall
@@ -532,6 +529,12 @@ define( function( require ) {
       var newVelocityX = parallelUnitX * uD;
       var newVelocityY = parallelUnitY * uD;
 
+      //Exponentially decay the velocity if already nearly zero and on a flat slope, see https://github.com/phetsims/energy-skate-park-basics/issues/129
+      if ( parallelUnitX / parallelUnitY > 5 && Math.sqrt( newVelocityX * newVelocityX + newVelocityY * newVelocityY ) < 1E-2 ) {
+        newVelocityX /= 2;
+        newVelocityY /= 2;
+      }
+
       //choose velocity by using the unit parallel vector to the track
       var newState = skaterState.updateUUDVelocityPosition( u, uD, newVelocityX, newVelocityY, newPointX, newPointY );
       if ( this.friction > 0 ) {
@@ -548,8 +551,8 @@ define( function( require ) {
 
         var newTotalEnergy = newState.getTotalEnergy() + therm;
 
-        //Conserve energy, but only if the user is not adding energy
-        if ( thrust.magnitude() === 0 ) {
+        //Conserve energy, but only if the user is not adding energy, see https://github.com/phetsims/energy-skate-park-basics/issues/135
+        if ( thrust.magnitude() === 0 && !this.trackChangePending ) {
           if ( newTotalEnergy < origEnergy ) {
             thermalEnergy += Math.abs( newTotalEnergy - origEnergy );//add some thermal to exactly match
             if ( Math.abs( newTotalEnergy - origEnergy ) > 1E-6 ) {

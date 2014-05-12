@@ -50,10 +50,13 @@ define( function( require ) {
       //Make the radius proportional to the square root of the energy so that the area will grow linearly with energy
       var radius = 0.4 * Math.sqrt( totalEnergy );
 
+      //If any value is too low, then don't show it, see https://github.com/phetsims/energy-skate-park-basics/issues/136
+      var THRESHOLD = 1E-4;
+
       //if only one component of pie chart, then show as a circle so there are no seams
-      var numberComponents = (skater.potentialEnergy > 0 ? 1 : 0) +
-                             (skater.kineticEnergy > 0 ? 1 : 0) +
-                             (skater.thermalEnergy > 0 ? 1 : 0);
+      var numberComponents = (skater.potentialEnergy > THRESHOLD ? 1 : 0) +
+                             (skater.kineticEnergy > THRESHOLD ? 1 : 0) +
+                             (skater.thermalEnergy > THRESHOLD ? 1 : 0);
 
       if ( numberComponents === 0 ) {
         potentialEnergySlice.visible = false;
@@ -61,8 +64,8 @@ define( function( require ) {
         thermalEnergySlice.visible = false;
       }
       else if ( numberComponents === 1 ) {
-        var selectedSlice = skater.potentialEnergy > 0 ? potentialEnergySlice :
-                            skater.kineticEnergy > 0 ? kineticEnergySlice :
+        var selectedSlice = skater.potentialEnergy > THRESHOLD ? potentialEnergySlice :
+                            skater.kineticEnergy > THRESHOLD ? kineticEnergySlice :
                             thermalEnergySlice;
         potentialEnergySlice.visible = false;
         thermalEnergySlice.visible = false;
@@ -89,8 +92,13 @@ define( function( require ) {
         //Show one of them in the background instead of pieces for each one for performance
         //Round the radius so it will only update the graphics when it changed by a px or more
         thermalEnergySlice.radius = Math.round( radius );
-        potentialEnergySlice.shape = new Shape().moveTo( 0, 0 ).ellipticalArc( 0, 0, radius, radius, 0, -Math.PI / 2, Math.PI * 2 * fractionPotential - Math.PI / 2, false ).lineTo( 0, 0 );
-        kineticEnergySlice.shape = new Shape().moveTo( 0, 0 ).ellipticalArc( 0, 0, radius, radius, 0, Math.PI * 2 * fractionPotential - Math.PI / 2, Math.PI * 2 * fractionPotential - Math.PI / 2 + fractionKinetic * Math.PI * 2, false ).lineTo( 0, 0 );
+
+        //Start thermal at the right and wind counter clockwise, see https://github.com/phetsims/energy-skate-park-basics/issues/133
+        //Order is thermal (in the background), kinetic, potential
+        var potentialStartAngle = 0;
+        var kineticStartAngle = Math.PI * 2 * fractionPotential;
+        potentialEnergySlice.shape = new Shape().moveTo( 0, 0 ).ellipticalArc( 0, 0, radius, radius, 0, potentialStartAngle, kineticStartAngle, false ).lineTo( 0, 0 );
+        kineticEnergySlice.shape = new Shape().moveTo( 0, 0 ).ellipticalArc( 0, 0, radius, radius, 0, kineticStartAngle, kineticStartAngle + fractionKinetic * Math.PI * 2, false ).lineTo( 0, 0 );
       }
     };
 
