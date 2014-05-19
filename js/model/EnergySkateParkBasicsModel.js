@@ -40,8 +40,6 @@ define( function( require ) {
 
   function isApproxEqual( a, b, tolerance ) { return Math.abs( a - b ) <= tolerance; }
 
-  function getSign( a ) {return a > 0 ? +1 : -1;}
-
   //Flag to enable debugging for physics issues
   var debugLogEnabled = false;
   var debug = debugLogEnabled ? function( string ) { console.log( string ); } : null;
@@ -733,7 +731,9 @@ define( function( require ) {
           //Choose the exact velocity in the same direction as current velocity to ensure total energy conserved.
           var vSq = Math.abs( 2 / newState.mass * ( e0 - newState.getPotentialEnergy() - newState.thermalEnergy ) );
           var v = Math.sqrt( vSq );
-          var newVelocity = v * getSign( newState.uD );
+
+          //TODO: What if uD ===0?
+          var newVelocity = v * newState.uD > 0 ? 1 : -1;
           var updatedVelocityX = newState.track.getUnitParallelVectorX( newState.u ) * newVelocity;
           var updatedVelocityY = newState.track.getUnitParallelVectorY( newState.u ) * newVelocity;
           var fixedState = newState.updateUDVelocity( newVelocity, updatedVelocityX, updatedVelocityY );
