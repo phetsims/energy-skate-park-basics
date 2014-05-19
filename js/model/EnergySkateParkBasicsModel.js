@@ -272,17 +272,7 @@ define( function( require ) {
       var newThermalEnergy = initialEnergy - newKineticEnergy - newPotentialEnergy;
 
       if ( !isFinite( newThermalEnergy ) ) { throw new Error( "not finite" ); }
-      return skaterState.update( {
-        thermalEnergy: newThermalEnergy,
-        track: null,
-        up: true,
-        angle: 0,
-        //TODO: Allocations
-        velocityX: proposedVelocity.normalized().timesScalar( newSpeed ).x,
-        velocityY: proposedVelocity.normalized().timesScalar( newSpeed ).y,
-        positionX: proposedPosition.x,
-        positionY: proposedPosition.y
-      } );
+      return skaterState.switchToGround( newThermalEnergy, proposedVelocity.normalized().timesScalar( newSpeed ).x, proposedVelocity.normalized().timesScalar( newSpeed ).y, proposedPosition.x, proposedPosition.y );
     },
 
     //Update the skater in free fall
@@ -396,16 +386,7 @@ define( function( require ) {
       var y = (initialEnergy - 0.5 * skaterState.mass * proposedVelocity.magnitudeSquared() - skaterState.thermalEnergy) / (-1 * skaterState.mass * skaterState.gravity);
       if ( y <= 0 ) {
         //When falling straight down, stop completely and convert all energy to thermal
-        return skaterState.update( {
-          velocityX: 0,
-          velocityY: 0,
-          thermalEnergy: initialEnergy,
-          angle: 0,
-          up: true,
-          positionX: proposedPosition.x,
-          positionY: 0,
-          stepsSinceJump: 0
-        } );
+        return skaterState.strikeGround( initialEnergy, proposedPosition.x );
       }
       else {
         return skaterState.update( {
@@ -565,7 +546,7 @@ define( function( require ) {
 
         //Discrepancy with original version: original version allowed drop of thermal energy here, to be fixed in the heuristic patch
         //We have clamped it here to make it amenable to a smaller number of euler updates, to improve performance
-        return newState.update( {thermalEnergy: Math.max( thermalEnergy, skaterState.thermalEnergy )} );
+        return newState.updateThermalEnergy( Math.max( thermalEnergy, skaterState.thermalEnergy ) );
       }
       else {
         return newState;

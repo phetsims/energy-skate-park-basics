@@ -167,6 +167,32 @@ define( function( require ) {
       return state;
     },
 
+    switchToGround: function( thermalEnergy, velocityX, velocityY, positionX, positionY ) {
+      var state = SkaterState.createFromPool( this, EMPTY_OBJECT );
+      state.thermalEnergy = thermalEnergy;
+      state.track = null;
+      state.up = true;
+      state.angle = 0;
+      state.velocityX = velocityX;
+      state.velocityY = velocityY;
+      state.positionX = positionX;
+      state.positionY = positionY;
+      return state;
+    },
+
+    strikeGround: function( thermalEnergy, positionX ) {
+      var state = SkaterState.createFromPool( this, EMPTY_OBJECT );
+      state.thermalEnergy = thermalEnergy;
+      state.positionX = positionX;
+      state.positionY = 0;
+      state.velocityX = 0;
+      state.velocityY = 0;
+      state.angle = 0;
+      state.up = true;
+      state.stepsSinceJump = 0;
+      return state;
+    },
+
     attachToTrack: function( thermalEnergy, track, up, u, uD, velocityX, velocityY, positionX, positionY ) {
       var state = SkaterState.createFromPool( this, EMPTY_OBJECT );
       state.thermalEnergy = thermalEnergy;
