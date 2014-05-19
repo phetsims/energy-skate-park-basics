@@ -193,6 +193,16 @@ define( function( require ) {
       return state;
     },
 
+    continueFreeFall: function( velocityX, velocityY, positionX, positionY, stepsSinceJump ) {
+      var state = SkaterState.createFromPool( this, EMPTY_OBJECT );
+      state.velocityX = velocityX;
+      state.velocityY = velocityY;
+      state.positionX = positionX;
+      state.positionY = positionY;
+      state.stepsSinceJump = stepsSinceJump;
+      return state;
+    },
+
     attachToTrack: function( thermalEnergy, track, up, u, uD, velocityX, velocityY, positionX, positionY ) {
       var state = SkaterState.createFromPool( this, EMPTY_OBJECT );
       state.thermalEnergy = thermalEnergy;

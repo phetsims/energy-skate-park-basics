@@ -389,13 +389,7 @@ define( function( require ) {
         return skaterState.strikeGround( initialEnergy, proposedPosition.x );
       }
       else {
-        return skaterState.update( {
-          velocityX: proposedVelocity.x,
-          velocityY: proposedVelocity.y,
-          positionX: proposedPosition.x,
-          positionY: y,
-          stepsSinceJump: skaterState.stepsSinceJump + 1
-        } );
+        return skaterState.continueFreeFall( proposedVelocity.x, proposedVelocity.y, proposedPosition.x, y, skaterState.stepsSinceJump + 1 );
       }
     },
 
