@@ -280,7 +280,7 @@ define( function( require ) {
       var newPotentialEnergy = 0;
       var newThermalEnergy = initialEnergy - newKineticEnergy - newPotentialEnergy;
 
-      if ( isNaN( newThermalEnergy ) ) { throw new Error( "nan" ); }
+      if ( !isFinite( newThermalEnergy ) ) { throw new Error( "not finite" ); }
       return skaterState.update( {
         thermalEnergy: newThermalEnergy,
         track: null,
@@ -380,10 +380,10 @@ define( function( require ) {
           var dot = proposedVelocity.normalized().dot( segment );
 
           //Sanity test
-          assert && assert( !isNaN( dot ) );
-          assert && assert( !isNaN( newVelocity.x ) );
-          assert && assert( !isNaN( newVelocity.y ) );
-          assert && assert( !isNaN( newThermalEnergy ) );
+          assert && assert( isFinite( dot ) );
+          assert && assert( isFinite( newVelocity.x ) );
+          assert && assert( isFinite( newVelocity.y ) );
+          assert && assert( isFinite( newThermalEnergy ) );
 
           var uD = (dot > 0 ? +1 : -1) * newSpeed;
           var up = beforeVector.dot( normal ) > 0;
@@ -507,7 +507,7 @@ define( function( require ) {
       var origLocY = skaterState.positionY;
       var thermalEnergy = skaterState.thermalEnergy;
       var uD = skaterState.uD;
-      assert && assert( !isNaN( uD ) );
+      assert && assert( isFinite( uD ) );
       var u = skaterState.u;
 
       //Component-wise math to prevent allocations, see #50
@@ -520,7 +520,7 @@ define( function( require ) {
       var a = netForceMagnitude * Math.cos( skaterState.track.getModelAngleAt( u ) - netForceAngle ) / skaterState.mass;
 
       uD += a * dt;
-      assert && assert( !isNaN( uD ) );
+      assert && assert( isFinite( uD ) );
       u += track.getParametricDistance( u, uD * dt + 1 / 2 * a * dt * dt );
       var newPointX = skaterState.track.getX( u );
       var newPointY = skaterState.track.getY( u );
@@ -704,7 +704,7 @@ define( function( require ) {
       var u0 = skaterState.u;
       var e0 = skaterState.getTotalEnergy();
 
-      if ( isNaN( newState.getTotalEnergy() ) ) { throw new Error( 'nan' );}
+      if ( !isFinite( newState.getTotalEnergy() ) ) { throw new Error( 'not finite' );}
       var dE = newState.getTotalEnergy() - e0;
       if ( Math.abs( dE ) < 1E-6 ) {
         //small enough
@@ -768,7 +768,7 @@ define( function( require ) {
           }
         }
         else {
-          if ( isNaN( newState.getTotalEnergy() ) ) { throw new Error( 'nan' );}
+          if ( !isFinite( newState.getTotalEnergy() ) ) { throw new Error( 'not finite' );}
           debug.log( "Energy too low" );
 
           //increasing the kinetic energy

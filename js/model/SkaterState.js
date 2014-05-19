@@ -79,10 +79,10 @@ define( function( require ) {
       this.thermalEnergy = 'thermalEnergy' in overrides ? overrides.thermalEnergy : source.thermalEnergy;
 
       //Some sanity tests
-      assert && assert( !isNaN( this.thermalEnergy ) );
-      assert && assert( !isNaN( this.velocityX ) );
-      assert && assert( !isNaN( this.velocityY ) );
-      assert && assert( !isNaN( this.uD ) );
+      assert && assert( isFinite( this.thermalEnergy ) );
+      assert && assert( isFinite( this.velocityX ) );
+      assert && assert( isFinite( this.velocityY ) );
+      assert && assert( isFinite( this.uD ) );
 
       return this;
     },
