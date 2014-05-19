@@ -581,13 +581,7 @@ define( function( require ) {
 
         //Leave the track.  Make sure the velocity is pointing away from the track or keep track of frames away from the track so it doesn't immediately recollide
         //Or project a ray and see if a collision is imminent
-        var freeSkater = skaterState.update( {
-          track: null,
-          uD: 0,
-
-          //Keep track of the steps since jumping, otherwise it can run into the track again immediately, which increases thermal energy
-          stepsSinceJump: 0
-        } );
+        var freeSkater = skaterState.leaveTrack();
 
         //Step after switching to free fall, so it doesn't look like it pauses
         return this.stepFreeFall( dt, freeSkater );

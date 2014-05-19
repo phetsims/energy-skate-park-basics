@@ -197,6 +197,16 @@ define( function( require ) {
       return SkaterState.createFromPool( this, EMPTY_OBJECT );
     },
 
+    leaveTrack: function() {
+      var state = SkaterState.createFromPool( this, EMPTY_OBJECT );
+      state.uD = 0;
+      state.track = null;
+
+      //Keep track of the steps since jumping, otherwise it can run into the track again immediately, which increases thermal energy
+      state.stepsSinceJump = 0;
+      return state;
+    },
+
     continueFreeFall: function( velocityX, velocityY, positionX, positionY, stepsSinceJump ) {
       var state = SkaterState.createFromPool( this, EMPTY_OBJECT );
       state.velocityX = velocityX;
