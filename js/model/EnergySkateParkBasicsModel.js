@@ -701,10 +701,8 @@ define( function( require ) {
               da = ( ( bestAlpha - da ) - ( bestAlpha + da ) ) / numSteps;
             }
 
-            var correctedState = newState.update( {
-              u: bestAlpha,
-              position: newState.track.getPoint( bestAlpha )
-            } );
+            var point = newState.track.getPoint( bestAlpha );
+            var correctedState = newState.updateUPosition( bestAlpha, point.x, point.y );
             debug && debug( "changed position u: dE=" + ( correctedState.getTotalEnergy() - e0 ) );
             if ( !isApproxEqual( e0, correctedState.getTotalEnergy(), 1E-8 ) ) {
               if ( Math.abs( correctedState.getKineticEnergy() ) > Math.abs( dE ) ) {//amount we could reduce the energy if we deleted all the kinetic energy:
