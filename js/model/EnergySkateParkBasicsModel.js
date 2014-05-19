@@ -619,7 +619,7 @@ define( function( require ) {
     correctEnergyReduceVelocity: function( skaterState, targetState ) {
 
       //Make a clone we can mutate and return, to protect the input argument
-      var newSkaterState = targetState.update( {} );
+      var newSkaterState = targetState.copy();
       var e0 = skaterState.getTotalEnergy();
       var mass = skaterState.mass;
       var unit = newSkaterState.track.getUnitParallelVector( newSkaterState.u );

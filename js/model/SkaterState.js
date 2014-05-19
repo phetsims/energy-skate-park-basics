@@ -193,6 +193,10 @@ define( function( require ) {
       return state;
     },
 
+    copy: function() {
+      return SkaterState.createFromPool( this, EMPTY_OBJECT );
+    },
+
     continueFreeFall: function( velocityX, velocityY, positionX, positionY, stepsSinceJump ) {
       var state = SkaterState.createFromPool( this, EMPTY_OBJECT );
       state.velocityX = velocityX;
