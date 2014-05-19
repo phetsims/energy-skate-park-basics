@@ -646,7 +646,7 @@ define( function( require ) {
       for ( var i = 0; i < numSteps; i++ ) {
         var proposedAlpha = u0 + da * i;
         var p2 = skaterState.track.getPoint( bestAlpha );
-        var e = skaterState.update( {positionX: p2.x, positionY: p2.y} ).getTotalEnergy();
+        var e = skaterState.updatePosition( p2.x, p2.y ).getTotalEnergy();
         if ( Math.abs( e - e0 ) <= Math.abs( bestDE ) ) {
           bestDE = e - e0;
           bestAlpha = proposedAlpha;
