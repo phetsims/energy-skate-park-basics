@@ -214,6 +214,14 @@ define( function( require ) {
       return state;
     },
 
+    updateUDVelocity: function( uD, velocityX, velocityY ) {
+      var state = SkaterState.createFromPool( this, EMPTY_OBJECT );
+      state.uD = uD;
+      state.velocityX = velocityX;
+      state.velocityY = velocityY;
+      return state;
+    },
+
     continueFreeFall: function( velocityX, velocityY, positionX, positionY, stepsSinceJump ) {
       var state = SkaterState.createFromPool( this, EMPTY_OBJECT );
       state.velocityX = velocityX;
