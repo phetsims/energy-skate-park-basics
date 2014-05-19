@@ -642,7 +642,7 @@ define( function( require ) {
       var da = ( u1 - u0 ) / numSteps;
       var bestAlpha = ( u1 - u0 ) / 2;
       var p = skaterState.track.getPoint( bestAlpha );
-      var bestDE = skaterState.update( {positionX: p.x, positionY: p.y} ).getTotalEnergy();
+      var bestDE = skaterState.updatePosition( p.x, p.y ).getTotalEnergy();
       for ( var i = 0; i < numSteps; i++ ) {
         var proposedAlpha = u0 + da * i;
         var p2 = skaterState.track.getPoint( bestAlpha );

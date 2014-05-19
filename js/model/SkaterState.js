@@ -207,6 +207,13 @@ define( function( require ) {
       return state;
     },
 
+    updatePosition: function( positionX, positionY ) {
+      var state = SkaterState.createFromPool( this, EMPTY_OBJECT );
+      state.positionX = positionX;
+      state.positionY = positionY;
+      return state;
+    },
+
     continueFreeFall: function( velocityX, velocityY, positionX, positionY, stepsSinceJump ) {
       var state = SkaterState.createFromPool( this, EMPTY_OBJECT );
       state.velocityX = velocityX;
