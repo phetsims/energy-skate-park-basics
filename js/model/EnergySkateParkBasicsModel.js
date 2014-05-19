@@ -253,19 +253,10 @@ define( function( require ) {
       var newPosition = new Vector2( x1, 0 );
       var originalEnergy = skaterState.getTotalEnergy();
 
-      var updated = skaterState.update( {
-        positionX: newPosition.x,
-        positionY: newPosition.y,
-        angle: 0,
-        up: true,
-        velocityX: v1,
-        velocityY: 0
-      } );
+      var updated = skaterState.updatePositionAngleUpVelocity( newPosition.x, newPosition.y, 0, true, v1, 0 );
 
       var newEnergy = updated.getTotalEnergy();
-      return updated.update( {
-        thermalEnergy: updated.thermalEnergy + (originalEnergy - newEnergy)
-      } );
+      return updated.updateThermalEnergy( updated.thermalEnergy + (originalEnergy - newEnergy) );
     },
 
     //No bouncing on the ground, but the code is very similar to attachment part of interactWithTracksWhileFalling

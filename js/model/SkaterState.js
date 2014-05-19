@@ -150,6 +150,23 @@ define( function( require ) {
       return state;
     },
 
+    updatePositionAngleUpVelocity: function( positionX, positionY, angle, up, velocityX, velocityY ) {
+      var state = SkaterState.createFromPool( this, EMPTY_OBJECT );
+      state.angle = angle;
+      state.up = up;
+      state.velocityX = velocityX;
+      state.velocityY = velocityY;
+      state.positionX = positionX;
+      state.positionY = positionY;
+      return state;
+    },
+
+    updateThermalEnergy: function( thermalEnergy ) {
+      var state = SkaterState.createFromPool( this, EMPTY_OBJECT );
+      state.thermalEnergy = thermalEnergy;
+      return state;
+    },
+
     attachToTrack: function( thermalEnergy, track, up, u, uD, velocityX, velocityY, positionX, positionY ) {
       var state = SkaterState.createFromPool( this, EMPTY_OBJECT );
       state.thermalEnergy = thermalEnergy;
