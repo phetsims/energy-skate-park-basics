@@ -733,7 +733,7 @@ define( function( require ) {
           var v = Math.sqrt( vSq );
 
           //TODO: What if uD ===0?
-          var newVelocity = v * newState.uD > 0 ? 1 : -1;
+          var newVelocity = v * (newState.uD > 0 ? +1 : -1);
           var updatedVelocityX = newState.track.getUnitParallelVectorX( newState.u ) * newVelocity;
           var updatedVelocityY = newState.track.getUnitParallelVectorY( newState.u ) * newVelocity;
           var fixedState = newState.updateUDVelocity( newVelocity, updatedVelocityX, updatedVelocityY );
