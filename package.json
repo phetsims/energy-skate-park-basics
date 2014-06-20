@@ -4,6 +4,10 @@
   "preload": "../sherpa/jquery-2.1.0.js ../sherpa/lodash-2.4.1.js ../sherpa/has.js ../sherpa/FileSaver.js ../sherpa/numeric-1.2.6.js ../phetcommon/js/util/query-parameters.js ../phetcommon/js/util/check-assertions.js ../phetcommon/js/analytics/google-analytics.js",
   "phetLibs": "energy-skate-park-basics assert brand dot joist kite phet-core phetcommon scenery scenery-phet sun axon sherpa",
   "license": "GPLv3",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/phetsims/energy-skate-park-basics.git"
+  },
   "devDependencies": {
     "grunt": "~0.4.1",
     "grunt-requirejs": "~0.4.0",
