@@ -496,6 +496,10 @@ define( function( require ) {
     set position( p ) {
       var delta = p.minus( this.position );
       this.translate( delta.x, delta.y );
+    },
+
+    copyControlPointSources: function() {
+      return this.controlPoints.map( function( controlPoint ) {return controlPoint.sourcePosition.copy();} )
     }
   } );
 } );

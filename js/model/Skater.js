@@ -125,12 +125,26 @@ define( function( require ) {
       this.updateEnergy();
     },
 
+    arrayEquals: function( a, b ) {
+      if ( a.length !== b.length ) {
+        return false;
+      }
+      for ( var i = 0; i < a.length; i++ ) {
+        var elm1 = a[i];
+        var elm2 = b[i];
+        if ( !elm1.equals( elm2 ) ) {
+          return false;
+        }
+      }
+      return true;
+    },
+
     //Return the skater to the last location it was released by the user (or its starting location)
     //Including the position on a track (if any)
     returnSkater: function() {
 
-      //If the user is on the same track as where he began, remain on the track, see #143
-      if ( this.startingTrack && this.track === this.startingTrack ) {
+      //If the user is on the same track as where he began (and the track hasn't changed), remain on the track, see #143 and #144
+      if ( this.startingTrack && this.track === this.startingTrack && this.arrayEquals( this.track.copyControlPointSources(), this.startingTrackControlPointSources ) ) {
         this.u = this.startingU;
         this.angle = this.startingTrack.getViewAngleAt( this.u );
         this.up = this.startingUp;
