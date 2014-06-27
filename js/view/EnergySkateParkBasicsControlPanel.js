@@ -35,12 +35,12 @@ define( function( require ) {
   function EnergySkateParkBasicsControlPanel( model ) {
     var textOptions = {font: new PhetFont( 14 )};
 
-    var barGraphSet = [new Text( barGraphString, textOptions ), this.createBarGraphIcon()];
     var pieChartSet = [new Text( pieChartString, textOptions ), this.createPieChartIcon()];
+    var barGraphSet = [new Text( barGraphString, textOptions ), this.createBarGraphIcon()];
     var gridSet = [new Text( gridString, textOptions ), this.createGridIcon()];
     var speedometerSet = [new Text( speedString, textOptions ), this.createSpeedometerIcon()];
 
-    var sets = [barGraphSet, pieChartSet, gridSet, speedometerSet];
+    var sets = [pieChartSet, barGraphSet, gridSet, speedometerSet];
     var maxTextWidth = _.max( sets, function( itemSet ) { return itemSet[0].width; } )[0].width;
 
     //In the absence of any sun (or other) layout packages, just manually space them out so they will have the icons aligned
@@ -52,8 +52,8 @@ define( function( require ) {
     var options = {boxWidth: 18};
 
     var checkBoxChildren = [
-      new CheckBox( new HBox( {children: pad( barGraphSet )} ), model.property( 'barGraphVisible' ), options ),
       new CheckBox( new HBox( {children: pad( pieChartSet )} ), model.property( 'pieChartVisible' ), options ),
+      new CheckBox( new HBox( {children: pad( barGraphSet )} ), model.property( 'barGraphVisible' ), options ),
       new CheckBox( new HBox( {children: pad( gridSet )} ), model.property( 'gridVisible' ), options ),
       new CheckBox( new HBox( {children: pad( speedometerSet )} ), model.property( 'speedometerVisible' ), options )];
     var checkBoxes = new VBox( {align: 'left', spacing: 10, children: checkBoxChildren} );
