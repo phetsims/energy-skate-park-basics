@@ -129,9 +129,8 @@ define( function( require ) {
     //Including the position on a track (if any)
     returnSkater: function() {
 
-      //Have to reset track before changing position so view angle gets updated properly
-      if ( this.startingTrack ) {
-        this.track = this.startingTrack;
+      //If the user is on the same track as where he began, remain on the track, see #143
+      if ( this.startingTrack && this.track === this.startingTrack ) {
         this.u = this.startingU;
         this.angle = this.startingTrack.getViewAngleAt( this.u );
         this.up = this.startingUp;

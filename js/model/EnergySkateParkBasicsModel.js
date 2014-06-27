@@ -776,19 +776,11 @@ define( function( require ) {
 
     //Return to the place he was last released by the user.  Also restores the track the skater was on so the initial conditions are the same as the previous release
     returnSkater: function() {
-      if ( this.skater.startingTrack ) {
 
-        //Restore the starting track if in one of the scenes
-        if ( this.skater.startingTrack.scene !== undefined ) {
-          this.scene = this.skater.startingTrack.scene;
-        }
-
-        //Restore the skater's track, see #126
-        else {
-          if ( !this.tracks.contains( this.skater.startingTrack ) ) {
-            this.tracks.add( this.skater.startingTrack );
-          }
-        }
+      //if the skater's original track is available, restore her to it, see #143
+      var originalTrackAvailable = _.contains( this.getPhysicalTracks(), this.skater.startingTrack );
+      if ( originalTrackAvailable ) {
+        this.skater.track = this.skater.startingTrack;
       }
       this.skater.returnSkater();
     },
