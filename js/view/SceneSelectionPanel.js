@@ -45,7 +45,7 @@ define( function( require ) {
         createNode( 1 ) ,
         createNode( 2 )
       ]} );
-    Panel.call( this, content, {xMargin: 10} );
+    Panel.call( this, content, {xMargin: 10, stroke: null} );
   }
 
   return inherit( Panel, SceneSelectionPanel );
