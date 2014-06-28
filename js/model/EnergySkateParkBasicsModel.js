@@ -955,6 +955,8 @@ define( function( require ) {
       b.trigger( 'remove' );
       this.tracks.remove( b );
 
+      //When tracks are joined, bump the new track above ground so the y value (and potential energy) cannot go negative, and so it won't make the "return skater" button get bigger, see #158
+      newTrack.bumpAboveGround();
       this.tracks.add( newTrack );
 
       //Move skater to new track if he was on the old track, by searching for the best fit point on the new track
