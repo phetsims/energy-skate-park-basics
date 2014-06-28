@@ -8,6 +8,8 @@
 define( function( require ) {
   'use strict';
 
+  // modules
+  var AttachDetachToggleButtons = require( 'ENERGY_SKATE_PARK_BASICS/view/AttachDetachToggleButtons' );
   var Color = require( 'SCENERY/util/Color' );
   var inherit = require( 'PHET_CORE/inherit' );
   var Image = require( 'SCENERY/nodes/Image' );
@@ -78,6 +80,13 @@ define( function( require ) {
     this.addChild( this.controlPanel );
     this.controlPanel.right = this.layoutBounds.width - 5;
     this.controlPanel.top = 5;
+
+    if ( model.frictionAllowed ) {
+      this.attachDetachToggleButtons = new AttachDetachToggleButtons( model.property( 'detachable' ), model.draggableTracks ? new Property( true ) : model.property( 'scene' ).valueEquals( 2 ) );
+      this.addChild( this.attachDetachToggleButtons );
+      this.attachDetachToggleButtons.top = this.controlPanel.bottom + 5;
+      this.attachDetachToggleButtons.centerX = this.controlPanel.centerX;
+    }
 
     //Determine if the skater is onscreen or offscreen for purposes of highlighting the 'return skater' button.
     var onscreenProperty = new DerivedProperty( [model.skater.positionProperty], function( position ) {
@@ -274,8 +283,9 @@ define( function( require ) {
       this.controlPanel.right = Math.min( 890, this.availableViewBounds.maxX ) - 5;
 
       if ( this.sceneSelectionPanel ) {
-        this.sceneSelectionPanel.centerX = this.controlPanel.centerX;
-        this.sceneSelectionPanel.top = this.controlPanel.bottom + 5;
+        var panelAbove = this.attachDetachToggleButtons || this.controlPanel;
+        this.sceneSelectionPanel.centerX = panelAbove.centerX;
+        this.sceneSelectionPanel.top = panelAbove.bottom + 5;
       }
       this.resetAllButton.centerX = this.controlPanel.centerX;
       this.returnSkaterButton.right = this.resetAllButton.left - 10;
