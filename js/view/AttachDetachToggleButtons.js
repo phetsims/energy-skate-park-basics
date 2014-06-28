@@ -36,9 +36,9 @@ define( function( require ) {
       yMargin: 0,
       cornerRadius: 6
     };
-    var lineWidth = 1.6;
-    var selectedOptions = _.extend( {stroke: selectedStroke, lineWidth: lineWidth}, panelOptions );
-    var deselectedOptions = _.extend( {stroke: deselectedStroke, lineWidth: lineWidth}, panelOptions );
+    var lineWidth = 2.3;
+    var selectedOptions = _.extend( {stroke: selectedStroke, lineWidth: lineWidth, opacity: 1}, panelOptions );
+    var deselectedOptions = _.extend( {stroke: deselectedStroke, lineWidth: lineWidth, opacity: 0.6}, panelOptions );
 
     var attachPanel = new Panel( new Image( attachIcon, {scale: scale} ), selectedOptions );
     var attachButton = new RadioButton( detachableProperty, false, attachPanel, new Panel( new Image( attachIcon, {scale: scale} ), deselectedOptions ) );
