@@ -281,6 +281,10 @@ define( function( require ) {
       //Float the control panel to the right (but not arbitrarily far because it could get too far from the play area)
       this.controlPanel.right = Math.min( 890, this.availableViewBounds.maxX ) - 5;
 
+      if ( this.attachDetachToggleButtons ) {
+        this.attachDetachToggleButtons.centerX = this.controlPanel.centerX;
+      }
+
       if ( this.sceneSelectionPanel ) {
         var panelAbove = this.attachDetachToggleButtons || this.controlPanel;
         this.sceneSelectionPanel.centerX = panelAbove.centerX;
