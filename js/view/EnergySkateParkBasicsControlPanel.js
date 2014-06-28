@@ -61,6 +61,7 @@ define( function( require ) {
       children: !model.frictionAllowed ? [checkBoxes, new MassSlider( model.skater.massProperty )] :
                 [checkBoxes, new FrictionControl( model.property( 'friction' ) )]} );
 
+    this.contentWidth = content.width;
     Panel.call( this, content, { xMargin: 10, yMargin: 5, fill: '#F0F0F0', stroke: null, lineWidth: null, resize: false } );
   }
 

@@ -82,10 +82,9 @@ define( function( require ) {
     this.controlPanel.top = 5;
 
     if ( model.frictionAllowed ) {
-      this.attachDetachToggleButtons = new AttachDetachToggleButtons( model.property( 'detachable' ), model.draggableTracks ? new Property( true ) : model.property( 'scene' ).valueEquals( 2 ) );
+      var property = model.draggableTracks ? new Property( true ) : model.property( 'scene' ).valueEquals( 2 );
+      this.attachDetachToggleButtons = new AttachDetachToggleButtons( model.property( 'detachable' ), property, this.controlPanel.contentWidth, {top: this.controlPanel.bottom + 5, centerX: this.controlPanel.centerX} );
       this.addChild( this.attachDetachToggleButtons );
-      this.attachDetachToggleButtons.top = this.controlPanel.bottom + 5;
-      this.attachDetachToggleButtons.centerX = this.controlPanel.centerX;
     }
 
     //Determine if the skater is onscreen or offscreen for purposes of highlighting the 'return skater' button.
