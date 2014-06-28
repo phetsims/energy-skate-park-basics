@@ -58,8 +58,16 @@ define( function( require ) {
     var checkBoxes = new VBox( {align: 'left', spacing: 10, children: checkBoxChildren} );
 
     var content = new VBox( {spacing: 4,
+
+      //For 1st screen, show MassSlider
       children: !model.frictionAllowed ? [checkBoxes, new MassSlider( model.skater.massProperty )] :
-                [checkBoxes, new FrictionControl( model.property( 'friction' ) )]} );
+
+        //For 2nd screen, show Friction Slider
+                !model.draggableTracks ? [checkBoxes, new FrictionControl( model.property( 'friction' ) )] :
+
+                  //For 3rd screen, show Friction Slider and Mass Slider, see #147
+                [checkBoxes, new MassSlider( model.skater.massProperty ), new FrictionControl( model.property( 'friction' ) )]
+    } );
 
     this.contentWidth = content.width;
     Panel.call( this, content, { xMargin: 10, yMargin: 5, fill: '#F0F0F0', stroke: null, lineWidth: null, resize: false } );
