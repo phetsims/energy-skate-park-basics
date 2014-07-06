@@ -499,7 +499,7 @@ define( function( require ) {
     },
 
     copyControlPointSources: function() {
-      return this.controlPoints.map( function( controlPoint ) {return controlPoint.sourcePosition.copy();} )
+      return this.controlPoints.map( function( controlPoint ) {return controlPoint.sourcePosition.copy();} );
     }
   } );
 } );
