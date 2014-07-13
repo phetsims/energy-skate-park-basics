@@ -972,14 +972,17 @@ define( function( require ) {
         var y2 = newTrack.getY( p.u );
         this.skater.position = new Vector2( x2, y2 );
         this.skater.angle = newTrack.getViewAngleAt( p.u ) + (this.skater.up ? 0 : Math.PI);
+
+        //Trigger an initial update now so we can get the right up vector, see #150
+        this.skater.trigger( 'updated' );
         var newNormal = this.skater.upVector;
 
         //If the skater flipped upside down because the track directionality is different, toggle his 'up' flag
         if ( originalNormal.dot( newNormal ) < 0 ) {
           this.skater.up = !this.skater.up;
           this.skater.angle = newTrack.getViewAngleAt( p.u ) + (this.skater.up ? 0 : Math.PI);
+          this.skater.trigger( 'updated' );
         }
-        this.skater.trigger( 'updated' );
       }
     },
 
