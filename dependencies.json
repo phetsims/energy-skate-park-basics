@@ -1,59 +1,59 @@
 {
   "chipper": {
-    "sha": "989a6f31a9d76b07a0afe017e79e32efaba5a80d",
+    "sha": "a70478047e72540d937907951d184c8d874543a3",
     "branch": "master"
   },
   "sherpa": {
-    "sha": "0c3ed4dee9ce96dbe841cefdda11947785e0da67",
+    "sha": "2ee466c320f754de1e75969a89ddcfddc5b27810",
     "branch": "master"
   },
   "axon": {
-    "sha": "98a20797dc4351b32e07f11e016013af67d14da0",
+    "sha": "9dfe22ecfb7fd220489f0751c5a2c7dd0cd967f0",
     "branch": "master"
   },
   "sun": {
-    "sha": "335ccd4298ecfb2068304c452a01925ed4333149",
+    "sha": "2602b501374e578e3a890a2c00f2223a17ecbaef",
     "branch": "master"
   },
   "scenery-phet": {
-    "sha": "db2320f2c7508155191bd6df36944a2b99b37d4e",
+    "sha": "d91779707c10a63723af38fd74092770cda16aa2",
     "branch": "master"
   },
   "scenery": {
-    "sha": "ec7384000e8cfe7dd07115fdbc9993c1e69033ec",
+    "sha": "2755e9bd7dd4234279d7fd8d69d63c9e3a9a1f2b",
     "branch": "master"
   },
   "phetcommon": {
-    "sha": "73d5ccfce77a1268f5d89f16c57cd3f3f10266d0",
+    "sha": "effdd0c6e3a26eccb3da1a35e675eb5fa85e806a",
     "branch": "master"
   },
   "phet-core": {
-    "sha": "db1fd8e3df72b8385084c397f712494a17a4c103",
+    "sha": "29272a5ba61442021dfc10ff5fbef6cd7ce66456",
     "branch": "master"
   },
   "kite": {
-    "sha": "11bccf0b11ff6152ee5a182c0a612b32ca7234a3",
+    "sha": "28cacb2824575b7f947de0a0cc54c79437b7b4b0",
     "branch": "master"
   },
   "joist": {
-    "sha": "5d5b957d2ba370fbcecfbd3fc1abb670024af890",
+    "sha": "d54bb2e9f3e94df8b778f146cb49270ffa8f782a",
     "branch": "master"
   },
   "dot": {
-    "sha": "1efbb57e7eb9516028800ec282647c027509f1e2",
+    "sha": "fd75efc81325bff24c825d55be1d016125ef0821",
     "branch": "master"
   },
   "brand": {
-    "sha": "a6908d6c047727353c397e257945833047af2ed0",
+    "sha": "8be52066aa533f58f118abd34d73f2609c844d48",
     "branch": "master"
   },
   "assert": {
-    "sha": "aed00968d94640815e81e2f8f4a6fa67582010db",
+    "sha": "e4595f5eae375c15fa9aaba9511c52dbc1b0f2c6",
     "branch": "master"
   },
   "energy-skate-park-basics": {
-    "sha": "624ad2363923bc089bf02a967be9fcfc47380c1d",
+    "sha": "ad194efd3de488909850380d223f1bf6ff28dbc9",
     "branch": "1.0"
   },
-  "comment": "# energy-skate-park-basics 1.0.0-rc.2 Mon May 12 2014 13:20:35 GMT-0600 (Mountain Daylight Time)"
+  "comment": "# energy-skate-park-basics 1.0.0-rc.3 Sun Jul 13 2014 13:07:27 GMT-0600 (Mountain Daylight Time)"
 }
