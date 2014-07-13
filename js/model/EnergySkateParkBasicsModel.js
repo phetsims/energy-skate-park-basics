@@ -291,7 +291,7 @@ define( function( require ) {
         //see if it crossed the track
         var physicalTracks = this.getPhysicalTracks();
 
-        //Make sure the skater has gone far enough before connecting to a track, this is to prevent automatically reattaching to the track it just jumped off the middle of
+        //Make sure the skater has gone far enough before connecting to a track, this is to prevent automatically reattaching to the track it just jumped off the middle of.  See #142
         if ( physicalTracks.length && skaterState.timeSinceJump > 3 / 16.0 ) {
           return this.interactWithTracksWhileFalling( physicalTracks, skaterState, proposedPosition, initialEnergy, dt, proposedVelocity );
         }
