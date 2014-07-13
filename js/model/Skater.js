@@ -66,11 +66,13 @@ define( function( require ) {
       //Returns to this track when pressing "return skater"
       startingTrack: null,
 
-      headPosition: new Vector2( 0, 0 )
+      headPosition: new Vector2( 0, 0 ),
+
+      startingTimeSinceJump: 0 // in seconds
     } );
 
     //Number of model updates since leaving the middle of the track, so it doesn't immediately re-collide
-    this.stepsSinceJump = 0;
+    this.timeSinceJump = 0;
 
     this.addDerivedProperty( 'speed', ['velocity'], function( velocity ) {return velocity.magnitude();} );
 
@@ -154,6 +156,8 @@ define( function( require ) {
         this.track = null;
         this.angle = this.startingAngle;
       }
+      //TODO: Just restore the timeSinceJump value
+      this.timeSinceJump = this.startingTimeSinceJump;
       this.positionProperty.set( new Vector2( this.startingPosition.x, this.startingPosition.y ) );
       this.velocity = new Vector2( 0, 0 );
       this.clearThermal();
@@ -176,7 +180,7 @@ define( function( require ) {
     getState: function( tracks ) {
       var state = {
         properties: this.get(),
-        stepsSinceJump: this.stepsSinceJump
+        timeSinceJump: this.timeSinceJump
       };
       //Replace the circularity problem
       state.properties.track = tracks.indexOf( this.track );
@@ -185,7 +189,7 @@ define( function( require ) {
     },
     setState: function( state, tracks ) {
       this.set( state.properties );
-      this.stepsSinceJump = state.stepsSinceJump;
+      this.timeSinceJump = state.timeSinceJump;
       this.track = tracks.getArray()[state.properties.track];
       this.startingTrack = tracks[state.properties.startingTrack];
       this.trigger( 'updated' );

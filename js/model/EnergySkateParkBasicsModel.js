@@ -290,11 +290,13 @@ define( function( require ) {
 
         //see if it crossed the track
         var physicalTracks = this.getPhysicalTracks();
-        if ( physicalTracks.length && skaterState.stepsSinceJump > 10 ) {
+
+        //Make sure the skater has gone far enough before connecting to a track, this is to prevent automatically reattaching to the track it just jumped off the middle of
+        if ( physicalTracks.length && skaterState.timeSinceJump > 3 / 16.0 ) {
           return this.interactWithTracksWhileFalling( physicalTracks, skaterState, proposedPosition, initialEnergy, dt, proposedVelocity );
         }
         else {
-          return this.continueFreeFall( skaterState, initialEnergy, proposedPosition, proposedVelocity );
+          return this.continueFreeFall( skaterState, initialEnergy, proposedPosition, proposedVelocity, dt );
         }
       }
       else {
@@ -337,7 +339,7 @@ define( function( require ) {
       var trackPoint = closestTrackAndPositionAndParameter.point;
 
       if ( !track.isParameterInBounds( u ) ) {
-        return this.continueFreeFall( skaterState, initialEnergy, proposedPosition, proposedVelocity );
+        return this.continueFreeFall( skaterState, initialEnergy, proposedPosition, proposedVelocity, dt );
       }
       else {
         var normal = track.getUnitNormalVector( u );
@@ -372,13 +374,13 @@ define( function( require ) {
 
         //It just continued in free fall
         else {
-          return this.continueFreeFall( skaterState, initialEnergy, proposedPosition, proposedVelocity );
+          return this.continueFreeFall( skaterState, initialEnergy, proposedPosition, proposedVelocity, dt );
         }
       }
     },
 
     //Started in free fall and did not interact with a track
-    continueFreeFall: function( skaterState, initialEnergy, proposedPosition, proposedVelocity ) {
+    continueFreeFall: function( skaterState, initialEnergy, proposedPosition, proposedVelocity, dt ) {
 
       //make up for the difference by changing the y value
       var y = (initialEnergy - 0.5 * skaterState.mass * proposedVelocity.magnitudeSquared() - skaterState.thermalEnergy) / (-1 * skaterState.mass * skaterState.gravity);
@@ -387,7 +389,7 @@ define( function( require ) {
         return skaterState.strikeGround( initialEnergy, proposedPosition.x );
       }
       else {
-        return skaterState.continueFreeFall( proposedVelocity.x, proposedVelocity.y, proposedPosition.x, y, skaterState.stepsSinceJump + 1 );
+        return skaterState.continueFreeFall( proposedVelocity.x, proposedVelocity.y, proposedPosition.x, y, skaterState.timeSinceJump + dt );
       }
     },
 

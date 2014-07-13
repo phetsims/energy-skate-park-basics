@@ -69,7 +69,7 @@ define( function( require ) {
       this.mass = overrides.mass || source.mass;
 
       //Special handling for values that can be null, false or zero
-      this.stepsSinceJump = 'stepsSinceJump' in overrides ? overrides.stepsSinceJump : source.stepsSinceJump;
+      this.timeSinceJump = 'timeSinceJump' in overrides ? overrides.timeSinceJump : source.timeSinceJump;
       this.track = 'track' in overrides ? overrides.track : source.track;
       this.angle = 'angle' in overrides ? overrides.angle : source.angle;
       this.up = 'up' in overrides ? overrides.up : source.up;
@@ -109,7 +109,7 @@ define( function( require ) {
 
     //Only set values that have changed
     setToSkater: function( skater ) {
-      skater.stepsSinceJump = this.stepsSinceJump;
+      skater.timeSinceJump = this.timeSinceJump;
       skater.track = this.track;
 
       //Set property values manually to avoid allocations, see #50
@@ -130,11 +130,11 @@ define( function( require ) {
     },
 
     //Create a new SkaterState with the new values.  Provided as a convenience to avoid allocating options argument (as in update)
-    updateTrackUDStepsSinceJump: function( track, uD, stepsSinceJump ) {
+    updateTrackUDStepsSinceJump: function( track, uD, timeSinceJump ) {
       var state = SkaterState.createFromPool( this, EMPTY_OBJECT );
       state.track = track;
       state.uD = uD;
-      state.stepsSinceJump = stepsSinceJump;
+      state.timeSinceJump = timeSinceJump;
       return state;
     },
 
@@ -197,7 +197,7 @@ define( function( require ) {
       state.velocityY = 0;
       state.angle = 0;
       state.up = true;
-      state.stepsSinceJump = 0;
+      state.timeSinceJump = 0;
       return state;
     },
 
@@ -211,7 +211,7 @@ define( function( require ) {
       state.track = null;
 
       //Keep track of the steps since jumping, otherwise it can run into the track again immediately, which increases thermal energy
-      state.stepsSinceJump = 0;
+      state.timeSinceJump = 0;
       return state;
     },
 
@@ -230,13 +230,13 @@ define( function( require ) {
       return state;
     },
 
-    continueFreeFall: function( velocityX, velocityY, positionX, positionY, stepsSinceJump ) {
+    continueFreeFall: function( velocityX, velocityY, positionX, positionY, timeSinceJump ) {
       var state = SkaterState.createFromPool( this, EMPTY_OBJECT );
       state.velocityX = velocityX;
       state.velocityY = velocityY;
       state.positionX = positionX;
       state.positionY = positionY;
-      state.stepsSinceJump = stepsSinceJump;
+      state.timeSinceJump = timeSinceJump;
       return state;
     },
 
