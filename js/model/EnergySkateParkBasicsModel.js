@@ -40,10 +40,9 @@ define( function( require ) {
 
   function isApproxEqual( a, b, tolerance ) { return Math.abs( a - b ) <= tolerance; }
 
-  function getSign( a ) {return a > 0 ? +1 : -1;}
-
+  //Flag to enable debugging for physics issues
   var debugLogEnabled = false;
-  var debug = {log: debugLogEnabled ? function( string ) { console.log( string ); } : function( string ) {}};
+  var debug = debugLogEnabled ? function( string ) { console.log( string ); } : null;
 
   var MAX_NUMBER_CONTROL_POINTS = 12;
 
@@ -204,7 +203,6 @@ define( function( require ) {
     //Step the model, automatically called from Joist
     step: function( dt ) {
 
-      var debugEnergy = false;
       var initialEnergy = null;
 
       //If the delay makes dt too high, then truncate it.  This helps e.g. when clicking in the address bar on ipad, which gives a huge dt and problems for integration
@@ -216,14 +214,14 @@ define( function( require ) {
         }
 
         var skaterState = SkaterState.createFromPool( this.skater, EMPTY_OBJECT );
-        if ( debugEnergy ) {
+        if ( debug ) {
           initialEnergy = skaterState.getTotalEnergy();
         }
 
         var updatedState = this.stepModel( this.speed === 'normal' ? dt : dt * 0.25, skaterState );
 
         //Uncomment this block to debug energy issues.  Commented out instead of blocked with a flag so debugger statement will pass jshint
-        if ( debugEnergy && Math.abs( updatedState.getTotalEnergy() - initialEnergy ) > 1E-6 ) {
+        if ( debug && Math.abs( updatedState.getTotalEnergy() - initialEnergy ) > 1E-6 ) {
           var redo = this.stepModel( this.speed === 'normal' ? dt : dt * 0.25, SkaterState.createFromPool( this.skater, EMPTY_OBJECT ) );
           console.log( redo );
         }
@@ -253,19 +251,10 @@ define( function( require ) {
       var newPosition = new Vector2( x1, 0 );
       var originalEnergy = skaterState.getTotalEnergy();
 
-      var updated = skaterState.update( {
-        positionX: newPosition.x,
-        positionY: newPosition.y,
-        angle: 0,
-        up: true,
-        velocityX: v1,
-        velocityY: 0
-      } );
+      var updated = skaterState.updatePositionAngleUpVelocity( newPosition.x, newPosition.y, 0, true, v1, 0 );
 
       var newEnergy = updated.getTotalEnergy();
-      return updated.update( {
-        thermalEnergy: updated.thermalEnergy + (originalEnergy - newEnergy)
-      } );
+      return updated.updateThermalEnergy( updated.thermalEnergy + (originalEnergy - newEnergy) );
     },
 
     //No bouncing on the ground, but the code is very similar to attachment part of interactWithTracksWhileFalling
@@ -280,18 +269,8 @@ define( function( require ) {
       var newPotentialEnergy = 0;
       var newThermalEnergy = initialEnergy - newKineticEnergy - newPotentialEnergy;
 
-      if ( isNaN( newThermalEnergy ) ) { throw new Error( "nan" ); }
-      return skaterState.update( {
-        thermalEnergy: newThermalEnergy,
-        track: null,
-        up: true,
-        angle: 0,
-        //TODO: Allocations
-        velocityX: proposedVelocity.normalized().timesScalar( newSpeed ).x,
-        velocityY: proposedVelocity.normalized().timesScalar( newSpeed ).y,
-        positionX: proposedPosition.x,
-        positionY: proposedPosition.y
-      } );
+      if ( !isFinite( newThermalEnergy ) ) { throw new Error( "not finite" ); }
+      return skaterState.switchToGround( newThermalEnergy, proposedVelocity.normalized().timesScalar( newSpeed ).x, proposedVelocity.normalized().timesScalar( newSpeed ).y, proposedPosition.x, proposedPosition.y );
     },
 
     //Update the skater in free fall
@@ -311,11 +290,13 @@ define( function( require ) {
 
         //see if it crossed the track
         var physicalTracks = this.getPhysicalTracks();
-        if ( physicalTracks.length && skaterState.stepsSinceJump > 10 ) {
+
+        //Make sure the skater has gone far enough before connecting to a track, this is to prevent automatically reattaching to the track it just jumped off the middle of.  See #142
+        if ( physicalTracks.length && skaterState.timeSinceJump > 3 / 16.0 ) {
           return this.interactWithTracksWhileFalling( physicalTracks, skaterState, proposedPosition, initialEnergy, dt, proposedVelocity );
         }
         else {
-          return this.continueFreeFall( skaterState, initialEnergy, proposedPosition, proposedVelocity );
+          return this.continueFreeFall( skaterState, initialEnergy, proposedPosition, proposedVelocity, dt );
         }
       }
       else {
@@ -358,7 +339,7 @@ define( function( require ) {
       var trackPoint = closestTrackAndPositionAndParameter.point;
 
       if ( !track.isParameterInBounds( u ) ) {
-        return this.continueFreeFall( skaterState, initialEnergy, proposedPosition, proposedVelocity );
+        return this.continueFreeFall( skaterState, initialEnergy, proposedPosition, proposedVelocity, dt );
       }
       else {
         var normal = track.getUnitNormalVector( u );
@@ -380,10 +361,10 @@ define( function( require ) {
           var dot = proposedVelocity.normalized().dot( segment );
 
           //Sanity test
-          assert && assert( !isNaN( dot ) );
-          assert && assert( !isNaN( newVelocity.x ) );
-          assert && assert( !isNaN( newVelocity.y ) );
-          assert && assert( !isNaN( newThermalEnergy ) );
+          assert && assert( isFinite( dot ) );
+          assert && assert( isFinite( newVelocity.x ) );
+          assert && assert( isFinite( newVelocity.y ) );
+          assert && assert( isFinite( newThermalEnergy ) );
 
           var uD = (dot > 0 ? +1 : -1) * newSpeed;
           var up = beforeVector.dot( normal ) > 0;
@@ -393,37 +374,22 @@ define( function( require ) {
 
         //It just continued in free fall
         else {
-          return this.continueFreeFall( skaterState, initialEnergy, proposedPosition, proposedVelocity );
+          return this.continueFreeFall( skaterState, initialEnergy, proposedPosition, proposedVelocity, dt );
         }
       }
     },
 
     //Started in free fall and did not interact with a track
-    continueFreeFall: function( skaterState, initialEnergy, proposedPosition, proposedVelocity ) {
+    continueFreeFall: function( skaterState, initialEnergy, proposedPosition, proposedVelocity, dt ) {
 
       //make up for the difference by changing the y value
       var y = (initialEnergy - 0.5 * skaterState.mass * proposedVelocity.magnitudeSquared() - skaterState.thermalEnergy) / (-1 * skaterState.mass * skaterState.gravity);
       if ( y <= 0 ) {
         //When falling straight down, stop completely and convert all energy to thermal
-        return skaterState.update( {
-          velocityX: 0,
-          velocityY: 0,
-          thermalEnergy: initialEnergy,
-          angle: 0,
-          up: true,
-          positionX: proposedPosition.x,
-          positionY: 0,
-          stepsSinceJump: 0
-        } );
+        return skaterState.strikeGround( initialEnergy, proposedPosition.x );
       }
       else {
-        return skaterState.update( {
-          velocityX: proposedVelocity.x,
-          velocityY: proposedVelocity.y,
-          positionX: proposedPosition.x,
-          positionY: y,
-          stepsSinceJump: skaterState.stepsSinceJump + 1
-        } );
+        return skaterState.continueFreeFall( proposedVelocity.x, proposedVelocity.y, proposedPosition.x, y, skaterState.timeSinceJump + dt );
       }
     },
 
@@ -492,7 +458,7 @@ define( function( require ) {
       netForceRadial.addXY( 0, skaterState.mass * skaterState.gravity );//gravity
       var curvatureDirection = this.getCurvatureDirection( this.curvatureTemp2, skaterState.positionX, skaterState.positionY );
       var normalForce = skaterState.mass * skaterState.getSpeed() * skaterState.getSpeed() / Math.abs( radiusOfCurvature ) - netForceRadial.dot( curvatureDirection );
-      debug.log( normalForce );
+      debug && debug( normalForce );
 
       var n = Vector2.createPolar( normalForce, curvatureDirection.angle() );
       return n;
@@ -507,7 +473,7 @@ define( function( require ) {
       var origLocY = skaterState.positionY;
       var thermalEnergy = skaterState.thermalEnergy;
       var uD = skaterState.uD;
-      assert && assert( !isNaN( uD ) );
+      assert && assert( isFinite( uD ) );
       var u = skaterState.u;
 
       //Component-wise math to prevent allocations, see #50
@@ -520,7 +486,7 @@ define( function( require ) {
       var a = netForceMagnitude * Math.cos( skaterState.track.getModelAngleAt( u ) - netForceAngle ) / skaterState.mass;
 
       uD += a * dt;
-      assert && assert( !isNaN( uD ) );
+      assert && assert( isFinite( uD ) );
       u += track.getParametricDistance( u, uD * dt + 1 / 2 * a * dt * dt );
       var newPointX = skaterState.track.getX( u );
       var newPointY = skaterState.track.getY( u );
@@ -556,17 +522,17 @@ define( function( require ) {
           if ( newTotalEnergy < origEnergy ) {
             thermalEnergy += Math.abs( newTotalEnergy - origEnergy );//add some thermal to exactly match
             if ( Math.abs( newTotalEnergy - origEnergy ) > 1E-6 ) {
-              debug.log( "Added thermal, dE=" + ( newState.getTotalEnergy() - origEnergy ) );
+              debug && debug( "Added thermal, dE=" + ( newState.getTotalEnergy() - origEnergy ) );
             }
           }
           if ( newTotalEnergy > origEnergy ) {
             if ( Math.abs( newTotalEnergy - origEnergy ) < therm ) {
-              debug.log( "gained energy, removing thermal (Would have to remove more than we gained)" );
+              debug && debug( "gained energy, removing thermal (Would have to remove more than we gained)" );
             }
             else {
               thermalEnergy -= Math.abs( newTotalEnergy - origEnergy );
               if ( Math.abs( newTotalEnergy - origEnergy ) > 1E-6 ) {
-                debug.log( "Removed thermal, dE=" + ( newTotalEnergy - origEnergy ) );
+                debug && debug( "Removed thermal, dE=" + ( newTotalEnergy - origEnergy ) );
               }
             }
           }
@@ -574,7 +540,7 @@ define( function( require ) {
 
         //Discrepancy with original version: original version allowed drop of thermal energy here, to be fixed in the heuristic patch
         //We have clamped it here to make it amenable to a smaller number of euler updates, to improve performance
-        return newState.update( {thermalEnergy: Math.max( thermalEnergy, skaterState.thermalEnergy )} );
+        return newState.updateThermalEnergy( Math.max( thermalEnergy, skaterState.thermalEnergy ) );
       }
       else {
         return newState;
@@ -615,13 +581,7 @@ define( function( require ) {
 
         //Leave the track.  Make sure the velocity is pointing away from the track or keep track of frames away from the track so it doesn't immediately recollide
         //Or project a ray and see if a collision is imminent
-        var freeSkater = skaterState.update( {
-          track: null,
-          uD: 0,
-
-          //Keep track of the steps since jumping, otherwise it can run into the track again immediately, which increases thermal energy
-          stepsSinceJump: 0
-        } );
+        var freeSkater = skaterState.leaveTrack();
 
         //Step after switching to free fall, so it doesn't look like it pauses
         return this.stepFreeFall( dt, freeSkater );
@@ -653,7 +613,7 @@ define( function( require ) {
     correctEnergyReduceVelocity: function( skaterState, targetState ) {
 
       //Make a clone we can mutate and return, to protect the input argument
-      var newSkaterState = targetState.update( {} );
+      var newSkaterState = targetState.copy();
       var e0 = skaterState.getTotalEnergy();
       var mass = skaterState.mass;
       var unit = newSkaterState.track.getUnitParallelVector( newSkaterState.u );
@@ -682,17 +642,17 @@ define( function( require ) {
       var da = ( u1 - u0 ) / numSteps;
       var bestAlpha = ( u1 - u0 ) / 2;
       var p = skaterState.track.getPoint( bestAlpha );
-      var bestDE = skaterState.update( {positionX: p.x, positionY: p.y} ).getTotalEnergy();
+      var bestDE = skaterState.updatePosition( p.x, p.y ).getTotalEnergy();
       for ( var i = 0; i < numSteps; i++ ) {
         var proposedAlpha = u0 + da * i;
         var p2 = skaterState.track.getPoint( bestAlpha );
-        var e = skaterState.update( {positionX: p2.x, positionY: p2.y} ).getTotalEnergy();
+        var e = skaterState.updatePosition( p2.x, p2.y ).getTotalEnergy();
         if ( Math.abs( e - e0 ) <= Math.abs( bestDE ) ) {
           bestDE = e - e0;
           bestAlpha = proposedAlpha;
         }//continue to find best value closest to proposed u, even if several values give dE=0.0
       }
-      debug.log( "After " + numSteps + " steps, origAlpha=" + u0 + ", bestAlpha=" + bestAlpha + ", dE=" + bestDE );
+      debug && debug( "After " + numSteps + " steps, origAlpha=" + u0 + ", bestAlpha=" + bestAlpha + ", dE=" + bestDE );
       return bestAlpha;
     },
 
@@ -704,7 +664,7 @@ define( function( require ) {
       var u0 = skaterState.u;
       var e0 = skaterState.getTotalEnergy();
 
-      if ( isNaN( newState.getTotalEnergy() ) ) { throw new Error( 'nan' );}
+      if ( !isFinite( newState.getTotalEnergy() ) ) { throw new Error( 'not finite' );}
       var dE = newState.getTotalEnergy() - e0;
       if ( Math.abs( dE ) < 1E-6 ) {
         //small enough
@@ -712,23 +672,23 @@ define( function( require ) {
       }
       else {
         if ( newState.getTotalEnergy() > e0 ) {
-          debug.log( "Energy too high" );
+          debug && debug( "Energy too high" );
 
           //can we reduce the velocity enough?
           if ( Math.abs( newState.getKineticEnergy() ) > Math.abs( dE ) ) {//amount we could reduce the energy if we deleted all the kinetic energy:
 
             //TODO: maybe should only do this if all velocity is not converted
-            debug.log( "Could fix all energy by changing velocity." );
+            debug && debug( "Could fix all energy by changing velocity." );
             var correctedStateA = this.correctEnergyReduceVelocity( skaterState, newState );
-            debug.log( "changed velocity: dE=" + ( correctedStateA.getTotalEnergy() - e0 ) );
+            debug && debug( "changed velocity: dE=" + ( correctedStateA.getTotalEnergy() - e0 ) );
             if ( !isApproxEqual( e0, correctedStateA.getTotalEnergy(), 1E-8 ) ) {
-              debug.log( "Energy error[0]" );
+              debug && debug( "Energy error[0]" );
             }
             return correctedStateA;
           }
           else {
-            debug.log( "Not enough KE to fix with velocity alone: normal:" );
-            debug.log( "changed position u: dE=" + ( newState.getTotalEnergy() - e0 ) );
+            debug && debug( "Not enough KE to fix with velocity alone: normal:" );
+            debug && debug( "changed position u: dE=" + ( newState.getTotalEnergy() - e0 ) );
             //search for a place between u and u0 with a better energy
 
             var numRecursiveSearches = 10;
@@ -741,20 +701,18 @@ define( function( require ) {
               da = ( ( bestAlpha - da ) - ( bestAlpha + da ) ) / numSteps;
             }
 
-            var correctedState = newState.update( {
-              u: bestAlpha,
-              position: newState.track.getPoint( bestAlpha )
-            } );
-            debug.log( "changed position u: dE=" + ( correctedState.getTotalEnergy() - e0 ) );
+            var point = newState.track.getPoint( bestAlpha );
+            var correctedState = newState.updateUPosition( bestAlpha, point.x, point.y );
+            debug && debug( "changed position u: dE=" + ( correctedState.getTotalEnergy() - e0 ) );
             if ( !isApproxEqual( e0, correctedState.getTotalEnergy(), 1E-8 ) ) {
               if ( Math.abs( correctedState.getKineticEnergy() ) > Math.abs( dE ) ) {//amount we could reduce the energy if we deleted all the kinetic energy:
 
                 //TODO: maybe should only do this if all velocity is not converted
-                debug.log( "Fixed position some, still need to fix velocity as well." );
+                debug && debug( "Fixed position some, still need to fix velocity as well." );
                 var correctedState2 = this.correctEnergyReduceVelocity( skaterState, correctedState );
                 if ( !isApproxEqual( e0, correctedState2.getTotalEnergy(), 1E-8 ) ) {
-                  debug.log( "Changed position & Velocity and still had energy error" );
-                  debug.log( "Energy error[123]" );
+                  debug && debug( "Changed position & Velocity and still had energy error" );
+                  debug && debug( "Energy error[123]" );
                 }
                 return correctedState2;
               }
@@ -768,23 +726,21 @@ define( function( require ) {
           }
         }
         else {
-          if ( isNaN( newState.getTotalEnergy() ) ) { throw new Error( 'nan' );}
-          debug.log( "Energy too low" );
+          if ( !isFinite( newState.getTotalEnergy() ) ) { throw new Error( 'not finite' );}
+          debug && debug( "Energy too low" );
 
           //increasing the kinetic energy
           //Choose the exact velocity in the same direction as current velocity to ensure total energy conserved.
           var vSq = Math.abs( 2 / newState.mass * ( e0 - newState.getPotentialEnergy() - newState.thermalEnergy ) );
           var v = Math.sqrt( vSq );
-          var newVelocity = v * getSign( newState.uD );
+
+          //TODO: What if uD ===0?
+          var newVelocity = v * (newState.uD > 0 ? +1 : -1);
           var updatedVelocityX = newState.track.getUnitParallelVectorX( newState.u ) * newVelocity;
           var updatedVelocityY = newState.track.getUnitParallelVectorY( newState.u ) * newVelocity;
-          var fixedState = newState.update( {
-            uD: newVelocity,
-            velocityX: updatedVelocityX,
-            velocityY: updatedVelocityY
-          } );
-          debug.log( "Set velocity to match energy, when energy was low: " );
-          debug.log( "INC changed velocity: dE=" + ( fixedState.getTotalEnergy() - e0 ) );
+          var fixedState = newState.updateUDVelocity( newVelocity, updatedVelocityX, updatedVelocityY );
+          debug && debug( "Set velocity to match energy, when energy was low: " );
+          debug && debug( "INC changed velocity: dE=" + ( fixedState.getTotalEnergy() - e0 ) );
           if ( !isApproxEqual( e0, fixedState.getTotalEnergy(), 1E-8 ) ) {
             new Error( "Energy error[2]" ).printStackTrace();
           }
@@ -822,19 +778,11 @@ define( function( require ) {
 
     //Return to the place he was last released by the user.  Also restores the track the skater was on so the initial conditions are the same as the previous release
     returnSkater: function() {
-      if ( this.skater.startingTrack ) {
 
-        //Restore the starting track if in one of the scenes
-        if ( this.skater.startingTrack.scene !== undefined ) {
-          this.scene = this.skater.startingTrack.scene;
-        }
-
-        //Restore the skater's track, see #126
-        else {
-          if ( !this.tracks.contains( this.skater.startingTrack ) ) {
-            this.tracks.add( this.skater.startingTrack );
-          }
-        }
+      //if the skater's original track is available, restore her to it, see #143
+      var originalTrackAvailable = _.contains( this.getPhysicalTracks(), this.skater.startingTrack );
+      if ( originalTrackAvailable ) {
+        this.skater.track = this.skater.startingTrack;
       }
       this.skater.returnSkater();
     },
@@ -1009,6 +957,8 @@ define( function( require ) {
       b.trigger( 'remove' );
       this.tracks.remove( b );
 
+      //When tracks are joined, bump the new track above ground so the y value (and potential energy) cannot go negative, and so it won't make the "return skater" button get bigger, see #158
+      newTrack.bumpAboveGround();
       this.tracks.add( newTrack );
 
       //Move skater to new track if he was on the old track, by searching for the best fit point on the new track
@@ -1024,14 +974,17 @@ define( function( require ) {
         var y2 = newTrack.getY( p.u );
         this.skater.position = new Vector2( x2, y2 );
         this.skater.angle = newTrack.getViewAngleAt( p.u ) + (this.skater.up ? 0 : Math.PI);
+
+        //Trigger an initial update now so we can get the right up vector, see #150
+        this.skater.trigger( 'updated' );
         var newNormal = this.skater.upVector;
 
         //If the skater flipped upside down because the track directionality is different, toggle his 'up' flag
         if ( originalNormal.dot( newNormal ) < 0 ) {
           this.skater.up = !this.skater.up;
           this.skater.angle = newTrack.getViewAngleAt( p.u ) + (this.skater.up ? 0 : Math.PI);
+          this.skater.trigger( 'updated' );
         }
-        this.skater.trigger( 'updated' );
       }
     },
 

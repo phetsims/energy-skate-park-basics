@@ -69,7 +69,7 @@ define( function( require ) {
       this.mass = overrides.mass || source.mass;
 
       //Special handling for values that can be null, false or zero
-      this.stepsSinceJump = 'stepsSinceJump' in overrides ? overrides.stepsSinceJump : source.stepsSinceJump;
+      this.timeSinceJump = 'timeSinceJump' in overrides ? overrides.timeSinceJump : source.timeSinceJump;
       this.track = 'track' in overrides ? overrides.track : source.track;
       this.angle = 'angle' in overrides ? overrides.angle : source.angle;
       this.up = 'up' in overrides ? overrides.up : source.up;
@@ -79,10 +79,10 @@ define( function( require ) {
       this.thermalEnergy = 'thermalEnergy' in overrides ? overrides.thermalEnergy : source.thermalEnergy;
 
       //Some sanity tests
-      assert && assert( !isNaN( this.thermalEnergy ) );
-      assert && assert( !isNaN( this.velocityX ) );
-      assert && assert( !isNaN( this.velocityY ) );
-      assert && assert( !isNaN( this.uD ) );
+      assert && assert( isFinite( this.thermalEnergy ) );
+      assert && assert( isFinite( this.velocityX ) );
+      assert && assert( isFinite( this.velocityY ) );
+      assert && assert( isFinite( this.uD ) );
 
       return this;
     },
@@ -109,7 +109,7 @@ define( function( require ) {
 
     //Only set values that have changed
     setToSkater: function( skater ) {
-      skater.stepsSinceJump = this.stepsSinceJump;
+      skater.timeSinceJump = this.timeSinceJump;
       skater.track = this.track;
 
       //Set property values manually to avoid allocations, see #50
@@ -130,11 +130,11 @@ define( function( require ) {
     },
 
     //Create a new SkaterState with the new values.  Provided as a convenience to avoid allocating options argument (as in update)
-    updateTrackUDStepsSinceJump: function( track, uD, stepsSinceJump ) {
+    updateTrackUDStepsSinceJump: function( track, uD, timeSinceJump ) {
       var state = SkaterState.createFromPool( this, EMPTY_OBJECT );
       state.track = track;
       state.uD = uD;
-      state.stepsSinceJump = stepsSinceJump;
+      state.timeSinceJump = timeSinceJump;
       return state;
     },
 
@@ -147,6 +147,96 @@ define( function( require ) {
       state.velocityY = velocityY;
       state.positionX = positionX;
       state.positionY = positionY;
+      return state;
+    },
+
+    updatePositionAngleUpVelocity: function( positionX, positionY, angle, up, velocityX, velocityY ) {
+      var state = SkaterState.createFromPool( this, EMPTY_OBJECT );
+      state.angle = angle;
+      state.up = up;
+      state.velocityX = velocityX;
+      state.velocityY = velocityY;
+      state.positionX = positionX;
+      state.positionY = positionY;
+      return state;
+    },
+
+    updateThermalEnergy: function( thermalEnergy ) {
+      var state = SkaterState.createFromPool( this, EMPTY_OBJECT );
+      state.thermalEnergy = thermalEnergy;
+      return state;
+    },
+
+    updateUPosition: function( u, positionX, positionY ) {
+      var state = SkaterState.createFromPool( this, EMPTY_OBJECT );
+      state.u = u;
+      state.positionX = positionX;
+      state.positionY = positionY;
+      return state;
+    },
+
+    switchToGround: function( thermalEnergy, velocityX, velocityY, positionX, positionY ) {
+      var state = SkaterState.createFromPool( this, EMPTY_OBJECT );
+      state.thermalEnergy = thermalEnergy;
+      state.track = null;
+      state.up = true;
+      state.angle = 0;
+      state.velocityX = velocityX;
+      state.velocityY = velocityY;
+      state.positionX = positionX;
+      state.positionY = positionY;
+      return state;
+    },
+
+    strikeGround: function( thermalEnergy, positionX ) {
+      var state = SkaterState.createFromPool( this, EMPTY_OBJECT );
+      state.thermalEnergy = thermalEnergy;
+      state.positionX = positionX;
+      state.positionY = 0;
+      state.velocityX = 0;
+      state.velocityY = 0;
+      state.angle = 0;
+      state.up = true;
+      state.timeSinceJump = 0;
+      return state;
+    },
+
+    copy: function() {
+      return SkaterState.createFromPool( this, EMPTY_OBJECT );
+    },
+
+    leaveTrack: function() {
+      var state = SkaterState.createFromPool( this, EMPTY_OBJECT );
+      state.uD = 0;
+      state.track = null;
+
+      //Keep track of the steps since jumping, otherwise it can run into the track again immediately, which increases thermal energy
+      state.timeSinceJump = 0;
+      return state;
+    },
+
+    updatePosition: function( positionX, positionY ) {
+      var state = SkaterState.createFromPool( this, EMPTY_OBJECT );
+      state.positionX = positionX;
+      state.positionY = positionY;
+      return state;
+    },
+
+    updateUDVelocity: function( uD, velocityX, velocityY ) {
+      var state = SkaterState.createFromPool( this, EMPTY_OBJECT );
+      state.uD = uD;
+      state.velocityX = velocityX;
+      state.velocityY = velocityY;
+      return state;
+    },
+
+    continueFreeFall: function( velocityX, velocityY, positionX, positionY, timeSinceJump ) {
+      var state = SkaterState.createFromPool( this, EMPTY_OBJECT );
+      state.velocityX = velocityX;
+      state.velocityY = velocityY;
+      state.positionX = positionX;
+      state.positionY = positionY;
+      state.timeSinceJump = timeSinceJump;
       return state;
     },
 

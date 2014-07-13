@@ -8,6 +8,8 @@
 define( function( require ) {
   'use strict';
 
+  // modules
+  var AttachDetachToggleButtons = require( 'ENERGY_SKATE_PARK_BASICS/view/AttachDetachToggleButtons' );
   var Color = require( 'SCENERY/util/Color' );
   var inherit = require( 'PHET_CORE/inherit' );
   var Image = require( 'SCENERY/nodes/Image' );
@@ -78,6 +80,12 @@ define( function( require ) {
     this.addChild( this.controlPanel );
     this.controlPanel.right = this.layoutBounds.width - 5;
     this.controlPanel.top = 5;
+
+    if ( model.frictionAllowed ) {
+      var property = model.draggableTracks ? new Property( true ) : model.property( 'scene' ).valueEquals( 2 );
+      this.attachDetachToggleButtons = new AttachDetachToggleButtons( model.property( 'detachable' ), property, this.controlPanel.contentWidth, {top: this.controlPanel.bottom + 5, centerX: this.controlPanel.centerX} );
+      this.addChild( this.attachDetachToggleButtons );
+    }
 
     //Determine if the skater is onscreen or offscreen for purposes of highlighting the 'return skater' button.
     var onscreenProperty = new DerivedProperty( [model.skater.positionProperty], function( position ) {
@@ -273,9 +281,14 @@ define( function( require ) {
       //Float the control panel to the right (but not arbitrarily far because it could get too far from the play area)
       this.controlPanel.right = Math.min( 890, this.availableViewBounds.maxX ) - 5;
 
+      if ( this.attachDetachToggleButtons ) {
+        this.attachDetachToggleButtons.centerX = this.controlPanel.centerX;
+      }
+
       if ( this.sceneSelectionPanel ) {
-        this.sceneSelectionPanel.centerX = this.controlPanel.centerX;
-        this.sceneSelectionPanel.top = this.controlPanel.bottom + 5;
+        var panelAbove = this.attachDetachToggleButtons || this.controlPanel;
+        this.sceneSelectionPanel.centerX = panelAbove.centerX;
+        this.sceneSelectionPanel.top = panelAbove.bottom + 5;
       }
       this.resetAllButton.centerX = this.controlPanel.centerX;
       this.returnSkaterButton.right = this.resetAllButton.left - 10;

@@ -12,7 +12,7 @@ define( function( require ) {
   var inherit = require( 'PHET_CORE/inherit' );
   var Node = require( 'SCENERY/nodes/Node' );
   var VBox = require( 'SCENERY/nodes/VBox' );
-  var ToggleButton = require( 'SUN/ToggleButton' );
+  var ToggleButtonDeprecated = require( 'SUN/ToggleButtonDeprecated' );
   var Property = require( 'AXON/Property' );
   var TrackNode = require( 'ENERGY_SKATE_PARK_BASICS/view/TrackNode' );
   var BackgroundNode = require( 'ENERGY_SKATE_PARK_BASICS/view/BackgroundNode' );
@@ -35,7 +35,7 @@ define( function( require ) {
 
       property.link( function( scene0Selected ) { if ( scene0Selected ) { model.scene = index; } } );
       model.sceneProperty.link( function( scene ) { property.value = scene === index; } );
-      return new ToggleButton( selectedNode, unselectedNode, property, {radioButton: true} );
+      return new ToggleButtonDeprecated( selectedNode, unselectedNode, property, {radioButton: true} );
     };
 
     var content = new VBox( {
@@ -45,7 +45,7 @@ define( function( require ) {
         createNode( 1 ) ,
         createNode( 2 )
       ]} );
-    Panel.call( this, content, {xMargin: 10} );
+    Panel.call( this, content, {fill: '#F0F0F0', xMargin: 10, stroke: null} );
   }
 
   return inherit( Panel, SceneSelectionPanel );

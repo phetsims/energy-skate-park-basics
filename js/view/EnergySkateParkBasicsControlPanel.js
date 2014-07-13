@@ -30,17 +30,16 @@ define( function( require ) {
   var speedString = require( 'string!ENERGY_SKATE_PARK_BASICS/properties.speed' );
   var gridString = require( 'string!ENERGY_SKATE_PARK_BASICS/controls.show-grid' );
   var PhetFont = require( 'SCENERY_PHET/PhetFont' );
-  var AttachDetachToggleButtons = require( 'ENERGY_SKATE_PARK_BASICS/view/AttachDetachToggleButtons' );
 
   function EnergySkateParkBasicsControlPanel( model ) {
     var textOptions = {font: new PhetFont( 14 )};
 
-    var barGraphSet = [new Text( barGraphString, textOptions ), this.createBarGraphIcon()];
     var pieChartSet = [new Text( pieChartString, textOptions ), this.createPieChartIcon()];
+    var barGraphSet = [new Text( barGraphString, textOptions ), this.createBarGraphIcon()];
     var gridSet = [new Text( gridString, textOptions ), this.createGridIcon()];
     var speedometerSet = [new Text( speedString, textOptions ), this.createSpeedometerIcon()];
 
-    var sets = [barGraphSet, pieChartSet, gridSet, speedometerSet];
+    var sets = [pieChartSet, barGraphSet, gridSet, speedometerSet];
     var maxTextWidth = _.max( sets, function( itemSet ) { return itemSet[0].width; } )[0].width;
 
     //In the absence of any sun (or other) layout packages, just manually space them out so they will have the icons aligned
@@ -52,19 +51,26 @@ define( function( require ) {
     var options = {boxWidth: 18};
 
     var checkBoxChildren = [
-      new CheckBox( new HBox( {children: pad( barGraphSet )} ), model.property( 'barGraphVisible' ), options ),
       new CheckBox( new HBox( {children: pad( pieChartSet )} ), model.property( 'pieChartVisible' ), options ),
+      new CheckBox( new HBox( {children: pad( barGraphSet )} ), model.property( 'barGraphVisible' ), options ),
       new CheckBox( new HBox( {children: pad( gridSet )} ), model.property( 'gridVisible' ), options ),
       new CheckBox( new HBox( {children: pad( speedometerSet )} ), model.property( 'speedometerVisible' ), options )];
     var checkBoxes = new VBox( {align: 'left', spacing: 10, children: checkBoxChildren} );
 
     var content = new VBox( {spacing: 4,
-      children: !model.frictionAllowed ? [checkBoxes, new MassSlider( model.skater.massProperty )] :
-                [checkBoxes,
-                  new AttachDetachToggleButtons( model.property( 'detachable' ), model.draggableTracks ? new Property( true ) : model.property( 'scene' ).valueEquals( 2 ) ),
-                  new FrictionControl( model.property( 'friction' ) )]} );
 
-    Panel.call( this, content, { xMargin: 10, yMargin: 5, fill: '#F0F0F0', stroke: 'gray', lineWidth: 1, resize: false } );
+      //For 1st screen, show MassSlider
+      children: !model.frictionAllowed ? [checkBoxes, new MassSlider( model.skater.massProperty )] :
+
+        //For 2nd screen, show Friction Slider
+                !model.draggableTracks ? [checkBoxes, new FrictionControl( model.property( 'friction' ) )] :
+
+                  //For 3rd screen, show Friction Slider and Mass Slider, see #147
+                [checkBoxes, new MassSlider( model.skater.massProperty ), new FrictionControl( model.property( 'friction' ) )]
+    } );
+
+    this.contentWidth = content.width;
+    Panel.call( this, content, { xMargin: 10, yMargin: 5, fill: '#F0F0F0', stroke: null, lineWidth: null, resize: false } );
   }
 
   return inherit( Panel, EnergySkateParkBasicsControlPanel, {

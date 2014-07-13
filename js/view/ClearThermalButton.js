@@ -3,16 +3,13 @@
 /**
  * The Undo button that can be used to remove thermal energy from the system.
  *
- * TODO: This button should be using the new sun buttons, but there is a long delay on iPad3 that should be solved.
- * See https://github.com/phetsims/energy-skate-park-basics/issues/137
- * Once that is resolved, check the history of this file for an implementation that uses the sun buttons (so you don't have to start from scratch).
- *
  * @author Sam Reid
  */
 define( function( require ) {
   'use strict';
 
-  var RectanglePushButtonDeprecated = require( 'SUN/RectanglePushButtonDeprecated' );
+  var RectangularPushButton = require( 'SUN/buttons/RectangularPushButton' );
+  var RectangularButtonView = require( 'SUN/buttons/RectangularButtonView' );
   var inherit = require( 'PHET_CORE/inherit' );
   var Shape = require( 'KITE/Shape' );
   var Color = require( 'SCENERY/util/Color' );
@@ -30,15 +27,19 @@ define( function( require ) {
       icon.opacity = hasThermalEnergy ? 1 : 0.3;
     } );
 
-    RectanglePushButtonDeprecated.call( this, icon, {
-      rectangleCornerRadius: 6,
-      listener: callback, rectangleFillUp: new Color( 230, 230, 240 ),
-      rectangleFillDisabled: 'white',
-      rectangleXMargin: 7,
-      rectangleYMargin: 3 } );
+    RectangularPushButton.call( this, {
+      content: icon,
+      baseColor: new Color( 230, 230, 240 ),
+      disabledBaseColor: 'white',
+      cornerRadius: 6,
+      listener: callback,
+      buttonAppearanceStrategy: RectangularButtonView.flatAppearanceStrategy,
+      xMargin: 7,
+      yMargin: 3
+    } );
     this.mouseArea = this.touchArea = Shape.rectangle( icon.bounds.minX, icon.bounds.minY, icon.bounds.width, icon.bounds.height );
     this.mutate( options );
   }
 
-  return inherit( RectanglePushButtonDeprecated, ClearThermalButton );
+  return inherit( RectangularPushButton, ClearThermalButton );
 } );

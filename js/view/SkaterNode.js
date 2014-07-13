@@ -155,7 +155,12 @@ define( function( require ) {
           skater.startingU = targetU;
           skater.startingUp = skater.up;
           skater.startingTrack = targetTrack;
+
+          //Record the starting track control points to make sure the track hasn't changed during return skater.
+          skater.startingTrackControlPointSources = targetTrack ? targetTrack.copyControlPointSources() : [];
           skater.startingAngle = skater.angle;
+          skater.timeSinceJump = 1000;
+          skater.startingTimeSinceJump = skater.timeSinceJump;
 
           //Update the energy on skater release so it won't try to move to a different height to make up for the delta
           skater.updateEnergy();
