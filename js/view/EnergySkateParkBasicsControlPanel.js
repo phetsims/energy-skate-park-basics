@@ -62,10 +62,7 @@ define( function( require ) {
       //For 1st screen, show MassSlider
       children: !model.frictionAllowed ? [checkBoxes, new MassSlider( model.skater.massProperty )] :
 
-        //For 2nd screen, show Friction Slider
-                !model.draggableTracks ? [checkBoxes, new FrictionControl( model.property( 'friction' ) )] :
-
-                  //For 3rd screen, show Friction Slider and Mass Slider, see #147
+        //For 2nd and 3rd screen, show Friction Slider and Mass Slider, see #147
                 [checkBoxes, new MassSlider( model.skater.massProperty ), new FrictionControl( model.property( 'friction' ) )]
     } );
 
