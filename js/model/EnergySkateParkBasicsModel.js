@@ -272,8 +272,14 @@ define( function( require ) {
       return skaterState.switchToGround( newThermalEnergy, newSpeed, 0, proposedPosition.x, proposedPosition.y );
     },
 
-    //Update the skater in free fall
-    stepFreeFall: function( dt, skaterState ) {
+    /**
+     * Update the skater in free fall
+     * @param {Number} dt the time that passed, in seconds
+     * @param {SkaterState} skaterState the original state of the skater
+     * @param {Boolean} justLeft true if the skater just fell off or launched off the track: in this case it should not interact with the track.
+     * @return {SkaterState} the new state
+     */
+    stepFreeFall: function( dt, skaterState, justLeft ) {
       var initialEnergy = skaterState.getTotalEnergy();
 
       var acceleration = new Vector2( 0, skaterState.gravity );
@@ -290,8 +296,8 @@ define( function( require ) {
         //see if it crossed the track
         var physicalTracks = this.getPhysicalTracks();
 
-        //Make sure the skater has gone far enough before connecting to a track, this is to prevent automatically reattaching to the track it just jumped off the middle of.  See #142
-        if ( physicalTracks.length && skaterState.timeSinceJump > 3 / 16.0 ) {
+        //Don't interact with the track if the skater just left the track in this same frame, see #142
+        if ( physicalTracks.length && !justLeft ) {
           return this.interactWithTracksWhileFalling( physicalTracks, skaterState, proposedPosition, initialEnergy, dt, proposedVelocity );
         }
         else {
@@ -579,11 +585,11 @@ define( function( require ) {
       if ( leaveTrack && this.detachable ) {
 
         //Leave the track.  Make sure the velocity is pointing away from the track or keep track of frames away from the track so it doesn't immediately recollide
-        //Or project a ray and see if a collision is imminent
+        //Or project a ray and see if a collision is imminent ?
         var freeSkater = skaterState.leaveTrack();
 
         //Step after switching to free fall, so it doesn't look like it pauses
-        return this.stepFreeFall( dt, freeSkater );
+        return this.stepFreeFall( dt, freeSkater, true );
       }
       else {
         var newState = skaterState;
@@ -770,7 +776,7 @@ define( function( require ) {
     stepModel: function( dt, skaterState ) {
       return skaterState.dragging ? skaterState : //User is dragging the skater, nothing to update here
              !skaterState.track && skaterState.positionY <= 0 ? this.stepGround( dt, skaterState ) :
-             !skaterState.track && skaterState.positionY > 0 ? this.stepFreeFall( dt, skaterState ) :
+             !skaterState.track && skaterState.positionY > 0 ? this.stepFreeFall( dt, skaterState, false ) :
              skaterState.track ? this.stepTrack( dt, skaterState ) :
              skaterState;
     },
