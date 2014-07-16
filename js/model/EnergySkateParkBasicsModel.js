@@ -261,8 +261,7 @@ define( function( require ) {
     switchToGround: function( skaterState, initialEnergy, proposedPosition, proposedVelocity, dt ) {
       var segment = new Vector2( 1, 0 );
 
-      var newVelocity = segment.times( segment.dot( proposedVelocity ) );
-      var newSpeed = newVelocity.magnitude();
+      var newSpeed = segment.dot( proposedVelocity );
 
       //Make sure energy perfectly conserved when falling to the ground.
       var newKineticEnergy = 0.5 * newSpeed * newSpeed * skaterState.mass;
@@ -270,7 +269,7 @@ define( function( require ) {
       var newThermalEnergy = initialEnergy - newKineticEnergy - newPotentialEnergy;
 
       if ( !isFinite( newThermalEnergy ) ) { throw new Error( "not finite" ); }
-      return skaterState.switchToGround( newThermalEnergy, proposedVelocity.normalized().timesScalar( newSpeed ).x, proposedVelocity.normalized().timesScalar( newSpeed ).y, proposedPosition.x, proposedPosition.y );
+      return skaterState.switchToGround( newThermalEnergy, newSpeed, 0, proposedPosition.x, proposedPosition.y );
     },
 
     //Update the skater in free fall
