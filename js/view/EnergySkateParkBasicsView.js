@@ -81,7 +81,8 @@ define( function( require ) {
     this.controlPanel.right = this.layoutBounds.width - 5;
     this.controlPanel.top = 5;
 
-    if ( model.frictionAllowed ) {
+    // For the playground screen, show attach/detach toggle buttons
+    if ( model.draggableTracks ) {
       var property = model.draggableTracks ? new Property( true ) : model.property( 'scene' ).valueEquals( 2 );
       this.attachDetachToggleButtons = new AttachDetachToggleButtons( model.property( 'detachable' ), property, this.controlPanel.contentWidth, {top: this.controlPanel.bottom + 5, centerX: this.controlPanel.centerX} );
       this.addChild( this.attachDetachToggleButtons );
