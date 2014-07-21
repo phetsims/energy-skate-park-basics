@@ -132,9 +132,14 @@ define( function( require ) {
       var slope = [new ControlPoint( -4, 6 ), new ControlPoint( -2, 1.2 ), new ControlPoint( 2, 0 )];
       var doubleWell = [new ControlPoint( -4, 5 ), new ControlPoint( -2, 0.0166015 ), new ControlPoint( 0, 2 ), new ControlPoint( 2, 1 ), new ControlPoint( 4, 5 ) ];
 
+      var slopeTrack = new Track( this, this.tracks, slope, false );
+
+      //Flag to indicate whether the skater transitions from the right edge of this track directly to the ground, see #164
+      slopeTrack.slopeToGround = true;
+
       this.tracks.addAll(
         [ new Track( this, this.tracks, parabola, false ),
-          new Track( this, this.tracks, slope, false ),
+          slopeTrack,
           new Track( this, this.tracks, doubleWell, false )
         ] );
 
@@ -609,7 +614,14 @@ define( function( require ) {
           return correctedState;
         }
         else {
-          return skaterState.updateTrackUDStepsSinceJump( null, 0, 0 );
+
+          //Off the edge of the track.  If the skater transitions from the right edge of the 2nd track directly to the ground then do not lose thermal energy during the transition, see #164
+          if ( correctedState.u > skaterState.track.maxPoint && skaterState.track.slopeToGround ) {
+            return correctedState.switchToGround( correctedState.thermalEnergy, correctedState.getSpeed(), 0, correctedState.positionX, 0 );
+          }
+          else {
+            return skaterState.updateTrackUDStepsSinceJump( null, 0, 0 );
+          }
         }
       }
     },
