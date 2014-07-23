@@ -375,6 +375,7 @@ define( function( require ) {
           assert && assert( isFinite( newVelocity.x ) );
           assert && assert( isFinite( newVelocity.y ) );
           assert && assert( isFinite( newThermalEnergy ) );
+          assert && assert( newThermalEnergy >= 0 );
 
           var uD = (dot > 0 ? +1 : -1) * newSpeed;
           var up = beforeVector.dot( normal ) > 0;
