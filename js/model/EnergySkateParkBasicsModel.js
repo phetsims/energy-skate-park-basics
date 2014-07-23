@@ -1001,7 +1001,7 @@ define( function( require ) {
 
         //Keep track of the skater direction so we can toggle the 'up' flag if the track orientation changed
         var originalNormal = this.skater.upVector;
-        var p = newTrack.getClosestPositionAndParameter( new Vector2( this.skater.positionX, this.skater.positionY ) );//TODO: Allocations
+        var p = newTrack.getClosestPositionAndParameter( new Vector2( this.skater.position.x, this.skater.position.y ) );
         this.skater.track = newTrack;
         this.skater.u = p.u;
         var x2 = newTrack.getX( p.u );
