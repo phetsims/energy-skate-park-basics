@@ -368,6 +368,22 @@ define( function( require ) {
           var newPotentialEnergy = -skaterState.mass * skaterState.gravity * newPosition.y;
           var newThermalEnergy = initialEnergy - newKineticEnergy - newPotentialEnergy;
 
+          //Sometimes (depending on dt) the thermal energy can go negative by the above calculation, see #141
+          //In that case, set the thermal energy to zero and reduce the speed to compensate.
+          if ( newThermalEnergy < 0 ) {
+            newThermalEnergy = 0;
+            newKineticEnergy = initialEnergy - newPotentialEnergy;
+
+            assert && assert( newKineticEnergy >= 0 );
+            if ( newKineticEnergy < 0 ) {
+              newKineticEnergy = 0;
+            }
+
+            //ke = 1/2 m v v
+            newSpeed = Math.sqrt( 2 * newKineticEnergy / skaterState.mass );
+            newVelocity = segment.times( newSpeed );
+          }
+
           var dot = proposedVelocity.normalized().dot( segment );
 
           //Sanity test
