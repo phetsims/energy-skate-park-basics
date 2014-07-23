@@ -245,10 +245,6 @@ define( function( require ) {
             controlPointNode.lineDash = [ 4, 5 ];
           }
 
-          //Make it so you can only translate the track to bring it out of the toolbox, but once it is out of the toolbox it can be reshaped
-//          track.physicalProperty.link( function( physical ) { controlPointNode.pickable = physical; } );
-//          controlPointNode.pickable = true;
-
           controlPoint.positionProperty.link( function( position ) {
             controlPointNode.translation = modelViewTransform.modelToViewPosition( position );
           } );
