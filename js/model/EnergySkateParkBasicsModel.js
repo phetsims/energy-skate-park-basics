@@ -396,6 +396,7 @@ define( function( require ) {
           var uD = (dot > 0 ? +1 : -1) * newSpeed;
           var up = beforeVector.dot( normal ) > 0;
 
+          debug( 'attach to track, ' + ', ' + u + ', ' + track.maxPoint );
           return skaterState.attachToTrack( newThermalEnergy, track, up, u, uD, newVelocity.x, newVelocity.y, newPosition.x, newPosition.y );
         }
 
@@ -610,6 +611,8 @@ define( function( require ) {
         //Or project a ray and see if a collision is imminent ?
         var freeSkater = skaterState.leaveTrack();
 
+        debug( 'left middle track' );
+
         //Step after switching to free fall, so it doesn't look like it pauses
         return this.stepFreeFall( dt, freeSkater, true );
       }
@@ -626,18 +629,29 @@ define( function( require ) {
         //Correct energy
         var correctedState = this.correctEnergy( skaterState, newState );
 
-        //Fly off the left or right side of the track
+        //Check whether the skater has left the track
         if ( skaterState.track.isParameterInBounds( correctedState.u ) ) {
           return correctedState;
         }
         else {
-
+          //Fly off the left or right side of the track
           //Off the edge of the track.  If the skater transitions from the right edge of the 2nd track directly to the ground then do not lose thermal energy during the transition, see #164
           if ( correctedState.u > skaterState.track.maxPoint && skaterState.track.slopeToGround ) {
             return correctedState.switchToGround( correctedState.thermalEnergy, correctedState.getSpeed(), 0, correctedState.positionX, 0 );
           }
           else {
-            return skaterState.updateTrackUDStepsSinceJump( null, 0, 0 );
+            debug( 'left edge track: ' + correctedState.u + ', ' + skaterState.track.maxPoint );
+
+            //There is a situation in which the `u` of the skater exceeds the track bounds before the getClosestPositionAndParameter.u does, which can cause the skater to immediately reattach
+            //So make sure the skater is far enough from the track so it won't reattach right away.
+            //See https://github.com/phetsims/energy-skate-park-basics/issues/167
+            var searchPoint = track.getClosestPositionAndParameter( new Vector2( skaterState.positionX, skaterState.positionY ) ).u;
+            if ( skaterState.track.isParameterInBounds( searchPoint ) ) {
+              return correctedState;
+            }
+            else {
+              return skaterState.updateTrackUDStepsSinceJump( null, 0, 0 );
+            }
           }
         }
       }
