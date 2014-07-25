@@ -123,7 +123,7 @@ define( function( require ) {
       }
 
       //Binary search in the neighborhood of the best point, to refine the search
-      var distanceBetweenSearchPoints = Math.abs( this.xSearchPoints[1] - this.xSearchPoints[0] );
+      var distanceBetweenSearchPoints = Math.abs( this.searchLinSpace[1] - this.searchLinSpace[0] );
       var topU = bestU + distanceBetweenSearchPoints / 2;
       var bottomU = bestU - distanceBetweenSearchPoints / 2;
 
