@@ -149,6 +149,9 @@ define( function( require ) {
             points[1].snapTarget = null;
           }
 
+          //Make it so the track can't be dragged underground when dragged by the track itself (not control point), see #166
+          track.bumpAboveGround();
+
           model.trackModified( track );
         },
 
