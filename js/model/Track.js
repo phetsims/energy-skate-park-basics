@@ -401,7 +401,7 @@ define( function( require ) {
         metricDelta = this.getArcLength( u0, guess );
         count++;
         if ( count > 100 ) {
-          console.log( "binary search failed: count=" + count );
+          assert && assert( count <= 100, 'binary search failed' );
           break;
         }
       }

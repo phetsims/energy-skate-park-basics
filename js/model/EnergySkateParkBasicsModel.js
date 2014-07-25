@@ -753,7 +753,9 @@ define( function( require ) {
               else {
 
                 //TODO: This error case can still occur, especially with friction turned on
-                console.log( "Changed position, wanted to change velocity, but didn't have enough to fix it..., dE=" + ( newState.getTotalEnergy() - e0 ) );
+                if ( debug ) {
+                  console.log( "Changed position, wanted to change velocity, but didn't have enough to fix it..., dE=" + ( newState.getTotalEnergy() - e0 ) );
+                }
               }
             }
             return correctedState;
