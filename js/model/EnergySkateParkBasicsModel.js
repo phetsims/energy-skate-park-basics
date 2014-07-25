@@ -396,7 +396,7 @@ define( function( require ) {
           var uD = (dot > 0 ? +1 : -1) * newSpeed;
           var up = beforeVector.dot( normal ) > 0;
 
-          debug( 'attach to track, ' + ', ' + u + ', ' + track.maxPoint );
+          debug && debug( 'attach to track, ' + ', ' + u + ', ' + track.maxPoint );
           return skaterState.attachToTrack( newThermalEnergy, track, up, u, uD, newVelocity.x, newVelocity.y, newPosition.x, newPosition.y );
         }
 
@@ -611,7 +611,7 @@ define( function( require ) {
         //Or project a ray and see if a collision is imminent ?
         var freeSkater = skaterState.leaveTrack();
 
-        debug( 'left middle track' );
+        debug && debug( 'left middle track' );
 
         //Step after switching to free fall, so it doesn't look like it pauses
         return this.stepFreeFall( dt, freeSkater, true );
@@ -640,7 +640,7 @@ define( function( require ) {
             return correctedState.switchToGround( correctedState.thermalEnergy, correctedState.getSpeed(), 0, correctedState.positionX, 0 );
           }
           else {
-            debug( 'left edge track: ' + correctedState.u + ', ' + skaterState.track.maxPoint );
+            debug && debug( 'left edge track: ' + correctedState.u + ', ' + skaterState.track.maxPoint );
 
             //There is a situation in which the `u` of the skater exceeds the track bounds before the getClosestPositionAndParameter.u does, which can cause the skater to immediately reattach
             //So make sure the skater is far enough from the track so it won't reattach right away.
