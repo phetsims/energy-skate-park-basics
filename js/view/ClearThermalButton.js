@@ -18,6 +18,7 @@ define( function( require ) {
   var trashCanGrayImage = require( 'image!ENERGY_SKATE_PARK_BASICS/trash-can-disabled.png' );
 
   function ClearThermalButton( callback, skater, options ) {
+    var clearThermalButton = this;
     options = _.extend( { cursor: 'pointer' }, options );
 
     var icon = new Image( trashCanImage, {scale: 0.22} );
@@ -25,6 +26,7 @@ define( function( require ) {
     skater.toDerivedProperty( ['thermalEnergy'], function( thermalEnergy ) {return thermalEnergy > 0;} ).link( function( hasThermalEnergy ) {
       icon.image = hasThermalEnergy ? trashCanImage : trashCanGrayImage;
       icon.opacity = hasThermalEnergy ? 1 : 0.3;
+      clearThermalButton.pickable = hasThermalEnergy;
     } );
 
     RectangularPushButton.call( this, {

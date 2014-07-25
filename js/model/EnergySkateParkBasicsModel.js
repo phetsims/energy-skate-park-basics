@@ -129,12 +129,17 @@ define( function( require ) {
       //Shape types
       //For the double well, move the left well up a bit since the interpolation moves it down by that much, and we don't want the skater to go to y<0 while on the track.  Numbers determined by trial and error.
       var parabola = [new ControlPoint( -4, 6 ), new ControlPoint( 0, 0 ), new ControlPoint( 4, 6 )];
-      var slope = [new ControlPoint( -4, 6 ), new ControlPoint( -2, 1.2 ), new ControlPoint( 2, 0.05 )];
+      var slope = [new ControlPoint( -4, 6 ), new ControlPoint( -2, 1.2 ), new ControlPoint( 2, 0 )];
       var doubleWell = [new ControlPoint( -4, 5 ), new ControlPoint( -2, 0.0166015 ), new ControlPoint( 0, 2 ), new ControlPoint( 2, 1 ), new ControlPoint( 4, 5 ) ];
+
+      var slopeTrack = new Track( this, this.tracks, slope, false );
+
+      //Flag to indicate whether the skater transitions from the right edge of this track directly to the ground, see #164
+      slopeTrack.slopeToGround = true;
 
       this.tracks.addAll(
         [ new Track( this, this.tracks, parabola, false ),
-          new Track( this, this.tracks, slope, false ),
+          slopeTrack,
           new Track( this, this.tracks, doubleWell, false )
         ] );
 
@@ -363,6 +368,22 @@ define( function( require ) {
           var newPotentialEnergy = -skaterState.mass * skaterState.gravity * newPosition.y;
           var newThermalEnergy = initialEnergy - newKineticEnergy - newPotentialEnergy;
 
+          //Sometimes (depending on dt) the thermal energy can go negative by the above calculation, see #141
+          //In that case, set the thermal energy to zero and reduce the speed to compensate.
+          if ( newThermalEnergy < 0 ) {
+            newThermalEnergy = 0;
+            newKineticEnergy = initialEnergy - newPotentialEnergy;
+
+            assert && assert( newKineticEnergy >= 0 );
+            if ( newKineticEnergy < 0 ) {
+              newKineticEnergy = 0;
+            }
+
+            //ke = 1/2 m v v
+            newSpeed = Math.sqrt( 2 * newKineticEnergy / skaterState.mass );
+            newVelocity = segment.times( newSpeed );
+          }
+
           var dot = proposedVelocity.normalized().dot( segment );
 
           //Sanity test
@@ -370,10 +391,12 @@ define( function( require ) {
           assert && assert( isFinite( newVelocity.x ) );
           assert && assert( isFinite( newVelocity.y ) );
           assert && assert( isFinite( newThermalEnergy ) );
+          assert && assert( newThermalEnergy >= 0 );
 
           var uD = (dot > 0 ? +1 : -1) * newSpeed;
           var up = beforeVector.dot( normal ) > 0;
 
+          debug && debug( 'attach to track, ' + ', ' + u + ', ' + track.maxPoint );
           return skaterState.attachToTrack( newThermalEnergy, track, up, u, uD, newVelocity.x, newVelocity.y, newPosition.x, newPosition.y );
         }
 
@@ -588,6 +611,8 @@ define( function( require ) {
         //Or project a ray and see if a collision is imminent ?
         var freeSkater = skaterState.leaveTrack();
 
+        debug && debug( 'left middle track' );
+
         //Step after switching to free fall, so it doesn't look like it pauses
         return this.stepFreeFall( dt, freeSkater, true );
       }
@@ -604,12 +629,30 @@ define( function( require ) {
         //Correct energy
         var correctedState = this.correctEnergy( skaterState, newState );
 
-        //Fly off the left or right side of the track
+        //Check whether the skater has left the track
         if ( skaterState.track.isParameterInBounds( correctedState.u ) ) {
           return correctedState;
         }
         else {
-          return skaterState.updateTrackUDStepsSinceJump( null, 0, 0 );
+          //Fly off the left or right side of the track
+          //Off the edge of the track.  If the skater transitions from the right edge of the 2nd track directly to the ground then do not lose thermal energy during the transition, see #164
+          if ( correctedState.u > skaterState.track.maxPoint && skaterState.track.slopeToGround ) {
+            return correctedState.switchToGround( correctedState.thermalEnergy, correctedState.getSpeed(), 0, correctedState.positionX, 0 );
+          }
+          else {
+            debug && debug( 'left edge track: ' + correctedState.u + ', ' + skaterState.track.maxPoint );
+
+            //There is a situation in which the `u` of the skater exceeds the track bounds before the getClosestPositionAndParameter.u does, which can cause the skater to immediately reattach
+            //So make sure the skater is far enough from the track so it won't reattach right away.
+            //See https://github.com/phetsims/energy-skate-park-basics/issues/167
+            var searchPoint = track.getClosestPositionAndParameter( new Vector2( skaterState.positionX, skaterState.positionY ) ).u;
+            if ( skaterState.track.isParameterInBounds( searchPoint ) ) {
+              return correctedState;
+            }
+            else {
+              return skaterState.updateTrackUDStepsSinceJump( null, 0, 0 );
+            }
+          }
         }
       }
     },
@@ -724,7 +767,9 @@ define( function( require ) {
               else {
 
                 //TODO: This error case can still occur, especially with friction turned on
-                console.log( "Changed position, wanted to change velocity, but didn't have enough to fix it..., dE=" + ( newState.getTotalEnergy() - e0 ) );
+                if ( debug ) {
+                  console.log( "Changed position, wanted to change velocity, but didn't have enough to fix it..., dE=" + ( newState.getTotalEnergy() - e0 ) );
+                }
               }
             }
             return correctedState;
@@ -972,7 +1017,7 @@ define( function( require ) {
 
         //Keep track of the skater direction so we can toggle the 'up' flag if the track orientation changed
         var originalNormal = this.skater.upVector;
-        var p = newTrack.getClosestPositionAndParameter( new Vector2( this.skater.positionX, this.skater.positionY ) );//TODO: Allocations
+        var p = newTrack.getClosestPositionAndParameter( new Vector2( this.skater.position.x, this.skater.position.y ) );
         this.skater.track = newTrack;
         this.skater.u = p.u;
         var x2 = newTrack.getX( p.u );

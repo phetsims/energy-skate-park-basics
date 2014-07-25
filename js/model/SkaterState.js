@@ -75,6 +75,8 @@ define( function( require ) {
         assert && assert( isFinite( this.velocityY ) );
         assert && assert( isFinite( this.uD ) );
 
+        assert && assert( this.thermalEnergy >= 0 );
+
         return this;
       },
 
@@ -153,6 +155,8 @@ define( function( require ) {
       },
 
       updateThermalEnergy: function( thermalEnergy ) {
+        assert && assert( thermalEnergy >= 0 );
+
         var state = SkaterState.createFromPool( this, EMPTY_OBJECT );
         state.thermalEnergy = thermalEnergy;
         return state;
@@ -167,6 +171,8 @@ define( function( require ) {
       },
 
       switchToGround: function( thermalEnergy, velocityX, velocityY, positionX, positionY ) {
+        assert && assert( thermalEnergy >= 0 );
+
         var state = SkaterState.createFromPool( this, EMPTY_OBJECT );
         state.thermalEnergy = thermalEnergy;
         state.track = null;
@@ -180,6 +186,8 @@ define( function( require ) {
       },
 
       strikeGround: function( thermalEnergy, positionX ) {
+        assert && assert( thermalEnergy >= 0 );
+
         var state = SkaterState.createFromPool( this, EMPTY_OBJECT );
         state.thermalEnergy = thermalEnergy;
         state.positionX = positionX;
@@ -232,6 +240,8 @@ define( function( require ) {
       },
 
       attachToTrack: function( thermalEnergy, track, up, u, uD, velocityX, velocityY, positionX, positionY ) {
+        assert && assert( thermalEnergy >= 0 );
+
         var state = SkaterState.createFromPool( this, EMPTY_OBJECT );
         state.thermalEnergy = thermalEnergy;
         state.track = track;

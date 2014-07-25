@@ -28,6 +28,9 @@ define( function( require ) {
     this.parents = parents;
     this.modelTracks = modelTracks;
 
+    //Flag to indicate whether the skater transitions from the right edge of this track directly to the ground, see #164
+    this.slopeToGround = false;
+
     PropertySet.call( this, {
 
       //True if the track can be interacted with.  For screens 1-2 only one track will be physical (and hence visible).
@@ -120,7 +123,7 @@ define( function( require ) {
       }
 
       //Binary search in the neighborhood of the best point, to refine the search
-      var distanceBetweenSearchPoints = Math.abs( this.xSearchPoints[1] - this.xSearchPoints[0] );
+      var distanceBetweenSearchPoints = Math.abs( this.searchLinSpace[1] - this.searchLinSpace[0] );
       var topU = bestU + distanceBetweenSearchPoints / 2;
       var bottomU = bestU - distanceBetweenSearchPoints / 2;
 
@@ -398,7 +401,7 @@ define( function( require ) {
         metricDelta = this.getArcLength( u0, guess );
         count++;
         if ( count > 100 ) {
-          console.log( "binary search failed: count=" + count );
+          assert && assert( count <= 100, 'binary search failed' );
           break;
         }
       }

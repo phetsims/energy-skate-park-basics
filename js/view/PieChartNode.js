@@ -47,6 +47,11 @@ define( function( require ) {
       }
       var totalEnergy = skater.totalEnergy;
 
+      // Guard against negative total energy, which could occur of the user is dragging the track underground, see #166
+      if ( totalEnergy < 0 ) {
+        totalEnergy = 0;
+      }
+
       //Make the radius proportional to the square root of the energy so that the area will grow linearly with energy
       var radius = 0.4 * Math.sqrt( totalEnergy );
 
@@ -97,7 +102,14 @@ define( function( require ) {
         //Order is thermal (in the background), kinetic, potential
         var potentialStartAngle = 0;
         var kineticStartAngle = Math.PI * 2 * fractionPotential;
-        potentialEnergySlice.shape = new Shape().moveTo( 0, 0 ).ellipticalArc( 0, 0, radius, radius, 0, potentialStartAngle, kineticStartAngle, false ).lineTo( 0, 0 );
+
+        //If there is no potential energy (i.e. the skater is on the ground) then don't show the potential energy slice, see #165
+        if ( fractionPotential === 0 ) {
+          potentialEnergySlice.shape = new Shape();
+        }
+        else {
+          potentialEnergySlice.shape = new Shape().moveTo( 0, 0 ).ellipticalArc( 0, 0, radius, radius, 0, potentialStartAngle, kineticStartAngle, false ).lineTo( 0, 0 );
+        }
         kineticEnergySlice.shape = new Shape().moveTo( 0, 0 ).ellipticalArc( 0, 0, radius, radius, 0, kineticStartAngle, kineticStartAngle + fractionKinetic * Math.PI * 2, false ).lineTo( 0, 0 );
       }
     };
