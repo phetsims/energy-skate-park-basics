@@ -26,12 +26,11 @@ define( function( require ) {
 
     var options = {
       credits: {
-        leadDesign: 'Sam Reid (Energy Skate Park), Noah Podolefsky (Energy Skate Park: Basics)',
+        leadDesign: 'Noah Podolefsky & Sam Reid',
         softwareDevelopment: 'Sam Reid',
         designTeam: 'Wendy Adams, Michael Dubson, Trish Loeblein, Emily Moore, Ariel Paul, Kathy Perkins, Carl Wieman',
         interviews: 'Danielle Harlow, Noah Podolefsky, Ariel Paul'
-      },
-      showSaveAndLoad: true
+      }
     };
 
     Sim.call( this, title, [
