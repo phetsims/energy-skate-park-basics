@@ -8,15 +8,15 @@
     "branch": "master"
   },
   "axon": {
-    "sha": "9dfe22ecfb7fd220489f0751c5a2c7dd0cd967f0",
+    "sha": "bd88cd7e2d2be78665ad1d28eff77ddd97784f27",
     "branch": "master"
   },
   "sun": {
-    "sha": "db24ce5d8f4a9a6f7e8a7418f0696748399ebfb6",
+    "sha": "ec7cac5271e9f85e7ee7afae1d321d0ebb73f096",
     "branch": "master"
   },
   "scenery-phet": {
-    "sha": "d91779707c10a63723af38fd74092770cda16aa2",
+    "sha": "804142be295567e29b838140cd652ccdef8e8fa0",
     "branch": "master"
   },
   "scenery": {
@@ -28,7 +28,7 @@
     "branch": "master"
   },
   "phet-core": {
-    "sha": "29272a5ba61442021dfc10ff5fbef6cd7ce66456",
+    "sha": "9ce862130e848a817d1f1c9fd749af5d97a376ef",
     "branch": "master"
   },
   "kite": {
@@ -52,8 +52,8 @@
     "branch": "master"
   },
   "energy-skate-park-basics": {
-    "sha": "b9a967163f1f7925a018aa7f06604925d0ffa6bf",
+    "sha": "d56845e9c909ee22a8844d91f59a71709c1413e5",
     "branch": "1.0"
   },
-  "comment": "# energy-skate-park-basics 1.0.0-rc.5 Thu Jul 17 2014 13:47:58 GMT-0600 (Mountain Daylight Time)"
+  "comment": "# energy-skate-park-basics 1.0.0-rc.9 Fri Jul 25 2014 13:18:42 GMT-0600 (Mountain Daylight Time)"
 }
