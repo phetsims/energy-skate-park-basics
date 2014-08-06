@@ -435,8 +435,8 @@ define( function( require ) {
       var centerX = this.getX( u );
       var centerY = this.getY( u );
 
-      var vectorX = this.getUnitNormalVectorX( u ) * 1 / k + centerX;
-      var vectorY = this.getUnitNormalVectorY( u ) * 1 / k + centerY;
+      var vectorX = this.getUnitNormalVectorX( u ) / k + centerX;
+      var vectorY = this.getUnitNormalVectorY( u ) / k + centerY;
 
       curvature.r = 1 / k;
       curvature.x = vectorX;
