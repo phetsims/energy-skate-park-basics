@@ -898,6 +898,10 @@ define( function( require ) {
         var points = _.without( track.controlPoints, track.controlPoints[controlPointIndex] );
         var newTrack = new Track( this, this.tracks, points, true, track.getParentsOrSelf() );
         newTrack.physical = true;
+
+        // Make sure the new track doesn't go underground after a control point is deleted, see #174
+        newTrack.bumpAboveGround();
+
         this.tracks.add( newTrack );
       }
 
