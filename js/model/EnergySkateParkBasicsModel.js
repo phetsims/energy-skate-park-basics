@@ -580,8 +580,6 @@ define( function( require ) {
     //Update the skater as it moves along the track, and fly off the track if it goes over a jump or off the end of the track
     stepTrack: function( dt, skaterState ) {
 
-      var energySkateParkBasicsModel = this;
-
       skaterState.getCurvature( this.curvatureTemp );
 
       var curvatureDirectionX = this.getCurvatureDirectionX( this.curvatureTemp, skaterState.positionX, skaterState.positionY );
