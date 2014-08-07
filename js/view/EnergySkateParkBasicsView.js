@@ -229,7 +229,7 @@ define( function( require ) {
       clearButtonEnabledProperty.linkAttribute( clearButton, 'enabled' );
       clearButton.addListener( function() {model.clearTracks();} );
 
-      var buttons = new VBox( {children: [clearButton], spacing: 2, right: this.trackCreationPanel.left - 5, centerY: this.trackCreationPanel.centerY} );
+      var buttons = new VBox( {children: [clearButton], spacing: 2, left: 5, centerY: this.trackCreationPanel.centerY} );
       this.addChild( buttons );
     }
 

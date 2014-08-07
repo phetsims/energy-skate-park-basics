@@ -148,7 +148,7 @@ define( function( require ) {
       //If the user is on the same track as where he began (and the track hasn't changed), remain on the track, see #143 and #144
       if ( this.startingTrack && this.track === this.startingTrack && this.arrayEquals( this.track.copyControlPointSources(), this.startingTrackControlPointSources ) ) {
         this.u = this.startingU;
-        this.angle = this.startingTrack.getViewAngleAt( this.u );
+        this.angle = this.startingAngle;
         this.up = this.startingUp;
         this.uD = 0;
       }
@@ -187,6 +187,7 @@ define( function( require ) {
       state.properties.startingTrack = tracks.indexOf( this.startingTrack );
       return state;
     },
+
     setState: function( state, tracks ) {
       this.set( state.properties );
       this.timeSinceJump = state.timeSinceJump;

@@ -170,7 +170,7 @@ define( function( require ) {
 
       //Move the tracks over so they will be in the right position in the view coordinates, under the grass to the left of the clock controls
       //Could use view transform for this, but it would require creating the view first, so just eyeballing it for now.
-      var offset = new Vector2( -5.5 + 0.27, -0.85 );
+      var offset = new Vector2( -5.1, -0.85 );
       var controlPoints = [ new ControlPoint( offset.x - 1, offset.y ), new ControlPoint( offset.x, offset.y ), new ControlPoint( offset.x + 1, offset.y )];
       this.tracks.add( new Track( this, this.tracks, controlPoints, true ) );
     },
@@ -580,6 +580,8 @@ define( function( require ) {
     //Update the skater as it moves along the track, and fly off the track if it goes over a jump or off the end of the track
     stepTrack: function( dt, skaterState ) {
 
+      var energySkateParkBasicsModel = this;
+
       skaterState.getCurvature( this.curvatureTemp );
 
       var curvatureDirectionX = this.getCurvatureDirectionX( this.curvatureTemp, skaterState.positionX, skaterState.positionY );
@@ -605,7 +607,8 @@ define( function( require ) {
       var netForceRadial = netForceWithoutNormalX * curvatureDirectionX + netForceWithoutNormalY * curvatureDirectionY;
 
       var leaveTrack = (netForceRadial < centripForce && outsideCircle) || (netForceRadial > centripForce && !outsideCircle);
-      if ( leaveTrack && this.detachable ) {
+
+      if ( leaveTrack && this.detachable && this.okToDetach( skaterState, dt ) ) {
 
         //Leave the track.  Make sure the velocity is pointing away from the track or keep track of frames away from the track so it doesn't immediately recollide
         //Or project a ray and see if a collision is imminent ?
@@ -655,6 +658,21 @@ define( function( require ) {
           }
         }
       }
+    },
+
+    //Check if the skater can detach from the track without immediately reattaching, given its velocity. See #172
+    okToDetach: function( skaterState, dt ) {
+      var ss = skaterState.leaveTrack();
+      var count = 0;
+
+      //Make sure the skater won't immediately re-collide with the track before allowing it to detach, see #172
+      for ( ; count <= 1; count++ ) {
+        ss = this.stepFreeFall( dt, ss, false );
+        if ( ss.track !== null && ss.track === skaterState.track ) {
+          return false;
+        }
+      }
+      return true;
     },
 
     //Try to match the target energy by reducing the velocity of the skaterState
@@ -898,6 +916,10 @@ define( function( require ) {
         var points = _.without( track.controlPoints, track.controlPoints[controlPointIndex] );
         var newTrack = new Track( this, this.tracks, points, true, track.getParentsOrSelf() );
         newTrack.physical = true;
+
+        // Make sure the new track doesn't go underground after a control point is deleted, see #174
+        newTrack.bumpAboveGround();
+
         this.tracks.add( newTrack );
       }
 
