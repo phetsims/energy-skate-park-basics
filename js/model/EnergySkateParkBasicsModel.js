@@ -208,6 +208,9 @@ define( function( require ) {
     //Step the model, automatically called from Joist
     step: function( dt ) {
 
+      // This simulation uses a fixed time step to make the skater's motion reproducible.  Making the time step fixed did not significantly reduce performance/speed on iPad3.
+      dt = 1.0 / 60.0;
+
       var initialEnergy = null;
 
       //If the delay makes dt too high, then truncate it.  This helps e.g. when clicking in the address bar on ipad, which gives a huge dt and problems for integration
