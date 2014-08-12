@@ -137,16 +137,19 @@ define( function( require ) {
       //Flag to indicate whether the skater transitions from the right edge of this track directly to the ground, see #164
       slopeTrack.slopeToGround = true;
 
-      this.tracks.addAll(
-        [ new Track( this, this.tracks, parabola, false ),
-          slopeTrack,
-          new Track( this, this.tracks, doubleWell, false )
-        ] );
+      this.tracks.addAll( [
+        new Track( this, this.tracks, parabola, false ),
+        slopeTrack,
+        new Track( this, this.tracks, doubleWell, false )
+      ] );
 
       this.sceneProperty.link( function( scene ) {
         for ( var i = 0; i < model.tracks.length; i++ ) {
           model.tracks.get( i ).physical = (i === scene);
           model.tracks.get( i ).scene = i;
+
+          // Reset the skater when the track is changed, see #179
+          model.skater.reset();
         }
         model.skater.track = null;
       } );

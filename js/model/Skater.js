@@ -33,13 +33,13 @@ define( function( require ) {
       //Gravity magnitude and direction
       gravity: -9.8,
 
-      position: new Vector2( 0, 0 ),
+      position: new Vector2( 3.5, 0 ),
 
       //Start in the middle of the MassSlider range
       mass: Constants.DEFAULT_MASS,
 
       //Which way the skater is facing, right or left.  Coded as strings instead of boolean in case we add other states later like 'forward'
-      direction: 'right',
+      direction: 'left',
 
       velocity: new Vector2( 0, 0 ),
 
