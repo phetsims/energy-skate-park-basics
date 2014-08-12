@@ -56,7 +56,7 @@ define( function( require ) {
       angle: 0,
 
       //Returns to this point when pressing "return skater"
-      startingPosition: new Vector2( 0, 0 ),
+      startingPosition: new Vector2( 3.5, 0 ),
 
       //Returns to this parametric position along the track when pressing "return skater"
       startingU: 0,
