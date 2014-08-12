@@ -208,6 +208,9 @@ define( function( require ) {
     //Step the model, automatically called from Joist
     step: function( dt ) {
 
+      // This simulation uses a fixed time step to make the skater's motion reproducible.  Making the time step fixed did not significantly reduce performance/speed on iPad3.
+      dt = 1.0 / 60.0;
+
       var initialEnergy = null;
 
       //If the delay makes dt too high, then truncate it.  This helps e.g. when clicking in the address bar on ipad, which gives a huge dt and problems for integration
@@ -1035,6 +1038,8 @@ define( function( require ) {
       //Note: Energy is not conserved when tracks joined since the user has added or removed energy from the system
       if ( this.skater.track === a || this.skater.track === b ) {
 
+        var originalDirectionVector = this.skater.track.getUnitParallelVector( this.skater.u ).times( this.skater.uD );
+
         //Keep track of the skater direction so we can toggle the 'up' flag if the track orientation changed
         var originalNormal = this.skater.upVector;
         var p = newTrack.getClosestPositionAndParameter( new Vector2( this.skater.position.x, this.skater.position.y ) );
@@ -1054,6 +1059,13 @@ define( function( require ) {
           this.skater.up = !this.skater.up;
           this.skater.angle = newTrack.getViewAngleAt( p.u ) + (this.skater.up ? 0 : Math.PI);
           this.skater.trigger( 'updated' );
+        }
+
+        //If the skater changed direction of motion because of the track polarity change, flip the parametric velocity 'uD' value, see #180
+        var newDirectionVector = this.skater.track.getUnitParallelVector( this.skater.u ).times( this.skater.uD );
+        console.log( newDirectionVector.dot( originalDirectionVector ) );
+        if ( newDirectionVector.dot( originalDirectionVector ) < 0 ) {
+          this.skater.uD = -this.skater.uD;
         }
       }
     },
