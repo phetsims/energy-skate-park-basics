@@ -521,6 +521,8 @@ define( function( require ) {
         this.controlPoints[i].sourcePosition = new Vector2( originalX, originalY );
         this.updateSplines();
       }
+
+      this.trigger( 'smoothed' );
     },
 
     /**

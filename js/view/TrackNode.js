@@ -342,7 +342,6 @@ define( function( require ) {
                 }
                 else {
                   track.smooth( i );
-                  updateTrackShape();
                   model.trackModified( track );
                 }
                 track.bumpAboveGround();
@@ -377,6 +376,7 @@ define( function( require ) {
     } );
 
     track.on( 'reset', updateTrackShape );
+    track.on( 'smoothed', updateTrackShape );
   }
 
   return inherit( Node, TrackNode );

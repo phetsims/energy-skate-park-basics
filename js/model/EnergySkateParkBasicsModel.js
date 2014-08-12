@@ -1068,6 +1068,9 @@ define( function( require ) {
           this.skater.uD = -this.skater.uD;
         }
       }
+
+      //Smooth out the new track by moving the point that joined the tracks, see #177
+      newTrack.smooth( a.controlPoints.length - 1 );
     },
 
     //When a track is dragged, update the skater's energy (if the sim was paused), since it wouldn't be handled in the update loop.
