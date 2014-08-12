@@ -150,7 +150,10 @@ define( function( require ) {
           }
 
           //Make it so the track can't be dragged underground when dragged by the track itself (not control point), see #166
-          track.bumpAboveGround();
+          //But if the user is dragging the track out of the toolbox, then leave the motion continuous, see #178
+          if ( track.physical ) {
+            track.bumpAboveGround();
+          }
 
           model.trackModified( track );
         },
