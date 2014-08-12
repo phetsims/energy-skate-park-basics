@@ -33,7 +33,7 @@ define( function( require ) {
       },
 
       //TODO: Remove before publication
-      showSaveAndLoad: true
+      showSaveAndLoad: window.phetcommon && window.phetcommon.getQueryParameter && window.phetcommon.getQueryParameter( 'showSaveAndLoad' )
     };
 
     Sim.call( this, title, [
