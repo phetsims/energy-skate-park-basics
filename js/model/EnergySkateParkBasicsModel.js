@@ -965,6 +965,10 @@ define( function( require ) {
       this.tracks.add( newTrack1 );
       this.tracks.add( newTrack2 );
 
+      //Smooth the new tracks, see #177
+      newTrack1.smooth( controlPointIndex - 1 );
+      newTrack2.smooth( 0 );
+
       //Trigger track changed first to update the edit enabled properties
       this.trigger( 'track-changed' );
 

@@ -496,6 +496,8 @@ define( function( require ) {
      * @param {Number} i the index of the control point to adjust
      */
     smooth: function( i ) {
+      assert && assert( i >= 0 && i < this.controlPoints.length );
+
       var numTries = 0;
 
       //Record the original control point location
