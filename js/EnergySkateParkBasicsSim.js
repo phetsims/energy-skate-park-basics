@@ -30,7 +30,10 @@ define( function( require ) {
         softwareDevelopment: 'Sam Reid',
         designTeam: 'Wendy Adams, Michael Dubson, Trish Loeblein, Emily Moore, Ariel Paul, Kathy Perkins, Carl Wieman',
         interviews: 'Danielle Harlow, Noah Podolefsky, Ariel Paul'
-      }
+      },
+
+      //TODO: Remove before publication
+      showSaveAndLoad: true
     };
 
     Sim.call( this, title, [
