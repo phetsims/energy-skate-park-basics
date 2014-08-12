@@ -337,6 +337,11 @@ define( function( require ) {
                 if ( isEndPoint && controlPoint.snapTarget ) {
                   model.joinTracks( track );
                 }
+                else {
+                  track.smooth( i );
+                  updateTrackShape();
+                  model.trackModified( track );
+                }
                 track.bumpAboveGround();
                 track.dragging = false;
 

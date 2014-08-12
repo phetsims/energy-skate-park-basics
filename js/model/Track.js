@@ -490,6 +490,61 @@ define( function( require ) {
       }
     },
 
+    /**
+     * Smooth out the track so it doesn't have any sharp turns
+     * see https://github.com/phetsims/energy-skate-park-basics/issues/177
+     * @param {Number} i the index of the control point to adjust
+     */
+    smooth: function( i ) {
+      var numTries = 0;
+
+      //Record the original control point location
+      var originalX = this.controlPoints[i].sourcePosition.x;
+      var originalY = this.controlPoints[i].sourcePosition.y;
+
+      //Spiral outward, searching for a point that gives a smooth enough track.
+      var distance = 0.01;
+      var angle = 0;
+      var MAX_TRIES = 100;
+      while ( this.getMinimumRadiusOfCurvature() < 0.1 && numTries < MAX_TRIES ) {
+        var delta = Vector2.createPolar( distance, angle );
+        this.controlPoints[i].sourcePosition = delta.plusXY( originalX, originalY );
+        angle = angle + Math.PI / 7;
+        distance = distance + 0.1;
+        this.updateSplines();
+//        console.log( 'newRadius of curvature', this.getMinimumRadiusOfCurvature() );
+        numTries++;
+      }
+
+      //Could not find a better solution, leave the control point where it started.
+      if ( numTries >= MAX_TRIES ) {
+        this.controlPoints[i].sourcePosition = new Vector2( originalX, originalY );
+        this.updateSplines();
+      }
+    },
+
+    /**
+     * Find the minimum radius of curvature along the track, in meters
+     * @return {Number} the minimum radius of curvature along the track, in meters.
+     */
+    getMinimumRadiusOfCurvature: function() {
+      var curvature = {r: 0, x: 0, y: 0};
+      var minRadius = Number.POSITIVE_INFINITY;
+
+      //Search the entire space of the spline.  Larger number of divisions was chosen to prevent large curvatures at a single sampling point.
+      var numDivisions = 200;
+      var du = (this.maxPoint - this.minPoint) / numDivisions;
+      for ( var u = this.minPoint; u < this.maxPoint; u += du ) {
+        this.getCurvature( u, curvature );
+        var r = Math.abs( curvature.r );
+        if ( r < minRadius ) {
+          minRadius = r;
+        }
+      }
+//      console.log( '=============min', minRadius );
+      return minRadius;
+    },
+
     //Use the position of the 0th control point as the position of the track, used when dragging the track.  Only used for relative positioning and translation, so an exact "position" is irrelevant
     //Use the source position instead of the snapped position or buggy "jumpy" behavior will occur, see #98
     get position() {
