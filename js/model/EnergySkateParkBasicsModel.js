@@ -918,6 +918,10 @@ define( function( require ) {
         var newTrack = new Track( this, this.tracks, points, true, track.getParentsOrSelf() );
         newTrack.physical = true;
 
+        // smooth out the new track, see #177
+        var smoothingPoint = controlPointIndex >= newTrack.controlPoints.length ? newTrack.controlPoints.length - 1 : controlPointIndex;
+        newTrack.smooth( smoothingPoint );
+
         // Make sure the new track doesn't go underground after a control point is deleted, see #174
         newTrack.bumpAboveGround();
 
