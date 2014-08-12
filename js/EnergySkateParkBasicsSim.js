@@ -26,10 +26,11 @@ define( function( require ) {
 
     var options = {
       credits: {
-        leadDesign: 'Noah Podolefsky & Sam Reid',
+        leadDesign: 'Ariel Paul, Sam Reid',
         softwareDevelopment: 'Sam Reid',
-        designTeam: 'Wendy Adams, Michael Dubson, Trish Loeblein, Emily Moore, Ariel Paul, Kathy Perkins, Carl Wieman',
-        interviews: 'Danielle Harlow, Noah Podolefsky, Ariel Paul'
+        designTeam: 'Michael Dubson, Bryce Gruneich, Trish Loeblein, Kathy Perkins',
+        interviews: 'Bryce Gruneich',
+        graphicArts: 'Sharon Siman-Tov'
       },
 
       //TODO: Remove before publication
