@@ -30,7 +30,8 @@ define( function( require ) {
         softwareDevelopment: 'Sam Reid',
         designTeam: 'Michael Dubson, Bryce Gruneich, Trish Loeblein, Kathy Perkins',
         interviews: 'Bryce Gruneich',
-        graphicArts: 'Sharon Siman-Tov'
+        graphicArts: 'Sharon Siman-Tov',
+        qualityAssurance: 'Oliver Orejola, Bryan Yoelin'
       },
 
       //TODO: Remove before publication
