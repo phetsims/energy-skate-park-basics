@@ -63,7 +63,8 @@ define( function( require ) {
                              (skater.kineticEnergy > THRESHOLD ? 1 : 0) +
                              (skater.thermalEnergy > THRESHOLD ? 1 : 0);
 
-      if ( numberComponents === 0 ) {
+      //Don't show the pie chart if energies are zero, or if potential energy is negative (underground skater), see #189
+      if ( numberComponents === 0 || skater.potentialEnergy < 0 ) {
         potentialEnergySlice.visible = false;
         kineticEnergySlice.visible = false;
         thermalEnergySlice.visible = false;
