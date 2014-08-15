@@ -127,6 +127,15 @@ define( function( require ) {
       this.updateEnergy();
     },
 
+    //When the scene (track) is changed, the skater's position & velocity reset, but the mass and other properties do not reset, see #179
+    returnToInitialPosition: function() {
+
+      //Everything needs to be reset except the mass, see #188
+      var mass = this.mass;
+      this.reset();
+      this.mass = mass;
+    },
+
     arrayEquals: function( a, b ) {
       if ( a.length !== b.length ) {
         return false;

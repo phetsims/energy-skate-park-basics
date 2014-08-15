@@ -149,7 +149,7 @@ define( function( require ) {
           model.tracks.get( i ).scene = i;
 
           // Reset the skater when the track is changed, see #179
-          model.skater.reset();
+          model.skater.returnToInitialPosition();
         }
         model.skater.track = null;
       } );
