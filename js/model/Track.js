@@ -529,6 +529,55 @@ define( function( require ) {
     },
 
     /**
+     * The user just released a control point with index (indexToIgnore) and the spline needs to be smoothed.
+     * Choose the point closest to the sharpest turn and adjust it.
+     * @param indexToIgnore the index of the control point that the user just adjusted, which should not be moved during smoothing
+     */
+    smoothPointOfHighestCurvature: function( indexToIgnore ) {
+
+      //Find the sharpest turn on the track
+      var highestCurvatureU = this.getUWithHighestCurvature();
+
+      //find the point closest (in parametric coordinates) to the sharpest turn, but not including the indexToIgnore
+      //it looks like the control points are equally spaced in parametric coordinates (see the constructor)
+      var bestDistance = Number.POSITIVE_INFINITY;
+      var bestIndex = -1;
+      for ( var i = 0; i < this.controlPoints.length; i++ ) {
+        if ( i !== indexToIgnore ) {
+          var controlPointU = i / this.controlPoints.length;
+          var distanceFromHighestCurvature = Math.abs( highestCurvatureU - controlPointU );
+          if ( distanceFromHighestCurvature < bestDistance ) {
+            bestDistance = distanceFromHighestCurvature;
+            bestIndex = i;
+          }
+        }
+      }
+      this.smooth( bestIndex );
+    },
+
+    getUWithHighestCurvature: function() {
+      //Below implementation copied from getMinimumRadiusOfCurvature.  It is a CPU demanding task, so kept separate to keep the other one fast.
+      //Should be kept in sync manually
+      var curvature = {r: 0, x: 0, y: 0};
+      var minRadius = Number.POSITIVE_INFINITY;
+      var bestU = 0;
+
+      //Search the entire space of the spline.  Larger number of divisions was chosen to prevent large curvatures at a single sampling point.
+      var numDivisions = 200;
+      var du = (this.maxPoint - this.minPoint) / numDivisions;
+      for ( var u = this.minPoint; u < this.maxPoint; u += du ) {
+        this.getCurvature( u, curvature );
+        var r = Math.abs( curvature.r );
+        if ( r < minRadius ) {
+          minRadius = r;
+          bestU = u;
+        }
+      }
+//      console.log( '=============min', minRadius );
+      return bestU;
+    },
+
+    /**
      * Find the minimum radius of curvature along the track, in meters
      * @return {Number} the minimum radius of curvature along the track, in meters.
      */

@@ -341,7 +341,7 @@ define( function( require ) {
                   model.joinTracks( track );
                 }
                 else {
-                  track.smooth( i );
+                  track.smoothPointOfHighestCurvature( i );
                   model.trackModified( track );
                 }
                 track.bumpAboveGround();
