@@ -508,7 +508,8 @@ define( function( require ) {
       var distance = 0.01;
       var angle = 0;
       var MAX_TRIES = 100;
-      while ( this.getMinimumRadiusOfCurvature() < 0.1 && numTries < MAX_TRIES ) {
+      var MAXIMUM_ACCEPTABLE_CURVATURE = 0.03;
+      while ( this.getMinimumRadiusOfCurvature() < MAXIMUM_ACCEPTABLE_CURVATURE && numTries < MAX_TRIES ) {
         var delta = Vector2.createPolar( distance, angle );
         this.controlPoints[i].sourcePosition = delta.plusXY( originalX, originalY );
         angle = angle + Math.PI / 7;
