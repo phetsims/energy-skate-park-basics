@@ -43,6 +43,7 @@ define( function( require ) {
   var Property = require( 'AXON/Property' );
   var RectangularPushButton = require( 'SUN/buttons/RectangularPushButton' );
   var Text = require( 'SCENERY/nodes/Text' );
+  var Bounds2 = require( 'DOT/Bounds2' );
 
   //Debug flag to show the view bounds, the region within which the skater can move
   var showAvailableBounds = false;
@@ -246,6 +247,8 @@ define( function( require ) {
   }
 
   return inherit( ScreenView, EnergySkateParkBasicsScreenView, {
+
+    layoutBounds: ScreenView.UPDATED_LAYOUT_BOUNDS.copy(),
 
     //No state that is specific to the view, in this case
     getState: function() {},
