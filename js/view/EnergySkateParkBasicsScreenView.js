@@ -47,7 +47,7 @@ define( function( require ) {
   //Debug flag to show the view bounds, the region within which the skater can move
   var showAvailableBounds = false;
 
-  function EnergySkateParkBasicsView( model ) {
+  function EnergySkateParkBasicsScreenView( model ) {
 
     var view = this;
     ScreenView.call( view, { renderer: 'svg' } );
@@ -245,13 +245,13 @@ define( function( require ) {
     }
   }
 
-  return inherit( ScreenView, EnergySkateParkBasicsView, {
+  return inherit( ScreenView, EnergySkateParkBasicsScreenView, {
 
     //No state that is specific to the view, in this case
     getState: function() {},
     setState: function() {},
 
-    //Layout the EnergySkateParkBasicsView, scaling it up and down with the size of the screen to ensure a minimially visible area,
+    //Layout the EnergySkateParkBasicsScreenView, scaling it up and down with the size of the screen to ensure a minimially visible area,
     //But keeping it centered at the bottom of the screen, so there is more area in the +y direction to build tracks and move the skater
     layout: function( width, height ) {
 

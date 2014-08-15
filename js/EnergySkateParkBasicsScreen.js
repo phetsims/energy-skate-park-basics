@@ -9,7 +9,7 @@ define( function( require ) {
   'use strict';
 
   var EnergySkateParkBasicsModel = require( 'ENERGY_SKATE_PARK_BASICS/model/EnergySkateParkBasicsModel' );
-  var EnergySkateParkBasicsView = require( 'ENERGY_SKATE_PARK_BASICS/view/EnergySkateParkBasicsView' );
+  var EnergySkateParkBasicsScreenView = require( 'ENERGY_SKATE_PARK_BASICS/view/EnergySkateParkBasicsScreenView' );
   var Image = require( 'SCENERY/nodes/Image' );
   var inherit = require( 'PHET_CORE/inherit' );
   var Screen = require( 'JOIST/Screen' );
@@ -17,7 +17,7 @@ define( function( require ) {
   function EnergySkateParkBasicsScreen( name, homescreenIcon, navbarIcon, draggableTracks, friction ) {
     Screen.call( this, name, new Image( homescreenIcon ),
       function() { return new EnergySkateParkBasicsModel( draggableTracks, friction ); },
-      function( model ) { return new EnergySkateParkBasicsView( model ); },
+      function( model ) { return new EnergySkateParkBasicsScreenView( model ); },
       {navigationBarIcon: new Image( navbarIcon )} );
   }
 
