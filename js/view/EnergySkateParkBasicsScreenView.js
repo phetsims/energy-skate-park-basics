@@ -102,8 +102,8 @@ define( function( require ) {
       this.addChild( this.sceneSelectionPanel );
     }
 
-    //Center the pie chart legend between the bar chart and speedometer, see #60
-    pieChartLegend.mutate( {top: barGraphNode.top, centerX: (barGraphNode.right + speedometerNode.left) / 2} );
+    //Put the pie chart legend to the right of the bar chart, see #60, #192
+    pieChartLegend.mutate( {top: barGraphNode.top, left: barGraphNode.right + 8} );
 
     var playProperty = model.property( 'paused' ).not();
     var playPauseButton = new PlayPauseButton( playProperty ).mutate( {scale: 0.75} );
