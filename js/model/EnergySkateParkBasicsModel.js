@@ -243,6 +243,19 @@ define( function( require ) {
       //Clear the track change pending flag for the next step
       this.trackChangePending = false;
 
+      //If traveling on the ground, face in the direction of motion, see #181
+      if ( this.skater.track === null && this.skater.position.y === 0 ) {
+        if ( this.skater.velocity.x > 0 ) {
+          this.skater.direction = 'right';
+        }
+        if ( this.skater.velocity.x < 0 ) {
+          this.skater.direction = 'left';
+        }
+        else {
+          //skater wasn't moving, so don't change directions
+        }
+      }
+
       SkaterState.clearAllocated();
     },
 
