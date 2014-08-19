@@ -51,7 +51,7 @@ define( function( require ) {
   function EnergySkateParkBasicsScreenView( model ) {
 
     var view = this;
-    ScreenView.call( view, { renderer: 'svg' } );
+    ScreenView.call( view, { renderer: 'svg', layoutBounds: ScreenView.UPDATED_LAYOUT_BOUNDS.copy() } );
 
     var modelPoint = new Vector2( 0, 0 );
     var viewPoint = new Vector2( this.layoutBounds.width / 2, this.layoutBounds.height - BackgroundNode.earthHeight );//earth is 70px high in stage coordinates
@@ -247,8 +247,6 @@ define( function( require ) {
   }
 
   return inherit( ScreenView, EnergySkateParkBasicsScreenView, {
-
-    layoutBounds: ScreenView.UPDATED_LAYOUT_BOUNDS.copy(),
 
     //No state that is specific to the view, in this case
     getState: function() {},
