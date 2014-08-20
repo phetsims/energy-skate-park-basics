@@ -43,7 +43,6 @@ define( function( require ) {
   var Property = require( 'AXON/Property' );
   var RectangularPushButton = require( 'SUN/buttons/RectangularPushButton' );
   var Text = require( 'SCENERY/nodes/Text' );
-  var Bounds2 = require( 'DOT/Bounds2' );
 
   //Debug flag to show the view bounds, the region within which the skater can move
   var showAvailableBounds = false;
@@ -51,7 +50,7 @@ define( function( require ) {
   function EnergySkateParkBasicsScreenView( model ) {
 
     var view = this;
-    ScreenView.call( view, { renderer: 'svg' } );
+    ScreenView.call( view, { renderer: 'svg', layoutBounds: ScreenView.UPDATED_LAYOUT_BOUNDS.copy() } );
 
     var modelPoint = new Vector2( 0, 0 );
     var viewPoint = new Vector2( this.layoutBounds.width / 2, this.layoutBounds.height - BackgroundNode.earthHeight );//earth is 70px high in stage coordinates
@@ -247,8 +246,6 @@ define( function( require ) {
   }
 
   return inherit( ScreenView, EnergySkateParkBasicsScreenView, {
-
-    layoutBounds: ScreenView.UPDATED_LAYOUT_BOUNDS.copy(),
 
     //No state that is specific to the view, in this case
     getState: function() {},
