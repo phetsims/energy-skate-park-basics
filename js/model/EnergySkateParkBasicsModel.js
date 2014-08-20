@@ -362,6 +362,8 @@ define( function( require ) {
 
       //Find the closest track
       //TODO: Allocations
+      //TODO: Should find the closest track halfway between the current position and new position, but that introduced problematic behavior elsewhere
+      //The code below is less buggy overall, but can lead to cases where the skater "jumps" through the track when at a shallow angle
       var closestTrackAndPositionAndParameter = this.getClosestTrackAndPositionAndParameter( new Vector2( skaterState.positionX, skaterState.positionY ), physicalTracks );
       var track = closestTrackAndPositionAndParameter.track;
       var u = closestTrackAndPositionAndParameter.u;
