@@ -59,6 +59,7 @@ define( function( require ) {
     this.modelViewTransform = transform;
 
     this.availableModelBoundsProperty = new Property();
+    this.availableModelBoundsProperty.linkAttribute( model, 'availableModelBounds' );
 
     //The background
     this.backgroundNode = new BackgroundNode( this.layoutBounds );

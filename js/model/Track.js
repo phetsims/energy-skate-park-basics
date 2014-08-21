@@ -11,8 +11,6 @@ define( function( require ) {
   var inherit = require( 'PHET_CORE/inherit' );
   var PropertySet = require( 'AXON/PropertySet' );
   var Vector2 = require( 'DOT/Vector2' );
-  var SplineEvaluation = require( 'ENERGY_SKATE_PARK_BASICS/model/SplineEvaluation' );
-
   /**
    * Model for a track, which has a fixed number of points.  If you added a point to a Track, you need a new track.
    * @param {Events} events event source for sending messages
@@ -20,13 +18,17 @@ define( function( require ) {
    * @param {Array<ControlPoint>} controlPoints
    * @param {Boolean} interactive
    * @param {Array<Number>} parents the original tracks that were used to make this track (if any) so they can be broken apart when dragged back to control panel
+   * @param {Function} availableModelBoundsProperty function that provides the visible model bounds, to prevent the adjusted control point from going offscreen, see #195
    * @constructor
    */
-  function Track( events, modelTracks, controlPoints, interactive, parents ) {
+  var SplineEvaluation = require( 'ENERGY_SKATE_PARK_BASICS/model/SplineEvaluation' );
+
+  function Track( events, modelTracks, controlPoints, interactive, parents, availableModelBoundsProperty ) {
     var track = this;
     this.events = events;
     this.parents = parents;
     this.modelTracks = modelTracks;
+    this.availableModelBoundsProperty = availableModelBoundsProperty;
 
     //Flag to indicate whether the skater transitions from the right edge of this track directly to the ground, see #164
     this.slopeToGround = false;
@@ -497,6 +499,10 @@ define( function( require ) {
      */
     smooth: function( i ) {
       assert && assert( i >= 0 && i < this.controlPoints.length );
+      assert && assert( this.availableModelBoundsProperty );
+
+      var availableModelBounds = this.availableModelBoundsProperty.value;
+      assert && assert( availableModelBounds );
 
       var numTries = 0;
 
@@ -509,13 +515,20 @@ define( function( require ) {
       var angle = 0;
       var MAX_TRIES = 100;
       var MAXIMUM_ACCEPTABLE_RADIUS_OF_CURVATURE = 0.03;
+
       while ( this.getMinimumRadiusOfCurvature() < MAXIMUM_ACCEPTABLE_RADIUS_OF_CURVATURE && numTries < MAX_TRIES ) {
         var delta = Vector2.createPolar( distance, angle );
-        this.controlPoints[i].sourcePosition = delta.plusXY( originalX, originalY );
+        var proposedPosition = delta.plusXY( originalX, originalY );
+
+        //Only search within the visible model bounds, see #195
+        var containsPoint = availableModelBounds.containsPoint( proposedPosition );
+        if ( containsPoint ) {
+          this.controlPoints[i].sourcePosition = proposedPosition;
+          this.updateSplines();
+        }
+//        console.log( 'newRadius of curvature', this.getMinimumRadiusOfCurvature() );
         angle = angle + Math.PI / 7;
         distance = distance + 0.1;
-        this.updateSplines();
-//        console.log( 'newRadius of curvature', this.getMinimumRadiusOfCurvature() );
         numTries++;
       }
 

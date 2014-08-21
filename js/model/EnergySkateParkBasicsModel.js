@@ -62,6 +62,9 @@ define( function( require ) {
 
     var model = this;
 
+    //Will be filled in with a function that returns the visible model bounds, once the view is available
+    this.availableModelBoundsProperty = null;
+
     //Temporary flag that keeps track of whether the track was changed in the step before the physics update.
     //true if the skater's track is being dragged by the user, so that energy conservation no longer applies.
     //Only applies to one frame at a time (for the immediate next update).
@@ -93,7 +96,10 @@ define( function( require ) {
       detachable: false,
 
       //True if the user has pressed 'edit' to modify connected tracks, and the sim is in an "editing" mode
-      editing: false
+      editing: false,
+
+      //Will be filled in by the view, used to prevent control points from moving outside the visible model bounds when adjusted, see #195
+      availableModelBounds: null
     } );
     this.skater = new Skater();
 
@@ -132,15 +138,15 @@ define( function( require ) {
       var slope = [new ControlPoint( -4, 6 ), new ControlPoint( -2, 1.2 ), new ControlPoint( 2, 0 )];
       var doubleWell = [new ControlPoint( -4, 5 ), new ControlPoint( -2, 0.0166015 ), new ControlPoint( 0, 2 ), new ControlPoint( 2, 1 ), new ControlPoint( 4, 5 ) ];
 
-      var slopeTrack = new Track( this, this.tracks, slope, false );
+      var slopeTrack = new Track( this, this.tracks, slope, false, null, this.availableModelBoundsProperty );
 
       //Flag to indicate whether the skater transitions from the right edge of this track directly to the ground, see #164
       slopeTrack.slopeToGround = true;
 
       this.tracks.addAll( [
-        new Track( this, this.tracks, parabola, false ),
+        new Track( this, this.tracks, parabola, false, null, this.availableModelBoundsProperty ),
         slopeTrack,
-        new Track( this, this.tracks, doubleWell, false )
+        new Track( this, this.tracks, doubleWell, false, null, this.availableModelBoundsProperty )
       ] );
 
       this.sceneProperty.link( function( scene ) {
@@ -175,7 +181,7 @@ define( function( require ) {
       //Could use view transform for this, but it would require creating the view first, so just eyeballing it for now.
       var offset = new Vector2( -5.1, -0.85 );
       var controlPoints = [ new ControlPoint( offset.x - 1, offset.y ), new ControlPoint( offset.x, offset.y ), new ControlPoint( offset.x + 1, offset.y )];
-      this.tracks.add( new Track( this, this.tracks, controlPoints, true ) );
+      this.tracks.add( new Track( this, this.tracks, controlPoints, true, null, this.availableModelBoundsProperty ) );
     },
 
     //Reset the model, including the skater, tracks, visualizations, etc.
@@ -933,7 +939,7 @@ define( function( require ) {
 
       if ( track.controlPoints.length > 2 ) {
         var points = _.without( track.controlPoints, track.controlPoints[controlPointIndex] );
-        var newTrack = new Track( this, this.tracks, points, true, track.getParentsOrSelf() );
+        var newTrack = new Track( this, this.tracks, points, true, track.getParentsOrSelf(), null, this.availableModelBoundsProperty );
         newTrack.physical = true;
 
         // smooth out the new track, see #177
@@ -973,9 +979,9 @@ define( function( require ) {
       points1.push( newPoint1 );
       points2.unshift( newPoint2 );
 
-      var newTrack1 = new Track( this, this.tracks, points1, true, track.getParentsOrSelf() );
+      var newTrack1 = new Track( this, this.tracks, points1, true, track.getParentsOrSelf(), null, this.availableModelBoundsProperty );
       newTrack1.physical = true;
-      var newTrack2 = new Track( this, this.tracks, points2, true, track.getParentsOrSelf() );
+      var newTrack2 = new Track( this, this.tracks, points2, true, track.getParentsOrSelf(), null, this.availableModelBoundsProperty );
       newTrack2.physical = true;
 
       track.trigger( 'remove' );
@@ -1047,7 +1053,7 @@ define( function( require ) {
         secondTrackBackward();
       }
 
-      var newTrack = new Track( this, this.tracks, points, true, a.getParentsOrSelf().concat( b.getParentsOrSelf() ) );
+      var newTrack = new Track( this, this.tracks, points, true, a.getParentsOrSelf().concat( b.getParentsOrSelf() ), null, this.availableModelBoundsProperty );
       newTrack.physical = true;
 
       a.trigger( 'remove' );
@@ -1128,7 +1134,7 @@ define( function( require ) {
         var controlPoints = state.tracks[i].points.map( function( point ) {
           return new ControlPoint( point.x, point.y );
         } );
-        var newTrack = new Track( this, this.tracks, controlPoints, true, null );
+        var newTrack = new Track( this, this.tracks, controlPoints, true, null, this.availableModelBoundsProperty );
         newTrack.physical = state.tracks[i].physical;
         this.tracks.add( newTrack );
       }
