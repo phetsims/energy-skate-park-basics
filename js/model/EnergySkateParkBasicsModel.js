@@ -687,8 +687,8 @@ define( function( require ) {
 
             //There is a situation in which the `u` of the skater exceeds the track bounds before the getClosestPositionAndParameter.u does, which can cause the skater to immediately reattach
             //So make sure the skater is far enough from the track so it won't reattach right away, see #167
-            var searchPoint = track.getClosestPositionAndParameter( new Vector2( skaterState.positionX, skaterState.positionY ) ).u;
-            if ( skaterState.track.isParameterInBounds( searchPoint ) ) {
+            var closestU = track.getClosestPositionAndParameter( new Vector2( skaterState.positionX, skaterState.positionY ) ).u;
+            if ( skaterState.track.isParameterInBounds( closestU ) ) {
               return correctedState;
             }
             else {
