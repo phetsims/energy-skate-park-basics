@@ -1066,7 +1066,7 @@ define( function( require ) {
         secondTrackBackward();
       }
 
-      var newTrack = new Track( this, this.tracks, points, true, a.getParentsOrSelf().concat( b.getParentsOrSelf() ), null, this.availableModelBoundsProperty );
+      var newTrack = new Track( this, this.tracks, points, true, a.getParentsOrSelf().concat( b.getParentsOrSelf() ), this.availableModelBoundsProperty );
       newTrack.physical = true;
 
       a.trigger( 'remove' );
