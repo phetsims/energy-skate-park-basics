@@ -424,6 +424,19 @@ define( function( require ) {
           var up = beforeVector.dot( normal ) > 0;
 
           debug && debug( 'attach to track, ' + ', ' + u + ', ' + track.maxPoint );
+
+          //Double check the velocities and invert uD if incorrect, see #172
+          //Compute the new velocities same as in stepTrack
+          var newVelocityX = track.getUnitParallelVectorX( u ) * uD;
+          var newVelocityY = track.getUnitParallelVectorY( u ) * uD;
+
+          var velocityDotted = skaterState.velocityX * newVelocityX + skaterState.velocityY * newVelocityY;
+
+          //See if the track attachment will cause velocity to flip, and inverse it if so, see #172
+          if ( velocityDotted < -1E-6 ) {
+            uD = uD * -1;
+          }
+
           return skaterState.attachToTrack( newThermalEnergy, track, up, u, uD, newVelocity.x, newVelocity.y, newPosition.x, newPosition.y );
         }
 
