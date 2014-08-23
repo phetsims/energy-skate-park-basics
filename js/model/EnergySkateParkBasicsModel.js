@@ -684,8 +684,7 @@ define( function( require ) {
             debug && debug( 'left edge track: ' + correctedState.u + ', ' + skaterState.track.maxPoint );
 
             //There is a situation in which the `u` of the skater exceeds the track bounds before the getClosestPositionAndParameter.u does, which can cause the skater to immediately reattach
-            //So make sure the skater is far enough from the track so it won't reattach right away.
-            //See https://github.com/phetsims/energy-skate-park-basics/issues/167
+            //So make sure the skater is far enough from the track so it won't reattach right away, see #167
             var searchPoint = track.getClosestPositionAndParameter( new Vector2( skaterState.positionX, skaterState.positionY ) ).u;
             if ( skaterState.track.isParameterInBounds( searchPoint ) ) {
               return correctedState;
