@@ -71,6 +71,11 @@ define( function( require ) {
         if ( visible ) {
           //PERFORMANCE/ALLOCATION: Possible performance improvement to avoid allocations in Rectangle.setRect
 
+          //If the bar is too small, don't try to render it, see #199
+          if ( barHeight < 1E-6 ) {
+            barHeight = 0;
+          }
+
           //TODO: just omit negative bars altogether?
           if ( barHeight >= 0 ) {
             bar.setRect( barX, originY - barHeight, barWidth, barHeight );
