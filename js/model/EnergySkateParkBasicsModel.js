@@ -235,9 +235,11 @@ define( function( require ) {
           initialEnergy = skaterState.getTotalEnergy();
         }
 
+        //Update the skater state by running the dynamics engine
+        //There are issues in running multiple iterations here (the skater won't attach to the track).  I presume some of that work is being done in setToSkater() below or skater.trigger('updated')
+        //In either case, 10 subdivisions on iPad3 makes the sim run too slowly, so we may just want to leave it as is
         var updatedState = this.stepModel( this.speed === 'normal' ? dt : dt * 0.25, skaterState );
 
-        //Uncomment this block to debug energy issues.  Commented out instead of blocked with a flag so debugger statement will pass jshint
         if ( debug && Math.abs( updatedState.getTotalEnergy() - initialEnergy ) > 1E-6 ) {
           var redo = this.stepModel( this.speed === 'normal' ? dt : dt * 0.25, SkaterState.createFromPool( this.skater, EMPTY_OBJECT ) );
           console.log( redo );
