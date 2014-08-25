@@ -504,6 +504,7 @@ define( function( require ) {
       var availableModelBounds = this.availableModelBoundsProperty.value;
       assert && assert( availableModelBounds );
 
+      var success = false;
       var numTries = 0;
 
       //Record the original control point location
@@ -513,7 +514,7 @@ define( function( require ) {
       //Spiral outward, searching for a point that gives a smooth enough track.
       var distance = 0.01;
       var angle = 0;
-      var MAX_TRIES = 100;
+      var MAX_TRIES = 80;
       var MAXIMUM_ACCEPTABLE_RADIUS_OF_CURVATURE = 0.03;
 
       while ( this.getMinimumRadiusOfCurvature() < MAXIMUM_ACCEPTABLE_RADIUS_OF_CURVATURE && numTries < MAX_TRIES ) {
@@ -527,8 +528,8 @@ define( function( require ) {
           this.updateSplines();
         }
 //        console.log( 'newRadius of curvature', this.getMinimumRadiusOfCurvature() );
-        angle = angle + Math.PI / 7;
-        distance = distance + 0.1;
+        angle = angle + Math.PI / 9;
+        distance = distance + 0.07;
         numTries++;
       }
 
@@ -537,8 +538,12 @@ define( function( require ) {
         this.controlPoints[i].sourcePosition = new Vector2( originalX, originalY );
         this.updateSplines();
       }
+      else {
+        success = true;
+      }
 
       this.trigger( 'smoothed' );
+      return success;
     },
 
     /**
@@ -546,7 +551,7 @@ define( function( require ) {
      * Choose the point closest to the sharpest turn and adjust it.
      * @param indexToIgnore the index of the control point that the user just adjusted, which should not be moved during smoothing
      */
-    smoothPointOfHighestCurvature: function( indexToIgnore ) {
+    smoothPointOfHighestCurvature: function( indicesToIgnore ) {
 
       //Find the sharpest turn on the track
       var highestCurvatureU = this.getUWithHighestCurvature();
@@ -556,7 +561,7 @@ define( function( require ) {
       var bestDistance = Number.POSITIVE_INFINITY;
       var bestIndex = -1;
       for ( var i = 0; i < this.controlPoints.length; i++ ) {
-        if ( i !== indexToIgnore ) {
+        if ( indicesToIgnore.indexOf( i ) === -1 ) {
           var controlPointU = i / this.controlPoints.length;
           var distanceFromHighestCurvature = Math.abs( highestCurvatureU - controlPointU );
           if ( distanceFromHighestCurvature < bestDistance ) {
@@ -565,7 +570,21 @@ define( function( require ) {
           }
         }
       }
-      this.smooth( bestIndex );
+
+      //If smoothing succeeded, all is well, otherwise try smoothing based on another point, see #198
+      var success = this.smooth( bestIndex );
+      if ( success ) {
+        return true;
+      }
+      else {
+        indicesToIgnore.push( bestIndex );
+        if ( indicesToIgnore.length === this.controlPoints.length ) {
+          return false;
+        }
+        else {
+          return this.smoothPointOfHighestCurvature( indicesToIgnore );
+        }
+      }
     },
 
     getUWithHighestCurvature: function() {
@@ -576,7 +595,7 @@ define( function( require ) {
       var bestU = 0;
 
       //Search the entire space of the spline.  Larger number of divisions was chosen to prevent large curvatures at a single sampling point.
-      var numDivisions = 200;
+      var numDivisions = 400;
       var du = (this.maxPoint - this.minPoint) / numDivisions;
       for ( var u = this.minPoint; u < this.maxPoint; u += du ) {
         this.getCurvature( u, curvature );
@@ -599,7 +618,7 @@ define( function( require ) {
       var minRadius = Number.POSITIVE_INFINITY;
 
       //Search the entire space of the spline.  Larger number of divisions was chosen to prevent large curvatures at a single sampling point.
-      var numDivisions = 200;
+      var numDivisions = 400;
       var du = (this.maxPoint - this.minPoint) / numDivisions;
       for ( var u = this.minPoint; u < this.maxPoint; u += du ) {
         this.getCurvature( u, curvature );
