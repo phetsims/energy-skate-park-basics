@@ -952,7 +952,7 @@ define( function( require ) {
 
       if ( track.controlPoints.length > 2 ) {
         var points = _.without( track.controlPoints, track.controlPoints[controlPointIndex] );
-        var newTrack = new Track( this, this.tracks, points, true, track.getParentsOrSelf(), null, this.availableModelBoundsProperty );
+        var newTrack = new Track( this, this.tracks, points, true, track.getParentsOrSelf(), this.availableModelBoundsProperty );
         newTrack.physical = true;
 
         // smooth out the new track, see #177
@@ -992,9 +992,9 @@ define( function( require ) {
       points1.push( newPoint1 );
       points2.unshift( newPoint2 );
 
-      var newTrack1 = new Track( this, this.tracks, points1, true, track.getParentsOrSelf(), null, this.availableModelBoundsProperty );
+      var newTrack1 = new Track( this, this.tracks, points1, true, track.getParentsOrSelf(), this.availableModelBoundsProperty );
       newTrack1.physical = true;
-      var newTrack2 = new Track( this, this.tracks, points2, true, track.getParentsOrSelf(), null, this.availableModelBoundsProperty );
+      var newTrack2 = new Track( this, this.tracks, points2, true, track.getParentsOrSelf(), this.availableModelBoundsProperty );
       newTrack2.physical = true;
 
       track.trigger( 'remove' );
