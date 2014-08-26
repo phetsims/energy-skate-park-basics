@@ -17,7 +17,7 @@ define( function( require ) {
   var TrackNode = require( 'ENERGY_SKATE_PARK_BASICS/view/TrackNode' );
   var BackgroundNode = require( 'ENERGY_SKATE_PARK_BASICS/view/BackgroundNode' );
 
-  //Construct a ScenerSelectionPanel.  Pass the entire model since it is used to create TrackNode
+  //Construct a SceneSelectionPanel.  Pass the entire model since it is used to create TrackNode
   function SceneSelectionPanel( model, view, transform ) {
 
     //Create a button with a scene like the track in the index
