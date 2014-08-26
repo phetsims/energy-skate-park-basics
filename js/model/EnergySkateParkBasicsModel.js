@@ -62,9 +62,6 @@ define( function( require ) {
 
     var model = this;
 
-    //Will be filled in with a function that returns the visible model bounds, once the view is available
-    this.availableModelBoundsProperty = null;
-
     //Temporary flag that keeps track of whether the track was changed in the step before the physics update.
     //true if the skater's track is being dragged by the user, so that energy conservation no longer applies.
     //Only applies to one frame at a time (for the immediate next update).
@@ -186,7 +183,9 @@ define( function( require ) {
 
     //Reset the model, including the skater, tracks, visualizations, etc.
     reset: function() {
+      var availableModelBounds = this.availableModelBounds;
       PropertySet.prototype.reset.call( this );
+      this.availableModelBounds = availableModelBounds;
       this.skater.reset();
 
       this.clearTracks();
