@@ -221,6 +221,31 @@ define( function( require ) {
       this.headPosition.x = this.position.x + vectorX;
       this.headPosition.y = this.position.y - vectorY;
       this.headPositionProperty.notifyObserversStatic();
+    },
+
+    released: function( targetTrack, targetU ) {
+      this.dragging = false;
+      this.velocity = new Vector2( 0, 0 );
+      this.uD = 0;
+      this.track = targetTrack;
+      this.u = targetU;
+      if ( targetTrack ) {
+        this.position = targetTrack.getPoint( this.u );
+      }
+      this.startingPosition = this.position.copy();
+      this.startingU = targetU;
+      this.startingUp = this.up;
+      this.startingTrack = targetTrack;
+
+      //Record the starting track control points to make sure the track hasn't changed during return this.
+      this.startingTrackControlPointSources = targetTrack ? targetTrack.copyControlPointSources() : [];
+      this.startingAngle = this.angle;
+      this.timeSinceJump = 1000;
+      this.startingTimeSinceJump = this.timeSinceJump;
+
+      //Update the energy on skater release so it won't try to move to a different height to make up for the delta
+      this.updateEnergy();
+      this.trigger( 'updated' );
     }
   } );
 } );

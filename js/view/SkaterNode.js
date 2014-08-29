@@ -143,28 +143,9 @@ define( function( require ) {
         },
 
         end: function() {
-          skater.dragging = false;
-          skater.velocity = new Vector2( 0, 0 );
-          skater.uD = 0;
-          skater.track = targetTrack;
-          skater.u = targetU;
-          if ( targetTrack ) {
-            skater.position = targetTrack.getPoint( skater.u );
-          }
-          skater.startingPosition = skater.position.copy();
-          skater.startingU = targetU;
-          skater.startingUp = skater.up;
-          skater.startingTrack = targetTrack;
 
-          //Record the starting track control points to make sure the track hasn't changed during return skater.
-          skater.startingTrackControlPointSources = targetTrack ? targetTrack.copyControlPointSources() : [];
-          skater.startingAngle = skater.angle;
-          skater.timeSinceJump = 1000;
-          skater.startingTimeSinceJump = skater.timeSinceJump;
-
-          //Update the energy on skater release so it won't try to move to a different height to make up for the delta
-          skater.updateEnergy();
-          skater.trigger( 'updated' );
+          //Record the state of the skater for "return skater"
+          skater.released( targetTrack, targetU );
         }
       } ) );
   }
