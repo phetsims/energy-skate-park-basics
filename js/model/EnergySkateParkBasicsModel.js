@@ -101,7 +101,6 @@ define( function( require ) {
 
     this.time = 0;
 
-    this.resetLastDetachment();
     this.skater = new Skater();
 
     //If the mass changes while the sim is paused, trigger an update so the skater image size will update, see #115
@@ -168,29 +167,6 @@ define( function( require ) {
 
   return inherit( PropertySet, EnergySkateParkBasicsModel, {
 
-    resetLastDetachment: function() {
-
-      //Keep track of the last time the skater detached from the track to use as a heuristic for when reattachments are allowed.
-      //This information should be stored in the SkaterState, but I am too worried about making that more complex or perform more slowly.
-      this.lastDetachment = {
-
-        //The model time (in seconds) when the skater last detached from the track
-        time: 0,
-
-        //The last track the skater detached from
-        track: null,
-
-        //The Vector2 position the skater detached from.  Initialize this as far from the play area but non-null to simplify the logic
-        position: new Vector2( 10000, 10000 ),
-
-        //The arc distance traveled since detaching
-        arcLength: 0,
-
-        //The parametric curve position the skater detached from
-        u: 0
-      };
-    },
-
     //Add the tracks that will be in the track toolbox for the "Playground" screen
     addDraggableTracks: function() {
       for ( var i = 0; i < 4; i++ ) {
@@ -216,7 +192,6 @@ define( function( require ) {
       this.skater.reset();
 
       this.clearTracks();
-      this.resetLastDetachment();
     },
 
     clearTracks: function() {
@@ -395,13 +370,16 @@ define( function( require ) {
 
     //Logic to see if it is okay to reattach to the track.  See #207 #176 #194
     okToAttach: function( skaterState, track, u ) {
-      var elapsedTime = this.time - this.lastDetachment.time;
-      var isTrackDifferent = track !== this.lastDetachment.track;
-      var dx = skaterState.positionX - this.lastDetachment.position.x;
-      var dy = skaterState.positionY - this.lastDetachment.position.y;
+      var lastDetachment = this.skater.lastDetachment;
+      var elapsedTime = this.time - lastDetachment.time;
+      var isTrackDifferent = track !== lastDetachment.track;
+      var dx = skaterState.positionX - lastDetachment.position.x;
+      var dy = skaterState.positionY - lastDetachment.position.y;
       var euclideanDistance = Math.sqrt( dx * dx + dy * dy );
-      var deltaU = Math.abs( u - this.lastDetachment.u );
-      return isTrackDifferent || elapsedTime > 10.0 / 60.0 || euclideanDistance > 0.1 || deltaU > 0.1 || this.lastDetachment.arcLength > 0.2;
+      var deltaU = Math.abs( u - lastDetachment.u );
+
+      //TODO: visualize & verify these heuristic values
+      return isTrackDifferent || elapsedTime > 10.0 / 60.0 || euclideanDistance > 0.1 || deltaU > 0.1 || lastDetachment.arcLength > 0.2;
     },
 
     //Check to see if it should hit or attach to track during free fall
@@ -500,7 +478,7 @@ define( function( require ) {
       else {
         var dx = skaterState.positionX - proposedPosition.x;
         var dy = skaterState.positionY - proposedPosition.y;
-        this.lastDetachment.arcLength += Math.sqrt( dx * dx + dy * dy );
+        this.skater.lastDetachment.arcLength += Math.sqrt( dx * dx + dy * dy );
         return skaterState.continueFreeFall( proposedVelocity.x, proposedVelocity.y, proposedPosition.x, y, skaterState.timeSinceJump + dt );
       }
     },
@@ -698,7 +676,7 @@ define( function( require ) {
 
         debug && debug( 'left middle track' );
 
-        this.recordDetachment( skaterState, track );
+        this.skater.recordDetachment( skaterState, track );
 
         //Step after switching to free fall, so it doesn't look like it pauses
         return this.stepFreeFall( dt, freeSkater, true );
@@ -731,23 +709,11 @@ define( function( require ) {
 
             //There is a situation in which the `u` of the skater exceeds the track bounds before the getClosestPositionAndParameter.u does, which can cause the skater to immediately reattach
             //So make sure the skater is far enough from the track so it won't reattach right away, see #167
-            this.recordDetachment( skaterState, track );
+            this.skater.recordDetachment( skaterState, track );
             return skaterState.updateTrackUDStepsSinceJump( null, 0, 0 );
           }
         }
       }
-    },
-
-    //Record the last position time the skater detached from the track, see #207 #176 #194
-    recordDetachment: function( skaterState, track ) {
-      assert && assert( track );
-      this.lastDetachment = {
-        time: this.time,
-        track: track,
-        position: new Vector2( skaterState.positionX, skaterState.positionY ),
-        arcLength: 0,
-        u: skaterState.u
-      };
     },
 
     //Try to match the target energy by reducing the velocity of the skaterState

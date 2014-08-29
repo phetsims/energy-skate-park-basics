@@ -107,6 +107,9 @@ define( function( require ) {
     this.on( 'updated', function() {
       skater.updateHeadPosition();
     } );
+
+    this.lastDetachment = this.getInitialDetachment();
+    this.startingLastDetachment = this.getInitialDetachment();
   }
 
   return inherit( PropertySet, Skater, {
@@ -124,6 +127,7 @@ define( function( require ) {
       //Without showing the skater at the wrong angle
       this.angle = 0;
       PropertySet.prototype.reset.call( this );
+      this.lastDetachment = this.getInitialDetachment();
       this.updateEnergy();
     },
 
@@ -171,6 +175,7 @@ define( function( require ) {
       this.velocity = new Vector2( 0, 0 );
       this.clearThermal();
       this.updateEnergy();
+      this.lastDetachment = _.clone( this.startingLastDetachment );
       this.trigger( 'updated' );
     },
 
@@ -246,6 +251,39 @@ define( function( require ) {
       //Update the energy on skater release so it won't try to move to a different height to make up for the delta
       this.updateEnergy();
       this.trigger( 'updated' );
+      this.startingLastDetachment = _.clone( this.lastDetachment );
+    },
+
+    getInitialDetachment: function() {
+      return {
+
+        //The model time (in seconds) when the skater last detached from the track
+        time: 0,
+
+        //The last track the skater detached from
+        track: null,
+
+        //The Vector2 position the skater detached from.  Initialize this as far from the play area but non-null to simplify the logic
+        position: new Vector2( 10000, 10000 ),
+
+        //The arc distance traveled since detaching
+        arcLength: 0,
+
+        //The parametric curve position the skater detached from
+        u: 0
+      };
+    },
+
+    //Record the last position time the skater detached from the track, see #207 #176 #194
+    recordDetachment: function( skaterState, track ) {
+      assert && assert( track );
+      this.lastDetachment = {
+        time: this.time,
+        track: track,
+        position: new Vector2( skaterState.positionX, skaterState.positionY ),
+        arcLength: 0,
+        u: skaterState.u
+      };
     }
   } );
 } );
