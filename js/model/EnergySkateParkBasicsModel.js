@@ -378,8 +378,10 @@ define( function( require ) {
       var euclideanDistance = Math.sqrt( dx * dx + dy * dy );
       var deltaU = Math.abs( u - lastDetachment.u );
 
+      var result = isTrackDifferent || elapsedTime > (10.0 / 60.0) || euclideanDistance > 0.15 || deltaU > 0.05 || lastDetachment.arcLength > 0.2;
       //TODO: visualize & verify these heuristic values
-      return isTrackDifferent || elapsedTime > 10.0 / 60.0 || euclideanDistance > 0.1 || deltaU > 0.1 || lastDetachment.arcLength > 0.2;
+      //console.log( result, ':', 'different', isTrackDifferent, isTrackDifferent, 'elapsedTime', elapsedTime, elapsedTime > (10.0 / 60.0), 'euclideanDistance', euclideanDistance, euclideanDistance > 0.05, 'deltaU', deltaU, deltaU > 0.05, 'arcLength', lastDetachment.arcLength, lastDetachment.arcLength > 0.1 );
+      return result;
     },
 
     //Check to see if it should hit or attach to track during free fall
@@ -676,7 +678,7 @@ define( function( require ) {
 
         debug && debug( 'left middle track' );
 
-        this.skater.recordDetachment( skaterState, track );
+        this.skater.recordDetachment( skaterState, track, this.time );
 
         //Step after switching to free fall, so it doesn't look like it pauses
         return this.stepFreeFall( dt, freeSkater, true );
@@ -709,7 +711,7 @@ define( function( require ) {
 
             //There is a situation in which the `u` of the skater exceeds the track bounds before the getClosestPositionAndParameter.u does, which can cause the skater to immediately reattach
             //So make sure the skater is far enough from the track so it won't reattach right away, see #167
-            this.skater.recordDetachment( skaterState, track );
+            this.skater.recordDetachment( skaterState, track, this.time );
             return skaterState.updateTrackUDStepsSinceJump( null, 0, 0 );
           }
         }

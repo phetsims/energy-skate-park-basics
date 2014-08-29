@@ -266,10 +266,10 @@ define( function( require ) {
     },
 
     //Record the last position time the skater detached from the track, see #207 #176 #194
-    recordDetachment: function( skaterState, track ) {
+    recordDetachment: function( skaterState, track, time ) {
       assert && assert( track );
       this.lastDetachment = {
-        time: this.time,
+        time: time,
         track: track,
         position: new Vector2( skaterState.positionX, skaterState.positionY ),
         arcLength: 0,
