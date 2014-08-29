@@ -123,6 +123,7 @@ define( function( require ) {
       this.angle = 0;
       PropertySet.prototype.reset.call( this );
       this.lastDetachment = this.getInitialDetachment();
+      this.startingLastDetachment = this.getInitialDetachment();
       this.updateEnergy();
     },
 
