@@ -479,7 +479,7 @@ define( function( require ) {
         var dx = skaterState.positionX - proposedPosition.x;
         var dy = skaterState.positionY - proposedPosition.y;
         this.skater.lastDetachment.arcLength += Math.sqrt( dx * dx + dy * dy );
-        return skaterState.continueFreeFall( proposedVelocity.x, proposedVelocity.y, proposedPosition.x, y, skaterState.timeSinceJump + dt );
+        return skaterState.continueFreeFall( proposedVelocity.x, proposedVelocity.y, proposedPosition.x, y );
       }
     },
 

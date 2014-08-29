@@ -66,13 +66,8 @@ define( function( require ) {
       //Returns to this track when pressing "return skater"
       startingTrack: null,
 
-      headPosition: new Vector2( 0, 0 ),
-
-      startingTimeSinceJump: 0 // in seconds
+      headPosition: new Vector2( 0, 0 )
     } );
-
-    //Number of model updates since leaving the middle of the track, so it doesn't immediately re-collide
-    this.timeSinceJump = 0;
 
     this.addDerivedProperty( 'speed', ['velocity'], function( velocity ) {return velocity.magnitude();} );
 
@@ -169,8 +164,6 @@ define( function( require ) {
         this.track = null;
         this.angle = this.startingAngle;
       }
-      //TODO: Just restore the timeSinceJump value
-      this.timeSinceJump = this.startingTimeSinceJump;
       this.positionProperty.set( new Vector2( this.startingPosition.x, this.startingPosition.y ) );
       this.velocity = new Vector2( 0, 0 );
       this.clearThermal();
@@ -193,8 +186,7 @@ define( function( require ) {
     //Pass in tracks so it can use indices for serialization
     getState: function( tracks ) {
       var state = {
-        properties: this.get(),
-        timeSinceJump: this.timeSinceJump
+        properties: this.get()
       };
       //Replace the circularity problem
       state.properties.track = tracks.indexOf( this.track );
@@ -204,7 +196,6 @@ define( function( require ) {
 
     setState: function( state, tracks ) {
       this.set( state.properties );
-      this.timeSinceJump = state.timeSinceJump;
       this.track = tracks.getArray()[state.properties.track];
       this.startingTrack = tracks[state.properties.startingTrack];
       this.trigger( 'updated' );
@@ -245,8 +236,6 @@ define( function( require ) {
       //Record the starting track control points to make sure the track hasn't changed during return this.
       this.startingTrackControlPointSources = targetTrack ? targetTrack.copyControlPointSources() : [];
       this.startingAngle = this.angle;
-      this.timeSinceJump = 1000;
-      this.startingTimeSinceJump = this.timeSinceJump;
 
       //Update the energy on skater release so it won't try to move to a different height to make up for the delta
       this.updateEnergy();
