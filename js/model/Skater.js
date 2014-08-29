@@ -237,10 +237,11 @@ define( function( require ) {
       this.startingTrackControlPointSources = targetTrack ? targetTrack.copyControlPointSources() : [];
       this.startingAngle = this.angle;
 
+      this.startingLastDetachment = _.clone( this.lastDetachment );
+
       //Update the energy on skater release so it won't try to move to a different height to make up for the delta
       this.updateEnergy();
       this.trigger( 'updated' );
-      this.startingLastDetachment = _.clone( this.lastDetachment );
     },
 
     getInitialDetachment: function() {
