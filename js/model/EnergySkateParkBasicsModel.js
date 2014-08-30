@@ -380,7 +380,7 @@ define( function( require ) {
 
       var result = isTrackDifferent || elapsedTime > (10.0 / 60.0) || euclideanDistance > 0.15 || deltaU > 0.05 || lastDetachment.arcLength > 0.2;
       //TODO: visualize & verify these heuristic values
-      //console.log( result, ':', 'different', isTrackDifferent, isTrackDifferent, 'elapsedTime', elapsedTime, elapsedTime > (10.0 / 60.0), 'euclideanDistance', euclideanDistance, euclideanDistance > 0.05, 'deltaU', deltaU, deltaU > 0.05, 'arcLength', lastDetachment.arcLength, lastDetachment.arcLength > 0.1 );
+      console.log( result, ':', 'different', isTrackDifferent, isTrackDifferent, 'elapsedTime', elapsedTime, elapsedTime > (10.0 / 60.0), 'euclideanDistance', euclideanDistance, euclideanDistance > 0.15, 'deltaU', deltaU, deltaU > 0.05, 'arcLength', lastDetachment.arcLength, lastDetachment.arcLength > 0.2 );
       return result;
     },
 
@@ -408,6 +408,7 @@ define( function( require ) {
 
         //If crossed the track, attach to it.
         if ( beforeVector.dot( afterVector ) < 0 && this.okToAttach( skaterState, track, u ) ) {
+          console.log( 'attaching' );
 
           var newVelocity = segment.times( segment.dot( proposedVelocity ) );
           var newSpeed = newVelocity.magnitude();
@@ -673,12 +674,12 @@ define( function( require ) {
       if ( leaveTrack && this.detachable ) {
 
         //Leave the track.  Make sure the velocity is pointing away from the track or keep track of frames away from the track so it doesn't immediately recollide
-        //Or project a ray and see if a collision is imminent ?
+        //Or project a ray and see if a collision is imminent?
         var freeSkater = skaterState.leaveTrack();
 
-        debug && debug( 'left middle track' );
+        console.log( 'left middle track', freeSkater.velocityX, freeSkater.velocityY );
 
-        this.skater.recordDetachment( skaterState, track, this.time );
+        this.skater.recordDetachment( freeSkater, track, this.time );
 
         //Step after switching to free fall, so it doesn't look like it pauses
         return this.stepFreeFall( dt, freeSkater, true );
@@ -707,7 +708,7 @@ define( function( require ) {
             return correctedState.switchToGround( correctedState.thermalEnergy, correctedState.getSpeed(), 0, correctedState.positionX, 0 );
           }
           else {
-            debug && debug( 'left edge track: ' + correctedState.u + ', ' + skaterState.track.maxPoint );
+            console.log( 'left edge track: ' + correctedState.u + ', ' + skaterState.track.maxPoint );
 
             //There is a situation in which the `u` of the skater exceeds the track bounds before the getClosestPositionAndParameter.u does, which can cause the skater to immediately reattach
             //So make sure the skater is far enough from the track so it won't reattach right away, see #167
