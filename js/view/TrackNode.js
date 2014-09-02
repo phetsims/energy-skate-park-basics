@@ -168,6 +168,10 @@ define( function( require ) {
           track.bumpAboveGround();
           track.dragging = false;
           trackDropped = true;
+
+          if ( window.phetcommon.getQueryParameter( 'debugTrack' ) ) {
+            console.log( track.getDebugString() );
+          }
         }
       };
       var trackSegmentDragHandler = new SimpleDragHandler( trackSegmentDragHandlerOptions );
@@ -353,6 +357,10 @@ define( function( require ) {
                   var controlPointUI = new ControlPointUI( model, track, i, modelViewTransform, trackNode.parents[0] );
                   track.on( 'remove', function() { controlPointUI.detach(); } );
                   trackNode.parents[0].addChild( controlPointUI );
+                }
+
+                if ( window.phetcommon.getQueryParameter( 'debugTrack' ) ) {
+                  console.log( track.getDebugString() );
                 }
               }
             } ) );

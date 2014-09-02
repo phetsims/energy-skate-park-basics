@@ -163,6 +163,107 @@ define( function( require ) {
     else {
       this.addDraggableTracks();
     }
+
+    //Tracks to help demonstrate issues
+
+    var controlPoints = null;
+    var track = null;
+    if ( window.phetcommon.getQueryParameter( 'debugTrack' ) === '1' ) {
+
+      this.detachable = true;
+      //The skater falls through this track
+      this.skater.position.set( new Vector2( -5, 8 ) );
+      this.skater.released( 0, 0 );
+
+      controlPoints = [new ControlPoint( 3.9238282647584946, 3.1917866726296955 ), new ControlPoint( 2.043971377459748, 4.847851073345259 ), new ControlPoint( -1.116994633273702, 3.686296958855098 ), new ControlPoint( -3.5806797853309487, 1.8639512522361352 ), new ControlPoint( -5.982719141323793, 6.235364490161 )];
+      track = new Track( this, this.tracks, controlPoints, true, null, this.availableModelBoundsProperty );
+      track.physical = true;
+      this.tracks.add( track );
+    }
+
+    //Skater stutters and slows going over the hump
+    if ( window.phetcommon.getQueryParameter( 'debugTrack' ) === '2' ) {
+
+      this.detachable = true;
+      //The skater falls through this track
+      this.skater.position.set( new Vector2( -5, 7.7 ) );
+      this.skater.released( 0, 0 );
+
+      controlPoints = [new ControlPoint( 3.9238282647584946, 3.1917866726296955 ), new ControlPoint( 2.043971377459748, 4.847851073345259 ), new ControlPoint( -1.116994633273702, 3.686296958855098 ), new ControlPoint( -3.5806797853309487, 1.8639512522361352 ), new ControlPoint( -5.982719141323793, 6.235364490161 )];
+      track = new Track( this, this.tracks, controlPoints, true, null, this.availableModelBoundsProperty );
+      track.physical = true;
+      this.tracks.add( track );
+    }
+
+    //Tricky one--handled OK
+    if ( window.phetcommon.getQueryParameter( 'debugTrack' ) === '3' ) {
+
+      this.detachable = true;
+      //The skater falls through this track
+      this.skater.position.set( new Vector2( -5, 7.7 ) );
+      this.skater.released( 0, 0 );
+
+      controlPoints = [new ControlPoint( -1.8031842576028616, 3.53633273703041 ), new ControlPoint( 1.7306618962432907, 2.8187991949910547 ), new ControlPoint( 1.9246153846153842, 4.3405881037567084 ), new ControlPoint( 3.834311270125223, 4.907529069767442 ), new ControlPoint( 3.491162790697672, 1.0732177996422188 ), new ControlPoint( -2.760107334525939, 1.461124776386404 ), new ControlPoint( -5.162146690518783, 5.832538014311269 )];
+      track = new Track( this, this.tracks, controlPoints, true, null, this.availableModelBoundsProperty );
+      track.physical = true;
+      this.tracks.add( track );
+    }
+
+    //Wide loop, OK
+    if ( window.phetcommon.getQueryParameter( 'debugTrack' ) === '4' ) {
+
+      this.detachable = true;
+      //The skater falls through this track
+      this.skater.position.set( new Vector2( -5, 7.7 ) );
+      this.skater.released( 0, 0 );
+
+      controlPoints = [new ControlPoint( 4.639964221824686, 6.68294946332737 ), new ControlPoint( 1.4173524150268335, 0.938942307692308 ), new ControlPoint( -3.207692307692308, 3.997439624329159 ), new ControlPoint( 3.2524508050089445, 3.9079226296958858 ), new ControlPoint( 3.491162790697672, 1.0732177996422188 ), new ControlPoint( -2.760107334525939, 1.461124776386404 ), new ControlPoint( -5.162146690518783, 5.832538014311269 )];
+      track = new Track( this, this.tracks, controlPoints, true, null, this.availableModelBoundsProperty );
+      track.physical = true;
+      this.tracks.add( track );
+    }
+
+    //Flickering return skater button, PROBLEM
+    if ( window.phetcommon.getQueryParameter( 'debugTrack' ) === '5' ) {
+
+      this.detachable = true;
+      //The skater falls through this track
+      this.skater.position.set( new Vector2( -5, 7.7 ) );
+      this.skater.released( 0, 0 );
+
+      controlPoints = [new ControlPoint( 4.431091234347049, 7.9252447313977665 ), new ControlPoint( 2.4169588550983896, 7.975935759156005 ), new ControlPoint( -1.9874106197862114, 4.75700797278857 ), new ControlPoint( 0.13992761930286512, 6.207060140642635 ), new ControlPoint( 1.447191413237924, 1.0090653610430707 ), new ControlPoint( -1.7008228980322002, 1.0717102008522177 ), new ControlPoint( -5.37101967799642, 7.0748332823816655 )];
+      track = new Track( this, this.tracks, controlPoints, true, null, this.availableModelBoundsProperty );
+      track.physical = true;
+      this.tracks.add( track );
+    }
+
+    //Passes through track, PROBLEM
+    if ( window.phetcommon.getQueryParameter( 'debugTrack' ) === '6' ) {
+
+      this.detachable = true;
+      //The skater falls through this track
+      this.skater.position.set( new Vector2( 5, 7.9 ) );
+      this.skater.released( 0, 0 );
+
+      controlPoints = [new ControlPoint( 5.147227191413236, 6.57851296958855 ), new ControlPoint( 0.05887058823529401, 1.0476264705882334 ), new ControlPoint( -1.9427294117647067, 2.637132352941175 ), new ControlPoint( -3.1201411764705886, 6.404849999999999 ), new ControlPoint( 0.5690823529411766, 6.071249999999999 ), new ControlPoint( -2.3940705882352944, 1.3419794117647044 ), new ControlPoint( -5.474964705882353, 6.5029676470588225 )];
+      track = new Track( this, this.tracks, controlPoints, true, null, this.availableModelBoundsProperty );
+      track.physical = true;
+      this.tracks.add( track );
+    }
+
+    //Falls through bottom, PROBLEM
+    if ( window.phetcommon.getQueryParameter( 'debugTrack' ) === '7' ) {
+
+      this.detachable = true;
+      //The skater falls through this track
+      this.skater.position.set( new Vector2( 5, 7.9 ) );
+      this.skater.released( 0, 0 );
+
+      controlPoints = [new ControlPoint( 5.147227191413236, 6.57851296958855 ), new ControlPoint( -0.43896196231781204, 1.7569427657305372 ), new ControlPoint( -1.1787355229664587, 2.807585005572261 ), new ControlPoint( -3.1201411764705886, 6.404849999999999 ), new ControlPoint( 0.5690823529411766, 6.071249999999999 ), new ControlPoint( -2.3940705882352944, 1.3419794117647044 ), new ControlPoint( -5.474964705882353, 6.5029676470588225 )];
+      track = new Track( this, this.tracks, controlPoints, true, null, this.availableModelBoundsProperty );
+      track.physical = true;
+      this.tracks.add( track );
+    }
   }
 
   return inherit( PropertySet, EnergySkateParkBasicsModel, {

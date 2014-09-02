@@ -644,6 +644,19 @@ define( function( require ) {
 
     copyControlPointSources: function() {
       return this.controlPoints.map( function( controlPoint ) {return controlPoint.sourcePosition.copy();} );
+    },
+
+    getDebugString: function() {
+
+      var string = 'var controlPoints = [';
+      for ( var i = 0; i < this.controlPoints.length; i++ ) {
+        var controlPoint = this.controlPoints[i];
+        string += 'new ControlPoint(' + controlPoint.position.x + ',' + controlPoint.position.y + ')';
+        if ( i < this.controlPoints.length - 1 ) {
+          string += ',';
+        }
+      }
+      return string + '];';
     }
   } );
 } );
