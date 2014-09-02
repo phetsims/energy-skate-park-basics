@@ -91,7 +91,18 @@ define( function( require ) {
 
     //Determine if the skater is onscreen or offscreen for purposes of highlighting the 'return skater' button.
     var onscreenProperty = new DerivedProperty( [model.skater.positionProperty], function( position ) {
-      return view.availableModelBounds && view.availableModelBounds.containsPoint( position );
+
+      //To solve the "flickering/pulsating" button problem reported in #206, require the skater to go across 2E-2 window before the button is activated.
+      //That is, if the skater was in bounds in the last frame, make sure the skater goes outside an expanded bounds on the next frame and vice versa
+      //Another way to say that is: if the "return skater" button was large, the skater must come back significantly further into the frame to make it small again,
+      //thus minor numerical fluctuations do not cause the pulsating problem.
+      var lastValue = onscreenProperty && onscreenProperty.value;
+      if ( lastValue ) {
+        return view.availableModelBounds && view.dilatedAvailableModelBounds.containsPoint( position );
+      }
+      else {
+        return view.availableModelBounds && view.erodedAvailableModelBounds.containsPoint( position );
+      }
     } );
 
     var barGraphNode = new BarGraphNode( model.skater, model.property( 'barGraphVisible' ), model.clearThermal.bind( model ) );
@@ -297,6 +308,8 @@ define( function( require ) {
 
       //Compute the visible model bounds so we will know when a model object like the skater has gone offscreen
       this.availableModelBounds = this.modelViewTransform.viewToModelBounds( this.availableViewBounds );
+      this.dilatedAvailableModelBounds = this.availableModelBounds.dilated( 1E-2 );
+      this.erodedAvailableModelBounds = this.availableModelBounds.eroded( 1E-2 );
       this.availableModelBoundsProperty.value = this.availableModelBounds;
 
       //Show it for debugging
