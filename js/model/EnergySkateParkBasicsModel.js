@@ -46,6 +46,9 @@ define( function( require ) {
 
   var MAX_NUMBER_CONTROL_POINTS = 12;
 
+  //Track the model iterations to implement "slow motion" by stepping every Nth frame, see #210
+  var modelIterations = 0;
+
   /**
    * Main constructor for the EnergySkateParkBasicsModel
    *
@@ -342,7 +345,11 @@ define( function( require ) {
         //Update the skater state by running the dynamics engine
         //There are issues in running multiple iterations here (the skater won't attach to the track).  I presume some of that work is being done in setToSkater() below or skater.trigger('updated')
         //In either case, 10 subdivisions on iPad3 makes the sim run too slowly, so we may just want to leave it as is
-        var updatedState = this.stepModel( this.speed === 'normal' ? dt : dt * 0.25, skaterState );
+        var updatedState = null;
+        modelIterations++;
+        if ( this.speed === 'normal' || modelIterations % 2 === 0 ) {
+          updatedState = this.stepModel( dt, skaterState );
+        }
 
         if ( debug && Math.abs( updatedState.getTotalEnergy() - initialEnergy ) > 1E-6 ) {
           var redo = this.stepModel( this.speed === 'normal' ? dt : dt * 0.25, SkaterState.createFromPool( this.skater, EMPTY_OBJECT ) );
