@@ -267,6 +267,36 @@ define( function( require ) {
       track.physical = true;
       this.tracks.add( track );
     }
+
+    //Falls through loop, PROBLEM
+    if ( window.phetcommon.getQueryParameter( 'debugTrack' ) === '8' ) {
+
+      this.detachable = true;
+      //The skater falls through this track
+      this.skater.position.set( new Vector2( 5, 7.9 ) );
+      this.skater.released( 0, 0 );
+
+      controlPoints = [new ControlPoint( 5.07086859688196, 6.925682071269487 ), new ControlPoint( 2.061781737193762, 0.7625271732714408 ), new ControlPoint( 0.09287305122494338, 0.7625271732714408 ), new ControlPoint( -3.287706013363029, 3.0472042334050697 ), new ControlPoint( -2.2289532293986642, 4.399535077951003 ), new ControlPoint( -0.6129621380846331, 4.306662026726059 ), new ControlPoint( 0.7429844097995542, 3.3629726075698803 ), new ControlPoint( 0.14859688195991083, 2.3227944338505053 ), new ControlPoint( -1.4302449888641426, 1.4159674088426304 ), new ControlPoint( -4.532204899777283, 0.580109947818132 ), new ControlPoint( -6.1185746102449885, 7.75698912376468 )];
+      track = new Track( this, this.tracks, controlPoints, true, null, this.availableModelBoundsProperty );
+      track.physical = true;
+      this.tracks.add( track );
+    }
+
+    //Pops upside down in loop, PROBLEM
+    if ( window.phetcommon.getQueryParameter( 'debugTrack' ) === '9' ) {
+
+      this.detachable = true;
+      //The skater falls through this track
+      this.skater.position.set( new Vector2( 5, 7.9 ) );
+      this.skater.released( 0, 0 );
+      this.friction = 0;
+
+      controlPoints = [new ControlPoint( 5.516659242761692, 5.458287861915368 ), new ControlPoint( 2.061781737193762, 0.7625271732714408 ), new ControlPoint( 0.09287305122494338, 0.7625271732714408 ), new ControlPoint( -3.287706013363029, 3.0472042334050697 ), new ControlPoint( -2.2289532293986642, 4.399535077951003 ), new ControlPoint( -0.6129621380846331, 4.306662026726059 ), new ControlPoint( 0.7429844097995542, 3.3629726075698803 ), new ControlPoint( 0.14859688195991083, 2.3227944338505053 ), new ControlPoint( -1.4302449888641426, 1.4159674088426304 ), new ControlPoint( -4.532204899777283, 0.580109947818132 ), new ControlPoint( -6.1185746102449885, 7.75698912376468 )];
+      track = new Track( this, this.tracks, controlPoints, true, null, this.availableModelBoundsProperty );
+      track.physical = true;
+      this.tracks.add( track );
+    }
+
   }
 
   return inherit( PropertySet, EnergySkateParkBasicsModel, {
