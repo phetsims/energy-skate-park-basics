@@ -817,6 +817,12 @@ define( function( require ) {
 
         console.log( 'left middle track', freeSkater.velocityX, freeSkater.velocityY );
 
+        //Nudge the velocity in the 'up' direction so the skater won't pass through the track, see #207
+        var velocity = new Vector2( freeSkater.velocityX, freeSkater.velocityY );
+        var upVector = new Vector2( sideVectorX, sideVectorY );
+        var revisedVelocity = velocity.normalized().blend( upVector, 0.01 ).normalized().times( velocity.magnitude() );
+        freeSkater = freeSkater.updateUDVelocity( 0, revisedVelocity.x, revisedVelocity.y );
+
         this.skater.recordDetachment( freeSkater, track, this.time );
 
         //Step after switching to free fall, so it doesn't look like it pauses
