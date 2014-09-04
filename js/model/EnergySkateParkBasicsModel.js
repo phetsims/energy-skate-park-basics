@@ -31,6 +31,7 @@ define( function( require ) {
   var Vector2 = require( 'DOT/Vector2' );
   var ObservableArray = require( 'AXON/ObservableArray' );
   var SkaterState = require( 'ENERGY_SKATE_PARK_BASICS/model/SkaterState' );
+  var Util = require( 'DOT/Util' );
 
   //Reuse empty object for creating SkaterStates to avoid allocations
   var EMPTY_OBJECT = {};
@@ -394,7 +395,7 @@ define( function( require ) {
         //In either case, 10 subdivisions on iPad3 makes the sim run too slowly, so we may just want to leave it as is
         var updatedState = null;
         modelIterations++;
-        if ( this.speed === 'normal' || modelIterations % 2 === 0 ) {
+        if ( this.speed === 'normal' || modelIterations % 3 === 0 ) {
           updatedState = this.stepModel( dt, skaterState );
         }
 
@@ -402,8 +403,10 @@ define( function( require ) {
           var redo = this.stepModel( this.speed === 'normal' ? dt : dt * 0.25, SkaterState.createFromPool( this.skater, EMPTY_OBJECT ) );
           console.log( redo );
         }
-        updatedState.setToSkater( this.skater );
-        this.skater.trigger( 'updated' );
+        if ( updatedState ) {
+          updatedState.setToSkater( this.skater );
+          this.skater.trigger( 'updated' );
+        }
       }
 
       //Clear the track change pending flag for the next step
@@ -523,104 +526,102 @@ define( function( require ) {
       }
     },
 
-    //Logic to see if it is okay to reattach to the track.  See #207 #176 #194
-    okToAttach: function( skaterState, track, u ) {
-      var lastDetachment = this.skater.lastDetachment;
-      var elapsedTime = this.time - lastDetachment.time;
-      var isTrackDifferent = track !== lastDetachment.track;
-      var dx = skaterState.positionX - lastDetachment.position.x;
-      var dy = skaterState.positionY - lastDetachment.position.y;
-      var euclideanDistance = Math.sqrt( dx * dx + dy * dy );
-      var deltaU = Math.abs( u - lastDetachment.u );
-
-      var result = isTrackDifferent || elapsedTime > (10.0 / 60.0) || euclideanDistance > 0.15 || deltaU > 0.05 || lastDetachment.arcLength > 0.2;
-      //TODO: visualize & verify these heuristic values
-      console.log( result, ':', 'different', isTrackDifferent, isTrackDifferent, 'elapsedTime', elapsedTime, elapsedTime > (10.0 / 60.0), 'euclideanDistance', euclideanDistance, euclideanDistance > 0.15, 'deltaU', deltaU, deltaU > 0.05, 'arcLength', lastDetachment.arcLength, lastDetachment.arcLength > 0.2 );
-      return result;
-    },
-
-    //Check to see if it should hit or attach to track during free fall
-    interactWithTracksWhileFalling: function( physicalTracks, skaterState, proposedPosition, initialEnergy, dt, proposedVelocity ) {
-
-      //Find the closest track
-      //TODO: Allocations
-      //TODO: Should find the closest track halfway between the current position and new position, but that introduced problematic behavior elsewhere
-      //The code below is less buggy overall, but can lead to cases where the skater "jumps" through the track when at a shallow angle
-      var closestTrackAndPositionAndParameter = this.getClosestTrackAndPositionAndParameter( new Vector2( skaterState.positionX, skaterState.positionY ), physicalTracks );
+    //Check to see if the points crossed the track
+    crossedTrack: function( closestTrackAndPositionAndParameter, physicalTracks, beforeX, beforeY, afterX, afterY ) {
       var track = closestTrackAndPositionAndParameter.track;
       var u = closestTrackAndPositionAndParameter.u;
       var trackPoint = closestTrackAndPositionAndParameter.point;
 
       if ( !track.isParameterInBounds( u ) ) {
-        return this.continueFreeFall( skaterState, initialEnergy, proposedPosition, proposedVelocity, dt );
+        return false;
       }
       else {
+
+        //Linearize the spline, and check to see if the skater crossed by performing a line segment intersection between
+        //the skater's trajectory segment and the linearized track segment.
+        var unitParallelVector = track.getUnitParallelVector( u );
+        var a = trackPoint.plus( unitParallelVector.times( 100 ) );
+        var b = trackPoint.plus( unitParallelVector.times( -100 ) );
+        var intersection = Util.lineSegmentIntersection( a.x, a.y, b.x, b.y, beforeX, beforeY, afterX, afterY );
+        return intersection !== null;
+      }
+    },
+
+    //Check to see if it should hit or attach to track during free fall
+    interactWithTracksWhileFalling: function( physicalTracks, skaterState, proposedPosition, initialEnergy, dt, proposedVelocity ) {
+
+      //Find the closest track, and see if the skater would cross it in this time step.
+      var closestTrackAndPositionAndParameter = this.getClosestTrackAndPositionAndParameter( new Vector2( (skaterState.positionX + proposedPosition.x) / 2, (skaterState.positionY + proposedPosition.y) / 2 ), physicalTracks );
+      var crossed = this.crossedTrack( closestTrackAndPositionAndParameter, physicalTracks, skaterState.positionX, skaterState.positionY, proposedPosition.x, proposedPosition.y );
+
+      var track = closestTrackAndPositionAndParameter.track;
+      var u = closestTrackAndPositionAndParameter.u;
+      var trackPoint = closestTrackAndPositionAndParameter.point;
+
+      if ( crossed ) {
+        console.log( 'attaching' );
         var normal = track.getUnitNormalVector( u );
         var segment = normal.perpendicular();
 
         var beforeVector = new Vector2( skaterState.positionX, skaterState.positionY ).minus( trackPoint );
-        var afterVector = proposedPosition.minus( trackPoint );
 
         //If crossed the track, attach to it.
-        if ( beforeVector.dot( afterVector ) < 0 && this.okToAttach( skaterState, track, u ) ) {
-          console.log( 'attaching' );
 
-          var newVelocity = segment.times( segment.dot( proposedVelocity ) );
-          var newSpeed = newVelocity.magnitude();
-          var newKineticEnergy = 0.5 * skaterState.mass * newVelocity.magnitudeSquared();
-          var newPosition = track.getPoint( u );
-          var newPotentialEnergy = -skaterState.mass * skaterState.gravity * newPosition.y;
-          var newThermalEnergy = initialEnergy - newKineticEnergy - newPotentialEnergy;
+        var newVelocity = segment.times( segment.dot( proposedVelocity ) );
+        var newSpeed = newVelocity.magnitude();
+        var newKineticEnergy = 0.5 * skaterState.mass * newVelocity.magnitudeSquared();
+        var newPosition = track.getPoint( u );
+        var newPotentialEnergy = -skaterState.mass * skaterState.gravity * newPosition.y;
+        var newThermalEnergy = initialEnergy - newKineticEnergy - newPotentialEnergy;
 
-          //Sometimes (depending on dt) the thermal energy can go negative by the above calculation, see #141
-          //In that case, set the thermal energy to zero and reduce the speed to compensate.
-          if ( newThermalEnergy < 0 ) {
-            newThermalEnergy = 0;
-            newKineticEnergy = initialEnergy - newPotentialEnergy;
+        //Sometimes (depending on dt) the thermal energy can go negative by the above calculation, see #141
+        //In that case, set the thermal energy to zero and reduce the speed to compensate.
+        if ( newThermalEnergy < 0 ) {
+          newThermalEnergy = 0;
+          newKineticEnergy = initialEnergy - newPotentialEnergy;
 
-            assert && assert( newKineticEnergy >= 0 );
-            if ( newKineticEnergy < 0 ) {
-              newKineticEnergy = 0;
-            }
-
-            //ke = 1/2 m v v
-            newSpeed = Math.sqrt( 2 * newKineticEnergy / skaterState.mass );
-            newVelocity = segment.times( newSpeed );
+          assert && assert( newKineticEnergy >= 0 );
+          if ( newKineticEnergy < 0 ) {
+            newKineticEnergy = 0;
           }
 
-          var dot = proposedVelocity.normalized().dot( segment );
-
-          //Sanity test
-          assert && assert( isFinite( dot ) );
-          assert && assert( isFinite( newVelocity.x ) );
-          assert && assert( isFinite( newVelocity.y ) );
-          assert && assert( isFinite( newThermalEnergy ) );
-          assert && assert( newThermalEnergy >= 0 );
-
-          var uD = (dot > 0 ? +1 : -1) * newSpeed;
-          var up = beforeVector.dot( normal ) > 0;
-
-          debug && debug( 'attach to track, ' + ', ' + u + ', ' + track.maxPoint );
-
-          //Double check the velocities and invert uD if incorrect, see #172
-          //Compute the new velocities same as in stepTrack
-          var newVelocityX = track.getUnitParallelVectorX( u ) * uD;
-          var newVelocityY = track.getUnitParallelVectorY( u ) * uD;
-
-          var velocityDotted = skaterState.velocityX * newVelocityX + skaterState.velocityY * newVelocityY;
-
-          //See if the track attachment will cause velocity to flip, and inverse it if so, see #172
-          if ( velocityDotted < -1E-6 ) {
-            uD = uD * -1;
-          }
-
-          return skaterState.attachToTrack( newThermalEnergy, track, up, u, uD, newVelocity.x, newVelocity.y, newPosition.x, newPosition.y );
+          //ke = 1/2 m v v
+          newSpeed = Math.sqrt( 2 * newKineticEnergy / skaterState.mass );
+          newVelocity = segment.times( newSpeed );
         }
 
-        //It just continued in free fall
-        else {
-          return this.continueFreeFall( skaterState, initialEnergy, proposedPosition, proposedVelocity, dt );
+        var dot = proposedVelocity.normalized().dot( segment );
+
+        //Sanity test
+        assert && assert( isFinite( dot ) );
+        assert && assert( isFinite( newVelocity.x ) );
+        assert && assert( isFinite( newVelocity.y ) );
+        assert && assert( isFinite( newThermalEnergy ) );
+        assert && assert( newThermalEnergy >= 0 );
+
+        var uD = (dot > 0 ? +1 : -1) * newSpeed;
+        var up = beforeVector.dot( normal ) > 0;
+
+        debug && debug( 'attach to track, ' + ', ' + u + ', ' + track.maxPoint );
+
+        //Double check the velocities and invert uD if incorrect, see #172
+        //Compute the new velocities same as in stepTrack
+        var newVelocityX = track.getUnitParallelVectorX( u ) * uD;
+        var newVelocityY = track.getUnitParallelVectorY( u ) * uD;
+
+        var velocityDotted = skaterState.velocityX * newVelocityX + skaterState.velocityY * newVelocityY;
+
+        //See if the track attachment will cause velocity to flip, and inverse it if so, see #172
+        if ( velocityDotted < -1E-6 ) {
+          uD = uD * -1;
         }
+
+        return skaterState.attachToTrack( newThermalEnergy, track, up, u, uD, newVelocity.x, newVelocity.y, newPosition.x, newPosition.y );
+      }
+
+      //It just continued in free fall
+      else {
+        return this.continueFreeFall( skaterState, initialEnergy, proposedPosition, proposedVelocity, dt );
       }
     },
 
