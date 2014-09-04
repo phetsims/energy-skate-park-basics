@@ -45,6 +45,9 @@ define( function( require ) {
       var lastDragPoint;
       var startOffset = null;
 
+      //Keep track of whether the user has started to drag the track.  Click events should not create tracks, only drag events.  See #205
+      var startedDrag = false;
+
       //Drag handler for dragging the track segment itself (not one of the control points)
       //Uses a similar strategy as MovableDragHandler but requires a separate implementation because its bounds are determined by the shape of the track (so it cannot go below ground)
       //And so it can be dragged out of the toolbox but not back into it (so it won't be dragged below ground)
@@ -52,15 +55,23 @@ define( function( require ) {
         allowTouchSnag: true,
 
         start: function( event ) {
-          lastDragPoint = event.pointer.point;
-          track.dragging = true;
 
-          var location = modelViewTransform.modelToViewPosition( track.position );
-          startOffset = event.currentTarget.globalToParentPoint( event.pointer.point ).minus( location );
+          //A new press has started, but the user has not moved the track yet, so do not create it yet.  See #205
+          startedDrag = false;
         },
 
         //Drag an entire track
         drag: function( event ) {
+
+          //On the first drag event, move the track out of the toolbox, see #205
+          if ( !startedDrag ) {
+            lastDragPoint = event.pointer.point;
+            track.dragging = true;
+
+            var startingPosition = modelViewTransform.modelToViewPosition( track.position );
+            startOffset = event.currentTarget.globalToParentPoint( event.pointer.point ).minus( startingPosition );
+            startedDrag = true;
+          }
           track.dragging = true;
 
           var parentPoint = event.currentTarget.globalToParentPoint( event.pointer.point ).minus( startOffset );
@@ -160,17 +171,22 @@ define( function( require ) {
 
         //End the drag
         end: function() {
-          var myPoints = [track.controlPoints[0], track.controlPoints[track.controlPoints.length - 1]];
-          if ( myPoints[0].snapTarget || myPoints[1].snapTarget ) {
-            model.joinTracks( track );
-          }
 
-          track.bumpAboveGround();
-          track.dragging = false;
-          trackDropped = true;
+          //If the user never dragged the object, then there is no track to drop in this case, see #205
+          if ( startedDrag ) {
+            var myPoints = [track.controlPoints[0], track.controlPoints[track.controlPoints.length - 1]];
+            if ( myPoints[0].snapTarget || myPoints[1].snapTarget ) {
+              model.joinTracks( track );
+            }
 
-          if ( window.phetcommon.getQueryParameter( 'debugTrack' ) ) {
-            console.log( track.getDebugString() );
+            track.bumpAboveGround();
+            track.dragging = false;
+            trackDropped = true;
+
+            if ( window.phetcommon.getQueryParameter( 'debugTrack' ) ) {
+              console.log( track.getDebugString() );
+            }
+            startedDrag = false;
           }
         }
       };
