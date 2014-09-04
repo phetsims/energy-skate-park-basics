@@ -566,7 +566,24 @@ define( function( require ) {
     interactWithTracksWhileFalling: function( physicalTracks, skaterState, proposedPosition, initialEnergy, dt, proposedVelocity ) {
 
       //Find the closest track, and see if the skater would cross it in this time step.
-      var closestTrackAndPositionAndParameter = this.getClosestTrackAndPositionAndParameter( new Vector2( (skaterState.positionX + proposedPosition.x) / 2, (skaterState.positionY + proposedPosition.y) / 2 ), physicalTracks );
+      //Assuming the skater's initial + final locations determine a line segment, we search for the best point for the skater's start point, midpoint and end point
+      //And choose whichever is closest.  This helps avoid "high curvature" problems like the one identified in #212
+      var a = this.getClosestTrackAndPositionAndParameter( new Vector2( skaterState.positionX, skaterState.positionY ), physicalTracks );
+      var b = this.getClosestTrackAndPositionAndParameter( new Vector2( (skaterState.positionX + proposedPosition.x) / 2, (skaterState.positionY + proposedPosition.y) / 2 ), physicalTracks );
+      var c = this.getClosestTrackAndPositionAndParameter( new Vector2( proposedPosition.x, proposedPosition.y ), physicalTracks );
+
+      var initialPosition = new Vector2( skaterState.positionX, skaterState.positionY );
+      var distanceA = Util.distToSegment( a.point, initialPosition, proposedPosition );
+      var distanceB = Util.distToSegment( b.point, initialPosition, proposedPosition );
+      var distanceC = Util.distToSegment( c.point, initialPosition, proposedPosition );
+
+      var distances = [distanceA, distanceB, distanceC];
+      var minDistance = _.min( distances );
+
+      var closestTrackAndPositionAndParameter = minDistance === distanceA ? a : minDistance === distanceC ? c : b;
+
+      console.log( 'minDistance', distances.indexOf( minDistance ) );
+
       var crossed = this.crossedTrack( closestTrackAndPositionAndParameter, physicalTracks, skaterState.positionX, skaterState.positionY, proposedPosition.x, proposedPosition.y );
 
       var track = closestTrackAndPositionAndParameter.track;
@@ -856,6 +873,12 @@ define( function( require ) {
         var revisedVelocity = velocity.normalized().blend( upVector, 0.01 ).normalized().times( velocity.magnitude() );
         freeSkater = freeSkater.updateUDVelocity( 0, revisedVelocity.x, revisedVelocity.y );
 
+        //Nudge the position away from the track, slightly since it was perfectly centered on the track, see #212
+        var origPosition = new Vector2( freeSkater.positionX, freeSkater.positionY );
+        var newPosition = origPosition.plus( upVector.times( 1E-6 ) );
+        freeSkater = freeSkater.updatePosition( newPosition.x, newPosition.y );
+
+        console.log( 'newdot', revisedVelocity.dot( upVector ) );
         this.skater.recordDetachment( freeSkater, track, this.time );
 
         //Step after switching to free fall, so it doesn't look like it pauses
