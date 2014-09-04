@@ -42,8 +42,8 @@ define( function( require ) {
   function isApproxEqual( a, b, tolerance ) { return Math.abs( a - b ) <= tolerance; }
 
   //Flag to enable debugging for physics issues
-  var debugLogEnabled = false;
-  var debug = debugLogEnabled ? function( string ) { console.log( string ); } : null;
+  var debug = window.phetcommon.getQueryParameter( 'debugLog' ) ? function() {console.log.apply( console, arguments );} : null;
+  var debugAttachDetach = window.phetcommon.getQueryParameter( 'debugAttachDetach' ) ? function() {console.log.apply( console, arguments );} : null;
 
   var MAX_NUMBER_CONTROL_POINTS = 12;
 
@@ -415,7 +415,7 @@ define( function( require ) {
 
         if ( debug && Math.abs( updatedState.getTotalEnergy() - initialEnergy ) > 1E-6 ) {
           var redo = this.stepModel( this.speed === 'normal' ? dt : dt * 0.25, SkaterState.createFromPool( this.skater, EMPTY_OBJECT ) );
-          console.log( redo );
+          debug && debug( redo );
         }
         if ( updatedState ) {
           updatedState.setToSkater( this.skater );
@@ -582,7 +582,7 @@ define( function( require ) {
 
       var closestTrackAndPositionAndParameter = minDistance === distanceA ? a : minDistance === distanceC ? c : b;
 
-      console.log( 'minDistance', distances.indexOf( minDistance ) );
+      debugAttachDetach && debugAttachDetach( 'minDistance', distances.indexOf( minDistance ) );
 
       var crossed = this.crossedTrack( closestTrackAndPositionAndParameter, physicalTracks, skaterState.positionX, skaterState.positionY, proposedPosition.x, proposedPosition.y );
 
@@ -591,7 +591,7 @@ define( function( require ) {
       var trackPoint = closestTrackAndPositionAndParameter.point;
 
       if ( crossed ) {
-        console.log( 'attaching' );
+        debugAttachDetach && debugAttachDetach( 'attaching' );
         var normal = track.getUnitNormalVector( u );
         var segment = normal.perpendicular();
 
@@ -864,7 +864,7 @@ define( function( require ) {
         //Or project a ray and see if a collision is imminent?
         var freeSkater = skaterState.leaveTrack();
 
-        console.log( 'left middle track', freeSkater.velocityX, freeSkater.velocityY );
+        debugAttachDetach && debugAttachDetach( 'left middle track', freeSkater.velocityX, freeSkater.velocityY );
 
         //Nudge the velocity in the 'up' direction so the skater won't pass through the track, see #207
         var velocity = new Vector2( freeSkater.velocityX, freeSkater.velocityY );
@@ -877,7 +877,7 @@ define( function( require ) {
         var newPosition = origPosition.plus( upVector.times( 1E-6 ) );
         freeSkater = freeSkater.updatePosition( newPosition.x, newPosition.y );
 
-        console.log( 'newdot', revisedVelocity.dot( upVector ) );
+        debugAttachDetach && debugAttachDetach( 'newdot', revisedVelocity.dot( upVector ) );
 
         //Step after switching to free fall, so it doesn't look like it pauses
         return this.stepFreeFall( dt, freeSkater, true );
@@ -906,7 +906,7 @@ define( function( require ) {
             return correctedState.switchToGround( correctedState.thermalEnergy, correctedState.getSpeed(), 0, correctedState.positionX, 0 );
           }
           else {
-            console.log( 'left edge track: ' + correctedState.u + ', ' + skaterState.track.maxPoint );
+            debugAttachDetach && debugAttachDetach( 'left edge track: ' + correctedState.u + ', ' + skaterState.track.maxPoint );
 
             //There is a situation in which the `u` of the skater exceeds the track bounds before the getClosestPositionAndParameter.u does, which can cause the skater to immediately reattach
             //So make sure the skater is far enough from the track so it won't reattach right away, see #167
@@ -1026,9 +1026,7 @@ define( function( require ) {
               else {
 
                 //TODO: This error case can still occur, especially with friction turned on
-                if ( debug ) {
-                  console.log( "Changed position, wanted to change velocity, but didn't have enough to fix it..., dE=" + ( newState.getTotalEnergy() - e0 ) );
-                }
+                debug && debug( "Changed position, wanted to change velocity, but didn't have enough to fix it..., dE=" + ( newState.getTotalEnergy() - e0 ) );
               }
             }
             return correctedState;
@@ -1313,7 +1311,7 @@ define( function( require ) {
 
         //If the skater changed direction of motion because of the track polarity change, flip the parametric velocity 'uD' value, see #180
         var newDirectionVector = this.skater.track.getUnitParallelVector( this.skater.u ).times( this.skater.uD );
-        console.log( newDirectionVector.dot( originalDirectionVector ) );
+        debugAttachDetach && debugAttachDetach( newDirectionVector.dot( originalDirectionVector ) );
         if ( newDirectionVector.dot( originalDirectionVector ) < 0 ) {
           this.skater.uD = -this.skater.uD;
         }
