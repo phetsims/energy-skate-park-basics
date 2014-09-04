@@ -122,7 +122,7 @@ define( function( require ) {
       },
 
       //Create a new SkaterState with the new values.  Provided as a convenience to avoid allocating options argument (as in update)
-      updateTrackUDStepsSinceJump: function( track, uD ) {
+      updateTrackUD: function( track, uD ) {
         var state = SkaterState.createFromPool( this, EMPTY_OBJECT );
         state.track = track;
         state.uD = uD;

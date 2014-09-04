@@ -927,7 +927,7 @@ define( function( require ) {
 
             //There is a situation in which the `u` of the skater exceeds the track bounds before the getClosestPositionAndParameter.u does, which can cause the skater to immediately reattach
             //So make sure the skater is far enough from the track so it won't reattach right away, see #167
-            var freeSkater = skaterState.updateTrackUDStepsSinceJump( null, 0, 0 );
+            var freeSkater = skaterState.updateTrackUD( null, 0 );
 
             var nudged = this.nudge( freeSkater, sideVectorX, sideVectorY, -1 );
 
