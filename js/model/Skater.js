@@ -102,9 +102,6 @@ define( function( require ) {
     this.on( 'updated', function() {
       skater.updateHeadPosition();
     } );
-
-    this.lastDetachment = this.getInitialDetachment();
-    this.startingLastDetachment = this.getInitialDetachment();
   }
 
   return inherit( PropertySet, Skater, {
@@ -122,8 +119,6 @@ define( function( require ) {
       //Without showing the skater at the wrong angle
       this.angle = 0;
       PropertySet.prototype.reset.call( this );
-      this.lastDetachment = this.getInitialDetachment();
-      this.startingLastDetachment = this.getInitialDetachment();
       this.updateEnergy();
     },
 
@@ -169,7 +164,6 @@ define( function( require ) {
       this.velocity = new Vector2( 0, 0 );
       this.clearThermal();
       this.updateEnergy();
-      this.lastDetachment = _.clone( this.startingLastDetachment );
       this.trigger( 'updated' );
     },
 
@@ -238,8 +232,6 @@ define( function( require ) {
       this.startingTrackControlPointSources = targetTrack ? targetTrack.copyControlPointSources() : [];
       this.startingAngle = this.angle;
 
-      this.startingLastDetachment = _.clone( this.lastDetachment );
-
       //Update the energy on skater release so it won't try to move to a different height to make up for the delta
       this.updateEnergy();
       this.trigger( 'updated' );
@@ -262,18 +254,6 @@ define( function( require ) {
 
         //The parametric curve position the skater detached from
         u: 0
-      };
-    },
-
-    //Record the last position time the skater detached from the track, see #207 #176 #194
-    recordDetachment: function( skaterState, track, time ) {
-      assert && assert( track );
-      this.lastDetachment = {
-        time: time,
-        track: track,
-        position: new Vector2( skaterState.positionX, skaterState.positionY ),
-        arcLength: 0,
-        u: skaterState.u
       };
     }
   } );

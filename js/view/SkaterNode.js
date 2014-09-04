@@ -137,8 +137,6 @@ define( function( require ) {
             skater.position = targetTrack.getPoint( targetU );
           }
 
-          skater.lastDetachment = skater.getInitialDetachment();
-          skater.startingLastDetachment = skater.getInitialDetachment();
           skater.updateEnergy();
           skater.trigger( 'updated' );
         },
