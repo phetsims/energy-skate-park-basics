@@ -553,6 +553,7 @@ define( function( require ) {
 
         //Linearize the spline, and check to see if the skater crossed by performing a line segment intersection between
         //the skater's trajectory segment and the linearized track segment.
+        //Note, this has an error for cusps, see #212
         var unitParallelVector = track.getUnitParallelVector( u );
         var a = trackPoint.plus( unitParallelVector.times( 100 ) );
         var b = trackPoint.plus( unitParallelVector.times( -100 ) );
