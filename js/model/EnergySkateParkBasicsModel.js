@@ -894,21 +894,10 @@ define( function( require ) {
 
         debugAttachDetach && debugAttachDetach( 'left middle track', freeSkater.velocityX, freeSkater.velocityY );
 
-        //Nudge the velocity in the 'up' direction so the skater won't pass through the track, see #207
-        var velocity = new Vector2( freeSkater.velocityX, freeSkater.velocityY );
-        var upVector = new Vector2( sideVectorX, sideVectorY );
-        var revisedVelocity = velocity.normalized().blend( upVector, 0.01 ).normalized().times( velocity.magnitude() );
-        freeSkater = freeSkater.updateUDVelocity( 0, revisedVelocity.x, revisedVelocity.y );
-
-        //Nudge the position away from the track, slightly since it was perfectly centered on the track, see #212
-        var origPosition = new Vector2( freeSkater.positionX, freeSkater.positionY );
-        var newPosition = origPosition.plus( upVector.times( 1E-6 ) );
-        freeSkater = freeSkater.updatePosition( newPosition.x, newPosition.y );
-
-        debugAttachDetach && debugAttachDetach( 'newdot', revisedVelocity.dot( upVector ) );
+        var nudged = this.nudge( freeSkater, sideVectorX, sideVectorY, +1 );
 
         //Step after switching to free fall, so it doesn't look like it pauses
-        return this.stepFreeFall( dt, freeSkater, true );
+        return this.stepFreeFall( dt, nudged, true );
       }
       else {
         var newState = skaterState;
@@ -938,10 +927,37 @@ define( function( require ) {
 
             //There is a situation in which the `u` of the skater exceeds the track bounds before the getClosestPositionAndParameter.u does, which can cause the skater to immediately reattach
             //So make sure the skater is far enough from the track so it won't reattach right away, see #167
-            return skaterState.updateTrackUDStepsSinceJump( null, 0, 0 );
+            var freeSkater = skaterState.updateTrackUDStepsSinceJump( null, 0, 0 );
+
+            var nudged = this.nudge( freeSkater, sideVectorX, sideVectorY, -1 );
+
+            //Step after switching to free fall, so it doesn't look like it pauses
+            return this.stepFreeFall( dt, nudged, true );
           }
         }
       }
+    },
+
+    // When the skater leaves the track, adjust the position and velocity.  This prevents the following problems:
+    //1. When leaving from the sides, adjust the skater under the track so it won't immediately re-collide
+    //2. When leaving from the middle of the track (say going over a jump or falling upside-down from a loop), adjust the skater so it won't fall through or re-collide
+    nudge: function( freeSkater, sideVectorX, sideVectorY, sign ) {
+
+      //angle the velocity down a bit and underset from track so that it won't immediately re-collide
+      //Nudge the velocity in the 'up' direction so the skater won't pass through the track, see #207
+      var velocity = new Vector2( freeSkater.velocityX, freeSkater.velocityY );
+      var upVector = new Vector2( sideVectorX, sideVectorY );
+      var revisedVelocity = velocity.normalized().blend( upVector, 0.01 * sign ).normalized().times( velocity.magnitude() );
+      freeSkater = freeSkater.updateUDVelocity( 0, revisedVelocity.x, revisedVelocity.y );
+
+      //Nudge the position away from the track, slightly since it was perfectly centered on the track, see #212
+      //Note this will change the energy of the skater, but only by a tiny amount (that should be undetectable in the bar chart)
+      var origPosition = new Vector2( freeSkater.positionX, freeSkater.positionY );
+      var newPosition = origPosition.plus( upVector.times( sign * 1E-6 ) );
+      freeSkater = freeSkater.updatePosition( newPosition.x, newPosition.y );
+
+      debugAttachDetach && debugAttachDetach( 'newdot', revisedVelocity.dot( upVector ) );
+      return freeSkater;
     },
 
     //Try to match the target energy by reducing the velocity of the skaterState
