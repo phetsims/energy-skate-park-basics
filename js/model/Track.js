@@ -527,7 +527,6 @@ define( function( require ) {
           this.controlPoints[i].sourcePosition = proposedPosition;
           this.updateSplines();
         }
-//        console.log( 'newRadius of curvature', this.getMinimumRadiusOfCurvature() );
         angle = angle + Math.PI / 9;
         distance = distance + 0.07;
         numTries++;
@@ -605,7 +604,6 @@ define( function( require ) {
           bestU = u;
         }
       }
-//      console.log( '=============min', minRadius );
       return bestU;
     },
 
@@ -627,7 +625,6 @@ define( function( require ) {
           minRadius = r;
         }
       }
-//      console.log( '=============min', minRadius );
       return minRadius;
     },
 
