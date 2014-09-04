@@ -343,6 +343,20 @@ define( function( require ) {
       track.physical = true;
       this.tracks.add( track );
     }
+    if ( window.phetcommon.getQueryParameter( 'debugTrack' ) === '13' ) {
+
+      this.detachable = false;
+      //The skater falls through this track
+      this.skater.position.set( new Vector2( 5, 7.9 ) );
+      this.skater.released( 0, 0 );
+      this.friction = 0.0363651226158039;
+
+      controlPoints = [new ControlPoint( 0.8301088646967347, 3.5809234059097967 ), new ControlPoint( 3.411228615863142, 2.4784350699844477 ), new ControlPoint( 5.29194401244168, 5.928575038880248 )];
+      track = new Track( this, this.tracks, controlPoints, true, null, this.availableModelBoundsProperty );
+      track.physical = true;
+      this.tracks.add( track );
+    }
+
   }
 
   return inherit( PropertySet, EnergySkateParkBasicsModel, {
