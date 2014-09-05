@@ -1,7 +1,7 @@
 // Copyright 2002-2013, University of Colorado Boulder
 
 /**
- * Scenery node for the mass slider, which changes the skater's mass.
+ * Scenery node for the mass slider, which changes the skater's mass (and correspondingly, the height)
  *
  * @author Sam Reid
  */
