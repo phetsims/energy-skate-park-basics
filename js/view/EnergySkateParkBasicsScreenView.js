@@ -89,20 +89,18 @@ define( function( require ) {
       this.addChild( this.attachDetachToggleButtons );
     }
 
-    //Determine if the skater is onscreen or offscreen for purposes of highlighting the 'return skater' button.
-    var onscreenProperty = new DerivedProperty( [model.skater.positionProperty], function( position ) {
+    var containsAbove = function( bounds, x, y ) {
+      return bounds.minX <= x && x <= bounds.maxX && y <= bounds.maxY;
+    };
 
-      //To solve the "flickering/pulsating" button problem reported in #206, require the skater to go across 2E-2 window before the button is activated.
-      //That is, if the skater was in bounds in the last frame, make sure the skater goes outside an expanded bounds on the next frame and vice versa
-      //Another way to say that is: if the "return skater" button was large, the skater must come back significantly further into the frame to make it small again,
-      //thus minor numerical fluctuations do not cause the pulsating problem.
-      var lastValue = onscreenProperty && onscreenProperty.value;
-      if ( lastValue ) {
-        return view.availableModelBounds && view.dilatedAvailableModelBounds.containsPoint( position );
+    //Determine if the skater is onscreen or offscreen for purposes of highlighting the 'return skater' button.
+    //Don't check whether the skater is underground since that is a rare case (only if the user is actively dragging a control point near y=0 and the track curves below)
+    //And the skater will pop up again soon, see the related flickering problem in #206
+    var onscreenProperty = new DerivedProperty( [model.skater.positionProperty], function( position ) {
+      if ( !view.availableModelBounds ) {
+        return true;
       }
-      else {
-        return view.availableModelBounds && view.erodedAvailableModelBounds.containsPoint( position );
-      }
+      return view.availableModelBounds && containsAbove( view.availableModelBounds, position.x, position.y );
     } );
 
     var barGraphNode = new BarGraphNode( model.skater, model.property( 'barGraphVisible' ), model.clearThermal.bind( model ) );
