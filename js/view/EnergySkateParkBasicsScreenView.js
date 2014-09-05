@@ -264,11 +264,14 @@ define( function( require ) {
     this.addChild( returnSkaterToGroundButton );
 
     //When the skater goes off screen, make the "return skater" button big
-    onscreenProperty.link( function( onscreen ) {
-      returnSkaterToGroundButton.visible = !onscreen;
-      returnSkaterToStartingPointButton.visible = !onscreen;
+    onscreenProperty.link( function( skaterOnscreen ) {
+      var buttonsVisible = !skaterOnscreen;
+      returnSkaterToGroundButton.visible = buttonsVisible;
+      returnSkaterToStartingPointButton.visible = buttonsVisible;
 
-      if ( !onscreen ) {
+      if ( buttonsVisible ) {
+        returnSkaterToGroundButton.moveToFront();
+        returnSkaterToStartingPointButton.moveToFront();
 
         //Put the button where the skater will appear.  Nudge it up a bit so the mouse can hit it from the drop site, without being moved at all (to simplify repeat runs).
         var viewPosition = transform.modelToViewPosition( model.skater.startingPosition ).plusXY( 0, 5 );
