@@ -44,6 +44,10 @@ define( function( require ) {
   var RectangularPushButton = require( 'SUN/buttons/RectangularPushButton' );
   var Text = require( 'SCENERY/nodes/Text' );
 
+  // images
+  var skaterLeftImage = require( 'image!ENERGY_SKATE_PARK_BASICS/skater-left.png' );
+  var skaterRightImage = require( 'image!ENERGY_SKATE_PARK_BASICS/skater-right.png' );
+
   //Debug flag to show the view bounds, the region within which the skater can move
   var showAvailableBounds = false;
 
@@ -144,13 +148,6 @@ define( function( require ) {
     model.skater.linkAttribute( 'moved', view.returnSkaterButton, 'enabled' );
     this.addChild( this.returnSkaterButton );
 
-    //When the skater goes off screen, make the "return skater" button big
-    onscreenProperty.lazyLink( function( onscreen ) {
-      view.returnSkaterButton.setScaleMagnitude( onscreen ? 1 : 1.5 );
-      view.returnSkaterButton.centerY = view.resetAllButton.centerY;
-      view.returnSkaterButton.right = view.resetAllButton.left - 10;
-    } );
-
     this.addChild( new PlaybackSpeedControl( model.property( 'speed' ) ).mutate( {right: playPauseButton.left - 10, bottom: playPauseButton.bottom} ) );
 
     //Switch between selectable tracks
@@ -247,6 +244,39 @@ define( function( require ) {
     this.addChild( skaterNode );
     var pieChartNode = new PieChartNode( model.skater, model.property( 'pieChartVisible' ), transform );
     this.addChild( pieChartNode );
+
+    //Buttons to return the skater when she is offscreen, see #219
+    var returnSkaterToStartingPointButton = new RectangularPushButton( {
+      content: new Image( skaterRightImage, {scale: 0.1} ),
+      baseColor: '#64ba88', //green means "go" since the skater will likely start moving at this point
+      listener: model.returnSkater.bind( model )
+    } );
+
+    var returnSkaterToGroundButton = new RectangularPushButton( {
+      content: new Image( skaterLeftImage, {
+        scale: 0.1
+      } ),
+      centerBottom: transform.modelToViewPosition( model.skater.startingPosition ),
+      baseColor: '#f4514e', //red for stop, since the skater will be stopped on the ground.
+      listener: function() {
+        model.skater.reset();
+      }
+    } );
+
+    this.addChild( returnSkaterToStartingPointButton );
+    this.addChild( returnSkaterToGroundButton );
+
+    //When the skater goes off screen, make the "return skater" button big
+    onscreenProperty.link( function( onscreen ) {
+      returnSkaterToGroundButton.visible = !onscreen;
+      returnSkaterToStartingPointButton.visible = !onscreen;
+
+      if ( !onscreen ) {
+
+        //Put the button where the skater will appear.  Nudge it up a bit so the mouse can hit it from the drop site, without being moved at all (to simplify repeat runs).
+        returnSkaterToStartingPointButton.centerBottom = transform.modelToViewPosition( model.skater.startingPosition ).plusXY( 0, 5 );
+      }
+    } );
 
     //For debugging the visible bounds
     if ( showAvailableBounds ) {
