@@ -275,7 +275,13 @@ define( function( require ) {
       if ( !onscreen ) {
 
         //Put the button where the skater will appear.  Nudge it up a bit so the mouse can hit it from the drop site, without being moved at all (to simplify repeat runs).
-        returnSkaterToStartingPointButton.centerBottom = transform.modelToViewPosition( model.skater.startingPosition ).plusXY( 0, 5 );
+        var viewPosition = transform.modelToViewPosition( model.skater.startingPosition ).plusXY( 0, 5 );
+        returnSkaterToStartingPointButton.centerBottom = viewPosition;
+
+        //If the return skater button went offscreen, move it back on the screen, see #222
+        if ( returnSkaterToStartingPointButton.top < 5 ) {
+          returnSkaterToStartingPointButton.top = 5;
+        }
       }
     } );
 
