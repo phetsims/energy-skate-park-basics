@@ -1239,6 +1239,11 @@ define( function( require ) {
     //This is feasible if the number of control points in the play area (above y>0) is less than the maximum
     canCutTrackControlPoint: function() {
       return this.getNumberOfPhysicalControlPoints() < MAX_NUMBER_CONTROL_POINTS;
+    },
+
+    //Check whether the model contains a track so that input listeners for detached elements can't create bugs, see #230
+    containsTrack: function( track ) {
+      return this.tracks.contains( track );
     }
   } );
 } );

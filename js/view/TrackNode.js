@@ -63,6 +63,9 @@ define( function( require ) {
         //Drag an entire track
         drag: function( event ) {
 
+          //Check whether the model contains a track so that input listeners for detached elements can't create bugs, see #230
+          if ( !model.containsTrack( track ) ) { return; }
+
           //On the first drag event, move the track out of the toolbox, see #205
           if ( !startedDrag ) {
             lastDragPoint = event.pointer.point;
@@ -172,6 +175,9 @@ define( function( require ) {
         //End the drag
         end: function() {
 
+          //Check whether the model contains a track so that input listeners for detached elements can't create bugs, see #230
+          if ( !model.containsTrack( track ) ) { return; }
+
           //If the user never dragged the object, then there is no track to drop in this case, see #205
           if ( startedDrag ) {
             var myPoints = [track.controlPoints[0], track.controlPoints[track.controlPoints.length - 1]];
@@ -275,7 +281,7 @@ define( function( require ) {
             controlPointNode.translation = modelViewTransform.modelToViewPosition( position );
           } );
           var dragEvents = 0;
-          controlPointNode.addInputListener( new SimpleDragHandler(
+          var controlPointInputListener = new SimpleDragHandler(
             {
               allowTouchSnag: true,
               start: function( event ) {
@@ -289,6 +295,9 @@ define( function( require ) {
                 dragEvents = 0;
               },
               drag: function( event ) {
+
+                //Check whether the model contains a track so that input listeners for detached elements can't create bugs, see #230
+                if ( !model.containsTrack( track ) ) { return; }
 
                 //If control point dragged out of the control panel, translate the entire track, see #130
                 if ( !track.physical || !trackDropped ) {
@@ -352,6 +361,9 @@ define( function( require ) {
               },
               end: function( event ) {
 
+                //Check whether the model contains a track so that input listeners for detached elements can't create bugs, see #230
+                if ( !model.containsTrack( track ) ) { return; }
+
                 //If control point dragged out of the control panel, translate the entire track, see #130
                 if ( !track.physical || !trackDropped ) {
                   trackSegmentDragHandlerOptions.end( event );
@@ -379,7 +391,8 @@ define( function( require ) {
                   console.log( track.getDebugString() );
                 }
               }
-            } ) );
+            } );
+          controlPointNode.addInputListener( controlPointInputListener );
           trackNode.addChild( controlPointNode );
         })( i, i === 0 || i === track.controlPoints.length - 1 );
       }
