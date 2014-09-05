@@ -17,12 +17,18 @@ define( function( require ) {
   var slowMotionString = require( 'string!ENERGY_SKATE_PARK_BASICS/slow.motion' );
 
   function PlaybackSpeedControl( speedProperty ) {
+    var dilateX = 5;
+    var dilateY = 2;
+    var slowMotionButton = new AquaRadioButton( speedProperty, 'slow', new Text( slowMotionString, {font: new PhetFont( 15 )} ), {radius: 9.5} );
+    var normalButton = new AquaRadioButton( speedProperty, 'normal', new Text( normalString, {font: new PhetFont( 15 )} ), {radius: 9.5, x: 130} );
+    slowMotionButton.touchArea = slowMotionButton.localBounds.dilatedXY( dilateX, dilateY );
+    normalButton.touchArea = normalButton.localBounds.dilatedXY( dilateX, dilateY );
     VBox.call( this, {
       align: 'left',
-      spacing: 2,
+      spacing: 4,
       children: [
-        new AquaRadioButton( speedProperty, 'slow', new Text( slowMotionString, {font: new PhetFont( 15 )} ), {radius: 9.5} ),
-        new AquaRadioButton( speedProperty, 'normal', new Text( normalString, {font: new PhetFont( 15 )} ), {radius: 9.5, x: 130} )
+        slowMotionButton,
+        normalButton
       ]} );
   }
 
