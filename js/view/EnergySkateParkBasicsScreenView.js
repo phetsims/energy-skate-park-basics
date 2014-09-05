@@ -337,8 +337,6 @@ define( function( require ) {
 
       //Compute the visible model bounds so we will know when a model object like the skater has gone offscreen
       this.availableModelBounds = this.modelViewTransform.viewToModelBounds( this.availableViewBounds );
-      this.dilatedAvailableModelBounds = this.availableModelBounds.dilated( 1E-2 );
-      this.erodedAvailableModelBounds = this.availableModelBounds.eroded( 1E-2 );
       this.availableModelBoundsProperty.value = this.availableModelBounds;
 
       //Show it for debugging
