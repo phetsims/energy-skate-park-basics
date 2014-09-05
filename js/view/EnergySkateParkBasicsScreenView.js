@@ -254,14 +254,10 @@ define( function( require ) {
     } );
 
     var returnSkaterToGroundButton = new RectangularPushButton( {
-      content: new Image( skaterLeftImage, {
-        scale: 0.1
-      } ),
+      content: new Image( skaterLeftImage, { scale: 0.1 } ),
       centerBottom: transform.modelToViewPosition( model.skater.startingPosition ),
       baseColor: '#f4514e', //red for stop, since the skater will be stopped on the ground.
-      listener: function() {
-        model.skater.reset();
-      }
+      listener: function() { model.skater.reset(); }
     } );
 
     this.addChild( returnSkaterToStartingPointButton );
