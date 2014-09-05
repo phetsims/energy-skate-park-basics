@@ -845,7 +845,7 @@ define( function( require ) {
           //can we reduce the velocity enough?
           if ( Math.abs( newState.getKineticEnergy() ) > Math.abs( dE ) ) {//amount we could reduce the energy if we deleted all the kinetic energy:
 
-            //TODO: maybe should only do this if all velocity is not converted
+            //This is the current rule for reducing the energy.  But in a future version maybe should only do this if all velocity is not converted?
             debug && debug( "Could fix all energy by changing velocity." );
             var correctedStateA = this.correctEnergyReduceVelocity( skaterState, newState );
             debug && debug( "changed velocity: dE=" + ( correctedStateA.getTotalEnergy() - e0 ) );

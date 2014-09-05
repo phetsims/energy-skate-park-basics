@@ -34,7 +34,6 @@ define( function( require ) {
         qualityAssurance: 'Oliver Orejola, Bryan Yoelin'
       },
 
-      //TODO: Remove before publication
       showSaveAndLoad: window.phetcommon && window.phetcommon.getQueryParameter && window.phetcommon.getQueryParameter( 'showSaveAndLoad' )
     };
 

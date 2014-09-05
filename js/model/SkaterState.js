@@ -252,7 +252,6 @@ define( function( require ) {
         return Math.sqrt( this.velocityX * this.velocityX + this.velocityY * this.velocityY );
       },
 
-      //TODO: Allocations
       getVelocity: function() {
         return new Vector2( this.velocityX, this.velocityY );
       }
