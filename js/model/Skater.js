@@ -120,6 +120,9 @@ define( function( require ) {
       this.angle = 0;
       PropertySet.prototype.reset.call( this );
       this.updateEnergy();
+
+      //Notify the graphics to re-render.  See #223
+      this.trigger( 'updated' );
     },
 
     //When the scene (track) is changed, the skater's position & velocity reset, but the mass and other properties do not reset, see #179
