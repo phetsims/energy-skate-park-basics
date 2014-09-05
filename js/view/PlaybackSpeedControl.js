@@ -21,8 +21,8 @@ define( function( require ) {
       align: 'left',
       spacing: 2,
       children: [
-        new AquaRadioButton( speedProperty, 'normal', new Text( normalString, {font: new PhetFont( 15 )} ), {radius: 9.5, x: 130} ),
-        new AquaRadioButton( speedProperty, 'slow', new Text( slowMotionString, {font: new PhetFont( 15 )} ), {radius: 9.5} )
+        new AquaRadioButton( speedProperty, 'slow', new Text( slowMotionString, {font: new PhetFont( 15 )} ), {radius: 9.5} ),
+        new AquaRadioButton( speedProperty, 'normal', new Text( normalString, {font: new PhetFont( 15 )} ), {radius: 9.5, x: 130} )
       ]} );
   }
 
