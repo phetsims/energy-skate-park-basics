@@ -43,6 +43,7 @@ define( function( require ) {
   var Property = require( 'AXON/Property' );
   var RectangularPushButton = require( 'SUN/buttons/RectangularPushButton' );
   var Text = require( 'SCENERY/nodes/Text' );
+  var EnergySkateParkColorScheme = require( 'ENERGY_SKATE_PARK_BASICS/view/EnergySkateParkColorScheme' );
 
   // images
   var skaterLeftImage = require( 'image!ENERGY_SKATE_PARK_BASICS/skater-left.png' );
@@ -248,7 +249,7 @@ define( function( require ) {
     //Buttons to return the skater when she is offscreen, see #219
     var returnSkaterToStartingPointButton = new RectangularPushButton( {
       content: new Image( skaterRightImage, {scale: 0.1} ),
-      baseColor: '#64ba88', //green means "go" since the skater will likely start moving at this point
+      baseColor: EnergySkateParkColorScheme.kineticEnergy, //green means "go" since the skater will likely start moving at this point
       listener: model.returnSkater.bind( model )
     } );
 
