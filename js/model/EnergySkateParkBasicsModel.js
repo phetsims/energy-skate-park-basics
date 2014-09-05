@@ -514,8 +514,6 @@ define( function( require ) {
         return skaterState.strikeGround( initialEnergy, proposedPosition.x );
       }
       else {
-        var dx = skaterState.positionX - proposedPosition.x;
-        var dy = skaterState.positionY - proposedPosition.y;
         return skaterState.continueFreeFall( proposedVelocity.x, proposedVelocity.y, proposedPosition.x, y );
       }
     },
@@ -746,12 +744,12 @@ define( function( require ) {
 
             //There is a situation in which the `u` of the skater exceeds the track bounds before the getClosestPositionAndParameter.u does, which can cause the skater to immediately reattach
             //So make sure the skater is far enough from the track so it won't reattach right away, see #167
-            var freeSkater = skaterState.updateTrackUD( null, 0 );
+            var freeSkaterState = skaterState.updateTrackUD( null, 0 );
 
-            var nudged = this.nudge( freeSkater, sideVectorX, sideVectorY, -1 );
+            var nudgedState = this.nudge( freeSkaterState, sideVectorX, sideVectorY, -1 );
 
             //Step after switching to free fall, so it doesn't look like it pauses
-            return this.stepFreeFall( dt, nudged, true );
+            return this.stepFreeFall( dt, nudgedState, true );
           }
         }
       }

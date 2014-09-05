@@ -204,5 +204,5 @@ define( function( require ) {
         }
 
       }}
-  )
+  );
 } );
