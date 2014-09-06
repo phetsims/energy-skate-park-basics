@@ -39,7 +39,7 @@ define( function( require ) {
   var PlayPauseButton = require( 'SCENERY_PHET/PlayPauseButton' );
   var StepButton = require( 'SCENERY_PHET/StepButton' );
   var VBox = require( 'SCENERY/nodes/VBox' );
-  var eraser = require( 'image!ENERGY_SKATE_PARK_BASICS/eraser.png' );
+  var eraser = require( 'image!SCENERY_PHET/eraser.png' );
   var Property = require( 'AXON/Property' );
   var RectangularPushButton = require( 'SUN/buttons/RectangularPushButton' );
   var Text = require( 'SCENERY/nodes/Text' );
