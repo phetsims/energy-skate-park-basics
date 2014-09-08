@@ -46,8 +46,7 @@ define( function( require ) {
   var EnergySkateParkColorScheme = require( 'ENERGY_SKATE_PARK_BASICS/view/EnergySkateParkColorScheme' );
 
   // images
-  var skaterLeftImage = require( 'image!ENERGY_SKATE_PARK_BASICS/skater-left.png' );
-  var skaterRightImage = require( 'image!ENERGY_SKATE_PARK_BASICS/skater-right.png' );
+  var skaterIconImage = require( 'image!ENERGY_SKATE_PARK_BASICS/skater-icon.png' );
 
   //Debug flag to show the view bounds, the region within which the skater can move
   var showAvailableBounds = false;
@@ -251,14 +250,15 @@ define( function( require ) {
     this.addChild( pieChartNode );
 
     //Buttons to return the skater when she is offscreen, see #219
+    var iconScale = 0.4;
     var returnSkaterToStartingPointButton = new RectangularPushButton( {
-      content: new Image( skaterRightImage, {scale: 0.1} ),
+      content: new Image( skaterIconImage, {scale: iconScale} ),
       baseColor: EnergySkateParkColorScheme.kineticEnergy, //green means "go" since the skater will likely start moving at this point
       listener: model.returnSkater.bind( model )
     } );
 
     var returnSkaterToGroundButton = new RectangularPushButton( {
-      content: new Image( skaterLeftImage, { scale: 0.1 } ),
+      content: new Image( skaterIconImage, {scale: iconScale} ),
       centerBottom: transform.modelToViewPosition( model.skater.startingPosition ),
       baseColor: '#f4514e', //red for stop, since the skater will be stopped on the ground.
       listener: function() { model.skater.reset(); }
