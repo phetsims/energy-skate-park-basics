@@ -83,7 +83,7 @@
   "label.potential-energy-reference": "Energia Potenziale di riferimento",
   "energy.kinetic.energy": "Energia cinetica",
   "tracks-menu.item.jump": "Salto",
-  "controls.reset-character": "Fai ripartire lo Skater",
+  "controls.restart-skater": "Fai ripartire lo Skater",
   "help.right-click-for-options": "Tasto destro per le opzioni",
   "plots.energy-vs-position-save": "Energa/Posizione (salva #",
   "controls.hide-friction": "Nascondi l'attrito",

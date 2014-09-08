@@ -34,7 +34,7 @@
   "controls.measuring-tape": "Cinta métrica",
   "units.meters": "metros",
   "controls.gravity.none": "Nada",
-  "controls.reset-character": "Devolver patinador",
+  "controls.restart-skater": "Devolver patinador",
   "energy.kinetic": "Cinética",
   "message.confirm-reset": "¿Está seguro que quiere reiniciar?",
   "controls.gravity.lots": "Mucho",

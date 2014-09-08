@@ -64,7 +64,7 @@
   "controls.gravity": "الجاذبية",
   "message.confirm-reset-title": "اكد إعادة الضبط",
   "label.potential-energy-reference": "مرجع الطاقة الكامنة",
-  "controls.reset-character": "أعد المتزحلق",
+  "controls.restart-skater": "أعد المتزحلق",
   "plots.energy-vs-position-save": "حفظ (الطاقة ضد المكان",
   "controls.hide-friction": "اخف الاحتكاك",
   "controls.add-track": "اسحب حتى تضيف مسار",

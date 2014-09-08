@@ -34,7 +34,7 @@
   "controls.bounciness": "sprongkracht",
   "controls.measuring-tape": "meetlint",
   "controls.gravity.none": "geen",
-  "controls.reset-character": "Skater terugzetten",
+  "controls.restart-skater": "Skater terugzetten",
   "energy.kinetic": "kinetisch",
   "message.confirm-reset": "Wil je echt resetten?",
   "controls.gravity.lots": "veel",

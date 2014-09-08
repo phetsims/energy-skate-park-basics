@@ -86,7 +86,7 @@
   "label.potential-energy-reference": "Нульовий рівень потенційної енергії",
   "energy.kinetic.energy": "Кінетиччна енергія",
   "tracks-menu.item.jump": "Стрибок",
-  "controls.reset-character": "На початок руху",
+  "controls.restart-skater": "На початок руху",
   "help.right-click-for-options": "Клацни праворуч для опцій",
   "plots.energy-vs-position-save": "Залежність енергії від координати (зберегти #",
   "controls.hide-friction": "Згорнути налаштування тертя<<",

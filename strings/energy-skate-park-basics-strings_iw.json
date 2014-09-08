@@ -85,7 +85,7 @@
   "label.potential-energy-reference": "רמת יחוס אנרגיית גובה",
   "energy.kinetic.energy": "אנרגיית תנועה",
   "tracks-menu.item.jump": "מסלול מקוטע",
-  "controls.reset-character": "החזר מחליק",
+  "controls.restart-skater": "החזר מחליק",
   "help.right-click-for-options": "לחצן ימני ל\"אפשרויות\"",
   "plots.energy-vs-position-save": " # אנרגיה כתלות במקום(שמור",
   "controls.hide-friction": "החבא חיכוך",

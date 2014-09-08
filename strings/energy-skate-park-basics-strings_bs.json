@@ -84,7 +84,7 @@
   "label.potential-energy-reference": "Nulti nivo potencijalne energije",
   "energy.kinetic.energy": "Kinetička Energija",
   "tracks-menu.item.jump": "Skok",
-  "controls.reset-character": "Vrati skejtera",
+  "controls.restart-skater": "Vrati skejtera",
   "help.right-click-for-options": "desni klik za opcije",
   "plots.energy-vs-position-save": "grafik Energija-Položaj (save #",
   "controls.hide-friction": "Sakrij trenje",

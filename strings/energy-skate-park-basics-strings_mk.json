@@ -84,7 +84,7 @@
   "label.potential-energy-reference": "Нулто ниво на потенцијалната енергија",
   "energy.kinetic.energy": "Кинетичка Енергија",
   "tracks-menu.item.jump": "Скок",
-  "controls.reset-character": "Врати го скејтерот",
+  "controls.restart-skater": "Врати го скејтерот",
   "help.right-click-for-options": "десеи клик за опции",
   "plots.energy-vs-position-save": "график Енергија-Положба (save #",
   "controls.hide-friction": "Сокриј триење",

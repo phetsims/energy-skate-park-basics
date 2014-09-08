@@ -85,7 +85,7 @@
   "label.potential-energy-reference": "Hladina potenciálnej energie",
   "energy.kinetic.energy": "Kinetická energia",
   "tracks-menu.item.jump": "Skok",
-  "controls.reset-character": "Vrátiť skejtbordistu",
+  "controls.restart-skater": "Vrátiť skejtbordistu",
   "help.right-click-for-options": "Nastavenie po kliknutí pravým tlačidlom myši",
   "plots.energy-vs-position-save": "Graf energia / poloha (kópia #",
   "controls.hide-friction": "Skryť trenie",

@@ -62,7 +62,7 @@
   "controls.gravity": "Sila teže",
   "message.confirm-reset-title": "Potvrdi!",
   "label.potential-energy-reference": "Ref. točka potencijalne energije",
-  "controls.reset-character": "Vrati skejtera",
+  "controls.restart-skater": "Vrati skejtera",
   "plots.energy-vs-position-save": "Energija /  Položaj (spremi #",
   "controls.hide-friction": "Sakrij trenje",
   "controls.add-track": "Oblikuj stazu",

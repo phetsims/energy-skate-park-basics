@@ -36,7 +36,7 @@
   "controls.measuring-tape": "туузан хэмжигч",
   "controls.gravity.none": "бага",
   "units.meters": "м",
-  "controls.reset-character": "Гулгагчийг дахин эхлүүлэх",
+  "controls.restart-skater": "Гулгагчийг дахин эхлүүлэх",
   "energy.kinetic": "кинетик",
   "message.confirm-reset": "Та дахин эхлүүлэх үү?",
   "controls.gravity.lots": "их",

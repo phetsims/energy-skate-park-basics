@@ -86,7 +86,7 @@
   "label.potential-energy-reference": "Določi lego W(p) = 0 J",
   "energy.kinetic.energy": "Kinetična energija",
   "tracks-menu.item.jump": "Skok",
-  "controls.reset-character": "Rolkarja na začetek",
+  "controls.restart-skater": "Rolkarja na začetek",
   "help.right-click-for-options": "Desni klik za možnosti",
   "plots.energy-vs-position-save": "Graf energij po poti (save #",
   "controls.hide-friction": "Skrij trenje<<",

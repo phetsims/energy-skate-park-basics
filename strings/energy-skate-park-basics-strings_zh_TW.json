@@ -87,7 +87,7 @@
   "label.potential-energy-reference": "位能參照線",
   "energy.kinetic.energy": "動能",
   "tracks-menu.item.jump": "跳躍",
-  "controls.reset-character": "送回滑板玩家",
+  "controls.restart-skater": "送回滑板玩家",
   "help.right-click-for-options": "按滑鼠右鍵設定選項",
   "plots.energy-vs-position-save": "能量 vs. 位置（儲存 #",
   "controls.hide-friction": "隱藏摩擦設定",
