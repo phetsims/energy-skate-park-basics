@@ -1,8 +1,3 @@
-button_sim_pause.png source=PhET Author=SST
-button_sim_play.png source=PhET Author=SST
-button_step_deactivated.png source=PhET Author=SST
-button_step_hover.png source=PhET Author=SST
-button_step_unpressed.png source=PhET Author=SST
 cement-texture-dark.jpg source=http://www.public-domain-image.com/full-image/textures-and-patterns-public-domain-images-pictures/concrete-texture-public-domain-images-pictures/cement-texture.jpg-royalty-free-stock-image.html license=public domain
 close-button.png source=PhET Author=SST
 icon-friction-homescreen.png source=PhET Author=Bryce
