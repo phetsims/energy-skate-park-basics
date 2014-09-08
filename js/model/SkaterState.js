@@ -22,7 +22,7 @@ define( function( require ) {
   /**
    * Create a SkaterSate from a SkaterState or Skater
    * @param {Skater|SkaterSate} source
-   * @param {*] overrides
+   * @param {*] overrides the new values
    * @constructor
    */
   function SkaterState( source, overrides ) {
@@ -33,6 +33,12 @@ define( function( require ) {
 
   inherit( Object, SkaterState, {
 
+      /**
+       * Create a new SkaterState
+       * @param {Skater|SkaterState} source the initial values to use
+       * @param {*} overrides the new values to override in the source
+       * @return {SkaterState} the new SkaterState
+       */
       setState: function( source, overrides ) {
 
         if ( !overrides ) {

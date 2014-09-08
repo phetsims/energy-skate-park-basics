@@ -31,6 +31,10 @@ define( function( require ) {
   var gridString = require( 'string!ENERGY_SKATE_PARK_BASICS/controls.show-grid' );
   var PhetFont = require( 'SCENERY_PHET/PhetFont' );
 
+  /**
+   * @param {EnergySkateParkBasicsModel} model
+   * @constructor
+   */
   function EnergySkateParkBasicsControlPanel( model ) {
     var textOptions = {font: new PhetFont( 14 )};
 

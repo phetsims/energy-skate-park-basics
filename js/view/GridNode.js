@@ -17,6 +17,11 @@ define( function( require ) {
   var BackgroundNode = require( 'ENERGY_SKATE_PARK_BASICS/view/BackgroundNode' );
   var zeroMetersString = require( 'string!ENERGY_SKATE_PARK_BASICS/zeroMeters' );
 
+  /**
+   * @param {Property<Boolean>} gridVisibleProperty the axon property indicating whether the grid should be visible
+   * @param {ModelViewTransform2} modelViewTransform the main model-view transform
+   * @constructor
+   */
   function GridNode( gridVisibleProperty, modelViewTransform ) {
     this.modelViewTransform = modelViewTransform;
     Node.call( this, {pickable: false} );

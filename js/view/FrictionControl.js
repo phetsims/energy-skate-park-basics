@@ -18,6 +18,10 @@ define( function( require ) {
   var lotsString = require( 'string!ENERGY_SKATE_PARK_BASICS/controls.gravity.lots' );
   var Constants = require( 'ENERGY_SKATE_PARK_BASICS/Constants' );
 
+  /**
+   * @param {Property<Number>} frictionProperty the axon property representing the value of the friction
+   * @constructor
+   */
   function FrictionControl( frictionProperty ) {
     var frictionRange = {min: 0, max: frictionProperty.value * 2};
     var slider = new HSlider( frictionProperty, frictionRange, Constants.SLIDER_OPTIONS );

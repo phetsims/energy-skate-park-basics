@@ -18,6 +18,10 @@ define( function( require ) {
   var largeString = require( 'string!ENERGY_SKATE_PARK_BASICS/large' );
   var Constants = require( 'ENERGY_SKATE_PARK_BASICS/Constants' );
 
+  /**
+   * @param {Property<Number>} massProperty axon Property indiciating the skater mass
+   * @constructor
+   */
   function MassSlider( massProperty ) {
     var range = {min: Constants.MIN_MASS, max: Constants.MAX_MASS};
     var slider = new HSlider( massProperty, range, Constants.SLIDER_OPTIONS );

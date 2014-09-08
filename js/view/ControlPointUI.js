@@ -16,7 +16,16 @@ define( function( require ) {
   var RoundPushButton = require( 'SUN/buttons/RoundPushButton' );
   var Color = require( 'SCENERY/util/Color' );
 
-  function ControlPointUI( model, track, controlPointIndex, transform, parentNode ) {
+  /**
+   * Constructor for the ControlPointUI for a single control point.
+   * @param {EnergySkateParkBasicsModel} model the main model
+   * @param {Track} track the track associated with the control point
+   * @param {Number} controlPointIndex the 0-based index of the control point
+   * @param {ModelViewTransform2} modelViewTransform the main model-view transform
+   * @param {Node} parentNode
+   * @constructor
+   */
+  function ControlPointUI( model, track, controlPointIndex, modelViewTransform, parentNode ) {
 
     var controlPointUI = this;
 
@@ -61,7 +70,7 @@ define( function( require ) {
         listener: function() {
           model.splitControlPoint( track, controlPointIndex, modelAngle );
         },
-        center: transform.modelToViewPosition( position ).plus( Vector2.createPolar( 40, angle + Math.PI / 2 ) ),
+        center: modelViewTransform.modelToViewPosition( position ).plus( Vector2.createPolar( 40, angle + Math.PI / 2 ) ),
         radius: 20,
         touchAreaRadius: 20 * 1.3,
 
@@ -77,7 +86,7 @@ define( function( require ) {
     var deleteButton = new RoundPushButton( {
       listener: function() { model.deleteControlPoint( track, controlPointIndex ); },
       content: deleteNode,
-      center: transform.modelToViewPosition( position ).plus( Vector2.createPolar( 40, angle - Math.PI / 2 ) ),
+      center: modelViewTransform.modelToViewPosition( position ).plus( Vector2.createPolar( 40, angle - Math.PI / 2 ) ),
       radius: 20,
       touchAreaRadius: 20 * 1.3,
 

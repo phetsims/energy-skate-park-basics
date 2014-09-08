@@ -24,6 +24,12 @@ define( function( require ) {
   var thermalString = require( 'string!ENERGY_SKATE_PARK_BASICS/energy.thermal' );
   var energyString = require( 'string!ENERGY_SKATE_PARK_BASICS/energy.energy' );
 
+  /**
+   * @param {Skater} skater the model for the skater
+   * @param {Function} clearThermal function to be called when the user presses the clear thermal button
+   * @param {Property<Boolean>) pieChartVisibleProperty axon Property indicating whether the pie chart is visible
+   * @constructor
+   */
   function PieChartLegend( skater, clearThermal, pieChartVisibleProperty ) {
 
     //The x-coordinate of a bar chart bar

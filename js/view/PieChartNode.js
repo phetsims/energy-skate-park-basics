@@ -16,6 +16,12 @@ define( function( require ) {
   var Path = require( 'SCENERY/nodes/Path' );
   var EnergySkateParkColorScheme = require( 'ENERGY_SKATE_PARK_BASICS/view/EnergySkateParkColorScheme' );
 
+  /**
+   * @param {Skater} skater the skater model
+   * @param {Property<Boolean>} pieChartVisibleProperty axon Property indicating whether the pie chart is shown
+   * @param {ModelViewTransform2}} modelViewTransform
+   * @constructor
+   */
   function PieChartNode( skater, pieChartVisibleProperty, modelViewTransform ) {
     var pieChartNode = this;
 

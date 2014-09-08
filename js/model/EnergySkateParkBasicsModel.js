@@ -2,7 +2,7 @@
 
 /**
  * Model for the Energy Skate Park: Basics sim, including model values for the view settings, such as whether the grid is visible.
- * All units are in metric.
+ * All units are in mks.
  *
  * The step functions focus on making computations up front and applying changes to the skater at the end of each method, to
  * simplify the logic and make it communicate with the Axon+View as little as possible (for performance reasons).

@@ -52,6 +52,10 @@ define( function( require ) {
   //Debug flag to show the view bounds, the region within which the skater can move
   var showAvailableBounds = false;
 
+  /**
+   * @param {EnergySkateParkBasicsModel} model
+   * @constructor
+   */
   function EnergySkateParkBasicsScreenView( model ) {
 
     var view = this;

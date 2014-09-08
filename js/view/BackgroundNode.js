@@ -20,6 +20,11 @@ define( function( require ) {
   var earthHeight = 70;
   var cementWidth = 4;
 
+  /**
+   * @param {Bounds2} layoutBounds the ScreenView layoutBounds
+   * @param {*} options
+   * @constructor
+   */
   function BackgroundNode( layoutBounds, options ) {
     Node.call( this, { pickable: false } );
 

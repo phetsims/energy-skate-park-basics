@@ -16,6 +16,10 @@ define( function( require ) {
   var normalString = require( 'string!ENERGY_SKATE_PARK_BASICS/normal' );
   var slowMotionString = require( 'string!ENERGY_SKATE_PARK_BASICS/slow.motion' );
 
+  /**
+   * @param {Property<Number>} speedProperty the instantaneous speed of the skater (magnitude of the velocity vector)
+   * @constructor
+   */
   function PlaybackSpeedControl( speedProperty ) {
     var dilateX = 5;
     var dilateY = 2;

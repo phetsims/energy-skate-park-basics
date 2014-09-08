@@ -11,6 +11,8 @@ define( function( require ) {
   var inherit = require( 'PHET_CORE/inherit' );
   var PropertySet = require( 'AXON/PropertySet' );
   var Vector2 = require( 'DOT/Vector2' );
+  var SplineEvaluation = require( 'ENERGY_SKATE_PARK_BASICS/model/SplineEvaluation' );
+
   /**
    * Model for a track, which has a fixed number of points.  If you added a point to a Track, you need a new track.
    * @param {Events} events event source for sending messages
@@ -21,8 +23,6 @@ define( function( require ) {
    * @param {Function} availableModelBoundsProperty function that provides the visible model bounds, to prevent the adjusted control point from going offscreen, see #195
    * @constructor
    */
-  var SplineEvaluation = require( 'ENERGY_SKATE_PARK_BASICS/model/SplineEvaluation' );
-
   function Track( events, modelTracks, controlPoints, interactive, parents, availableModelBoundsProperty ) {
     var track = this;
     this.events = events;
@@ -634,8 +634,8 @@ define( function( require ) {
       return this.controlPoints[0].sourcePosition;
     },
 
-    set position( p ) {
-      var delta = p.minus( this.position );
+    set position( newPosition ) {
+      var delta = newPosition.minus( this.position );
       this.translate( delta.x, delta.y );
     },
 
@@ -644,7 +644,6 @@ define( function( require ) {
     },
 
     getDebugString: function() {
-
       var string = 'var controlPoints = [';
       for ( var i = 0; i < this.controlPoints.length; i++ ) {
         var controlPoint = this.controlPoints[i];

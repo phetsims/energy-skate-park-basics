@@ -18,6 +18,8 @@ define( function( require ) {
     var skater = this;
 
     PropertySet.call( this, {
+
+      //The track the skater is on, or null if free-falling
       track: null,
 
       //Parameter along the parametric spline, unitless since it is in parametric space
@@ -43,6 +45,7 @@ define( function( require ) {
 
       velocity: new Vector2( 0, 0 ),
 
+      //True if the user is dragging the skater with a pointer
       dragging: false,
 
       kineticEnergy: 0,

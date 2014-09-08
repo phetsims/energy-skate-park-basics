@@ -1,7 +1,7 @@
 // Copyright 2002-2013, University of Colorado Boulder
 
 /**
- * The Undo button that can be used to remove thermal energy from the system.
+ * The Clear Thermal button that can be used to remove thermal energy from the system.  Looks like a trash can with an orange arrow going into it.
  *
  * @author Sam Reid
  */
@@ -17,6 +17,12 @@ define( function( require ) {
   var trashCanImage = require( 'image!ENERGY_SKATE_PARK_BASICS/trash-can.png' );
   var trashCanGrayImage = require( 'image!ENERGY_SKATE_PARK_BASICS/trash-can-disabled.png' );
 
+  /**
+   * @param {Function} callback function to be called when the user presses the clear thermal button.
+   * @param {Skater} skater the model's skater model
+   * @param {*}options
+   * @constructor
+   */
   function ClearThermalButton( callback, skater, options ) {
     var clearThermalButton = this;
     options = _.extend( { cursor: 'pointer' }, options );
