@@ -1,7 +1,10 @@
 // Copyright 2002-2013, University of Colorado Boulder
 
 /**
- * The Clear Thermal button that can be used to remove thermal energy from the system.  Looks like a trash can with an orange arrow going into it.
+ * The Clear Thermal button that can be used to remove thermal energy from the system.
+ * Looks like a trash can with an orange arrow going into it.
+ * It appears in the bar chart and the pie chart legend,
+ * and is disabled if there is no thermal energy in the system.
  *
  * @author Sam Reid
  */
