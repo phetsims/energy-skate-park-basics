@@ -23,7 +23,7 @@ define( function( require ) {
    * @param {Property<Boolean>} detachableProperty Axon property that is true if the model state allows the skater to detach
    * @param {Property<Boolean>} enabledProperty Axon property that is true if the control is enabled
    * @param {Number} contentWidth Width for the control panel, to match the layout of the rest of the controls.
-   * @param {*} options
+   * @param {Object} options
    * @constructor
    */
   function AttachDetachToggleButtons( detachableProperty, enabledProperty, contentWidth, options ) {
