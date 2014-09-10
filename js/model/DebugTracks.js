@@ -203,6 +203,42 @@ define( function( require ) {
           track.physical = true;
           model.tracks.add( track );
         }
+        if ( window.phetcommon.getQueryParameter( 'debugTrack' ) === '14' ) {
+          model.detachable = true;
+          model.skater.position.set( new Vector2( -6.698445595854922, 6.5278756476683935 ) );
+          model.skater.released( 0, 0 );
+          model.friction = 0.05;
+
+          var controlPoints1 = [
+            new ControlPoint( -6.23, -0.85 ),
+            new ControlPoint( -5.23, -0.85 ),
+            new ControlPoint( -4.23, -0.85 )
+          ];
+          var track1 = new Track( model, model.tracks, controlPoints1, true, null, model.availableModelBoundsProperty );
+          track1.physical = false;
+          model.tracks.add( track1 );
+
+          var controlPoints2 = [
+            new ControlPoint( -6.23, -0.85 ),
+            new ControlPoint( -5.23, -0.85 ),
+            new ControlPoint( -4.23, -0.85 )
+          ];
+          var track2 = new Track( model, model.tracks, controlPoints2, true, null, model.availableModelBoundsProperty );
+          track2.physical = false;
+          model.tracks.add( track2 );
+
+          var controlPoints3 = [
+            new ControlPoint( -0.720977917981072, 1.6368312846731214 ),
+            new ControlPoint( 0.279022082018928, 1.6368312846731214 ),
+            new ControlPoint( 3.8511345589035137, 7.315696725769607 ),
+            new ControlPoint( -1.1916066572392037, 2.911932992494288 ),
+            new ControlPoint( -9.170190362232134, 6.469483302512781 )
+          ];
+          var track3 = new Track( model, model.tracks, controlPoints3, true, null, model.availableModelBoundsProperty );
+          track3.physical = true;
+          model.tracks.add( track3 );
+
+        }
 
       }}
   );
