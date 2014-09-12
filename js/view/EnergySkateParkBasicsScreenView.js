@@ -261,7 +261,7 @@ define( function( require ) {
       content: new Image( skaterIconImage, {scale: iconScale} ),
       centerBottom: transform.modelToViewPosition( model.skater.startingPosition ),
       baseColor: '#f4514e', //red for stop, since the skater will be stopped on the ground.
-      listener: function() { model.skater.reset(); }
+      listener: function() { model.skater.resetPosition(); }
     } );
 
     this.addChild( returnSkaterToStartingPointButton );

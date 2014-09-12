@@ -128,6 +128,20 @@ define( function( require ) {
       this.trigger( 'updated' );
     },
 
+    //Move the skater to her initial position, but leave the friction and mass the same, see #237
+    resetPosition: function() {
+      //set the angle to zero before calling PropertySet.prototype.reset so that the optimization for SkaterNode.updatePosition is maintained,
+      //Without showing the skater at the wrong angle
+      this.angle = 0;
+      var mass = this.mass;
+      PropertySet.prototype.reset.call( this );
+      this.mass = mass;
+      this.updateEnergy();
+
+      //Notify the graphics to re-render.  See #223
+      this.trigger( 'updated' );
+    },
+
     //When the scene (track) is changed, the skater's position & velocity reset, but the mass and other properties do not reset, see #179
     returnToInitialPosition: function() {
 
