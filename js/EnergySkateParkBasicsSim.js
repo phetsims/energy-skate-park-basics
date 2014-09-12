@@ -34,7 +34,8 @@ define( function( require ) {
         qualityAssurance: 'Oliver Orejola, Bryan Yoelin'
       },
 
-      showSaveAndLoad: window.phetcommon && window.phetcommon.getQueryParameter && window.phetcommon.getQueryParameter( 'showSaveAndLoad' )
+      showSaveAndLoad: window.phetcommon.getQueryParameter( 'showSaveAndLoad' ),
+      screenDisplayStrategy: 'setChildren'
     };
 
     Sim.call( this, title, [
