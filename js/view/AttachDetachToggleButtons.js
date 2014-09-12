@@ -45,8 +45,8 @@ define( function( require ) {
 
     var radioButtons = new RadioButtonGroup( detachableProperty, radioButtonsContent,
       {
-        contentXMargin: 0,
-        contentYMargin: 0,
+        buttonContentXMargin: 0,
+        buttonContentYMargin: 0,
         baseColor: 'white',
         disabledBaseColor: 'rgba(255,255,255,0.5)',
         spacing: 20,
