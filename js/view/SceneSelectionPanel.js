@@ -16,6 +16,7 @@ define( function( require ) {
   var Property = require( 'AXON/Property' );
   var TrackNode = require( 'ENERGY_SKATE_PARK_BASICS/view/TrackNode' );
   var BackgroundNode = require( 'ENERGY_SKATE_PARK_BASICS/view/BackgroundNode' );
+  var RadioButtonGroup = require( 'SUN/buttons/RadioButtonGroup' );
 
   /**
    * Construct a SceneSelectionPanel.  Pass the entire model since it is used to create TrackNode
@@ -29,7 +30,7 @@ define( function( require ) {
     //Create a button with a scene like the track in the index
     var createNode = function( index ) {
       var track = model.tracks.get( index );
-      var background = new BackgroundNode( view.layoutBounds, {pickable: true} );
+      var background = new BackgroundNode( view.layoutBounds );
       background.layout( 0, 0, view.layoutBounds.width, view.layoutBounds.height, 1 );
       var trackNode = new TrackNode( model, track, transform, new Property() );
 
@@ -38,24 +39,26 @@ define( function( require ) {
 
       var a = new Node( {children: [background, trackNode ]} );
       a.scale( 45 / a.height );
-      var selectedNode = new Panel( a, {stroke: 'black', lineWidth: 3, xMargin: 0, yMargin: 0, cornerRadius: 0} );
-
-      var unselectedNode = new Panel( a, {stroke: 'gray', lineWidth: 0, xMargin: 0, yMargin: 0, cornerRadius: 0, opacity: 0.6} );
-      var property = new Property( model.scene === index );
-
-      property.link( function( scene0Selected ) { if ( scene0Selected ) { model.scene = index; } } );
-      model.sceneProperty.link( function( scene ) { property.value = scene === index; } );
-      return new ToggleButtonDeprecated( selectedNode, unselectedNode, property, {radioButton: true} );
+      return a;
     };
 
-    var content = new VBox( {
-      spacing: 10,
-      children: [
-        createNode( 0 ),
-        createNode( 1 ) ,
-        createNode( 2 )
-      ]} );
-    Panel.call( this, content, {fill: '#F0F0F0', xMargin: 10, stroke: null} );
+    var content = new RadioButtonGroup( model.sceneProperty, [
+      {value: 0, node: createNode( 0 )},
+      {value: 1, node: createNode( 1 )},
+      {value: 2, node: createNode( 2 )}
+    ], {
+      alignVertically: true,
+      buttonContentXMargin: 0,
+      buttonContentYMargin: 0,
+      cornerRadius: 0,
+      selectedLineWidth: 3
+    } );
+
+    Panel.call( this, content, {
+      fill: '#F0F0F0',
+      xMargin: 10,
+      stroke: null
+    } );
   }
 
   return inherit( Panel, SceneSelectionPanel );
