@@ -17,7 +17,7 @@ define( function( require ) {
   var attachIcon = require( 'image!ENERGY_SKATE_PARK_BASICS/attach.png' );
   var RadioButton = require( 'SUN/RadioButton' );
   var Rectangle = require( 'SCENERY/nodes/Rectangle' );
-  var RadioButtons = require( 'SUN/buttons/RadioButtons' );
+  var RadioButtonGroup = require( 'SUN/buttons/RadioButtonGroup' );
 
   /**
    * Constructor for the AttachDetachToggleButtons
@@ -43,7 +43,7 @@ define( function( require ) {
       { value: true, node: new Image( detachIcon, {scale: scale} ) }
     ];
 
-    var radioButtons = new RadioButtons( detachableProperty, radioButtonsContent,
+    var radioButtons = new RadioButtonGroup( detachableProperty, radioButtonsContent,
       {
         contentXMargin: 0,
         contentYMargin: 0,
