@@ -11,8 +11,6 @@ define( function( require ) {
   var Panel = require( 'SUN/Panel' );
   var inherit = require( 'PHET_CORE/inherit' );
   var Node = require( 'SCENERY/nodes/Node' );
-  var VBox = require( 'SCENERY/nodes/VBox' );
-  var ToggleButtonDeprecated = require( 'SUN/ToggleButtonDeprecated' );
   var Property = require( 'AXON/Property' );
   var TrackNode = require( 'ENERGY_SKATE_PARK_BASICS/view/TrackNode' );
   var BackgroundNode = require( 'ENERGY_SKATE_PARK_BASICS/view/BackgroundNode' );
