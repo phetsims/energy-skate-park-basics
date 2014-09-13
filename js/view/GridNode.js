@@ -11,8 +11,9 @@ define( function( require ) {
 
   var inherit = require( 'PHET_CORE/inherit' );
   var Node = require( 'SCENERY/nodes/Node' );
-  var Line = require( 'SCENERY/nodes/Line' );
   var Text = require( 'SCENERY/nodes/Text' );
+  var Path = require( 'SCENERY/nodes/Path' );
+  var Shape = require( 'KITE/Shape' );
   var PhetFont = require( 'SCENERY_PHET/PhetFont' );
   var BackgroundNode = require( 'ENERGY_SKATE_PARK_BASICS/view/BackgroundNode' );
   var zeroMetersString = require( 'string!ENERGY_SKATE_PARK_BASICS/zeroMeters' );
@@ -36,15 +37,16 @@ define( function( require ) {
     //For more performance improvements on screen size change, only update when the graph is visible, then again when it becomes visible
     layout: function( offsetX, offsetY, width, height, layoutScale ) {
 
-      var lines = [];
+      var thickLines = [];
+      var thinLines = [];
       var texts = [];
       var lineHeight = height / layoutScale - BackgroundNode.earthHeight;
       for ( var x = 0; x < 100; x++ ) {
         var viewXPositive = this.modelViewTransform.modelToViewX( x );
         var viewXNegative = this.modelViewTransform.modelToViewX( -x );
-        lines.push( new Line( viewXPositive, -offsetY, viewXPositive, lineHeight - offsetY, {stroke: 'gray'} ) );
+        thinLines.push( {x1: viewXPositive, y1: -offsetY, x2: viewXPositive, y2: lineHeight - offsetY} );
         if ( x !== 0 ) {
-          lines.push( new Line( viewXNegative, -offsetY, viewXNegative, lineHeight - offsetY, {stroke: 'gray'} ) );
+          thinLines.push( { x1: viewXNegative, y1: -offsetY, x2: viewXNegative, y2: lineHeight - offsetY} );
         }
         if ( viewXNegative < -offsetX ) {
           break;
@@ -59,7 +61,13 @@ define( function( require ) {
           break;
         }
 
-        lines.push( new Line( -offsetX, viewY, separation - offsetX, viewY, {stroke: '#686868', lineWidth: y % 2 === 0 ? 1.8 : 0.8 } ) );
+        if ( y % 2 === 0 ) {
+          thickLines.push( {x1: -offsetX, y1: viewY, x2: separation - offsetX, y2: viewY} );
+        }
+        else {
+          thinLines.push( {x1: -offsetX, y1: viewY, x2: separation - offsetX, y2: viewY} );
+        }
+
         if ( y % 2 === 0 ) {
           var text = new Text( '' + y, {font: new PhetFont( 18 ), top: viewY, right: originX - 2} );
 
@@ -74,7 +82,23 @@ define( function( require ) {
           }
         }
       }
-      this.children = lines.concat( texts );
+
+      var thinLineShape = new Shape();
+      var thickLineShape = new Shape();
+      for ( var i = 0; i < thinLines.length; i++ ) {
+        var thinLine = thinLines[i];
+        thinLineShape.moveTo( thinLine.x1, thinLine.y1 );
+        thinLineShape.lineTo( thinLine.x2, thinLine.y2 );
+      }
+      for ( var k = 0; k < thickLines.length; k++ ) {
+        var thickLine = thickLines[k];
+        thickLineShape.moveTo( thickLine.x1, thickLine.y1 );
+        thickLineShape.lineTo( thickLine.x2, thickLine.y2 );
+      }
+      this.children = [
+        new Path( thinLineShape, {stroke: '#686868', lineWidth: 0.8} ),
+        new Path( thickLineShape, {stroke: '#686868', lineWidth: 1.8} )
+      ].concat( texts );
     }
   } );
 } );
