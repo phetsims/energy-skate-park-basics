@@ -22,7 +22,7 @@ define( function( require ) {
 
   /**
    * @param {Bounds2} layoutBounds the ScreenView layoutBounds
-   * @param {Object} options
+   * @param {Object} [options]
    * @constructor
    */
   function BackgroundNode( layoutBounds, options ) {
