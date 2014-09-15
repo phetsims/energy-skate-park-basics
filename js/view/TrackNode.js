@@ -63,6 +63,8 @@ define( function( require ) {
         //Drag an entire track
         drag: function( event ) {
 
+          var snapTargetChanged = false;
+
           //Check whether the model contains a track so that input listeners for detached elements can't create bugs, see #230
           if ( !model.containsTrack( track ) ) { return; }
 
@@ -153,14 +155,31 @@ define( function( require ) {
           }
 
           if ( bestDistance !== null && bestDistance < 1 ) {
+            if ( myBestPoint.snapTarget !== otherBestPoint ) {
+              snapTargetChanged = true;
+            }
             myBestPoint.snapTarget = otherBestPoint;
 
             //Set the opposite point to be unsnapped, you can only snap one at a time
-            (myBestPoint === points[0] ? points[1] : points[0]).snapTarget = null;
+            var source = (myBestPoint === points[0] ? points[1] : points[0]);
+            if ( source.snapTarget !== null ) {
+              snapTargetChanged = true;
+            }
+            source.snapTarget = null;
           }
           else {
+
+            if ( points[0].snapTarget !== null || points[1].snapTarget !== null ) {
+              snapTargetChanged = true;
+            }
             points[0].snapTarget = null;
             points[1].snapTarget = null;
+          }
+
+          //It costs about 5fps to do this every frame (on iPad3), so only check if the snapTargets have changed.  See #235
+          if ( snapTargetChanged ) {
+            track.updateSplines();
+            updateTrackShape();
           }
 
           //Make it so the track can't be dragged underground when dragged by the track itself (not control point), see #166
