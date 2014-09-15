@@ -20,6 +20,7 @@ define( function( require ) {
       //Where it would be if it hadn't snapped to another point during dragging
       sourcePosition: new Vector2( x, y ),
 
+      //Another ControlPoint that this ControlPoint is going to 'snap' to if released.
       snapTarget: null
     } );
 
