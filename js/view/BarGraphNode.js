@@ -23,6 +23,7 @@ define( function( require ) {
   var totalString = require( 'string!ENERGY_SKATE_PARK_BASICS/energy.total' );
   var energyString = require( 'string!ENERGY_SKATE_PARK_BASICS/energy.energy' );
   var DerivedProperty = require( 'AXON/DerivedProperty' );
+  var Bounds2 = require( 'DOT/Bounds2' );
 
   /**
    * Constructor for the BarGraph
@@ -72,6 +73,9 @@ define( function( require ) {
       } );
       var barX = getBarX( index );
       var bar = new Rectangle( barX, 0, barWidth, 0, {fill: color, stroke: 'black', lineWidth: 0.5, pickable: false} );
+
+      //Skip bounds computation to improve performance, see #245
+      bar.computeShapeBounds = function() {return new Bounds2( 0, 0, 0, 0 )};
 
       //update the bars when the graph becomes visible, and skip update when they are invisible
       DerivedProperty.multilink( [barHeightProperty, barGraphVisibleProperty], function( barHeight, visible ) {

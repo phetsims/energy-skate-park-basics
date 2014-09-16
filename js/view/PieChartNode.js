@@ -15,6 +15,7 @@ define( function( require ) {
   var Shape = require( 'KITE/Shape' );
   var Path = require( 'SCENERY/nodes/Path' );
   var EnergySkateParkColorScheme = require( 'ENERGY_SKATE_PARK_BASICS/view/EnergySkateParkColorScheme' );
+  var Bounds2 = require( 'DOT/Bounds2' );
 
   /**
    * @param {Skater} skater the skater model
@@ -27,6 +28,10 @@ define( function( require ) {
 
     var kineticEnergySlice = new Path( null, {fill: EnergySkateParkColorScheme.kineticEnergy, stroke: 'black', lineWidth: 1} );
     var potentialEnergySlice = new Path( null, {fill: EnergySkateParkColorScheme.potentialEnergy, stroke: 'black', lineWidth: 1} );
+
+    //Skip bounds computation to improve performance, see #245
+    kineticEnergySlice.computeShapeBounds = function() {return new Bounds2( 0, 0, 0, 0 )};
+    potentialEnergySlice.computeShapeBounds = function() {return new Bounds2( 0, 0, 0, 0 )};
 
     //Back layer is always a circle, so use the optimized version.
     var thermalEnergySlice = new Circle( 1, {fill: EnergySkateParkColorScheme.thermalEnergy, stroke: 'black', lineWidth: 1} );
