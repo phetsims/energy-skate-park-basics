@@ -112,12 +112,12 @@ define( function( require ) {
 
         //If there is no potential energy (i.e. the skater is on the ground) then don't show the potential energy slice, see #165
         if ( fractionPotential === 0 ) {
-          potentialEnergySlice.shape = new Shape();
+          potentialEnergySlice.shape = null;
         }
         else {
-          potentialEnergySlice.shape = new Shape().moveTo( 0, 0 ).ellipticalArc( 0, 0, radius, radius, 0, potentialStartAngle, kineticStartAngle, false ).lineTo( 0, 0 );
+          potentialEnergySlice.shape = new Shape().moveTo( 0, 0 ).arc( 0, 0, radius, potentialStartAngle, kineticStartAngle, false ).lineTo( 0, 0 ).close();
         }
-        kineticEnergySlice.shape = new Shape().moveTo( 0, 0 ).ellipticalArc( 0, 0, radius, radius, 0, kineticStartAngle, kineticStartAngle + fractionKinetic * Math.PI * 2, false ).lineTo( 0, 0 );
+        kineticEnergySlice.shape = new Shape().moveTo( 0, 0 ).arc( 0, 0, radius, kineticStartAngle, kineticStartAngle + fractionKinetic * Math.PI * 2, false ).lineTo( 0, 0 ).close();
       }
     };
 
