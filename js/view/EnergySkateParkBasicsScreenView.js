@@ -13,6 +13,7 @@ define( function( require ) {
   var Color = require( 'SCENERY/util/Color' );
   var inherit = require( 'PHET_CORE/inherit' );
   var Image = require( 'SCENERY/nodes/Image' );
+  var Node = require( 'SCENERY/nodes/Node' );
   var Rectangle = require( 'SCENERY/nodes/Rectangle' );
   var Rect = require( 'DOT/Rectangle' );
   var Shape = require( 'KITE/Shape' );
@@ -79,12 +80,6 @@ define( function( require ) {
     var pieChartLegend = new PieChartLegend( model.skater, model.clearThermal.bind( model ), model.property( 'pieChartVisible' ) );
     this.addChild( pieChartLegend );
 
-    var speedometerNode = new GaugeNode( model.skater.property( 'speed' ), speedString, {min: 0, max: 20}, {updateEnabledProperty: model.property( 'speedometerVisible' ), pickable: false} );
-    model.property( 'speedometerVisible' ).linkAttribute( speedometerNode, 'visible' );
-    speedometerNode.centerX = this.layoutBounds.centerX;
-    speedometerNode.top = this.layoutBounds.minY + 5;
-    this.addChild( speedometerNode );
-
     this.controlPanel = new EnergySkateParkBasicsControlPanel( model );
     this.addChild( this.controlPanel );
     this.controlPanel.right = this.layoutBounds.width - 5;
@@ -112,7 +107,6 @@ define( function( require ) {
     } );
 
     var barGraphNode = new BarGraphNode( model.skater, model.property( 'barGraphVisible' ), model.clearThermal.bind( model ) );
-    this.addChild( barGraphNode );
 
     if ( !model.draggableTracks ) {
       this.sceneSelectionPanel = new SceneSelectionPanel( model, this, transform );//layout done in layout bounds
@@ -153,6 +147,16 @@ define( function( require ) {
     this.addChild( this.returnSkaterButton );
 
     this.addChild( new PlaybackSpeedControl( model.property( 'speed' ) ).mutate( {right: playPauseButton.left - 10, bottom: playPauseButton.bottom} ) );
+
+    this.addChild( new Node( { layerSplit: true } ) );
+
+    var speedometerNode = new GaugeNode( model.skater.property( 'speed' ), speedString, {min: 0, max: 20}, {updateEnabledProperty: model.property( 'speedometerVisible' ), pickable: false} );
+    model.property( 'speedometerVisible' ).linkAttribute( speedometerNode, 'visible' );
+    speedometerNode.centerX = this.layoutBounds.centerX;
+    speedometerNode.top = this.layoutBounds.minY + 5;
+    this.addChild( speedometerNode );
+
+    this.addChild( barGraphNode );
 
     //Switch between selectable tracks
     if ( !model.draggableTracks ) {
