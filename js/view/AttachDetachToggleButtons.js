@@ -50,7 +50,8 @@ define( function( require ) {
         cornerRadius: 6,
         selectedLineWidth: 2.3,
         selectedStroke: '#3291b8',
-        deselectedStroke: 'gray'
+        deselectedStroke: 'gray',
+        orientation: 'horizontal'
       } );
     Panel.call( this, radioButtons, options );
   }
