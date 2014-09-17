@@ -45,7 +45,7 @@ define( function( require ) {
       {value: 1, node: createNode( 1 )},
       {value: 2, node: createNode( 2 )}
     ], {
-      alignVertically: true,
+      orientation: 'vertical',
       buttonContentXMargin: 0,
       buttonContentYMargin: 0,
       cornerRadius: 0,
