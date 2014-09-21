@@ -43,7 +43,7 @@ define( function( require ) {
     var skaterNode = this;
 
     var skaterImageNode = new Image( skaterRightImage, { cursor: 'pointer' } );
-    Node.call( this, {children: [skaterImageNode]} );
+    Node.call( this, {children: [skaterImageNode], renderer: 'webgl' } );
     var imageWidth = this.width;
     var imageHeight = this.height;
 
@@ -80,7 +80,7 @@ define( function( require ) {
     } );
 
     //Show a red dot in the bottom center as the important particle model coordinate
-    this.addChild( new Circle( 8, {fill: 'red', x: imageWidth / 2, y: imageHeight } ) );
+    this.addChild( new Circle( 8, {fill: 'red', x: imageWidth / 2, y: imageHeight } ).toCanvasNodeSynchronous() );
 
     var targetTrack = null;
 
