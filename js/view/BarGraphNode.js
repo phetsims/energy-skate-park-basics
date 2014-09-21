@@ -24,6 +24,7 @@ define( function( require ) {
   var energyString = require( 'string!ENERGY_SKATE_PARK_BASICS/energy.energy' );
   var DerivedProperty = require( 'AXON/DerivedProperty' );
   var Bounds2 = require( 'DOT/Bounds2' );
+  var Node = require( 'SCENERY/nodes/Node' );
 
   /**
    * Constructor for the BarGraph
@@ -72,7 +73,7 @@ define( function( require ) {
         return result > 1 ? Math.floor( result ) : result;
       } );
       var barX = getBarX( index );
-      var bar = new Rectangle( barX, 0, barWidth, 0, {fill: color, stroke: 'black', lineWidth: 0.5, pickable: false} );
+      var bar = new Rectangle( barX, 0, barWidth, 1, {fill: color, stroke: 'black', lineWidth: 0.5, pickable: false} ).toCanvasNodeSynchronous();
 
       //Skip bounds computation to improve performance, see #245
       bar.computeShapeBounds = function() {return new Bounds2( 0, 0, 0, 0 );};
@@ -89,10 +90,12 @@ define( function( require ) {
 
           //TODO: just omit negative bars altogether?
           if ( barHeight >= 0 ) {
-            bar.setRect( barX, originY - barHeight, barWidth, barHeight );
+            bar.setScaleMagnitude( 1, barHeight );
+//            bar.setRect( barX, originY - barHeight, barWidth, barHeight );
           }
           else {
-            bar.setRect( barX, originY, barWidth, -barHeight );
+            bar.setScaleMagnitude( 1, -barHeight );
+//            bar.setRect( barX, originY, barWidth, -barHeight );
           }
         }
       } );
@@ -115,29 +118,29 @@ define( function( require ) {
     this.bars = [kineticBar, potentialBar, thermalBar, totalBar];
     var titleNode = new Text( energyString, {x: 5, y: insetY - 10, font: new PhetFont( 14 ), pickable: false} );
     var contentNode = new Rectangle( 0, 0, contentWidth, contentHeight, {children: [
-      new ArrowNode( insetX, originY, insetX, insetY, {pickable: false} ),
-      titleNode,
-      new Line( insetX, originY, contentWidth - insetX, originY, {lineWidth: 1, stroke: 'gray', pickable: false} ),
-      kineticLabel,
-      potentialLabel,
-      thermalLabel,
-      totalLabel,
+      new ArrowNode( insetX, originY, insetX, insetY, {pickable: false} ).toCanvasNodeSynchronous(),
+      titleNode.toCanvasNodeSynchronous(),
+      new Line( insetX, originY, contentWidth - insetX, originY, {lineWidth: 1, stroke: 'gray', pickable: false} ).toCanvasNodeSynchronous(),
+      kineticLabel.toCanvasNodeSynchronous(),
+      potentialLabel.toCanvasNodeSynchronous(),
+      thermalLabel.toCanvasNodeSynchronous(),
+      totalLabel.toCanvasNodeSynchronous(),
 
       kineticBar,
       potentialBar,
       thermalBar,
       totalBar,
-      clearThermalButton
+      clearThermalButton.toCanvasNodeSynchronous()
     ]} );
 
     //Center the bar chart title, see #62
     titleNode.centerX = contentNode.centerX;
 
-    Panel.call( this, contentNode, { x: 10, y: 10, xMargin: 10, yMargin: 10, fill: 'white', stroke: 'gray', lineWidth: 1, resize: false} );
+    Node.call( this, { x: 10, y: 10, xMargin: 10, yMargin: 10, fill: 'white', stroke: 'gray', lineWidth: 1, resize: false, children: [contentNode], renderer: 'webgl'} );
 
     //When the bar graph is shown, update the bars (because they do not get updated when invisible for performance reasons)
     barGraphVisibleProperty.linkAttribute( this, 'visible' );
   }
 
-  return inherit( Panel, BarGraphNode );
+  return inherit( Node, BarGraphNode );
 } );
