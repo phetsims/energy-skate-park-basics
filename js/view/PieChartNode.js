@@ -30,8 +30,8 @@ define( function( require ) {
     var potentialEnergySlice = new Path( null, {fill: EnergySkateParkColorScheme.potentialEnergy, stroke: 'black', lineWidth: 1} );
 
     //Skip bounds computation to improve performance, see #245
-    kineticEnergySlice.computeShapeBounds = function() {return new Bounds2( 0, 0, 0, 0 )};
-    potentialEnergySlice.computeShapeBounds = function() {return new Bounds2( 0, 0, 0, 0 )};
+    kineticEnergySlice.computeShapeBounds = function() {return new Bounds2( 0, 0, 0, 0 );};
+    potentialEnergySlice.computeShapeBounds = function() {return new Bounds2( 0, 0, 0, 0 );};
 
     //Back layer is always a circle, so use the optimized version.
     var thermalEnergySlice = new Circle( 1, {fill: EnergySkateParkColorScheme.thermalEnergy, stroke: 'black', lineWidth: 1} );

@@ -75,7 +75,7 @@ define( function( require ) {
       var bar = new Rectangle( barX, 0, barWidth, 0, {fill: color, stroke: 'black', lineWidth: 0.5, pickable: false} );
 
       //Skip bounds computation to improve performance, see #245
-      bar.computeShapeBounds = function() {return new Bounds2( 0, 0, 0, 0 )};
+      bar.computeShapeBounds = function() {return new Bounds2( 0, 0, 0, 0 );};
 
       //update the bars when the graph becomes visible, and skip update when they are invisible
       DerivedProperty.multilink( [barHeightProperty, barGraphVisibleProperty], function( barHeight, visible ) {
