@@ -73,10 +73,7 @@ define( function( require ) {
         return result > 1 ? Math.floor( result ) : result;
       } );
       var barX = getBarX( index );
-      var bar = new Rectangle( barX, 0, barWidth, 1, {fill: color, stroke: 'black', lineWidth: 0.5, pickable: false} ).toCanvasNodeSynchronous();
-
-      //Skip bounds computation to improve performance, see #245
-      bar.computeShapeBounds = function() {return new Bounds2( 0, 0, 0, 0 );};
+      var bar = new Rectangle( barX, 0, barWidth, 100, {fill: color, pickable: false, renderer: 'webgl'} );
 
       //update the bars when the graph becomes visible, and skip update when they are invisible
       DerivedProperty.multilink( [barHeightProperty, barGraphVisibleProperty], function( barHeight, visible ) {
@@ -90,12 +87,10 @@ define( function( require ) {
 
           //TODO: just omit negative bars altogether?
           if ( barHeight >= 0 ) {
-            bar.setScaleMagnitude( 1, barHeight );
-//            bar.setRect( barX, originY - barHeight, barWidth, barHeight );
+            bar.setRect( barX, originY - barHeight, barWidth, barHeight );
           }
           else {
-            bar.setScaleMagnitude( 1, -barHeight );
-//            bar.setRect( barX, originY, barWidth, -barHeight );
+            bar.setRect( barX, originY, barWidth, -barHeight );
           }
         }
       } );
