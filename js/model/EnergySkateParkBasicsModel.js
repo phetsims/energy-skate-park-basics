@@ -77,9 +77,9 @@ define( function( require ) {
 
       //Model for visibility of various view parameters
       pieChartVisible: false,
-      barGraphVisible: true,
+      barGraphVisible: false,
       gridVisible: false,
-      speedometerVisible: true,
+      speedometerVisible: false,
 
       //Enabled/disabled for the track editing buttons
       editButtonEnabled: false,
