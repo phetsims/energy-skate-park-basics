@@ -150,13 +150,22 @@ define( function( require ) {
 
     this.addChild( new PlaybackSpeedControl( model.property( 'speed' ) ).mutate( {right: playPauseButton.left - 10, bottom: playPauseButton.bottom} ) );
 
-//    this.addChild( new Node( { layerSplit: true } ) );
-
-    var speedometerNode = new GaugeNode( model.skater.property( 'speed' ), speedString, {min: 0, max: 20}, {updateEnabledProperty: model.property( 'speedometerVisible' ), pickable: false, renderer: 'webgl'} );
+    var speedometerNode = new GaugeNode(
+      //Hide the needle in for the background of the GaugeNode
+      new Property( null ), speedString,
+      {
+        min: 0,
+        max: 20
+      },
+      {
+        updateEnabledProperty: model.property( 'speedometerVisible' ),
+        pickable: false,
+        renderer: 'webgl'
+      } );
     model.property( 'speedometerVisible' ).linkAttribute( speedometerNode, 'visible' );
     speedometerNode.centerX = this.layoutBounds.centerX;
     speedometerNode.top = this.layoutBounds.minY + 5;
-
+    this.addChild( speedometerNode );
 
     //Switch between selectable tracks
     if ( !model.draggableTracks ) {
@@ -249,8 +258,8 @@ define( function( require ) {
     }
 
     var skaterNode = new SkaterNode( model.skater, this, transform, model.getClosestTrackAndPositionAndParameter.bind( model ), model.getPhysicalTracks.bind( model ) );
-    this.addChild( speedometerNode.mutate( {renderer: 'webgl'} ) );
-    this.addChild( new BarGraphForeground( model.skater, model.property( 'barGraphVisible' ), model.clearThermal.bind( model ) ) );
+//    this.addChild( speedometerNode );
+    this.addChild( new BarGraphForeground( model.skater, model.property( 'barGraphVisible' ), model.clearThermal.bind( model ) ).mutate( {renderer: 'webgl'} ) );
     this.addChild( skaterNode.mutate( {renderer: 'webgl'} ) );
 //    var pieChartNode = new PieChartNode( model.skater, model.property( 'pieChartVisible' ), transform );
 //    this.addChild( pieChartNode );

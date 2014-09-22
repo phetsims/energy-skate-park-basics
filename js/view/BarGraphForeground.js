@@ -95,8 +95,7 @@ define( function( require ) {
         potentialBar,
         thermalBar,
         totalBar
-      ],
-      renderer: 'webgl'} );
+      ]} );
 
     //When the bar graph is shown, update the bars (because they do not get updated when invisible for performance reasons)
     barGraphVisibleProperty.linkAttribute( this, 'visible' );
