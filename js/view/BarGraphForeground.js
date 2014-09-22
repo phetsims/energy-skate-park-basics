@@ -11,15 +11,8 @@ define( function( require ) {
 
   var inherit = require( 'PHET_CORE/inherit' );
   var Rectangle = require( 'SCENERY/nodes/Rectangle' );
-  var Line = require( 'SCENERY/nodes/Line' );
-  var Text = require( 'SCENERY/nodes/Text' );
-  var Panel = require( 'SUN/Panel' );
-  var ArrowNode = require( 'SCENERY_PHET/ArrowNode' );
-  var PhetFont = require( 'SCENERY_PHET/PhetFont' );
   var EnergySkateParkColorScheme = require( 'ENERGY_SKATE_PARK_BASICS/view/EnergySkateParkColorScheme' );
-  var ClearThermalButton = require( 'ENERGY_SKATE_PARK_BASICS/view/ClearThermalButton' );
   var DerivedProperty = require( 'AXON/DerivedProperty' );
-  var Bounds2 = require( 'DOT/Bounds2' );
   var Node = require( 'SCENERY/nodes/Node' );
 
   /**

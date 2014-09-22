@@ -23,9 +23,6 @@ define( function( require ) {
   var thermalString = require( 'string!ENERGY_SKATE_PARK_BASICS/energy.thermal' );
   var totalString = require( 'string!ENERGY_SKATE_PARK_BASICS/energy.total' );
   var energyString = require( 'string!ENERGY_SKATE_PARK_BASICS/energy.energy' );
-  var DerivedProperty = require( 'AXON/DerivedProperty' );
-  var Bounds2 = require( 'DOT/Bounds2' );
-  var Node = require( 'SCENERY/nodes/Node' );
 
   /**
    * Constructor for the BarGraph
