@@ -24,7 +24,8 @@ define( function( require ) {
   var BackgroundNode = require( 'ENERGY_SKATE_PARK_BASICS/view/BackgroundNode' );
   var EnergySkateParkBasicsControlPanel = require( 'ENERGY_SKATE_PARK_BASICS/view/EnergySkateParkBasicsControlPanel' );
   var PlaybackSpeedControl = require( 'ENERGY_SKATE_PARK_BASICS/view/PlaybackSpeedControl' );
-  var BarGraphNode = require( 'ENERGY_SKATE_PARK_BASICS/view/BarGraphNode' );
+  var BarGraphBackground = require( 'ENERGY_SKATE_PARK_BASICS/view/BarGraphBackground' );
+  var BarGraphForeground = require( 'ENERGY_SKATE_PARK_BASICS/view/BarGraphForeground' );
   var PieChartNode = require( 'ENERGY_SKATE_PARK_BASICS/view/PieChartNode' );
   var PieChartLegend = require( 'ENERGY_SKATE_PARK_BASICS/view/PieChartLegend' );
   var GridNode = require( 'ENERGY_SKATE_PARK_BASICS/view/GridNode' );
@@ -106,7 +107,8 @@ define( function( require ) {
       return view.availableModelBounds && containsAbove( view.availableModelBounds, position.x, position.y );
     } );
 
-    var barGraphNode = new BarGraphNode( model.skater, model.property( 'barGraphVisible' ), model.clearThermal.bind( model ) );
+    var barGraphBackground = new BarGraphBackground( model.skater, model.property( 'barGraphVisible' ), model.clearThermal.bind( model ) );
+    this.addChild( barGraphBackground );
 
     if ( !model.draggableTracks ) {
       this.sceneSelectionPanel = new SceneSelectionPanel( model, this, transform );//layout done in layout bounds
@@ -114,7 +116,7 @@ define( function( require ) {
     }
 
     //Put the pie chart legend to the right of the bar chart, see #60, #192
-    pieChartLegend.mutate( {top: barGraphNode.top, left: barGraphNode.right + 8} );
+    pieChartLegend.mutate( {top: barGraphBackground.top, left: barGraphBackground.right + 8} );
 
     var playProperty = model.property( 'paused' ).not();
     var playPauseButton = new PlayPauseButton( playProperty ).mutate( {scale: 0.75} );
@@ -248,7 +250,7 @@ define( function( require ) {
 
     var skaterNode = new SkaterNode( model.skater, this, transform, model.getClosestTrackAndPositionAndParameter.bind( model ), model.getPhysicalTracks.bind( model ) );
     this.addChild( speedometerNode.mutate( {renderer: 'webgl'} ) );
-//    this.addChild( barGraphNode );
+    this.addChild( new BarGraphForeground( model.skater, model.property( 'barGraphVisible' ), model.clearThermal.bind( model ) ) );
     this.addChild( skaterNode.mutate( {renderer: 'webgl'} ) );
 //    var pieChartNode = new PieChartNode( model.skater, model.property( 'pieChartVisible' ), transform );
 //    this.addChild( pieChartNode );
