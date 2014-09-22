@@ -46,6 +46,8 @@ define( function( require ) {
   var RectangularPushButton = require( 'SUN/buttons/RectangularPushButton' );
   var Text = require( 'SCENERY/nodes/Text' );
   var EnergySkateParkColorScheme = require( 'ENERGY_SKATE_PARK_BASICS/view/EnergySkateParkColorScheme' );
+  var platform = require( 'PHET_CORE/platform' );
+  var WebGLLayer = require( 'SCENERY/layers/WebGLLayer' );
 
   // images
   var skaterIconImage = require( 'image!ENERGY_SKATE_PARK_BASICS/skater-icon.png' );
@@ -259,17 +261,18 @@ define( function( require ) {
 
     var skaterNode = new SkaterNode( model.skater, this, transform, model.getClosestTrackAndPositionAndParameter.bind( model ), model.getPhysicalTracks.bind( model ) );
 
+    var renderer = platform.mobileSafari && WebGLLayer.isWebGLSupported() ? 'webgl' : 'svg';
     var gaugeNeedleNode = new GaugeNeedleNode( model.skater.property( 'speed' ),
       {
         min: 0,
         max: 20
-      }, {renderer: 'webgl'} );
+      }, {renderer: renderer} );
     model.property( 'speedometerVisible' ).linkAttribute( gaugeNeedleNode, 'visible' );
     gaugeNeedleNode.x = speedometerNode.x;
     gaugeNeedleNode.y = speedometerNode.y;
     this.addChild( gaugeNeedleNode );
-    this.addChild( new BarGraphForeground( model.skater, model.property( 'barGraphVisible' ), model.clearThermal.bind( model ) ).mutate( {renderer: 'webgl'} ) );
-    this.addChild( skaterNode.mutate( {renderer: 'webgl'} ) );
+    this.addChild( new BarGraphForeground( model.skater, model.property( 'barGraphVisible' ), model.clearThermal.bind( model ) ).mutate( {renderer: renderer} ) );
+    this.addChild( skaterNode.mutate( {renderer: renderer} ) );
     var pieChartNode = new PieChartNode( model.skater, model.property( 'pieChartVisible' ), transform );
 //    this.addChild( pieChartNode );
 

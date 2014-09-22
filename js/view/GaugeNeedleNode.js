@@ -45,8 +45,7 @@ define( function( require ) {
     }, options );
     var lineWidth = 3;
     var needle = new Rectangle( 0, -lineWidth / 2, options.radius, lineWidth, {fill: 'red'} ).toCanvasNodeSynchronous();
-    needle.renderer = 'webgl';
-    Node.call( this, {children: [needle], renderer: 'webgl'} );
+    Node.call( this, {children: [needle]} );
 
     var totalAngle = (options.numTicks - 1) * options.anglePerTick;
     var startAngle = -1 / 2 * Math.PI - totalAngle / 2;
