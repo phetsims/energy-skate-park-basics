@@ -72,16 +72,16 @@ define( function( require ) {
 
     //The background
     this.backgroundNode = new BackgroundNode( this.layoutBounds );
-//    this.addChild( this.backgroundNode );
+    this.addChild( this.backgroundNode );
 
     this.gridNode = new GridNode( model.property( 'gridVisible' ), transform );
-//    this.addChild( this.gridNode );
+    this.addChild( this.gridNode );
 
     var pieChartLegend = new PieChartLegend( model.skater, model.clearThermal.bind( model ), model.property( 'pieChartVisible' ) );
-//    this.addChild( pieChartLegend );
+    this.addChild( pieChartLegend );
 
     this.controlPanel = new EnergySkateParkBasicsControlPanel( model );
-//    this.addChild( this.controlPanel );
+    this.addChild( this.controlPanel );
     this.controlPanel.right = this.layoutBounds.width - 5;
     this.controlPanel.top = 5;
 
@@ -89,7 +89,7 @@ define( function( require ) {
     if ( model.draggableTracks ) {
       var property = model.draggableTracks ? new Property( true ) : model.property( 'scene' ).valueEquals( 2 );
       this.attachDetachToggleButtons = new AttachDetachToggleButtons( model.property( 'detachable' ), property, this.controlPanel.contentWidth, {top: this.controlPanel.bottom + 5, centerX: this.controlPanel.centerX} );
-//      this.addChild( this.attachDetachToggleButtons );
+      this.addChild( this.attachDetachToggleButtons );
     }
 
     var containsAbove = function( bounds, x, y ) {
@@ -110,7 +110,7 @@ define( function( require ) {
 
     if ( !model.draggableTracks ) {
       this.sceneSelectionPanel = new SceneSelectionPanel( model, this, transform );//layout done in layout bounds
-//      this.addChild( this.sceneSelectionPanel );
+      this.addChild( this.sceneSelectionPanel );
     }
 
     //Put the pie chart legend to the right of the bar chart, see #60, #192
@@ -121,8 +121,8 @@ define( function( require ) {
     var stepButton = new StepButton( function() { model.manualStep(); }, playProperty ).mutate( {scale: 0.75} );
     model.property( 'paused' ).linkAttribute( stepButton, 'enabled' );
 
-//    this.addChild( playPauseButton.mutate( {centerX: this.layoutBounds.centerX, bottom: this.layoutBounds.maxY - 7} ) );
-//    this.addChild( stepButton.mutate( {left: playPauseButton.right + 5, centerY: playPauseButton.centerY} ) );
+    this.addChild( playPauseButton.mutate( {centerX: this.layoutBounds.centerX, bottom: this.layoutBounds.maxY - 7} ) );
+    this.addChild( stepButton.mutate( {left: playPauseButton.right + 5, centerY: playPauseButton.centerY} ) );
 
     this.resetAllButton = new ResetAllButton( {
       listener: model.reset.bind( model ),
@@ -132,7 +132,7 @@ define( function( require ) {
       //Align vertically with other controls, see https://github.com/phetsims/energy-skate-park-basics/issues/134
       centerY: (transform.modelToViewY( 0 ) + this.layoutBounds.maxY) / 2 + 8
     } );
-//    this.addChild( this.resetAllButton );
+    this.addChild( this.resetAllButton );
 
     //The button to return the skater
     this.returnSkaterButton = new RectangularPushButton( {
@@ -144,9 +144,9 @@ define( function( require ) {
 
     //Disable the return skater button when the skater is already at his initial coordinates
     model.skater.linkAttribute( 'moved', view.returnSkaterButton, 'enabled' );
-//    this.addChild( this.returnSkaterButton );
+    this.addChild( this.returnSkaterButton );
 
-//    this.addChild( new PlaybackSpeedControl( model.property( 'speed' ) ).mutate( {right: playPauseButton.left - 10, bottom: playPauseButton.bottom} ) );
+    this.addChild( new PlaybackSpeedControl( model.property( 'speed' ) ).mutate( {right: playPauseButton.left - 10, bottom: playPauseButton.bottom} ) );
 
 //    this.addChild( new Node( { layerSplit: true } ) );
 
@@ -161,7 +161,7 @@ define( function( require ) {
 
       var trackNodes = model.tracks.map( function( track ) { return new TrackNode( model, track, transform, view.availableModelBoundsProperty ); } ).getArray();
       trackNodes.forEach( function( trackNode ) {
-//        view.addChild( trackNode );
+        view.addChild( trackNode );
       } );
 
       model.property( 'scene' ).link( function( scene ) {
@@ -175,7 +175,7 @@ define( function( require ) {
       var addTrackNode = function( track ) {
 
         var trackNode = new TrackNode( model, track, transform, view.availableModelBoundsProperty );
-//        view.addChild( trackNode );
+        view.addChild( trackNode );
 
         //Make sure the skater stays in front of the tracks when tracks are joined
         if ( skaterNode ) {
@@ -201,7 +201,7 @@ define( function( require ) {
       //Add a panel behind the tracks
       var margin = 5;
       this.trackCreationPanel = new Panel( new Rectangle( 0, 0, interactiveTrackNodes[0].width, interactiveTrackNodes[0].height ), {xMargin: margin, yMargin: margin, x: interactiveTrackNodes[0].left - margin, y: interactiveTrackNodes[0].top - margin} );
-//      this.addChild( this.trackCreationPanel );
+      this.addChild( this.trackCreationPanel );
 
       interactiveTrackNodes.forEach( function( trackNode ) { trackNode.moveToFront(); } );
 
@@ -243,14 +243,14 @@ define( function( require ) {
       clearButton.addListener( function() {model.clearTracks();} );
 
       var buttons = new VBox( {children: [clearButton], spacing: 2, left: 5, centerY: this.trackCreationPanel.centerY} );
-//      this.addChild( buttons );
+      this.addChild( buttons );
     }
 
     var skaterNode = new SkaterNode( model.skater, this, transform, model.getClosestTrackAndPositionAndParameter.bind( model ), model.getPhysicalTracks.bind( model ) );
-//    this.addChild( speedometerNode );
-    this.addChild( barGraphNode );
-    this.addChild( skaterNode );
-    var pieChartNode = new PieChartNode( model.skater, model.property( 'pieChartVisible' ), transform );
+    this.addChild( speedometerNode.mutate( {renderer: 'webgl'} ) );
+//    this.addChild( barGraphNode );
+    this.addChild( skaterNode.mutate( {renderer: 'webgl'} ) );
+//    var pieChartNode = new PieChartNode( model.skater, model.property( 'pieChartVisible' ), transform );
 //    this.addChild( pieChartNode );
 
     //Buttons to return the skater when she is offscreen, see #219
