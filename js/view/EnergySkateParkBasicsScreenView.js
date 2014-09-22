@@ -48,6 +48,7 @@ define( function( require ) {
   var EnergySkateParkColorScheme = require( 'ENERGY_SKATE_PARK_BASICS/view/EnergySkateParkColorScheme' );
   var platform = require( 'PHET_CORE/platform' );
   var WebGLLayer = require( 'SCENERY/layers/WebGLLayer' );
+  var Bounds2 = require( 'DOT/Bounds2' );
 
   // images
   var skaterIconImage = require( 'image!ENERGY_SKATE_PARK_BASICS/skater-icon.png' );
@@ -62,7 +63,7 @@ define( function( require ) {
   function EnergySkateParkBasicsScreenView( model ) {
 
     var view = this;
-    ScreenView.call( view, { renderer: 'svg', layoutBounds: ScreenView.UPDATED_LAYOUT_BOUNDS.copy() } );
+    ScreenView.call( view, { renderer: 'svg', layoutBounds: new Bounds2( 0, 0, 834, 504 ) } );
 
     var modelPoint = new Vector2( 0, 0 );
     var viewPoint = new Vector2( this.layoutBounds.width / 2, this.layoutBounds.height - BackgroundNode.earthHeight );//earth is 70px high in stage coordinates
