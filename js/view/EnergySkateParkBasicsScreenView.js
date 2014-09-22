@@ -34,6 +34,7 @@ define( function( require ) {
   var ModelViewTransform2 = require( 'PHETCOMMON/view/ModelViewTransform2' );
   var Vector2 = require( 'DOT/Vector2' );
   var GaugeNode = require( 'SCENERY_PHET/GaugeNode' );
+  var GaugeNeedleNode = require( 'ENERGY_SKATE_PARK_BASICS/view/GaugeNeedleNode' );
   var DerivedProperty = require( 'AXON/DerivedProperty' );
   var Path = require( 'SCENERY/nodes/Path' );
   var returnSkaterString = require( 'string!ENERGY_SKATE_PARK_BASICS/controls.restart-skater' );
@@ -258,10 +259,19 @@ define( function( require ) {
     }
 
     var skaterNode = new SkaterNode( model.skater, this, transform, model.getClosestTrackAndPositionAndParameter.bind( model ), model.getPhysicalTracks.bind( model ) );
-//    this.addChild( speedometerNode );
+
+    var gaugeNeedleNode = new GaugeNeedleNode( model.skater.property( 'speed' ),
+      {
+        min: 0,
+        max: 20
+      }, {renderer: 'webgl'} );
+    model.property( 'speedometerVisible' ).linkAttribute( gaugeNeedleNode, 'visible' );
+    gaugeNeedleNode.x = speedometerNode.x;
+    gaugeNeedleNode.y = speedometerNode.y;
+    this.addChild( gaugeNeedleNode );
     this.addChild( new BarGraphForeground( model.skater, model.property( 'barGraphVisible' ), model.clearThermal.bind( model ) ).mutate( {renderer: 'webgl'} ) );
     this.addChild( skaterNode.mutate( {renderer: 'webgl'} ) );
-//    var pieChartNode = new PieChartNode( model.skater, model.property( 'pieChartVisible' ), transform );
+    var pieChartNode = new PieChartNode( model.skater, model.property( 'pieChartVisible' ), transform );
 //    this.addChild( pieChartNode );
 
     //Buttons to return the skater when she is offscreen, see #219
