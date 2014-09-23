@@ -278,54 +278,58 @@ define( function( require ) {
     this.addChild( gaugeNeedleNode );
     this.addChild( new BarGraphForeground( model.skater, model.property( 'barGraphVisible' ), model.clearThermal.bind( model ) ).mutate( {renderer: renderer} ) );
     this.addChild( skaterNode.mutate( {renderer: renderer} ) );
-    var pieChartNode = new PieChartNode( model.skater, model.property( 'pieChartVisible' ), transform );
 
     //Make the radius proportional to the square root of the energy so that the area will grow linearly with energy
     var pieChartRadiusProperty = model.skater.totalEnergyProperty.map( function( totalEnergy ) {
       return 0.4 * Math.sqrt( totalEnergy );
     } );
 
-    //radiusProperty, startAngleProperty, extentProperty
-    var potentialEnergyProportion = model.skater.multilink( ['potentialEnergy', 'totalEnergy'], function( potentialEnergy, totalEnergy ) {
-      var result = (potentialEnergy / totalEnergy);
-      var clamped = result < 0 ? 0 :
-                    result > 1 ? 1 :
-                    result;
-      return clamped * Math.PI * 2;
-    } );
-
-    var kineticEnergyProportion = model.skater.multilink( ['kineticEnergy', 'totalEnergy'], function( kineticEnergy, totalEnergy ) {
-      var result = (kineticEnergy / totalEnergy);
-      var clamped = result < 0 ? 0 :
-                    result > 1 ? 1 :
-                    result;
-      return clamped * Math.PI * 2;
-    } );
-
-    var thermalEnergyProportion = model.skater.multilink( ['thermalEnergy', 'totalEnergy'], function( thermalEnergy, totalEnergy ) {
-      var result = (thermalEnergy / totalEnergy);
-      var clamped = result < 0 ? 0 :
-                    result > 1 ? 1 :
-                    result;
-      return clamped * Math.PI * 2;
-    } );
-
-    var plus = function( a, b ) {
-      return DerivedProperty.multilink( [a, b], function( a, b ) {
-        return a + b;
+    if ( renderer === 'webgl' ) {
+      //radiusProperty, startAngleProperty, extentProperty
+      var potentialEnergyProportion = model.skater.multilink( ['potentialEnergy', 'totalEnergy'], function( potentialEnergy, totalEnergy ) {
+        var result = (potentialEnergy / totalEnergy);
+        var clamped = result < 0 ? 0 :
+                      result > 1 ? 1 :
+                      result;
+        return clamped * Math.PI * 2;
       } );
-    };
 
-    var thermalEnergyPiece = new PieChartWebGLNode( model, EnergySkateParkColorScheme.thermalEnergy, pieChartRadiusProperty, new Property( 0 ), thermalEnergyProportion ).mutate( {x: 200, y: 200} );
-    this.addChild( thermalEnergyPiece );
+      var kineticEnergyProportion = model.skater.multilink( ['kineticEnergy', 'totalEnergy'], function( kineticEnergy, totalEnergy ) {
+        var result = (kineticEnergy / totalEnergy);
+        var clamped = result < 0 ? 0 :
+                      result > 1 ? 1 :
+                      result;
+        return clamped * Math.PI * 2;
+      } );
 
-    var kineticEnergyPiece = new PieChartWebGLNode( model, EnergySkateParkColorScheme.kineticEnergy, pieChartRadiusProperty, thermalEnergyProportion, kineticEnergyProportion ).mutate( {x: 200, y: 200} );
-    this.addChild( kineticEnergyPiece );
+      var thermalEnergyProportion = model.skater.multilink( ['thermalEnergy', 'totalEnergy'], function( thermalEnergy, totalEnergy ) {
+        var result = (thermalEnergy / totalEnergy);
+        var clamped = result < 0 ? 0 :
+                      result > 1 ? 1 :
+                      result;
+        return clamped * Math.PI * 2;
+      } );
 
-    var potentialEnergyPiece = new PieChartWebGLNode( model, EnergySkateParkColorScheme.potentialEnergy, pieChartRadiusProperty, plus( kineticEnergyProportion, thermalEnergyProportion ), potentialEnergyProportion ).mutate( {x: 200, y: 200} );
-    this.addChild( potentialEnergyPiece );
+      var plus = function( a, b ) {
+        return DerivedProperty.multilink( [a, b], function( a, b ) {
+          return a + b;
+        } );
+      };
 
-//    this.addChild( pieChartNode );
+      var thermalEnergyPiece = new PieChartWebGLNode( model, EnergySkateParkColorScheme.thermalEnergy, pieChartRadiusProperty, new Property( 0 ), thermalEnergyProportion, model.pieChartVisibleProperty ).mutate( {x: 200, y: 200} );
+      this.addChild( thermalEnergyPiece );
+
+      var kineticEnergyPiece = new PieChartWebGLNode( model, EnergySkateParkColorScheme.kineticEnergy, pieChartRadiusProperty, thermalEnergyProportion, kineticEnergyProportion, model.pieChartVisibleProperty ).mutate( {x: 200, y: 200} );
+      this.addChild( kineticEnergyPiece );
+
+      var potentialEnergyPiece = new PieChartWebGLNode( model, EnergySkateParkColorScheme.potentialEnergy, pieChartRadiusProperty, plus( kineticEnergyProportion, thermalEnergyProportion ), potentialEnergyProportion, model.pieChartVisibleProperty ).mutate( {x: 200, y: 200} );
+      this.addChild( potentialEnergyPiece );
+    }
+
+    else {
+      var pieChartNode = new PieChartNode( model.skater, model.property( 'pieChartVisible' ), transform );
+      this.addChild( pieChartNode );
+    }
 
     //Buttons to return the skater when she is offscreen, see #219
     var iconScale = 0.4;

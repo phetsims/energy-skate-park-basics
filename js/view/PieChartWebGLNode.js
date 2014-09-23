@@ -22,7 +22,7 @@ define( function( require ) {
    * @param {Object} [options], must contain a canvasBounds attribute of type Bounds2
    * @constructor
    */
-  function PieChartWebGLNode( model, color, radiusProperty, startAngleProperty, extentProperty, options ) {
+  function PieChartWebGLNode( model, color, radiusProperty, startAngleProperty, extentProperty, pieChartVisibleProperty ) {
 
     this.color = color;
     this.radiusProperty = radiusProperty;
@@ -30,6 +30,7 @@ define( function( require ) {
     this.extentProperty = extentProperty;
     WebGLNode.call( this, {canvasBounds: new Bounds2( 0, 0, 100, 100 )} );
 
+    pieChartVisibleProperty.linkAttribute( this, 'visible' );
     this.invalidatePaint();
   }
 
