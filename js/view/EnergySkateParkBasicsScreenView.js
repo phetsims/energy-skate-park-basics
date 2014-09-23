@@ -316,13 +316,13 @@ define( function( require ) {
         } );
       };
 
-      var thermalEnergyPiece = new PieChartWebGLNode( model, EnergySkateParkColorScheme.thermalEnergy, pieChartRadiusProperty, new Property( 0 ), thermalEnergyProportion, model.pieChartVisibleProperty ).mutate( {x: 200, y: 200} );
+      var thermalEnergyPiece = new PieChartWebGLNode( model, EnergySkateParkColorScheme.thermalEnergy, pieChartRadiusProperty, new Property( 0 ), thermalEnergyProportion, model.pieChartVisibleProperty, this.modelViewTransform ).mutate( {x: 200, y: 200} );
       this.addChild( thermalEnergyPiece );
 
-      var kineticEnergyPiece = new PieChartWebGLNode( model, EnergySkateParkColorScheme.kineticEnergy, pieChartRadiusProperty, thermalEnergyProportion, kineticEnergyProportion, model.pieChartVisibleProperty ).mutate( {x: 200, y: 200} );
+      var kineticEnergyPiece = new PieChartWebGLNode( model, EnergySkateParkColorScheme.kineticEnergy, pieChartRadiusProperty, thermalEnergyProportion, kineticEnergyProportion, model.pieChartVisibleProperty, this.modelViewTransform ).mutate( {x: 200, y: 200} );
       this.addChild( kineticEnergyPiece );
 
-      var potentialEnergyPiece = new PieChartWebGLNode( model, EnergySkateParkColorScheme.potentialEnergy, pieChartRadiusProperty, plus( kineticEnergyProportion, thermalEnergyProportion ), potentialEnergyProportion, model.pieChartVisibleProperty ).mutate( {x: 200, y: 200} );
+      var potentialEnergyPiece = new PieChartWebGLNode( model, EnergySkateParkColorScheme.potentialEnergy, pieChartRadiusProperty, plus( kineticEnergyProportion, thermalEnergyProportion ), potentialEnergyProportion, model.pieChartVisibleProperty, this.modelViewTransform ).mutate( {x: 200, y: 200} );
       this.addChild( potentialEnergyPiece );
     }
 

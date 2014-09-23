@@ -22,8 +22,9 @@ define( function( require ) {
    * @param {Object} [options], must contain a canvasBounds attribute of type Bounds2
    * @constructor
    */
-  function PieChartWebGLNode( model, color, radiusProperty, startAngleProperty, extentProperty, pieChartVisibleProperty ) {
+  function PieChartWebGLNode( model, color, radiusProperty, startAngleProperty, extentProperty, pieChartVisibleProperty, modelViewTransform ) {
 
+    var pieChartNode = this;
     this.color = color;
     this.radiusProperty = radiusProperty;
     this.startAngleProperty = startAngleProperty;
@@ -32,6 +33,16 @@ define( function( require ) {
 
     pieChartVisibleProperty.linkAttribute( this, 'visible' );
     this.invalidatePaint();
+
+    //Show the pie chart above the skater's head
+    model.skater.headPositionProperty.link( function() {
+      if ( pieChartNode.visible ) {
+        var view = modelViewTransform.modelToViewPosition( model.skater.headPosition );
+
+        //Center pie chart over skater's head not his feet so it doesn't look awkward when skating in a parabola
+        pieChartNode.setTranslation( view.x, view.y - 50 );
+      }
+    } );
   }
 
   return inherit( WebGLNode, PieChartWebGLNode, {
