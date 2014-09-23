@@ -22,6 +22,7 @@ define( function( require ) {
   var TrackNode = require( 'ENERGY_SKATE_PARK_BASICS/view/TrackNode' );
   var BackgroundNode = require( 'ENERGY_SKATE_PARK_BASICS/view/BackgroundNode' );
   var EnergySkateParkBasicsControlPanel = require( 'ENERGY_SKATE_PARK_BASICS/view/EnergySkateParkBasicsControlPanel' );
+  var PieChartWebGLNode = require( 'ENERGY_SKATE_PARK_BASICS/view/PieChartWebGLNode' );
   var PlaybackSpeedControl = require( 'ENERGY_SKATE_PARK_BASICS/view/PlaybackSpeedControl' );
   var BarGraphBackground = require( 'ENERGY_SKATE_PARK_BASICS/view/BarGraphBackground' );
   var BarGraphForeground = require( 'ENERGY_SKATE_PARK_BASICS/view/BarGraphForeground' );
@@ -262,7 +263,10 @@ define( function( require ) {
 
     var skaterNode = new SkaterNode( model.skater, this, transform, model.getClosestTrackAndPositionAndParameter.bind( model ), model.getPhysicalTracks.bind( model ) );
 
-    var renderer = platform.mobileSafari && WebGLLayer.isWebGLSupported() ? 'webgl' : 'svg';
+    var webGLSupported = WebGLLayer.isWebGLSupported();
+
+    //TODO: This short-circuits the mobile safari path and just uses WebGL where it is available
+    var renderer = (platform.mobileSafari && webGLSupported) || webGLSupported ? 'webgl' : 'svg';
     var gaugeNeedleNode = new GaugeNeedleNode( model.skater.property( 'speed' ),
       {
         min: 0,
@@ -275,6 +279,8 @@ define( function( require ) {
     this.addChild( new BarGraphForeground( model.skater, model.property( 'barGraphVisible' ), model.clearThermal.bind( model ) ).mutate( {renderer: renderer} ) );
     this.addChild( skaterNode.mutate( {renderer: renderer} ) );
     var pieChartNode = new PieChartNode( model.skater, model.property( 'pieChartVisible' ), transform );
+    var pieChartWebGLNode = new PieChartWebGLNode();
+    this.addChild( pieChartWebGLNode );
 //    this.addChild( pieChartNode );
 
     //Buttons to return the skater when she is offscreen, see #219
