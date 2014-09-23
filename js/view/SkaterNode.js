@@ -42,8 +42,17 @@ define( function( require ) {
     this.skater = skater;
     var skaterNode = this;
 
-    var skaterImageNode = new Image( skaterRightImage, { cursor: 'pointer' } );
-    Node.call( this, {children: [skaterImageNode], renderer: 'webgl' } );
+    //Use a separate texture for left/right skaters to avoid WebGL performance issues when switching textures
+    var leftSkaterImageNode = new Image( skaterLeftImage, { cursor: 'pointer' } );
+    var rightSkaterImageNode = new Image( skaterRightImage, { cursor: 'pointer' } );
+
+    Node.call( this, {children: [leftSkaterImageNode, rightSkaterImageNode], renderer: 'webgl' } );
+
+    skater.directionProperty.link( function( direction ) {
+      leftSkaterImageNode.visible = direction === 'left';
+      rightSkaterImageNode.visible = direction === 'right';
+    } );
+
     var imageWidth = this.width;
     var imageHeight = this.height;
 
@@ -66,7 +75,6 @@ define( function( require ) {
       rotationMatrix.freeToPool();
 
       var scale = massToScale( mass );
-      skaterImageNode.image = direction === LEFT_STRING ? skaterLeftImage : skaterRightImage;
       var scalingMatrix = Matrix3.scaling( scale, scale );
       matrix.multiplyMatrix( scalingMatrix );
       scalingMatrix.freeToPool();
