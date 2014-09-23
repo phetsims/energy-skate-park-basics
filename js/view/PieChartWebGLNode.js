@@ -15,7 +15,6 @@ define( function( require ) {
   var Matrix4 = require( 'DOT/Matrix4' );
   var WebGLLayer = require( 'SCENERY/layers/WebGLLayer' );
   var Color = require( 'SCENERY/util/Color' );
-  var DerivedProperty = require( 'AXON/DerivedProperty' );
 
   /**
    * @param {SingleBulbModel} model
