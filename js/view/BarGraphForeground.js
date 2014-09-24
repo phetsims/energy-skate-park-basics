@@ -82,7 +82,10 @@ define( function( require ) {
     var totalBar = createBar( 3, EnergySkateParkColorScheme.totalEnergy, skater.totalEnergyProperty );
 
     Node.call( this, {
-      x: 10 + 10 + 4, y: 10 + 10,
+
+      //Manually align with the baseline of the bar chart.
+      x: 24, y: 15,
+
       children: [
         kineticBar,
         potentialBar,
