@@ -8,10 +8,14 @@
 define( function() {
   'use strict';
 
+  var Color = require( 'SCENERY/util/Color' );
+
   return {
-    kineticEnergy: '#00cc1a',
-    potentialEnergy: '#3282D7',
-    thermalEnergy: '#FF5500',//red colorblind
-    totalEnergy: '#B4B400'//dirty yellow
+
+    //Use color instances here to prevent parsing these values multiple times
+    kineticEnergy: new Color( '#00cc1a' ),
+    potentialEnergy: new Color( '#3282D7' ),
+    thermalEnergy: new Color( '#FF5500' ),//red colorblind
+    totalEnergy: new Color( '#B4B400' )//dirty yellow
   };
 } );
