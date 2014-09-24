@@ -23,7 +23,6 @@ define( function( require ) {
    */
   function PieChartWebGLSliceNode( skater, color, radiusProperty, startAngleProperty, extentProperty, pieChartVisibleProperty, modelViewTransform ) {
 
-    var pieChartNode = this;
     this.color = color;
     this.radiusProperty = radiusProperty;
     this.startAngleProperty = startAngleProperty;
@@ -32,7 +31,6 @@ define( function( require ) {
 
     pieChartVisibleProperty.linkAttribute( this, 'visible' );
     this.invalidatePaint();
-
   }
 
   return inherit( WebGLNode, PieChartWebGLSliceNode, {
