@@ -163,8 +163,7 @@ define( function( require ) {
       },
       {
         updateEnabledProperty: model.property( 'speedometerVisible' ),
-        pickable: false,
-        renderer: 'webgl'
+        pickable: false
       } );
     model.property( 'speedometerVisible' ).linkAttribute( speedometerNode, 'visible' );
     speedometerNode.centerX = this.layoutBounds.centerX;
