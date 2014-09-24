@@ -55,17 +55,25 @@ define( function( require ) {
       var centerY = 0;
       var radius = 0.5;
 
-      //40 seemed a little aliased.  Anything 50+ seems pretty great.  Though even 1000 samples doesn't slow performance
-      var numSamples = 200;
+      //40 makes a smooth circle, but we need enough samples to eliminate seams between the pie slices
+      var numSamples = 500;
 
       var vertices = [centerX, centerY];
-      for ( var i = 0; i <= numSamples; i++ ) {
+
+      var indexToVertex = function( i ) {
         var angle = -Math.PI * 2 / numSamples * i;
         var x = radius * Math.cos( angle ) + centerX;
         var y = radius * Math.sin( angle ) + centerY;
         vertices.push( x );
         vertices.push( y );
+      };
+
+      for ( var i = 0; i <= numSamples; i++ ) {
+        indexToVertex( i );
       }
+
+      //Complete the circle
+      indexToVertex( 0 );
       this.vertices = vertices;
 
       //TODO: Once we are lazily handling the full matrix, we may benefit from DYNAMIC draw here, and updating the vertices themselves
