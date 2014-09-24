@@ -63,7 +63,7 @@ define( function( require ) {
       contentNode
     ]} );
 
-    Panel.call( this, contentWithTitle, { x: 4, y: 4, xMargin: 4, yMargin: 4, fill: 'white', stroke: 'gray', lineWidth: 1, resize: false, cursor: 'pointer'} );
+    Panel.call( this, contentWithTitle, { x: 4, y: 4, xMargin: 6, yMargin: 5, fill: 'white', stroke: 'gray', lineWidth: 1, resize: false, cursor: 'pointer'} );
 
     this.addChild( clearThermalButton );
     var strutGlobal = clearThermalButtonStrut.parentToGlobalPoint( clearThermalButtonStrut.center );
