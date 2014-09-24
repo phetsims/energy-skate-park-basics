@@ -548,7 +548,7 @@ define( function( require ) {
     /**
      * The user just released a control point with index (indexToIgnore) and the spline needs to be smoothed.
      * Choose the point closest to the sharpest turn and adjust it.
-     * @param indexToIgnore the index of the control point that the user just adjusted, which should not be moved during smoothing
+     * @param {Array} indicesToIgnore indices which should not be adjusted (perhaps because the user just released them)
      */
     smoothPointOfHighestCurvature: function( indicesToIgnore ) {
 

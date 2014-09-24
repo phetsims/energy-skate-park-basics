@@ -1178,8 +1178,8 @@ define( function( require ) {
         }
       }
 
-      //Smooth out the new track by moving the point that joined the tracks, see #177
-      newTrack.smooth( a.controlPoints.length - 1 );
+      //When joining tracks, smooth out the new track, but without moving the point that joined the tracks, see #177 #238
+      newTrack.smoothPointOfHighestCurvature( [] );
     },
 
     //When a track is dragged, update the skater's energy (if the sim was paused), since it wouldn't be handled in the update loop.
