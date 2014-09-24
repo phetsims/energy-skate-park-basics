@@ -69,8 +69,8 @@ define( function( require ) {
     var modelPoint = new Vector2( 0, 0 );
     var viewPoint = new Vector2( this.layoutBounds.width / 2, this.layoutBounds.height - BackgroundNode.earthHeight );//earth is 70px high in stage coordinates
     var scale = 50;
-    var transform = ModelViewTransform2.createSinglePointScaleInvertedYMapping( modelPoint, viewPoint, scale );
-    this.modelViewTransform = transform;
+    var modelViewTransform = ModelViewTransform2.createSinglePointScaleInvertedYMapping( modelPoint, viewPoint, scale );
+    this.modelViewTransform = modelViewTransform;
 
     this.availableModelBoundsProperty = new Property();
     this.availableModelBoundsProperty.linkAttribute( model, 'availableModelBounds' );
@@ -79,7 +79,7 @@ define( function( require ) {
     this.backgroundNode = new BackgroundNode( this.layoutBounds );
     this.addChild( this.backgroundNode );
 
-    this.gridNode = new GridNode( model.property( 'gridVisible' ), transform );
+    this.gridNode = new GridNode( model.property( 'gridVisible' ), modelViewTransform );
     this.addChild( this.gridNode );
 
     var pieChartLegend = new PieChartLegend( model.skater, model.clearThermal.bind( model ), model.property( 'pieChartVisible' ) );
@@ -115,7 +115,7 @@ define( function( require ) {
     this.addChild( barGraphBackground );
 
     if ( !model.draggableTracks ) {
-      this.sceneSelectionPanel = new SceneSelectionPanel( model, this, transform );//layout done in layout bounds
+      this.sceneSelectionPanel = new SceneSelectionPanel( model, this, modelViewTransform );//layout done in layout bounds
       this.addChild( this.sceneSelectionPanel );
     }
 
@@ -136,7 +136,7 @@ define( function( require ) {
       centerX: this.controlPanel.centerX,
 
       //Align vertically with other controls, see https://github.com/phetsims/energy-skate-park-basics/issues/134
-      centerY: (transform.modelToViewY( 0 ) + this.layoutBounds.maxY) / 2 + 8
+      centerY: (modelViewTransform.modelToViewY( 0 ) + this.layoutBounds.maxY) / 2 + 8
     } );
     this.addChild( this.resetAllButton );
 
@@ -173,7 +173,7 @@ define( function( require ) {
     //Switch between selectable tracks
     if ( !model.draggableTracks ) {
 
-      var trackNodes = model.tracks.map( function( track ) { return new TrackNode( model, track, transform, view.availableModelBoundsProperty ); } ).getArray();
+      var trackNodes = model.tracks.map( function( track ) { return new TrackNode( model, track, modelViewTransform, view.availableModelBoundsProperty ); } ).getArray();
       trackNodes.forEach( function( trackNode ) {
         view.addChild( trackNode );
       } );
@@ -188,7 +188,7 @@ define( function( require ) {
 
       var addTrackNode = function( track ) {
 
-        var trackNode = new TrackNode( model, track, transform, view.availableModelBoundsProperty );
+        var trackNode = new TrackNode( model, track, modelViewTransform, view.availableModelBoundsProperty );
         view.addChild( trackNode );
 
         //Make sure the skater stays in front of the tracks when tracks are joined
@@ -260,7 +260,7 @@ define( function( require ) {
       this.addChild( buttons );
     }
 
-    var skaterNode = new SkaterNode( model.skater, this, transform, model.getClosestTrackAndPositionAndParameter.bind( model ), model.getPhysicalTracks.bind( model ) );
+    var skaterNode = new SkaterNode( model.skater, this, modelViewTransform, model.getClosestTrackAndPositionAndParameter.bind( model ), model.getPhysicalTracks.bind( model ) );
 
     var webGLSupported = WebGLLayer.isWebGLSupported();
 
@@ -278,73 +278,9 @@ define( function( require ) {
     this.addChild( new BarGraphForeground( model.skater, model.property( 'barGraphVisible' ), model.clearThermal.bind( model ) ).mutate( {renderer: renderer} ) );
     this.addChild( skaterNode.mutate( {renderer: renderer} ) );
 
-    //Make the radius proportional to the square root of the energy so that the area will grow linearly with energy
-    var pieChartRadiusProperty = model.skater.totalEnergyProperty.map( function( totalEnergy ) {
-      return 0.4 * Math.sqrt( totalEnergy );
-    } );
-
-    if ( renderer === 'webgl' ) {
-      //radiusProperty, startAngleProperty, extentProperty
-      var potentialEnergyProportion = model.skater.multilink( ['potentialEnergy', 'totalEnergy'], function( potentialEnergy, totalEnergy ) {
-        var result = (potentialEnergy / totalEnergy);
-        var clamped = result < 0 ? 0 :
-                      result > 1 ? 1 :
-                      result;
-        return clamped * Math.PI * 2;
-      } );
-
-      var kineticEnergyProportion = model.skater.multilink( ['kineticEnergy', 'totalEnergy'], function( kineticEnergy, totalEnergy ) {
-        var result = (kineticEnergy / totalEnergy);
-        var clamped = result < 0 ? 0 :
-                      result > 1 ? 1 :
-                      result;
-        return clamped * Math.PI * 2;
-      } );
-
-      var thermalEnergyProportion = model.skater.multilink( ['thermalEnergy', 'totalEnergy'], function( thermalEnergy, totalEnergy ) {
-        var result = (thermalEnergy / totalEnergy);
-        var clamped = result < 0 ? 0 :
-                      result > 1 ? 1 :
-                      result;
-        return clamped * Math.PI * 2;
-      } );
-
-      var plus = function( a, b ) {
-        return DerivedProperty.multilink( [a, b], function( a, b ) {
-          return a + b;
-        } );
-      };
-
-      var pieStroke = 1;
-
-      //TODO: why did Property.multilink not work here?
-      var outlineRadiusProperty = DerivedProperty.multilink( [pieChartRadiusProperty], function( pieChartRadius ) {
-        if ( pieChartRadius === 0 ) {
-          return 0;
-        }
-        else {
-          return pieChartRadius + pieStroke;
-        }
-      } );
-
-      //Render the stroke as a larger black circle behind the pie chart
-      var outline = new PieChartWebGLNode( model, 'black', outlineRadiusProperty, new Property( 0 ), new Property( Math.PI * 2 ), model.pieChartVisibleProperty, this.modelViewTransform );
-      this.addChild( outline );
-
-      var thermalEnergyPiece = new PieChartWebGLNode( model, EnergySkateParkColorScheme.thermalEnergy, pieChartRadiusProperty, new Property( 0 ), thermalEnergyProportion, model.pieChartVisibleProperty, this.modelViewTransform );
-      this.addChild( thermalEnergyPiece );
-
-      var kineticEnergyPiece = new PieChartWebGLNode( model, EnergySkateParkColorScheme.kineticEnergy, pieChartRadiusProperty, thermalEnergyProportion, kineticEnergyProportion, model.pieChartVisibleProperty, this.modelViewTransform );
-      this.addChild( kineticEnergyPiece );
-
-      var potentialEnergyPiece = new PieChartWebGLNode( model, EnergySkateParkColorScheme.potentialEnergy, pieChartRadiusProperty, plus( kineticEnergyProportion, thermalEnergyProportion ), potentialEnergyProportion, model.pieChartVisibleProperty, this.modelViewTransform );
-      this.addChild( potentialEnergyPiece );
-    }
-
-    else {
-      var pieChartNode = new PieChartNode( model.skater, model.property( 'pieChartVisible' ), transform );
-      this.addChild( pieChartNode );
-    }
+    var pieChartNode = renderer === 'webgl' ? new PieChartWebGLNode( model.skater, model.property( 'pieChartVisible' ), modelViewTransform ) :
+                       new PieChartNode( model.skater, model.property( 'pieChartVisible' ), modelViewTransform );
+    this.addChild( pieChartNode );
 
     //Buttons to return the skater when she is offscreen, see #219
     var iconScale = 0.4;
@@ -356,7 +292,7 @@ define( function( require ) {
 
     var returnSkaterToGroundButton = new RectangularPushButton( {
       content: new Image( skaterIconImage, {scale: iconScale} ),
-      centerBottom: transform.modelToViewPosition( model.skater.startingPosition ),
+      centerBottom: modelViewTransform.modelToViewPosition( model.skater.startingPosition ),
       baseColor: '#f4514e', //red for stop, since the skater will be stopped on the ground.
       listener: function() { model.skater.resetPosition(); }
     } );
@@ -375,7 +311,7 @@ define( function( require ) {
         returnSkaterToStartingPointButton.moveToFront();
 
         //Put the button where the skater will appear.  Nudge it up a bit so the mouse can hit it from the drop site, without being moved at all (to simplify repeat runs).
-        var viewPosition = transform.modelToViewPosition( model.skater.startingPosition ).plusXY( 0, 5 );
+        var viewPosition = modelViewTransform.modelToViewPosition( model.skater.startingPosition ).plusXY( 0, 5 );
         returnSkaterToStartingPointButton.centerBottom = viewPosition;
 
         //If the return skater button went offscreen, move it back on the screen, see #222
