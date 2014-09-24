@@ -316,13 +316,29 @@ define( function( require ) {
         } );
       };
 
-      var thermalEnergyPiece = new PieChartWebGLNode( model, EnergySkateParkColorScheme.thermalEnergy, pieChartRadiusProperty, new Property( 0 ), thermalEnergyProportion, model.pieChartVisibleProperty, this.modelViewTransform ).mutate( {x: 200, y: 200} );
+      var pieStroke = 1;
+
+      //TODO: why did Property.multilink not work here?
+      var outlineRadiusProperty = DerivedProperty.multilink( [pieChartRadiusProperty], function( pieChartRadius ) {
+        if ( pieChartRadius === 0 ) {
+          return 0;
+        }
+        else {
+          return pieChartRadius + pieStroke;
+        }
+      } );
+
+      //Render the stroke as a larger black circle behind the pie chart
+      var outline = new PieChartWebGLNode( model, 'black', outlineRadiusProperty, new Property( 0 ), new Property( Math.PI * 2 ), model.pieChartVisibleProperty, this.modelViewTransform );
+      this.addChild( outline );
+
+      var thermalEnergyPiece = new PieChartWebGLNode( model, EnergySkateParkColorScheme.thermalEnergy, pieChartRadiusProperty, new Property( 0 ), thermalEnergyProportion, model.pieChartVisibleProperty, this.modelViewTransform );
       this.addChild( thermalEnergyPiece );
 
-      var kineticEnergyPiece = new PieChartWebGLNode( model, EnergySkateParkColorScheme.kineticEnergy, pieChartRadiusProperty, thermalEnergyProportion, kineticEnergyProportion, model.pieChartVisibleProperty, this.modelViewTransform ).mutate( {x: 200, y: 200} );
+      var kineticEnergyPiece = new PieChartWebGLNode( model, EnergySkateParkColorScheme.kineticEnergy, pieChartRadiusProperty, thermalEnergyProportion, kineticEnergyProportion, model.pieChartVisibleProperty, this.modelViewTransform );
       this.addChild( kineticEnergyPiece );
 
-      var potentialEnergyPiece = new PieChartWebGLNode( model, EnergySkateParkColorScheme.potentialEnergy, pieChartRadiusProperty, plus( kineticEnergyProportion, thermalEnergyProportion ), potentialEnergyProportion, model.pieChartVisibleProperty, this.modelViewTransform ).mutate( {x: 200, y: 200} );
+      var potentialEnergyPiece = new PieChartWebGLNode( model, EnergySkateParkColorScheme.potentialEnergy, pieChartRadiusProperty, plus( kineticEnergyProportion, thermalEnergyProportion ), potentialEnergyProportion, model.pieChartVisibleProperty, this.modelViewTransform );
       this.addChild( potentialEnergyPiece );
     }
 

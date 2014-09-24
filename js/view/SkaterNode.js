@@ -26,8 +26,6 @@ define( function( require ) {
   //Map from mass(kg) to scale
   var massToScale = new LinearFunction( (100 + 25) / 2, 100, 0.34, 0.43 );
 
-  var LEFT_STRING = 'left';
-
   /**
    * SkaterNode constructor
    *
@@ -61,7 +59,6 @@ define( function( require ) {
     this.skater.on( 'updated', function() {
       var mass = skater.mass;
       var position = skater.position;
-      var direction = skater.direction;
       var angle = skater.angle;
 
       var view = modelViewTransform.modelToViewPosition( position );
