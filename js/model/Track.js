@@ -55,6 +55,10 @@ define( function( require ) {
     this.x = new Array( track.controlPoints.length );
     this.y = new Array( track.controlPoints.length );
 
+    // Sampling points, which will be initialized and updated in updateLinSpace
+    this.searchLinSpace = null;
+    this.distanceBetweenSamplePoints = null;
+
     this.updateLinSpace();
     this.updateSplines();
   }
