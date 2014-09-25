@@ -56,36 +56,35 @@ define( function( require ) {
     this.y = new Array( track.controlPoints.length );
 
     this.updateLinSpace();
-
-    //when points change, update the spline instance
-    this.updateSplines = function() {
-
-      //Arrays are fixed length, so just overwrite values, see #38
-      for ( var i = 0; i < track.controlPoints.length; i++ ) {
-        track.u[i] = i / track.controlPoints.length;
-        track.x[i] = track.controlPoints[i].position.x;
-        track.y[i] = track.controlPoints[i].position.y;
-      }
-
-      track.xSpline = numeric.spline( track.u, track.x );
-      track.ySpline = numeric.spline( track.u, track.y );
-
-      //Mark search points as dirty
-      track.xSearchPoints = null;
-      track.ySearchPoints = null;
-
-      //Mark derivatives as dirty
-      track.xSplineDiff = null;
-      track.ySplineDiff = null;
-
-      track.xSplineDiffDiff = null;
-      track.ySplineDiffDiff = null;
-    };
-
     this.updateSplines();
   }
 
   return inherit( PropertySet, Track, {
+
+    //when points change, update the spline instance
+    updateSplines: function() {
+
+      //Arrays are fixed length, so just overwrite values, see #38
+      for ( var i = 0; i < this.controlPoints.length; i++ ) {
+        this.u[i] = i / this.controlPoints.length;
+        this.x[i] = this.controlPoints[i].position.x;
+        this.y[i] = this.controlPoints[i].position.y;
+      }
+
+      this.xSpline = numeric.spline( this.u, this.x );
+      this.ySpline = numeric.spline( this.u, this.y );
+
+      //Mark search points as dirty
+      this.xSearchPoints = null;
+      this.ySearchPoints = null;
+
+      //Mark derivatives as dirty
+      this.xSplineDiff = null;
+      this.ySplineDiff = null;
+
+      this.xSplineDiffDiff = null;
+      this.ySplineDiffDiff = null;
+    },
     reset: function() {
       PropertySet.prototype.reset.call( this );
       for ( var i = 0; i < this.controlPoints.length; i++ ) {
