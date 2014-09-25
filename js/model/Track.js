@@ -55,7 +55,8 @@ define( function( require ) {
     this.x = new Array( track.controlPoints.length );
     this.y = new Array( track.controlPoints.length );
 
-    // Sampling points, which will be initialized and updated in updateLinSpace
+    // Sampling points, which will be initialized and updated in updateLinSpace.  These points are evenly spaced
+    // in the track parametric coordinates from just before the track parameter space to just after. See updateLinSpace
     this.searchLinSpace = null;
     this.distanceBetweenSamplePoints = null;
 
