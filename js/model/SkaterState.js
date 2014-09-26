@@ -260,9 +260,9 @@ define( function( require ) {
 
       getVelocity: function() {
         return new Vector2( this.velocityX, this.velocityY );
-      }
+      },
 
-//      freeToPool: function() {}
+      freeToPool: function() {}
 
     },
 
@@ -278,32 +278,32 @@ define( function( require ) {
           skaterState.freeToPool();
         }
         SkaterState.allocated.length = 0;
+      },
+      createFromPool: function( source, overrides ) {
+        return new SkaterState( source, overrides );
       }
-//      createFromPool: function( source, overrides ) {
-//        return new SkaterState( source, overrides );
-//      }
     }
   );
 
   // Object pooling to prevent allocations, see #50
   /* jshint -W064 */
-  Poolable( SkaterState, {
-    debug: false,
-    constructorDuplicateFactory: function( pool ) {
-      return function( source, overrides ) {
-        if ( pool.length ) {
-          var result = pool.pop().setState( source, overrides );
-
-          //All SkaterStates are cleared each frame, so track each available one so they can be cleared, see #50
-          SkaterState.allocated.push( result );
-          return result;
-        }
-        else {
-          return new SkaterState( source, overrides );
-        }
-      };
-    }
-  } );
+//  Poolable( SkaterState, {
+//    debug: false,
+//    constructorDuplicateFactory: function( pool ) {
+//      return function( source, overrides ) {
+//        if ( pool.length ) {
+//          var result = pool.pop().setState( source, overrides );
+//
+//          //All SkaterStates are cleared each frame, so track each available one so they can be cleared, see #50
+//          SkaterState.allocated.push( result );
+//          return result;
+//        }
+//        else {
+//          return new SkaterState( source, overrides );
+//        }
+//      };
+//    }
+//  } );
 
   return SkaterState;
 } );
