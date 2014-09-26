@@ -55,10 +55,10 @@ define( function( require ) {
     this.yArray = new FastArray( track.controlPoints.length );
 
     // Store for performance
-    this.lastPt = (track.controlPoints.length - 1) / track.controlPoints.length;
+    this.lastPoint = (track.controlPoints.length - 1) / track.controlPoints.length;
 
     // Sample space, which is recomputed if the track gets longer, to keep it looking smooth no matter how many control points
-    this.linSpace = numeric.linspace( 0, this.lastPt, 20 * (track.controlPoints.length - 1) );
+    this.linSpace = numeric.linspace( 0, this.lastPoint, 20 * (track.controlPoints.length - 1) );
     this.lengthForLinSpace = track.controlPoints.length;
 
     //If the track is interactive, make it draggable and make the control points visible and draggable
@@ -103,8 +103,8 @@ define( function( require ) {
       var i;
       // Update the sample range when the number of control points has changed
       if ( this.lengthForLinSpace !== track.controlPoints.length ) {
-        this.lastPt = (track.controlPoints.length - 1) / track.controlPoints.length;
-        this.linSpace = numeric.linspace( 0, this.lastPt, 20 * (track.controlPoints.length - 1) );
+        this.lastPoint = (track.controlPoints.length - 1) / track.controlPoints.length;
+        this.linSpace = numeric.linspace( 0, this.lastPoint, 20 * (track.controlPoints.length - 1) );
         this.lengthForLinSpace = track.controlPoints.length;
       }
 
