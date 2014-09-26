@@ -41,7 +41,6 @@ define( function( require ) {
     this.model = model;
     this.modelViewTransform = modelViewTransform;
     this.availableBoundsProperty = availableBoundsProperty;
-    Node.call( this );
 
     this.road = new Path( null, {fill: 'gray', cursor: track.interactive ? 'pointer' : 'default'} );
     this.centerLine = new Path( null, {stroke: 'black', lineWidth: '1.2', lineDash: [11, 8]} );
@@ -49,12 +48,11 @@ define( function( require ) {
       trackNode.centerLine.lineDash = detachable ? null : [11, 8];
     } );
 
-    this.addChild( this.road );
-    this.addChild( this.centerLine );
+    Node.call( this, {children: [this.road, this.centerLine]} );
 
     // Reuse arrays to save allocations and prevent garbage collections, see #38
-    this.x = new FastArray( track.controlPoints.length );
-    this.y = new FastArray( track.controlPoints.length );
+    this.xArray = new FastArray( track.controlPoints.length );
+    this.yArray = new FastArray( track.controlPoints.length );
 
     // Store for performance
     this.lastPt = (track.controlPoints.length - 1) / track.controlPoints.length;
@@ -94,6 +92,9 @@ define( function( require ) {
   }
 
   return inherit( Node, TrackNode, {
+
+    // When a control point has moved, or the track has moved, or the track has been reset, or on initialization
+    // update the shape of the track.
     updateTrackShape: function() {
 
       var track = this.track;
@@ -109,8 +110,8 @@ define( function( require ) {
 
       // Arrays are fixed length, so just overwrite values
       for ( i = 0; i < track.controlPoints.length; i++ ) {
-        this.x[i] = track.controlPoints[i].position.x;
-        this.y[i] = track.controlPoints[i].position.y;
+        this.xArray[i] = track.controlPoints[i].position.x;
+        this.yArray[i] = track.controlPoints[i].position.y;
       }
 
       // Compute points for lineTo
@@ -120,7 +121,8 @@ define( function( require ) {
       var tx = this.getTranslation();
       var shape = new Shape().moveTo(
           this.modelViewTransform.modelToViewX( xPoints[0] ) - tx.x,
-          this.modelViewTransform.modelToViewY( yPoints[0] ) - tx.y );
+          this.modelViewTransform.modelToViewY( yPoints[0] ) - tx.y
+      );
 
       // Show the track at reduced resolution while dragging so it will be smooth and responsive while dragging
       // (whether updating the entire track, some of the control points or both)
