@@ -29,10 +29,9 @@ define( function( require ) {
   function SkaterState( source, overrides ) {
     this.setState( source, overrides );
     phetAllocation && phetAllocation( 'SkaterState' );
-    SkaterState.allocated.push( this );
   }
 
-  inherit( Object, SkaterState, {
+  return inherit( Object, SkaterState, {
 
       /**
        * Create a new SkaterState
@@ -100,7 +99,7 @@ define( function( require ) {
         return -this.mass * this.gravity * this.positionY;
       },
 
-      update: function( overrides ) { return SkaterState.createFromPool( this, overrides ); },
+      update: function( overrides ) { return new SkaterState( this, overrides ); },
 
       // Get the curvature at the skater's point on the track, by setting it to the pass-by-reference argument
       getCurvature: function( curvature ) {
@@ -131,7 +130,7 @@ define( function( require ) {
       // Create a new SkaterState with the new values.  Provided as a convenience to avoid allocating options argument
       // (as in update)
       updateTrackUD: function( track, uD ) {
-        var state = SkaterState.createFromPool( this, EMPTY_OBJECT );
+        var state = new SkaterState( this, EMPTY_OBJECT );
         state.track = track;
         state.uD = uD;
         return state;
@@ -140,7 +139,7 @@ define( function( require ) {
       // Create a new SkaterState with the new values.  Provided as a convenience to avoid allocating options argument
       // (as in update)
       updateUUDVelocityPosition: function( u, uD, velocityX, velocityY, positionX, positionY ) {
-        var state = SkaterState.createFromPool( this, EMPTY_OBJECT );
+        var state = new SkaterState( this, EMPTY_OBJECT );
         state.u = u;
         state.uD = uD;
         state.velocityX = velocityX;
@@ -151,7 +150,7 @@ define( function( require ) {
       },
 
       updatePositionAngleUpVelocity: function( positionX, positionY, angle, up, velocityX, velocityY ) {
-        var state = SkaterState.createFromPool( this, EMPTY_OBJECT );
+        var state = new SkaterState( this, EMPTY_OBJECT );
         state.angle = angle;
         state.up = up;
         state.velocityX = velocityX;
@@ -164,13 +163,13 @@ define( function( require ) {
       updateThermalEnergy: function( thermalEnergy ) {
         assert && assert( thermalEnergy >= 0 );
 
-        var state = SkaterState.createFromPool( this, EMPTY_OBJECT );
+        var state = new SkaterState( this, EMPTY_OBJECT );
         state.thermalEnergy = thermalEnergy;
         return state;
       },
 
       updateUPosition: function( u, positionX, positionY ) {
-        var state = SkaterState.createFromPool( this, EMPTY_OBJECT );
+        var state = new SkaterState( this, EMPTY_OBJECT );
         state.u = u;
         state.positionX = positionX;
         state.positionY = positionY;
@@ -180,7 +179,7 @@ define( function( require ) {
       switchToGround: function( thermalEnergy, velocityX, velocityY, positionX, positionY ) {
         assert && assert( thermalEnergy >= 0 );
 
-        var state = SkaterState.createFromPool( this, EMPTY_OBJECT );
+        var state = new SkaterState( this, EMPTY_OBJECT );
         state.thermalEnergy = thermalEnergy;
         state.track = null;
         state.up = true;
@@ -195,7 +194,7 @@ define( function( require ) {
       strikeGround: function( thermalEnergy, positionX ) {
         assert && assert( thermalEnergy >= 0 );
 
-        var state = SkaterState.createFromPool( this, EMPTY_OBJECT );
+        var state = new SkaterState( this, EMPTY_OBJECT );
         state.thermalEnergy = thermalEnergy;
         state.positionX = positionX;
         state.positionY = 0;
@@ -207,25 +206,25 @@ define( function( require ) {
       },
 
       copy: function() {
-        return SkaterState.createFromPool( this, EMPTY_OBJECT );
+        return new SkaterState( this, EMPTY_OBJECT );
       },
 
       leaveTrack: function() {
-        var state = SkaterState.createFromPool( this, EMPTY_OBJECT );
+        var state = new SkaterState( this, EMPTY_OBJECT );
         state.uD = 0;
         state.track = null;
         return state;
       },
 
       updatePosition: function( positionX, positionY ) {
-        var state = SkaterState.createFromPool( this, EMPTY_OBJECT );
+        var state = new SkaterState( this, EMPTY_OBJECT );
         state.positionX = positionX;
         state.positionY = positionY;
         return state;
       },
 
       updateUDVelocity: function( uD, velocityX, velocityY ) {
-        var state = SkaterState.createFromPool( this, EMPTY_OBJECT );
+        var state = new SkaterState( this, EMPTY_OBJECT );
         state.uD = uD;
         state.velocityX = velocityX;
         state.velocityY = velocityY;
@@ -233,7 +232,7 @@ define( function( require ) {
       },
 
       continueFreeFall: function( velocityX, velocityY, positionX, positionY ) {
-        var state = SkaterState.createFromPool( this, EMPTY_OBJECT );
+        var state = new SkaterState( this, EMPTY_OBJECT );
         state.velocityX = velocityX;
         state.velocityY = velocityY;
         state.positionX = positionX;
@@ -244,7 +243,7 @@ define( function( require ) {
       attachToTrack: function( thermalEnergy, track, up, u, uD, velocityX, velocityY, positionX, positionY ) {
         assert && assert( thermalEnergy >= 0 );
 
-        var state = SkaterState.createFromPool( this, EMPTY_OBJECT );
+        var state = new SkaterState( this, EMPTY_OBJECT );
         state.thermalEnergy = thermalEnergy;
         state.track = track;
         state.up = up;
@@ -271,47 +270,6 @@ define( function( require ) {
       getPosition: function() {
         return new Vector2( this.positionX, this.positionY );
       }
-
-    },
-
-    // statics
-    {
-      // Keep track of all of the SkaterStates allocated during a frame
-      allocated: [],
-
-      // Clear all SkaterStates at the end of the frame
-      clearAllocated: function() {
-        for ( var i = 0; i < SkaterState.allocated.length; i++ ) {
-          var skaterState = SkaterState.allocated[i];
-          skaterState.freeToPool();
-        }
-        SkaterState.allocated.length = 0;
-      },
-      createFromPool: function( source, overrides ) {
-        return new SkaterState( source, overrides );
-      }
     }
   );
-
-  // Object pooling to prevent allocations, see #50
-  /* jshint -W064 */
-//  Poolable( SkaterState, {
-//    debug: false,
-//    constructorDuplicateFactory: function( pool ) {
-//      return function( source, overrides ) {
-//        if ( pool.length ) {
-//          var result = pool.pop().setState( source, overrides );
-//
-//          //All SkaterStates are cleared each frame, so track each available one so they can be cleared, see #50
-//          SkaterState.allocated.push( result );
-//          return result;
-//        }
-//        else {
-//          return new SkaterState( source, overrides );
-//        }
-//      };
-//    }
-//  } );
-
-  return SkaterState;
 } );

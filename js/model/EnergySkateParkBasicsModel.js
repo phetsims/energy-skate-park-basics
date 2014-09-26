@@ -249,7 +249,7 @@ define( function( require ) {
 
     // step one frame, assuming 60fps
     manualStep: function() {
-      var skaterState = SkaterState.createFromPool( this.skater, EMPTY_OBJECT );
+      var skaterState = new SkaterState( this.skater, EMPTY_OBJECT );
       var dt = 1.0 / 60;
       var result = this.stepModel( dt, skaterState );
       result.setToSkater( this.skater );
@@ -274,7 +274,7 @@ define( function( require ) {
           dt = 1.0 / 60.0;
         }
 
-        var skaterState = SkaterState.createFromPool( this.skater, EMPTY_OBJECT );
+        var skaterState = new SkaterState( this.skater, EMPTY_OBJECT );
         if ( debug ) {
           initialEnergy = skaterState.getTotalEnergy();
         }
@@ -290,7 +290,7 @@ define( function( require ) {
         }
 
         if ( debug && Math.abs( updatedState.getTotalEnergy() - initialEnergy ) > 1E-6 ) {
-          var initialStateCopy = SkaterState.createFromPool( this.skater, EMPTY_OBJECT );
+          var initialStateCopy = new SkaterState( this.skater, EMPTY_OBJECT );
           var redo = this.stepModel( this.speed === 'normal' ? dt : dt * 0.25, initialStateCopy );
           debug && debug( redo );
         }
@@ -315,8 +315,6 @@ define( function( require ) {
           // skater wasn't moving, so don't change directions
         }
       }
-
-      SkaterState.clearAllocated();
     },
 
     // The skater moves along the ground with the same coefficient of fraction as the tracks, see #11
