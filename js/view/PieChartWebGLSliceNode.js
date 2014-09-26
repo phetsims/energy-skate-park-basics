@@ -33,7 +33,6 @@ define( function( require ) {
     this.extentProperty = extentProperty;
     WebGLNode.call( this, {canvasBounds: new Bounds2( 0, 0, 100, 100 )} );
 
-    pieChartVisibleProperty.linkAttribute( this, 'visible' );
     this.invalidatePaint();
   }
 
