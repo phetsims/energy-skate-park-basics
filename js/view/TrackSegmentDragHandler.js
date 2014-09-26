@@ -210,6 +210,10 @@ define( function( require ) {
   }
 
   return inherit( SimpleDragHandler, TrackSegmentDragHandler, {
+
+    // When the user drags the track out of the toolbox, if they drag the track by a control point, it still translates
+    // the track.  In that case (and only that case), the following methods are called by the ControlPointNode drag
+    // handler in order to translate the track.
     trackDragStarted: function( event ) {
       this.trackSegmentDragHandlerOptions.start( event );
     },
