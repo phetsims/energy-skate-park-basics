@@ -230,9 +230,9 @@ define( function( require ) {
     updateHeadPosition: function() {
 
       //Center pie chart over skater's head not his feet so it doesn't look awkward when skating in a parabola
-      //when mass is minimum, the skater height is 1.5
-      //when mass is max, the skater height is 2.5
-      var skaterHeight = Util.linear( 10, 110, 1.5, 2.5, this.mass );
+      //Note this has been tuned independently of SkaterNode.massToScale, which also accounts for the image dimensions
+      var skaterHeight = Util.linear( Constants.MIN_MASS, Constants.MAX_MASS, 1.65, 2.4, this.mass );
+
       var vectorX = skaterHeight * Math.cos( this.angle - Math.PI / 2 );
       var vectorY = skaterHeight * Math.sin( this.angle - Math.PI / 2 );
 
