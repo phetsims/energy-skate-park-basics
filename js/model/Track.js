@@ -225,17 +225,12 @@ define( function( require ) {
 
     //Get the model parallel vector at the specified position on the track
     getUnitParallelVector: function( u ) {
-      return Vector2.createPolar( 1, this.getModelAngleAt( u ) );
-    },
-
-    //Get the model parallel vector at the specified position on the track
-    getUnitParallelVectorX: function( u ) {
-      return Math.cos( this.getModelAngleAt( u ) );
-    },
-
-    //Get the model parallel vector at the specified position on the track
-    getUnitParallelVectorY: function( u ) {
-      return Math.sin( this.getModelAngleAt( u ) );
+      // load xSplineDiff, ySplineDiff here if not already loaded
+      if ( this.xSplineDiff === null ) {
+        this.xSplineDiff = this.xSpline.diff();
+        this.ySplineDiff = this.ySpline.diff();
+      }
+      return new Vector2( SplineEvaluation.atNumber( this.xSplineDiff, u ), SplineEvaluation.atNumber( this.ySplineDiff, u ) ).normalize();
     },
 
     updateLinSpace: function() {

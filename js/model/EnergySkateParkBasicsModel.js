@@ -485,8 +485,9 @@ define( function( require ) {
 
         //Double check the velocities and invert uD if incorrect, see #172
         //Compute the new velocities same as in stepTrack
-        var newVelocityX = track.getUnitParallelVectorX( u ) * uD;
-        var newVelocityY = track.getUnitParallelVectorY( u ) * uD;
+        var unitParallelVector = track.getUnitParallelVector( u );
+        var newVelocityX = unitParallelVector.x * uD;
+        var newVelocityY = unitParallelVector.y * uD;
 
         var velocityDotted = skaterState.velocityX * newVelocityX + skaterState.velocityY * newVelocityY;
 
@@ -615,8 +616,9 @@ define( function( require ) {
       u += track.getParametricDistance( u, uD * dt + 1 / 2 * a * dt * dt );
       var newPointX = skaterState.track.getX( u );
       var newPointY = skaterState.track.getY( u );
-      var parallelUnitX = skaterState.track.getUnitParallelVectorX( u );
-      var parallelUnitY = skaterState.track.getUnitParallelVectorY( u );
+      var unitParallelVector = skaterState.track.getUnitParallelVector( u );
+      var parallelUnitX = unitParallelVector.x;
+      var parallelUnitY = unitParallelVector.y;
       var newVelocityX = parallelUnitX * uD;
       var newVelocityY = parallelUnitY * uD;
 
@@ -904,8 +906,9 @@ define( function( require ) {
 
           //TODO: What if uD ===0?
           var newVelocity = v * (newState.uD > 0 ? +1 : -1);
-          var updatedVelocityX = newState.track.getUnitParallelVectorX( newState.u ) * newVelocity;
-          var updatedVelocityY = newState.track.getUnitParallelVectorY( newState.u ) * newVelocity;
+          var unitParallelVector = newState.track.getUnitParallelVector( newState.u );
+          var updatedVelocityX = unitParallelVector.x * newVelocity;
+          var updatedVelocityY = unitParallelVector.y * newVelocity;
           var fixedState = newState.updateUDVelocity( newVelocity, updatedVelocityX, updatedVelocityY );
           debug && debug( "Set velocity to match energy, when energy was low: " );
           debug && debug( "INC changed velocity: dE=" + ( fixedState.getTotalEnergy() - e0 ) );
