@@ -262,7 +262,12 @@ define( function( require ) {
         return new Vector2( this.velocityX, this.velocityY );
       },
 
-      freeToPool: function() {}
+      freeToPool: function() {},
+
+      //Create a new Vector2 that contains the positionX/positionY of this SkaterState
+      getPosition: function() {
+        return new Vector2( this.positionX, this.positionY );
+      }
 
     },
 

@@ -338,7 +338,7 @@ define( function( require ) {
 
       var acceleration = new Vector2( 0, skaterState.gravity );
       var proposedVelocity = skaterState.getVelocity().plus( acceleration.times( dt ) );
-      var position = new Vector2( skaterState.positionX, skaterState.positionY );
+      var position = skaterState.getPosition();
       var proposedPosition = position.plus( proposedVelocity.times( dt ) );
       if ( proposedPosition.y < 0 ) {
         proposedPosition.y = 0;
@@ -415,11 +415,11 @@ define( function( require ) {
       //Find the closest track, and see if the skater would cross it in this time step.
       //Assuming the skater's initial + final locations determine a line segment, we search for the best point for the skater's start point, midpoint and end point
       //And choose whichever is closest.  This helps avoid "high curvature" problems like the one identified in #212
-      var a = this.getClosestTrackAndPositionAndParameter( new Vector2( skaterState.positionX, skaterState.positionY ), physicalTracks );
+      var a = this.getClosestTrackAndPositionAndParameter( skaterState.getPosition(), physicalTracks );
       var b = this.getClosestTrackAndPositionAndParameter( new Vector2( (skaterState.positionX + proposedPosition.x) / 2, (skaterState.positionY + proposedPosition.y) / 2 ), physicalTracks );
       var c = this.getClosestTrackAndPositionAndParameter( new Vector2( proposedPosition.x, proposedPosition.y ), physicalTracks );
 
-      var initialPosition = new Vector2( skaterState.positionX, skaterState.positionY );
+      var initialPosition = skaterState.getPosition();
       var distanceA = Util.distToSegment( a.point, initialPosition, proposedPosition );
       var distanceB = Util.distToSegment( b.point, initialPosition, proposedPosition );
       var distanceC = Util.distToSegment( c.point, initialPosition, proposedPosition );
@@ -442,7 +442,7 @@ define( function( require ) {
         var normal = track.getUnitNormalVector( u );
         var segment = normal.perpendicular();
 
-        var beforeVector = new Vector2( skaterState.positionX, skaterState.positionY ).minus( trackPoint );
+        var beforeVector = skaterState.getPosition().minus( trackPoint );
 
         //If crossed the track, attach to it.
 
@@ -771,7 +771,7 @@ define( function( require ) {
 
       //Nudge the position away from the track, slightly since it was perfectly centered on the track, see #212
       //Note this will change the energy of the skater, but only by a tiny amount (that should be undetectable in the bar chart)
-      var origPosition = new Vector2( freeSkater.positionX, freeSkater.positionY );
+      var origPosition = freeSkater.getPosition();
       var newPosition = origPosition.plus( upVector.times( sign * 1E-6 ) );
       freeSkater = freeSkater.updatePosition( newPosition.x, newPosition.y );
 
@@ -1154,7 +1154,7 @@ define( function( require ) {
 
         //Keep track of the skater direction so we can toggle the 'up' flag if the track orientation changed
         var originalNormal = this.skater.upVector;
-        var p = newTrack.getClosestPositionAndParameter( new Vector2( this.skater.position.x, this.skater.position.y ) );
+        var p = newTrack.getClosestPositionAndParameter( this.skater.position.copy() );
         this.skater.track = newTrack;
         this.skater.u = p.u;
         var x2 = newTrack.getX( p.u );

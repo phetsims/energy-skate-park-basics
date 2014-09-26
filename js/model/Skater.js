@@ -75,7 +75,11 @@ define( function( require ) {
     this.addDerivedProperty( 'speed', ['velocity'], function( velocity ) {return velocity.magnitude();} );
 
     //Zero the kinetic energy when dragging, see https://github.com/phetsims/energy-skate-park-basics/issues/22
-    this.draggingProperty.link( function( dragging ) { if ( dragging ) { skater.velocity = new Vector2( 0, 0 ); } } );
+    this.draggingProperty.link( function( dragging ) {
+      if ( dragging ) {
+        skater.velocity = new Vector2( 0, 0 );
+      }
+    } );
 
     this.link( 'uD', function( uD ) {
 
@@ -180,7 +184,7 @@ define( function( require ) {
         this.track = null;
         this.angle = this.startingAngle;
       }
-      this.positionProperty.set( new Vector2( this.startingPosition.x, this.startingPosition.y ) );
+      this.positionProperty.set( this.startingPosition.copy() );
       this.velocity = new Vector2( 0, 0 );
       this.clearThermal();
       this.updateEnergy();
