@@ -1081,6 +1081,7 @@ define( function( require ) {
         var points = _.without( track.controlPoints, track.controlPoints[controlPointIndex] );
         var newTrack = new Track( this, this.tracks, points, true, track.getParentsOrSelf(), this.availableModelBoundsProperty );
         newTrack.physical = true;
+        newTrack.dropped = true;
 
         // smooth out the new track, see #177
         var smoothingPoint = controlPointIndex >= newTrack.controlPoints.length ? newTrack.controlPoints.length - 1 : controlPointIndex;
@@ -1121,8 +1122,10 @@ define( function( require ) {
 
       var newTrack1 = new Track( this, this.tracks, points1, true, track.getParentsOrSelf(), this.availableModelBoundsProperty );
       newTrack1.physical = true;
+      newTrack1.dropped = true;
       var newTrack2 = new Track( this, this.tracks, points2, true, track.getParentsOrSelf(), this.availableModelBoundsProperty );
       newTrack2.physical = true;
+      newTrack2.dropped = true;
 
       track.trigger( 'remove' );
       this.tracks.remove( track );
@@ -1196,6 +1199,7 @@ define( function( require ) {
 
       var newTrack = new Track( this, this.tracks, points, true, a.getParentsOrSelf().concat( b.getParentsOrSelf() ), this.availableModelBoundsProperty );
       newTrack.physical = true;
+      newTrack.dropped = true;
 
       a.trigger( 'remove' );
       this.tracks.remove( a );
@@ -1281,6 +1285,7 @@ define( function( require ) {
         } );
         var newTrack = new Track( this, this.tracks, controlPoints, true, null, this.availableModelBoundsProperty );
         newTrack.physical = state.tracks[i].physical;
+        newTrack.dropped = state.tracks[i].dropped;
         this.tracks.add( newTrack );
       }
 

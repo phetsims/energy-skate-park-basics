@@ -1,7 +1,8 @@
 //  Copyright 2002-2014, University of Colorado Boulder
 
 /**
- *
+ * The scenery node that shows a control point on a track, and allows the user to drag it or click on it for more
+ * options.
  *
  * @author Sam Reid (PhET Interactive Simulations)
  */
@@ -21,12 +22,18 @@ define( function( require ) {
   var dot = require( 'DOT/dot' );
 
   /**
-   *
+   * @param {TrackNode} trackNode
+   * @param {TrackSegmentDragHandler} trackSegmentDragHandler
+   * @param {Function}updateTrackShape
+   * @param {number} i
+   * @param {boolean} isEndPoint
    * @constructor
    */
-  function ControlPointNode( trackNode, modelViewTransform, trackSegmentDragHandlerOptions, availableBoundsProperty, updateTrackShape, i, isEndPoint ) {
+  function ControlPointNode( trackNode, trackSegmentDragHandler, updateTrackShape, i, isEndPoint ) {
     var track = trackNode.track;
     var model = trackNode.model;
+    var modelViewTransform = trackNode.modelViewTransform;
+    var availableBoundsProperty = trackNode.availableBoundsProperty;
 
     var controlPointNode = this;
     var controlPoint = track.controlPoints[i];
@@ -49,7 +56,7 @@ define( function( require ) {
 
           // If control point dragged out of the control panel, translate the entire track, see #130
           if ( !track.physical || !track.dropped ) {
-            trackSegmentDragHandlerOptions.start( event );
+            trackSegmentDragHandler.trackDragStarted( event );
             return;
           }
           track.dragging = true;
@@ -60,9 +67,10 @@ define( function( require ) {
           // Check whether the model contains a track so that input listeners for detached elements can't create bugs, see #230
           if ( !model.containsTrack( track ) ) { return; }
 
+          console.log( 'p', track.physical, 'd', track.dropped );
           // If control point dragged out of the control panel, translate the entire track, see #130
           if ( !track.physical || !track.dropped ) {
-            trackSegmentDragHandlerOptions.drag( event );
+            trackSegmentDragHandler.trackDragged( event );
             return;
           }
           dragEvents++;
@@ -127,7 +135,7 @@ define( function( require ) {
 
           // If control point dragged out of the control panel, translate the entire track, see #130
           if ( !track.physical || !track.dropped ) {
-            trackSegmentDragHandlerOptions.end( event );
+            trackSegmentDragHandler.trackDragEnded( event );
             return;
           }
           if ( isEndPoint && controlPoint.snapTarget ) {

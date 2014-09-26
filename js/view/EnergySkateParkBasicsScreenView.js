@@ -175,7 +175,9 @@ define( function( require ) {
     // Switch between selectable tracks
     if ( !model.draggableTracks ) {
 
-      var trackNodes = model.tracks.map( function( track ) { return new TrackNode( model, track, modelViewTransform, view.availableModelBoundsProperty ); } ).getArray();
+      var trackNodes = model.tracks.map( function( track ) {
+        return new TrackNode( model, track, modelViewTransform, view.availableModelBoundsProperty );
+      } ).getArray();
       trackNodes.forEach( function( trackNode ) {
         view.addChild( trackNode );
       } );
