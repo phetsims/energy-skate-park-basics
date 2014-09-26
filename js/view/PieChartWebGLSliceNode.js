@@ -48,6 +48,7 @@ define( function( require ) {
       var radius = 0.5;
 
       // 40 makes a smooth circle, but we need enough samples to eliminate seams between the pie slices
+      // Win8/Chrome starts to slow down around 1000000 samples
       var numSamples = 500;
       this.numSamples = numSamples;
 
