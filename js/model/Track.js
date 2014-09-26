@@ -223,14 +223,6 @@ define( function( require ) {
       return new Vector2( -SplineEvaluation.atNumber( this.ySplineDiff, u ), SplineEvaluation.atNumber( this.xSplineDiff, u ) ).normalize();
     },
 
-    getUnitNormalVectorX: function( u ) {
-      return Math.cos( this.getModelAngleAt( u ) + Math.PI / 2 );
-    },
-
-    getUnitNormalVectorY: function( u ) {
-      return Math.sin( this.getModelAngleAt( u ) + Math.PI / 2 );
-    },
-
     //Get the model parallel vector at the specified position on the track
     getUnitParallelVector: function( u ) {
       return Vector2.createPolar( 1, this.getModelAngleAt( u ) );
@@ -452,8 +444,9 @@ define( function( require ) {
       var centerX = this.getX( u );
       var centerY = this.getY( u );
 
-      var vectorX = this.getUnitNormalVectorX( u ) / k + centerX;
-      var vectorY = this.getUnitNormalVectorY( u ) / k + centerY;
+      var unitNormalVector = this.getUnitNormalVector( u );
+      var vectorX = unitNormalVector.x / k + centerX;
+      var vectorY = unitNormalVector.y / k + centerY;
 
       curvature.r = 1 / k;
       curvature.x = vectorX;

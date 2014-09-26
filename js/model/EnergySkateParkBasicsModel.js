@@ -683,10 +683,10 @@ define( function( require ) {
       var curvatureDirectionY = this.getCurvatureDirectionY( this.curvatureTemp, skaterState.positionX, skaterState.positionY );
 
       var track = skaterState.track;
-      var sideVectorX = skaterState.up ? track.getUnitNormalVectorX( skaterState.u ) :
-                        track.getUnitNormalVectorX( skaterState.u ) * -1;
-      var sideVectorY = skaterState.up ? track.getUnitNormalVectorY( skaterState.u ) :
-                        track.getUnitNormalVectorY( skaterState.u ) * -1;
+      var sideVectorX = skaterState.up ? track.getUnitNormalVector( skaterState.u ).x :
+                        track.getUnitNormalVector( skaterState.u ).x * -1;
+      var sideVectorY = skaterState.up ? track.getUnitNormalVector( skaterState.u ).y :
+                        track.getUnitNormalVector( skaterState.u ).y * -1;
 
       //Dot product written out component-wise to avoid allocations, see #50
       var outsideCircle = sideVectorX * curvatureDirectionX + sideVectorY * curvatureDirectionY < 0;
