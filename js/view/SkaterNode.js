@@ -18,13 +18,15 @@ define( function( require ) {
   var Matrix3 = require( 'DOT/Matrix3' );
   var LinearFunction = require( 'DOT/LinearFunction' );
   var Node = require( 'SCENERY/nodes/Node' );
+  var Constants = require( 'ENERGY_SKATE_PARK_BASICS/Constants' );
 
   // images
   var skaterLeftImage = require( 'image!ENERGY_SKATE_PARK_BASICS/skater-left.png' );
   var skaterRightImage = require( 'image!ENERGY_SKATE_PARK_BASICS/skater-right.png' );
 
-  //Map from mass(kg) to scale
-  var massToScale = new LinearFunction( (100 + 25) / 2, 100, 0.34, 0.43 );
+  //Map from mass(kg) to the amount to scale the image
+  var centerMassValue = (Constants.MIN_MASS + Constants.MAX_MASS) / 2;
+  var massToScale = new LinearFunction( centerMassValue, Constants.MAX_MASS, 0.34, 0.43 );
 
   /**
    * SkaterNode constructor
