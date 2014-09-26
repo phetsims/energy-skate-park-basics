@@ -40,6 +40,10 @@ define( function( require ) {
     // Flag to indicate whether the skater transitions from the right edge of this track directly to the ground, see #164
     this.slopeToGround = false;
 
+    // Use an arbitrary position for translating the track during dragging.  Only used for deltas in relative
+    // positioning and translation, so an exact "position" is irrelevant, see #260
+    this._position = new Vector2( 0, 0 );
+
     PropertySet.call( this, {
 
       // True if the track can be interacted with.  For screens 1-2 only one track will be physical (and hence visible).
@@ -186,6 +190,8 @@ define( function( require ) {
     },
 
     translate: function( dx, dy ) {
+      this._position = this._position.plusXY( dx, dy );
+
       // move all the control points
       for ( var i = 0; i < this.controlPoints.length; i++ ) {
         var point = this.controlPoints[i];
@@ -642,11 +648,10 @@ define( function( require ) {
       return minRadius;
     },
 
-    // Use the position of the 0th control point as the position of the track, used when dragging the track.  Only used
-    // for relative positioning and translation, so an exact "position" is irrelevant.  Use the source position instead
-    // of the snapped position or buggy "jumpy" behavior will occur, see #98
+    // Use an arbitrary position for translating the track during dragging.  Only used for deltas in relative
+    // positioning and translation, so an exact "position" is irrelevant.
     get position() {
-      return this.controlPoints[0].sourcePosition;
+      return this._position.copy();
     },
 
     set position( newPosition ) {
