@@ -34,8 +34,10 @@ define( function( require ) {
    * @param {Skater} skater
    * @param {EnergySkateParkBasicsScreenView} view
    * @param {ModelViewTransform} modelViewTransform
-   * @param {function} getClosestTrackAndPositionAndParameter function that gets the closest track properties, used when the skater is being dragged close to the track
-   * @param {function} getPhysicalTracks function that returns the physical tracks in the model, so the skater can try to attach to them while dragging
+   * @param {function} getClosestTrackAndPositionAndParameter function that gets the closest track properties, used when
+   * the skater is being dragged close to the track
+   * @param {function} getPhysicalTracks function that returns the physical tracks in the model, so the skater can try
+   * to attach to them while dragging
    * @constructor
    */
   function SkaterNode( skater, view, modelViewTransform, getClosestTrackAndPositionAndParameter, getPhysicalTracks ) {
@@ -56,8 +58,8 @@ define( function( require ) {
     var imageWidth = this.width;
     var imageHeight = this.height;
 
-    //Update the position and angle.  Normally the angle would only change if the position has also changed, so no need for a duplicate callback there
-    //Uses pooling to avoid allocations, see #50
+    //Update the position and angle.  Normally the angle would only change if the position has also changed, so no need
+    //for a duplicate callback there.  Uses pooling to avoid allocations, see #50
     this.skater.on( 'updated', function() {
       var mass = skater.mass;
       var position = skater.position;
@@ -78,7 +80,8 @@ define( function( require ) {
       matrix.multiplyMatrix( scalingMatrix );
       scalingMatrix.freeToPool();
 
-      //Think of it as a multiplying the Vector2 to the right, so this step happens first actually.  Use it to center the registration point
+      //Think of it as a multiplying the Vector2 to the right, so this step happens first actually.  Use it to center
+      //the registration point
       var translation = Matrix3.translation( -imageWidth / 2, -imageHeight );
       matrix.multiplyMatrix( translation );
       translation.freeToPool();
@@ -97,7 +100,8 @@ define( function( require ) {
         start: function( event ) {
           skater.dragging = true;
 
-          //Clear thermal energy whenever skater is grabbed, see https://github.com/phetsims/energy-skate-park-basics/issues/32
+          //Clear thermal energy whenever skater is grabbed,
+          //see https://github.com/phetsims/energy-skate-park-basics/issues/32
           skater.thermalEnergy = 0;
 
           //Jump to the input location when dragged
@@ -112,7 +116,8 @@ define( function( require ) {
           //make sure it is within the visible bounds
           position = view.availableModelBounds.getClosestPoint( position.x, position.y, position );
 
-          //PERFORMANCE/ALLOCATION: lots of unnecessary allocations and computation here, biggest improvement could be to use binary search for position on the track
+          //PERFORMANCE/ALLOCATION: lots of unnecessary allocations and computation here, biggest improvement could be
+          //to use binary search for position on the track
           var closestTrackAndPositionAndParameter = getClosestTrackAndPositionAndParameter( position, getPhysicalTracks() );
           var closeEnough = false;
           if ( closestTrackAndPositionAndParameter && closestTrackAndPositionAndParameter.track && closestTrackAndPositionAndParameter.track.isParameterInBounds( closestTrackAndPositionAndParameter.u ) ) {

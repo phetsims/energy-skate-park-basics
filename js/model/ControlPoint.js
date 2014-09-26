@@ -25,7 +25,8 @@ define( function( require ) {
     } );
 
     //Where it is shown on the screen.  Same as sourcePosition (if not snapped) or snapTarget.position (if snapped).
-    //Snapping means temporarily connecting to an adjacent open point before the tracks are joined, to indicate that a connection is possible
+    //Snapping means temporarily connecting to an adjacent open point before the tracks are joined, to indicate that a
+    //connection is possible
     this.addDerivedProperty( 'position', ['sourcePosition', 'snapTarget'], function( sourcePosition, snapTarget ) {
       return snapTarget ? snapTarget.position : sourcePosition;
     } );

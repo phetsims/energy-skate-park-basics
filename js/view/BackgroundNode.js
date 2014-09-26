@@ -50,7 +50,8 @@ define( function( require ) {
 
   return inherit( Node, BackgroundNode, {
 
-      //Exactly fit the geometry to the screen so no matter what aspect ratio it will always show something.  Perhaps it will improve performance too?
+      //Exactly fit the geometry to the screen so no matter what aspect ratio it will always show something.
+      //Perhaps it will improve performance too?
       layout: function( offsetX, offsetY, width, height, layoutScale ) {
         var cementY = this.cementY;
         this.earth.setRect( -offsetX, cementY, width / layoutScale, earthHeight );

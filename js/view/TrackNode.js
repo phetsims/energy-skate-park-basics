@@ -27,7 +27,8 @@ define( function( require ) {
 
   /*
    * Constructor for TrackNode
-   * @param model the entire model.  Not absolutely necessary, but so many methods are called on it for joining and splitting tracks that we pass the entire model anyways.
+   * @param model the entire model.  Not absolutely necessary, but so many methods are called on it for joining and
+   * splitting tracks that we pass the entire model anyways.
    * @param track the track for this track node
    * @param modelViewTransform the model view transform for the view
    * @constructor
@@ -36,7 +37,8 @@ define( function( require ) {
     var trackNode = this;
     Node.call( this );
 
-    //When dragging the track out of the toolbox, the control points should be able to drag the track.  However, don't use that feature if the track is already in the play area (physical) when created.
+    //When dragging the track out of the toolbox, the control points should be able to drag the track.  However, don't
+    //use that feature if the track is already in the play area (physical) when created.
     var trackDropped = track.physical;
 
     var road = new Path( null, {fill: 'gray', cursor: track.interactive ? 'pointer' : 'default'} );
@@ -50,11 +52,13 @@ define( function( require ) {
       var lastDragPoint;
       var startOffset = null;
 
-      //Keep track of whether the user has started to drag the track.  Click events should not create tracks, only drag events.  See #205
+      //Keep track of whether the user has started to drag the track.  Click events should not create tracks, only drag
+      //events.  See #205
       var startedDrag = false;
 
       //Drag handler for dragging the track segment itself (not one of the control points)
-      //Uses a similar strategy as MovableDragHandler but requires a separate implementation because its bounds are determined by the shape of the track (so it cannot go below ground)
+      //Uses a similar strategy as MovableDragHandler but requires a separate implementation because its bounds are
+      //determined by the shape of the track (so it cannot go below ground)
       //And so it can be dragged out of the toolbox but not back into it (so it won't be dragged below ground)
       var trackSegmentDragHandlerOptions = {
         allowTouchSnag: true,
@@ -259,7 +263,8 @@ define( function( require ) {
       var tx = trackNode.getTranslation();
       var shape = new Shape().moveTo( modelViewTransform.modelToViewX( xPoints[0] ) - tx.x, modelViewTransform.modelToViewY( yPoints[0] ) - tx.y );
 
-      //Show the track at reduced resolution while dragging so it will be smooth and responsive while dragging (whether updating the entire track, some of the control points or both)
+      //Show the track at reduced resolution while dragging so it will be smooth and responsive while dragging
+      //(whether updating the entire track, some of the control points or both)
       var delta = track.dragging ? 3 : 1;
       for ( i = 1; i < xPoints.length; i = i + delta ) {
         shape.lineTo( modelViewTransform.modelToViewX( xPoints[i] ) - tx.x, modelViewTransform.modelToViewY( yPoints[i] ) - tx.y );
@@ -280,7 +285,8 @@ define( function( require ) {
       road.shape = shape.getStrokedShape( strokeStyles );
       centerLine.shape = shape;
 
-      //Update the skater if the track is moved while the sim is paused, see https://github.com/phetsims/energy-skate-park-basics/issues/84
+      //Update the skater if the track is moved while the sim is paused,
+      //see https://github.com/phetsims/energy-skate-park-basics/issues/84
       if ( model.skater.track === track && model.paused ) {
         model.skater.position = track.getPoint( model.skater.u );
         model.skater.angle = model.skater.track.getViewAngleAt( model.skater.u ) + (model.skater.up ? 0 : Math.PI);

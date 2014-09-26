@@ -32,11 +32,12 @@ define( function( require ) {
 
     var icon = new Image( trashCanImage, {scale: 0.22} );
 
-    skater.toDerivedProperty( ['thermalEnergy'], function( thermalEnergy ) {return thermalEnergy > 0;} ).link( function( hasThermalEnergy ) {
-      icon.image = hasThermalEnergy ? trashCanImage : trashCanGrayImage;
-      icon.opacity = hasThermalEnergy ? 1 : 0.3;
-      clearThermalButton.pickable = hasThermalEnergy;
-    } );
+    skater.toDerivedProperty( ['thermalEnergy'], function( thermalEnergy ) {return thermalEnergy > 0;} ).link(
+      function( hasThermalEnergy ) {
+        icon.image = hasThermalEnergy ? trashCanImage : trashCanGrayImage;
+        icon.opacity = hasThermalEnergy ? 1 : 0.3;
+        clearThermalButton.pickable = hasThermalEnergy;
+      } );
 
     RectangularPushButton.call( this, {
       content: icon,

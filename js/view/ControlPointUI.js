@@ -55,7 +55,7 @@ define( function( require ) {
     Node.call( this );
 
     var isEndPoint = controlPointIndex === 0 || controlPointIndex === track.controlPoints.length - 1;
-    var alpha = new LinearFunction( 0, track.controlPoints.length - 1, track.minPoint, track.maxPoint )( controlPointIndex ); //a1, a2, b1, b2, clamp
+    var alpha = new LinearFunction( 0, track.controlPoints.length - 1, track.minPoint, track.maxPoint )( controlPointIndex );
     var position = track.getPoint( alpha );
     var angle = track.getViewAngleAt( alpha );
     var modelAngle = track.getModelAngleAt( alpha );

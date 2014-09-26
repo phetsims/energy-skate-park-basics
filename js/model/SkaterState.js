@@ -1,10 +1,11 @@
 // Copyright 2002-2013, University of Colorado Boulder
 
 /**
- * Immutable snapshot of skater state for updating the physics. To improve performance, operate solely on a skaterState instance without updating the real skater,
- * so that the skater model itself can be set only once, and trigger callbacks only once (no matter how many subdivisions).
- * This can also facilitate debugging and ensuring energy is conserved from one step to another. Pooled to avoid allocation problems, see #50
- * Another reason this class is valuable is to create and evaluate proposed states before applying them to the live model.
+ * Immutable snapshot of skater state for updating the physics. To improve performance, operate solely on a skaterState
+ * instance without updating the real skater, so that the skater model itself can be set only once, and trigger
+ * callbacks only once (no matter how many subdivisions). This can also facilitate debugging and ensuring energy is
+ * conserved from one step to another. Pooled to avoid allocation problems, see #50. Another reason this class is
+ * valuable is to create and evaluate proposed states before applying them to the live model.
  *
  * @author Sam Reid
  */
@@ -127,7 +128,8 @@ define( function( require ) {
         skater.updateEnergy();
       },
 
-      //Create a new SkaterState with the new values.  Provided as a convenience to avoid allocating options argument (as in update)
+      //Create a new SkaterState with the new values.  Provided as a convenience to avoid allocating options argument
+      //(as in update)
       updateTrackUD: function( track, uD ) {
         var state = SkaterState.createFromPool( this, EMPTY_OBJECT );
         state.track = track;
@@ -135,7 +137,8 @@ define( function( require ) {
         return state;
       },
 
-      //Create a new SkaterState with the new values.  Provided as a convenience to avoid allocating options argument (as in update)
+      //Create a new SkaterState with the new values.  Provided as a convenience to avoid allocating options argument
+      //(as in update)
       updateUUDVelocityPosition: function( u, uD, velocityX, velocityY, positionX, positionY ) {
         var state = SkaterState.createFromPool( this, EMPTY_OBJECT );
         state.u = u;

@@ -17,10 +17,16 @@ define( function( require ) {
   var Color = require( 'SCENERY/util/Color' );
 
   /**
-   * @param {SingleBulbModel} model
-   * @param {Object} [options], must contain a canvasBounds attribute of type Bounds2
+   * @param {Skater} skater
+   * @param {Color} color
+   * @param {Property<Number>} radiusProperty
+   * @param {Property<Number>} startAngleProperty
+   * @param {Property<Number>} extentProperty
+   * @param {Property<Boolean>} pieChartVisibleProperty
+   * @param {ModelViewTransform} modelViewTransform
    * @constructor
    */
+    //TODO: unused params?
   function PieChartWebGLSliceNode( skater, color, radiusProperty, startAngleProperty, extentProperty, pieChartVisibleProperty, modelViewTransform ) {
 
     this.color = color;

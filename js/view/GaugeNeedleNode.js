@@ -40,7 +40,8 @@ define( function( require ) {
       //The ticks are duplicated for the right side, and one tick appears in the middle at the top
       numTicks: ( 8 + 2 ) * 2 + 1,
 
-      //Optional property to pass in--if the client provides a updateEnabledProperty then the needle will only be updated when changed and visible (or made visible)
+      //Optional property to pass in--if the client provides a updateEnabledProperty then the needle will only be
+      //updated when changed and visible (or made visible)
       updateEnabledProperty: new Property( true )
     }, options );
     var lineWidth = 3;

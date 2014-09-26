@@ -48,7 +48,8 @@ define( function( require ) {
     var clearThermalButton = new ClearThermalButton( clearThermal, skater, {centerX: thermalLabel.centerX, y: thermalLabel.bottom + 15} );
     skater.link( 'thermalEnergy', function( thermalEnergy ) { clearThermalButton.enabled = thermalEnergy > 0; } );
 
-    //Don't let the ClearThermalButton participate in the layout since it is too big vertically.  Just use a strut to get the width right, then add the undo button later
+    //Don't let the ClearThermalButton participate in the layout since it is too big vertically.  Just use a strut to
+    //get the width right, then add the undo button later
     var clearThermalButtonStrut = new Rectangle( 0, 0, clearThermalButton.width, 1, {} );
 
     var contentNode = new VBox( {spacing: 10, align: 'left', children: [
@@ -63,7 +64,8 @@ define( function( require ) {
       contentNode
     ]} );
 
-    Panel.call( this, contentWithTitle, { x: 4, y: 4, xMargin: 6, yMargin: 5, fill: 'white', stroke: 'gray', lineWidth: 1, resize: false, cursor: 'pointer'} );
+    Panel.call( this, contentWithTitle,
+      { x: 4, y: 4, xMargin: 6, yMargin: 5, fill: 'white', stroke: 'gray', lineWidth: 1, resize: false, cursor: 'pointer'} );
 
     this.addChild( clearThermalButton );
     var strutGlobal = clearThermalButtonStrut.parentToGlobalPoint( clearThermalButtonStrut.center );

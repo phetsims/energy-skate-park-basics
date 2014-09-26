@@ -1,7 +1,8 @@
 // Copyright 2002-2013, University of Colorado Boulder
 
 /**
- * Model for one track in Energy Skate Park Basics, which contains the control points and cubic splines for interpolating between them.
+ * Model for one track in Energy Skate Park Basics, which contains the control points and cubic splines for
+ * interpolating between them.
  *
  * @author Sam Reid
  */
@@ -21,11 +22,13 @@ define( function( require ) {
   /**
    * Model for a track, which has a fixed number of points.  If you added a point to a Track, you need a new track.
    * @param {Events} events event source for sending messages
-   * @param {ObservableArray<Track>} modelTracks all model tracks, so this track can add and remove others when joined/split
+   * @param {ObservableArray<Track>} modelTracks all model tracks, so this track can add/remove others when joined/split
    * @param {Array<ControlPoint>} controlPoints
    * @param {Boolean} interactive
-   * @param {Array<Number>} parents the original tracks that were used to make this track (if any) so they can be broken apart when dragged back to control panel
-   * @param {Function} availableModelBoundsProperty function that provides the visible model bounds, to prevent the adjusted control point from going offscreen, see #195
+   * @param {Array<Number>} parents the original tracks that were used to make this track (if any) so they can be
+   * broken apart when dragged back to control panel
+   * @param {Function} availableModelBoundsProperty function that provides the visible model bounds, to prevent the
+   * adjusted control point from going offscreen, see #195
    * @constructor
    */
   function Track( events, modelTracks, controlPoints, interactive, parents, availableModelBoundsProperty ) {
@@ -108,9 +111,9 @@ define( function( require ) {
 
     //Returns the closest point (Euclidean) and position (parametric) on the track, as an object with {u,point}
     //also checks 1E-6 beyond each side of the track to see if the skater is beyond the edge of the track
-    //This currently does a flat search, but if more precision is needed, a finer-grained binary search could be done afterwards
-    //This code is used when dragging the skater (to see if he is dragged near the track) and while the skater is falling toward the track
-    // (to see if he should bounce/attach)
+    //This currently does a flat search, but if more precision is needed, a finer-grained binary search could be done
+    //afterwards. This code is used when dragging the skater (to see if he is dragged near the track) and while the
+    //skater is falling toward the track (to see if he should bounce/attach).
     getClosestPositionAndParameter: function( point ) {
 
       //Compute the spline points for purposes of getting closest points.
@@ -188,13 +191,13 @@ define( function( require ) {
 
       this.updateSplines();
 
-      //Just observing the control points individually would lead to N expensive callbacks (instead of 1) for each of the N points
-      //So we use this broadcast mechanism instead
+      //Just observing the control points individually would lead to N expensive callbacks (instead of 1)
+      //for each of the N points, So we use this broadcast mechanism instead
       this.trigger( 'translated' );
     },
 
-    //For purposes of showing the skater angle, get the view angle of the track here.  Note this means inverting the y values
-    //This is called every step while animating on the track, so it was optimized to avoid new allocations
+    //For purposes of showing the skater angle, get the view angle of the track here.  Note this means inverting the y
+    //values, this is called every step while animating on the track, so it was optimized to avoid new allocations
     getViewAngleAt: function( u ) {
       if ( this.xSplineDiff === null ) {
         this.xSplineDiff = this.xSpline.diff();
@@ -246,7 +249,8 @@ define( function( require ) {
       this.distanceBetweenSamplePoints = (postPoint - prePoint) / n;
     },
 
-    //Detect whether a parametric point is in bounds of this track, for purposes of telling whether the skater fell past the edge of the track
+    //Detect whether a parametric point is in bounds of this track, for purposes of telling whether the skater fell
+    //past the edge of the track
     isParameterInBounds: function( u ) { return u >= this.minPoint && u <= this.maxPoint; },
 
     //Setter/getter for physical property, mimic the PropertySet pattern instead of using PropertySet multiple inheritance
@@ -357,7 +361,8 @@ define( function( require ) {
         return -this.getArcLength( u1, u0 );
       }
 
-      //Discrepancy with original version: original version had 10 subdivisions here.  We have reduced it to improve performance at the cost of numerical precision
+      //Discrepancy with original version: original version had 10 subdivisions here.  We have reduced it to improve
+      //performance at the cost of numerical precision
       var numSegments = 4;
       var da = ( u1 - u0 ) / ( numSegments - 1 );
       var prevX = SplineEvaluation.atNumber( this.xSpline, u0 );
@@ -414,7 +419,8 @@ define( function( require ) {
 
     //Compute the signed curvature as defined here: http://en.wikipedia.org/wiki/Curvature#Local_expressions
     //Used for centripetal force and determining whether the skater flies off the track
-    //Curvature parameter is for storing the result as pass-by-value.  Sorry, see https://github.com/phetsims/energy-skate-park-basics/issues/50 regarding GC
+    //Curvature parameter is for storing the result as pass-by-value.
+    //Sorry, see https://github.com/phetsims/energy-skate-park-basics/issues/50 regarding GC
     getCurvature: function( u, curvature ) {
 
       if ( this.xSplineDiff === null ) {
@@ -448,7 +454,8 @@ define( function( require ) {
       curvature.y = vectorY;
     },
 
-    //Find the lowest y-point on the spline by sampling, used when dropping the track or a control point to ensure it won't go below y=0
+    //Find the lowest y-point on the spline by sampling, used when dropping the track or a control point to ensure it
+    //won't go below y=0
     getLowestY: function() {
       if ( !this.xSearchPoints ) {
         this.xSearchPoints = SplineEvaluation.atArray( this.xSpline, this.searchLinSpace );
@@ -590,13 +597,14 @@ define( function( require ) {
     },
 
     getUWithHighestCurvature: function() {
-      //Below implementation copied from getMinimumRadiusOfCurvature.  It is a CPU demanding task, so kept separate to keep the other one fast.
-      //Should be kept in sync manually
+      //Below implementation copied from getMinimumRadiusOfCurvature.  It is a CPU demanding task, so kept separate to
+      //keep the other one fast. Should be kept in sync manually
       var curvature = {r: 0, x: 0, y: 0};
       var minRadius = Number.POSITIVE_INFINITY;
       var bestU = 0;
 
-      //Search the entire space of the spline.  Larger number of divisions was chosen to prevent large curvatures at a single sampling point.
+      //Search the entire space of the spline.  Larger number of divisions was chosen to prevent large curvatures at a
+      //single sampling point.
       var numDivisions = 400;
       var du = (this.maxPoint - this.minPoint) / numDivisions;
       for ( var u = this.minPoint; u < this.maxPoint; u += du ) {
@@ -618,7 +626,8 @@ define( function( require ) {
       var curvature = {r: 0, x: 0, y: 0};
       var minRadius = Number.POSITIVE_INFINITY;
 
-      //Search the entire space of the spline.  Larger number of divisions was chosen to prevent large curvatures at a single sampling point.
+      //Search the entire space of the spline.  Larger number of divisions was chosen to prevent large curvatures at a
+      //single sampling point.
       var numDivisions = 400;
       var du = (this.maxPoint - this.minPoint) / numDivisions;
       for ( var u = this.minPoint; u < this.maxPoint; u += du ) {
@@ -631,8 +640,9 @@ define( function( require ) {
       return minRadius;
     },
 
-    //Use the position of the 0th control point as the position of the track, used when dragging the track.  Only used for relative positioning and translation, so an exact "position" is irrelevant
-    //Use the source position instead of the snapped position or buggy "jumpy" behavior will occur, see #98
+    //Use the position of the 0th control point as the position of the track, used when dragging the track.  Only used
+    //for relative positioning and translation, so an exact "position" is irrelevant.  Use the source position instead
+    //of the snapped position or buggy "jumpy" behavior will occur, see #98
     get position() {
       return this.controlPoints[0].sourcePosition;
     },

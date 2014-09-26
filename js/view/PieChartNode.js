@@ -1,8 +1,8 @@
 // Copyright 2002-2013, University of Colorado Boulder
 
 /**
- * Scenery node for the pie chart, which moves with the skater and shows a pie chart representation of the energies by type.
- * The size of the pie chart is proportional to the total energy.
+ * Scenery node for the pie chart, which moves with the skater and shows a pie chart representation of the energies by
+ * type. The size of the pie chart is proportional to the total energy.
  *
  * @author Sam Reid
  */
@@ -110,12 +110,14 @@ define( function( require ) {
         //Round the radius so it will only update the graphics when it changed by a px or more
         thermalEnergySlice.radius = Math.round( radius );
 
-        //Start thermal at the right and wind counter clockwise, see https://github.com/phetsims/energy-skate-park-basics/issues/133
+        //Start thermal at the right and wind counter clockwise,
+        //see https://github.com/phetsims/energy-skate-park-basics/issues/133
         //Order is thermal (in the background), kinetic, potential
         var potentialStartAngle = 0;
         var kineticStartAngle = Math.PI * 2 * fractionPotential;
 
-        //If there is no potential energy (i.e. the skater is on the ground) then don't show the potential energy slice, see #165
+        //If there is no potential energy (i.e. the skater is on the ground) then don't show the potential energy slice,
+        //see #165
         if ( fractionPotential === 0 ) {
           potentialEnergySlice.shape = null;
         }

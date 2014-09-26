@@ -88,15 +88,36 @@ define( function( require ) {
     var outline = new PieChartWebGLSliceNode( skater, 'black', outlineRadiusProperty, new Property( 0 ), new Property( Math.PI * 2 ), pieChartVisibleProperty, modelViewTransform );
     this.addChild( outline );
 
-    var thermalEnergyPiece = new PieChartWebGLSliceNode( skater, EnergySkateParkColorScheme.thermalEnergy, pieChartRadiusProperty, new Property( 0 ), thermalEnergyProportion, pieChartVisibleProperty, modelViewTransform );
+    var thermalEnergyPiece = new PieChartWebGLSliceNode(
+      skater,
+      EnergySkateParkColorScheme.thermalEnergy,
+      pieChartRadiusProperty,
+      new Property( 0 ),
+      thermalEnergyProportion,
+      pieChartVisibleProperty,
+      modelViewTransform );
+
     this.addChild( thermalEnergyPiece );
 
-    var kineticEnergyPiece = new PieChartWebGLSliceNode( skater, EnergySkateParkColorScheme.kineticEnergy, pieChartRadiusProperty, thermalEnergyProportion, kineticEnergyProportion, pieChartVisibleProperty, modelViewTransform );
+    var kineticEnergyPiece = new PieChartWebGLSliceNode(
+      skater,
+      EnergySkateParkColorScheme.kineticEnergy,
+      pieChartRadiusProperty,
+      thermalEnergyProportion,
+      kineticEnergyProportion,
+      pieChartVisibleProperty,
+      modelViewTransform );
     this.addChild( kineticEnergyPiece );
 
-    var potentialEnergyPiece = new PieChartWebGLSliceNode( skater, EnergySkateParkColorScheme.potentialEnergy, pieChartRadiusProperty, plus( kineticEnergyProportion, thermalEnergyProportion ), potentialEnergyProportion, pieChartVisibleProperty, modelViewTransform );
+    var potentialEnergyPiece = new PieChartWebGLSliceNode(
+      skater,
+      EnergySkateParkColorScheme.potentialEnergy,
+      pieChartRadiusProperty,
+      plus( kineticEnergyProportion, thermalEnergyProportion ),
+      potentialEnergyProportion,
+      pieChartVisibleProperty,
+      modelViewTransform );
     this.addChild( potentialEnergyPiece );
-
   }
 
   return inherit( Node, PieChartWebGLNode );

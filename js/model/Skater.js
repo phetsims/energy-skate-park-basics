@@ -1,7 +1,8 @@
 // Copyright 2002-2013, University of Colorado Boulder
 
 /**
- * Model for the skater in Energy Skate Park: Basics, including position, velocity, energy, etc..  All units are in meters.
+ * Model for the skater in Energy Skate Park: Basics, including position, velocity, energy, etc..
+ * All units are in meters.
  *
  * @author Sam Reid
  */
@@ -43,8 +44,8 @@ define( function( require ) {
       //Parameter along the parametric spline, unitless since it is in parametric space
       u: 0,
 
-      //Speed along the parametric spline dimension, formally 'u dot', indicating speed and direction (+/-) along the track spline
-      //In meters per second.  Not technically the derivative of 'u' since it is the euclidean speed.  Name is vestigial
+      //Speed along the parametric spline dimension, formally 'u dot', indicating speed and direction (+/-) along the
+      //track spline in meters per second.  Not technically the derivative of 'u' since it is the euclidean speed.
       uD: 0,
 
       //True if the skater is pointing up on the track, false if attached to underside of track
@@ -58,7 +59,8 @@ define( function( require ) {
       //Start in the middle of the MassSlider range
       mass: Constants.DEFAULT_MASS,
 
-      //Which way the skater is facing, right or left.  Coded as strings instead of boolean in case we add other states later like 'forward'
+      //Which way the skater is facing, right or left.  Coded as strings instead of boolean in case we add other states
+      //later like 'forward'
       direction: 'left',
 
       velocity: new Vector2( 0, 0 ),
@@ -101,7 +103,8 @@ define( function( require ) {
 
     this.link( 'uD', function( uD ) {
 
-      //Require the skater to overcome a speed threshold so he won't toggle back and forth rapidly at the bottom of a well with friction, see #51
+      //Require the skater to overcome a speed threshold so he won't toggle back and forth rapidly at the bottom of a
+      //well with friction, see #51
       var speedThreshold = 0.01;
 
       if ( uD > speedThreshold ) {
@@ -118,7 +121,9 @@ define( function( require ) {
     //Boolean flag that indicates whether the skater has moved from his initial position, and hence can be 'returned',
     //For making the 'return skater' button enabled/disabled
     //If this is a performance concern, perhaps it could just be dropped as a feature
-    this.addDerivedProperty( 'moved', ['position', 'startingPosition', 'dragging'], function( x, x0, dragging ) { return !dragging && (x.x !== x0.x || x.y !== x0.y); } );
+    this.addDerivedProperty( 'moved', ['position', 'startingPosition', 'dragging'], function( x, x0, dragging ) {
+      return !dragging && (x.x !== x0.x || x.y !== x0.y);
+    } );
 
     this.property( 'mass' ).link( function() { skater.updateEnergy(); } );
 
@@ -140,8 +145,8 @@ define( function( require ) {
     },
 
     reset: function() {
-      //set the angle to zero before calling PropertySet.prototype.reset so that the optimization for SkaterNode.updatePosition is maintained,
-      //Without showing the skater at the wrong angle
+      //set the angle to zero before calling PropertySet.prototype.reset so that the optimization for
+      //SkaterNode.updatePosition is maintained, without showing the skater at the wrong angle
       this.angle = 0;
       PropertySet.prototype.reset.call( this );
       this.updateEnergy();
@@ -152,8 +157,8 @@ define( function( require ) {
 
     //Move the skater to her initial position, but leave the friction and mass the same, see #237
     resetPosition: function() {
-      //set the angle to zero before calling PropertySet.prototype.reset so that the optimization for SkaterNode.updatePosition is maintained,
-      //Without showing the skater at the wrong angle
+      //set the angle to zero before calling PropertySet.prototype.reset so that the optimization for
+      //SkaterNode.updatePosition is maintained, without showing the skater at the wrong angle
       this.angle = 0;
       var mass = this.mass;
       PropertySet.prototype.reset.call( this );
@@ -164,7 +169,8 @@ define( function( require ) {
       this.trigger( 'updated' );
     },
 
-    //When the scene (track) is changed, the skater's position & velocity reset, but the mass and other properties do not reset, see #179
+    //When the scene (track) is changed, the skater's position & velocity reset, but the mass and other properties
+    //do not reset, see #179
     returnToInitialPosition: function() {
 
       //Everything needs to be reset except the mass, see #188
@@ -177,7 +183,8 @@ define( function( require ) {
     //Including the position on a track (if any)
     returnSkater: function() {
 
-      //If the user is on the same track as where he began (and the track hasn't changed), remain on the track, see #143 and #144
+      //If the user is on the same track as where he began (and the track hasn't changed), remain on the track,
+      //see #143 and #144
       if ( this.startingTrack && this.track === this.startingTrack && arrayEquals( this.track.copyControlPointSources(), this.startingTrackControlPointSources ) ) {
         this.u = this.startingU;
         this.angle = this.startingAngle;
@@ -195,14 +202,15 @@ define( function( require ) {
       this.trigger( 'updated' );
     },
 
-    //Update the energies as a batch.  This is an explicit method instead of linked to all dependencies so that it can be called in a controlled fashion \
-    //When multiple dependencies have changed, for performance.
+    //Update the energies as a batch.  This is an explicit method instead of linked to all dependencies so that it can
+    //be called in a controlled fashion when multiple dependencies have changed, for performance.
     updateEnergy: function() {
       this.kineticEnergy = 0.5 * this.mass * this.velocity.magnitudeSquared();
       this.potentialEnergy = -this.mass * this.position.y * this.gravity;
       this.totalEnergy = this.kineticEnergy + this.potentialEnergy + this.thermalEnergy;
 
-      //Signal that energies have changed for coarse-grained listeners like PieChartNode that should not get updated 3-4 times per times step
+      //Signal that energies have changed for coarse-grained listeners like PieChartNode that should not get updated
+      //3-4 times per times step
       this.trigger( 'energy-changed' );
     },
 
@@ -274,7 +282,8 @@ define( function( require ) {
         //The last track the skater detached from
         track: null,
 
-        //The Vector2 position the skater detached from.  Initialize this as far from the play area but non-null to simplify the logic
+        //The Vector2 position the skater detached from.  Initialize this as far from the play area but non-null to
+        //simplify the logic
         position: new Vector2( 10000, 10000 ),
 
         //The arc distance traveled since detaching

@@ -67,7 +67,8 @@ define( function( require ) {
     ScreenView.call( view, { renderer: 'svg', layoutBounds: new Bounds2( 0, 0, 834, 504 ) } );
 
     var modelPoint = new Vector2( 0, 0 );
-    var viewPoint = new Vector2( this.layoutBounds.width / 2, this.layoutBounds.height - BackgroundNode.earthHeight );//earth is 70px high in stage coordinates
+    //earth is 70px high in stage coordinates
+    var viewPoint = new Vector2( this.layoutBounds.width / 2, this.layoutBounds.height - BackgroundNode.earthHeight );
     var scale = 50;
     var modelViewTransform = ModelViewTransform2.createSinglePointScaleInvertedYMapping( modelPoint, viewPoint, scale );
     this.modelViewTransform = modelViewTransform;
@@ -102,8 +103,9 @@ define( function( require ) {
     };
 
     //Determine if the skater is onscreen or offscreen for purposes of highlighting the 'return skater' button.
-    //Don't check whether the skater is underground since that is a rare case (only if the user is actively dragging a control point near y=0 and the track curves below)
-    //And the skater will pop up again soon, see the related flickering problem in #206
+    //Don't check whether the skater is underground since that is a rare case (only if the user is actively dragging a
+    //control point near y=0 and the track curves below) and the skater will pop up again soon, see the related
+    //flickering problem in #206
     var onscreenProperty = new DerivedProperty( [model.skater.positionProperty], function( position ) {
       if ( !view.availableModelBounds ) {
         return true;
@@ -214,7 +216,8 @@ define( function( require ) {
 
       //Add a panel behind the tracks
       var margin = 5;
-      this.trackCreationPanel = new Panel( new Rectangle( 0, 0, interactiveTrackNodes[0].width, interactiveTrackNodes[0].height ), {xMargin: margin, yMargin: margin, x: interactiveTrackNodes[0].left - margin, y: interactiveTrackNodes[0].top - margin} );
+      this.trackCreationPanel = new Panel( new Rectangle( 0, 0, interactiveTrackNodes[0].width, interactiveTrackNodes[0].height ),
+        {xMargin: margin, yMargin: margin, x: interactiveTrackNodes[0].left - margin, y: interactiveTrackNodes[0].top - margin} );
       this.addChild( this.trackCreationPanel );
 
       interactiveTrackNodes.forEach( function( trackNode ) { trackNode.moveToFront(); } );
@@ -240,7 +243,8 @@ define( function( require ) {
           {fill: 'black'} );
       };
 
-      var rightCurve = new Path( new Shape().moveTo( 0, 0 ).quadraticCurveTo( -xControl, yControl, -xTip, yTip ), { stroke: 'black', lineWidth: 3 } );
+      var rightCurve = new Path( new Shape().moveTo( 0, 0 ).quadraticCurveTo( -xControl, yControl, -xTip, yTip ),
+        { stroke: 'black', lineWidth: 3 } );
       var arrowHead = createArrowhead( Math.PI - Math.PI / 3, new Vector2( -xTip, yTip ) );
 
       //Create the clear button, and match the size to the size of the track toolbox
@@ -260,7 +264,12 @@ define( function( require ) {
       this.addChild( buttons );
     }
 
-    var skaterNode = new SkaterNode( model.skater, this, modelViewTransform, model.getClosestTrackAndPositionAndParameter.bind( model ), model.getPhysicalTracks.bind( model ) );
+    var skaterNode = new SkaterNode(
+      model.skater,
+      this,
+      modelViewTransform,
+      model.getClosestTrackAndPositionAndParameter.bind( model ),
+      model.getPhysicalTracks.bind( model ) );
 
     var webGLSupported = WebGLLayer.isWebGLSupported();
 
@@ -286,7 +295,9 @@ define( function( require ) {
     var iconScale = 0.4;
     var returnSkaterToStartingPointButton = new RectangularPushButton( {
       content: new Image( skaterIconImage, {scale: iconScale} ),
-      baseColor: EnergySkateParkColorScheme.kineticEnergy, //green means "go" since the skater will likely start moving at this point
+
+      //green means "go" since the skater will likely start moving at this point
+      baseColor: EnergySkateParkColorScheme.kineticEnergy,
       listener: model.returnSkater.bind( model )
     } );
 
@@ -310,7 +321,8 @@ define( function( require ) {
         returnSkaterToGroundButton.moveToFront();
         returnSkaterToStartingPointButton.moveToFront();
 
-        //Put the button where the skater will appear.  Nudge it up a bit so the mouse can hit it from the drop site, without being moved at all (to simplify repeat runs).
+        //Put the button where the skater will appear.  Nudge it up a bit so the mouse can hit it from the drop site,
+        //without being moved at all (to simplify repeat runs).
         var viewPosition = modelViewTransform.modelToViewPosition( model.skater.startingPosition ).plusXY( 0, 5 );
         returnSkaterToStartingPointButton.centerBottom = viewPosition;
 
@@ -334,8 +346,9 @@ define( function( require ) {
     getState: function() {},
     setState: function() {},
 
-    //Layout the EnergySkateParkBasicsScreenView, scaling it up and down with the size of the screen to ensure a minimially visible area,
-    //But keeping it centered at the bottom of the screen, so there is more area in the +y direction to build tracks and move the skater
+    //Layout the EnergySkateParkBasicsScreenView, scaling it up and down with the size of the screen to ensure a
+    //minimially visible area, but keeping it centered at the bottom of the screen, so there is more area in the +y
+    //direction to build tracks and move the skater
     layout: function( width, height ) {
 
       this.resetTransform();
