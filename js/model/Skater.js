@@ -8,11 +8,29 @@
 define( function( require ) {
   'use strict';
 
+  // modules
   var inherit = require( 'PHET_CORE/inherit' );
   var PropertySet = require( 'AXON/PropertySet' );
   var Vector2 = require( 'DOT/Vector2' );
   var Util = require( 'DOT/Util' );
   var Constants = require( 'ENERGY_SKATE_PARK_BASICS/Constants' );
+
+  // constants
+
+  // Compare two arrays, whose elements have 'equals' methods for comparison
+  var arrayEquals = function( a, b ) {
+    if ( a.length !== b.length ) {
+      return false;
+    }
+    for ( var i = 0; i < a.length; i++ ) {
+      var elm1 = a[i];
+      var elm2 = b[i];
+      if ( !elm1.equals( elm2 ) ) {
+        return false;
+      }
+    }
+    return true;
+  };
 
   function Skater() {
     var skater = this;
@@ -155,26 +173,12 @@ define( function( require ) {
       this.mass = mass;
     },
 
-    arrayEquals: function( a, b ) {
-      if ( a.length !== b.length ) {
-        return false;
-      }
-      for ( var i = 0; i < a.length; i++ ) {
-        var elm1 = a[i];
-        var elm2 = b[i];
-        if ( !elm1.equals( elm2 ) ) {
-          return false;
-        }
-      }
-      return true;
-    },
-
     //Return the skater to the last location it was released by the user (or its starting location)
     //Including the position on a track (if any)
     returnSkater: function() {
 
       //If the user is on the same track as where he began (and the track hasn't changed), remain on the track, see #143 and #144
-      if ( this.startingTrack && this.track === this.startingTrack && this.arrayEquals( this.track.copyControlPointSources(), this.startingTrackControlPointSources ) ) {
+      if ( this.startingTrack && this.track === this.startingTrack && arrayEquals( this.track.copyControlPointSources(), this.startingTrackControlPointSources ) ) {
         this.u = this.startingU;
         this.angle = this.startingAngle;
         this.up = this.startingUp;
