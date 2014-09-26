@@ -32,7 +32,6 @@ define( function( require ) {
    * @constructor
    */
   function Track( events, modelTracks, controlPoints, interactive, parents, availableModelBoundsProperty ) {
-    var track = this;
     this.events = events;
     this.parents = parents;
     this.modelTracks = modelTracks;
@@ -63,9 +62,9 @@ define( function( require ) {
     this.controlPoints = controlPoints;
 
     this.interactive = interactive;
-    this.u = new FastArray( track.controlPoints.length );
-    this.x = new FastArray( track.controlPoints.length );
-    this.y = new FastArray( track.controlPoints.length );
+    this.u = new FastArray( this.controlPoints.length );
+    this.x = new FastArray( this.controlPoints.length );
+    this.y = new FastArray( this.controlPoints.length );
 
     // Sampling points, which will be initialized and updated in updateLinSpace.  These points are evenly spaced
     // in the track parametric coordinates from just before the track parameter space to just after. See updateLinSpace
