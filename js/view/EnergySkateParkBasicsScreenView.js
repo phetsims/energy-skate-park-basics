@@ -137,7 +137,7 @@ define( function( require ) {
       scale: 0.85,
       centerX: this.controlPanel.centerX,
 
-      // Align vertically with other controls, see https:// github.com/phetsims/energy-skate-park-basics/issues/134
+      // Align vertically with other controls, see #134
       centerY: (modelViewTransform.modelToViewY( 0 ) + this.layoutBounds.maxY) / 2 + 8
     } );
     this.addChild( this.resetAllButton );

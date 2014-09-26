@@ -66,7 +66,7 @@ define( function( require ) {
       // Make the radius proportional to the square root of the energy so that the area will grow linearly with energy
       var radius = 0.4 * Math.sqrt( totalEnergy );
 
-      // If any value is too low, then don't show it, see https:// github.com/phetsims/energy-skate-park-basics/issues/136
+      // If any value is too low, then don't show it, see #136
       var THRESHOLD = 1E-4;
 
       // if only one component of pie chart, then show as a circle so there are no seams
@@ -110,8 +110,7 @@ define( function( require ) {
         // Round the radius so it will only update the graphics when it changed by a px or more
         thermalEnergySlice.radius = Math.round( radius );
 
-        // Start thermal at the right and wind counter clockwise,
-        // see https:// github.com/phetsims/energy-skate-park-basics/issues/133
+        // Start thermal at the right and wind counter clockwise, see #133
         // Order is thermal (in the background), kinetic, potential
         var potentialStartAngle = 0;
         var kineticStartAngle = Math.PI * 2 * fractionPotential;

@@ -424,7 +424,7 @@ define( function( require ) {
     // Compute the signed curvature as defined here: http:// en.wikipedia.org/wiki/Curvature#Local_expressions
     // Used for centripetal force and determining whether the skater flies off the track
     // Curvature parameter is for storing the result as pass-by-value.
-    // Sorry, see https:// github.com/phetsims/energy-skate-park-basics/issues/50 regarding GC
+    // Sorry, see #50 regarding GC
     getCurvature: function( u, curvature ) {
 
       if ( this.xSplineDiff === null ) {
@@ -507,8 +507,7 @@ define( function( require ) {
     },
 
     /**
-     * Smooth out the track so it doesn't have any sharp turns
-     * see https:// github.com/phetsims/energy-skate-park-basics/issues/177
+     * Smooth out the track so it doesn't have any sharp turns, see #177
      * @param {Number} i the index of the control point to adjust
      */
     smooth: function( i ) {

@@ -12,12 +12,11 @@
  * Computational problems in introductory physics: Lessons from a bead on a wire
  * Thomas J. Bensky and Matthew J. Moelter
  *
- * We experimented with the analytical model, but ran into problems with discontinuous tracks,
- * see https:// github.com/phetsims/energy-skate-park-basics/issues/15 so reverted to using the euclidean model from the
- * original Java version.
+ * We experimented with the analytical model, but ran into problems with discontinuous tracks, see #15, so reverted to
+ * using the euclidean model from the original Java version.
  *
  * Please note: Many modifications were made to this file to reduce allocations and garbage collections on iPad,
- * see https:// github.com/phetsims/energy-skate-park-basics/issues/50 The main changes were: Using pooling,
+ * see #50.  The main changes were: Using pooling,
  * pass by reference, and component-wise math. Unfortunately, these are often compromises in the
  * readability/maintainability of the code, but they seemed important to attain good performance.
  *
@@ -76,9 +75,7 @@ define( function( require ) {
 
     // Temporary flag that keeps track of whether the track was changed in the step before the physics update.
     // true if the skater's track is being dragged by the user, so that energy conservation no longer applies.
-    // Only applies to one frame at a time (for the immediate next update).
-    // See https:// github.com/phetsims/energy-skate-park-basics/issues/127
-    // Also applies to https:// github.com/phetsims/energy-skate-park-basics/issues/135
+    // Only applies to one frame at a time (for the immediate next update).  See #127 and #135
     this.trackChangePending = false;
     PropertySet.call( this, {
 
@@ -322,8 +319,7 @@ define( function( require ) {
       SkaterState.clearAllocated();
     },
 
-    // The skater moves along the ground with the same coefficient of fraction as the tracks,
-    // see https:// github.com/phetsims/energy-skate-park-basics/issues/11
+    // The skater moves along the ground with the same coefficient of fraction as the tracks, see #11
     stepGround: function( dt, skaterState ) {
       var x0 = skaterState.positionX;
       var frictionMagnitude = (this.friction === 0 || skaterState.getSpeed() < 1E-2) ? 0 :
@@ -332,8 +328,7 @@ define( function( require ) {
 
       var v1 = skaterState.velocityX + acceleration * dt;
 
-      // Exponentially decay the velocity if already nearly zero,
-      // see https:// github.com/phetsims/energy-skate-park-basics/issues/138
+      // Exponentially decay the velocity if already nearly zero, see #138
       if ( this.friction !== 0 && skaterState.getSpeed() < 1E-2 ) {
         v1 = v1 / 2;
       }
@@ -666,8 +661,7 @@ define( function( require ) {
       var newVelocityX = parallelUnitX * uD;
       var newVelocityY = parallelUnitY * uD;
 
-      // Exponentially decay the velocity if already nearly zero and on a flat slope,
-      // see https:// github.com/phetsims/energy-skate-park-basics/issues/129
+      // Exponentially decay the velocity if already nearly zero and on a flat slope, see #129
       if ( parallelUnitX / parallelUnitY > 5 && Math.sqrt( newVelocityX * newVelocityX + newVelocityY * newVelocityY ) < 1E-2 ) {
         newVelocityX /= 2;
         newVelocityY /= 2;
@@ -689,8 +683,7 @@ define( function( require ) {
 
         var newTotalEnergy = newState.getTotalEnergy() + therm;
 
-        // Conserve energy, but only if the user is not adding energy,
-        // see https:// github.com/phetsims/energy-skate-park-basics/issues/135
+        // Conserve energy, but only if the user is not adding energy, see #135
         if ( thrust.magnitude() === 0 && !this.trackChangePending ) {
           if ( newTotalEnergy < origEnergy ) {
             thermalEnergy += Math.abs( newTotalEnergy - origEnergy );// add some thermal to exactly match
@@ -1259,8 +1252,7 @@ define( function( require ) {
         this.skater.updateEnergy();
       }
 
-      // Flag the track as having changed *this frame* so energy doesn't need to be conserved during this frame,
-      // see https:// github.com/phetsims/energy-skate-park-basics/issues/127
+      // Flag the track as having changed *this frame* so energy doesn't need to be conserved during this frame, see #127
       this.trackChangePending = true;
     },
 

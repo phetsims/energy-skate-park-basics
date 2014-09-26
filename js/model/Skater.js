@@ -92,7 +92,7 @@ define( function( require ) {
 
     this.addDerivedProperty( 'speed', ['velocity'], function( velocity ) {return velocity.magnitude();} );
 
-    // Zero the kinetic energy when dragging, see https:// github.com/phetsims/energy-skate-park-basics/issues/22
+    // Zero the kinetic energy when dragging, see #22
     this.draggingProperty.link( function( dragging ) {
       if ( dragging ) {
         skater.velocity = new Vector2( 0, 0 );

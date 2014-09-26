@@ -146,8 +146,7 @@ define( function( require ) {
       this.road.shape = shape.getStrokedShape( strokeStyles );
       this.centerLine.shape = shape;
 
-      // Update the skater if the track is moved while the sim is paused,
-      // see https:// github.com/phetsims/energy-skate-park-basics/issues/84
+      // Update the skater if the track is moved while the sim is paused, see #84
       if ( model.skater.track === track && model.paused ) {
         model.skater.position = track.getPoint( model.skater.u );
         model.skater.angle = model.skater.track.getViewAngleAt( model.skater.u ) + (model.skater.up ? 0 : Math.PI);

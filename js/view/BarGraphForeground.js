@@ -45,8 +45,7 @@ define( function( require ) {
     var createBar = function( index, color, property ) {
 
       // Convert to graph coordinates, floor and protect against duplicates
-      // However, do not floor for values less than 1 otherwise a nonzero value will show up as zero,
-      // see https:// github.com/phetsims/energy-skate-park-basics/issues/159
+      // However, do not floor for values less than 1 otherwise a nonzero value will show up as zero, see #159
       var barHeightProperty = property.map( function( value ) {
         var result = value / 30;
 
