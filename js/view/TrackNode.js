@@ -10,6 +10,7 @@
 define( function( require ) {
   'use strict';
 
+  // modules
   var inherit = require( 'PHET_CORE/inherit' );
   var Node = require( 'SCENERY/nodes/Node' );
   var Path = require( 'SCENERY/nodes/Path' );
@@ -19,6 +20,10 @@ define( function( require ) {
   var LineStyles = require( 'KITE/util/LineStyles' );
   var SplineEvaluation = require( 'ENERGY_SKATE_PARK_BASICS/model/SplineEvaluation' );
   var ControlPointUI = require( 'ENERGY_SKATE_PARK_BASICS/view/ControlPointUI' );
+  var dot = require( 'DOT/dot' );
+
+  // constants
+  var FastArray = dot.FastArray;
 
   /*
    * Constructor for TrackNode
@@ -221,8 +226,8 @@ define( function( require ) {
     }
 
     //Reuse arrays to save allocations and prevent garbage collections, see #38
-    var x = new Array( track.controlPoints.length );
-    var y = new Array( track.controlPoints.length );
+    var x = new FastArray( track.controlPoints.length );
+    var y = new FastArray( track.controlPoints.length );
 
     //Store for performance
     var lastPt = (track.controlPoints.length - 1) / track.controlPoints.length;

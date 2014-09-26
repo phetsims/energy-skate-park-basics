@@ -8,10 +8,15 @@
 define( function( require ) {
   'use strict';
 
+  // modules
   var inherit = require( 'PHET_CORE/inherit' );
   var PropertySet = require( 'AXON/PropertySet' );
   var Vector2 = require( 'DOT/Vector2' );
   var SplineEvaluation = require( 'ENERGY_SKATE_PARK_BASICS/model/SplineEvaluation' );
+  var dot = require( 'DOT/dot' );
+
+  // constants
+  var FastArray = dot.FastArray;
 
   /**
    * Model for a track, which has a fixed number of points.  If you added a point to a Track, you need a new track.
@@ -51,9 +56,9 @@ define( function( require ) {
     this.controlPoints = controlPoints;
 
     this.interactive = interactive;
-    this.u = new Array( track.controlPoints.length );
-    this.x = new Array( track.controlPoints.length );
-    this.y = new Array( track.controlPoints.length );
+    this.u = new FastArray( track.controlPoints.length );
+    this.x = new FastArray( track.controlPoints.length );
+    this.y = new FastArray( track.controlPoints.length );
 
     // Sampling points, which will be initialized and updated in updateLinSpace.  These points are evenly spaced
     // in the track parametric coordinates from just before the track parameter space to just after. See updateLinSpace

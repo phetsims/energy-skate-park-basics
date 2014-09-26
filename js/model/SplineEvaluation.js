@@ -9,6 +9,12 @@
 define( function() {
   'use strict';
 
+  // modules
+  var dot = require( 'DOT/dot' );
+
+  // constants
+  var FastArray = dot.FastArray;
+
   //The most important function for this sim in numeric.js is just too slow because it uses tensor versions of all functions.
   //This version inlines everything.
   var _at = function( spline, x1, p ) {
@@ -47,7 +53,7 @@ define( function() {
 
   var atArray = function( spline, x0 ) {
     var n = x0.length;
-    var i, ret = new Array( n );
+    var i, ret = new FastArray( n );
     for ( i = n - 1; i !== -1; --i ) {
       ret[i] = atNumber( spline, x0[i] );
     }
