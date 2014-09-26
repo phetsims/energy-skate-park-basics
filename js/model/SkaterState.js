@@ -262,6 +262,8 @@ define( function( require ) {
         return new Vector2( this.velocityX, this.velocityY );
       }
 
+//      freeToPool: function() {}
+
     },
 
     //statics
@@ -277,6 +279,9 @@ define( function( require ) {
         }
         SkaterState.allocated.length = 0;
       }
+//      createFromPool: function( source, overrides ) {
+//        return new SkaterState( source, overrides );
+//      }
     }
   );
 
