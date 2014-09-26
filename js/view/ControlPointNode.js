@@ -24,12 +24,11 @@ define( function( require ) {
   /**
    * @param {TrackNode} trackNode
    * @param {TrackSegmentDragHandler} trackSegmentDragHandler
-   * @param {Function}updateTrackShape
    * @param {number} i
    * @param {boolean} isEndPoint
    * @constructor
    */
-  function ControlPointNode( trackNode, trackSegmentDragHandler, updateTrackShape, i, isEndPoint ) {
+  function ControlPointNode( trackNode, trackSegmentDragHandler, i, isEndPoint ) {
     var track = trackNode.track;
     var model = trackNode.model;
     var modelViewTransform = trackNode.modelViewTransform;
@@ -67,7 +66,6 @@ define( function( require ) {
           // Check whether the model contains a track so that input listeners for detached elements can't create bugs, see #230
           if ( !model.containsTrack( track ) ) { return; }
 
-          console.log( 'p', track.physical, 'd', track.dropped );
           // If control point dragged out of the control panel, translate the entire track, see #130
           if ( !track.physical || !track.dropped ) {
             trackSegmentDragHandler.trackDragged( event );
@@ -125,7 +123,7 @@ define( function( require ) {
 
           // When one control point dragged, update the track and the node shape
           track.updateSplines();
-          updateTrackShape();
+          trackNode.updateTrackShape();
           model.trackModified( track );
         },
         end: function( event ) {

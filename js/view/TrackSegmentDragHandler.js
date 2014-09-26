@@ -22,9 +22,10 @@ define( function( require ) {
   var dot = require( 'DOT/dot' );
 
   /**
+   * @param {TrackNode} the track node that this listener will drag
    * @constructor
    */
-  function TrackSegmentDragHandler( trackNode, updateTrackShape ) {
+  function TrackSegmentDragHandler( trackNode ) {
     var track = trackNode.track;
     var model = trackNode.model;
     var modelViewTransform = trackNode.modelViewTransform;
@@ -168,7 +169,7 @@ define( function( require ) {
         // It costs about 5fps to do this every frame (on iPad3), so only check if the snapTargets have changed.  See #235
         if ( snapTargetChanged ) {
           track.updateSplines();
-          updateTrackShape();
+          trackNode.updateTrackShape();
         }
 
         // Make it so the track can't be dragged underground when dragged by the track itself (not control point), see #166
