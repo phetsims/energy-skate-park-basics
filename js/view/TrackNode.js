@@ -21,7 +21,7 @@ define( function( require ) {
   var SplineEvaluation = require( 'ENERGY_SKATE_PARK_BASICS/model/SplineEvaluation' );
   var ControlPointUI = require( 'ENERGY_SKATE_PARK_BASICS/view/ControlPointUI' );
   var ControlPointNode = require( 'ENERGY_SKATE_PARK_BASICS/view/ControlPointNode' );
-  var TrackSegmentDragHandler = require( 'ENERGY_SKATE_PARK_BASICS/view/TrackSegmentDragHandler' );
+  var TrackDragHandler = require( 'ENERGY_SKATE_PARK_BASICS/view/TrackDragHandler' );
   var dot = require( 'DOT/dot' );
 
   // constants
@@ -64,12 +64,12 @@ define( function( require ) {
     //If the track is interactive, make it draggable and make the control points visible and draggable
     if ( track.interactive ) {
 
-      var trackSegmentDragHandler = new TrackSegmentDragHandler( this );
-      this.road.addInputListener( trackSegmentDragHandler );
+      var trackDragHandler = new TrackDragHandler( this );
+      this.road.addInputListener( trackDragHandler );
 
       for ( var i = 0; i < track.controlPoints.length; i++ ) {
         var isEndPoint = i === 0 || i === track.controlPoints.length - 1;
-        trackNode.addChild( new ControlPointNode( trackNode, trackSegmentDragHandler, i, isEndPoint ) );
+        trackNode.addChild( new ControlPointNode( trackNode, trackDragHandler, i, isEndPoint ) );
       }
     }
 

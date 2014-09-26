@@ -23,12 +23,12 @@ define( function( require ) {
 
   /**
    * @param {TrackNode} trackNode
-   * @param {TrackSegmentDragHandler} trackSegmentDragHandler
+   * @param {TrackDragHandler} trackDragHandler
    * @param {number} i
    * @param {boolean} isEndPoint
    * @constructor
    */
-  function ControlPointNode( trackNode, trackSegmentDragHandler, i, isEndPoint ) {
+  function ControlPointNode( trackNode, trackDragHandler, i, isEndPoint ) {
     var track = trackNode.track;
     var model = trackNode.model;
     var modelViewTransform = trackNode.modelViewTransform;
@@ -55,7 +55,7 @@ define( function( require ) {
 
           // If control point dragged out of the control panel, translate the entire track, see #130
           if ( !track.physical || !track.dropped ) {
-            trackSegmentDragHandler.trackDragStarted( event );
+            trackDragHandler.trackDragStarted( event );
             return;
           }
           track.dragging = true;
@@ -68,7 +68,7 @@ define( function( require ) {
 
           // If control point dragged out of the control panel, translate the entire track, see #130
           if ( !track.physical || !track.dropped ) {
-            trackSegmentDragHandler.trackDragged( event );
+            trackDragHandler.trackDragged( event );
             return;
           }
           dragEvents++;
@@ -133,7 +133,7 @@ define( function( require ) {
 
           // If control point dragged out of the control panel, translate the entire track, see #130
           if ( !track.physical || !track.dropped ) {
-            trackSegmentDragHandler.trackDragEnded( event );
+            trackDragHandler.trackDragEnded( event );
             return;
           }
           if ( isEndPoint && controlPoint.snapTarget ) {

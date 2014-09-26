@@ -25,7 +25,7 @@ define( function( require ) {
    * @param {TrackNode} the track node that this listener will drag
    * @constructor
    */
-  function TrackSegmentDragHandler( trackNode ) {
+  function TrackDragHandler( trackNode ) {
     var track = trackNode.track;
     var model = trackNode.model;
     var modelViewTransform = trackNode.modelViewTransform;
@@ -209,7 +209,7 @@ define( function( require ) {
     SimpleDragHandler.call( this, trackSegmentDragHandlerOptions );
   }
 
-  return inherit( SimpleDragHandler, TrackSegmentDragHandler, {
+  return inherit( SimpleDragHandler, TrackDragHandler, {
 
     // When the user drags the track out of the toolbox, if they drag the track by a control point, it still translates
     // the track.  In that case (and only that case), the following methods are called by the ControlPointNode drag
