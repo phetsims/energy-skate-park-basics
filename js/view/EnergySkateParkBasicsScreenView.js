@@ -308,8 +308,8 @@ define( function( require ) {
       listener: function() { model.skater.resetPosition(); }
     } );
 
-//    this.addChild( returnSkaterToStartingPointButton );
-//    this.addChild( returnSkaterToGroundButton );
+    this.addChild( returnSkaterToStartingPointButton );
+    this.addChild( returnSkaterToGroundButton );
 
     //When the skater goes off screen, make the "return skater" button big
     onscreenProperty.link( function( skaterOnscreen ) {
