@@ -70,7 +70,7 @@ define( function( require ) {
       //Translate to the desired location
       var matrix = Matrix3.translation( view.x, view.y );
 
-      //Rotation and translation can happen in any order
+      //Rotate about the pivot (bottom center of the skater)
       var rotationMatrix = Matrix3.rotation2( angle );
       matrix.multiplyMatrix( rotationMatrix );
       rotationMatrix.freeToPool();
