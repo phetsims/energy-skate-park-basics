@@ -269,27 +269,6 @@ define( function( require ) {
       // Update the energy on skater release so it won't try to move to a different height to make up for the delta
       this.updateEnergy();
       this.trigger( 'updated' );
-    },
-
-    getInitialDetachment: function() {
-      return {
-
-        // The model time (in seconds) when the skater last detached from the track
-        time: 0,
-
-        // The last track the skater detached from
-        track: null,
-
-        // The Vector2 position the skater detached from.  Initialize this as far from the play area but non-null to
-        // simplify the logic
-        position: new Vector2( 10000, 10000 ),
-
-        // The arc distance traveled since detaching
-        arcLength: 0,
-
-        // The parametric curve position the skater detached from
-        u: 0
-      };
     }
   } );
 } );
