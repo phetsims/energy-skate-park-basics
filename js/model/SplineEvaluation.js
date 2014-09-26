@@ -15,8 +15,8 @@ define( function() {
   // constants
   var FastArray = dot.FastArray;
 
-  //The most important function for this sim in numeric.js is just too slow because it uses tensor versions of all functions.
-  //This version inlines everything.
+  // The most important function for this sim in numeric.js is just too slow because it uses tensor versions of all functions.
+  // This version inlines everything.
   var _at = function( spline, x1, p ) {
     var x = spline.x;
     var yl = spline.yl;

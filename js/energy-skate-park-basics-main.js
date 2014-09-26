@@ -11,7 +11,7 @@ define( function( require ) {
   var SimLauncher = require( 'JOIST/SimLauncher' );
   var EnergySkateParkBasicsSim = require( 'ENERGY_SKATE_PARK_BASICS/EnergySkateParkBasicsSim' );
 
-  //Fix a circular loading problem when using this in EnergySkateParkColorScheme
+  // Fix a circular loading problem when using this in EnergySkateParkColorScheme
   require( 'SCENERY/util/Color' );
 
   SimLauncher.launch( function() {

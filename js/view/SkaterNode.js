@@ -24,7 +24,7 @@ define( function( require ) {
   var skaterLeftImage = require( 'image!ENERGY_SKATE_PARK_BASICS/skater-left.png' );
   var skaterRightImage = require( 'image!ENERGY_SKATE_PARK_BASICS/skater-right.png' );
 
-  //Map from mass(kg) to the amount to scale the image
+  // Map from mass(kg) to the amount to scale the image
   var centerMassValue = (Constants.MIN_MASS + Constants.MAX_MASS) / 2;
   var massToScale = new LinearFunction( centerMassValue, Constants.MAX_MASS, 0.34, 0.43 );
 
@@ -44,7 +44,7 @@ define( function( require ) {
     this.skater = skater;
     var skaterNode = this;
 
-    //Use a separate texture for left/right skaters to avoid WebGL performance issues when switching textures
+    // Use a separate texture for left/right skaters to avoid WebGL performance issues when switching textures
     var leftSkaterImageNode = new Image( skaterLeftImage, { cursor: 'pointer' } );
     var rightSkaterImageNode = new Image( skaterRightImage, { cursor: 'pointer' } );
 
@@ -58,8 +58,8 @@ define( function( require ) {
     var imageWidth = this.width;
     var imageHeight = this.height;
 
-    //Update the position and angle.  Normally the angle would only change if the position has also changed, so no need
-    //for a duplicate callback there.  Uses pooling to avoid allocations, see #50
+    // Update the position and angle.  Normally the angle would only change if the position has also changed, so no need
+    // for a duplicate callback there.  Uses pooling to avoid allocations, see #50
     this.skater.on( 'updated', function() {
       var mass = skater.mass;
       var position = skater.position;
@@ -67,10 +67,10 @@ define( function( require ) {
 
       var view = modelViewTransform.modelToViewPosition( position );
 
-      //Translate to the desired location
+      // Translate to the desired location
       var matrix = Matrix3.translation( view.x, view.y );
 
-      //Rotate about the pivot (bottom center of the skater)
+      // Rotate about the pivot (bottom center of the skater)
       var rotationMatrix = Matrix3.rotation2( angle );
       matrix.multiplyMatrix( rotationMatrix );
       rotationMatrix.freeToPool();
@@ -80,8 +80,8 @@ define( function( require ) {
       matrix.multiplyMatrix( scalingMatrix );
       scalingMatrix.freeToPool();
 
-      //Think of it as a multiplying the Vector2 to the right, so this step happens first actually.  Use it to center
-      //the registration point
+      // Think of it as a multiplying the Vector2 to the right, so this step happens first actually.  Use it to center
+      // the registration point
       var translation = Matrix3.translation( -imageWidth / 2, -imageHeight );
       matrix.multiplyMatrix( translation );
       translation.freeToPool();
@@ -89,7 +89,7 @@ define( function( require ) {
       skaterNode.setMatrix( matrix );
     } );
 
-    //Show a red dot in the bottom center as the important particle model coordinate
+    // Show a red dot in the bottom center as the important particle model coordinate
     this.addChild( new Circle( 8, {fill: 'red', x: imageWidth / 2, y: imageHeight } ).toCanvasNodeSynchronous() );
 
     var targetTrack = null;
@@ -100,11 +100,11 @@ define( function( require ) {
         start: function( event ) {
           skater.dragging = true;
 
-          //Clear thermal energy whenever skater is grabbed,
-          //see https://github.com/phetsims/energy-skate-park-basics/issues/32
+          // Clear thermal energy whenever skater is grabbed,
+          // see https:// github.com/phetsims/energy-skate-park-basics/issues/32
           skater.thermalEnergy = 0;
 
-          //Jump to the input location when dragged
+          // Jump to the input location when dragged
           this.drag( event );
         },
 
@@ -113,11 +113,11 @@ define( function( require ) {
           var globalPoint = skaterNode.globalToParentPoint( event.pointer.point );
           var position = modelViewTransform.viewToModelPosition( globalPoint );
 
-          //make sure it is within the visible bounds
+          // make sure it is within the visible bounds
           position = view.availableModelBounds.getClosestPoint( position.x, position.y, position );
 
-          //PERFORMANCE/ALLOCATION: lots of unnecessary allocations and computation here, biggest improvement could be
-          //to use binary search for position on the track
+          // PERFORMANCE/ALLOCATION: lots of unnecessary allocations and computation here, biggest improvement could be
+          // to use binary search for position on the track
           var closestTrackAndPositionAndParameter = getClosestTrackAndPositionAndParameter( position, getPhysicalTracks() );
           var closeEnough = false;
           if ( closestTrackAndPositionAndParameter && closestTrackAndPositionAndParameter.track && closestTrackAndPositionAndParameter.track.isParameterInBounds( closestTrackAndPositionAndParameter.u ) ) {
@@ -128,7 +128,7 @@ define( function( require ) {
               targetTrack = closestTrackAndPositionAndParameter.track;
               targetU = closestTrackAndPositionAndParameter.u;
 
-              //Choose the right side of the track, i.e. the side of the track that would have the skater upside up
+              // Choose the right side of the track, i.e. the side of the track that would have the skater upside up
               var normal = targetTrack.getUnitNormalVector( targetU );
               skater.up = normal.y > 0;
 
@@ -141,7 +141,7 @@ define( function( require ) {
             targetTrack = null;
             targetU = null;
 
-            //make skater upright if not near the track
+            // make skater upright if not near the track
             skater.angle = 0;
             skater.up = true;
 
@@ -158,7 +158,7 @@ define( function( require ) {
 
         end: function() {
 
-          //Record the state of the skater for "return skater"
+          // Record the state of the skater for "return skater"
           skater.released( targetTrack, targetU );
         }
       } ) );

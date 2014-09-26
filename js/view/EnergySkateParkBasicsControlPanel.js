@@ -46,7 +46,7 @@ define( function( require ) {
     var sets = [pieChartSet, barGraphSet, gridSet, speedometerSet];
     var maxTextWidth = _.max( sets, function( itemSet ) { return itemSet[0].width; } )[0].width;
 
-    //In the absence of any sun (or other) layout packages, just manually space them out so they will have the icons aligned
+    // In the absence of any sun (or other) layout packages, just manually space them out so they will have the icons aligned
     var pad = function( itemSet ) {
       var padWidth = maxTextWidth - itemSet[0].width;
       return [itemSet[0], new Rectangle( 0, 0, padWidth + 20, 20 ), itemSet[1]];
@@ -63,10 +63,10 @@ define( function( require ) {
 
     var content = new VBox( {spacing: 4,
 
-      //For 1st screen, show MassSlider
+      // For 1st screen, show MassSlider
       children: !model.frictionAllowed ? [checkBoxes, new MassSlider( model.skater.massProperty )] :
 
-        //For 2nd and 3rd screen, show Friction Slider and Mass Slider, see #147
+        // For 2nd and 3rd screen, show Friction Slider and Mass Slider, see #147
                 [checkBoxes, new MassSlider( model.skater.massProperty ), new FrictionControl( model.property( 'friction' ) )]
     } );
 
@@ -76,7 +76,7 @@ define( function( require ) {
 
   return inherit( Panel, EnergySkateParkBasicsControlPanel, {
 
-    //Create an icon for the bar graph check box
+    // Create an icon for the bar graph check box
     createBarGraphIcon: function() {
       return new Node( {children: [
         new Rectangle( 0, 0, 20, 20, {fill: 'white', stroke: 'black', lineWidth: 0.5} ),
@@ -85,7 +85,7 @@ define( function( require ) {
       ]} );
     },
 
-    //Create an icon for the pie chart check box
+    // Create an icon for the pie chart check box
     createPieChartIcon: function() {
       var radius = 10;
       var x = new Shape().
@@ -97,7 +97,7 @@ define( function( require ) {
       ]} );
     },
 
-    //Create an icon for the grid check box
+    // Create an icon for the grid check box
     createGridIcon: function() {
       return new Node( {children: [
         new Rectangle( 0, 0, 20, 20, {fill: 'white', stroke: 'black', lineWidth: 0.5} ),
@@ -110,7 +110,7 @@ define( function( require ) {
       ]} );
     },
 
-    //Create an icon for the speedometer check box
+    // Create an icon for the speedometer check box
     createSpeedometerIcon: function() {
       var node = new GaugeNode( new Property( 0 ), speedString, {min: 0, max: 10}, {pickable: false} );
       node.scale( 20 / node.width );

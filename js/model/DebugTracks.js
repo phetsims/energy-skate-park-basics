@@ -1,4 +1,4 @@
-//  Copyright 2002-2014, University of Colorado Boulder
+// Copyright 2002-2014, University of Colorado Boulder
 
 /**
  * Debug tracks, which can be enabled using the query parameter 'debugTrack' with the index of the track to debug.
@@ -19,14 +19,14 @@ define( function( require ) {
 
   return inherit( Object, DebugTrack, {}, {
       init: function( model ) {
-        //Tracks to help demonstrate issues
+        // Tracks to help demonstrate issues
 
         var controlPoints = null;
         var track = null;
         if ( window.phetcommon.getQueryParameter( 'debugTrack' ) === '1' ) {
 
           model.detachable = true;
-          //The skater falls through model track
+          // The skater falls through model track
           model.skater.position.set( new Vector2( -5, 8 ) );
           model.skater.released( 0, 0 );
 
@@ -36,11 +36,11 @@ define( function( require ) {
           model.tracks.add( track );
         }
 
-        //Skater stutters and slows going over the hump
+        // Skater stutters and slows going over the hump
         if ( window.phetcommon.getQueryParameter( 'debugTrack' ) === '2' ) {
 
           model.detachable = true;
-          //The skater falls through model track
+          // The skater falls through model track
           model.skater.position.set( new Vector2( -5, 7.7 ) );
           model.skater.released( 0, 0 );
 
@@ -50,11 +50,11 @@ define( function( require ) {
           model.tracks.add( track );
         }
 
-        //Tricky one--handled OK
+        // Tricky one--handled OK
         if ( window.phetcommon.getQueryParameter( 'debugTrack' ) === '3' ) {
 
           model.detachable = true;
-          //The skater falls through model track
+          // The skater falls through model track
           model.skater.position.set( new Vector2( -5, 7.7 ) );
           model.skater.released( 0, 0 );
 
@@ -64,11 +64,11 @@ define( function( require ) {
           model.tracks.add( track );
         }
 
-        //Wide loop, OK
+        // Wide loop, OK
         if ( window.phetcommon.getQueryParameter( 'debugTrack' ) === '4' ) {
 
           model.detachable = true;
-          //The skater falls through model track
+          // The skater falls through model track
           model.skater.position.set( new Vector2( -5, 7.7 ) );
           model.skater.released( 0, 0 );
 
@@ -78,11 +78,11 @@ define( function( require ) {
           model.tracks.add( track );
         }
 
-        //Flickering return skater button, PROBLEM
+        // Flickering return skater button, PROBLEM
         if ( window.phetcommon.getQueryParameter( 'debugTrack' ) === '5' ) {
 
           model.detachable = true;
-          //The skater falls through model track
+          // The skater falls through model track
           model.skater.position.set( new Vector2( -5, 7.7 ) );
           model.skater.released( 0, 0 );
 
@@ -92,11 +92,11 @@ define( function( require ) {
           model.tracks.add( track );
         }
 
-        //Passes through track, PROBLEM
+        // Passes through track, PROBLEM
         if ( window.phetcommon.getQueryParameter( 'debugTrack' ) === '6' ) {
 
           model.detachable = true;
-          //The skater falls through model track
+          // The skater falls through model track
           model.skater.position.set( new Vector2( 5, 7.9 ) );
           model.skater.released( 0, 0 );
 
@@ -106,11 +106,11 @@ define( function( require ) {
           model.tracks.add( track );
         }
 
-        //Falls through bottom, PROBLEM
+        // Falls through bottom, PROBLEM
         if ( window.phetcommon.getQueryParameter( 'debugTrack' ) === '7' ) {
 
           model.detachable = true;
-          //The skater falls through model track
+          // The skater falls through model track
           model.skater.position.set( new Vector2( 5, 7.9 ) );
           model.skater.released( 0, 0 );
 
@@ -120,11 +120,11 @@ define( function( require ) {
           model.tracks.add( track );
         }
 
-        //Falls through loop, PROBLEM
+        // Falls through loop, PROBLEM
         if ( window.phetcommon.getQueryParameter( 'debugTrack' ) === '8' ) {
 
           model.detachable = true;
-          //The skater falls through model track
+          // The skater falls through model track
           model.skater.position.set( new Vector2( 5, 7.9 ) );
           model.skater.released( 0, 0 );
 
@@ -134,11 +134,11 @@ define( function( require ) {
           model.tracks.add( track );
         }
 
-        //Pops upside down in loop, PROBLEM
+        // Pops upside down in loop, PROBLEM
         if ( window.phetcommon.getQueryParameter( 'debugTrack' ) === '9' ) {
 
           model.detachable = true;
-          //The skater falls through model track
+          // The skater falls through model track
           model.skater.position.set( new Vector2( 5, 7.9 ) );
           model.skater.released( 0, 0 );
           model.friction = 0;
@@ -152,7 +152,7 @@ define( function( require ) {
         if ( window.phetcommon.getQueryParameter( 'debugTrack' ) === '10' ) {
 
           model.detachable = true;
-          //The skater falls through model track
+          // The skater falls through model track
           model.skater.position.set( new Vector2( 5, 7.9 ) );
           model.skater.released( 0, 0 );
           model.friction = 0.0363651226158039;
@@ -166,7 +166,7 @@ define( function( require ) {
         if ( window.phetcommon.getQueryParameter( 'debugTrack' ) === '11' ) {
 
           model.detachable = true;
-          //The skater falls through model track
+          // The skater falls through model track
           model.skater.position.set( new Vector2( 5, 7.9 ) );
           model.skater.released( 0, 0 );
           model.friction = 0.0363651226158039;
@@ -180,7 +180,7 @@ define( function( require ) {
         if ( window.phetcommon.getQueryParameter( 'debugTrack' ) === '12' ) {
 
           model.detachable = true;
-          //The skater falls through model track
+          // The skater falls through model track
           model.skater.position.set( new Vector2( 5, 7.9 ) );
           model.skater.released( 0, 0 );
           model.friction = 0.0363651226158039;
@@ -193,7 +193,7 @@ define( function( require ) {
         if ( window.phetcommon.getQueryParameter( 'debugTrack' ) === '13' ) {
 
           model.detachable = false;
-          //The skater falls through model track
+          // The skater falls through model track
           model.skater.position.set( new Vector2( 5, 7.9 ) );
           model.skater.released( 0, 0 );
           model.friction = 0.0363651226158039;
@@ -237,9 +237,7 @@ define( function( require ) {
           var track3 = new Track( model, model.tracks, controlPoints3, true, null, model.availableModelBoundsProperty );
           track3.physical = true;
           model.tracks.add( track3 );
-
         }
-
       }}
   );
 } );

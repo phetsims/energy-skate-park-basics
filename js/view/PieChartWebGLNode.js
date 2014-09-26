@@ -1,4 +1,4 @@
-//  Copyright 2002-2014, University of Colorado Boulder
+// Copyright 2002-2014, University of Colorado Boulder
 
 /**
  * Pie chart, rendered in WebGL to improve performance (when WebGL available)
@@ -27,17 +27,17 @@ define( function( require ) {
     var pieChartNode = this;
     Node.call( this );
 
-    //Show the pie chart above the skater's head
+    // Show the pie chart above the skater's head
     skater.headPositionProperty.link( function() {
       if ( pieChartNode.visible ) {
         var view = modelViewTransform.modelToViewPosition( skater.headPosition );
 
-        //Center pie chart over skater's head not his feet so it doesn't look awkward when skating in a parabola
+        // Center pie chart over skater's head not his feet so it doesn't look awkward when skating in a parabola
         pieChartNode.setTranslation( view.x, view.y - 50 );
       }
     } );
 
-    //Make the radius proportional to the square root of the energy so that the area will grow linearly with energy
+    // Make the radius proportional to the square root of the energy so that the area will grow linearly with energy
     var pieChartRadiusProperty = skater.totalEnergyProperty.map( function( totalEnergy ) {
       return 0.4 * Math.sqrt( totalEnergy );
     } );
@@ -74,7 +74,7 @@ define( function( require ) {
 
     var pieStroke = 1;
 
-    //TODO: why did Property.multilink not work here?
+    // TODO: why did Property.multilink not work here?
     var outlineRadiusProperty = DerivedProperty.multilink( [pieChartRadiusProperty], function( pieChartRadius ) {
       if ( pieChartRadius === 0 ) {
         return 0;
@@ -84,7 +84,7 @@ define( function( require ) {
       }
     } );
 
-    //Render the stroke as a larger black circle behind the pie chart
+    // Render the stroke as a larger black circle behind the pie chart
     var outline = new PieChartWebGLSliceNode( skater, 'black', outlineRadiusProperty, new Property( 0 ), new Property( Math.PI * 2 ), pieChartVisibleProperty, modelViewTransform );
     this.addChild( outline );
 

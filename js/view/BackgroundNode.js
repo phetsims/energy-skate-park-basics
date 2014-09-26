@@ -31,7 +31,7 @@ define( function( require ) {
     this.sky = new Rectangle( 0, 0, 0, 0 );
     this.addChild( this.sky );
 
-    //Wait for bounds to fill in the grass
+    // Wait for bounds to fill in the grass
     this.earth = new Rectangle( 0, 0, 0, 0, {fill: '#93774c'} );
     this.addChild( this.earth );
 
@@ -50,20 +50,20 @@ define( function( require ) {
 
   return inherit( Node, BackgroundNode, {
 
-      //Exactly fit the geometry to the screen so no matter what aspect ratio it will always show something.
-      //Perhaps it will improve performance too?
+      // Exactly fit the geometry to the screen so no matter what aspect ratio it will always show something.
+      // Perhaps it will improve performance too?
       layout: function( offsetX, offsetY, width, height, layoutScale ) {
         var cementY = this.cementY;
         this.earth.setRect( -offsetX, cementY, width / layoutScale, earthHeight );
 
-        //Work around scenery horizontal line pattern problem, see https://github.com/phetsims/scenery/issues/196
+        // Work around scenery horizontal line pattern problem, see https:// github.com/phetsims/scenery/issues/196
         this.cement.setRect( -offsetX, cementY, width / layoutScale, cementWidth );
         this.sky.setRect( -offsetX, -offsetY, width / layoutScale, height / layoutScale - earthHeight );
         this.sky.fill = new LinearGradient( 0, 0, 0, height / 2 ).addColorStop( 0, '#02ace4' ).addColorStop( 1, '#cfecfc' );
       }
     },
 
-    //Statics
+    // Statics
     {
       earthHeight: earthHeight
     } );

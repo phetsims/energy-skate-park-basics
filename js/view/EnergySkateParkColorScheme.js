@@ -12,10 +12,10 @@ define( function() {
 
   return {
 
-    //Use color instances here to prevent parsing these values multiple times
+    // Use color instances here to prevent parsing these values multiple times
     kineticEnergy: new Color( '#00cc1a' ),
     potentialEnergy: new Color( '#3282D7' ),
-    thermalEnergy: new Color( '#FF5500' ),//red colorblind
-    totalEnergy: new Color( '#B4B400' )//dirty yellow
+    thermalEnergy: new Color( '#FF5500' ),// red colorblind
+    totalEnergy: new Color( '#B4B400' )// dirty yellow
   };
 } );

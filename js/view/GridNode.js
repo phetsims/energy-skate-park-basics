@@ -32,10 +32,10 @@ define( function( require ) {
 
   return inherit( Node, GridNode, {
 
-    //Exactly fit the geometry to the screen so no matter what aspect ratio it will always show something.  Perhaps it
-    //will improve performance too? Could performance optimize by using visible instead of add/remove child if necessary
-    //(would only change performance on screen size change). For more performance improvements on screen size change,
-    //only update when the graph is visible, then again when it becomes visible.
+    // Exactly fit the geometry to the screen so no matter what aspect ratio it will always show something.  Perhaps it
+    // will improve performance too? Could performance optimize by using visible instead of add/remove child if necessary
+    // (would only change performance on screen size change). For more performance improvements on screen size change,
+    // only update when the graph is visible, then again when it becomes visible.
     layout: function( offsetX, offsetY, width, height, layoutScale ) {
 
       var thickLines = [];
@@ -72,9 +72,9 @@ define( function( require ) {
         if ( y % 2 === 0 ) {
           var text = new Text( '' + y, {font: new PhetFont( 18 ), top: viewY, right: originX - 2} );
 
-          //For the "0 meters" readout, we still need the 0 to line up perfectly (while still using a single
-          //internationalizable string), so use the 0 text bounds
-          //And shift it down a bit so it isn't touching the concrete, see #134
+          // For the "0 meters" readout, we still need the 0 to line up perfectly (while still using a single
+          // internationalizable string), so use the 0 text bounds
+          // And shift it down a bit so it isn't touching the concrete, see #134
           if ( y === 0 ) {
             var replacementText = new Text( zeroMetersString, {font: new PhetFont( 18 ), top: viewY + 2, x: text.x} );
             texts.push( replacementText );

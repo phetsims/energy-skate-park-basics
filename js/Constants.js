@@ -9,7 +9,7 @@ define( function( require ) {
 
   var Dimension2 = require( 'DOT/Dimension2' );
 
-  var minMass = 25;//kg
+  var minMass = 25;// kg
   var maxMass = 100;
 
   return {

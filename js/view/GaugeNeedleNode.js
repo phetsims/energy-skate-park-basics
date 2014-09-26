@@ -1,4 +1,4 @@
-//  Copyright 2002-2014, University of Colorado Boulder
+// Copyright 2002-2014, University of Colorado Boulder
 
 /**
  * The gauge node is a scenery node that represents a circular gauge that
@@ -36,12 +36,12 @@ define( function( require ) {
       backgroundLineWidth: 2,
       anglePerTick: Math.PI * 2 / 4 / 8,
 
-      //8 ticks goes to 9 o'clock (on the left side), and two more ticks appear below that mark.
-      //The ticks are duplicated for the right side, and one tick appears in the middle at the top
+      // 8 ticks goes to 9 o'clock (on the left side), and two more ticks appear below that mark.
+      // The ticks are duplicated for the right side, and one tick appears in the middle at the top
       numTicks: ( 8 + 2 ) * 2 + 1,
 
-      //Optional property to pass in--if the client provides a updateEnabledProperty then the needle will only be
-      //updated when changed and visible (or made visible)
+      // Optional property to pass in--if the client provides a updateEnabledProperty then the needle will only be
+      // updated when changed and visible (or made visible)
       updateEnabledProperty: new Property( true )
     }, options );
     var lineWidth = 3;
@@ -52,7 +52,7 @@ define( function( require ) {
     var startAngle = -1 / 2 * Math.PI - totalAngle / 2;
     var endAngle = startAngle + totalAngle;
 
-    //Update when the velocity changes, but only if the s is visible
+    // Update when the velocity changes, but only if the s is visible
     var updateNeedle = function() {
       if ( options.updateEnabledProperty.get() ) {
         if ( typeof( valueProperty.get() ) === 'number' ) {
@@ -68,7 +68,7 @@ define( function( require ) {
     };
     valueProperty.link( updateNeedle );
 
-    //When the gauge is made visible, update the needle
+    // When the gauge is made visible, update the needle
     options.updateEnabledProperty.link( function( visible ) {
       if ( visible ) {
         updateNeedle();

@@ -8,16 +8,16 @@
  * method, to simplify the logic and make it communicate with the Axon+View as little as possible (for performance
  * reasons).
  *
- * For an analytical model, see http://digitalcommons.calpoly.edu/cgi/viewcontent.cgi?article=1387&context=phy_fac
+ * For an analytical model, see http:// digitalcommons.calpoly.edu/cgi/viewcontent.cgi?article=1387&context=phy_fac
  * Computational problems in introductory physics: Lessons from a bead on a wire
  * Thomas J. Bensky and Matthew J. Moelter
  *
  * We experimented with the analytical model, but ran into problems with discontinuous tracks,
- * see https://github.com/phetsims/energy-skate-park-basics/issues/15 so reverted to using the euclidean model from the
+ * see https:// github.com/phetsims/energy-skate-park-basics/issues/15 so reverted to using the euclidean model from the
  * original Java version.
  *
  * Please note: Many modifications were made to this file to reduce allocations and garbage collections on iPad,
- * see https://github.com/phetsims/energy-skate-park-basics/issues/50 The main changes were: Using pooling,
+ * see https:// github.com/phetsims/energy-skate-park-basics/issues/50 The main changes were: Using pooling,
  * pass by reference, and component-wise math. Unfortunately, these are often compromises in the
  * readability/maintainability of the code, but they seemed important to attain good performance.
  *
@@ -37,15 +37,15 @@ define( function( require ) {
   var SkaterState = require( 'ENERGY_SKATE_PARK_BASICS/model/SkaterState' );
   var Util = require( 'DOT/Util' );
 
-  //Reuse empty object for creating SkaterStates to avoid allocations
+  // Reuse empty object for creating SkaterStates to avoid allocations
   var EMPTY_OBJECT = {};
 
-  //Thrust is not currently implemented in Energy Skate Park: Basics but may be used in a future version, so left here
+  // Thrust is not currently implemented in Energy Skate Park: Basics but may be used in a future version, so left here
   var thrust = new Vector2();
 
   function isApproxEqual( a, b, tolerance ) { return Math.abs( a - b ) <= tolerance; }
 
-  //Flag to enable debugging for physics issues
+  // Flag to enable debugging for physics issues
   var debug = window.phetcommon.getQueryParameter( 'debugLog' ) ? function() {
     console.log.apply( console, arguments );
   } : null;
@@ -55,7 +55,7 @@ define( function( require ) {
 
   var MAX_NUMBER_CONTROL_POINTS = 12;
 
-  //Track the model iterations to implement "slow motion" by stepping every Nth frame, see #210
+  // Track the model iterations to implement "slow motion" by stepping every Nth frame, see #210
   var modelIterations = 0;
 
   /**
@@ -74,41 +74,41 @@ define( function( require ) {
 
     var model = this;
 
-    //Temporary flag that keeps track of whether the track was changed in the step before the physics update.
-    //true if the skater's track is being dragged by the user, so that energy conservation no longer applies.
-    //Only applies to one frame at a time (for the immediate next update).
-    //See https://github.com/phetsims/energy-skate-park-basics/issues/127
-    //Also applies to https://github.com/phetsims/energy-skate-park-basics/issues/135
+    // Temporary flag that keeps track of whether the track was changed in the step before the physics update.
+    // true if the skater's track is being dragged by the user, so that energy conservation no longer applies.
+    // Only applies to one frame at a time (for the immediate next update).
+    // See https:// github.com/phetsims/energy-skate-park-basics/issues/127
+    // Also applies to https:// github.com/phetsims/energy-skate-park-basics/issues/135
     this.trackChangePending = false;
     PropertySet.call( this, {
 
-      //Model for visibility of various view parameters
+      // Model for visibility of various view parameters
       pieChartVisible: false,
       barGraphVisible: false,
       gridVisible: false,
       speedometerVisible: false,
 
-      //Enabled/disabled for the track editing buttons
+      // Enabled/disabled for the track editing buttons
       editButtonEnabled: false,
       clearButtonEnabled: false,
 
-      //Whether the sim is paused or running
+      // Whether the sim is paused or running
       paused: false,
 
-      //speed of the model, either 'normal' or 'slow'
+      // speed of the model, either 'normal' or 'slow'
       speed: 'normal',
 
-      //Coefficient of friction (unitless) between skater and track
+      // Coefficient of friction (unitless) between skater and track
       friction: frictionAllowed ? 0.05 : 0,
 
-      //Whether the skater should stick to the track like a roller coaster, or be able to fly off like a street
+      // Whether the skater should stick to the track like a roller coaster, or be able to fly off like a street
       detachable: false,
 
-      //True if the user has pressed 'edit' to modify connected tracks, and the sim is in an "editing" mode
+      // True if the user has pressed 'edit' to modify connected tracks, and the sim is in an "editing" mode
       editing: false,
 
-      //Will be filled in by the view, used to prevent control points from moving outside the visible model bounds when
-      //adjusted, see #195
+      // Will be filled in by the view, used to prevent control points from moving outside the visible model bounds when
+      // adjusted, see #195
       availableModelBounds: null
     } );
 
@@ -120,7 +120,7 @@ define( function( require ) {
 
     this.skater = new Skater();
 
-    //If the mass changes while the sim is paused, trigger an update so the skater image size will update, see #115
+    // If the mass changes while the sim is paused, trigger an update so the skater image size will update, see #115
     this.skater.property( 'mass' ).link( function() { if ( model.paused ) { model.skater.trigger( 'updated' ); } } );
 
     this.tracks = new ObservableArray();
@@ -146,12 +146,12 @@ define( function( require ) {
 
     if ( !draggableTracks ) {
 
-      //For screens 1-2, the index of the selected scene (and track) within the screen
+      // For screens 1-2, the index of the selected scene (and track) within the screen
       this.addProperty( 'scene', 0 );
 
-      //Shape types
-      //For the double well, move the left well up a bit since the interpolation moves it down by that much, and we
-      //don't want the skater to go to y<0 while on the track.  Numbers determined by trial and error.
+      // Shape types
+      // For the double well, move the left well up a bit since the interpolation moves it down by that much, and we
+      // don't want the skater to go to y<0 while on the track.  Numbers determined by trial and error.
       var parabola = [
         new ControlPoint( -4, 6 ),
         new ControlPoint( 0, 0 ),
@@ -172,8 +172,8 @@ define( function( require ) {
 
       var slopeTrack = new Track( this, this.tracks, slope, false, null, this.availableModelBoundsProperty );
 
-      //Flag to indicate whether the skater transitions from the right edge of this track directly to the ground
-      //see #164
+      // Flag to indicate whether the skater transitions from the right edge of this track directly to the ground
+      // see #164
       slopeTrack.slopeToGround = true;
 
       this.tracks.addAll( [
@@ -204,19 +204,19 @@ define( function( require ) {
 
   return inherit( PropertySet, EnergySkateParkBasicsModel, {
 
-    //Add the tracks that will be in the track toolbox for the "Playground" screen
+    // Add the tracks that will be in the track toolbox for the "Playground" screen
     addDraggableTracks: function() {
       for ( var i = 0; i < 4; i++ ) {
         this.addDraggableTrack();
       }
     },
 
-    //Add a single track to the track control panel.
+    // Add a single track to the track control panel.
     addDraggableTrack: function() {
 
-      //Move the tracks over so they will be in the right position in the view coordinates, under the grass to the left
-      //of the clock controls.  Could use view transform for this, but it would require creating the view first, so just
-      //eyeballing it for now.
+      // Move the tracks over so they will be in the right position in the view coordinates, under the grass to the left
+      // of the clock controls.  Could use view transform for this, but it would require creating the view first, so just
+      // eyeballing it for now.
       var offset = new Vector2( -5.1, -0.85 );
       var controlPoints = [
         new ControlPoint( offset.x - 1, offset.y ),
@@ -226,7 +226,7 @@ define( function( require ) {
       this.tracks.add( new Track( this, this.tracks, controlPoints, true, null, this.availableModelBoundsProperty ) );
     },
 
-    //Reset the model, including the skater, tracks, visualizations, etc.
+    // Reset the model, including the skater, tracks, visualizations, etc.
     reset: function() {
       var availableModelBounds = this.availableModelBounds;
       PropertySet.prototype.reset.call( this );
@@ -238,19 +238,19 @@ define( function( require ) {
 
     clearTracks: function() {
 
-      //For the first two screens, make the default track physical
+      // For the first two screens, make the default track physical
       if ( this.draggableTracks ) {
         this.tracks.clear();
         this.addDraggableTracks();
 
-        //If the skater was on a track, then he should fall off, see #97
+        // If the skater was on a track, then he should fall off, see #97
         if ( this.skater.track ) {
           this.skater.track = null;
         }
       }
     },
 
-    //step one frame, assuming 60fps
+    // step one frame, assuming 60fps
     manualStep: function() {
       var skaterState = SkaterState.createFromPool( this.skater, EMPTY_OBJECT );
       var dt = 1.0 / 60;
@@ -259,7 +259,7 @@ define( function( require ) {
       this.skater.trigger( 'updated' );
     },
 
-    //Step the model, automatically called from Joist
+    // Step the model, automatically called from Joist
     step: function( dt ) {
 
       // This simulation uses a fixed time step to make the skater's motion reproducible.  Making the time step fixed
@@ -268,11 +268,11 @@ define( function( require ) {
 
       var initialEnergy = null;
 
-      //If the delay makes dt too high, then truncate it.  This helps e.g. when clicking in the address bar on ipad,
-      //which gives a huge dt and problems for integration
+      // If the delay makes dt too high, then truncate it.  This helps e.g. when clicking in the address bar on ipad,
+      // which gives a huge dt and problems for integration
       if ( !this.paused && !this.skater.dragging ) {
 
-        //If they switched windows or tabs, just bail on that delta
+        // If they switched windows or tabs, just bail on that delta
         if ( dt > 1 || dt <= 0 ) {
           dt = 1.0 / 60.0;
         }
@@ -282,10 +282,10 @@ define( function( require ) {
           initialEnergy = skaterState.getTotalEnergy();
         }
 
-        //Update the skater state by running the dynamics engine
-        //There are issues in running multiple iterations here (the skater won't attach to the track).  I presume some
-        //of that work is being done in setToSkater() below or skater.trigger('updated')
-        //In either case, 10 subdivisions on iPad3 makes the sim run too slowly, so we may just want to leave it as is
+        // Update the skater state by running the dynamics engine
+        // There are issues in running multiple iterations here (the skater won't attach to the track).  I presume some
+        // of that work is being done in setToSkater() below or skater.trigger('updated')
+        // In either case, 10 subdivisions on iPad3 makes the sim run too slowly, so we may just want to leave it as is
         var updatedState = null;
         modelIterations++;
         if ( this.speed === 'normal' || modelIterations % 3 === 0 ) {
@@ -303,10 +303,10 @@ define( function( require ) {
         }
       }
 
-      //Clear the track change pending flag for the next step
+      // Clear the track change pending flag for the next step
       this.trackChangePending = false;
 
-      //If traveling on the ground, face in the direction of motion, see #181
+      // If traveling on the ground, face in the direction of motion, see #181
       if ( this.skater.track === null && this.skater.position.y === 0 ) {
         if ( this.skater.velocity.x > 0 ) {
           this.skater.direction = 'right';
@@ -315,15 +315,15 @@ define( function( require ) {
           this.skater.direction = 'left';
         }
         else {
-          //skater wasn't moving, so don't change directions
+          // skater wasn't moving, so don't change directions
         }
       }
 
       SkaterState.clearAllocated();
     },
 
-    //The skater moves along the ground with the same coefficient of fraction as the tracks,
-    //see https://github.com/phetsims/energy-skate-park-basics/issues/11
+    // The skater moves along the ground with the same coefficient of fraction as the tracks,
+    // see https:// github.com/phetsims/energy-skate-park-basics/issues/11
     stepGround: function( dt, skaterState ) {
       var x0 = skaterState.positionX;
       var frictionMagnitude = (this.friction === 0 || skaterState.getSpeed() < 1E-2) ? 0 :
@@ -332,8 +332,8 @@ define( function( require ) {
 
       var v1 = skaterState.velocityX + acceleration * dt;
 
-      //Exponentially decay the velocity if already nearly zero,
-      //see https://github.com/phetsims/energy-skate-park-basics/issues/138
+      // Exponentially decay the velocity if already nearly zero,
+      // see https:// github.com/phetsims/energy-skate-park-basics/issues/138
       if ( this.friction !== 0 && skaterState.getSpeed() < 1E-2 ) {
         v1 = v1 / 2;
       }
@@ -347,13 +347,13 @@ define( function( require ) {
       return updated.updateThermalEnergy( updated.thermalEnergy + (originalEnergy - newEnergy) );
     },
 
-    //No bouncing on the ground, but the code is very similar to attachment part of interactWithTracksWhileFalling
+    // No bouncing on the ground, but the code is very similar to attachment part of interactWithTracksWhileFalling
     switchToGround: function( skaterState, initialEnergy, proposedPosition, proposedVelocity, dt ) {
       var segment = new Vector2( 1, 0 );
 
       var newSpeed = segment.dot( proposedVelocity );
 
-      //Make sure energy perfectly conserved when falling to the ground.
+      // Make sure energy perfectly conserved when falling to the ground.
       var newKineticEnergy = 0.5 * newSpeed * newSpeed * skaterState.mass;
       var newPotentialEnergy = 0;
       var newThermalEnergy = initialEnergy - newKineticEnergy - newPotentialEnergy;
@@ -384,10 +384,10 @@ define( function( require ) {
       }
       else if ( position.x !== proposedPosition.x || position.y !== proposedPosition.y ) {
 
-        //see if it crossed the track
+        // see if it crossed the track
         var physicalTracks = this.getPhysicalTracks();
 
-        //Don't interact with the track if the skater just left the track in this same frame, see #142
+        // Don't interact with the track if the skater just left the track in this same frame, see #142
         if ( physicalTracks.length && !justLeft ) {
           return this.interactWithTracksWhileFalling( physicalTracks, skaterState, proposedPosition, initialEnergy, dt, proposedVelocity );
         }
@@ -400,8 +400,8 @@ define( function( require ) {
       }
     },
 
-    //Find the closest track to the skater, to see what he can bounce off of or attach to, and return the closest point
-    //on that track took
+    // Find the closest track to the skater, to see what he can bounce off of or attach to, and return the closest point
+    // on that track took
     getClosestTrackAndPositionAndParameter: function( position, physicalTracks ) {
       var closestTrack = null;
       var closestMatch = null;
@@ -409,8 +409,8 @@ define( function( require ) {
       for ( var i = 0; i < physicalTracks.length; i++ ) {
         var track = physicalTracks[i];
 
-        //PERFORMANCE/ALLOCATION maybe get closest point shouldn't return a new object allocation each time, or use
-        //pooling for it, or pass in reference as an arg?
+        // PERFORMANCE/ALLOCATION maybe get closest point shouldn't return a new object allocation each time, or use
+        // pooling for it, or pass in reference as an arg?
         var bestMatch = track.getClosestPositionAndParameter( position );
         if ( bestMatch.distance < closestDistance ) {
           closestDistance = bestMatch.distance;
@@ -426,7 +426,7 @@ define( function( require ) {
       }
     },
 
-    //Check to see if the points crossed the track
+    // Check to see if the points crossed the track
     crossedTrack: function( closestTrackAndPositionAndParameter, physicalTracks, beforeX, beforeY, afterX, afterY ) {
       var track = closestTrackAndPositionAndParameter.track;
       var u = closestTrackAndPositionAndParameter.u;
@@ -437,9 +437,9 @@ define( function( require ) {
       }
       else {
 
-        //Linearize the spline, and check to see if the skater crossed by performing a line segment intersection between
-        //the skater's trajectory segment and the linearized track segment.
-        //Note, this has an error for cusps, see #212
+        // Linearize the spline, and check to see if the skater crossed by performing a line segment intersection between
+        // the skater's trajectory segment and the linearized track segment.
+        // Note, this has an error for cusps, see #212
         var unitParallelVector = track.getUnitParallelVector( u );
         var a = trackPoint.plus( unitParallelVector.times( 100 ) );
         var b = trackPoint.plus( unitParallelVector.times( -100 ) );
@@ -448,13 +448,13 @@ define( function( require ) {
       }
     },
 
-    //Check to see if it should hit or attach to track during free fall
+    // Check to see if it should hit or attach to track during free fall
     interactWithTracksWhileFalling: function( physicalTracks, skaterState, proposedPosition, initialEnergy, dt, proposedVelocity ) {
 
-      //Find the closest track, and see if the skater would cross it in this time step.
-      //Assuming the skater's initial + final locations determine a line segment, we search for the best point for the
-      //skater's start point, midpoint and end point and choose whichever is closest.  This helps avoid "high curvature"
-      //problems like the one identified in #212
+      // Find the closest track, and see if the skater would cross it in this time step.
+      // Assuming the skater's initial + final locations determine a line segment, we search for the best point for the
+      // skater's start point, midpoint and end point and choose whichever is closest.  This helps avoid "high curvature"
+      // problems like the one identified in #212
       var a = this.getClosestTrackAndPositionAndParameter( skaterState.getPosition(), physicalTracks );
       var averagePosition = new Vector2( (skaterState.positionX + proposedPosition.x) / 2, (skaterState.positionY + proposedPosition.y) / 2 );
       var b = this.getClosestTrackAndPositionAndParameter( averagePosition, physicalTracks );
@@ -486,7 +486,7 @@ define( function( require ) {
 
         var beforeVector = skaterState.getPosition().minus( trackPoint );
 
-        //If crossed the track, attach to it.
+        // If crossed the track, attach to it.
 
         var newVelocity = segment.times( segment.dot( proposedVelocity ) );
         var newSpeed = newVelocity.magnitude();
@@ -495,8 +495,8 @@ define( function( require ) {
         var newPotentialEnergy = -skaterState.mass * skaterState.gravity * newPosition.y;
         var newThermalEnergy = initialEnergy - newKineticEnergy - newPotentialEnergy;
 
-        //Sometimes (depending on dt) the thermal energy can go negative by the above calculation, see #141
-        //In that case, set the thermal energy to zero and reduce the speed to compensate.
+        // Sometimes (depending on dt) the thermal energy can go negative by the above calculation, see #141
+        // In that case, set the thermal energy to zero and reduce the speed to compensate.
         if ( newThermalEnergy < 0 ) {
           newThermalEnergy = 0;
           newKineticEnergy = initialEnergy - newPotentialEnergy;
@@ -506,14 +506,14 @@ define( function( require ) {
             newKineticEnergy = 0;
           }
 
-          //ke = 1/2 m v v
+          // ke = 1/2 m v v
           newSpeed = Math.sqrt( 2 * newKineticEnergy / skaterState.mass );
           newVelocity = segment.times( newSpeed );
         }
 
         var dot = proposedVelocity.normalized().dot( segment );
 
-        //Sanity test
+        // Sanity test
         assert && assert( isFinite( dot ) );
         assert && assert( isFinite( newVelocity.x ) );
         assert && assert( isFinite( newVelocity.y ) );
@@ -525,15 +525,15 @@ define( function( require ) {
 
         debug && debug( 'attach to track, ' + ', ' + u + ', ' + track.maxPoint );
 
-        //Double check the velocities and invert uD if incorrect, see #172
-        //Compute the new velocities same as in stepTrack
+        // Double check the velocities and invert uD if incorrect, see #172
+        // Compute the new velocities same as in stepTrack
         var unitParallelVector = track.getUnitParallelVector( u );
         var newVelocityX = unitParallelVector.x * uD;
         var newVelocityY = unitParallelVector.y * uD;
 
         var velocityDotted = skaterState.velocityX * newVelocityX + skaterState.velocityY * newVelocityY;
 
-        //See if the track attachment will cause velocity to flip, and inverse it if so, see #172
+        // See if the track attachment will cause velocity to flip, and inverse it if so, see #172
         if ( velocityDotted < -1E-6 ) {
           uD = uD * -1;
         }
@@ -541,19 +541,19 @@ define( function( require ) {
         return skaterState.attachToTrack( newThermalEnergy, track, up, u, uD, newVelocity.x, newVelocity.y, newPosition.x, newPosition.y );
       }
 
-      //It just continued in free fall
+      // It just continued in free fall
       else {
         return this.continueFreeFall( skaterState, initialEnergy, proposedPosition, proposedVelocity, dt );
       }
     },
 
-    //Started in free fall and did not interact with a track
+    // Started in free fall and did not interact with a track
     continueFreeFall: function( skaterState, initialEnergy, proposedPosition, proposedVelocity, dt ) {
 
-      //make up for the difference by changing the y value
+      // make up for the difference by changing the y value
       var y = (initialEnergy - 0.5 * skaterState.mass * proposedVelocity.magnitudeSquared() - skaterState.thermalEnergy) / (-1 * skaterState.mass * skaterState.gravity);
       if ( y <= 0 ) {
-        //When falling straight down, stop completely and convert all energy to thermal
+        // When falling straight down, stop completely and convert all energy to thermal
         return skaterState.strikeGround( initialEnergy, proposedPosition.x );
       }
       else {
@@ -585,12 +585,12 @@ define( function( require ) {
       return skaterState.mass * skaterState.gravity + this.getFrictionForceY( skaterState );
     },
 
-    //The only other force on the object in the direction of motion is the gravity force
-    //Component-wise to reduce allocations, see #50
+    // The only other force on the object in the direction of motion is the gravity force
+    // Component-wise to reduce allocations, see #50
     getFrictionForceX: function( skaterState ) {
-      //Friction force should not exceed sum of other forces (in the direction of motion), otherwise the friction could
-      //start a stopped object moving. Hence we check to see if the object is already stopped and don't add friction
-      //in that case
+      // Friction force should not exceed sum of other forces (in the direction of motion), otherwise the friction could
+      // start a stopped object moving. Hence we check to see if the object is already stopped and don't add friction
+      // in that case
       if ( this.friction === 0 || skaterState.getSpeed() < 1E-2 ) {
         return 0;
       }
@@ -601,12 +601,12 @@ define( function( require ) {
       }
     },
 
-    //The only other force on the object in the direction of motion is the gravity force
-    //Component-wise to reduce allocations, see #50
+    // The only other force on the object in the direction of motion is the gravity force
+    // Component-wise to reduce allocations, see #50
     getFrictionForceY: function( skaterState ) {
-      //Friction force should not exceed sum of other forces (in the direction of motion), otherwise the friction could
-      //start a stopped object moving.  Hence we check to see if the object is already stopped and don't add friction in
-      //that case
+      // Friction force should not exceed sum of other forces (in the direction of motion), otherwise the friction could
+      // start a stopped object moving.  Hence we check to see if the object is already stopped and don't add friction in
+      // that case
       if ( this.friction === 0 || skaterState.getSpeed() < 1E-2 ) {
         return 0;
       }
@@ -616,16 +616,16 @@ define( function( require ) {
       }
     },
 
-    //Use a separate pooled curvature variable
+    // Use a separate pooled curvature variable
     curvatureTemp2: {r: 1, x: 0, y: 0},
 
-    //Get the normal force (Newtons) on the skater
+    // Get the normal force (Newtons) on the skater
     getNormalForce: function( skaterState ) {
       skaterState.getCurvature( this.curvatureTemp2 );
       var radiusOfCurvature = Math.min( this.curvatureTemp2.r, 100000 );
       var netForceRadial = new Vector2();
 
-      netForceRadial.addXY( 0, skaterState.mass * skaterState.gravity );//gravity
+      netForceRadial.addXY( 0, skaterState.mass * skaterState.gravity );// gravity
       var curvatureDirection = this.getCurvatureDirection( this.curvatureTemp2, skaterState.positionX, skaterState.positionY );
       var normalForce = skaterState.mass * skaterState.getSpeed() * skaterState.getSpeed() / Math.abs( radiusOfCurvature ) - netForceRadial.dot( curvatureDirection );
       debug && debug( normalForce );
@@ -634,8 +634,8 @@ define( function( require ) {
       return n;
     },
 
-    //Use an Euler integration step to move the skater along the track
-    //This code is in an inner loop of the model physics and has been heavily optimized
+    // Use an Euler integration step to move the skater along the track
+    // This code is in an inner loop of the model physics and has been heavily optimized
     stepEuler: function( dt, skaterState ) {
       var track = skaterState.track;
       var origEnergy = skaterState.getTotalEnergy();
@@ -646,13 +646,13 @@ define( function( require ) {
       assert && assert( isFinite( uD ) );
       var u = skaterState.u;
 
-      //Component-wise math to prevent allocations, see #50
+      // Component-wise math to prevent allocations, see #50
       var netForceX = this.getNetForceWithoutNormalX( skaterState );
       var netForceY = this.getNetForceWithoutNormalY( skaterState );
       var netForceMagnitude = Math.sqrt( netForceX * netForceX + netForceY * netForceY );
       var netForceAngle = Math.atan2( netForceY, netForceX );
 
-      //Get the net force in the direction of the track.  Dot product is a * b * cos(theta)
+      // Get the net force in the direction of the track.  Dot product is a * b * cos(theta)
       var a = netForceMagnitude * Math.cos( skaterState.track.getModelAngleAt( u ) - netForceAngle ) / skaterState.mass;
 
       uD += a * dt;
@@ -666,18 +666,18 @@ define( function( require ) {
       var newVelocityX = parallelUnitX * uD;
       var newVelocityY = parallelUnitY * uD;
 
-      //Exponentially decay the velocity if already nearly zero and on a flat slope,
-      //see https://github.com/phetsims/energy-skate-park-basics/issues/129
+      // Exponentially decay the velocity if already nearly zero and on a flat slope,
+      // see https:// github.com/phetsims/energy-skate-park-basics/issues/129
       if ( parallelUnitX / parallelUnitY > 5 && Math.sqrt( newVelocityX * newVelocityX + newVelocityY * newVelocityY ) < 1E-2 ) {
         newVelocityX /= 2;
         newVelocityY /= 2;
       }
 
-      //choose velocity by using the unit parallel vector to the track
+      // choose velocity by using the unit parallel vector to the track
       var newState = skaterState.updateUUDVelocityPosition( u, uD, newVelocityX, newVelocityY, newPointX, newPointY );
       if ( this.friction > 0 ) {
 
-        //Compute friction force magnitude component-wise to prevent allocations, see #50
+        // Compute friction force magnitude component-wise to prevent allocations, see #50
         var frictionForceX = this.getFrictionForceX( skaterState );
         var frictionForceY = this.getFrictionForceY( skaterState );
         var frictionForceMagnitude = Math.sqrt( frictionForceX * frictionForceX + frictionForceY * frictionForceY );
@@ -689,11 +689,11 @@ define( function( require ) {
 
         var newTotalEnergy = newState.getTotalEnergy() + therm;
 
-        //Conserve energy, but only if the user is not adding energy,
-        //see https://github.com/phetsims/energy-skate-park-basics/issues/135
+        // Conserve energy, but only if the user is not adding energy,
+        // see https:// github.com/phetsims/energy-skate-park-basics/issues/135
         if ( thrust.magnitude() === 0 && !this.trackChangePending ) {
           if ( newTotalEnergy < origEnergy ) {
-            thermalEnergy += Math.abs( newTotalEnergy - origEnergy );//add some thermal to exactly match
+            thermalEnergy += Math.abs( newTotalEnergy - origEnergy );// add some thermal to exactly match
             if ( Math.abs( newTotalEnergy - origEnergy ) > 1E-6 ) {
               debug && debug( "Added thermal, dE=" + ( newState.getTotalEnergy() - origEnergy ) );
             }
@@ -711,9 +711,9 @@ define( function( require ) {
           }
         }
 
-        //Discrepancy with original version: original version allowed drop of thermal energy here, to be fixed in the
-        //heuristic patch. We have clamped it here to make it amenable to a smaller number of euler updates,
-        //to improve performance
+        // Discrepancy with original version: original version allowed drop of thermal energy here, to be fixed in the
+        // heuristic patch. We have clamped it here to make it amenable to a smaller number of euler updates,
+        // to improve performance
         return newState.updateThermalEnergy( Math.max( thermalEnergy, skaterState.thermalEnergy ) );
       }
       else {
@@ -723,7 +723,7 @@ define( function( require ) {
 
     curvatureTemp: {r: 1, x: 0, y: 0},
 
-    //Update the skater as it moves along the track, and fly off the track if it goes over a jump or off the track's end
+    // Update the skater as it moves along the track, and fly off the track if it goes over a jump or off the track's end
     stepTrack: function( dt, skaterState ) {
 
       skaterState.getCurvature( this.curvatureTemp );
@@ -737,70 +737,70 @@ define( function( require ) {
       var sideVectorY = skaterState.up ? track.getUnitNormalVector( skaterState.u ).y :
                         track.getUnitNormalVector( skaterState.u ).y * -1;
 
-      //Dot product written out component-wise to avoid allocations, see #50
+      // Dot product written out component-wise to avoid allocations, see #50
       var outsideCircle = sideVectorX * curvatureDirectionX + sideVectorY * curvatureDirectionY < 0;
 
-      //compare a to v/r^2 to see if it leaves the track
+      // compare a to v/r^2 to see if it leaves the track
       var r = Math.abs( this.curvatureTemp.r );
       var centripForce = skaterState.mass * skaterState.uD * skaterState.uD / r;
 
       var netForceWithoutNormalX = this.getNetForceWithoutNormalX( skaterState );
       var netForceWithoutNormalY = this.getNetForceWithoutNormalY( skaterState );
 
-      //Net force in the radial direction is the dot product.  Component-wise to avoid allocations, see #50
+      // Net force in the radial direction is the dot product.  Component-wise to avoid allocations, see #50
       var netForceRadial = netForceWithoutNormalX * curvatureDirectionX + netForceWithoutNormalY * curvatureDirectionY;
 
       var leaveTrack = (netForceRadial < centripForce && outsideCircle) || (netForceRadial > centripForce && !outsideCircle);
 
       if ( leaveTrack && this.detachable ) {
 
-        //Leave the track.  Make sure the velocity is pointing away from the track or keep track of frames away from the
-        //track so it doesn't immediately recollide.  Or project a ray and see if a collision is imminent?
+        // Leave the track.  Make sure the velocity is pointing away from the track or keep track of frames away from the
+        // track so it doesn't immediately recollide.  Or project a ray and see if a collision is imminent?
         var freeSkater = skaterState.leaveTrack();
 
         debugAttachDetach && debugAttachDetach( 'left middle track', freeSkater.velocityX, freeSkater.velocityY );
 
         var nudged = this.nudge( freeSkater, sideVectorX, sideVectorY, +1 );
 
-        //Step after switching to free fall, so it doesn't look like it pauses
+        // Step after switching to free fall, so it doesn't look like it pauses
         return this.stepFreeFall( dt, nudged, true );
       }
       else {
         var newState = skaterState;
 
-        //Turning this value to 5 or less causes thermal energy to decrease on some time steps
-        //Discrepancy with original version: original version had 10 divisions here.  We have reduced it to make it more
-        //smooth and less GC
+        // Turning this value to 5 or less causes thermal energy to decrease on some time steps
+        // Discrepancy with original version: original version had 10 divisions here.  We have reduced it to make it more
+        // smooth and less GC
         var numDivisions = 4;
         for ( var i = 0; i < numDivisions; i++ ) {
           newState = this.stepEuler( dt / numDivisions, newState );
         }
 
-        //Correct energy
+        // Correct energy
         var correctedState = this.correctEnergy( skaterState, newState );
 
-        //Check whether the skater has left the track
+        // Check whether the skater has left the track
         if ( skaterState.track.isParameterInBounds( correctedState.u ) ) {
           return correctedState;
         }
         else {
-          //Fly off the left or right side of the track
-          //Off the edge of the track.  If the skater transitions from the right edge of the 2nd track directly to the
-          //ground then do not lose thermal energy during the transition, see #164
+          // Fly off the left or right side of the track
+          // Off the edge of the track.  If the skater transitions from the right edge of the 2nd track directly to the
+          // ground then do not lose thermal energy during the transition, see #164
           if ( correctedState.u > skaterState.track.maxPoint && skaterState.track.slopeToGround ) {
             return correctedState.switchToGround( correctedState.thermalEnergy, correctedState.getSpeed(), 0, correctedState.positionX, 0 );
           }
           else {
             debugAttachDetach && debugAttachDetach( 'left edge track: ' + correctedState.u + ', ' + skaterState.track.maxPoint );
 
-            //There is a situation in which the `u` of the skater exceeds the track bounds before the
-            //getClosestPositionAndParameter.u does, which can cause the skater to immediately reattach
-            //So make sure the skater is far enough from the track so it won't reattach right away, see #167
+            // There is a situation in which the `u` of the skater exceeds the track bounds before the
+            // getClosestPositionAndParameter.u does, which can cause the skater to immediately reattach
+            // So make sure the skater is far enough from the track so it won't reattach right away, see #167
             var freeSkaterState = skaterState.updateTrackUD( null, 0 );
 
             var nudgedState = this.nudge( freeSkaterState, sideVectorX, sideVectorY, -1 );
 
-            //Step after switching to free fall, so it doesn't look like it pauses
+            // Step after switching to free fall, so it doesn't look like it pauses
             return this.stepFreeFall( dt, nudgedState, true );
           }
         }
@@ -808,21 +808,21 @@ define( function( require ) {
     },
 
     // When the skater leaves the track, adjust the position and velocity.  This prevents the following problems:
-    //1. When leaving from the sides, adjust the skater under the track so it won't immediately re-collide
-    //2. When leaving from the middle of the track (say going over a jump or falling upside-down from a loop),
-    //adjust the skater so it won't fall through or re-collide
+    // 1. When leaving from the sides, adjust the skater under the track so it won't immediately re-collide
+    // 2. When leaving from the middle of the track (say going over a jump or falling upside-down from a loop),
+    // adjust the skater so it won't fall through or re-collide
     nudge: function( freeSkater, sideVectorX, sideVectorY, sign ) {
 
-      //angle the velocity down a bit and underset from track so that it won't immediately re-collide
-      //Nudge the velocity in the 'up' direction so the skater won't pass through the track, see #207
+      // angle the velocity down a bit and underset from track so that it won't immediately re-collide
+      // Nudge the velocity in the 'up' direction so the skater won't pass through the track, see #207
       var velocity = new Vector2( freeSkater.velocityX, freeSkater.velocityY );
       var upVector = new Vector2( sideVectorX, sideVectorY );
       var revisedVelocity = velocity.normalized().blend( upVector, 0.01 * sign ).normalized().times( velocity.magnitude() );
       freeSkater = freeSkater.updateUDVelocity( 0, revisedVelocity.x, revisedVelocity.y );
 
-      //Nudge the position away from the track, slightly since it was perfectly centered on the track, see #212
-      //Note this will change the energy of the skater, but only by a tiny amount (that should be undetectable in the
-      //bar chart)
+      // Nudge the position away from the track, slightly since it was perfectly centered on the track, see #212
+      // Note this will change the energy of the skater, but only by a tiny amount (that should be undetectable in the
+      // bar chart)
       var origPosition = freeSkater.getPosition();
       var newPosition = origPosition.plus( upVector.times( sign * 1E-6 ) );
       freeSkater = freeSkater.updatePosition( newPosition.x, newPosition.y );
@@ -831,23 +831,23 @@ define( function( require ) {
       return freeSkater;
     },
 
-    //Try to match the target energy by reducing the velocity of the skaterState
+    // Try to match the target energy by reducing the velocity of the skaterState
     correctEnergyReduceVelocity: function( skaterState, targetState ) {
 
-      //Make a clone we can mutate and return, to protect the input argument
+      // Make a clone we can mutate and return, to protect the input argument
       var newSkaterState = targetState.copy();
       var e0 = skaterState.getTotalEnergy();
       var mass = skaterState.mass;
       var unit = newSkaterState.track.getUnitParallelVector( newSkaterState.u );
 
-      //Binary search, but bail after too many iterations
+      // Binary search, but bail after too many iterations
       for ( var i = 0; i < 100; i++ ) {
         var dv = ( newSkaterState.getTotalEnergy() - e0 ) / ( mass * newSkaterState.uD );
 
         var newVelocity = newSkaterState.uD - dv;
 
-        //We can just set the state directly instead of calling update since we are keeping a protected clone of the
-        //newSkaterState
+        // We can just set the state directly instead of calling update since we are keeping a protected clone of the
+        // newSkaterState
         newSkaterState.uD = newVelocity;
         var result = unit.times( newVelocity );
         newSkaterState.velocityX = result.x;
@@ -860,7 +860,7 @@ define( function( require ) {
       return newSkaterState;
     },
 
-    //Binary search to find the parametric coordinate along the track that matches the e0 energy
+    // Binary search to find the parametric coordinate along the track that matches the e0 energy
     searchSplineForEnergy: function( skaterState, u0, u1, e0, numSteps ) {
       var da = ( u1 - u0 ) / numSteps;
       var bestAlpha = ( u1 - u0 ) / 2;
@@ -873,14 +873,14 @@ define( function( require ) {
         if ( Math.abs( e - e0 ) <= Math.abs( bestDE ) ) {
           bestDE = e - e0;
           bestAlpha = proposedAlpha;
-        }//continue to find best value closest to proposed u, even if several values give dE=0.0
+        }// continue to find best value closest to proposed u, even if several values give dE=0.0
       }
       debug && debug( "After " + numSteps + " steps, origAlpha=" + u0 + ", bestAlpha=" + bestAlpha + ", dE=" + bestDE );
       return bestAlpha;
     },
 
-    //A number of heuristic energy correction steps to ensure energy is conserved while keeping the motion smooth and
-    //accurate
+    // A number of heuristic energy correction steps to ensure energy is conserved while keeping the motion smooth and
+    // accurate
     correctEnergy: function( skaterState, newState ) {
       if ( this.trackChangePending ) {
         return newState;
@@ -891,19 +891,19 @@ define( function( require ) {
       if ( !isFinite( newState.getTotalEnergy() ) ) { throw new Error( 'not finite' );}
       var dE = newState.getTotalEnergy() - e0;
       if ( Math.abs( dE ) < 1E-6 ) {
-        //small enough
+        // small enough
         return newState;
       }
       else {
         if ( newState.getTotalEnergy() > e0 ) {
           debug && debug( "Energy too high" );
 
-          //can we reduce the velocity enough?
-          //amount we could reduce the energy if we deleted all the kinetic energy:
+          // can we reduce the velocity enough?
+          // amount we could reduce the energy if we deleted all the kinetic energy:
           if ( Math.abs( newState.getKineticEnergy() ) > Math.abs( dE ) ) {
 
-            //This is the current rule for reducing the energy.  But in a future version maybe should only do this
-            //if all velocity is not converted?
+            // This is the current rule for reducing the energy.  But in a future version maybe should only do this
+            // if all velocity is not converted?
             debug && debug( "Could fix all energy by changing velocity." );
             var correctedStateA = this.correctEnergyReduceVelocity( skaterState, newState );
             debug && debug( "changed velocity: dE=" + ( correctedStateA.getTotalEnergy() - e0 ) );
@@ -915,7 +915,7 @@ define( function( require ) {
           else {
             debug && debug( "Not enough KE to fix with velocity alone: normal:" );
             debug && debug( "changed position u: dE=" + ( newState.getTotalEnergy() - e0 ) );
-            //search for a place between u and u0 with a better energy
+            // search for a place between u and u0 with a better energy
 
             var numRecursiveSearches = 10;
             var u = newState.u;
@@ -932,10 +932,10 @@ define( function( require ) {
             debug && debug( "changed position u: dE=" + ( correctedState.getTotalEnergy() - e0 ) );
             if ( !isApproxEqual( e0, correctedState.getTotalEnergy(), 1E-8 ) ) {
 
-              //amount we could reduce the energy if we deleted all the kinetic energy:
+              // amount we could reduce the energy if we deleted all the kinetic energy:
               if ( Math.abs( correctedState.getKineticEnergy() ) > Math.abs( dE ) ) {
 
-                //TODO: maybe should only do this if all velocity is not converted
+                // TODO: maybe should only do this if all velocity is not converted
                 debug && debug( "Fixed position some, still need to fix velocity as well." );
                 var correctedState2 = this.correctEnergyReduceVelocity( skaterState, correctedState );
                 if ( !isApproxEqual( e0, correctedState2.getTotalEnergy(), 1E-8 ) ) {
@@ -946,7 +946,7 @@ define( function( require ) {
               }
               else {
 
-                //TODO: This error case can still occur, especially with friction turned on
+                // TODO: This error case can still occur, especially with friction turned on
                 debug && debug( "Changed position, wanted to change velocity, but didn't have enough to fix it..., dE=" + ( newState.getTotalEnergy() - e0 ) );
               }
             }
@@ -957,12 +957,12 @@ define( function( require ) {
           if ( !isFinite( newState.getTotalEnergy() ) ) { throw new Error( 'not finite' );}
           debug && debug( "Energy too low" );
 
-          //increasing the kinetic energy
-          //Choose the exact velocity in the same direction as current velocity to ensure total energy conserved.
+          // increasing the kinetic energy
+          // Choose the exact velocity in the same direction as current velocity to ensure total energy conserved.
           var vSq = Math.abs( 2 / newState.mass * ( e0 - newState.getPotentialEnergy() - newState.thermalEnergy ) );
           var v = Math.sqrt( vSq );
 
-          //TODO: What if uD ===0?
+          // TODO: What if uD ===0?
           var newVelocity = v * (newState.uD > 0 ? +1 : -1);
           var unitParallelVector = newState.track.getUnitParallelVector( newState.u );
           var updatedVelocityX = unitParallelVector.x * newVelocity;
@@ -978,7 +978,7 @@ define( function( require ) {
       }
     },
 
-    //PERFORMANCE/ALLOCATION
+    // PERFORMANCE/ALLOCATION
     getCurvatureDirection: function( curvature, x2, y2 ) {
       var v = new Vector2( curvature.x - x2, curvature.y - y2 );
       return v.x !== 0 || v.y !== 0 ? v.normalized() : v;
@@ -996,22 +996,22 @@ define( function( require ) {
       return vx !== 0 || vy !== 0 ? vy / Math.sqrt( vx * vx + vy * vy ) : vy;
     },
 
-    //Update the skater based on which state it is in
+    // Update the skater based on which state it is in
     stepModel: function( dt, skaterState ) {
       this.time += dt;
 
-      return skaterState.dragging ? skaterState : //User is dragging the skater, nothing to update here
+      return skaterState.dragging ? skaterState : // User is dragging the skater, nothing to update here
              !skaterState.track && skaterState.positionY <= 0 ? this.stepGround( dt, skaterState ) :
              !skaterState.track && skaterState.positionY > 0 ? this.stepFreeFall( dt, skaterState, false ) :
              skaterState.track ? this.stepTrack( dt, skaterState ) :
              skaterState;
     },
 
-    //Return to the place he was last released by the user.  Also restores the track the skater was on so the initial
-    //conditions are the same as the previous release
+    // Return to the place he was last released by the user.  Also restores the track the skater was on so the initial
+    // conditions are the same as the previous release
     returnSkater: function() {
 
-      //if the skater's original track is available, restore her to it, see #143
+      // if the skater's original track is available, restore her to it, see #143
       var originalTrackAvailable = _.contains( this.getPhysicalTracks(), this.skater.startingTrack );
       if ( originalTrackAvailable ) {
         this.skater.track = this.skater.startingTrack;
@@ -1019,13 +1019,13 @@ define( function( require ) {
       this.skater.returnSkater();
     },
 
-    //Clear the thermal energy from the model
+    // Clear the thermal energy from the model
     clearThermal: function() { this.skater.clearThermal(); },
 
-    //Get all of the tracks marked as physical (i.e. that the skater could interact with).
+    // Get all of the tracks marked as physical (i.e. that the skater could interact with).
     getPhysicalTracks: function() {
 
-      //Use vanilla instead of lodash for speed since this is in an inner loop
+      // Use vanilla instead of lodash for speed since this is in an inner loop
       var physicalTracks = [];
       for ( var i = 0; i < this.tracks.length; i++ ) {
         var track = this.tracks.get( i );
@@ -1039,7 +1039,7 @@ define( function( require ) {
 
     getNonPhysicalTracks: function() {
 
-      //Use vanilla instead of lodash for speed since this is in an inner loop
+      // Use vanilla instead of lodash for speed since this is in an inner loop
       var nonphysicalTracks = [];
       for ( var i = 0; i < this.tracks.length; i++ ) {
         var track = this.tracks.get( i );
@@ -1052,7 +1052,7 @@ define( function( require ) {
     },
 
 
-    //Find whatever track is connected to the specified track and join them together to a new track
+    // Find whatever track is connected to the specified track and join them together to a new track
     joinTracks: function( track ) {
       var connectedPoint = track.getSnapTarget();
       for ( var i = 0; i < this.getPhysicalTracks().length; i++ ) {
@@ -1063,16 +1063,16 @@ define( function( require ) {
         }
       }
 
-      //if the number of control points is low enough, replenish the toolbox
+      // if the number of control points is low enough, replenish the toolbox
       if ( this.getNumberOfControlPoints() <= MAX_NUMBER_CONTROL_POINTS - 3 ) {
         this.addDraggableTrack();
       }
     },
 
-    //The user has pressed the "delete" button for the specified track's specified control point, and it should be
-    //deleted.
-    //It should be an inner point of a track (not an end point)
-    //If there were only 2 points on the track, just delete the entire track
+    // The user has pressed the "delete" button for the specified track's specified control point, and it should be
+    // deleted.
+    // It should be an inner point of a track (not an end point)
+    // If there were only 2 points on the track, just delete the entire track
     deleteControlPoint: function( track, controlPointIndex ) {
       track.trigger( 'remove' );
       this.tracks.remove( track );
@@ -1092,22 +1092,22 @@ define( function( require ) {
         this.tracks.add( newTrack );
       }
 
-      //Trigger track changed first to update the edit enabled properties
+      // Trigger track changed first to update the edit enabled properties
       this.trigger( 'track-changed' );
 
-      //If the skater was on track, then he should fall off
+      // If the skater was on track, then he should fall off
       if ( this.skater.track === track ) {
         this.skater.track = null;
       }
 
-      //if the number of control points is low enough, replenish the toolbox
+      // if the number of control points is low enough, replenish the toolbox
       if ( this.getNumberOfControlPoints() <= MAX_NUMBER_CONTROL_POINTS - 3 ) {
         this.addDraggableTrack();
       }
     },
 
-    //The user has pressed the "delete" button for the specified track's specified control point, and it should be
-    //deleted. It should be an inner point of a track (not an end point)
+    // The user has pressed the "delete" button for the specified track's specified control point, and it should be
+    // deleted. It should be an inner point of a track (not an end point)
     splitControlPoint: function( track, controlPointIndex, modelAngle ) {
       var vector = Vector2.createPolar( 0.5, modelAngle );
       var newPoint1 = new ControlPoint( track.controlPoints[controlPointIndex].sourcePosition.x - vector.x, track.controlPoints[controlPointIndex].sourcePosition.y - vector.y );
@@ -1129,22 +1129,22 @@ define( function( require ) {
       this.tracks.add( newTrack1 );
       this.tracks.add( newTrack2 );
 
-      //Smooth the new tracks, see #177
+      // Smooth the new tracks, see #177
       newTrack1.smooth( controlPointIndex - 1 );
       newTrack2.smooth( 0 );
 
-      //Trigger track changed first to update the edit enabled properties
+      // Trigger track changed first to update the edit enabled properties
       this.trigger( 'track-changed' );
 
-      //If the skater was on track, then he should fall off, see #97
+      // If the skater was on track, then he should fall off, see #97
       if ( this.skater.track === track ) {
         this.skater.track = null;
       }
 
-      //If a control point was split and that makes too many "live" control points total, remove a piece of track from
-      //the toolbox to keep the total number of control points low enough.
+      // If a control point was split and that makes too many "live" control points total, remove a piece of track from
+      // the toolbox to keep the total number of control points low enough.
       if ( this.getNumberOfControlPoints() > MAX_NUMBER_CONTROL_POINTS ) {
-        //find a nonphysical track, then remove it
+        // find a nonphysical track, then remove it
 
         var trackToRemove = this.getNonPhysicalTracks()[0];
         trackToRemove.trigger( 'remove' );
@@ -1162,33 +1162,33 @@ define( function( require ) {
       var points = [];
       var i;
 
-      //Join in the right direction for a & b so that the joined point is in the middle
+      // Join in the right direction for a & b so that the joined point is in the middle
 
       var firstTrackForward = function() {for ( i = 0; i < a.controlPoints.length; i++ ) { points.push( a.controlPoints[i].copy() ); }};
       var firstTrackBackward = function() {for ( i = a.controlPoints.length - 1; i >= 0; i-- ) { points.push( a.controlPoints[i].copy() ); }};
       var secondTrackForward = function() {for ( i = 1; i < b.controlPoints.length; i++ ) {points.push( b.controlPoints[i].copy() ); }};
       var secondTrackBackward = function() {for ( i = b.controlPoints.length - 2; i >= 0; i-- ) {points.push( b.controlPoints[i].copy() ); }};
 
-      //Only include one copy of the snapped point
-      //Forward Forward
+      // Only include one copy of the snapped point
+      // Forward Forward
       if ( a.controlPoints[a.controlPoints.length - 1].snapTarget === b.controlPoints[0] ) {
         firstTrackForward();
         secondTrackForward();
       }
 
-      //Forward Backward
+      // Forward Backward
       else if ( a.controlPoints[a.controlPoints.length - 1].snapTarget === b.controlPoints[b.controlPoints.length - 1] ) {
         firstTrackForward();
         secondTrackBackward();
       }
 
-      //Backward Forward
+      // Backward Forward
       else if ( a.controlPoints[0].snapTarget === b.controlPoints[0] ) {
         firstTrackBackward();
         secondTrackForward();
       }
 
-      //Backward backward
+      // Backward backward
       else if ( a.controlPoints[0].snapTarget === b.controlPoints[b.controlPoints.length - 1] ) {
         firstTrackBackward();
         secondTrackBackward();
@@ -1203,18 +1203,18 @@ define( function( require ) {
       b.trigger( 'remove' );
       this.tracks.remove( b );
 
-      //When tracks are joined, bump the new track above ground so the y value (and potential energy) cannot go negative,
-      //and so it won't make the "return skater" button get bigger, see #158
+      // When tracks are joined, bump the new track above ground so the y value (and potential energy) cannot go negative,
+      // and so it won't make the "return skater" button get bigger, see #158
       newTrack.bumpAboveGround();
       this.tracks.add( newTrack );
 
-      //Move skater to new track if he was on the old track, by searching for the best fit point on the new track
-      //Note: Energy is not conserved when tracks joined since the user has added or removed energy from the system
+      // Move skater to new track if he was on the old track, by searching for the best fit point on the new track
+      // Note: Energy is not conserved when tracks joined since the user has added or removed energy from the system
       if ( this.skater.track === a || this.skater.track === b ) {
 
         var originalDirectionVector = this.skater.track.getUnitParallelVector( this.skater.u ).times( this.skater.uD );
 
-        //Keep track of the skater direction so we can toggle the 'up' flag if the track orientation changed
+        // Keep track of the skater direction so we can toggle the 'up' flag if the track orientation changed
         var originalNormal = this.skater.upVector;
         var p = newTrack.getClosestPositionAndParameter( this.skater.position.copy() );
         this.skater.track = newTrack;
@@ -1224,19 +1224,19 @@ define( function( require ) {
         this.skater.position = new Vector2( x2, y2 );
         this.skater.angle = newTrack.getViewAngleAt( p.u ) + (this.skater.up ? 0 : Math.PI);
 
-        //Trigger an initial update now so we can get the right up vector, see #150
+        // Trigger an initial update now so we can get the right up vector, see #150
         this.skater.trigger( 'updated' );
         var newNormal = this.skater.upVector;
 
-        //If the skater flipped upside down because the track directionality is different, toggle his 'up' flag
+        // If the skater flipped upside down because the track directionality is different, toggle his 'up' flag
         if ( originalNormal.dot( newNormal ) < 0 ) {
           this.skater.up = !this.skater.up;
           this.skater.angle = newTrack.getViewAngleAt( p.u ) + (this.skater.up ? 0 : Math.PI);
           this.skater.trigger( 'updated' );
         }
 
-        //If the skater changed direction of motion because of the track polarity change, flip the parametric velocity
-        //'uD' value, see #180
+        // If the skater changed direction of motion because of the track polarity change, flip the parametric velocity
+        // 'uD' value, see #180
         var newDirectionVector = this.skater.track.getUnitParallelVector( this.skater.u ).times( this.skater.uD );
         debugAttachDetach && debugAttachDetach( newDirectionVector.dot( originalDirectionVector ) );
         if ( newDirectionVector.dot( originalDirectionVector ) < 0 ) {
@@ -1244,23 +1244,23 @@ define( function( require ) {
         }
       }
 
-      //When joining tracks, smooth out the new track, but without moving the point that joined the tracks, see #177 #238
+      // When joining tracks, smooth out the new track, but without moving the point that joined the tracks, see #177 #238
       newTrack.smoothPointOfHighestCurvature( [] );
     },
 
-    //When a track is dragged, update the skater's energy (if the sim was paused), since it wouldn't be handled in the
-    //update loop.
+    // When a track is dragged, update the skater's energy (if the sim was paused), since it wouldn't be handled in the
+    // update loop.
     trackModified: function( track ) {
       if ( this.paused && this.skater.track === track ) {
         this.skater.updateEnergy();
       }
 
-      //Flag the track as having changed *this frame* so energy doesn't need to be conserved during this frame,
-      //see https://github.com/phetsims/energy-skate-park-basics/issues/127
+      // Flag the track as having changed *this frame* so energy doesn't need to be conserved during this frame,
+      // see https:// github.com/phetsims/energy-skate-park-basics/issues/127
       this.trackChangePending = true;
     },
 
-    //Get the state, say, to put in a query parameter
+    // Get the state, say, to put in a query parameter
     getState: function() {
       return {
         properties: this.get(),
@@ -1271,9 +1271,9 @@ define( function( require ) {
       };
     },
 
-    //Set the state, say from a query parameter
+    // Set the state, say from a query parameter
     setState: function( state ) {
-      //Clear old tracks
+      // Clear old tracks
       this.tracks.clear();
       for ( var i = 0; i < state.tracks.length; i++ ) {
         var controlPoints = state.tracks[i].points.map( function( point ) {
@@ -1284,7 +1284,7 @@ define( function( require ) {
         this.tracks.add( newTrack );
       }
 
-      //Trigger track changed first to update the edit enabled properties
+      // Trigger track changed first to update the edit enabled properties
       this.trigger( 'track-changed' );
 
       this.set( state.properties );
@@ -1292,7 +1292,7 @@ define( function( require ) {
       this.skater.setState( state.skater, this.tracks );
     },
 
-    //Get the number of physical control points (i.e. control points outside of the toolbox)
+    // Get the number of physical control points (i.e. control points outside of the toolbox)
     getNumberOfPhysicalControlPoints: function() {
       var numberOfPointsInEachTrack = _.map( this.getPhysicalTracks(), function( track ) {return track.controlPoints.length;} );
       return _.reduce( numberOfPointsInEachTrack, function( memo, num ) { return memo + num; }, 0 );
@@ -1303,13 +1303,13 @@ define( function( require ) {
       return _.reduce( numberOfPointsInEachTrack, function( memo, num ) { return memo + num; }, 0 );
     },
 
-    //Logic to determine whether a control point can be added by cutting a track's control point in two
-    //This is feasible if the number of control points in the play area (above y>0) is less than the maximum
+    // Logic to determine whether a control point can be added by cutting a track's control point in two
+    // This is feasible if the number of control points in the play area (above y>0) is less than the maximum
     canCutTrackControlPoint: function() {
       return this.getNumberOfPhysicalControlPoints() < MAX_NUMBER_CONTROL_POINTS;
     },
 
-    //Check whether the model contains a track so that input listeners for detached elements can't create bugs, see #230
+    // Check whether the model contains a track so that input listeners for detached elements can't create bugs, see #230
     containsTrack: function( track ) {
       return this.tracks.contains( track );
     }

@@ -54,7 +54,7 @@ define( function( require ) {
   // images
   var skaterIconImage = require( 'image!ENERGY_SKATE_PARK_BASICS/skater-icon.png' );
 
-  //Debug flag to show the view bounds, the region within which the skater can move
+  // Debug flag to show the view bounds, the region within which the skater can move
   var showAvailableBounds = false;
 
   /**
@@ -67,7 +67,7 @@ define( function( require ) {
     ScreenView.call( view, { renderer: 'svg', layoutBounds: new Bounds2( 0, 0, 834, 504 ) } );
 
     var modelPoint = new Vector2( 0, 0 );
-    //earth is 70px high in stage coordinates
+    // earth is 70px high in stage coordinates
     var viewPoint = new Vector2( this.layoutBounds.width / 2, this.layoutBounds.height - BackgroundNode.earthHeight );
     var scale = 50;
     var modelViewTransform = ModelViewTransform2.createSinglePointScaleInvertedYMapping( modelPoint, viewPoint, scale );
@@ -76,7 +76,7 @@ define( function( require ) {
     this.availableModelBoundsProperty = new Property();
     this.availableModelBoundsProperty.linkAttribute( model, 'availableModelBounds' );
 
-    //The background
+    // The background
     this.backgroundNode = new BackgroundNode( this.layoutBounds );
     this.addChild( this.backgroundNode );
 
@@ -102,10 +102,10 @@ define( function( require ) {
       return bounds.minX <= x && x <= bounds.maxX && y <= bounds.maxY;
     };
 
-    //Determine if the skater is onscreen or offscreen for purposes of highlighting the 'return skater' button.
-    //Don't check whether the skater is underground since that is a rare case (only if the user is actively dragging a
-    //control point near y=0 and the track curves below) and the skater will pop up again soon, see the related
-    //flickering problem in #206
+    // Determine if the skater is onscreen or offscreen for purposes of highlighting the 'return skater' button.
+    // Don't check whether the skater is underground since that is a rare case (only if the user is actively dragging a
+    // control point near y=0 and the track curves below) and the skater will pop up again soon, see the related
+    // flickering problem in #206
     var onscreenProperty = new DerivedProperty( [model.skater.positionProperty], function( position ) {
       if ( !view.availableModelBounds ) {
         return true;
@@ -117,11 +117,11 @@ define( function( require ) {
     this.addChild( barGraphBackground );
 
     if ( !model.draggableTracks ) {
-      this.sceneSelectionPanel = new SceneSelectionPanel( model, this, modelViewTransform );//layout done in layout bounds
+      this.sceneSelectionPanel = new SceneSelectionPanel( model, this, modelViewTransform );// layout done in layout bounds
       this.addChild( this.sceneSelectionPanel );
     }
 
-    //Put the pie chart legend to the right of the bar chart, see #60, #192
+    // Put the pie chart legend to the right of the bar chart, see #60, #192
     pieChartLegend.mutate( {top: barGraphBackground.top, left: barGraphBackground.right + 8} );
 
     var playProperty = model.property( 'paused' ).not();
@@ -137,27 +137,27 @@ define( function( require ) {
       scale: 0.85,
       centerX: this.controlPanel.centerX,
 
-      //Align vertically with other controls, see https://github.com/phetsims/energy-skate-park-basics/issues/134
+      // Align vertically with other controls, see https:// github.com/phetsims/energy-skate-park-basics/issues/134
       centerY: (modelViewTransform.modelToViewY( 0 ) + this.layoutBounds.maxY) / 2 + 8
     } );
     this.addChild( this.resetAllButton );
 
-    //The button to return the skater
+    // The button to return the skater
     this.returnSkaterButton = new RectangularPushButton( {
       content: new Text( returnSkaterString ),
       listener: model.returnSkater.bind( model ),
       centerY: this.resetAllButton.centerY
-      //X updated in layoutBounds since the reset all button can move horizontally
+      // X updated in layoutBounds since the reset all button can move horizontally
     } );
 
-    //Disable the return skater button when the skater is already at his initial coordinates
+    // Disable the return skater button when the skater is already at his initial coordinates
     model.skater.linkAttribute( 'moved', view.returnSkaterButton, 'enabled' );
     this.addChild( this.returnSkaterButton );
 
     this.addChild( new PlaybackSpeedControl( model.property( 'speed' ) ).mutate( {right: playPauseButton.left - 10, bottom: playPauseButton.bottom} ) );
 
     var speedometerNode = new GaugeNode(
-      //Hide the needle in for the background of the GaugeNode
+      // Hide the needle in for the background of the GaugeNode
       new Property( null ), speedString,
       {
         min: 0,
@@ -172,7 +172,7 @@ define( function( require ) {
     speedometerNode.top = this.layoutBounds.minY + 5;
     this.addChild( speedometerNode );
 
-    //Switch between selectable tracks
+    // Switch between selectable tracks
     if ( !model.draggableTracks ) {
 
       var trackNodes = model.tracks.map( function( track ) { return new TrackNode( model, track, modelViewTransform, view.availableModelBoundsProperty ); } ).getArray();
@@ -193,17 +193,17 @@ define( function( require ) {
         var trackNode = new TrackNode( model, track, modelViewTransform, view.availableModelBoundsProperty );
         view.addChild( trackNode );
 
-        //Make sure the skater stays in front of the tracks when tracks are joined
+        // Make sure the skater stays in front of the tracks when tracks are joined
         if ( skaterNode ) {
           skaterNode.moveToFront();
           pieChartNode.moveToFront();
         }
 
-        //When track removed, remove its view
+        // When track removed, remove its view
         var itemRemovedListener = function( removed ) {
           if ( removed === track ) {
             view.removeChild( trackNode );
-            model.tracks.removeItemRemovedListener( itemRemovedListener );//Clean up memory leak
+            model.tracks.removeItemRemovedListener( itemRemovedListener );// Clean up memory leak
           }
         };
         model.tracks.addItemRemovedListener( itemRemovedListener );
@@ -211,10 +211,10 @@ define( function( require ) {
         return trackNode;
       };
 
-      //Create the tracks for the track toolbox
+      // Create the tracks for the track toolbox
       var interactiveTrackNodes = model.tracks.map( addTrackNode ).getArray();
 
-      //Add a panel behind the tracks
+      // Add a panel behind the tracks
       var margin = 5;
       this.trackCreationPanel = new Panel( new Rectangle( 0, 0, interactiveTrackNodes[0].width, interactiveTrackNodes[0].height ),
         {xMargin: margin, yMargin: margin, x: interactiveTrackNodes[0].left - margin, y: interactiveTrackNodes[0].top - margin} );
@@ -247,7 +247,7 @@ define( function( require ) {
         { stroke: 'black', lineWidth: 3 } );
       var arrowHead = createArrowhead( Math.PI - Math.PI / 3, new Vector2( -xTip, yTip ) );
 
-      //Create the clear button, and match the size to the size of the track toolbox
+      // Create the clear button, and match the size to the size of the track toolbox
       var clearNode = new Image( eraser, {scale: 0.4475} );
 
       var clearButtonEnabledProperty = model.property( 'clearButtonEnabled' );
@@ -273,7 +273,7 @@ define( function( require ) {
 
     var webGLSupported = WebGLLayer.isWebGLSupported();
 
-    //TODO: This short-circuits the mobile safari path and just uses WebGL where it is available
+    // TODO: This short-circuits the mobile safari path and just uses WebGL where it is available
     var renderer = (platform.mobileSafari && webGLSupported) || webGLSupported ? 'webgl' : 'svg';
     var gaugeNeedleNode = new GaugeNeedleNode( model.skater.property( 'speed' ),
       {
@@ -291,12 +291,12 @@ define( function( require ) {
                        new PieChartNode( model.skater, model.property( 'pieChartVisible' ), modelViewTransform );
     this.addChild( pieChartNode );
 
-    //Buttons to return the skater when she is offscreen, see #219
+    // Buttons to return the skater when she is offscreen, see #219
     var iconScale = 0.4;
     var returnSkaterToStartingPointButton = new RectangularPushButton( {
       content: new Image( skaterIconImage, {scale: iconScale} ),
 
-      //green means "go" since the skater will likely start moving at this point
+      // green means "go" since the skater will likely start moving at this point
       baseColor: EnergySkateParkColorScheme.kineticEnergy,
       listener: model.returnSkater.bind( model )
     } );
@@ -304,14 +304,14 @@ define( function( require ) {
     var returnSkaterToGroundButton = new RectangularPushButton( {
       content: new Image( skaterIconImage, {scale: iconScale} ),
       centerBottom: modelViewTransform.modelToViewPosition( model.skater.startingPosition ),
-      baseColor: '#f4514e', //red for stop, since the skater will be stopped on the ground.
+      baseColor: '#f4514e', // red for stop, since the skater will be stopped on the ground.
       listener: function() { model.skater.resetPosition(); }
     } );
 
     this.addChild( returnSkaterToStartingPointButton );
     this.addChild( returnSkaterToGroundButton );
 
-    //When the skater goes off screen, make the "return skater" button big
+    // When the skater goes off screen, make the "return skater" button big
     onscreenProperty.link( function( skaterOnscreen ) {
       var buttonsVisible = !skaterOnscreen;
       returnSkaterToGroundButton.visible = buttonsVisible;
@@ -321,19 +321,19 @@ define( function( require ) {
         returnSkaterToGroundButton.moveToFront();
         returnSkaterToStartingPointButton.moveToFront();
 
-        //Put the button where the skater will appear.  Nudge it up a bit so the mouse can hit it from the drop site,
-        //without being moved at all (to simplify repeat runs).
+        // Put the button where the skater will appear.  Nudge it up a bit so the mouse can hit it from the drop site,
+        // without being moved at all (to simplify repeat runs).
         var viewPosition = modelViewTransform.modelToViewPosition( model.skater.startingPosition ).plusXY( 0, 5 );
         returnSkaterToStartingPointButton.centerBottom = viewPosition;
 
-        //If the return skater button went offscreen, move it back on the screen, see #222
+        // If the return skater button went offscreen, move it back on the screen, see #222
         if ( returnSkaterToStartingPointButton.top < 5 ) {
           returnSkaterToStartingPointButton.top = 5;
         }
       }
     } );
 
-    //For debugging the visible bounds
+    // For debugging the visible bounds
     if ( showAvailableBounds ) {
       this.viewBoundsPath = new Path( null, {pickable: false, stroke: 'red', lineWidth: 10} );
       this.addChild( this.viewBoundsPath );
@@ -342,13 +342,13 @@ define( function( require ) {
 
   return inherit( ScreenView, EnergySkateParkBasicsScreenView, {
 
-    //No state that is specific to the view, in this case
+    // No state that is specific to the view, in this case
     getState: function() {},
     setState: function() {},
 
-    //Layout the EnergySkateParkBasicsScreenView, scaling it up and down with the size of the screen to ensure a
-    //minimially visible area, but keeping it centered at the bottom of the screen, so there is more area in the +y
-    //direction to build tracks and move the skater
+    // Layout the EnergySkateParkBasicsScreenView, scaling it up and down with the size of the screen to ensure a
+    // minimially visible area, but keeping it centered at the bottom of the screen, so there is more area in the +y
+    // direction to build tracks and move the skater
     layout: function( width, height ) {
 
       this.resetTransform();
@@ -359,12 +359,12 @@ define( function( require ) {
       var offsetX = 0;
       var offsetY = 0;
 
-      //Move to bottom vertically
+      // Move to bottom vertically
       if ( scale === width / this.layoutBounds.width ) {
         offsetY = (height / scale - this.layoutBounds.height);
       }
 
-      //center horizontally
+      // center horizontally
       else if ( scale === height / this.layoutBounds.height ) {
         offsetX = (width - this.layoutBounds.width * scale) / 2 / scale;
       }
@@ -375,7 +375,7 @@ define( function( require ) {
 
       this.availableViewBounds = new Rect( -offsetX, -offsetY, width / scale, this.modelViewTransform.modelToViewY( 0 ) + Math.abs( offsetY ) );
 
-      //Float the control panel to the right (but not arbitrarily far because it could get too far from the play area)
+      // Float the control panel to the right (but not arbitrarily far because it could get too far from the play area)
       this.controlPanel.right = Math.min( 890, this.availableViewBounds.maxX ) - 5;
 
       if ( this.attachDetachToggleButtons ) {
@@ -390,11 +390,11 @@ define( function( require ) {
       this.resetAllButton.centerX = this.controlPanel.centerX;
       this.returnSkaterButton.right = this.resetAllButton.left - 10;
 
-      //Compute the visible model bounds so we will know when a model object like the skater has gone offscreen
+      // Compute the visible model bounds so we will know when a model object like the skater has gone offscreen
       this.availableModelBounds = this.modelViewTransform.viewToModelBounds( this.availableViewBounds );
       this.availableModelBoundsProperty.value = this.availableModelBounds;
 
-      //Show it for debugging
+      // Show it for debugging
       if ( showAvailableBounds ) {
         this.viewBoundsPath.shape = Shape.bounds( this.availableViewBounds );
       }

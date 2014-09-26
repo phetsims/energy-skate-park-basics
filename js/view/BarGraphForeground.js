@@ -24,7 +24,7 @@ define( function( require ) {
    */
   function BarGraphForeground( skater, barGraphVisibleProperty ) {
 
-    //Free layout parameters
+    // Free layout parameters
     var contentWidth = 110;
     var contentHeight = 325;
     var insetX = 2;
@@ -38,15 +38,15 @@ define( function( require ) {
 
     var originY = contentHeight - insetY;
 
-    //The x-coordinate of a bar chart bar
+    // The x-coordinate of a bar chart bar
     var getBarX = function( barIndex ) { return insetX + spaceBetweenAxisAndBar + barWidth * barIndex + spaceBetweenBars * barIndex; };
 
-    //Create an energy bar that animates as the skater moves
+    // Create an energy bar that animates as the skater moves
     var createBar = function( index, color, property ) {
 
-      //Convert to graph coordinates, floor and protect against duplicates
-      //However, do not floor for values less than 1 otherwise a nonzero value will show up as zero,
-      //see https://github.com/phetsims/energy-skate-park-basics/issues/159
+      // Convert to graph coordinates, floor and protect against duplicates
+      // However, do not floor for values less than 1 otherwise a nonzero value will show up as zero,
+      // see https:// github.com/phetsims/energy-skate-park-basics/issues/159
       var barHeightProperty = property.map( function( value ) {
         var result = value / 30;
 
@@ -55,17 +55,17 @@ define( function( require ) {
       var barX = getBarX( index );
       var bar = new Rectangle( barX, 0, barWidth, 100, {fill: color, pickable: false, renderer: 'webgl'} );
 
-      //update the bars when the graph becomes visible, and skip update when they are invisible
+      // update the bars when the graph becomes visible, and skip update when they are invisible
       DerivedProperty.multilink( [barHeightProperty, barGraphVisibleProperty], function( barHeight, visible ) {
         if ( visible ) {
-          //PERFORMANCE/ALLOCATION: Possible performance improvement to avoid allocations in Rectangle.setRect
+          // PERFORMANCE/ALLOCATION: Possible performance improvement to avoid allocations in Rectangle.setRect
 
-          //If the bar is too small, don't try to render it, see #199
+          // If the bar is too small, don't try to render it, see #199
           if ( barHeight < 1E-6 ) {
             barHeight = 0;
           }
 
-          //TODO: just omit negative bars altogether?
+          // TODO: just omit negative bars altogether?
           if ( barHeight >= 0 ) {
             bar.setRect( barX, originY - barHeight, barWidth, barHeight );
           }
@@ -84,7 +84,7 @@ define( function( require ) {
 
     Node.call( this, {
 
-      //Manually align with the baseline of the bar chart.
+      // Manually align with the baseline of the bar chart.
       x: 24, y: 15,
 
       children: [
@@ -94,7 +94,7 @@ define( function( require ) {
         totalBar
       ]} );
 
-    //When the bar graph is shown, update the bars (because they do not get updated when invisible for performance reasons)
+    // When the bar graph is shown, update the bars (because they do not get updated when invisible for performance reasons)
     barGraphVisibleProperty.linkAttribute( this, 'visible' );
   }
 

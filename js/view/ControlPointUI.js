@@ -29,7 +29,7 @@ define( function( require ) {
 
     var controlPointUI = this;
 
-    //See ComboxBox.js
+    // See ComboxBox.js
     var enableClickToDismissListener = true;
     var sceneListenerAdded = false;
 
@@ -62,7 +62,7 @@ define( function( require ) {
 
     var disableDismissAction = { down: function() { enableClickToDismissListener = false; } };
 
-    //Add a scissors cut button, but only for interior points and only if there aren't too many control points already
+    // Add a scissors cut button, but only for interior points and only if there aren't too many control points already
     if ( !isEndPoint && model.canCutTrackControlPoint() ) {
       var scissorNode = new FontAwesomeNode( 'cut', {fill: 'black', scale: 0.6, rotation: Math.PI / 2 - angle} );
       var cutButton = new RoundPushButton( {
@@ -74,14 +74,14 @@ define( function( require ) {
         radius: 20,
         touchAreaRadius: 20 * 1.3,
 
-        //yellow color scheme
+        // yellow color scheme
         baseColor: new Color( '#fefd53' )
       } );
       cutButton.addInputListener( disableDismissAction );
       this.addChild( cutButton );
     }
 
-    //Show the delete button.
+    // Show the delete button.
     var deleteNode = new FontAwesomeNode( 'times_circle', {fill: 'red', scale: 0.6} );
     var deleteButton = new RoundPushButton( {
       listener: function() { model.deleteControlPoint( track, controlPointIndex ); },
@@ -90,10 +90,10 @@ define( function( require ) {
       radius: 20,
       touchAreaRadius: 20 * 1.3,
 
-      //Doesn't look exactly centered due to button shading, so adjust it slightly
+      // Doesn't look exactly centered due to button shading, so adjust it slightly
       xContentOffset: -0.5,
 
-      //yellow color scheme
+      // yellow color scheme
       baseColor: new Color( '#fefd53' )
     } );
     deleteButton.addInputListener( disableDismissAction );

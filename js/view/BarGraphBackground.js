@@ -1,4 +1,4 @@
-//  Copyright 2002-2014, University of Colorado Boulder
+// Copyright 2002-2014, University of Colorado Boulder
 
 /**
  * Scenery node that shows static background for the bar graph, including the title, axes, labels and clear thermal
@@ -33,7 +33,7 @@ define( function( require ) {
    */
   function BarGraphBackground( skater, barGraphVisibleProperty, clearThermal ) {
 
-    //Free layout parameters
+    // Free layout parameters
     var contentWidth = 110;
     var contentHeight = 325;
     var insetX = 2;
@@ -47,10 +47,10 @@ define( function( require ) {
 
     var originY = contentHeight - insetY;
 
-    //The x-coordinate of a bar chart bar
+    // The x-coordinate of a bar chart bar
     var getBarX = function( barIndex ) { return insetX + spaceBetweenAxisAndBar + barWidth * barIndex + spaceBetweenBars * barIndex; };
 
-    //Create a label that appears under one of the bars
+    // Create a label that appears under one of the bars
     var createLabel = function( index, title, color ) {
       var text = new Text( title, {fill: color, font: new PhetFont( 14 ), pickable: false} );
       text.rotate( -Math.PI / 2 );
@@ -80,12 +80,12 @@ define( function( require ) {
       clearThermalButton
     ]} );
 
-    //Center the bar chart title, see #62
+    // Center the bar chart title, see #62
     titleNode.centerX = contentNode.centerX;
 
     Panel.call( this, contentNode, { x: 10, y: 10, xMargin: 10, yMargin: 5, fill: 'white', stroke: 'gray', lineWidth: 1, resize: false} );
 
-    //When the bar graph is shown, update the bars (because they do not get updated when invisible for performance reasons)
+    // When the bar graph is shown, update the bars (because they do not get updated when invisible for performance reasons)
     barGraphVisibleProperty.linkAttribute( this, 'visible' );
   }
 

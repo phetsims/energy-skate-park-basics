@@ -26,7 +26,7 @@ define( function( require ) {
    * @param {ModelViewTransform} modelViewTransform
    * @constructor
    */
-    //TODO: unused params?
+    // TODO: unused params?
   function PieChartWebGLSliceNode( skater, color, radiusProperty, startAngleProperty, extentProperty, pieChartVisibleProperty, modelViewTransform ) {
 
     this.color = color;
@@ -50,7 +50,7 @@ define( function( require ) {
       var centerY = 0;
       var radius = 0.5;
 
-      //40 makes a smooth circle, but we need enough samples to eliminate seams between the pie slices
+      // 40 makes a smooth circle, but we need enough samples to eliminate seams between the pie slices
       var numSamples = 500;
 
       var vertices = [centerX, centerY];
@@ -67,18 +67,18 @@ define( function( require ) {
         indexToVertex( i );
       }
 
-      //Complete the circle
+      // Complete the circle
       indexToVertex( 0 );
       this.vertices = vertices;
 
-      //TODO: Once we are lazily handling the full matrix, we may benefit from DYNAMIC draw here, and updating the vertices themselves
+      // TODO: Once we are lazily handling the full matrix, we may benefit from DYNAMIC draw here, and updating the vertices themselves
       gl.bufferData( gl.ARRAY_BUFFER, new Float32Array( vertices ), gl.STATIC_DRAW );
 
       this.updateRectangle();
     },
 
-    //Nothing necessary since everything currently handled in the uMatrix below
-    //However, we may switch to dynamic draw, and handle the matrix change only where necessary in the future?
+    // Nothing necessary since everything currently handled in the uMatrix below
+    // However, we may switch to dynamic draw, and handle the matrix change only where necessary in the future?
     updateRectangle: function() {
     },
 
@@ -103,7 +103,7 @@ define( function( require ) {
       // combine image matrix (to scale aspect ratios), the trail's matrix, and the matrix to device coordinates
       gl.uniformMatrix4fv( shaderProgram.uniformLocations.uMatrix, false, uMatrix.entries );
 
-      //Indicate the branch of logic to use in the ubershader.  In this case, a texture should be used for the image
+      // Indicate the branch of logic to use in the ubershader.  In this case, a texture should be used for the image
       gl.uniform1i( shaderProgram.uniformLocations.uFragmentType, WebGLLayer.fragmentTypeFill );
       var color = Color.toColor( this.color );
       gl.uniform4f( shaderProgram.uniformLocations.uColor, color.r / 255, color.g / 255, color.b / 255, color.a );
@@ -111,7 +111,7 @@ define( function( require ) {
       gl.bindBuffer( gl.ARRAY_BUFFER, this.buffer );
       gl.vertexAttribPointer( shaderProgram.attributeLocations.aVertex, 2, gl.FLOAT, false, 0, 0 );
 
-      //To cut out a piece from the pie, just select the appropriate start/end vertices, then the call is still static.
+      // To cut out a piece from the pie, just select the appropriate start/end vertices, then the call is still static.
       var numPoints = this.vertices.length / 2;
 
       var numOuterSamples = numPoints - 1;
@@ -119,7 +119,7 @@ define( function( require ) {
       gl.drawArrays( gl.TRIANGLE_FAN, 0, numToDraw );
     },
 
-    //TODO: Is this necessary?
+    // TODO: Is this necessary?
     step: function( dt ) {
       this.invalidatePaint();
     },

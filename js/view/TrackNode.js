@@ -37,8 +37,8 @@ define( function( require ) {
     var trackNode = this;
     Node.call( this );
 
-    //When dragging the track out of the toolbox, the control points should be able to drag the track.  However, don't
-    //use that feature if the track is already in the play area (physical) when created.
+    // When dragging the track out of the toolbox, the control points should be able to drag the track.  However, don't
+    // use that feature if the track is already in the play area (physical) when created.
     var trackDropped = track.physical;
 
     var road = new Path( null, {fill: 'gray', cursor: track.interactive ? 'pointer' : 'default'} );
@@ -52,32 +52,32 @@ define( function( require ) {
       var lastDragPoint;
       var startOffset = null;
 
-      //Keep track of whether the user has started to drag the track.  Click events should not create tracks, only drag
-      //events.  See #205
+      // Keep track of whether the user has started to drag the track.  Click events should not create tracks, only drag
+      // events.  See #205
       var startedDrag = false;
 
-      //Drag handler for dragging the track segment itself (not one of the control points)
-      //Uses a similar strategy as MovableDragHandler but requires a separate implementation because its bounds are
-      //determined by the shape of the track (so it cannot go below ground)
-      //And so it can be dragged out of the toolbox but not back into it (so it won't be dragged below ground)
+      // Drag handler for dragging the track segment itself (not one of the control points)
+      // Uses a similar strategy as MovableDragHandler but requires a separate implementation because its bounds are
+      // determined by the shape of the track (so it cannot go below ground)
+      // And so it can be dragged out of the toolbox but not back into it (so it won't be dragged below ground)
       var trackSegmentDragHandlerOptions = {
         allowTouchSnag: true,
 
         start: function( event ) {
 
-          //A new press has started, but the user has not moved the track yet, so do not create it yet.  See #205
+          // A new press has started, but the user has not moved the track yet, so do not create it yet.  See #205
           startedDrag = false;
         },
 
-        //Drag an entire track
+        // Drag an entire track
         drag: function( event ) {
 
           var snapTargetChanged = false;
 
-          //Check whether the model contains a track so that input listeners for detached elements can't create bugs, see #230
+          // Check whether the model contains a track so that input listeners for detached elements can't create bugs, see #230
           if ( !model.containsTrack( track ) ) { return; }
 
-          //On the first drag event, move the track out of the toolbox, see #205
+          // On the first drag event, move the track out of the toolbox, see #205
           if ( !startedDrag ) {
             lastDragPoint = event.pointer.point;
             track.dragging = true;
@@ -91,13 +91,13 @@ define( function( require ) {
           var parentPoint = event.currentTarget.globalToParentPoint( event.pointer.point ).minus( startOffset );
           var location = modelViewTransform.viewToModelPosition( parentPoint );
 
-          //If the user moved it out of the toolbox above y=0, then make it physically interactive
+          // If the user moved it out of the toolbox above y=0, then make it physically interactive
           var bottomControlPointY = track.getBottomControlPointY();
           if ( !track.physical && bottomControlPointY > 0 ) {
             track.physical = true;
           }
 
-          //When dragging track, make sure the control points don't go below ground, see #71
+          // When dragging track, make sure the control points don't go below ground, see #71
           var modelDelta = location.minus( track.position );
           var translatedBottomControlPointY = bottomControlPointY + modelDelta.y;
 
@@ -107,22 +107,22 @@ define( function( require ) {
 
           if ( availableBoundsProperty.value ) {
 
-            //constrain each point to lie within the available bounds
+            // constrain each point to lie within the available bounds
             var availableBounds = availableBoundsProperty.value;
 
-            //Constrain the top
+            // Constrain the top
             var topControlPointY = track.getTopControlPointY();
             if ( topControlPointY + modelDelta.y > availableBounds.maxY ) {
               location.y = availableBounds.maxY - (topControlPointY - track.position.y);
             }
 
-            //Constrain the left side
+            // Constrain the left side
             var leftControlPointX = track.getLeftControlPointX();
             if ( leftControlPointX + modelDelta.x < availableBounds.minX ) {
               location.x = availableBounds.minX - (leftControlPointX - track.position.x);
             }
 
-            //Constrain the right side
+            // Constrain the right side
             var rightControlPointX = track.getRightControlPointX();
             if ( rightControlPointX + modelDelta.x > availableBounds.maxX ) {
               location.x = availableBounds.maxX - (rightControlPointX - track.position.x);
@@ -131,7 +131,7 @@ define( function( require ) {
 
           track.position = location;
 
-          //If one of the control points is close enough to link to another track, do so
+          // If one of the control points is close enough to link to another track, do so
           var tracks = model.getPhysicalTracks();
 
           var bestDistance = null;
@@ -144,10 +144,10 @@ define( function( require ) {
             var t = tracks[i];
             if ( t !== track ) {
 
-              //4 cases 00, 01, 10, 11
+              // 4 cases 00, 01, 10, 11
               var otherPoints = [t.controlPoints[0], t.controlPoints[t.controlPoints.length - 1]];
 
-              //don't match inner points
+              // don't match inner points
               for ( var j = 0; j < points.length; j++ ) {
                 var point = points[j];
                 for ( var k = 0; k < otherPoints.length; k++ ) {
@@ -169,7 +169,7 @@ define( function( require ) {
             }
             myBestPoint.snapTarget = otherBestPoint;
 
-            //Set the opposite point to be unsnapped, you can only snap one at a time
+            // Set the opposite point to be unsnapped, you can only snap one at a time
             var source = (myBestPoint === points[0] ? points[1] : points[0]);
             if ( source.snapTarget !== null ) {
               snapTargetChanged = true;
@@ -185,14 +185,14 @@ define( function( require ) {
             points[1].snapTarget = null;
           }
 
-          //It costs about 5fps to do this every frame (on iPad3), so only check if the snapTargets have changed.  See #235
+          // It costs about 5fps to do this every frame (on iPad3), so only check if the snapTargets have changed.  See #235
           if ( snapTargetChanged ) {
             track.updateSplines();
             updateTrackShape();
           }
 
-          //Make it so the track can't be dragged underground when dragged by the track itself (not control point), see #166
-          //But if the user is dragging the track out of the toolbox, then leave the motion continuous, see #178
+          // Make it so the track can't be dragged underground when dragged by the track itself (not control point), see #166
+          // But if the user is dragging the track out of the toolbox, then leave the motion continuous, see #178
           if ( track.physical ) {
             track.bumpAboveGround();
           }
@@ -200,13 +200,13 @@ define( function( require ) {
           model.trackModified( track );
         },
 
-        //End the drag
+        // End the drag
         end: function() {
 
-          //Check whether the model contains a track so that input listeners for detached elements can't create bugs, see #230
+          // Check whether the model contains a track so that input listeners for detached elements can't create bugs, see #230
           if ( !model.containsTrack( track ) ) { return; }
 
-          //If the user never dragged the object, then there is no track to drop in this case, see #205
+          // If the user never dragged the object, then there is no track to drop in this case, see #205
           if ( startedDrag ) {
             var myPoints = [track.controlPoints[0], track.controlPoints[track.controlPoints.length - 1]];
             if ( myPoints[0].snapTarget || myPoints[1].snapTarget ) {
@@ -229,48 +229,48 @@ define( function( require ) {
       road.addInputListener( trackSegmentDragHandler );
     }
 
-    //Reuse arrays to save allocations and prevent garbage collections, see #38
+    // Reuse arrays to save allocations and prevent garbage collections, see #38
     var x = new FastArray( track.controlPoints.length );
     var y = new FastArray( track.controlPoints.length );
 
-    //Store for performance
+    // Store for performance
     var lastPt = (track.controlPoints.length - 1) / track.controlPoints.length;
 
-    //Sample space, which is recomputed if the track gets longer, to keep it looking smooth no matter how many control points
+    // Sample space, which is recomputed if the track gets longer, to keep it looking smooth no matter how many control points
     var linSpace = numeric.linspace( 0, lastPt, 20 * (track.controlPoints.length - 1) );
     var lengthForLinSpace = track.controlPoints.length;
 
     var updateTrackShape = function() {
 
       var i;
-      //Update the sample range when the number of control points has changed
+      // Update the sample range when the number of control points has changed
       if ( lengthForLinSpace !== track.controlPoints.length ) {
         lastPt = (track.controlPoints.length - 1) / track.controlPoints.length;
         linSpace = numeric.linspace( 0, lastPt, 20 * (track.controlPoints.length - 1) );
         lengthForLinSpace = track.controlPoints.length;
       }
 
-      //Arrays are fixed length, so just overwrite values
+      // Arrays are fixed length, so just overwrite values
       for ( i = 0; i < track.controlPoints.length; i++ ) {
         x[i] = track.controlPoints[i].position.x;
         y[i] = track.controlPoints[i].position.y;
       }
 
-      //Compute points for lineTo
+      // Compute points for lineTo
       var xPoints = SplineEvaluation.atArray( track.xSpline, linSpace );
       var yPoints = SplineEvaluation.atArray( track.ySpline, linSpace );
 
       var tx = trackNode.getTranslation();
       var shape = new Shape().moveTo( modelViewTransform.modelToViewX( xPoints[0] ) - tx.x, modelViewTransform.modelToViewY( yPoints[0] ) - tx.y );
 
-      //Show the track at reduced resolution while dragging so it will be smooth and responsive while dragging
-      //(whether updating the entire track, some of the control points or both)
+      // Show the track at reduced resolution while dragging so it will be smooth and responsive while dragging
+      // (whether updating the entire track, some of the control points or both)
       var delta = track.dragging ? 3 : 1;
       for ( i = 1; i < xPoints.length; i = i + delta ) {
         shape.lineTo( modelViewTransform.modelToViewX( xPoints[i] ) - tx.x, modelViewTransform.modelToViewY( yPoints[i] ) - tx.y );
       }
 
-      //If at reduced resolution, still make sure we draw to the end point
+      // If at reduced resolution, still make sure we draw to the end point
       if ( i !== xPoints.length - 1 ) {
         i = xPoints.length - 1;
         shape.lineTo( modelViewTransform.modelToViewX( xPoints[i] ) - tx.x, modelViewTransform.modelToViewY( yPoints[i] ) - tx.y );
@@ -285,8 +285,8 @@ define( function( require ) {
       road.shape = shape.getStrokedShape( strokeStyles );
       centerLine.shape = shape;
 
-      //Update the skater if the track is moved while the sim is paused,
-      //see https://github.com/phetsims/energy-skate-park-basics/issues/84
+      // Update the skater if the track is moved while the sim is paused,
+      // see https:// github.com/phetsims/energy-skate-park-basics/issues/84
       if ( model.skater.track === track && model.paused ) {
         model.skater.position = track.getPoint( model.skater.u );
         model.skater.angle = model.skater.track.getViewAngleAt( model.skater.u ) + (model.skater.up ? 0 : Math.PI);
@@ -294,7 +294,7 @@ define( function( require ) {
       }
     };
 
-    //Add the control points
+    // Add the control points
     if ( track.interactive ) {
       for ( var i = 0; i < track.controlPoints.length; i++ ) {
         (function( i, isEndPoint ) {
@@ -302,7 +302,7 @@ define( function( require ) {
 
           var controlPointNode = new Circle( 14, {pickable: true, opacity: 0.7, stroke: 'black', lineWidth: 2, fill: 'red', cursor: 'pointer', translation: modelViewTransform.modelToViewPosition( controlPoint.position )} );
 
-          //Show a dotted line for the exterior track points, which can be connected to other track
+          // Show a dotted line for the exterior track points, which can be connected to other track
           if ( i === 0 || i === track.controlPoints.length - 1 ) {
             controlPointNode.lineDash = [ 4, 5 ];
           }
@@ -316,7 +316,7 @@ define( function( require ) {
               allowTouchSnag: true,
               start: function( event ) {
 
-                //If control point dragged out of the control panel, translate the entire track, see #130
+                // If control point dragged out of the control panel, translate the entire track, see #130
                 if ( !track.physical || !trackDropped ) {
                   trackSegmentDragHandlerOptions.start( event );
                   return;
@@ -326,10 +326,10 @@ define( function( require ) {
               },
               drag: function( event ) {
 
-                //Check whether the model contains a track so that input listeners for detached elements can't create bugs, see #230
+                // Check whether the model contains a track so that input listeners for detached elements can't create bugs, see #230
                 if ( !model.containsTrack( track ) ) { return; }
 
-                //If control point dragged out of the control panel, translate the entire track, see #130
+                // If control point dragged out of the control panel, translate the entire track, see #130
                 if ( !track.physical || !trackDropped ) {
                   trackSegmentDragHandlerOptions.drag( event );
                   return;
@@ -338,16 +338,16 @@ define( function( require ) {
                 track.dragging = true;
                 var globalPoint = controlPointNode.globalToParentPoint( event.pointer.point );
 
-                //trigger reconstruction of the track shape based on the control points
+                // trigger reconstruction of the track shape based on the control points
                 var pt = modelViewTransform.viewToModelPosition( globalPoint );
 
-                //Constrain the control points to remain in y>0, see #71
+                // Constrain the control points to remain in y>0, see #71
                 pt.y = Math.max( pt.y, 0 );
 
                 if ( availableBoundsProperty.value ) {
                   var availableBounds = availableBoundsProperty.value;
 
-                  //Constrain the control points to be onscreen, see #94
+                  // Constrain the control points to be onscreen, see #94
                   pt.x = Math.max( pt.x, availableBounds.minX );
                   pt.x = Math.min( pt.x, availableBounds.maxX );
                   pt.y = Math.min( pt.y, availableBounds.maxY );
@@ -356,7 +356,7 @@ define( function( require ) {
                 controlPoint.sourcePosition = pt;
 
                 if ( isEndPoint ) {
-                  //If one of the control points is close enough to link to another track, do so
+                  // If one of the control points is close enough to link to another track, do so
                   var tracks = model.getPhysicalTracks();
 
                   var bestDistance = Number.POSITIVE_INFINITY;
@@ -366,7 +366,7 @@ define( function( require ) {
                     var t = tracks[i];
                     if ( t !== track ) {
 
-                      //don't match inner points
+                      // don't match inner points
                       var otherPoints = [t.controlPoints[0], t.controlPoints[t.controlPoints.length - 1]];
 
                       for ( var k = 0; k < otherPoints.length; k++ ) {
@@ -384,17 +384,17 @@ define( function( require ) {
                   controlPoint.snapTarget = bestDistance !== null && bestDistance < 1 ? bestMatch : null;
                 }
 
-                //When one control point dragged, update the track and the node shape
+                // When one control point dragged, update the track and the node shape
                 track.updateSplines();
                 updateTrackShape();
                 model.trackModified( track );
               },
               end: function( event ) {
 
-                //Check whether the model contains a track so that input listeners for detached elements can't create bugs, see #230
+                // Check whether the model contains a track so that input listeners for detached elements can't create bugs, see #230
                 if ( !model.containsTrack( track ) ) { return; }
 
-                //If control point dragged out of the control panel, translate the entire track, see #130
+                // If control point dragged out of the control panel, translate the entire track, see #130
                 if ( !track.physical || !trackDropped ) {
                   trackSegmentDragHandlerOptions.end( event );
                   return;
@@ -409,8 +409,8 @@ define( function( require ) {
                 track.bumpAboveGround();
                 track.dragging = false;
 
-                //Show the 'control point editing' ui, but only if the user didn't drag the control point.
-                //Threshold at a few drag events in case the user didn't mean to drag it but accidentally moved it a few pixels.
+                // Show the 'control point editing' ui, but only if the user didn't drag the control point.
+                // Threshold at a few drag events in case the user didn't mean to drag it but accidentally moved it a few pixels.
                 if ( dragEvents <= 3 ) {
                   var controlPointUI = new ControlPointUI( model, track, i, modelViewTransform, trackNode.parents[0] );
                   track.on( 'remove', function() { controlPointUI.detach(); } );
@@ -428,12 +428,12 @@ define( function( require ) {
       }
     }
 
-    //Init the track shape
+    // Init the track shape
     updateTrackShape();
 
-    //Update the track shape when the whole track is translated
-    //Just observing the control points individually would lead to N expensive callbacks (instead of 1) for each of the N points
-    //So we use this broadcast mechanism instead
+    // Update the track shape when the whole track is translated
+    // Just observing the control points individually would lead to N expensive callbacks (instead of 1) for each of the N points
+    // So we use this broadcast mechanism instead
     track.on( 'translated', updateTrackShape );
 
     track.draggingProperty.link( function( dragging ) {

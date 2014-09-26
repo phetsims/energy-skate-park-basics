@@ -29,7 +29,7 @@ define( function( require ) {
     slider.addMajorTick( frictionRange.min, new Text( noneString, { font: tickFont } ) );
     slider.addMajorTick( frictionRange.max, new Text( lotsString, { font: tickFont } ) );
 
-    //Space the friction label above the tick labels so that it won't overlap for i18n
+    // Space the friction label above the tick labels so that it won't overlap for i18n
     VBox.call( this, {spacing: -4, children: [new Text( frictionString, new PhetFont( 14 ) ), slider]} );
   }
 

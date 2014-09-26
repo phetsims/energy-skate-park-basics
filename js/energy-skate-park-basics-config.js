@@ -5,7 +5,7 @@ require.config( {
 
   paths: {
 
-    //Load dependencies from sibling directories
+    // Load dependencies from sibling directories
     ASSERT: '../../assert/js',
     AXON: '../../axon/js',
     BRAND: '../../brand/js',
@@ -19,7 +19,7 @@ require.config( {
     JOIST: '../../joist/js',
     ENERGY_SKATE_PARK_BASICS: '.',
 
-    //Load plugins
+    // Load plugins
     image: '../../chipper/requirejs-plugins/image',
     audio: '../../chipper/requirejs-plugins/audio',
     string: '../../chipper/requirejs-plugins/string',
