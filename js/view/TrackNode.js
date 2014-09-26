@@ -70,10 +70,8 @@ define( function( require ) {
       this.road.addInputListener( trackSegmentDragHandler );
 
       for ( var i = 0; i < track.controlPoints.length; i++ ) {
-        (function( i, isEndPoint ) {
-          var controlPointNode = new ControlPointNode( trackNode, trackSegmentDragHandler, i, isEndPoint );
-          trackNode.addChild( controlPointNode );
-        })( i, i === 0 || i === track.controlPoints.length - 1 );
+        var isEndPoint = i === 0 || i === track.controlPoints.length - 1;
+        trackNode.addChild( new ControlPointNode( trackNode, trackSegmentDragHandler, i, isEndPoint ) );
       }
     }
 
