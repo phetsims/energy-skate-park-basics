@@ -205,6 +205,7 @@ define( function( require ) {
 
     //Get the model angle at the specified position on the track
     getModelAngleAt: function( u ) {
+      // load xSplineDiff, ySplineDiff here if not already loaded
       if ( this.xSplineDiff === null ) {
         this.xSplineDiff = this.xSpline.diff();
         this.ySplineDiff = this.ySpline.diff();
@@ -214,7 +215,12 @@ define( function( require ) {
 
     //Get the model unit vector at the specified position on the track
     getUnitNormalVector: function( u ) {
-      return Vector2.createPolar( 1, this.getModelAngleAt( u ) + Math.PI / 2 );
+      // load xSplineDiff, ySplineDiff here if not already loaded
+      if ( this.xSplineDiff === null ) {
+        this.xSplineDiff = this.xSpline.diff();
+        this.ySplineDiff = this.ySpline.diff();
+      }
+      return new Vector2( -SplineEvaluation.atNumber( this.ySplineDiff, u ), SplineEvaluation.atNumber( this.xSplineDiff, u ) ).normalize();
     },
 
     getUnitNormalVectorX: function( u ) {
