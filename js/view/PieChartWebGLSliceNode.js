@@ -49,6 +49,7 @@ define( function( require ) {
 
       // 40 makes a smooth circle, but we need enough samples to eliminate seams between the pie slices
       var numSamples = 500;
+      this.numSamples = numSamples;
 
       var vertices = [centerX, centerY];
 
@@ -60,32 +61,26 @@ define( function( require ) {
         vertices.push( y );
       };
 
+      //Go back to the first vertex, to make sure it is a closed circle
       for ( var i = 0; i <= numSamples; i++ ) {
         indexToVertex( i );
       }
 
       // Complete the circle
-      indexToVertex( 0 );
       this.vertices = vertices;
 
       // TODO: Once we are lazily handling the full matrix, we may benefit from DYNAMIC draw here, and updating the vertices themselves
       gl.bufferData( gl.ARRAY_BUFFER, new Float32Array( vertices ), gl.STATIC_DRAW );
-
-      this.updateRectangle();
     },
 
-    // Nothing necessary since everything currently handled in the uMatrix below
-    // However, we may switch to dynamic draw, and handle the matrix change only where necessary in the future?
-    updateRectangle: function() {
-    },
-
-    myPosition: 0,
-    myAngle: 0,
     render: function( gl, shaderProgram, viewMatrix ) {
 
-      var extent = this.extentProperty.value;
+      var angleBetweenSlices = Math.PI * 2 / this.numSamples;
       var radius = this.radiusProperty.value;
-      var startAngle = this.startAngleProperty.value;
+
+      //Round to the nearest angle to prevent seams
+      var startAngle = Math.round( this.startAngleProperty.value / angleBetweenSlices ) * angleBetweenSlices;
+      var extent = Math.round( this.extentProperty.value / angleBetweenSlices ) * angleBetweenSlices;
 
       var rectangleX = 0;
       var rectangleY = 0;
@@ -109,10 +104,7 @@ define( function( require ) {
       gl.vertexAttribPointer( shaderProgram.attributeLocations.aVertex, 2, gl.FLOAT, false, 0, 0 );
 
       // To cut out a piece from the pie, just select the appropriate start/end vertices, then the call is still static.
-      var numPoints = this.vertices.length / 2;
-
-      var numOuterSamples = numPoints - 1;
-      var numToDraw = Math.round( numOuterSamples * extent / Math.PI / 2 );
+      var numToDraw = Math.round( 2 + ( this.vertices.length / 2 - 2 ) * extent / ( 2 * Math.PI ) ); // linear between 2 and the maximum
       gl.drawArrays( gl.TRIANGLE_FAN, 0, numToDraw );
     },
 
@@ -121,7 +113,7 @@ define( function( require ) {
       // Mark the WebGL dirty flag as dirty, to ensure it will render.
       this.invalidatePaint();
     },
-    
+
     dispose: function( gl ) {
       gl.deleteBuffer( this.buffer );
     }
