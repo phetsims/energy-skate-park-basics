@@ -20,6 +20,7 @@ define( function( require ) {
   var LineStyles = require( 'KITE/util/LineStyles' );
   var SplineEvaluation = require( 'ENERGY_SKATE_PARK_BASICS/model/SplineEvaluation' );
   var ControlPointUI = require( 'ENERGY_SKATE_PARK_BASICS/view/ControlPointUI' );
+  var ControlPointNode = require( 'ENERGY_SKATE_PARK_BASICS/view/ControlPointNode' );
   var dot = require( 'DOT/dot' );
 
   // constants
@@ -35,11 +36,9 @@ define( function( require ) {
    */
   function TrackNode( model, track, modelViewTransform, availableBoundsProperty ) {
     var trackNode = this;
+    this.track = track;
+    this.model = model;
     Node.call( this );
-
-    // When dragging the track out of the toolbox, the control points should be able to drag the track.  However, don't
-    // use that feature if the track is already in the play area (physical) when created.
-    var trackDropped = track.physical;
 
     var road = new Path( null, {fill: 'gray', cursor: track.interactive ? 'pointer' : 'default'} );
     var centerLine = new Path( null, {stroke: 'black', lineWidth: '1.2', lineDash: [11, 8]} );
@@ -215,7 +214,7 @@ define( function( require ) {
 
             track.bumpAboveGround();
             track.dragging = false;
-            trackDropped = true;
+            track.dropped = true;
 
             if ( window.phetcommon.getQueryParameter( 'debugTrack' ) ) {
               console.log( track.getDebugString() );
@@ -298,131 +297,7 @@ define( function( require ) {
     if ( track.interactive ) {
       for ( var i = 0; i < track.controlPoints.length; i++ ) {
         (function( i, isEndPoint ) {
-          var controlPoint = track.controlPoints[i];
-
-          var controlPointNode = new Circle( 14, {pickable: true, opacity: 0.7, stroke: 'black', lineWidth: 2, fill: 'red', cursor: 'pointer', translation: modelViewTransform.modelToViewPosition( controlPoint.position )} );
-
-          // Show a dotted line for the exterior track points, which can be connected to other track
-          if ( i === 0 || i === track.controlPoints.length - 1 ) {
-            controlPointNode.lineDash = [ 4, 5 ];
-          }
-
-          controlPoint.positionProperty.link( function( position ) {
-            controlPointNode.translation = modelViewTransform.modelToViewPosition( position );
-          } );
-          var dragEvents = 0;
-          var controlPointInputListener = new SimpleDragHandler(
-            {
-              allowTouchSnag: true,
-              start: function( event ) {
-
-                // If control point dragged out of the control panel, translate the entire track, see #130
-                if ( !track.physical || !trackDropped ) {
-                  trackSegmentDragHandlerOptions.start( event );
-                  return;
-                }
-                track.dragging = true;
-                dragEvents = 0;
-              },
-              drag: function( event ) {
-
-                // Check whether the model contains a track so that input listeners for detached elements can't create bugs, see #230
-                if ( !model.containsTrack( track ) ) { return; }
-
-                // If control point dragged out of the control panel, translate the entire track, see #130
-                if ( !track.physical || !trackDropped ) {
-                  trackSegmentDragHandlerOptions.drag( event );
-                  return;
-                }
-                dragEvents++;
-                track.dragging = true;
-                var globalPoint = controlPointNode.globalToParentPoint( event.pointer.point );
-
-                // trigger reconstruction of the track shape based on the control points
-                var pt = modelViewTransform.viewToModelPosition( globalPoint );
-
-                // Constrain the control points to remain in y>0, see #71
-                pt.y = Math.max( pt.y, 0 );
-
-                if ( availableBoundsProperty.value ) {
-                  var availableBounds = availableBoundsProperty.value;
-
-                  // Constrain the control points to be onscreen, see #94
-                  pt.x = Math.max( pt.x, availableBounds.minX );
-                  pt.x = Math.min( pt.x, availableBounds.maxX );
-                  pt.y = Math.min( pt.y, availableBounds.maxY );
-                }
-
-                controlPoint.sourcePosition = pt;
-
-                if ( isEndPoint ) {
-                  // If one of the control points is close enough to link to another track, do so
-                  var tracks = model.getPhysicalTracks();
-
-                  var bestDistance = Number.POSITIVE_INFINITY;
-                  var bestMatch = null;
-
-                  for ( var i = 0; i < tracks.length; i++ ) {
-                    var t = tracks[i];
-                    if ( t !== track ) {
-
-                      // don't match inner points
-                      var otherPoints = [t.controlPoints[0], t.controlPoints[t.controlPoints.length - 1]];
-
-                      for ( var k = 0; k < otherPoints.length; k++ ) {
-                        var otherPoint = otherPoints[k];
-                        var distance = controlPoint.sourcePosition.distance( otherPoint.position );
-
-                        if ( distance < bestDistance ) {
-                          bestDistance = distance;
-                          bestMatch = otherPoint;
-                        }
-                      }
-                    }
-                  }
-
-                  controlPoint.snapTarget = bestDistance !== null && bestDistance < 1 ? bestMatch : null;
-                }
-
-                // When one control point dragged, update the track and the node shape
-                track.updateSplines();
-                updateTrackShape();
-                model.trackModified( track );
-              },
-              end: function( event ) {
-
-                // Check whether the model contains a track so that input listeners for detached elements can't create bugs, see #230
-                if ( !model.containsTrack( track ) ) { return; }
-
-                // If control point dragged out of the control panel, translate the entire track, see #130
-                if ( !track.physical || !trackDropped ) {
-                  trackSegmentDragHandlerOptions.end( event );
-                  return;
-                }
-                if ( isEndPoint && controlPoint.snapTarget ) {
-                  model.joinTracks( track );
-                }
-                else {
-                  track.smoothPointOfHighestCurvature( [i] );
-                  model.trackModified( track );
-                }
-                track.bumpAboveGround();
-                track.dragging = false;
-
-                // Show the 'control point editing' ui, but only if the user didn't drag the control point.
-                // Threshold at a few drag events in case the user didn't mean to drag it but accidentally moved it a few pixels.
-                if ( dragEvents <= 3 ) {
-                  var controlPointUI = new ControlPointUI( model, track, i, modelViewTransform, trackNode.parents[0] );
-                  track.on( 'remove', function() { controlPointUI.detach(); } );
-                  trackNode.parents[0].addChild( controlPointUI );
-                }
-
-                if ( window.phetcommon.getQueryParameter( 'debugTrack' ) ) {
-                  console.log( track.getDebugString() );
-                }
-              }
-            } );
-          controlPointNode.addInputListener( controlPointInputListener );
+          var controlPointNode = new ControlPointNode( trackNode, modelViewTransform, trackSegmentDragHandlerOptions, availableBoundsProperty, updateTrackShape, i, isEndPoint );
           trackNode.addChild( controlPointNode );
         })( i, i === 0 || i === track.controlPoints.length - 1 );
       }

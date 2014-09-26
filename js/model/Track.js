@@ -51,7 +51,11 @@ define( function( require ) {
       leftThePanel: false,
 
       // Keep track of whether the track is dragging, so performance can be optimized while dragging
-      dragging: false
+      dragging: false,
+
+      // Flag to indicate whether the user has dragged the track out of the toolbox.  If dragging from the toolbox,
+      // then dragging translates the entire track instead of just a point.
+      dropped: false
     } );
 
     this.property( 'physical' ).link( function() { events.trigger( 'track-changed' ); } );
