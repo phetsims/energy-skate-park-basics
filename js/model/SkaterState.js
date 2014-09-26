@@ -14,7 +14,6 @@ define( function( require ) {
 
   // modules
   var inherit = require( 'PHET_CORE/inherit' );
-  var Poolable = require( 'PHET_CORE/Poolable' );
   var Vector2 = require( 'DOT/Vector2' );
 
   // constants

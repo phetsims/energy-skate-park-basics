@@ -11,15 +11,9 @@ define( function( require ) {
 
   // modules
   var inherit = require( 'PHET_CORE/inherit' );
-  var Node = require( 'SCENERY/nodes/Node' );
-  var Path = require( 'SCENERY/nodes/Path' );
   var Circle = require( 'SCENERY/nodes/Circle' );
   var SimpleDragHandler = require( 'SCENERY/input/SimpleDragHandler' );
-  var Shape = require( 'KITE/Shape' );
-  var LineStyles = require( 'KITE/util/LineStyles' );
-  var SplineEvaluation = require( 'ENERGY_SKATE_PARK_BASICS/model/SplineEvaluation' );
   var ControlPointUI = require( 'ENERGY_SKATE_PARK_BASICS/view/ControlPointUI' );
-  var dot = require( 'DOT/dot' );
 
   /**
    * @param {TrackNode} trackNode
