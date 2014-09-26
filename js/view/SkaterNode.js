@@ -76,7 +76,7 @@ define( function( require ) {
       rotationMatrix.freeToPool();
 
       var scale = massToScale( mass );
-      var scalingMatrix = Matrix3.scaling( scale, scale );
+      var scalingMatrix = Matrix3.scaling( scale );
       matrix.multiplyMatrix( scalingMatrix );
       scalingMatrix.freeToPool();
 
