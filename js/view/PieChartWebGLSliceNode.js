@@ -116,10 +116,12 @@ define( function( require ) {
       gl.drawArrays( gl.TRIANGLE_FAN, 0, numToDraw );
     },
 
-    // TODO: Is this necessary?
     step: function( dt ) {
+
+      // Mark the WebGL dirty flag as dirty, to ensure it will render.
       this.invalidatePaint();
     },
+    
     dispose: function( gl ) {
       gl.deleteBuffer( this.buffer );
     }
