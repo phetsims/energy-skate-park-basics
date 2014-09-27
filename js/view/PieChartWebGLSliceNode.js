@@ -49,7 +49,7 @@ define( function( require ) {
 
       // 40 makes a smooth circle, but we need enough samples to eliminate seams between the pie slices
       // Win8/Chrome starts to slow down around 1000000 samples
-      var numSamples = 300;
+      var numSamples = 100;
       this.numSamples = numSamples;
 
       var vertices = [centerX, centerY];
@@ -79,9 +79,12 @@ define( function( require ) {
       var angleBetweenSlices = Math.PI * 2 / this.numSamples;
       var radius = this.radiusProperty.value;
 
-      //Round to the nearest angle to prevent seams
+      //Round to the nearest angle to prevent seams, see #263
       var startAngle = Math.round( this.startAngleProperty.value / angleBetweenSlices ) * angleBetweenSlices;
-      var extent = Math.round( this.extentProperty.value / angleBetweenSlices ) * angleBetweenSlices;
+      var unroundedEndAngle = this.startAngleProperty.value + this.extentProperty.value;
+      var endAngle = Math.round( unroundedEndAngle / angleBetweenSlices ) * angleBetweenSlices;
+
+      var extent = endAngle - startAngle;
 
       var rectangleX = 0;
       var rectangleY = 0;
