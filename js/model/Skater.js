@@ -66,6 +66,7 @@ define( function( require ) {
       // True if the user is dragging the skater with a pointer
       dragging: false,
 
+      // Energies are in Joules
       kineticEnergy: 0,
 
       potentialEnergy: 0,
@@ -74,6 +75,7 @@ define( function( require ) {
 
       totalEnergy: 0,
 
+      // The skater's angle (about the pivot point at the bottom center), in radians
       angle: 0,
 
       // Returns to this point when pressing "return skater"
@@ -87,10 +89,13 @@ define( function( require ) {
       // Returns to this track when pressing "return skater"
       startingTrack: null,
 
+      // Position of the skater's head, for positioning the pie chart.
       headPosition: new Vector2( 0, 0 )
     } );
 
-    this.addDerivedProperty( 'speed', ['velocity'], function( velocity ) {return velocity.magnitude();} );
+    this.addDerivedProperty( 'speed', ['velocity'], function( velocity ) {
+      return velocity.magnitude();
+    } );
 
     // Zero the kinetic energy when dragging, see #22
     this.draggingProperty.link( function( dragging ) {
@@ -248,6 +253,11 @@ define( function( require ) {
       this.headPositionProperty.notifyObserversStatic();
     },
 
+    /**
+     * If the skater is released, store the initial conditions for when the skater is returned.
+     * @param targetTrack The track to start on (if any)
+     * @param targetU The parametric location along the track to start on (if any)
+     */
     released: function( targetTrack, targetU ) {
       this.dragging = false;
       this.velocity = new Vector2( 0, 0 );

@@ -25,6 +25,7 @@
 define( function( require ) {
   'use strict';
 
+  // modules
   var inherit = require( 'PHET_CORE/inherit' );
   var PropertySet = require( 'AXON/PropertySet' );
   var Skater = require( 'ENERGY_SKATE_PARK_BASICS/model/Skater' );
@@ -42,6 +43,13 @@ define( function( require ) {
   // Thrust is not currently implemented in Energy Skate Park: Basics but may be used in a future version, so left here
   var thrust = new Vector2();
 
+  /**
+   * Determine if two numbers are within tolerance of each other
+   * @param {number} a
+   * @param {number} b
+   * @param {number} tolerance
+   * @return {boolean}
+   */
   function isApproxEqual( a, b, tolerance ) { return Math.abs( a - b ) <= tolerance; }
 
   // Flag to enable debugging for physics issues
@@ -52,6 +60,8 @@ define( function( require ) {
     console.log.apply( console, arguments );
   } : null;
 
+  // Control points are replenished in the toolbox as they are destroyed (by connecting) in the play area
+  // This is the maximum number of control points available to the user.
   var MAX_NUMBER_CONTROL_POINTS = 12;
 
   // Track the model iterations to implement "slow motion" by stepping every Nth frame, see #210
@@ -113,8 +123,10 @@ define( function( require ) {
       this.frictionProperty.debug( 'friction' );
     }
 
+    // elapsed time in the sim, in seconds.
     this.time = 0;
 
+    // the skater model instance
     this.skater = new Skater();
 
     // If the mass changes while the sim is paused, trigger an update so the skater image size will update, see #115
@@ -122,6 +134,7 @@ define( function( require ) {
 
     this.tracks = new ObservableArray();
 
+    // Determine when to show/hide the track edit buttons (cut track or delete control point)
     var updateTrackEditingButtonProperties = function() {
       var editEnabled = false;
       var clearEnabled = false;
@@ -167,26 +180,26 @@ define( function( require ) {
         new ControlPoint( 4, 5 )
       ];
 
+      var parabolaTrack = new Track( this, this.tracks, parabola, false, null, this.availableModelBoundsProperty );
       var slopeTrack = new Track( this, this.tracks, slope, false, null, this.availableModelBoundsProperty );
+      var doubleWellTrack = new Track( this, this.tracks, doubleWell, false, null, this.availableModelBoundsProperty );
 
       // Flag to indicate whether the skater transitions from the right edge of this track directly to the ground
       // see #164
       slopeTrack.slopeToGround = true;
 
-      this.tracks.addAll( [
-        new Track( this, this.tracks, parabola, false, null, this.availableModelBoundsProperty ),
-        slopeTrack,
-        new Track( this, this.tracks, doubleWell, false, null, this.availableModelBoundsProperty )
-      ] );
+      this.tracks.addAll( [ parabolaTrack, slopeTrack, doubleWellTrack ] );
 
+      // When the scene changes, also change the tracks.
       this.sceneProperty.link( function( scene ) {
         for ( var i = 0; i < model.tracks.length; i++ ) {
           model.tracks.get( i ).physical = (i === scene);
-          model.tracks.get( i ).scene = i;
 
           // Reset the skater when the track is changed, see #179
           model.skater.returnToInitialPosition();
         }
+
+        // The skater should detach from track when the scene changes.  Code elsewhere also resets the location of the skater.
         model.skater.track = null;
       } );
     }
@@ -480,7 +493,6 @@ define( function( require ) {
         var beforeVector = skaterState.getPosition().minus( trackPoint );
 
         // If crossed the track, attach to it.
-
         var newVelocity = segment.times( segment.dot( proposedVelocity ) );
         var newSpeed = newVelocity.magnitude();
         var newKineticEnergy = 0.5 * skaterState.mass * newVelocity.magnitudeSquared();
@@ -567,7 +579,7 @@ define( function( require ) {
     },
 
     /**
-     * Gets the net force discluding normal force.
+     * Gets the net force but without the normal force.
      *
      * Split into component-wise to prevent allocations, see #50
      *
@@ -733,7 +745,7 @@ define( function( require ) {
 
       // compare a to v/r^2 to see if it leaves the track
       var r = Math.abs( this.curvatureTemp.r );
-      var centripForce = skaterState.mass * skaterState.uD * skaterState.uD / r;
+      var centripetalForce = skaterState.mass * skaterState.uD * skaterState.uD / r;
 
       var netForceWithoutNormalX = this.getNetForceWithoutNormalX( skaterState );
       var netForceWithoutNormalY = this.getNetForceWithoutNormalY( skaterState );
@@ -741,7 +753,7 @@ define( function( require ) {
       // Net force in the radial direction is the dot product.  Component-wise to avoid allocations, see #50
       var netForceRadial = netForceWithoutNormalX * curvatureDirectionX + netForceWithoutNormalY * curvatureDirectionY;
 
-      var leaveTrack = (netForceRadial < centripForce && outsideCircle) || (netForceRadial > centripForce && !outsideCircle);
+      var leaveTrack = (netForceRadial < centripetalForce && outsideCircle) || (netForceRadial > centripetalForce && !outsideCircle);
 
       if ( leaveTrack && this.detachable ) {
 
@@ -871,7 +883,7 @@ define( function( require ) {
     },
 
     // A number of heuristic energy correction steps to ensure energy is conserved while keeping the motion smooth and
-    // accurate
+    // accurate.  Copied from the Java version directly (with a few different magic numbers)
     correctEnergy: function( skaterState, newState ) {
       if ( this.trackChangePending ) {
         return newState;
@@ -1284,7 +1296,7 @@ define( function( require ) {
 
       this.set( state.properties );
 
-      this.skater.setState( state.skater, this.tracks );
+      this.skater.setState( state.skater, EMPTY_OBJECT );
     },
 
     // Get the number of physical control points (i.e. control points outside of the toolbox)
