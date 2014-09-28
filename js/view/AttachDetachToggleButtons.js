@@ -9,12 +9,15 @@
 define( function( require ) {
   'use strict';
 
+  // modules
   var inherit = require( 'PHET_CORE/inherit' );
   var Image = require( 'SCENERY/nodes/Image' );
   var Panel = require( 'SUN/Panel' );
+  var RadioButtonGroup = require( 'SUN/buttons/RadioButtonGroup' );
+
+  // images
   var detachIcon = require( 'image!ENERGY_SKATE_PARK_BASICS/detach.png' );
   var attachIcon = require( 'image!ENERGY_SKATE_PARK_BASICS/attach.png' );
-  var RadioButtonGroup = require( 'SUN/buttons/RadioButtonGroup' );
 
   /**
    * Constructor for the AttachDetachToggleButtons

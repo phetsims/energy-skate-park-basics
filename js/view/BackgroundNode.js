@@ -8,15 +8,19 @@
 define( function( require ) {
   'use strict';
 
+  // modules
   var inherit = require( 'PHET_CORE/inherit' );
   var Node = require( 'SCENERY/nodes/Node' );
   var Rectangle = require( 'SCENERY/nodes/Rectangle' );
   var Image = require( 'SCENERY/nodes/Image' );
   var LinearGradient = require( 'SCENERY/util/LinearGradient' );
-  var mountainImage = require( 'image!ENERGY_SKATE_PARK_BASICS/mountains.png' );
-  var cementImg = require( 'image!ENERGY_SKATE_PARK_BASICS/cement-texture-dark.jpg' );
   var Pattern = require( 'SCENERY/util/Pattern' );
 
+  // images
+  var mountainImage = require( 'image!ENERGY_SKATE_PARK_BASICS/mountains.png' );
+  var cementImg = require( 'image!ENERGY_SKATE_PARK_BASICS/cement-texture-dark.jpg' );
+
+  // constants
   var earthHeight = 70;
   var cementWidth = 4;
 

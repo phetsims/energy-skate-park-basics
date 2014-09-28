@@ -11,12 +11,15 @@
 define( function( require ) {
   'use strict';
 
+  // modules
   var RectangularPushButton = require( 'SUN/buttons/RectangularPushButton' );
   var RectangularButtonView = require( 'SUN/buttons/RectangularButtonView' );
   var inherit = require( 'PHET_CORE/inherit' );
   var Shape = require( 'KITE/Shape' );
   var Color = require( 'SCENERY/util/Color' );
   var Image = require( 'SCENERY/nodes/Image' );
+
+  // images
   var trashCanImage = require( 'image!ENERGY_SKATE_PARK_BASICS/trash-can.png' );
   var trashCanGrayImage = require( 'image!ENERGY_SKATE_PARK_BASICS/trash-can-disabled.png' );
 

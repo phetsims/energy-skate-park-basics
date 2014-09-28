@@ -8,6 +8,7 @@
 define( function( require ) {
   'use strict';
 
+  // modules
   var inherit = require( 'PHET_CORE/inherit' );
   var Node = require( 'SCENERY/nodes/Node' );
   var VBox = require( 'SCENERY/nodes/VBox' );
@@ -25,11 +26,13 @@ define( function( require ) {
   var GaugeNode = require( 'SCENERY_PHET/GaugeNode' );
   var Property = require( 'AXON/Property' );
   var FrictionControl = require( 'ENERGY_SKATE_PARK_BASICS/view/FrictionControl' );
+  var PhetFont = require( 'SCENERY_PHET/PhetFont' );
+
+  // strings
   var barGraphString = require( 'string!ENERGY_SKATE_PARK_BASICS/plots.bar-graph' );
   var pieChartString = require( 'string!ENERGY_SKATE_PARK_BASICS/pieChart' );
   var speedString = require( 'string!ENERGY_SKATE_PARK_BASICS/properties.speed' );
   var gridString = require( 'string!ENERGY_SKATE_PARK_BASICS/controls.show-grid' );
-  var PhetFont = require( 'SCENERY_PHET/PhetFont' );
 
   /**
    * @param {EnergySkateParkBasicsModel} model

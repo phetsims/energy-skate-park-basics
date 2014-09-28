@@ -9,6 +9,7 @@
 define( function( require ) {
   'use strict';
 
+  // modules
   var inherit = require( 'PHET_CORE/inherit' );
   var Track = require( 'ENERGY_SKATE_PARK_BASICS/model/Track' );
   var ControlPoint = require( 'ENERGY_SKATE_PARK_BASICS/model/ControlPoint' );

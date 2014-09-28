@@ -37,12 +37,9 @@ define( function( require ) {
   var GaugeNeedleNode = require( 'ENERGY_SKATE_PARK_BASICS/view/GaugeNeedleNode' );
   var DerivedProperty = require( 'AXON/DerivedProperty' );
   var Path = require( 'SCENERY/nodes/Path' );
-  var returnSkaterString = require( 'string!ENERGY_SKATE_PARK_BASICS/controls.restart-skater' );
-  var speedString = require( 'string!ENERGY_SKATE_PARK_BASICS/properties.speed' );
   var PlayPauseButton = require( 'SCENERY_PHET/PlayPauseButton' );
   var StepButton = require( 'SCENERY_PHET/StepButton' );
   var VBox = require( 'SCENERY/nodes/VBox' );
-  var eraser = require( 'image!SCENERY_PHET/eraser.png' );
   var Property = require( 'AXON/Property' );
   var RectangularPushButton = require( 'SUN/buttons/RectangularPushButton' );
   var Text = require( 'SCENERY/nodes/Text' );
@@ -51,8 +48,13 @@ define( function( require ) {
   var WebGLLayer = require( 'SCENERY/layers/WebGLLayer' );
   var Bounds2 = require( 'DOT/Bounds2' );
 
+  // strings
+  var returnSkaterString = require( 'string!ENERGY_SKATE_PARK_BASICS/controls.restart-skater' );
+  var speedString = require( 'string!ENERGY_SKATE_PARK_BASICS/properties.speed' );
+
   // images
   var skaterIconImage = require( 'image!ENERGY_SKATE_PARK_BASICS/skater-icon.png' );
+  var eraser = require( 'image!SCENERY_PHET/eraser.png' );
 
   // Debug flag to show the view bounds, the region within which the skater can move
   var showAvailableBounds = false;
