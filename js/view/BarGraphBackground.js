@@ -68,8 +68,13 @@ define( function( require ) {
     var thermalLabel = createLabel( 2, thermalString, EnergySkateParkColorScheme.thermalEnergy );
     var totalLabel = createLabel( 3, totalString, EnergySkateParkColorScheme.totalEnergy );
 
-    var clearThermalButton = new ClearThermalButton( clearThermal, skater, {centerX: thermalLabel.centerX, y: thermalLabel.bottom + 12} );
-    skater.link( 'thermalEnergy', function( thermalEnergy ) { clearThermalButton.enabled = thermalEnergy > 0; } );
+    var clearThermalButton = new ClearThermalButton( clearThermal, skater, {
+      centerX: thermalLabel.centerX,
+      y: thermalLabel.bottom + 12
+    } );
+    skater.link( 'thermalEnergy', function( thermalEnergy ) {
+      clearThermalButton.enabled = thermalEnergy > 0;
+    } );
 
     var titleNode = new Text( energyString, {x: 5, top: 0, font: new PhetFont( 14 ), pickable: false} );
     var contentNode = new Rectangle( 0, 0, contentWidth, contentHeight, {children: [
