@@ -28,9 +28,11 @@ define( function( require ) {
     Node.call( this );
 
     // Show the pie chart above the skater's head
-    skater.headPositionProperty.link( function() {
-      if ( pieChartNode.visible ) {
-        var view = modelViewTransform.modelToViewPosition( skater.headPosition );
+    Property.multilink( [skater.headPositionProperty, pieChartVisibleProperty], function( skaterHeadPosition, pieChartVisible ) {
+
+      // Only update it when visible, to improve performance
+      if ( pieChartVisible ) {
+        var view = modelViewTransform.modelToViewPosition( skaterHeadPosition );
 
         // Center pie chart over skater's head not his feet so it doesn't look awkward when skating in a parabola
         pieChartNode.setTranslation( view.x, view.y - 50 );
