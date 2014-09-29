@@ -14,7 +14,7 @@ define( function( require ) {
   var inherit = require( 'PHET_CORE/inherit' );
   var Image = require( 'SCENERY/nodes/Image' );
   var Rectangle = require( 'SCENERY/nodes/Rectangle' );
-  var Rect = require( 'DOT/Rectangle' );
+  var DotRectangle = require( 'DOT/Rectangle' );
   var Shape = require( 'KITE/Shape' );
   var Panel = require( 'SUN/Panel' );
   var ScreenView = require( 'JOIST/ScreenView' );
@@ -377,7 +377,7 @@ define( function( require ) {
       this.backgroundNode.layout( offsetX, offsetY, width, height, scale );
       this.gridNode.layout( offsetX, offsetY, width, height, scale );
 
-      this.availableViewBounds = new Rect( -offsetX, -offsetY, width / scale, this.modelViewTransform.modelToViewY( 0 ) + Math.abs( offsetY ) );
+      this.availableViewBounds = new DotRectangle( -offsetX, -offsetY, width / scale, this.modelViewTransform.modelToViewY( 0 ) + Math.abs( offsetY ) );
 
       // Float the control panel to the right (but not arbitrarily far because it could get too far from the play area)
       this.controlPanel.right = Math.min( 890, this.availableViewBounds.maxX ) - 5;
