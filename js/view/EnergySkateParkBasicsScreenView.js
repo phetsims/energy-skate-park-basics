@@ -44,7 +44,6 @@ define( function( require ) {
   var RectangularPushButton = require( 'SUN/buttons/RectangularPushButton' );
   var Text = require( 'SCENERY/nodes/Text' );
   var EnergySkateParkColorScheme = require( 'ENERGY_SKATE_PARK_BASICS/view/EnergySkateParkColorScheme' );
-  var platform = require( 'PHET_CORE/platform' );
   var WebGLLayer = require( 'SCENERY/layers/WebGLLayer' );
   var Bounds2 = require( 'DOT/Bounds2' );
 

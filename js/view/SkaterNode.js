@@ -92,7 +92,7 @@ define( function( require ) {
     // Show a red dot in the bottom center as the important particle model coordinate
     var circle = new Circle( 8, {fill: 'red', x: imageWidth / 2, y: imageHeight } );
     if ( renderer === 'webgl' ) {
-      circle = circle.toCanvasNodeSynchronous()
+      circle = circle.toCanvasNodeSynchronous();
     }
     this.addChild( circle );
 
