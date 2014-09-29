@@ -272,7 +272,7 @@ define( function( require ) {
 
     // Use WebGL where available, but not on IE, due to https://github.com/phetsims/energy-skate-park-basics/issues/277
     // and https://github.com/phetsims/scenery/issues/285
-    var renderer = (webGLSupported && !platform.ie) ? 'webgl' : 'svg';
+    var renderer = webGLSupported ? 'webgl' : 'svg';
 
     var skaterNode = new SkaterNode(
       model.skater,
