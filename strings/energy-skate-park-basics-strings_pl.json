@@ -76,7 +76,7 @@
   "label.potential-energy-reference": "Punkt odniesienia energii potencjalnej",
   "energy.kinetic.energy": "Energia kinetyczna",
   "tracks-menu.item.jump": "Skok",
-  "controls.reset-character": "Przywróć deskorolkowca",
+  "controls.restart-skater": "Przywróć deskorolkowca",
   "help.right-click-for-options": "Kliknij prawym klawiszem",
   "plots.energy-vs-position-save": "Energia w funkcji położenia (zachowaj #",
   "controls.hide-friction": "Ukryj tarcie",

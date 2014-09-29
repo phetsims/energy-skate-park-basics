@@ -8,6 +8,7 @@
 define( function( require ) {
   'use strict';
 
+  // modules
   var inherit = require( 'PHET_CORE/inherit' );
   var Rectangle = require( 'SCENERY/nodes/Rectangle' );
   var VBox = require( 'SCENERY/nodes/VBox' );
@@ -19,14 +20,22 @@ define( function( require ) {
   var PhetFont = require( 'SCENERY_PHET/PhetFont' );
   var EnergySkateParkColorScheme = require( 'ENERGY_SKATE_PARK_BASICS/view/EnergySkateParkColorScheme' );
   var ClearThermalButton = require( 'ENERGY_SKATE_PARK_BASICS/view/ClearThermalButton' );
+
+  // strings
   var kineticString = require( 'string!ENERGY_SKATE_PARK_BASICS/energy.kinetic' );
   var potentialString = require( 'string!ENERGY_SKATE_PARK_BASICS/energy.potential' );
   var thermalString = require( 'string!ENERGY_SKATE_PARK_BASICS/energy.thermal' );
   var energyString = require( 'string!ENERGY_SKATE_PARK_BASICS/energy.energy' );
 
+  /**
+   * @param {Skater} skater the model for the skater
+   * @param {Function} clearThermal function to be called when the user presses the clear thermal button
+   * @param {Property<Boolean>) pieChartVisibleProperty axon Property indicating whether the pie chart is visible
+   * @constructor
+   */
   function PieChartLegend( skater, clearThermal, pieChartVisibleProperty ) {
 
-    //The x-coordinate of a bar chart bar
+    // The x-coordinate of a bar chart bar
     var createLabel = function( index, title, color ) { return new Text( title, {fill: color, font: new PhetFont( 12 ), pickable: false} ); };
 
     var createBar = function( index, color ) { return new Rectangle( 0, 0, 16.5, 16.5, {fill: color, stroke: 'black', lineWidth: 1} ); };
@@ -42,7 +51,8 @@ define( function( require ) {
     var clearThermalButton = new ClearThermalButton( clearThermal, skater, {centerX: thermalLabel.centerX, y: thermalLabel.bottom + 15} );
     skater.link( 'thermalEnergy', function( thermalEnergy ) { clearThermalButton.enabled = thermalEnergy > 0; } );
 
-    //Don't let the ClearThermalButton participate in the layout since it is too big vertically.  Just use a strut to get the width right, then add the undo button later
+    // Don't let the ClearThermalButton participate in the layout since it is too big vertically.  Just use a strut to
+    // get the width right, then add the undo button later
     var clearThermalButtonStrut = new Rectangle( 0, 0, clearThermalButton.width, 1, {} );
 
     var contentNode = new VBox( {spacing: 10, align: 'left', children: [
@@ -57,7 +67,8 @@ define( function( require ) {
       contentNode
     ]} );
 
-    Panel.call( this, contentWithTitle, { x: 4, y: 4, xMargin: 4, yMargin: 4, fill: 'white', stroke: 'gray', lineWidth: 1, resize: false, cursor: 'pointer'} );
+    Panel.call( this, contentWithTitle,
+      { x: 4, y: 4, xMargin: 6, yMargin: 5, fill: 'white', stroke: 'gray', lineWidth: 1, resize: false, cursor: 'pointer'} );
 
     this.addChild( clearThermalButton );
     var strutGlobal = clearThermalButtonStrut.parentToGlobalPoint( clearThermalButtonStrut.center );

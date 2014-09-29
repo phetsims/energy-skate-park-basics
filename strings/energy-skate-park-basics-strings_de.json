@@ -76,7 +76,7 @@
   "label.potential-energy-reference": "Nullniveau der potentiellen Energie",
   "energy.kinetic.energy": "kinetische Energie",
   "tracks-menu.item.jump": "Sprung",
-  "controls.reset-character": "Skater-Neustart",
+  "controls.restart-skater": "Skater-Neustart",
   "help.right-click-for-options": "Rechtsklick für Optionen",
   "plots.energy-vs-position-save": "Energie-Position (speichern #",
   "controls.hide-friction": "Reibung verbergen<<",

@@ -62,7 +62,7 @@
   "controls.gravity": "Тяготение",
   "message.confirm-reset-title": "Подтверждение сброса",
   "label.potential-energy-reference": "Отчёт потенциальной энергии",
-  "controls.reset-character": "Вернуть скейтбордиста",
+  "controls.restart-skater": "Вернуть скейтбордиста",
   "plots.energy-vs-position-save": "Энергия - Положение (запись #",
   "controls.hide-friction": "Скрыть трение <<",
   "controls.add-track": "Перемести и добавь трек",

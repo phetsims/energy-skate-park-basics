@@ -83,7 +83,7 @@
   "label.potential-energy-reference": "Potentiel energireference",
   "energy.kinetic.energy": "Kinetisk energi",
   "tracks-menu.item.jump": "Hop",
-  "controls.reset-character": "Skater tilbage",
+  "controls.restart-skater": "Skater tilbage",
   "help.right-click-for-options": "Højreklik for muligheder",
   "plots.energy-vs-position-save": "Energi vs. position (save #",
   "controls.hide-friction": "Skjul friktion",

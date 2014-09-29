@@ -71,7 +71,7 @@
   "label.potential-energy-reference": "Potensiell energireferanse",
   "energy.kinetic.energy": "Kinetisk energi",
   "tracks-menu.item.jump": "Hopp",
-  "controls.reset-character": "Hent skater",
+  "controls.restart-skater": "Hent skater",
   "help.right-click-for-options": "Høyreklikk for alternativer",
   "plots.energy-vs-position-save": "Energi vs posisjon (lagre #",
   "controls.hide-friction": "Skjul friksjon",

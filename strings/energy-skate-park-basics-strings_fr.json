@@ -87,7 +87,7 @@
   "label.potential-energy-reference": "Référence de l'énergie potentielle",
   "energy.kinetic.energy": "Énergie cinétique",
   "tracks-menu.item.jump": "Saut",
-  "controls.reset-character": "Retour du skater",
+  "controls.restart-skater": "Retour du skater",
   "help.right-click-for-options": "Clic droit pour les options",
   "plots.energy-vs-position-save": "Sauvergarder l'énergie en fonction de la position",
   "controls.hide-friction": "Masquer les frottements",

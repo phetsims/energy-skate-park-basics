@@ -87,7 +87,7 @@
   "label.potential-energy-reference": "위치 에너지 기준",
   "energy.kinetic.energy": "운동에너지",
   "tracks-menu.item.jump": "점프",
-  "controls.reset-character": "스케이트 선수 돌아오기",
+  "controls.restart-skater": "스케이트 선수 돌아오기",
   "help.right-click-for-options": "옵션을 보기위해 마우스 오른쪽 클릭",
   "plots.energy-vs-position-save": "에너지 vs. 위치 (# 저장",
   "controls.hide-friction": "마찰 숨기기",

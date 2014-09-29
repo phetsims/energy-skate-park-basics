@@ -8,6 +8,7 @@
 define( function( require ) {
   'use strict';
 
+  // modules
   var inherit = require( 'PHET_CORE/inherit' );
   var Node = require( 'SCENERY/nodes/Node' );
   var VBox = require( 'SCENERY/nodes/VBox' );
@@ -25,12 +26,18 @@ define( function( require ) {
   var GaugeNode = require( 'SCENERY_PHET/GaugeNode' );
   var Property = require( 'AXON/Property' );
   var FrictionControl = require( 'ENERGY_SKATE_PARK_BASICS/view/FrictionControl' );
+  var PhetFont = require( 'SCENERY_PHET/PhetFont' );
+
+  // strings
   var barGraphString = require( 'string!ENERGY_SKATE_PARK_BASICS/plots.bar-graph' );
   var pieChartString = require( 'string!ENERGY_SKATE_PARK_BASICS/pieChart' );
   var speedString = require( 'string!ENERGY_SKATE_PARK_BASICS/properties.speed' );
   var gridString = require( 'string!ENERGY_SKATE_PARK_BASICS/controls.show-grid' );
-  var PhetFont = require( 'SCENERY_PHET/PhetFont' );
 
+  /**
+   * @param {EnergySkateParkBasicsModel} model
+   * @constructor
+   */
   function EnergySkateParkBasicsControlPanel( model ) {
     var textOptions = {font: new PhetFont( 14 )};
 
@@ -42,7 +49,7 @@ define( function( require ) {
     var sets = [pieChartSet, barGraphSet, gridSet, speedometerSet];
     var maxTextWidth = _.max( sets, function( itemSet ) { return itemSet[0].width; } )[0].width;
 
-    //In the absence of any sun (or other) layout packages, just manually space them out so they will have the icons aligned
+    // In the absence of any sun (or other) layout packages, just manually space them out so they will have the icons aligned
     var pad = function( itemSet ) {
       var padWidth = maxTextWidth - itemSet[0].width;
       return [itemSet[0], new Rectangle( 0, 0, padWidth + 20, 20 ), itemSet[1]];
@@ -59,10 +66,10 @@ define( function( require ) {
 
     var content = new VBox( {spacing: 4,
 
-      //For 1st screen, show MassSlider
+      // For 1st screen, show MassSlider
       children: !model.frictionAllowed ? [checkBoxes, new MassSlider( model.skater.massProperty )] :
 
-        //For 2nd and 3rd screen, show Friction Slider and Mass Slider, see #147
+        // For 2nd and 3rd screen, show Friction Slider and Mass Slider, see #147
                 [checkBoxes, new MassSlider( model.skater.massProperty ), new FrictionControl( model.property( 'friction' ) )]
     } );
 
@@ -72,7 +79,7 @@ define( function( require ) {
 
   return inherit( Panel, EnergySkateParkBasicsControlPanel, {
 
-    //Create an icon for the bar graph check box
+    // Create an icon for the bar graph check box
     createBarGraphIcon: function() {
       return new Node( {children: [
         new Rectangle( 0, 0, 20, 20, {fill: 'white', stroke: 'black', lineWidth: 0.5} ),
@@ -81,17 +88,19 @@ define( function( require ) {
       ]} );
     },
 
-    //Create an icon for the pie chart check box
+    // Create an icon for the pie chart check box
     createPieChartIcon: function() {
       var radius = 10;
-      var x = new Shape().moveTo( 0, 0 ).ellipticalArc( 0, 0, radius, radius, 0, -Math.PI / 2, Math.PI * 2 * 0.25 - Math.PI / 2, false ).lineTo( 0, 0 );
+      var x = new Shape().
+        moveTo( 0, 0 ).
+        ellipticalArc( 0, 0, radius, radius, 0, -Math.PI / 2, Math.PI * 2 * 0.25 - Math.PI / 2, false ).lineTo( 0, 0 );
       return new Node( {children: [
         new Circle( radius, {fill: EnergySkateParkColorScheme.potentialEnergy, lineWidth: 0.5, stroke: 'black' } ),
         new Path( x, {fill: EnergySkateParkColorScheme.kineticEnergy, lineWidth: 0.5, stroke: 'black'} )
       ]} );
     },
 
-    //Create an icon for the grid check box
+    // Create an icon for the grid check box
     createGridIcon: function() {
       return new Node( {children: [
         new Rectangle( 0, 0, 20, 20, {fill: 'white', stroke: 'black', lineWidth: 0.5} ),
@@ -104,7 +113,7 @@ define( function( require ) {
       ]} );
     },
 
-    //Create an icon for the speedometer check box
+    // Create an icon for the speedometer check box
     createSpeedometerIcon: function() {
       var node = new GaugeNode( new Property( 0 ), speedString, {min: 0, max: 10}, {pickable: false} );
       node.scale( 20 / node.width );

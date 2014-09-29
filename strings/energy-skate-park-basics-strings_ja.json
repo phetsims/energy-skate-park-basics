@@ -71,7 +71,7 @@
   "label.potential-energy-reference": "ポテンシャルエネルギー　基準点　",
   "energy.kinetic.energy": "運動エネルギー",
   "tracks-menu.item.jump": "ジャンプ",
-  "controls.reset-character": "スケータを戻す",
+  "controls.restart-skater": "スケータを戻す",
   "help.right-click-for-options": "トラックの設定(右クリック)",
   "plots.energy-vs-position-save": "エネルギーと位置（save#",
   "controls.hide-friction": "摩擦表示を隠す",

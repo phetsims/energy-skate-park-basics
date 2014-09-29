@@ -1,47 +1,64 @@
 // Copyright 2002-2013, University of Colorado Boulder
 
 /**
- * Model for one track in Energy Skate Park Basics, which contains the control points and cubic splines for interpolating between them.
+ * Model for one track in Energy Skate Park Basics, which contains the control points and cubic splines for
+ * interpolating between them.
  *
  * @author Sam Reid
  */
 define( function( require ) {
   'use strict';
 
+  // modules
   var inherit = require( 'PHET_CORE/inherit' );
   var PropertySet = require( 'AXON/PropertySet' );
   var Vector2 = require( 'DOT/Vector2' );
   var SplineEvaluation = require( 'ENERGY_SKATE_PARK_BASICS/model/SplineEvaluation' );
+  var dot = require( 'DOT/dot' );
+
+  // constants
+  var FastArray = dot.FastArray;
 
   /**
    * Model for a track, which has a fixed number of points.  If you added a point to a Track, you need a new track.
    * @param {Events} events event source for sending messages
-   * @param {ObservableArray<Track>} modelTracks all model tracks, so this track can add and remove others when joined/split
+   * @param {ObservableArray<Track>} modelTracks all model tracks, so this track can add/remove others when joined/split
    * @param {Array<ControlPoint>} controlPoints
    * @param {Boolean} interactive
-   * @param {Array<Number>} parents the original tracks that were used to make this track (if any) so they can be broken apart when dragged back to control panel
+   * @param {Array<Track>} parents the original tracks that were used to make this track (if any) so they can be
+   * broken apart when dragged back to control panel
+   * @param {Property<Bounds2>} availableModelBoundsProperty function that provides the visible model bounds, to prevent the
+   * adjusted control point from going offscreen, see #195
    * @constructor
    */
-  function Track( events, modelTracks, controlPoints, interactive, parents ) {
-    var track = this;
+  function Track( events, modelTracks, controlPoints, interactive, parents, availableModelBoundsProperty ) {
     this.events = events;
     this.parents = parents;
     this.modelTracks = modelTracks;
+    this.availableModelBoundsProperty = availableModelBoundsProperty;
 
-    //Flag to indicate whether the skater transitions from the right edge of this track directly to the ground, see #164
+    // Flag to indicate whether the skater transitions from the right edge of this track directly to the ground, see #164
     this.slopeToGround = false;
+
+    // Use an arbitrary position for translating the track during dragging.  Only used for deltas in relative
+    // positioning and translation, so an exact "position" is irrelevant, see #260
+    this._position = new Vector2( 0, 0 );
 
     PropertySet.call( this, {
 
-      //True if the track can be interacted with.  For screens 1-2 only one track will be physical (and hence visible).
-      //For screen 3, tracks in the control panel are visible but non-physical until dragged to the play area
+      // True if the track can be interacted with.  For screens 1-2 only one track will be physical (and hence visible).
+      // For screen 3, tracks in the control panel are visible but non-physical until dragged to the play area
       physical: false,
 
-      //Flag that shows whether the track has been dragged fully out of the panel
+      // Flag that shows whether the track has been dragged fully out of the panel
       leftThePanel: false,
 
-      //Keep track of whether the track is dragging, so performance can be optimized while dragging
-      dragging: false
+      // Keep track of whether the track is dragging, so performance can be optimized while dragging
+      dragging: false,
+
+      // Flag to indicate whether the user has dragged the track out of the toolbox.  If dragging from the toolbox,
+      // then dragging translates the entire track instead of just a point.
+      dropped: false
     } );
 
     this.property( 'physical' ).link( function() { events.trigger( 'track-changed' ); } );
@@ -49,61 +66,65 @@ define( function( require ) {
     this.controlPoints = controlPoints;
 
     this.interactive = interactive;
-    this.u = new Array( track.controlPoints.length );
-    this.x = new Array( track.controlPoints.length );
-    this.y = new Array( track.controlPoints.length );
+    this.u = new FastArray( this.controlPoints.length );
+    this.x = new FastArray( this.controlPoints.length );
+    this.y = new FastArray( this.controlPoints.length );
+
+    // Sampling points, which will be initialized and updated in updateLinSpace.  These points are evenly spaced
+    // in the track parametric coordinates from just before the track parameter space to just after. See updateLinSpace
+    this.searchLinSpace = null;
+    this.distanceBetweenSamplePoints = null;
 
     this.updateLinSpace();
-
-    //when points change, update the spline instance
-    this.updateSplines = function() {
-
-      //Arrays are fixed length, so just overwrite values, see #38
-      for ( var i = 0; i < track.controlPoints.length; i++ ) {
-        track.u[i] = i / track.controlPoints.length;
-        track.x[i] = track.controlPoints[i].position.x;
-        track.y[i] = track.controlPoints[i].position.y;
-      }
-
-      track.xSpline = numeric.spline( track.u, track.x );
-      track.ySpline = numeric.spline( track.u, track.y );
-
-      //Mark search points as dirty
-      track.xSearchPoints = null;
-      track.ySearchPoints = null;
-
-      //Mark derivatives as dirty
-      track.xSplineDiff = null;
-      track.ySplineDiff = null;
-
-      track.xSplineDiffDiff = null;
-      track.ySplineDiffDiff = null;
-    };
-
     this.updateSplines();
   }
 
   return inherit( PropertySet, Track, {
+
+    // when points change, update the spline instance
+    updateSplines: function() {
+
+      // Arrays are fixed length, so just overwrite values, see #38
+      for ( var i = 0; i < this.controlPoints.length; i++ ) {
+        this.u[i] = i / this.controlPoints.length;
+        this.x[i] = this.controlPoints[i].position.x;
+        this.y[i] = this.controlPoints[i].position.y;
+      }
+
+      this.xSpline = numeric.spline( this.u, this.x );
+      this.ySpline = numeric.spline( this.u, this.y );
+
+      // Mark search points as dirty
+      this.xSearchPoints = null;
+      this.ySearchPoints = null;
+
+      // Mark derivatives as dirty
+      this.xSplineDiff = null;
+      this.ySplineDiff = null;
+
+      this.xSplineDiffDiff = null;
+      this.ySplineDiffDiff = null;
+    },
     reset: function() {
       PropertySet.prototype.reset.call( this );
       for ( var i = 0; i < this.controlPoints.length; i++ ) {
         this.controlPoints[i].reset();
       }
 
-      //Broadcast message so that TrackNode can update the shape
+      // Broadcast message so that TrackNode can update the shape
       this.updateSplines();
       this.trigger( 'reset' );
     },
 
-    //Returns the closest point (Euclidean) and position (parametric) on the track, as an object with {u,point}
-    //also checks 1E-6 beyond each side of the track to see if the skater is beyond the edge of the track
-    //This currently does a flat search, but if more precision is needed, a finer-grained binary search could be done afterwards
-    //This code is used when dragging the skater (to see if he is dragged near the track) and while the skater is falling toward the track
-    // (to see if he should bounce/attach)
+    // Returns the closest point (Euclidean) and position (parametric) on the track, as an object with {u,point}
+    // also checks 1E-6 beyond each side of the track to see if the skater is beyond the edge of the track
+    // This currently does a flat search, but if more precision is needed, a finer-grained binary search could be done
+    // afterwards. This code is used when dragging the skater (to see if he is dragged near the track) and while the
+    // skater is falling toward the track (to see if he should bounce/attach).
     getClosestPositionAndParameter: function( point ) {
 
-      //Compute the spline points for purposes of getting closest points.
-      //keep these points around and invalidate only when necessary
+      // Compute the spline points for purposes of getting closest points.
+      // keep these points around and invalidate only when necessary
       if ( !this.xSearchPoints ) {
         this.xSearchPoints = SplineEvaluation.atArray( this.xSpline, this.searchLinSpace );
         this.ySearchPoints = SplineEvaluation.atArray( this.ySpline, this.searchLinSpace );
@@ -122,7 +143,7 @@ define( function( require ) {
         }
       }
 
-      //Binary search in the neighborhood of the best point, to refine the search
+      // Binary search in the neighborhood of the best point, to refine the search
       var distanceBetweenSearchPoints = Math.abs( this.searchLinSpace[1] - this.searchLinSpace[0] );
       var topU = bestU + distanceBetweenSearchPoints / 2;
       var bottomU = bestU - distanceBetweenSearchPoints / 2;
@@ -133,7 +154,7 @@ define( function( require ) {
       var bottomX = SplineEvaluation.atNumber( this.xSpline, bottomU );
       var bottomY = SplineEvaluation.atNumber( this.ySpline, bottomU );
 
-      //Even at 400 binary search iterations, performance is smooth on iPad3, so this loop doesn't seem too invasive
+      // Even at 400 binary search iterations, performance is smooth on iPad3, so this loop doesn't seem too invasive
       var maxBinarySearchIterations = 40;
       for ( i = 0; i < maxBinarySearchIterations; i++ ) {
 
@@ -141,13 +162,13 @@ define( function( require ) {
         var bottomDistanceSquared = point.distanceSquaredXY( bottomX, bottomY );
 
         if ( topDistanceSquared < bottomDistanceSquared ) {
-          bottomU = bottomU + (topU - bottomU) / 4;  //move halfway up
+          bottomU = bottomU + (topU - bottomU) / 4;  // move halfway up
           bottomX = SplineEvaluation.atNumber( this.xSpline, bottomU );
           bottomY = SplineEvaluation.atNumber( this.ySpline, bottomU );
           bestDistanceSquared = topDistanceSquared;
         }
         else {
-          topU = topU - (topU - bottomU) / 4;  //move halfway down
+          topU = topU - (topU - bottomU) / 4;  // move halfway down
           topX = SplineEvaluation.atNumber( this.xSpline, topU );
           topY = SplineEvaluation.atNumber( this.ySpline, topU );
           bestDistanceSquared = bottomDistanceSquared;
@@ -169,7 +190,9 @@ define( function( require ) {
     },
 
     translate: function( dx, dy ) {
-      //move all the control points
+      this._position = this._position.plusXY( dx, dy );
+
+      // move all the control points
       for ( var i = 0; i < this.controlPoints.length; i++ ) {
         var point = this.controlPoints[i];
         point.sourcePosition = point.sourcePosition.plusXY( dx, dy );
@@ -177,13 +200,13 @@ define( function( require ) {
 
       this.updateSplines();
 
-      //Just observing the control points individually would lead to N expensive callbacks (instead of 1) for each of the N points
-      //So we use this broadcast mechanism instead
+      // Just observing the control points individually would lead to N expensive callbacks (instead of 1)
+      // for each of the N points, So we use this broadcast mechanism instead
       this.trigger( 'translated' );
     },
 
-    //For purposes of showing the skater angle, get the view angle of the track here.  Note this means inverting the y values
-    //This is called every step while animating on the track, so it was optimized to avoid new allocations
+    // For purposes of showing the skater angle, get the view angle of the track here.  Note this means inverting the y
+    // values, this is called every step while animating on the track, so it was optimized to avoid new allocations
     getViewAngleAt: function( u ) {
       if ( this.xSplineDiff === null ) {
         this.xSplineDiff = this.xSpline.diff();
@@ -192,8 +215,9 @@ define( function( require ) {
       return Math.atan2( -SplineEvaluation.atNumber( this.ySplineDiff, u ), SplineEvaluation.atNumber( this.xSplineDiff, u ) );
     },
 
-    //Get the model angle at the specified position on the track
+    // Get the model angle at the specified position on the track
     getModelAngleAt: function( u ) {
+      // load xSplineDiff, ySplineDiff here if not already loaded
       if ( this.xSplineDiff === null ) {
         this.xSplineDiff = this.xSpline.diff();
         this.ySplineDiff = this.ySpline.diff();
@@ -201,32 +225,24 @@ define( function( require ) {
       return Math.atan2( SplineEvaluation.atNumber( this.ySplineDiff, u ), SplineEvaluation.atNumber( this.xSplineDiff, u ) );
     },
 
-    //Get the model unit vector at the specified position on the track
+    // Get the model unit vector at the specified position on the track
     getUnitNormalVector: function( u ) {
-      return Vector2.createPolar( 1, this.getModelAngleAt( u ) + Math.PI / 2 );
+      // load xSplineDiff, ySplineDiff here if not already loaded
+      if ( this.xSplineDiff === null ) {
+        this.xSplineDiff = this.xSpline.diff();
+        this.ySplineDiff = this.ySpline.diff();
+      }
+      return new Vector2( -SplineEvaluation.atNumber( this.ySplineDiff, u ), SplineEvaluation.atNumber( this.xSplineDiff, u ) ).normalize();
     },
 
-    getUnitNormalVectorX: function( u ) {
-      return Math.cos( this.getModelAngleAt( u ) + Math.PI / 2 );
-    },
-
-    getUnitNormalVectorY: function( u ) {
-      return Math.sin( this.getModelAngleAt( u ) + Math.PI / 2 );
-    },
-
-    //Get the model parallel vector at the specified position on the track
+    // Get the model parallel vector at the specified position on the track
     getUnitParallelVector: function( u ) {
-      return Vector2.createPolar( 1, this.getModelAngleAt( u ) );
-    },
-
-    //Get the model parallel vector at the specified position on the track
-    getUnitParallelVectorX: function( u ) {
-      return Math.cos( this.getModelAngleAt( u ) );
-    },
-
-    //Get the model parallel vector at the specified position on the track
-    getUnitParallelVectorY: function( u ) {
-      return Math.sin( this.getModelAngleAt( u ) );
+      // load xSplineDiff, ySplineDiff here if not already loaded
+      if ( this.xSplineDiff === null ) {
+        this.xSplineDiff = this.xSpline.diff();
+        this.ySplineDiff = this.ySpline.diff();
+      }
+      return new Vector2( SplineEvaluation.atNumber( this.xSplineDiff, u ), SplineEvaluation.atNumber( this.ySplineDiff, u ) ).normalize();
     },
 
     updateLinSpace: function() {
@@ -235,17 +251,18 @@ define( function( require ) {
       var prePoint = this.minPoint - 1E-6;
       var postPoint = this.maxPoint + 1E-6;
 
-      //Store for performance
-      //made number of sample points depend on the length of the track, to make it smooth enough no matter how long it is
+      // Store for performance
+      // made number of sample points depend on the length of the track, to make it smooth enough no matter how long it is
       var n = 20 * (this.controlPoints.length - 1);
       this.searchLinSpace = numeric.linspace( prePoint, postPoint, n );
       this.distanceBetweenSamplePoints = (postPoint - prePoint) / n;
     },
 
-    //Detect whether a parametric point is in bounds of this track, for purposes of telling whether the skater fell past the edge of the track
+    // Detect whether a parametric point is in bounds of this track, for purposes of telling whether the skater fell
+    // past the edge of the track
     isParameterInBounds: function( u ) { return u >= this.minPoint && u <= this.maxPoint; },
 
-    //Setter/getter for physical property, mimic the PropertySet pattern instead of using PropertySet multiple inheritance
+    // Setter/getter for physical property, mimic the PropertySet pattern instead of using PropertySet multiple inheritance
     get physical() { return this.physicalProperty.get(); },
     set physical( p ) {this.physicalProperty.set( p );},
 
@@ -321,7 +338,7 @@ define( function( require ) {
       return false;
     },
 
-    //Return an array which contains all of the Tracks that would need to be reset if this track was reset.
+    // Return an array which contains all of the Tracks that would need to be reset if this track was reset.
     getParentsOrSelf: function() { return this.parents || [this]; },
 
     returnToControlPanel: function() {
@@ -353,7 +370,8 @@ define( function( require ) {
         return -this.getArcLength( u1, u0 );
       }
 
-      //Discrepancy with original version: original version had 10 subdivisions here.  We have reduced it to improve performance at the cost of numerical precision
+      // Discrepancy with original version: original version had 10 subdivisions here.  We have reduced it to improve
+      // performance at the cost of numerical precision
       var numSegments = 4;
       var da = ( u1 - u0 ) / ( numSegments - 1 );
       var prevX = SplineEvaluation.atNumber( this.xSpline, u0 );
@@ -387,7 +405,7 @@ define( function( require ) {
       var guess = ( upperBound + lowerBound ) / 2.0;
 
       var metricDelta = this.getArcLength( u0, guess );
-      var epsilon = 1E-8; //ORIGINAL ENERGY SKATE PARK BASICS HAD VALUE 1E-8
+      var epsilon = 1E-8; // ORIGINAL ENERGY SKATE PARK BASICS HAD VALUE 1E-8
 
       var count = 0;
       while ( Math.abs( metricDelta - ds ) > epsilon ) {
@@ -408,9 +426,10 @@ define( function( require ) {
       return guess - u0;
     },
 
-    //Compute the signed curvature as defined here: http://en.wikipedia.org/wiki/Curvature#Local_expressions
-    //Used for centripetal force and determining whether the skater flies off the track
-    //Curvature parameter is for storing the result as pass-by-value.  Sorry, see https://github.com/phetsims/energy-skate-park-basics/issues/50 regarding GC
+    // Compute the signed curvature as defined here: http:// en.wikipedia.org/wiki/Curvature#Local_expressions
+    // Used for centripetal force and determining whether the skater flies off the track
+    // Curvature parameter is for storing the result as pass-by-value.
+    // Sorry, see #50 regarding GC
     getCurvature: function( u, curvature ) {
 
       if ( this.xSplineDiff === null ) {
@@ -431,19 +450,21 @@ define( function( require ) {
       var k = (xP * yPP - yP * xPP) /
               Math.pow( (xP * xP + yP * yP), 3 / 2 );
 
-      //Using component-wise maths to avoid allocations, see #50
+      // Using component-wise maths to avoid allocations, see #50
       var centerX = this.getX( u );
       var centerY = this.getY( u );
 
-      var vectorX = this.getUnitNormalVectorX( u ) / k + centerX;
-      var vectorY = this.getUnitNormalVectorY( u ) / k + centerY;
+      var unitNormalVector = this.getUnitNormalVector( u );
+      var vectorX = unitNormalVector.x / k + centerX;
+      var vectorY = unitNormalVector.y / k + centerY;
 
       curvature.r = 1 / k;
       curvature.x = vectorX;
       curvature.y = vectorY;
     },
 
-    //Find the lowest y-point on the spline by sampling, used when dropping the track or a control point to ensure it won't go below y=0
+    // Find the lowest y-point on the spline by sampling, used when dropping the track or a control point to ensure it
+    // won't go below y=0
     getLowestY: function() {
       if ( !this.xSearchPoints ) {
         this.xSearchPoints = SplineEvaluation.atArray( this.xSpline, this.searchLinSpace );
@@ -461,7 +482,7 @@ define( function( require ) {
         }
       }
 
-      //Increase resolution in the neighborhood of y
+      // Increase resolution in the neighborhood of y
       var foundU = this.searchLinSpace[minIndex];
 
       var minBound = foundU - this.distanceBetweenSamplePoints;
@@ -481,8 +502,8 @@ define( function( require ) {
       return min;
     },
 
-    //If any part of the track is below ground, move the whole track up so it rests at y=0 at its minimum, see #71
-    //Called when user releases track or a control point after dragging
+    // If any part of the track is below ground, move the whole track up so it rests at y=0 at its minimum, see #71
+    // Called when user releases track or a control point after dragging
     bumpAboveGround: function() {
       var lowestY = this.getLowestY();
       if ( lowestY < 0 ) {
@@ -491,59 +512,73 @@ define( function( require ) {
     },
 
     /**
-     * Smooth out the track so it doesn't have any sharp turns
-     * see https://github.com/phetsims/energy-skate-park-basics/issues/177
+     * Smooth out the track so it doesn't have any sharp turns, see #177
      * @param {Number} i the index of the control point to adjust
      */
     smooth: function( i ) {
       assert && assert( i >= 0 && i < this.controlPoints.length );
+      assert && assert( this.availableModelBoundsProperty );
 
+      var availableModelBounds = this.availableModelBoundsProperty.value;
+      assert && assert( availableModelBounds );
+
+      var success = false;
       var numTries = 0;
 
-      //Record the original control point location
+      // Record the original control point location
       var originalX = this.controlPoints[i].sourcePosition.x;
       var originalY = this.controlPoints[i].sourcePosition.y;
 
-      //Spiral outward, searching for a point that gives a smooth enough track.
+      // Spiral outward, searching for a point that gives a smooth enough track.
       var distance = 0.01;
       var angle = 0;
-      var MAX_TRIES = 100;
+      var MAX_TRIES = 80;
       var MAXIMUM_ACCEPTABLE_RADIUS_OF_CURVATURE = 0.03;
+
       while ( this.getMinimumRadiusOfCurvature() < MAXIMUM_ACCEPTABLE_RADIUS_OF_CURVATURE && numTries < MAX_TRIES ) {
         var delta = Vector2.createPolar( distance, angle );
-        this.controlPoints[i].sourcePosition = delta.plusXY( originalX, originalY );
-        angle = angle + Math.PI / 7;
-        distance = distance + 0.1;
-        this.updateSplines();
-//        console.log( 'newRadius of curvature', this.getMinimumRadiusOfCurvature() );
+        var proposedPosition = delta.plusXY( originalX, originalY );
+
+        // Only search within the visible model bounds, see #195
+        var containsPoint = availableModelBounds.containsPoint( proposedPosition );
+        if ( containsPoint ) {
+          this.controlPoints[i].sourcePosition = proposedPosition;
+          this.updateSplines();
+        }
+        angle = angle + Math.PI / 9;
+        distance = distance + 0.07;
         numTries++;
       }
 
-      //Could not find a better solution, leave the control point where it started.
+      // Could not find a better solution, leave the control point where it started.
       if ( numTries >= MAX_TRIES ) {
         this.controlPoints[i].sourcePosition = new Vector2( originalX, originalY );
         this.updateSplines();
       }
+      else {
+        success = true;
+      }
 
       this.trigger( 'smoothed' );
+      return success;
     },
 
     /**
      * The user just released a control point with index (indexToIgnore) and the spline needs to be smoothed.
      * Choose the point closest to the sharpest turn and adjust it.
-     * @param indexToIgnore the index of the control point that the user just adjusted, which should not be moved during smoothing
+     * @param {Array} indicesToIgnore indices which should not be adjusted (perhaps because the user just released them)
      */
-    smoothPointOfHighestCurvature: function( indexToIgnore ) {
+    smoothPointOfHighestCurvature: function( indicesToIgnore ) {
 
-      //Find the sharpest turn on the track
+      // Find the sharpest turn on the track
       var highestCurvatureU = this.getUWithHighestCurvature();
 
-      //find the point closest (in parametric coordinates) to the sharpest turn, but not including the indexToIgnore
-      //it looks like the control points are equally spaced in parametric coordinates (see the constructor)
+      // find the point closest (in parametric coordinates) to the sharpest turn, but not including the indexToIgnore
+      // it looks like the control points are equally spaced in parametric coordinates (see the constructor)
       var bestDistance = Number.POSITIVE_INFINITY;
       var bestIndex = -1;
       for ( var i = 0; i < this.controlPoints.length; i++ ) {
-        if ( i !== indexToIgnore ) {
+        if ( indicesToIgnore.indexOf( i ) === -1 ) {
           var controlPointU = i / this.controlPoints.length;
           var distanceFromHighestCurvature = Math.abs( highestCurvatureU - controlPointU );
           if ( distanceFromHighestCurvature < bestDistance ) {
@@ -552,18 +587,33 @@ define( function( require ) {
           }
         }
       }
-      this.smooth( bestIndex );
+
+      // If smoothing succeeded, all is well, otherwise try smoothing based on another point, see #198
+      var success = this.smooth( bestIndex );
+      if ( success ) {
+        return true;
+      }
+      else {
+        indicesToIgnore.push( bestIndex );
+        if ( indicesToIgnore.length === this.controlPoints.length ) {
+          return false;
+        }
+        else {
+          return this.smoothPointOfHighestCurvature( indicesToIgnore );
+        }
+      }
     },
 
     getUWithHighestCurvature: function() {
-      //Below implementation copied from getMinimumRadiusOfCurvature.  It is a CPU demanding task, so kept separate to keep the other one fast.
-      //Should be kept in sync manually
+      // Below implementation copied from getMinimumRadiusOfCurvature.  It is a CPU demanding task, so kept separate to
+      // keep the other one fast. Should be kept in sync manually
       var curvature = {r: 0, x: 0, y: 0};
       var minRadius = Number.POSITIVE_INFINITY;
       var bestU = 0;
 
-      //Search the entire space of the spline.  Larger number of divisions was chosen to prevent large curvatures at a single sampling point.
-      var numDivisions = 200;
+      // Search the entire space of the spline.  Larger number of divisions was chosen to prevent large curvatures at a
+      // single sampling point.
+      var numDivisions = 400;
       var du = (this.maxPoint - this.minPoint) / numDivisions;
       for ( var u = this.minPoint; u < this.maxPoint; u += du ) {
         this.getCurvature( u, curvature );
@@ -573,7 +623,6 @@ define( function( require ) {
           bestU = u;
         }
       }
-//      console.log( '=============min', minRadius );
       return bestU;
     },
 
@@ -585,8 +634,9 @@ define( function( require ) {
       var curvature = {r: 0, x: 0, y: 0};
       var minRadius = Number.POSITIVE_INFINITY;
 
-      //Search the entire space of the spline.  Larger number of divisions was chosen to prevent large curvatures at a single sampling point.
-      var numDivisions = 200;
+      // Search the entire space of the spline.  Larger number of divisions was chosen to prevent large curvatures at a
+      // single sampling point.
+      var numDivisions = 400;
       var du = (this.maxPoint - this.minPoint) / numDivisions;
       for ( var u = this.minPoint; u < this.maxPoint; u += du ) {
         this.getCurvature( u, curvature );
@@ -595,23 +645,34 @@ define( function( require ) {
           minRadius = r;
         }
       }
-//      console.log( '=============min', minRadius );
       return minRadius;
     },
 
-    //Use the position of the 0th control point as the position of the track, used when dragging the track.  Only used for relative positioning and translation, so an exact "position" is irrelevant
-    //Use the source position instead of the snapped position or buggy "jumpy" behavior will occur, see #98
+    // Use an arbitrary position for translating the track during dragging.  Only used for deltas in relative
+    // positioning and translation, so an exact "position" is irrelevant.
     get position() {
-      return this.controlPoints[0].sourcePosition;
+      return this._position.copy();
     },
 
-    set position( p ) {
-      var delta = p.minus( this.position );
+    set position( newPosition ) {
+      var delta = newPosition.minus( this.position );
       this.translate( delta.x, delta.y );
     },
 
     copyControlPointSources: function() {
       return this.controlPoints.map( function( controlPoint ) {return controlPoint.sourcePosition.copy();} );
+    },
+
+    getDebugString: function() {
+      var string = 'var controlPoints = [';
+      for ( var i = 0; i < this.controlPoints.length; i++ ) {
+        var controlPoint = this.controlPoints[i];
+        string += 'new ControlPoint(' + controlPoint.position.x + ',' + controlPoint.position.y + ')';
+        if ( i < this.controlPoints.length - 1 ) {
+          string += ',';
+        }
+      }
+      return string + '];';
     }
   } );
 } );

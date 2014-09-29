@@ -62,7 +62,7 @@
   "controls.gravity": "Yer çekimi",
   "message.confirm-reset-title": "Sıfırlamayı onaylayın",
   "label.potential-energy-reference": "Potansiyel enerji referansı",
-  "controls.reset-character": "Kaykaycıyı geri getir",
+  "controls.restart-skater": "Kaykaycıyı geri getir",
   "plots.energy-vs-position-save": "Enerji - Konum (kaydet #",
   "controls.hide-friction": "Sürtünmeyi gizle",
   "controls.add-track": "İz bırakmak için sürükleyin",

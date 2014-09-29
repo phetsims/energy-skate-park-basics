@@ -87,7 +87,7 @@
   "label.potential-energy-reference": "Σημείο Αναφοράς Δυναμικής Ενέργειας",
   "energy.kinetic.energy": "Κινητική Ενέργεια",
   "tracks-menu.item.jump": "Άλμα",
-  "controls.reset-character": "Επαναφορά Αναβάτη",
+  "controls.restart-skater": "Επαναφορά Αναβάτη",
   "help.right-click-for-options": "Δεξί κλικ για ιδιότητες",
   "plots.energy-vs-position-save": "Ενέργεια - Θέση (Αποθήκευση #",
   "controls.hide-friction": "Απόκρυψη Τριβής",

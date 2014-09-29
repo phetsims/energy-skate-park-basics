@@ -64,7 +64,7 @@
   "controls.gravity": "Gravitatsioon",
   "message.confirm-reset-title": "Kinnita algseadete tastamine",
   "label.potential-energy-reference": "Potensiaalse energia nullnivoo",
-  "controls.reset-character": "Taasta Rulataja",
+  "controls.restart-skater": "Taasta Rulataja",
   "plots.energy-vs-position-save": "Energia vs. Asukoht (save #",
   "controls.hide-friction": "Peida Hõõrdumine<<",
   "controls.add-track": "Lohista, et lisada rada",

@@ -8,21 +8,34 @@
 define( function( require ) {
   'use strict';
 
+  // modules
   var inherit = require( 'PHET_CORE/inherit' );
   var VBox = require( 'SCENERY/nodes/VBox' );
   var AquaRadioButton = require( 'SUN/AquaRadioButton' );
   var Text = require( 'SCENERY/nodes/Text' );
   var PhetFont = require( 'SCENERY_PHET/PhetFont' );
+
+  // strings
   var normalString = require( 'string!ENERGY_SKATE_PARK_BASICS/normal' );
   var slowMotionString = require( 'string!ENERGY_SKATE_PARK_BASICS/slow.motion' );
 
+  /**
+   * @param {Property<Number>} speedProperty the instantaneous speed of the skater (magnitude of the velocity vector)
+   * @constructor
+   */
   function PlaybackSpeedControl( speedProperty ) {
+    var dilateX = 5;
+    var dilateY = 2;
+    var slowMotionButton = new AquaRadioButton( speedProperty, 'slow', new Text( slowMotionString, {font: new PhetFont( 15 )} ), {radius: 9.5} );
+    var normalButton = new AquaRadioButton( speedProperty, 'normal', new Text( normalString, {font: new PhetFont( 15 )} ), {radius: 9.5, x: 130} );
+    slowMotionButton.touchArea = slowMotionButton.localBounds.dilatedXY( dilateX, dilateY );
+    normalButton.touchArea = normalButton.localBounds.dilatedXY( dilateX, dilateY );
     VBox.call( this, {
       align: 'left',
-      spacing: 2,
+      spacing: 4,
       children: [
-        new AquaRadioButton( speedProperty, 'normal', new Text( normalString, {font: new PhetFont( 15 )} ), {radius: 9.5, x: 130} ),
-        new AquaRadioButton( speedProperty, 'slow', new Text( slowMotionString, {font: new PhetFont( 15 )} ), {radius: 9.5} )
+        slowMotionButton,
+        normalButton
       ]} );
   }
 

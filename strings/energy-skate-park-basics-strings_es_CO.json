@@ -74,7 +74,7 @@
   "label.potential-energy-reference": "Referencia de energía potencial",
   "energy.kinetic.energy": "Energía Cinética",
   "tracks-menu.item.jump": "Salto",
-  "controls.reset-character": "Recupere al patinador",
+  "controls.restart-skater": "Recupere al patinador",
   "help.right-click-for-options": "Opciones (clic derecho)",
   "plots.energy-vs-position-save": "Energía vs. Posición (salva #",
   "controls.hide-friction": "No muestre la fricción",

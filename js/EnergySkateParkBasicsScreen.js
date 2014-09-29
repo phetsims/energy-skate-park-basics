@@ -8,6 +8,7 @@
 define( function( require ) {
   'use strict';
 
+  // modules
   var EnergySkateParkBasicsModel = require( 'ENERGY_SKATE_PARK_BASICS/model/EnergySkateParkBasicsModel' );
   var EnergySkateParkBasicsScreenView = require( 'ENERGY_SKATE_PARK_BASICS/view/EnergySkateParkBasicsScreenView' );
   var Image = require( 'SCENERY/nodes/Image' );
