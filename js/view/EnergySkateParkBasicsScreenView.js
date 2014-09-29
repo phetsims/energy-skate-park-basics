@@ -268,17 +268,20 @@ define( function( require ) {
       this.addChild( buttons );
     }
 
+    var webGLSupported = WebGLLayer.isWebGLSupported();
+
+    // TODO: This short-circuits the mobile safari path and just uses WebGL where it is available
+    var renderer = webGLSupported ? 'webgl' : 'svg';
+
     var skaterNode = new SkaterNode(
       model.skater,
       this,
       modelViewTransform,
       model.getClosestTrackAndPositionAndParameter.bind( model ),
-      model.getPhysicalTracks.bind( model ) );
+      model.getPhysicalTracks.bind( model ),
+      renderer
+    );
 
-    var webGLSupported = WebGLLayer.isWebGLSupported();
-
-    // TODO: This short-circuits the mobile safari path and just uses WebGL where it is available
-    var renderer = webGLSupported ? 'webgl' : 'svg';
     var gaugeNeedleNode = new GaugeNeedleNode( model.skater.property( 'speed' ),
       {
         min: 0,
@@ -289,7 +292,7 @@ define( function( require ) {
     gaugeNeedleNode.y = speedometerNode.y;
     this.addChild( gaugeNeedleNode );
     this.addChild( new BarGraphForeground( model.skater, model.property( 'barGraphVisible' ), renderer ) );
-    this.addChild( skaterNode.mutate( {renderer: renderer} ) );
+    this.addChild( skaterNode );
 
     var pieChartNode = renderer === 'webgl' ? new PieChartWebGLNode( model.skater, model.property( 'pieChartVisible' ), modelViewTransform ) :
                        new PieChartNode( model.skater, model.property( 'pieChartVisible' ), modelViewTransform );

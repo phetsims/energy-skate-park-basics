@@ -40,7 +40,7 @@ define( function( require ) {
    * to attach to them while dragging
    * @constructor
    */
-  function SkaterNode( skater, view, modelViewTransform, getClosestTrackAndPositionAndParameter, getPhysicalTracks ) {
+  function SkaterNode( skater, view, modelViewTransform, getClosestTrackAndPositionAndParameter, getPhysicalTracks, renderer ) {
     this.skater = skater;
     var skaterNode = this;
 
@@ -48,7 +48,7 @@ define( function( require ) {
     var leftSkaterImageNode = new Image( skaterLeftImage, { cursor: 'pointer' } );
     var rightSkaterImageNode = new Image( skaterRightImage, { cursor: 'pointer' } );
 
-    Node.call( this, {children: [leftSkaterImageNode, rightSkaterImageNode]} );
+    Node.call( this, {children: [leftSkaterImageNode, rightSkaterImageNode], renderer: renderer} );
 
     skater.directionProperty.link( function( direction ) {
       leftSkaterImageNode.visible = direction === 'left';
@@ -90,7 +90,11 @@ define( function( require ) {
     } );
 
     // Show a red dot in the bottom center as the important particle model coordinate
-    this.addChild( new Circle( 8, {fill: 'red', x: imageWidth / 2, y: imageHeight } ).toCanvasNodeSynchronous() );
+    var circle = new Circle( 8, {fill: 'red', x: imageWidth / 2, y: imageHeight } );
+    if ( renderer === 'webgl' ) {
+      circle = circle.toCanvasNodeSynchronous()
+    }
+    this.addChild( circle );
 
     var targetTrack = null;
 
