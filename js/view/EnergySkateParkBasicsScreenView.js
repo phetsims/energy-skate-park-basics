@@ -391,7 +391,7 @@ define( function( require ) {
         this.sceneSelectionPanel.centerX = panelAbove.centerX;
         this.sceneSelectionPanel.top = panelAbove.bottom + 5;
       }
-      this.resetAllButton.centerX = this.controlPanel.centerX;
+      this.resetAllButton.right = this.controlPanel.right;
       this.returnSkaterButton.right = this.resetAllButton.left - 10;
 
       // Compute the visible model bounds so we will know when a model object like the skater has gone offscreen
