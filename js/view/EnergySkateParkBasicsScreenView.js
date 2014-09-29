@@ -46,6 +46,7 @@ define( function( require ) {
   var EnergySkateParkColorScheme = require( 'ENERGY_SKATE_PARK_BASICS/view/EnergySkateParkColorScheme' );
   var WebGLLayer = require( 'SCENERY/layers/WebGLLayer' );
   var Bounds2 = require( 'DOT/Bounds2' );
+  var platform = require( 'PHET_CORE/platform' );
 
   // strings
   var returnSkaterString = require( 'string!ENERGY_SKATE_PARK_BASICS/controls.restart-skater' );
@@ -269,8 +270,9 @@ define( function( require ) {
 
     var webGLSupported = WebGLLayer.isWebGLSupported();
 
-    // TODO: This short-circuits the mobile safari path and just uses WebGL where it is available
-    var renderer = webGLSupported ? 'webgl' : 'svg';
+    // Use WebGL where available, but not on IE, due to https://github.com/phetsims/energy-skate-park-basics/issues/277
+    // and https://github.com/phetsims/scenery/issues/285
+    var renderer = (webGLSupported && !platform.ie) ? 'webgl' : 'svg';
 
     var skaterNode = new SkaterNode(
       model.skater,
