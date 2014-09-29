@@ -20,10 +20,10 @@ define( function( require ) {
    * Constructor for the BarGraph
    * @param {Skater} skater the model's skater model
    * @param {Property<Boolean>} barGraphVisibleProperty property that indicates whether the bar graph is visible
-   * @param {Function} clearThermal function to be called when the user presses the clear thermal button.
+   * @param {string} barRenderer the renderer type to use for the bars.  For some reason it is not currently inherited.
    * @constructor
    */
-  function BarGraphForeground( skater, barGraphVisibleProperty ) {
+  function BarGraphForeground( skater, barGraphVisibleProperty, barRenderer ) {
 
     // Free layout parameters
     var contentWidth = 110;
@@ -53,7 +53,7 @@ define( function( require ) {
         return result > 1 ? Math.floor( result ) : result;
       } );
       var barX = getBarX( index );
-      var bar = new Rectangle( barX, 0, barWidth, 100, {fill: color, pickable: false, renderer: 'webgl'} );
+      var bar = new Rectangle( barX, 0, barWidth, 100, {fill: color, pickable: false, renderer: barRenderer} );
 
       // update the bars when the graph becomes visible, and skip update when they are invisible
       DerivedProperty.multilink( [barHeightProperty, barGraphVisibleProperty], function( barHeight, visible ) {

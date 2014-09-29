@@ -48,7 +48,7 @@ define( function( require ) {
     var leftSkaterImageNode = new Image( skaterLeftImage, { cursor: 'pointer' } );
     var rightSkaterImageNode = new Image( skaterRightImage, { cursor: 'pointer' } );
 
-    Node.call( this, {children: [leftSkaterImageNode, rightSkaterImageNode], renderer: 'webgl' } );
+    Node.call( this, {children: [leftSkaterImageNode, rightSkaterImageNode]} );
 
     skater.directionProperty.link( function( direction ) {
       leftSkaterImageNode.visible = direction === 'left';
