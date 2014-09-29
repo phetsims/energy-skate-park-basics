@@ -278,7 +278,7 @@ define( function( require ) {
     var webGLSupported = WebGLLayer.isWebGLSupported();
 
     // TODO: This short-circuits the mobile safari path and just uses WebGL where it is available
-    var renderer = (platform.mobileSafari && webGLSupported) || webGLSupported ? 'webgl' : 'svg';
+    var renderer = webGLSupported ? 'webgl' : 'svg';
     var gaugeNeedleNode = new GaugeNeedleNode( model.skater.property( 'speed' ),
       {
         min: 0,
