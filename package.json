@@ -15,6 +15,5 @@
     "uglify-js": "~2.4.0",
     "requirejs": "~2.1.8"
   },
-  "requirejsNamespace": "ENERGY_SKATE_PARK_BASICS",
   "simTitleStringKey": "ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics.name"
 }
