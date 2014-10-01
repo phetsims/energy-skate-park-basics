@@ -79,6 +79,13 @@ define( function( require ) {
       var angleBetweenSlices = Math.PI * 2 / this.numSamples;
       var radius = this.radiusProperty.value;
 
+      // If any slice is too small, then don't show it.  Use the same rules as the non-webgl pie chart, see #136
+      var energy = Math.pow( radius / 0.4, 2 );
+      var THRESHOLD = 1E-4;
+      if ( energy < THRESHOLD ) {
+        radius = 0;
+      }
+
       //Round to the nearest angle to prevent seams, see #263
       var startAngle = Math.round( this.startAngleProperty.value / angleBetweenSlices ) * angleBetweenSlices;
       var unroundedEndAngle = this.startAngleProperty.value + this.extentProperty.value;

@@ -78,7 +78,9 @@ define( function( require ) {
 
     // TODO: why did Property.multilink not work here?
     var outlineRadiusProperty = DerivedProperty.multilink( [pieChartRadiusProperty], function( pieChartRadius ) {
-      if ( pieChartRadius === 0 ) {
+
+      // If any slice is too small, then don't show it.  Use the same rules as the non-webgl pie chart, see #136
+      if ( pieChartRadius <= 0.05 ) {
         return 0;
       }
       else {
