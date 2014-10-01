@@ -41,18 +41,18 @@ define( function( require ) {
   function EnergySkateParkBasicsControlPanel( model ) {
     var textOptions = {font: new PhetFont( 14 )};
 
-    var pieChartSet = [new Text( pieChartString, textOptions ), this.createPieChartIcon()];
-    var barGraphSet = [new Text( barGraphString, textOptions ), this.createBarGraphIcon()];
-    var gridSet = [new Text( gridString, textOptions ), this.createGridIcon()];
-    var speedometerSet = [new Text( speedString, textOptions ), this.createSpeedometerIcon()];
+    var pieChartSet = {label: new Text( pieChartString, textOptions ), icon: this.createPieChartIcon()};
+    var barGraphSet = {label: new Text( barGraphString, textOptions ), icon: this.createBarGraphIcon()};
+    var gridSet = {label: new Text( gridString, textOptions ), icon: this.createGridIcon()};
+    var speedometerSet = {label: new Text( speedString, textOptions ), icon: this.createSpeedometerIcon()};
 
     var sets = [pieChartSet, barGraphSet, gridSet, speedometerSet];
-    var maxTextWidth = _.max( sets, function( itemSet ) { return itemSet[0].width; } )[0].width;
+    var maxTextWidth = _.max( sets, function( itemSet ) { return itemSet.label.width; } ).label.width;
 
     // In the absence of any sun (or other) layout packages, just manually space them out so they will have the icons aligned
     var pad = function( itemSet ) {
-      var padWidth = maxTextWidth - itemSet[0].width;
-      return [itemSet[0], new Rectangle( 0, 0, padWidth + 20, 20 ), itemSet[1]];
+      var padWidth = maxTextWidth - itemSet.label.width;
+      return [itemSet.label, new Rectangle( 0, 0, padWidth + 20, 20 ), itemSet.icon];
     };
 
     var options = {boxWidth: 18};
