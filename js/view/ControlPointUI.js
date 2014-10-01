@@ -40,7 +40,6 @@ define( function( require ) {
         if ( enableClickToDismissListener ) {
           sceneNode.removeInputListener( clickToDismissListener );
           sceneListenerAdded = false;
-          model.editing = false;
           controlPointUI.detach();
         }
         else {

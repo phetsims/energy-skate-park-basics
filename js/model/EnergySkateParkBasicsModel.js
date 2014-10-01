@@ -111,9 +111,6 @@ define( function( require ) {
       // Whether the skater should stick to the track like a roller coaster, or be able to fly off like a street
       detachable: false,
 
-      // True if the user has pressed 'edit' to modify connected tracks, and the sim is in an "editing" mode
-      editing: false,
-
       // Will be filled in by the view, used to prevent control points from moving outside the visible model bounds when
       // adjusted, see #195
       availableModelBounds: null
