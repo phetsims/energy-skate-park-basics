@@ -144,7 +144,13 @@ define( function( require ) {
           // Threshold at a few drag events in case the user didn't mean to drag it but accidentally moved it a few pixels.
           if ( dragEvents <= 3 ) {
             var controlPointUI = new ControlPointUI( model, track, i, modelViewTransform, trackNode.parents[0] );
+
+            // If the track was removed, get rid of the buttons
             track.on( 'remove', function() { controlPointUI.detach(); } );
+
+            // If the track has translated, hide the buttons, see #272
+            track.on( 'translated', function() { controlPointUI.detach();} );
+            
             trackNode.parents[0].addChild( controlPointUI );
           }
 
