@@ -64,14 +64,15 @@ define( function( require ) {
       new CheckBox( new HBox( {children: pad( speedometerSet )} ), model.property( 'speedometerVisible' ), options )];
     var checkBoxes = new VBox( {align: 'left', spacing: 10, children: checkBoxChildren} );
 
-    var content = new VBox( {spacing: 4,
+    var massSlider = new MassSlider( model.skater.massProperty );
 
-      // For 1st screen, show MassSlider
-      children: !model.frictionAllowed ? [checkBoxes, new MassSlider( model.skater.massProperty )] :
-
-        // For 2nd and 3rd screen, show Friction Slider and Mass Slider, see #147
-                [checkBoxes, new MassSlider( model.skater.massProperty ), new FrictionControl( model.property( 'friction' ) )]
-    } );
+    // For 1st screen, show MassSlider
+    // For 2nd and 3rd screen, show Friction Slider and Mass Slider, see #147
+    var children = [checkBoxes, massSlider];
+    if ( model.frictionAllowed ) {
+      children.push( new FrictionControl( model.property( 'friction' ) ) );
+    }
+    var content = new VBox( { spacing: 4, children: children } );
 
     this.contentWidth = content.width;
     Panel.call( this, content, { xMargin: 10, yMargin: 5, fill: '#F0F0F0', stroke: null, lineWidth: null, resize: false } );
