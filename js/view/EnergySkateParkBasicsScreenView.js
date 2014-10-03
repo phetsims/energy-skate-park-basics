@@ -44,7 +44,7 @@ define( function( require ) {
   var RectangularPushButton = require( 'SUN/buttons/RectangularPushButton' );
   var Text = require( 'SCENERY/nodes/Text' );
   var EnergySkateParkColorScheme = require( 'ENERGY_SKATE_PARK_BASICS/view/EnergySkateParkColorScheme' );
-  var WebGLLayer = require( 'SCENERY/layers/WebGLLayer' );
+  var Util = require( 'SCENERY/util/Util' );
   var Bounds2 = require( 'DOT/Bounds2' );
   var platform = require( 'PHET_CORE/platform' );
 
@@ -268,7 +268,7 @@ define( function( require ) {
       this.addChild( buttons );
     }
 
-    var webGLSupported = WebGLLayer.isWebGLSupported();
+    var webGLSupported = Util.isWebGLSupported();
 
     // Use WebGL where available, but not on IE, due to https://github.com/phetsims/energy-skate-park-basics/issues/277
     // and https://github.com/phetsims/scenery/issues/285
