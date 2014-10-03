@@ -37,6 +37,10 @@ define( function( require ) {
     this.modelTracks = modelTracks;
     this.availableModelBoundsProperty = availableModelBoundsProperty;
 
+    // Keep track of what component (control point or track body) is dragging the track, so that it can't be dragged by
+    // two sources, which causes a flicker, see #282
+    this.dragSource = null;
+
     // Flag to indicate whether the skater transitions from the right edge of this track directly to the ground, see #164
     this.slopeToGround = false;
 

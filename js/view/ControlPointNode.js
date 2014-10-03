@@ -49,7 +49,12 @@ define( function( require ) {
 
           // If control point dragged out of the control panel, translate the entire track, see #130
           if ( !track.physical || !track.dropped ) {
-            trackDragHandler.trackDragStarted( event );
+
+            // Only start a track drag if nothing else was dragging the track (which caused a flicker), see #282
+            if ( track.dragSource === null ) {
+              track.dragSource = controlPointInputListener;
+              trackDragHandler.trackDragStarted( event );
+            }
             return;
           }
           track.dragging = true;
@@ -62,7 +67,11 @@ define( function( require ) {
 
           // If control point dragged out of the control panel, translate the entire track, see #130
           if ( !track.physical || !track.dropped ) {
-            trackDragHandler.trackDragged( event );
+
+            // Only drag a track if nothing else was dragging the track (which caused a flicker), see #282
+            if ( track.dragSource === controlPointInputListener ) {
+              trackDragHandler.trackDragged( event );
+            }
             return;
           }
           dragEvents++;
@@ -127,7 +136,11 @@ define( function( require ) {
 
           // If control point dragged out of the control panel, translate the entire track, see #130
           if ( !track.physical || !track.dropped ) {
-            trackDragHandler.trackDragEnded( event );
+
+            // Only drop a track if nothing else was dragging the track (which caused a flicker), see #282
+            if ( track.dragSource === controlPointInputListener ) {
+              trackDragHandler.trackDragEnded( event );
+            }
             return;
           }
           if ( isEndPoint && controlPoint.snapTarget ) {
@@ -150,7 +163,7 @@ define( function( require ) {
 
             // If the track has translated, hide the buttons, see #272
             track.on( 'translated', function() { controlPointUI.detach();} );
-            
+
             trackNode.parents[0].addChild( controlPointUI );
           }
 
