@@ -29,7 +29,7 @@ define( function( require ) {
   var PieChartNode = require( 'ENERGY_SKATE_PARK_BASICS/view/PieChartNode' );
   var PieChartLegend = require( 'ENERGY_SKATE_PARK_BASICS/view/PieChartLegend' );
   var GridNode = require( 'ENERGY_SKATE_PARK_BASICS/view/GridNode' );
-  var ResetAllButton = require( 'SCENERY_PHET/ResetAllButton' );
+  var ResetAllButton = require( 'SCENERY_PHET/buttons/ResetAllButton' );
   var SceneSelectionPanel = require( 'ENERGY_SKATE_PARK_BASICS/view/SceneSelectionPanel' );
   var ModelViewTransform2 = require( 'PHETCOMMON/view/ModelViewTransform2' );
   var Vector2 = require( 'DOT/Vector2' );
@@ -37,8 +37,8 @@ define( function( require ) {
   var GaugeNeedleNode = require( 'ENERGY_SKATE_PARK_BASICS/view/GaugeNeedleNode' );
   var DerivedProperty = require( 'AXON/DerivedProperty' );
   var Path = require( 'SCENERY/nodes/Path' );
-  var PlayPauseButton = require( 'SCENERY_PHET/PlayPauseButton' );
-  var StepButton = require( 'SCENERY_PHET/StepButton' );
+  var PlayPauseButton = require( 'SCENERY_PHET/buttons/PlayPauseButton' );
+  var StepButton = require( 'SCENERY_PHET/buttons/StepButton' );
   var VBox = require( 'SCENERY/nodes/VBox' );
   var Property = require( 'AXON/Property' );
   var RectangularPushButton = require( 'SUN/buttons/RectangularPushButton' );
