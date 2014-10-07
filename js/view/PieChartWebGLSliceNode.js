@@ -93,15 +93,9 @@ define( function( require ) {
 
       var extent = endAngle - startAngle;
 
-      var rectangleX = 0;
-      var rectangleY = 0;
-      var rectangleWidth = radius * 2;
-      var rectangleHeight = radius * 2;
-
-      var rectangleOffset = Matrix4.translation( rectangleX, rectangleY, 0 );
-      var rectangleSize = Matrix4.scaling( rectangleWidth, rectangleHeight, 1 );
+      var scalingMatrix = Matrix4.scaling( radius * 2, radius * 2, 1 );
       var rotationMatrix = Matrix4.rotationZ( -startAngle );
-      var uMatrix = viewMatrix.timesMatrix( rectangleOffset.timesMatrix( rectangleSize.timesMatrix( rotationMatrix ) ) );
+      var uMatrix = viewMatrix.timesMatrix( scalingMatrix.timesMatrix( rotationMatrix ) );
 
       // combine image matrix (to scale aspect ratios), the trail's matrix, and the matrix to device coordinates
       gl.uniformMatrix4fv( shaderProgram.uniformLocations.uMatrix, false, uMatrix.entries );
