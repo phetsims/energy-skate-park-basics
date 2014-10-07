@@ -292,7 +292,7 @@ define( function( require ) {
     gaugeNeedleNode.x = speedometerNode.x;
     gaugeNeedleNode.y = speedometerNode.y;
     this.addChild( gaugeNeedleNode );
-    this.addChild( new BarGraphForeground( model.skater, model.property( 'barGraphVisible' ), renderer ) );
+    this.addChild( new BarGraphForeground( model.skater, barGraphBackground, model.property( 'barGraphVisible' ), renderer ) );
     this.addChild( skaterNode );
 
     var pieChartNode = renderer === 'webgl' ? new PieChartWebGLNode( model.skater, model.property( 'pieChartVisible' ), modelViewTransform ) :

@@ -36,6 +36,8 @@ define( function( require ) {
    */
   function BarGraphBackground( skater, barGraphVisibleProperty, clearThermal ) {
 
+    var barGraphBackground = this;
+
     // Free layout parameters
     var contentWidth = 110;
     var contentHeight = 325;
@@ -46,19 +48,19 @@ define( function( require ) {
     var spaceBetweenBars = 10;
     var spaceBetweenAxisAndBar = 10;
     var spaceBetweenRightSideAndBar = 5;
-    var barWidth = (contentWidth - insetX * 2 - (numBars - 1) * spaceBetweenBars - spaceBetweenAxisAndBar - spaceBetweenRightSideAndBar) / numBars;
+    this.barWidth = (contentWidth - insetX * 2 - (numBars - 1) * spaceBetweenBars - spaceBetweenAxisAndBar - spaceBetweenRightSideAndBar) / numBars;
 
-    var originY = contentHeight - insetY;
+    this.originY = contentHeight - insetY;
 
     // The x-coordinate of a bar chart bar
-    var getBarX = function( barIndex ) { return insetX + spaceBetweenAxisAndBar + barWidth * barIndex + spaceBetweenBars * barIndex; };
+    this.getBarX = function( barIndex ) { return insetX + spaceBetweenAxisAndBar + barGraphBackground.barWidth * barIndex + spaceBetweenBars * barIndex; };
 
     // Create a label that appears under one of the bars
     var createLabel = function( index, title, color ) {
       var text = new Text( title, {fill: color, font: new PhetFont( 14 ), pickable: false} );
       text.rotate( -Math.PI / 2 );
-      text.centerX = getBarX( index ) + barWidth / 2;
-      text.top = originY + 2;
+      text.centerX = barGraphBackground.getBarX( index ) + barGraphBackground.barWidth / 2;
+      text.top = barGraphBackground.originY + 2;
 
       return text;
     };
@@ -78,9 +80,9 @@ define( function( require ) {
 
     var titleNode = new Text( energyString, {x: 5, top: 0, font: new PhetFont( 14 ), pickable: false} );
     var contentNode = new Rectangle( 0, 0, contentWidth, contentHeight, {children: [
-      new ArrowNode( insetX, originY, insetX, insetY, {pickable: false} ),
+      new ArrowNode( insetX, this.originY, insetX, insetY, {pickable: false} ),
       titleNode,
-      new Line( insetX, originY, contentWidth - insetX, originY, {lineWidth: 1, stroke: 'gray', pickable: false} ),
+      new Line( insetX, this.originY, contentWidth - insetX, this.originY, {lineWidth: 1, stroke: 'gray', pickable: false} ),
       kineticLabel,
       potentialLabel,
       thermalLabel,

@@ -23,24 +23,11 @@ define( function( require ) {
    * @param {string} barRenderer the renderer type to use for the bars.  For some reason it is not currently inherited.
    * @constructor
    */
-  function BarGraphForeground( skater, barGraphVisibleProperty, barRenderer ) {
+  function BarGraphForeground( skater, barGraphBackground, barGraphVisibleProperty, barRenderer ) {
 
-    // Free layout parameters
-    var contentWidth = 110;
-    var contentHeight = 325;
-    var insetX = 2;
-    var insetY = 25;
-
-    var numBars = 4;
-    var spaceBetweenBars = 10;
-    var spaceBetweenAxisAndBar = 10;
-    var spaceBetweenRightSideAndBar = 5;
-    var barWidth = (contentWidth - insetX * 2 - (numBars - 1) * spaceBetweenBars - spaceBetweenAxisAndBar - spaceBetweenRightSideAndBar) / numBars;
-
-    var originY = contentHeight - insetY;
-
-    // The x-coordinate of a bar chart bar
-    var getBarX = function( barIndex ) { return insetX + spaceBetweenAxisAndBar + barWidth * barIndex + spaceBetweenBars * barIndex; };
+    var barWidth = barGraphBackground.barWidth;
+    var getBarX = barGraphBackground.getBarX;
+    var originY = barGraphBackground.originY;
 
     // Create an energy bar that animates as the skater moves
     var createBar = function( index, color, property ) {
