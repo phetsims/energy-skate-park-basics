@@ -35,10 +35,10 @@ define( function( require ) {
     var sceneListenerAdded = false;
 
     // listener for 'click outside to dismiss'
-    var clickToDismissListener = {
+    this.clickToDismissListener = {
       down: function() {
         if ( enableClickToDismissListener ) {
-          sceneNode.removeInputListener( clickToDismissListener );
+          sceneNode.removeInputListener( controlPointUI.clickToDismissListener );
           sceneListenerAdded = false;
           controlPointUI.detach();
         }
@@ -49,7 +49,9 @@ define( function( require ) {
     };
 
     var sceneNode = parentNode.getUniqueTrail().rootNode();
-    sceneNode.addInputListener( clickToDismissListener );
+
+    this.sceneNode = sceneNode;
+    sceneNode.addInputListener( this.clickToDismissListener );
     sceneListenerAdded = true;
 
     Node.call( this );
@@ -100,5 +102,12 @@ define( function( require ) {
     this.addChild( deleteButton );
   }
 
-  return inherit( Node, ControlPointUI );
+  return inherit( Node, ControlPointUI, {
+
+    //Override to additionally remove the attached input listener
+    detach: function() {
+      Node.prototype.detach.call( this );
+      this.sceneNode.removeInputListener( this.clickToDismissListener );
+    }
+  } );
 } );
