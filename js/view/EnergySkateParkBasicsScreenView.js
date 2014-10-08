@@ -47,6 +47,7 @@ define( function( require ) {
   var Util = require( 'SCENERY/util/Util' );
   var Bounds2 = require( 'DOT/Bounds2' );
   var platform = require( 'PHET_CORE/platform' );
+  var Node = require( 'SCENERY/nodes/Node' );
 
   // strings
   var returnSkaterString = require( 'string!ENERGY_SKATE_PARK_BASICS/controls.restart-skater' );
@@ -174,14 +175,18 @@ define( function( require ) {
     speedometerNode.top = this.layoutBounds.minY + 5;
     this.addChild( speedometerNode );
 
+    // Layer which will contain all of the tracks
+    var trackLayer = new Node();
+
     // Switch between selectable tracks
     if ( !model.draggableTracks ) {
 
       var trackNodes = model.tracks.map( function( track ) {
         return new TrackNode( model, track, modelViewTransform, view.availableModelBoundsProperty );
       } ).getArray();
+
       trackNodes.forEach( function( trackNode ) {
-        view.addChild( trackNode );
+        trackLayer.addChild( trackNode );
       } );
 
       model.property( 'scene' ).link( function( scene ) {
@@ -195,18 +200,12 @@ define( function( require ) {
       var addTrackNode = function( track ) {
 
         var trackNode = new TrackNode( model, track, modelViewTransform, view.availableModelBoundsProperty );
-        view.addChild( trackNode );
-
-        // Make sure the skater stays in front of the tracks when tracks are joined
-        if ( skaterNode ) {
-          skaterNode.moveToFront();
-          pieChartNode.moveToFront();
-        }
+        trackLayer.addChild( trackNode );
 
         // When track removed, remove its view
         var itemRemovedListener = function( removed ) {
           if ( removed === track ) {
-            view.removeChild( trackNode );
+            trackLayer.removeChild( trackNode );
             model.tracks.removeItemRemovedListener( itemRemovedListener );// Clean up memory leak
           }
         };
@@ -219,12 +218,19 @@ define( function( require ) {
       var interactiveTrackNodes = model.tracks.map( addTrackNode ).getArray();
 
       // Add a panel behind the tracks
-      var margin = 5;
-      this.trackCreationPanel = new Panel( new Rectangle( 0, 0, interactiveTrackNodes[0].width, interactiveTrackNodes[0].height ),
-        {xMargin: margin, yMargin: margin, x: interactiveTrackNodes[0].left - margin, y: interactiveTrackNodes[0].top - margin} );
-      this.addChild( this.trackCreationPanel );
+      var padding = 10;
 
-      interactiveTrackNodes.forEach( function( trackNode ) { trackNode.moveToFront(); } );
+      var trackCreationPanel = new Rectangle(
+        (interactiveTrackNodes[0].left - padding / 2),
+        (interactiveTrackNodes[0].top - padding / 2),
+        (interactiveTrackNodes[0].width + padding),
+        (interactiveTrackNodes[0].height + padding),
+        6,
+        6, {
+          fill: 'white',
+          stroke: 'black'
+        } );
+      this.addChild( trackCreationPanel );
 
       model.tracks.addItemAddedListener( addTrackNode );
 
@@ -264,9 +270,10 @@ define( function( require ) {
       clearButtonEnabledProperty.linkAttribute( clearButton, 'enabled' );
       clearButton.addListener( function() {model.clearTracks();} );
 
-      var buttons = new VBox( {children: [clearButton], spacing: 2, left: 5, centerY: this.trackCreationPanel.centerY} );
-      this.addChild( buttons );
+      this.addChild( clearButton.mutate( {left: 5, centerY: trackCreationPanel.centerY} ) );
     }
+
+    this.addChild( trackLayer );
 
     var webGLSupported = Util.isWebGLSupported();
 
@@ -326,8 +333,6 @@ define( function( require ) {
       returnSkaterToStartingPointButton.visible = buttonsVisible;
 
       if ( buttonsVisible ) {
-        returnSkaterToGroundButton.moveToFront();
-        returnSkaterToStartingPointButton.moveToFront();
 
         // Put the button where the skater will appear.  Nudge it up a bit so the mouse can hit it from the drop site,
         // without being moved at all (to simplify repeat runs).
