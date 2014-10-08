@@ -16,7 +16,6 @@ define( function( require ) {
   var Rectangle = require( 'SCENERY/nodes/Rectangle' );
   var DotRectangle = require( 'DOT/Rectangle' );
   var Shape = require( 'KITE/Shape' );
-  var Panel = require( 'SUN/Panel' );
   var ScreenView = require( 'JOIST/ScreenView' );
   var SkaterNode = require( 'ENERGY_SKATE_PARK_BASICS/view/SkaterNode' );
   var TrackNode = require( 'ENERGY_SKATE_PARK_BASICS/view/TrackNode' );
@@ -39,14 +38,12 @@ define( function( require ) {
   var Path = require( 'SCENERY/nodes/Path' );
   var PlayPauseButton = require( 'SCENERY_PHET/buttons/PlayPauseButton' );
   var StepButton = require( 'SCENERY_PHET/buttons/StepButton' );
-  var VBox = require( 'SCENERY/nodes/VBox' );
   var Property = require( 'AXON/Property' );
   var RectangularPushButton = require( 'SUN/buttons/RectangularPushButton' );
   var Text = require( 'SCENERY/nodes/Text' );
   var EnergySkateParkColorScheme = require( 'ENERGY_SKATE_PARK_BASICS/view/EnergySkateParkColorScheme' );
   var Util = require( 'SCENERY/util/Util' );
   var Bounds2 = require( 'DOT/Bounds2' );
-  var platform = require( 'PHET_CORE/platform' );
   var Node = require( 'SCENERY/nodes/Node' );
 
   // strings

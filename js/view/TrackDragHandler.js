@@ -56,7 +56,7 @@ define( function( require ) {
       },
 
       // End the drag
-      end: function() {
+      end: function( event ) {
         if ( track.dragSource === trackDragHandler ) {
           trackDragHandler.trackDragEnded( event );
         }
@@ -77,7 +77,6 @@ define( function( require ) {
       var snapTargetChanged = false;
       var model = this.model;
       var track = this.track;
-      var trackDragHandler = this;
 
       // Check whether the model contains a track so that input listeners for detached elements can't create bugs, see #230
       if ( !model.containsTrack( track ) ) { return; }
