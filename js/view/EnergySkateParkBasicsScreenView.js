@@ -125,12 +125,22 @@ define( function( require ) {
     pieChartLegend.mutate( {top: barGraphBackground.top, left: barGraphBackground.right + 8} );
 
     var playProperty = model.property( 'paused' ).not();
-    var playPauseButton = new PlayPauseButton( playProperty ).mutate( {scale: 0.75} );
-    var stepButton = new StepButton( function() { model.manualStep(); }, playProperty ).mutate( {scale: 0.75} );
+    var playPauseButton = new PlayPauseButton( playProperty ).mutate( {scale: 0.6} );
+
+    // Make the Play/Pause button bigger when it is showing the pause button, see #298
+    var pauseSizeIncreaseFactor = 1.35;
+    playProperty.lazyLink( function( isPlaying ) {
+      playPauseButton.scale( isPlaying ? ( 1 / pauseSizeIncreaseFactor ) : pauseSizeIncreaseFactor );
+    } );
+
+    var stepButton = new StepButton( function() { model.manualStep(); }, playProperty );
+
+    // Make the step button the same size as the pause button.
+    stepButton.mutate( {scale: playPauseButton.height / stepButton.height} );
     model.property( 'paused' ).linkAttribute( stepButton, 'enabled' );
 
-    this.addChild( playPauseButton.mutate( {centerX: this.layoutBounds.centerX, bottom: this.layoutBounds.maxY - 7} ) );
-    this.addChild( stepButton.mutate( {left: playPauseButton.right + 5, centerY: playPauseButton.centerY} ) );
+    this.addChild( playPauseButton.mutate( {centerX: this.layoutBounds.centerX, bottom: this.layoutBounds.maxY - 15} ) );
+    this.addChild( stepButton.mutate( {left: playPauseButton.right + 15, centerY: playPauseButton.centerY} ) );
 
     this.resetAllButton = new ResetAllButton( {
       listener: model.reset.bind( model ),
@@ -154,7 +164,7 @@ define( function( require ) {
     model.skater.linkAttribute( 'moved', view.returnSkaterButton, 'enabled' );
     this.addChild( this.returnSkaterButton );
 
-    this.addChild( new PlaybackSpeedControl( model.property( 'speed' ) ).mutate( {right: playPauseButton.left - 10, bottom: playPauseButton.bottom} ) );
+    this.addChild( new PlaybackSpeedControl( model.property( 'speed' ) ).mutate( {right: playPauseButton.left - 20, centerY: playPauseButton.centerY} ) );
 
     var speedometerNode = new GaugeNode(
       // Hide the needle in for the background of the GaugeNode
