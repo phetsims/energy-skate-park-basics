@@ -31,7 +31,24 @@ define( function( require ) {
     var controlPointNode = this;
     var controlPoint = track.controlPoints[i];
 
-    Circle.call( this, 14, {pickable: true, opacity: 0.7, stroke: 'black', lineWidth: 2, fill: 'red', cursor: 'pointer', translation: modelViewTransform.modelToViewPosition( controlPoint.position )} );
+    // Default colors for the control point fill and highlight
+    var fill = 'red';
+    var highlightedFill = '#c90606';
+
+    // When mousing over the control point, highlight it like a button, to hint that it can be pressed to show the
+    // cut/delete buttons, see #234
+    var opacity = 0.7;
+    var highlightedOpacity = 0.85;
+
+    Circle.call( this, 14, {
+      pickable: true,
+      opacity: opacity,
+      stroke: 'black',
+      lineWidth: 2,
+      fill: fill,
+      cursor: 'pointer',
+      translation: modelViewTransform.modelToViewPosition( controlPoint.position )
+    } );
 
     // Show a dotted line for the exterior track points, which can be connected to other track
     if ( i === 0 || i === track.controlPoints.length - 1 ) {
@@ -172,6 +189,16 @@ define( function( require ) {
           }
         }
       } );
+    controlPointInputListener.over = function() {
+      if ( track.physical && !track.dragging ) {
+        controlPointNode.opacity = highlightedOpacity;
+        controlPointNode.fill = highlightedFill;
+      }
+    };
+    controlPointInputListener.out = function() {
+      controlPointNode.opacity = opacity;
+      controlPointNode.fill = fill;
+    };
     controlPointNode.addInputListener( controlPointInputListener );
   }
 
