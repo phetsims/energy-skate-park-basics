@@ -282,7 +282,10 @@ define( function( require ) {
 
     this.addChild( trackLayer );
 
-    var webGLSupported = Util.isWebGLSupported();
+    // Check to see if WebGL was prevented by a query parameter
+    var allowWebGL = window.phetcommon.getQueryParameter( 'webgl' ) !== 'false';
+
+    var webGLSupported = Util.isWebGLSupported && allowWebGL;
 
     // Use WebGL where available, but not on IE, due to https://github.com/phetsims/energy-skate-park-basics/issues/277
     // and https://github.com/phetsims/scenery/issues/285
