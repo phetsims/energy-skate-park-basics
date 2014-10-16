@@ -239,6 +239,23 @@ define( function( require ) {
           track3.physical = true;
           model.tracks.add( track3 );
         }
+
+        //Test decrease in thermal energy, see https://github.com/phetsims/energy-skate-park-basics/issues/141#issuecomment-59395426
+        if ( window.phetcommon.getQueryParameter( 'debugTrack' ) === '15' ) {
+          model.detachable = true;
+          model.skater.position.set( new Vector2( -6.698445595854922, 6.5278756476683935 ) );
+          model.skater.released( 0, 0 );
+          model.friction = 0;
+          var track15 = new Track( model, model.tracks, [
+            new ControlPoint( 0.9873551637279601, 7.856892317380353 ),
+            new ControlPoint( -0.4621662468513845, 5.9031895465994975 ),
+            new ControlPoint( -3.0250881612090676, 5.735129093198994 ),
+            new ControlPoint( -4.705692695214106, 0.9454061712846356 ),
+            new ControlPoint( -7.310629722921914, 7.457748740554157 )
+          ], true, null, model.availableModelBoundsProperty );
+          track15.physical = true;
+          model.tracks.add( track15 );
+        }
       }}
   );
 } );
