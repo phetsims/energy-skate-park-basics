@@ -279,6 +279,8 @@ define( function( require ) {
       // which gives a huge dt and problems for integration
       if ( !this.paused && !this.skater.dragging ) {
 
+        var initialThermalEnergy = this.skater.thermalEnergy;
+
         // If they switched windows or tabs, just bail on that delta
         if ( dt > 1 || dt <= 0 ) {
           dt = 1.0 / 60.0;
@@ -307,6 +309,15 @@ define( function( require ) {
         if ( updatedState ) {
           updatedState.setToSkater( this.skater );
           this.skater.trigger( 'updated' );
+
+          var finalThermalEnergy = this.skater.thermalEnergy;
+          var deltaThermalEnergy = finalThermalEnergy - initialThermalEnergy;
+          console.log( deltaThermalEnergy );
+          if ( deltaThermalEnergy < 0 ) {
+            debugger;
+
+            var myNewState = this.stepModel( dt, skaterState );
+          }
         }
       }
 
@@ -499,8 +510,8 @@ define( function( require ) {
 
         // Sometimes (depending on dt) the thermal energy can go negative by the above calculation, see #141
         // In that case, set the thermal energy to zero and reduce the speed to compensate.
-        if ( newThermalEnergy < 0 ) {
-          newThermalEnergy = 0;
+        if ( newThermalEnergy < skaterState.thermalEnergy ) {
+          newThermalEnergy = skaterState.thermalEnergy;
           newKineticEnergy = initialEnergy - newPotentialEnergy;
 
           assert && assert( newKineticEnergy >= 0 );
