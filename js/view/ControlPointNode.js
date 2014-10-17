@@ -64,6 +64,10 @@ define( function( require ) {
         allowTouchSnag: true,
         start: function( event ) {
 
+          // Move the track to the front when it starts dragging, see #296
+          // The track is in a layer of tracks (without other nodes) so moving it to the front will work perfectly
+          trackNode.moveToFront();
+
           // If control point dragged out of the control panel, translate the entire track, see #130
           if ( !track.physical || !track.dropped ) {
 

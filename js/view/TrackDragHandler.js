@@ -40,6 +40,10 @@ define( function( require ) {
 
       start: function( event ) {
 
+        // Move the track to the front when it starts dragging, see #296
+        // The track is in a layer of tracks (without other nodes) so moving it to the front will work perfectly
+        trackNode.moveToFront();
+
         if ( track.dragSource === null ) {
           // A new press has started, but the user has not moved the track yet, so do not create it yet.  See #205
           track.dragSource = trackDragHandler;
