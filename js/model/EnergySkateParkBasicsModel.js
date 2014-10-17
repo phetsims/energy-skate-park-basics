@@ -310,13 +310,11 @@ define( function( require ) {
           updatedState.setToSkater( this.skater );
           this.skater.trigger( 'updated' );
 
+          // Make sure the thermal energy doesn't go negative
           var finalThermalEnergy = this.skater.thermalEnergy;
           var deltaThermalEnergy = finalThermalEnergy - initialThermalEnergy;
-          console.log( deltaThermalEnergy );
           if ( deltaThermalEnergy < 0 ) {
-            debugger;
-
-            var myNewState = this.stepModel( dt, skaterState );
+            debug && debug( 'thermal energy wanted to decrease' );
           }
         }
       }
@@ -512,7 +510,7 @@ define( function( require ) {
         // In that case, set the thermal energy to zero and reduce the speed to compensate.
         if ( newThermalEnergy < skaterState.thermalEnergy ) {
           newThermalEnergy = skaterState.thermalEnergy;
-          newKineticEnergy = initialEnergy - newPotentialEnergy;
+          newKineticEnergy = initialEnergy - newPotentialEnergy - newThermalEnergy;
 
           assert && assert( newKineticEnergy >= 0 );
           if ( newKineticEnergy < 0 ) {
