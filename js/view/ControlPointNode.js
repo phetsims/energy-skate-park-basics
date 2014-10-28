@@ -176,7 +176,8 @@ define( function( require ) {
 
           // Show the 'control point editing' ui, but only if the user didn't drag the control point.
           // Threshold at a few drag events in case the user didn't mean to drag it but accidentally moved it a few pixels.
-          if ( dragEvents <= 3 ) {
+          // Make sure the track hasn't recently detached (was seen twice in fuzzMouse=100 testing)
+          if ( dragEvents <= 3 && trackNode.parents.length > 0 ) {
             var controlPointUI = new ControlPointUI( model, track, i, modelViewTransform, trackNode.parents[0] );
 
             // If the track was removed, get rid of the buttons
