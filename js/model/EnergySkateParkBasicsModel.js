@@ -797,7 +797,10 @@ define( function( require ) {
           // Off the edge of the track.  If the skater transitions from the right edge of the 2nd track directly to the
           // ground then do not lose thermal energy during the transition, see #164
           if ( correctedState.u > skaterState.track.maxPoint && skaterState.track.slopeToGround ) {
-            return correctedState.switchToGround( correctedState.thermalEnergy, correctedState.getSpeed(), 0, correctedState.positionX, 0 );
+            var result = correctedState.switchToGround( correctedState.thermalEnergy, correctedState.getSpeed(), 0, correctedState.positionX, 0 );
+
+            // Correct the energy discrepancy when switching to the ground, see #301
+            return this.correctEnergy( skaterState, result );
           }
           else {
             debugAttachDetach && debugAttachDetach( 'left edge track: ' + correctedState.u + ', ' + skaterState.track.maxPoint );
@@ -847,7 +850,10 @@ define( function( require ) {
       var newSkaterState = targetState.copy();
       var e0 = skaterState.getTotalEnergy();
       var mass = skaterState.mass;
-      var unit = newSkaterState.track.getUnitParallelVector( newSkaterState.u );
+
+      // Find the direction of velocity.  This is on the track unless the skater just left the "slope" track
+      var unit = newSkaterState.track ? newSkaterState.track.getUnitParallelVector( newSkaterState.u ) :
+                 newSkaterState.getVelocity().normalized();
 
       // Binary search, but bail after too many iterations
       for ( var i = 0; i < 100; i++ ) {
