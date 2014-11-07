@@ -98,7 +98,7 @@ define( function( require ) {
       var uMatrix = viewMatrix.timesMatrix( scalingMatrix.timesMatrix( rotationMatrix ) );
 
       // combine image matrix (to scale aspect ratios), the trail's matrix, and the matrix to device coordinates
-      gl.uniformMatrix4fv( shaderProgram.uniformLocations.uMatrix, false, uMatrix.entries );
+      gl.uniformMatrix4fv( shaderProgram.uniformLocations.uModelViewMatrix, false, uMatrix.entries );
 
       // Indicate the branch of logic to use in the ubershader.  In this case, a texture should be used for the image
       gl.uniform1i( shaderProgram.uniformLocations.uFragmentType, WebGLLayer.fragmentTypeFill );
