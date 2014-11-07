@@ -1308,7 +1308,7 @@ define( function( require ) {
 
       this.set( state.properties );
 
-      this.skater.setState( state.skater, EMPTY_OBJECT );
+      this.skater.setState( state.skater, this.tracks );
     },
 
     // Get the number of physical control points (i.e. control points outside of the toolbox)
