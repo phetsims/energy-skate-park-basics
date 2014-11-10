@@ -32,12 +32,16 @@ define( function( require ) {
     // Create an energy bar that animates as the skater moves
     var createBar = function( index, color, property ) {
 
-      // Convert to graph coordinates, floor and protect against duplicates
+      // Convert to graph coordinates
       // However, do not floor for values less than 1 otherwise a nonzero value will show up as zero, see #159
       var barHeightProperty = property.map( function( value ) {
         var result = value / 30;
 
-        return result > 1 ? Math.floor( result ) : result;
+        // Floor and protect against duplicates.
+        // Make sure that nonzero values are big enough to be visible, see #307
+        return result > 1 ? Math.floor( result ) :
+               result < 1E-6 ? 0 :
+               1;
       } );
       var barX = getBarX( index );
       var bar = new Rectangle( barX, 0, barWidth, 100, {fill: color, pickable: false, renderer: barRenderer} );
@@ -46,11 +50,6 @@ define( function( require ) {
       DerivedProperty.multilink( [barHeightProperty, barGraphVisibleProperty], function( barHeight, visible ) {
         if ( visible ) {
           // PERFORMANCE/ALLOCATION: Possible performance improvement to avoid allocations in Rectangle.setRect
-
-          // If the bar is too small, don't try to render it, see #199
-          if ( barHeight < 1E-6 ) {
-            barHeight = 0;
-          }
 
           // TODO: just omit negative bars altogether?
           if ( barHeight >= 0 ) {

@@ -49,7 +49,7 @@ define( function( require ) {
 
       // 40 makes a smooth circle, but we need enough samples to eliminate seams between the pie slices
       // Win8/Chrome starts to slow down around 1000000 samples
-      var numSamples = 100;
+      var numSamples = 1000;
       this.numSamples = numSamples;
 
       var vertices = [centerX, centerY];
@@ -79,13 +79,6 @@ define( function( require ) {
       var angleBetweenSlices = Math.PI * 2 / this.numSamples;
       var radius = this.radiusProperty.value;
 
-      // If any slice is too small, then don't show it.  Use the same rules as the non-webgl pie chart, see #136
-      var energy = Math.pow( radius / 0.4, 2 );
-      var THRESHOLD = 1E-4;
-      if ( energy < THRESHOLD ) {
-        radius = 0;
-      }
-
       //Round to the nearest angle to prevent seams, see #263
       var startAngle = Math.round( this.startAngleProperty.value / angleBetweenSlices ) * angleBetweenSlices;
       var unroundedEndAngle = this.startAngleProperty.value + this.extentProperty.value;
@@ -110,6 +103,11 @@ define( function( require ) {
 
       // To cut out a piece from the pie, just select the appropriate start/end vertices, then the call is still static.
       var numToDraw = Math.round( 2 + ( this.vertices.length / 2 - 2 ) * extent / ( 2 * Math.PI ) ); // linear between 2 and the maximum
+
+      // Make sure to show non-zero energy if the value is above the threshold, see #307
+      if ( numToDraw === 2 && this.extentProperty.get() > 1E-6 ) {
+        numToDraw = 3;
+      }
       gl.drawArrays( gl.TRIANGLE_FAN, 0, numToDraw );
     },
 
