@@ -49,6 +49,7 @@ define( function( require ) {
 
       // 40 makes a smooth circle, but we need enough samples to eliminate seams between the pie slices
       // Win8/Chrome starts to slow down around 1000000 samples
+      // But need it to be high enough that we don't see discrete jumps when the energy changes, see #303
       var numSamples = 1000;
       this.numSamples = numSamples;
 
@@ -91,7 +92,7 @@ define( function( require ) {
       var uMatrix = viewMatrix.timesMatrix( scalingMatrix.timesMatrix( rotationMatrix ) );
 
       // combine image matrix (to scale aspect ratios), the trail's matrix, and the matrix to device coordinates
-      gl.uniformMatrix4fv( shaderProgram.uniformLocations.uModelViewMatrix, false, uMatrix.entries );
+      gl.uniformMatrix4fv( shaderProgram.uniformLocations.uMatrix, false, uMatrix.entries );
 
       // Indicate the branch of logic to use in the ubershader.  In this case, a texture should be used for the image
       gl.uniform1i( shaderProgram.uniformLocations.uFragmentType, WebGLLayer.fragmentTypeFill );
