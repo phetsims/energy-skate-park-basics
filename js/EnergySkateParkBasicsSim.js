@@ -29,14 +29,14 @@ define( function( require ) {
 
   function EnergySkateParkBasicsSim() {
 
+    var indent = '\n        ';
     var options = {
       credits: {
-        leadDesign: 'Ariel Paul, Sam Reid',
+        leadDesign: 'Ariel Paul, Noah Podolefsky, Sam Reid',
         softwareDevelopment: 'Sam Reid',
-        designTeam: 'Michael Dubson, Bryce Gruneich, Trish Loeblein, Kathy Perkins',
-        interviews: 'Bryce Gruneich',
-        graphicArts: 'Sharon Siman-Tov',
-        qualityAssurance: 'Oliver Orejola, Bryan Yoelin'
+        team: 'Michael Dubson, Bryce Gruneich, Trish Loeblein' + indent + 'Emily B. Moore, Kathy Perkins',
+        graphicArts: 'Sharon Siman-Tov, Amanda McGarry',
+        qualityAssurance: 'Steele Dalton, Oliver Orejola' + indent + 'Arnab Purkayastha, Bryan Yoelin'
       },
 
       showSaveAndLoad: window.phetcommon.getQueryParameter( 'showSaveAndLoad' ),
