@@ -21,6 +21,9 @@ define( function( require ) {
   // strings
   var zeroMetersString = require( 'string!ENERGY_SKATE_PARK_BASICS/zeroMeters' );
 
+  // constants
+  var FONT = new PhetFont( 16 );
+
   /**
    * @param {Property<Boolean>} gridVisibleProperty the axon property indicating whether the grid should be visible
    * @param {ModelViewTransform2} modelViewTransform the main model-view transform
@@ -73,13 +76,21 @@ define( function( require ) {
         }
 
         if ( y % 2 === 0 ) {
-          var text = new Text( '' + y, {font: new PhetFont( 18 ), top: viewY, right: originX - 2} );
+          var text = new Text( '' + y, {
+            font: FONT,
+            top: viewY,
+            right: originX - 2
+          } );
 
           // For the "0 meters" readout, we still need the 0 to line up perfectly (while still using a single
           // internationalizable string), so use the 0 text bounds
           // And shift it down a bit so it isn't touching the concrete, see #134
           if ( y === 0 ) {
-            var replacementText = new Text( zeroMetersString, {font: new PhetFont( 18 ), top: viewY + 2, x: text.x} );
+            var replacementText = new Text( zeroMetersString, {
+              font: FONT,
+              top: viewY + 2,
+              x: text.x
+            } );
             texts.push( replacementText );
           }
           else {
