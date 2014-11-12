@@ -164,7 +164,10 @@ define( function( require ) {
     model.skater.linkAttribute( 'moved', view.returnSkaterButton, 'enabled' );
     this.addChild( this.returnSkaterButton );
 
-    this.addChild( new PlaybackSpeedControl( model.property( 'speed' ) ).mutate( {right: playPauseButton.left - 20, centerY: playPauseButton.centerY} ) );
+    this.addChild( new PlaybackSpeedControl( model.property( 'speed' ) ).mutate( {
+      right: playPauseButton.left - 20,
+      top: playPauseButton.top
+    } ) );
 
     var speedometerNode = new GaugeNode(
       // Hide the needle in for the background of the GaugeNode

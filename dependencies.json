@@ -1,46 +1,46 @@
 {
   "chipper": {
-    "sha": "a70478047e72540d937907951d184c8d874543a3",
+    "sha": "ae9596649e5a320b97b6d935a9954fb8a3af15a1",
     "branch": "master"
   },
   "sherpa": {
-    "sha": "2ee466c320f754de1e75969a89ddcfddc5b27810",
+    "sha": "883cbc33dac82a7146c8bd4f66633097d9b62c4c",
     "branch": "master"
   },
   "axon": {
-    "sha": "bd88cd7e2d2be78665ad1d28eff77ddd97784f27",
+    "sha": "37c22f512524abfd3b4e4b15825d59a3546f8782",
     "branch": "master"
   },
   "sun": {
-    "sha": "ec7cac5271e9f85e7ee7afae1d321d0ebb73f096",
+    "sha": "1ae2669e10ec9370721b64cc41bda78c14c3a0c1",
     "branch": "master"
   },
   "scenery-phet": {
-    "sha": "804142be295567e29b838140cd652ccdef8e8fa0",
+    "sha": "e867171adea6bfb7ec5fcfe78668c67b22a04e5b",
     "branch": "master"
   },
   "scenery": {
-    "sha": "8bda55c75f6b86f243f5d7bff77542ed54a9e4df",
+    "sha": "267034d8a97d8cb3d9e30e9a1a2956f2b60de656",
     "branch": "master"
   },
   "phetcommon": {
-    "sha": "effdd0c6e3a26eccb3da1a35e675eb5fa85e806a",
+    "sha": "1bfd46f1f42c6cb305ba70f281d195211bc4ac00",
     "branch": "master"
   },
   "phet-core": {
-    "sha": "9ce862130e848a817d1f1c9fd749af5d97a376ef",
+    "sha": "f85bb6811986ce5d9cc0b3cfae7f258b02557701",
     "branch": "master"
   },
   "kite": {
-    "sha": "4500a24ddc452c624ad1f47c749ec38d500d779e",
+    "sha": "c262daa0938f79862e5ef5cf6780197091d9b6d6",
     "branch": "master"
   },
   "joist": {
-    "sha": "00cb01d91108e45c5c188d24167845edaf7cdea0",
+    "sha": "7f13613a077b9a6783d89d1bc2ec9ac6ae1325e7",
     "branch": "master"
   },
   "dot": {
-    "sha": "bc26794f7a888443d9317b7c84b86a1a16a678bd",
+    "sha": "78fa399bde69424d771b8b268b1afea29550222d",
     "branch": "master"
   },
   "brand": {
@@ -52,8 +52,8 @@
     "branch": "master"
   },
   "energy-skate-park-basics": {
-    "sha": "d56845e9c909ee22a8844d91f59a71709c1413e5",
+    "sha": "4d418ae972d3e48d1283884a7827f4fe3d9b6131",
     "branch": "1.0"
   },
-  "comment": "# energy-skate-park-basics 1.0.0-rc.9 Fri Jul 25 2014 13:18:42 GMT-0600 (Mountain Daylight Time)"
+  "comment": "# energy-skate-park-basics 1.0.0-rc.16 Wed Oct 29 2014 12:56:17 GMT-0600 (MDT)"
 }

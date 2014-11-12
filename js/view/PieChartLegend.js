@@ -49,7 +49,9 @@ define( function( require ) {
     var thermalLabel = createLabel( 2, thermalString, EnergySkateParkColorScheme.thermalEnergy );
 
     var clearThermalButton = new ClearThermalButton( clearThermal, skater, {centerX: thermalLabel.centerX, y: thermalLabel.bottom + 15} );
-    skater.link( 'thermalEnergy', function( thermalEnergy ) { clearThermalButton.enabled = thermalEnergy > 0; } );
+    skater.allowClearingThermalEnergyProperty.link( function( allowClearingThermalEnergy ) {
+      clearThermalButton.enabled = allowClearingThermalEnergy;
+    } );
 
     // Don't let the ClearThermalButton participate in the layout since it is too big vertically.  Just use a strut to
     // get the width right, then add the undo button later

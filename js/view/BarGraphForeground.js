@@ -30,18 +30,32 @@ define( function( require ) {
     var originY = barGraphBackground.originY;
 
     // Create an energy bar that animates as the skater moves
-    var createBar = function( index, color, property ) {
+    var createBar = function( index, color, property, showSmallValuesAsZero ) {
 
       // Convert to graph coordinates
       // However, do not floor for values less than 1 otherwise a nonzero value will show up as zero, see #159
       var barHeightProperty = property.map( function( value ) {
         var result = value / 30;
 
+        var answer;
+
         // Floor and protect against duplicates.
-        // Make sure that nonzero values are big enough to be visible, see #307
-        return result > 1 ? Math.floor( result ) :
-               result < 1E-6 ? 0 :
-               1;
+        // Make sure that nonzero values
+        // For thermal and total energy, make sure they are big enough to be visible, see #307
+        // For kinetic and potential, they must go to zero at the endpoints to reach learning goals like
+        //   "The kinetic energy is zero at the top of the trajectory (turning point)
+        if ( showSmallValuesAsZero ) {
+          answer = result > 1 ? Math.floor( result ) :
+                   result < 1 ? 0 :
+                   1;
+        }
+        else {
+          answer = result > 1 ? Math.floor( result ) :
+                   result < 1E-6 ? 0 :
+                   1;
+        }
+
+        return answer;
       } );
       var barX = getBarX( index );
       var bar = new Rectangle( barX, 0, barWidth, 100, {fill: color, pickable: false, renderer: barRenderer} );
@@ -63,10 +77,10 @@ define( function( require ) {
       return bar;
     };
 
-    var kineticBar = createBar( 0, EnergySkateParkColorScheme.kineticEnergy, skater.kineticEnergyProperty );
-    var potentialBar = createBar( 1, EnergySkateParkColorScheme.potentialEnergy, skater.potentialEnergyProperty );
-    var thermalBar = createBar( 2, EnergySkateParkColorScheme.thermalEnergy, skater.thermalEnergyProperty );
-    var totalBar = createBar( 3, EnergySkateParkColorScheme.totalEnergy, skater.totalEnergyProperty );
+    var kineticBar = createBar( 0, EnergySkateParkColorScheme.kineticEnergy, skater.kineticEnergyProperty, true );
+    var potentialBar = createBar( 1, EnergySkateParkColorScheme.potentialEnergy, skater.potentialEnergyProperty, true );
+    var thermalBar = createBar( 2, EnergySkateParkColorScheme.thermalEnergy, skater.thermalEnergyProperty, false );
+    var totalBar = createBar( 3, EnergySkateParkColorScheme.totalEnergy, skater.totalEnergyProperty, false );
 
     Node.call( this, {
 

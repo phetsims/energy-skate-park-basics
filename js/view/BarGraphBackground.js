@@ -74,8 +74,8 @@ define( function( require ) {
       centerX: thermalLabel.centerX,
       y: thermalLabel.bottom + 12
     } );
-    skater.link( 'thermalEnergy', function( thermalEnergy ) {
-      clearThermalButton.enabled = thermalEnergy > 0;
+    skater.allowClearingThermalEnergyProperty.link( function( allowClearingThermalEnergy ) {
+      clearThermalButton.enabled = allowClearingThermalEnergy;
     } );
 
     var titleNode = new Text( energyString, {x: 5, top: 0, font: new PhetFont( 14 ), pickable: false} );
