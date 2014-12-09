@@ -93,6 +93,8 @@ define( function( require ) {
       headPosition: new Vector2( 0, 0 )
     } );
 
+    this.trackProperty.setSendPhetEvents && this.trackProperty.setSendPhetEvents( false );
+
     this.addDerivedProperty( 'speed', ['velocity'], function( velocity ) {
       return velocity.magnitude();
     } );

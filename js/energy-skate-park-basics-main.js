@@ -8,6 +8,8 @@
 define( function( require ) {
   'use strict';
 
+  require( 'TOGETHER/SimIFrameAPI' );
+
   var SimLauncher = require( 'JOIST/SimLauncher' );
   var EnergySkateParkBasicsSim = require( 'ENERGY_SKATE_PARK_BASICS/EnergySkateParkBasicsSim' );
 
