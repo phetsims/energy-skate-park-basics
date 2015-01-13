@@ -36,15 +36,15 @@ define( function( require ) {
       // Fixes: Cursor turns into a hand over the track in the track selection panel, see #204
       trackNode.pickable = false;
 
-      var a = new Node( {children: [background, trackNode ]} );
+      var a = new Node( { children: [ background, trackNode ] } );
       a.scale( 45 / a.height );
       return a;
     };
 
     var content = new RadioButtonGroup( model.sceneProperty, [
-      {value: 0, node: createNode( 0 )},
-      {value: 1, node: createNode( 1 )},
-      {value: 2, node: createNode( 2 )}
+      { value: 0, node: createNode( 0 ) },
+      { value: 1, node: createNode( 1 ) },
+      { value: 2, node: createNode( 2 ) }
     ], {
       orientation: 'vertical',
       buttonContentXMargin: 0,

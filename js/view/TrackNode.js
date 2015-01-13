@@ -39,13 +39,13 @@ define( function( require ) {
     this.modelViewTransform = modelViewTransform;
     this.availableBoundsProperty = availableBoundsProperty;
 
-    this.road = new Path( null, {fill: 'gray', cursor: track.interactive ? 'pointer' : 'default'} );
-    this.centerLine = new Path( null, {stroke: 'black', lineWidth: '1.2', lineDash: [11, 8]} );
+    this.road = new Path( null, { fill: 'gray', cursor: track.interactive ? 'pointer' : 'default' } );
+    this.centerLine = new Path( null, { stroke: 'black', lineWidth: '1.2', lineDash: [ 11, 8 ] } );
     model.property( 'detachable' ).link( function( detachable ) {
-      trackNode.centerLine.lineDash = detachable ? null : [11, 8];
+      trackNode.centerLine.lineDash = detachable ? null : [ 11, 8 ];
     } );
 
-    Node.call( this, {children: [this.road, this.centerLine]} );
+    Node.call( this, { children: [ this.road, this.centerLine ] } );
 
     // Reuse arrays to save allocations and prevent garbage collections, see #38
     this.xArray = new FastArray( track.controlPoints.length );
@@ -107,8 +107,8 @@ define( function( require ) {
 
       // Arrays are fixed length, so just overwrite values
       for ( i = 0; i < track.controlPoints.length; i++ ) {
-        this.xArray[i] = track.controlPoints[i].position.x;
-        this.yArray[i] = track.controlPoints[i].position.y;
+        this.xArray[ i ] = track.controlPoints[ i ].position.x;
+        this.yArray[ i ] = track.controlPoints[ i ].position.y;
       }
 
       // Compute points for lineTo
@@ -117,21 +117,21 @@ define( function( require ) {
 
       var tx = this.getTranslation();
       var shape = new Shape().moveTo(
-          this.modelViewTransform.modelToViewX( xPoints[0] ) - tx.x,
-          this.modelViewTransform.modelToViewY( yPoints[0] ) - tx.y
+        this.modelViewTransform.modelToViewX( xPoints[ 0 ] ) - tx.x,
+        this.modelViewTransform.modelToViewY( yPoints[ 0 ] ) - tx.y
       );
 
       // Show the track at reduced resolution while dragging so it will be smooth and responsive while dragging
       // (whether updating the entire track, some of the control points or both)
       var delta = track.dragging ? 3 : 1;
       for ( i = 1; i < xPoints.length; i = i + delta ) {
-        shape.lineTo( this.modelViewTransform.modelToViewX( xPoints[i] ) - tx.x, this.modelViewTransform.modelToViewY( yPoints[i] ) - tx.y );
+        shape.lineTo( this.modelViewTransform.modelToViewX( xPoints[ i ] ) - tx.x, this.modelViewTransform.modelToViewY( yPoints[ i ] ) - tx.y );
       }
 
       // If at reduced resolution, still make sure we draw to the end point
       if ( i !== xPoints.length - 1 ) {
         i = xPoints.length - 1;
-        shape.lineTo( this.modelViewTransform.modelToViewX( xPoints[i] ) - tx.x, this.modelViewTransform.modelToViewY( yPoints[i] ) - tx.y );
+        shape.lineTo( this.modelViewTransform.modelToViewX( xPoints[ i ] ) - tx.x, this.modelViewTransform.modelToViewY( yPoints[ i ] ) - tx.y );
       }
 
       var strokeStyles = new LineStyles( {

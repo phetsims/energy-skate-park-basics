@@ -22,8 +22,8 @@ define( function( require ) {
       return false;
     }
     for ( var i = 0; i < a.length; i++ ) {
-      var elm1 = a[i];
-      var elm2 = b[i];
+      var elm1 = a[ i ];
+      var elm2 = b[ i ];
       if ( !elm1.equals( elm2 ) ) {
         return false;
       }
@@ -93,7 +93,7 @@ define( function( require ) {
       headPosition: new Vector2( 0, 0 )
     } );
 
-    this.addDerivedProperty( 'speed', ['velocity'], function( velocity ) {
+    this.addDerivedProperty( 'speed', [ 'velocity' ], function( velocity ) {
       return velocity.magnitude();
     } );
 
@@ -124,7 +124,7 @@ define( function( require ) {
     // Boolean flag that indicates whether the skater has moved from his initial position, and hence can be 'returned',
     // For making the 'return skater' button enabled/disabled
     // If this is a performance concern, perhaps it could just be dropped as a feature
-    this.addDerivedProperty( 'moved', ['position', 'startingPosition', 'dragging'], function( x, x0, dragging ) {
+    this.addDerivedProperty( 'moved', [ 'position', 'startingPosition', 'dragging' ], function( x, x0, dragging ) {
       return !dragging && (x.x !== x0.x || x.y !== x0.y);
     } );
 
@@ -138,7 +138,7 @@ define( function( require ) {
 
     // Enable the "Clear Thermal" buttons but only if the thermal energy exceeds a tiny threshold, so there aren't visual
     // "false positives", see #306
-    this.addDerivedProperty( 'allowClearingThermalEnergy', ['thermalEnergy'], function( thermalEnergy ) {return thermalEnergy > 1E-2;} );
+    this.addDerivedProperty( 'allowClearingThermalEnergy', [ 'thermalEnergy' ], function( thermalEnergy ) {return thermalEnergy > 1E-2;} );
   }
 
   return inherit( PropertySet, Skater, {
@@ -234,8 +234,8 @@ define( function( require ) {
 
     setState: function( state, tracks ) {
       this.set( state.properties );
-      this.track = tracks.getArray()[state.properties.track];
-      this.startingTrack = tracks[state.properties.startingTrack];
+      this.track = tracks.getArray()[ state.properties.track ];
+      this.startingTrack = tracks[ state.properties.startingTrack ];
       this.trigger( 'updated' );
     },
 

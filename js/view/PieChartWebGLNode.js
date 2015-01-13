@@ -28,7 +28,7 @@ define( function( require ) {
     Node.call( this );
 
     // Show the pie chart above the skater's head
-    Property.multilink( [skater.headPositionProperty, pieChartVisibleProperty], function( skaterHeadPosition, pieChartVisible ) {
+    Property.multilink( [ skater.headPositionProperty, pieChartVisibleProperty ], function( skaterHeadPosition, pieChartVisible ) {
 
       // Only update it when visible, to improve performance
       if ( pieChartVisible ) {
@@ -44,7 +44,7 @@ define( function( require ) {
       return 0.4 * Math.sqrt( totalEnergy );
     } );
 
-    var potentialEnergyProportion = skater.multilink( ['potentialEnergy', 'totalEnergy'], function( potentialEnergy, totalEnergy ) {
+    var potentialEnergyProportion = skater.multilink( [ 'potentialEnergy', 'totalEnergy' ], function( potentialEnergy, totalEnergy ) {
       var result = (potentialEnergy / totalEnergy);
       var clamped = result < 0 ? 0 :
                     result > 1 ? 1 :
@@ -52,7 +52,7 @@ define( function( require ) {
       return clamped * Math.PI * 2;
     } );
 
-    var kineticEnergyProportion = skater.multilink( ['kineticEnergy', 'totalEnergy'], function( kineticEnergy, totalEnergy ) {
+    var kineticEnergyProportion = skater.multilink( [ 'kineticEnergy', 'totalEnergy' ], function( kineticEnergy, totalEnergy ) {
       var result = (kineticEnergy / totalEnergy);
       var clamped = result < 0 ? 0 :
                     result > 1 ? 1 :
@@ -60,7 +60,7 @@ define( function( require ) {
       return clamped * Math.PI * 2;
     } );
 
-    var thermalEnergyProportion = skater.multilink( ['thermalEnergy', 'totalEnergy'], function( thermalEnergy, totalEnergy ) {
+    var thermalEnergyProportion = skater.multilink( [ 'thermalEnergy', 'totalEnergy' ], function( thermalEnergy, totalEnergy ) {
       var result = (thermalEnergy / totalEnergy);
       var clamped = result < 0 ? 0 :
                     result > 1 ? 1 :
@@ -69,7 +69,7 @@ define( function( require ) {
     } );
 
     var plus = function( a, b ) {
-      return DerivedProperty.multilink( [a, b], function( a, b ) {
+      return DerivedProperty.multilink( [ a, b ], function( a, b ) {
         return a + b;
       } );
     };
@@ -77,7 +77,7 @@ define( function( require ) {
     var pieStroke = 1;
 
     // TODO: why did Property.multilink not work here?
-    var outlineRadiusProperty = DerivedProperty.multilink( [pieChartRadiusProperty], function( pieChartRadius ) {
+    var outlineRadiusProperty = DerivedProperty.multilink( [ pieChartRadiusProperty ], function( pieChartRadius ) {
 
       // If any slice is too small, then don't show it.  Use the same rules as the non-webgl pie chart, see #136
       if ( pieChartRadius <= 0.05 ) {

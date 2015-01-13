@@ -66,7 +66,7 @@ define( function( require ) {
 
     // Add a scissors cut button, but only for interior points and only if there aren't too many control points already
     if ( !isEndPoint && model.canCutTrackControlPoint() ) {
-      var scissorNode = new FontAwesomeNode( 'cut', {fill: 'black', scale: 0.6, rotation: Math.PI / 2 - angle} );
+      var scissorNode = new FontAwesomeNode( 'cut', { fill: 'black', scale: 0.6, rotation: Math.PI / 2 - angle } );
       var cutButton = new RoundPushButton( {
         content: scissorNode,
         listener: function() {
@@ -84,7 +84,7 @@ define( function( require ) {
     }
 
     // Show the delete button.
-    var deleteNode = new FontAwesomeNode( 'times_circle', {fill: 'red', scale: 0.6} );
+    var deleteNode = new FontAwesomeNode( 'times_circle', { fill: 'red', scale: 0.6 } );
     var deleteButton = new RoundPushButton( {
       listener: function() { model.deleteControlPoint( track, controlPointIndex ); },
       content: deleteNode,

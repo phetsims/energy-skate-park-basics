@@ -1,7 +1,7 @@
 // Copyright 2002-2013, University of Colorado Boulder
 
 require.config( {
-  deps: ['energy-skate-park-basics-main'],
+  deps: [ 'energy-skate-park-basics-main' ],
 
   paths: {
 

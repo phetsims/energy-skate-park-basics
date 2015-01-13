@@ -146,20 +146,20 @@ define( function( require ) {
       var myBestPoint = null;
       var otherBestPoint = null;
 
-      var points = [track.controlPoints[0], track.controlPoints[track.controlPoints.length - 1]];
+      var points = [ track.controlPoints[ 0 ], track.controlPoints[ track.controlPoints.length - 1 ] ];
 
       for ( var i = 0; i < tracks.length; i++ ) {
-        var t = tracks[i];
+        var t = tracks[ i ];
         if ( t !== track ) {
 
           // 4 cases 00, 01, 10, 11
-          var otherPoints = [t.controlPoints[0], t.controlPoints[t.controlPoints.length - 1]];
+          var otherPoints = [ t.controlPoints[ 0 ], t.controlPoints[ t.controlPoints.length - 1 ] ];
 
           // don't match inner points
           for ( var j = 0; j < points.length; j++ ) {
-            var point = points[j];
+            var point = points[ j ];
             for ( var k = 0; k < otherPoints.length; k++ ) {
-              var otherPoint = otherPoints[k];
+              var otherPoint = otherPoints[ k ];
               var distance = point.sourcePosition.distance( otherPoint.position );
               if ( (bestDistance === null && distance > 1E-6) || (distance < bestDistance ) ) {
                 bestDistance = distance;
@@ -178,7 +178,7 @@ define( function( require ) {
         myBestPoint.snapTarget = otherBestPoint;
 
         // Set the opposite point to be unsnapped, you can only snap one at a time
-        var source = (myBestPoint === points[0] ? points[1] : points[0]);
+        var source = (myBestPoint === points[ 0 ] ? points[ 1 ] : points[ 0 ]);
         if ( source.snapTarget !== null ) {
           snapTargetChanged = true;
         }
@@ -186,11 +186,11 @@ define( function( require ) {
       }
       else {
 
-        if ( points[0].snapTarget !== null || points[1].snapTarget !== null ) {
+        if ( points[ 0 ].snapTarget !== null || points[ 1 ].snapTarget !== null ) {
           snapTargetChanged = true;
         }
-        points[0].snapTarget = null;
-        points[1].snapTarget = null;
+        points[ 0 ].snapTarget = null;
+        points[ 1 ].snapTarget = null;
       }
 
       // It costs about 5fps to do this every frame (on iPad3), so only check if the snapTargets have changed.  See #235
@@ -218,8 +218,8 @@ define( function( require ) {
 
       // If the user never dragged the object, then there is no track to drop in this case, see #205
       if ( this.startedDrag ) {
-        var myPoints = [track.controlPoints[0], track.controlPoints[track.controlPoints.length - 1]];
-        if ( myPoints[0].snapTarget || myPoints[1].snapTarget ) {
+        var myPoints = [ track.controlPoints[ 0 ], track.controlPoints[ track.controlPoints.length - 1 ] ];
+        if ( myPoints[ 0 ].snapTarget || myPoints[ 1 ].snapTarget ) {
           model.joinTracks( track );
         }
 

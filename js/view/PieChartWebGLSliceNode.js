@@ -24,14 +24,14 @@ define( function( require ) {
    * @param {Property<Boolean>} pieChartVisibleProperty
    * @constructor
    */
-    // TODO: unused params?
+  // TODO: unused params?
   function PieChartWebGLSliceNode( color, radiusProperty, startAngleProperty, extentProperty, pieChartVisibleProperty ) {
 
     this.color = color;
     this.radiusProperty = radiusProperty;
     this.startAngleProperty = startAngleProperty;
     this.extentProperty = extentProperty;
-    WebGLNode.call( this, {canvasBounds: new Bounds2( 0, 0, 100, 100 )} );
+    WebGLNode.call( this, { canvasBounds: new Bounds2( 0, 0, 100, 100 ) } );
 
     this.invalidatePaint();
   }
@@ -53,7 +53,7 @@ define( function( require ) {
       var numSamples = 1000;
       this.numSamples = numSamples;
 
-      var vertices = [centerX, centerY];
+      var vertices = [ centerX, centerY ];
 
       var indexToVertex = function( i ) {
         var angle = -Math.PI * 2 / numSamples * i;

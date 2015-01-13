@@ -57,7 +57,7 @@ define( function( require ) {
 
     // Create a label that appears under one of the bars
     var createLabel = function( index, title, color ) {
-      var text = new Text( title, {fill: color, font: new PhetFont( 14 ), pickable: false} );
+      var text = new Text( title, { fill: color, font: new PhetFont( 14 ), pickable: false } );
       text.rotate( -Math.PI / 2 );
       text.centerX = barGraphBackground.getBarX( index ) + barGraphBackground.barWidth / 2;
       text.top = barGraphBackground.originY + 2;
@@ -78,22 +78,24 @@ define( function( require ) {
       clearThermalButton.enabled = allowClearingThermalEnergy;
     } );
 
-    var titleNode = new Text( energyString, {x: 5, top: 0, font: new PhetFont( 14 ), pickable: false} );
-    var contentNode = new Rectangle( 0, 0, contentWidth, contentHeight, {children: [
-      new ArrowNode( insetX, this.originY, insetX, insetY, {pickable: false} ),
-      titleNode,
-      new Line( insetX, this.originY, contentWidth - insetX, this.originY, {lineWidth: 1, stroke: 'gray', pickable: false} ),
-      kineticLabel,
-      potentialLabel,
-      thermalLabel,
-      totalLabel,
-      clearThermalButton
-    ]} );
+    var titleNode = new Text( energyString, { x: 5, top: 0, font: new PhetFont( 14 ), pickable: false } );
+    var contentNode = new Rectangle( 0, 0, contentWidth, contentHeight, {
+      children: [
+        new ArrowNode( insetX, this.originY, insetX, insetY, { pickable: false } ),
+        titleNode,
+        new Line( insetX, this.originY, contentWidth - insetX, this.originY, { lineWidth: 1, stroke: 'gray', pickable: false } ),
+        kineticLabel,
+        potentialLabel,
+        thermalLabel,
+        totalLabel,
+        clearThermalButton
+      ]
+    } );
 
     // Center the bar chart title, see #62
     titleNode.centerX = contentNode.centerX;
 
-    Panel.call( this, contentNode, { x: 10, y: 10, xMargin: 10, yMargin: 5, fill: 'white', stroke: 'gray', lineWidth: 1, resize: false} );
+    Panel.call( this, contentNode, { x: 10, y: 10, xMargin: 10, yMargin: 5, fill: 'white', stroke: 'gray', lineWidth: 1, resize: false } );
 
     // When the bar graph is shown, update the bars (because they do not get updated when invisible for performance reasons)
     barGraphVisibleProperty.linkAttribute( this, 'visible' );

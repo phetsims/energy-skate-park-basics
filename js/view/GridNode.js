@@ -31,7 +31,7 @@ define( function( require ) {
    */
   function GridNode( gridVisibleProperty, modelViewTransform ) {
     this.modelViewTransform = modelViewTransform;
-    Node.call( this, {pickable: false} );
+    Node.call( this, { pickable: false } );
 
     gridVisibleProperty.linkAttribute( this, 'visible' );
   }
@@ -51,9 +51,9 @@ define( function( require ) {
       for ( var x = 0; x < 100; x++ ) {
         var viewXPositive = this.modelViewTransform.modelToViewX( x );
         var viewXNegative = this.modelViewTransform.modelToViewX( -x );
-        thinLines.push( {x1: viewXPositive, y1: -offsetY, x2: viewXPositive, y2: lineHeight - offsetY} );
+        thinLines.push( { x1: viewXPositive, y1: -offsetY, x2: viewXPositive, y2: lineHeight - offsetY } );
         if ( x !== 0 ) {
-          thinLines.push( { x1: viewXNegative, y1: -offsetY, x2: viewXNegative, y2: lineHeight - offsetY} );
+          thinLines.push( { x1: viewXNegative, y1: -offsetY, x2: viewXNegative, y2: lineHeight - offsetY } );
         }
         if ( viewXNegative < -offsetX ) {
           break;
@@ -69,10 +69,10 @@ define( function( require ) {
         }
 
         if ( y % 2 === 0 ) {
-          thickLines.push( {x1: -offsetX, y1: viewY, x2: separation - offsetX, y2: viewY} );
+          thickLines.push( { x1: -offsetX, y1: viewY, x2: separation - offsetX, y2: viewY } );
         }
         else {
-          thinLines.push( {x1: -offsetX, y1: viewY, x2: separation - offsetX, y2: viewY} );
+          thinLines.push( { x1: -offsetX, y1: viewY, x2: separation - offsetX, y2: viewY } );
         }
 
         if ( y % 2 === 0 ) {
@@ -102,18 +102,18 @@ define( function( require ) {
       var thinLineShape = new Shape();
       var thickLineShape = new Shape();
       for ( var i = 0; i < thinLines.length; i++ ) {
-        var thinLine = thinLines[i];
+        var thinLine = thinLines[ i ];
         thinLineShape.moveTo( thinLine.x1, thinLine.y1 );
         thinLineShape.lineTo( thinLine.x2, thinLine.y2 );
       }
       for ( var k = 0; k < thickLines.length; k++ ) {
-        var thickLine = thickLines[k];
+        var thickLine = thickLines[ k ];
         thickLineShape.moveTo( thickLine.x1, thickLine.y1 );
         thickLineShape.lineTo( thickLine.x2, thickLine.y2 );
       }
       this.children = [
-        new Path( thinLineShape, {stroke: '#686868', lineWidth: 0.8} ),
-        new Path( thickLineShape, {stroke: '#686868', lineWidth: 1.8} )
+        new Path( thinLineShape, { stroke: '#686868', lineWidth: 0.8 } ),
+        new Path( thickLineShape, { stroke: '#686868', lineWidth: 1.8 } )
       ].concat( texts );
     }
   } );

@@ -76,7 +76,7 @@ define( function( require ) {
    */
   function EnergySkateParkBasicsModel( draggableTracks, frictionAllowed ) {
     if ( !window.phetModel ) {
-      window.phetModel = new PropertySet( {text: ''} );
+      window.phetModel = new PropertySet( { text: '' } );
     }
     this.frictionAllowed = frictionAllowed;
     this.draggableTracks = draggableTracks;
@@ -138,7 +138,7 @@ define( function( require ) {
       var physicalTracks = model.getPhysicalTracks();
       for ( var i = 0; i < physicalTracks.length; i++ ) {
         clearEnabled = true;
-        var physicalTrack = physicalTracks[i];
+        var physicalTrack = physicalTracks[ i ];
         if ( physicalTrack.controlPoints.length >= 3 ) {
           editEnabled = true;
         }
@@ -419,7 +419,7 @@ define( function( require ) {
       var closestMatch = null;
       var closestDistance = Number.POSITIVE_INFINITY;
       for ( var i = 0; i < physicalTracks.length; i++ ) {
-        var track = physicalTracks[i];
+        var track = physicalTracks[ i ];
 
         // PERFORMANCE/ALLOCATION maybe get closest point shouldn't return a new object allocation each time, or use
         // pooling for it, or pass in reference as an arg?
@@ -431,7 +431,7 @@ define( function( require ) {
         }
       }
       if ( closestTrack ) {
-        return {track: closestTrack, u: closestMatch.u, point: closestMatch.point};
+        return { track: closestTrack, u: closestMatch.u, point: closestMatch.point };
       }
       else {
         return null;
@@ -477,7 +477,7 @@ define( function( require ) {
       var distanceB = Util.distToSegment( b.point, initialPosition, proposedPosition );
       var distanceC = Util.distToSegment( c.point, initialPosition, proposedPosition );
 
-      var distances = [distanceA, distanceB, distanceC];
+      var distances = [ distanceA, distanceB, distanceC ];
       var minDistance = _.min( distances );
 
       var closestTrackAndPositionAndParameter = minDistance === distanceA ? a : minDistance === distanceC ? c : b;
@@ -628,7 +628,7 @@ define( function( require ) {
     },
 
     // Use a separate pooled curvature variable
-    curvatureTemp2: {r: 1, x: 0, y: 0},
+    curvatureTemp2: { r: 1, x: 0, y: 0 },
 
     // Get the normal force (Newtons) on the skater
     getNormalForce: function( skaterState ) {
@@ -730,7 +730,7 @@ define( function( require ) {
       }
     },
 
-    curvatureTemp: {r: 1, x: 0, y: 0},
+    curvatureTemp: { r: 1, x: 0, y: 0 },
 
     // Update the skater as it moves along the track, and fly off the track if it goes over a jump or off the track's end
     stepTrack: function( dt, skaterState ) {
@@ -1071,7 +1071,7 @@ define( function( require ) {
     joinTracks: function( track ) {
       var connectedPoint = track.getSnapTarget();
       for ( var i = 0; i < this.getPhysicalTracks().length; i++ ) {
-        var otherTrack = this.getPhysicalTracks()[i];
+        var otherTrack = this.getPhysicalTracks()[ i ];
         if ( otherTrack.containsControlPoint( connectedPoint ) ) {
           this.joinTrackToTrack( track, otherTrack );
           break;
@@ -1093,7 +1093,7 @@ define( function( require ) {
       this.tracks.remove( track );
 
       if ( track.controlPoints.length > 2 ) {
-        var points = _.without( track.controlPoints, track.controlPoints[controlPointIndex] );
+        var points = _.without( track.controlPoints, track.controlPoints[ controlPointIndex ] );
         var newTrack = new Track( this, this.tracks, points, true, track.getParentsOrSelf(), this.availableModelBoundsProperty );
         newTrack.physical = true;
         newTrack.dropped = true;
@@ -1126,8 +1126,8 @@ define( function( require ) {
     // deleted. It should be an inner point of a track (not an end point)
     splitControlPoint: function( track, controlPointIndex, modelAngle ) {
       var vector = Vector2.createPolar( 0.5, modelAngle );
-      var newPoint1 = new ControlPoint( track.controlPoints[controlPointIndex].sourcePosition.x - vector.x, track.controlPoints[controlPointIndex].sourcePosition.y - vector.y );
-      var newPoint2 = new ControlPoint( track.controlPoints[controlPointIndex].sourcePosition.x + vector.x, track.controlPoints[controlPointIndex].sourcePosition.y + vector.y );
+      var newPoint1 = new ControlPoint( track.controlPoints[ controlPointIndex ].sourcePosition.x - vector.x, track.controlPoints[ controlPointIndex ].sourcePosition.y - vector.y );
+      var newPoint2 = new ControlPoint( track.controlPoints[ controlPointIndex ].sourcePosition.x + vector.x, track.controlPoints[ controlPointIndex ].sourcePosition.y + vector.y );
 
       var points1 = track.controlPoints.slice( 0, controlPointIndex );
       var points2 = track.controlPoints.slice( controlPointIndex + 1, track.controlPoints.length );
@@ -1164,7 +1164,7 @@ define( function( require ) {
       if ( this.getNumberOfControlPoints() > MAX_NUMBER_CONTROL_POINTS ) {
         // find a nonphysical track, then remove it
 
-        var trackToRemove = this.getNonPhysicalTracks()[0];
+        var trackToRemove = this.getNonPhysicalTracks()[ 0 ];
         trackToRemove.trigger( 'remove' );
         this.tracks.remove( trackToRemove );
       }
@@ -1182,32 +1182,32 @@ define( function( require ) {
 
       // Join in the right direction for a & b so that the joined point is in the middle
 
-      var firstTrackForward = function() {for ( i = 0; i < a.controlPoints.length; i++ ) { points.push( a.controlPoints[i].copy() ); }};
-      var firstTrackBackward = function() {for ( i = a.controlPoints.length - 1; i >= 0; i-- ) { points.push( a.controlPoints[i].copy() ); }};
-      var secondTrackForward = function() {for ( i = 1; i < b.controlPoints.length; i++ ) {points.push( b.controlPoints[i].copy() ); }};
-      var secondTrackBackward = function() {for ( i = b.controlPoints.length - 2; i >= 0; i-- ) {points.push( b.controlPoints[i].copy() ); }};
+      var firstTrackForward = function() {for ( i = 0; i < a.controlPoints.length; i++ ) { points.push( a.controlPoints[ i ].copy() ); }};
+      var firstTrackBackward = function() {for ( i = a.controlPoints.length - 1; i >= 0; i-- ) { points.push( a.controlPoints[ i ].copy() ); }};
+      var secondTrackForward = function() {for ( i = 1; i < b.controlPoints.length; i++ ) {points.push( b.controlPoints[ i ].copy() ); }};
+      var secondTrackBackward = function() {for ( i = b.controlPoints.length - 2; i >= 0; i-- ) {points.push( b.controlPoints[ i ].copy() ); }};
 
       // Only include one copy of the snapped point
       // Forward Forward
-      if ( a.controlPoints[a.controlPoints.length - 1].snapTarget === b.controlPoints[0] ) {
+      if ( a.controlPoints[ a.controlPoints.length - 1 ].snapTarget === b.controlPoints[ 0 ] ) {
         firstTrackForward();
         secondTrackForward();
       }
 
       // Forward Backward
-      else if ( a.controlPoints[a.controlPoints.length - 1].snapTarget === b.controlPoints[b.controlPoints.length - 1] ) {
+      else if ( a.controlPoints[ a.controlPoints.length - 1 ].snapTarget === b.controlPoints[ b.controlPoints.length - 1 ] ) {
         firstTrackForward();
         secondTrackBackward();
       }
 
       // Backward Forward
-      else if ( a.controlPoints[0].snapTarget === b.controlPoints[0] ) {
+      else if ( a.controlPoints[ 0 ].snapTarget === b.controlPoints[ 0 ] ) {
         firstTrackBackward();
         secondTrackForward();
       }
 
       // Backward backward
-      else if ( a.controlPoints[0].snapTarget === b.controlPoints[b.controlPoints.length - 1] ) {
+      else if ( a.controlPoints[ 0 ].snapTarget === b.controlPoints[ b.controlPoints.length - 1 ] ) {
         firstTrackBackward();
         secondTrackBackward();
       }
@@ -1284,7 +1284,7 @@ define( function( require ) {
         properties: this.get(),
         skater: this.skater.getState( this.tracks ),
         tracks: this.tracks.getArray().map( function( track ) {
-          return {physical: track.physical, points: track.controlPoints.map( function( controlPoint ) { return controlPoint.sourcePosition; } )};
+          return { physical: track.physical, points: track.controlPoints.map( function( controlPoint ) { return controlPoint.sourcePosition; } ) };
         } )
       };
     },
@@ -1294,12 +1294,12 @@ define( function( require ) {
       // Clear old tracks
       this.tracks.clear();
       for ( var i = 0; i < state.tracks.length; i++ ) {
-        var controlPoints = state.tracks[i].points.map( function( point ) {
+        var controlPoints = state.tracks[ i ].points.map( function( point ) {
           return new ControlPoint( point.x, point.y );
         } );
         var newTrack = new Track( this, this.tracks, controlPoints, true, null, this.availableModelBoundsProperty );
-        newTrack.physical = state.tracks[i].physical;
-        newTrack.dropped = state.tracks[i].dropped;
+        newTrack.physical = state.tracks[ i ].physical;
+        newTrack.dropped = state.tracks[ i ].dropped;
         this.tracks.add( newTrack );
       }
 

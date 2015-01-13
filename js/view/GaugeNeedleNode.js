@@ -46,11 +46,11 @@ define( function( require ) {
       updateEnabledProperty: new Property( true )
     }, options );
     var lineWidth = 3;
-    var needle = new Rectangle( 0, -lineWidth / 2, options.radius, lineWidth, {fill: 'red'} );
+    var needle = new Rectangle( 0, -lineWidth / 2, options.radius, lineWidth, { fill: 'red' } );
     if ( options && options.renderer && options.renderer === 'webgl' ) {
       needle = needle.toCanvasNodeSynchronous();
     }
-    Node.call( this, {children: [needle]} );
+    Node.call( this, { children: [ needle ] } );
 
     var totalAngle = (options.numTicks - 1) * options.anglePerTick;
     var startAngle = -1 / 2 * Math.PI - totalAngle / 2;

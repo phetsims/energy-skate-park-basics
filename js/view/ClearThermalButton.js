@@ -33,7 +33,7 @@ define( function( require ) {
     var clearThermalButton = this;
     options = _.extend( { cursor: 'pointer' }, options );
 
-    var icon = new Image( trashCanImage, {scale: 0.22} );
+    var icon = new Image( trashCanImage, { scale: 0.22 } );
 
     skater.allowClearingThermalEnergyProperty.link(
       function( allowClearingThermalEnergy ) {

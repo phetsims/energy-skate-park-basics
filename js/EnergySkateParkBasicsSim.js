@@ -50,6 +50,5 @@ define( function( require ) {
     ], options );
   }
 
-  return inherit( Sim, EnergySkateParkBasicsSim, {
-  } );
+  return inherit( Sim, EnergySkateParkBasicsSim, {} );
 } );

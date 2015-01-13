@@ -39,36 +39,36 @@ define( function( require ) {
    * @constructor
    */
   function EnergySkateParkBasicsControlPanel( model ) {
-    var textOptions = {font: new PhetFont( 14 )};
+    var textOptions = { font: new PhetFont( 14 ) };
 
-    var pieChartSet = {label: new Text( pieChartString, textOptions ), icon: this.createPieChartIcon()};
-    var barGraphSet = {label: new Text( barGraphString, textOptions ), icon: this.createBarGraphIcon()};
-    var gridSet = {label: new Text( gridString, textOptions ), icon: this.createGridIcon()};
-    var speedometerSet = {label: new Text( speedString, textOptions ), icon: this.createSpeedometerIcon()};
+    var pieChartSet = { label: new Text( pieChartString, textOptions ), icon: this.createPieChartIcon() };
+    var barGraphSet = { label: new Text( barGraphString, textOptions ), icon: this.createBarGraphIcon() };
+    var gridSet = { label: new Text( gridString, textOptions ), icon: this.createGridIcon() };
+    var speedometerSet = { label: new Text( speedString, textOptions ), icon: this.createSpeedometerIcon() };
 
-    var sets = [pieChartSet, barGraphSet, gridSet, speedometerSet];
+    var sets = [ pieChartSet, barGraphSet, gridSet, speedometerSet ];
     var maxTextWidth = _.max( sets, function( itemSet ) { return itemSet.label.width; } ).label.width;
 
     // In the absence of any sun (or other) layout packages, just manually space them out so they will have the icons aligned
     var pad = function( itemSet ) {
       var padWidth = maxTextWidth - itemSet.label.width;
-      return [itemSet.label, new Rectangle( 0, 0, padWidth + 20, 20 ), itemSet.icon];
+      return [ itemSet.label, new Rectangle( 0, 0, padWidth + 20, 20 ), itemSet.icon ];
     };
 
-    var options = {boxWidth: 18};
+    var options = { boxWidth: 18 };
 
     var checkBoxChildren = [
-      new CheckBox( new HBox( {children: pad( pieChartSet )} ), model.property( 'pieChartVisible' ), options ),
-      new CheckBox( new HBox( {children: pad( barGraphSet )} ), model.property( 'barGraphVisible' ), options ),
-      new CheckBox( new HBox( {children: pad( gridSet )} ), model.property( 'gridVisible' ), options ),
-      new CheckBox( new HBox( {children: pad( speedometerSet )} ), model.property( 'speedometerVisible' ), options )];
-    var checkBoxes = new VBox( {align: 'left', spacing: 10, children: checkBoxChildren} );
+      new CheckBox( new HBox( { children: pad( pieChartSet ) } ), model.property( 'pieChartVisible' ), options ),
+      new CheckBox( new HBox( { children: pad( barGraphSet ) } ), model.property( 'barGraphVisible' ), options ),
+      new CheckBox( new HBox( { children: pad( gridSet ) } ), model.property( 'gridVisible' ), options ),
+      new CheckBox( new HBox( { children: pad( speedometerSet ) } ), model.property( 'speedometerVisible' ), options ) ];
+    var checkBoxes = new VBox( { align: 'left', spacing: 10, children: checkBoxChildren } );
 
     var massSlider = new MassSlider( model.skater.massProperty );
 
     // For 1st screen, show MassSlider
     // For 2nd and 3rd screen, show Friction Slider and Mass Slider, see #147
-    var children = [checkBoxes, massSlider];
+    var children = [ checkBoxes, massSlider ];
     if ( model.frictionAllowed ) {
       children.push( new FrictionControl( model.property( 'friction' ) ) );
     }
@@ -82,11 +82,13 @@ define( function( require ) {
 
     // Create an icon for the bar graph check box
     createBarGraphIcon: function() {
-      return new Node( {children: [
-        new Rectangle( 0, 0, 20, 20, {fill: 'white', stroke: 'black', lineWidth: 0.5} ),
-        new Rectangle( 3, 14, 5, 6, {fill: EnergySkateParkColorScheme.kineticEnergy, stroke: 'black', lineWidth: 0.5} ),
-        new Rectangle( 11, 8, 5, 12, {fill: EnergySkateParkColorScheme.potentialEnergy, stroke: 'black', lineWidth: 0.5} )
-      ]} );
+      return new Node( {
+        children: [
+          new Rectangle( 0, 0, 20, 20, { fill: 'white', stroke: 'black', lineWidth: 0.5 } ),
+          new Rectangle( 3, 14, 5, 6, { fill: EnergySkateParkColorScheme.kineticEnergy, stroke: 'black', lineWidth: 0.5 } ),
+          new Rectangle( 11, 8, 5, 12, { fill: EnergySkateParkColorScheme.potentialEnergy, stroke: 'black', lineWidth: 0.5 } )
+        ]
+      } );
     },
 
     // Create an icon for the pie chart check box
@@ -95,28 +97,32 @@ define( function( require ) {
       var x = new Shape().
         moveTo( 0, 0 ).
         ellipticalArc( 0, 0, radius, radius, 0, -Math.PI / 2, 0, false ).lineTo( 0, 0 );
-      return new Node( {children: [
-        new Circle( radius, {fill: EnergySkateParkColorScheme.potentialEnergy, lineWidth: 0.5, stroke: 'black' } ),
-        new Path( x, {fill: EnergySkateParkColorScheme.kineticEnergy, lineWidth: 0.5, stroke: 'black'} )
-      ]} );
+      return new Node( {
+        children: [
+          new Circle( radius, { fill: EnergySkateParkColorScheme.potentialEnergy, lineWidth: 0.5, stroke: 'black' } ),
+          new Path( x, { fill: EnergySkateParkColorScheme.kineticEnergy, lineWidth: 0.5, stroke: 'black' } )
+        ]
+      } );
     },
 
     // Create an icon for the grid check box
     createGridIcon: function() {
-      return new Node( {children: [
-        new Rectangle( 0, 0, 20, 20, {fill: 'white', stroke: 'black', lineWidth: 0.5} ),
-        new Line( 0, 10, 20, 10, {stroke: 'black', lineWidth: 1} ),
-        new Line( 0, 5, 20, 5, {stroke: 'black', lineWidth: 0.5} ),
-        new Line( 0, 15, 20, 15, {stroke: 'black', lineWidth: 0.5} ),
-        new Line( 10, 0, 10, 20, {stroke: 'black', lineWidth: 1} ),
-        new Line( 5, 0, 5, 20, {stroke: 'black', lineWidth: 0.5} ),
-        new Line( 15, 0, 15, 20, {stroke: 'black', lineWidth: 0.5} )
-      ]} );
+      return new Node( {
+        children: [
+          new Rectangle( 0, 0, 20, 20, { fill: 'white', stroke: 'black', lineWidth: 0.5 } ),
+          new Line( 0, 10, 20, 10, { stroke: 'black', lineWidth: 1 } ),
+          new Line( 0, 5, 20, 5, { stroke: 'black', lineWidth: 0.5 } ),
+          new Line( 0, 15, 20, 15, { stroke: 'black', lineWidth: 0.5 } ),
+          new Line( 10, 0, 10, 20, { stroke: 'black', lineWidth: 1 } ),
+          new Line( 5, 0, 5, 20, { stroke: 'black', lineWidth: 0.5 } ),
+          new Line( 15, 0, 15, 20, { stroke: 'black', lineWidth: 0.5 } )
+        ]
+      } );
     },
 
     // Create an icon for the speedometer check box
     createSpeedometerIcon: function() {
-      var node = new GaugeNode( new Property( 0 ), speedString, {min: 0, max: 10}, {pickable: false} );
+      var node = new GaugeNode( new Property( 0 ), speedString, { min: 0, max: 10 }, { pickable: false } );
       node.scale( 20 / node.width );
       return node;
     }

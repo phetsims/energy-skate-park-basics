@@ -94,7 +94,10 @@ define( function( require ) {
     // For the playground screen, show attach/detach toggle buttons
     if ( model.draggableTracks ) {
       var property = model.draggableTracks ? new Property( true ) : model.property( 'scene' ).valueEquals( 2 );
-      this.attachDetachToggleButtons = new AttachDetachToggleButtons( model.property( 'detachable' ), property, this.controlPanel.contentWidth, {top: this.controlPanel.bottom + 5, centerX: this.controlPanel.centerX} );
+      this.attachDetachToggleButtons = new AttachDetachToggleButtons( model.property( 'detachable' ), property, this.controlPanel.contentWidth, {
+        top: this.controlPanel.bottom + 5,
+        centerX: this.controlPanel.centerX
+      } );
       this.addChild( this.attachDetachToggleButtons );
     }
 
@@ -106,7 +109,7 @@ define( function( require ) {
     // Don't check whether the skater is underground since that is a rare case (only if the user is actively dragging a
     // control point near y=0 and the track curves below) and the skater will pop up again soon, see the related
     // flickering problem in #206
-    var onscreenProperty = new DerivedProperty( [model.skater.positionProperty], function( position ) {
+    var onscreenProperty = new DerivedProperty( [ model.skater.positionProperty ], function( position ) {
       if ( !view.availableModelBounds ) {
         return true;
       }
@@ -122,10 +125,10 @@ define( function( require ) {
     }
 
     // Put the pie chart legend to the right of the bar chart, see #60, #192
-    pieChartLegend.mutate( {top: barGraphBackground.top, left: barGraphBackground.right + 8} );
+    pieChartLegend.mutate( { top: barGraphBackground.top, left: barGraphBackground.right + 8 } );
 
     var playProperty = model.property( 'paused' ).not();
-    var playPauseButton = new PlayPauseButton( playProperty ).mutate( {scale: 0.6} );
+    var playPauseButton = new PlayPauseButton( playProperty ).mutate( { scale: 0.6 } );
 
     // Make the Play/Pause button bigger when it is showing the pause button, see #298
     var pauseSizeIncreaseFactor = 1.35;
@@ -136,11 +139,11 @@ define( function( require ) {
     var stepButton = new StepButton( function() { model.manualStep(); }, playProperty );
 
     // Make the step button the same size as the pause button.
-    stepButton.mutate( {scale: playPauseButton.height / stepButton.height} );
+    stepButton.mutate( { scale: playPauseButton.height / stepButton.height } );
     model.property( 'paused' ).linkAttribute( stepButton, 'enabled' );
 
-    this.addChild( playPauseButton.mutate( {centerX: this.layoutBounds.centerX, bottom: this.layoutBounds.maxY - 15} ) );
-    this.addChild( stepButton.mutate( {left: playPauseButton.right + 15, centerY: playPauseButton.centerY} ) );
+    this.addChild( playPauseButton.mutate( { centerX: this.layoutBounds.centerX, bottom: this.layoutBounds.maxY - 15 } ) );
+    this.addChild( stepButton.mutate( { left: playPauseButton.right + 15, centerY: playPauseButton.centerY } ) );
 
     this.resetAllButton = new ResetAllButton( {
       listener: model.reset.bind( model ),
@@ -200,9 +203,9 @@ define( function( require ) {
       } );
 
       model.property( 'scene' ).link( function( scene ) {
-        trackNodes[0].visible = (scene === 0);
-        trackNodes[1].visible = (scene === 1);
-        trackNodes[2].visible = (scene === 2);
+        trackNodes[ 0 ].visible = (scene === 0);
+        trackNodes[ 1 ].visible = (scene === 1);
+        trackNodes[ 2 ].visible = (scene === 2);
       } );
     }
     else {
@@ -231,10 +234,10 @@ define( function( require ) {
       var padding = 10;
 
       var trackCreationPanel = new Rectangle(
-        (interactiveTrackNodes[0].left - padding / 2),
-        (interactiveTrackNodes[0].top - padding / 2),
-        (interactiveTrackNodes[0].width + padding),
-        (interactiveTrackNodes[0].height + padding),
+        (interactiveTrackNodes[ 0 ].left - padding / 2),
+        (interactiveTrackNodes[ 0 ].top - padding / 2),
+        (interactiveTrackNodes[ 0 ].width + padding),
+        (interactiveTrackNodes[ 0 ].height + padding),
         6,
         6, {
           fill: 'white',
@@ -260,7 +263,7 @@ define( function( require ) {
             lineToPoint( tip ).
             lineToPoint( tail.plus( orthogonalUnitVector.times( -headWidth / 2 ) ) ).
             lineToPoint( tail ).close(),
-          {fill: 'black'} );
+          { fill: 'black' } );
       };
 
       var rightCurve = new Path( new Shape().moveTo( 0, 0 ).quadraticCurveTo( -xControl, yControl, -xTip, yTip ),
@@ -268,7 +271,7 @@ define( function( require ) {
       var arrowHead = createArrowhead( Math.PI - Math.PI / 3, new Vector2( -xTip, yTip ) );
 
       // Create the clear button, and match the size to the size of the track toolbox
-      var clearNode = new Image( eraser, {scale: 0.4475} );
+      var clearNode = new Image( eraser, { scale: 0.4475 } );
 
       var clearButtonEnabledProperty = model.property( 'clearButtonEnabled' );
       clearButtonEnabledProperty.link( function( clearButtonEnabled ) {
@@ -276,11 +279,11 @@ define( function( require ) {
         arrowHead.fill = clearButtonEnabled ? 'black' : 'gray';
       } );
 
-      var clearButton = new RectangularPushButton( {content: clearNode, baseColor: new Color( 221, 210, 32 )} );
+      var clearButton = new RectangularPushButton( { content: clearNode, baseColor: new Color( 221, 210, 32 ) } );
       clearButtonEnabledProperty.linkAttribute( clearButton, 'enabled' );
       clearButton.addListener( function() {model.clearTracks();} );
 
-      this.addChild( clearButton.mutate( {left: 5, centerY: trackCreationPanel.centerY} ) );
+      this.addChild( clearButton.mutate( { left: 5, centerY: trackCreationPanel.centerY } ) );
     }
 
     this.addChild( trackLayer );
@@ -307,7 +310,7 @@ define( function( require ) {
       {
         min: 0,
         max: 20
-      }, {renderer: renderer} );
+      }, { renderer: renderer } );
     model.property( 'speedometerVisible' ).linkAttribute( gaugeNeedleNode, 'visible' );
     gaugeNeedleNode.x = speedometerNode.x;
     gaugeNeedleNode.y = speedometerNode.y;
@@ -322,7 +325,7 @@ define( function( require ) {
     // Buttons to return the skater when she is offscreen, see #219
     var iconScale = 0.4;
     var returnSkaterToStartingPointButton = new RectangularPushButton( {
-      content: new Image( skaterIconImage, {scale: iconScale} ),
+      content: new Image( skaterIconImage, { scale: iconScale } ),
 
       // green means "go" since the skater will likely start moving at this point
       baseColor: EnergySkateParkColorScheme.kineticEnergy,
@@ -330,7 +333,7 @@ define( function( require ) {
     } );
 
     var returnSkaterToGroundButton = new RectangularPushButton( {
-      content: new Image( skaterIconImage, {scale: iconScale} ),
+      content: new Image( skaterIconImage, { scale: iconScale } ),
       centerBottom: modelViewTransform.modelToViewPosition( model.skater.startingPosition ),
       baseColor: '#f4514e', // red for stop, since the skater will be stopped on the ground.
       listener: function() { model.skater.resetPosition(); }
@@ -361,7 +364,7 @@ define( function( require ) {
 
     // For debugging the visible bounds
     if ( showAvailableBounds ) {
-      this.viewBoundsPath = new Path( null, {pickable: false, stroke: 'red', lineWidth: 10} );
+      this.viewBoundsPath = new Path( null, { pickable: false, stroke: 'red', lineWidth: 10 } );
       this.addChild( this.viewBoundsPath );
     }
   }

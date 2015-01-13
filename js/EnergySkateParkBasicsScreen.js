@@ -19,7 +19,7 @@ define( function( require ) {
     Screen.call( this, name, new Image( homescreenIcon ),
       function() { return new EnergySkateParkBasicsModel( draggableTracks, friction ); },
       function( model ) { return new EnergySkateParkBasicsScreenView( model ); },
-      {navigationBarIcon: new Image( navbarIcon )} );
+      { navigationBarIcon: new Image( navbarIcon ) } );
   }
 
   return inherit( Screen, EnergySkateParkBasicsScreen, {

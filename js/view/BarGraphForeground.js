@@ -58,10 +58,10 @@ define( function( require ) {
         return answer;
       } );
       var barX = getBarX( index );
-      var bar = new Rectangle( barX, 0, barWidth, 100, {fill: color, pickable: false, renderer: barRenderer} );
+      var bar = new Rectangle( barX, 0, barWidth, 100, { fill: color, pickable: false, renderer: barRenderer } );
 
       // update the bars when the graph becomes visible, and skip update when they are invisible
-      DerivedProperty.multilink( [barHeightProperty, barGraphVisibleProperty], function( barHeight, visible ) {
+      DerivedProperty.multilink( [ barHeightProperty, barGraphVisibleProperty ], function( barHeight, visible ) {
         if ( visible ) {
           // PERFORMANCE/ALLOCATION: Possible performance improvement to avoid allocations in Rectangle.setRect
 
@@ -92,7 +92,8 @@ define( function( require ) {
         potentialBar,
         thermalBar,
         totalBar
-      ]} );
+      ]
+    } );
 
     // When the bar graph is shown, update the bars (because they do not get updated when invisible for performance reasons)
     barGraphVisibleProperty.linkAttribute( this, 'visible' );

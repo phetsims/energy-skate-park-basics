@@ -27,8 +27,11 @@ define( function( require ) {
     var dilateX = 5;
     var dilateY = 2;
     var radioButtonRadius = 7.1;
-    var slowMotionButton = new AquaRadioButton( speedProperty, 'slow', new Text( slowMotionString, {font: new PhetFont( 15 )} ), {radius: radioButtonRadius} );
-    var normalButton = new AquaRadioButton( speedProperty, 'normal', new Text( normalString, {font: new PhetFont( 15 )} ), {radius: radioButtonRadius, x: 130} );
+    var slowMotionButton = new AquaRadioButton( speedProperty, 'slow', new Text( slowMotionString, { font: new PhetFont( 15 ) } ), { radius: radioButtonRadius } );
+    var normalButton = new AquaRadioButton( speedProperty, 'normal', new Text( normalString, { font: new PhetFont( 15 ) } ), {
+      radius: radioButtonRadius,
+      x: 130
+    } );
     slowMotionButton.touchArea = slowMotionButton.localBounds.dilatedXY( dilateX, dilateY );
     normalButton.touchArea = normalButton.localBounds.dilatedXY( dilateX, dilateY );
     VBox.call( this, {
@@ -37,7 +40,8 @@ define( function( require ) {
       children: [
         slowMotionButton,
         normalButton
-      ]} );
+      ]
+    } );
   }
 
   return inherit( VBox, PlaybackSpeedControl );

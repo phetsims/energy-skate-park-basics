@@ -29,7 +29,7 @@ define( function( require ) {
     var availableBoundsProperty = trackNode.availableBoundsProperty;
 
     var controlPointNode = this;
-    var controlPoint = track.controlPoints[i];
+    var controlPoint = track.controlPoints[ i ];
 
     // Default colors for the control point fill and highlight
     var fill = 'red';
@@ -124,14 +124,14 @@ define( function( require ) {
             var bestMatch = null;
 
             for ( var i = 0; i < tracks.length; i++ ) {
-              var t = tracks[i];
+              var t = tracks[ i ];
               if ( t !== track ) {
 
                 // don't match inner points
-                var otherPoints = [t.controlPoints[0], t.controlPoints[t.controlPoints.length - 1]];
+                var otherPoints = [ t.controlPoints[ 0 ], t.controlPoints[ t.controlPoints.length - 1 ] ];
 
                 for ( var k = 0; k < otherPoints.length; k++ ) {
-                  var otherPoint = otherPoints[k];
+                  var otherPoint = otherPoints[ k ];
                   var distance = controlPoint.sourcePosition.distance( otherPoint.position );
 
                   if ( distance < bestDistance ) {
@@ -168,7 +168,7 @@ define( function( require ) {
             model.joinTracks( track );
           }
           else {
-            track.smoothPointOfHighestCurvature( [i] );
+            track.smoothPointOfHighestCurvature( [ i ] );
             model.trackModified( track );
           }
           track.bumpAboveGround();
@@ -178,7 +178,7 @@ define( function( require ) {
           // Threshold at a few drag events in case the user didn't mean to drag it but accidentally moved it a few pixels.
           // Make sure the track hasn't recently detached (was seen twice in fuzzMouse=100 testing)
           if ( dragEvents <= 3 && trackNode.parents.length > 0 ) {
-            var controlPointUI = new ControlPointUI( model, track, i, modelViewTransform, trackNode.parents[0] );
+            var controlPointUI = new ControlPointUI( model, track, i, modelViewTransform, trackNode.parents[ 0 ] );
 
             // If the track was removed, get rid of the buttons
             track.on( 'remove', function() { controlPointUI.detach(); } );
@@ -186,7 +186,7 @@ define( function( require ) {
             // If the track has translated, hide the buttons, see #272
             track.on( 'translated', function() { controlPointUI.detach();} );
 
-            trackNode.parents[0].addChild( controlPointUI );
+            trackNode.parents[ 0 ].addChild( controlPointUI );
           }
 
           if ( window.phetcommon.getQueryParameter( 'debugTrack' ) ) {

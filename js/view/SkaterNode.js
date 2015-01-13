@@ -48,7 +48,7 @@ define( function( require ) {
     var leftSkaterImageNode = new Image( skaterLeftImage, { cursor: 'pointer' } );
     var rightSkaterImageNode = new Image( skaterRightImage, { cursor: 'pointer' } );
 
-    Node.call( this, {children: [leftSkaterImageNode, rightSkaterImageNode], renderer: renderer} );
+    Node.call( this, { children: [ leftSkaterImageNode, rightSkaterImageNode ], renderer: renderer } );
 
     skater.directionProperty.link( function( direction ) {
       leftSkaterImageNode.visible = direction === 'left';
@@ -90,7 +90,7 @@ define( function( require ) {
     } );
 
     // Show a red dot in the bottom center as the important particle model coordinate
-    var circle = new Circle( 8, {fill: 'red', x: imageWidth / 2, y: imageHeight } );
+    var circle = new Circle( 8, { fill: 'red', x: imageWidth / 2, y: imageHeight } );
     if ( renderer === 'webgl' ) {
       circle = circle.toCanvasNodeSynchronous();
     }
