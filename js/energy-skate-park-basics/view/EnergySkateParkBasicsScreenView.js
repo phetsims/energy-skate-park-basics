@@ -291,6 +291,10 @@ define( function( require ) {
     // Check to see if WebGL was prevented by a query parameter
     var allowWebGL = window.phetcommon.getQueryParameter( 'webgl' ) !== 'false';
 
+    // Hack to disable WebGL until Energy Skate Park: Basics is working with lastest master branch
+    // TODO: This should be removed once webgl support is restored in scenery
+    allowWebGL = false;
+
     var webGLSupported = Util.isWebGLSupported && allowWebGL;
 
     // Use WebGL where available, but not on IE, due to https://github.com/phetsims/energy-skate-park-basics/issues/277
