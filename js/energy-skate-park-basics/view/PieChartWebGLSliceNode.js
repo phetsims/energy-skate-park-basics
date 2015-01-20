@@ -13,7 +13,6 @@ define( function( require ) {
   var WebGLNode = require( 'SCENERY/nodes/WebGLNode' );
   var Bounds2 = require( 'DOT/Bounds2' );
   var Matrix4 = require( 'DOT/Matrix4' );
-  var WebGLLayer = require( 'SCENERY/layers/WebGLLayer' );
   var Color = require( 'SCENERY/util/Color' );
 
   /**
