@@ -28,13 +28,13 @@ define( function( require ) {
   // modules
   var inherit = require( 'PHET_CORE/inherit' );
   var PropertySet = require( 'AXON/PropertySet' );
-  var Skater = require( 'ENERGY_SKATE_PARK_BASICS/model/Skater' );
-  var DebugTracks = require( 'ENERGY_SKATE_PARK_BASICS/model/DebugTracks' );
-  var Track = require( 'ENERGY_SKATE_PARK_BASICS/model/Track' );
-  var ControlPoint = require( 'ENERGY_SKATE_PARK_BASICS/model/ControlPoint' );
+  var Skater = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/model/Skater' );
+  var DebugTracks = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/model/DebugTracks' );
+  var Track = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/model/Track' );
+  var ControlPoint = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/model/ControlPoint' );
   var Vector2 = require( 'DOT/Vector2' );
   var ObservableArray = require( 'AXON/ObservableArray' );
-  var SkaterState = require( 'ENERGY_SKATE_PARK_BASICS/model/SkaterState' );
+  var SkaterState = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/model/SkaterState' );
   var Util = require( 'DOT/Util' );
 
   // Reuse empty object for creating SkaterStates to avoid allocations

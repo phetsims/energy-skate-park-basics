@@ -11,8 +11,8 @@ define( function( require ) {
 
   // modules
   var inherit = require( 'PHET_CORE/inherit' );
-  var Track = require( 'ENERGY_SKATE_PARK_BASICS/model/Track' );
-  var ControlPoint = require( 'ENERGY_SKATE_PARK_BASICS/model/ControlPoint' );
+  var Track = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/model/Track' );
+  var ControlPoint = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/model/ControlPoint' );
   var Vector2 = require( 'DOT/Vector2' );
 
   function DebugTrack() {

@@ -9,7 +9,7 @@ define( function( require ) {
   'use strict';
 
   var SimLauncher = require( 'JOIST/SimLauncher' );
-  var EnergySkateParkBasicsSim = require( 'ENERGY_SKATE_PARK_BASICS/EnergySkateParkBasicsSim' );
+  var EnergySkateParkBasicsSim = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/EnergySkateParkBasicsSim' );
 
   // Fix a circular loading problem when using this in EnergySkateParkColorScheme
   require( 'SCENERY/util/Color' );

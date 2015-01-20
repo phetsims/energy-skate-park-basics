@@ -13,8 +13,8 @@ define( function( require ) {
   var Node = require( 'SCENERY/nodes/Node' );
   var DerivedProperty = require( 'AXON/DerivedProperty' );
   var Property = require( 'AXON/Property' );
-  var PieChartWebGLSliceNode = require( 'ENERGY_SKATE_PARK_BASICS/view/PieChartWebGLSliceNode' );
-  var EnergySkateParkColorScheme = require( 'ENERGY_SKATE_PARK_BASICS/view/EnergySkateParkColorScheme' );
+  var PieChartWebGLSliceNode = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/view/PieChartWebGLSliceNode' );
+  var EnergySkateParkColorScheme = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/view/EnergySkateParkColorScheme' );
 
   /**
    * @param {Skater} skater the skater model

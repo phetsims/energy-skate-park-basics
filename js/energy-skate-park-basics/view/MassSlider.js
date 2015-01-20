@@ -14,7 +14,7 @@ define( function( require ) {
   var Text = require( 'SCENERY/nodes/Text' );
   var PhetFont = require( 'SCENERY_PHET/PhetFont' );
   var HSlider = require( 'SUN/HSlider' );
-  var Constants = require( 'ENERGY_SKATE_PARK_BASICS/Constants' );
+  var Constants = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/Constants' );
 
   // strings
   var skaterMassString = require( 'string!ENERGY_SKATE_PARK_BASICS/controls.mass' );

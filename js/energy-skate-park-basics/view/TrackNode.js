@@ -16,9 +16,9 @@ define( function( require ) {
   var Path = require( 'SCENERY/nodes/Path' );
   var Shape = require( 'KITE/Shape' );
   var LineStyles = require( 'KITE/util/LineStyles' );
-  var SplineEvaluation = require( 'ENERGY_SKATE_PARK_BASICS/model/SplineEvaluation' );
-  var ControlPointNode = require( 'ENERGY_SKATE_PARK_BASICS/view/ControlPointNode' );
-  var TrackDragHandler = require( 'ENERGY_SKATE_PARK_BASICS/view/TrackDragHandler' );
+  var SplineEvaluation = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/model/SplineEvaluation' );
+  var ControlPointNode = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/view/ControlPointNode' );
+  var TrackDragHandler = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/view/TrackDragHandler' );
   var dot = require( 'DOT/dot' );
 
   // constants
