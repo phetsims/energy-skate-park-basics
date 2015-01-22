@@ -15,6 +15,9 @@ define( function( require ) {
   var Matrix4 = require( 'DOT/Matrix4' );
   var Color = require( 'SCENERY/util/Color' );
 
+  // Hack workaround to satisfy lint until WebGL support is restored
+  var WebGLLayer = null;
+
   /**
    * @param {Color} color
    * @param {Property<Number>} radiusProperty
