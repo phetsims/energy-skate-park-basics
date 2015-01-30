@@ -75,9 +75,12 @@ define( function( require ) {
    * @constructor
    */
   function EnergySkateParkBasicsModel( draggableTracks, frictionAllowed ) {
-    if ( !window.phetModel ) {
-      window.phetModel = new PropertySet( { text: '' } );
-    }
+
+    //TODO document what this global is used for
+    assert && assert( phet );
+    phet.enerySkateParkBasics = phet.enerySkateParkBasics || {};
+    phet.enerySkateParkBasics.model = phet.enerySkateParkBasics.model || new PropertySet( { text: '' } );
+
     this.frictionAllowed = frictionAllowed;
     this.draggableTracks = draggableTracks;
 
