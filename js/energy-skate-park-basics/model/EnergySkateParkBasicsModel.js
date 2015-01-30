@@ -78,8 +78,8 @@ define( function( require ) {
 
     //TODO document what this global is used for
     assert && assert( phet );
-    phet.enerySkateParkBasics = phet.enerySkateParkBasics || {};
-    phet.enerySkateParkBasics.model = phet.enerySkateParkBasics.model || new PropertySet( { text: '' } );
+    phet.energySkateParkBasics = phet.energySkateParkBasics || {};
+    phet.energySkateParkBasics.model = phet.energySkateParkBasics.model || new PropertySet( { text: '' } );
 
     this.frictionAllowed = frictionAllowed;
     this.draggableTracks = draggableTracks;
