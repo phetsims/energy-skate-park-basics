@@ -76,11 +76,6 @@ define( function( require ) {
    */
   function EnergySkateParkBasicsModel( draggableTracks, frictionAllowed ) {
 
-    //TODO document what this global is used for
-    assert && assert( phet );
-    phet.energySkateParkBasics = phet.energySkateParkBasics || {};
-    phet.energySkateParkBasics.model = phet.energySkateParkBasics.model || new PropertySet( { text: '' } );
-
     this.frictionAllowed = frictionAllowed;
     this.draggableTracks = draggableTracks;
 
