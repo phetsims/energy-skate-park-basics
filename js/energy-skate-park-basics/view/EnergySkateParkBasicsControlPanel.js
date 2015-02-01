@@ -75,7 +75,7 @@ define( function( require ) {
     var content = new VBox( { spacing: 4, children: children } );
 
     this.contentWidth = content.width;
-    Panel.call( this, content, { xMargin: 10, yMargin: 5, fill: '#F0F0F0', stroke: null, lineWidth: null, resize: false } );
+    Panel.call( this, content, { xMargin: 10, yMargin: 5, fill: '#F0F0F0', stroke: null, resize: false } );
   }
 
   return inherit( Panel, EnergySkateParkBasicsControlPanel, {

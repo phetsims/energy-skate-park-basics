@@ -40,7 +40,7 @@ define( function( require ) {
     this.availableBoundsProperty = availableBoundsProperty;
 
     this.road = new Path( null, { fill: 'gray', cursor: track.interactive ? 'pointer' : 'default' } );
-    this.centerLine = new Path( null, { stroke: 'black', lineWidth: '1.2', lineDash: [ 11, 8 ] } );
+    this.centerLine = new Path( null, { stroke: 'black', lineWidth: 1.2, lineDash: [ 11, 8 ] } );
     model.property( 'detachable' ).link( function( detachable ) {
       trackNode.centerLine.lineDash = detachable ? null : [ 11, 8 ];
     } );
