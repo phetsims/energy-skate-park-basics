@@ -11,7 +11,6 @@ define( function( require ) {
   // modules
   var inherit = require( 'PHET_CORE/inherit' );
   var Node = require( 'SCENERY/nodes/Node' );
-  var DerivedProperty = require( 'AXON/DerivedProperty' );
   var Property = require( 'AXON/Property' );
   var PieChartWebGLSliceNode = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/view/PieChartWebGLSliceNode' );
   var EnergySkateParkColorScheme = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/view/EnergySkateParkColorScheme' );
@@ -69,7 +68,7 @@ define( function( require ) {
     } );
 
     var plus = function( a, b ) {
-      return DerivedProperty.multilink( [ a, b ], function( a, b ) {
+      return Property.multilink( [ a, b ], function( a, b ) {
         return a + b;
       } );
     };
@@ -77,7 +76,7 @@ define( function( require ) {
     var pieStroke = 1;
 
     // TODO: why did Property.multilink not work here?
-    var outlineRadiusProperty = DerivedProperty.multilink( [ pieChartRadiusProperty ], function( pieChartRadius ) {
+    var outlineRadiusProperty = Property.multilink( [ pieChartRadiusProperty ], function( pieChartRadius ) {
 
       // If any slice is too small, then don't show it.  Use the same rules as the non-webgl pie chart, see #136
       if ( pieChartRadius <= 0.05 ) {

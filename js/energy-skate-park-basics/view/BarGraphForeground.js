@@ -13,7 +13,7 @@ define( function( require ) {
   var inherit = require( 'PHET_CORE/inherit' );
   var Rectangle = require( 'SCENERY/nodes/Rectangle' );
   var EnergySkateParkColorScheme = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/view/EnergySkateParkColorScheme' );
-  var DerivedProperty = require( 'AXON/DerivedProperty' );
+  var Property = require( 'AXON/Property' );
   var Node = require( 'SCENERY/nodes/Node' );
 
   /**
@@ -61,7 +61,7 @@ define( function( require ) {
       var bar = new Rectangle( barX, 0, barWidth, 100, { fill: color, pickable: false, renderer: barRenderer } );
 
       // update the bars when the graph becomes visible, and skip update when they are invisible
-      DerivedProperty.multilink( [ barHeightProperty, barGraphVisibleProperty ], function( barHeight, visible ) {
+      Property.multilink( [ barHeightProperty, barGraphVisibleProperty ], function( barHeight, visible ) {
         if ( visible ) {
           // PERFORMANCE/ALLOCATION: Possible performance improvement to avoid allocations in Rectangle.setRect
 
