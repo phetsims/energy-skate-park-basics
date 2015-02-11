@@ -24,7 +24,7 @@ define( function( require ) {
 
         var controlPoints = null;
         var track = null;
-        if ( phet.phetcommon.getQueryParameter( 'debugTrack' ) === '1' ) {
+        if ( phet.chipper.getQueryParameter( 'debugTrack' ) === '1' ) {
 
           model.detachable = true;
           // The skater falls through model track
@@ -38,7 +38,7 @@ define( function( require ) {
         }
 
         // Skater stutters and slows going over the hump
-        if ( phet.phetcommon.getQueryParameter( 'debugTrack' ) === '2' ) {
+        if ( phet.chipper.getQueryParameter( 'debugTrack' ) === '2' ) {
 
           model.detachable = true;
           // The skater falls through model track
@@ -52,7 +52,7 @@ define( function( require ) {
         }
 
         // Tricky one--handled OK
-        if ( phet.phetcommon.getQueryParameter( 'debugTrack' ) === '3' ) {
+        if ( phet.chipper.getQueryParameter( 'debugTrack' ) === '3' ) {
 
           model.detachable = true;
           // The skater falls through model track
@@ -66,7 +66,7 @@ define( function( require ) {
         }
 
         // Wide loop, OK
-        if ( phet.phetcommon.getQueryParameter( 'debugTrack' ) === '4' ) {
+        if ( phet.chipper.getQueryParameter( 'debugTrack' ) === '4' ) {
 
           model.detachable = true;
           // The skater falls through model track
@@ -80,7 +80,7 @@ define( function( require ) {
         }
 
         // Flickering return skater button, PROBLEM
-        if ( phet.phetcommon.getQueryParameter( 'debugTrack' ) === '5' ) {
+        if ( phet.chipper.getQueryParameter( 'debugTrack' ) === '5' ) {
 
           model.detachable = true;
           // The skater falls through model track
@@ -94,7 +94,7 @@ define( function( require ) {
         }
 
         // Passes through track, PROBLEM
-        if ( phet.phetcommon.getQueryParameter( 'debugTrack' ) === '6' ) {
+        if ( phet.chipper.getQueryParameter( 'debugTrack' ) === '6' ) {
 
           model.detachable = true;
           // The skater falls through model track
@@ -108,7 +108,7 @@ define( function( require ) {
         }
 
         // Falls through bottom, PROBLEM
-        if ( phet.phetcommon.getQueryParameter( 'debugTrack' ) === '7' ) {
+        if ( phet.chipper.getQueryParameter( 'debugTrack' ) === '7' ) {
 
           model.detachable = true;
           // The skater falls through model track
@@ -122,7 +122,7 @@ define( function( require ) {
         }
 
         // Falls through loop, PROBLEM
-        if ( phet.phetcommon.getQueryParameter( 'debugTrack' ) === '8' ) {
+        if ( phet.chipper.getQueryParameter( 'debugTrack' ) === '8' ) {
 
           model.detachable = true;
           // The skater falls through model track
@@ -136,7 +136,7 @@ define( function( require ) {
         }
 
         // Pops upside down in loop, PROBLEM
-        if ( phet.phetcommon.getQueryParameter( 'debugTrack' ) === '9' ) {
+        if ( phet.chipper.getQueryParameter( 'debugTrack' ) === '9' ) {
 
           model.detachable = true;
           // The skater falls through model track
@@ -150,7 +150,7 @@ define( function( require ) {
           model.tracks.add( track );
         }
 
-        if ( phet.phetcommon.getQueryParameter( 'debugTrack' ) === '10' ) {
+        if ( phet.chipper.getQueryParameter( 'debugTrack' ) === '10' ) {
 
           model.detachable = true;
           // The skater falls through model track
@@ -164,7 +164,7 @@ define( function( require ) {
           model.tracks.add( track );
         }
 
-        if ( phet.phetcommon.getQueryParameter( 'debugTrack' ) === '11' ) {
+        if ( phet.chipper.getQueryParameter( 'debugTrack' ) === '11' ) {
 
           model.detachable = true;
           // The skater falls through model track
@@ -178,7 +178,7 @@ define( function( require ) {
           model.tracks.add( track );
         }
 
-        if ( phet.phetcommon.getQueryParameter( 'debugTrack' ) === '12' ) {
+        if ( phet.chipper.getQueryParameter( 'debugTrack' ) === '12' ) {
 
           model.detachable = true;
           // The skater falls through model track
@@ -191,7 +191,7 @@ define( function( require ) {
           track.physical = true;
           model.tracks.add( track );
         }
-        if ( phet.phetcommon.getQueryParameter( 'debugTrack' ) === '13' ) {
+        if ( phet.chipper.getQueryParameter( 'debugTrack' ) === '13' ) {
 
           model.detachable = false;
           // The skater falls through model track
@@ -204,7 +204,7 @@ define( function( require ) {
           track.physical = true;
           model.tracks.add( track );
         }
-        if ( phet.phetcommon.getQueryParameter( 'debugTrack' ) === '14' ) {
+        if ( phet.chipper.getQueryParameter( 'debugTrack' ) === '14' ) {
           model.detachable = true;
           model.skater.position.set( new Vector2( -6.698445595854922, 6.5278756476683935 ) );
           model.skater.released( 0, 0 );
@@ -241,7 +241,7 @@ define( function( require ) {
         }
 
         //Test decrease in thermal energy, see https://github.com/phetsims/energy-skate-park-basics/issues/141#issuecomment-59395426
-        if ( phet.phetcommon.getQueryParameter( 'debugTrack' ) === '15' ) {
+        if ( phet.chipper.getQueryParameter( 'debugTrack' ) === '15' ) {
           model.detachable = true;
           model.skater.position.set( new Vector2( -6.698445595854922, 6.5278756476683935 ) );
           model.skater.released( 0, 0 );

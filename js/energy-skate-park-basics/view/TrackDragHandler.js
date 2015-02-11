@@ -227,7 +227,7 @@ define( function( require ) {
         track.dragging = false;
         track.dropped = true;
 
-        if ( phet.phetcommon.getQueryParameter( 'debugTrack' ) ) {
+        if ( phet.chipper.getQueryParameter( 'debugTrack' ) ) {
           console.log( track.getDebugString() );
         }
         this.startedDrag = false;

@@ -53,10 +53,10 @@ define( function( require ) {
   function isApproxEqual( a, b, tolerance ) { return Math.abs( a - b ) <= tolerance; }
 
   // Flag to enable debugging for physics issues
-  var debug = phet.phetcommon.getQueryParameter( 'debugLog' ) ? function() {
+  var debug = phet.chipper.getQueryParameter( 'debugLog' ) ? function() {
     console.log.apply( console, arguments );
   } : null;
-  var debugAttachDetach = phet.phetcommon.getQueryParameter( 'debugAttachDetach' ) ? function() {
+  var debugAttachDetach = phet.chipper.getQueryParameter( 'debugAttachDetach' ) ? function() {
     console.log.apply( console, arguments );
   } : null;
 
@@ -114,7 +114,7 @@ define( function( require ) {
       availableModelBounds: null
     } );
 
-    if ( phet.phetcommon.getQueryParameter( 'debugTrack' ) ) {
+    if ( phet.chipper.getQueryParameter( 'debugTrack' ) ) {
       this.frictionProperty.debug( 'friction' );
     }
 
@@ -202,7 +202,7 @@ define( function( require ) {
       this.addDraggableTracks();
     }
 
-    if ( phet.phetcommon.getQueryParameter( 'debugTrack' ) ) {
+    if ( phet.chipper.getQueryParameter( 'debugTrack' ) ) {
       DebugTracks.init( this );
     }
   }

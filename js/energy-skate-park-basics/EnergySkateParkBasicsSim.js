@@ -39,7 +39,7 @@ define( function( require ) {
         qualityAssurance: 'Steele Dalton, Oliver Orejola' + indent + 'Arnab Purkayastha, Bryan Yoelin'
       },
 
-      showSaveAndLoad: phet.phetcommon.getQueryParameter( 'showSaveAndLoad' ),
+      showSaveAndLoad: phet.chipper.getQueryParameter( 'showSaveAndLoad' ),
       screenDisplayStrategy: 'setChildren'
     };
 

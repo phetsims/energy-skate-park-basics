@@ -189,7 +189,7 @@ define( function( require ) {
             trackNode.parents[ 0 ].addChild( controlPointUI );
           }
 
-          if ( phet.phetcommon.getQueryParameter( 'debugTrack' ) ) {
+          if ( phet.chipper.getQueryParameter( 'debugTrack' ) ) {
             console.log( track.getDebugString() );
           }
         }

@@ -289,7 +289,7 @@ define( function( require ) {
     this.addChild( trackLayer );
 
     // Check to see if WebGL was prevented by a query parameter
-    var allowWebGL = phet.phetcommon.getQueryParameter( 'webgl' ) !== 'false';
+    var allowWebGL = phet.chipper.getQueryParameter( 'webgl' ) !== 'false';
 
     // Hack to disable WebGL until Energy Skate Park: Basics is working with lastest master branch
     // TODO: This should be removed once webgl support is restored in scenery
