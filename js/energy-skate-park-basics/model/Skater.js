@@ -233,7 +233,7 @@ define( function( require ) {
     },
 
     setState: function( state, tracks ) {
-      this.set( state.properties );
+      this.setValues( state.properties );
       this.track = tracks.getArray()[ state.properties.track ];
       this.startingTrack = tracks[ state.properties.startingTrack ];
       this.trigger( 'updated' );

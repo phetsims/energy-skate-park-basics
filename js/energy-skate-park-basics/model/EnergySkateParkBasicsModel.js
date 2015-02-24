@@ -1304,7 +1304,7 @@ define( function( require ) {
       // Trigger track changed first to update the edit enabled properties
       this.trigger( 'track-changed' );
 
-      this.set( state.properties );
+      this.setValues( state.properties );
 
       this.skater.setState( state.skater, this.tracks );
     },
