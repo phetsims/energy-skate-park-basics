@@ -224,7 +224,7 @@ define( function( require ) {
     // Pass in tracks so it can use indices for serialization
     getState: function( tracks ) {
       var state = {
-        properties: this.get()
+        properties: this.getValues()
       };
       // Replace the circularity problem
       state.properties.track = tracks.indexOf( this.track );

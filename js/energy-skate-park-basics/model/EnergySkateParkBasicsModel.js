@@ -1279,7 +1279,7 @@ define( function( require ) {
     // Get the state, say, to put in a query parameter
     getState: function() {
       return {
-        properties: this.get(),
+        properties: this.getValues(),
         skater: this.skater.getState( this.tracks ),
         tracks: this.tracks.getArray().map( function( track ) {
           return { physical: track.physical, points: track.controlPoints.map( function( controlPoint ) { return controlPoint.sourcePosition; } ) };
