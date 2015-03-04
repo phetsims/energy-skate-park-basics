@@ -128,7 +128,13 @@ define( function( require ) {
     // Put the pie chart legend to the right of the bar chart, see #60, #192
     pieChartLegend.mutate( { top: barGraphBackground.top, left: barGraphBackground.right + 8 } );
 
-    var playProperty = model.property( 'paused' ).not();
+    var playProperty = new Property( !model.property( 'paused' ).value );
+    model.property( 'paused' ).link( function( paused ) {
+      playProperty.set( !paused );
+    } );
+    playProperty.link( function( playing ) {
+      model.property( 'paused' ).set( !playing );
+    } );
     var playPauseButton = new PlayPauseButton( playProperty ).mutate( { scale: 0.6 } );
 
     // Make the Play/Pause button bigger when it is showing the pause button, see #298

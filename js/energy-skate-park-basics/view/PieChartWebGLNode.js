@@ -14,6 +14,7 @@ define( function( require ) {
   var Property = require( 'AXON/Property' );
   var PieChartWebGLSliceNode = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/view/PieChartWebGLSliceNode' );
   var EnergySkateParkColorScheme = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/view/EnergySkateParkColorScheme' );
+  var DerivedProperty = require( 'AXON/DerivedProperty' );
 
   /**
    * @param {Skater} skater the skater model
@@ -39,7 +40,7 @@ define( function( require ) {
     } );
 
     // Make the radius proportional to the square root of the energy so that the area will grow linearly with energy
-    var pieChartRadiusProperty = skater.totalEnergyProperty.map( function( totalEnergy ) {
+    var pieChartRadiusProperty = new DerivedProperty( [skater.totalEnergyProperty], function( totalEnergy ) {
       return 0.4 * Math.sqrt( totalEnergy );
     } );
 

@@ -15,6 +15,7 @@ define( function( require ) {
   var EnergySkateParkColorScheme = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/view/EnergySkateParkColorScheme' );
   var Property = require( 'AXON/Property' );
   var Node = require( 'SCENERY/nodes/Node' );
+  var DerivedProperty = require( 'AXON/DerivedProperty' );
 
   /**
    * Constructor for the BarGraph
@@ -34,7 +35,7 @@ define( function( require ) {
 
       // Convert to graph coordinates
       // However, do not floor for values less than 1 otherwise a nonzero value will show up as zero, see #159
-      var barHeightProperty = property.map( function( value ) {
+      var barHeightProperty = new DerivedProperty( [property], function( value ) {
         var result = value / 30;
 
         var answer;
