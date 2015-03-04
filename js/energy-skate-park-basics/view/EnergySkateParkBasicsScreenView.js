@@ -64,7 +64,7 @@ define( function( require ) {
   function EnergySkateParkBasicsScreenView( model ) {
 
     var view = this;
-    ScreenView.call( view, { renderer: 'svg', layoutBounds: new Bounds2( 0, 0, 834, 504 ) } );
+    ScreenView.call( view, { layoutBounds: new Bounds2( 0, 0, 834, 504 ) } );
 
     var modelPoint = new Vector2( 0, 0 );
     // earth is 70px high in stage coordinates
