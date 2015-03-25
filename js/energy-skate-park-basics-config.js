@@ -16,7 +16,6 @@ require.config( {
     PHETCOMMON: '../../phetcommon/js',
     SUN: '../../sun/js',
     JOIST: '../../joist/js',
-    TOGETHER: '../../together/js',
     ENERGY_SKATE_PARK_BASICS: '.',
 
     // Load plugins
