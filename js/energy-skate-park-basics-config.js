@@ -1,7 +1,7 @@
 // Copyright 2002-2013, University of Colorado Boulder
 
 require.config( {
-  deps: ['energy-skate-park-basics-main'],
+  deps: [ 'energy-skate-park-basics-main' ],
 
   paths: {
 
@@ -20,12 +20,13 @@ require.config( {
     ENERGY_SKATE_PARK_BASICS: '.',
 
     // Load plugins
-    image: '../../chipper/requirejs-plugins/image',
-    audio: '../../chipper/requirejs-plugins/audio',
-    string: '../../chipper/requirejs-plugins/string',
+    image: '../../chipper/js/requirejs-plugins/image',
+    audio: '../../chipper/js/requirejs-plugins/audio',
+    string: '../../chipper/js/requirejs-plugins/string',
 
     text: '../../sherpa/text'
   },
 
-  urlArgs: new Date().getTime() // add cache buster query string to make browser refresh actually reload everything
+  // optional cache buster to make browser refresh load all included scripts, can be disabled with ?cacheBuster=false
+  urlArgs: phet.chipper.getCacheBusterArgs()
 } );
