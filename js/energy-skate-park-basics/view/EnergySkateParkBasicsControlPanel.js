@@ -27,6 +27,7 @@ define( function( require ) {
   var Property = require( 'AXON/Property' );
   var FrictionControl = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/view/FrictionControl' );
   var PhetFont = require( 'SCENERY_PHET/PhetFont' );
+  var ComponentIDContext = require( 'TANDEM/ComponentIDContext' );
 
   // strings
   var barGraphString = require( 'string!ENERGY_SKATE_PARK_BASICS/plots.bar-graph' );
@@ -40,9 +41,7 @@ define( function( require ) {
    */
   function EnergySkateParkBasicsControlPanel( model, options ) {
     options = _.extend( {
-      componentIDContext: null,
-      pieChartCheckBoxComponentID: null,
-      barGraphCheckBoxComponentID: null,
+      componentIDContext: new ComponentIDContext(),
       gridCheckBoxComponentID: null,
       speedometerCheckBoxComponentID: null,
       frictionControlComponentID: null
@@ -74,7 +73,7 @@ define( function( require ) {
       new CheckBox(
         new HBox( { children: pad( barGraphSet ) } ),
         model.property( 'barGraphVisible' ),
-        _.extend( { componentID: options.barGraphCheckBoxComponentID }, checkBoxItemOptions ) ),
+        _.extend( { componentID: options.componentIDContext.createComponentID( 'barGraphCheckBox' ) }, checkBoxItemOptions ) ),
       new CheckBox(
         new HBox( { children: pad( gridSet ) } ),
         model.property( 'gridVisible' ),
