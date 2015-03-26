@@ -84,7 +84,7 @@ define( function( require ) {
     var checkBoxes = new VBox( { align: 'left', spacing: 10, children: checkBoxChildren } );
 
     var massSlider = new MassSlider( model.skater.massProperty, {
-      componentID: options.massSliderComponentID
+      componentID: options.componentIDContext.createComponentID( 'massSlider' )
     } );
 
     // For 1st screen, show MassSlider

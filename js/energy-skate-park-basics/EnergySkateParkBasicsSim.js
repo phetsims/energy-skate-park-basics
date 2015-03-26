@@ -48,7 +48,6 @@ define( function( require ) {
       new EnergySkateParkBasicsScreen( intro, iconIntroHomescreen, iconIntroNavbar, false, false, {
         componentIDContext: new ComponentIDContext( 'introScreen' ),
         clearThermalButtonComponentID: 'introScreen.pieChartLegend.clearThermalButton',
-        massSliderComponentID: 'introScreen.massSlider',
         barGraphClearThermalButtonComponentID: 'introScreen.barGraph.clearThermalButton',
         scene1RadioButtonComponentID: 'introScreen.scene1RadioButton',
         scene2RadioButtonComponentID: 'introScreen.scene2RadioButton',
@@ -66,7 +65,6 @@ define( function( require ) {
       new EnergySkateParkBasicsScreen( friction, iconFrictionHomescreen, iconFrictionNavbar, false, true, {
         componentIDContext: new ComponentIDContext( 'frictionScreen' ),
         clearThermalButtonComponentID: 'frictionScreen.pieChartLegend.clearThermalButton',
-        massSliderComponentID: 'frictionScreen.massSlider',
         barGraphClearThermalButtonComponentID: 'frictionScreen.barGraph.clearThermalButton',
         scene1RadioButtonComponentID: 'frictionScreen.scene1RadioButton',
         scene2RadioButtonComponentID: 'frictionScreen.scene2RadioButton',
@@ -86,7 +84,6 @@ define( function( require ) {
       new EnergySkateParkBasicsScreen( playground, iconPlaygroundHomescreen, iconPlaygroundNavbar, true, true, {
         componentIDContext: new ComponentIDContext( 'playgroundScreen' ),
         clearThermalButtonComponentID: 'playgroundScreen.pieChartLegend.clearThermalButton',
-        massSliderComponentID: 'playgroundScreen.massSlider',
         barGraphClearThermalButtonComponentID: 'playgroundScreen.barGraph.clearThermalButton',
         scene1RadioButtonComponentID: 'playgroundScreen.scene1RadioButton',
         scene2RadioButtonComponentID: 'playgroundScreen.scene2RadioButton',
