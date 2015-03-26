@@ -39,8 +39,16 @@ define( function( require ) {
 
     var scale = 0.32;
     var radioButtonsContent = [
-      { value: false, node: new Image( attachIcon, { scale: scale } ) },
-      { value: true, node: new Image( detachIcon, { scale: scale } ) }
+      {
+        value: false,
+        node: new Image( attachIcon, { scale: scale } ),
+        componentID: 'playgroundScreen.attachRadioButton'
+      },
+      {
+        value: true,
+        node: new Image( detachIcon, { scale: scale } ),
+        componentID: 'playgroundScreen.detachRadioButton'
+      }
     ];
 
     var radioButtons = new RadioButtonGroup( detachableProperty, radioButtonsContent,

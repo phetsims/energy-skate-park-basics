@@ -89,12 +89,27 @@ define( function( require ) {
         frictionControlComponentID: 'frictionScreen.frictionSlider'
       } ),
       new EnergySkateParkBasicsScreen( playground, iconPlaygroundHomescreen, iconPlaygroundNavbar, true, true, {
-        pieChartCheckBoxComponentID: 'introScreen.pieChartCheckBox',
-        barGraphCheckBoxComponentID: 'introScreen.barGraphCheckBox',
-        gridCheckBoxComponentID: 'introScreen.gridCheckBox',
-        speedometerCheckBoxComponentID: 'introScreen.speedometerCheckBox',
+        pieChartCheckBoxComponentID: 'playgroundScreen.pieChartCheckBox',
+        barGraphCheckBoxComponentID: 'playgroundScreen.barGraphCheckBox',
+        gridCheckBoxComponentID: 'playgroundScreen.gridCheckBox',
+        speedometerCheckBoxComponentID: 'playgroundScreen.speedometerCheckBox',
         clearThermalButtonComponentID: 'playgroundScreen.pieChartLegend.clearThermalButton',
-        massSliderComponentID: 'playgroundScreen.massSlider'
+        massSliderComponentID: 'playgroundScreen.massSlider',
+        barGraphClearThermalButtonComponentID: 'playgroundScreen.barGraph.clearThermalButton',
+        scene1RadioButtonComponentID: 'playgroundScreen.scene1RadioButton',
+        scene2RadioButtonComponentID: 'playgroundScreen.scene2RadioButton',
+        scene3RadioButtonComponentID: 'playgroundScreen.scene3RadioButton',
+        stepButtonComponentID: 'playgroundScreen.stepButton',
+        resetAllButtonComponentID: 'playgroundScreen.resetAllButton',
+        returnSkaterButtonComponentID: 'playgroundScreen.returnSkaterButton',
+        slowSpeedRadioButtonComponentID: 'playgroundScreen.slowSpeedRadioButton',
+        normalSpeedRadioButtonComponentID: 'playgroundScreen.normalSpeedRadioButton',
+        returnSkaterToPreviousStartingPositionButtonComponentID: 'playgroundScreen.returnSkaterToPreviousStartingPositionButton',
+        returnSkaterToGroundButtonComponentID: 'playgroundScreen.returnSkaterToGroundButton',
+        homeScreenButtonComponentID: 'homeScreen.playgroundScreenButton',
+        navigationBarScreenButtonComponentID: 'navigationBar.playgroundScreenButton',
+
+        frictionControlComponentID: 'playgroundScreen.frictionSlider'
       } )
     ], options );
   }
