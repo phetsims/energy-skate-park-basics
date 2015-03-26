@@ -83,7 +83,8 @@ define( function( require ) {
     this.gridNode = new GridNode( model.property( 'gridVisible' ), modelViewTransform );
     this.addChild( this.gridNode );
 
-    var pieChartLegend = new PieChartLegend( model.skater, model.clearThermal.bind( model ), model.property( 'pieChartVisible' ) );
+    var pieChartLegend = new PieChartLegend( model.skater, model.clearThermal.bind( model ),
+      model.property( 'pieChartVisible' ), { clearThermalButtonComponentID: 'pieChartLegend.clearThermalButton' } );
     this.addChild( pieChartLegend );
 
     this.controlPanel = new EnergySkateParkBasicsControlPanel( model );
@@ -94,7 +95,7 @@ define( function( require ) {
     // For the playground screen, show attach/detach toggle buttons
     if ( model.draggableTracks ) {
       var property = model.draggableTracks ? new Property( true ) :
-                     new DerivedProperty( [model.property( 'scene' ) ], function( scene ) { return scene === 2; } );
+                     new DerivedProperty( [ model.property( 'scene' ) ], function( scene ) { return scene === 2; } );
       this.attachDetachToggleButtons = new AttachDetachToggleButtons( model.property( 'detachable' ), property, this.controlPanel.contentWidth, {
         top: this.controlPanel.bottom + 5,
         centerX: this.controlPanel.centerX
@@ -117,7 +118,8 @@ define( function( require ) {
       return view.availableModelBounds && containsAbove( view.availableModelBounds, position.x, position.y );
     } );
 
-    var barGraphBackground = new BarGraphBackground( model.skater, model.property( 'barGraphVisible' ), model.clearThermal.bind( model ) );
+    var barGraphBackground = new BarGraphBackground( model.skater, model.property( 'barGraphVisible' ), model.clearThermal.bind( model ),
+      { clearThermalButtonComponentID: 'barGraph.clearThermalButton' } );
     this.addChild( barGraphBackground );
 
     if ( !model.draggableTracks ) {
@@ -135,7 +137,7 @@ define( function( require ) {
     playProperty.link( function( playing ) {
       model.property( 'paused' ).set( !playing );
     } );
-    var playPauseButton = new PlayPauseButton( playProperty ).mutate( { scale: 0.6 } );
+    var playPauseButton = new PlayPauseButton( playProperty, { componentID: 'playPauseButton' } ).mutate( { scale: 0.6 } );
 
     // Make the Play/Pause button bigger when it is showing the pause button, see #298
     var pauseSizeIncreaseFactor = 1.35;
@@ -143,13 +145,18 @@ define( function( require ) {
       playPauseButton.scale( isPlaying ? ( 1 / pauseSizeIncreaseFactor ) : pauseSizeIncreaseFactor );
     } );
 
-    var stepButton = new StepButton( function() { model.manualStep(); }, playProperty );
+    var stepButton = new StepButton( function() { model.manualStep(); }, playProperty, {
+      componentID: 'stepButton'
+    } );
 
     // Make the step button the same size as the pause button.
     stepButton.mutate( { scale: playPauseButton.height / stepButton.height } );
     model.property( 'paused' ).linkAttribute( stepButton, 'enabled' );
 
-    this.addChild( playPauseButton.mutate( { centerX: this.layoutBounds.centerX, bottom: this.layoutBounds.maxY - 15 } ) );
+    this.addChild( playPauseButton.mutate( {
+      centerX: this.layoutBounds.centerX,
+      bottom: this.layoutBounds.maxY - 15
+    } ) );
     this.addChild( stepButton.mutate( { left: playPauseButton.right + 15, centerY: playPauseButton.centerY } ) );
 
     this.resetAllButton = new ResetAllButton( {
@@ -158,7 +165,9 @@ define( function( require ) {
       centerX: this.controlPanel.centerX,
 
       // Align vertically with other controls, see #134
-      centerY: (modelViewTransform.modelToViewY( 0 ) + this.layoutBounds.maxY) / 2 + 8
+      centerY: (modelViewTransform.modelToViewY( 0 ) + this.layoutBounds.maxY) / 2 + 8,
+
+      componentID: 'resetAllButton'
     } );
     this.addChild( this.resetAllButton );
 
@@ -166,8 +175,9 @@ define( function( require ) {
     this.returnSkaterButton = new RectangularPushButton( {
       content: new Text( returnSkaterString ),
       listener: model.returnSkater.bind( model ),
-      centerY: this.resetAllButton.centerY
+      centerY: this.resetAllButton.centerY,
       // X updated in layoutBounds since the reset all button can move horizontally
+      componentID: 'returnSkaterButton'
     } );
 
     // Disable the return skater button when the skater is already at his initial coordinates
@@ -340,14 +350,16 @@ define( function( require ) {
 
       // green means "go" since the skater will likely start moving at this point
       baseColor: EnergySkateParkColorScheme.kineticEnergy,
-      listener: model.returnSkater.bind( model )
+      listener: model.returnSkater.bind( model ),
+      componentID: 'returnSkaterToPreviousStartingPositionButton'
     } );
 
     var returnSkaterToGroundButton = new RectangularPushButton( {
       content: new Image( skaterIconImage, { scale: iconScale } ),
       centerBottom: modelViewTransform.modelToViewPosition( model.skater.startingPosition ),
       baseColor: '#f4514e', // red for stop, since the skater will be stopped on the ground.
-      listener: function() { model.skater.resetPosition(); }
+      listener: function() { model.skater.resetPosition(); },
+      componentID: 'returnSkaterToGroundButton'
     } );
 
     this.addChild( returnSkaterToStartingPointButton );

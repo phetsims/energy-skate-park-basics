@@ -34,7 +34,9 @@ define( function( require ) {
    * @param {Function} clearThermal function to be called when the user presses the clear thermal button.
    * @constructor
    */
-  function BarGraphBackground( skater, barGraphVisibleProperty, clearThermal ) {
+  function BarGraphBackground( skater, barGraphVisibleProperty, clearThermal, options ) {
+
+    options = _.extend( { clearThermalButtonComponentID: null }, options );
 
     var barGraphBackground = this;
 
@@ -72,7 +74,8 @@ define( function( require ) {
 
     var clearThermalButton = new ClearThermalButton( clearThermal, skater, {
       centerX: thermalLabel.centerX,
-      y: thermalLabel.bottom + 12
+      y: thermalLabel.bottom + 12,
+      componentID: options.clearThermalButtonComponentID
     } );
     skater.allowClearingThermalEnergyProperty.link( function( allowClearingThermalEnergy ) {
       clearThermalButton.enabled = allowClearingThermalEnergy;
@@ -83,7 +86,11 @@ define( function( require ) {
       children: [
         new ArrowNode( insetX, this.originY, insetX, insetY, { pickable: false } ),
         titleNode,
-        new Line( insetX, this.originY, contentWidth - insetX, this.originY, { lineWidth: 1, stroke: 'gray', pickable: false } ),
+        new Line( insetX, this.originY, contentWidth - insetX, this.originY, {
+          lineWidth: 1,
+          stroke: 'gray',
+          pickable: false
+        } ),
         kineticLabel,
         potentialLabel,
         thermalLabel,
@@ -95,7 +102,16 @@ define( function( require ) {
     // Center the bar chart title, see #62
     titleNode.centerX = contentNode.centerX;
 
-    Panel.call( this, contentNode, { x: 10, y: 10, xMargin: 10, yMargin: 5, fill: 'white', stroke: 'gray', lineWidth: 1, resize: false } );
+    Panel.call( this, contentNode, {
+      x: 10,
+      y: 10,
+      xMargin: 10,
+      yMargin: 5,
+      fill: 'white',
+      stroke: 'gray',
+      lineWidth: 1,
+      resize: false
+    } );
 
     // When the bar graph is shown, update the bars (because they do not get updated when invisible for performance reasons)
     barGraphVisibleProperty.linkAttribute( this, 'visible' );

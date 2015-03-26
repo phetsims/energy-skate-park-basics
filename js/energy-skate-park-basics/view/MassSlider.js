@@ -27,7 +27,7 @@ define( function( require ) {
    */
   function MassSlider( massProperty ) {
     var range = { min: Constants.MIN_MASS, max: Constants.MAX_MASS };
-    var slider = new HSlider( massProperty, range, Constants.SLIDER_OPTIONS );
+    var slider = new HSlider( massProperty, range, _.extend( { componentID: 'massSlider' }, Constants.SLIDER_OPTIONS ) );
     var tickFont = new PhetFont( 10 );
     slider.addMajorTick( Constants.MIN_MASS, new Text( smallString, { font: tickFont } ) );
     slider.addMajorTick( Constants.MAX_MASS, new Text( largeString, { font: tickFont } ) );

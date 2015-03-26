@@ -58,10 +58,24 @@ define( function( require ) {
     var options = { boxWidth: 18 };
 
     var checkBoxChildren = [
-      new CheckBox( new HBox( { children: pad( pieChartSet ) } ), model.property( 'pieChartVisible' ), options ),
-      new CheckBox( new HBox( { children: pad( barGraphSet ) } ), model.property( 'barGraphVisible' ), options ),
-      new CheckBox( new HBox( { children: pad( gridSet ) } ), model.property( 'gridVisible' ), options ),
-      new CheckBox( new HBox( { children: pad( speedometerSet ) } ), model.property( 'speedometerVisible' ), options ) ];
+      new CheckBox(
+        new HBox( { children: pad( pieChartSet ) } ),
+        model.property( 'pieChartVisible' ),
+        _.extend( { componentID: 'pieChartCheckBox' }, options )
+      ),
+      new CheckBox(
+        new HBox( { children: pad( barGraphSet ) } ),
+        model.property( 'barGraphVisible' ),
+        _.extend( { componentID: 'barGraphCheckBox' }, options ) ),
+      new CheckBox(
+        new HBox( { children: pad( gridSet ) } ),
+        model.property( 'gridVisible' ),
+        _.extend( { componentID: 'gridCheckBox' }, options ) ),
+      new CheckBox(
+        new HBox( { children: pad( speedometerSet ) } ),
+        model.property( 'speedometerVisible' ),
+        _.extend( { componentID: 'speedometerCheckBox' }, options )
+      ) ];
     var checkBoxes = new VBox( { align: 'left', spacing: 10, children: checkBoxChildren } );
 
     var massSlider = new MassSlider( model.skater.massProperty );
@@ -85,8 +99,16 @@ define( function( require ) {
       return new Node( {
         children: [
           new Rectangle( 0, 0, 20, 20, { fill: 'white', stroke: 'black', lineWidth: 0.5 } ),
-          new Rectangle( 3, 14, 5, 6, { fill: EnergySkateParkColorScheme.kineticEnergy, stroke: 'black', lineWidth: 0.5 } ),
-          new Rectangle( 11, 8, 5, 12, { fill: EnergySkateParkColorScheme.potentialEnergy, stroke: 'black', lineWidth: 0.5 } )
+          new Rectangle( 3, 14, 5, 6, {
+            fill: EnergySkateParkColorScheme.kineticEnergy,
+            stroke: 'black',
+            lineWidth: 0.5
+          } ),
+          new Rectangle( 11, 8, 5, 12, {
+            fill: EnergySkateParkColorScheme.potentialEnergy,
+            stroke: 'black',
+            lineWidth: 0.5
+          } )
         ]
       } );
     },

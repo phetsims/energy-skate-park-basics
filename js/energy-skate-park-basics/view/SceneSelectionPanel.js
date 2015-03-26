@@ -42,9 +42,9 @@ define( function( require ) {
     };
 
     var content = new RadioButtonGroup( model.sceneProperty, [
-      { value: 0, node: createNode( 0 ) },
-      { value: 1, node: createNode( 1 ) },
-      { value: 2, node: createNode( 2 ) }
+      { value: 0, node: createNode( 0 ), componentID: 'scene1RadioButton' },
+      { value: 1, node: createNode( 1 ), componentID: 'scene2RadioButton' },
+      { value: 2, node: createNode( 2 ), componentID: 'scene3RadioButton' }
     ], {
       orientation: 'vertical',
       buttonContentXMargin: 0,

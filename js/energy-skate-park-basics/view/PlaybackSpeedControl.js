@@ -27,10 +27,14 @@ define( function( require ) {
     var dilateX = 5;
     var dilateY = 2;
     var radioButtonRadius = 7.1;
-    var slowMotionButton = new AquaRadioButton( speedProperty, 'slow', new Text( slowMotionString, { font: new PhetFont( 15 ) } ), { radius: radioButtonRadius } );
+    var slowMotionButton = new AquaRadioButton( speedProperty, 'slow', new Text( slowMotionString, { font: new PhetFont( 15 ) } ), {
+      radius: radioButtonRadius,
+      componentID: 'slowSpeedRadioButton'
+    } );
     var normalButton = new AquaRadioButton( speedProperty, 'normal', new Text( normalString, { font: new PhetFont( 15 ) } ), {
       radius: radioButtonRadius,
-      x: 130
+      x: 130,
+      componentID: 'normalSpeedRadioButton'
     } );
     slowMotionButton.touchArea = slowMotionButton.localBounds.dilatedXY( dilateX, dilateY );
     normalButton.touchArea = normalButton.localBounds.dilatedXY( dilateX, dilateY );
