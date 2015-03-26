@@ -47,7 +47,6 @@ define( function( require ) {
     Sim.call( this, title, [
       new EnergySkateParkBasicsScreen( intro, iconIntroHomescreen, iconIntroNavbar, false, false, {
         componentIDContext: new ComponentIDContext( 'introScreen' ),
-        gridCheckBoxComponentID: 'introScreen.gridCheckBox',
         speedometerCheckBoxComponentID: 'introScreen.speedometerCheckBox',
         clearThermalButtonComponentID: 'introScreen.pieChartLegend.clearThermalButton',
         massSliderComponentID: 'introScreen.massSlider',
@@ -67,7 +66,6 @@ define( function( require ) {
       } ),
       new EnergySkateParkBasicsScreen( friction, iconFrictionHomescreen, iconFrictionNavbar, false, true, {
         componentIDContext: new ComponentIDContext( 'frictionScreen' ),
-        gridCheckBoxComponentID: 'frictionScreen.gridCheckBox',
         speedometerCheckBoxComponentID: 'frictionScreen.speedometerCheckBox',
         clearThermalButtonComponentID: 'frictionScreen.pieChartLegend.clearThermalButton',
         massSliderComponentID: 'frictionScreen.massSlider',
@@ -89,7 +87,6 @@ define( function( require ) {
       } ),
       new EnergySkateParkBasicsScreen( playground, iconPlaygroundHomescreen, iconPlaygroundNavbar, true, true, {
         componentIDContext: new ComponentIDContext( 'playgroundScreen' ),
-        gridCheckBoxComponentID: 'playgroundScreen.gridCheckBox',
         speedometerCheckBoxComponentID: 'playgroundScreen.speedometerCheckBox',
         clearThermalButtonComponentID: 'playgroundScreen.pieChartLegend.clearThermalButton',
         massSliderComponentID: 'playgroundScreen.massSlider',

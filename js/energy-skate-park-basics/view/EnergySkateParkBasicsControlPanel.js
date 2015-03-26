@@ -42,7 +42,6 @@ define( function( require ) {
   function EnergySkateParkBasicsControlPanel( model, options ) {
     options = _.extend( {
       componentIDContext: new ComponentIDContext(),
-      gridCheckBoxComponentID: null,
       speedometerCheckBoxComponentID: null,
       frictionControlComponentID: null
     }, options );
@@ -77,7 +76,7 @@ define( function( require ) {
       new CheckBox(
         new HBox( { children: pad( gridSet ) } ),
         model.property( 'gridVisible' ),
-        _.extend( { componentID: options.gridCheckBoxComponentID }, checkBoxItemOptions ) ),
+        _.extend( { componentID: options.componentIDContext.createComponentID( 'gridCheckBox' ) }, checkBoxItemOptions ) ),
       new CheckBox(
         new HBox( { children: pad( speedometerSet ) } ),
         model.property( 'speedometerVisible' ),
