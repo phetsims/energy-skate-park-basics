@@ -74,7 +74,7 @@ define( function( require ) {
    * @param {Boolean} frictionAllowed True in screen 3 where the user can drag the tracks
    * @constructor
    */
-  function EnergySkateParkBasicsModel( draggableTracks, frictionAllowed ) {
+  function EnergySkateParkBasicsModel( draggableTracks, frictionAllowed, options ) {
 
     this.frictionAllowed = frictionAllowed;
     this.draggableTracks = draggableTracks;
@@ -112,6 +112,30 @@ define( function( require ) {
       // Will be filled in by the view, used to prevent control points from moving outside the visible model bounds when
       // adjusted, see #195
       availableModelBounds: null
+    }, {
+      componentIDMap: {
+        // Model for visibility of various view parameters
+        pieChartVisible: options.componentIDContext.createComponentID( 'pieChartVisible' ),
+        barGraphVisible: options.componentIDContext.createComponentID( 'barGraphVisible' ),
+        gridVisible: options.componentIDContext.createComponentID( 'gridVisible' ),
+        speedometerVisible: options.componentIDContext.createComponentID( 'speedometerVisible' ),
+
+        // Enabled/disabled for the track editing buttons
+        editButtonEnabled: options.componentIDContext.createComponentID( 'editButtonEnabled' ),
+        clearButtonEnabled: options.componentIDContext.createComponentID( 'clearButtonEnabled' ),
+
+        // Whether the sim is paused or running
+        paused: options.componentIDContext.createComponentID( 'paused' ),
+
+        // speed of the model, either 'normal' or 'slow'
+        speed: options.componentIDContext.createComponentID( 'speed' ),
+
+        // Coefficient of friction (unitless) between skater and track
+        friction: options.componentIDContext.createComponentID( 'friction' ),
+
+        // Whether the skater should stick to the track like a roller coaster, or be able to fly off like a street
+        detachable: options.componentIDContext.createComponentID( 'detachable' )
+      }
     } );
 
     if ( phet.chipper.getQueryParameter( 'debugTrack' ) ) {
@@ -122,7 +146,7 @@ define( function( require ) {
     this.time = 0;
 
     // the skater model instance
-    this.skater = new Skater();
+    this.skater = new Skater( options );
 
     // If the mass changes while the sim is paused, trigger an update so the skater image size will update, see #115
     this.skater.property( 'mass' ).link( function() { if ( model.paused ) { model.skater.trigger( 'updated' ); } } );
@@ -1282,7 +1306,10 @@ define( function( require ) {
         properties: this.getValues(),
         skater: this.skater.getState( this.tracks ),
         tracks: this.tracks.getArray().map( function( track ) {
-          return { physical: track.physical, points: track.controlPoints.map( function( controlPoint ) { return controlPoint.sourcePosition; } ) };
+          return {
+            physical: track.physical,
+            points: track.controlPoints.map( function( controlPoint ) { return controlPoint.sourcePosition; } )
+          };
         } )
       };
     },

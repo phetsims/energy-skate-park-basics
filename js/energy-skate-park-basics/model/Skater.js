@@ -31,7 +31,7 @@ define( function( require ) {
     return true;
   };
 
-  function Skater() {
+  function Skater( options ) {
     var skater = this;
 
     PropertySet.call( this, {
@@ -91,6 +91,10 @@ define( function( require ) {
 
       // Position of the skater's head, for positioning the pie chart.
       headPosition: new Vector2( 0, 0 )
+    }, {
+      componentIDMap: {
+        position: options.componentIDContext.createComponentID( 'skaterPosition' )
+      }
     } );
 
     this.addDerivedProperty( 'speed', [ 'velocity' ], function( velocity ) {
