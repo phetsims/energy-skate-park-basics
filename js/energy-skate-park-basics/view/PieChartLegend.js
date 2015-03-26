@@ -20,7 +20,8 @@ define( function( require ) {
   var PhetFont = require( 'SCENERY_PHET/PhetFont' );
   var EnergySkateParkColorScheme = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/view/EnergySkateParkColorScheme' );
   var ClearThermalButton = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/view/ClearThermalButton' );
-
+  var ComponentIDContext = require( 'TANDEM/ComponentIDContext' );
+  
   // strings
   var kineticString = require( 'string!ENERGY_SKATE_PARK_BASICS/energy.kinetic' );
   var potentialString = require( 'string!ENERGY_SKATE_PARK_BASICS/energy.potential' );
@@ -35,7 +36,7 @@ define( function( require ) {
    */
   function PieChartLegend( skater, clearThermal, pieChartVisibleProperty, options ) {
 
-    options = _.extend( { clearThermalButtonComponentID: null }, options );
+    options = _.extend( { componentIDContext: new ComponentIDContext() }, options );
     // The x-coordinate of a bar chart bar
     var createLabel = function( index, title, color ) {
       return new Text( title, {
@@ -64,7 +65,7 @@ define( function( require ) {
     var clearThermalButton = new ClearThermalButton( clearThermal, skater, {
       centerX: thermalLabel.centerX,
       y: thermalLabel.bottom + 15,
-      componentID: options.clearThermalButtonComponentID
+      componentID: options.componentIDContext.createComponentID( 'pieChartLegend.clearThermalButton' )
     } );
     skater.allowClearingThermalEnergyProperty.link( function( allowClearingThermalEnergy ) {
       clearThermalButton.enabled = allowClearingThermalEnergy;

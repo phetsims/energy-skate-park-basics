@@ -47,11 +47,6 @@ define( function( require ) {
     Sim.call( this, title, [
       new EnergySkateParkBasicsScreen( intro, iconIntroHomescreen, iconIntroNavbar, false, false, {
         componentIDContext: new ComponentIDContext( 'introScreen' ),
-        clearThermalButtonComponentID: 'introScreen.pieChartLegend.clearThermalButton',
-        barGraphClearThermalButtonComponentID: 'introScreen.barGraph.clearThermalButton',
-        scene1RadioButtonComponentID: 'introScreen.scene1RadioButton',
-        scene2RadioButtonComponentID: 'introScreen.scene2RadioButton',
-        scene3RadioButtonComponentID: 'introScreen.scene3RadioButton',
         stepButtonComponentID: 'introScreen.stepButton',
         resetAllButtonComponentID: 'introScreen.resetAllButton',
         returnSkaterButtonComponentID: 'introScreen.returnSkaterButton',
@@ -64,11 +59,6 @@ define( function( require ) {
       } ),
       new EnergySkateParkBasicsScreen( friction, iconFrictionHomescreen, iconFrictionNavbar, false, true, {
         componentIDContext: new ComponentIDContext( 'frictionScreen' ),
-        clearThermalButtonComponentID: 'frictionScreen.pieChartLegend.clearThermalButton',
-        barGraphClearThermalButtonComponentID: 'frictionScreen.barGraph.clearThermalButton',
-        scene1RadioButtonComponentID: 'frictionScreen.scene1RadioButton',
-        scene2RadioButtonComponentID: 'frictionScreen.scene2RadioButton',
-        scene3RadioButtonComponentID: 'frictionScreen.scene3RadioButton',
         stepButtonComponentID: 'frictionScreen.stepButton',
         resetAllButtonComponentID: 'frictionScreen.resetAllButton',
         returnSkaterButtonComponentID: 'frictionScreen.returnSkaterButton',
@@ -83,11 +73,6 @@ define( function( require ) {
       } ),
       new EnergySkateParkBasicsScreen( playground, iconPlaygroundHomescreen, iconPlaygroundNavbar, true, true, {
         componentIDContext: new ComponentIDContext( 'playgroundScreen' ),
-        clearThermalButtonComponentID: 'playgroundScreen.pieChartLegend.clearThermalButton',
-        barGraphClearThermalButtonComponentID: 'playgroundScreen.barGraph.clearThermalButton',
-        scene1RadioButtonComponentID: 'playgroundScreen.scene1RadioButton',
-        scene2RadioButtonComponentID: 'playgroundScreen.scene2RadioButton',
-        scene3RadioButtonComponentID: 'playgroundScreen.scene3RadioButton',
         stepButtonComponentID: 'playgroundScreen.stepButton',
         resetAllButtonComponentID: 'playgroundScreen.resetAllButton',
         returnSkaterButtonComponentID: 'playgroundScreen.returnSkaterButton',

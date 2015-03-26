@@ -83,8 +83,12 @@ define( function( require ) {
     this.gridNode = new GridNode( model.property( 'gridVisible' ), modelViewTransform );
     this.addChild( this.gridNode );
 
-    var pieChartLegend = new PieChartLegend( model.skater, model.clearThermal.bind( model ),
-      model.property( 'pieChartVisible' ), { clearThermalButtonComponentID: options.clearThermalButtonComponentID } );
+    var pieChartLegend = new PieChartLegend(
+      model.skater,
+      model.clearThermal.bind( model ),
+      model.property( 'pieChartVisible' ), {
+        componentIDContext: options.componentIDContext
+      } );
     this.addChild( pieChartLegend );
 
     this.controlPanel = new EnergySkateParkBasicsControlPanel( model, {
@@ -123,14 +127,12 @@ define( function( require ) {
     } );
 
     var barGraphBackground = new BarGraphBackground( model.skater, model.property( 'barGraphVisible' ), model.clearThermal.bind( model ),
-      { clearThermalButtonComponentID: options.barGraphClearThermalButtonComponentID } );
+      { componentIDContext: options.componentIDContext } );
     this.addChild( barGraphBackground );
 
     if ( !model.draggableTracks ) {
       this.sceneSelectionPanel = new SceneSelectionPanel( model, this, modelViewTransform, {
-        scene1RadioButtonComponentID: options.scene1RadioButtonComponentID,
-        scene2RadioButtonComponentID: options.scene2RadioButtonComponentID,
-        scene3RadioButtonComponentID: options.scene3RadioButtonComponentID
+        componentIDContext: options.componentIDContext
       } );// layout done in layout bounds
       this.addChild( this.sceneSelectionPanel );
     }
