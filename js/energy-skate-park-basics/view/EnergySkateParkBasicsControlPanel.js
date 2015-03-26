@@ -40,6 +40,7 @@ define( function( require ) {
    */
   function EnergySkateParkBasicsControlPanel( model, options ) {
     options = _.extend( {
+      componentIDContext: null,
       pieChartCheckBoxComponentID: null,
       barGraphCheckBoxComponentID: null,
       gridCheckBoxComponentID: null,
@@ -68,7 +69,7 @@ define( function( require ) {
       new CheckBox(
         new HBox( { children: pad( pieChartSet ) } ),
         model.property( 'pieChartVisible' ),
-        _.extend( { componentID: options.pieChartCheckBoxComponentID }, checkBoxItemOptions )
+        _.extend( { componentID: options.componentIDContext.createComponentID( 'pieChartCheckBox' ) }, checkBoxItemOptions )
       ),
       new CheckBox(
         new HBox( { children: pad( barGraphSet ) } ),

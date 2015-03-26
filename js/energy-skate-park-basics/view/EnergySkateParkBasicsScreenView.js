@@ -88,6 +88,7 @@ define( function( require ) {
     this.addChild( pieChartLegend );
 
     this.controlPanel = new EnergySkateParkBasicsControlPanel( model, {
+      componentIDContext: options.componentIDContext,
       pieChartCheckBoxComponentID: options.pieChartCheckBoxComponentID,
       barGraphCheckBoxComponentID: options.barGraphCheckBoxComponentID,
       gridCheckBoxComponentID: options.gridCheckBoxComponentID,

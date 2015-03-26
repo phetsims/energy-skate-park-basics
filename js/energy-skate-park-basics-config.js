@@ -15,6 +15,7 @@ require.config( {
     PHET_CORE: '../../phet-core/js',
     PHETCOMMON: '../../phetcommon/js',
     SUN: '../../sun/js',
+    TANDEM: '../../tandem/js',
     JOIST: '../../joist/js',
     ENERGY_SKATE_PARK_BASICS: '.',
 

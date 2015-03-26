@@ -12,6 +12,7 @@ define( function( require ) {
   var inherit = require( 'PHET_CORE/inherit' );
   var EnergySkateParkBasicsScreen = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/EnergySkateParkBasicsScreen' );
   var Sim = require( 'JOIST/Sim' );
+  var ComponentIDContext = require( 'TANDEM/ComponentIDContext' );
 
   // images
   var iconIntroHomescreen = require( 'image!ENERGY_SKATE_PARK_BASICS/icon-intro-homescreen.png' );
@@ -45,6 +46,7 @@ define( function( require ) {
 
     Sim.call( this, title, [
       new EnergySkateParkBasicsScreen( intro, iconIntroHomescreen, iconIntroNavbar, false, false, {
+        componentIDContext: new ComponentIDContext( 'introScreen' ),
         pieChartCheckBoxComponentID: 'introScreen.pieChartCheckBox',
         barGraphCheckBoxComponentID: 'introScreen.barGraphCheckBox',
         gridCheckBoxComponentID: 'introScreen.gridCheckBox',
@@ -66,6 +68,7 @@ define( function( require ) {
         navigationBarScreenButtonComponentID: 'navigationBar.introScreenButton'
       } ),
       new EnergySkateParkBasicsScreen( friction, iconFrictionHomescreen, iconFrictionNavbar, false, true, {
+        componentIDContext: new ComponentIDContext( 'frictionScreen' ),
         pieChartCheckBoxComponentID: 'frictionScreen.pieChartCheckBox',
         barGraphCheckBoxComponentID: 'frictionScreen.barGraphCheckBox',
         gridCheckBoxComponentID: 'frictionScreen.gridCheckBox',
@@ -89,6 +92,7 @@ define( function( require ) {
         frictionControlComponentID: 'frictionScreen.frictionSlider'
       } ),
       new EnergySkateParkBasicsScreen( playground, iconPlaygroundHomescreen, iconPlaygroundNavbar, true, true, {
+        componentIDContext: new ComponentIDContext( 'playgroundScreen' ),
         pieChartCheckBoxComponentID: 'playgroundScreen.pieChartCheckBox',
         barGraphCheckBoxComponentID: 'playgroundScreen.barGraphCheckBox',
         gridCheckBoxComponentID: 'playgroundScreen.gridCheckBox',
