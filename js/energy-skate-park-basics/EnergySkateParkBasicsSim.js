@@ -47,7 +47,6 @@ define( function( require ) {
     Sim.call( this, title, [
       new EnergySkateParkBasicsScreen( intro, iconIntroHomescreen, iconIntroNavbar, false, false, {
         componentIDContext: new ComponentIDContext( 'introScreen' ),
-        speedometerCheckBoxComponentID: 'introScreen.speedometerCheckBox',
         clearThermalButtonComponentID: 'introScreen.pieChartLegend.clearThermalButton',
         massSliderComponentID: 'introScreen.massSlider',
         barGraphClearThermalButtonComponentID: 'introScreen.barGraph.clearThermalButton',
@@ -66,7 +65,6 @@ define( function( require ) {
       } ),
       new EnergySkateParkBasicsScreen( friction, iconFrictionHomescreen, iconFrictionNavbar, false, true, {
         componentIDContext: new ComponentIDContext( 'frictionScreen' ),
-        speedometerCheckBoxComponentID: 'frictionScreen.speedometerCheckBox',
         clearThermalButtonComponentID: 'frictionScreen.pieChartLegend.clearThermalButton',
         massSliderComponentID: 'frictionScreen.massSlider',
         barGraphClearThermalButtonComponentID: 'frictionScreen.barGraph.clearThermalButton',
@@ -87,7 +85,6 @@ define( function( require ) {
       } ),
       new EnergySkateParkBasicsScreen( playground, iconPlaygroundHomescreen, iconPlaygroundNavbar, true, true, {
         componentIDContext: new ComponentIDContext( 'playgroundScreen' ),
-        speedometerCheckBoxComponentID: 'playgroundScreen.speedometerCheckBox',
         clearThermalButtonComponentID: 'playgroundScreen.pieChartLegend.clearThermalButton',
         massSliderComponentID: 'playgroundScreen.massSlider',
         barGraphClearThermalButtonComponentID: 'playgroundScreen.barGraph.clearThermalButton',

@@ -42,7 +42,6 @@ define( function( require ) {
   function EnergySkateParkBasicsControlPanel( model, options ) {
     options = _.extend( {
       componentIDContext: new ComponentIDContext(),
-      speedometerCheckBoxComponentID: null,
       frictionControlComponentID: null
     }, options );
     var textOptions = { font: new PhetFont( 14 ) };
@@ -80,7 +79,7 @@ define( function( require ) {
       new CheckBox(
         new HBox( { children: pad( speedometerSet ) } ),
         model.property( 'speedometerVisible' ),
-        _.extend( { componentID: options.speedometerCheckBoxComponentID }, checkBoxItemOptions )
+        _.extend( { componentID: options.componentIDContext.createComponentID( 'speedometerCheckBox' ) }, checkBoxItemOptions )
       ) ];
     var checkBoxes = new VBox( { align: 'left', spacing: 10, children: checkBoxChildren } );
 

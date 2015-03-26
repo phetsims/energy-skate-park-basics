@@ -89,7 +89,6 @@ define( function( require ) {
 
     this.controlPanel = new EnergySkateParkBasicsControlPanel( model, {
       componentIDContext: options.componentIDContext,
-      speedometerCheckBoxComponentID: options.speedometerCheckBoxComponentID,
       massSliderComponentID: options.massSliderComponentID,
       frictionControlComponentID: options.frictionControlComponentID
     } );
