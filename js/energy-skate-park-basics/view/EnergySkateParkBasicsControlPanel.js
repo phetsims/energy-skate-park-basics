@@ -41,8 +41,7 @@ define( function( require ) {
    */
   function EnergySkateParkBasicsControlPanel( model, options ) {
     options = _.extend( {
-      componentIDContext: new ComponentIDContext(),
-      frictionControlComponentID: null
+      componentIDContext: new ComponentIDContext()
     }, options );
     var textOptions = { font: new PhetFont( 14 ) };
 
@@ -91,7 +90,9 @@ define( function( require ) {
     // For 2nd and 3rd screen, show Friction Slider and Mass Slider, see #147
     var children = [ checkBoxes, massSlider ];
     if ( model.frictionAllowed ) {
-      children.push( new FrictionControl( model.property( 'friction' ), { componentID: options.frictionControlComponentID } ) );
+      children.push( new FrictionControl( model.property( 'friction' ), {
+        componentID: options.componentIDContext.createComponentID( 'frictionSlider' )
+      } ) );
     }
     var content = new VBox( { spacing: 4, children: children } );
 

@@ -47,43 +47,18 @@ define( function( require ) {
     Sim.call( this, title, [
       new EnergySkateParkBasicsScreen( intro, iconIntroHomescreen, iconIntroNavbar, false, false, {
         componentIDContext: new ComponentIDContext( 'introScreen' ),
-        stepButtonComponentID: 'introScreen.stepButton',
-        resetAllButtonComponentID: 'introScreen.resetAllButton',
-        returnSkaterButtonComponentID: 'introScreen.returnSkaterButton',
-        slowSpeedRadioButtonComponentID: 'introScreen.slowSpeedRadioButton',
-        normalSpeedRadioButtonComponentID: 'introScreen.normalSpeedRadioButton',
-        returnSkaterToPreviousStartingPositionButtonComponentID: 'introScreen.returnSkaterToPreviousStartingPositionButton',
-        returnSkaterToGroundButtonComponentID: 'introScreen.returnSkaterToGroundButton',
         homeScreenButtonComponentID: 'homeScreen.introScreenButton',
         navigationBarScreenButtonComponentID: 'navigationBar.introScreenButton'
       } ),
       new EnergySkateParkBasicsScreen( friction, iconFrictionHomescreen, iconFrictionNavbar, false, true, {
         componentIDContext: new ComponentIDContext( 'frictionScreen' ),
-        stepButtonComponentID: 'frictionScreen.stepButton',
-        resetAllButtonComponentID: 'frictionScreen.resetAllButton',
-        returnSkaterButtonComponentID: 'frictionScreen.returnSkaterButton',
-        slowSpeedRadioButtonComponentID: 'frictionScreen.slowSpeedRadioButton',
-        normalSpeedRadioButtonComponentID: 'frictionScreen.normalSpeedRadioButton',
-        returnSkaterToPreviousStartingPositionButtonComponentID: 'frictionScreen.returnSkaterToPreviousStartingPositionButton',
-        returnSkaterToGroundButtonComponentID: 'frictionScreen.returnSkaterToGroundButton',
         homeScreenButtonComponentID: 'homeScreen.frictionScreenButton',
-        navigationBarScreenButtonComponentID: 'navigationBar.frictionScreenButton',
-
-        frictionControlComponentID: 'frictionScreen.frictionSlider'
+        navigationBarScreenButtonComponentID: 'navigationBar.frictionScreenButton'
       } ),
       new EnergySkateParkBasicsScreen( playground, iconPlaygroundHomescreen, iconPlaygroundNavbar, true, true, {
         componentIDContext: new ComponentIDContext( 'playgroundScreen' ),
-        stepButtonComponentID: 'playgroundScreen.stepButton',
-        resetAllButtonComponentID: 'playgroundScreen.resetAllButton',
-        returnSkaterButtonComponentID: 'playgroundScreen.returnSkaterButton',
-        slowSpeedRadioButtonComponentID: 'playgroundScreen.slowSpeedRadioButton',
-        normalSpeedRadioButtonComponentID: 'playgroundScreen.normalSpeedRadioButton',
-        returnSkaterToPreviousStartingPositionButtonComponentID: 'playgroundScreen.returnSkaterToPreviousStartingPositionButton',
-        returnSkaterToGroundButtonComponentID: 'playgroundScreen.returnSkaterToGroundButton',
         homeScreenButtonComponentID: 'homeScreen.playgroundScreenButton',
-        navigationBarScreenButtonComponentID: 'navigationBar.playgroundScreenButton',
-
-        frictionControlComponentID: 'playgroundScreen.frictionSlider'
+        navigationBarScreenButtonComponentID: 'navigationBar.playgroundScreenButton'
       } )
     ], options );
   }
