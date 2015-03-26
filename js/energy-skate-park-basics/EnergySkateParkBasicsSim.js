@@ -44,9 +44,58 @@ define( function( require ) {
     };
 
     Sim.call( this, title, [
-      new EnergySkateParkBasicsScreen( intro, iconIntroHomescreen, iconIntroNavbar, false, false ),
-      new EnergySkateParkBasicsScreen( friction, iconFrictionHomescreen, iconFrictionNavbar, false, true ),
-      new EnergySkateParkBasicsScreen( playground, iconPlaygroundHomescreen, iconPlaygroundNavbar, true, true )
+      new EnergySkateParkBasicsScreen( intro, iconIntroHomescreen, iconIntroNavbar, false, false, {
+        pieChartCheckBoxComponentID: 'introScreen.pieChartCheckBox',
+        barGraphCheckBoxComponentID: 'introScreen.barGraphCheckBox',
+        gridCheckBoxComponentID: 'introScreen.gridCheckBox',
+        speedometerCheckBoxComponentID: 'introScreen.speedometerCheckBox',
+        clearThermalButtonComponentID: 'introScreen.pieChartLegend.clearThermalButton',
+        massSliderComponentID: 'introScreen.massSlider',
+        barGraphClearThermalButtonComponentID: 'introScreen.barGraph.clearThermalButton',
+        scene1RadioButtonComponentID: 'introScreen.scene1RadioButton',
+        scene2RadioButtonComponentID: 'introScreen.scene2RadioButton',
+        scene3RadioButtonComponentID: 'introScreen.scene3RadioButton',
+        stepButtonComponentID: 'introScreen.stepButton',
+        resetAllButtonComponentID: 'introScreen.resetAllButton',
+        returnSkaterButtonComponentID: 'introScreen.returnSkaterButton',
+        slowSpeedRadioButtonComponentID: 'introScreen.slowSpeedRadioButton',
+        normalSpeedRadioButtonComponentID: 'introScreen.normalSpeedRadioButton',
+        returnSkaterToPreviousStartingPositionButtonComponentID: 'introScreen.returnSkaterToPreviousStartingPositionButton',
+        returnSkaterToGroundButtonComponentID: 'introScreen.returnSkaterToGroundButton',
+        homeScreenButtonComponentID: 'homeScreen.introScreenButton',
+        navigationBarScreenButtonComponentID: 'navigationBar.introScreenButton'
+      } ),
+      new EnergySkateParkBasicsScreen( friction, iconFrictionHomescreen, iconFrictionNavbar, false, true, {
+        pieChartCheckBoxComponentID: 'frictionScreen.pieChartCheckBox',
+        barGraphCheckBoxComponentID: 'frictionScreen.barGraphCheckBox',
+        gridCheckBoxComponentID: 'frictionScreen.gridCheckBox',
+        speedometerCheckBoxComponentID: 'frictionScreen.speedometerCheckBox',
+        clearThermalButtonComponentID: 'frictionScreen.pieChartLegend.clearThermalButton',
+        massSliderComponentID: 'frictionScreen.massSlider',
+        barGraphClearThermalButtonComponentID: 'frictionScreen.barGraph.clearThermalButton',
+        scene1RadioButtonComponentID: 'frictionScreen.scene1RadioButton',
+        scene2RadioButtonComponentID: 'frictionScreen.scene2RadioButton',
+        scene3RadioButtonComponentID: 'frictionScreen.scene3RadioButton',
+        stepButtonComponentID: 'frictionScreen.stepButton',
+        resetAllButtonComponentID: 'frictionScreen.resetAllButton',
+        returnSkaterButtonComponentID: 'frictionScreen.returnSkaterButton',
+        slowSpeedRadioButtonComponentID: 'frictionScreen.slowSpeedRadioButton',
+        normalSpeedRadioButtonComponentID: 'frictionScreen.normalSpeedRadioButton',
+        returnSkaterToPreviousStartingPositionButtonComponentID: 'frictionScreen.returnSkaterToPreviousStartingPositionButton',
+        returnSkaterToGroundButtonComponentID: 'frictionScreen.returnSkaterToGroundButton',
+        homeScreenButtonComponentID: 'homeScreen.frictionScreenButton',
+        navigationBarScreenButtonComponentID: 'navigationBar.frictionScreenButton',
+
+        frictionControlComponentID: 'frictionScreen.frictionSlider'
+      } ),
+      new EnergySkateParkBasicsScreen( playground, iconPlaygroundHomescreen, iconPlaygroundNavbar, true, true, {
+        pieChartCheckBoxComponentID: 'introScreen.pieChartCheckBox',
+        barGraphCheckBoxComponentID: 'introScreen.barGraphCheckBox',
+        gridCheckBoxComponentID: 'introScreen.gridCheckBox',
+        speedometerCheckBoxComponentID: 'introScreen.speedometerCheckBox',
+        clearThermalButtonComponentID: 'playgroundScreen.pieChartLegend.clearThermalButton',
+        massSliderComponentID: 'playgroundScreen.massSlider'
+      } )
     ], options );
   }
 

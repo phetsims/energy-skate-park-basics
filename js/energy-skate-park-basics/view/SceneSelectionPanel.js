@@ -24,7 +24,7 @@ define( function( require ) {
    * @param {ModelViewTransform2} transform the model view transform
    * @constructor
    */
-  function SceneSelectionPanel( model, view, transform ) {
+  function SceneSelectionPanel( model, view, transform, options ) {
 
     // Create a button with a scene like the track in the index
     var createNode = function( index ) {
@@ -42,9 +42,9 @@ define( function( require ) {
     };
 
     var content = new RadioButtonGroup( model.sceneProperty, [
-      { value: 0, node: createNode( 0 ), componentID: 'scene1RadioButton' },
-      { value: 1, node: createNode( 1 ), componentID: 'scene2RadioButton' },
-      { value: 2, node: createNode( 2 ), componentID: 'scene3RadioButton' }
+      { value: 0, node: createNode( 0 ), componentID: options.scene1RadioButtonComponentID },
+      { value: 1, node: createNode( 1 ), componentID: options.scene2RadioButtonComponentID },
+      { value: 2, node: createNode( 2 ), componentID: options.scene3RadioButtonComponentID }
     ], {
       orientation: 'vertical',
       buttonContentXMargin: 0,

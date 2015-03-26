@@ -61,7 +61,7 @@ define( function( require ) {
    * @param {EnergySkateParkBasicsModel} model
    * @constructor
    */
-  function EnergySkateParkBasicsScreenView( model ) {
+  function EnergySkateParkBasicsScreenView( model, options ) {
 
     var view = this;
     ScreenView.call( view, { layoutBounds: new Bounds2( 0, 0, 834, 504 ) } );
@@ -84,10 +84,17 @@ define( function( require ) {
     this.addChild( this.gridNode );
 
     var pieChartLegend = new PieChartLegend( model.skater, model.clearThermal.bind( model ),
-      model.property( 'pieChartVisible' ), { clearThermalButtonComponentID: 'pieChartLegend.clearThermalButton' } );
+      model.property( 'pieChartVisible' ), { clearThermalButtonComponentID: options.clearThermalButtonComponentID } );
     this.addChild( pieChartLegend );
 
-    this.controlPanel = new EnergySkateParkBasicsControlPanel( model );
+    this.controlPanel = new EnergySkateParkBasicsControlPanel( model, {
+      pieChartCheckBoxComponentID: options.pieChartCheckBoxComponentID,
+      barGraphCheckBoxComponentID: options.barGraphCheckBoxComponentID,
+      gridCheckBoxComponentID: options.gridCheckBoxComponentID,
+      speedometerCheckBoxComponentID: options.speedometerCheckBoxComponentID,
+      massSliderComponentID: options.massSliderComponentID,
+      frictionControlComponentID: options.frictionControlComponentID
+    } );
     this.addChild( this.controlPanel );
     this.controlPanel.right = this.layoutBounds.width - 5;
     this.controlPanel.top = 5;
@@ -119,11 +126,15 @@ define( function( require ) {
     } );
 
     var barGraphBackground = new BarGraphBackground( model.skater, model.property( 'barGraphVisible' ), model.clearThermal.bind( model ),
-      { clearThermalButtonComponentID: 'barGraph.clearThermalButton' } );
+      { clearThermalButtonComponentID: options.barGraphClearThermalButtonComponentID } );
     this.addChild( barGraphBackground );
 
     if ( !model.draggableTracks ) {
-      this.sceneSelectionPanel = new SceneSelectionPanel( model, this, modelViewTransform );// layout done in layout bounds
+      this.sceneSelectionPanel = new SceneSelectionPanel( model, this, modelViewTransform, {
+        scene1RadioButtonComponentID: options.scene1RadioButtonComponentID,
+        scene2RadioButtonComponentID: options.scene2RadioButtonComponentID,
+        scene3RadioButtonComponentID: options.scene3RadioButtonComponentID
+      } );// layout done in layout bounds
       this.addChild( this.sceneSelectionPanel );
     }
 
@@ -146,7 +157,7 @@ define( function( require ) {
     } );
 
     var stepButton = new StepButton( function() { model.manualStep(); }, playProperty, {
-      componentID: 'stepButton'
+      componentID: options.stepButtonComponentID
     } );
 
     // Make the step button the same size as the pause button.
@@ -167,7 +178,7 @@ define( function( require ) {
       // Align vertically with other controls, see #134
       centerY: (modelViewTransform.modelToViewY( 0 ) + this.layoutBounds.maxY) / 2 + 8,
 
-      componentID: 'resetAllButton'
+      componentID: options.resetAllButtonComponentID
     } );
     this.addChild( this.resetAllButton );
 
@@ -177,17 +188,20 @@ define( function( require ) {
       listener: model.returnSkater.bind( model ),
       centerY: this.resetAllButton.centerY,
       // X updated in layoutBounds since the reset all button can move horizontally
-      componentID: 'returnSkaterButton'
+      componentID: options.returnSkaterButtonComponentID
     } );
 
     // Disable the return skater button when the skater is already at his initial coordinates
     model.skater.linkAttribute( 'moved', view.returnSkaterButton, 'enabled' );
     this.addChild( this.returnSkaterButton );
 
-    this.addChild( new PlaybackSpeedControl( model.property( 'speed' ) ).mutate( {
-      right: playPauseButton.left - 20,
-      top: playPauseButton.top
-    } ) );
+    this.addChild( new PlaybackSpeedControl( model.property( 'speed' ), {
+      slowSpeedRadioButtonComponentID: options.slowSpeedRadioButtonComponentID,
+      normalSpeedRadioButtonComponentID: options.normalSpeedRadioButtonComponentID
+    } ).mutate( {
+        right: playPauseButton.left - 20,
+        top: playPauseButton.top
+      } ) );
 
     var speedometerNode = new GaugeNode(
       // Hide the needle in for the background of the GaugeNode
@@ -351,7 +365,7 @@ define( function( require ) {
       // green means "go" since the skater will likely start moving at this point
       baseColor: EnergySkateParkColorScheme.kineticEnergy,
       listener: model.returnSkater.bind( model ),
-      componentID: 'returnSkaterToPreviousStartingPositionButton'
+      componentID: options.returnSkaterToPreviousStartingPositionButtonComponentID
     } );
 
     var returnSkaterToGroundButton = new RectangularPushButton( {
@@ -359,7 +373,7 @@ define( function( require ) {
       centerBottom: modelViewTransform.modelToViewPosition( model.skater.startingPosition ),
       baseColor: '#f4514e', // red for stop, since the skater will be stopped on the ground.
       listener: function() { model.skater.resetPosition(); },
-      componentID: 'returnSkaterToGroundButton'
+      componentID: options.returnSkaterToGroundButtonComponentID
     } );
 
     this.addChild( returnSkaterToStartingPointButton );

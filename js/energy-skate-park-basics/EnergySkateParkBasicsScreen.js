@@ -15,11 +15,17 @@ define( function( require ) {
   var inherit = require( 'PHET_CORE/inherit' );
   var Screen = require( 'JOIST/Screen' );
 
-  function EnergySkateParkBasicsScreen( name, homescreenIcon, navbarIcon, draggableTracks, friction ) {
+  function EnergySkateParkBasicsScreen( name, homescreenIcon, navbarIcon, draggableTracks, friction, options ) {
     Screen.call( this, name, new Image( homescreenIcon ),
       function() { return new EnergySkateParkBasicsModel( draggableTracks, friction ); },
-      function( model ) { return new EnergySkateParkBasicsScreenView( model ); },
-      { navigationBarIcon: new Image( navbarIcon ) } );
+      function( model ) {
+        return new EnergySkateParkBasicsScreenView( model, options );
+      },
+      {
+        navigationBarIcon: new Image( navbarIcon ),
+        homeScreenButtonComponentID: options.homeScreenButtonComponentID,
+        navigationBarScreenButtonComponentID: options.navigationBarScreenButtonComponentID
+      } );
   }
 
   return inherit( Screen, EnergySkateParkBasicsScreen, {

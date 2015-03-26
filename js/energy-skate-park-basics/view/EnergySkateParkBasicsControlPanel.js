@@ -38,7 +38,14 @@ define( function( require ) {
    * @param {EnergySkateParkBasicsModel} model
    * @constructor
    */
-  function EnergySkateParkBasicsControlPanel( model ) {
+  function EnergySkateParkBasicsControlPanel( model, options ) {
+    options = _.extend( {
+      pieChartCheckBoxComponentID: null,
+      barGraphCheckBoxComponentID: null,
+      gridCheckBoxComponentID: null,
+      speedometerCheckBoxComponentID: null,
+      frictionControlComponentID: null
+    }, options );
     var textOptions = { font: new PhetFont( 14 ) };
 
     var pieChartSet = { label: new Text( pieChartString, textOptions ), icon: this.createPieChartIcon() };
@@ -55,36 +62,38 @@ define( function( require ) {
       return [ itemSet.label, new Rectangle( 0, 0, padWidth + 20, 20 ), itemSet.icon ];
     };
 
-    var options = { boxWidth: 18 };
+    var checkBoxItemOptions = { boxWidth: 18 };
 
     var checkBoxChildren = [
       new CheckBox(
         new HBox( { children: pad( pieChartSet ) } ),
         model.property( 'pieChartVisible' ),
-        _.extend( { componentID: 'pieChartCheckBox' }, options )
+        _.extend( { componentID: options.pieChartCheckBoxComponentID }, checkBoxItemOptions )
       ),
       new CheckBox(
         new HBox( { children: pad( barGraphSet ) } ),
         model.property( 'barGraphVisible' ),
-        _.extend( { componentID: 'barGraphCheckBox' }, options ) ),
+        _.extend( { componentID: options.barGraphCheckBoxComponentID }, checkBoxItemOptions ) ),
       new CheckBox(
         new HBox( { children: pad( gridSet ) } ),
         model.property( 'gridVisible' ),
-        _.extend( { componentID: 'gridCheckBox' }, options ) ),
+        _.extend( { componentID: options.gridCheckBoxComponentID }, checkBoxItemOptions ) ),
       new CheckBox(
         new HBox( { children: pad( speedometerSet ) } ),
         model.property( 'speedometerVisible' ),
-        _.extend( { componentID: 'speedometerCheckBox' }, options )
+        _.extend( { componentID: options.speedometerCheckBoxComponentID }, checkBoxItemOptions )
       ) ];
     var checkBoxes = new VBox( { align: 'left', spacing: 10, children: checkBoxChildren } );
 
-    var massSlider = new MassSlider( model.skater.massProperty );
+    var massSlider = new MassSlider( model.skater.massProperty, {
+      componentID: options.massSliderComponentID
+    } );
 
     // For 1st screen, show MassSlider
     // For 2nd and 3rd screen, show Friction Slider and Mass Slider, see #147
     var children = [ checkBoxes, massSlider ];
     if ( model.frictionAllowed ) {
-      children.push( new FrictionControl( model.property( 'friction' ) ) );
+      children.push( new FrictionControl( model.property( 'friction' ), { componentID: options.frictionControlComponentID } ) );
     }
     var content = new VBox( { spacing: 4, children: children } );
 

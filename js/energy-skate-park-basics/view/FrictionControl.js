@@ -25,9 +25,9 @@ define( function( require ) {
    * @param {Property<Number>} frictionProperty the axon property representing the value of the friction
    * @constructor
    */
-  function FrictionControl( frictionProperty ) {
+  function FrictionControl( frictionProperty, options ) {
     var frictionRange = { min: 0, max: frictionProperty.value * 2 };
-    var slider = new HSlider( frictionProperty, frictionRange, Constants.SLIDER_OPTIONS );
+    var slider = new HSlider( frictionProperty, frictionRange, _.extend( { componentID: options.componentID }, Constants.SLIDER_OPTIONS ) );
     var tickFont = new PhetFont( 10 );
     slider.addMajorTick( frictionRange.min, new Text( noneString, { font: tickFont } ) );
     slider.addMajorTick( frictionRange.max, new Text( lotsString, { font: tickFont } ) );

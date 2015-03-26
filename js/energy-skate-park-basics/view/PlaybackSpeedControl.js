@@ -23,18 +23,18 @@ define( function( require ) {
    * @param {Property<Number>} speedProperty the instantaneous speed of the skater (magnitude of the velocity vector)
    * @constructor
    */
-  function PlaybackSpeedControl( speedProperty ) {
+  function PlaybackSpeedControl( speedProperty, options ) {
     var dilateX = 5;
     var dilateY = 2;
     var radioButtonRadius = 7.1;
     var slowMotionButton = new AquaRadioButton( speedProperty, 'slow', new Text( slowMotionString, { font: new PhetFont( 15 ) } ), {
       radius: radioButtonRadius,
-      componentID: 'slowSpeedRadioButton'
+      componentID: options.slowSpeedRadioButtonComponentID
     } );
     var normalButton = new AquaRadioButton( speedProperty, 'normal', new Text( normalString, { font: new PhetFont( 15 ) } ), {
       radius: radioButtonRadius,
       x: 130,
-      componentID: 'normalSpeedRadioButton'
+      componentID: options.normalSpeedRadioButtonComponentID
     } );
     slowMotionButton.touchArea = slowMotionButton.localBounds.dilatedXY( dilateX, dilateY );
     normalButton.touchArea = normalButton.localBounds.dilatedXY( dilateX, dilateY );
