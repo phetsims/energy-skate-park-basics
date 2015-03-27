@@ -176,7 +176,7 @@ define( function( require ) {
     if ( !draggableTracks ) {
 
       // For screens 1-2, the index of the selected scene (and track) within the screen
-      this.addProperty( 'scene', 0 );
+      this.addProperty( 'scene', 0, options.componentIDContext.createComponentID( 'scene' ) );
 
       // Shape types
       // For the double well, move the left well up a bit since the interpolation moves it down by that much, and we
