@@ -96,7 +96,15 @@ define( function( require ) {
         position: options.componentIDContext.createComponentID( 'skaterPosition' ),
         u: options.componentIDContext.createComponentID( 'skaterParametricDistanceAlongTrack' ),
         up: options.componentIDContext.createComponentID( 'skaterUpsideUpOnTrack' ),
-        mass: options.componentIDContext.createComponentID( 'skaterMass' )
+        mass: options.componentIDContext.createComponentID( 'skaterMass' ),
+        gravity: options.componentIDContext.createComponentID( 'gravity' ),
+        direction: options.componentIDContext.createComponentID( 'skaterDirection' ),
+        kineticEnergy: options.componentIDContext.createComponentID( 'skaterKineticEnergy' ),
+        potentialEnergy: options.componentIDContext.createComponentID( 'skaterPotentialEnergy' ),
+        thermalEnergy: options.componentIDContext.createComponentID( 'skaterThermalEnergy' ),
+        totalEnergy: options.componentIDContext.createComponentID( 'skaterTotalEnergy' ),
+        velocity: options.componentIDContext.createComponentID( 'skaterVelocity' ),
+        dragging: options.componentIDContext.createComponentID( 'skaterDragging' )
       }
     } );
 
