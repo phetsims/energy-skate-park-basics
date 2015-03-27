@@ -93,7 +93,10 @@ define( function( require ) {
       headPosition: new Vector2( 0, 0 )
     }, {
       componentIDMap: {
-        position: options.componentIDContext.createComponentID( 'skaterPosition' )
+        position: options.componentIDContext.createComponentID( 'skaterPosition' ),
+        u: options.componentIDContext.createComponentID( 'skaterParametricDistanceAlongTrack' ),
+        up: options.componentIDContext.createComponentID( 'skaterUpsideUpOnTrack' ),
+        mass: options.componentIDContext.createComponentID( 'skaterMass' )
       }
     } );
 
