@@ -35,14 +35,6 @@ define( function( require ) {
   return inherit( PropertySet, ControlPoint, {
     copy: function() {
       return new ControlPoint( this.position.x, this.position.y );
-    },
-
-    // For together.js
-    get x() {
-      return this.sourcePosition.x;
-    },
-    get y() {
-      return this.sourcePosition.y;
     }
   } );
 } );

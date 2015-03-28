@@ -151,7 +151,49 @@ define( function( require ) {
     // If the mass changes while the sim is paused, trigger an update so the skater image size will update, see #115
     this.skater.property( 'mass' ).link( function() { if ( model.paused ) { model.skater.trigger( 'updated' ); } } );
 
-    this.tracks = new ObservableArray( { componentID: options.componentIDContext.createComponentID( 'tracks' ) } );
+    this.tracks = new ObservableArray();
+
+    // Proxy for save/load for the tracks for together.js
+    // TODO: This is all a bit hackish, to serialize the tracks.  Cannot this be made simpler?
+    if ( draggableTracks ) {
+      together && together.addComponent( {
+        componentID: 'playgroundScreen.tracks',
+        getArray: function() {
+          var tracksArray = [];
+          for ( var i = 0; i < model.tracks.length; i++ ) {
+            (function( track ) {
+              tracksArray.push( {
+                getArray: function() {
+                  var controlPointArray = [];
+                  for ( var j = 0; j < track.controlPoints.length; j++ ) {
+                    var controlPoint = track.controlPoints[ j ];
+                    controlPointArray.push( new Vector2( controlPoint.sourcePosition.x, controlPoint.sourcePosition.y ) );
+                  }
+                  return controlPointArray;
+                }
+              } )
+            })( model.tracks.get( i ) );
+          }
+          return tracksArray;
+        },
+
+        // TODO: set value asymmetric from getArray
+        set value( arrayOfArrayOfVector ) {
+          for ( var i = 0; i < arrayOfArrayOfVector.length; i++ ) {
+            var track = arrayOfArrayOfVector[ i ];
+            for ( var j = 0; j < track.length; j++ ) {
+              var controlPoint = model.tracks.get( i ).controlPoints[ j ];
+              if ( controlPoint.sourcePosition.x !== track[ j ].x ||
+                   controlPoint.sourcePosition.y !== track[ j ].y ) {
+                controlPoint.sourcePosition = track[ j ];
+                model.tracks.get( i ).updateSplines();
+                model.tracks.get( i ).trigger( 'update' );
+              }
+            }
+          }
+        }
+      } );
+    }
 
     // Determine when to show/hide the track edit buttons (cut track or delete control point)
     var updateTrackEditingButtonProperties = function() {

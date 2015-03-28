@@ -104,7 +104,8 @@ define( function( require ) {
         thermalEnergy: options.componentIDContext.createComponentID( 'skaterThermalEnergy' ),
         totalEnergy: options.componentIDContext.createComponentID( 'skaterTotalEnergy' ),
         velocity: options.componentIDContext.createComponentID( 'skaterVelocity' ),
-        dragging: options.componentIDContext.createComponentID( 'skaterDragging' )
+        dragging: options.componentIDContext.createComponentID( 'skaterDragging' ),
+        angle: options.componentIDContext.createComponentID( 'skaterAngle' )
       }
     } );
 

@@ -86,6 +86,7 @@ define( function( require ) {
 
     track.on( 'reset', this.updateTrackShape.bind( this ) );
     track.on( 'smoothed', this.updateTrackShape.bind( this ) );
+    track.on( 'update', this.updateTrackShape.bind( this ) );
   }
 
   return inherit( Node, TrackNode, {
