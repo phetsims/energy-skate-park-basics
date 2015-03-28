@@ -172,6 +172,8 @@ define( function( require ) {
 
         // TODO: set value asymmetric from getArray
         set value( arrayOfArrayOfVector ) {
+          // TODO: Ensure the right number of tracks, each with the right number of points.
+
           for ( var i = 0; i < arrayOfArrayOfVector.length; i++ ) {
             var track = arrayOfArrayOfVector[ i ];
             for ( var j = 0; j < track.length; j++ ) {
