@@ -151,7 +151,7 @@ define( function( require ) {
     // If the mass changes while the sim is paused, trigger an update so the skater image size will update, see #115
     this.skater.property( 'mass' ).link( function() { if ( model.paused ) { model.skater.trigger( 'updated' ); } } );
 
-    this.tracks = new ObservableArray();
+    this.tracks = new ObservableArray( { componentID: options.componentIDContext.createComponentID( 'tracks' ) } );
 
     // Determine when to show/hide the track edit buttons (cut track or delete control point)
     var updateTrackEditingButtonProperties = function() {
