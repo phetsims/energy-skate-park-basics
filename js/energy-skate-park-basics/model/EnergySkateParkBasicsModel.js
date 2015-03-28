@@ -159,22 +159,15 @@ define( function( require ) {
       together && together.addComponent( {
         componentID: 'playgroundScreen.tracks',
         getArray: function() {
-          var tracksArray = [];
-          for ( var i = 0; i < model.tracks.length; i++ ) {
-            (function( track ) {
-              tracksArray.push( {
-                getArray: function() {
-                  var controlPointArray = [];
-                  for ( var j = 0; j < track.controlPoints.length; j++ ) {
-                    var controlPoint = track.controlPoints[ j ];
-                    controlPointArray.push( new Vector2( controlPoint.sourcePosition.x, controlPoint.sourcePosition.y ) );
-                  }
-                  return controlPointArray;
-                }
-              } )
-            })( model.tracks.get( i ) );
-          }
-          return tracksArray;
+          return model.tracks.map( function( track ) {
+            return {
+              getArray: function() {
+                return track.controlPoints.map( function( controlPoint ) {
+                  return controlPoint.sourcePosition;
+                } );
+              }
+            };
+          } ).getArray(); // This line returns a JS Array, not ObservableArray, required by together.js
         },
 
         // TODO: set value asymmetric from getArray
@@ -183,6 +176,8 @@ define( function( require ) {
             var track = arrayOfArrayOfVector[ i ];
             for ( var j = 0; j < track.length; j++ ) {
               var controlPoint = model.tracks.get( i ).controlPoints[ j ];
+
+              // Making sure it is different here significantly improves performance in mirror.html
               if ( controlPoint.sourcePosition.x !== track[ j ].x ||
                    controlPoint.sourcePosition.y !== track[ j ].y ) {
                 controlPoint.sourcePosition = track[ j ];
