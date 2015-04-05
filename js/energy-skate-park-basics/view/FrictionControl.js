@@ -27,7 +27,7 @@ define( function( require ) {
    */
   function FrictionControl( frictionProperty, options ) {
     var frictionRange = { min: 0, max: frictionProperty.value * 2 };
-    var slider = new HSlider( frictionProperty, frictionRange, _.extend( { componentID: options.componentID }, Constants.SLIDER_OPTIONS ) );
+    var slider = new HSlider( frictionProperty, frictionRange, _.extend( { togetherID: options.togetherID }, Constants.SLIDER_OPTIONS ) );
     var tickFont = new PhetFont( 10 );
     slider.addMajorTick( frictionRange.min, new Text( noneString, { font: tickFont } ) );
     slider.addMajorTick( frictionRange.max, new Text( lotsString, { font: tickFont } ) );

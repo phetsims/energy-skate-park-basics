@@ -92,20 +92,20 @@ define( function( require ) {
       // Position of the skater's head, for positioning the pie chart.
       headPosition: new Vector2( 0, 0 )
     }, {
-      componentIDMap: {
-        position: options.componentIDContext.createComponentID( 'skaterPosition' ),
-        u: options.componentIDContext.createComponentID( 'skaterParametricDistanceAlongTrack' ),
-        up: options.componentIDContext.createComponentID( 'skaterUpsideUpOnTrack' ),
-        mass: options.componentIDContext.createComponentID( 'skaterMass' ),
-        gravity: options.componentIDContext.createComponentID( 'gravity' ),
-        direction: options.componentIDContext.createComponentID( 'skaterDirection' ),
-        kineticEnergy: options.componentIDContext.createComponentID( 'skaterKineticEnergy' ),
-        potentialEnergy: options.componentIDContext.createComponentID( 'skaterPotentialEnergy' ),
-        thermalEnergy: options.componentIDContext.createComponentID( 'skaterThermalEnergy' ),
-        totalEnergy: options.componentIDContext.createComponentID( 'skaterTotalEnergy' ),
-        velocity: options.componentIDContext.createComponentID( 'skaterVelocity' ),
-        dragging: options.componentIDContext.createComponentID( 'skaterDragging' ),
-        angle: options.componentIDContext.createComponentID( 'skaterAngle' )
+      togetherIDMap: {
+        position: options.togetherContext.createTogetherID( 'skaterPosition' ),
+        u: options.togetherContext.createTogetherID( 'skaterParametricDistanceAlongTrack' ),
+        up: options.togetherContext.createTogetherID( 'skaterUpsideUpOnTrack' ),
+        mass: options.togetherContext.createTogetherID( 'skaterMass' ),
+        gravity: options.togetherContext.createTogetherID( 'gravity' ),
+        direction: options.togetherContext.createTogetherID( 'skaterDirection' ),
+        kineticEnergy: options.togetherContext.createTogetherID( 'skaterKineticEnergy' ),
+        potentialEnergy: options.togetherContext.createTogetherID( 'skaterPotentialEnergy' ),
+        thermalEnergy: options.togetherContext.createTogetherID( 'skaterThermalEnergy' ),
+        totalEnergy: options.togetherContext.createTogetherID( 'skaterTotalEnergy' ),
+        velocity: options.togetherContext.createTogetherID( 'skaterVelocity' ),
+        dragging: options.togetherContext.createTogetherID( 'skaterDragging' ),
+        angle: options.togetherContext.createTogetherID( 'skaterAngle' )
       }
     } );
 

@@ -19,7 +19,7 @@ define( function( require ) {
   var PhetFont = require( 'SCENERY_PHET/PhetFont' );
   var EnergySkateParkColorScheme = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/view/EnergySkateParkColorScheme' );
   var ClearThermalButton = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/view/ClearThermalButton' );
-  var ComponentIDContext = require( 'TANDEM/ComponentIDContext' );
+  var TogetherContext = require( 'TANDEM/TogetherContext' );
 
   // strings
   var kineticString = require( 'string!ENERGY_SKATE_PARK_BASICS/energy.kinetic' );
@@ -37,7 +37,7 @@ define( function( require ) {
    */
   function BarGraphBackground( skater, barGraphVisibleProperty, clearThermal, options ) {
 
-    options = _.extend( { componentIDContext: new ComponentIDContext() }, options );
+    options = _.extend( { togetherContext: new TogetherContext() }, options );
 
     var barGraphBackground = this;
 
@@ -76,7 +76,7 @@ define( function( require ) {
     var clearThermalButton = new ClearThermalButton( clearThermal, skater, {
       centerX: thermalLabel.centerX,
       y: thermalLabel.bottom + 12,
-      componentID: options.componentIDContext.createComponentID( 'barGraph.clearThermalButton' )
+      togetherID: options.togetherContext.createTogetherID( 'barGraph.clearThermalButton' )
     } );
     skater.allowClearingThermalEnergyProperty.link( function( allowClearingThermalEnergy ) {
       clearThermalButton.enabled = allowClearingThermalEnergy;

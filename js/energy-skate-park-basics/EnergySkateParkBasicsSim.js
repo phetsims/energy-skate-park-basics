@@ -12,7 +12,7 @@ define( function( require ) {
   var inherit = require( 'PHET_CORE/inherit' );
   var EnergySkateParkBasicsScreen = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/EnergySkateParkBasicsScreen' );
   var Sim = require( 'JOIST/Sim' );
-  var ComponentIDContext = require( 'TANDEM/ComponentIDContext' );
+  var TogetherContext = require( 'TANDEM/TogetherContext' );
 
   // images
   var iconIntroHomescreen = require( 'image!ENERGY_SKATE_PARK_BASICS/icon-intro-homescreen.png' );
@@ -46,19 +46,19 @@ define( function( require ) {
 
     Sim.call( this, title, [
       new EnergySkateParkBasicsScreen( intro, iconIntroHomescreen, iconIntroNavbar, false, false, {
-        componentIDContext: new ComponentIDContext( 'introScreen' ),
-        homeScreenButtonComponentID: 'homeScreen.introScreenButton',
-        navigationBarScreenButtonComponentID: 'navigationBar.introScreenButton'
+        togetherContext: new TogetherContext( 'introScreen' ),
+        homeScreenButtonTogetherID: 'homeScreen.introScreenButton',
+        navigationBarScreenButtonTogetherID: 'navigationBar.introScreenButton'
       } ),
       new EnergySkateParkBasicsScreen( friction, iconFrictionHomescreen, iconFrictionNavbar, false, true, {
-        componentIDContext: new ComponentIDContext( 'frictionScreen' ),
-        homeScreenButtonComponentID: 'homeScreen.frictionScreenButton',
-        navigationBarScreenButtonComponentID: 'navigationBar.frictionScreenButton'
+        togetherContext: new TogetherContext( 'frictionScreen' ),
+        homeScreenButtonTogetherID: 'homeScreen.frictionScreenButton',
+        navigationBarScreenButtonTogetherID: 'navigationBar.frictionScreenButton'
       } ),
       new EnergySkateParkBasicsScreen( playground, iconPlaygroundHomescreen, iconPlaygroundNavbar, true, true, {
-        componentIDContext: new ComponentIDContext( 'playgroundScreen' ),
-        homeScreenButtonComponentID: 'homeScreen.playgroundScreenButton',
-        navigationBarScreenButtonComponentID: 'navigationBar.playgroundScreenButton'
+        togetherContext: new TogetherContext( 'playgroundScreen' ),
+        homeScreenButtonTogetherID: 'homeScreen.playgroundScreenButton',
+        navigationBarScreenButtonTogetherID: 'navigationBar.playgroundScreenButton'
       } )
     ], options );
   }

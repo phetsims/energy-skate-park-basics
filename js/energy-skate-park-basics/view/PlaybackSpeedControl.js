@@ -29,12 +29,12 @@ define( function( require ) {
     var radioButtonRadius = 7.1;
     var slowMotionButton = new AquaRadioButton( speedProperty, 'slow', new Text( slowMotionString, { font: new PhetFont( 15 ) } ), {
       radius: radioButtonRadius,
-      componentID: options.slowSpeedRadioButtonComponentID
+      togetherID: options.slowSpeedRadioButtonTogetherID
     } );
     var normalButton = new AquaRadioButton( speedProperty, 'normal', new Text( normalString, { font: new PhetFont( 15 ) } ), {
       radius: radioButtonRadius,
       x: 130,
-      componentID: options.normalSpeedRadioButtonComponentID
+      togetherID: options.normalSpeedRadioButtonTogetherID
     } );
     slowMotionButton.touchArea = slowMotionButton.localBounds.dilatedXY( dilateX, dilateY );
     normalButton.touchArea = normalButton.localBounds.dilatedXY( dilateX, dilateY );

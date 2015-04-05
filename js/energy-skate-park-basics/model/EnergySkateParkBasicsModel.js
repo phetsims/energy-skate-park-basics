@@ -113,28 +113,28 @@ define( function( require ) {
       // adjusted, see #195
       availableModelBounds: null
     }, {
-      componentIDMap: {
+      togetherIDMap: {
         // Model for visibility of various view parameters
-        pieChartVisible: options.componentIDContext.createComponentID( 'pieChartVisible' ),
-        barGraphVisible: options.componentIDContext.createComponentID( 'barGraphVisible' ),
-        gridVisible: options.componentIDContext.createComponentID( 'gridVisible' ),
-        speedometerVisible: options.componentIDContext.createComponentID( 'speedometerVisible' ),
+        pieChartVisible: options.togetherContext.createTogetherID( 'pieChartVisible' ),
+        barGraphVisible: options.togetherContext.createTogetherID( 'barGraphVisible' ),
+        gridVisible: options.togetherContext.createTogetherID( 'gridVisible' ),
+        speedometerVisible: options.togetherContext.createTogetherID( 'speedometerVisible' ),
 
         // Enabled/disabled for the track editing buttons
-        editButtonEnabled: options.componentIDContext.createComponentID( 'editButtonEnabled' ),
-        clearButtonEnabled: options.componentIDContext.createComponentID( 'clearButtonEnabled' ),
+        editButtonEnabled: options.togetherContext.createTogetherID( 'editButtonEnabled' ),
+        clearButtonEnabled: options.togetherContext.createTogetherID( 'clearButtonEnabled' ),
 
         // Whether the sim is paused or running
-        paused: options.componentIDContext.createComponentID( 'paused' ),
+        paused: options.togetherContext.createTogetherID( 'paused' ),
 
         // speed of the model, either 'normal' or 'slow'
-        speed: options.componentIDContext.createComponentID( 'speed' ),
+        speed: options.togetherContext.createTogetherID( 'speed' ),
 
         // Coefficient of friction (unitless) between skater and track
-        friction: options.componentIDContext.createComponentID( 'friction' ),
+        friction: options.togetherContext.createTogetherID( 'friction' ),
 
         // Whether the skater should stick to the track like a roller coaster, or be able to fly off like a street
-        detachable: options.componentIDContext.createComponentID( 'detachable' )
+        detachable: options.togetherContext.createTogetherID( 'detachable' )
       }
     } );
 
@@ -157,7 +157,7 @@ define( function( require ) {
     // TODO: This is all a bit hackish, to serialize the tracks.  Cannot this be made simpler?
     if ( draggableTracks ) {
       together && together.addComponent( {
-        componentID: 'playgroundScreen.tracks',
+        togetherID: 'playgroundScreen.tracks',
         getArray: function() {
           return model.tracks.map( function( track ) {
             return {
@@ -215,7 +215,7 @@ define( function( require ) {
     if ( !draggableTracks ) {
 
       // For screens 1-2, the index of the selected scene (and track) within the screen
-      this.addProperty( 'scene', 0, options.componentIDContext.createComponentID( 'scene' ) );
+      this.addProperty( 'scene', 0, options.togetherContext.createTogetherID( 'scene' ) );
 
       // Shape types
       // For the double well, move the left well up a bit since the interpolation moves it down by that much, and we

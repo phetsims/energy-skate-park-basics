@@ -42,12 +42,12 @@ define( function( require ) {
       {
         value: false,
         node: new Image( attachIcon, { scale: scale } ),
-        componentID: 'playgroundScreen.attachRadioButton'
+        togetherID: 'playgroundScreen.attachRadioButton'
       },
       {
         value: true,
         node: new Image( detachIcon, { scale: scale } ),
-        componentID: 'playgroundScreen.detachRadioButton'
+        togetherID: 'playgroundScreen.detachRadioButton'
       }
     ];
 

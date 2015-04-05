@@ -33,7 +33,7 @@ define( function( require ) {
     var clearThermalButton = this;
     options = _.extend( {
       cursor: 'pointer',
-      componentID: null
+      togetherID: null
     }, options );
 
     var icon = new Image( trashCanImage, { scale: 0.22 } );
@@ -54,7 +54,7 @@ define( function( require ) {
       buttonAppearanceStrategy: RectangularButtonView.flatAppearanceStrategy,
       xMargin: 7,
       yMargin: 3,
-      componentID: options.componentID
+      togetherID: options.togetherID
     } );
     this.mouseArea = this.touchArea = Shape.rectangle( icon.bounds.minX, icon.bounds.minY, icon.bounds.width, icon.bounds.height );
     this.mutate( options );

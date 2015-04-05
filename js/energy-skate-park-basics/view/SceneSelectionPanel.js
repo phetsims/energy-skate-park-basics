@@ -45,17 +45,17 @@ define( function( require ) {
       {
         value: 0,
         node: createNode( 0 ),
-        componentID: options.componentIDContext.createComponentID( 'scene1RadioButton' )
+        togetherID: options.togetherContext.createTogetherID( 'scene1RadioButton' )
       },
       {
         value: 1,
         node: createNode( 1 ),
-        componentID: options.componentIDContext.createComponentID( 'scene2RadioButton' )
+        togetherID: options.togetherContext.createTogetherID( 'scene2RadioButton' )
       },
       {
         value: 2,
         node: createNode( 2 ),
-        componentID: options.componentIDContext.createComponentID( 'scene3RadioButton' )
+        togetherID: options.togetherContext.createTogetherID( 'scene3RadioButton' )
       }
     ], {
       orientation: 'vertical',
