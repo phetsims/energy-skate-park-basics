@@ -155,6 +155,9 @@ define( function( require ) {
     // Enable the "Clear Thermal" buttons but only if the thermal energy exceeds a tiny threshold, so there aren't visual
     // "false positives", see #306
     this.addDerivedProperty( 'allowClearingThermalEnergy', [ 'thermalEnergy' ], function( thermalEnergy ) {return thermalEnergy > 1E-2;} );
+
+    this.togetherID = options.togetherContext.createTogetherID( 'skater' );
+    together && together.addComponent( this );
   }
 
   return inherit( PropertySet, Skater, {
