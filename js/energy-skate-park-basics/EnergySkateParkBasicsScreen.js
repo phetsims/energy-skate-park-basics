@@ -17,7 +17,7 @@ define( function( require ) {
 
   function EnergySkateParkBasicsScreen( name, homescreenIcon, navbarIcon, draggableTracks, friction, options ) {
     Screen.call( this, name, new Image( homescreenIcon ),
-      function() { return new EnergySkateParkBasicsModel( draggableTracks, friction, { togetherContext: options.togetherContext } ); },
+      function() { return new EnergySkateParkBasicsModel( draggableTracks, friction, { tandem: options.tandem } ); },
       function( model ) {
         return new EnergySkateParkBasicsScreenView( model, options );
       },

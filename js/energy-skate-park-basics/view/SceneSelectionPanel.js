@@ -45,17 +45,17 @@ define( function( require ) {
       {
         value: 0,
         node: createNode( 0 ),
-        togetherID: options.togetherContext.createTogetherID( 'scene1RadioButton' )
+        togetherID: options.tandem.createTandem( 'scene1RadioButton' )
       },
       {
         value: 1,
         node: createNode( 1 ),
-        togetherID: options.togetherContext.createTogetherID( 'scene2RadioButton' )
+        togetherID: options.tandem.createTandem( 'scene2RadioButton' )
       },
       {
         value: 2,
         node: createNode( 2 ),
-        togetherID: options.togetherContext.createTogetherID( 'scene3RadioButton' )
+        togetherID: options.tandem.createTandem( 'scene3RadioButton' )
       }
     ], {
       orientation: 'vertical',

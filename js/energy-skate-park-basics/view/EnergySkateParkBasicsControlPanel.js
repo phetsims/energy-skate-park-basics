@@ -27,7 +27,7 @@ define( function( require ) {
   var Property = require( 'AXON/Property' );
   var FrictionControl = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/view/FrictionControl' );
   var PhetFont = require( 'SCENERY_PHET/PhetFont' );
-  var TogetherContext = require( 'TANDEM/TogetherContext' );
+  var Tandem = require( 'TANDEM/Tandem' );
 
   // strings
   var barGraphString = require( 'string!ENERGY_SKATE_PARK_BASICS/plots.bar-graph' );
@@ -41,7 +41,7 @@ define( function( require ) {
    */
   function EnergySkateParkBasicsControlPanel( model, options ) {
     options = _.extend( {
-      togetherContext: new TogetherContext()
+      tandem: new Tandem()
     }, options );
     var textOptions = { font: new PhetFont( 14 ) };
 
@@ -65,25 +65,25 @@ define( function( require ) {
       new CheckBox(
         new HBox( { children: pad( pieChartSet ) } ),
         model.property( 'pieChartVisible' ),
-        _.extend( { togetherID: options.togetherContext.createTogetherID( 'pieChartCheckBox' ) }, checkBoxItemOptions )
+        _.extend( { togetherID: options.tandem.createTandem( 'pieChartCheckBox' ) }, checkBoxItemOptions )
       ),
       new CheckBox(
         new HBox( { children: pad( barGraphSet ) } ),
         model.property( 'barGraphVisible' ),
-        _.extend( { togetherID: options.togetherContext.createTogetherID( 'barGraphCheckBox' ) }, checkBoxItemOptions ) ),
+        _.extend( { togetherID: options.tandem.createTandem( 'barGraphCheckBox' ) }, checkBoxItemOptions ) ),
       new CheckBox(
         new HBox( { children: pad( gridSet ) } ),
         model.property( 'gridVisible' ),
-        _.extend( { togetherID: options.togetherContext.createTogetherID( 'gridCheckBox' ) }, checkBoxItemOptions ) ),
+        _.extend( { togetherID: options.tandem.createTandem( 'gridCheckBox' ) }, checkBoxItemOptions ) ),
       new CheckBox(
         new HBox( { children: pad( speedometerSet ) } ),
         model.property( 'speedometerVisible' ),
-        _.extend( { togetherID: options.togetherContext.createTogetherID( 'speedometerCheckBox' ) }, checkBoxItemOptions )
+        _.extend( { togetherID: options.tandem.createTandem( 'speedometerCheckBox' ) }, checkBoxItemOptions )
       ) ];
     var checkBoxes = new VBox( { align: 'left', spacing: 10, children: checkBoxChildren } );
 
     var massSlider = new MassSlider( model.skater.massProperty, {
-      togetherID: options.togetherContext.createTogetherID( 'massSlider' )
+      togetherID: options.tandem.createTandem( 'massSlider' )
     } );
 
     // For 1st screen, show MassSlider
@@ -91,7 +91,7 @@ define( function( require ) {
     var children = [ checkBoxes, massSlider ];
     if ( model.frictionAllowed ) {
       children.push( new FrictionControl( model.property( 'friction' ), {
-        togetherID: options.togetherContext.createTogetherID( 'frictionSlider' )
+        togetherID: options.tandem.createTandem( 'frictionSlider' )
       } ) );
     }
     var content = new VBox( { spacing: 4, children: children } );

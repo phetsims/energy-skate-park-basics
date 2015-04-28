@@ -12,7 +12,7 @@ define( function( require ) {
   var inherit = require( 'PHET_CORE/inherit' );
   var EnergySkateParkBasicsScreen = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/EnergySkateParkBasicsScreen' );
   var Sim = require( 'JOIST/Sim' );
-  var TogetherContext = require( 'TANDEM/TogetherContext' );
+  var Tandem = require( 'TANDEM/Tandem' );
 
   // images
   var iconIntroHomescreen = require( 'image!ENERGY_SKATE_PARK_BASICS/icon-intro-homescreen.png' );
@@ -44,19 +44,20 @@ define( function( require ) {
       screenDisplayStrategy: 'setChildren'
     };
 
+    var tandem = new Tandem( 'energySkateParkBasics' );
     Sim.call( this, title, [
       new EnergySkateParkBasicsScreen( intro, iconIntroHomescreen, iconIntroNavbar, false, false, {
-        togetherContext: new TogetherContext( 'introScreen' ),
+        tandem: tandem.createTandem( 'introScreen' ),
         homeScreenButtonTogetherID: 'homeScreen.introScreenButton',
         navigationBarScreenButtonTogetherID: 'navigationBar.introScreenButton'
       } ),
       new EnergySkateParkBasicsScreen( friction, iconFrictionHomescreen, iconFrictionNavbar, false, true, {
-        togetherContext: new TogetherContext( 'frictionScreen' ),
+        tandem: tandem.createTandem( 'frictionScreen' ),
         homeScreenButtonTogetherID: 'homeScreen.frictionScreenButton',
         navigationBarScreenButtonTogetherID: 'navigationBar.frictionScreenButton'
       } ),
       new EnergySkateParkBasicsScreen( playground, iconPlaygroundHomescreen, iconPlaygroundNavbar, true, true, {
-        togetherContext: new TogetherContext( 'playgroundScreen' ),
+        tandem: tandem.createTandem( 'playgroundScreen' ),
         homeScreenButtonTogetherID: 'homeScreen.playgroundScreenButton',
         navigationBarScreenButtonTogetherID: 'navigationBar.playgroundScreenButton'
       } )

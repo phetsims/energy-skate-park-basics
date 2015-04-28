@@ -115,26 +115,26 @@ define( function( require ) {
     }, {
       togetherIDMap: {
         // Model for visibility of various view parameters
-        pieChartVisible: options.togetherContext.createTogetherID( 'pieChartVisible' ),
-        barGraphVisible: options.togetherContext.createTogetherID( 'barGraphVisible' ),
-        gridVisible: options.togetherContext.createTogetherID( 'gridVisible' ),
-        speedometerVisible: options.togetherContext.createTogetherID( 'speedometerVisible' ),
+        pieChartVisible: options.tandem.createTandem( 'pieChartVisible' ),
+        barGraphVisible: options.tandem.createTandem( 'barGraphVisible' ),
+        gridVisible: options.tandem.createTandem( 'gridVisible' ),
+        speedometerVisible: options.tandem.createTandem( 'speedometerVisible' ),
 
         // Enabled/disabled for the track editing buttons
-        editButtonEnabled: options.togetherContext.createTogetherID( 'editButtonEnabled' ),
-        clearButtonEnabled: options.togetherContext.createTogetherID( 'clearButtonEnabled' ),
+        editButtonEnabled: options.tandem.createTandem( 'editButtonEnabled' ),
+        clearButtonEnabled: options.tandem.createTandem( 'clearButtonEnabled' ),
 
         // Whether the sim is paused or running
-        paused: options.togetherContext.createTogetherID( 'paused' ),
+        paused: options.tandem.createTandem( 'paused' ),
 
         // speed of the model, either 'normal' or 'slow'
-        speed: options.togetherContext.createTogetherID( 'speed' ),
+        speed: options.tandem.createTandem( 'speed' ),
 
         // Coefficient of friction (unitless) between skater and track
-        friction: options.togetherContext.createTogetherID( 'friction' ),
+        friction: options.tandem.createTandem( 'friction' ),
 
         // Whether the skater should stick to the track like a roller coaster, or be able to fly off like a street
-        detachable: options.togetherContext.createTogetherID( 'detachable' )
+        detachable: options.tandem.createTandem( 'detachable' )
       }
     } );
 
@@ -221,7 +221,7 @@ define( function( require ) {
     if ( !draggableTracks ) {
 
       // For screens 1-2, the index of the selected scene (and track) within the screen
-      this.addProperty( 'scene', 0, options.togetherContext.createTogetherID( 'scene' ) );
+      this.addProperty( 'scene', 0, options.tandem.createTandem( 'scene' ) );
 
       // Shape types
       // For the double well, move the left well up a bit since the interpolation moves it down by that much, and we

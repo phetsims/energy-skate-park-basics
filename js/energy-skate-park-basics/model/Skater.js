@@ -93,19 +93,19 @@ define( function( require ) {
       headPosition: new Vector2( 0, 0 )
     }, {
       togetherIDMap: {
-        position: options.togetherContext.createTogetherID( 'skaterPosition' ),
-        u: options.togetherContext.createTogetherID( 'skaterParametricDistanceAlongTrack' ),
-        up: options.togetherContext.createTogetherID( 'skaterUpsideUpOnTrack' ),
-        mass: options.togetherContext.createTogetherID( 'skaterMass' ),
-        gravity: options.togetherContext.createTogetherID( 'gravity' ),
-        direction: options.togetherContext.createTogetherID( 'skaterDirection' ),
-        kineticEnergy: options.togetherContext.createTogetherID( 'skaterKineticEnergy' ),
-        potentialEnergy: options.togetherContext.createTogetherID( 'skaterPotentialEnergy' ),
-        thermalEnergy: options.togetherContext.createTogetherID( 'skaterThermalEnergy' ),
-        totalEnergy: options.togetherContext.createTogetherID( 'skaterTotalEnergy' ),
-        velocity: options.togetherContext.createTogetherID( 'skaterVelocity' ),
-        dragging: options.togetherContext.createTogetherID( 'skaterDragging' ),
-        angle: options.togetherContext.createTogetherID( 'skaterAngle' )
+        position: options.tandem.createTandem( 'skaterPosition' ),
+        u: options.tandem.createTandem( 'skaterParametricDistanceAlongTrack' ),
+        up: options.tandem.createTandem( 'skaterUpsideUpOnTrack' ),
+        mass: options.tandem.createTandem( 'skaterMass' ),
+        gravity: options.tandem.createTandem( 'gravity' ),
+        direction: options.tandem.createTandem( 'skaterDirection' ),
+        kineticEnergy: options.tandem.createTandem( 'skaterKineticEnergy' ),
+        potentialEnergy: options.tandem.createTandem( 'skaterPotentialEnergy' ),
+        thermalEnergy: options.tandem.createTandem( 'skaterThermalEnergy' ),
+        totalEnergy: options.tandem.createTandem( 'skaterTotalEnergy' ),
+        velocity: options.tandem.createTandem( 'skaterVelocity' ),
+        dragging: options.tandem.createTandem( 'skaterDragging' ),
+        angle: options.tandem.createTandem( 'skaterAngle' )
       }
     } );
 
@@ -156,7 +156,7 @@ define( function( require ) {
     // "false positives", see #306
     this.addDerivedProperty( 'allowClearingThermalEnergy', [ 'thermalEnergy' ], function( thermalEnergy ) {return thermalEnergy > 1E-2;} );
 
-    this.togetherID = options.togetherContext.createTogetherID( 'skater' );
+    this.togetherID = options.tandem.createTandem( 'skater' );
     together && together.addComponent( this );
   }
 

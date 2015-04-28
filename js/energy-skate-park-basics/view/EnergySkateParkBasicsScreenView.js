@@ -87,12 +87,12 @@ define( function( require ) {
       model.skater,
       model.clearThermal.bind( model ),
       model.property( 'pieChartVisible' ), {
-        togetherContext: options.togetherContext
+        tandem: options.tandem
       } );
     this.addChild( pieChartLegend );
 
     this.controlPanel = new EnergySkateParkBasicsControlPanel( model, {
-      togetherContext: options.togetherContext,
+      tandem: options.tandem,
       massSliderTogetherID: options.massSliderTogetherID
     } );
     this.addChild( this.controlPanel );
@@ -126,12 +126,12 @@ define( function( require ) {
     } );
 
     var barGraphBackground = new BarGraphBackground( model.skater, model.property( 'barGraphVisible' ), model.clearThermal.bind( model ),
-      { togetherContext: options.togetherContext } );
+      { tandem: options.tandem } );
     this.addChild( barGraphBackground );
 
     if ( !model.draggableTracks ) {
       this.sceneSelectionPanel = new SceneSelectionPanel( model, this, modelViewTransform, {
-        togetherContext: options.togetherContext
+        tandem: options.tandem
       } );// layout done in layout bounds
       this.addChild( this.sceneSelectionPanel );
     }
@@ -155,7 +155,7 @@ define( function( require ) {
     } );
 
     var stepButton = new StepButton( function() { model.manualStep(); }, playProperty, {
-      togetherID: options.togetherContext.createTogetherID( 'stepButton' )
+      togetherID: options.tandem.createTandem( 'stepButton' )
     } );
 
     // Make the step button the same size as the pause button.
@@ -176,7 +176,7 @@ define( function( require ) {
       // Align vertically with other controls, see #134
       centerY: (modelViewTransform.modelToViewY( 0 ) + this.layoutBounds.maxY) / 2 + 8,
 
-      togetherID: options.togetherContext.createTogetherID( 'resetAllButton' )
+      togetherID: options.tandem.createTandem( 'resetAllButton' )
     } );
     this.addChild( this.resetAllButton );
 
@@ -186,7 +186,7 @@ define( function( require ) {
       listener: model.returnSkater.bind( model ),
       centerY: this.resetAllButton.centerY,
       // X updated in layoutBounds since the reset all button can move horizontally
-      togetherID: options.togetherContext.createTogetherID( 'returnSkaterButton' )
+      togetherID: options.tandem.createTandem( 'returnSkaterButton' )
     } );
 
     // Disable the return skater button when the skater is already at his initial coordinates
@@ -194,8 +194,8 @@ define( function( require ) {
     this.addChild( this.returnSkaterButton );
 
     this.addChild( new PlaybackSpeedControl( model.property( 'speed' ), {
-      slowSpeedRadioButtonTogetherID: options.togetherContext.createTogetherID( 'slowSpeedRadioButton' ),
-      normalSpeedRadioButtonTogetherID: options.togetherContext.createTogetherID( 'normalSpeedRadioButton' )
+      slowSpeedRadioButtonTogetherID: options.tandem.createTandem( 'slowSpeedRadioButton' ),
+      normalSpeedRadioButtonTogetherID: options.tandem.createTandem( 'normalSpeedRadioButton' )
     } ).mutate( {
         right: playPauseButton.left - 20,
         top: playPauseButton.top
@@ -367,7 +367,7 @@ define( function( require ) {
       // green means "go" since the skater will likely start moving at this point
       baseColor: EnergySkateParkColorScheme.kineticEnergy,
       listener: model.returnSkater.bind( model ),
-      togetherID: options.togetherContext.createTogetherID( 'returnSkaterToPreviousStartingPositionButton' )
+      togetherID: options.tandem.createTandem( 'returnSkaterToPreviousStartingPositionButton' )
     } );
 
     var returnSkaterToGroundButton = new RectangularPushButton( {
@@ -375,7 +375,7 @@ define( function( require ) {
       centerBottom: modelViewTransform.modelToViewPosition( model.skater.startingPosition ),
       baseColor: '#f4514e', // red for stop, since the skater will be stopped on the ground.
       listener: function() { model.skater.resetPosition(); },
-      togetherID: options.togetherContext.createTogetherID( 'returnSkaterToGroundButton' )
+      togetherID: options.tandem.createTandem( 'returnSkaterToGroundButton' )
     } );
 
     this.addChild( returnSkaterToStartingPointButton );
