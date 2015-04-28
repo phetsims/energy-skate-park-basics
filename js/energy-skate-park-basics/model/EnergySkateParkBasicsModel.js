@@ -158,6 +158,8 @@ define( function( require ) {
     if ( draggableTracks ) {
       together && together.addComponent( {
         togetherID: 'playgroundScreen.tracks',
+
+        // TODO: use get value instead of this function.
         getArray: function() {
           return model.tracks.map( function( track ) {
             return {
@@ -168,6 +170,10 @@ define( function( require ) {
               }
             };
           } ).getArray(); // This line returns a JS Array, not ObservableArray, required by together.js
+        },
+
+        get value() {
+          return this.getArray();
         },
 
         // TODO: set value asymmetric from getArray
