@@ -48,18 +48,15 @@ define( function( require ) {
     Sim.call( this, title, [
       new EnergySkateParkBasicsScreen( intro, iconIntroHomescreen, iconIntroNavbar, false, false, {
         tandem: tandem.createTandem( 'introScreen' ),
-        homeScreenButtonTogetherID: 'homeScreen.introScreenButton',
-        navigationBarScreenButtonTogetherID: 'navigationBar.introScreenButton'
+        tandemScreenName: 'introScreen'
       } ),
       new EnergySkateParkBasicsScreen( friction, iconFrictionHomescreen, iconFrictionNavbar, false, true, {
         tandem: tandem.createTandem( 'frictionScreen' ),
-        homeScreenButtonTogetherID: 'homeScreen.frictionScreenButton',
-        navigationBarScreenButtonTogetherID: 'navigationBar.frictionScreenButton'
+        tandemScreenName: 'frictionScreen'
       } ),
       new EnergySkateParkBasicsScreen( playground, iconPlaygroundHomescreen, iconPlaygroundNavbar, true, true, {
         tandem: tandem.createTandem( 'playgroundScreen' ),
-        homeScreenButtonTogetherID: 'homeScreen.playgroundScreenButton',
-        navigationBarScreenButtonTogetherID: 'navigationBar.playgroundScreenButton'
+        tandemScreenName: 'playgroundScreen'
       } )
     ], options );
   }

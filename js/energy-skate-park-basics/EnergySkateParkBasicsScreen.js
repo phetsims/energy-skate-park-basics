@@ -23,8 +23,7 @@ define( function( require ) {
       },
       {
         navigationBarIcon: new Image( navbarIcon ),
-        homeScreenButtonTogetherID: options.homeScreenButtonTogetherID,
-        navigationBarScreenButtonTogetherID: options.navigationBarScreenButtonTogetherID
+        tandemScreenName: options.tandemScreenName
       } );
   }
 
