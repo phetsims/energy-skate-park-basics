@@ -156,7 +156,7 @@ define( function( require ) {
     // Proxy for save/load for the tracks for together.js
     // TODO: This is all a bit hackish, to serialize the tracks.  Cannot this be made simpler?
     if ( draggableTracks ) {
-      together && together.addComponent( {
+      together && together.addInstance( 'playgroundScreen.tracks', {
         togetherID: 'playgroundScreen.tracks',
 
         // TODO: use get value instead of this function.
