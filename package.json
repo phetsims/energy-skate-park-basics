@@ -20,6 +20,9 @@
     "sherpa",
     "sun"
   ],
+  "preload": [
+    "../sherpa/lib/numeric-1.2.6.js"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/phetsims/energy-skate-park-basics.git"
