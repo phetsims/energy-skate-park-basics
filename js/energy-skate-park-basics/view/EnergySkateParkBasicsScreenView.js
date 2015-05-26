@@ -45,6 +45,7 @@ define( function( require ) {
   var Util = require( 'SCENERY/util/Util' );
   var Bounds2 = require( 'DOT/Bounds2' );
   var Node = require( 'SCENERY/nodes/Node' );
+  var EraserButton = require( 'SCENERY_PHET/buttons/EraserButton' );
 
   // strings
   var returnSkaterString = require( 'string!ENERGY_SKATE_PARK_BASICS/controls.restart-skater' );
@@ -52,7 +53,6 @@ define( function( require ) {
 
   // images
   var skaterIconImage = require( 'image!ENERGY_SKATE_PARK_BASICS/skater-icon.png' );
-  var eraser = require( 'image!SCENERY_PHET/eraser.png' );
 
   // Debug flag to show the view bounds, the region within which the skater can move
   var showAvailableBounds = false;
@@ -299,17 +299,14 @@ define( function( require ) {
         { stroke: 'black', lineWidth: 3 } );
       var arrowHead = createArrowhead( Math.PI - Math.PI / 3, new Vector2( -xTip, yTip ) );
 
-      // Create the clear button, and match the size to the size of the track toolbox
-      var clearNode = new Image( eraser, { scale: 0.4475 } );
-
       var clearButtonEnabledProperty = model.property( 'clearButtonEnabled' );
       clearButtonEnabledProperty.link( function( clearButtonEnabled ) {
         rightCurve.stroke = clearButtonEnabled ? 'black' : 'gray';
         arrowHead.fill = clearButtonEnabled ? 'black' : 'gray';
       } );
 
-      var clearButton = new RectangularPushButton( {
-        content: clearNode,
+      var clearButton = new EraserButton( {
+        iconWidth: 30,
         baseColor: new Color( 221, 210, 32 ),
         togetherID: 'playgroundScreen.clearTracksButton'
       } );
