@@ -15,8 +15,8 @@ define( function( require ) {
   var HBox = require( 'SCENERY/nodes/HBox' );
   var Text = require( 'SCENERY/nodes/Text' );
   var Panel = require( 'SUN/Panel' );
-  var VStrut = require( 'SUN/VStrut' );
-  var HStrut = require( 'SUN/HStrut' );
+  var VStrut = require( 'SCENERY/nodes/VStrut' );
+  var HStrut = require( 'SCENERY/nodes/HStrut' );
   var PhetFont = require( 'SCENERY_PHET/PhetFont' );
   var EnergySkateParkColorScheme = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/view/EnergySkateParkColorScheme' );
   var ClearThermalButton = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/view/ClearThermalButton' );
