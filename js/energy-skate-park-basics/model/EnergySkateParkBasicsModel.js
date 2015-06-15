@@ -8,7 +8,7 @@
  * method, to simplify the logic and make it communicate with the Axon+View as little as possible (for performance
  * reasons).
  *
- * For an analytical model, see http:// digitalcommons.calpoly.edu/cgi/viewcontent.cgi?article=1387&context=phy_fac
+ * For an analytical model, see http://digitalcommons.calpoly.edu/cgi/viewcontent.cgi?article=1387&context=phy_fac
  * Computational problems in introductory physics: Lessons from a bead on a wire
  * Thomas J. Bensky and Matthew J. Moelter
  *
