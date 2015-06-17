@@ -40,11 +40,11 @@ define( function( require ) {
     } );
 
     // Make the radius proportional to the square root of the energy so that the area will grow linearly with energy
-    var pieChartRadiusProperty = new DerivedProperty( [skater.totalEnergyProperty], function( totalEnergy ) {
+    var pieChartRadiusProperty = new DerivedProperty( [ skater.totalEnergyProperty ], function( totalEnergy ) {
       return 0.4 * Math.sqrt( totalEnergy );
     } );
 
-    var potentialEnergyProportion = skater.multilink( [ 'potentialEnergy', 'totalEnergy' ], function( potentialEnergy, totalEnergy ) {
+    var potentialEnergyProportion = skater.toDerivedProperty( [ 'potentialEnergy', 'totalEnergy' ], function( potentialEnergy, totalEnergy ) {
       var result = (potentialEnergy / totalEnergy);
       var clamped = result < 0 ? 0 :
                     result > 1 ? 1 :
@@ -52,7 +52,7 @@ define( function( require ) {
       return clamped * Math.PI * 2;
     } );
 
-    var kineticEnergyProportion = skater.multilink( [ 'kineticEnergy', 'totalEnergy' ], function( kineticEnergy, totalEnergy ) {
+    var kineticEnergyProportion = skater.toDerivedProperty( [ 'kineticEnergy', 'totalEnergy' ], function( kineticEnergy, totalEnergy ) {
       var result = (kineticEnergy / totalEnergy);
       var clamped = result < 0 ? 0 :
                     result > 1 ? 1 :
@@ -60,7 +60,7 @@ define( function( require ) {
       return clamped * Math.PI * 2;
     } );
 
-    var thermalEnergyProportion = skater.multilink( [ 'thermalEnergy', 'totalEnergy' ], function( thermalEnergy, totalEnergy ) {
+    var thermalEnergyProportion = skater.toDerivedProperty( [ 'thermalEnergy', 'totalEnergy' ], function( thermalEnergy, totalEnergy ) {
       var result = (thermalEnergy / totalEnergy);
       var clamped = result < 0 ? 0 :
                     result > 1 ? 1 :
