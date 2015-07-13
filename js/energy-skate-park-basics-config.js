@@ -5,7 +5,16 @@ require.config( {
 
   paths: {
 
-    // Load dependencies from sibling directories
+    // third-party plugins
+    text: '../../sherpa/lib/text-2.0.12',
+
+    // PhET plugins
+    audio: '../../chipper/js/requirejs-plugins/audio',
+    image: '../../chipper/js/requirejs-plugins/image',
+    mipmap: '../../chipper/js/requirejs-plugins/mipmap',
+    string: '../../chipper/js/requirejs-plugins/string',
+
+    // common directories, uppercase names to identify them in require imports
     AXON: '../../axon/js',
     BRAND: '../../brand/js',
     DOT: '../../dot/js',
@@ -18,15 +27,9 @@ require.config( {
     SUN: '../../sun/js',
     TANDEM: '../../tandem/js',
     JOIST: '../../joist/js',
-    ENERGY_SKATE_PARK_BASICS: '.',
 
-    // Load plugins
-    image: '../../chipper/js/requirejs-plugins/image',
-    audio: '../../chipper/js/requirejs-plugins/audio',
-    string: '../../chipper/js/requirejs-plugins/string',
-
-    // third-party libs
-    text: '../../sherpa/lib/text-2.0.12'
+    // this sim
+    ENERGY_SKATE_PARK_BASICS: '.'
   },
 
   // optional cache buster to make browser refresh load all included scripts, can be disabled with ?cacheBuster=false
