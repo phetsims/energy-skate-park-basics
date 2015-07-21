@@ -1,5 +1,7 @@
+attach.png source=PhET author=Bryce
 cement-texture-dark.jpg source=http://www.public-domain-image.com/full-image/textures-and-patterns-public-domain-images-pictures/concrete-texture-public-domain-images-pictures/cement-texture.jpg-royalty-free-stock-image.html license=public domain
 close-button.png source=PhET Author=SST
+detach.png source=PhET author=Bryce
 icon-friction-homescreen.png source=PhET Author=Bryce
 icon-friction-navbar.png source=PhET Author=Bryce
 icon-intro-homescreen.png source=PhET Author=Bryce
@@ -8,9 +10,11 @@ icon-playground-homescreen.png source=PhET Author=Bryce
 icon-playground-navbar.png source=PhET Author=Bryce
 mountains.png source=PhET Author=Noah P
 reset_arrow.svg source=PhET
-skater.png source=PhET
+skater-icon.png source=PhET
+skater-left.png source=PhET
+skater-right.png source=PhET
 scissors.png source=Open Clip Art license=PUBLIC DOMAIN notes=Modified from http://www.openclipart.org/detail/32341
 scissors-closed.png source=Open Clip Art license=PUBLIC DOMAIN notes=Modified from http://www.openclipart.org/detail/32341
 scissors-gray.png source=Open Clip Art license=PUBLIC DOMAIN notes=Modified from http://www.openclipart.org/detail/32341
-trash-can-open.png source=Font Awesome notes=modified by SR on 2/6/2014
-trash-can-open-gray.png source=Font Awesome notes=modified by SR on 2/6/2014
+trash-can.png source=PhET notes=Bryce and/or Sam
+trash-can-disabled.png source=PhET notes=Bryce and/or Sam
