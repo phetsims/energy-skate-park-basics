@@ -1,20 +1,162 @@
-attach.png source=PhET author=Bryce
-cement-texture-dark.jpg source=http://www.public-domain-image.com/full-image/textures-and-patterns-public-domain-images-pictures/concrete-texture-public-domain-images-pictures/cement-texture.jpg-royalty-free-stock-image.html license=public domain
-close-button.png source=PhET Author=SST
-detach.png source=PhET author=Bryce
-icon-friction-homescreen.png source=PhET Author=Bryce
-icon-friction-navbar.png source=PhET Author=Bryce
-icon-intro-homescreen.png source=PhET Author=Bryce
-icon-intro-navbar.png source=PhET Author=Bryce
-icon-playground-homescreen.png source=PhET Author=Bryce
-icon-playground-navbar.png source=PhET Author=Bryce
-mountains.png source=PhET Author=Noah P
-reset_arrow.svg source=PhET
-skater-icon.png source=PhET
-skater-left.png source=PhET
-skater-right.png source=PhET
-scissors.png source=Open Clip Art license=PUBLIC DOMAIN notes=Modified from http://www.openclipart.org/detail/32341
-scissors-closed.png source=Open Clip Art license=PUBLIC DOMAIN notes=Modified from http://www.openclipart.org/detail/32341
-scissors-gray.png source=Open Clip Art license=PUBLIC DOMAIN notes=Modified from http://www.openclipart.org/detail/32341
-trash-can.png source=PhET notes=Bryce and/or Sam
-trash-can-disabled.png source=PhET notes=Bryce and/or Sam
+{
+  "attach.png": {
+    "text": [
+      "Copyright 2002-2015 University of Colorado Boulder"
+    ],
+    "projectURL": "http://phet.colorado.edu",
+    "license": "contact phethelp@colorado.edu",
+    "notes": "created by Bryce Gruneich"
+  },
+  "cement-texture-dark.jpg": {
+    "text": [
+      "Public Domain"
+    ],
+    "projectURL": "http://www.public-domain-image.com/full-image/textures-and-patterns-public-domain-images-pictures/concrete-texture-public-domain-images-pictures/cement-texture.jpg-royalty-free-stock-image.html",
+    "license": "Public Domain",
+    "notes": ""
+  },
+  "close-button.png": {
+    "text": [
+      "Copyright 2002-2015 University of Colorado Boulder"
+    ],
+    "projectURL": "http://phet.colorado.edu",
+    "license": "contact phethelp@colorado.edu",
+    "notes": "created by Sharon Siman-Tov"
+  },
+  "detach.png": {
+    "text": [
+      "Copyright 2002-2015 University of Colorado Boulder"
+    ],
+    "projectURL": "http://phet.colorado.edu",
+    "license": "contact phethelp@colorado.edu",
+    "notes": "created by Bryce Gruneich"
+  },
+  "icon-friction-homescreen.png": {
+    "text": [
+      "Copyright 2002-2015 University of Colorado Boulder"
+    ],
+    "projectURL": "http://phet.colorado.edu",
+    "license": "contact phethelp@colorado.edu",
+    "notes": "created by Bryce Gruneich"
+  },
+  "icon-friction-navbar.png": {
+    "text": [
+      "Copyright 2002-2015 University of Colorado Boulder"
+    ],
+    "projectURL": "http://phet.colorado.edu",
+    "license": "contact phethelp@colorado.edu",
+    "notes": "created by Bryce Gruneich"
+  },
+  "icon-intro-homescreen.png": {
+    "text": [
+      "Copyright 2002-2015 University of Colorado Boulder"
+    ],
+    "projectURL": "http://phet.colorado.edu",
+    "license": "contact phethelp@colorado.edu",
+    "notes": "created by Bryce Gruneich"
+  },
+  "icon-intro-navbar.png": {
+    "text": [
+      "Copyright 2002-2015 University of Colorado Boulder"
+    ],
+    "projectURL": "http://phet.colorado.edu",
+    "license": "contact phethelp@colorado.edu",
+    "notes": "created by Bryce Gruneich"
+  },
+  "icon-playground-homescreen.png": {
+    "text": [
+      "Copyright 2002-2015 University of Colorado Boulder"
+    ],
+    "projectURL": "http://phet.colorado.edu",
+    "license": "contact phethelp@colorado.edu",
+    "notes": "created by Bryce Gruneich"
+  },
+  "icon-playground-navbar.png": {
+    "text": [
+      "Copyright 2002-2015 University of Colorado Boulder"
+    ],
+    "projectURL": "http://phet.colorado.edu",
+    "license": "contact phethelp@colorado.edu",
+    "notes": "Brcreated by Bryce Gruneichyce"
+  },
+  "mountains.png": {
+    "text": [
+      "Copyright 2002-2015 University of Colorado Boulder"
+    ],
+    "projectURL": "http://phet.colorado.edu",
+    "license": "contact phethelp@colorado.edu",
+    "notes": "created by Noah Podolefsky"
+  },
+  "reset_arrow.svg": {
+    "text": [
+      "Copyright 2002-2015 University of Colorado Boulder"
+    ],
+    "projectURL": "http://phet.colorado.edu",
+    "license": "contact phethelp@colorado.edu",
+    "notes": ""
+  },
+  "skater-icon.png": {
+    "text": [
+      "Copyright 2002-2015 University of Colorado Boulder"
+    ],
+    "projectURL": "http://phet.colorado.edu",
+    "license": "contact phethelp@colorado.edu",
+    "notes": ""
+  },
+  "skater-left.png": {
+    "text": [
+      "Copyright 2002-2015 University of Colorado Boulder"
+    ],
+    "projectURL": "http://phet.colorado.edu",
+    "license": "contact phethelp@colorado.edu",
+    "notes": ""
+  },
+  "skater-right.png": {
+    "text": [
+      "Copyright 2002-2015 University of Colorado Boulder"
+    ],
+    "projectURL": "http://phet.colorado.edu",
+    "license": "contact phethelp@colorado.edu",
+    "notes": ""
+  },
+  "scissors.png": {
+    "text": [
+      "Public Domain"
+    ],
+    "projectURL": "Open Clip Art",
+    "license": "Public Domain",
+    "notes": "Modified from http://www.openclipart.org/detail/32341"
+  },
+  "scissors-closed.png": {
+    "text": [
+      "Public Domain"
+    ],
+    "projectURL": "Open Clip Art",
+    "license": "Public Domain",
+    "notes": "Modified from http://www.openclipart.org/detail/32341"
+  },
+  "scissors-gray.png": {
+    "text": [
+      "Public Domain"
+    ],
+    "projectURL": "Open Clip Art",
+    "license": "Public Domain",
+    "notes": "Modified from http://www.openclipart.org/detail/32341"
+  },
+  "trash-can.png": {
+    "text": [
+      "Copyright 2002-2015 University of Colorado Boulder"
+    ],
+    "projectURL": "http://phet.colorado.edu",
+    "license": "contact phethelp@colorado.edu",
+    "notes": "created by Bryce Gruneich and Sam Reid"
+  },
+  "trash-can-disabled.png": {
+    "text": [
+      "Copyright 2002-2015 University of Colorado Boulder"
+    ],
+    "projectURL": "http://phet.colorado.edu",
+    "license": "contact phethelp@colorado.edu",
+    "notes": "created by Bryce Gruneich and Sam Reid"
+  }
+}
