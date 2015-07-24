@@ -15,14 +15,6 @@
     "license": "Public Domain",
     "notes": ""
   },
-  "close-button.png": {
-    "text": [
-      "Copyright 2002-2015 University of Colorado Boulder"
-    ],
-    "projectURL": "http://phet.colorado.edu",
-    "license": "contact phethelp@colorado.edu",
-    "notes": "created by Sharon Siman-Tov"
-  },
   "detach.png": {
     "text": [
       "Copyright 2002-2015 University of Colorado Boulder"
@@ -87,14 +79,6 @@
     "license": "contact phethelp@colorado.edu",
     "notes": "created by Noah Podolefsky"
   },
-  "reset_arrow.svg": {
-    "text": [
-      "Copyright 2002-2015 University of Colorado Boulder"
-    ],
-    "projectURL": "http://phet.colorado.edu",
-    "license": "contact phethelp@colorado.edu",
-    "notes": ""
-  },
   "skater-icon.png": {
     "text": [
       "Copyright 2002-2015 University of Colorado Boulder"
@@ -118,30 +102,6 @@
     "projectURL": "http://phet.colorado.edu",
     "license": "contact phethelp@colorado.edu",
     "notes": ""
-  },
-  "scissors.png": {
-    "text": [
-      "Public Domain"
-    ],
-    "projectURL": "http://www.openclipart.org/detail/32341",
-    "license": "Public Domain",
-    "notes": "Modified by PhET"
-  },
-  "scissors-closed.png": {
-    "text": [
-      "Public Domain"
-    ],
-    "projectURL": "http://www.openclipart.org/detail/32341",
-    "license": "Public Domain",
-    "notes": "Modified by PhET"
-  },
-  "scissors-gray.png": {
-    "text": [
-      "Public Domain"
-    ],
-    "projectURL": "http://www.openclipart.org/detail/32341",
-    "license": "Public Domain",
-    "notes": "Modified by PhET"
   },
   "trash-can.png": {
     "text": [
