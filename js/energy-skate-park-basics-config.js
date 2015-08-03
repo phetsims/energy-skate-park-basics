@@ -16,7 +16,7 @@ require.config( {
 
     // common directories, uppercase names to identify them in require imports
     AXON: '../../axon/js',
-    BRAND: '../../brand/js',
+    BRAND: '../../brand/' + phet.chipper.getBrandName() + '/js',
     DOT: '../../dot/js',
     SCENERY: '../../scenery/js',
     SCENERY_PHET: '../../scenery-phet/js',
