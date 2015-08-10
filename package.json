@@ -2,6 +2,7 @@
   "name": "energy-skate-park-basics",
   "version": "1.0.0",
   "license": "GPLv3",
+  "requirejsNamespace": "ENERGY_SKATE_PARK_BASICS",
   "simTitleStringKey": "ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics.name",
   "phetLibs": [
     "energy-skate-park-basics"
