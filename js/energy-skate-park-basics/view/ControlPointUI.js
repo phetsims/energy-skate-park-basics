@@ -38,7 +38,9 @@ define( function( require ) {
     this.clickToDismissListener = {
       down: function() {
         if ( enableClickToDismissListener ) {
-          sceneNode.removeInputListener( controlPointUI.clickToDismissListener );
+          if ( _.indexOf( controlPointUI.sceneNode.getInputListeners(), controlPointUI.clickToDismissListener ) !== -1 ) {
+            controlPointUI.sceneNode.removeInputListener( controlPointUI.clickToDismissListener );
+          }
           sceneListenerAdded = false;
           controlPointUI.detach();
         }
@@ -107,7 +109,9 @@ define( function( require ) {
     //Override to additionally remove the attached input listener
     detach: function() {
       Node.prototype.detach.call( this );
-      this.sceneNode.removeInputListener( this.clickToDismissListener );
+      if ( _.indexOf( this.sceneNode.getInputListeners(), this.clickToDismissListener ) !== -1 ) {
+        this.sceneNode.removeInputListener( this.clickToDismissListener );
+      }
     }
   } );
 } );
