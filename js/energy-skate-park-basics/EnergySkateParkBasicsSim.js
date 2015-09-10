@@ -23,9 +23,9 @@ define( function( require ) {
   var iconPlaygroundNavbar = require( 'image!ENERGY_SKATE_PARK_BASICS/icon-playground-navbar.png' );
 
   // strings
-  var intro = require( 'string!ENERGY_SKATE_PARK_BASICS/tab.introduction' );
-  var friction = require( 'string!ENERGY_SKATE_PARK_BASICS/tab.friction' );
-  var playground = require( 'string!ENERGY_SKATE_PARK_BASICS/tab.trackPlayground' );
+  var intro = require( 'string!ENERGY_SKATE_PARK_BASICS/screen.introduction' );
+  var friction = require( 'string!ENERGY_SKATE_PARK_BASICS/screen.friction' );
+  var playground = require( 'string!ENERGY_SKATE_PARK_BASICS/screen.trackPlayground' );
   var title = require( 'string!ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics.name' );
 
   function EnergySkateParkBasicsSim() {

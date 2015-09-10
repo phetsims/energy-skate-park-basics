@@ -20,7 +20,7 @@
   "units.joules": {
     "value": "Joules"
   },
-  "tab.trackPlayground": {
+  "screen.trackPlayground": {
     "value": "Playground"
   },
   "controls.mass": {
@@ -200,7 +200,7 @@
   "controls.choose-character": {
     "value": "Choose Skater"
   },
-  "tab.friction": {
+  "screen.friction": {
     "value": "Friction"
   },
   "controls.delete-track": {
@@ -308,7 +308,7 @@
   "location": {
     "value": "Location"
   },
-  "tab.introduction": {
+  "screen.introduction": {
     "value": "Intro"
   },
   "controls.edit-skater": {
