@@ -29,7 +29,7 @@
   "plots.energy-vs-time": {
     "value": "Energy vs. Time"
   },
-  "energy-skate-park-basics.name": {
+  "energy-skate-park-basics.title": {
     "value": "Energy Skate Park: Basics"
   },
   "controls.skater.restore-defaults": {
@@ -104,7 +104,7 @@
   "properties.energy": {
     "value": "Energy (J)"
   },
-  "energy-skate-park.name": {
+  "energy-skate-park.title": {
     "value": "Energy Skate Park"
   },
   "controls.show-grid": {

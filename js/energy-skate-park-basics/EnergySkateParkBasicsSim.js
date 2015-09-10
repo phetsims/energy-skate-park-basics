@@ -26,7 +26,7 @@ define( function( require ) {
   var intro = require( 'string!ENERGY_SKATE_PARK_BASICS/screen.introduction' );
   var friction = require( 'string!ENERGY_SKATE_PARK_BASICS/screen.friction' );
   var playground = require( 'string!ENERGY_SKATE_PARK_BASICS/screen.trackPlayground' );
-  var title = require( 'string!ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics.name' );
+  var title = require( 'string!ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics.title' );
 
   function EnergySkateParkBasicsSim() {
 
