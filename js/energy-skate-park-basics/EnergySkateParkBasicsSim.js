@@ -40,8 +40,7 @@ define( function( require ) {
         qualityAssurance: 'Steele Dalton, Oliver Orejola' + indent + 'Arnab Purkayastha, Bryan Yoelin'
       },
 
-      showSaveAndLoad: phet.chipper.getQueryParameter( 'showSaveAndLoad' ),
-      screenDisplayStrategy: 'setChildren'
+      showSaveAndLoad: phet.chipper.getQueryParameter( 'showSaveAndLoad' )
     };
 
     var tandem = new Tandem( 'energySkateParkBasics' );
