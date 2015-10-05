@@ -37,12 +37,10 @@ define( function( require ) {
 
   /**
    * @param {EnergySkateParkBasicsModel} model
+   * @param {object} [options]
    * @constructor
    */
   function EnergySkateParkBasicsControlPanel( model, options ) {
-    options = _.extend( {
-      tandem: new Tandem()
-    }, options );
     var textOptions = { font: new PhetFont( 14 ) };
 
     var pieChartSet = { label: new Text( pieChartString, textOptions ), icon: this.createPieChartIcon() };

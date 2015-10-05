@@ -33,11 +33,10 @@ define( function( require ) {
    * @param {Skater} skater the model's skater model
    * @param {Property<Boolean>} barGraphVisibleProperty property that indicates whether the bar graph is visible
    * @param {Function} clearThermal function to be called when the user presses the clear thermal button.
+   * @param {object} [options]
    * @constructor
    */
   function BarGraphBackground( skater, barGraphVisibleProperty, clearThermal, options ) {
-
-    options = _.extend( { tandem: new Tandem() }, options );
 
     var barGraphBackground = this;
 

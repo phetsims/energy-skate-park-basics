@@ -32,11 +32,11 @@ define( function( require ) {
    * @param {Skater} skater the model for the skater
    * @param {Function} clearThermal function to be called when the user presses the clear thermal button
    * @param {Property<Boolean>) pieChartVisibleProperty axon Property indicating whether the pie chart is visible
+   * @param {objects} [options]
    * @constructor
    */
   function PieChartLegend( skater, clearThermal, pieChartVisibleProperty, options ) {
 
-    options = _.extend( { tandem: new Tandem() }, options );
     // The x-coordinate of a bar chart bar
     var createLabel = function( index, title, color ) {
       return new Text( title, {
