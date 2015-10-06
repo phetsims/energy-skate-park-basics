@@ -437,7 +437,7 @@ define( function( require ) {
       var newPotentialEnergy = 0;
       var newThermalEnergy = initialEnergy - newKineticEnergy - newPotentialEnergy;
 
-      if ( !isFinite( newThermalEnergy ) ) { throw new Error( "not finite" ); }
+      if ( !isFinite( newThermalEnergy ) ) { throw new Error( 'not finite' ); }
       return skaterState.switchToGround( newThermalEnergy, newSpeed, 0, proposedPosition.x, proposedPosition.y );
     },
 
@@ -771,17 +771,17 @@ define( function( require ) {
           if ( newTotalEnergy < origEnergy ) {
             thermalEnergy += Math.abs( newTotalEnergy - origEnergy );// add some thermal to exactly match
             if ( Math.abs( newTotalEnergy - origEnergy ) > 1E-6 ) {
-              debug && debug( "Added thermal, dE=" + ( newState.getTotalEnergy() - origEnergy ) );
+              debug && debug( 'Added thermal, dE=' + ( newState.getTotalEnergy() - origEnergy ) );
             }
           }
           if ( newTotalEnergy > origEnergy ) {
             if ( Math.abs( newTotalEnergy - origEnergy ) < therm ) {
-              debug && debug( "gained energy, removing thermal (Would have to remove more than we gained)" );
+              debug && debug( 'gained energy, removing thermal (Would have to remove more than we gained)' );
             }
             else {
               thermalEnergy -= Math.abs( newTotalEnergy - origEnergy );
               if ( Math.abs( newTotalEnergy - origEnergy ) > 1E-6 ) {
-                debug && debug( "Removed thermal, dE=" + ( newTotalEnergy - origEnergy ) );
+                debug && debug( 'Removed thermal, dE=' + ( newTotalEnergy - origEnergy ) );
               }
             }
           }
@@ -957,7 +957,7 @@ define( function( require ) {
           bestAlpha = proposedAlpha;
         }// continue to find best value closest to proposed u, even if several values give dE=0.0
       }
-      debug && debug( "After " + numSteps + " steps, origAlpha=" + u0 + ", bestAlpha=" + bestAlpha + ", dE=" + bestDE );
+      debug && debug( 'After ' + numSteps + ' steps, origAlpha=' + u0 + ', bestAlpha=' + bestAlpha + ', dE=' + bestDE );
       return bestAlpha;
     },
 
@@ -978,7 +978,7 @@ define( function( require ) {
       }
       else {
         if ( newState.getTotalEnergy() > e0 ) {
-          debug && debug( "Energy too high" );
+          debug && debug( 'Energy too high' );
 
           // can we reduce the velocity enough?
           // amount we could reduce the energy if we deleted all the kinetic energy:
@@ -986,17 +986,17 @@ define( function( require ) {
 
             // This is the current rule for reducing the energy.  But in a future version maybe should only do this
             // if all velocity is not converted?
-            debug && debug( "Could fix all energy by changing velocity." );
+            debug && debug( 'Could fix all energy by changing velocity.' );
             var correctedStateA = this.correctEnergyReduceVelocity( skaterState, newState );
-            debug && debug( "changed velocity: dE=" + ( correctedStateA.getTotalEnergy() - e0 ) );
+            debug && debug( 'changed velocity: dE=' + ( correctedStateA.getTotalEnergy() - e0 ) );
             if ( !isApproxEqual( e0, correctedStateA.getTotalEnergy(), 1E-8 ) ) {
-              debug && debug( "Energy error[0]" );
+              debug && debug( 'Energy error[0]' );
             }
             return correctedStateA;
           }
           else {
-            debug && debug( "Not enough KE to fix with velocity alone: normal:" );
-            debug && debug( "changed position u: dE=" + ( newState.getTotalEnergy() - e0 ) );
+            debug && debug( 'Not enough KE to fix with velocity alone: normal:' );
+            debug && debug( 'changed position u: dE=' + ( newState.getTotalEnergy() - e0 ) );
             // search for a place between u and u0 with a better energy
 
             var numRecursiveSearches = 10;
@@ -1011,25 +1011,25 @@ define( function( require ) {
 
             var point = newState.track.getPoint( bestAlpha );
             var correctedState = newState.updateUPosition( bestAlpha, point.x, point.y );
-            debug && debug( "changed position u: dE=" + ( correctedState.getTotalEnergy() - e0 ) );
+            debug && debug( 'changed position u: dE=' + ( correctedState.getTotalEnergy() - e0 ) );
             if ( !isApproxEqual( e0, correctedState.getTotalEnergy(), 1E-8 ) ) {
 
               // amount we could reduce the energy if we deleted all the kinetic energy:
               if ( Math.abs( correctedState.getKineticEnergy() ) > Math.abs( dE ) ) {
 
                 // TODO: maybe should only do this if all velocity is not converted
-                debug && debug( "Fixed position some, still need to fix velocity as well." );
+                debug && debug( 'Fixed position some, still need to fix velocity as well.' );
                 var correctedState2 = this.correctEnergyReduceVelocity( skaterState, correctedState );
                 if ( !isApproxEqual( e0, correctedState2.getTotalEnergy(), 1E-8 ) ) {
-                  debug && debug( "Changed position & Velocity and still had energy error" );
-                  debug && debug( "Energy error[123]" );
+                  debug && debug( 'Changed position & Velocity and still had energy error' );
+                  debug && debug( 'Energy error[123]' );
                 }
                 return correctedState2;
               }
               else {
 
                 // TODO: This error case can still occur, especially with friction turned on
-                debug && debug( "Changed position, wanted to change velocity, but didn't have enough to fix it..., dE=" + ( newState.getTotalEnergy() - e0 ) );
+                debug && debug( 'Changed position, wanted to change velocity, but didn\'t have enough to fix it..., dE=' + ( newState.getTotalEnergy() - e0 ) );
               }
             }
             return correctedState;
@@ -1037,7 +1037,7 @@ define( function( require ) {
         }
         else {
           if ( !isFinite( newState.getTotalEnergy() ) ) { throw new Error( 'not finite' );}
-          debug && debug( "Energy too low" );
+          debug && debug( 'Energy too low' );
 
           // increasing the kinetic energy
           // Choose the exact velocity in the same direction as current velocity to ensure total energy conserved.
@@ -1050,10 +1050,10 @@ define( function( require ) {
           var updatedVelocityX = unitParallelVector.x * newVelocity;
           var updatedVelocityY = unitParallelVector.y * newVelocity;
           var fixedState = newState.updateUDVelocity( newVelocity, updatedVelocityX, updatedVelocityY );
-          debug && debug( "Set velocity to match energy, when energy was low: " );
-          debug && debug( "INC changed velocity: dE=" + ( fixedState.getTotalEnergy() - e0 ) );
+          debug && debug( 'Set velocity to match energy, when energy was low: ' );
+          debug && debug( 'INC changed velocity: dE=' + ( fixedState.getTotalEnergy() - e0 ) );
           if ( !isApproxEqual( e0, fixedState.getTotalEnergy(), 1E-8 ) ) {
-            new Error( "Energy error[2]" ).printStackTrace();
+            new Error( 'Energy error[2]' ).printStackTrace();
           }
           return fixedState;
         }
