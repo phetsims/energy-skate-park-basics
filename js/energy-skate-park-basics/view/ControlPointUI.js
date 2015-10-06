@@ -32,7 +32,6 @@ define( function( require ) {
 
     // See ComboxBox.js
     var enableClickToDismissListener = true;
-    var sceneListenerAdded = false;
 
     // listener for 'click outside to dismiss'
     this.clickToDismissListener = {
@@ -41,7 +40,6 @@ define( function( require ) {
           if ( _.indexOf( controlPointUI.sceneNode.getInputListeners(), controlPointUI.clickToDismissListener ) !== -1 ) {
             controlPointUI.sceneNode.removeInputListener( controlPointUI.clickToDismissListener );
           }
-          sceneListenerAdded = false;
           controlPointUI.detach();
         }
         else {
@@ -54,7 +52,6 @@ define( function( require ) {
 
     this.sceneNode = sceneNode;
     sceneNode.addInputListener( this.clickToDismissListener );
-    sceneListenerAdded = true;
 
     Node.call( this );
 

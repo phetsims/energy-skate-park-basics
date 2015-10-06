@@ -27,7 +27,6 @@ define( function( require ) {
   var Property = require( 'AXON/Property' );
   var FrictionControl = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/view/FrictionControl' );
   var PhetFont = require( 'SCENERY_PHET/PhetFont' );
-  var Tandem = require( 'TANDEM/Tandem' );
 
   // strings
   var barGraphString = require( 'string!ENERGY_SKATE_PARK_BASICS/plots.bar-graph' );
