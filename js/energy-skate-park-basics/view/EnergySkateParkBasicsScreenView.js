@@ -14,7 +14,7 @@ define( function( require ) {
   var inherit = require( 'PHET_CORE/inherit' );
   var Image = require( 'SCENERY/nodes/Image' );
   var Rectangle = require( 'SCENERY/nodes/Rectangle' );
-  var DotRectangle = require( 'DOT/Rectangle' );
+  var DotRectangle = require( 'DOT/Rectangle' ); // eslint-disable-line require-statement-match
   var Shape = require( 'KITE/Shape' );
   var ScreenView = require( 'JOIST/ScreenView' );
   var SkaterNode = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/view/SkaterNode' );
