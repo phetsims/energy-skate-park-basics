@@ -15,9 +15,6 @@
   },
   "phet": {
     "requirejsNamespace": "ENERGY_SKATE_PARK_BASICS",
-    "phetLibs": [
-      "tandem"
-    ],
     "preload": [
       "../sherpa/lib/numeric-1.2.6.js"
     ]
