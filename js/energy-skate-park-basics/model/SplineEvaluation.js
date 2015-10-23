@@ -23,7 +23,9 @@ define( function() {
     var yr = spline.yr;
     var kl = spline.kl;
     var kr = spline.kr;
-    var a, b, t;
+    var a;
+    var b;
+    var t;
     a = (kl[ p ] * (x[ p + 1 ] - x[ p ])) - (yr[ p + 1 ] - yl[ p ]);
     b = kr[ p + 1 ] * (x[ p ] - x[ p + 1 ]) + yr[ p + 1 ] - yl[ p ];
     t = (x1 - x[ p ]) / (x[ p + 1 ] - x[ p ]);
@@ -36,7 +38,10 @@ define( function() {
   var atNumber = function( spline, x0 ) {
     var x = spline.x;
     var n = x.length;
-    var p, q, mid, floor = Math.floor;
+    var p;
+    var q;
+    var mid;
+    var floor = Math.floor;
     p = 0;
     q = n - 1;
     while ( q - p > 1 ) {
@@ -53,7 +58,8 @@ define( function() {
 
   var atArray = function( spline, x0 ) {
     var n = x0.length;
-    var i, ret = new FastArray( n );
+    var i;
+    var ret = new FastArray( n );
     for ( i = n - 1; i !== -1; --i ) {
       ret[ i ] = atNumber( spline, x0[ i ] );
     }
