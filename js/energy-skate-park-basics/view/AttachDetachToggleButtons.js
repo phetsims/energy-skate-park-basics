@@ -1,4 +1,4 @@
-// Copyright 2002-2013, University of Colorado Boulder
+// Copyright 2014-2015, University of Colorado Boulder
 
 /**
  * Scenery node for the Attach/Detach toggle buttons which determine whether the skater can fly off the track or not.

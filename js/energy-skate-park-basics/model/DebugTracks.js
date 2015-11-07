@@ -1,4 +1,4 @@
-// Copyright 2002-2014, University of Colorado Boulder
+// Copyright 2014-2015, University of Colorado Boulder
 
 /**
  * Debug tracks, which can be enabled using the query parameter 'debugTrack' with the index of the track to debug.
