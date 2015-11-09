@@ -5,7 +5,7 @@
  *
  * @author Sam Reid
  */
-define( function() {
+define( function( require ) {
   'use strict';
 
   var Color = require( 'SCENERY/util/Color' );
