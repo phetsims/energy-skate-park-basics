@@ -48,8 +48,8 @@ define( function( require ) {
   var EraserButton = require( 'SCENERY_PHET/buttons/EraserButton' );
 
   // strings
-  var returnSkaterString = require( 'string!ENERGY_SKATE_PARK_BASICS/controls.restart-skater' );
-  var speedString = require( 'string!ENERGY_SKATE_PARK_BASICS/properties.speed' );
+  var controlsRestartSkaterString = require( 'string!ENERGY_SKATE_PARK_BASICS/controls.restart-skater' );
+  var propertiesSpeedString = require( 'string!ENERGY_SKATE_PARK_BASICS/properties.speed' );
 
   // images
   var skaterIconImage = require( 'image!ENERGY_SKATE_PARK_BASICS/skater-icon.png' );
@@ -182,7 +182,7 @@ define( function( require ) {
 
     // The button to return the skater
     this.returnSkaterButton = new RectangularPushButton( {
-      content: new Text( returnSkaterString ),
+      content: new Text( controlsRestartSkaterString ),
       listener: model.returnSkater.bind( model ),
       centerY: this.resetAllButton.centerY,
       // X updated in layoutBounds since the reset all button can move horizontally
@@ -203,7 +203,7 @@ define( function( require ) {
 
     var speedometerNode = new GaugeNode(
       // Hide the needle in for the background of the GaugeNode
-      new Property( null ), speedString,
+      new Property( null ), propertiesSpeedString,
       {
         min: 0,
         max: 20

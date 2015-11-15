@@ -21,11 +21,11 @@ define( function( require ) {
   var ClearThermalButton = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/view/ClearThermalButton' );
 
   // strings
-  var kineticString = require( 'string!ENERGY_SKATE_PARK_BASICS/energy.kinetic' );
-  var potentialString = require( 'string!ENERGY_SKATE_PARK_BASICS/energy.potential' );
-  var thermalString = require( 'string!ENERGY_SKATE_PARK_BASICS/energy.thermal' );
-  var totalString = require( 'string!ENERGY_SKATE_PARK_BASICS/energy.total' );
-  var energyString = require( 'string!ENERGY_SKATE_PARK_BASICS/energy.energy' );
+  var energyKineticString = require( 'string!ENERGY_SKATE_PARK_BASICS/energy.kinetic' );
+  var energyPotentialString = require( 'string!ENERGY_SKATE_PARK_BASICS/energy.potential' );
+  var energyThermalString = require( 'string!ENERGY_SKATE_PARK_BASICS/energy.thermal' );
+  var energyTotalString = require( 'string!ENERGY_SKATE_PARK_BASICS/energy.total' );
+  var energyEnergyString = require( 'string!ENERGY_SKATE_PARK_BASICS/energy.energy' );
 
   /**
    * Constructor for the BarGraph
@@ -66,10 +66,10 @@ define( function( require ) {
       return text;
     };
 
-    var kineticLabel = createLabel( 0, kineticString, EnergySkateParkColorScheme.kineticEnergy );
-    var potentialLabel = createLabel( 1, potentialString, EnergySkateParkColorScheme.potentialEnergy );
-    var thermalLabel = createLabel( 2, thermalString, EnergySkateParkColorScheme.thermalEnergy );
-    var totalLabel = createLabel( 3, totalString, EnergySkateParkColorScheme.totalEnergy );
+    var kineticLabel = createLabel( 0, energyKineticString, EnergySkateParkColorScheme.kineticEnergy );
+    var potentialLabel = createLabel( 1, energyPotentialString, EnergySkateParkColorScheme.potentialEnergy );
+    var thermalLabel = createLabel( 2, energyThermalString, EnergySkateParkColorScheme.thermalEnergy );
+    var totalLabel = createLabel( 3, energyTotalString, EnergySkateParkColorScheme.totalEnergy );
 
     var clearThermalButton = new ClearThermalButton( clearThermal, skater, {
       centerX: thermalLabel.centerX,
@@ -80,7 +80,7 @@ define( function( require ) {
       clearThermalButton.enabled = allowClearingThermalEnergy;
     } );
 
-    var titleNode = new Text( energyString, { x: 5, top: 0, font: new PhetFont( 14 ), pickable: false } );
+    var titleNode = new Text( energyEnergyString, { x: 5, top: 0, font: new PhetFont( 14 ), pickable: false } );
     var contentNode = new Rectangle( 0, 0, contentWidth, contentHeight, {
       children: [
         new ArrowNode( insetX, this.originY, insetX, insetY, { pickable: false } ),

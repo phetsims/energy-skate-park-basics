@@ -22,10 +22,10 @@ define( function( require ) {
   var ClearThermalButton = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/view/ClearThermalButton' );
 
   // strings
-  var kineticString = require( 'string!ENERGY_SKATE_PARK_BASICS/energy.kinetic' );
-  var potentialString = require( 'string!ENERGY_SKATE_PARK_BASICS/energy.potential' );
-  var thermalString = require( 'string!ENERGY_SKATE_PARK_BASICS/energy.thermal' );
-  var energyString = require( 'string!ENERGY_SKATE_PARK_BASICS/energy.energy' );
+  var energyKineticString = require( 'string!ENERGY_SKATE_PARK_BASICS/energy.kinetic' );
+  var energyPotentialString = require( 'string!ENERGY_SKATE_PARK_BASICS/energy.potential' );
+  var energyThermalString = require( 'string!ENERGY_SKATE_PARK_BASICS/energy.thermal' );
+  var energyEnergyString = require( 'string!ENERGY_SKATE_PARK_BASICS/energy.energy' );
 
   /**
    * @param {Skater} skater the model for the skater
@@ -57,9 +57,9 @@ define( function( require ) {
     var potentialBar = createBar( 1, EnergySkateParkColorScheme.potentialEnergy );
     var thermalBar = createBar( 2, EnergySkateParkColorScheme.thermalEnergy );
 
-    var kineticLabel = createLabel( 0, kineticString, EnergySkateParkColorScheme.kineticEnergy );
-    var potentialLabel = createLabel( 1, potentialString, EnergySkateParkColorScheme.potentialEnergy );
-    var thermalLabel = createLabel( 2, thermalString, EnergySkateParkColorScheme.thermalEnergy );
+    var kineticLabel = createLabel( 0, energyKineticString, EnergySkateParkColorScheme.kineticEnergy );
+    var potentialLabel = createLabel( 1, energyPotentialString, EnergySkateParkColorScheme.potentialEnergy );
+    var thermalLabel = createLabel( 2, energyThermalString, EnergySkateParkColorScheme.thermalEnergy );
 
     var clearThermalButton = new ClearThermalButton( clearThermal, skater, {
       centerX: thermalLabel.centerX,
@@ -88,7 +88,7 @@ define( function( require ) {
 
     var contentWithTitle = new VBox( {
       spacing: 5, align: 'center', children: [
-        new Text( energyString, { fill: 'black', font: new PhetFont( 14 ), pickable: false } ),
+        new Text( energyEnergyString, { fill: 'black', font: new PhetFont( 14 ), pickable: false } ),
         contentNode
       ]
     } );

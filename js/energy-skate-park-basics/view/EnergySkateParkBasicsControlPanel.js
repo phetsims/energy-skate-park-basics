@@ -29,10 +29,10 @@ define( function( require ) {
   var PhetFont = require( 'SCENERY_PHET/PhetFont' );
 
   // strings
-  var barGraphString = require( 'string!ENERGY_SKATE_PARK_BASICS/plots.bar-graph' );
+  var plotsBarGraphString = require( 'string!ENERGY_SKATE_PARK_BASICS/plots.bar-graph' );
   var pieChartString = require( 'string!ENERGY_SKATE_PARK_BASICS/pieChart' );
-  var speedString = require( 'string!ENERGY_SKATE_PARK_BASICS/properties.speed' );
-  var gridString = require( 'string!ENERGY_SKATE_PARK_BASICS/controls.show-grid' );
+  var propertiesSpeedString = require( 'string!ENERGY_SKATE_PARK_BASICS/properties.speed' );
+  var controlsShowGridString = require( 'string!ENERGY_SKATE_PARK_BASICS/controls.show-grid' );
 
   /**
    * @param {EnergySkateParkBasicsModel} model
@@ -43,9 +43,9 @@ define( function( require ) {
     var textOptions = { font: new PhetFont( 14 ) };
 
     var pieChartSet = { label: new Text( pieChartString, textOptions ), icon: this.createPieChartIcon() };
-    var barGraphSet = { label: new Text( barGraphString, textOptions ), icon: this.createBarGraphIcon() };
-    var gridSet = { label: new Text( gridString, textOptions ), icon: this.createGridIcon() };
-    var speedometerSet = { label: new Text( speedString, textOptions ), icon: this.createSpeedometerIcon() };
+    var barGraphSet = { label: new Text( plotsBarGraphString, textOptions ), icon: this.createBarGraphIcon() };
+    var gridSet = { label: new Text( controlsShowGridString, textOptions ), icon: this.createGridIcon() };
+    var speedometerSet = { label: new Text( propertiesSpeedString, textOptions ), icon: this.createSpeedometerIcon() };
 
     var sets = [ pieChartSet, barGraphSet, gridSet, speedometerSet ];
     var maxTextWidth = _.max( sets, function( itemSet ) { return itemSet.label.width; } ).label.width;
@@ -122,8 +122,8 @@ define( function( require ) {
     createPieChartIcon: function() {
       var radius = 10;
       var x = new Shape().
-        moveTo( 0, 0 ).
-        ellipticalArc( 0, 0, radius, radius, 0, -Math.PI / 2, 0, false ).lineTo( 0, 0 );
+      moveTo( 0, 0 ).
+      ellipticalArc( 0, 0, radius, radius, 0, -Math.PI / 2, 0, false ).lineTo( 0, 0 );
       return new Node( {
         children: [
           new Circle( radius, { fill: EnergySkateParkColorScheme.potentialEnergy, lineWidth: 0.5, stroke: 'black' } ),
@@ -149,7 +149,7 @@ define( function( require ) {
 
     // Create an icon for the speedometer check box
     createSpeedometerIcon: function() {
-      var node = new GaugeNode( new Property( 0 ), speedString, { min: 0, max: 10 }, { pickable: false } );
+      var node = new GaugeNode( new Property( 0 ), propertiesSpeedString, { min: 0, max: 10 }, { pickable: false } );
       node.scale( 20 / node.width );
       return node;
     }

@@ -23,10 +23,10 @@ define( function( require ) {
   var iconPlaygroundNavbar = require( 'image!ENERGY_SKATE_PARK_BASICS/icon-playground-navbar.png' );
 
   // strings
-  var intro = require( 'string!ENERGY_SKATE_PARK_BASICS/screen.introduction' );
-  var friction = require( 'string!ENERGY_SKATE_PARK_BASICS/screen.friction' );
-  var playground = require( 'string!ENERGY_SKATE_PARK_BASICS/screen.trackPlayground' );
-  var title = require( 'string!ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics.title' );
+  var screenIntroductionString = require( 'string!ENERGY_SKATE_PARK_BASICS/screen.introduction' );
+  var screenFrictionString = require( 'string!ENERGY_SKATE_PARK_BASICS/screen.friction' );
+  var screenTrackPlaygroundString = require( 'string!ENERGY_SKATE_PARK_BASICS/screen.trackPlayground' );
+  var energySkateParkBasicsTitleString = require( 'string!ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics.title' );
 
   function EnergySkateParkBasicsSim() {
 
@@ -44,16 +44,16 @@ define( function( require ) {
     };
 
     var tandem = new Tandem( 'energySkateParkBasics' );
-    Sim.call( this, title, [
-      new EnergySkateParkBasicsScreen( intro, iconIntroHomescreen, iconIntroNavbar, false, false, {
+    Sim.call( this, energySkateParkBasicsTitleString, [
+      new EnergySkateParkBasicsScreen( screenIntroductionString, iconIntroHomescreen, iconIntroNavbar, false, false, {
         tandem: tandem.createTandem( 'introScreen' ),
         tandemScreenName: 'introScreen'
       } ),
-      new EnergySkateParkBasicsScreen( friction, iconFrictionHomescreen, iconFrictionNavbar, false, true, {
+      new EnergySkateParkBasicsScreen( screenFrictionString, iconFrictionHomescreen, iconFrictionNavbar, false, true, {
         tandem: tandem.createTandem( 'frictionScreen' ),
         tandemScreenName: 'frictionScreen'
       } ),
-      new EnergySkateParkBasicsScreen( playground, iconPlaygroundHomescreen, iconPlaygroundNavbar, true, true, {
+      new EnergySkateParkBasicsScreen( screenTrackPlaygroundString, iconPlaygroundHomescreen, iconPlaygroundNavbar, true, true, {
         tandem: tandem.createTandem( 'playgroundScreen' ),
         tandemScreenName: 'playgroundScreen'
       } )
