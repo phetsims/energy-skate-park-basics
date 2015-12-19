@@ -46,16 +46,13 @@ define( function( require ) {
     var tandem = new Tandem( 'energySkateParkBasics' );
     Sim.call( this, energySkateParkBasicsTitleString, [
       new EnergySkateParkBasicsScreen( screenIntroductionString, iconIntroHomescreen, iconIntroNavbar, false, false, {
-        tandem: tandem.createTandem( 'introScreen' ),
-        tandemScreenName: 'introScreen'
+        tandem: tandem.createTandem( 'introScreen' )
       } ),
       new EnergySkateParkBasicsScreen( screenFrictionString, iconFrictionHomescreen, iconFrictionNavbar, false, true, {
-        tandem: tandem.createTandem( 'frictionScreen' ),
-        tandemScreenName: 'frictionScreen'
+        tandem: tandem.createTandem( 'frictionScreen' )
       } ),
       new EnergySkateParkBasicsScreen( screenTrackPlaygroundString, iconPlaygroundHomescreen, iconPlaygroundNavbar, true, true, {
-        tandem: tandem.createTandem( 'playgroundScreen' ),
-        tandemScreenName: 'playgroundScreen'
+        tandem: tandem.createTandem( 'playgroundScreen' )
       } )
     ], options );
   }

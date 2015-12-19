@@ -20,10 +20,9 @@ define( function( require ) {
       function() { return new EnergySkateParkBasicsModel( draggableTracks, friction, { tandem: options.tandem } ); },
       function( model ) {
         return new EnergySkateParkBasicsScreenView( model, options );
-      },
-      {
+      }, {
         navigationBarIcon: new Image( navbarIcon ),
-        tandemScreenName: options.tandemScreenName
+        tandem: options.tandem
       } );
   }
 
