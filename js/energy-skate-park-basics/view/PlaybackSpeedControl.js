@@ -19,25 +19,28 @@ define( function( require ) {
   var normalString = require( 'string!ENERGY_SKATE_PARK_BASICS/normal' );
   var slowMotionString = require( 'string!ENERGY_SKATE_PARK_BASICS/slow.motion' );
 
+  // constants
+  var X_DILATION = 5;
+  var Y_DILATION = 2;
+  var RADIO_BUTTON_RADIUS = 7.1;
+
   /**
    * @param {Property<Number>} speedProperty the instantaneous speed of the skater (magnitude of the velocity vector)
    * @constructor
    */
   function PlaybackSpeedControl( speedProperty, options ) {
-    var dilateX = 5;
-    var dilateY = 2;
-    var radioButtonRadius = 7.1;
+
     var slowMotionButton = new AquaRadioButton( speedProperty, 'slow', new Text( slowMotionString, { font: new PhetFont( 15 ) } ), {
-      radius: radioButtonRadius,
+      radius: RADIO_BUTTON_RADIUS,
       togetherID: options.slowSpeedRadioButtonTogetherID
     } );
     var normalButton = new AquaRadioButton( speedProperty, 'normal', new Text( normalString, { font: new PhetFont( 15 ) } ), {
-      radius: radioButtonRadius,
+      radius: RADIO_BUTTON_RADIUS,
       x: 130,
       togetherID: options.normalSpeedRadioButtonTogetherID
     } );
-    slowMotionButton.touchArea = slowMotionButton.localBounds.dilatedXY( dilateX, dilateY );
-    normalButton.touchArea = normalButton.localBounds.dilatedXY( dilateX, dilateY );
+    slowMotionButton.touchArea = slowMotionButton.localBounds.dilatedXY( X_DILATION, Y_DILATION );
+    normalButton.touchArea = normalButton.localBounds.dilatedXY( X_DILATION, Y_DILATION );
     VBox.call( this, {
       align: 'left',
       spacing: 4,
