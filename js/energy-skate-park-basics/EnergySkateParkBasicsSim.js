@@ -43,7 +43,7 @@ define( function( require ) {
       showSaveAndLoad: phet.chipper.getQueryParameter( 'showSaveAndLoad' )
     };
 
-    var tandem = new Tandem( 'energySkateParkBasics' );
+    var tandem = Tandem.createRootTandem();
     Sim.call( this, energySkateParkBasicsTitleString, [
       new EnergySkateParkBasicsScreen( screenIntroductionString, iconIntroHomescreen, iconIntroNavbar, false, false, {
         tandem: tandem.createTandem( 'introScreen' )
