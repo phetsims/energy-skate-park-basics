@@ -153,7 +153,7 @@ define( function( require ) {
 
     this.tracks = new ObservableArray();
 
-    // Proxy for save/load for the tracks for together.js
+    // Proxy for save/load for the tracks for phetio.js
     // TODO: This is all a bit hackish, to serialize the tracks.  Cannot this be made simpler?
     if ( draggableTracks ) {
       together && together.addInstance( 'playgroundScreen.tracks', {
@@ -169,7 +169,7 @@ define( function( require ) {
                 } );
               }
             };
-          } ).getArray(); // This line returns a JS Array, not ObservableArray, required by together.js
+          } ).getArray(); // This line returns a JS Array, not ObservableArray, required by phetio.js
         },
 
         get value() {
