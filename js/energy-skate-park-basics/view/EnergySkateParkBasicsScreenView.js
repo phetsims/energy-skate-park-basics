@@ -93,7 +93,7 @@ define( function( require ) {
 
     this.controlPanel = new EnergySkateParkBasicsControlPanel( model, {
       tandem: options.tandem,
-      massSliderTogetherID: options.massSliderTogetherID
+      massSliderPhETIOID: options.massSliderPhETIOID
     } );
     this.addChild( this.controlPanel );
     this.controlPanel.right = this.layoutBounds.width - 5;
@@ -194,8 +194,8 @@ define( function( require ) {
     this.addChild( this.returnSkaterButton );
 
     this.addChild( new PlaybackSpeedControl( model.property( 'speed' ), {
-      slowSpeedRadioButtonTogetherID: options.tandem.createTandem( 'slowSpeedRadioButton' ),
-      normalSpeedRadioButtonTogetherID: options.tandem.createTandem( 'normalSpeedRadioButton' )
+      slowSpeedRadioButtonPhETIOID: options.tandem.createTandem( 'slowSpeedRadioButton' ),
+      normalSpeedRadioButtonPhETIOID: options.tandem.createTandem( 'normalSpeedRadioButton' )
     } ).mutate( {
         right: playPauseButton.left - 20,
         top: playPauseButton.top

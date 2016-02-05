@@ -156,7 +156,7 @@ define( function( require ) {
     // Proxy for save/load for the tracks for phetio.js
     // TODO: This is all a bit hackish, to serialize the tracks.  Cannot this be made simpler?
     if ( draggableTracks ) {
-      together && together.addInstance( 'playgroundScreen.tracks', {
+      phetio && phetio.addInstance( 'playgroundScreen.tracks', {
         phetioID: 'playgroundScreen.tracks',
 
         // TODO: use get value instead of this function.

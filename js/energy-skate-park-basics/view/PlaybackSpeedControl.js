@@ -32,12 +32,12 @@ define( function( require ) {
 
     var slowMotionButton = new AquaRadioButton( speedProperty, 'slow', new Text( slowMotionString, { font: new PhetFont( 15 ) } ), {
       radius: RADIO_BUTTON_RADIUS,
-      phetioID: options.slowSpeedRadioButtonTogetherID
+      phetioID: options.slowSpeedRadioButtonPhETIOID
     } );
     var normalButton = new AquaRadioButton( speedProperty, 'normal', new Text( normalString, { font: new PhetFont( 15 ) } ), {
       radius: RADIO_BUTTON_RADIUS,
       x: 130,
-      phetioID: options.normalSpeedRadioButtonTogetherID
+      phetioID: options.normalSpeedRadioButtonPhETIOID
     } );
     slowMotionButton.touchArea = slowMotionButton.localBounds.dilatedXY( X_DILATION, Y_DILATION );
     normalButton.touchArea = normalButton.localBounds.dilatedXY( X_DILATION, Y_DILATION );

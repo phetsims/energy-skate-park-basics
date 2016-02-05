@@ -157,7 +157,7 @@ define( function( require ) {
     this.addDerivedProperty( 'allowClearingThermalEnergy', [ 'thermalEnergy' ], function( thermalEnergy ) {return thermalEnergy > 1E-2;} );
 
     this.phetioID = options.tandem.createTandem( 'skater' );
-    together && together.addInstance( this.phetioID, this );
+    phetio && phetio.addInstance( this.phetioID, this );
   }
 
   return inherit( PropertySet, Skater, {
