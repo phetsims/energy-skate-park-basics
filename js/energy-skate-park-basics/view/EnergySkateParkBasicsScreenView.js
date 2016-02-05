@@ -146,7 +146,7 @@ define( function( require ) {
     playProperty.link( function( playing ) {
       model.property( 'paused' ).set( !playing );
     } );
-    var playPauseButton = new PlayPauseButton( playProperty, { togetherID: 'playPauseButton' } ).mutate( { scale: 0.6 } );
+    var playPauseButton = new PlayPauseButton( playProperty, { phetioID: 'playPauseButton' } ).mutate( { scale: 0.6 } );
 
     // Make the Play/Pause button bigger when it is showing the pause button, see #298
     var pauseSizeIncreaseFactor = 1.35;
@@ -155,7 +155,7 @@ define( function( require ) {
     } );
 
     var stepButton = new StepButton( function() { model.manualStep(); }, playProperty, {
-      togetherID: options.tandem.createTandem( 'stepButton' )
+      phetioID: options.tandem.createTandem( 'stepButton' )
     } );
 
     // Make the step button the same size as the pause button.
@@ -176,7 +176,7 @@ define( function( require ) {
       // Align vertically with other controls, see #134
       centerY: (modelViewTransform.modelToViewY( 0 ) + this.layoutBounds.maxY) / 2 + 8,
 
-      togetherID: options.tandem.createTandem( 'resetAllButton' )
+      phetioID: options.tandem.createTandem( 'resetAllButton' )
     } );
     this.addChild( this.resetAllButton );
 
@@ -186,7 +186,7 @@ define( function( require ) {
       listener: model.returnSkater.bind( model ),
       centerY: this.resetAllButton.centerY,
       // X updated in layoutBounds since the reset all button can move horizontally
-      togetherID: options.tandem.createTandem( 'returnSkaterButton' )
+      phetioID: options.tandem.createTandem( 'returnSkaterButton' )
     } );
 
     // Disable the return skater button when the skater is already at his initial coordinates
@@ -308,7 +308,7 @@ define( function( require ) {
       var clearButton = new EraserButton( {
         iconWidth: 30,
         baseColor: new Color( 221, 210, 32 ),
-        togetherID: 'playgroundScreen.clearTracksButton'
+        phetioID: 'playgroundScreen.clearTracksButton'
       } );
       clearButtonEnabledProperty.linkAttribute( clearButton, 'enabled' );
       clearButton.addListener( function() {model.clearTracks();} );
@@ -364,7 +364,7 @@ define( function( require ) {
       // green means "go" since the skater will likely start moving at this point
       baseColor: EnergySkateParkColorScheme.kineticEnergy,
       listener: model.returnSkater.bind( model ),
-      togetherID: options.tandem.createTandem( 'returnSkaterToPreviousStartingPositionButton' )
+      phetioID: options.tandem.createTandem( 'returnSkaterToPreviousStartingPositionButton' )
     } );
 
     var returnSkaterToGroundButton = new RectangularPushButton( {
@@ -372,7 +372,7 @@ define( function( require ) {
       centerBottom: modelViewTransform.modelToViewPosition( model.skater.startingPosition ),
       baseColor: '#f4514e', // red for stop, since the skater will be stopped on the ground.
       listener: function() { model.skater.resetPosition(); },
-      togetherID: options.tandem.createTandem( 'returnSkaterToGroundButton' )
+      phetioID: options.tandem.createTandem( 'returnSkaterToGroundButton' )
     } );
 
     this.addChild( returnSkaterToStartingPointButton );

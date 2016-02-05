@@ -92,7 +92,7 @@ define( function( require ) {
       // Position of the skater's head, for positioning the pie chart.
       headPosition: new Vector2( 0, 0 )
     }, {
-      togetherIDMap: {
+      phetioIDMap: {
         position: options.tandem.createTandem( 'skaterPosition' ),
         u: options.tandem.createTandem( 'skaterParametricDistanceAlongTrack' ),
         up: options.tandem.createTandem( 'skaterUpsideUpOnTrack' ),
@@ -156,8 +156,8 @@ define( function( require ) {
     // "false positives", see #306
     this.addDerivedProperty( 'allowClearingThermalEnergy', [ 'thermalEnergy' ], function( thermalEnergy ) {return thermalEnergy > 1E-2;} );
 
-    this.togetherID = options.tandem.createTandem( 'skater' );
-    together && together.addInstance( this.togetherID, this );
+    this.phetioID = options.tandem.createTandem( 'skater' );
+    together && together.addInstance( this.phetioID, this );
   }
 
   return inherit( PropertySet, Skater, {

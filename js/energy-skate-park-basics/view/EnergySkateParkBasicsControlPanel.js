@@ -62,25 +62,25 @@ define( function( require ) {
       new CheckBox(
         new HBox( { children: pad( pieChartSet ) } ),
         model.property( 'pieChartVisible' ),
-        _.extend( { togetherID: options.tandem.createTandem( 'pieChartCheckBox' ) }, checkBoxItemOptions )
+        _.extend( { phetioID: options.tandem.createTandem( 'pieChartCheckBox' ) }, checkBoxItemOptions )
       ),
       new CheckBox(
         new HBox( { children: pad( barGraphSet ) } ),
         model.property( 'barGraphVisible' ),
-        _.extend( { togetherID: options.tandem.createTandem( 'barGraphCheckBox' ) }, checkBoxItemOptions ) ),
+        _.extend( { phetioID: options.tandem.createTandem( 'barGraphCheckBox' ) }, checkBoxItemOptions ) ),
       new CheckBox(
         new HBox( { children: pad( gridSet ) } ),
         model.property( 'gridVisible' ),
-        _.extend( { togetherID: options.tandem.createTandem( 'gridCheckBox' ) }, checkBoxItemOptions ) ),
+        _.extend( { phetioID: options.tandem.createTandem( 'gridCheckBox' ) }, checkBoxItemOptions ) ),
       new CheckBox(
         new HBox( { children: pad( speedometerSet ) } ),
         model.property( 'speedometerVisible' ),
-        _.extend( { togetherID: options.tandem.createTandem( 'speedometerCheckBox' ) }, checkBoxItemOptions )
+        _.extend( { phetioID: options.tandem.createTandem( 'speedometerCheckBox' ) }, checkBoxItemOptions )
       ) ];
     var checkBoxes = new VBox( { align: 'left', spacing: 10, children: checkBoxChildren } );
 
     var massSlider = new MassSlider( model.skater.massProperty, {
-      togetherID: options.tandem.createTandem( 'massSlider' )
+      phetioID: options.tandem.createTandem( 'massSlider' )
     } );
 
     // For 1st screen, show MassSlider
@@ -88,7 +88,7 @@ define( function( require ) {
     var children = [ checkBoxes, massSlider ];
     if ( model.frictionAllowed ) {
       children.push( new FrictionControl( model.property( 'friction' ), {
-        togetherID: options.tandem.createTandem( 'frictionSlider' )
+        phetioID: options.tandem.createTandem( 'frictionSlider' )
       } ) );
     }
     var content = new VBox( { spacing: 4, children: children } );

@@ -113,7 +113,7 @@ define( function( require ) {
       // adjusted, see #195
       availableModelBounds: null
     }, {
-      togetherIDMap: {
+      phetioIDMap: {
         // Model for visibility of various view parameters
         pieChartVisible: options.tandem.createTandem( 'pieChartVisible' ),
         barGraphVisible: options.tandem.createTandem( 'barGraphVisible' ),
@@ -157,7 +157,7 @@ define( function( require ) {
     // TODO: This is all a bit hackish, to serialize the tracks.  Cannot this be made simpler?
     if ( draggableTracks ) {
       together && together.addInstance( 'playgroundScreen.tracks', {
-        togetherID: 'playgroundScreen.tracks',
+        phetioID: 'playgroundScreen.tracks',
 
         // TODO: use get value instead of this function.
         getArray: function() {

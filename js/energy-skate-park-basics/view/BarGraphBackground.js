@@ -74,7 +74,7 @@ define( function( require ) {
     var clearThermalButton = new ClearThermalButton( clearThermal, skater, {
       centerX: thermalLabel.centerX,
       y: thermalLabel.bottom + 12,
-      togetherID: options.tandem.createTandem( 'barGraph.clearThermalButton' )
+      phetioID: options.tandem.createTandem( 'barGraph.clearThermalButton' )
     } );
     skater.allowClearingThermalEnergyProperty.link( function( allowClearingThermalEnergy ) {
       clearThermalButton.enabled = allowClearingThermalEnergy;

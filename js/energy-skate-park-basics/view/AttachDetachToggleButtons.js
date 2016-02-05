@@ -42,12 +42,12 @@ define( function( require ) {
       {
         value: false,
         node: new Image( attachIcon, { scale: scale } ),
-        togetherID: 'playgroundScreen.attachRadioButton'
+        phetioID: 'playgroundScreen.attachRadioButton'
       },
       {
         value: true,
         node: new Image( detachIcon, { scale: scale } ),
-        togetherID: 'playgroundScreen.detachRadioButton'
+        phetioID: 'playgroundScreen.detachRadioButton'
       }
     ];
 
