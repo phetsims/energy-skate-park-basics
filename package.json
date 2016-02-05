@@ -20,7 +20,7 @@
     ],
     "phet-io": {
       "preload": [
-        "../together/js/api/energy-skate-park-basics-api.js"
+        "../phet-io/js/api/energy-skate-park-basics-api.js"
       ]
     }
   }
