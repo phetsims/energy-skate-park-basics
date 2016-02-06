@@ -1133,7 +1133,6 @@ define( function( require ) {
       return nonphysicalTracks;
     },
 
-
     // Find whatever track is connected to the specified track and join them together to a new track
     joinTracks: function( track ) {
       var connectedPoint = track.getSnapTarget();
