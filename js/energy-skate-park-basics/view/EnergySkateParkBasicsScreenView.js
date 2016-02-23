@@ -182,7 +182,9 @@ define( function( require ) {
 
     // The button to return the skater
     this.returnSkaterButton = new RectangularPushButton( {
-      content: new Text( controlsRestartSkaterString ),
+      content: new Text( controlsRestartSkaterString, {
+        maxWidth: 100
+      } ),
       listener: model.returnSkater.bind( model ),
       centerY: this.resetAllButton.centerY,
       // X updated in layoutBounds since the reset all button can move horizontally
@@ -197,9 +199,9 @@ define( function( require ) {
       slowSpeedRadioButtonPhETIOID: options.tandem.createTandem( 'slowSpeedRadioButton' ),
       normalSpeedRadioButtonPhETIOID: options.tandem.createTandem( 'normalSpeedRadioButton' )
     } ).mutate( {
-        right: playPauseButton.left - 20,
-        top: playPauseButton.top
-      } ) );
+      left: stepButton.right + 20,
+      centerY: playPauseButton.centerY
+    } ) );
 
     var speedometerNode = new GaugeNode(
       // Hide the needle in for the background of the GaugeNode
@@ -288,10 +290,10 @@ define( function( require ) {
         var orthogonalUnitVector = directionUnitVector.perpendicular();
         var tip = directionUnitVector.times( headHeight ).plus( tail );
         return new Path( new Shape().moveToPoint( tail ).
-            lineToPoint( tail.plus( orthogonalUnitVector.times( headWidth / 2 ) ) ).
-            lineToPoint( tip ).
-            lineToPoint( tail.plus( orthogonalUnitVector.times( -headWidth / 2 ) ) ).
-            lineToPoint( tail ).close(),
+          lineToPoint( tail.plus( orthogonalUnitVector.times( headWidth / 2 ) ) ).
+          lineToPoint( tip ).
+          lineToPoint( tail.plus( orthogonalUnitVector.times( -headWidth / 2 ) ) ).
+          lineToPoint( tail ).close(),
           { fill: 'black' } );
       };
 

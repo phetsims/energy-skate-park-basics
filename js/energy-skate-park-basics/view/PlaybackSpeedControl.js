@@ -44,6 +44,7 @@ define( function( require ) {
     VBox.call( this, {
       align: 'left',
       spacing: 4,
+      maxWidth: 142,
       children: [
         slowMotionButton,
         normalButton
