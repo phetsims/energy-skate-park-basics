@@ -99,72 +99,72 @@ define( function( require ) {
     var targetTrack = null;
 
     var targetU = null;
-    this.addInputListener( new SimpleDragHandler(
-      {
-        start: function( event ) {
-          skater.dragging = true;
 
-          // Clear thermal energy whenever skater is grabbed, see #32
-          skater.thermalEnergy = 0;
+    function dragSkater( event ) {
+      var globalPoint = skaterNode.globalToParentPoint( event.pointer.point );
+      var position = modelViewTransform.viewToModelPosition( globalPoint );
 
-          // Jump to the input location when dragged
-          this.drag( event );
-        },
+      // make sure it is within the visible bounds
+      position = view.availableModelBounds.getClosestPoint( position.x, position.y, position );
 
-        drag: function( event ) {
+      // PERFORMANCE/ALLOCATION: lots of unnecessary allocations and computation here, biggest improvement could be
+      // to use binary search for position on the track
+      var closestTrackAndPositionAndParameter = getClosestTrackAndPositionAndParameter( position, getPhysicalTracks() );
+      var closeEnough = false;
+      if ( closestTrackAndPositionAndParameter && closestTrackAndPositionAndParameter.track && closestTrackAndPositionAndParameter.track.isParameterInBounds( closestTrackAndPositionAndParameter.u ) ) {
+        var closestPoint = closestTrackAndPositionAndParameter.point;
+        var distance = closestPoint.distance( position );
+        if ( distance < 0.5 ) {
+          position = closestPoint;
+          targetTrack = closestTrackAndPositionAndParameter.track;
+          targetU = closestTrackAndPositionAndParameter.u;
 
-          var globalPoint = skaterNode.globalToParentPoint( event.pointer.point );
-          var position = modelViewTransform.viewToModelPosition( globalPoint );
+          // Choose the right side of the track, i.e. the side of the track that would have the skater upside up
+          var normal = targetTrack.getUnitNormalVector( targetU );
+          skater.up = normal.y > 0;
 
-          // make sure it is within the visible bounds
-          position = view.availableModelBounds.getClosestPoint( position.x, position.y, position );
+          skater.angle = targetTrack.getViewAngleAt( targetU ) + (skater.up ? 0 : Math.PI);
 
-          // PERFORMANCE/ALLOCATION: lots of unnecessary allocations and computation here, biggest improvement could be
-          // to use binary search for position on the track
-          var closestTrackAndPositionAndParameter = getClosestTrackAndPositionAndParameter( position, getPhysicalTracks() );
-          var closeEnough = false;
-          if ( closestTrackAndPositionAndParameter && closestTrackAndPositionAndParameter.track && closestTrackAndPositionAndParameter.track.isParameterInBounds( closestTrackAndPositionAndParameter.u ) ) {
-            var closestPoint = closestTrackAndPositionAndParameter.point;
-            var distance = closestPoint.distance( position );
-            if ( distance < 0.5 ) {
-              position = closestPoint;
-              targetTrack = closestTrackAndPositionAndParameter.track;
-              targetU = closestTrackAndPositionAndParameter.u;
-
-              // Choose the right side of the track, i.e. the side of the track that would have the skater upside up
-              var normal = targetTrack.getUnitNormalVector( targetU );
-              skater.up = normal.y > 0;
-
-              skater.angle = targetTrack.getViewAngleAt( targetU ) + (skater.up ? 0 : Math.PI);
-
-              closeEnough = true;
-            }
-          }
-          if ( !closeEnough ) {
-            targetTrack = null;
-            targetU = null;
-
-            // make skater upright if not near the track
-            skater.angle = 0;
-            skater.up = true;
-
-            skater.position = position;
-          }
-
-          else {
-            skater.position = targetTrack.getPoint( targetU );
-          }
-
-          skater.updateEnergy();
-          skater.trigger( 'updated' );
-        },
-
-        end: function() {
-
-          // Record the state of the skater for "return skater"
-          skater.released( targetTrack, targetU );
+          closeEnough = true;
         }
-      } ) );
+      }
+      if ( !closeEnough ) {
+        targetTrack = null;
+        targetU = null;
+
+        // make skater upright if not near the track
+        skater.angle = 0;
+        skater.up = true;
+
+        skater.position = position;
+      }
+
+      else {
+        skater.position = targetTrack.getPoint( targetU );
+      }
+
+      skater.updateEnergy();
+      skater.trigger( 'updated' );
+    }
+
+    this.addInputListener( new SimpleDragHandler( {
+      start: function( event ) {
+        skater.dragging = true;
+
+        // Clear thermal energy whenever skater is grabbed, see #32
+        skater.thermalEnergy = 0;
+
+        // Jump to the input location when dragged
+        dragSkater( event );
+      },
+
+      drag: dragSkater,
+
+      end: function() {
+        // Record the state of the skater for "return skater"
+        skater.released( targetTrack, targetU );
+      }
+    } ) );
   }
 
   return inherit( Node, SkaterNode );
