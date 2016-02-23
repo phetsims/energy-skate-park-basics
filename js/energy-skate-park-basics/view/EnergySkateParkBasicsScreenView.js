@@ -342,11 +342,12 @@ define( function( require ) {
       renderer
     );
 
-    var gaugeNeedleNode = new GaugeNeedleNode( model.skater.property( 'speed' ),
-      {
-        min: 0,
-        max: 20
-      }, { renderer: renderer } );
+    var gaugeNeedleNode = new GaugeNeedleNode( model.skater.property( 'speed' ), {
+      min: 0,
+      max: 20
+    }, {
+      renderer: renderer
+    } );
     model.property( 'speedometerVisible' ).linkAttribute( gaugeNeedleNode, 'visible' );
     gaugeNeedleNode.x = speedometerNode.x;
     gaugeNeedleNode.y = speedometerNode.y;
@@ -354,7 +355,8 @@ define( function( require ) {
     this.addChild( new BarGraphForeground( model.skater, barGraphBackground, model.property( 'barGraphVisible' ), renderer ) );
     this.addChild( skaterNode );
 
-    var pieChartNode = renderer === 'webgl' ? new PieChartWebGLNode( model.skater, model.property( 'pieChartVisible' ), modelViewTransform ) :
+    var pieChartNode = renderer === 'webgl' ?
+                       new PieChartWebGLNode( model.skater, model.property( 'pieChartVisible' ), modelViewTransform ) :
                        new PieChartNode( model.skater, model.property( 'pieChartVisible' ), modelViewTransform );
     this.addChild( pieChartNode );
 
@@ -408,10 +410,6 @@ define( function( require ) {
   }
 
   return inherit( ScreenView, EnergySkateParkBasicsScreenView, {
-
-    // No state that is specific to the view, in this case
-    getState: function() {},
-    setState: function() {},
 
     // Layout the EnergySkateParkBasicsScreenView, scaling it up and down with the size of the screen to ensure a
     // minimially visible area, but keeping it centered at the bottom of the screen, so there is more area in the +y

@@ -1344,42 +1344,6 @@ define( function( require ) {
       this.trackChangePending = true;
     },
 
-    // Get the state, say, to put in a query parameter
-    getState: function() {
-      return {
-        properties: this.getValues(),
-        skater: this.skater.getState( this.tracks ),
-        tracks: this.tracks.getArray().map( function( track ) {
-          return {
-            physical: track.physical,
-            points: track.controlPoints.map( function( controlPoint ) { return controlPoint.sourcePosition; } )
-          };
-        } )
-      };
-    },
-
-    // Set the state, say from a query parameter
-    setState: function( state ) {
-      // Clear old tracks
-      this.tracks.clear();
-      for ( var i = 0; i < state.tracks.length; i++ ) {
-        var controlPoints = state.tracks[ i ].points.map( function( point ) {
-          return new ControlPoint( point.x, point.y );
-        } );
-        var newTrack = new Track( this, this.tracks, controlPoints, true, null, this.availableModelBoundsProperty );
-        newTrack.physical = state.tracks[ i ].physical;
-        newTrack.dropped = state.tracks[ i ].dropped;
-        this.tracks.add( newTrack );
-      }
-
-      // Trigger track changed first to update the edit enabled properties
-      this.trigger( 'track-changed' );
-
-      this.setValues( state.properties );
-
-      this.skater.setState( state.skater, this.tracks );
-    },
-
     // Get the number of physical control points (i.e. control points outside of the toolbox)
     getNumberOfPhysicalControlPoints: function() {
       var numberOfPointsInEachTrack = _.map( this.getPhysicalTracks(), function( track ) {return track.controlPoints.length;} );

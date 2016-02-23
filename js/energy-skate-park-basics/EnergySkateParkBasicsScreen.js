@@ -26,17 +26,5 @@ define( function( require ) {
       } );
   }
 
-  return inherit( Screen, EnergySkateParkBasicsScreen, {
-
-    getState: function() {
-      return {
-        model: this.model.getState(),
-        view: this.view.getState()
-      };
-    },
-    setState: function( state ) {
-      this.model.setState( state.model );
-      this.view.setState( state.view );
-    }
-  } );
+  return inherit( Screen, EnergySkateParkBasicsScreen );
 } );

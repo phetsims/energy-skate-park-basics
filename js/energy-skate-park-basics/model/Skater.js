@@ -240,24 +240,6 @@ define( function( require ) {
       this.trigger( 'energy-changed' );
     },
 
-    // Pass in tracks so it can use indices for serialization
-    getState: function( tracks ) {
-      var state = {
-        properties: this.getValues()
-      };
-      // Replace the circularity problem
-      state.properties.track = tracks.indexOf( this.track );
-      state.properties.startingTrack = tracks.indexOf( this.startingTrack );
-      return state;
-    },
-
-    setState: function( state, tracks ) {
-      this.setValues( state.properties );
-      this.track = tracks.getArray()[ state.properties.track ];
-      this.startingTrack = tracks[ state.properties.startingTrack ];
-      this.trigger( 'updated' );
-    },
-
     // Update the head position for showing the pie chart.
     // Doesn't depend on "up" because it already depends on the angle of the skater.
     // Would be better if headPosition were a derived property, but created too many allocations, see #50
