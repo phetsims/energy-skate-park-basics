@@ -34,6 +34,7 @@ define( function( require ) {
 
     // Space the friction label above the tick labels so that it won't overlap for i18n
     VBox.call( this, {
+      resize: false,
       spacing: -4,
       children: [ new Text( controlsFrictionTitleString, new PhetFont( 14 ) ), slider ]
     } );

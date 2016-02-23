@@ -31,7 +31,10 @@ define( function( require ) {
     var tickFont = new PhetFont( 10 );
     slider.addMajorTick( Constants.MIN_MASS, new Text( smallString, { font: tickFont } ) );
     slider.addMajorTick( Constants.MAX_MASS, new Text( largeString, { font: tickFont } ) );
-    VBox.call( this, { children: [ new Text( controlsMassString, new PhetFont( 14 ) ), slider ] } );
+    VBox.call( this, {
+      resize: false,
+      children: [ new Text( controlsMassString, new PhetFont( 14 ) ), slider ]
+    } );
   }
 
   return inherit( VBox, MassSlider );
