@@ -151,46 +151,6 @@ define( function( require ) {
     /*
      DEPRECATED
      */
-    initialize: function( gl ) {
-
-      this.buffer = gl.createBuffer();
-      gl.bindBuffer( gl.ARRAY_BUFFER, this.buffer );
-
-      var centerX = 0;
-      var centerY = 0;
-      var radius = 0.5;
-
-      // 40 makes a smooth circle, but we need enough samples to eliminate seams between the pie slices
-      // Win8/Chrome starts to slow down around 1000000 samples
-      // But need it to be high enough that we don't see discrete jumps when the energy changes, see #303
-      var numSamples = 1000;
-      this.numSamples = numSamples;
-
-      var vertices = [ centerX, centerY ];
-
-      var indexToVertex = function( i ) {
-        var angle = -Math.PI * 2 / numSamples * i;
-        var x = radius * Math.cos( angle ) + centerX;
-        var y = radius * Math.sin( angle ) + centerY;
-        vertices.push( x );
-        vertices.push( y );
-      };
-
-      //Go back to the first vertex, to make sure it is a closed circle
-      for ( var i = 0; i <= numSamples; i++ ) {
-        indexToVertex( i );
-      }
-
-      // Complete the circle
-      this.vertices = vertices;
-
-      // TODO: Once we are lazily handling the full matrix, we may benefit from DYNAMIC draw here, and updating the vertices themselves
-      gl.bufferData( gl.ARRAY_BUFFER, new Float32Array( vertices ), gl.STATIC_DRAW );
-    },
-
-    /*
-     DEPRECATED
-     */
     render: function( gl, shaderProgram, viewMatrix ) {
 
       var angleBetweenSlices = Math.PI * 2 / this.numSamples;
