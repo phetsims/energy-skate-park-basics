@@ -103,13 +103,12 @@ define( function( require ) {
       new Property( 0 ),
       thermalEnergyProportion
     );
-
     this.addChild( thermalEnergyPiece );
 
     var kineticEnergyPiece = new PieChartWebGLSliceNode(
       EnergySkateParkColorScheme.kineticEnergy,
       pieChartRadiusProperty,
-      thermalEnergyProportion,
+      new Property( 0 ),
       kineticEnergyProportion
     );
     this.addChild( kineticEnergyPiece );
@@ -117,6 +116,7 @@ define( function( require ) {
     var potentialEnergyPiece = new PieChartWebGLSliceNode(
       EnergySkateParkColorScheme.potentialEnergy,
       pieChartRadiusProperty,
+      new Property( 0 ),
       plus( kineticEnergyProportion, thermalEnergyProportion ),
       potentialEnergyProportion
     );

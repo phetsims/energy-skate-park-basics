@@ -51,57 +51,79 @@ define( function( require ) {
       // Simple example for custom shader
       var vertexShaderSource = [
         // Position
-        'attribute vec3 aPosition;',
-        'attribute vec3 aColor;',
+        'attribute vec2 aPosition;',
+        // 'attribute vec3 aColor;',
         'varying vec3 vColor;',
         'uniform mat3 uModelViewMatrix;',
         'uniform mat3 uProjectionMatrix;',
 
         'void main( void ) {',
-        '  vColor = aColor;',
+        // '  vColor = aColor;',
         // homogeneous model-view transformation
         '  vec3 view = uModelViewMatrix * vec3( aPosition.xy, 1 );',
         // homogeneous map to to normalized device coordinates
         '  vec3 ndc = uProjectionMatrix * vec3( view.xy, 1 );',
         // combine with the z coordinate specified
-        '  gl_Position = vec4( ndc.xy, aPosition.z, 1.0 );',
+        '  gl_Position = vec4( ndc.xy, 0.2, 1.0 );',
         '}'
       ].join( '\n' );
 
       // Simple demo for custom shader
       var fragmentShaderSource = [
         'precision mediump float;',
-        'varying vec3 vColor;',
+        // 'varying vec3 vColor;',
 
         // Returns the color from the vertex shader
         'void main( void ) {',
-        '  gl_FragColor = vec4( vColor, 1.0 );',
+        '  gl_FragColor = vec4( 1.0, 0.0, 0.0, 1.0 );',
         '}'
       ].join( '\n' );
 
       drawable.shaderProgram = new ShaderProgram( gl, vertexShaderSource, fragmentShaderSource, {
-        attributes: [ 'aPosition', 'aColor' ],
+        attributes: [ 'aPosition' ],
         uniforms: [ 'uModelViewMatrix', 'uProjectionMatrix' ]
       } );
 
       drawable.vertexBuffer = gl.createBuffer();
 
-      var points = this.shape.subpaths[ 0 ].points;
+      var centerX = 0;
+      var centerY = 0;
+      var radius = 100;
+
+      // 40 makes a smooth circle, but we need enough samples to eliminate seams between the pie slices
+      // Win8/Chrome starts to slow down around 1000000 samples
+      // But need it to be high enough that we don't see discrete jumps when the energy changes, see #303
+      var numSamples = 1000;
+      this.numSamples = numSamples;
+
+      var vertices = [ centerX, centerY ];
+      this.vertices = vertices;
+
+      var indexToVertex = function( i ) {
+        var angle = -Math.PI * 2 / numSamples * i;
+        var x = radius * Math.cos( angle ) + centerX;
+        var y = radius * Math.sin( angle ) + centerY;
+        vertices.push( x );
+        vertices.push( y );
+      };
+
+      //Go back to the first vertex, to make sure it is a closed circle
+      for ( var i = 0; i <= numSamples; i++ ) {
+        indexToVertex( i );
+      }
+
+      // var points = this.shape.subpaths[ 0 ].points;
       gl.bindBuffer( gl.ARRAY_BUFFER, drawable.vertexBuffer );
-      gl.bufferData( gl.ARRAY_BUFFER, new Float32Array( [
-        points[ 0 ].x, points[ 0 ].y, 0.2,
-        points[ 1 ].x, points[ 1 ].y, 0.2,
-        points[ 2 ].x, points[ 2 ].y, 0.2
-      ] ), gl.STATIC_DRAW );
+      gl.bufferData( gl.ARRAY_BUFFER, new Float32Array( vertices ), gl.STATIC_DRAW );
 
-      drawable.colorBuffer = gl.createBuffer();
+      // drawable.colorBuffer = gl.createBuffer();
 
-      gl.bindBuffer( gl.ARRAY_BUFFER, drawable.colorBuffer );
-      gl.bufferData( gl.ARRAY_BUFFER, new Float32Array( [
-        1, 0, 0,
-        0, 1, 0,
-        0, 0, 1
-      ] ), gl.STATIC_DRAW );
+      // gl.bindBuffer( gl.ARRAY_BUFFER, drawable.colorBuffer );
+      // gl.bufferData( gl.ARRAY_BUFFER, new Float32Array( [
+      //   1, 0, 0,
+      //   0, 1, 0,
+      //   0, 0, 1
+      // ] ), gl.STATIC_DRAW );
 
     },
     paintWebGLDrawable: function( drawable, matrix ) {
@@ -114,12 +136,31 @@ define( function( require ) {
       gl.uniformMatrix3fv( shaderProgram.uniformLocations.uProjectionMatrix, false, drawable.webGLBlock.projectionMatrixArray );
 
       gl.bindBuffer( gl.ARRAY_BUFFER, drawable.vertexBuffer );
-      gl.vertexAttribPointer( shaderProgram.attributeLocations.aPosition, 3, gl.FLOAT, false, 0, 0 );
+      gl.vertexAttribPointer( shaderProgram.attributeLocations.aPosition, 2, gl.FLOAT, false, 0, 0 );
 
-      gl.bindBuffer( gl.ARRAY_BUFFER, drawable.colorBuffer );
-      gl.vertexAttribPointer( shaderProgram.attributeLocations.aColor, 3, gl.FLOAT, false, 0, 0 );
+      // gl.bindBuffer( gl.ARRAY_BUFFER, drawable.colorBuffer );
+      // gl.vertexAttribPointer( shaderProgram.attributeLocations.aColor, 3, gl.FLOAT, false, 0, 0 );
 
-      gl.drawArrays( gl.TRIANGLES, 0, 3 );
+      var angleBetweenSlices = Math.PI * 2 / this.numSamples;
+      // var radius = this.radiusProperty.value;
+
+      //Round to the nearest angle to prevent seams, see #263
+      var startAngle = Math.round( this.startAngleProperty.value / angleBetweenSlices ) * angleBetweenSlices;
+      var unroundedEndAngle = this.startAngleProperty.value + this.extentProperty.value;
+      var endAngle = Math.round( unroundedEndAngle / angleBetweenSlices ) * angleBetweenSlices;
+
+      var extent = endAngle - startAngle;
+
+      // To cut out a piece from the pie, just select the appropriate start/end vertices, then the call is still static.
+      var numToDraw = Math.round( 2 + ( this.vertices.length / 2 - 2 ) * extent / ( 2 * Math.PI ) ); // linear between 2 and the maximum
+
+      // Make sure to show non-zero energy if the value is above the threshold, see #307
+      if ( numToDraw === 2 && this.extentProperty.get() > 1E-6 ) {
+        numToDraw = 3;
+      }
+
+      console.log( numToDraw );
+      gl.drawArrays( gl.TRIANGLE_FAN, 0, numToDraw );
 
       shaderProgram.unuse();
 
