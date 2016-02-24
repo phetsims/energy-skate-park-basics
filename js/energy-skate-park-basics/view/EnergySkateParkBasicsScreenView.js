@@ -355,10 +355,9 @@ define( function( require ) {
     this.addChild( new BarGraphForeground( model.skater, barGraphBackground, model.property( 'barGraphVisible' ), renderer ) );
     this.addChild( skaterNode );
 
-    // var pieChartNode = renderer === 'webgl' ?
-    //                    new PieChartWebGLNode( model.skater, model.property( 'pieChartVisible' ), modelViewTransform ) :
-    //                    new PieChartNode( model.skater, model.property( 'pieChartVisible' ), modelViewTransform );
-    var pieChartNode = new PieChartWebGLNode( model.skater, model.property( 'pieChartVisible' ), modelViewTransform );
+    var pieChartNode = renderer === 'webgl' ?
+                       new PieChartWebGLNode( model.skater, model.property( 'pieChartVisible' ), modelViewTransform ) :
+                       new PieChartNode( model.skater, model.property( 'pieChartVisible' ), modelViewTransform );
     this.addChild( pieChartNode );
 
     // Buttons to return the skater when she is offscreen, see #219
