@@ -25,8 +25,8 @@ define( function( require ) {
    * @constructor
    */
   function PieChartWebGLSliceNode( color, radiusProperty, extentProperty ) {
-
-    this.color = color;
+    var pieChartWebGLSliceNode = this;
+    this.color = Color.toColor( color );
     this.radiusProperty = radiusProperty;
     this.extentProperty = extentProperty;
     WebGLNode.call( this, { canvasBounds: new Bounds2( 0, 0, 100, 100 ) } );
@@ -34,6 +34,18 @@ define( function( require ) {
     this.invalidatePaint();
 
     this.shape = Shape.regularPolygon( 3, 100 * Math.sqrt( 2 ) );
+    this.radiusProperty.link( function( radius ) {
+      if ( radius > 0 ) {
+        pieChartWebGLSliceNode.setScaleMagnitude( radius * 2, radius * 2 );
+      }
+      else {
+        pieChartWebGLSliceNode.setScaleMagnitude( Math.sqrt( 2 ) / 2, Math.sqrt( 2 ) / 2 );
+      }
+      pieChartWebGLSliceNode.invalidatePaint();
+    } );
+    this.extentProperty.link( function() {
+      pieChartWebGLSliceNode.invalidatePaint();
+    } );
   }
 
   return inherit( WebGLNode, PieChartWebGLSliceNode, {
@@ -81,7 +93,7 @@ define( function( require ) {
 
       var centerX = 0;
       var centerY = 0;
-      var radius = 100;
+      var radius = 0.5;
 
       // 40 makes a smooth circle, but we need enough samples to eliminate seams between the pie slices
       // Win8/Chrome starts to slow down around 1000000 samples
@@ -121,12 +133,10 @@ define( function( require ) {
       gl.bindBuffer( gl.ARRAY_BUFFER, drawable.vertexBuffer );
       gl.vertexAttribPointer( shaderProgram.attributeLocations.aPosition, 2, gl.FLOAT, false, 0, 0 );
 
-      var color = Color.toColor( this.color );
+      var color = this.color;
       gl.uniform4f( shaderProgram.uniformLocations.uColor, color.r / 255, color.g / 255, color.b / 255, color.a );
-      //console.log( color.r / 255, color.g / 255, color.b / 255, color.a );
 
       var angleBetweenSlices = Math.PI * 2 / this.numSamples;
-      // var radius = this.radiusProperty.value;
 
       //Round to the nearest angle to prevent seams, see #263
       var startAngle = 0;
@@ -144,61 +154,13 @@ define( function( require ) {
       }
 
       gl.drawArrays( gl.TRIANGLE_FAN, 0, numToDraw );
-
       shaderProgram.unuse();
-    },
-
-    /*
-     DEPRECATED
-     */
-    render: function( gl, shaderProgram, viewMatrix ) {
-
-      var angleBetweenSlices = Math.PI * 2 / this.numSamples;
-      var radius = this.radiusProperty.value;
-
-      //Round to the nearest angle to prevent seams, see #263
-      var startAngle = Math.round( this.startAngleProperty.value / angleBetweenSlices ) * angleBetweenSlices;
-      var unroundedEndAngle = this.startAngleProperty.value + this.extentProperty.value;
-      var endAngle = Math.round( unroundedEndAngle / angleBetweenSlices ) * angleBetweenSlices;
-
-      var extent = endAngle - startAngle;
-
-      var scalingMatrix = Matrix4.scaling( radius * 2, radius * 2, 1 );
-      var rotationMatrix = Matrix4.rotationZ( -startAngle );
-      var uMatrix = viewMatrix.timesMatrix( scalingMatrix.timesMatrix( rotationMatrix ) );
-
-      // combine image matrix (to scale aspect ratios), the trail's matrix, and the matrix to device coordinates
-      gl.uniformMatrix4fv( shaderProgram.uniformLocations.uModelViewMatrix, false, uMatrix.entries );
-
-      // Indicate the branch of logic to use in the ubershader.  In this case, a texture should be used for the image
-      gl.uniform1i( shaderProgram.uniformLocations.uFragmentType, WebGLLayer.fragmentTypeFill );
-      var color = Color.toColor( this.color );
-      gl.uniform4f( shaderProgram.uniformLocations.uColor, color.r / 255, color.g / 255, color.b / 255, color.a );
-
-      gl.bindBuffer( gl.ARRAY_BUFFER, this.buffer );
-      gl.vertexAttribPointer( shaderProgram.attributeLocations.aVertex, 2, gl.FLOAT, false, 0, 0 );
-
-      // To cut out a piece from the pie, just select the appropriate start/end vertices, then the call is still static.
-      var numToDraw = Math.round( 2 + ( this.vertices.length / 2 - 2 ) * extent / ( 2 * Math.PI ) ); // linear between 2 and the maximum
-
-      // Make sure to show non-zero energy if the value is above the threshold, see #307
-      if ( numToDraw === 2 && this.extentProperty.get() > 1E-6 ) {
-        numToDraw = 3;
-      }
-      gl.drawArrays( gl.TRIANGLE_FAN, 0, numToDraw );
     },
 
     step: function( dt ) {
 
       // Mark the WebGL dirty flag as dirty, to ensure it will render.
       this.invalidatePaint();
-    },
-
-    /*
-     DEPRECATED
-     */
-    dispose: function( gl ) {
-      gl.deleteBuffer( this.buffer );
     }
   } );
 } );
