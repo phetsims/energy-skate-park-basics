@@ -29,7 +29,7 @@ define( function( require ) {
    * @constructor
    */
   // TODO: unused params?
-  function PieChartWebGLSliceNode( color, radiusProperty, startAngleProperty, extentProperty, pieChartVisibleProperty ) {
+  function PieChartWebGLSliceNode( color, radiusProperty, startAngleProperty, extentProperty ) {
 
     this.color = color;
     this.radiusProperty = radiusProperty;
@@ -45,20 +45,19 @@ define( function( require ) {
   return inherit( WebGLNode, PieChartWebGLSliceNode, {
 
     initializeWebGLDrawable: function( drawable ) {
-      console.log( 'hello' );
       var gl = drawable.gl;
 
       // Simple example for custom shader
       var vertexShaderSource = [
         // Position
         'attribute vec2 aPosition;',
-        // 'attribute vec3 aColor;',
-        'varying vec3 vColor;',
+        'uniform vec4 uColor;',
+        'varying vec4 vColor;',
         'uniform mat3 uModelViewMatrix;',
         'uniform mat3 uProjectionMatrix;',
 
         'void main( void ) {',
-        // '  vColor = aColor;',
+        '  vColor = uColor;',
         // homogeneous model-view transformation
         '  vec3 view = uModelViewMatrix * vec3( aPosition.xy, 1 );',
         // homogeneous map to to normalized device coordinates
@@ -71,17 +70,17 @@ define( function( require ) {
       // Simple demo for custom shader
       var fragmentShaderSource = [
         'precision mediump float;',
-        // 'varying vec3 vColor;',
+        'varying vec4 vColor;',
 
         // Returns the color from the vertex shader
         'void main( void ) {',
-        '  gl_FragColor = vec4( 1.0, 0.0, 0.0, 1.0 );',
+        '  gl_FragColor = vColor;',
         '}'
       ].join( '\n' );
 
       drawable.shaderProgram = new ShaderProgram( gl, vertexShaderSource, fragmentShaderSource, {
         attributes: [ 'aPosition' ],
-        uniforms: [ 'uModelViewMatrix', 'uProjectionMatrix' ]
+        uniforms: [ 'uModelViewMatrix', 'uProjectionMatrix', 'uColor' ]
       } );
 
       drawable.vertexBuffer = gl.createBuffer();
@@ -115,16 +114,6 @@ define( function( require ) {
       // var points = this.shape.subpaths[ 0 ].points;
       gl.bindBuffer( gl.ARRAY_BUFFER, drawable.vertexBuffer );
       gl.bufferData( gl.ARRAY_BUFFER, new Float32Array( vertices ), gl.STATIC_DRAW );
-
-      // drawable.colorBuffer = gl.createBuffer();
-
-      // gl.bindBuffer( gl.ARRAY_BUFFER, drawable.colorBuffer );
-      // gl.bufferData( gl.ARRAY_BUFFER, new Float32Array( [
-      //   1, 0, 0,
-      //   0, 1, 0,
-      //   0, 0, 1
-      // ] ), gl.STATIC_DRAW );
-
     },
     paintWebGLDrawable: function( drawable, matrix ) {
       var gl = drawable.gl;
@@ -138,8 +127,9 @@ define( function( require ) {
       gl.bindBuffer( gl.ARRAY_BUFFER, drawable.vertexBuffer );
       gl.vertexAttribPointer( shaderProgram.attributeLocations.aPosition, 2, gl.FLOAT, false, 0, 0 );
 
-      // gl.bindBuffer( gl.ARRAY_BUFFER, drawable.colorBuffer );
-      // gl.vertexAttribPointer( shaderProgram.attributeLocations.aColor, 3, gl.FLOAT, false, 0, 0 );
+      var color = Color.toColor( this.color );
+      gl.uniform4f( shaderProgram.uniformLocations.uColor, color.r / 255, color.g / 255, color.b / 255, color.a );
+      //console.log( color.r / 255, color.g / 255, color.b / 255, color.a );
 
       var angleBetweenSlices = Math.PI * 2 / this.numSamples;
       // var radius = this.radiusProperty.value;
@@ -159,13 +149,14 @@ define( function( require ) {
         numToDraw = 3;
       }
 
-      console.log( numToDraw );
       gl.drawArrays( gl.TRIANGLE_FAN, 0, numToDraw );
 
       shaderProgram.unuse();
-
     },
 
+    /*
+     DEPRECATED
+     */
     initialize: function( gl ) {
 
       this.buffer = gl.createBuffer();
@@ -203,6 +194,9 @@ define( function( require ) {
       gl.bufferData( gl.ARRAY_BUFFER, new Float32Array( vertices ), gl.STATIC_DRAW );
     },
 
+    /*
+     DEPRECATED
+     */
     render: function( gl, shaderProgram, viewMatrix ) {
 
       var angleBetweenSlices = Math.PI * 2 / this.numSamples;
@@ -246,6 +240,9 @@ define( function( require ) {
       this.invalidatePaint();
     },
 
+    /*
+     DEPRECATED
+     */
     dispose: function( gl ) {
       gl.deleteBuffer( this.buffer );
     }

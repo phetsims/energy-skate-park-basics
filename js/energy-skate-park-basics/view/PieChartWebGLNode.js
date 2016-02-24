@@ -45,31 +45,35 @@ define( function( require ) {
     } );
 
     var potentialEnergyProportion = skater.toDerivedProperty( [ 'potentialEnergy', 'totalEnergy' ], function( potentialEnergy, totalEnergy ) {
-      var result = (potentialEnergy / totalEnergy);
+      var result = totalEnergy === 0 ? 0 : (potentialEnergy / totalEnergy);
       var clamped = result < 0 ? 0 :
                     result > 1 ? 1 :
                     result;
+      assert && assert( !isNaN( clamped ), 'should be a number!' );
       return clamped * Math.PI * 2;
     } );
 
     var kineticEnergyProportion = skater.toDerivedProperty( [ 'kineticEnergy', 'totalEnergy' ], function( kineticEnergy, totalEnergy ) {
-      var result = (kineticEnergy / totalEnergy);
+      var result = totalEnergy === 0 ? 0 : (kineticEnergy / totalEnergy);
       var clamped = result < 0 ? 0 :
                     result > 1 ? 1 :
                     result;
+      assert && assert( !isNaN( clamped ), 'should be a number!' );
       return clamped * Math.PI * 2;
     } );
 
     var thermalEnergyProportion = skater.toDerivedProperty( [ 'thermalEnergy', 'totalEnergy' ], function( thermalEnergy, totalEnergy ) {
-      var result = (thermalEnergy / totalEnergy);
+      var result = totalEnergy === 0 ? 0 : (thermalEnergy / totalEnergy);
       var clamped = result < 0 ? 0 :
                     result > 1 ? 1 :
                     result;
-      return clamped * Math.PI * 2;
+      var number = clamped * Math.PI * 2;
+      assert && assert( !isNaN( number ), 'should be a number!' );
+      return number;
     } );
 
     var plus = function( a, b ) {
-      return Property.multilink( [ a, b ], function( a, b ) {
+      return new DerivedProperty( [ a, b ], function( a, b ) {
         return a + b;
       } );
     };
