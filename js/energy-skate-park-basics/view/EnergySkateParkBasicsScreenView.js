@@ -323,11 +323,10 @@ define( function( require ) {
     // Check to see if WebGL was prevented by a query parameter
     var allowWebGL = phet.chipper.getQueryParameter( 'webgl' ) !== 'false';
 
-    var webGLSupported = Util.isWebGLSupported && allowWebGL;
-
     // Use WebGL where available, but not on IE, due to https://github.com/phetsims/energy-skate-park-basics/issues/277
     // and https://github.com/phetsims/scenery/issues/285
-    var renderer = webGLSupported ? 'webgl' : 'svg';
+    var webGLSupported = Util.isWebGLSupported && allowWebGL;
+    var renderer = webGLSupported ? 'webgl' : null;
 
     var skaterNode = new SkaterNode(
       model.skater,
