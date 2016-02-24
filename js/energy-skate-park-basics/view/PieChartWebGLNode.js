@@ -96,34 +96,31 @@ define( function( require ) {
     var outline = new PieChartWebGLSliceNode(
       'black',
       outlineRadiusProperty,
-      new Property( 0 ),
       new Property( Math.PI * 2 )
     );
-    this.addChild( outline );
 
     var thermalEnergyPiece = new PieChartWebGLSliceNode(
       EnergySkateParkColorScheme.thermalEnergy,
       pieChartRadiusProperty,
-      new Property( 0 ),
       thermalEnergyProportion
     );
-    this.addChild( thermalEnergyPiece );
 
     var kineticEnergyPiece = new PieChartWebGLSliceNode(
       EnergySkateParkColorScheme.kineticEnergy,
       pieChartRadiusProperty,
-      thermalEnergyProportion,
-      kineticEnergyProportion
+      plus( thermalEnergyProportion, kineticEnergyProportion )
     );
-    this.addChild( kineticEnergyPiece );
 
     var potentialEnergyPiece = new PieChartWebGLSliceNode(
       EnergySkateParkColorScheme.potentialEnergy,
       pieChartRadiusProperty,
-      plus( kineticEnergyProportion, thermalEnergyProportion ),
-      potentialEnergyProportion
+      plus( plus( kineticEnergyProportion, thermalEnergyProportion ), potentialEnergyProportion )
     );
+
+    this.addChild( outline );
     this.addChild( potentialEnergyPiece );
+    this.addChild( kineticEnergyPiece );
+    this.addChild( thermalEnergyPiece );
 
     pieChartVisibleProperty.linkAttribute( this, 'visible' );
   }

@@ -1,7 +1,8 @@
 // Copyright 2014-2015, University of Colorado Boulder
 
 /**
- * A single slice of a pie chart, as contained in PieChartWebGLNode.
+ * A single slice of a pie chart, as contained in PieChartWebGLNode.  The slices each start at angle=0 and overlap each other, so the
+ * z-ordering is critical.
  *
  * @author Sam Reid (PhET Interactive Simulations)
  */
@@ -17,23 +18,16 @@ define( function( require ) {
   var ShaderProgram = require( 'SCENERY/util/ShaderProgram' );
   var Shape = require( 'KITE/Shape' );
 
-  // Hack workaround to satisfy lint until WebGL support is restored
-  var WebGLLayer = null;
-
   /**
    * @param {Color} color
    * @param {Property<Number>} radiusProperty
-   * @param {Property<Number>} startAngleProperty
    * @param {Property<Number>} extentProperty
-   * @param {Property<Boolean>} pieChartVisibleProperty
    * @constructor
    */
-  // TODO: unused params?
-  function PieChartWebGLSliceNode( color, radiusProperty, startAngleProperty, extentProperty ) {
+  function PieChartWebGLSliceNode( color, radiusProperty, extentProperty ) {
 
     this.color = color;
     this.radiusProperty = radiusProperty;
-    this.startAngleProperty = startAngleProperty;
     this.extentProperty = extentProperty;
     WebGLNode.call( this, { canvasBounds: new Bounds2( 0, 0, 100, 100 ) } );
 
@@ -135,8 +129,8 @@ define( function( require ) {
       // var radius = this.radiusProperty.value;
 
       //Round to the nearest angle to prevent seams, see #263
-      var startAngle = Math.round( this.startAngleProperty.value / angleBetweenSlices ) * angleBetweenSlices;
-      var unroundedEndAngle = this.startAngleProperty.value + this.extentProperty.value;
+      var startAngle = 0;
+      var unroundedEndAngle = this.extentProperty.value;
       var endAngle = Math.round( unroundedEndAngle / angleBetweenSlices ) * angleBetweenSlices;
 
       var extent = endAngle - startAngle;
