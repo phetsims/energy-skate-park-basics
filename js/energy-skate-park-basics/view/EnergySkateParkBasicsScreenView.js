@@ -59,6 +59,7 @@ define( function( require ) {
 
   /**
    * @param {EnergySkateParkBasicsModel} model
+   * @param {Object} [options]
    * @constructor
    */
   function EnergySkateParkBasicsScreenView( model, options ) {
@@ -341,7 +342,7 @@ define( function( require ) {
       min: 0,
       max: 20
     }, {
-      renderer: renderer
+      renderer: 'webgl'
     } );
     model.property( 'speedometerVisible' ).linkAttribute( gaugeNeedleNode, 'visible' );
     gaugeNeedleNode.x = speedometerNode.x;
