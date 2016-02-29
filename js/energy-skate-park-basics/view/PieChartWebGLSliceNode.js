@@ -13,7 +13,6 @@ define( function( require ) {
   var inherit = require( 'PHET_CORE/inherit' );
   var WebGLNode = require( 'SCENERY/nodes/WebGLNode' );
   var Bounds2 = require( 'DOT/Bounds2' );
-  var Matrix4 = require( 'DOT/Matrix4' );
   var Color = require( 'SCENERY/util/Color' );
   var ShaderProgram = require( 'SCENERY/util/ShaderProgram' );
   var Shape = require( 'KITE/Shape' );
