@@ -41,7 +41,8 @@ define( function( require ) {
       return new Text( title, {
         fill: color,
         font: new PhetFont( 12 ),
-        pickable: false
+        pickable: false,
+        maxWidth: 97 // selected by choosing the length of widest English string in ?stringTest=double
       } );
     };
 
@@ -86,9 +87,15 @@ define( function( require ) {
       ]
     } );
 
+    var titleNode = new Text( energyEnergyString, {
+      fill: 'black',
+      font: new PhetFont( 14 ),
+      pickable: false,
+      maxWidth: 93 // selected by choosing the length of widest English string in ?stringTest=double
+    } );
     var contentWithTitle = new VBox( {
       spacing: 5, align: 'center', children: [
-        new Text( energyEnergyString, { fill: 'black', font: new PhetFont( 14 ), pickable: false } ),
+        titleNode,
         contentNode
       ]
     } );

@@ -40,7 +40,10 @@ define( function( require ) {
    * @constructor
    */
   function EnergySkateParkBasicsControlPanel( model, options ) {
-    var textOptions = { font: new PhetFont( 14 ) };
+    var textOptions = {
+      font: new PhetFont( 14 ),
+      maxWidth: 134 // selected by choosing the length of widest English string in ?stringTest=double
+    };
 
     var pieChartSet = { label: new Text( pieChartString, textOptions ), icon: this.createPieChartIcon() };
     var barGraphSet = { label: new Text( plotsBarGraphString, textOptions ), icon: this.createBarGraphIcon() };

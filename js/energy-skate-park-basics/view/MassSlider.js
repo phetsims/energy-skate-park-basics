@@ -29,11 +29,19 @@ define( function( require ) {
     var range = { min: Constants.MIN_MASS, max: Constants.MAX_MASS };
     var slider = new HSlider( massProperty, range, _.extend( { phetioID: options.phetioID }, Constants.SLIDER_OPTIONS ) );
     var tickFont = new PhetFont( 10 );
-    slider.addMajorTick( Constants.MIN_MASS, new Text( smallString, { font: tickFont } ) );
-    slider.addMajorTick( Constants.MAX_MASS, new Text( largeString, { font: tickFont } ) );
+    var textOptions = {
+      font: tickFont,
+      maxWidth: 54 // selected by choosing the length of widest English string in ?stringTest=double
+    };
+    slider.addMajorTick( Constants.MIN_MASS, new Text( smallString, textOptions ) );
+    slider.addMajorTick( Constants.MAX_MASS, new Text( largeString, textOptions ) );
+
     VBox.call( this, {
       resize: false,
-      children: [ new Text( controlsMassString, new PhetFont( 14 ) ), slider ]
+      children: [ new Text( controlsMassString, {
+        font: new PhetFont( 14 ),
+        maxWidth: 71 // selected by choosing the length of widest English string in ?stringTest=double
+      } ), slider ]
     } );
   }
 
