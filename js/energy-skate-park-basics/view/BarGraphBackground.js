@@ -58,7 +58,12 @@ define( function( require ) {
 
     // Create a label that appears under one of the bars
     var createLabel = function( index, title, color ) {
-      var text = new Text( title, { fill: color, font: new PhetFont( 14 ), pickable: false } );
+      var text = new Text( title, {
+        fill: color,
+        font: new PhetFont( 14 ),
+        pickable: false,
+        maxWidth: 113 // selected by choosing the max length of English string in ?stringTest=double
+      } );
       text.rotate( -Math.PI / 2 );
       text.centerX = barGraphBackground.getBarX( index ) + barGraphBackground.barWidth / 2;
       text.top = barGraphBackground.originY + 2;
@@ -80,7 +85,13 @@ define( function( require ) {
       clearThermalButton.enabled = allowClearingThermalEnergy;
     } );
 
-    var titleNode = new Text( energyEnergyString, { x: 5, top: 0, font: new PhetFont( 14 ), pickable: false } );
+    var titleNode = new Text( energyEnergyString, {
+      x: 5,
+      top: 0,
+      font: new PhetFont( 14 ),
+      pickable: false,
+      maxWidth: 93 // selected by choosing the length of English string in ?stringTest=double
+    } );
     var contentNode = new Rectangle( 0, 0, contentWidth, contentHeight, {
       children: [
         new ArrowNode( insetX, this.originY, insetX, insetY, { pickable: false } ),
