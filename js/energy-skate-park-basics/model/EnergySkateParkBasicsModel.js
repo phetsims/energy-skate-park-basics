@@ -62,7 +62,7 @@ define( function( require ) {
 
   // Control points are replenished in the toolbox as they are destroyed (by connecting) in the play area
   // This is the maximum number of control points available to the user.
-  var MAX_NUMBER_CONTROL_POINTS = 12;
+  var MAX_NUMBER_CONTROL_POINTS = 15;
 
   // Track the model iterations to implement "slow motion" by stepping every Nth frame, see #210
   var modelIterations = 0;
@@ -280,7 +280,9 @@ define( function( require ) {
 
     // Add the tracks that will be in the track toolbox for the "Playground" screen
     addDraggableTracks: function() {
-      for ( var i = 0; i < 4; i++ ) {
+
+      // 3 points per track
+      for ( var i = 0; i < MAX_NUMBER_CONTROL_POINTS / 3; i++ ) {
         this.addDraggableTrack();
       }
     },
