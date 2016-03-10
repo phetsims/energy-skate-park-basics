@@ -1,59 +1,63 @@
 {
-  "chipper": {
-    "sha": "ae9596649e5a320b97b6d935a9954fb8a3af15a1",
-    "branch": "master"
-  },
-  "sherpa": {
-    "sha": "883cbc33dac82a7146c8bd4f66633097d9b62c4c",
-    "branch": "master"
+  "comment": "# wave-on-a-string 1.1.1 Mon Mar 07 2016 17:11:58 GMT-0700 (MST)",
+  "assert": {
+    "sha": "7d27130a4d27da15aa7f8a21bbfb9245288c1b44",
+    "branch": "HEAD"
   },
   "axon": {
-    "sha": "37c22f512524abfd3b4e4b15825d59a3546f8782",
-    "branch": "master"
-  },
-  "sun": {
-    "sha": "1ae2669e10ec9370721b64cc41bda78c14c3a0c1",
-    "branch": "master"
-  },
-  "scenery-phet": {
-    "sha": "e867171adea6bfb7ec5fcfe78668c67b22a04e5b",
-    "branch": "master"
-  },
-  "scenery": {
-    "sha": "267034d8a97d8cb3d9e30e9a1a2956f2b60de656",
-    "branch": "master"
-  },
-  "phetcommon": {
-    "sha": "1bfd46f1f42c6cb305ba70f281d195211bc4ac00",
-    "branch": "master"
-  },
-  "phet-core": {
-    "sha": "f85bb6811986ce5d9cc0b3cfae7f258b02557701",
-    "branch": "master"
-  },
-  "kite": {
-    "sha": "c262daa0938f79862e5ef5cf6780197091d9b6d6",
-    "branch": "master"
-  },
-  "joist": {
-    "sha": "7f13613a077b9a6783d89d1bc2ec9ac6ae1325e7",
-    "branch": "master"
-  },
-  "dot": {
-    "sha": "78fa399bde69424d771b8b268b1afea29550222d",
-    "branch": "master"
+    "sha": "9457f36aec22935c7b5f41a9d0777255dd5d9884",
+    "branch": "HEAD"
   },
   "brand": {
-    "sha": "8be52066aa533f58f118abd34d73f2609c844d48",
-    "branch": "master"
+    "sha": "ac9ccaa74427844b170dcd1582f3e9bb931edef4",
+    "branch": "HEAD"
   },
-  "assert": {
-    "sha": "e4595f5eae375c15fa9aaba9511c52dbc1b0f2c6",
-    "branch": "master"
+  "chipper": {
+    "sha": "b3a8a3c24b598badc3b1089aa0eb28c812c47fa0",
+    "branch": "HEAD"
   },
-  "energy-skate-park-basics": {
-    "sha": "4d418ae972d3e48d1283884a7827f4fe3d9b6131",
-    "branch": "1.0"
+  "dot": {
+    "sha": "da78031b6f080d20bc8346beaa1d37148188371e",
+    "branch": "HEAD"
   },
-  "comment": "# energy-skate-park-basics 1.0.0-rc.16 Wed Oct 29 2014 12:56:17 GMT-0600 (MDT)"
+  "joist": {
+    "sha": "28f510089c0f5312ca58526b10ff063466ebbc5a",
+    "branch": "HEAD"
+  },
+  "kite": {
+    "sha": "10ca8bf2b2712307ff528352de8451c0c8afe093",
+    "branch": "HEAD"
+  },
+  "phet-core": {
+    "sha": "c48bf32035dc5a4ed092ad611012fcbdeb5c6351",
+    "branch": "HEAD"
+  },
+  "phetcommon": {
+    "sha": "380b1fb5f15d097133bfceaf119d3eaf40a3a2d4",
+    "branch": "HEAD"
+  },
+  "scenery": {
+    "sha": "b34b4fea76b01c9b36a07c83ed6655930143f054",
+    "branch": "HEAD"
+  },
+  "scenery-phet": {
+    "sha": "71a9c7634c1c59de38afc9e277154126fbd83256",
+    "branch": "HEAD"
+  },
+  "sherpa": {
+    "sha": "bb68bbbc6e8e3ce98fc37a956f1e19fe8365c107",
+    "branch": "HEAD"
+  },
+  "sun": {
+    "sha": "2b83e994039b2d33845d5e51d7735d144c188d97",
+    "branch": "HEAD"
+  },
+  "tandem": {
+    "sha": "2441eec6b422cb20e08682da02ab2bf7bf73250c",
+    "branch": "HEAD"
+  },
+  "wave-on-a-string": {
+    "sha": "b341062ffa3dc4dbb3c302da43f9e3f6ca04af4f",
+    "branch": "1.1"
+  }
 }
