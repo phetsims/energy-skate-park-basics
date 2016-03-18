@@ -156,46 +156,46 @@ define( function( require ) {
     // Proxy for save/load for the tracks for phetio.js
     // TODO: This is all a bit hackish, to serialize the tracks.  Cannot this be made simpler?
     if ( draggableTracks ) {
-      phetio && phetio.addInstance( 'playgroundScreen.tracks', {
-        phetioID: 'playgroundScreen.tracks',
-
-        // TODO: use get value instead of this function.
-        getArray: function() {
-          return model.tracks.map( function( track ) {
-            return {
-              getArray: function() {
-                return track.controlPoints.map( function( controlPoint ) {
-                  return controlPoint.sourcePosition;
-                } );
-              }
-            };
-          } ).getArray(); // This line returns a JS Array, not ObservableArray, required by phetio.js
-        },
-
-        get value() {
-          return this.getArray();
-        },
-
-        // TODO: set value asymmetric from getArray
-        set value( arrayOfArrayOfVector ) {
-          // TODO: Ensure the right number of tracks, each with the right number of points.
-
-          for ( var i = 0; i < arrayOfArrayOfVector.length; i++ ) {
-            var track = arrayOfArrayOfVector[ i ];
-            for ( var j = 0; j < track.length; j++ ) {
-              var controlPoint = model.tracks.get( i ).controlPoints[ j ];
-
-              // Making sure it is different here significantly improves performance in mirror.html
-              if ( controlPoint.sourcePosition.x !== track[ j ].x ||
-                   controlPoint.sourcePosition.y !== track[ j ].y ) {
-                controlPoint.sourcePosition = track[ j ];
-                model.tracks.get( i ).updateSplines();
-                model.tracks.get( i ).trigger( 'update' );
-              }
-            }
-          }
-        }
-      } );
+      //phetio && phetio.addInstance( 'playgroundScreen.tracks', {
+      //  phetioID: 'playgroundScreen.tracks',
+      //
+      //  // TODO: use get value instead of this function.
+      //  getArray: function() {
+      //    return model.tracks.map( function( track ) {
+      //      return {
+      //        getArray: function() {
+      //          return track.controlPoints.map( function( controlPoint ) {
+      //            return controlPoint.sourcePosition;
+      //          } );
+      //        }
+      //      };
+      //    } ).getArray(); // This line returns a JS Array, not ObservableArray, required by phetio.js
+      //  },
+      //
+      //  get value() {
+      //    return this.getArray();
+      //  },
+      //
+      //  // TODO: set value asymmetric from getArray
+      //  set value( arrayOfArrayOfVector ) {
+      //    // TODO: Ensure the right number of tracks, each with the right number of points.
+      //
+      //    for ( var i = 0; i < arrayOfArrayOfVector.length; i++ ) {
+      //      var track = arrayOfArrayOfVector[ i ];
+      //      for ( var j = 0; j < track.length; j++ ) {
+      //        var controlPoint = model.tracks.get( i ).controlPoints[ j ];
+      //
+      //        // Making sure it is different here significantly improves performance in mirror.html
+      //        if ( controlPoint.sourcePosition.x !== track[ j ].x ||
+      //             controlPoint.sourcePosition.y !== track[ j ].y ) {
+      //          controlPoint.sourcePosition = track[ j ];
+      //          model.tracks.get( i ).updateSplines();
+      //          model.tracks.get( i ).trigger( 'update' );
+      //        }
+      //      }
+      //    }
+      //  }
+      //} );
     }
 
     // Determine when to show/hide the track edit buttons (cut track or delete control point)
