@@ -168,6 +168,8 @@ define( function( require ) {
 
       gl.drawArrays( gl.TRIANGLE_FAN, 0, numToDraw );
       shaderProgram.unuse();
+
+      return WebGLNode.PAINTED_SOMETHING;
     },
 
     dispose: function() {
