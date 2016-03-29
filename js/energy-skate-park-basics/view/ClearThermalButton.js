@@ -38,13 +38,6 @@ define( function( require ) {
 
     var icon = new Image( trashCanImage, { scale: 0.22 } );
 
-    skater.allowClearingThermalEnergyProperty.link(
-      function( allowClearingThermalEnergy ) {
-        icon.image = allowClearingThermalEnergy ? trashCanImage : trashCanGrayImage;
-        icon.opacity = allowClearingThermalEnergy ? 1 : 0.3;
-        clearThermalButton.pickable = allowClearingThermalEnergy;
-      } );
-
     RectangularPushButton.call( this, {
       content: icon,
       baseColor: new Color( 230, 230, 240 ),
@@ -56,6 +49,12 @@ define( function( require ) {
       yMargin: 3,
       phetioID: options.phetioID
     } );
+    skater.allowClearingThermalEnergyProperty.link(
+      function( allowClearingThermalEnergy ) {
+        icon.image = allowClearingThermalEnergy ? trashCanImage : trashCanGrayImage;
+        icon.opacity = allowClearingThermalEnergy ? 1 : 0.3;
+        clearThermalButton.pickable = allowClearingThermalEnergy;
+      } );
     this.mouseArea = this.touchArea = Shape.rectangle( icon.bounds.minX, icon.bounds.minY, icon.bounds.width, icon.bounds.height );
     this.mutate( options );
   }
