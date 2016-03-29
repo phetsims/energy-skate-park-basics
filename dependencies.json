@@ -1,5 +1,5 @@
 {
-  "comment": "# energy-skate-park-basics 1.1.0-dev.2 Mon Mar 28 2016 21:49:13 GMT-0600 (MDT)",
+  "comment": "# energy-skate-park-basics 1.1.0-dev.3 Tue Mar 29 2016 15:10:03 GMT-0600 (MDT)",
   "assert": {
     "sha": "7d27130a4d27da15aa7f8a21bbfb9245288c1b44",
     "branch": "master"
@@ -13,7 +13,7 @@
     "branch": "master"
   },
   "chipper": {
-    "sha": "faddf283b47e13652afa4b93eadb64f7ce1ce15c",
+    "sha": "f0780548d7a9dee5fadcf11357ff54ba0fae2845",
     "branch": "master"
   },
   "dot": {
@@ -21,7 +21,7 @@
     "branch": "master"
   },
   "energy-skate-park-basics": {
-    "sha": "d55374accacaf148fce69f5e9fc80e6a96af9cb7",
+    "sha": "b0be6e33cbe02caae90b38b1403a954af8183dc6",
     "branch": "master"
   },
   "joist": {
@@ -41,11 +41,11 @@
     "branch": "master"
   },
   "scenery": {
-    "sha": "ee35a4eb3d983440ce3f5472d92f6fa91a31eb0c",
+    "sha": "63d16579fe8b97a5ae04d475da54f1623e6fc2ad",
     "branch": "master"
   },
   "scenery-phet": {
-    "sha": "ddb8e53fae964c81ecf53e17f4aa9798b626d895",
+    "sha": "54df833b220e91e97bc9fc21a22107c882fd11cb",
     "branch": "master"
   },
   "sherpa": {
