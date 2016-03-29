@@ -342,7 +342,7 @@ define( function( require ) {
       min: 0,
       max: 20
     }, {
-      renderer: 'webgl'
+      renderer: renderer
     } );
     model.property( 'speedometerVisible' ).linkAttribute( gaugeNeedleNode, 'visible' );
     gaugeNeedleNode.x = speedometerNode.x;
