@@ -736,7 +736,7 @@ define( function( require ) {
       var a = netForceMagnitude * Math.cos( skaterState.track.getModelAngleAt( u ) - netForceAngle ) / skaterState.mass;
 
       uD += a * dt;
-      assert && assert( isFinite( uD ) );
+      assert && assert( isFinite( uD ), 'uD should be finite' );
       u += track.getParametricDistance( u, uD * dt + 1 / 2 * a * dt * dt );
       var newPointX = skaterState.track.getX( u );
       var newPointY = skaterState.track.getY( u );
