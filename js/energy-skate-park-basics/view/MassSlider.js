@@ -29,6 +29,7 @@ define( function( require ) {
     var range = { min: Constants.MIN_MASS, max: Constants.MAX_MASS };
     var slider = new HSlider( massProperty, range, _.extend( { phetioID: options.phetioID }, Constants.SLIDER_OPTIONS ) );
     var tickFont = new PhetFont( 10 );
+
     var textOptions = {
       font: tickFont,
       maxWidth: 54 // selected by choosing the length of widest English string in ?stringTest=double
@@ -36,12 +37,14 @@ define( function( require ) {
     slider.addMajorTick( Constants.MIN_MASS, new Text( smallString, textOptions ) );
     slider.addMajorTick( Constants.MAX_MASS, new Text( largeString, textOptions ) );
 
+    // Space the label above the tick labels so that it won't overlap for i18n
+    var text = new Text( controlsMassString, {
+      font: new PhetFont( 14 ),
+      maxWidth: 80 // selected by choosing the length of widest English string in ?stringTest=double
+    } );
     VBox.call( this, {
       resize: false,
-      children: [ new Text( controlsMassString, {
-        font: new PhetFont( 14 ),
-        maxWidth: 71 // selected by choosing the length of widest English string in ?stringTest=double
-      } ), slider ]
+      children: [ text, slider ]
     } );
   }
 
