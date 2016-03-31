@@ -39,11 +39,12 @@ define( function( require ) {
 
     // Space the label above the tick labels so that it won't overlap for i18n
     var text = new Text( controlsMassString, {
-      font: new PhetFont( 14 ),
-      maxWidth: 80 // selected by choosing the length of widest English string in ?stringTest=double
+      font: new PhetFont( { weight: 'bold', size: 13 } ),
+      maxWidth: 100 // selected by choosing the length of widest English string in ?stringTest=double
     } );
     VBox.call( this, {
       resize: false,
+      spacing: -3,
       children: [ text, slider ]
     } );
   }
