@@ -713,8 +713,8 @@ define( function( require ) {
       debug && debug( normalForce );
 
       var n = Vector2.createPolar( normalForce, curvatureDirection.angle() );
-      assert && assert( isFinite( n.x, 'n.x should be finite' ) );
-      assert && assert( isFinite( n.y, 'n.y should be finite' ) );
+      assert && assert( isFinite( n.x ), 'n.x should be finite' );
+      assert && assert( isFinite( n.y ), 'n.y should be finite' );
       return n;
     },
 
