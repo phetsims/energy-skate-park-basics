@@ -677,6 +677,8 @@ define( function( require ) {
       else {
         var magnitude = this.friction * this.getNormalForce( skaterState ).magnitude();
         var angleComponent = Math.cos( skaterState.getVelocity().angle() + Math.PI );
+        assert && assert( isFinite( magnitude ), 'magnitude should be finite' );
+        assert && assert( isFinite( angleComponent ), 'angleComponent should be finite' );
         return magnitude * angleComponent;
       }
     },
@@ -711,6 +713,8 @@ define( function( require ) {
       debug && debug( normalForce );
 
       var n = Vector2.createPolar( normalForce, curvatureDirection.angle() );
+      assert && assert( isFinite( n.x, 'n.x should be finite' ) );
+      assert && assert( isFinite( n.y, 'n.y should be finite' ) );
       return n;
     },
 
