@@ -156,46 +156,46 @@ define( function( require ) {
     // Proxy for save/load for the tracks for phetio.js
     // TODO: This is all a bit hackish, to serialize the tracks.  Cannot this be made simpler?
     if ( draggableTracks ) {
-      phetio && phetio.addInstance( 'playgroundScreen.tracks', {
-        phetioID: 'playgroundScreen.tracks',
-
-        // TODO: use get value instead of this function.
-        getArray: function() {
-          return model.tracks.map( function( track ) {
-            return {
-              getArray: function() {
-                return track.controlPoints.map( function( controlPoint ) {
-                  return controlPoint.sourcePosition;
-                } );
-              }
-            };
-          } ).getArray(); // This line returns a JS Array, not ObservableArray, required by phetio.js
-        },
-
-        get value() {
-          return this.getArray();
-        },
-
-        // TODO: set value asymmetric from getArray
-        set value( arrayOfArrayOfVector ) {
-          // TODO: Ensure the right number of tracks, each with the right number of points.
-
-          for ( var i = 0; i < arrayOfArrayOfVector.length; i++ ) {
-            var track = arrayOfArrayOfVector[ i ];
-            for ( var j = 0; j < track.length; j++ ) {
-              var controlPoint = model.tracks.get( i ).controlPoints[ j ];
-
-              // Making sure it is different here significantly improves performance in mirror.html
-              if ( controlPoint.sourcePosition.x !== track[ j ].x ||
-                   controlPoint.sourcePosition.y !== track[ j ].y ) {
-                controlPoint.sourcePosition = track[ j ];
-                model.tracks.get( i ).updateSplines();
-                model.tracks.get( i ).trigger( 'update' );
-              }
-            }
-          }
-        }
-      } );
+      //phetio && phetio.addInstance( 'playgroundScreen.tracks', {
+      //  phetioID: 'playgroundScreen.tracks',
+      //
+      //  // TODO: use get value instead of this function.
+      //  getArray: function() {
+      //    return model.tracks.map( function( track ) {
+      //      return {
+      //        getArray: function() {
+      //          return track.controlPoints.map( function( controlPoint ) {
+      //            return controlPoint.sourcePosition;
+      //          } );
+      //        }
+      //      };
+      //    } ).getArray(); // This line returns a JS Array, not ObservableArray, required by phetio.js
+      //  },
+      //
+      //  get value() {
+      //    return this.getArray();
+      //  },
+      //
+      //  // TODO: set value asymmetric from getArray
+      //  set value( arrayOfArrayOfVector ) {
+      //    // TODO: Ensure the right number of tracks, each with the right number of points.
+      //
+      //    for ( var i = 0; i < arrayOfArrayOfVector.length; i++ ) {
+      //      var track = arrayOfArrayOfVector[ i ];
+      //      for ( var j = 0; j < track.length; j++ ) {
+      //        var controlPoint = model.tracks.get( i ).controlPoints[ j ];
+      //
+      //        // Making sure it is different here significantly improves performance in mirror.html
+      //        if ( controlPoint.sourcePosition.x !== track[ j ].x ||
+      //             controlPoint.sourcePosition.y !== track[ j ].y ) {
+      //          controlPoint.sourcePosition = track[ j ];
+      //          model.tracks.get( i ).updateSplines();
+      //          model.tracks.get( i ).trigger( 'update' );
+      //        }
+      //      }
+      //    }
+      //  }
+      //} );
     }
 
     // Determine when to show/hide the track edit buttons (cut track or delete control point)
@@ -677,6 +677,8 @@ define( function( require ) {
       else {
         var magnitude = this.friction * this.getNormalForce( skaterState ).magnitude();
         var angleComponent = Math.cos( skaterState.getVelocity().angle() + Math.PI );
+        assert && assert( isFinite( magnitude ), 'magnitude should be finite' );
+        assert && assert( isFinite( angleComponent ), 'angleComponent should be finite' );
         return magnitude * angleComponent;
       }
     },
@@ -707,10 +709,17 @@ define( function( require ) {
 
       netForceRadial.addXY( 0, skaterState.mass * skaterState.gravity );// gravity
       var curvatureDirection = this.getCurvatureDirection( this.curvatureTemp2, skaterState.positionX, skaterState.positionY );
+
+      // On a flat surface, just use the radial component of the net force for the normal, see #344
+      if ( isNaN( curvatureDirection.x ) || isNaN( curvatureDirection.y ) ) {
+        curvatureDirection = netForceRadial.normalized(); // todo: sign?
+      }
       var normalForce = skaterState.mass * skaterState.getSpeed() * skaterState.getSpeed() / Math.abs( radiusOfCurvature ) - netForceRadial.dot( curvatureDirection );
       debug && debug( normalForce );
 
       var n = Vector2.createPolar( normalForce, curvatureDirection.angle() );
+      assert && assert( isFinite( n.x ), 'n.x should be finite' );
+      assert && assert( isFinite( n.y ), 'n.y should be finite' );
       return n;
     },
 
@@ -736,7 +745,7 @@ define( function( require ) {
       var a = netForceMagnitude * Math.cos( skaterState.track.getModelAngleAt( u ) - netForceAngle ) / skaterState.mass;
 
       uD += a * dt;
-      assert && assert( isFinite( uD ) );
+      assert && assert( isFinite( uD ), 'uD should be finite' );
       u += track.getParametricDistance( u, uD * dt + 1 / 2 * a * dt * dt );
       var newPointX = skaterState.track.getX( u );
       var newPointY = skaterState.track.getY( u );

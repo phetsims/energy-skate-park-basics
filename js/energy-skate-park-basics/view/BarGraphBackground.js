@@ -62,7 +62,7 @@ define( function( require ) {
         fill: color,
         font: new PhetFont( 14 ),
         pickable: false,
-        maxWidth: 113 // selected by choosing the max length of English string in ?stringTest=double
+        maxWidth: 90 // selected by requiring that the bar chart not overlap with the track toolbox, see #337
       } );
       text.rotate( -Math.PI / 2 );
       text.centerX = barGraphBackground.getBarX( index ) + barGraphBackground.barWidth / 2;

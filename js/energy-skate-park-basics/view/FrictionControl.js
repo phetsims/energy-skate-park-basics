@@ -32,19 +32,19 @@ define( function( require ) {
 
     var textOptions = {
       font: tickFont,
-      maxWidth: 51 // selected by choosing the length of widest English string in ?stringTest=double
+      maxWidth: 54 // selected by choosing the length of widest English string in ?stringTest=double
     };
     slider.addMajorTick( frictionRange.min, new Text( controlsGravityNoneString, textOptions ) );
     slider.addMajorTick( frictionRange.max, new Text( controlsGravityLotsString, textOptions ) );
 
-    // Space the friction label above the tick labels so that it won't overlap for i18n
+    // Space the label above the tick labels so that it won't overlap for i18n
     var text = new Text( controlsFrictionTitleString, {
-      font: new PhetFont( 14 ),
-      maxWidth: 96 // selected by choosing the length of widest English string in ?stringTest=double
+      font: new PhetFont( { weight: 'bold', size: 13 } ),
+      maxWidth: 100 // selected by choosing the length of widest English string in ?stringTest=double
     } );
     VBox.call( this, {
       resize: false,
-      spacing: -4,
+      spacing: -3,
       children: [ text, slider ]
     } );
   }

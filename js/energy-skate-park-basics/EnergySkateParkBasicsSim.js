@@ -28,8 +28,10 @@ define( function( require ) {
   var screenTrackPlaygroundString = require( 'string!ENERGY_SKATE_PARK_BASICS/screen.trackPlayground' );
   var energySkateParkBasicsTitleString = require( 'string!ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics.title' );
 
-  function EnergySkateParkBasicsSim() {
+  // constants
+  var tandem = Tandem.createRootTandem();
 
+  function EnergySkateParkBasicsSim() {
     var indent = '\n        ';
     var options = {
       credits: {
@@ -40,10 +42,10 @@ define( function( require ) {
         qualityAssurance: 'Steele Dalton, Oliver Orejola' + indent + 'Arnab Purkayastha, Bryan Yoelin'
       },
 
-      showSaveAndLoad: phet.chipper.getQueryParameter( 'showSaveAndLoad' )
+      showSaveAndLoad: phet.chipper.getQueryParameter( 'showSaveAndLoad' ),
+      tandem: tandem
     };
 
-    var tandem = Tandem.createRootTandem();
     Sim.call( this, energySkateParkBasicsTitleString, [
       new EnergySkateParkBasicsScreen( screenIntroductionString, iconIntroHomescreen, iconIntroNavbar, false, false, {
         tandem: tandem.createTandem( 'introScreen' )

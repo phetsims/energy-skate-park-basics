@@ -94,7 +94,7 @@ define( function( require ) {
         phetioID: options.tandem.createTandem( 'frictionSlider' )
       } ) );
     }
-    var content = new VBox( { resize: false, spacing: 4, children: children } );
+    var content = new VBox( { resize: false, spacing: 6, children: children } );
 
     this.contentWidth = content.width;
     Panel.call( this, content, { xMargin: 10, yMargin: 5, fill: '#F0F0F0', stroke: null, resize: false } );
