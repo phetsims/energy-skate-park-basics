@@ -212,6 +212,7 @@ define( function( require ) {
         max: 20
       },
       {
+        // enable/disable updates based on whether the speedometer is visible
         updateEnabledProperty: model.property( 'speedometerVisible' ),
         pickable: false
       } );

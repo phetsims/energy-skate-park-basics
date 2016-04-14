@@ -40,8 +40,8 @@ define( function( require ) {
       // The ticks are duplicated for the right side, and one tick appears in the middle at the top
       numTicks: ( 8 + 2 ) * 2 + 1,
 
-      // Optional property to pass in--if the client provides a updateEnabledProperty then the needle will only be
-      // updated when changed and visible (or made visible)
+      // Determines whether the gauge will be updated when the value changes.
+      // Use this to (for example) disable updates while a gauge is not visible.
       updateEnabledProperty: new Property( true )
     }, options );
     var lineWidth = 3;
@@ -55,7 +55,6 @@ define( function( require ) {
     var startAngle = -1 / 2 * Math.PI - totalAngle / 2;
     var endAngle = startAngle + totalAngle;
 
-    // Update when the velocity changes, but only if the s is visible
     var updateNeedle = function() {
       if ( options.updateEnabledProperty.get() ) {
         if ( typeof( valueProperty.get() ) === 'number' ) {
@@ -71,11 +70,8 @@ define( function( require ) {
     };
     valueProperty.link( updateNeedle );
 
-    // When the gauge is made visible, update the needle
-    options.updateEnabledProperty.link( function( visible ) {
-      if ( visible ) {
+    options.updateEnabledProperty.link( function( updateEnabled ) {
         updateNeedle();
-      }
     } );
 
     this.mutate( options );
