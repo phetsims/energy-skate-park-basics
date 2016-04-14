@@ -37,7 +37,7 @@ define( function( require ) {
   var DerivedProperty = require( 'AXON/DerivedProperty' );
   var Path = require( 'SCENERY/nodes/Path' );
   var PlayPauseButton = require( 'SCENERY_PHET/buttons/PlayPauseButton' );
-  var StepButton = require( 'SCENERY_PHET/buttons/StepButton' );
+  var StepForwardButton = require( 'SCENERY_PHET/buttons/StepForwardButton' );
   var Property = require( 'AXON/Property' );
   var RectangularPushButton = require( 'SUN/buttons/RectangularPushButton' );
   var Text = require( 'SCENERY/nodes/Text' );
@@ -155,7 +155,7 @@ define( function( require ) {
       playPauseButton.scale( isPlaying ? ( 1 / pauseSizeIncreaseFactor ) : pauseSizeIncreaseFactor );
     } );
 
-    var stepButton = new StepButton( function() { model.manualStep(); }, playProperty, {
+    var stepButton = new StepForwardButton( function() { model.manualStep(); }, playProperty, {
       phetioID: options.tandem.createTandem( 'stepButton' )
     } );
 
