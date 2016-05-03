@@ -10,6 +10,7 @@ define( function( require ) {
   'use strict';
 
   // modules
+  var energySkateParkBasics = require( 'ENERGY_SKATE_PARK_BASICS/energySkateParkBasics' );
   var inherit = require( 'PHET_CORE/inherit' );
   var Rectangle = require( 'SCENERY/nodes/Rectangle' );
   var Line = require( 'SCENERY/nodes/Line' );
@@ -127,5 +128,7 @@ define( function( require ) {
     barGraphVisibleProperty.linkAttribute( this, 'visible' );
   }
 
+  energySkateParkBasics.register( 'BarGraphBackground', BarGraphBackground );
+  
   return inherit( Panel, BarGraphBackground );
 } );

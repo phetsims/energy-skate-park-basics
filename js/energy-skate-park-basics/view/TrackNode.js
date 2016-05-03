@@ -11,6 +11,7 @@ define( function( require ) {
   'use strict';
 
   // modules
+  var energySkateParkBasics = require( 'ENERGY_SKATE_PARK_BASICS/energySkateParkBasics' );
   var inherit = require( 'PHET_CORE/inherit' );
   var Node = require( 'SCENERY/nodes/Node' );
   var Path = require( 'SCENERY/nodes/Path' );
@@ -89,6 +90,8 @@ define( function( require ) {
     track.on( 'update', this.updateTrackShape.bind( this ) );
   }
 
+  energySkateParkBasics.register( 'TrackNode', TrackNode );
+  
   return inherit( Node, TrackNode, {
 
     // When a control point has moved, or the track has moved, or the track has been reset, or on initialization

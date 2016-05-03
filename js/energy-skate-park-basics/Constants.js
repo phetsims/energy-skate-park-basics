@@ -7,12 +7,14 @@
 define( function( require ) {
   'use strict';
 
+  // modules
   var Dimension2 = require( 'DOT/Dimension2' );
+  var energySkateParkBasics = require( 'ENERGY_SKATE_PARK_BASICS/energySkateParkBasics' );
 
   var minMass = 25;// kg
   var maxMass = 100;
 
-  return {
+  var Constants = {
     SLIDER_OPTIONS: {
       thumbSize: new Dimension2( 13, 30 ),
       tickLabelSpacing: 0,
@@ -23,4 +25,8 @@ define( function( require ) {
     MIN_MASS: minMass,
     MAX_MASS: maxMass
   };
+
+  energySkateParkBasics.register( 'Constants', Constants );
+
+  return Constants;
 } );

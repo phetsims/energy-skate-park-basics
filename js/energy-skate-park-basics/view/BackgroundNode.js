@@ -9,6 +9,7 @@ define( function( require ) {
   'use strict';
 
   // modules
+  var energySkateParkBasics = require( 'ENERGY_SKATE_PARK_BASICS/energySkateParkBasics' );
   var inherit = require( 'PHET_CORE/inherit' );
   var Node = require( 'SCENERY/nodes/Node' );
   var Rectangle = require( 'SCENERY/nodes/Rectangle' );
@@ -52,6 +53,8 @@ define( function( require ) {
     }
   }
 
+  energySkateParkBasics.register( 'BackgroundNode', BackgroundNode );
+  
   return inherit( Node, BackgroundNode, {
 
       // Exactly fit the geometry to the screen so no matter what aspect ratio it will always show something.

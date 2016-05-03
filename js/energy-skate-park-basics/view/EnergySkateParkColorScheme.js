@@ -8,9 +8,11 @@
 define( function( require ) {
   'use strict';
 
+  // modules
+  var energySkateParkBasics = require( 'ENERGY_SKATE_PARK_BASICS/energySkateParkBasics' );
   var Color = require( 'SCENERY/util/Color' );
 
-  return {
+  var EnergySkateParkColorScheme = {
 
     // Use color instances here to prevent parsing these values multiple times
     kineticEnergy: new Color( '#00cc1a' ),
@@ -18,4 +20,8 @@ define( function( require ) {
     thermalEnergy: new Color( '#FF5500' ),// red colorblind
     totalEnergy: new Color( '#B4B400' )// dirty yellow
   };
+
+  energySkateParkBasics.register( 'EnergySkateParkColorScheme', EnergySkateParkColorScheme );
+
+  return EnergySkateParkColorScheme;
 } );

@@ -11,6 +11,7 @@ define( function( require ) {
   'use strict';
 
   // modules
+  var energySkateParkBasics = require( 'ENERGY_SKATE_PARK_BASICS/energySkateParkBasics' );
   var inherit = require( 'PHET_CORE/inherit' );
   var Circle = require( 'SCENERY/nodes/Circle' );
   var Image = require( 'SCENERY/nodes/Image' );
@@ -167,5 +168,7 @@ define( function( require ) {
     } ) );
   }
 
+  energySkateParkBasics.register( 'SkaterNode', SkaterNode );
+  
   return inherit( Node, SkaterNode );
 } );

@@ -9,6 +9,7 @@ define( function( require ) {
   'use strict';
 
   // modules
+  var energySkateParkBasics = require( 'ENERGY_SKATE_PARK_BASICS/energySkateParkBasics' );
   var inherit = require( 'PHET_CORE/inherit' );
   var VBox = require( 'SCENERY/nodes/VBox' );
   var Text = require( 'SCENERY/nodes/Text' );
@@ -49,5 +50,7 @@ define( function( require ) {
     } );
   }
 
+  energySkateParkBasics.register( 'MassSlider', MassSlider );
+  
   return inherit( VBox, MassSlider );
 } );

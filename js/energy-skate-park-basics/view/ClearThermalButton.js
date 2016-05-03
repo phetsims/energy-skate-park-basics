@@ -12,6 +12,7 @@ define( function( require ) {
   'use strict';
 
   // modules
+  var energySkateParkBasics = require( 'ENERGY_SKATE_PARK_BASICS/energySkateParkBasics' );
   var RectangularPushButton = require( 'SUN/buttons/RectangularPushButton' );
   var RectangularButtonView = require( 'SUN/buttons/RectangularButtonView' );
   var inherit = require( 'PHET_CORE/inherit' );
@@ -59,5 +60,7 @@ define( function( require ) {
     this.mutate( options );
   }
 
+  energySkateParkBasics.register( 'ClearThermalButton', ClearThermalButton );
+  
   return inherit( RectangularPushButton, ClearThermalButton );
 } );

@@ -12,6 +12,7 @@ define( function( require ) {
   'use strict';
 
   // modules
+  var energySkateParkBasics = require( 'ENERGY_SKATE_PARK_BASICS/energySkateParkBasics' );
   var Node = require( 'SCENERY/nodes/Node' );
   var Matrix3 = require( 'DOT/Matrix3' );
   var inherit = require( 'PHET_CORE/inherit' );
@@ -21,7 +22,7 @@ define( function( require ) {
 
   // constants
   var linear = Util.linear;
-  
+
   /**
    * Constructor
    * @param {Property} valueProperty Property.<number> which is portrayed
@@ -74,11 +75,13 @@ define( function( require ) {
     valueProperty.link( updateNeedle );
 
     options.updateEnabledProperty.link( function( updateEnabled ) {
-        updateNeedle();
+      updateNeedle();
     } );
 
     this.mutate( options );
   }
 
+  energySkateParkBasics.register( 'GaugeNeedleNode', GaugeNeedleNode );
+  
   return inherit( Node, GaugeNeedleNode );
 } );

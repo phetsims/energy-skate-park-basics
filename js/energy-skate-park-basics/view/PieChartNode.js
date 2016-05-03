@@ -10,6 +10,7 @@ define( function( require ) {
   'use strict';
 
   // modules
+  var energySkateParkBasics = require( 'ENERGY_SKATE_PARK_BASICS/energySkateParkBasics' );
   var inherit = require( 'PHET_CORE/inherit' );
   var Node = require( 'SCENERY/nodes/Node' );
   var Circle = require( 'SCENERY/nodes/Circle' );
@@ -27,15 +28,27 @@ define( function( require ) {
   function PieChartNode( skater, pieChartVisibleProperty, modelViewTransform ) {
     var pieChartNode = this;
 
-    var kineticEnergySlice = new Path( null, { fill: EnergySkateParkColorScheme.kineticEnergy, stroke: 'black', lineWidth: 1 } );
-    var potentialEnergySlice = new Path( null, { fill: EnergySkateParkColorScheme.potentialEnergy, stroke: 'black', lineWidth: 1 } );
+    var kineticEnergySlice = new Path( null, {
+      fill: EnergySkateParkColorScheme.kineticEnergy,
+      stroke: 'black',
+      lineWidth: 1
+    } );
+    var potentialEnergySlice = new Path( null, {
+      fill: EnergySkateParkColorScheme.potentialEnergy,
+      stroke: 'black',
+      lineWidth: 1
+    } );
 
     // Skip bounds computation to improve performance, see #245
     kineticEnergySlice.computeShapeBounds = function() {return new Bounds2( 0, 0, 0, 0 );};
     potentialEnergySlice.computeShapeBounds = function() {return new Bounds2( 0, 0, 0, 0 );};
 
     // Back layer is always a circle, so use the optimized version.
-    var thermalEnergySlice = new Circle( 1, { fill: EnergySkateParkColorScheme.thermalEnergy, stroke: 'black', lineWidth: 1 } );
+    var thermalEnergySlice = new Circle( 1, {
+      fill: EnergySkateParkColorScheme.thermalEnergy,
+      stroke: 'black',
+      lineWidth: 1
+    } );
     Node.call( this, { children: [ thermalEnergySlice, potentialEnergySlice, kineticEnergySlice ], pickable: false } );
 
     var updatePieChartLocation = function() {
@@ -141,5 +154,7 @@ define( function( require ) {
     } );
   }
 
+  energySkateParkBasics.register( 'PieChartNode', PieChartNode );
+  
   return inherit( Node, PieChartNode );
 } );

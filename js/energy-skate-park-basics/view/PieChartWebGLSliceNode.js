@@ -10,6 +10,7 @@ define( function( require ) {
   'use strict';
 
   // modules
+  var energySkateParkBasics = require( 'ENERGY_SKATE_PARK_BASICS/energySkateParkBasics' );
   var inherit = require( 'PHET_CORE/inherit' );
   var WebGLNode = require( 'SCENERY/nodes/WebGLNode' );
   var Bounds2 = require( 'DOT/Bounds2' );
@@ -47,6 +48,8 @@ define( function( require ) {
     } );
   }
 
+  energySkateParkBasics.register( 'PieChartWebGLSliceNode', PieChartWebGLSliceNode );
+
   inherit( WebGLNode, PieChartWebGLSliceNode, {
     step: function( dt ) {
       // Mark the WebGL dirty flag as dirty, to ensure it will render.
@@ -61,6 +64,7 @@ define( function( require ) {
    * @param {WaveWebGLNode} node
    */
   function PieChartSlicePainter( gl, node ) {
+    assert && assert( typeof gl !== 'string', 'gl should not be a string' );
     this.gl = gl;
     this.node = node;
 
@@ -132,6 +136,8 @@ define( function( require ) {
     gl.bindBuffer( gl.ARRAY_BUFFER, this.vertexBuffer );
     gl.bufferData( gl.ARRAY_BUFFER, new Float32Array( vertices ), gl.STATIC_DRAW );
   }
+
+  energySkateParkBasics.register( 'PieChartSlicePainter', PieChartSlicePainter );
 
   inherit( Object, PieChartSlicePainter, {
     paint: function( modelViewMatrix, projectionMatrix ) {

@@ -10,6 +10,7 @@ define( function( require ) {
   'use strict';
 
   // modules
+  var energySkateParkBasics = require( 'ENERGY_SKATE_PARK_BASICS/energySkateParkBasics' );
   var inherit = require( 'PHET_CORE/inherit' );
   var PropertySet = require( 'AXON/PropertySet' );
   var Vector2 = require( 'DOT/Vector2' );
@@ -83,6 +84,8 @@ define( function( require ) {
     this.updateSplines();
   }
 
+  energySkateParkBasics.register( 'Track', Track );
+  
   return inherit( PropertySet, Track, {
 
     // when points change, update the spline instance

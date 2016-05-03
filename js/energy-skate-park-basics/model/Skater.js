@@ -10,6 +10,7 @@ define( function( require ) {
   'use strict';
 
   // modules
+  var energySkateParkBasics = require( 'ENERGY_SKATE_PARK_BASICS/energySkateParkBasics' );
   var inherit = require( 'PHET_CORE/inherit' );
   var PropertySet = require( 'AXON/PropertySet' );
   var Vector2 = require( 'DOT/Vector2' );
@@ -157,6 +158,8 @@ define( function( require ) {
     this.addDerivedProperty( 'allowClearingThermalEnergy', [ 'thermalEnergy' ], function( thermalEnergy ) {return thermalEnergy > 1E-2;} );
   }
 
+  energySkateParkBasics.register( 'Skater', Skater );
+  
   return inherit( PropertySet, Skater, {
 
     // Get the vector from feet to head, so that when tracks are joined we can make sure he is still pointing up

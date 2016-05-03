@@ -10,6 +10,7 @@ define( function( require ) {
   'use strict';
 
   // modules
+  var energySkateParkBasics = require( 'ENERGY_SKATE_PARK_BASICS/energySkateParkBasics' );
   var inherit = require( 'PHET_CORE/inherit' );
   var Rectangle = require( 'SCENERY/nodes/Rectangle' );
   var EnergySkateParkColorScheme = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/view/EnergySkateParkColorScheme' );
@@ -35,7 +36,7 @@ define( function( require ) {
 
       // Convert to graph coordinates
       // However, do not floor for values less than 1 otherwise a nonzero value will show up as zero, see #159
-      var barHeightProperty = new DerivedProperty( [property], function( value ) {
+      var barHeightProperty = new DerivedProperty( [ property ], function( value ) {
         var result = value / 30;
 
         var answer;
@@ -100,5 +101,7 @@ define( function( require ) {
     barGraphVisibleProperty.linkAttribute( this, 'visible' );
   }
 
+  energySkateParkBasics.register( 'BarGraphForeground', BarGraphForeground );
+  
   return inherit( Node, BarGraphForeground );
 } );

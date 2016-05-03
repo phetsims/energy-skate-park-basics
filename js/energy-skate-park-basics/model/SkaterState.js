@@ -13,6 +13,7 @@ define( function( require ) {
   'use strict';
 
   // modules
+  var energySkateParkBasics = require( 'ENERGY_SKATE_PARK_BASICS/energySkateParkBasics' );
   var inherit = require( 'PHET_CORE/inherit' );
   var Vector2 = require( 'DOT/Vector2' );
 
@@ -30,6 +31,8 @@ define( function( require ) {
     phetAllocation && phetAllocation( 'SkaterState' );
   }
 
+  energySkateParkBasics.register( 'SkaterState', SkaterState );
+  
   return inherit( Object, SkaterState, {
 
       /**

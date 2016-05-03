@@ -9,6 +9,7 @@ define( function( require ) {
   'use strict';
 
   // modules
+  var energySkateParkBasics = require( 'ENERGY_SKATE_PARK_BASICS/energySkateParkBasics' );
   var inherit = require( 'PHET_CORE/inherit' );
   var SimpleDragHandler = require( 'SCENERY/input/SimpleDragHandler' );
 
@@ -69,6 +70,8 @@ define( function( require ) {
     SimpleDragHandler.call( this, trackSegmentDragHandlerOptions );
   }
 
+  energySkateParkBasics.register( 'TrackDragHandler', TrackDragHandler );
+  
   return inherit( SimpleDragHandler, TrackDragHandler, {
 
     // When the user drags the track out of the toolbox, if they drag the track by a control point, it still translates

@@ -10,6 +10,7 @@ define( function( require ) {
   'use strict';
 
   // modules
+  var energySkateParkBasics = require( 'ENERGY_SKATE_PARK_BASICS/energySkateParkBasics' );
   var inherit = require( 'PHET_CORE/inherit' );
   var Node = require( 'SCENERY/nodes/Node' );
   var Text = require( 'SCENERY/nodes/Text' );
@@ -36,6 +37,8 @@ define( function( require ) {
     gridVisibleProperty.linkAttribute( this, 'visible' );
   }
 
+  energySkateParkBasics.register( 'GridNode', GridNode );
+  
   return inherit( Node, GridNode, {
 
     // Exactly fit the geometry to the screen so no matter what aspect ratio it will always show something.  Perhaps it

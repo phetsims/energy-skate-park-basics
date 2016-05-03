@@ -10,6 +10,7 @@ define( function() {
   'use strict';
 
   // modules
+  var energySkateParkBasics = require( 'ENERGY_SKATE_PARK_BASICS/energySkateParkBasics' );
   var dot = require( 'DOT/dot' );
 
   // constants
@@ -31,7 +32,7 @@ define( function() {
     t = (x1 - x[ p ]) / (x[ p + 1 ] - x[ p ]);
     var s = t * (1 - t);
     return ((1 - t) * yl[ p ] + t * yr[ p + 1 ] +
-            a * s * (1 - t) ) +
+           a * s * (1 - t) ) +
            b * s * t;
   };
 
@@ -66,5 +67,9 @@ define( function() {
     return ret;
   };
 
-  return { atNumber: atNumber, atArray: atArray };
+  var SplineEvaluation = { atNumber: atNumber, atArray: atArray };
+
+  energySkateParkBasics.register( 'SplineEvaluation', SplineEvaluation );
+
+  return SplineEvaluation;
 } );

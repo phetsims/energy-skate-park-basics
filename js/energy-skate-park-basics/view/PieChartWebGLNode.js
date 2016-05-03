@@ -9,6 +9,7 @@ define( function( require ) {
   'use strict';
 
   // modules
+  var energySkateParkBasics = require( 'ENERGY_SKATE_PARK_BASICS/energySkateParkBasics' );
   var inherit = require( 'PHET_CORE/inherit' );
   var Node = require( 'SCENERY/nodes/Node' );
   var Property = require( 'AXON/Property' );
@@ -125,5 +126,7 @@ define( function( require ) {
     pieChartVisibleProperty.linkAttribute( this, 'visible' );
   }
 
+  energySkateParkBasics.register( 'PieChartWebGLNode', PieChartWebGLNode );
+  
   return inherit( Node, PieChartWebGLNode );
 } );

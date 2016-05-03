@@ -9,6 +9,7 @@ define( function( require ) {
   'use strict';
 
   // modules
+  var energySkateParkBasics = require( 'ENERGY_SKATE_PARK_BASICS/energySkateParkBasics' );
   var inherit = require( 'PHET_CORE/inherit' );
   var VBox = require( 'SCENERY/nodes/VBox' );
   var AquaRadioButton = require( 'SUN/AquaRadioButton' );
@@ -52,5 +53,7 @@ define( function( require ) {
     } );
   }
 
+  energySkateParkBasics.register( 'PlaybackSpeedControl', PlaybackSpeedControl );
+  
   return inherit( VBox, PlaybackSpeedControl );
 } );

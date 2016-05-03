@@ -9,6 +9,7 @@ define( function( require ) {
   'use strict';
 
   // modules
+  var energySkateParkBasics = require( 'ENERGY_SKATE_PARK_BASICS/energySkateParkBasics' );
   var inherit = require( 'PHET_CORE/inherit' );
   var Node = require( 'SCENERY/nodes/Node' );
   var VBox = require( 'SCENERY/nodes/VBox' );
@@ -100,6 +101,8 @@ define( function( require ) {
     Panel.call( this, content, { xMargin: 10, yMargin: 5, fill: '#F0F0F0', stroke: null, resize: false } );
   }
 
+  energySkateParkBasics.register( 'EnergySkateParkBasicsControlPanel', EnergySkateParkBasicsControlPanel );
+  
   return inherit( Panel, EnergySkateParkBasicsControlPanel, {
 
     // Create an icon for the bar graph check box
@@ -124,9 +127,7 @@ define( function( require ) {
     // Create an icon for the pie chart check box
     createPieChartIcon: function() {
       var radius = 10;
-      var x = new Shape().
-      moveTo( 0, 0 ).
-      ellipticalArc( 0, 0, radius, radius, 0, -Math.PI / 2, 0, false ).lineTo( 0, 0 );
+      var x = new Shape().moveTo( 0, 0 ).ellipticalArc( 0, 0, radius, radius, 0, -Math.PI / 2, 0, false ).lineTo( 0, 0 );
       return new Node( {
         children: [
           new Circle( radius, { fill: EnergySkateParkColorScheme.potentialEnergy, lineWidth: 0.5, stroke: 'black' } ),

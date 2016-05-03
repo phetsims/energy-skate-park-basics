@@ -1,7 +1,7 @@
 // Copyright 2014-2015, University of Colorado Boulder
 
 /**
- * Debug tracks, which can be enabled using the query parameter 'debugTrack' with the index of the track to debug.
+ * Debug tracks, which can be enabled using the query parameter 'DebugTracks' with the index of the track to debug.
  * There is no automated testing, you have to launch the track and see if the behavior looks correct.
  *
  * @author Sam Reid
@@ -10,21 +10,24 @@ define( function( require ) {
   'use strict';
 
   // modules
+  var energySkateParkBasics = require( 'ENERGY_SKATE_PARK_BASICS/energySkateParkBasics' );
   var inherit = require( 'PHET_CORE/inherit' );
   var Track = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/model/Track' );
   var ControlPoint = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/model/ControlPoint' );
   var Vector2 = require( 'DOT/Vector2' );
 
-  function DebugTrack() {
+  function DebugTracks() {
   }
 
-  return inherit( Object, DebugTrack, {}, {
+  energySkateParkBasics.register( 'DebugTracks', DebugTracks );
+
+  return inherit( Object, DebugTracks, {}, {
       init: function( model ) {
         // Tracks to help demonstrate issues
 
         var controlPoints = null;
         var track = null;
-        if ( phet.chipper.getQueryParameter( 'debugTrack' ) === '1' ) {
+        if ( phet.chipper.getQueryParameter( 'DebugTracks' ) === '1' ) {
 
           model.detachable = true;
           // The skater falls through model track
@@ -38,7 +41,7 @@ define( function( require ) {
         }
 
         // Skater stutters and slows going over the hump
-        if ( phet.chipper.getQueryParameter( 'debugTrack' ) === '2' ) {
+        if ( phet.chipper.getQueryParameter( 'DebugTracks' ) === '2' ) {
 
           model.detachable = true;
           // The skater falls through model track
@@ -52,7 +55,7 @@ define( function( require ) {
         }
 
         // Tricky one--handled OK
-        if ( phet.chipper.getQueryParameter( 'debugTrack' ) === '3' ) {
+        if ( phet.chipper.getQueryParameter( 'DebugTracks' ) === '3' ) {
 
           model.detachable = true;
           // The skater falls through model track
@@ -66,7 +69,7 @@ define( function( require ) {
         }
 
         // Wide loop, OK
-        if ( phet.chipper.getQueryParameter( 'debugTrack' ) === '4' ) {
+        if ( phet.chipper.getQueryParameter( 'DebugTracks' ) === '4' ) {
 
           model.detachable = true;
           // The skater falls through model track
@@ -80,7 +83,7 @@ define( function( require ) {
         }
 
         // Flickering return skater button, PROBLEM
-        if ( phet.chipper.getQueryParameter( 'debugTrack' ) === '5' ) {
+        if ( phet.chipper.getQueryParameter( 'DebugTracks' ) === '5' ) {
 
           model.detachable = true;
           // The skater falls through model track
@@ -94,7 +97,7 @@ define( function( require ) {
         }
 
         // Passes through track, PROBLEM
-        if ( phet.chipper.getQueryParameter( 'debugTrack' ) === '6' ) {
+        if ( phet.chipper.getQueryParameter( 'DebugTracks' ) === '6' ) {
 
           model.detachable = true;
           // The skater falls through model track
@@ -108,7 +111,7 @@ define( function( require ) {
         }
 
         // Falls through bottom, PROBLEM
-        if ( phet.chipper.getQueryParameter( 'debugTrack' ) === '7' ) {
+        if ( phet.chipper.getQueryParameter( 'DebugTracks' ) === '7' ) {
 
           model.detachable = true;
           // The skater falls through model track
@@ -122,7 +125,7 @@ define( function( require ) {
         }
 
         // Falls through loop, PROBLEM
-        if ( phet.chipper.getQueryParameter( 'debugTrack' ) === '8' ) {
+        if ( phet.chipper.getQueryParameter( 'DebugTracks' ) === '8' ) {
 
           model.detachable = true;
           // The skater falls through model track
@@ -136,7 +139,7 @@ define( function( require ) {
         }
 
         // Pops upside down in loop, PROBLEM
-        if ( phet.chipper.getQueryParameter( 'debugTrack' ) === '9' ) {
+        if ( phet.chipper.getQueryParameter( 'DebugTracks' ) === '9' ) {
 
           model.detachable = true;
           // The skater falls through model track
@@ -150,7 +153,7 @@ define( function( require ) {
           model.tracks.add( track );
         }
 
-        if ( phet.chipper.getQueryParameter( 'debugTrack' ) === '10' ) {
+        if ( phet.chipper.getQueryParameter( 'DebugTracks' ) === '10' ) {
 
           model.detachable = true;
           // The skater falls through model track
@@ -164,7 +167,7 @@ define( function( require ) {
           model.tracks.add( track );
         }
 
-        if ( phet.chipper.getQueryParameter( 'debugTrack' ) === '11' ) {
+        if ( phet.chipper.getQueryParameter( 'DebugTracks' ) === '11' ) {
 
           model.detachable = true;
           // The skater falls through model track
@@ -178,7 +181,7 @@ define( function( require ) {
           model.tracks.add( track );
         }
 
-        if ( phet.chipper.getQueryParameter( 'debugTrack' ) === '12' ) {
+        if ( phet.chipper.getQueryParameter( 'DebugTracks' ) === '12' ) {
 
           model.detachable = true;
           // The skater falls through model track
@@ -191,7 +194,7 @@ define( function( require ) {
           track.physical = true;
           model.tracks.add( track );
         }
-        if ( phet.chipper.getQueryParameter( 'debugTrack' ) === '13' ) {
+        if ( phet.chipper.getQueryParameter( 'DebugTracks' ) === '13' ) {
 
           model.detachable = false;
           // The skater falls through model track
@@ -204,7 +207,7 @@ define( function( require ) {
           track.physical = true;
           model.tracks.add( track );
         }
-        if ( phet.chipper.getQueryParameter( 'debugTrack' ) === '14' ) {
+        if ( phet.chipper.getQueryParameter( 'DebugTracks' ) === '14' ) {
           model.detachable = true;
           model.skater.position.set( new Vector2( -6.698445595854922, 6.5278756476683935 ) );
           model.skater.released( 0, 0 );
@@ -241,7 +244,7 @@ define( function( require ) {
         }
 
         //Test decrease in thermal energy, see https://github.com/phetsims/energy-skate-park-basics/issues/141#issuecomment-59395426
-        if ( phet.chipper.getQueryParameter( 'debugTrack' ) === '15' ) {
+        if ( phet.chipper.getQueryParameter( 'DebugTracks' ) === '15' ) {
           model.detachable = true;
           model.skater.position.set( new Vector2( -6.698445595854922, 6.5278756476683935 ) );
           model.skater.released( 0, 0 );

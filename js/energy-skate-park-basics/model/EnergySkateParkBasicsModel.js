@@ -26,6 +26,7 @@ define( function( require ) {
   'use strict';
 
   // modules
+  var energySkateParkBasics = require( 'ENERGY_SKATE_PARK_BASICS/energySkateParkBasics' );
   var inherit = require( 'PHET_CORE/inherit' );
   var PropertySet = require( 'AXON/PropertySet' );
   var Skater = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/model/Skater' );
@@ -276,6 +277,8 @@ define( function( require ) {
     }
   }
 
+  energySkateParkBasics.register( 'EnergySkateParkBasicsModel', EnergySkateParkBasicsModel );
+  
   return inherit( PropertySet, EnergySkateParkBasicsModel, {
 
     // Add the tracks that will be in the track toolbox for the "Playground" screen

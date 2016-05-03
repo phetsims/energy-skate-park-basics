@@ -9,6 +9,7 @@ define( function( require ) {
   'use strict';
 
   // modules
+  var energySkateParkBasics = require( 'ENERGY_SKATE_PARK_BASICS/energySkateParkBasics' );
   var Panel = require( 'SUN/Panel' );
   var inherit = require( 'PHET_CORE/inherit' );
   var Node = require( 'SCENERY/nodes/Node' );
@@ -72,5 +73,7 @@ define( function( require ) {
     } );
   }
 
+  energySkateParkBasics.register( 'SceneSelectionPanel', SceneSelectionPanel );
+  
   return inherit( Panel, SceneSelectionPanel );
 } );

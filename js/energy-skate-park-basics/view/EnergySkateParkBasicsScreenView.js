@@ -9,6 +9,7 @@ define( function( require ) {
   'use strict';
 
   // modules
+  var energySkateParkBasics = require( 'ENERGY_SKATE_PARK_BASICS/energySkateParkBasics' );
   var AttachDetachToggleButtons = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/view/AttachDetachToggleButtons' );
   var Color = require( 'SCENERY/util/Color' );
   var inherit = require( 'PHET_CORE/inherit' );
@@ -291,11 +292,7 @@ define( function( require ) {
         var directionUnitVector = Vector2.createPolar( 1, angle );
         var orthogonalUnitVector = directionUnitVector.perpendicular();
         var tip = directionUnitVector.times( headHeight ).plus( tail );
-        return new Path( new Shape().moveToPoint( tail ).
-          lineToPoint( tail.plus( orthogonalUnitVector.times( headWidth / 2 ) ) ).
-          lineToPoint( tip ).
-          lineToPoint( tail.plus( orthogonalUnitVector.times( -headWidth / 2 ) ) ).
-          lineToPoint( tail ).close(),
+        return new Path( new Shape().moveToPoint( tail ).lineToPoint( tail.plus( orthogonalUnitVector.times( headWidth / 2 ) ) ).lineToPoint( tip ).lineToPoint( tail.plus( orthogonalUnitVector.times( -headWidth / 2 ) ) ).lineToPoint( tail ).close(),
           { fill: 'black' } );
       };
 
@@ -406,6 +403,8 @@ define( function( require ) {
     }
   }
 
+  energySkateParkBasics.register( 'EnergySkateParkBasicsScreenView', EnergySkateParkBasicsScreenView );
+  
   return inherit( ScreenView, EnergySkateParkBasicsScreenView, {
 
     // Layout the EnergySkateParkBasicsScreenView, scaling it up and down with the size of the screen to ensure a

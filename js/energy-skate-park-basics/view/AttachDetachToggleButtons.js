@@ -10,6 +10,7 @@ define( function( require ) {
   'use strict';
 
   // modules
+  var energySkateParkBasics = require( 'ENERGY_SKATE_PARK_BASICS/energySkateParkBasics' );
   var inherit = require( 'PHET_CORE/inherit' );
   var Image = require( 'SCENERY/nodes/Image' );
   var Panel = require( 'SUN/Panel' );
@@ -67,5 +68,7 @@ define( function( require ) {
     Panel.call( this, radioButtons, options );
   }
 
+  energySkateParkBasics.register( 'AttachDetachToggleButtons', AttachDetachToggleButtons );
+  
   return inherit( Panel, AttachDetachToggleButtons );
 } );

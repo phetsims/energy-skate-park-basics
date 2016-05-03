@@ -10,6 +10,7 @@ define( function( require ) {
   'use strict';
 
   // modules
+  var energySkateParkBasics = require( 'ENERGY_SKATE_PARK_BASICS/energySkateParkBasics' );
   var inherit = require( 'PHET_CORE/inherit' );
   var Circle = require( 'SCENERY/nodes/Circle' );
   var SimpleDragHandler = require( 'SCENERY/input/SimpleDragHandler' );
@@ -207,5 +208,7 @@ define( function( require ) {
     controlPointNode.addInputListener( controlPointInputListener );
   }
 
+  energySkateParkBasics.register( 'ControlPointNode', ControlPointNode );
+  
   return inherit( Circle, ControlPointNode );
 } );
