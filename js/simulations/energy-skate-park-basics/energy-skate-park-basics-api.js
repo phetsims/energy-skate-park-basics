@@ -7,12 +7,12 @@
 (function() {
   'use strict';
 
-  var TVector2 = require( 'PHET_IO/api/dot/TVector2' );
+  var TVector2 = require( 'PHET_IO/types/dot/TVector2' );
 
   var PhETIOCommon = phetio.PhETIOCommon;
-  var TArray = require( 'PHET_IO/api/TArray' );
-  var TNumber = require( 'PHET_IO/api/TNumber' );
-  var TProperty = require( 'PHET_IO/api/axon/TProperty' );
+  var TArray = require( 'PHET_IO/types/TArray' );
+  var TNumber = require( 'PHET_IO/types/TNumber' );
+  var TProperty = require( 'PHET_IO/types/axon/TProperty' );
 
   phetio.api = PhETIOCommon.createAPI( {
     energySkateParkBasics: PhETIOCommon.createSim( {
