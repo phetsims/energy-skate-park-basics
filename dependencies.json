@@ -25,7 +25,7 @@
     "branch": "1.1"
   },
   "joist": {
-    "sha": "ecd8d968e09ee1be00a444a261a01d1b391422e2",
+    "sha": "1fad8aae4b45f4afa242dc41d1da96900a622f84",
     "branch": "HEAD"
   },
   "kite": {
@@ -49,7 +49,7 @@
     "branch": "HEAD"
   },
   "sherpa": {
-    "sha": "b74418c01f7b018cfc2ad130becdc0ad428b71c2",
+    "sha": "2b2bdfd9c084d9e8b7a22009fed9522439122400",
     "branch": "HEAD"
   },
   "sun": {
