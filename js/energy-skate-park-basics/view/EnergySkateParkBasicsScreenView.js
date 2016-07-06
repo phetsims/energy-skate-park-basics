@@ -156,7 +156,8 @@ define( function( require ) {
       playPauseButton.scale( isPlaying ? ( 1 / pauseSizeIncreaseFactor ) : pauseSizeIncreaseFactor );
     } );
 
-    var stepButton = new StepForwardButton( playProperty, {
+    var stepButton = new StepForwardButton( {
+      playingProperty: playProperty,
       listener: function() { model.manualStep(); },
       phetioID: options.tandem.createTandem( 'stepButton' )
     } );
