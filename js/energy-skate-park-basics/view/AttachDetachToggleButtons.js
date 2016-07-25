@@ -16,6 +16,9 @@ define( function( require ) {
   var Panel = require( 'SUN/Panel' );
   var RadioButtonGroup = require( 'SUN/buttons/RadioButtonGroup' );
 
+  // phet-io modules
+  var TBoolean = require( 'ifphetio!PHET_IO/types/TBoolean' );
+
   // images
   var detachIcon = require( 'image!ENERGY_SKATE_PARK_BASICS/detach.png' );
   var attachIcon = require( 'image!ENERGY_SKATE_PARK_BASICS/attach.png' );
@@ -28,7 +31,7 @@ define( function( require ) {
    * @param {Object} [options]
    * @constructor
    */
-  function AttachDetachToggleButtons( detachableProperty, enabledProperty, contentWidth, options ) {
+  function AttachDetachToggleButtons( detachableProperty, enabledProperty, contentWidth, tandem, options ) {
 
     // Match the style of the EnergySkateParkBasicsControlPanel
     options = _.extend( {
@@ -43,12 +46,14 @@ define( function( require ) {
       {
         value: false,
         node: new Image( attachIcon, { scale: scale } ),
-        phetioID: 'playgroundScreen.attachRadioButton'
+        tandem: tandem.createTandem( 'attachRadioButton' ),
+        type: TBoolean
       },
       {
         value: true,
         node: new Image( detachIcon, { scale: scale } ),
-        phetioID: 'playgroundScreen.detachRadioButton'
+        tandem: tandem.createTandem( 'detachRadioButton' ),
+        type: TBoolean
       }
     ];
 
@@ -69,6 +74,6 @@ define( function( require ) {
   }
 
   energySkateParkBasics.register( 'AttachDetachToggleButtons', AttachDetachToggleButtons );
-  
+
   return inherit( Panel, AttachDetachToggleButtons );
 } );

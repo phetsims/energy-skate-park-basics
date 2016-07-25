@@ -104,7 +104,7 @@ define( function( require ) {
     if ( model.draggableTracks ) {
       var property = model.draggableTracks ? new Property( true ) :
                      new DerivedProperty( [ model.sceneProperty ], function( scene ) { return scene === 2; } );
-      this.attachDetachToggleButtons = new AttachDetachToggleButtons( model.detachableProperty, property, this.controlPanel.contentWidth, {
+      this.attachDetachToggleButtons = new AttachDetachToggleButtons( model.detachableProperty, property, this.controlPanel.contentWidth, tandem.createTandem( 'attachDetachToggleButtons' ), {
         top: this.controlPanel.bottom + 5,
         centerX: this.controlPanel.centerX
       } );
