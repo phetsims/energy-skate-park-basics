@@ -13,7 +13,6 @@ define( function( require ) {
   var inherit = require( 'PHET_CORE/inherit' );
   var EnergySkateParkBasicsScreen = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/EnergySkateParkBasicsScreen' );
   var Sim = require( 'JOIST/Sim' );
-  var Tandem = require( 'TANDEM/Tandem' );
 
   // images
   var iconIntroHomescreen = require( 'image!ENERGY_SKATE_PARK_BASICS/icon-intro-homescreen.png' );
@@ -29,10 +28,7 @@ define( function( require ) {
   var screenTrackPlaygroundString = require( 'string!ENERGY_SKATE_PARK_BASICS/screen.trackPlayground' );
   var energySkateParkBasicsTitleString = require( 'string!ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics.title' );
 
-  // constants
-  var tandem = Tandem.createRootTandem();
-
-  function EnergySkateParkBasicsSim() {
+  function EnergySkateParkBasicsSim( tandem ) {
     var indent = '\n        ';
     var options = {
       credits: {
@@ -61,6 +57,6 @@ define( function( require ) {
   }
 
   energySkateParkBasics.register( 'EnergySkateParkBasicsSim', EnergySkateParkBasicsSim );
-  
+
   return inherit( Sim, EnergySkateParkBasicsSim );
 } );

@@ -17,11 +17,6 @@
     "requirejsNamespace": "ENERGY_SKATE_PARK_BASICS",
     "preload": [
       "../sherpa/lib/numeric-1.2.6.js"
-    ],
-    "phet-io": {
-      "preload": [
-        "../phet-io/js/api/energy-skate-park-basics-api.js"
-      ]
-    }
+    ]
   }
 }

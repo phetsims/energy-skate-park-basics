@@ -10,11 +10,15 @@ define( function( require ) {
 
   var SimLauncher = require( 'JOIST/SimLauncher' );
   var EnergySkateParkBasicsSim = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/EnergySkateParkBasicsSim' );
+  var Tandem = require( 'TANDEM/Tandem' );
 
   // Fix a circular loading problem when using this in EnergySkateParkColorScheme
   require( 'SCENERY/util/Color' );
 
+  // constants
+  var tandem = Tandem.createRootTandem();
+
   SimLauncher.launch( function() {
-    new EnergySkateParkBasicsSim().start();
+    new EnergySkateParkBasicsSim( tandem ).start();
   } );
 } );
