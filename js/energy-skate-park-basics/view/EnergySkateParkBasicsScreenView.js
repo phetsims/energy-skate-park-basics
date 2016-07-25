@@ -63,7 +63,7 @@ define( function( require ) {
    * @param {Object} [options]
    * @constructor
    */
-  function EnergySkateParkBasicsScreenView( model, options ) {
+  function EnergySkateParkBasicsScreenView( model, tandem ) {
 
     var view = this;
     ScreenView.call( view, { layoutBounds: new Bounds2( 0, 0, 834, 504 ) } );
@@ -89,13 +89,12 @@ define( function( require ) {
       model.skater,
       model.clearThermal.bind( model ),
       model.property( 'pieChartVisible' ), {
-        tandem: options.tandem
+        tandem: tandem
       } );
     this.addChild( pieChartLegend );
 
     this.controlPanel = new EnergySkateParkBasicsControlPanel( model, {
-      tandem: options.tandem,
-      massSliderPhETIOID: options.massSliderPhETIOID
+      tandem: tandem.createTandem( 'controlPanel' )
     } );
     this.addChild( this.controlPanel );
     this.controlPanel.right = this.layoutBounds.width - 5;
@@ -128,12 +127,12 @@ define( function( require ) {
     } );
 
     var barGraphBackground = new BarGraphBackground( model.skater, model.property( 'barGraphVisible' ), model.clearThermal.bind( model ),
-      { tandem: options.tandem } );
+      { tandem: tandem } );
     this.addChild( barGraphBackground );
 
     if ( !model.draggableTracks ) {
       this.sceneSelectionPanel = new SceneSelectionPanel( model, this, modelViewTransform, {
-        tandem: options.tandem
+        tandem: tandem
       } );// layout done in layout bounds
       this.addChild( this.sceneSelectionPanel );
     }
@@ -159,7 +158,7 @@ define( function( require ) {
     var stepButton = new StepForwardButton( {
       playingProperty: playProperty,
       listener: function() { model.manualStep(); },
-      phetioID: options.tandem.createTandem( 'stepButton' )
+      phetioID: tandem.createTandem( 'stepButton' )
     } );
 
     // Make the step button the same size as the pause button.
@@ -180,7 +179,7 @@ define( function( require ) {
       // Align vertically with other controls, see #134
       centerY: (modelViewTransform.modelToViewY( 0 ) + this.layoutBounds.maxY) / 2 + 8,
 
-      phetioID: options.tandem.createTandem( 'resetAllButton' )
+      phetioID: tandem.createTandem( 'resetAllButton' )
     } );
     this.addChild( this.resetAllButton );
 
@@ -192,7 +191,7 @@ define( function( require ) {
       listener: model.returnSkater.bind( model ),
       centerY: this.resetAllButton.centerY,
       // X updated in layoutBounds since the reset all button can move horizontally
-      phetioID: options.tandem.createTandem( 'returnSkaterButton' )
+      phetioID: tandem.createTandem( 'returnSkaterButton' )
     } );
 
     // Disable the return skater button when the skater is already at his initial coordinates
@@ -200,8 +199,8 @@ define( function( require ) {
     this.addChild( this.returnSkaterButton );
 
     this.addChild( new PlaybackSpeedControl( model.property( 'speed' ), {
-      slowSpeedRadioButtonPhETIOID: options.tandem.createTandem( 'slowSpeedRadioButton' ),
-      normalSpeedRadioButtonPhETIOID: options.tandem.createTandem( 'normalSpeedRadioButton' )
+      slowSpeedRadioButtonPhETIOID: tandem.createTandem( 'slowSpeedRadioButton' ),
+      normalSpeedRadioButtonPhETIOID: tandem.createTandem( 'normalSpeedRadioButton' )
     } ).mutate( {
       left: stepButton.right + 20,
       centerY: playPauseButton.centerY
@@ -364,7 +363,7 @@ define( function( require ) {
       // green means "go" since the skater will likely start moving at this point
       baseColor: EnergySkateParkColorScheme.kineticEnergy,
       listener: model.returnSkater.bind( model ),
-      phetioID: options.tandem.createTandem( 'returnSkaterToPreviousStartingPositionButton' )
+      phetioID: tandem.createTandem( 'returnSkaterToPreviousStartingPositionButton' )
     } );
 
     var returnSkaterToGroundButton = new RectangularPushButton( {
@@ -372,7 +371,7 @@ define( function( require ) {
       centerBottom: modelViewTransform.modelToViewPosition( model.skater.startingPosition ),
       baseColor: '#f4514e', // red for stop, since the skater will be stopped on the ground.
       listener: function() { model.skater.resetPosition(); },
-      phetioID: options.tandem.createTandem( 'returnSkaterToGroundButton' )
+      phetioID: tandem.createTandem( 'returnSkaterToGroundButton' )
     } );
 
     this.addChild( returnSkaterToStartingPointButton );
@@ -406,7 +405,7 @@ define( function( require ) {
   }
 
   energySkateParkBasics.register( 'EnergySkateParkBasicsScreenView', EnergySkateParkBasicsScreenView );
-  
+
   return inherit( ScreenView, EnergySkateParkBasicsScreenView, {
 
     // Layout the EnergySkateParkBasicsScreenView, scaling it up and down with the size of the screen to ensure a

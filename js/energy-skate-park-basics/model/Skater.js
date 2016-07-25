@@ -32,7 +32,7 @@ define( function( require ) {
     return true;
   };
 
-  function Skater( options ) {
+  function Skater( tandem ) {
     var skater = this;
 
     PropertySet.call( this, {
@@ -94,19 +94,19 @@ define( function( require ) {
       headPosition: new Vector2( 0, 0 )
     }, {
       phetioIDMap: {
-        position: options.tandem.createTandem( 'skaterPosition' ),
-        u: options.tandem.createTandem( 'skaterParametricDistanceAlongTrack' ),
-        up: options.tandem.createTandem( 'skaterUpsideUpOnTrack' ),
-        mass: options.tandem.createTandem( 'skaterMass' ),
-        gravity: options.tandem.createTandem( 'gravity' ),
-        direction: options.tandem.createTandem( 'skaterDirection' ),
-        kineticEnergy: options.tandem.createTandem( 'skaterKineticEnergy' ),
-        potentialEnergy: options.tandem.createTandem( 'skaterPotentialEnergy' ),
-        thermalEnergy: options.tandem.createTandem( 'skaterThermalEnergy' ),
-        totalEnergy: options.tandem.createTandem( 'skaterTotalEnergy' ),
-        velocity: options.tandem.createTandem( 'skaterVelocity' ),
-        dragging: options.tandem.createTandem( 'skaterDragging' ),
-        angle: options.tandem.createTandem( 'skaterAngle' )
+        position: tandem.createTandem( 'skaterPosition' ),
+        u: tandem.createTandem( 'skaterParametricDistanceAlongTrack' ),
+        up: tandem.createTandem( 'skaterUpsideUpOnTrack' ),
+        mass: tandem.createTandem( 'skaterMass' ),
+        gravity: tandem.createTandem( 'gravity' ),
+        direction: tandem.createTandem( 'skaterDirection' ),
+        kineticEnergy: tandem.createTandem( 'skaterKineticEnergy' ),
+        potentialEnergy: tandem.createTandem( 'skaterPotentialEnergy' ),
+        thermalEnergy: tandem.createTandem( 'skaterThermalEnergy' ),
+        totalEnergy: tandem.createTandem( 'skaterTotalEnergy' ),
+        velocity: tandem.createTandem( 'skaterVelocity' ),
+        dragging: tandem.createTandem( 'skaterDragging' ),
+        angle: tandem.createTandem( 'skaterAngle' )
       }
     } );
 

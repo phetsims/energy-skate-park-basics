@@ -44,15 +44,9 @@ define( function( require ) {
     };
 
     Sim.call( this, energySkateParkBasicsTitleString, [
-      new EnergySkateParkBasicsScreen( screenIntroductionString, iconIntroHomescreen, iconIntroNavbar, false, false, {
-        tandem: tandem.createTandem( 'introScreen' )
-      } ),
-      new EnergySkateParkBasicsScreen( screenFrictionString, iconFrictionHomescreen, iconFrictionNavbar, false, true, {
-        tandem: tandem.createTandem( 'frictionScreen' )
-      } ),
-      new EnergySkateParkBasicsScreen( screenTrackPlaygroundString, iconPlaygroundHomescreen, iconPlaygroundNavbar, true, true, {
-        tandem: tandem.createTandem( 'playgroundScreen' )
-      } )
+      new EnergySkateParkBasicsScreen( screenIntroductionString, iconIntroHomescreen, iconIntroNavbar, false, false, tandem.createTandem( 'introScreen' ) ),
+      new EnergySkateParkBasicsScreen( screenFrictionString, iconFrictionHomescreen, iconFrictionNavbar, false, true, tandem.createTandem( 'frictionScreen' ) ),
+      new EnergySkateParkBasicsScreen( screenTrackPlaygroundString, iconPlaygroundHomescreen, iconPlaygroundNavbar, true, true, tandem.createTandem( 'playgroundScreen' ) )
     ], options );
   }
 

@@ -78,7 +78,7 @@ define( function( require ) {
    * @param {Boolean} frictionAllowed True in screen 3 where the user can drag the tracks
    * @constructor
    */
-  function EnergySkateParkBasicsModel( draggableTracks, frictionAllowed, options ) {
+  function EnergySkateParkBasicsModel( draggableTracks, frictionAllowed, tandem ) {
 
     this.frictionAllowed = frictionAllowed;
     this.draggableTracks = draggableTracks;
@@ -119,26 +119,26 @@ define( function( require ) {
     }, {
       phetioIDMap: {
         // Model for visibility of various view parameters
-        pieChartVisible: options.tandem.createTandem( 'pieChartVisible' ),
-        barGraphVisible: options.tandem.createTandem( 'barGraphVisible' ),
-        gridVisible: options.tandem.createTandem( 'gridVisible' ),
-        speedometerVisible: options.tandem.createTandem( 'speedometerVisible' ),
+        pieChartVisible: tandem.createTandem( 'pieChartVisible' ),
+        barGraphVisible: tandem.createTandem( 'barGraphVisible' ),
+        gridVisible: tandem.createTandem( 'gridVisible' ),
+        speedometerVisible: tandem.createTandem( 'speedometerVisible' ),
 
         // Enabled/disabled for the track editing buttons
-        editButtonEnabled: options.tandem.createTandem( 'editButtonEnabled' ),
-        clearButtonEnabled: options.tandem.createTandem( 'clearButtonEnabled' ),
+        editButtonEnabled: tandem.createTandem( 'editButtonEnabled' ),
+        clearButtonEnabled: tandem.createTandem( 'clearButtonEnabled' ),
 
         // Whether the sim is paused or running
-        paused: options.tandem.createTandem( 'paused' ),
+        paused: tandem.createTandem( 'paused' ),
 
         // speed of the model, either 'normal' or 'slow'
-        speed: options.tandem.createTandem( 'speed' ),
+        speed: tandem.createTandem( 'speed' ),
 
         // Coefficient of friction (unitless) between skater and track
-        friction: options.tandem.createTandem( 'friction' ),
+        friction: tandem.createTandem( 'friction' ),
 
         // Whether the skater should stick to the track like a roller coaster, or be able to fly off like a street
-        detachable: options.tandem.createTandem( 'detachable' )
+        detachable: tandem.createTandem( 'detachable' )
       }
     } );
 
@@ -150,7 +150,7 @@ define( function( require ) {
     this.time = 0;
 
     // the skater model instance
-    this.skater = new Skater( options );
+    this.skater = new Skater( tandem.createTandem( 'skater' ) );
 
     // If the mass changes while the sim is paused, trigger an update so the skater image size will update, see #115
     this.skater.property( 'mass' ).link( function() { if ( model.paused ) { model.skater.trigger( 'updated' ); } } );
@@ -225,7 +225,7 @@ define( function( require ) {
     if ( !draggableTracks ) {
 
       // For screens 1-2, the index of the selected scene (and track) within the screen
-      this.addProperty( 'scene', 0, options.tandem.createTandem( 'sceneProperty' ), TNumber( 'unitless' ) );
+      this.addProperty( 'scene', 0, tandem.createTandem( 'sceneProperty' ), TNumber( 'unitless' ) );
 
       // Shape types
       // For the double well, move the left well up a bit since the interpolation moves it down by that much, and we
