@@ -83,9 +83,7 @@ define( function( require ) {
       ) ];
     var checkBoxes = new VBox( { align: 'left', spacing: 10, children: checkBoxChildren } );
 
-    var massSlider = new MassSlider( model.skater.massProperty, {
-      tandem: tandem.createTandem( 'massSlider' )
-    } );
+    var massSlider = new MassSlider( model.skater.massProperty, tandem.createTandem( 'massSlider' ) );
 
     // For 1st screen, show MassSlider
     // For 2nd and 3rd screen, show Friction Slider and Mass Slider, see #147

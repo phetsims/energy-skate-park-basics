@@ -24,11 +24,14 @@ define( function( require ) {
 
   /**
    * @param {Property<Number>} massProperty axon Property indicating the skater mass
+   * @param {Tandem} tandem
    * @constructor
    */
-  function MassSlider( massProperty, options ) {
+  function MassSlider( massProperty, tandem ) {
     var range = { min: Constants.MIN_MASS, max: Constants.MAX_MASS };
-    var slider = new HSlider( massProperty, range, _.extend( { phetioID: options.phetioID }, Constants.SLIDER_OPTIONS ) );
+    var slider = new HSlider( massProperty, range, _.extend( {
+      tandem: tandem.createTandem( 'slider' )
+    }, Constants.SLIDER_OPTIONS ) );
     var tickFont = new PhetFont( 10 );
 
     var textOptions = {
@@ -51,6 +54,6 @@ define( function( require ) {
   }
 
   energySkateParkBasics.register( 'MassSlider', MassSlider );
-  
+
   return inherit( VBox, MassSlider );
 } );
