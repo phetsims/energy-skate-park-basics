@@ -22,7 +22,7 @@ define( function( require ) {
   var Panel = require( 'SUN/Panel' );
   var CheckBox = require( 'SUN/CheckBox' );
   var Text = require( 'SCENERY/nodes/Text' );
-  var MassSlider = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/view/MassSlider' );
+  var MassControlPanel = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/view/MassControlPanel' );
   var EnergySkateParkColorScheme = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/view/EnergySkateParkColorScheme' );
   var GaugeNode = require( 'SCENERY_PHET/GaugeNode' );
   var Property = require( 'AXON/Property' );
@@ -83,11 +83,11 @@ define( function( require ) {
       ) ];
     var checkBoxes = new VBox( { align: 'left', spacing: 10, children: checkBoxChildren } );
 
-    var massSlider = new MassSlider( model.skater.massProperty, tandem.createTandem( 'massSlider' ) );
+    var massControlPanel = new MassControlPanel( model.skater.massProperty, tandem.createTandem( 'massControlPanel' ) );
 
-    // For 1st screen, show MassSlider
+    // For 1st screen, show MassControlPanel
     // For 2nd and 3rd screen, show Friction Slider and Mass Slider, see #147
-    var children = [ checkBoxes, massSlider ];
+    var children = [ checkBoxes, massControlPanel ];
     if ( model.frictionAllowed ) {
       children.push( new FrictionControl( model.property( 'friction' ), tandem.createTandem( 'frictionSlider' ) ) );
     }

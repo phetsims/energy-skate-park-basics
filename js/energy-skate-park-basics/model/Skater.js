@@ -55,7 +55,7 @@ define( function( require ) {
 
       position: new Vector2( 3.5, 0 ),
 
-      // Start in the middle of the MassSlider range
+      // Start in the middle of the MassControlPanel range
       mass: Constants.DEFAULT_MASS,
 
       // Which way the skater is facing, right or left.  Coded as strings instead of boolean in case we add other states

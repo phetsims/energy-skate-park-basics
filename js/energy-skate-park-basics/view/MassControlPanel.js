@@ -27,7 +27,7 @@ define( function( require ) {
    * @param {Tandem} tandem
    * @constructor
    */
-  function MassSlider( massProperty, tandem ) {
+  function MassControlPanel( massProperty, tandem ) {
     var range = { min: Constants.MIN_MASS, max: Constants.MAX_MASS };
     var slider = new HSlider( massProperty, range, _.extend( {
       tandem: tandem.createTandem( 'slider' )
@@ -53,7 +53,7 @@ define( function( require ) {
     } );
   }
 
-  energySkateParkBasics.register( 'MassSlider', MassSlider );
+  energySkateParkBasics.register( 'MassControlPanel', MassControlPanel );
 
-  return inherit( VBox, MassSlider );
+  return inherit( VBox, MassControlPanel );
 } );
