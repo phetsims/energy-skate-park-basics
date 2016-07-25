@@ -38,6 +38,9 @@ define( function( require ) {
   var SkaterState = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/model/SkaterState' );
   var Util = require( 'DOT/Util' );
 
+  // phet-io modules
+  var TNumber = require( 'ifphetio!PHET_IO/types/TNumber' );
+
   // Reuse empty object for creating SkaterStates to avoid allocations
   var EMPTY_OBJECT = {};
 
@@ -222,7 +225,7 @@ define( function( require ) {
     if ( !draggableTracks ) {
 
       // For screens 1-2, the index of the selected scene (and track) within the screen
-      this.addProperty( 'scene', 0, options.tandem.createTandem( 'scene' ) );
+      this.addProperty( 'scene', 0, options.tandem.createTandem( 'sceneProperty' ), TNumber( 'unitless' ) );
 
       // Shape types
       // For the double well, move the left well up a bit since the interpolation moves it down by that much, and we
@@ -278,7 +281,7 @@ define( function( require ) {
   }
 
   energySkateParkBasics.register( 'EnergySkateParkBasicsModel', EnergySkateParkBasicsModel );
-  
+
   return inherit( PropertySet, EnergySkateParkBasicsModel, {
 
     // Add the tracks that will be in the track toolbox for the "Playground" screen
