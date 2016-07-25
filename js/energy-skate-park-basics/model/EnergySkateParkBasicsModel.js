@@ -40,6 +40,8 @@ define( function( require ) {
 
   // phet-io modules
   var TNumber = require( 'ifphetio!PHET_IO/types/TNumber' );
+  var TBoolean = require( 'ifphetio!PHET_IO/types/TBoolean' );
+  var TString = require( 'ifphetio!PHET_IO/types/TString' );
 
   // Reuse empty object for creating SkaterStates to avoid allocations
   var EMPTY_OBJECT = {};
@@ -117,28 +119,29 @@ define( function( require ) {
       // adjusted, see #195
       availableModelBounds: null
     }, {
-      phetioIDMap: {
-        // Model for visibility of various view parameters
-        pieChartVisible: tandem.createTandem( 'pieChartVisible' ),
-        barGraphVisible: tandem.createTandem( 'barGraphVisible' ),
-        gridVisible: tandem.createTandem( 'gridVisible' ),
-        speedometerVisible: tandem.createTandem( 'speedometerVisible' ),
-
-        // Enabled/disabled for the track editing buttons
-        editButtonEnabled: tandem.createTandem( 'editButtonEnabled' ),
-        clearButtonEnabled: tandem.createTandem( 'clearButtonEnabled' ),
-
-        // Whether the sim is paused or running
-        paused: tandem.createTandem( 'paused' ),
-
-        // speed of the model, either 'normal' or 'slow'
-        speed: tandem.createTandem( 'speed' ),
-
-        // Coefficient of friction (unitless) between skater and track
-        friction: tandem.createTandem( 'friction' ),
-
-        // Whether the skater should stick to the track like a roller coaster, or be able to fly off like a street
-        detachable: tandem.createTandem( 'detachable' )
+      tandemSet: {
+        pieChartVisible: tandem.createTandem( 'pieChartVisibleProperty' ),
+        barGraphVisible: tandem.createTandem( 'barGraphVisibleProperty' ),
+        gridVisible: tandem.createTandem( 'gridVisibleProperty' ),
+        speedometerVisible: tandem.createTandem( 'speedometerVisibleProperty' ),
+        editButtonEnabled: tandem.createTandem( 'editButtonEnabledProperty' ),
+        clearButtonEnabled: tandem.createTandem( 'clearButtonEnabledProperty' ),
+        paused: tandem.createTandem( 'pausedProperty' ),
+        speed: tandem.createTandem( 'speedProperty' ),
+        friction: tandem.createTandem( 'frictionProperty' ),
+        detachable: tandem.createTandem( 'detachableProperty' )
+      },
+      typeSet: {
+        pieChartVisible: TBoolean,
+        barGraphVisible: TBoolean,
+        gridVisible: TBoolean,
+        speedometerVisible: TBoolean,
+        editButtonEnabled: TBoolean,
+        clearButtonEnabled: TBoolean,
+        paused: TBoolean,
+        speed: TString,
+        friction: TNumber( 'unitless' ),
+        detachable: TBoolean
       }
     } );
 
