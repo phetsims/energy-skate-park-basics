@@ -48,6 +48,9 @@ define( function( require ) {
   var Node = require( 'SCENERY/nodes/Node' );
   var EraserButton = require( 'SCENERY_PHET/buttons/EraserButton' );
 
+  // phet-io modules
+  var TBoolean = require( 'ifphetio!PHET_IO/types/TBoolean' );
+
   // strings
   var controlsRestartSkaterString = require( 'string!ENERGY_SKATE_PARK_BASICS/controls.restart-skater' );
   var propertiesSpeedString = require( 'string!ENERGY_SKATE_PARK_BASICS/properties.speed' );
@@ -138,23 +141,28 @@ define( function( require ) {
     // Put the pie chart legend to the right of the bar chart, see #60, #192
     pieChartLegend.mutate( { top: barGraphBackground.top, left: barGraphBackground.right + 8 } );
 
-    var playProperty = new Property( !model.property( 'paused' ).value );
-    model.property( 'paused' ).link( function( paused ) {
-      playProperty.set( !paused );
+    var playingProperty = new Property( !model.property( 'paused' ).value, {
+      tandem: tandem.createTandem( 'playingProperty' ),
+      type: TBoolean
     } );
-    playProperty.link( function( playing ) {
+    model.property( 'paused' ).link( function( paused ) {
+      playingProperty.set( !paused );
+    } );
+    playingProperty.link( function( playing ) {
       model.property( 'paused' ).set( !playing );
     } );
-    var playPauseButton = new PlayPauseButton( playProperty, { phetioID: 'playPauseButton' } ).mutate( { scale: 0.6 } );
+    var playPauseButton = new PlayPauseButton( playingProperty, {
+      tandem: tandem.createTandem( 'playPauseButton' )
+    } ).mutate( { scale: 0.6 } );
 
     // Make the Play/Pause button bigger when it is showing the pause button, see #298
     var pauseSizeIncreaseFactor = 1.35;
-    playProperty.lazyLink( function( isPlaying ) {
+    playingProperty.lazyLink( function( isPlaying ) {
       playPauseButton.scale( isPlaying ? ( 1 / pauseSizeIncreaseFactor ) : pauseSizeIncreaseFactor );
     } );
 
     var stepButton = new StepForwardButton( {
-      playingProperty: playProperty,
+      playingProperty: playingProperty,
       listener: function() { model.manualStep(); },
       phetioID: tandem.createTandem( 'stepButton' )
     } );
