@@ -129,9 +129,9 @@ define( function( require ) {
     this.addChild( barGraphBackground );
 
     if ( !model.draggableTracks ) {
-      this.sceneSelectionPanel = new SceneSelectionPanel( model, this, modelViewTransform, {
-        tandem: tandem
-      } );// layout done in layout bounds
+
+      // layout done in layout bounds
+      this.sceneSelectionPanel = new SceneSelectionPanel( model, this, modelViewTransform, tandem.createTandem( 'sceneSelectionPanel' ) );
       this.addChild( this.sceneSelectionPanel );
     }
 

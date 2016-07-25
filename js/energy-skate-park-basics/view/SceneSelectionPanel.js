@@ -18,14 +18,18 @@ define( function( require ) {
   var BackgroundNode = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/view/BackgroundNode' );
   var RadioButtonGroup = require( 'SUN/buttons/RadioButtonGroup' );
 
+  // phet-io modules
+  var TNumber = require( 'ifphetio!PHET_IO/types/TNumber' );
+
   /**
    * Construct a SceneSelectionPanel.  Pass the entire model since it is used to create TrackNode
    * @param {EnergySkateParkBasicsModel} model the main model for the entire screen
    * @param {EnergySkateParkBasicsView} view the main view for the entire screen
    * @param {ModelViewTransform2} transform the model view transform
+   * @param {Tandem} tandem
    * @constructor
    */
-  function SceneSelectionPanel( model, view, transform, options ) {
+  function SceneSelectionPanel( model, view, transform, tandem ) {
 
     // Create a button with a scene like the track in the index
     var createNode = function( index ) {
@@ -46,17 +50,20 @@ define( function( require ) {
       {
         value: 0,
         node: createNode( 0 ),
-        phetioID: options.tandem.createTandem( 'scene1RadioButton' )
+        tandem: tandem.createTandem( 'scene1RadioButton' ),
+        type: TNumber && TNumber( 'unitless' )
       },
       {
         value: 1,
         node: createNode( 1 ),
-        phetioID: options.tandem.createTandem( 'scene2RadioButton' )
+        tandem: tandem.createTandem( 'scene2RadioButton' ),
+        type: TNumber && TNumber( 'unitless' )
       },
       {
         value: 2,
         node: createNode( 2 ),
-        phetioID: options.tandem.createTandem( 'scene3RadioButton' )
+        tandem: tandem.createTandem( 'scene3RadioButton' ),
+        type: TNumber && TNumber( 'unitless' )
       }
     ], {
       orientation: 'vertical',
@@ -74,6 +81,6 @@ define( function( require ) {
   }
 
   energySkateParkBasics.register( 'SceneSelectionPanel', SceneSelectionPanel );
-  
+
   return inherit( Panel, SceneSelectionPanel );
 } );
