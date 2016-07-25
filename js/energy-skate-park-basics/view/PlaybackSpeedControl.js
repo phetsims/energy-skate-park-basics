@@ -16,6 +16,9 @@ define( function( require ) {
   var Text = require( 'SCENERY/nodes/Text' );
   var PhetFont = require( 'SCENERY_PHET/PhetFont' );
 
+  // phet-io modules
+  var TString = require( 'ifphetio!PHET_IO/types/TString' );
+
   // strings
   var normalString = require( 'string!ENERGY_SKATE_PARK_BASICS/normal' );
   var slowMotionString = require( 'string!ENERGY_SKATE_PARK_BASICS/slow.motion' );
@@ -27,33 +30,36 @@ define( function( require ) {
 
   /**
    * @param {Property<Number>} speedProperty the instantaneous speed of the skater (magnitude of the velocity vector)
+   * @param {Tandem} tandem
    * @constructor
    */
-  function PlaybackSpeedControl( speedProperty, options ) {
+  function PlaybackSpeedControl( speedProperty, tandem ) {
 
-    var slowMotionButton = new AquaRadioButton( speedProperty, 'slow', new Text( slowMotionString, { font: new PhetFont( 15 ) } ), {
+    var slowMotionRadioButton = new AquaRadioButton( speedProperty, 'slow', new Text( slowMotionString, { font: new PhetFont( 15 ) } ), {
       radius: RADIO_BUTTON_RADIUS,
-      phetioID: options.slowSpeedRadioButtonPhETIOID
+      tandem: tandem.createTandem( 'slowMotionRadioButton' ),
+      type: TString
     } );
-    var normalButton = new AquaRadioButton( speedProperty, 'normal', new Text( normalString, { font: new PhetFont( 15 ) } ), {
+    var normalSpeedRadioButton = new AquaRadioButton( speedProperty, 'normal', new Text( normalString, { font: new PhetFont( 15 ) } ), {
       radius: RADIO_BUTTON_RADIUS,
       x: 130,
-      phetioID: options.normalSpeedRadioButtonPhETIOID
+      tandem: tandem.createTandem( 'normalSpeedButton' ),
+      type: TString
     } );
-    slowMotionButton.touchArea = slowMotionButton.localBounds.dilatedXY( X_DILATION, Y_DILATION );
-    normalButton.touchArea = normalButton.localBounds.dilatedXY( X_DILATION, Y_DILATION );
+    slowMotionRadioButton.touchArea = slowMotionRadioButton.localBounds.dilatedXY( X_DILATION, Y_DILATION );
+    normalSpeedRadioButton.touchArea = normalSpeedRadioButton.localBounds.dilatedXY( X_DILATION, Y_DILATION );
     VBox.call( this, {
       align: 'left',
       spacing: 4,
       maxWidth: 142,
       children: [
-        slowMotionButton,
-        normalButton
+        slowMotionRadioButton,
+        normalSpeedRadioButton
       ]
     } );
   }
 
   energySkateParkBasics.register( 'PlaybackSpeedControl', PlaybackSpeedControl );
-  
+
   return inherit( VBox, PlaybackSpeedControl );
 } );

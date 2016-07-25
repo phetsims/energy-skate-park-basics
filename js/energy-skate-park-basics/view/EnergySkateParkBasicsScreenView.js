@@ -196,10 +196,7 @@ define( function( require ) {
     model.skater.linkAttribute( 'moved', view.returnSkaterButton, 'enabled' );
     this.addChild( this.returnSkaterButton );
 
-    this.addChild( new PlaybackSpeedControl( model.property( 'speed' ), {
-      slowSpeedRadioButtonPhETIOID: tandem.createTandem( 'slowSpeedRadioButton' ),
-      normalSpeedRadioButtonPhETIOID: tandem.createTandem( 'normalSpeedRadioButton' )
-    } ).mutate( {
+    this.addChild( new PlaybackSpeedControl( model.property( 'speed' ), tandem.createTandem( 'playbackSpeedControl' ) ).mutate( {
       left: stepButton.right + 20,
       centerY: playPauseButton.centerY
     } ) );
