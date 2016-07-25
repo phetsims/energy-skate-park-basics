@@ -33,10 +33,10 @@ define( function( require ) {
    * @param {Skater} skater the model's skater model
    * @param {Property<Boolean>} barGraphVisibleProperty property that indicates whether the bar graph is visible
    * @param {Function} clearThermal function to be called when the user presses the clear thermal button.
-   * @param {object} [options]
+   * @param {Tandem} tandem
    * @constructor
    */
-  function BarGraphBackground( skater, barGraphVisibleProperty, clearThermal, options ) {
+  function BarGraphBackground( skater, barGraphVisibleProperty, clearThermal, tandem ) {
 
     var barGraphBackground = this;
 
@@ -77,10 +77,9 @@ define( function( require ) {
     var thermalLabel = createLabel( 2, energyThermalString, EnergySkateParkColorScheme.thermalEnergy );
     var totalLabel = createLabel( 3, energyTotalString, EnergySkateParkColorScheme.totalEnergy );
 
-    var clearThermalButton = new ClearThermalButton( clearThermal, skater, {
+    var clearThermalButton = new ClearThermalButton( clearThermal, skater, tandem.createTandem( 'clearThermalButton' ), {
       centerX: thermalLabel.centerX,
-      y: thermalLabel.bottom + 12,
-      phetioID: options.tandem.createTandem( 'barGraph.clearThermalButton' )
+      y: thermalLabel.bottom + 12
     } );
     skater.allowClearingThermalEnergyProperty.link( function( allowClearingThermalEnergy ) {
       clearThermalButton.enabled = allowClearingThermalEnergy;
@@ -129,6 +128,6 @@ define( function( require ) {
   }
 
   energySkateParkBasics.register( 'BarGraphBackground', BarGraphBackground );
-  
+
   return inherit( Panel, BarGraphBackground );
 } );

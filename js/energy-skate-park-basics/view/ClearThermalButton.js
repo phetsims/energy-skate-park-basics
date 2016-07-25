@@ -30,11 +30,10 @@ define( function( require ) {
    * @param {*}options
    * @constructor
    */
-  function ClearThermalButton( callback, skater, options ) {
+  function ClearThermalButton( callback, skater, tandem, options ) {
     var clearThermalButton = this;
     options = _.extend( {
       cursor: 'pointer',
-      phetioID: null
     }, options );
 
     var icon = new Image( trashCanImage, { scale: 0.22 } );
@@ -48,7 +47,7 @@ define( function( require ) {
       buttonAppearanceStrategy: RectangularButtonView.flatAppearanceStrategy,
       xMargin: 7,
       yMargin: 3,
-      phetioID: options.phetioID
+      tandem: tandem
     } );
     skater.allowClearingThermalEnergyProperty.link(
       function( allowClearingThermalEnergy ) {
@@ -61,6 +60,6 @@ define( function( require ) {
   }
 
   energySkateParkBasics.register( 'ClearThermalButton', ClearThermalButton );
-  
+
   return inherit( RectangularPushButton, ClearThermalButton );
 } );

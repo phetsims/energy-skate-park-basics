@@ -88,9 +88,9 @@ define( function( require ) {
     var pieChartLegend = new PieChartLegend(
       model.skater,
       model.clearThermal.bind( model ),
-      model.property( 'pieChartVisible' ), {
-        tandem: tandem
-      } );
+      model.property( 'pieChartVisible' ),
+      tandem
+    );
     this.addChild( pieChartLegend );
 
     this.controlPanel = new EnergySkateParkBasicsControlPanel( model, {
@@ -126,8 +126,8 @@ define( function( require ) {
       return view.availableModelBounds && containsAbove( view.availableModelBounds, position.x, position.y );
     } );
 
-    var barGraphBackground = new BarGraphBackground( model.skater, model.property( 'barGraphVisible' ), model.clearThermal.bind( model ),
-      { tandem: tandem } );
+    var barGraphBackground = new BarGraphBackground( model.skater, model.property( 'barGraphVisible' ),
+      model.clearThermal.bind( model ), tandem.createTandem( 'barGraphBackground' ) );
     this.addChild( barGraphBackground );
 
     if ( !model.draggableTracks ) {
