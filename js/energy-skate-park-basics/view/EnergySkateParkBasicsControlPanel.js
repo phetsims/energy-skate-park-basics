@@ -40,7 +40,7 @@ define( function( require ) {
    * @param {object} [options]
    * @constructor
    */
-  function EnergySkateParkBasicsControlPanel( model, options ) {
+  function EnergySkateParkBasicsControlPanel( model, tandem ) {
     var textOptions = {
       font: new PhetFont( 14 ),
       maxWidth: 134 // selected by choosing the length of widest English string in ?stringTest=double
@@ -66,25 +66,25 @@ define( function( require ) {
       new CheckBox(
         new HBox( { children: pad( pieChartSet ) } ),
         model.property( 'pieChartVisible' ),
-        _.extend( { phetioID: options.tandem.createTandem( 'pieChartCheckBox' ) }, checkBoxItemOptions )
+        _.extend( { tandem: tandem.createTandem( 'pieChartCheckBox' ) }, checkBoxItemOptions )
       ),
       new CheckBox(
         new HBox( { children: pad( barGraphSet ) } ),
         model.property( 'barGraphVisible' ),
-        _.extend( { phetioID: options.tandem.createTandem( 'barGraphCheckBox' ) }, checkBoxItemOptions ) ),
+        _.extend( { tandem: tandem.createTandem( 'barGraphCheckBox' ) }, checkBoxItemOptions ) ),
       new CheckBox(
         new HBox( { children: pad( gridSet ) } ),
         model.property( 'gridVisible' ),
-        _.extend( { phetioID: options.tandem.createTandem( 'gridCheckBox' ) }, checkBoxItemOptions ) ),
+        _.extend( { tandem: tandem.createTandem( 'gridCheckBox' ) }, checkBoxItemOptions ) ),
       new CheckBox(
         new HBox( { children: pad( speedometerSet ) } ),
         model.property( 'speedometerVisible' ),
-        _.extend( { phetioID: options.tandem.createTandem( 'speedometerCheckBox' ) }, checkBoxItemOptions )
+        _.extend( { tandem: tandem.createTandem( 'speedometerCheckBox' ) }, checkBoxItemOptions )
       ) ];
     var checkBoxes = new VBox( { align: 'left', spacing: 10, children: checkBoxChildren } );
 
     var massSlider = new MassSlider( model.skater.massProperty, {
-      phetioID: options.tandem.createTandem( 'massSlider' )
+      tandem: tandem.createTandem( 'massSlider' )
     } );
 
     // For 1st screen, show MassSlider
@@ -92,7 +92,7 @@ define( function( require ) {
     var children = [ checkBoxes, massSlider ];
     if ( model.frictionAllowed ) {
       children.push( new FrictionControl( model.property( 'friction' ), {
-        phetioID: options.tandem.createTandem( 'frictionSlider' )
+        tandem: tandem.createTandem( 'frictionSlider' )
       } ) );
     }
     var content = new VBox( { resize: false, spacing: 6, children: children } );

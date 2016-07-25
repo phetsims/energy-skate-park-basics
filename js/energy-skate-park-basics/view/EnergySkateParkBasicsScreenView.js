@@ -93,9 +93,7 @@ define( function( require ) {
     );
     this.addChild( pieChartLegend );
 
-    this.controlPanel = new EnergySkateParkBasicsControlPanel( model, {
-      tandem: tandem.createTandem( 'controlPanel' )
-    } );
+    this.controlPanel = new EnergySkateParkBasicsControlPanel( model, tandem.createTandem( 'controlPanel' ) );
     this.addChild( this.controlPanel );
     this.controlPanel.right = this.layoutBounds.width - 5;
     this.controlPanel.top = 5;
