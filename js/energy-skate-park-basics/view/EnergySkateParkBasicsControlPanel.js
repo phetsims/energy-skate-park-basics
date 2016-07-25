@@ -91,9 +91,7 @@ define( function( require ) {
     // For 2nd and 3rd screen, show Friction Slider and Mass Slider, see #147
     var children = [ checkBoxes, massSlider ];
     if ( model.frictionAllowed ) {
-      children.push( new FrictionControl( model.property( 'friction' ), {
-        tandem: tandem.createTandem( 'frictionSlider' )
-      } ) );
+      children.push( new FrictionControl( model.property( 'friction' ), tandem.createTandem( 'frictionSlider' ) ) );
     }
     var content = new VBox( { resize: false, spacing: 6, children: children } );
 
@@ -102,7 +100,7 @@ define( function( require ) {
   }
 
   energySkateParkBasics.register( 'EnergySkateParkBasicsControlPanel', EnergySkateParkBasicsControlPanel );
-  
+
   return inherit( Panel, EnergySkateParkBasicsControlPanel, {
 
     // Create an icon for the bar graph check box

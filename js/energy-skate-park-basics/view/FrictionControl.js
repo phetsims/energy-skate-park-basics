@@ -24,11 +24,12 @@ define( function( require ) {
 
   /**
    * @param {Property<Number>} frictionProperty the axon property representing the value of the friction
+   * @param {Tandem} tandem
    * @constructor
    */
-  function FrictionControl( frictionProperty, options ) {
+  function FrictionControl( frictionProperty, tandem ) {
     var frictionRange = { min: 0, max: frictionProperty.value * 2 };
-    var slider = new HSlider( frictionProperty, frictionRange, _.extend( { phetioID: options.phetioID }, Constants.SLIDER_OPTIONS ) );
+    var slider = new HSlider( frictionProperty, frictionRange, _.extend( { tandem: tandem }, Constants.SLIDER_OPTIONS ) );
     var tickFont = new PhetFont( 10 );
 
     var textOptions = {
@@ -51,6 +52,6 @@ define( function( require ) {
   }
 
   energySkateParkBasics.register( 'FrictionControl', FrictionControl );
-  
+
   return inherit( VBox, FrictionControl );
 } );
