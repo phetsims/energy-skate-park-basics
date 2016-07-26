@@ -11,7 +11,7 @@ define( function( require ) {
   // modules
   var energySkateParkBasics = require( 'ENERGY_SKATE_PARK_BASICS/energySkateParkBasics' );
   var inherit = require( 'PHET_CORE/inherit' );
-  var Node = require( 'SCENERY/nodes/Node' );
+  var TandemNode = require( 'TANDEM/scenery/nodes/TandemNode' );
   var Vector2 = require( 'DOT/Vector2' );
   var FontAwesomeNode = require( 'SUN/FontAwesomeNode' );
   var LinearFunction = require( 'DOT/LinearFunction' );
@@ -27,7 +27,7 @@ define( function( require ) {
    * @param {Node} parentNode
    * @constructor
    */
-  function ControlPointUI( model, track, controlPointIndex, modelViewTransform, parentNode ) {
+  function ControlPointUI( model, track, controlPointIndex, modelViewTransform, parentNode, tandem ) {
 
     var controlPointUI = this;
 
@@ -54,7 +54,9 @@ define( function( require ) {
     this.sceneNode = sceneNode;
     sceneNode.addInputListener( this.clickToDismissListener );
 
-    Node.call( this );
+    TandemNode.call( this, {
+      tandem: tandem
+    } );
 
     var isEndPoint = controlPointIndex === 0 || controlPointIndex === track.controlPoints.length - 1;
     var alpha = new LinearFunction( 0, track.controlPoints.length - 1, track.minPoint, track.maxPoint )( controlPointIndex );
@@ -103,8 +105,8 @@ define( function( require ) {
   }
 
   energySkateParkBasics.register( 'ControlPointUI', ControlPointUI );
-  
-  return inherit( Node, ControlPointUI, {
+
+  return inherit( TandemNode, ControlPointUI, {
 
     //Override to additionally remove the attached input listener
     detach: function() {

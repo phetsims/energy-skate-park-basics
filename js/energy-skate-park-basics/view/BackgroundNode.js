@@ -11,7 +11,7 @@ define( function( require ) {
   // modules
   var energySkateParkBasics = require( 'ENERGY_SKATE_PARK_BASICS/energySkateParkBasics' );
   var inherit = require( 'PHET_CORE/inherit' );
-  var Node = require( 'SCENERY/nodes/Node' );
+  var TandemNode = require( 'TANDEM/scenery/nodes/TandemNode' );
   var Rectangle = require( 'SCENERY/nodes/Rectangle' );
   var TandemImage = require( 'TANDEM/scenery/nodes/TandemImage' );
   var LinearGradient = require( 'SCENERY/util/LinearGradient' );
@@ -32,7 +32,10 @@ define( function( require ) {
    * @constructor
    */
   function BackgroundNode( layoutBounds, tandem, options ) {
-    Node.call( this, { pickable: false } );
+    TandemNode.call( this, {
+      pickable: false,
+      tandem: tandem
+    } );
 
     this.sky = new Rectangle( 0, 0, 0, 0 );
     this.addChild( this.sky );
@@ -59,7 +62,7 @@ define( function( require ) {
 
   energySkateParkBasics.register( 'BackgroundNode', BackgroundNode );
 
-  return inherit( Node, BackgroundNode, {
+  return inherit( TandemNode, BackgroundNode, {
 
       // Exactly fit the geometry to the screen so no matter what aspect ratio it will always show something.
       // Perhaps it will improve performance too?

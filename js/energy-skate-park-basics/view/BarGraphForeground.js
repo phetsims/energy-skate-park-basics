@@ -15,7 +15,7 @@ define( function( require ) {
   var Rectangle = require( 'SCENERY/nodes/Rectangle' );
   var EnergySkateParkColorScheme = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/view/EnergySkateParkColorScheme' );
   var Property = require( 'AXON/Property' );
-  var Node = require( 'SCENERY/nodes/Node' );
+  var TandemNode = require( 'TANDEM/scenery/nodes/TandemNode' );
   var DerivedProperty = require( 'AXON/DerivedProperty' );
 
   /**
@@ -23,9 +23,10 @@ define( function( require ) {
    * @param {Skater} skater the model's skater model
    * @param {Property<Boolean>} barGraphVisibleProperty property that indicates whether the bar graph is visible
    * @param {string} barRenderer the renderer type to use for the bars.  For some reason it is not currently inherited.
+   * @param {Tandem} tandem
    * @constructor
    */
-  function BarGraphForeground( skater, barGraphBackground, barGraphVisibleProperty, barRenderer ) {
+  function BarGraphForeground( skater, barGraphBackground, barGraphVisibleProperty, barRenderer, tandem ) {
 
     var barWidth = barGraphBackground.barWidth;
     var getBarX = barGraphBackground.getBarX;
@@ -84,7 +85,8 @@ define( function( require ) {
     var thermalBar = createBar( 2, EnergySkateParkColorScheme.thermalEnergy, skater.thermalEnergyProperty, false );
     var totalBar = createBar( 3, EnergySkateParkColorScheme.totalEnergy, skater.totalEnergyProperty, false );
 
-    Node.call( this, {
+    TandemNode.call( this, {
+      tandem: tandem,
 
       // Manually align with the baseline of the bar chart.
       x: 24, y: 15,
@@ -102,6 +104,6 @@ define( function( require ) {
   }
 
   energySkateParkBasics.register( 'BarGraphForeground', BarGraphForeground );
-  
-  return inherit( Node, BarGraphForeground );
+
+  return inherit( TandemNode, BarGraphForeground );
 } );

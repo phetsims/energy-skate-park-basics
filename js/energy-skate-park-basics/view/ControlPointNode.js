@@ -180,7 +180,14 @@ define( function( require ) {
         // Threshold at a few drag events in case the user didn't mean to drag it but accidentally moved it a few pixels.
         // Make sure the track hasn't recently detached (was seen twice in fuzzMouse=100 testing)
         if ( dragEvents <= 3 && trackNode.parents.length > 0 ) {
-          var controlPointUI = new ControlPointUI( model, track, i, modelViewTransform, trackNode.parents[ 0 ] );
+          var controlPointUI = new ControlPointUI(
+            model,
+            track,
+            i,
+            modelViewTransform,
+            trackNode.parents[ 0 ],
+            tandem.createTandem( 'controlPointUI' )
+          );
 
           // If the track was removed, get rid of the buttons
           track.on( 'remove', function() { controlPointUI.detach(); } );

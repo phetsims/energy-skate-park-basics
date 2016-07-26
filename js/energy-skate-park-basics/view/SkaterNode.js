@@ -18,7 +18,7 @@ define( function( require ) {
   var TandemDragHandler = require( 'TANDEM/scenery/input/TandemDragHandler' );
   var Matrix3 = require( 'DOT/Matrix3' );
   var LinearFunction = require( 'DOT/LinearFunction' );
-  var Node = require( 'SCENERY/nodes/Node' );
+  var TandemNode = require( 'TANDEM/scenery/nodes/TandemNode' );
   var Constants = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/Constants' );
 
   // images
@@ -55,7 +55,11 @@ define( function( require ) {
       tandem: tandem.createTandem( 'rightSkaterImageNode' )
     } );
 
-    Node.call( this, { children: [ leftSkaterImageNode, rightSkaterImageNode ], renderer: renderer } );
+    TandemNode.call( this, {
+      children: [ leftSkaterImageNode, rightSkaterImageNode ],
+      renderer: renderer,
+      tandem: tandem
+    } );
 
     skater.directionProperty.link( function( direction ) {
       leftSkaterImageNode.visible = direction === 'left';
@@ -177,5 +181,5 @@ define( function( require ) {
 
   energySkateParkBasics.register( 'SkaterNode', SkaterNode );
 
-  return inherit( Node, SkaterNode );
+  return inherit( TandemNode, SkaterNode );
 } );

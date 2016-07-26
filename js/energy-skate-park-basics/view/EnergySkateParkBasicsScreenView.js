@@ -46,7 +46,7 @@ define( function( require ) {
   var EnergySkateParkColorScheme = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/view/EnergySkateParkColorScheme' );
   var Util = require( 'SCENERY/util/Util' );
   var Bounds2 = require( 'DOT/Bounds2' );
-  var Node = require( 'SCENERY/nodes/Node' );
+  var TandemNode = require( 'TANDEM/scenery/nodes/TandemNode' );
   var EraserButton = require( 'SCENERY_PHET/buttons/EraserButton' );
 
   // phet-io modules
@@ -88,7 +88,7 @@ define( function( require ) {
     this.backgroundNode = new BackgroundNode( this.layoutBounds, tandem.createTandem( 'backgroundNode' ) );
     this.addChild( this.backgroundNode );
 
-    this.gridNode = new GridNode( model.property( 'gridVisible' ), modelViewTransform );
+    this.gridNode = new GridNode( model.property( 'gridVisible' ), modelViewTransform, tandem.createTandem( 'gridNode' ) );
     this.addChild( this.gridNode );
 
     var pieChartLegend = new PieChartLegend(
@@ -349,19 +349,21 @@ define( function( require ) {
     var gaugeNeedleNode = new GaugeNeedleNode( model.skater.property( 'speed' ), {
       min: 0,
       max: 20
-    }, {
+    }, tandem.createTandem( 'gaugeNeedleNode' ), {
       renderer: renderer
     } );
     model.property( 'speedometerVisible' ).linkAttribute( gaugeNeedleNode, 'visible' );
     gaugeNeedleNode.x = speedometerNode.x;
     gaugeNeedleNode.y = speedometerNode.y;
     this.addChild( gaugeNeedleNode );
-    this.addChild( new BarGraphForeground( model.skater, barGraphBackground, model.property( 'barGraphVisible' ), renderer ) );
+    this.addChild( new BarGraphForeground( model.skater, barGraphBackground, model.property( 'barGraphVisible' ), renderer,
+      tandem.createTandem( 'barGraphForeground' )
+    ) );
     this.addChild( skaterNode );
 
     var pieChartNode = renderer === 'webgl' ?
-                       new PieChartWebGLNode( model.skater, model.property( 'pieChartVisible' ), modelViewTransform ) :
-                       new PieChartNode( model.skater, model.property( 'pieChartVisible' ), modelViewTransform );
+                       new PieChartWebGLNode( model.skater, model.property( 'pieChartVisible' ), modelViewTransform, tandem.createTandem( 'pieChartNode' ) ) :
+                       new PieChartNode( model.skater, model.property( 'pieChartVisible' ), modelViewTransform, tandem.createTandem( 'pieChartNode' ) );
     this.addChild( pieChartNode );
 
     // Buttons to return the skater when she is offscreen, see #219

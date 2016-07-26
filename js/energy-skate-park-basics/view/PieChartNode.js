@@ -12,7 +12,7 @@ define( function( require ) {
   // modules
   var energySkateParkBasics = require( 'ENERGY_SKATE_PARK_BASICS/energySkateParkBasics' );
   var inherit = require( 'PHET_CORE/inherit' );
-  var Node = require( 'SCENERY/nodes/Node' );
+  var TandemNode = require( 'TANDEM/scenery/nodes/TandemNode' );
   var Circle = require( 'SCENERY/nodes/Circle' );
   var Shape = require( 'KITE/Shape' );
   var Path = require( 'SCENERY/nodes/Path' );
@@ -25,7 +25,7 @@ define( function( require ) {
    * @param {ModelViewTransform2}} modelViewTransform
    * @constructor
    */
-  function PieChartNode( skater, pieChartVisibleProperty, modelViewTransform ) {
+  function PieChartNode( skater, pieChartVisibleProperty, modelViewTransform, tandem ) {
     var pieChartNode = this;
 
     var kineticEnergySlice = new Path( null, {
@@ -49,7 +49,11 @@ define( function( require ) {
       stroke: 'black',
       lineWidth: 1
     } );
-    Node.call( this, { children: [ thermalEnergySlice, potentialEnergySlice, kineticEnergySlice ], pickable: false } );
+    TandemNode.call( this, {
+      tandem: tandem,
+      children: [ thermalEnergySlice, potentialEnergySlice, kineticEnergySlice ],
+      pickable: false
+    } );
 
     var updatePieChartLocation = function() {
 
@@ -155,6 +159,6 @@ define( function( require ) {
   }
 
   energySkateParkBasics.register( 'PieChartNode', PieChartNode );
-  
-  return inherit( Node, PieChartNode );
+
+  return inherit( TandemNode, PieChartNode );
 } );

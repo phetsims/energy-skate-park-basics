@@ -11,7 +11,7 @@ define( function( require ) {
   // modules
   var energySkateParkBasics = require( 'ENERGY_SKATE_PARK_BASICS/energySkateParkBasics' );
   var inherit = require( 'PHET_CORE/inherit' );
-  var Node = require( 'SCENERY/nodes/Node' );
+  var TandemNode = require( 'TANDEM/scenery/nodes/TandemNode' );
   var Property = require( 'AXON/Property' );
   var PieChartWebGLSliceNode = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/view/PieChartWebGLSliceNode' );
   var EnergySkateParkColorScheme = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/view/EnergySkateParkColorScheme' );
@@ -23,10 +23,12 @@ define( function( require ) {
    * @param {ModelViewTransform2} modelViewTransform
    * @constructor
    */
-  function PieChartWebGLNode( skater, pieChartVisibleProperty, modelViewTransform ) {
+  function PieChartWebGLNode( skater, pieChartVisibleProperty, modelViewTransform, tandem ) {
 
     var pieChartNode = this;
-    Node.call( this );
+    TandemNode.call( this, {
+      tandem: tandem
+    } );
 
     // Show the pie chart above the skater's head
     Property.multilink( [ skater.headPositionProperty, pieChartVisibleProperty ], function( skaterHeadPosition, pieChartVisible ) {
@@ -127,6 +129,6 @@ define( function( require ) {
   }
 
   energySkateParkBasics.register( 'PieChartWebGLNode', PieChartWebGLNode );
-  
-  return inherit( Node, PieChartWebGLNode );
+
+  return inherit( TandemNode, PieChartWebGLNode );
 } );

@@ -13,7 +13,7 @@ define( function( require ) {
 
   // modules
   var energySkateParkBasics = require( 'ENERGY_SKATE_PARK_BASICS/energySkateParkBasics' );
-  var Node = require( 'SCENERY/nodes/Node' );
+  var TandemNode = require( 'TANDEM/scenery/nodes/TandemNode' );
   var Matrix3 = require( 'DOT/Matrix3' );
   var inherit = require( 'PHET_CORE/inherit' );
   var Util = require( 'DOT/Util' );
@@ -26,11 +26,12 @@ define( function( require ) {
   /**
    * Constructor
    * @param {Property} valueProperty Property.<number> which is portrayed
-   * @param {Object} [options] typical Node layout and display options
    * @param range {Object} contains min and max values that define the range
+   * @param {Tandem} tandem
+   * @param {Object} [options] typical Node layout and display options
    * @constructor
    */
-  function GaugeNeedleNode( valueProperty, range, options ) {
+  function GaugeNeedleNode( valueProperty, range, tandem, options ) {
 
     options = _.extend( {
       // Defaults
@@ -53,7 +54,10 @@ define( function( require ) {
     if ( options && options.renderer && options.renderer === 'webgl' ) {
       needle = needle.toCanvasNodeSynchronous();
     }
-    Node.call( this, { children: [ needle ] } );
+    TandemNode.call( this, {
+      tandem: tandem,
+      children: [ needle ]
+    } );
 
     var totalAngle = (options.numTicks - 1) * options.anglePerTick;
     var startAngle = -1 / 2 * Math.PI - totalAngle / 2;
@@ -82,6 +86,6 @@ define( function( require ) {
   }
 
   energySkateParkBasics.register( 'GaugeNeedleNode', GaugeNeedleNode );
-  
-  return inherit( Node, GaugeNeedleNode );
+
+  return inherit( TandemNode, GaugeNeedleNode );
 } );

@@ -13,7 +13,7 @@ define( function( require ) {
   // modules
   var energySkateParkBasics = require( 'ENERGY_SKATE_PARK_BASICS/energySkateParkBasics' );
   var inherit = require( 'PHET_CORE/inherit' );
-  var Node = require( 'SCENERY/nodes/Node' );
+  var TandemNode = require( 'TANDEM/scenery/nodes/TandemNode' );
   var Path = require( 'SCENERY/nodes/Path' );
   var Shape = require( 'KITE/Shape' );
   var LineStyles = require( 'KITE/util/LineStyles' );
@@ -49,7 +49,10 @@ define( function( require ) {
       trackNode.centerLine.lineDash = detachable ? null : [ 11, 8 ];
     } );
 
-    Node.call( this, { children: [ this.road, this.centerLine ] } );
+    TandemNode.call( this, {
+      children: [ this.road, this.centerLine ],
+      tandem: tandem
+    } );
 
     // Reuse arrays to save allocations and prevent garbage collections, see #38
     this.xArray = new FastArray( track.controlPoints.length );
@@ -95,7 +98,7 @@ define( function( require ) {
 
   energySkateParkBasics.register( 'TrackNode', TrackNode );
 
-  return inherit( Node, TrackNode, {
+  return inherit( TandemNode, TrackNode, {
 
     // When a control point has moved, or the track has moved, or the track has been reset, or on initialization
     // update the shape of the track.
