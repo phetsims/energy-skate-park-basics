@@ -46,8 +46,6 @@ define( function( require ) {
   var TandemText = require( 'TANDEM/scenery/nodes/TandemText' );
   var EnergySkateParkColorScheme = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/view/EnergySkateParkColorScheme' );
   var Util = require( 'SCENERY/util/Util' );
-  var Bounds2 = require( 'DOT/Bounds2' );
-  var TandemNode = require( 'TANDEM/scenery/nodes/TandemNode' );
   var EraserButton = require( 'SCENERY_PHET/buttons/EraserButton' );
 
   // phet-io modules

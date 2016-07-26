@@ -129,8 +129,8 @@ define( function( require ) {
         thinLineShape.moveTo( thinLine.x1, thinLine.y1 );
         thinLineShape.lineTo( thinLine.x2, thinLine.y2 );
       }
-      for ( var k = 0; k < thickLines.length; k++ ) {
-        var thickLine = thickLines[ k ];
+      for ( var m = 0; m < thickLines.length; m++ ) {
+        var thickLine = thickLines[ m ];
         thickLineShape.moveTo( thickLine.x1, thickLine.y1 );
         thickLineShape.lineTo( thickLine.x2, thickLine.y2 );
       }

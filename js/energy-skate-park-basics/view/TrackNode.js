@@ -41,7 +41,7 @@ define( function( require ) {
     this.model = model;
     this.modelViewTransform = modelViewTransform;
     this.availableBoundsProperty = availableBoundsProperty;
-    var controlPointNodeGroupTandem = tandem.createGroupTandem( 'controlPointNode' )
+    var controlPointNodeGroupTandem = tandem.createGroupTandem( 'controlPointNode' );
 
     this.road = new TandemPath( null, {
       fill: 'gray',

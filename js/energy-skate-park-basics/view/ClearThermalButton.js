@@ -34,7 +34,7 @@ define( function( require ) {
   function ClearThermalButton( callback, skater, tandem, options ) {
     var clearThermalButton = this;
     options = _.extend( {
-      cursor: 'pointer',
+      cursor: 'pointer'
     }, options );
 
     var iconImage = new TandemImage( trashCanImage, { scale: 0.22, tandem: tandem.createTandem( 'iconImage' ) } );
