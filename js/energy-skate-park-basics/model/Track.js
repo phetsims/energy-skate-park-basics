@@ -17,9 +17,12 @@ define( function( require ) {
   var SplineEvaluation = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/model/SplineEvaluation' );
   var dot = require( 'DOT/dot' );
 
+  // phet-io modules
+  var TTrack = require( 'ifphetio!PHET_IO/simulations/energy-skate-park-basics/TTrack' );
+  var TBoolean = require( 'ifphetio!PHET_IO/types/TBoolean' );
+
   // constants
   var FastArray = dot.FastArray;
-  var TTrack = require( 'ifphetio!PHET_IO/simulations/energy-skate-park-basics/TTrack' );
 
   /**
    * Model for a track, which has a fixed number of points.  If you added a point to a Track, you need a new track.
@@ -66,6 +69,19 @@ define( function( require ) {
       // Flag to indicate whether the user has dragged the track out of the toolbox.  If dragging from the toolbox,
       // then dragging translates the entire track instead of just a point.
       dropped: false
+    }, {
+      tandemSet: {
+        physical: tandem.createTandem( 'physicalProperty' ),
+        leftThePanel: tandem.createTandem( 'leftThePanelProperty' ),
+        dragging: tandem.createTandem( 'draggingProperty' ),
+        dropped: tandem.createTandem( 'droppedProperty' )
+      },
+      typeSet: {
+        physical: TBoolean,
+        leftThePanel: TBoolean,
+        dragging: TBoolean,
+        dropped: TBoolean
+      }
     } );
 
     this.property( 'physical' ).link( function() { events.trigger( 'track-changed' ); } );
