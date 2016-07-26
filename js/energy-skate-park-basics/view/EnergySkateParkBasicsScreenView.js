@@ -339,7 +339,8 @@ define( function( require ) {
       modelViewTransform,
       model.getClosestTrackAndPositionAndParameter.bind( model ),
       model.getPhysicalTracks.bind( model ),
-      renderer
+      renderer,
+      tandem.createTandem( 'skaterNode' )
     );
 
     var gaugeNeedleNode = new GaugeNeedleNode( model.skater.property( 'speed' ), {

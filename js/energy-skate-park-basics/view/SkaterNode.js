@@ -15,7 +15,7 @@ define( function( require ) {
   var inherit = require( 'PHET_CORE/inherit' );
   var Circle = require( 'SCENERY/nodes/Circle' );
   var Image = require( 'SCENERY/nodes/Image' );
-  var SimpleDragHandler = require( 'SCENERY/input/SimpleDragHandler' );
+  var TandemDragHandler = require( 'TANDEM/scenery/input/TandemDragHandler' );
   var Matrix3 = require( 'DOT/Matrix3' );
   var LinearFunction = require( 'DOT/LinearFunction' );
   var Node = require( 'SCENERY/nodes/Node' );
@@ -41,7 +41,7 @@ define( function( require ) {
    * to attach to them while dragging
    * @constructor
    */
-  function SkaterNode( skater, view, modelViewTransform, getClosestTrackAndPositionAndParameter, getPhysicalTracks, renderer ) {
+  function SkaterNode( skater, view, modelViewTransform, getClosestTrackAndPositionAndParameter, getPhysicalTracks, renderer, tandem ) {
     this.skater = skater;
     var skaterNode = this;
 
@@ -148,7 +148,8 @@ define( function( require ) {
       skater.trigger( 'updated' );
     }
 
-    this.addInputListener( new SimpleDragHandler( {
+    this.addInputListener( new TandemDragHandler( {
+      tandem: tandem.createTandem( 'inputListener' ),
       start: function( event ) {
         skater.dragging = true;
 
@@ -169,6 +170,6 @@ define( function( require ) {
   }
 
   energySkateParkBasics.register( 'SkaterNode', SkaterNode );
-  
+
   return inherit( Node, SkaterNode );
 } );
