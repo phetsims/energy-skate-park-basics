@@ -90,6 +90,9 @@ define( function( require ) {
 
     var model = this;
 
+    var controlPointGroupTandem = tandem.createGroupTandem( 'controlPoint' );
+    this.controlPointGroupTandem = controlPointGroupTandem;
+
     // Temporary flag that keeps track of whether the track was changed in the step before the physics update.
     // true if the skater's track is being dragged by the user, so that energy conservation no longer applies.
     // Only applies to one frame at a time (for the immediate next update).  See #127 and #135
@@ -239,21 +242,21 @@ define( function( require ) {
       // For the double well, move the left well up a bit since the interpolation moves it down by that much, and we
       // don't want the skater to go to y<0 while on the track.  Numbers determined by trial and error.
       var parabola = [
-        new ControlPoint( -4, 6 ),
-        new ControlPoint( 0, 0 ),
-        new ControlPoint( 4, 6 )
+        new ControlPoint( -4, 6, controlPointGroupTandem ),
+        new ControlPoint( 0, 0, controlPointGroupTandem ),
+        new ControlPoint( 4, 6, controlPointGroupTandem )
       ];
       var slope = [
-        new ControlPoint( -4, 6 ),
-        new ControlPoint( -2, 1.2 ),
-        new ControlPoint( 2, 0 )
+        new ControlPoint( -4, 6, controlPointGroupTandem ),
+        new ControlPoint( -2, 1.2, controlPointGroupTandem ),
+        new ControlPoint( 2, 0, controlPointGroupTandem )
       ];
       var doubleWell = [
-        new ControlPoint( -4, 5 ),
-        new ControlPoint( -2, 0.0166015 ),
-        new ControlPoint( 0, 2 ),
-        new ControlPoint( 2, 1 ),
-        new ControlPoint( 4, 5 )
+        new ControlPoint( -4, 5, controlPointGroupTandem ),
+        new ControlPoint( -2, 0.0166015, controlPointGroupTandem ),
+        new ControlPoint( 0, 2, controlPointGroupTandem ),
+        new ControlPoint( 2, 1, controlPointGroupTandem ),
+        new ControlPoint( 4, 5, controlPointGroupTandem )
       ];
 
       var parabolaTrack = new Track( this, this.tracks, parabola, false, null, this.availableModelBoundsProperty );
@@ -284,7 +287,7 @@ define( function( require ) {
     }
 
     if ( phet.chipper.getQueryParameter( 'debugTrack' ) ) {
-      DebugTracks.init( this );
+      DebugTracks.init( this, tandem.createGroupTandem( 'debugTrackControlPoint' ) );
     }
   }
 
@@ -304,14 +307,16 @@ define( function( require ) {
     // Add a single track to the track control panel.
     addDraggableTrack: function() {
 
+      var controlPointGroupTandem = this.controlPointGroupTandem;
+
       // Move the tracks over so they will be in the right position in the view coordinates, under the grass to the left
       // of the clock controls.  Could use view transform for this, but it would require creating the view first, so just
       // eyeballing it for now.
       var offset = new Vector2( -5.1, -0.85 );
       var controlPoints = [
-        new ControlPoint( offset.x - 1, offset.y ),
-        new ControlPoint( offset.x, offset.y ),
-        new ControlPoint( offset.x + 1, offset.y )
+        new ControlPoint( offset.x - 1, offset.y, controlPointGroupTandem ),
+        new ControlPoint( offset.x, offset.y, controlPointGroupTandem ),
+        new ControlPoint( offset.x + 1, offset.y, controlPointGroupTandem )
       ];
       this.tracks.add( new Track( this, this.tracks, controlPoints, true, null, this.availableModelBoundsProperty ) );
     },
@@ -1217,8 +1222,16 @@ define( function( require ) {
     // deleted. It should be an inner point of a track (not an end point)
     splitControlPoint: function( track, controlPointIndex, modelAngle ) {
       var vector = Vector2.createPolar( 0.5, modelAngle );
-      var newPoint1 = new ControlPoint( track.controlPoints[ controlPointIndex ].sourcePosition.x - vector.x, track.controlPoints[ controlPointIndex ].sourcePosition.y - vector.y );
-      var newPoint2 = new ControlPoint( track.controlPoints[ controlPointIndex ].sourcePosition.x + vector.x, track.controlPoints[ controlPointIndex ].sourcePosition.y + vector.y );
+      var newPoint1 = new ControlPoint(
+        track.controlPoints[ controlPointIndex ].sourcePosition.x - vector.x,
+        track.controlPoints[ controlPointIndex ].sourcePosition.y - vector.y,
+        controlPointGroupTandem
+      );
+      var newPoint2 = new ControlPoint(
+        track.controlPoints[ controlPointIndex ].sourcePosition.x + vector.x,
+        track.controlPoints[ controlPointIndex ].sourcePosition.y + vector.y,
+        controlPointGroupTandem
+      );
 
       var points1 = track.controlPoints.slice( 0, controlPointIndex );
       var points2 = track.controlPoints.slice( controlPointIndex + 1, track.controlPoints.length );

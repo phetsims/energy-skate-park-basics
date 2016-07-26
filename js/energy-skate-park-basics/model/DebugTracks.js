@@ -22,8 +22,12 @@ define( function( require ) {
   energySkateParkBasics.register( 'DebugTracks', DebugTracks );
 
   return inherit( Object, DebugTracks, {}, {
-      init: function( model ) {
+    init: function( model, controlPointGroupTandem ) {
         // Tracks to help demonstrate issues
+
+      var createControlPoint = function( x, y ) {
+        return createControlPoint( x, y, controlPointGroupTandem );
+      };
 
         var controlPoints = null;
         var track = null;
@@ -34,7 +38,7 @@ define( function( require ) {
           model.skater.position.set( new Vector2( -5, 8 ) );
           model.skater.released( 0, 0 );
 
-          controlPoints = [ new ControlPoint( 3.9238282647584946, 3.1917866726296955 ), new ControlPoint( 2.043971377459748, 4.847851073345259 ), new ControlPoint( -1.116994633273702, 3.686296958855098 ), new ControlPoint( -3.5806797853309487, 1.8639512522361352 ), new ControlPoint( -5.982719141323793, 6.235364490161 ) ];
+          controlPoints = [ createControlPoint( 3.9238282647584946, 3.1917866726296955 ), createControlPoint( 2.043971377459748, 4.847851073345259 ), createControlPoint( -1.116994633273702, 3.686296958855098 ), createControlPoint( -3.5806797853309487, 1.8639512522361352 ), createControlPoint( -5.982719141323793, 6.235364490161 ) ];
           track = new Track( model, model.tracks, controlPoints, true, null, model.availableModelBoundsProperty );
           track.physical = true;
           model.tracks.add( track );
@@ -48,7 +52,7 @@ define( function( require ) {
           model.skater.position.set( new Vector2( -5, 7.7 ) );
           model.skater.released( 0, 0 );
 
-          controlPoints = [ new ControlPoint( 3.9238282647584946, 3.1917866726296955 ), new ControlPoint( 2.043971377459748, 4.847851073345259 ), new ControlPoint( -1.116994633273702, 3.686296958855098 ), new ControlPoint( -3.5806797853309487, 1.8639512522361352 ), new ControlPoint( -5.982719141323793, 6.235364490161 ) ];
+          controlPoints = [ createControlPoint( 3.9238282647584946, 3.1917866726296955 ), createControlPoint( 2.043971377459748, 4.847851073345259 ), createControlPoint( -1.116994633273702, 3.686296958855098 ), createControlPoint( -3.5806797853309487, 1.8639512522361352 ), createControlPoint( -5.982719141323793, 6.235364490161 ) ];
           track = new Track( model, model.tracks, controlPoints, true, null, model.availableModelBoundsProperty );
           track.physical = true;
           model.tracks.add( track );
@@ -62,7 +66,7 @@ define( function( require ) {
           model.skater.position.set( new Vector2( -5, 7.7 ) );
           model.skater.released( 0, 0 );
 
-          controlPoints = [ new ControlPoint( -1.8031842576028616, 3.53633273703041 ), new ControlPoint( 1.7306618962432907, 2.8187991949910547 ), new ControlPoint( 1.9246153846153842, 4.3405881037567084 ), new ControlPoint( 3.834311270125223, 4.907529069767442 ), new ControlPoint( 3.491162790697672, 1.0732177996422188 ), new ControlPoint( -2.760107334525939, 1.461124776386404 ), new ControlPoint( -5.162146690518783, 5.832538014311269 ) ];
+          controlPoints = [ createControlPoint( -1.8031842576028616, 3.53633273703041 ), createControlPoint( 1.7306618962432907, 2.8187991949910547 ), createControlPoint( 1.9246153846153842, 4.3405881037567084 ), createControlPoint( 3.834311270125223, 4.907529069767442 ), createControlPoint( 3.491162790697672, 1.0732177996422188 ), createControlPoint( -2.760107334525939, 1.461124776386404 ), createControlPoint( -5.162146690518783, 5.832538014311269 ) ];
           track = new Track( model, model.tracks, controlPoints, true, null, model.availableModelBoundsProperty );
           track.physical = true;
           model.tracks.add( track );
@@ -76,7 +80,7 @@ define( function( require ) {
           model.skater.position.set( new Vector2( -5, 7.7 ) );
           model.skater.released( 0, 0 );
 
-          controlPoints = [ new ControlPoint( 4.639964221824686, 6.68294946332737 ), new ControlPoint( 1.4173524150268335, 0.938942307692308 ), new ControlPoint( -3.207692307692308, 3.997439624329159 ), new ControlPoint( 3.2524508050089445, 3.9079226296958858 ), new ControlPoint( 3.491162790697672, 1.0732177996422188 ), new ControlPoint( -2.760107334525939, 1.461124776386404 ), new ControlPoint( -5.162146690518783, 5.832538014311269 ) ];
+          controlPoints = [ createControlPoint( 4.639964221824686, 6.68294946332737 ), createControlPoint( 1.4173524150268335, 0.938942307692308 ), createControlPoint( -3.207692307692308, 3.997439624329159 ), createControlPoint( 3.2524508050089445, 3.9079226296958858 ), createControlPoint( 3.491162790697672, 1.0732177996422188 ), createControlPoint( -2.760107334525939, 1.461124776386404 ), createControlPoint( -5.162146690518783, 5.832538014311269 ) ];
           track = new Track( model, model.tracks, controlPoints, true, null, model.availableModelBoundsProperty );
           track.physical = true;
           model.tracks.add( track );
@@ -90,7 +94,7 @@ define( function( require ) {
           model.skater.position.set( new Vector2( -5, 7.7 ) );
           model.skater.released( 0, 0 );
 
-          controlPoints = [ new ControlPoint( 4.431091234347049, 7.9252447313977665 ), new ControlPoint( 2.4169588550983896, 7.975935759156005 ), new ControlPoint( -1.9874106197862114, 4.75700797278857 ), new ControlPoint( 0.13992761930286512, 6.207060140642635 ), new ControlPoint( 1.447191413237924, 1.0090653610430707 ), new ControlPoint( -1.7008228980322002, 1.0717102008522177 ), new ControlPoint( -5.37101967799642, 7.0748332823816655 ) ];
+          controlPoints = [ createControlPoint( 4.431091234347049, 7.9252447313977665 ), createControlPoint( 2.4169588550983896, 7.975935759156005 ), createControlPoint( -1.9874106197862114, 4.75700797278857 ), createControlPoint( 0.13992761930286512, 6.207060140642635 ), createControlPoint( 1.447191413237924, 1.0090653610430707 ), createControlPoint( -1.7008228980322002, 1.0717102008522177 ), createControlPoint( -5.37101967799642, 7.0748332823816655 ) ];
           track = new Track( model, model.tracks, controlPoints, true, null, model.availableModelBoundsProperty );
           track.physical = true;
           model.tracks.add( track );
@@ -104,7 +108,7 @@ define( function( require ) {
           model.skater.position.set( new Vector2( 5, 7.9 ) );
           model.skater.released( 0, 0 );
 
-          controlPoints = [ new ControlPoint( 5.147227191413236, 6.57851296958855 ), new ControlPoint( 0.05887058823529401, 1.0476264705882334 ), new ControlPoint( -1.9427294117647067, 2.637132352941175 ), new ControlPoint( -3.1201411764705886, 6.404849999999999 ), new ControlPoint( 0.5690823529411766, 6.071249999999999 ), new ControlPoint( -2.3940705882352944, 1.3419794117647044 ), new ControlPoint( -5.474964705882353, 6.5029676470588225 ) ];
+          controlPoints = [ createControlPoint( 5.147227191413236, 6.57851296958855 ), createControlPoint( 0.05887058823529401, 1.0476264705882334 ), createControlPoint( -1.9427294117647067, 2.637132352941175 ), createControlPoint( -3.1201411764705886, 6.404849999999999 ), createControlPoint( 0.5690823529411766, 6.071249999999999 ), createControlPoint( -2.3940705882352944, 1.3419794117647044 ), createControlPoint( -5.474964705882353, 6.5029676470588225 ) ];
           track = new Track( model, model.tracks, controlPoints, true, null, model.availableModelBoundsProperty );
           track.physical = true;
           model.tracks.add( track );
@@ -118,7 +122,7 @@ define( function( require ) {
           model.skater.position.set( new Vector2( 5, 7.9 ) );
           model.skater.released( 0, 0 );
 
-          controlPoints = [ new ControlPoint( 5.147227191413236, 6.57851296958855 ), new ControlPoint( -0.43896196231781204, 1.7569427657305372 ), new ControlPoint( -1.1787355229664587, 2.807585005572261 ), new ControlPoint( -3.1201411764705886, 6.404849999999999 ), new ControlPoint( 0.5690823529411766, 6.071249999999999 ), new ControlPoint( -2.3940705882352944, 1.3419794117647044 ), new ControlPoint( -5.474964705882353, 6.5029676470588225 ) ];
+          controlPoints = [ createControlPoint( 5.147227191413236, 6.57851296958855 ), createControlPoint( -0.43896196231781204, 1.7569427657305372 ), createControlPoint( -1.1787355229664587, 2.807585005572261 ), createControlPoint( -3.1201411764705886, 6.404849999999999 ), createControlPoint( 0.5690823529411766, 6.071249999999999 ), createControlPoint( -2.3940705882352944, 1.3419794117647044 ), createControlPoint( -5.474964705882353, 6.5029676470588225 ) ];
           track = new Track( model, model.tracks, controlPoints, true, null, model.availableModelBoundsProperty );
           track.physical = true;
           model.tracks.add( track );
@@ -132,7 +136,7 @@ define( function( require ) {
           model.skater.position.set( new Vector2( 5, 7.9 ) );
           model.skater.released( 0, 0 );
 
-          controlPoints = [ new ControlPoint( 5.07086859688196, 6.925682071269487 ), new ControlPoint( 2.061781737193762, 0.7625271732714408 ), new ControlPoint( 0.09287305122494338, 0.7625271732714408 ), new ControlPoint( -3.287706013363029, 3.0472042334050697 ), new ControlPoint( -2.2289532293986642, 4.399535077951003 ), new ControlPoint( -0.6129621380846331, 4.306662026726059 ), new ControlPoint( 0.7429844097995542, 3.3629726075698803 ), new ControlPoint( 0.14859688195991083, 2.3227944338505053 ), new ControlPoint( -1.4302449888641426, 1.4159674088426304 ), new ControlPoint( -4.532204899777283, 0.580109947818132 ), new ControlPoint( -6.1185746102449885, 7.75698912376468 ) ];
+          controlPoints = [ createControlPoint( 5.07086859688196, 6.925682071269487 ), createControlPoint( 2.061781737193762, 0.7625271732714408 ), createControlPoint( 0.09287305122494338, 0.7625271732714408 ), createControlPoint( -3.287706013363029, 3.0472042334050697 ), createControlPoint( -2.2289532293986642, 4.399535077951003 ), createControlPoint( -0.6129621380846331, 4.306662026726059 ), createControlPoint( 0.7429844097995542, 3.3629726075698803 ), createControlPoint( 0.14859688195991083, 2.3227944338505053 ), createControlPoint( -1.4302449888641426, 1.4159674088426304 ), createControlPoint( -4.532204899777283, 0.580109947818132 ), createControlPoint( -6.1185746102449885, 7.75698912376468 ) ];
           track = new Track( model, model.tracks, controlPoints, true, null, model.availableModelBoundsProperty );
           track.physical = true;
           model.tracks.add( track );
@@ -147,7 +151,7 @@ define( function( require ) {
           model.skater.released( 0, 0 );
           model.friction = 0;
 
-          controlPoints = [ new ControlPoint( 5.516659242761692, 5.458287861915368 ), new ControlPoint( 2.061781737193762, 0.7625271732714408 ), new ControlPoint( 0.09287305122494338, 0.7625271732714408 ), new ControlPoint( -3.287706013363029, 3.0472042334050697 ), new ControlPoint( -2.2289532293986642, 4.399535077951003 ), new ControlPoint( -0.6129621380846331, 4.306662026726059 ), new ControlPoint( 0.7429844097995542, 3.3629726075698803 ), new ControlPoint( 0.14859688195991083, 2.3227944338505053 ), new ControlPoint( -1.4302449888641426, 1.4159674088426304 ), new ControlPoint( -4.532204899777283, 0.580109947818132 ), new ControlPoint( -6.1185746102449885, 7.75698912376468 ) ];
+          controlPoints = [ createControlPoint( 5.516659242761692, 5.458287861915368 ), createControlPoint( 2.061781737193762, 0.7625271732714408 ), createControlPoint( 0.09287305122494338, 0.7625271732714408 ), createControlPoint( -3.287706013363029, 3.0472042334050697 ), createControlPoint( -2.2289532293986642, 4.399535077951003 ), createControlPoint( -0.6129621380846331, 4.306662026726059 ), createControlPoint( 0.7429844097995542, 3.3629726075698803 ), createControlPoint( 0.14859688195991083, 2.3227944338505053 ), createControlPoint( -1.4302449888641426, 1.4159674088426304 ), createControlPoint( -4.532204899777283, 0.580109947818132 ), createControlPoint( -6.1185746102449885, 7.75698912376468 ) ];
           track = new Track( model, model.tracks, controlPoints, true, null, model.availableModelBoundsProperty );
           track.physical = true;
           model.tracks.add( track );
@@ -161,7 +165,7 @@ define( function( require ) {
           model.skater.released( 0, 0 );
           model.friction = 0.0363651226158039;
 
-          controlPoints = [ new ControlPoint( 5.07086859688196, 6.925682071269487 ), new ControlPoint( 2.061781737193762, 0.7625271732714408 ), new ControlPoint( 0.09287305122494338, 0.7625271732714408 ), new ControlPoint( -3.287706013363029, 3.0472042334050697 ), new ControlPoint( -2.2289532293986642, 4.399535077951003 ), new ControlPoint( -0.6129621380846331, 4.306662026726059 ), new ControlPoint( 0.7429844097995542, 3.3629726075698803 ), new ControlPoint( 0.14859688195991083, 2.3227944338505053 ), new ControlPoint( -1.4302449888641426, 1.4159674088426304 ), new ControlPoint( -4.532204899777283, 0.580109947818132 ), new ControlPoint( -6.1185746102449885, 7.75698912376468 ) ];
+          controlPoints = [ createControlPoint( 5.07086859688196, 6.925682071269487 ), createControlPoint( 2.061781737193762, 0.7625271732714408 ), createControlPoint( 0.09287305122494338, 0.7625271732714408 ), createControlPoint( -3.287706013363029, 3.0472042334050697 ), createControlPoint( -2.2289532293986642, 4.399535077951003 ), createControlPoint( -0.6129621380846331, 4.306662026726059 ), createControlPoint( 0.7429844097995542, 3.3629726075698803 ), createControlPoint( 0.14859688195991083, 2.3227944338505053 ), createControlPoint( -1.4302449888641426, 1.4159674088426304 ), createControlPoint( -4.532204899777283, 0.580109947818132 ), createControlPoint( -6.1185746102449885, 7.75698912376468 ) ];
           track = new Track( model, model.tracks, controlPoints, true, null, model.availableModelBoundsProperty );
           track.physical = true;
           model.tracks.add( track );
@@ -175,7 +179,7 @@ define( function( require ) {
           model.skater.released( 0, 0 );
           model.friction = 0.0363651226158039;
 
-          controlPoints = [ new ControlPoint( 7.049477756286265, 5.232410541586074 ), new ControlPoint( 1.8198088164974369, 1.7349575399795614 ), new ControlPoint( -0.14909986947138165, 1.7349575399795614 ), new ControlPoint( 0.5162088974854928, 1.8286581237911035 ), new ControlPoint( -0.4516827852998073, 11.657297387984716 ), new ControlPoint( 2.0970986460348158, 5.6886320108087025 ), new ControlPoint( -1.8000003436635232, 4.708138438138744 ), new ControlPoint( -0.43555125725338684, 5.914473403458605 ), new ControlPoint( -2.500386847195358, 4.849792552394775 ), new ControlPoint( -4.774177820473608, 1.5525403145262526 ), new ControlPoint( -6.339690522243714, 8.797478239845262 ) ];
+          controlPoints = [ createControlPoint( 7.049477756286265, 5.232410541586074 ), createControlPoint( 1.8198088164974369, 1.7349575399795614 ), createControlPoint( -0.14909986947138165, 1.7349575399795614 ), createControlPoint( 0.5162088974854928, 1.8286581237911035 ), createControlPoint( -0.4516827852998073, 11.657297387984716 ), createControlPoint( 2.0970986460348158, 5.6886320108087025 ), createControlPoint( -1.8000003436635232, 4.708138438138744 ), createControlPoint( -0.43555125725338684, 5.914473403458605 ), createControlPoint( -2.500386847195358, 4.849792552394775 ), createControlPoint( -4.774177820473608, 1.5525403145262526 ), createControlPoint( -6.339690522243714, 8.797478239845262 ) ];
           track = new Track( model, model.tracks, controlPoints, true, null, model.availableModelBoundsProperty );
           track.physical = true;
           model.tracks.add( track );
@@ -189,7 +193,7 @@ define( function( require ) {
           model.skater.released( 0, 0 );
           model.friction = 0.0363651226158039;
 
-          controlPoints = [ new ControlPoint( 0.8301088646967347, 3.5809234059097967 ), new ControlPoint( 3.411228615863142, 2.4784350699844477 ), new ControlPoint( 5.29194401244168, 5.928575038880248 ) ];
+          controlPoints = [ createControlPoint( 0.8301088646967347, 3.5809234059097967 ), createControlPoint( 3.411228615863142, 2.4784350699844477 ), createControlPoint( 5.29194401244168, 5.928575038880248 ) ];
           track = new Track( model, model.tracks, controlPoints, true, null, model.availableModelBoundsProperty );
           track.physical = true;
           model.tracks.add( track );
@@ -202,7 +206,7 @@ define( function( require ) {
           model.skater.released( 0, 0 );
           model.friction = 0.0363651226158039;
 
-          controlPoints = [ new ControlPoint( 0.8301088646967347, 3.5809234059097967 ), new ControlPoint( 3.411228615863142, 2.4784350699844477 ), new ControlPoint( 5.29194401244168, 5.928575038880248 ) ];
+          controlPoints = [ createControlPoint( 0.8301088646967347, 3.5809234059097967 ), createControlPoint( 3.411228615863142, 2.4784350699844477 ), createControlPoint( 5.29194401244168, 5.928575038880248 ) ];
           track = new Track( model, model.tracks, controlPoints, true, null, model.availableModelBoundsProperty );
           track.physical = true;
           model.tracks.add( track );
@@ -214,29 +218,29 @@ define( function( require ) {
           model.friction = 0.05;
 
           var controlPoints1 = [
-            new ControlPoint( -6.23, -0.85 ),
-            new ControlPoint( -5.23, -0.85 ),
-            new ControlPoint( -4.23, -0.85 )
+            createControlPoint( -6.23, -0.85 ),
+            createControlPoint( -5.23, -0.85 ),
+            createControlPoint( -4.23, -0.85 )
           ];
           var track1 = new Track( model, model.tracks, controlPoints1, true, null, model.availableModelBoundsProperty );
           track1.physical = false;
           model.tracks.add( track1 );
 
           var controlPoints2 = [
-            new ControlPoint( -6.23, -0.85 ),
-            new ControlPoint( -5.23, -0.85 ),
-            new ControlPoint( -4.23, -0.85 )
+            createControlPoint( -6.23, -0.85 ),
+            createControlPoint( -5.23, -0.85 ),
+            createControlPoint( -4.23, -0.85 )
           ];
           var track2 = new Track( model, model.tracks, controlPoints2, true, null, model.availableModelBoundsProperty );
           track2.physical = false;
           model.tracks.add( track2 );
 
           var controlPoints3 = [
-            new ControlPoint( -0.720977917981072, 1.6368312846731214 ),
-            new ControlPoint( 0.279022082018928, 1.6368312846731214 ),
-            new ControlPoint( 3.8511345589035137, 7.315696725769607 ),
-            new ControlPoint( -1.1916066572392037, 2.911932992494288 ),
-            new ControlPoint( -9.170190362232134, 6.469483302512781 )
+            createControlPoint( -0.720977917981072, 1.6368312846731214 ),
+            createControlPoint( 0.279022082018928, 1.6368312846731214 ),
+            createControlPoint( 3.8511345589035137, 7.315696725769607 ),
+            createControlPoint( -1.1916066572392037, 2.911932992494288 ),
+            createControlPoint( -9.170190362232134, 6.469483302512781 )
           ];
           var track3 = new Track( model, model.tracks, controlPoints3, true, null, model.availableModelBoundsProperty );
           track3.physical = true;
@@ -250,11 +254,11 @@ define( function( require ) {
           model.skater.released( 0, 0 );
           model.friction = 0;
           var track15 = new Track( model, model.tracks, [
-            new ControlPoint( 0.9873551637279601, 7.856892317380353 ),
-            new ControlPoint( -0.4621662468513845, 5.9031895465994975 ),
-            new ControlPoint( -3.0250881612090676, 5.735129093198994 ),
-            new ControlPoint( -4.705692695214106, 0.9454061712846356 ),
-            new ControlPoint( -7.310629722921914, 7.457748740554157 )
+            createControlPoint( 0.9873551637279601, 7.856892317380353 ),
+            createControlPoint( -0.4621662468513845, 5.9031895465994975 ),
+            createControlPoint( -3.0250881612090676, 5.735129093198994 ),
+            createControlPoint( -4.705692695214106, 0.9454061712846356 ),
+            createControlPoint( -7.310629722921914, 7.457748740554157 )
           ], true, null, model.availableModelBoundsProperty );
           track15.physical = true;
           model.tracks.add( track15 );

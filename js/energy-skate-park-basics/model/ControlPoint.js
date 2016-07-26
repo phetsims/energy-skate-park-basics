@@ -14,7 +14,23 @@ define( function( require ) {
   var PropertySet = require( 'AXON/PropertySet' );
   var Vector2 = require( 'DOT/Vector2' );
 
-  function ControlPoint( x, y ) {
+  // phet-io modules
+  var TVector2 = require( 'ifphetio!PHET_IO/types/dot/TVector2' );
+
+  /**
+   *
+   * @param x
+   * @param y
+   * @param {GroupTandem} groupTandem - to support creating ControlPoints from many contexts, they are created
+   *                                  - with a GroupTandem instead of a normal tandem, so copies my be made easily.
+   * @constructor
+   */
+  function ControlPoint( x, y, groupTandem ) {
+
+    // @private
+    this.groupTandem = groupTandem;
+
+    var tandem = groupTandem.createNextTandem();
 
     PropertySet.call( this, {
 
@@ -23,6 +39,13 @@ define( function( require ) {
 
       // Another ControlPoint that this ControlPoint is going to 'snap' to if released.
       snapTarget: null
+    }, {
+      tandemSet: {
+        sourcePosition: tandem.createTandem( 'sourcePositionProperty' )
+      },
+      typeSet: {
+        sourcePosition: TVector2
+      }
     } );
 
     // Where it is shown on the screen.  Same as sourcePosition (if not snapped) or snapTarget.position (if snapped).
@@ -34,10 +57,10 @@ define( function( require ) {
   }
 
   energySkateParkBasics.register( 'ControlPoint', ControlPoint );
-  
+
   return inherit( PropertySet, ControlPoint, {
     copy: function() {
-      return new ControlPoint( this.position.x, this.position.y );
+      return new ControlPoint( this.position.x, this.position.y, this.groupTandem );
     }
   } );
 } );
