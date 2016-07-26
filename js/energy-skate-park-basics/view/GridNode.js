@@ -14,7 +14,7 @@ define( function( require ) {
   var inherit = require( 'PHET_CORE/inherit' );
   var TandemNode = require( 'TANDEM/scenery/nodes/TandemNode' );
   var Text = require( 'SCENERY/nodes/Text' );
-  var Path = require( 'SCENERY/nodes/Path' );
+  var TandemPath = require( 'TANDEM/scenery/nodes/TandemPath' );
   var Shape = require( 'KITE/Shape' );
   var PhetFont = require( 'SCENERY_PHET/PhetFont' );
   var BackgroundNode = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/view/BackgroundNode' );
@@ -39,6 +39,9 @@ define( function( require ) {
     } );
 
     gridVisibleProperty.linkAttribute( this, 'visible' );
+
+    // @private
+    this.tandem = tandem;
   }
 
   energySkateParkBasics.register( 'GridNode', GridNode );
@@ -50,6 +53,9 @@ define( function( require ) {
     // (would only change performance on screen size change). For more performance improvements on screen size change,
     // only update when the graph is visible, then again when it becomes visible.
     layout: function( offsetX, offsetY, width, height, layoutScale ) {
+
+      this.thinLinePath && this.thinLinePath.dispose();
+      this.thickLinePath && this.thickLinePath.dispose();
 
       var thickLines = [];
       var thinLines = [];
@@ -118,10 +124,24 @@ define( function( require ) {
         thickLineShape.moveTo( thickLine.x1, thickLine.y1 );
         thickLineShape.lineTo( thickLine.x2, thickLine.y2 );
       }
+      var thinLinePath = new TandemPath( thinLineShape, {
+        stroke: '#686868',
+        lineWidth: 0.8,
+        tandem: this.tandem.createTandem( 'thinLinePath' )
+      } );
+      var thickLinePath = new TandemPath( thickLineShape, {
+        stroke: '#686868',
+        lineWidth: 1.8,
+        tandem: this.tandem.createTandem( 'thickLinePath' )
+      } );
       this.children = [
-        new Path( thinLineShape, { stroke: '#686868', lineWidth: 0.8 } ),
-        new Path( thickLineShape, { stroke: '#686868', lineWidth: 1.8 } )
+        thinLinePath,
+        thickLinePath
       ].concat( texts );
+
+      // TODO: reuse these instead of dispose/create
+      this.thinLinePath = thinLinePath;
+      this.thickLinePath = thickLinePath;
     }
   } );
 } );

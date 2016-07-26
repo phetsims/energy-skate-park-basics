@@ -14,7 +14,7 @@ define( function( require ) {
   var TandemNode = require( 'TANDEM/scenery/nodes/TandemNode' );
   var VBox = require( 'SCENERY/nodes/VBox' );
   var HBox = require( 'SCENERY/nodes/HBox' );
-  var Path = require( 'SCENERY/nodes/Path' );
+  var TandemPath = require( 'TANDEM/scenery/nodes/TandemPath' );
   var Shape = require( 'KITE/Shape' );
   var Rectangle = require( 'SCENERY/nodes/Rectangle' );
   var Line = require( 'SCENERY/nodes/Line' );
@@ -140,7 +140,10 @@ define( function( require ) {
         tandem: tandem,
         children: [
           new Circle( radius, { fill: EnergySkateParkColorScheme.potentialEnergy, lineWidth: 0.5, stroke: 'black' } ),
-          new Path( x, { fill: EnergySkateParkColorScheme.kineticEnergy, lineWidth: 0.5, stroke: 'black' } )
+          new TandemPath( x, {
+            tandem: tandem.createTandem( 'path' ), // TODO: What is this path for
+            fill: EnergySkateParkColorScheme.kineticEnergy, lineWidth: 0.5, stroke: 'black'
+          } )
         ]
       } );
     },

@@ -15,7 +15,7 @@ define( function( require ) {
   var TandemNode = require( 'TANDEM/scenery/nodes/TandemNode' );
   var Circle = require( 'SCENERY/nodes/Circle' );
   var Shape = require( 'KITE/Shape' );
-  var Path = require( 'SCENERY/nodes/Path' );
+  var TandemPath = require( 'TANDEM/scenery/nodes/TandemPath' );
   var EnergySkateParkColorScheme = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/view/EnergySkateParkColorScheme' );
   var Bounds2 = require( 'DOT/Bounds2' );
 
@@ -23,20 +23,23 @@ define( function( require ) {
    * @param {Skater} skater the skater model
    * @param {Property<Boolean>} pieChartVisibleProperty axon Property indicating whether the pie chart is shown
    * @param {ModelViewTransform2}} modelViewTransform
+   * @param {Tandem} tandem
    * @constructor
    */
   function PieChartNode( skater, pieChartVisibleProperty, modelViewTransform, tandem ) {
     var pieChartNode = this;
 
-    var kineticEnergySlice = new Path( null, {
+    var kineticEnergySlice = new TandemPath( null, {
       fill: EnergySkateParkColorScheme.kineticEnergy,
       stroke: 'black',
-      lineWidth: 1
+      lineWidth: 1,
+      tandem: tandem.createTandem( 'kineticEnergySlicePath' )
     } );
-    var potentialEnergySlice = new Path( null, {
+    var potentialEnergySlice = new TandemPath( null, {
       fill: EnergySkateParkColorScheme.potentialEnergy,
       stroke: 'black',
-      lineWidth: 1
+      lineWidth: 1,
+      tandem: tandem.createTandem( 'potentialEnergySlicePath' )
     } );
 
     // Skip bounds computation to improve performance, see #245
