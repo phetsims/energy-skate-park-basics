@@ -11,7 +11,7 @@ define( function( require ) {
   // modules
   var energySkateParkBasics = require( 'ENERGY_SKATE_PARK_BASICS/energySkateParkBasics' );
   var inherit = require( 'PHET_CORE/inherit' );
-  var Node = require( 'SCENERY/nodes/Node' );
+  var TandemNode = require( 'SCENERY/nodes/Node' );
   var VBox = require( 'SCENERY/nodes/VBox' );
   var HBox = require( 'SCENERY/nodes/HBox' );
   var Path = require( 'SCENERY/nodes/Path' );
@@ -45,11 +45,22 @@ define( function( require ) {
       font: new PhetFont( 14 ),
       maxWidth: 134 // selected by choosing the length of widest English string in ?stringTest=double
     };
-
-    var pieChartSet = { label: new Text( pieChartString, textOptions ), icon: this.createPieChartIcon() };
-    var barGraphSet = { label: new Text( plotsBarGraphString, textOptions ), icon: this.createBarGraphIcon() };
-    var gridSet = { label: new Text( controlsShowGridString, textOptions ), icon: this.createGridIcon() };
-    var speedometerSet = { label: new Text( propertiesSpeedString, textOptions ), icon: this.createSpeedometerIcon() };
+    var pieChartSet = {
+      label: new Text( pieChartString, textOptions ),
+      icon: this.createPieChartIcon( tandem.createTandem( 'pieChartIcon' ) )
+    };
+    var barGraphSet = {
+      label: new Text( plotsBarGraphString, textOptions ),
+      icon: this.createBarGraphIcon( tandem.createTandem( 'barGraphIcon' ) )
+    };
+    var gridSet = {
+      label: new Text( controlsShowGridString, textOptions ),
+      icon: this.createGridIcon( tandem.createTandem( 'gridIcon' ) )
+    };
+    var speedometerSet = {
+      label: new Text( propertiesSpeedString, textOptions ),
+      icon: this.createSpeedometerIcon( tandem.createTandem( 'speedometerIcon' ) )
+    };
 
     var sets = [ pieChartSet, barGraphSet, gridSet, speedometerSet ];
     var maxTextWidth = _.max( sets, function( itemSet ) { return itemSet.label.width; } ).label.width;
@@ -102,8 +113,9 @@ define( function( require ) {
   return inherit( Panel, EnergySkateParkBasicsControlPanel, {
 
     // Create an icon for the bar graph check box
-    createBarGraphIcon: function() {
-      return new Node( {
+    createBarGraphIcon: function( tandem ) {
+      return new TandemNode( {
+        tandem: tandem,
         children: [
           new Rectangle( 0, 0, 20, 20, { fill: 'white', stroke: 'black', lineWidth: 0.5 } ),
           new Rectangle( 3, 14, 5, 6, {
@@ -121,10 +133,11 @@ define( function( require ) {
     },
 
     // Create an icon for the pie chart check box
-    createPieChartIcon: function() {
+    createPieChartIcon: function( tandem ) {
       var radius = 10;
       var x = new Shape().moveTo( 0, 0 ).ellipticalArc( 0, 0, radius, radius, 0, -Math.PI / 2, 0, false ).lineTo( 0, 0 );
-      return new Node( {
+      return new TandemNode( {
+        tandem: tandem,
         children: [
           new Circle( radius, { fill: EnergySkateParkColorScheme.potentialEnergy, lineWidth: 0.5, stroke: 'black' } ),
           new Path( x, { fill: EnergySkateParkColorScheme.kineticEnergy, lineWidth: 0.5, stroke: 'black' } )
@@ -133,8 +146,9 @@ define( function( require ) {
     },
 
     // Create an icon for the grid check box
-    createGridIcon: function() {
-      return new Node( {
+    createGridIcon: function( tandem ) {
+      return new TandemNode( {
+        tandem: tandem,
         children: [
           new Rectangle( 0, 0, 20, 20, { fill: 'white', stroke: 'black', lineWidth: 0.5 } ),
           new Line( 0, 10, 20, 10, { stroke: 'black', lineWidth: 1 } ),
