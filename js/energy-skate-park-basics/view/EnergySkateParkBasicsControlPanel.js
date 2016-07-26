@@ -37,7 +37,7 @@ define( function( require ) {
 
   /**
    * @param {EnergySkateParkBasicsModel} model
-   * @param {object} [options]
+   * @param {Tandem} tandem
    * @constructor
    */
   function EnergySkateParkBasicsControlPanel( model, tandem ) {

@@ -23,7 +23,7 @@ define( function( require ) {
   var largeString = require( 'string!ENERGY_SKATE_PARK_BASICS/large' );
 
   /**
-   * @param {Property<Number>} massProperty axon Property indicating the skater mass
+   * @param {Property.<number>} massProperty axon Property indicating the skater mass
    * @param {Tandem} tandem
    * @constructor
    */

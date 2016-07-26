@@ -15,6 +15,7 @@ define( function( require ) {
 
   /**
    * @param {TrackNode} the track node that this listener will drag
+   * @param {Tandem} tandem
    * @constructor
    */
   function TrackDragHandler( trackNode, tandem ) {

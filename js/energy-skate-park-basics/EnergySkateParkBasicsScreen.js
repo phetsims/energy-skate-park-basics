@@ -16,6 +16,16 @@ define( function( require ) {
   var Screen = require( 'JOIST/Screen' );
   var TandemImage = require( 'TANDEM/scenery/nodes/TandemImage' );
 
+  /**
+   *
+   * @param name
+   * @param homescreenIcon
+   * @param navbarIcon
+   * @param draggableTracks
+   * @param friction
+   * @param {Tandem} tandem
+   * @constructor
+   */
   function EnergySkateParkBasicsScreen( name, homescreenIcon, navbarIcon, draggableTracks, friction, tandem ) {
     Screen.call( this, name, new TandemImage( homescreenIcon, {
         tandem: tandem.createTandem( 'homescreenIcon' )

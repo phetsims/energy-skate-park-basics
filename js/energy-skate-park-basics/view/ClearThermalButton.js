@@ -27,7 +27,8 @@ define( function( require ) {
   /**
    * @param {Function} callback function to be called when the user presses the clear thermal button.
    * @param {Skater} skater the model's skater model
-   * @param {*}options
+   * @param {Tandem} tandem
+   * @param {*} options
    * @constructor
    */
   function ClearThermalButton( callback, skater, tandem, options ) {

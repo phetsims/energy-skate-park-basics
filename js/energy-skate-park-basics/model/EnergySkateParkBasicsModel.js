@@ -78,6 +78,7 @@ define( function( require ) {
    *
    * @param {Boolean} draggableTracks True if this is screen 2-3, where friction is allowed to be on or off
    * @param {Boolean} frictionAllowed True in screen 3 where the user can drag the tracks
+   * @param {Tandem} tandem
    * @constructor
    */
   function EnergySkateParkBasicsModel( draggableTracks, frictionAllowed, tandem ) {

@@ -26,7 +26,7 @@ define( function( require ) {
   /**
    * Constructor
    * @param {Property} valueProperty Property.<number> which is portrayed
-   * @param range {Object} contains min and max values that define the range
+   * @param {Object} range - contains min and max values that define the range
    * @param {Tandem} tandem
    * @param {Object} [options] typical Node layout and display options
    * @constructor

@@ -22,7 +22,7 @@ define( function( require ) {
   /**
    * @param {Skater} skater the skater model
    * @param {Property<Boolean>} pieChartVisibleProperty axon Property indicating whether the pie chart is shown
-   * @param {ModelViewTransform2}} modelViewTransform
+   * @param {ModelViewTransform2} modelViewTransform
    * @param {Tandem} tandem
    * @constructor
    */

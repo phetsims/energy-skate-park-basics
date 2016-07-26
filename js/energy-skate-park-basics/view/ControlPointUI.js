@@ -25,6 +25,7 @@ define( function( require ) {
    * @param {Number} controlPointIndex the 0-based index of the control point
    * @param {ModelViewTransform2} modelViewTransform the main model-view transform
    * @param {Node} parentNode
+   * @param {Tandem} tandem
    * @constructor
    */
   function ControlPointUI( model, track, controlPointIndex, modelViewTransform, parentNode, tandem ) {

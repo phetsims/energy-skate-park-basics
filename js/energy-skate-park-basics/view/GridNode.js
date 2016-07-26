@@ -26,7 +26,7 @@ define( function( require ) {
   var FONT = new PhetFont( 16 );
 
   /**
-   * @param {Property<Boolean>} gridVisibleProperty the axon property indicating whether the grid should be visible
+   * @param {Property.<boolean>} gridVisibleProperty the axon property indicating whether the grid should be visible
    * @param {ModelViewTransform2} modelViewTransform the main model-view transform
    * @param {Tandem} tandem
    * @constructor
