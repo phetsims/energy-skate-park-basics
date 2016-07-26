@@ -16,6 +16,7 @@ define( function( require ) {
 
   // phet-io modules
   var TVector2 = require( 'ifphetio!PHET_IO/types/dot/TVector2' );
+  var TControlPoint = require( 'ifphetio!PHET_IO/simulations/energy-skate-park-basics/TControlPoint' );
 
   /**
    *
@@ -35,10 +36,12 @@ define( function( require ) {
       snapTarget: null
     }, {
       tandemSet: {
-        sourcePosition: tandem.createTandem( 'sourcePositionProperty' )
+        sourcePosition: tandem.createTandem( 'sourcePositionProperty' ),
+        snapTarget: tandem.createTandem( 'snapTargetProperty' )
       },
       typeSet: {
-        sourcePosition: TVector2
+        sourcePosition: TVector2,
+        snapTarget: TControlPoint
       }
     } );
 
