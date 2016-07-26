@@ -51,6 +51,8 @@ define( function( require ) {
     this.addDerivedProperty( 'position', [ 'sourcePosition', 'snapTarget' ], function( sourcePosition, snapTarget ) {
       return snapTarget ? snapTarget.position : sourcePosition;
     } );
+
+    TControlPoint && tandem.addInstance( this, TControlPoint );
   }
 
   energySkateParkBasics.register( 'ControlPoint', ControlPoint );
