@@ -25,20 +25,23 @@ define( function( require ) {
   // constants
   var FastArray = dot.FastArray;
 
-  /*
+  /**
    * Constructor for TrackNode
    * @param {EnergySkateParkBasicsModel} model the entire model.  Not absolutely necessary, but so many methods are called on it for joining and
    * splitting tracks that we pass the entire model anyways.
    * @param {Track} track the track for this track node
    * @param {ModelViewTransform} modelViewTransform the model view transform for the view
+   * @param {Property.<Bounds2>} availableBoundsProperty
+   * @param {Tandem} tandem
    * @constructor
    */
-  function TrackNode( model, track, modelViewTransform, availableBoundsProperty ) {
+  function TrackNode( model, track, modelViewTransform, availableBoundsProperty, tandem ) {
     var trackNode = this;
     this.track = track;
     this.model = model;
     this.modelViewTransform = modelViewTransform;
     this.availableBoundsProperty = availableBoundsProperty;
+    var controlPointNodeGroupTandem = tandem.createGroupTandem( 'controlPointNode' )
 
     this.road = new Path( null, { fill: 'gray', cursor: track.interactive ? 'pointer' : 'default' } );
     this.centerLine = new Path( null, { stroke: 'black', lineWidth: 1.2, lineDash: [ 11, 8 ] } );
@@ -67,7 +70,7 @@ define( function( require ) {
 
       for ( var i = 0; i < track.controlPoints.length; i++ ) {
         var isEndPoint = i === 0 || i === track.controlPoints.length - 1;
-        trackNode.addChild( new ControlPointNode( trackNode, trackDragHandler, i, isEndPoint ) );
+        trackNode.addChild( new ControlPointNode( trackNode, trackDragHandler, i, isEndPoint, controlPointNodeGroupTandem.createNextTandem() ) );
       }
     }
 
@@ -91,7 +94,7 @@ define( function( require ) {
   }
 
   energySkateParkBasics.register( 'TrackNode', TrackNode );
-  
+
   return inherit( Node, TrackNode, {
 
     // When a control point has moved, or the track has moved, or the track has been reset, or on initialization

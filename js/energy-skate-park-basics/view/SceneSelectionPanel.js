@@ -36,7 +36,7 @@ define( function( require ) {
       var track = model.tracks.get( index );
       var background = new BackgroundNode( view.layoutBounds );
       background.layout( 0, 0, view.layoutBounds.width, view.layoutBounds.height, 1 );
-      var trackNode = new TrackNode( model, track, transform, new Property() );
+      var trackNode = new TrackNode( model, track, transform, new Property(), tandem.createTandem( 'trackNode' ) );
 
       // Fixes: Cursor turns into a hand over the track in the track selection panel, see #204
       trackNode.pickable = false;

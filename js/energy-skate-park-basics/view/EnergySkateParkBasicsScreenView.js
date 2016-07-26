@@ -63,10 +63,12 @@ define( function( require ) {
 
   /**
    * @param {EnergySkateParkBasicsModel} model
-   * @param {Object} [options]
+   * @param {Tandem} tandem
    * @constructor
    */
   function EnergySkateParkBasicsScreenView( model, tandem ) {
+
+    var trackNodeGroupTandem = tandem.createGroupTandem( 'trackNode' );
 
     var view = this;
     ScreenView.call( view, { layoutBounds: new Bounds2( 0, 0, 834, 504 ) } );
@@ -233,7 +235,7 @@ define( function( require ) {
     if ( !model.draggableTracks ) {
 
       var trackNodes = model.tracks.map( function( track ) {
-        return new TrackNode( model, track, modelViewTransform, view.availableModelBoundsProperty );
+        return new TrackNode( model, track, modelViewTransform, view.availableModelBoundsProperty, trackNodeGroupTandem.createNextTandem() );
       } ).getArray();
 
       trackNodes.forEach( function( trackNode ) {
@@ -250,7 +252,7 @@ define( function( require ) {
 
       var addTrackNode = function( track ) {
 
-        var trackNode = new TrackNode( model, track, modelViewTransform, view.availableModelBoundsProperty );
+        var trackNode = new TrackNode( model, track, modelViewTransform, view.availableModelBoundsProperty, trackNodeGroupTandem.createNextTandem() );
         trackLayer.addChild( trackNode );
 
         // When track removed, remove its view

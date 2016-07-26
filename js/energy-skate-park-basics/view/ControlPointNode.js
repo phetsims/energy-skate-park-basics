@@ -13,7 +13,7 @@ define( function( require ) {
   var energySkateParkBasics = require( 'ENERGY_SKATE_PARK_BASICS/energySkateParkBasics' );
   var inherit = require( 'PHET_CORE/inherit' );
   var Circle = require( 'SCENERY/nodes/Circle' );
-  var SimpleDragHandler = require( 'SCENERY/input/SimpleDragHandler' );
+  var TandemDragHandler = require( 'TANDEM/scenery/input/TandemDragHandler' );
   var ControlPointUI = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/view/ControlPointUI' );
 
   /**
@@ -21,9 +21,10 @@ define( function( require ) {
    * @param {TrackDragHandler} trackDragHandler
    * @param {number} i
    * @param {boolean} isEndPoint
+   * @param {Tandem} tandem
    * @constructor
    */
-  function ControlPointNode( trackNode, trackDragHandler, i, isEndPoint ) {
+  function ControlPointNode( trackNode, trackDragHandler, i, isEndPoint, tandem ) {
     var track = trackNode.track;
     var model = trackNode.model;
     var modelViewTransform = trackNode.modelViewTransform;
@@ -60,155 +61,155 @@ define( function( require ) {
       controlPointNode.translation = modelViewTransform.modelToViewPosition( position );
     } );
     var dragEvents = 0;
-    var controlPointInputListener = new SimpleDragHandler(
-      {
-        allowTouchSnag: true,
-        start: function( event ) {
+    var inputListener = new TandemDragHandler( {
+      tandem: tandem.createTandem( 'inputListener' ),
+      allowTouchSnag: true,
+      start: function( event ) {
 
-          // Move the track to the front when it starts dragging, see #296
-          // The track is in a layer of tracks (without other nodes) so moving it to the front will work perfectly
-          trackNode.moveToFront();
+        // Move the track to the front when it starts dragging, see #296
+        // The track is in a layer of tracks (without other nodes) so moving it to the front will work perfectly
+        trackNode.moveToFront();
 
-          // If control point dragged out of the control panel, translate the entire track, see #130
-          if ( !track.physical || !track.dropped ) {
+        // If control point dragged out of the control panel, translate the entire track, see #130
+        if ( !track.physical || !track.dropped ) {
 
-            // Only start a track drag if nothing else was dragging the track (which caused a flicker), see #282
-            if ( track.dragSource === null ) {
-              track.dragSource = controlPointInputListener;
-              trackDragHandler.trackDragStarted( event );
-            }
-            return;
+          // Only start a track drag if nothing else was dragging the track (which caused a flicker), see #282
+          if ( track.dragSource === null ) {
+            track.dragSource = inputListener;
+            trackDragHandler.trackDragStarted( event );
           }
-          track.dragging = true;
-          dragEvents = 0;
-        },
-        drag: function( event ) {
+          return;
+        }
+        track.dragging = true;
+        dragEvents = 0;
+      },
+      drag: function( event ) {
 
-          // Check whether the model contains a track so that input listeners for detached elements can't create bugs, see #230
-          if ( !model.containsTrack( track ) ) { return; }
+        // Check whether the model contains a track so that input listeners for detached elements can't create bugs, see #230
+        if ( !model.containsTrack( track ) ) { return; }
 
-          // If control point dragged out of the control panel, translate the entire track, see #130
-          if ( !track.physical || !track.dropped ) {
+        // If control point dragged out of the control panel, translate the entire track, see #130
+        if ( !track.physical || !track.dropped ) {
 
-            // Only drag a track if nothing else was dragging the track (which caused a flicker), see #282
-            if ( track.dragSource === controlPointInputListener ) {
-              trackDragHandler.trackDragged( event );
-            }
-            return;
+          // Only drag a track if nothing else was dragging the track (which caused a flicker), see #282
+          if ( track.dragSource === inputListener ) {
+            trackDragHandler.trackDragged( event );
           }
-          dragEvents++;
-          track.dragging = true;
-          var globalPoint = controlPointNode.globalToParentPoint( event.pointer.point );
+          return;
+        }
+        dragEvents++;
+        track.dragging = true;
+        var globalPoint = controlPointNode.globalToParentPoint( event.pointer.point );
 
-          // trigger reconstruction of the track shape based on the control points
-          var pt = modelViewTransform.viewToModelPosition( globalPoint );
+        // trigger reconstruction of the track shape based on the control points
+        var pt = modelViewTransform.viewToModelPosition( globalPoint );
 
-          // Constrain the control points to remain in y>0, see #71
-          pt.y = Math.max( pt.y, 0 );
+        // Constrain the control points to remain in y>0, see #71
+        pt.y = Math.max( pt.y, 0 );
 
-          if ( availableBoundsProperty.value ) {
-            var availableBounds = availableBoundsProperty.value;
+        if ( availableBoundsProperty.value ) {
+          var availableBounds = availableBoundsProperty.value;
 
-            // Constrain the control points to be onscreen, see #94
-            pt.x = Math.max( pt.x, availableBounds.minX );
-            pt.x = Math.min( pt.x, availableBounds.maxX );
-            pt.y = Math.min( pt.y, availableBounds.maxY );
-          }
+          // Constrain the control points to be onscreen, see #94
+          pt.x = Math.max( pt.x, availableBounds.minX );
+          pt.x = Math.min( pt.x, availableBounds.maxX );
+          pt.y = Math.min( pt.y, availableBounds.maxY );
+        }
 
-          controlPoint.sourcePosition = pt;
+        controlPoint.sourcePosition = pt;
 
-          if ( isEndPoint ) {
-            // If one of the control points is close enough to link to another track, do so
-            var tracks = model.getPhysicalTracks();
+        if ( isEndPoint ) {
+          // If one of the control points is close enough to link to another track, do so
+          var tracks = model.getPhysicalTracks();
 
-            var bestDistance = Number.POSITIVE_INFINITY;
-            var bestMatch = null;
+          var bestDistance = Number.POSITIVE_INFINITY;
+          var bestMatch = null;
 
-            for ( var i = 0; i < tracks.length; i++ ) {
-              var t = tracks[ i ];
-              if ( t !== track ) {
+          for ( var i = 0; i < tracks.length; i++ ) {
+            var t = tracks[ i ];
+            if ( t !== track ) {
 
-                // don't match inner points
-                var otherPoints = [ t.controlPoints[ 0 ], t.controlPoints[ t.controlPoints.length - 1 ] ];
+              // don't match inner points
+              var otherPoints = [ t.controlPoints[ 0 ], t.controlPoints[ t.controlPoints.length - 1 ] ];
 
-                for ( var k = 0; k < otherPoints.length; k++ ) {
-                  var otherPoint = otherPoints[ k ];
-                  var distance = controlPoint.sourcePosition.distance( otherPoint.position );
+              for ( var k = 0; k < otherPoints.length; k++ ) {
+                var otherPoint = otherPoints[ k ];
+                var distance = controlPoint.sourcePosition.distance( otherPoint.position );
 
-                  if ( distance < bestDistance ) {
-                    bestDistance = distance;
-                    bestMatch = otherPoint;
-                  }
+                if ( distance < bestDistance ) {
+                  bestDistance = distance;
+                  bestMatch = otherPoint;
                 }
               }
             }
-
-            controlPoint.snapTarget = bestDistance !== null && bestDistance < 1 ? bestMatch : null;
           }
 
-          // When one control point dragged, update the track and the node shape
-          track.updateSplines();
-          trackNode.updateTrackShape();
-          model.trackModified( track );
-        },
-        end: function( event ) {
-
-          // Check whether the model contains a track so that input listeners for detached elements can't create bugs, see #230
-          if ( !model.containsTrack( track ) ) { return; }
-
-          // If control point dragged out of the control panel, translate the entire track, see #130
-          if ( !track.physical || !track.dropped ) {
-
-            // Only drop a track if nothing else was dragging the track (which caused a flicker), see #282
-            if ( track.dragSource === controlPointInputListener ) {
-              trackDragHandler.trackDragEnded( event );
-            }
-            return;
-          }
-          if ( isEndPoint && controlPoint.snapTarget ) {
-            model.joinTracks( track );
-          }
-          else {
-            track.smoothPointOfHighestCurvature( [ i ] );
-            model.trackModified( track );
-          }
-          track.bumpAboveGround();
-          track.dragging = false;
-
-          // Show the 'control point editing' ui, but only if the user didn't drag the control point.
-          // Threshold at a few drag events in case the user didn't mean to drag it but accidentally moved it a few pixels.
-          // Make sure the track hasn't recently detached (was seen twice in fuzzMouse=100 testing)
-          if ( dragEvents <= 3 && trackNode.parents.length > 0 ) {
-            var controlPointUI = new ControlPointUI( model, track, i, modelViewTransform, trackNode.parents[ 0 ] );
-
-            // If the track was removed, get rid of the buttons
-            track.on( 'remove', function() { controlPointUI.detach(); } );
-
-            // If the track has translated, hide the buttons, see #272
-            track.on( 'translated', function() { controlPointUI.detach();} );
-
-            trackNode.parents[ 0 ].addChild( controlPointUI );
-          }
-
-          if ( phet.chipper.getQueryParameter( 'debugTrack' ) ) {
-            console.log( track.getDebugString() );
-          }
+          controlPoint.snapTarget = bestDistance !== null && bestDistance < 1 ? bestMatch : null;
         }
-      } );
-    controlPointInputListener.over = function() {
+
+        // When one control point dragged, update the track and the node shape
+        track.updateSplines();
+        trackNode.updateTrackShape();
+        model.trackModified( track );
+      },
+      end: function( event ) {
+
+        // Check whether the model contains a track so that input listeners for detached elements can't create bugs, see #230
+        if ( !model.containsTrack( track ) ) { return; }
+
+        // If control point dragged out of the control panel, translate the entire track, see #130
+        if ( !track.physical || !track.dropped ) {
+
+          // Only drop a track if nothing else was dragging the track (which caused a flicker), see #282
+          if ( track.dragSource === inputListener ) {
+            trackDragHandler.trackDragEnded( event );
+          }
+          return;
+        }
+        if ( isEndPoint && controlPoint.snapTarget ) {
+          model.joinTracks( track );
+        }
+        else {
+          track.smoothPointOfHighestCurvature( [ i ] );
+          model.trackModified( track );
+        }
+        track.bumpAboveGround();
+        track.dragging = false;
+
+        // Show the 'control point editing' ui, but only if the user didn't drag the control point.
+        // Threshold at a few drag events in case the user didn't mean to drag it but accidentally moved it a few pixels.
+        // Make sure the track hasn't recently detached (was seen twice in fuzzMouse=100 testing)
+        if ( dragEvents <= 3 && trackNode.parents.length > 0 ) {
+          var controlPointUI = new ControlPointUI( model, track, i, modelViewTransform, trackNode.parents[ 0 ] );
+
+          // If the track was removed, get rid of the buttons
+          track.on( 'remove', function() { controlPointUI.detach(); } );
+
+          // If the track has translated, hide the buttons, see #272
+          track.on( 'translated', function() { controlPointUI.detach();} );
+
+          trackNode.parents[ 0 ].addChild( controlPointUI );
+        }
+
+        if ( phet.chipper.getQueryParameter( 'debugTrack' ) ) {
+          console.log( track.getDebugString() );
+        }
+      }
+    } );
+    inputListener.over = function() {
       if ( track.physical && !track.dragging ) {
         controlPointNode.opacity = highlightedOpacity;
         controlPointNode.fill = highlightedFill;
       }
     };
-    controlPointInputListener.out = function() {
+    inputListener.out = function() {
       controlPointNode.opacity = opacity;
       controlPointNode.fill = fill;
     };
-    controlPointNode.addInputListener( controlPointInputListener );
+    controlPointNode.addInputListener( inputListener );
   }
 
   energySkateParkBasics.register( 'ControlPointNode', ControlPointNode );
-  
+
   return inherit( Circle, ControlPointNode );
 } );
