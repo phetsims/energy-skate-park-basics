@@ -140,6 +140,7 @@ define( function( require ) {
       ].concat( texts );
 
       // TODO: reuse these instead of dispose/create
+      // @private
       this.thinLinePath = thinLinePath;
       this.thickLinePath = thickLinePath;
     }
