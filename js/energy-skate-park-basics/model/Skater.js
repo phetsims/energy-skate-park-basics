@@ -17,6 +17,12 @@ define( function( require ) {
   var Util = require( 'DOT/Util' );
   var Constants = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/Constants' );
 
+  // phet-io modules
+  var TVector2 = require( 'ifphetio!PHET_IO/types/dot/TVector2' );
+  var TNumber = require( 'ifphetio!PHET_IO/types/TNumber' );
+  var TBoolean = require( 'ifphetio!PHET_IO/types/TBoolean' );
+  var TString = require( 'ifphetio!PHET_IO/types/TString' );
+
   // Compare two arrays, whose elements have 'equals' methods for comparison
   var arrayEquals = function( a, b ) {
     if ( a.length !== b.length ) {
@@ -93,20 +99,35 @@ define( function( require ) {
       // Position of the skater's head, for positioning the pie chart.
       headPosition: new Vector2( 0, 0 )
     }, {
-      phetioIDMap: {
-        position: tandem.createTandem( 'skaterPosition' ),
-        u: tandem.createTandem( 'skaterParametricDistanceAlongTrack' ),
-        up: tandem.createTandem( 'skaterUpsideUpOnTrack' ),
-        mass: tandem.createTandem( 'skaterMass' ),
-        gravity: tandem.createTandem( 'gravity' ),
-        direction: tandem.createTandem( 'skaterDirection' ),
-        kineticEnergy: tandem.createTandem( 'skaterKineticEnergy' ),
-        potentialEnergy: tandem.createTandem( 'skaterPotentialEnergy' ),
-        thermalEnergy: tandem.createTandem( 'skaterThermalEnergy' ),
-        totalEnergy: tandem.createTandem( 'skaterTotalEnergy' ),
-        velocity: tandem.createTandem( 'skaterVelocity' ),
-        dragging: tandem.createTandem( 'skaterDragging' ),
-        angle: tandem.createTandem( 'skaterAngle' )
+      tandemSet: {
+        position: tandem.createTandem( 'skaterPositionProperty' ),
+        u: tandem.createTandem( 'skaterParametricDistanceAlongTrackProperty' ),
+        up: tandem.createTandem( 'skaterUpsideUpOnTrackProperty' ),
+        mass: tandem.createTandem( 'skaterMassProperty' ),
+        gravity: tandem.createTandem( 'gravityProperty' ),
+        direction: tandem.createTandem( 'skaterDirectionProperty' ),
+        kineticEnergy: tandem.createTandem( 'skaterKineticEnergyProperty' ),
+        potentialEnergy: tandem.createTandem( 'skaterPotentialEnergyProperty' ),
+        thermalEnergy: tandem.createTandem( 'skaterThermalEnergyProperty' ),
+        totalEnergy: tandem.createTandem( 'skaterTotalEnergyProperty' ),
+        velocity: tandem.createTandem( 'skaterVelocityProperty' ),
+        dragging: tandem.createTandem( 'skaterDraggingProperty' ),
+        angle: tandem.createTandem( 'skaterAngleProperty' )
+      },
+      typeSet: {
+        position: TVector2,
+        u: TNumber && TNumber( 'unitless' ),
+        up: TBoolean,
+        mass: TNumber && TNumber( 'kilograms' ),
+        gravity: TNumber && TNumber( 'meters/second/second' ),
+        direction: TString,
+        kineticEnergy: TNumber && TNumber( 'joules' ),
+        potentialEnergy: TNumber && TNumber( 'joules' ),
+        thermalEnergy: TNumber && TNumber( 'joules' ),
+        totalEnergy: TNumber && TNumber( 'joules' ),
+        velocity: TVector2,
+        dragging: TBoolean,
+        angle: TNumber && TNumber( 'radians' )
       }
     } );
 
@@ -159,7 +180,7 @@ define( function( require ) {
   }
 
   energySkateParkBasics.register( 'Skater', Skater );
-  
+
   return inherit( PropertySet, Skater, {
 
     // Get the vector from feet to head, so that when tracks are joined we can make sure he is still pointing up
