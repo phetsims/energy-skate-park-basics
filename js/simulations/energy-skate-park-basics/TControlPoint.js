@@ -31,6 +31,7 @@ define( function( require ) {
         return phetio.getWrapper( stateObject ).instance;
       }
     },
+
     toStateObject: function( instance ) {
       return instance ? instance.phetioID : 'null';
     }
