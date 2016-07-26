@@ -19,6 +19,7 @@ define( function( require ) {
 
   // constants
   var FastArray = dot.FastArray;
+  var TTrack = require( 'ifphetio!PHET_IO/simulations/energy-skate-park-basics/TTrack' );
 
   /**
    * Model for a track, which has a fixed number of points.  If you added a point to a Track, you need a new track.
@@ -30,9 +31,10 @@ define( function( require ) {
    * broken apart when dragged back to control panel
    * @param {Property<Bounds2>} availableModelBoundsProperty function that provides the visible model bounds, to prevent the
    * adjusted control point from going offscreen, see #195
+   * @param {Tandem} tandem
    * @constructor
    */
-  function Track( events, modelTracks, controlPoints, interactive, parents, availableModelBoundsProperty ) {
+  function Track( events, modelTracks, controlPoints, interactive, parents, availableModelBoundsProperty, tandem ) {
     this.events = events;
     this.parents = parents;
     this.modelTracks = modelTracks;
@@ -82,10 +84,12 @@ define( function( require ) {
 
     this.updateLinSpace();
     this.updateSplines();
+
+    tandem.addInstance( this, TTrack );
   }
 
   energySkateParkBasics.register( 'Track', Track );
-  
+
   return inherit( PropertySet, Track, {
 
     // when points change, update the spline instance

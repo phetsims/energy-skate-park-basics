@@ -22,6 +22,7 @@ define( function( require ) {
   var TNumber = require( 'ifphetio!PHET_IO/types/TNumber' );
   var TBoolean = require( 'ifphetio!PHET_IO/types/TBoolean' );
   var TString = require( 'ifphetio!PHET_IO/types/TString' );
+  var TTrack = require( 'ifphetio!PHET_IO/simulations/energy-skate-park-basics/TTrack' );
 
   // Compare two arrays, whose elements have 'equals' methods for comparison
   var arrayEquals = function( a, b ) {
@@ -100,6 +101,13 @@ define( function( require ) {
       headPosition: new Vector2( 0, 0 )
     }, {
       tandemSet: {
+        track: tandem.createTandem( 'trackProperty' ),
+        uD: tandem.createTandem( 'uDProperty' ),
+        startingPosition: tandem.createTandem( 'startingPositionProperty' ),
+        startingU: tandem.createTandem( 'startingUProperty' ),
+        startingUp: tandem.createTandem( 'startingUpProperty' ),
+        startingTrack: tandem.createTandem( 'startingTrackProperty' ),
+        headPosition: tandem.createTandem( 'headPositionProperty' ),
         position: tandem.createTandem( 'skaterPositionProperty' ),
         u: tandem.createTandem( 'skaterParametricDistanceAlongTrackProperty' ),
         up: tandem.createTandem( 'skaterUpsideUpOnTrackProperty' ),
@@ -115,6 +123,13 @@ define( function( require ) {
         angle: tandem.createTandem( 'skaterAngleProperty' )
       },
       typeSet: {
+        track: TTrack,
+        uD: TNumber && TNumber( 'unitless' ),
+        startingPosition: TVector2,
+        startingU: TNumber && TNumber( 'unitless' ),
+        startingUp: TBoolean,
+        startingTrack: TTrack,
+        headPosition: TVector2,
         position: TVector2,
         u: TNumber && TNumber( 'unitless' ),
         up: TBoolean,

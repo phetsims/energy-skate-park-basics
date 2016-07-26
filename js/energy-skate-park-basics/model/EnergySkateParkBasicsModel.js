@@ -91,7 +91,11 @@ define( function( require ) {
     var model = this;
 
     var controlPointGroupTandem = tandem.createGroupTandem( 'controlPoint' );
+    var trackGroupTandem = tandem.createGroupTandem( 'track' );
+
+    // @private
     this.controlPointGroupTandem = controlPointGroupTandem;
+    this.trackGroupTandem = trackGroupTandem;
 
     // Temporary flag that keeps track of whether the track was changed in the step before the physics update.
     // true if the skater's track is being dragged by the user, so that energy conservation no longer applies.
@@ -259,9 +263,12 @@ define( function( require ) {
         new ControlPoint( 4, 5, controlPointGroupTandem.createNextTandem() )
       ];
 
-      var parabolaTrack = new Track( this, this.tracks, parabola, false, null, this.availableModelBoundsProperty );
-      var slopeTrack = new Track( this, this.tracks, slope, false, null, this.availableModelBoundsProperty );
-      var doubleWellTrack = new Track( this, this.tracks, doubleWell, false, null, this.availableModelBoundsProperty );
+      var parabolaTrack = new Track( this, this.tracks, parabola, false, null, this.availableModelBoundsProperty,
+        tandem.createTandem( 'parabolaTrack' ) );
+      var slopeTrack = new Track( this, this.tracks, slope, false, null, this.availableModelBoundsProperty,
+        tandem.createTandem( 'slopeTrack' ) );
+      var doubleWellTrack = new Track( this, this.tracks, doubleWell, false, null, this.availableModelBoundsProperty,
+        tandem.createTandem( 'doubleWellTrack' ) );
 
       // Flag to indicate whether the skater transitions from the right edge of this track directly to the ground
       // see #164
@@ -287,7 +294,7 @@ define( function( require ) {
     }
 
     if ( phet.chipper.getQueryParameter( 'debugTrack' ) ) {
-      DebugTracks.init( this, tandem.createGroupTandem( 'debugTrackControlPoint' ) );
+      DebugTracks.init( this, tandem.createGroupTandem( 'debugTrackControlPoint' ), tandem.createGroupTandem( 'track' ) );
     }
   }
 
@@ -308,6 +315,7 @@ define( function( require ) {
     addDraggableTrack: function() {
 
       var controlPointGroupTandem = this.controlPointGroupTandem;
+      var trackGroupTandem = this.trackGroupTandem;
 
       // Move the tracks over so they will be in the right position in the view coordinates, under the grass to the left
       // of the clock controls.  Could use view transform for this, but it would require creating the view first, so just
@@ -318,7 +326,8 @@ define( function( require ) {
         new ControlPoint( offset.x, offset.y, controlPointGroupTandem.createNextTandem() ),
         new ControlPoint( offset.x + 1, offset.y, controlPointGroupTandem.createNextTandem() )
       ];
-      this.tracks.add( new Track( this, this.tracks, controlPoints, true, null, this.availableModelBoundsProperty ) );
+      this.tracks.add( new Track( this, this.tracks, controlPoints, true, null, this.availableModelBoundsProperty,
+        trackGroupTandem.createNextTandem() ) );
     },
 
     // Reset the model, including the skater, tracks, visualizations, etc.
@@ -1187,10 +1196,12 @@ define( function( require ) {
     deleteControlPoint: function( track, controlPointIndex ) {
       track.trigger( 'remove' );
       this.tracks.remove( track );
+      var trackGroupTandem = this.trackGroupTandem;
 
       if ( track.controlPoints.length > 2 ) {
         var points = _.without( track.controlPoints, track.controlPoints[ controlPointIndex ] );
-        var newTrack = new Track( this, this.tracks, points, true, track.getParentsOrSelf(), this.availableModelBoundsProperty );
+        var newTrack = new Track( this, this.tracks, points, true, track.getParentsOrSelf(), this.availableModelBoundsProperty,
+          trackGroupTandem.createNextTandem() );
         newTrack.physical = true;
         newTrack.dropped = true;
 
@@ -1221,6 +1232,9 @@ define( function( require ) {
     // The user has pressed the "delete" button for the specified track's specified control point, and it should be
     // deleted. It should be an inner point of a track (not an end point)
     splitControlPoint: function( track, controlPointIndex, modelAngle ) {
+
+      var trackGroupTandem = this.trackGroupTandem;
+
       var vector = Vector2.createPolar( 0.5, modelAngle );
       var newPoint1 = new ControlPoint(
         track.controlPoints[ controlPointIndex ].sourcePosition.x - vector.x,
@@ -1239,10 +1253,12 @@ define( function( require ) {
       points1.push( newPoint1 );
       points2.unshift( newPoint2 );
 
-      var newTrack1 = new Track( this, this.tracks, points1, true, track.getParentsOrSelf(), this.availableModelBoundsProperty );
+      var newTrack1 = new Track( this, this.tracks, points1, true, track.getParentsOrSelf(), this.availableModelBoundsProperty,
+        trackGroupTandem.createNextTandem() );
       newTrack1.physical = true;
       newTrack1.dropped = true;
-      var newTrack2 = new Track( this, this.tracks, points2, true, track.getParentsOrSelf(), this.availableModelBoundsProperty );
+      var newTrack2 = new Track( this, this.tracks, points2, true, track.getParentsOrSelf(), this.availableModelBoundsProperty,
+        trackGroupTandem.createNextTandem() );
       newTrack2.physical = true;
       newTrack2.dropped = true;
 
@@ -1284,6 +1300,7 @@ define( function( require ) {
       var points = [];
       var i;
       var controlPointGroupTandem = this.controlPointGroupTandem;
+      var trackGroupTandem = this.trackGroupTandem;
 
       var firstTrackForward = function() {
         for ( i = 0; i < a.controlPoints.length; i++ ) {
@@ -1331,7 +1348,8 @@ define( function( require ) {
         secondTrackBackward();
       }
 
-      var newTrack = new Track( this, this.tracks, points, true, a.getParentsOrSelf().concat( b.getParentsOrSelf() ), this.availableModelBoundsProperty );
+      var newTrack = new Track( this, this.tracks, points, true, a.getParentsOrSelf().concat( b.getParentsOrSelf() ), this.availableModelBoundsProperty,
+        trackGroupTandem.createNextTandem() );
       newTrack.physical = true;
       newTrack.dropped = true;
 
