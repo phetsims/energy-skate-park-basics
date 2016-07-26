@@ -15,14 +15,19 @@ define( function( require ) {
   var Image = require( 'SCENERY/nodes/Image' );
   var inherit = require( 'PHET_CORE/inherit' );
   var Screen = require( 'JOIST/Screen' );
+  var TandemImage = require( 'TANDEM/scenery/nodes/TandemImage' );
 
   function EnergySkateParkBasicsScreen( name, homescreenIcon, navbarIcon, draggableTracks, friction, tandem ) {
-    Screen.call( this, name, new Image( homescreenIcon ),
+    Screen.call( this, name, new TandemImage( homescreenIcon, {
+        tandem: tandem.createTandem( 'homescreenIcon' )
+      } ),
       function() { return new EnergySkateParkBasicsModel( draggableTracks, friction, tandem ); },
       function( model ) {
         return new EnergySkateParkBasicsScreenView( model, tandem );
       }, {
-        navigationBarIcon: new Image( navbarIcon ),
+        navigationBarIcon: new TandemImage( navbarIcon, {
+          tandem: tandem.createTandem( 'navbarIcon' )
+        } ),
         tandem: tandem
       } );
   }
