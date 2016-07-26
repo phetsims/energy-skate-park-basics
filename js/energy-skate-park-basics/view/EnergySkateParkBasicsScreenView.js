@@ -360,13 +360,13 @@ define( function( require ) {
 
     // Buttons to return the skater when she is offscreen, see #219
     var iconScale = 0.4;
-    var returnSkaterToStartingPointButton = new RectangularPushButton( {
+    var returnSkaterToPreviousStartingPositionButton = new RectangularPushButton( {
       content: new Image( skaterIconImage, { scale: iconScale } ),
 
       // green means "go" since the skater will likely start moving at this point
       baseColor: EnergySkateParkColorScheme.kineticEnergy,
       listener: model.returnSkater.bind( model ),
-      phetioID: tandem.createTandem( 'returnSkaterToPreviousStartingPositionButton' )
+      tandem: tandem.createTandem( 'returnSkaterToPreviousStartingPositionButton' )
     } );
 
     var returnSkaterToGroundButton = new RectangularPushButton( {
@@ -374,28 +374,28 @@ define( function( require ) {
       centerBottom: modelViewTransform.modelToViewPosition( model.skater.startingPosition ),
       baseColor: '#f4514e', // red for stop, since the skater will be stopped on the ground.
       listener: function() { model.skater.resetPosition(); },
-      phetioID: tandem.createTandem( 'returnSkaterToGroundButton' )
+      tandem: tandem.createTandem( 'returnSkaterToGroundButton' )
     } );
 
-    this.addChild( returnSkaterToStartingPointButton );
+    this.addChild( returnSkaterToPreviousStartingPositionButton );
     this.addChild( returnSkaterToGroundButton );
 
     // When the skater goes off screen, make the "return skater" button big
     onscreenProperty.link( function( skaterOnscreen ) {
       var buttonsVisible = !skaterOnscreen;
       returnSkaterToGroundButton.visible = buttonsVisible;
-      returnSkaterToStartingPointButton.visible = buttonsVisible;
+      returnSkaterToPreviousStartingPositionButton.visible = buttonsVisible;
 
       if ( buttonsVisible ) {
 
         // Put the button where the skater will appear.  Nudge it up a bit so the mouse can hit it from the drop site,
         // without being moved at all (to simplify repeat runs).
         var viewPosition = modelViewTransform.modelToViewPosition( model.skater.startingPosition ).plusXY( 0, 5 );
-        returnSkaterToStartingPointButton.centerBottom = viewPosition;
+        returnSkaterToPreviousStartingPositionButton.centerBottom = viewPosition;
 
         // If the return skater button went offscreen, move it back on the screen, see #222
-        if ( returnSkaterToStartingPointButton.top < 5 ) {
-          returnSkaterToStartingPointButton.top = 5;
+        if ( returnSkaterToPreviousStartingPositionButton.top < 5 ) {
+          returnSkaterToPreviousStartingPositionButton.top = 5;
         }
       }
     } );
