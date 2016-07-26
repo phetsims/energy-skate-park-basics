@@ -14,6 +14,7 @@ define( function( require ) {
   var Color = require( 'SCENERY/util/Color' );
   var inherit = require( 'PHET_CORE/inherit' );
   var TandemImage = require( 'TANDEM/scenery/nodes/TandemImage' );
+  var TandemNode = require( 'TANDEM/scenery/nodes/TandemNode' );
   var Rectangle = require( 'SCENERY/nodes/Rectangle' );
   var DotRectangle = require( 'DOT/Rectangle' ); // eslint-disable-line require-statement-match
   var Shape = require( 'KITE/Shape' );
@@ -229,7 +230,9 @@ define( function( require ) {
     this.addChild( speedometerNode );
 
     // Layer which will contain all of the tracks
-    var trackLayer = new Node();
+    var trackLayer = new TandemNode( {
+      tandem: tandem.createTandem( 'trackLayer' )
+    } );
 
     // Switch between selectable tracks
     if ( !model.draggableTracks ) {
