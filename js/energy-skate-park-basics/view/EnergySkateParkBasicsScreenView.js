@@ -310,9 +310,10 @@ define( function( require ) {
         arrowHead.fill = clearButtonEnabled ? 'black' : 'gray';
       } );
 
-      var clearButton = new EraserButton( tandem.createTandem( 'clearButton' ), {
+      var clearButton = new EraserButton( {
         iconWidth: 30,
-        baseColor: new Color( 221, 210, 32 )
+        baseColor: new Color( 221, 210, 32 ),
+        tandem: tandem.createTandem( 'clearButton' )
       } );
       clearButtonEnabledProperty.linkAttribute( clearButton, 'enabled' );
       clearButton.addListener( function() {model.clearTracks();} );
