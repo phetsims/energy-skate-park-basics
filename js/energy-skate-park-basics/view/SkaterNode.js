@@ -14,7 +14,7 @@ define( function( require ) {
   var energySkateParkBasics = require( 'ENERGY_SKATE_PARK_BASICS/energySkateParkBasics' );
   var inherit = require( 'PHET_CORE/inherit' );
   var Circle = require( 'SCENERY/nodes/Circle' );
-  var Image = require( 'SCENERY/nodes/Image' );
+  var TandemImage = require( 'TANDEM/scenery/nodes/TandemImage' );
   var TandemDragHandler = require( 'TANDEM/scenery/input/TandemDragHandler' );
   var Matrix3 = require( 'DOT/Matrix3' );
   var LinearFunction = require( 'DOT/LinearFunction' );
@@ -46,8 +46,14 @@ define( function( require ) {
     var skaterNode = this;
 
     // Use a separate texture for left/right skaters to avoid WebGL performance issues when switching textures
-    var leftSkaterImageNode = new Image( skaterLeftImage, { cursor: 'pointer' } );
-    var rightSkaterImageNode = new Image( skaterRightImage, { cursor: 'pointer' } );
+    var leftSkaterImageNode = new TandemImage( skaterLeftImage, {
+      cursor: 'pointer',
+      tandem: tandem.createTandem( 'leftSkaterImageNode' )
+    } );
+    var rightSkaterImageNode = new TandemImage( skaterRightImage, {
+      cursor: 'pointer',
+      tandem: tandem.createTandem( 'rightSkaterImageNode' )
+    } );
 
     Node.call( this, { children: [ leftSkaterImageNode, rightSkaterImageNode ], renderer: renderer } );
 

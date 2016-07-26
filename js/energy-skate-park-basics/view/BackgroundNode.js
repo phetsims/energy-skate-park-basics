@@ -13,7 +13,7 @@ define( function( require ) {
   var inherit = require( 'PHET_CORE/inherit' );
   var Node = require( 'SCENERY/nodes/Node' );
   var Rectangle = require( 'SCENERY/nodes/Rectangle' );
-  var Image = require( 'SCENERY/nodes/Image' );
+  var TandemImage = require( 'TANDEM/scenery/nodes/TandemImage' );
   var LinearGradient = require( 'SCENERY/util/LinearGradient' );
   var Pattern = require( 'SCENERY/util/Pattern' );
 
@@ -27,10 +27,11 @@ define( function( require ) {
 
   /**
    * @param {Bounds2} layoutBounds the ScreenView layoutBounds
+   * @param {Tandem} tandem
    * @param {Object} [options]
    * @constructor
    */
-  function BackgroundNode( layoutBounds, options ) {
+  function BackgroundNode( layoutBounds, tandem, options ) {
     Node.call( this, { pickable: false } );
 
     this.sky = new Rectangle( 0, 0, 0, 0 );
@@ -42,7 +43,10 @@ define( function( require ) {
 
     this.cementY = layoutBounds.height - earthHeight;
 
-    this.mountain = new Image( mountainImage, { bottom: this.cementY } );
+    this.mountain = new TandemImage( mountainImage, {
+      bottom: this.cementY,
+      tandem: tandem.createTandem( 'mountainImage' )
+    } );
     this.addChild( this.mountain );
 
     this.cement = new Rectangle( 0, 0, 0, cementWidth, { fill: new Pattern( cementImg ) } );
@@ -54,7 +58,7 @@ define( function( require ) {
   }
 
   energySkateParkBasics.register( 'BackgroundNode', BackgroundNode );
-  
+
   return inherit( Node, BackgroundNode, {
 
       // Exactly fit the geometry to the screen so no matter what aspect ratio it will always show something.

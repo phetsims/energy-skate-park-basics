@@ -34,9 +34,9 @@ define( function( require ) {
     // Create a button with a scene like the track in the index
     var createNode = function( index ) {
       var track = model.tracks.get( index );
-      var background = new BackgroundNode( view.layoutBounds );
+      var background = new BackgroundNode( view.layoutBounds, tandem.createTandem( 'backgroundNode' + index ) );
       background.layout( 0, 0, view.layoutBounds.width, view.layoutBounds.height, 1 );
-      var trackNode = new TrackNode( model, track, transform, new Property(), tandem.createTandem( 'trackNode' ) );
+      var trackNode = new TrackNode( model, track, transform, new Property(), tandem.createTandem( 'trackNode' + index ) );
 
       // Fixes: Cursor turns into a hand over the track in the track selection panel, see #204
       trackNode.pickable = false;

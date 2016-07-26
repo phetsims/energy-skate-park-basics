@@ -18,7 +18,7 @@ define( function( require ) {
   var inherit = require( 'PHET_CORE/inherit' );
   var Shape = require( 'KITE/Shape' );
   var Color = require( 'SCENERY/util/Color' );
-  var Image = require( 'SCENERY/nodes/Image' );
+  var TandemImage = require( 'TANDEM/scenery/nodes/TandemImage' );
 
   // images
   var trashCanImage = require( 'image!ENERGY_SKATE_PARK_BASICS/trash-can.png' );
@@ -36,10 +36,10 @@ define( function( require ) {
       cursor: 'pointer',
     }, options );
 
-    var icon = new Image( trashCanImage, { scale: 0.22 } );
+    var iconImage = new TandemImage( trashCanImage, { scale: 0.22, tandem: tandem.createTandem( 'iconImage' ) } );
 
     RectangularPushButton.call( this, {
-      content: icon,
+      content: iconImage,
       baseColor: new Color( 230, 230, 240 ),
       disabledBaseColor: 'white',
       cornerRadius: 6,
@@ -51,11 +51,11 @@ define( function( require ) {
     } );
     skater.allowClearingThermalEnergyProperty.link(
       function( allowClearingThermalEnergy ) {
-        icon.image = allowClearingThermalEnergy ? trashCanImage : trashCanGrayImage;
-        icon.opacity = allowClearingThermalEnergy ? 1 : 0.3;
+        iconImage.image = allowClearingThermalEnergy ? trashCanImage : trashCanGrayImage;
+        iconImage.opacity = allowClearingThermalEnergy ? 1 : 0.3;
         clearThermalButton.pickable = allowClearingThermalEnergy;
       } );
-    this.mouseArea = this.touchArea = Shape.rectangle( icon.bounds.minX, icon.bounds.minY, icon.bounds.width, icon.bounds.height );
+    this.mouseArea = this.touchArea = Shape.rectangle( iconImage.bounds.minX, iconImage.bounds.minY, iconImage.bounds.width, iconImage.bounds.height );
     this.mutate( options );
   }
 

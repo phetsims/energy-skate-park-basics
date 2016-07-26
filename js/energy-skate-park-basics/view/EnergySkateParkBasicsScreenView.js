@@ -13,7 +13,7 @@ define( function( require ) {
   var AttachDetachToggleButtons = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/view/AttachDetachToggleButtons' );
   var Color = require( 'SCENERY/util/Color' );
   var inherit = require( 'PHET_CORE/inherit' );
-  var Image = require( 'SCENERY/nodes/Image' );
+  var TandemImage = require( 'TANDEM/scenery/nodes/TandemImage' );
   var Rectangle = require( 'SCENERY/nodes/Rectangle' );
   var DotRectangle = require( 'DOT/Rectangle' ); // eslint-disable-line require-statement-match
   var Shape = require( 'KITE/Shape' );
@@ -84,7 +84,7 @@ define( function( require ) {
     this.availableModelBoundsProperty.linkAttribute( model, 'availableModelBounds' );
 
     // The background
-    this.backgroundNode = new BackgroundNode( this.layoutBounds );
+    this.backgroundNode = new BackgroundNode( this.layoutBounds, tandem.createTandem( 'backgroundNode' ) );
     this.addChild( this.backgroundNode );
 
     this.gridNode = new GridNode( model.property( 'gridVisible' ), modelViewTransform );
@@ -364,7 +364,10 @@ define( function( require ) {
     // Buttons to return the skater when she is offscreen, see #219
     var iconScale = 0.4;
     var returnSkaterToPreviousStartingPositionButton = new RectangularPushButton( {
-      content: new Image( skaterIconImage, { scale: iconScale } ),
+      content: new TandemImage( skaterIconImage, {
+        scale: iconScale,
+        tandem: tandem.createTandem( 'skaterIconImage1' )
+      } ),
 
       // green means "go" since the skater will likely start moving at this point
       baseColor: EnergySkateParkColorScheme.kineticEnergy,
@@ -373,7 +376,10 @@ define( function( require ) {
     } );
 
     var returnSkaterToGroundButton = new RectangularPushButton( {
-      content: new Image( skaterIconImage, { scale: iconScale } ),
+      content: new TandemImage( skaterIconImage, {
+        scale: iconScale,
+        tandem: tandem.createTandem( 'skaterIconImage2' )
+      } ),
       centerBottom: modelViewTransform.modelToViewPosition( model.skater.startingPosition ),
       baseColor: '#f4514e', // red for stop, since the skater will be stopped on the ground.
       listener: function() { model.skater.resetPosition(); },
