@@ -19,7 +19,7 @@ define( function( require ) {
    */
   var TControlPoint = phetioInherit( TObject, 'TControlPoint', function( instance, phetioID ) {
     TObject.call( this, instance, phetioID );
-    assertInstanceOf( instance, phet.energySkateParkBaics.ControlPoint );
+    assertInstanceOf( instance, phet.energySkateParkBasics.ControlPoint );
   }, {}, {
 
     // Support null
