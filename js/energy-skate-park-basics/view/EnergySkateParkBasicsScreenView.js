@@ -164,7 +164,7 @@ define( function( require ) {
     var stepButton = new StepForwardButton( {
       playingProperty: playingProperty,
       listener: function() { model.manualStep(); },
-      phetioID: tandem.createTandem( 'stepButton' )
+      tandem: tandem.createTandem( 'stepButton' )
     } );
 
     // Make the step button the same size as the pause button.
@@ -185,7 +185,7 @@ define( function( require ) {
       // Align vertically with other controls, see #134
       centerY: (modelViewTransform.modelToViewY( 0 ) + this.layoutBounds.maxY) / 2 + 8,
 
-      phetioID: tandem.createTandem( 'resetAllButton' )
+      tandem: tandem.createTandem( 'resetAllButton' )
     } );
     this.addChild( this.resetAllButton );
 
@@ -197,7 +197,7 @@ define( function( require ) {
       listener: model.returnSkater.bind( model ),
       centerY: this.resetAllButton.centerY,
       // X updated in layoutBounds since the reset all button can move horizontally
-      phetioID: tandem.createTandem( 'returnSkaterButton' )
+      tandem: tandem.createTandem( 'returnSkaterButton' )
     } );
 
     // Disable the return skater button when the skater is already at his initial coordinates
@@ -310,10 +310,9 @@ define( function( require ) {
         arrowHead.fill = clearButtonEnabled ? 'black' : 'gray';
       } );
 
-      var clearButton = new EraserButton( {
+      var clearButton = new EraserButton( tandem.createTandem( 'clearButton' ), {
         iconWidth: 30,
-        baseColor: new Color( 221, 210, 32 ),
-        phetioID: 'playgroundScreen.clearTracksButton'
+        baseColor: new Color( 221, 210, 32 )
       } );
       clearButtonEnabledProperty.linkAttribute( clearButton, 'enabled' );
       clearButton.addListener( function() {model.clearTracks();} );
