@@ -151,7 +151,7 @@ define( function( require ) {
         clearButtonEnabled: TBoolean,
         paused: TBoolean,
         speed: TString,
-        friction: TNumber( 'unitless' ),
+        friction: TNumber && TNumber( 'unitless' ),
         detachable: TBoolean,
         availableModelBounds: TBounds2
       }
@@ -240,7 +240,7 @@ define( function( require ) {
     if ( !draggableTracks ) {
 
       // For screens 1-2, the index of the selected scene (and track) within the screen
-      this.addProperty( 'scene', 0, tandem.createTandem( 'sceneProperty' ), TNumber( 'unitless' ) );
+      this.addProperty( 'scene', 0, tandem.createTandem( 'sceneProperty' ), TNumber && TNumber( 'unitless' ) );
 
       // Shape types
       // For the double well, move the left well up a bit since the interpolation moves it down by that much, and we
