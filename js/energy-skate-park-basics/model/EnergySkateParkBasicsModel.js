@@ -242,21 +242,21 @@ define( function( require ) {
       // For the double well, move the left well up a bit since the interpolation moves it down by that much, and we
       // don't want the skater to go to y<0 while on the track.  Numbers determined by trial and error.
       var parabola = [
-        new ControlPoint( -4, 6, controlPointGroupTandem ),
-        new ControlPoint( 0, 0, controlPointGroupTandem ),
-        new ControlPoint( 4, 6, controlPointGroupTandem )
+        new ControlPoint( -4, 6, controlPointGroupTandem.createNextTandem() ),
+        new ControlPoint( 0, 0, controlPointGroupTandem.createNextTandem() ),
+        new ControlPoint( 4, 6, controlPointGroupTandem.createNextTandem() )
       ];
       var slope = [
-        new ControlPoint( -4, 6, controlPointGroupTandem ),
-        new ControlPoint( -2, 1.2, controlPointGroupTandem ),
-        new ControlPoint( 2, 0, controlPointGroupTandem )
+        new ControlPoint( -4, 6, controlPointGroupTandem.createNextTandem() ),
+        new ControlPoint( -2, 1.2, controlPointGroupTandem.createNextTandem() ),
+        new ControlPoint( 2, 0, controlPointGroupTandem.createNextTandem() )
       ];
       var doubleWell = [
-        new ControlPoint( -4, 5, controlPointGroupTandem ),
-        new ControlPoint( -2, 0.0166015, controlPointGroupTandem ),
-        new ControlPoint( 0, 2, controlPointGroupTandem ),
-        new ControlPoint( 2, 1, controlPointGroupTandem ),
-        new ControlPoint( 4, 5, controlPointGroupTandem )
+        new ControlPoint( -4, 5, controlPointGroupTandem.createNextTandem() ),
+        new ControlPoint( -2, 0.0166015, controlPointGroupTandem.createNextTandem() ),
+        new ControlPoint( 0, 2, controlPointGroupTandem.createNextTandem() ),
+        new ControlPoint( 2, 1, controlPointGroupTandem.createNextTandem() ),
+        new ControlPoint( 4, 5, controlPointGroupTandem.createNextTandem() )
       ];
 
       var parabolaTrack = new Track( this, this.tracks, parabola, false, null, this.availableModelBoundsProperty );
@@ -314,9 +314,9 @@ define( function( require ) {
       // eyeballing it for now.
       var offset = new Vector2( -5.1, -0.85 );
       var controlPoints = [
-        new ControlPoint( offset.x - 1, offset.y, controlPointGroupTandem ),
-        new ControlPoint( offset.x, offset.y, controlPointGroupTandem ),
-        new ControlPoint( offset.x + 1, offset.y, controlPointGroupTandem )
+        new ControlPoint( offset.x - 1, offset.y, controlPointGroupTandem.createNextTandem() ),
+        new ControlPoint( offset.x, offset.y, controlPointGroupTandem.createNextTandem() ),
+        new ControlPoint( offset.x + 1, offset.y, controlPointGroupTandem.createNextTandem() )
       ];
       this.tracks.add( new Track( this, this.tracks, controlPoints, true, null, this.availableModelBoundsProperty ) );
     },
@@ -1225,12 +1225,12 @@ define( function( require ) {
       var newPoint1 = new ControlPoint(
         track.controlPoints[ controlPointIndex ].sourcePosition.x - vector.x,
         track.controlPoints[ controlPointIndex ].sourcePosition.y - vector.y,
-        controlPointGroupTandem
+        this.controlPointGroupTandem.createNextTandem()
       );
       var newPoint2 = new ControlPoint(
         track.controlPoints[ controlPointIndex ].sourcePosition.x + vector.x,
         track.controlPoints[ controlPointIndex ].sourcePosition.y + vector.y,
-        controlPointGroupTandem
+        this.controlPointGroupTandem.createNextTandem()
       );
 
       var points1 = track.controlPoints.slice( 0, controlPointIndex );
@@ -1283,13 +1283,28 @@ define( function( require ) {
     joinTrackToTrack: function( a, b ) {
       var points = [];
       var i;
+      var controlPointGroupTandem = this.controlPointGroupTandem;
 
-      // Join in the right direction for a & b so that the joined point is in the middle
-
-      var firstTrackForward = function() {for ( i = 0; i < a.controlPoints.length; i++ ) { points.push( a.controlPoints[ i ].copy() ); }};
-      var firstTrackBackward = function() {for ( i = a.controlPoints.length - 1; i >= 0; i-- ) { points.push( a.controlPoints[ i ].copy() ); }};
-      var secondTrackForward = function() {for ( i = 1; i < b.controlPoints.length; i++ ) {points.push( b.controlPoints[ i ].copy() ); }};
-      var secondTrackBackward = function() {for ( i = b.controlPoints.length - 2; i >= 0; i-- ) {points.push( b.controlPoints[ i ].copy() ); }};
+      var firstTrackForward = function() {
+        for ( i = 0; i < a.controlPoints.length; i++ ) {
+          points.push( a.controlPoints[ i ].copy( controlPointGroupTandem.createNextTandem() ) );
+        }
+      };
+      var firstTrackBackward = function() {
+        for ( i = a.controlPoints.length - 1; i >= 0; i-- ) {
+          points.push( a.controlPoints[ i ].copy( controlPointGroupTandem.createNextTandem() ) );
+        }
+      };
+      var secondTrackForward = function() {
+        for ( i = 1; i < b.controlPoints.length; i++ ) {
+          points.push( b.controlPoints[ i ].copy( controlPointGroupTandem.createNextTandem() ) );
+        }
+      };
+      var secondTrackBackward = function() {
+        for ( i = b.controlPoints.length - 2; i >= 0; i-- ) {
+          points.push( b.controlPoints[ i ].copy( controlPointGroupTandem.createNextTandem() ) );
+        }
+      };
 
       // Only include one copy of the snapped point
       // Forward Forward

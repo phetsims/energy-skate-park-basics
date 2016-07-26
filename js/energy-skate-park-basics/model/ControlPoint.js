@@ -21,16 +21,10 @@ define( function( require ) {
    *
    * @param x
    * @param y
-   * @param {GroupTandem} groupTandem - to support creating ControlPoints from many contexts, they are created
-   *                                  - with a GroupTandem instead of a normal tandem, so copies my be made easily.
+   * @param {Tandem} tandem
    * @constructor
    */
-  function ControlPoint( x, y, groupTandem ) {
-
-    // @private
-    this.groupTandem = groupTandem;
-
-    var tandem = groupTandem.createNextTandem();
+  function ControlPoint( x, y, tandem ) {
 
     PropertySet.call( this, {
 
@@ -59,8 +53,8 @@ define( function( require ) {
   energySkateParkBasics.register( 'ControlPoint', ControlPoint );
 
   return inherit( PropertySet, ControlPoint, {
-    copy: function() {
-      return new ControlPoint( this.position.x, this.position.y, this.groupTandem );
+    copy: function( tandem ) {
+      return new ControlPoint( this.position.x, this.position.y, tandem );
     }
   } );
 } );
