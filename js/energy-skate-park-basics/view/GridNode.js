@@ -56,7 +56,13 @@ define( function( require ) {
 
       this.thinLinePath && this.thinLinePath.dispose();
       this.thickLinePath && this.thickLinePath.dispose();
+      if ( this.createdTexts ) {
+        for ( var k = 0; k < this.createdTexts.length; k++ ) {
+          this.createdTexts[ k ].dispose();
+        }
+      }
 
+      var createdTexts = [];
       var thickLines = [];
       var thinLines = [];
       var texts = [];
@@ -95,6 +101,7 @@ define( function( require ) {
             top: viewY,
             right: originX - 2
           } );
+          createdTexts.push( gridLineLabel );
 
           // For the "0 meters" readout, we still need the 0 to line up perfectly (while still using a single
           // internationalizable string), so use the 0 text bounds
@@ -107,6 +114,7 @@ define( function( require ) {
               x: gridLineLabel.x
             } );
             texts.push( replacementText );
+            createdTexts.push( replacementText );
           }
           else {
             texts.push( gridLineLabel );
@@ -145,6 +153,7 @@ define( function( require ) {
       // @private
       this.thinLinePath = thinLinePath;
       this.thickLinePath = thickLinePath;
+      this.createdTexts = createdTexts;
     }
   } );
 } );
