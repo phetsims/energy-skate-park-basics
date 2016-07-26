@@ -65,7 +65,7 @@ define( function( require ) {
     //If the track is interactive, make it draggable and make the control points visible and draggable
     if ( track.interactive ) {
 
-      var trackDragHandler = new TrackDragHandler( this );
+      var trackDragHandler = new TrackDragHandler( this, tandem.createTandem( 'trackDragHandler' ) );
       this.road.addInputListener( trackDragHandler );
 
       for ( var i = 0; i < track.controlPoints.length; i++ ) {

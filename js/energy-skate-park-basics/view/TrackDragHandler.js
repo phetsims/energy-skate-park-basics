@@ -11,13 +11,13 @@ define( function( require ) {
   // modules
   var energySkateParkBasics = require( 'ENERGY_SKATE_PARK_BASICS/energySkateParkBasics' );
   var inherit = require( 'PHET_CORE/inherit' );
-  var SimpleDragHandler = require( 'SCENERY/input/SimpleDragHandler' );
+  var TandemDragHandler = require( 'TANDEM/scenery/input/TandemDragHandler' );
 
   /**
    * @param {TrackNode} the track node that this listener will drag
    * @constructor
    */
-  function TrackDragHandler( trackNode ) {
+  function TrackDragHandler( trackNode, tandem ) {
     this.trackNode = trackNode;
     var trackDragHandler = this;
     this.track = trackNode.track;
@@ -37,6 +37,7 @@ define( function( require ) {
     // determined by the shape of the track (so it cannot go below ground)
     // And so it can be dragged out of the toolbox but not back into it (so it won't be dragged below ground)
     var trackSegmentDragHandlerOptions = {
+      tandem: tandem.createTandem( 'inputListener' ),
       allowTouchSnag: true,
 
       start: function( event ) {
@@ -67,12 +68,12 @@ define( function( require ) {
         }
       }
     };
-    SimpleDragHandler.call( this, trackSegmentDragHandlerOptions );
+    TandemDragHandler.call( this, trackSegmentDragHandlerOptions );
   }
 
   energySkateParkBasics.register( 'TrackDragHandler', TrackDragHandler );
-  
-  return inherit( SimpleDragHandler, TrackDragHandler, {
+
+  return inherit( TandemDragHandler, TrackDragHandler, {
 
     // When the user drags the track out of the toolbox, if they drag the track by a control point, it still translates
     // the track.  In that case (and only that case), the following methods are called by the ControlPointNode drag
