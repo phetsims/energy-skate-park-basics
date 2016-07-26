@@ -14,7 +14,7 @@ define( function( require ) {
   var Rectangle = require( 'SCENERY/nodes/Rectangle' );
   var VBox = require( 'SCENERY/nodes/VBox' );
   var HBox = require( 'SCENERY/nodes/HBox' );
-  var Text = require( 'SCENERY/nodes/Text' );
+  var TandemText = require( 'TANDEM/scenery/nodes/TandemText' );
   var Panel = require( 'SUN/Panel' );
   var VStrut = require( 'SCENERY/nodes/VStrut' );
   var HStrut = require( 'SCENERY/nodes/HStrut' );
@@ -38,8 +38,9 @@ define( function( require ) {
   function PieChartLegend( skater, clearThermal, pieChartVisibleProperty, tandem ) {
 
     // The x-coordinate of a bar chart bar
-    var createLabel = function( index, title, color ) {
-      return new Text( title, {
+    var createLabel = function( index, title, color, tandemName ) {
+      return new TandemText( title, {
+        tandem: tandem.createTandem( tandemName ),
         fill: color,
         font: new PhetFont( 12 ),
         pickable: false,
@@ -59,9 +60,9 @@ define( function( require ) {
     var potentialBar = createBar( 1, EnergySkateParkColorScheme.potentialEnergy );
     var thermalBar = createBar( 2, EnergySkateParkColorScheme.thermalEnergy );
 
-    var kineticLabel = createLabel( 0, energyKineticString, EnergySkateParkColorScheme.kineticEnergy );
-    var potentialLabel = createLabel( 1, energyPotentialString, EnergySkateParkColorScheme.potentialEnergy );
-    var thermalLabel = createLabel( 2, energyThermalString, EnergySkateParkColorScheme.thermalEnergy );
+    var kineticLabel = createLabel( 0, energyKineticString, EnergySkateParkColorScheme.kineticEnergy, 'kineticEnergyLabel' );
+    var potentialLabel = createLabel( 1, energyPotentialString, EnergySkateParkColorScheme.potentialEnergy, 'potentialEnergyLabel' );
+    var thermalLabel = createLabel( 2, energyThermalString, EnergySkateParkColorScheme.thermalEnergy, 'thermalEnergyLabel' );
 
     var clearThermalButton = new ClearThermalButton( clearThermal, skater, tandem.createTandem( 'clearThermalButton' ), {
       centerX: thermalLabel.centerX,
@@ -87,7 +88,8 @@ define( function( require ) {
       ]
     } );
 
-    var titleNode = new Text( energyEnergyString, {
+    var titleNode = new TandemText( energyEnergyString, {
+      tandem: tandem.createTandem( 'titleNode' ),
       fill: 'black',
       font: new PhetFont( 14 ),
       pickable: false,

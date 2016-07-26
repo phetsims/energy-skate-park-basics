@@ -14,7 +14,7 @@ define( function( require ) {
   var inherit = require( 'PHET_CORE/inherit' );
   var Rectangle = require( 'SCENERY/nodes/Rectangle' );
   var Line = require( 'SCENERY/nodes/Line' );
-  var Text = require( 'SCENERY/nodes/Text' );
+  var TandemText = require( 'TANDEM/scenery/nodes/TandemText' );
   var Panel = require( 'SUN/Panel' );
   var ArrowNode = require( 'SCENERY_PHET/ArrowNode' );
   var PhetFont = require( 'SCENERY_PHET/PhetFont' );
@@ -58,8 +58,9 @@ define( function( require ) {
     this.getBarX = function( barIndex ) { return insetX + spaceBetweenAxisAndBar + barGraphBackground.barWidth * barIndex + spaceBetweenBars * barIndex; };
 
     // Create a label that appears under one of the bars
-    var createLabel = function( index, title, color ) {
-      var text = new Text( title, {
+    var createLabel = function( index, title, color, tandemName ) {
+      var text = new TandemText( title, {
+        tandem: tandem.createTandem( tandemName ),
         fill: color,
         font: new PhetFont( 14 ),
         pickable: false,
@@ -72,10 +73,10 @@ define( function( require ) {
       return text;
     };
 
-    var kineticLabel = createLabel( 0, energyKineticString, EnergySkateParkColorScheme.kineticEnergy );
-    var potentialLabel = createLabel( 1, energyPotentialString, EnergySkateParkColorScheme.potentialEnergy );
-    var thermalLabel = createLabel( 2, energyThermalString, EnergySkateParkColorScheme.thermalEnergy );
-    var totalLabel = createLabel( 3, energyTotalString, EnergySkateParkColorScheme.totalEnergy );
+    var kineticLabel = createLabel( 0, energyKineticString, EnergySkateParkColorScheme.kineticEnergy, 'kineticEnergyLabel' );
+    var potentialLabel = createLabel( 1, energyPotentialString, EnergySkateParkColorScheme.potentialEnergy, 'potentialEnergyLabel' );
+    var thermalLabel = createLabel( 2, energyThermalString, EnergySkateParkColorScheme.thermalEnergy, 'thermalEnergyLabel' );
+    var totalLabel = createLabel( 3, energyTotalString, EnergySkateParkColorScheme.totalEnergy, 'totalEnergyLabel' );
 
     var clearThermalButton = new ClearThermalButton( clearThermal, skater, tandem.createTandem( 'clearThermalButton' ), {
       centerX: thermalLabel.centerX,
@@ -85,7 +86,8 @@ define( function( require ) {
       clearThermalButton.enabled = allowClearingThermalEnergy;
     } );
 
-    var titleNode = new Text( energyEnergyString, {
+    var titleNode = new TandemText( energyEnergyString, {
+      tandem: tandem.createTandem( 'titleNode' ),
       x: 5,
       top: 0,
       font: new PhetFont( 14 ),

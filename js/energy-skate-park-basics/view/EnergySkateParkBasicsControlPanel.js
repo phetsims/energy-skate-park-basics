@@ -21,7 +21,7 @@ define( function( require ) {
   var Circle = require( 'SCENERY/nodes/Circle' );
   var Panel = require( 'SUN/Panel' );
   var CheckBox = require( 'SUN/CheckBox' );
-  var Text = require( 'SCENERY/nodes/Text' );
+  var TandemText = require( 'TANDEM/scenery/nodes/TandemText' );
   var MassControlPanel = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/view/MassControlPanel' );
   var EnergySkateParkColorScheme = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/view/EnergySkateParkColorScheme' );
   var GaugeNode = require( 'SCENERY_PHET/GaugeNode' );
@@ -46,19 +46,19 @@ define( function( require ) {
       maxWidth: 134 // selected by choosing the length of widest English string in ?stringTest=double
     };
     var pieChartSet = {
-      label: new Text( pieChartString, textOptions ),
+      label: new TandemText( pieChartString, _.extend( { tandem: tandem.createTandem( 'pieChartLabel' ) }, textOptions ) ),
       icon: this.createPieChartIcon( tandem.createTandem( 'pieChartIcon' ) )
     };
     var barGraphSet = {
-      label: new Text( plotsBarGraphString, textOptions ),
+      label: new TandemText( plotsBarGraphString, _.extend( { tandem: tandem.createTandem( 'barGraphLabel' ) }, textOptions ) ),
       icon: this.createBarGraphIcon( tandem.createTandem( 'barGraphIcon' ) )
     };
     var gridSet = {
-      label: new Text( controlsShowGridString, textOptions ),
+      label: new TandemText( controlsShowGridString, _.extend( { tandem: tandem.createTandem( 'gridLabel' ) }, textOptions ) ),
       icon: this.createGridIcon( tandem.createTandem( 'gridIcon' ) )
     };
     var speedometerSet = {
-      label: new Text( propertiesSpeedString, textOptions ),
+      label: new TandemText( propertiesSpeedString, _.extend( { tandem: tandem.createTandem( 'speedometerLabel' ) }, textOptions ) ),
       icon: this.createSpeedometerIcon( tandem.createTandem( 'speedometerIcon' ) )
     };
 

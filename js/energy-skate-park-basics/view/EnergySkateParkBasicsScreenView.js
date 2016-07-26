@@ -42,7 +42,7 @@ define( function( require ) {
   var StepForwardButton = require( 'SCENERY_PHET/buttons/StepForwardButton' );
   var Property = require( 'AXON/Property' );
   var RectangularPushButton = require( 'SUN/buttons/RectangularPushButton' );
-  var Text = require( 'SCENERY/nodes/Text' );
+  var TandemText = require( 'TANDEM/scenery/nodes/TandemText' );
   var EnergySkateParkColorScheme = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/view/EnergySkateParkColorScheme' );
   var Util = require( 'SCENERY/util/Util' );
   var Bounds2 = require( 'DOT/Bounds2' );
@@ -194,7 +194,8 @@ define( function( require ) {
 
     // The button to return the skater
     this.returnSkaterButton = new RectangularPushButton( {
-      content: new Text( controlsRestartSkaterString, {
+      content: new TandemText( controlsRestartSkaterString, {
+        tandem: tandem.createTandem( 'restartSkaterTextNode' ),
         maxWidth: 100
       } ),
       listener: model.returnSkater.bind( model ),

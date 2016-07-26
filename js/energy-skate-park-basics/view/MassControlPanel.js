@@ -12,7 +12,7 @@ define( function( require ) {
   var energySkateParkBasics = require( 'ENERGY_SKATE_PARK_BASICS/energySkateParkBasics' );
   var inherit = require( 'PHET_CORE/inherit' );
   var VBox = require( 'SCENERY/nodes/VBox' );
-  var Text = require( 'SCENERY/nodes/Text' );
+  var TandemText = require( 'TANDEM/scenery/nodes/TandemText' );
   var PhetFont = require( 'SCENERY_PHET/PhetFont' );
   var HSlider = require( 'SUN/HSlider' );
   var Constants = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/Constants' );
@@ -38,11 +38,12 @@ define( function( require ) {
       font: tickFont,
       maxWidth: 54 // selected by choosing the length of widest English string in ?stringTest=double
     };
-    slider.addMajorTick( Constants.MIN_MASS, new Text( smallString, textOptions ) );
-    slider.addMajorTick( Constants.MAX_MASS, new Text( largeString, textOptions ) );
+    slider.addMajorTick( Constants.MIN_MASS, new TandemText( smallString, _.extend( { tandem: tandem.createTandem( 'smallTextNode' ) }, textOptions ) ) );
+    slider.addMajorTick( Constants.MAX_MASS, new TandemText( largeString, _.extend( { tandem: tandem.createTandem( 'largeTextNode' ) }, textOptions ) ) );
 
     // Space the label above the tick labels so that it won't overlap for i18n
-    var text = new Text( controlsMassString, {
+    var text = new TandemText( controlsMassString, {
+      tandem: tandem.createTandem( 'massStringTextNode' ),
       font: new PhetFont( { weight: 'bold', size: 13 } ),
       maxWidth: 100 // selected by choosing the length of widest English string in ?stringTest=double
     } );
