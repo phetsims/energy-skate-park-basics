@@ -16,6 +16,7 @@ define( function( require ) {
   var TandemImage = require( 'TANDEM/scenery/nodes/TandemImage' );
   var TandemNode = require( 'TANDEM/scenery/nodes/TandemNode' );
   var Rectangle = require( 'SCENERY/nodes/Rectangle' );
+  var Bounds2 = require( 'DOT/Bounds2' );
   var DotRectangle = require( 'DOT/Rectangle' ); // eslint-disable-line require-statement-match
   var Shape = require( 'KITE/Shape' );
   var ScreenView = require( 'JOIST/ScreenView' );
@@ -81,7 +82,7 @@ define( function( require ) {
     var modelViewTransform = ModelViewTransform2.createSinglePointScaleInvertedYMapping( modelPoint, viewPoint, scale );
     this.modelViewTransform = modelViewTransform;
 
-    this.availableModelBoundsProperty = new Property();
+    this.availableModelBoundsProperty = new Property( new Bounds2( 0, 0, 0, 0 ) );
     this.availableModelBoundsProperty.linkAttribute( model, 'availableModelBounds' );
 
     // The background

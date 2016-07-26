@@ -37,11 +37,13 @@ define( function( require ) {
   var ObservableArray = require( 'AXON/ObservableArray' );
   var SkaterState = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/model/SkaterState' );
   var Util = require( 'DOT/Util' );
+  var Bounds2 = require( 'DOT/Bounds2' );
 
   // phet-io modules
   var TNumber = require( 'ifphetio!PHET_IO/types/TNumber' );
   var TBoolean = require( 'ifphetio!PHET_IO/types/TBoolean' );
   var TString = require( 'ifphetio!PHET_IO/types/TString' );
+  var TBounds2 = require( 'ifphetio!PHET_IO/types/dot/TBounds2' );
 
   // Reuse empty object for creating SkaterStates to avoid allocations
   var EMPTY_OBJECT = {};
@@ -118,7 +120,7 @@ define( function( require ) {
 
       // Will be filled in by the view, used to prevent control points from moving outside the visible model bounds when
       // adjusted, see #195
-      availableModelBounds: null
+      availableModelBounds: new Bounds2( 0, 0, 0, 0 )
     }, {
       tandemSet: {
         pieChartVisible: tandem.createTandem( 'pieChartVisibleProperty' ),
@@ -130,7 +132,8 @@ define( function( require ) {
         paused: tandem.createTandem( 'pausedProperty' ),
         speed: tandem.createTandem( 'speedProperty' ),
         friction: tandem.createTandem( 'frictionProperty' ),
-        detachable: tandem.createTandem( 'detachableProperty' )
+        detachable: tandem.createTandem( 'detachableProperty' ),
+        availableModelBounds: tandem.createTandem( 'availableModelBoundsProperty' )
       },
       typeSet: {
         pieChartVisible: TBoolean,
@@ -142,7 +145,8 @@ define( function( require ) {
         paused: TBoolean,
         speed: TString,
         friction: TNumber( 'unitless' ),
-        detachable: TBoolean
+        detachable: TBoolean,
+        availableModelBounds: TBounds2
       }
     } );
 
