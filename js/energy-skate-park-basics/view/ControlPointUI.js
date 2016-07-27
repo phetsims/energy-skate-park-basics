@@ -111,7 +111,7 @@ define( function( require ) {
 
     //Override to additionally remove the attached input listener
     detach: function() {
-      Node.prototype.detach.call( this );
+      TandemNode.prototype.detach.call( this );
       if ( _.indexOf( this.sceneNode.getInputListeners(), this.clickToDismissListener ) !== -1 ) {
         this.sceneNode.removeInputListener( this.clickToDismissListener );
       }
