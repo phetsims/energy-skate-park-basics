@@ -50,7 +50,7 @@ define( function( require ) {
     // connection is possible
     this.addDerivedProperty( 'position', [ 'sourcePosition', 'snapTarget' ], function( sourcePosition, snapTarget ) {
       return snapTarget ? snapTarget.position : sourcePosition;
-    } );
+    }, tandem.createTandem( 'positionProperty' ), TVector2 );
 
     TControlPoint && tandem.addInstance( this, TControlPoint );
   }
