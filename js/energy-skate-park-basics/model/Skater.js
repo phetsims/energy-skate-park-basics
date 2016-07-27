@@ -148,7 +148,7 @@ define( function( require ) {
 
     this.addDerivedProperty( 'speed', [ 'velocity' ], function( velocity ) {
       return velocity.magnitude();
-    } );
+    }, tandem.createTandem( 'speedProperty' ), TNumber && TNumber( 'meters/second' ) );
 
     // Zero the kinetic energy when dragging, see #22
     this.draggingProperty.link( function( dragging ) {
@@ -179,7 +179,7 @@ define( function( require ) {
     // If this is a performance concern, perhaps it could just be dropped as a feature
     this.addDerivedProperty( 'moved', [ 'position', 'startingPosition', 'dragging' ], function( x, x0, dragging ) {
       return !dragging && (x.x !== x0.x || x.y !== x0.y);
-    } );
+    }, tandem.createTandem( 'movedProperty' ), TBoolean );
 
     this.property( 'mass' ).link( function() { skater.updateEnergy(); } );
 
@@ -191,7 +191,9 @@ define( function( require ) {
 
     // Enable the "Clear Thermal" buttons but only if the thermal energy exceeds a tiny threshold, so there aren't visual
     // "false positives", see #306
-    this.addDerivedProperty( 'allowClearingThermalEnergy', [ 'thermalEnergy' ], function( thermalEnergy ) {return thermalEnergy > 1E-2;} );
+    this.addDerivedProperty( 'allowClearingThermalEnergy', [ 'thermalEnergy' ], function( thermalEnergy ) {
+      return thermalEnergy > 1E-2;
+    }, tandem.createTandem( 'allowClearingThermalEnergyProperty' ), TBoolean );
   }
 
   energySkateParkBasics.register( 'Skater', Skater );
