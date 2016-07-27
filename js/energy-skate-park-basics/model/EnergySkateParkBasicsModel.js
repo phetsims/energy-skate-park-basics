@@ -44,6 +44,7 @@ define( function( require ) {
   var TBoolean = require( 'ifphetio!PHET_IO/types/TBoolean' );
   var TString = require( 'ifphetio!PHET_IO/types/TString' );
   var TBounds2 = require( 'ifphetio!PHET_IO/types/dot/TBounds2' );
+  var TEnergySkateParkBasicsModel = require( 'ifphetio!PHET_IO/simulations/energy-skate-park-basics/TEnergySkateParkBasicsModel' )
 
   // Reuse empty object for creating SkaterStates to avoid allocations
   var EMPTY_OBJECT = {};
@@ -180,15 +181,6 @@ define( function( require ) {
       //
       //  // TODO: use get value instead of this function.
       //  getArray: function() {
-      //    return model.tracks.map( function( track ) {
-      //      return {
-      //        getArray: function() {
-      //          return track.controlPoints.map( function( controlPoint ) {
-      //            return controlPoint.sourcePosition;
-      //          } );
-      //        }
-      //      };
-      //    } ).getArray(); // This line returns a JS Array, not ObservableArray, required by phetio.js
       //  },
       //
       //  get value() {
@@ -197,22 +189,7 @@ define( function( require ) {
       //
       //  // TODO: set value asymmetric from getArray
       //  set value( arrayOfArrayOfVector ) {
-      //    // TODO: Ensure the right number of tracks, each with the right number of points.
-      //
-      //    for ( var i = 0; i < arrayOfArrayOfVector.length; i++ ) {
-      //      var track = arrayOfArrayOfVector[ i ];
-      //      for ( var j = 0; j < track.length; j++ ) {
-      //        var controlPoint = model.tracks.get( i ).controlPoints[ j ];
-      //
-      //        // Making sure it is different here significantly improves performance in mirror.html
-      //        if ( controlPoint.sourcePosition.x !== track[ j ].x ||
-      //             controlPoint.sourcePosition.y !== track[ j ].y ) {
-      //          controlPoint.sourcePosition = track[ j ];
-      //          model.tracks.get( i ).updateSplines();
-      //          model.tracks.get( i ).trigger( 'update' );
-      //        }
-      //      }
-      //    }
+
       //  }
       //} );
     }
@@ -296,6 +273,8 @@ define( function( require ) {
     if ( phet.chipper.getQueryParameter( 'debugTrack' ) ) {
       DebugTracks.init( this, tandem.createGroupTandem( 'debugTrackControlPoint' ), tandem.createGroupTandem( 'track' ) );
     }
+
+    tandem.addInstance( this, TEnergySkateParkBasicsModel );
   }
 
   energySkateParkBasics.register( 'EnergySkateParkBasicsModel', EnergySkateParkBasicsModel );

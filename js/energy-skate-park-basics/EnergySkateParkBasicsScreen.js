@@ -30,9 +30,11 @@ define( function( require ) {
     Screen.call( this, name, new TandemImage( homescreenIcon, {
         tandem: tandem.createTandem( 'homescreenIcon' )
       } ),
-      function() { return new EnergySkateParkBasicsModel( draggableTracks, friction, tandem ); },
+      function() {
+        return new EnergySkateParkBasicsModel( draggableTracks, friction, tandem.createTandem( 'model' ) );
+      },
       function( model ) {
-        return new EnergySkateParkBasicsScreenView( model, tandem );
+        return new EnergySkateParkBasicsScreenView( model, tandem.createTandem( 'view' ) );
       }, {
         navigationBarIcon: new TandemImage( navbarIcon, {
           tandem: tandem.createTandem( 'navbarIcon' )
