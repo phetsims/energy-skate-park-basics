@@ -127,31 +127,31 @@ define( function( require ) {
       },
       typeSet: {
         track: TTrack,
-        uD: TNumber && TNumber( 'unitless' ),
+        uD: TNumber( 'unitless' ),
         startingPosition: TVector2,
-        startingU: TNumber && TNumber( 'unitless' ),
+        startingU: TNumber( 'unitless' ),
         startingUp: TBoolean,
         startingTrack: TTrack,
         headPosition: TVector2,
         position: TVector2,
-        u: TNumber && TNumber( 'unitless' ),
+        u: TNumber( 'unitless' ),
         up: TBoolean,
-        mass: TNumber && TNumber( 'kilograms' ),
-        gravity: TNumber && TNumber( 'meters/second/second' ),
+        mass: TNumber( 'kilograms' ),
+        gravity: TNumber( 'meters/second/second' ),
         direction: TString,
-        kineticEnergy: TNumber && TNumber( 'joules' ),
-        potentialEnergy: TNumber && TNumber( 'joules' ),
-        thermalEnergy: TNumber && TNumber( 'joules' ),
-        totalEnergy: TNumber && TNumber( 'joules' ),
+        kineticEnergy: TNumber( 'joules' ),
+        potentialEnergy: TNumber( 'joules' ),
+        thermalEnergy: TNumber( 'joules' ),
+        totalEnergy: TNumber( 'joules' ),
         velocity: TVector2,
         dragging: TBoolean,
-        angle: TNumber && TNumber( 'radians' )
+        angle: TNumber( 'radians' )
       }
     } );
 
     this.addDerivedProperty( 'speed', [ 'velocity' ], function( velocity ) {
       return velocity.magnitude();
-    }, tandem.createTandem( 'speedProperty' ), TNumber && TNumber( 'meters/second' ) );
+    }, tandem.createTandem( 'speedProperty' ), TNumber( 'meters/second' ) );
 
     // Zero the kinetic energy when dragging, see #22
     this.draggingProperty.link( function( dragging ) {
