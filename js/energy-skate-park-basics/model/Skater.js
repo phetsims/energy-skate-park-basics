@@ -18,6 +18,9 @@ define( function( require ) {
   var Constants = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/Constants' );
 
   // phet-io modules
+  var phetio = require( 'ifphetio!PHET_IO/phetio' );
+
+  // phet-io modules
   var TVector2 = require( 'ifphetio!PHET_IO/types/dot/TVector2' );
   var TNumber = require( 'ifphetio!PHET_IO/types/TNumber' );
   var TBoolean = require( 'ifphetio!PHET_IO/types/TBoolean' );
@@ -194,6 +197,11 @@ define( function( require ) {
     this.addDerivedProperty( 'allowClearingThermalEnergy', [ 'thermalEnergy' ], function( thermalEnergy ) {
       return thermalEnergy > 1E-2;
     }, tandem.createTandem( 'allowClearingThermalEnergyProperty' ), TBoolean );
+
+    // In the state.html wrapper, when the state changes, we must update the skater node
+    phetio && phetio.setStateEmitter.addListener( function() {
+      skater.trigger( 'updated' );
+    } );
   }
 
   energySkateParkBasics.register( 'Skater', Skater );
