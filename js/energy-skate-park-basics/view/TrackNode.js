@@ -22,6 +22,9 @@ define( function( require ) {
   var TrackDragHandler = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/view/TrackDragHandler' );
   var dot = require( 'DOT/dot' );
 
+  // phet-io modules
+  var phetio = require( 'ifphetio!PHET_IO/phetio' );
+
   // constants
   var FastArray = dot.FastArray;
 
@@ -103,6 +106,11 @@ define( function( require ) {
     track.on( 'reset', this.updateTrackShape.bind( this ) );
     track.on( 'smoothed', this.updateTrackShape.bind( this ) );
     track.on( 'update', this.updateTrackShape.bind( this ) );
+
+    // In the state.html wrapper, when the state changes, we must update the skater node
+    phetio && phetio.setStateEmitter.addListener( function() {
+      trackNode.updateTrackShape();
+    } );
   }
 
   energySkateParkBasics.register( 'TrackNode', TrackNode );

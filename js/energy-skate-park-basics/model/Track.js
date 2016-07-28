@@ -20,6 +20,7 @@ define( function( require ) {
   // phet-io modules
   var TTrack = require( 'ifphetio!PHET_IO/simulations/energy-skate-park-basics/TTrack' );
   var TBoolean = require( 'ifphetio!PHET_IO/types/TBoolean' );
+  var phetio = require( 'ifphetio!PHET_IO/phetio' );
 
   // constants
   var FastArray = dot.FastArray;
@@ -38,6 +39,7 @@ define( function( require ) {
    * @constructor
    */
   function Track( events, modelTracks, controlPoints, interactive, parents, availableModelBoundsProperty, tandem ) {
+    var track = this;
     this.events = events;
     this.parents = parents;
     this.modelTracks = modelTracks;
@@ -102,6 +104,14 @@ define( function( require ) {
     this.updateSplines();
 
     tandem.addInstance( this, TTrack );
+
+    // In the state.html wrapper, when the state changes, we must update the skater node
+    phetio && phetio.setStateEmitter.addListener( function() {
+      track.updateLinSpace();
+      track.updateSplines();
+      events.trigger( 'track-changed' );
+      events.trigger( 'update' );
+    } );
   }
 
   energySkateParkBasics.register( 'Track', Track );
