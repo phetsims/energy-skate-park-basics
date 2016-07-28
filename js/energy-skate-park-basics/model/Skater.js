@@ -19,8 +19,6 @@ define( function( require ) {
 
   // phet-io modules
   var phetio = require( 'ifphetio!PHET_IO/phetio' );
-
-  // phet-io modules
   var TVector2 = require( 'ifphetio!PHET_IO/types/dot/TVector2' );
   var TNumber = require( 'ifphetio!PHET_IO/types/TNumber' );
   var TBoolean = require( 'ifphetio!PHET_IO/types/TBoolean' );
@@ -199,7 +197,7 @@ define( function( require ) {
     }, tandem.createTandem( 'allowClearingThermalEnergyProperty' ), TBoolean );
 
     // In the state.html wrapper, when the state changes, we must update the skater node
-    phetio && phetio.setStateEmitter.addListener( function() {
+    phetio.setStateEmitter && phetio.setStateEmitter.addListener( function() {
       skater.trigger( 'updated' );
     } );
   }

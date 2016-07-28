@@ -106,7 +106,7 @@ define( function( require ) {
     tandem.addInstance( this, TTrack );
 
     // In the state.html wrapper, when the state changes, we must update the skater node
-    phetio && phetio.setStateEmitter.addListener( function() {
+    phetio.setStateEmitter && phetio.setStateEmitter.addListener( function() {
       track.updateLinSpace();
       track.updateSplines();
       events.trigger( 'track-changed' );
