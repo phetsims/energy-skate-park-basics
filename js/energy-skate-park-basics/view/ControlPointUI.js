@@ -71,6 +71,7 @@ define( function( require ) {
     if ( !isEndPoint && model.canCutTrackControlPoint() ) {
       var scissorNode = new FontAwesomeNode( 'cut', { fill: 'black', scale: 0.6, rotation: Math.PI / 2 - angle } );
       var cutButton = new RoundPushButton( {
+        tandem: tandem.createTandem( 'cutButton' ),
         content: scissorNode,
         listener: function() {
           model.splitControlPoint( track, controlPointIndex, modelAngle );
@@ -89,6 +90,7 @@ define( function( require ) {
     // Show the delete button.
     var deleteNode = new FontAwesomeNode( 'times_circle', { fill: 'red', scale: 0.6 } );
     var deleteButton = new RoundPushButton( {
+      tandem: tandem.createTandem( 'deleteButton' ),
       listener: function() { model.deleteControlPoint( track, controlPointIndex ); },
       content: deleteNode,
       center: modelViewTransform.modelToViewPosition( position ).plus( Vector2.createPolar( 40, angle - Math.PI / 2 ) ),
