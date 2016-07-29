@@ -41,7 +41,7 @@ define( function( require ) {
     } ), {
       radius: RADIO_BUTTON_RADIUS,
       tandem: tandem.createTandem( 'slowMotionRadioButton' ),
-      type: TString
+      phetioValueType: TString
     } );
     var normalSpeedRadioButton = new AquaRadioButton( speedProperty, 'normal', new TandemText( normalString, {
       font: new PhetFont( 15 ),
@@ -50,7 +50,7 @@ define( function( require ) {
       radius: RADIO_BUTTON_RADIUS,
       x: 130,
       tandem: tandem.createTandem( 'normalSpeedButton' ),
-      type: TString
+      phetioValueType: TString
     } );
     slowMotionRadioButton.touchArea = slowMotionRadioButton.localBounds.dilatedXY( X_DILATION, Y_DILATION );
     normalSpeedRadioButton.touchArea = normalSpeedRadioButton.localBounds.dilatedXY( X_DILATION, Y_DILATION );

@@ -145,7 +145,7 @@ define( function( require ) {
 
     var playingProperty = new Property( !model.property( 'paused' ).value, {
       tandem: tandem.createTandem( 'playingProperty' ),
-      type: TBoolean
+      phetioValueType: TBoolean
     } );
     model.property( 'paused' ).link( function( paused ) {
       playingProperty.set( !paused );

@@ -48,13 +48,13 @@ define( function( require ) {
         value: false,
         node: new TandemImage( attachIcon, { scale: scale, tandem: tandem.createTandem( 'attachIcon' ) } ),
         tandem: tandem.createTandem( 'attachRadioButton' ),
-        type: TBoolean
+        phetioValueType: TBoolean
       },
       {
         value: true,
         node: new TandemImage( detachIcon, { scale: scale, tandem: tandem.createTandem( 'detachIcon' ) } ),
         tandem: tandem.createTandem( 'detachRadioButton' ),
-        type: TBoolean
+        phetioValueType: TBoolean
       }
     ];
 

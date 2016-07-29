@@ -54,19 +54,19 @@ define( function( require ) {
         value: 0,
         node: createNode( 0 ),
         tandem: tandem.createTandem( 'scene1RadioButton' ),
-        type: TNumber( 'unitless' )
+        phetioValueType: TNumber( 'unitless' )
       },
       {
         value: 1,
         node: createNode( 1 ),
         tandem: tandem.createTandem( 'scene2RadioButton' ),
-        type: TNumber( 'unitless' )
+        phetioValueType: TNumber( 'unitless' )
       },
       {
         value: 2,
         node: createNode( 2 ),
         tandem: tandem.createTandem( 'scene3RadioButton' ),
-        type: TNumber( 'unitless' )
+        phetioValueType: TNumber( 'unitless' )
       }
     ], {
       orientation: 'vertical',
