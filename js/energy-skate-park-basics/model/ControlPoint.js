@@ -39,7 +39,7 @@ define( function( require ) {
         sourcePosition: tandem.createTandem( 'sourcePositionProperty' ),
         snapTarget: tandem.createTandem( 'snapTargetProperty' )
       },
-      typeSet: {
+      phetioValueTypeSet: {
         sourcePosition: TVector2,
         snapTarget: TControlPoint
       }

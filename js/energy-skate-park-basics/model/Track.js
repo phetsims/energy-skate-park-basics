@@ -78,7 +78,7 @@ define( function( require ) {
         dragging: tandem.createTandem( 'draggingProperty' ),
         dropped: tandem.createTandem( 'droppedProperty' )
       },
-      typeSet: {
+      phetioValueTypeSet: {
         physical: TBoolean,
         leftThePanel: TBoolean,
         dragging: TBoolean,

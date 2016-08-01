@@ -123,7 +123,7 @@ define( function( require ) {
         dragging: tandem.createTandem( 'skaterDraggingProperty' ),
         angle: tandem.createTandem( 'skaterAngleProperty' )
       },
-      typeSet: {
+      phetioValueTypeSet: {
         track: TTrack,
         uD: TNumber( 'unitless' ),
         startingPosition: TVector2,

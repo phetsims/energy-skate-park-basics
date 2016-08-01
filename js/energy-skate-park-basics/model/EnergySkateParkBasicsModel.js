@@ -143,7 +143,7 @@ define( function( require ) {
         detachable: tandem.createTandem( 'detachableProperty' ),
         availableModelBounds: tandem.createTandem( 'availableModelBoundsProperty' )
       },
-      typeSet: {
+      phetioValueTypeSet: {
         pieChartVisible: TBoolean,
         barGraphVisible: TBoolean,
         gridVisible: TBoolean,
