@@ -125,31 +125,31 @@ define( function( require ) {
       },
       phetioValueTypeSet: {
         track: TTrack,
-        uD: TNumber( 'unitless' ),
+        uD: TNumber( ),
         startingPosition: TVector2,
-        startingU: TNumber( 'unitless' ),
+        startingU: TNumber(  ),
         startingUp: TBoolean,
         startingTrack: TTrack,
         headPosition: TVector2,
         position: TVector2,
-        u: TNumber( 'unitless' ),
+        u: TNumber(  ),
         up: TBoolean,
-        mass: TNumber( 'kilograms' ),
-        gravity: TNumber( 'meters/second/second' ),
+        mass: TNumber( {units: 'kilograms'} ),
+        gravity: TNumber( {units: 'meters/second/second'} ),
         direction: TString,
-        kineticEnergy: TNumber( 'joules' ),
-        potentialEnergy: TNumber( 'joules' ),
-        thermalEnergy: TNumber( 'joules' ),
-        totalEnergy: TNumber( 'joules' ),
+        kineticEnergy: TNumber({units:  'joules' }),
+        potentialEnergy: TNumber( {units: 'joules'} ),
+        thermalEnergy: TNumber( {units: 'joules'} ),
+        totalEnergy: TNumber( {units: 'joules'} ),
         velocity: TVector2,
         dragging: TBoolean,
-        angle: TNumber( 'radians' )
+        angle: TNumber( {units: 'radians'} )
       }
     } );
 
     this.addDerivedProperty( 'speed', [ 'velocity' ], function( velocity ) {
       return velocity.magnitude();
-    }, tandem.createTandem( 'speedProperty' ), TNumber( 'meters/second' ) );
+    }, tandem.createTandem( 'speedProperty' ), TNumber( {units: 'meters/second'} ) );
 
     // Zero the kinetic energy when dragging, see #22
     this.draggingProperty.link( function( dragging ) {
