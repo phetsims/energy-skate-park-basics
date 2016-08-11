@@ -15,13 +15,15 @@ define( function( require ) {
   var TObject = require( 'PHET_IO/types/TObject' );
   var phetio = require( 'PHET_IO/phetio' );
 
+  var TTrack = function( instance, phetioID ) {
+    TObject.call( this, instance, phetioID );
+    assertInstanceOf( instance, phet.energySkateParkBasics.Track );
+  };
+
   /**
    * Control point or null
    */
-  var TTrack = phetioInherit( TObject, 'TTrack', function( instance, phetioID ) {
-    TObject.call( this, instance, phetioID );
-    assertInstanceOf( instance, phet.energySkateParkBasics.Track );
-  }, {}, {
+  phetioInherit( TObject, 'TTrack', TTrack, {}, {
 
     // Support null
     fromStateObject: function( stateObject ) {

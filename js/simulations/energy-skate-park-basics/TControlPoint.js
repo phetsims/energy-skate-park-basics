@@ -14,13 +14,14 @@ define( function( require ) {
   var phetioInherit = require( 'PHET_IO/phetioInherit' );
   var TObject = require( 'PHET_IO/types/TObject' );
 
+  var TControlPoint = function( instance, phetioID ) {
+    TObject.call( this, instance, phetioID );
+    assertInstanceOf( instance, phet.energySkateParkBasics.ControlPoint );
+  };
   /**
    * Control point or null
    */
-  var TControlPoint = phetioInherit( TObject, 'TControlPoint', function( instance, phetioID ) {
-    TObject.call( this, instance, phetioID );
-    assertInstanceOf( instance, phet.energySkateParkBasics.ControlPoint );
-  }, {}, {
+  phetioInherit( TObject, 'TControlPoint', TControlPoint, {}, {
 
     // Support null
     fromStateObject: function( stateObject ) {
