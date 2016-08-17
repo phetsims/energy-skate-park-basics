@@ -39,8 +39,7 @@ define( function( require ) {
         qualityAssurance: 'Steele Dalton, Oliver Orejola' + indent + 'Arnab Purkayastha, Bryan Yoelin'
       },
 
-      showSaveAndLoad: phet.chipper.getQueryParameter( 'showSaveAndLoad' ),
-      tandem: tandem
+      showSaveAndLoad: phet.chipper.getQueryParameter( 'showSaveAndLoad' )
     };
 
     Sim.call( this, energySkateParkBasicsTitleString, [
