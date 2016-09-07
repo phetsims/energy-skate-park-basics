@@ -1,5 +1,5 @@
 {
-  "comment": "# energy-skate-park-basics 1.2.0-dev.2 Tue Sep 06 2016 15:12:25 GMT-0600 (MDT)",
+  "comment": "# energy-skate-park-basics 1.2.0-dev.3 Wed Sep 07 2016 01:26:54 GMT-0600 (MDT)",
   "assert": {
     "sha": "7d27130a4d27da15aa7f8a21bbfb9245288c1b44",
     "branch": "master"
@@ -13,20 +13,20 @@
     "branch": "master"
   },
   "chipper": {
-    "sha": "112b5aa35829d225a7fd1ca237312a6a1660b8c0",
-    "branch": "master"
+    "sha": "0c7cca9dbd6277504ec4bdcb3ff262e93189a14e",
+    "branch": "progress-indicator"
   },
   "dot": {
     "sha": "23b13772fe60b19cd4d3b8e75ac177ff5dcec594",
     "branch": "master"
   },
   "energy-skate-park-basics": {
-    "sha": "c93c475e4f8d3ee7d8c08b6244b132f72a96d923",
+    "sha": "a6d26665a3d910cc685f024b7a75f5deb9ea2687",
     "branch": "master"
   },
   "joist": {
-    "sha": "c0442ba8d2ba1732aec95d4d475257318f1d3a89",
-    "branch": "master"
+    "sha": "2c436d929a9b89085972f38db1ada6ec98a381f3",
+    "branch": "progress-indicator"
   },
   "kite": {
     "sha": "3b656b9a455ced42b9af90a15a25446b248490ab",
