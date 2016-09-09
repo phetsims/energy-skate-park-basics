@@ -27,20 +27,26 @@ define( function( require ) {
    * @constructor
    */
   function EnergySkateParkBasicsScreen( name, homescreenIcon, navbarIcon, draggableTracks, friction, tandem ) {
-    Screen.call( this, name, new TandemImage( homescreenIcon, {
+
+    var options = {
+      name: name,
+      homeScreenIcon: new TandemImage( homescreenIcon, {
         tandem: tandem.createTandem( 'homescreenIcon' )
       } ),
+      navigationBarIcon: new TandemImage( navbarIcon, {
+        tandem: tandem.createTandem( 'navbarIcon' )
+      } ),
+      tandem: tandem
+    };
+
+    Screen.call( this,
       function() {
         return new EnergySkateParkBasicsModel( draggableTracks, friction, tandem.createTandem( 'model' ) );
       },
       function( model ) {
         return new EnergySkateParkBasicsScreenView( model, tandem.createTandem( 'view' ) );
-      }, {
-        navigationBarIcon: new TandemImage( navbarIcon, {
-          tandem: tandem.createTandem( 'navbarIcon' )
-        } ),
-        tandem: tandem
-      } );
+      },
+      options );
   }
 
   energySkateParkBasics.register( 'EnergySkateParkBasicsScreen', EnergySkateParkBasicsScreen );
