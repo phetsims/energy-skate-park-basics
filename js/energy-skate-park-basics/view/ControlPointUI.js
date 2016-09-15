@@ -30,7 +30,7 @@ define( function( require ) {
    */
   function ControlPointUI( model, track, controlPointIndex, modelViewTransform, parentNode, tandem ) {
 
-    var controlPointUI = this;
+    var self = this;
 
     // See ComboxBox.js
     var enableClickToDismissListener = true;
@@ -39,10 +39,10 @@ define( function( require ) {
     this.clickToDismissListener = {
       down: function() {
         if ( enableClickToDismissListener ) {
-          if ( _.indexOf( controlPointUI.sceneNode.getInputListeners(), controlPointUI.clickToDismissListener ) !== -1 ) {
-            controlPointUI.sceneNode.removeInputListener( controlPointUI.clickToDismissListener );
+          if ( _.indexOf( self.sceneNode.getInputListeners(), self.clickToDismissListener ) !== -1 ) {
+            self.sceneNode.removeInputListener( self.clickToDismissListener );
           }
-          controlPointUI.detach();
+          self.detach();
         }
         else {
           enableClickToDismissListener = true;

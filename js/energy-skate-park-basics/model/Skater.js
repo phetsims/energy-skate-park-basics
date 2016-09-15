@@ -41,7 +41,7 @@ define( function( require ) {
   };
 
   function Skater( tandem ) {
-    var skater = this;
+    var self = this;
 
     PropertySet.call( this, {
 
@@ -154,7 +154,7 @@ define( function( require ) {
     // Zero the kinetic energy when dragging, see #22
     this.draggingProperty.link( function( dragging ) {
       if ( dragging ) {
-        skater.velocity = new Vector2( 0, 0 );
+        self.velocity = new Vector2( 0, 0 );
       }
     } );
 
@@ -165,10 +165,10 @@ define( function( require ) {
       var speedThreshold = 0.01;
 
       if ( uD > speedThreshold ) {
-        skater.direction = skater.up ? 'right' : 'left';
+        self.direction = self.up ? 'right' : 'left';
       }
       else if ( uD < -speedThreshold ) {
-        skater.direction = skater.up ? 'left' : 'right';
+        self.direction = self.up ? 'left' : 'right';
       }
       else {
         // Keep the same direction
@@ -182,12 +182,12 @@ define( function( require ) {
       return !dragging && (x.x !== x0.x || x.y !== x0.y);
     }, tandem.createTandem( 'movedProperty' ), TBoolean );
 
-    this.property( 'mass' ).link( function() { skater.updateEnergy(); } );
+    this.property( 'mass' ).link( function() { self.updateEnergy(); } );
 
     this.updateEnergy();
 
     this.on( 'updated', function() {
-      skater.updateHeadPosition();
+      self.updateHeadPosition();
     } );
 
     // Enable the "Clear Thermal" buttons but only if the thermal energy exceeds a tiny threshold, so there aren't visual
@@ -198,7 +198,7 @@ define( function( require ) {
 
     // In the state.html wrapper, when the state changes, we must update the skater node
     phetio.setStateEmitter && phetio.setStateEmitter.addListener( function() {
-      skater.trigger( 'updated' );
+      self.trigger( 'updated' );
     } );
   }
 

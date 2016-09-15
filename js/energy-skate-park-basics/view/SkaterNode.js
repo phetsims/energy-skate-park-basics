@@ -44,7 +44,7 @@ define( function( require ) {
    */
   function SkaterNode( skater, view, modelViewTransform, getClosestTrackAndPositionAndParameter, getPhysicalTracks, renderer, tandem ) {
     this.skater = skater;
-    var skaterNode = this;
+    var self = this;
 
     // Use a separate texture for left/right skaters to avoid WebGL performance issues when switching textures
     var leftSkaterImageNode = new TandemImage( skaterLeftImage, {
@@ -98,7 +98,7 @@ define( function( require ) {
       matrix.multiplyMatrix( translation );
       translation.freeToPool();
 
-      skaterNode.setMatrix( matrix );
+      self.setMatrix( matrix );
     } );
 
     // Show a red dot in the bottom center as the important particle model coordinate
@@ -113,7 +113,7 @@ define( function( require ) {
     var targetU = null;
 
     function dragSkater( event ) {
-      var globalPoint = skaterNode.globalToParentPoint( event.pointer.point );
+      var globalPoint = self.globalToParentPoint( event.pointer.point );
       var position = modelViewTransform.viewToModelPosition( globalPoint );
 
       // make sure it is within the visible bounds

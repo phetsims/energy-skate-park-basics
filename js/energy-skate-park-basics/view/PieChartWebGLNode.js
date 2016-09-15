@@ -25,7 +25,7 @@ define( function( require ) {
    */
   function PieChartWebGLNode( skater, pieChartVisibleProperty, modelViewTransform, tandem ) {
 
-    var pieChartNode = this;
+    var self = this;
     TandemNode.call( this, {
       tandem: tandem
     } );
@@ -38,7 +38,7 @@ define( function( require ) {
         var view = modelViewTransform.modelToViewPosition( skaterHeadPosition );
 
         // Center pie chart over skater's head not his feet so it doesn't look awkward when skating in a parabola
-        pieChartNode.setTranslation( view.x, view.y - 50 );
+        self.setTranslation( view.x, view.y - 50 );
       }
     } );
 

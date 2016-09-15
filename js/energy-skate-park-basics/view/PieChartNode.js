@@ -27,7 +27,7 @@ define( function( require ) {
    * @constructor
    */
   function PieChartNode( skater, pieChartVisibleProperty, modelViewTransform, tandem ) {
-    var pieChartNode = this;
+    var self = this;
 
     var kineticEnergySlice = new TandemPath( null, {
       fill: EnergySkateParkColorScheme.kineticEnergy,
@@ -63,10 +63,10 @@ define( function( require ) {
       var view = modelViewTransform.modelToViewPosition( skater.headPosition );
 
       // Center pie chart over skater's head not his feet so it doesn't look awkward when skating in a parabola
-      pieChartNode.setTranslation( view.x, view.y - 50 );
+      self.setTranslation( view.x, view.y - 50 );
     };
     skater.headPositionProperty.link( function() {
-      if ( pieChartNode.visible ) {
+      if ( self.visible ) {
         updatePieChartLocation();
       }
     } );
@@ -74,7 +74,7 @@ define( function( require ) {
     var updatePaths = function() {
 
       // Guard against expensive changes while the pie chart is invisible
-      if ( !pieChartNode.visible ) {
+      if ( !self.visible ) {
         return;
       }
       var totalEnergy = skater.totalEnergy;
@@ -153,7 +153,7 @@ define( function( require ) {
 
     // Synchronize visibility with the model, and also update when visibility changes because it is guarded against in updatePaths
     pieChartVisibleProperty.link( function( visible ) {
-      pieChartNode.visible = visible;
+      self.visible = visible;
       updatePaths();
       if ( visible ) {
         updatePieChartLocation();

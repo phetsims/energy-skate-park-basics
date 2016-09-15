@@ -20,7 +20,7 @@ define( function( require ) {
    */
   function TrackDragHandler( trackNode, tandem ) {
     this.trackNode = trackNode;
-    var trackDragHandler = this;
+    var self = this;
     this.track = trackNode.track;
     var track = trackNode.track;
     this.model = trackNode.model;
@@ -49,23 +49,23 @@ define( function( require ) {
 
         if ( track.dragSource === null ) {
           // A new press has started, but the user has not moved the track yet, so do not create it yet.  See #205
-          track.dragSource = trackDragHandler;
+          track.dragSource = self;
 
-          trackDragHandler.trackDragStarted( event );
+          self.trackDragStarted( event );
         }
       },
 
       // Drag an entire track
       drag: function( event ) {
-        if ( track.dragSource === trackDragHandler ) {
-          trackDragHandler.trackDragged( event );
+        if ( track.dragSource === self ) {
+          self.trackDragged( event );
         }
       },
 
       // End the drag
       end: function( event ) {
-        if ( track.dragSource === trackDragHandler ) {
-          trackDragHandler.trackDragEnded( event );
+        if ( track.dragSource === self ) {
+          self.trackDragEnded( event );
         }
       }
     };

@@ -38,7 +38,7 @@ define( function( require ) {
    */
   function BarGraphBackground( skater, barGraphVisibleProperty, clearThermal, tandem ) {
 
-    var barGraphBackground = this;
+    var self = this;
 
     // Free layout parameters
     var contentWidth = 110;
@@ -55,7 +55,7 @@ define( function( require ) {
     this.originY = contentHeight - insetY;
 
     // The x-coordinate of a bar chart bar
-    this.getBarX = function( barIndex ) { return insetX + spaceBetweenAxisAndBar + barGraphBackground.barWidth * barIndex + spaceBetweenBars * barIndex; };
+    this.getBarX = function( barIndex ) { return insetX + spaceBetweenAxisAndBar + self.barWidth * barIndex + spaceBetweenBars * barIndex; };
 
     // Create a label that appears under one of the bars
     var createLabel = function( index, title, color, tandemName ) {
@@ -67,8 +67,8 @@ define( function( require ) {
         maxWidth: 90 // selected by requiring that the bar chart not overlap with the track toolbox, see #337
       } );
       text.rotate( -Math.PI / 2 );
-      text.centerX = barGraphBackground.getBarX( index ) + barGraphBackground.barWidth / 2;
-      text.top = barGraphBackground.originY + 2;
+      text.centerX = self.getBarX( index ) + self.barWidth / 2;
+      text.top = self.originY + 2;
 
       return text;
     };

@@ -25,7 +25,7 @@ define( function( require ) {
    * @constructor
    */
   function PieChartWebGLSliceNode( color, radiusProperty, extentProperty ) {
-    var pieChartWebGLSliceNode = this;
+    var self = this;
     this.color = Color.toColor( color );
     this.radiusProperty = radiusProperty;
     this.extentProperty = extentProperty;
@@ -36,15 +36,15 @@ define( function( require ) {
     this.shape = Shape.regularPolygon( 3, 100 * Math.sqrt( 2 ) );
     this.radiusProperty.link( function( radius ) {
       if ( radius > 0 ) {
-        pieChartWebGLSliceNode.setScaleMagnitude( radius * 2, radius * 2 );
+        self.setScaleMagnitude( radius * 2, radius * 2 );
       }
       else {
-        pieChartWebGLSliceNode.setScaleMagnitude( Math.sqrt( 2 ) / 2, Math.sqrt( 2 ) / 2 );
+        self.setScaleMagnitude( Math.sqrt( 2 ) / 2, Math.sqrt( 2 ) / 2 );
       }
-      pieChartWebGLSliceNode.invalidatePaint();
+      self.invalidatePaint();
     } );
     this.extentProperty.link( function() {
-      pieChartWebGLSliceNode.invalidatePaint();
+      self.invalidatePaint();
     } );
   }
 

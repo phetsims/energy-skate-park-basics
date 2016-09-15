@@ -39,7 +39,7 @@ define( function( require ) {
    * @constructor
    */
   function Track( events, modelTracks, controlPoints, interactive, parents, availableModelBoundsProperty, tandem ) {
-    var track = this;
+    var self = this;
     this.events = events;
     this.parents = parents;
     this.modelTracks = modelTracks;
@@ -107,8 +107,8 @@ define( function( require ) {
 
     // In the state.html wrapper, when the state changes, we must update the skater node
     phetio.setStateEmitter && phetio.setStateEmitter.addListener( function() {
-      track.updateLinSpace();
-      track.updateSplines();
+      self.updateLinSpace();
+      self.updateSplines();
       events.trigger( 'track-changed' );
       events.trigger( 'update' );
     } );

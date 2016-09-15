@@ -89,7 +89,7 @@ define( function( require ) {
     this.frictionAllowed = frictionAllowed;
     this.draggableTracks = draggableTracks;
 
-    var model = this;
+    var self = this;
 
     var controlPointGroupTandem = tandem.createGroupTandem( 'controlPoint' );
     var trackGroupTandem = tandem.createGroupTandem( 'track' );
@@ -169,7 +169,7 @@ define( function( require ) {
     this.skater = new Skater( tandem.createTandem( 'skater' ) );
 
     // If the mass changes while the sim is paused, trigger an update so the skater image size will update, see #115
-    this.skater.property( 'mass' ).link( function() { if ( model.paused ) { model.skater.trigger( 'updated' ); } } );
+    this.skater.property( 'mass' ).link( function() { if ( self.paused ) { self.skater.trigger( 'updated' ); } } );
 
     this.tracks = new ObservableArray();
 
@@ -198,7 +198,7 @@ define( function( require ) {
     var updateTrackEditingButtonProperties = function() {
       var editEnabled = false;
       var clearEnabled = false;
-      var physicalTracks = model.getPhysicalTracks();
+      var physicalTracks = self.getPhysicalTracks();
       for ( var i = 0; i < physicalTracks.length; i++ ) {
         clearEnabled = true;
         var physicalTrack = physicalTracks[ i ];
@@ -206,8 +206,8 @@ define( function( require ) {
           editEnabled = true;
         }
       }
-      model.editButtonEnabled = editEnabled;
-      model.clearButtonEnabled = clearEnabled;
+      self.editButtonEnabled = editEnabled;
+      self.clearButtonEnabled = clearEnabled;
     };
     this.tracks.addItemAddedListener( updateTrackEditingButtonProperties );
     this.tracks.addItemRemovedListener( updateTrackEditingButtonProperties );
@@ -255,15 +255,15 @@ define( function( require ) {
 
       // When the scene changes, also change the tracks.
       this.sceneProperty.link( function( scene ) {
-        for ( var i = 0; i < model.tracks.length; i++ ) {
-          model.tracks.get( i ).physical = (i === scene);
+        for ( var i = 0; i < self.tracks.length; i++ ) {
+          self.tracks.get( i ).physical = (i === scene);
 
           // Reset the skater when the track is changed, see #179
-          model.skater.returnToInitialPosition();
+          self.skater.returnToInitialPosition();
         }
 
         // The skater should detach from track when the scene changes.  Code elsewhere also resets the location of the skater.
-        model.skater.track = null;
+        self.skater.track = null;
       } );
     }
     else {

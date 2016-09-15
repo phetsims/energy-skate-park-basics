@@ -30,7 +30,7 @@ define( function( require ) {
     var modelViewTransform = trackNode.modelViewTransform;
     var availableBoundsProperty = trackNode.availableBoundsProperty;
 
-    var controlPointNode = this;
+    var self = this;
     var controlPoint = track.controlPoints[ i ];
 
     // Default colors for the control point fill and highlight
@@ -54,11 +54,11 @@ define( function( require ) {
 
     // Show a dotted line for the exterior track points, which can be connected to other track
     if ( i === 0 || i === track.controlPoints.length - 1 ) {
-      controlPointNode.lineDash = [ 4, 5 ];
+      self.lineDash = [ 4, 5 ];
     }
 
     controlPoint.positionProperty.link( function( position ) {
-      controlPointNode.translation = modelViewTransform.modelToViewPosition( position );
+      self.translation = modelViewTransform.modelToViewPosition( position );
     } );
     var dragEvents = 0;
     var inputListener = new TandemDragHandler( {
@@ -99,7 +99,7 @@ define( function( require ) {
         }
         dragEvents++;
         track.dragging = true;
-        var globalPoint = controlPointNode.globalToParentPoint( event.pointer.point );
+        var globalPoint = self.globalToParentPoint( event.pointer.point );
 
         // trigger reconstruction of the track shape based on the control points
         var pt = modelViewTransform.viewToModelPosition( globalPoint );
@@ -205,15 +205,15 @@ define( function( require ) {
     } );
     inputListener.over = function() {
       if ( track.physical && !track.dragging ) {
-        controlPointNode.opacity = highlightedOpacity;
-        controlPointNode.fill = highlightedFill;
+        self.opacity = highlightedOpacity;
+        self.fill = highlightedFill;
       }
     };
     inputListener.out = function() {
-      controlPointNode.opacity = opacity;
-      controlPointNode.fill = fill;
+      self.opacity = opacity;
+      self.fill = fill;
     };
-    controlPointNode.addInputListener( inputListener );
+    self.addInputListener( inputListener );
   }
 
   energySkateParkBasics.register( 'ControlPointNode', ControlPointNode );

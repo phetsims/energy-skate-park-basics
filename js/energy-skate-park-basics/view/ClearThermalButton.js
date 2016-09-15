@@ -32,7 +32,7 @@ define( function( require ) {
    * @constructor
    */
   function ClearThermalButton( callback, skater, tandem, options ) {
-    var clearThermalButton = this;
+    var self = this;
     options = _.extend( {
       cursor: 'pointer'
     }, options );
@@ -54,7 +54,7 @@ define( function( require ) {
       function( allowClearingThermalEnergy ) {
         iconImage.image = allowClearingThermalEnergy ? trashCanImage : trashCanGrayImage;
         iconImage.opacity = allowClearingThermalEnergy ? 1 : 0.3;
-        clearThermalButton.pickable = allowClearingThermalEnergy;
+        self.pickable = allowClearingThermalEnergy;
       } );
     this.mouseArea = this.touchArea = Shape.rectangle( iconImage.bounds.minX, iconImage.bounds.minY, iconImage.bounds.width, iconImage.bounds.height );
     this.mutate( options );

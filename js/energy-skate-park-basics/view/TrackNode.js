@@ -39,7 +39,7 @@ define( function( require ) {
    * @constructor
    */
   function TrackNode( model, track, modelViewTransform, availableBoundsProperty, tandem ) {
-    var trackNode = this;
+    var self = this;
     this.track = track;
     this.model = model;
     this.modelViewTransform = modelViewTransform;
@@ -58,7 +58,7 @@ define( function( require ) {
       tandem: tandem.createTandem( 'centerLineNode' )
     } );
     model.property( 'detachable' ).link( function( detachable ) {
-      trackNode.centerLine.lineDash = detachable ? null : [ 11, 8 ];
+      self.centerLine.lineDash = detachable ? null : [ 11, 8 ];
     } );
 
     TandemNode.call( this, {
@@ -85,7 +85,7 @@ define( function( require ) {
 
       for ( var i = 0; i < track.controlPoints.length; i++ ) {
         var isEndPoint = i === 0 || i === track.controlPoints.length - 1;
-        trackNode.addChild( new ControlPointNode( trackNode, trackDragHandler, i, isEndPoint, controlPointNodeGroupTandem.createNextTandem() ) );
+        self.addChild( new ControlPointNode( self, trackDragHandler, i, isEndPoint, controlPointNodeGroupTandem.createNextTandem() ) );
       }
     }
 
@@ -99,7 +99,7 @@ define( function( require ) {
 
     track.draggingProperty.link( function( dragging ) {
       if ( !dragging ) {
-        trackNode.updateTrackShape();
+        self.updateTrackShape();
       }
     } );
 
@@ -109,7 +109,7 @@ define( function( require ) {
 
     // In the state.html wrapper, when the state changes, we must update the skater node
     phetio.setStateEmitter && phetio.setStateEmitter.addListener( function() {
-      trackNode.updateTrackShape();
+      self.updateTrackShape();
     } );
   }
 
