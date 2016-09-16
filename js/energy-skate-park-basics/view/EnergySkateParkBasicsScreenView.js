@@ -70,8 +70,8 @@ define( function( require ) {
 
     var trackNodeGroupTandem = tandem.createGroupTandem( 'trackNode' );
 
-    var view = this;
-    ScreenView.call( view, { layoutBounds: new Bounds2( 0, 0, 834, 504 ) } );
+    var self = this;
+    ScreenView.call( self, { layoutBounds: new Bounds2( 0, 0, 834, 504 ) } );
 
     var modelPoint = new Vector2( 0, 0 );
     // earth is 70px high in stage coordinates
@@ -123,10 +123,10 @@ define( function( require ) {
     // control point near y=0 and the track curves below) and the skater will pop up again soon, see the related
     // flickering problem in #206
     var onscreenProperty = new DerivedProperty( [ model.skater.positionProperty ], function( position ) {
-      if ( !view.availableModelBounds ) {
+      if ( !self.availableModelBounds ) {
         return true;
       }
-      return view.availableModelBounds && containsAbove( view.availableModelBounds, position.x, position.y );
+      return self.availableModelBounds && containsAbove( self.availableModelBounds, position.x, position.y );
     } );
 
     var barGraphBackground = new BarGraphBackground( model.skater, model.property( 'barGraphVisible' ),
@@ -204,7 +204,7 @@ define( function( require ) {
     } );
 
     // Disable the return skater button when the skater is already at his initial coordinates
-    model.skater.linkAttribute( 'moved', view.returnSkaterButton, 'enabled' );
+    model.skater.linkAttribute( 'moved', self.returnSkaterButton, 'enabled' );
     this.addChild( this.returnSkaterButton );
 
     this.addChild( new PlaybackSpeedControl( model.property( 'speed' ), tandem.createTandem( 'playbackSpeedControl' ) ).mutate( {
@@ -238,7 +238,7 @@ define( function( require ) {
     if ( !model.draggableTracks ) {
 
       var trackNodes = model.tracks.map( function( track ) {
-        return new TrackNode( model, track, modelViewTransform, view.availableModelBoundsProperty, trackNodeGroupTandem.createNextTandem() );
+        return new TrackNode( model, track, modelViewTransform, self.availableModelBoundsProperty, trackNodeGroupTandem.createNextTandem() );
       } ).getArray();
 
       trackNodes.forEach( function( trackNode ) {
@@ -255,7 +255,7 @@ define( function( require ) {
 
       var addTrackNode = function( track ) {
 
-        var trackNode = new TrackNode( model, track, modelViewTransform, view.availableModelBoundsProperty, trackNodeGroupTandem.createNextTandem() );
+        var trackNode = new TrackNode( model, track, modelViewTransform, self.availableModelBoundsProperty, trackNodeGroupTandem.createNextTandem() );
         trackLayer.addChild( trackNode );
 
         // When track removed, remove its view
