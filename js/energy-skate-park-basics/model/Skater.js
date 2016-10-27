@@ -43,109 +43,158 @@ define( function( require ) {
   function Skater( tandem ) {
     var self = this;
 
-    PropertySet.call( this, {
+    var properties = {
 
       // The track the skater is on, or null if free-falling
-      track: null,
+      track: {
+        value: null,
+        tandem: tandem.createTandem( 'trackProperty' ),
+        phetioValueType: TTrack
+      },
 
+      //TODO tandem name does not match Property name
       // Parameter along the parametric spline, unitless since it is in parametric space
-      u: 0,
+      u: {
+        value: 0,
+        tandem: tandem.createTandem( 'skaterParametricDistanceAlongTrackProperty' ),
+        phetioValueType: TNumber()
+      },
 
       // Speed along the parametric spline dimension, formally 'u dot', indicating speed and direction (+/-) along the
       // track spline in meters per second.  Not technically the derivative of 'u' since it is the euclidean speed.
-      uD: 0,
+      uD: {
+        value: 0,
+        tandem: tandem.createTandem( 'uDProperty' ),
+        phetioValueType: TNumber()
+      },
 
+      //TODO tandem name does not match Property name
       // True if the skater is pointing up on the track, false if attached to underside of track
-      up: true,
+      up: {
+        value: true,
+        tandem: tandem.createTandem( 'skaterUpsideUpOnTrackProperty' ),
+        phetioValueType: TBoolean
+      },
 
       // Gravity magnitude and direction
-      gravity: -9.8,
+      gravity: {
+        value: -9.8,
+        tandem: tandem.createTandem( 'gravityProperty' ),
+        phetioValueType: TNumber( { units: 'meters/second/second' } )
+      },
 
-      position: new Vector2( 3.5, 0 ),
+      //TODO tandem name does not match Property name
+      position: {
+        value: new Vector2( 3.5, 0 ),
+        tandem: tandem.createTandem( 'skaterPositionProperty' ),
+        phetioValueType: TVector2
+      },
 
+      //TODO tandem name does not match Property name
       // Start in the middle of the MassControlPanel range
-      mass: Constants.DEFAULT_MASS,
+      mass: {
+        value: Constants.DEFAULT_MASS,
+        tandem: tandem.createTandem( 'skaterMassProperty' ),
+        phetioValueType: TNumber( { units: 'kilograms' } )
+      },
 
+      //TODO tandem name does not match Property name
       // Which way the skater is facing, right or left.  Coded as strings instead of boolean in case we add other states
       // later like 'forward'
-      direction: 'left',
+      direction: {
+        value: 'left',
+        tandem: tandem.createTandem( 'skaterDirectionProperty' ),
+        phetioValueType: TString
+      },
 
-      velocity: new Vector2( 0, 0 ),
+      //TODO tandem name does not match Property name
+      velocity: {
+        value: new Vector2( 0, 0 ),
+        tandem: tandem.createTandem( 'skaterVelocityProperty' ),
+        phetioValueType: TVector2
+      },
 
+      //TODO tandem name does not match Property name
       // True if the user is dragging the skater with a pointer
-      dragging: false,
+      dragging: {
+        value: false,
+        tandem: tandem.createTandem( 'skaterDraggingProperty' ),
+        phetioValueType: TBoolean
+      },
 
+      //TODO tandem name does not match Property name
       // Energies are in Joules
-      kineticEnergy: 0,
+      kineticEnergy: {
+        value: 0,
+        tandem: tandem.createTandem( 'skaterKineticEnergyProperty' ),
+        phetioValueType: TNumber( { units: 'joules' } )
+      },
 
-      potentialEnergy: 0,
+      //TODO tandem name does not match Property name
+      potentialEnergy: {
+        value: 0,
+        tandem: tandem.createTandem( 'skaterPotentialEnergyProperty' ),
+        phetioValueType: TNumber( { units: 'joules' } )
+      },
 
-      thermalEnergy: 0,
+      //TODO tandem name does not match Property name
+      thermalEnergy: {
+        value: 0,
+        tandem: tandem.createTandem( 'skaterThermalEnergyProperty' ),
+        phetioValueType: TNumber( { units: 'joules' } )
+      },
 
-      totalEnergy: 0,
+      //TODO tandem name does not match Property name
+      totalEnergy: {
+        value: 0,
+        tandem: tandem.createTandem( 'skaterTotalEnergyProperty' ),
+        phetioValueType: TNumber( { units: 'joules' } )
+      },
 
+      //TODO tandem name does not match Property name
       // The skater's angle (about the pivot point at the bottom center), in radians
-      angle: 0,
+      angle: {
+        value: 0,
+        tandem: tandem.createTandem( 'skaterAngleProperty' ),
+        phetioValueType: TNumber( { units: 'radians' } )
+      },
 
       // Returns to this point when pressing "return skater"
-      startingPosition: new Vector2( 3.5, 0 ),
+      startingPosition: {
+        value: new Vector2( 3.5, 0 ),
+        tandem: tandem.createTandem( 'startingPositionProperty' ),
+        phetioValueType: TVector2
+      },
 
       // Returns to this parametric position along the track when pressing "return skater"
-      startingU: 0,
+      startingU: {
+        value: 0,
+        tandem: tandem.createTandem( 'startingUProperty' ),
+        phetioValueType: TNumber()
+      },
 
-      startingUp: true,
+      startingUp: {
+        value: true,
+        tandem: tandem.createTandem( 'startingUpProperty' ),
+        phetioValueType: TBoolean
+      },
 
       // Returns to this track when pressing "return skater"
-      startingTrack: null,
+      startingTrack: {
+        value: null,
+        tandem: tandem.createTandem( 'startingTrackProperty' ),
+        phetioValueType: TTrack
+      },
 
       // Position of the skater's head, for positioning the pie chart.
-      headPosition: new Vector2( 0, 0 )
-    }, {
-      tandemSet: {
-        track: tandem.createTandem( 'trackProperty' ),
-        uD: tandem.createTandem( 'uDProperty' ),
-        startingPosition: tandem.createTandem( 'startingPositionProperty' ),
-        startingU: tandem.createTandem( 'startingUProperty' ),
-        startingUp: tandem.createTandem( 'startingUpProperty' ),
-        startingTrack: tandem.createTandem( 'startingTrackProperty' ),
-        headPosition: tandem.createTandem( 'headPositionProperty' ),
-        position: tandem.createTandem( 'skaterPositionProperty' ),
-        u: tandem.createTandem( 'skaterParametricDistanceAlongTrackProperty' ),
-        up: tandem.createTandem( 'skaterUpsideUpOnTrackProperty' ),
-        mass: tandem.createTandem( 'skaterMassProperty' ),
-        gravity: tandem.createTandem( 'gravityProperty' ),
-        direction: tandem.createTandem( 'skaterDirectionProperty' ),
-        kineticEnergy: tandem.createTandem( 'skaterKineticEnergyProperty' ),
-        potentialEnergy: tandem.createTandem( 'skaterPotentialEnergyProperty' ),
-        thermalEnergy: tandem.createTandem( 'skaterThermalEnergyProperty' ),
-        totalEnergy: tandem.createTandem( 'skaterTotalEnergyProperty' ),
-        velocity: tandem.createTandem( 'skaterVelocityProperty' ),
-        dragging: tandem.createTandem( 'skaterDraggingProperty' ),
-        angle: tandem.createTandem( 'skaterAngleProperty' )
-      },
-      phetioValueTypeSet: {
-        track: TTrack,
-        uD: TNumber(),
-        startingPosition: TVector2,
-        startingU: TNumber(),
-        startingUp: TBoolean,
-        startingTrack: TTrack,
-        headPosition: TVector2,
-        position: TVector2,
-        u: TNumber(),
-        up: TBoolean,
-        mass: TNumber( { units: 'kilograms' } ),
-        gravity: TNumber( { units: 'meters/second/second' } ),
-        direction: TString,
-        kineticEnergy: TNumber( { units: 'joules' } ),
-        potentialEnergy: TNumber( { units: 'joules' } ),
-        thermalEnergy: TNumber( { units: 'joules' } ),
-        totalEnergy: TNumber( { units: 'joules' } ),
-        velocity: TVector2,
-        dragging: TBoolean,
-        angle: TNumber( { units: 'radians' } )
+      headPosition: {
+        value: new Vector2( 0, 0 ),
+        tandem: tandem.createTandem( 'headPositionProperty' ),
+        phetioValueType: TVector2
       }
-    } );
+    };
+
+    PropertySet.call( this, null, null, properties );
 
     this.addDerivedProperty( 'speed', [ 'velocity' ], function( velocity ) {
       return velocity.magnitude();

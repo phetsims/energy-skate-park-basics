@@ -102,61 +102,81 @@ define( function( require ) {
     // true if the skater's track is being dragged by the user, so that energy conservation no longer applies.
     // Only applies to one frame at a time (for the immediate next update).  See #127 and #135
     this.trackChangePending = false;
-    PropertySet.call( this, {
+
+    var properties = {
 
       // Model for visibility of various view parameters
-      pieChartVisible: false,
-      barGraphVisible: false,
-      gridVisible: false,
-      speedometerVisible: false,
+      pieChartVisible: {
+        value: false,
+        tandem: tandem.createTandem( 'pieChartVisibleProperty' ),
+        phetioValueType: TBoolean
+      },
+      barGraphVisible: {
+        value: false,
+        tandem: tandem.createTandem( 'barGraphVisibleProperty' ),
+        phetioValueType: TBoolean
+      },
+      gridVisible: {
+        value: false,
+        tandem: tandem.createTandem( 'gridVisibleProperty' ),
+        phetioValueType: TBoolean
+      },
+      speedometerVisible: {
+        value: false,
+        tandem: tandem.createTandem( 'speedometerVisibleProperty' ),
+        phetioValueType: TBoolean
+      },
 
       // Enabled/disabled for the track editing buttons
-      editButtonEnabled: false,
-      clearButtonEnabled: false,
+      editButtonEnabled: {
+        value: false,
+        tandem: tandem.createTandem( 'editButtonEnabledProperty' ),
+        phetioValueType: TBoolean
+      },
+      clearButtonEnabled: {
+        value: false,
+        tandem: tandem.createTandem( 'clearButtonEnabledProperty' ),
+        phetioValueType: TBoolean
+      },
 
       // Whether the sim is paused or running
-      paused: false,
+      paused: {
+        value: false,
+        tandem: tandem.createTandem( 'pausedProperty' ),
+        phetioValueType: TBoolean
+      },
 
       // speed of the model, either 'normal' or 'slow'
-      speed: 'normal',
+      speed: {
+        value: 'normal',
+        tandem: tandem.createTandem( 'speedProperty' ),
+        phetioValueType: TString
+      },
 
       // Coefficient of friction (unitless) between skater and track
-      friction: frictionAllowed ? 0.05 : 0,
+      friction: {
+        value: frictionAllowed ? 0.05 : 0,
+        tandem: tandem.createTandem( 'frictionProperty' ),
+        phetioValueType: TNumber()
+      },
 
       // Whether the skater should stick to the track like a roller coaster, or be able to fly off like a street
-      detachable: false,
+      detachable: {
+        value: false,
+        tandem: tandem.createTandem( 'detachableProperty' ),
+        phetioValueType: TBoolean
+      },
 
       // Will be filled in by the view, used to prevent control points from moving outside the visible model bounds when
       // adjusted, see #195
-      availableModelBounds: new Bounds2( 0, 0, 0, 0 )
-    }, {
-      tandemSet: {
-        pieChartVisible: tandem.createTandem( 'pieChartVisibleProperty' ),
-        barGraphVisible: tandem.createTandem( 'barGraphVisibleProperty' ),
-        gridVisible: tandem.createTandem( 'gridVisibleProperty' ),
-        speedometerVisible: tandem.createTandem( 'speedometerVisibleProperty' ),
-        editButtonEnabled: tandem.createTandem( 'editButtonEnabledProperty' ),
-        clearButtonEnabled: tandem.createTandem( 'clearButtonEnabledProperty' ),
-        paused: tandem.createTandem( 'pausedProperty' ),
-        speed: tandem.createTandem( 'speedProperty' ),
-        friction: tandem.createTandem( 'frictionProperty' ),
-        detachable: tandem.createTandem( 'detachableProperty' ),
-        availableModelBounds: tandem.createTandem( 'availableModelBoundsProperty' )
-      },
-      phetioValueTypeSet: {
-        pieChartVisible: TBoolean,
-        barGraphVisible: TBoolean,
-        gridVisible: TBoolean,
-        speedometerVisible: TBoolean,
-        editButtonEnabled: TBoolean,
-        clearButtonEnabled: TBoolean,
-        paused: TBoolean,
-        speed: TString,
-        friction: TNumber(),
-        detachable: TBoolean,
-        availableModelBounds: TBounds2
+      availableModelBounds: {
+        value: new Bounds2( 0, 0, 0, 0 ),
+        tandem: tandem.createTandem( 'availableModelBoundsProperty' ),
+        phetioValueType: TBounds2
       }
-    } );
+    };
+
+    PropertySet.call( this, null, null, properties );
 
     if ( phet.chipper.getQueryParameter( 'debugTrack' ) ) {
       this.frictionProperty.debug( 'friction' );
@@ -217,7 +237,7 @@ define( function( require ) {
     if ( !draggableTracks ) {
 
       // For screens 1-2, the index of the selected scene (and track) within the screen
-      this.addProperty( 'scene', 0, tandem.createTandem( 'sceneProperty' ), TNumber(  ) );
+      this.addProperty( 'scene', 0, tandem.createTandem( 'sceneProperty' ), TNumber() );
 
       // Shape types
       // For the double well, move the left well up a bit since the interpolation moves it down by that much, and we

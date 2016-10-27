@@ -27,23 +27,24 @@ define( function( require ) {
    */
   function ControlPoint( x, y, tandem ) {
 
-    PropertySet.call( this, {
+    var properties = {
 
       // Where it would be if it hadn't snapped to another point during dragging
-      sourcePosition: new Vector2( x, y ),
+      sourcePosition: {
+        value: new Vector2( x, y ),
+        tandem: tandem.createTandem( 'sourcePositionProperty' ),
+        phetioValueType: TVector2
+      },
 
       // Another ControlPoint that this ControlPoint is going to 'snap' to if released.
-      snapTarget: null
-    }, {
-      tandemSet: {
-        sourcePosition: tandem.createTandem( 'sourcePositionProperty' ),
-        snapTarget: tandem.createTandem( 'snapTargetProperty' )
-      },
-      phetioValueTypeSet: {
-        sourcePosition: TVector2,
-        snapTarget: TControlPoint
+      snapTarget: {
+        value: null,
+        tandem: tandem.createTandem( 'snapTargetProperty' ),
+        phetioValueType: TControlPoint
       }
-    } );
+    };
+
+    PropertySet.call( this, null, null, properties );
 
     // Where it is shown on the screen.  Same as sourcePosition (if not snapped) or snapTarget.position (if snapped).
     // Snapping means temporarily connecting to an adjacent open point before the tracks are joined, to indicate that a

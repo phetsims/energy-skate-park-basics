@@ -56,35 +56,40 @@ define( function( require ) {
     // positioning and translation, so an exact "position" is irrelevant, see #260
     this._position = new Vector2( 0, 0 );
 
-    PropertySet.call( this, {
+    var properties = {
 
       // True if the track can be interacted with.  For screens 1-2 only one track will be physical (and hence visible).
       // For screen 3, tracks in the control panel are visible but non-physical until dragged to the play area
-      physical: false,
+      physical: {
+        value: false,
+        tandem: tandem.createTandem( 'physicalProperty' ),
+        phetioValueType: TBoolean
+      },
 
       // Flag that shows whether the track has been dragged fully out of the panel
-      leftThePanel: false,
+      leftThePanel: {
+        value: false,
+        tandem: tandem.createTandem( 'leftThePanelProperty' ),
+        phetioValueType: TBoolean
+      },
 
       // Keep track of whether the track is dragging, so performance can be optimized while dragging
-      dragging: false,
+      dragging: {
+        value: false,
+        tandem: tandem.createTandem( 'draggingProperty' ),
+        phetioValueType: TBoolean
+      },
 
       // Flag to indicate whether the user has dragged the track out of the toolbox.  If dragging from the toolbox,
       // then dragging translates the entire track instead of just a point.
-      dropped: false
-    }, {
-      tandemSet: {
-        physical: tandem.createTandem( 'physicalProperty' ),
-        leftThePanel: tandem.createTandem( 'leftThePanelProperty' ),
-        dragging: tandem.createTandem( 'draggingProperty' ),
-        dropped: tandem.createTandem( 'droppedProperty' )
-      },
-      phetioValueTypeSet: {
-        physical: TBoolean,
-        leftThePanel: TBoolean,
-        dragging: TBoolean,
-        dropped: TBoolean
+      dropped: {
+        value: false,
+        tandem: tandem.createTandem( 'droppedProperty' ),
+        phetioValueType: TBoolean
       }
-    } );
+    };
+
+    PropertySet.call( this, null, null, properties );
 
     this.property( 'physical' ).link( function() { events.trigger( 'track-changed' ); } );
 
