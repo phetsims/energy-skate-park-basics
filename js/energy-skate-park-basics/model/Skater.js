@@ -52,7 +52,7 @@ define( function( require ) {
         phetioValueType: TTrack
       },
 
-      //TODO tandem name does not match Property name
+      //TODO tandem name does not match Property name, see https://github.com/phetsims/energy-skate-park-basics/issues/358
       // Parameter along the parametric spline, unitless since it is in parametric space
       u: {
         value: 0,
@@ -68,7 +68,7 @@ define( function( require ) {
         phetioValueType: TNumber()
       },
 
-      //TODO tandem name does not match Property name
+      //TODO tandem name does not match Property name, see https://github.com/phetsims/energy-skate-park-basics/issues/358
       // True if the skater is pointing up on the track, false if attached to underside of track
       up: {
         value: true,
@@ -83,14 +83,14 @@ define( function( require ) {
         phetioValueType: TNumber( { units: 'meters/second/second' } )
       },
 
-      //TODO tandem name does not match Property name
+      //TODO tandem name does not match Property name, see https://github.com/phetsims/energy-skate-park-basics/issues/358
       position: {
         value: new Vector2( 3.5, 0 ),
         tandem: tandem.createTandem( 'skaterPositionProperty' ),
         phetioValueType: TVector2
       },
 
-      //TODO tandem name does not match Property name
+      //TODO tandem name does not match Property name, see https://github.com/phetsims/energy-skate-park-basics/issues/358
       // Start in the middle of the MassControlPanel range
       mass: {
         value: Constants.DEFAULT_MASS,
@@ -98,7 +98,7 @@ define( function( require ) {
         phetioValueType: TNumber( { units: 'kilograms' } )
       },
 
-      //TODO tandem name does not match Property name
+      //TODO tandem name does not match Property name, see https://github.com/phetsims/energy-skate-park-basics/issues/358
       // Which way the skater is facing, right or left.  Coded as strings instead of boolean in case we add other states
       // later like 'forward'
       direction: {
@@ -107,14 +107,14 @@ define( function( require ) {
         phetioValueType: TString
       },
 
-      //TODO tandem name does not match Property name
+      //TODO tandem name does not match Property name, see https://github.com/phetsims/energy-skate-park-basics/issues/358
       velocity: {
         value: new Vector2( 0, 0 ),
         tandem: tandem.createTandem( 'skaterVelocityProperty' ),
         phetioValueType: TVector2
       },
 
-      //TODO tandem name does not match Property name
+      //TODO tandem name does not match Property name, see https://github.com/phetsims/energy-skate-park-basics/issues/358
       // True if the user is dragging the skater with a pointer
       dragging: {
         value: false,
@@ -122,7 +122,7 @@ define( function( require ) {
         phetioValueType: TBoolean
       },
 
-      //TODO tandem name does not match Property name
+      //TODO tandem name does not match Property name, see https://github.com/phetsims/energy-skate-park-basics/issues/358
       // Energies are in Joules
       kineticEnergy: {
         value: 0,
@@ -130,28 +130,28 @@ define( function( require ) {
         phetioValueType: TNumber( { units: 'joules' } )
       },
 
-      //TODO tandem name does not match Property name
+      //TODO tandem name does not match Property name, see https://github.com/phetsims/energy-skate-park-basics/issues/358
       potentialEnergy: {
         value: 0,
         tandem: tandem.createTandem( 'skaterPotentialEnergyProperty' ),
         phetioValueType: TNumber( { units: 'joules' } )
       },
 
-      //TODO tandem name does not match Property name
+      //TODO tandem name does not match Property name, see https://github.com/phetsims/energy-skate-park-basics/issues/358
       thermalEnergy: {
         value: 0,
         tandem: tandem.createTandem( 'skaterThermalEnergyProperty' ),
         phetioValueType: TNumber( { units: 'joules' } )
       },
 
-      //TODO tandem name does not match Property name
+      //TODO tandem name does not match Property name, see https://github.com/phetsims/energy-skate-park-basics/issues/358
       totalEnergy: {
         value: 0,
         tandem: tandem.createTandem( 'skaterTotalEnergyProperty' ),
         phetioValueType: TNumber( { units: 'joules' } )
       },
 
-      //TODO tandem name does not match Property name
+      //TODO tandem name does not match Property name, see https://github.com/phetsims/energy-skate-park-basics/issues/358
       // The skater's angle (about the pivot point at the bottom center), in radians
       angle: {
         value: 0,
