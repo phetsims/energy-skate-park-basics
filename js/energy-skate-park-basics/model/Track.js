@@ -89,7 +89,7 @@ define( function( require ) {
       }
     };
 
-    PropertySet.call( this, null, null, properties );
+    PropertySet.call( this, null, properties );
 
     this.property( 'physical' ).link( function() { events.trigger( 'track-changed' ); } );
 

@@ -176,7 +176,7 @@ define( function( require ) {
       }
     };
 
-    PropertySet.call( this, null, null, properties );
+    PropertySet.call( this, null, properties );
 
     if ( phet.chipper.getQueryParameter( 'debugTrack' ) ) {
       this.frictionProperty.debug( 'friction' );
