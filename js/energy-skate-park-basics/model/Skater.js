@@ -196,9 +196,13 @@ define( function( require ) {
 
     PropertySet.call( this, null, null, properties );
 
-    this.addDerivedProperty( 'speed', [ 'velocity' ], function( velocity ) {
-      return velocity.magnitude();
-    }, tandem.createTandem( 'speedProperty' ), TNumber( { units: 'meters/second' } ) );
+    this.addDerivedPropertyWithOptions( 'speed', [ 'velocity' ],
+      function( velocity ) {
+        return velocity.magnitude();
+      }, {
+        tandem: tandem.createTandem( 'speedProperty' ),
+        phetioValueType: TNumber( { units: 'meters/second' } )
+      } );
 
     // Zero the kinetic energy when dragging, see #22
     this.draggingProperty.link( function( dragging ) {
@@ -227,9 +231,13 @@ define( function( require ) {
     // Boolean flag that indicates whether the skater has moved from his initial position, and hence can be 'returned',
     // For making the 'return skater' button enabled/disabled
     // If this is a performance concern, perhaps it could just be dropped as a feature
-    this.addDerivedProperty( 'moved', [ 'position', 'startingPosition', 'dragging' ], function( x, x0, dragging ) {
-      return !dragging && (x.x !== x0.x || x.y !== x0.y);
-    }, tandem.createTandem( 'movedProperty' ), TBoolean );
+    this.addDerivedPropertyWithOptions( 'moved', [ 'position', 'startingPosition', 'dragging' ],
+      function( x, x0, dragging ) {
+        return !dragging && (x.x !== x0.x || x.y !== x0.y);
+      }, {
+        tandem: tandem.createTandem( 'movedProperty' ),
+        phetioValueType: TBoolean
+      } );
 
     this.property( 'mass' ).link( function() { self.updateEnergy(); } );
 
@@ -241,9 +249,13 @@ define( function( require ) {
 
     // Enable the "Clear Thermal" buttons but only if the thermal energy exceeds a tiny threshold, so there aren't visual
     // "false positives", see #306
-    this.addDerivedProperty( 'allowClearingThermalEnergy', [ 'thermalEnergy' ], function( thermalEnergy ) {
-      return thermalEnergy > 1E-2;
-    }, tandem.createTandem( 'allowClearingThermalEnergyProperty' ), TBoolean );
+    this.addDerivedPropertyWithOptions( 'allowClearingThermalEnergy', [ 'thermalEnergy' ],
+      function( thermalEnergy ) {
+        return thermalEnergy > 1E-2;
+      }, {
+        tandem: tandem.createTandem( 'allowClearingThermalEnergyProperty' ),
+        phetioValueType: TBoolean
+      } );
 
     // In the state.html wrapper, when the state changes, we must update the skater node
     phetio.setStateEmitter && phetio.setStateEmitter.addListener( function() {
