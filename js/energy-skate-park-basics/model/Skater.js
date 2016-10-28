@@ -196,7 +196,7 @@ define( function( require ) {
 
     PropertySet.call( this, null, null, properties );
 
-    this.addDerivedPropertyWithOptions( 'speed', [ 'velocity' ],
+    this.addDerivedProperty( 'speed', [ 'velocity' ],
       function( velocity ) {
         return velocity.magnitude();
       }, {
@@ -231,7 +231,7 @@ define( function( require ) {
     // Boolean flag that indicates whether the skater has moved from his initial position, and hence can be 'returned',
     // For making the 'return skater' button enabled/disabled
     // If this is a performance concern, perhaps it could just be dropped as a feature
-    this.addDerivedPropertyWithOptions( 'moved', [ 'position', 'startingPosition', 'dragging' ],
+    this.addDerivedProperty( 'moved', [ 'position', 'startingPosition', 'dragging' ],
       function( x, x0, dragging ) {
         return !dragging && (x.x !== x0.x || x.y !== x0.y);
       }, {
@@ -249,7 +249,7 @@ define( function( require ) {
 
     // Enable the "Clear Thermal" buttons but only if the thermal energy exceeds a tiny threshold, so there aren't visual
     // "false positives", see #306
-    this.addDerivedPropertyWithOptions( 'allowClearingThermalEnergy', [ 'thermalEnergy' ],
+    this.addDerivedProperty( 'allowClearingThermalEnergy', [ 'thermalEnergy' ],
       function( thermalEnergy ) {
         return thermalEnergy > 1E-2;
       }, {

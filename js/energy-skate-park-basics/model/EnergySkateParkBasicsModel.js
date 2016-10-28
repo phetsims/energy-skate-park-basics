@@ -237,7 +237,7 @@ define( function( require ) {
     if ( !draggableTracks ) {
 
       // For screens 1-2, the index of the selected scene (and track) within the screen
-      this.addPropertyWithOptions( 'scene', 0, {
+      this.addProperty( 'scene', 0, {
         tandem: tandem.createTandem( 'sceneProperty' ),
         phetioValueType: TNumber()
       } );
