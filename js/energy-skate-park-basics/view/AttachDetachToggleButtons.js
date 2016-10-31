@@ -47,14 +47,12 @@ define( function( require ) {
       {
         value: false,
         node: new TandemImage( attachIcon, { scale: scale, tandem: tandem.createTandem( 'attachIcon' ) } ),
-        tandem: tandem.createTandem( 'attachRadioButton' ),
-        phetioValueType: TBoolean
+        tandem: tandem.createTandem( 'attachRadioButton' )
       },
       {
         value: true,
         node: new TandemImage( detachIcon, { scale: scale, tandem: tandem.createTandem( 'detachIcon' ) } ),
-        tandem: tandem.createTandem( 'detachRadioButton' ),
-        phetioValueType: TBoolean
+        tandem: tandem.createTandem( 'detachRadioButton' )
       }
     ];
 
