@@ -16,8 +16,6 @@ define( function( require ) {
   var Panel = require( 'SUN/Panel' );
   var RadioButtonGroup = require( 'SUN/buttons/RadioButtonGroup' );
 
-  // phet-io modules
-  var TBoolean = require( 'ifphetio!PHET_IO/types/TBoolean' );
 
   // images
   var detachIcon = require( 'image!ENERGY_SKATE_PARK_BASICS/detach.png' );
