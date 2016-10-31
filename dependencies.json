@@ -1,4 +1,5 @@
 {
+  "comment": "# energy-skate-park-basics 1.2.0-phetiorc.1 Mon Oct 31 2016 09:29:48 GMT-0600 (Mountain Daylight Time)",
   "assert": {
     "sha": "845be6b591cb746b0b05b7023208aef2e49a8855",
     "branch": "HEAD"
@@ -19,8 +20,8 @@
     "sha": "da3b5dd421d06da1f5d1050909f897ec4ad833e2",
     "branch": "HEAD"
   },
-  "faradays-law": {
-    "sha": "81439f1fac2a26000c3a4f7854b6b8b95141053b",
+  "energy-skate-park-basics": {
+    "sha": "6ea0bc230dc4b892f25fa9810b80221167bd2759",
     "branch": "1.2-phetio"
   },
   "joist": {
@@ -69,10 +70,6 @@
   },
   "tandem": {
     "sha": "dc9f3cae2963b261ea7c0c505b204a57241d573a",
-    "branch": "HEAD"
-  },
-  "vibe": {
-    "sha": "2dba4d4b71cb0bf43c1f6a4779cc482adc9baed6",
     "branch": "HEAD"
   }
 }
