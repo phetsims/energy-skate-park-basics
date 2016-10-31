@@ -18,9 +18,6 @@ define( function( require ) {
   var BackgroundNode = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/view/BackgroundNode' );
   var RadioButtonGroup = require( 'SUN/buttons/RadioButtonGroup' );
 
-  // phet-io modules
-  var TNumber = require( 'ifphetio!PHET_IO/types/TNumber' );
-
   /**
    * Construct a SceneSelectionPanel.  Pass the entire model since it is used to create TrackNode
    * @param {EnergySkateParkBasicsModel} model the main model for the entire screen
@@ -53,20 +50,17 @@ define( function( require ) {
       {
         value: 0,
         node: createNode( 0 ),
-        tandem: tandem.createTandem( 'scene1RadioButton' ),
-        phetioValueType: TNumber(  )
+        tandem: tandem.createTandem( 'scene1RadioButton' )
       },
       {
         value: 1,
         node: createNode( 1 ),
-        tandem: tandem.createTandem( 'scene2RadioButton' ),
-        phetioValueType: TNumber( )
+        tandem: tandem.createTandem( 'scene2RadioButton' )
       },
       {
         value: 2,
         node: createNode( 2 ),
-        tandem: tandem.createTandem( 'scene3RadioButton' ),
-        phetioValueType: TNumber(  )
+        tandem: tandem.createTandem( 'scene3RadioButton' )
       }
     ], {
       orientation: 'vertical',
