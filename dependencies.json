@@ -1,5 +1,5 @@
 {
-  "comment": "# energy-skate-park-basics 1.2.0-phetiorc.3 Mon Oct 31 2016 10:57:54 GMT-0600 (Mountain Daylight Time)",
+  "comment": "# energy-skate-park-basics 1.2.0-phetiorc.4 Mon Oct 31 2016 16:53:34 GMT-0600 (MDT)",
   "assert": {
     "sha": "845be6b591cb746b0b05b7023208aef2e49a8855",
     "branch": "master"
@@ -13,7 +13,7 @@
     "branch": "master"
   },
   "chipper": {
-    "sha": "fc32b2df81a1a9689186ce50a837fa68f29c242c",
+    "sha": "78b153cccea9738203e7deda4fe91c0d8d95a654",
     "branch": "master"
   },
   "dot": {
@@ -21,7 +21,7 @@
     "branch": "master"
   },
   "energy-skate-park-basics": {
-    "sha": "e78a4562a5b3c77c6f840d40ee1e02b3f5f9c70d",
+    "sha": "9e43c3c88a393a7e5ecf6ea4461ceb38bdf645c9",
     "branch": "1.2-phetio"
   },
   "joist": {
@@ -37,7 +37,7 @@
     "branch": "master"
   },
   "phet-io": {
-    "sha": "a9b7b9dec1b1ff8c3eaa0a5c31eda925900a462d",
+    "sha": "d357636ddedd39706e86aa2c7e1126e867a3ab24",
     "branch": "master"
   },
   "phet-io-website": {
