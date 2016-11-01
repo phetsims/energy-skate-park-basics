@@ -239,7 +239,7 @@ define( function( require ) {
       // For screens 1-2, the index of the selected scene (and track) within the screen
       this.addProperty( 'scene', 0, {
         tandem: tandem.createTandem( 'sceneProperty' ),
-        phetioValueType: TNumber()
+        phetioValueType: TNumber( { values: [ 0, 1, 2 ] } ) // TODO: automatically get the number of tracks
       } );
 
       // Shape types
