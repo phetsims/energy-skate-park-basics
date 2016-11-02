@@ -15,6 +15,10 @@ define( function( require ) {
   var Circle = require( 'SCENERY/nodes/Circle' );
   var TandemDragHandler = require( 'TANDEM/scenery/input/TandemDragHandler' );
   var ControlPointUI = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/view/ControlPointUI' );
+  var TandemEmitter = require( 'TANDEM/axon/TandemEmitter' );
+
+  // phet-io modules
+  var TControlPointNode = require( 'ifphetio!PHET_IO/simulations/energy-skate-park-basics/TControlPointNode' );
 
   /**
    * @param {TrackNode} trackNode
@@ -29,6 +33,10 @@ define( function( require ) {
     var model = trackNode.model;
     var modelViewTransform = trackNode.modelViewTransform;
     var availableBoundsProperty = trackNode.availableBoundsProperty;
+    var controlPointUIShownEmitter = new TandemEmitter( {
+      tandem: tandem.createTandem( 'controlPointUIShownEmitter' ),
+      phetioArgumentTypes: []
+    } );
 
     var self = this;
     var controlPoint = track.controlPoints[ i ];
@@ -180,6 +188,9 @@ define( function( require ) {
         // Threshold at a few drag events in case the user didn't mean to drag it but accidentally moved it a few pixels.
         // Make sure the track hasn't recently detached (was seen twice in fuzzMouse=100 testing)
         if ( dragEvents <= 3 && trackNode.parents.length > 0 ) {
+
+          controlPointUIShownEmitter.emit();
+
           var controlPointUI = new ControlPointUI(
             model,
             track,
@@ -214,6 +225,8 @@ define( function( require ) {
       self.fill = fill;
     };
     self.addInputListener( inputListener );
+
+    tandem.addInstance( this, TControlPointNode );
   }
 
   energySkateParkBasics.register( 'ControlPointNode', ControlPointNode );
