@@ -22,7 +22,7 @@ define( function( require ) {
    * Constructor for the ControlPointUI for a single control point.
    * @param {EnergySkateParkBasicsModel} model the main model
    * @param {Track} track the track associated with the control point
-   * @param {Number} controlPointIndex the 0-based index of the control point
+   * @param {number} controlPointIndex the 0-based index of the control point
    * @param {ModelViewTransform2} modelViewTransform the main model-view transform
    * @param {Node} parentNode
    * @param {Tandem} tandem

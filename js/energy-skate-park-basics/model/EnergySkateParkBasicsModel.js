@@ -475,7 +475,7 @@ define( function( require ) {
 
     /**
      * Update the skater in free fall
-     * @param {Number} dt the time that passed, in seconds
+     * @param {number} dt the time that passed, in seconds
      * @param {SkaterState} skaterState the original state of the skater
      * @param {boolean} justLeft true if the skater just fell off or launched off the track: in this case it should not
      * interact with the track.
@@ -677,7 +677,7 @@ define( function( require ) {
      * Split into component-wise to prevent allocations, see #50
      *
      * @param {SkaterState} skaterState the state
-     * @return {Number} netForce in the X direction
+     * @return {number} netForce in the X direction
      */
     getNetForceWithoutNormalX: function( skaterState ) {
       return this.getFrictionForceX( skaterState );
@@ -689,7 +689,7 @@ define( function( require ) {
      * Split into component-wise to prevent allocations, see #50
      *
      * @param {SkaterState} skaterState the state
-     * @return {Number} netForce in the Y direction
+     * @return {number} netForce in the Y direction
      */
     getNetForceWithoutNormalY: function( skaterState ) {
       return skaterState.mass * skaterState.gravity + this.getFrictionForceY( skaterState );

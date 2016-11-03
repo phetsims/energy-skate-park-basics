@@ -555,7 +555,7 @@ define( function( require ) {
 
     /**
      * Smooth out the track so it doesn't have any sharp turns, see #177
-     * @param {Number} i the index of the control point to adjust
+     * @param {number} i the index of the control point to adjust
      */
     smooth: function( i ) {
       assert && assert( i >= 0 && i < this.controlPoints.length );
@@ -670,7 +670,7 @@ define( function( require ) {
 
     /**
      * Find the minimum radius of curvature along the track, in meters
-     * @return {Number} the minimum radius of curvature along the track, in meters.
+     * @return {number} the minimum radius of curvature along the track, in meters.
      */
     getMinimumRadiusOfCurvature: function() {
       var curvature = { r: 0, x: 0, y: 0 };
