@@ -79,8 +79,8 @@ define( function( require ) {
   /**
    * Main constructor for the EnergySkateParkBasicsModel
    *
-   * @param {Boolean} draggableTracks True if this is screen 2-3, where friction is allowed to be on or off
-   * @param {Boolean} frictionAllowed True in screen 3 where the user can drag the tracks
+   * @param {boolean} draggableTracks True if this is screen 2-3, where friction is allowed to be on or off
+   * @param {boolean} frictionAllowed True in screen 3 where the user can drag the tracks
    * @param {Tandem} tandem
    * @constructor
    */
@@ -477,7 +477,7 @@ define( function( require ) {
      * Update the skater in free fall
      * @param {Number} dt the time that passed, in seconds
      * @param {SkaterState} skaterState the original state of the skater
-     * @param {Boolean} justLeft true if the skater just fell off or launched off the track: in this case it should not
+     * @param {boolean} justLeft true if the skater just fell off or launched off the track: in this case it should not
      * interact with the track.
      * @return {SkaterState} the new state
      */

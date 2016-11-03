@@ -30,7 +30,7 @@ define( function( require ) {
    * @param {Events} events event source for sending messages
    * @param {ObservableArray<Track>} modelTracks all model tracks, so this track can add/remove others when joined/split
    * @param {Array<ControlPoint>} controlPoints
-   * @param {Boolean} interactive
+   * @param {boolean} interactive
    * @param {Array<Track>} parents the original tracks that were used to make this track (if any) so they can be
    * broken apart when dragged back to control panel
    * @param {Property<Bounds2>} availableModelBoundsProperty function that provides the visible model bounds, to prevent the
