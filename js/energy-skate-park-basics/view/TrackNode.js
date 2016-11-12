@@ -58,7 +58,7 @@ define( function( require ) {
       tandem: tandem.createTandem( 'centerLineNode' )
     } );
     model.property( 'detachable' ).link( function( detachable ) {
-      self.centerLine.lineDash = detachable ? null : [ 11, 8 ];
+      self.centerLine.lineDash = detachable ? [] : [ 11, 8 ];
     } );
 
     TandemNode.call( this, {
