@@ -47,7 +47,6 @@ define( function( require ) {
   var EnergySkateParkColorScheme = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/view/EnergySkateParkColorScheme' );
   var Util = require( 'SCENERY/util/Util' );
   var EraserButton = require( 'SCENERY_PHET/buttons/EraserButton' );
-  var EnergySkateParkBasicsQueryParameters = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/EnergySkateParkBasicsQueryParameters' );
 
   // phet-io modules
   var TBoolean = require( 'ifphetio!PHET_IO/types/TBoolean' );
