@@ -16,6 +16,7 @@ define( function( require ) {
   var TandemDragHandler = require( 'TANDEM/scenery/input/TandemDragHandler' );
   var ControlPointUI = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/view/ControlPointUI' );
   var TandemEmitter = require( 'TANDEM/axon/TandemEmitter' );
+  var EnergySkateParkBasicsQueryParameters = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/EnergySkateParkBasicsQueryParameters' );
 
   // phet-io modules
   var TControlPointNode = require( 'ifphetio!PHET_IO/simulations/energy-skate-park-basics/TControlPointNode' );
@@ -209,7 +210,7 @@ define( function( require ) {
           trackNode.parents[ 0 ].addChild( controlPointUI );
         }
 
-        if ( phet.chipper.getQueryParameter( 'debugTrack' ) ) {
+        if ( EnergySkateParkBasicsQueryParameters.debugTrack ) {
           console.log( track.getDebugString() );
         }
       }

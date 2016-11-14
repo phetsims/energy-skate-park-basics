@@ -13,6 +13,7 @@ define( function( require ) {
   var inherit = require( 'PHET_CORE/inherit' );
   var EnergySkateParkBasicsScreen = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/EnergySkateParkBasicsScreen' );
   var Sim = require( 'JOIST/Sim' );
+  var EnergySkateParkBasicsQueryParameters = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/EnergySkateParkBasicsQueryParameters' );
 
   // images
   var iconIntroHomescreen = require( 'image!ENERGY_SKATE_PARK_BASICS/icon-intro-homescreen.png' );
@@ -39,7 +40,7 @@ define( function( require ) {
         qualityAssurance: 'Steele Dalton, Oliver Orejola' + indent + 'Arnab Purkayastha, Bryan Yoelin'
       },
 
-      showSaveAndLoad: phet.chipper.getQueryParameter( 'showSaveAndLoad' )
+      showSaveAndLoad: EnergySkateParkBasicsQueryParameters.showSaveAndLoad
     };
 
     Sim.call( this, energySkateParkBasicsTitleString, [

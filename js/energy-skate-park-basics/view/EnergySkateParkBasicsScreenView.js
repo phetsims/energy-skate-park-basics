@@ -47,6 +47,7 @@ define( function( require ) {
   var EnergySkateParkColorScheme = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/view/EnergySkateParkColorScheme' );
   var Util = require( 'SCENERY/util/Util' );
   var EraserButton = require( 'SCENERY_PHET/buttons/EraserButton' );
+  var EnergySkateParkBasicsQueryParameters = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/EnergySkateParkBasicsQueryParameters' );
 
   // phet-io modules
   var TBoolean = require( 'ifphetio!PHET_IO/types/TBoolean' );
@@ -334,7 +335,7 @@ define( function( require ) {
     this.addChild( trackLayer );
 
     // Check to see if WebGL was prevented by a query parameter
-    var allowWebGL = phet.chipper.getQueryParameter( 'webgl' ) !== 'false';
+    var allowWebGL = EnergySkateParkBasicsQueryParameters.webgl;
 
     // Use WebGL where available, but not on IE, due to https://github.com/phetsims/energy-skate-park-basics/issues/277
     // and https://github.com/phetsims/scenery/issues/285

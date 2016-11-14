@@ -38,6 +38,7 @@ define( function( require ) {
   var SkaterState = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/model/SkaterState' );
   var Util = require( 'DOT/Util' );
   var Bounds2 = require( 'DOT/Bounds2' );
+  var EnergySkateParkBasicsQueryParameters = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/EnergySkateParkBasicsQueryParameters' );
 
   // phet-io modules
   var TNumber = require( 'ifphetio!PHET_IO/types/TNumber' );
@@ -62,10 +63,10 @@ define( function( require ) {
   function isApproxEqual( a, b, tolerance ) { return Math.abs( a - b ) <= tolerance; }
 
   // Flag to enable debugging for physics issues
-  var debug = phet.chipper.getQueryParameter( 'debugLog' ) ? function() {
+  var debug = EnergySkateParkBasicsQueryParameters.debugLog ? function() {
     console.log.apply( console, arguments );
   } : null;
-  var debugAttachDetach = phet.chipper.getQueryParameter( 'debugAttachDetach' ) ? function() {
+  var debugAttachDetach = EnergySkateParkBasicsQueryParameters.debugAttachDetach ? function() {
     console.log.apply( console, arguments );
   } : null;
 
@@ -178,7 +179,7 @@ define( function( require ) {
 
     PropertySet.call( this, null, properties );
 
-    if ( phet.chipper.getQueryParameter( 'debugTrack' ) ) {
+    if ( EnergySkateParkBasicsQueryParameters.debugTrack ) {
       this.frictionProperty.debug( 'friction' );
     }
 
@@ -293,7 +294,7 @@ define( function( require ) {
       this.addDraggableTracks();
     }
 
-    if ( phet.chipper.getQueryParameter( 'debugTrack' ) ) {
+    if ( EnergySkateParkBasicsQueryParameters.debugTrack ) {
       DebugTracks.init( this, tandem.createGroupTandem( 'debugTrackControlPoint' ), tandem.createGroupTandem( 'track' ) );
     }
 

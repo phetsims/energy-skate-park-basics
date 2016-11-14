@@ -12,9 +12,10 @@ define( function( require ) {
   var energySkateParkBasics = require( 'ENERGY_SKATE_PARK_BASICS/energySkateParkBasics' );
   var inherit = require( 'PHET_CORE/inherit' );
   var TandemDragHandler = require( 'TANDEM/scenery/input/TandemDragHandler' );
+  var EnergySkateParkBasicsQueryParameters = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/EnergySkateParkBasicsQueryParameters' );
 
   /**
-   * @param {TrackNode} the track node that this listener will drag
+   * @param {TrackNode} trackNode the track node that this listener will drag
    * @param {Tandem} tandem
    * @constructor
    */
@@ -232,7 +233,7 @@ define( function( require ) {
         track.dragging = false;
         track.dropped = true;
 
-        if ( phet.chipper.getQueryParameter( 'debugTrack' ) ) {
+        if ( EnergySkateParkBasicsQueryParameters.debugTrack ) {
           console.log( track.getDebugString() );
         }
         this.startedDrag = false;
