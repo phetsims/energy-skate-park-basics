@@ -27,10 +27,7 @@ define( function( require ) {
     DebugTracks: {
       type: 'number',
       defaultValue: -1
-    },
-
-    //TODO replace with phet.chipper.queryParameters.webgl
-    webgl: { type: 'flag' }
+    }
   });
 
   energySkateParkBasics.register( 'EnergySkateParkBasicsQueryParameters', EnergySkateParkBasicsQueryParameters );

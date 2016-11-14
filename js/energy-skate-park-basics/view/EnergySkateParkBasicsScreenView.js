@@ -335,7 +335,7 @@ define( function( require ) {
     this.addChild( trackLayer );
 
     // Check to see if WebGL was prevented by a query parameter
-    var allowWebGL = EnergySkateParkBasicsQueryParameters.webgl;
+    var allowWebGL = phet.chipper.queryParameters.webgl;
 
     // Use WebGL where available, but not on IE, due to https://github.com/phetsims/energy-skate-park-basics/issues/277
     // and https://github.com/phetsims/scenery/issues/285
