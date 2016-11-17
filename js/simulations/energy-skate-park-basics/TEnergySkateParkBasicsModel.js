@@ -26,7 +26,6 @@ define( function( require ) {
 
     // Support null
     fromStateObject: function( arrayOfArrayOfVector ) {
-      // // TODO: Ensure the right number of tracks, each with the right number of points.
       //
       // for ( var i = 0; i < arrayOfArrayOfVector.length; i++ ) {
       //   var track = arrayOfArrayOfVector[ i ];
