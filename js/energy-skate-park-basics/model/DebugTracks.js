@@ -32,7 +32,7 @@ define( function( require ) {
 
         var controlPoints = null;
         var track = null;
-        if ( EnergySkateParkBasicsQueryParameters.DebugTracks === 1 ) {
+        if ( EnergySkateParkBasicsQueryParameters.testTrackIndex === 1 ) {
 
           model.detachable = true;
           // The skater falls through model track
@@ -46,7 +46,7 @@ define( function( require ) {
         }
 
         // Skater stutters and slows going over the hump
-        if ( EnergySkateParkBasicsQueryParameters.DebugTracks === 2 ) {
+        if ( EnergySkateParkBasicsQueryParameters.testTrackIndex === 2 ) {
 
           model.detachable = true;
           // The skater falls through model track
@@ -60,7 +60,7 @@ define( function( require ) {
         }
 
         // Tricky one--handled OK
-        if ( EnergySkateParkBasicsQueryParameters.DebugTracks === 3 ) {
+        if ( EnergySkateParkBasicsQueryParameters.testTrackIndex === 3 ) {
 
           model.detachable = true;
           // The skater falls through model track
@@ -74,7 +74,7 @@ define( function( require ) {
         }
 
         // Wide loop, OK
-        if ( EnergySkateParkBasicsQueryParameters.DebugTracks === 4 ) {
+        if ( EnergySkateParkBasicsQueryParameters.testTrackIndex === 4 ) {
 
           model.detachable = true;
           // The skater falls through model track
@@ -88,7 +88,7 @@ define( function( require ) {
         }
 
         // Flickering return skater button, PROBLEM
-        if ( EnergySkateParkBasicsQueryParameters.DebugTracks === 5 ) {
+        if ( EnergySkateParkBasicsQueryParameters.testTrackIndex === 5 ) {
 
           model.detachable = true;
           // The skater falls through model track
@@ -102,7 +102,7 @@ define( function( require ) {
         }
 
         // Passes through track, PROBLEM
-        if ( EnergySkateParkBasicsQueryParameters.DebugTracks === 6 ) {
+        if ( EnergySkateParkBasicsQueryParameters.testTrackIndex === 6 ) {
 
           model.detachable = true;
           // The skater falls through model track
@@ -116,7 +116,7 @@ define( function( require ) {
         }
 
         // Falls through bottom, PROBLEM
-        if ( EnergySkateParkBasicsQueryParameters.DebugTracks === 7 ) {
+        if ( EnergySkateParkBasicsQueryParameters.testTrackIndex === 7 ) {
 
           model.detachable = true;
           // The skater falls through model track
@@ -130,7 +130,7 @@ define( function( require ) {
         }
 
         // Falls through loop, PROBLEM
-        if ( EnergySkateParkBasicsQueryParameters.DebugTracks === 8 ) {
+        if ( EnergySkateParkBasicsQueryParameters.testTrackIndex === 8 ) {
 
           model.detachable = true;
           // The skater falls through model track
@@ -144,7 +144,7 @@ define( function( require ) {
         }
 
         // Pops upside down in loop, PROBLEM
-        if ( EnergySkateParkBasicsQueryParameters.DebugTracks === 9 ) {
+        if ( EnergySkateParkBasicsQueryParameters.testTrackIndex === 9 ) {
 
           model.detachable = true;
           // The skater falls through model track
@@ -158,7 +158,7 @@ define( function( require ) {
           model.tracks.add( track );
         }
 
-        if ( EnergySkateParkBasicsQueryParameters.DebugTracks === 10 ) {
+        if ( EnergySkateParkBasicsQueryParameters.testTrackIndex === 10 ) {
 
           model.detachable = true;
           // The skater falls through model track
@@ -172,7 +172,7 @@ define( function( require ) {
           model.tracks.add( track );
         }
 
-        if ( EnergySkateParkBasicsQueryParameters.DebugTracks === 11 ) {
+        if ( EnergySkateParkBasicsQueryParameters.testTrackIndex === 11 ) {
 
           model.detachable = true;
           // The skater falls through model track
@@ -186,7 +186,7 @@ define( function( require ) {
           model.tracks.add( track );
         }
 
-        if ( EnergySkateParkBasicsQueryParameters.DebugTracks === 12 ) {
+        if ( EnergySkateParkBasicsQueryParameters.testTrackIndex === 12 ) {
 
           model.detachable = true;
           // The skater falls through model track
@@ -200,7 +200,7 @@ define( function( require ) {
           model.tracks.add( track );
         }
 
-        if ( EnergySkateParkBasicsQueryParameters.DebugTracks === 13 ) {
+        if ( EnergySkateParkBasicsQueryParameters.testTrackIndex === 13 ) {
 
           model.detachable = false;
           // The skater falls through model track
@@ -214,7 +214,7 @@ define( function( require ) {
           model.tracks.add( track );
         }
 
-        if ( EnergySkateParkBasicsQueryParameters.DebugTracks === 14 ) {
+        if ( EnergySkateParkBasicsQueryParameters.testTrackIndex === 14 ) {
           model.detachable = true;
           model.skater.position.set( new Vector2( -6.698445595854922, 6.5278756476683935 ) );
           model.skater.released( 0, 0 );
@@ -251,7 +251,7 @@ define( function( require ) {
         }
 
         //Test decrease in thermal energy, see https://github.com/phetsims/energy-skate-park-basics/issues/141#issuecomment-59395426
-        if ( EnergySkateParkBasicsQueryParameters.DebugTracks === 15 ) {
+        if ( EnergySkateParkBasicsQueryParameters.testTrackIndex === 15 ) {
           model.detachable = true;
           model.skater.position.set( new Vector2( -6.698445595854922, 6.5278756476683935 ) );
           model.skater.released( 0, 0 );

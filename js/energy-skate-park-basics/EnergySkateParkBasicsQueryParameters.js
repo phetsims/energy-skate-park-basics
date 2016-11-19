@@ -11,24 +11,24 @@ define( function( require ) {
 
   var EnergySkateParkBasicsQueryParameters = QueryStringMachine.getAll( {
 
-    //TODO document
+    // Print out console messages related to the physics
     debugLog: { type: 'flag' },
 
-    //TODO document
+    // Print out console messages related to attaching and detaching from the tracks
     debugAttachDetach: { type: 'flag' },
 
-    //TODO document
-    debugTrack: { type: 'flag' },
-
-    //TODO document
+    // Show experimental save & load button
     showSaveAndLoad: { type: 'flag' },
 
-    //TODO document, name should start with lowercase, defaultValue is a hack, validValues needed?
-    DebugTracks: {
+    // Print out console messages related to attaching and detaching from the tracks
+    debugTrack: { type: 'flag' },
+
+    // If debugTrack is true, this indicates the index (1-based) of the track to show
+    testTrackIndex: {
       type: 'number',
-      defaultValue: -1
+      defaultValue: 1
     }
-  });
+  } );
 
   energySkateParkBasics.register( 'EnergySkateParkBasicsQueryParameters', EnergySkateParkBasicsQueryParameters );
 
