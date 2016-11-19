@@ -20,7 +20,7 @@ define( function( require ) {
     // Show experimental save & load button
     showSaveAndLoad: { type: 'flag' },
 
-    // Print out console messages related to attaching and detaching from the tracks
+    // Show a testing track (as indicated by testTrackIndex)
     debugTrack: { type: 'flag' },
 
     // If debugTrack is true, this indicates the index (1-based) of the track to show
