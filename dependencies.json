@@ -1,5 +1,5 @@
 {
-  "comment": "# energy-skate-park-basics 1.2.4-dev.1 Wed Nov 30 2016 11:09:10 GMT-0700 (MST)",
+  "comment": "# energy-skate-park-basics 1.2.4-dev.2 Thu Dec 01 2016 10:28:06 GMT-0700 (MST)",
   "assert": {
     "sha": "47c12d191b9697389f0ad0e9ca7b48e276bfb79f",
     "branch": "master"
@@ -21,7 +21,7 @@
     "branch": "master"
   },
   "energy-skate-park-basics": {
-    "sha": "fdcd5fb7833665e390f05d4f26b845315998269e",
+    "sha": "b457c1cc64d6548183428a80eec2f9f07c22f98c",
     "branch": "master"
   },
   "joist": {
