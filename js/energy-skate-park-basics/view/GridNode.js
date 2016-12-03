@@ -52,6 +52,7 @@ define( function( require ) {
       lineWidth: 1.8,
       tandem: this.tandem.createTandem( 'thickLinePath' )
     } );
+    this.createdTexts = [];
   }
 
   energySkateParkBasics.register( 'GridNode', GridNode );
@@ -64,13 +65,11 @@ define( function( require ) {
     // only update when the graph is visible, then again when it becomes visible.
     layout: function( offsetX, offsetY, width, height, layoutScale ) {
 
-      if ( this.createdTexts ) {
-        for ( var k = 0; k < this.createdTexts.length; k++ ) {
-          this.createdTexts[ k ].dispose();
-        }
+      for ( var k = 0; k < this.createdTexts.length; k++ ) {
+        this.createdTexts[ k ].dispose();
       }
+      this.createdTexts.length = 0;
 
-      var createdTexts = [];
       var thickLines = [];
       var thinLines = [];
       var texts = [];
@@ -109,7 +108,7 @@ define( function( require ) {
             top: viewY,
             right: originX - 2
           } );
-          createdTexts.push( gridLineLabel );
+          this.createdTexts.push( gridLineLabel );
 
           // For the "0 meters" readout, we still need the 0 to line up perfectly (while still using a single
           // internationalizable string), so use the 0 text bounds
@@ -122,7 +121,7 @@ define( function( require ) {
               x: gridLineLabel.x
             } );
             texts.push( replacementText );
-            createdTexts.push( replacementText );
+            this.createdTexts.push( replacementText );
           }
           else {
             texts.push( gridLineLabel );
@@ -148,10 +147,6 @@ define( function( require ) {
         this.thinLinePath,
         this.thickLinePath
       ].concat( texts );
-
-      // TODO: reuse these instead of dispose/create
-      // @private
-      this.createdTexts = createdTexts;
     }
   } );
 } );
