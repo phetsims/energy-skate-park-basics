@@ -105,11 +105,21 @@ define( function( require ) {
     } );
     deleteButton.addInputListener( disableDismissAction );
     this.addChild( deleteButton );
+
+    this.disposeControlPointUI = function() {
+      cutButton && cutButton.dispose();
+      deleteButton.dispose();
+    };
   }
 
   energySkateParkBasics.register( 'ControlPointUI', ControlPointUI );
 
   return inherit( TandemNode, ControlPointUI, {
+
+    dispose: function() {
+      TandemNode.prototype.dispose.call( this );
+      this.disposeControlPointUI();
+    },
 
     //Override to additionally remove the attached input listener
     detach: function() {

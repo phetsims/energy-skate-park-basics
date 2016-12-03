@@ -70,6 +70,7 @@ define( function( require ) {
       self.translation = modelViewTransform.modelToViewPosition( position );
     } );
     var dragEvents = 0;
+    var lastControlPointUI = null;
     var inputListener = new TandemDragHandler( {
       tandem: tandem.createTandem( 'inputListener' ),
       allowTouchSnag: true,
@@ -192,6 +193,9 @@ define( function( require ) {
 
           controlPointUIShownEmitter.emit();
 
+          if ( lastControlPointUI ) {
+            lastControlPointUI.dispose();
+          }
           var controlPointUI = new ControlPointUI(
             model,
             track,
@@ -202,10 +206,17 @@ define( function( require ) {
           );
 
           // If the track was removed, get rid of the buttons
-          track.on( 'remove', function() { controlPointUI.detach(); } );
+          track.on( 'remove', function() {
+            controlPointUI.detach();
+            controlPointUI.dispose();
+          } );
 
           // If the track has translated, hide the buttons, see #272
-          track.on( 'translated', function() { controlPointUI.detach();} );
+          track.on( 'translated', function() {
+            controlPointUI.detach();
+            controlPointUI.dispose();
+          } );
+          lastControlPointUI = controlPointUI;
 
           trackNode.parents[ 0 ].addChild( controlPointUI );
         }
