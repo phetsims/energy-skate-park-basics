@@ -51,7 +51,7 @@ define( function( require ) {
       stroke: '#686868',
       lineWidth: 1.8,
       tandem: this.tandem.createTandem( 'thickLinePath' )
-    } )
+    } );
   }
 
   energySkateParkBasics.register( 'GridNode', GridNode );
