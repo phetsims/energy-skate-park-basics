@@ -42,6 +42,16 @@ define( function( require ) {
 
     // @private
     this.tandem = tandem;
+    this.thinLinePath = new TandemPath( null, {
+      stroke: '#686868',
+      lineWidth: 0.8,
+      tandem: this.tandem.createTandem( 'thinLinePath' )
+    } );
+    this.thickLinePath = new TandemPath( null, {
+      stroke: '#686868',
+      lineWidth: 1.8,
+      tandem: this.tandem.createTandem( 'thickLinePath' )
+    } )
   }
 
   energySkateParkBasics.register( 'GridNode', GridNode );
@@ -54,8 +64,6 @@ define( function( require ) {
     // only update when the graph is visible, then again when it becomes visible.
     layout: function( offsetX, offsetY, width, height, layoutScale ) {
 
-      this.thinLinePath && this.thinLinePath.dispose();
-      this.thickLinePath && this.thickLinePath.dispose();
       if ( this.createdTexts ) {
         for ( var k = 0; k < this.createdTexts.length; k++ ) {
           this.createdTexts[ k ].dispose();
@@ -134,25 +142,15 @@ define( function( require ) {
         thickLineShape.moveTo( thickLine.x1, thickLine.y1 );
         thickLineShape.lineTo( thickLine.x2, thickLine.y2 );
       }
-      var thinLinePath = new TandemPath( thinLineShape, {
-        stroke: '#686868',
-        lineWidth: 0.8,
-        tandem: this.tandem.createTandem( 'thinLinePath' )
-      } );
-      var thickLinePath = new TandemPath( thickLineShape, {
-        stroke: '#686868',
-        lineWidth: 1.8,
-        tandem: this.tandem.createTandem( 'thickLinePath' )
-      } );
+      this.thinLinePath.setShape( thinLineShape );
+      this.thickLinePath.setShape( thickLineShape );
       this.children = [
-        thinLinePath,
-        thickLinePath
+        this.thinLinePath,
+        this.thickLinePath
       ].concat( texts );
 
       // TODO: reuse these instead of dispose/create
       // @private
-      this.thinLinePath = thinLinePath;
-      this.thickLinePath = thickLinePath;
       this.createdTexts = createdTexts;
     }
   } );
