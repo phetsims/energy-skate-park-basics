@@ -96,7 +96,10 @@ define( function( require ) {
     } );
     var contentNode = new Rectangle( 0, 0, contentWidth, contentHeight, {
       children: [
-        new ArrowNode( insetX, this.originY, insetX, insetY, { pickable: false } ),
+        new ArrowNode( insetX, this.originY, insetX, insetY, {
+          pickable: false,
+          tandem: tandem.createTandem( 'arrowNode' )
+        } ),
         titleNode,
         new Line( insetX, this.originY, contentWidth - insetX, this.originY, {
           lineWidth: 1,
