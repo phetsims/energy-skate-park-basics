@@ -172,8 +172,8 @@ define( function( require ) {
 
       // Update the skater if the track is moved while the sim is paused, see #84
       if ( model.skater.track === track && model.paused ) {
-        model.skater.position = track.getPoint( model.skater.u );
-        model.skater.angle = model.skater.track.getViewAngleAt( model.skater.u ) + (model.skater.up ? 0 : Math.PI);
+        model.skater.position = track.getPoint( model.skater.parametricPosition );
+        model.skater.angle = model.skater.track.getViewAngleAt( model.skater.parametricPosition ) + (model.skater.onTopSideOfTrack ? 0 : Math.PI);
         model.skater.trigger( 'updated' );
       }
     }

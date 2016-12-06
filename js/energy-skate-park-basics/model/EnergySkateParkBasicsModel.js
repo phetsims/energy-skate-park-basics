@@ -531,7 +531,7 @@ define( function( require ) {
         }
       }
       if ( closestTrack ) {
-        return { track: closestTrack, u: closestMatch.u, point: closestMatch.point };
+        return { track: closestTrack, parametricPosition: closestMatch.parametricPosition, point: closestMatch.point };
       }
       else {
         return null;
@@ -541,10 +541,10 @@ define( function( require ) {
     // Check to see if the points crossed the track
     crossedTrack: function( closestTrackAndPositionAndParameter, physicalTracks, beforeX, beforeY, afterX, afterY ) {
       var track = closestTrackAndPositionAndParameter.track;
-      var u = closestTrackAndPositionAndParameter.u;
+      var parametricPosition = closestTrackAndPositionAndParameter.parametricPosition;
       var trackPoint = closestTrackAndPositionAndParameter.point;
 
-      if ( !track.isParameterInBounds( u ) ) {
+      if ( !track.isParameterInBounds( parametricPosition ) ) {
         return false;
       }
       else {
@@ -552,7 +552,7 @@ define( function( require ) {
         // Linearize the spline, and check to see if the skater crossed by performing a line segment intersection between
         // the skater's trajectory segment and the linearized track segment.
         // Note, this has an error for cusps, see #212
-        var unitParallelVector = track.getUnitParallelVector( u );
+        var unitParallelVector = track.getUnitParallelVector( parametricPosition );
         var a = trackPoint.plus( unitParallelVector.times( 100 ) );
         var b = trackPoint.plus( unitParallelVector.times( -100 ) );
         var intersection = Util.lineSegmentIntersection( a.x, a.y, b.x, b.y, beforeX, beforeY, afterX, afterY );
@@ -588,12 +588,12 @@ define( function( require ) {
         skaterState.positionX, skaterState.positionY, proposedPosition.x, proposedPosition.y );
 
       var track = closestTrackAndPositionAndParameter.track;
-      var u = closestTrackAndPositionAndParameter.u;
+      var parametricPosition = closestTrackAndPositionAndParameter.parametricPosition;
       var trackPoint = closestTrackAndPositionAndParameter.point;
 
       if ( crossed ) {
         debugAttachDetach && debugAttachDetach( 'attaching' );
-        var normal = track.getUnitNormalVector( u );
+        var normal = track.getUnitNormalVector( parametricPosition );
         var segment = normal.perpendicular();
 
         var beforeVector = skaterState.getPosition().minus( trackPoint );
@@ -602,7 +602,7 @@ define( function( require ) {
         var newVelocity = segment.times( segment.dot( proposedVelocity ) );
         var newSpeed = newVelocity.magnitude();
         var newKineticEnergy = 0.5 * skaterState.mass * newVelocity.magnitudeSquared();
-        var newPosition = track.getPoint( u );
+        var newPosition = track.getPoint( parametricPosition );
         var newPotentialEnergy = -skaterState.mass * skaterState.gravity * newPosition.y;
         var newThermalEnergy = initialEnergy - newKineticEnergy - newPotentialEnergy;
 
@@ -631,25 +631,25 @@ define( function( require ) {
         assert && assert( isFinite( newThermalEnergy ) );
         assert && assert( newThermalEnergy >= 0 );
 
-        var uD = (dot > 0 ? +1 : -1) * newSpeed;
-        var up = beforeVector.dot( normal ) > 0;
+        var parametricSpeed = (dot > 0 ? +1 : -1) * newSpeed;
+        var onTopSideOfTrack = beforeVector.dot( normal ) > 0;
 
-        debug && debug( 'attach to track, ' + ', ' + u + ', ' + track.maxPoint );
+        debug && debug( 'attach to track, ' + ', ' + parametricPosition + ', ' + track.maxPoint );
 
-        // Double check the velocities and invert uD if incorrect, see #172
+        // Double check the velocities and invert parametricSpeed if incorrect, see #172
         // Compute the new velocities same as in stepTrack
-        var unitParallelVector = track.getUnitParallelVector( u );
-        var newVelocityX = unitParallelVector.x * uD;
-        var newVelocityY = unitParallelVector.y * uD;
+        var unitParallelVector = track.getUnitParallelVector( parametricPosition );
+        var newVelocityX = unitParallelVector.x * parametricSpeed;
+        var newVelocityY = unitParallelVector.y * parametricSpeed;
 
         var velocityDotted = skaterState.velocityX * newVelocityX + skaterState.velocityY * newVelocityY;
 
         // See if the track attachment will cause velocity to flip, and inverse it if so, see #172
         if ( velocityDotted < -1E-6 ) {
-          uD = uD * -1;
+          parametricSpeed = parametricSpeed * -1;
         }
 
-        return skaterState.attachToTrack( newThermalEnergy, track, up, u, uD, newVelocity.x, newVelocity.y, newPosition.x, newPosition.y );
+        return skaterState.attachToTrack( newThermalEnergy, track, onTopSideOfTrack, parametricPosition, parametricSpeed, newVelocity.x, newVelocity.y, newPosition.x, newPosition.y );
       }
 
       // It just continued in free fall
@@ -762,9 +762,9 @@ define( function( require ) {
       var origLocX = skaterState.positionX;
       var origLocY = skaterState.positionY;
       var thermalEnergy = skaterState.thermalEnergy;
-      var uD = skaterState.uD;
-      assert && assert( isFinite( uD ) );
-      var u = skaterState.u;
+      var parametricSpeed = skaterState.parametricSpeed;
+      assert && assert( isFinite( parametricSpeed ) );
+      var parametricPosition = skaterState.parametricPosition;
 
       // Component-wise math to prevent allocations, see #50
       var netForceX = this.getNetForceWithoutNormalX( skaterState );
@@ -773,18 +773,18 @@ define( function( require ) {
       var netForceAngle = Math.atan2( netForceY, netForceX );
 
       // Get the net force in the direction of the track.  Dot product is a * b * cos(theta)
-      var a = netForceMagnitude * Math.cos( skaterState.track.getModelAngleAt( u ) - netForceAngle ) / skaterState.mass;
+      var a = netForceMagnitude * Math.cos( skaterState.track.getModelAngleAt( parametricPosition ) - netForceAngle ) / skaterState.mass;
 
-      uD += a * dt;
-      assert && assert( isFinite( uD ), 'uD should be finite' );
-      u += track.getParametricDistance( u, uD * dt + 1 / 2 * a * dt * dt );
-      var newPointX = skaterState.track.getX( u );
-      var newPointY = skaterState.track.getY( u );
-      var unitParallelVector = skaterState.track.getUnitParallelVector( u );
+      parametricSpeed += a * dt;
+      assert && assert( isFinite( parametricSpeed ), 'parametricSpeed should be finite' );
+      parametricPosition += track.getParametricDistance( parametricPosition, parametricSpeed * dt + 1 / 2 * a * dt * dt );
+      var newPointX = skaterState.track.getX( parametricPosition );
+      var newPointY = skaterState.track.getY( parametricPosition );
+      var unitParallelVector = skaterState.track.getUnitParallelVector( parametricPosition );
       var parallelUnitX = unitParallelVector.x;
       var parallelUnitY = unitParallelVector.y;
-      var newVelocityX = parallelUnitX * uD;
-      var newVelocityY = parallelUnitY * uD;
+      var newVelocityX = parallelUnitX * parametricSpeed;
+      var newVelocityY = parallelUnitY * parametricSpeed;
 
       // Exponentially decay the velocity if already nearly zero and on a flat slope, see #129
       if ( parallelUnitX / parallelUnitY > 5 && Math.sqrt( newVelocityX * newVelocityX + newVelocityY * newVelocityY ) < 1E-2 ) {
@@ -793,7 +793,7 @@ define( function( require ) {
       }
 
       // choose velocity by using the unit parallel vector to the track
-      var newState = skaterState.updateUUDVelocityPosition( u, uD, newVelocityX, newVelocityY, newPointX, newPointY );
+      var newState = skaterState.updateUUDVelocityPosition( parametricPosition, parametricSpeed, newVelocityX, newVelocityY, newPointX, newPointY );
       if ( this.friction > 0 ) {
 
         // Compute friction force magnitude component-wise to prevent allocations, see #50
@@ -850,17 +850,17 @@ define( function( require ) {
       var curvatureDirectionY = this.getCurvatureDirectionY( this.curvatureTemp, skaterState.positionX, skaterState.positionY );
 
       var track = skaterState.track;
-      var sideVectorX = skaterState.up ? track.getUnitNormalVector( skaterState.u ).x :
-                        track.getUnitNormalVector( skaterState.u ).x * -1;
-      var sideVectorY = skaterState.up ? track.getUnitNormalVector( skaterState.u ).y :
-                        track.getUnitNormalVector( skaterState.u ).y * -1;
+      var sideVectorX = skaterState.onTopSideOfTrack ? track.getUnitNormalVector( skaterState.parametricPosition ).x :
+                        track.getUnitNormalVector( skaterState.parametricPosition ).x * -1;
+      var sideVectorY = skaterState.onTopSideOfTrack ? track.getUnitNormalVector( skaterState.parametricPosition ).y :
+                        track.getUnitNormalVector( skaterState.parametricPosition ).y * -1;
 
       // Dot product written out component-wise to avoid allocations, see #50
       var outsideCircle = sideVectorX * curvatureDirectionX + sideVectorY * curvatureDirectionY < 0;
 
       // compare a to v/r^2 to see if it leaves the track
       var r = Math.abs( this.curvatureTemp.r );
-      var centripetalForce = skaterState.mass * skaterState.uD * skaterState.uD / r;
+      var centripetalForce = skaterState.mass * skaterState.parametricSpeed * skaterState.parametricSpeed / r;
 
       var netForceWithoutNormalX = this.getNetForceWithoutNormalX( skaterState );
       var netForceWithoutNormalY = this.getNetForceWithoutNormalY( skaterState );
@@ -898,24 +898,24 @@ define( function( require ) {
         var correctedState = this.correctEnergy( skaterState, newState );
 
         // Check whether the skater has left the track
-        if ( skaterState.track.isParameterInBounds( correctedState.u ) ) {
+        if ( skaterState.track.isParameterInBounds( correctedState.parametricPosition ) ) {
           return correctedState;
         }
         else {
           // Fly off the left or right side of the track
           // Off the edge of the track.  If the skater transitions from the right edge of the 2nd track directly to the
           // ground then do not lose thermal energy during the transition, see #164
-          if ( correctedState.u > skaterState.track.maxPoint && skaterState.track.slopeToGround ) {
+          if ( correctedState.parametricPosition > skaterState.track.maxPoint && skaterState.track.slopeToGround ) {
             var result = correctedState.switchToGround( correctedState.thermalEnergy, correctedState.getSpeed(), 0, correctedState.positionX, 0 );
 
             // Correct the energy discrepancy when switching to the ground, see #301
             return this.correctEnergy( skaterState, result );
           }
           else {
-            debugAttachDetach && debugAttachDetach( 'left edge track: ' + correctedState.u + ', ' + skaterState.track.maxPoint );
+            debugAttachDetach && debugAttachDetach( 'left edge track: ' + correctedState.parametricPosition + ', ' + skaterState.track.maxPoint );
 
             // There is a situation in which the `u` of the skater exceeds the track bounds before the
-            // getClosestPositionAndParameter.u does, which can cause the skater to immediately reattach
+            // getClosestPositionAndParameter.parametricPosition does, which can cause the skater to immediately reattach
             // So make sure the skater is far enough from the track so it won't reattach right away, see #167
             var freeSkaterState = skaterState.updateTrackUD( null, 0 );
 
@@ -961,18 +961,18 @@ define( function( require ) {
       var mass = skaterState.mass;
 
       // Find the direction of velocity.  This is on the track unless the skater just left the "slope" track
-      var unit = newSkaterState.track ? newSkaterState.track.getUnitParallelVector( newSkaterState.u ) :
+      var unit = newSkaterState.track ? newSkaterState.track.getUnitParallelVector( newSkaterState.parametricPosition ) :
                  newSkaterState.getVelocity().normalized();
 
       // Binary search, but bail after too many iterations
       for ( var i = 0; i < 100; i++ ) {
-        var dv = ( newSkaterState.getTotalEnergy() - e0 ) / ( mass * newSkaterState.uD );
+        var dv = ( newSkaterState.getTotalEnergy() - e0 ) / ( mass * newSkaterState.parametricSpeed );
 
-        var newVelocity = newSkaterState.uD - dv;
+        var newVelocity = newSkaterState.parametricSpeed - dv;
 
         // We can just set the state directly instead of calling update since we are keeping a protected clone of the
         // newSkaterState
-        newSkaterState.uD = newVelocity;
+        newSkaterState.parametricSpeed = newVelocity;
         var result = unit.times( newVelocity );
         newSkaterState.velocityX = result.x;
         newSkaterState.velocityY = result.y;
@@ -1009,7 +1009,7 @@ define( function( require ) {
       if ( this.trackChangePending ) {
         return newState;
       }
-      var u0 = skaterState.u;
+      var u0 = skaterState.parametricPosition;
       var e0 = skaterState.getTotalEnergy();
 
       if ( !isFinite( newState.getTotalEnergy() ) ) { throw new Error( 'not finite' );}
@@ -1042,9 +1042,9 @@ define( function( require ) {
             // search for a place between u and u0 with a better energy
 
             var numRecursiveSearches = 10;
-            var u = newState.u;
-            var bestAlpha = ( u + u0 ) / 2.0;
-            var da = ( u - u0 ) / 2;
+            var parametricPosition = newState.parametricPosition;
+            var bestAlpha = ( parametricPosition + u0 ) / 2.0;
+            var da = ( parametricPosition - u0 ) / 2;
             for ( var i = 0; i < numRecursiveSearches; i++ ) {
               var numSteps = 10;
               bestAlpha = this.searchSplineForEnergy( newState, bestAlpha - da, bestAlpha + da, e0, numSteps );
@@ -1086,9 +1086,9 @@ define( function( require ) {
           var vSq = Math.abs( 2 / newState.mass * ( e0 - newState.getPotentialEnergy() - newState.thermalEnergy ) );
           var v = Math.sqrt( vSq );
 
-          // TODO: What if uD ===0?
-          var newVelocity = v * (newState.uD > 0 ? +1 : -1);
-          var unitParallelVector = newState.track.getUnitParallelVector( newState.u );
+          // TODO: What if parametricSpeed ===0?
+          var newVelocity = v * (newState.parametricSpeed > 0 ? +1 : -1);
+          var unitParallelVector = newState.track.getUnitParallelVector( newState.parametricPosition );
           var updatedVelocityX = unitParallelVector.x * newVelocity;
           var updatedVelocityY = unitParallelVector.y * newVelocity;
           var fixedState = newState.updateUDVelocity( newVelocity, updatedVelocityX, updatedVelocityY );
@@ -1371,17 +1371,17 @@ define( function( require ) {
       // Note: Energy is not conserved when tracks joined since the user has added or removed energy from the system
       if ( this.skater.track === a || this.skater.track === b ) {
 
-        var originalDirectionVector = this.skater.track.getUnitParallelVector( this.skater.u ).times( this.skater.uD );
+        var originalDirectionVector = this.skater.track.getUnitParallelVector( this.skater.parametricPosition ).times( this.skater.parametricSpeed );
 
         // Keep track of the skater direction so we can toggle the 'up' flag if the track orientation changed
         var originalNormal = this.skater.upVector;
         var p = newTrack.getClosestPositionAndParameter( this.skater.position.copy() );
         this.skater.track = newTrack;
-        this.skater.u = p.u;
-        var x2 = newTrack.getX( p.u );
-        var y2 = newTrack.getY( p.u );
+        this.skater.parametricPosition = p.parametricPosition;
+        var x2 = newTrack.getX( p.parametricPosition );
+        var y2 = newTrack.getY( p.parametricPosition );
         this.skater.position = new Vector2( x2, y2 );
-        this.skater.angle = newTrack.getViewAngleAt( p.u ) + (this.skater.up ? 0 : Math.PI);
+        this.skater.angle = newTrack.getViewAngleAt( p.parametricPosition ) + (this.skater.onTopSideOfTrack ? 0 : Math.PI);
 
         // Trigger an initial update now so we can get the right up vector, see #150
         this.skater.trigger( 'updated' );
@@ -1389,17 +1389,17 @@ define( function( require ) {
 
         // If the skater flipped upside down because the track directionality is different, toggle his 'up' flag
         if ( originalNormal.dot( newNormal ) < 0 ) {
-          this.skater.up = !this.skater.up;
-          this.skater.angle = newTrack.getViewAngleAt( p.u ) + (this.skater.up ? 0 : Math.PI);
+          this.skater.onTopSideOfTrack = !this.skater.onTopSideOfTrack;
+          this.skater.angle = newTrack.getViewAngleAt( p.parametricPosition ) + (this.skater.onTopSideOfTrack ? 0 : Math.PI);
           this.skater.trigger( 'updated' );
         }
 
         // If the skater changed direction of motion because of the track polarity change, flip the parametric velocity
-        // 'uD' value, see #180
-        var newDirectionVector = this.skater.track.getUnitParallelVector( this.skater.u ).times( this.skater.uD );
+        // 'parametricSpeed' value, see #180
+        var newDirectionVector = this.skater.track.getUnitParallelVector( this.skater.parametricPosition ).times( this.skater.parametricSpeed );
         debugAttachDetach && debugAttachDetach( newDirectionVector.dot( originalDirectionVector ) );
         if ( newDirectionVector.dot( originalDirectionVector ) < 0 ) {
-          this.skater.uD = -this.skater.uD;
+          this.skater.parametricSpeed = -this.skater.parametricSpeed;
         }
       }
 

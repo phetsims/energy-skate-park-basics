@@ -123,19 +123,19 @@ define( function( require ) {
       // to use binary search for position on the track
       var closestTrackAndPositionAndParameter = getClosestTrackAndPositionAndParameter( position, getPhysicalTracks() );
       var closeEnough = false;
-      if ( closestTrackAndPositionAndParameter && closestTrackAndPositionAndParameter.track && closestTrackAndPositionAndParameter.track.isParameterInBounds( closestTrackAndPositionAndParameter.u ) ) {
+      if ( closestTrackAndPositionAndParameter && closestTrackAndPositionAndParameter.track && closestTrackAndPositionAndParameter.track.isParameterInBounds( closestTrackAndPositionAndParameter.parametricPosition ) ) {
         var closestPoint = closestTrackAndPositionAndParameter.point;
         var distance = closestPoint.distance( position );
         if ( distance < 0.5 ) {
           position = closestPoint;
           targetTrack = closestTrackAndPositionAndParameter.track;
-          targetU = closestTrackAndPositionAndParameter.u;
+          targetU = closestTrackAndPositionAndParameter.parametricPosition;
 
           // Choose the right side of the track, i.e. the side of the track that would have the skater upside up
           var normal = targetTrack.getUnitNormalVector( targetU );
-          skater.up = normal.y > 0;
+          skater.onTopSideOfTrack = normal.y > 0;
 
-          skater.angle = targetTrack.getViewAngleAt( targetU ) + (skater.up ? 0 : Math.PI);
+          skater.angle = targetTrack.getViewAngleAt( targetU ) + (skater.onTopSideOfTrack ? 0 : Math.PI);
 
           closeEnough = true;
         }
@@ -146,7 +146,7 @@ define( function( require ) {
 
         // make skater upright if not near the track
         skater.angle = 0;
-        skater.up = true;
+        skater.onTopSideOfTrack = true;
 
         skater.position = position;
       }

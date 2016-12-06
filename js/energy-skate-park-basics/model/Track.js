@@ -96,7 +96,7 @@ define( function( require ) {
     this.controlPoints = controlPoints;
 
     this.interactive = interactive;
-    this.u = new FastArray( this.controlPoints.length );
+    this.parametricPosition = new FastArray( this.controlPoints.length );
     this.x = new FastArray( this.controlPoints.length );
     this.y = new FastArray( this.controlPoints.length );
 
@@ -128,13 +128,13 @@ define( function( require ) {
 
       // Arrays are fixed length, so just overwrite values, see #38
       for ( var i = 0; i < this.controlPoints.length; i++ ) {
-        this.u[ i ] = i / this.controlPoints.length;
+        this.parametricPosition[ i ] = i / this.controlPoints.length;
         this.x[ i ] = this.controlPoints[ i ].position.x;
         this.y[ i ] = this.controlPoints[ i ].position.y;
       }
 
-      this.xSpline = numeric.spline( this.u, this.x );
-      this.ySpline = numeric.spline( this.u, this.y );
+      this.xSpline = numeric.spline( this.parametricPosition, this.x );
+      this.ySpline = numeric.spline( this.parametricPosition, this.y );
 
       // Mark search points as dirty
       this.xSearchPoints = null;
@@ -220,14 +220,14 @@ define( function( require ) {
       bestPoint.x = SplineEvaluation.atNumber( this.xSpline, bestU );
       bestPoint.y = SplineEvaluation.atNumber( this.ySpline, bestU );
 
-      return { u: bestU, point: bestPoint, distance: bestDistanceSquared };
+      return { parametricPosition: bestU, point: bestPoint, distance: bestDistanceSquared };
     },
 
-    getX: function( u ) { return SplineEvaluation.atNumber( this.xSpline, u ); },
-    getY: function( u ) { return SplineEvaluation.atNumber( this.ySpline, u ); },
-    getPoint: function( u ) {
-      var x = SplineEvaluation.atNumber( this.xSpline, u );
-      var y = SplineEvaluation.atNumber( this.ySpline, u );
+    getX: function( parametricPosition ) { return SplineEvaluation.atNumber( this.xSpline, parametricPosition ); },
+    getY: function( parametricPosition ) { return SplineEvaluation.atNumber( this.ySpline, parametricPosition ); },
+    getPoint: function( parametricPosition ) {
+      var x = SplineEvaluation.atNumber( this.xSpline, parametricPosition );
+      var y = SplineEvaluation.atNumber( this.ySpline, parametricPosition );
       return new Vector2( x, y );
     },
 
@@ -249,42 +249,44 @@ define( function( require ) {
 
     // For purposes of showing the skater angle, get the view angle of the track here.  Note this means inverting the y
     // values, this is called every step while animating on the track, so it was optimized to avoid new allocations
-    getViewAngleAt: function( u ) {
+    getViewAngleAt: function( parametricPosition ) {
       if ( this.xSplineDiff === null ) {
         this.xSplineDiff = this.xSpline.diff();
         this.ySplineDiff = this.ySpline.diff();
       }
-      return Math.atan2( -SplineEvaluation.atNumber( this.ySplineDiff, u ), SplineEvaluation.atNumber( this.xSplineDiff, u ) );
+      return Math.atan2( -SplineEvaluation.atNumber( this.ySplineDiff, parametricPosition ), SplineEvaluation.atNumber( this.xSplineDiff, parametricPosition ) );
     },
 
     // Get the model angle at the specified position on the track
-    getModelAngleAt: function( u ) {
+    getModelAngleAt: function( parametricPosition ) {
       // load xSplineDiff, ySplineDiff here if not already loaded
       if ( this.xSplineDiff === null ) {
         this.xSplineDiff = this.xSpline.diff();
         this.ySplineDiff = this.ySpline.diff();
       }
-      return Math.atan2( SplineEvaluation.atNumber( this.ySplineDiff, u ), SplineEvaluation.atNumber( this.xSplineDiff, u ) );
+      return Math.atan2( SplineEvaluation.atNumber( this.ySplineDiff, parametricPosition ), SplineEvaluation.atNumber( this.xSplineDiff, parametricPosition ) );
     },
 
     // Get the model unit vector at the specified position on the track
-    getUnitNormalVector: function( u ) {
+    getUnitNormalVector: function( parametricPosition ) {
+
       // load xSplineDiff, ySplineDiff here if not already loaded
       if ( this.xSplineDiff === null ) {
         this.xSplineDiff = this.xSpline.diff();
         this.ySplineDiff = this.ySpline.diff();
       }
-      return new Vector2( -SplineEvaluation.atNumber( this.ySplineDiff, u ), SplineEvaluation.atNumber( this.xSplineDiff, u ) ).normalize();
+      return new Vector2( -SplineEvaluation.atNumber( this.ySplineDiff, parametricPosition ), SplineEvaluation.atNumber( this.xSplineDiff, parametricPosition ) ).normalize();
     },
 
     // Get the model parallel vector at the specified position on the track
-    getUnitParallelVector: function( u ) {
+    getUnitParallelVector: function( parametricPosition ) {
+
       // load xSplineDiff, ySplineDiff here if not already loaded
       if ( this.xSplineDiff === null ) {
         this.xSplineDiff = this.xSpline.diff();
         this.ySplineDiff = this.ySpline.diff();
       }
-      return new Vector2( SplineEvaluation.atNumber( this.xSplineDiff, u ), SplineEvaluation.atNumber( this.ySplineDiff, u ) ).normalize();
+      return new Vector2( SplineEvaluation.atNumber( this.xSplineDiff, parametricPosition ), SplineEvaluation.atNumber( this.ySplineDiff, parametricPosition ) ).normalize();
     },
 
     updateLinSpace: function() {
@@ -302,7 +304,9 @@ define( function( require ) {
 
     // Detect whether a parametric point is in bounds of this track, for purposes of telling whether the skater fell
     // past the edge of the track
-    isParameterInBounds: function( u ) { return u >= this.minPoint && u <= this.maxPoint; },
+    isParameterInBounds: function( parametricPosition ) {
+      return parametricPosition >= this.minPoint && parametricPosition <= this.maxPoint;
+    },
 
     // Setter/getter for physical property, mimic the PropertySet pattern instead of using PropertySet multiple inheritance
     get physical() { return this.physicalProperty.get(); },
@@ -472,7 +476,7 @@ define( function( require ) {
     // Used for centripetal force and determining whether the skater flies off the track
     // Curvature parameter is for storing the result as pass-by-value.
     // Sorry, see #50 regarding GC
-    getCurvature: function( u, curvature ) {
+    getCurvature: function( parametricPosition, curvature ) {
 
       if ( this.xSplineDiff === null ) {
         this.xSplineDiff = this.xSpline.diff();
@@ -484,19 +488,19 @@ define( function( require ) {
         this.ySplineDiffDiff = this.ySplineDiff.diff();
       }
 
-      var xP = SplineEvaluation.atNumber( this.xSplineDiff, u );
-      var xPP = SplineEvaluation.atNumber( this.xSplineDiffDiff, u );
-      var yP = SplineEvaluation.atNumber( this.ySplineDiff, u );
-      var yPP = SplineEvaluation.atNumber( this.ySplineDiffDiff, u );
+      var xP = SplineEvaluation.atNumber( this.xSplineDiff, parametricPosition );
+      var xPP = SplineEvaluation.atNumber( this.xSplineDiffDiff, parametricPosition );
+      var yP = SplineEvaluation.atNumber( this.ySplineDiff, parametricPosition );
+      var yPP = SplineEvaluation.atNumber( this.ySplineDiffDiff, parametricPosition );
 
       var k = (xP * yPP - yP * xPP) /
               Math.pow( (xP * xP + yP * yP), 3 / 2 );
 
       // Using component-wise maths to avoid allocations, see #50
-      var centerX = this.getX( u );
-      var centerY = this.getY( u );
+      var centerX = this.getX( parametricPosition );
+      var centerY = this.getY( parametricPosition );
 
-      var unitNormalVector = this.getUnitNormalVector( u );
+      var unitNormalVector = this.getUnitNormalVector( parametricPosition );
       var vectorX = unitNormalVector.x / k + centerX;
       var vectorY = unitNormalVector.y / k + centerY;
 
@@ -657,12 +661,12 @@ define( function( require ) {
       // single sampling point.
       var numDivisions = 400;
       var du = (this.maxPoint - this.minPoint) / numDivisions;
-      for ( var u = this.minPoint; u < this.maxPoint; u += du ) {
-        this.getCurvature( u, curvature );
+      for ( var parametricPosition = this.minPoint; parametricPosition < this.maxPoint; parametricPosition += du ) {
+        this.getCurvature( parametricPosition, curvature );
         var r = Math.abs( curvature.r );
         if ( r < minRadius ) {
           minRadius = r;
-          bestU = u;
+          bestU = parametricPosition;
         }
       }
       return bestU;
@@ -680,8 +684,8 @@ define( function( require ) {
       // single sampling point.
       var numDivisions = 400;
       var du = (this.maxPoint - this.minPoint) / numDivisions;
-      for ( var u = this.minPoint; u < this.maxPoint; u += du ) {
-        this.getCurvature( u, curvature );
+      for ( var parametricPosition = this.minPoint; parametricPosition < this.maxPoint; parametricPosition += du ) {
+        this.getCurvature( parametricPosition, curvature );
         var r = Math.abs( curvature.r );
         if ( r < minRadius ) {
           minRadius = r;

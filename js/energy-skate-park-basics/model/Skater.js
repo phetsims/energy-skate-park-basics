@@ -52,27 +52,25 @@ define( function( require ) {
         phetioValueType: TTrack
       },
 
-      //TODO tandem name does not match Property name, see https://github.com/phetsims/energy-skate-park-basics/issues/358
       // Parameter along the parametric spline, unitless since it is in parametric space
-      u: {
+      parametricPosition: {
         value: 0,
-        tandem: tandem.createTandem( 'skaterParametricDistanceAlongTrackProperty' ),
+        tandem: tandem.createTandem( 'parametricPositionProperty' ),
         phetioValueType: TNumber()
       },
 
       // Speed along the parametric spline dimension, formally 'u dot', indicating speed and direction (+/-) along the
       // track spline in meters per second.  Not technically the derivative of 'u' since it is the euclidean speed.
-      uD: {
+      parametricSpeed: {
         value: 0,
-        tandem: tandem.createTandem( 'uDProperty' ),
+        tandem: tandem.createTandem( 'parametricSpeedProperty' ),
         phetioValueType: TNumber()
       },
 
-      //TODO tandem name does not match Property name, see https://github.com/phetsims/energy-skate-park-basics/issues/358
       // True if the skater is pointing up on the track, false if attached to underside of track
-      up: {
+      onTopSideOfTrack: {
         value: true,
-        tandem: tandem.createTandem( 'skaterUpsideUpOnTrackProperty' ),
+        tandem: tandem.createTandem( 'onTopSideOfTrackProperty' ),
         phetioValueType: TBoolean
       },
 
@@ -83,79 +81,69 @@ define( function( require ) {
         phetioValueType: TNumber( { units: 'meters/second/second' } )
       },
 
-      //TODO tandem name does not match Property name, see https://github.com/phetsims/energy-skate-park-basics/issues/358
       position: {
         value: new Vector2( 3.5, 0 ),
-        tandem: tandem.createTandem( 'skaterPositionProperty' ),
+        tandem: tandem.createTandem( 'positionProperty' ),
         phetioValueType: TVector2
       },
 
-      //TODO tandem name does not match Property name, see https://github.com/phetsims/energy-skate-park-basics/issues/358
       // Start in the middle of the MassControlPanel range
       mass: {
         value: Constants.DEFAULT_MASS,
-        tandem: tandem.createTandem( 'skaterMassProperty' ),
+        tandem: tandem.createTandem( 'massProperty' ),
         phetioValueType: TNumber( { units: 'kilograms' } )
       },
 
-      //TODO tandem name does not match Property name, see https://github.com/phetsims/energy-skate-park-basics/issues/358
       // Which way the skater is facing, right or left.  Coded as strings instead of boolean in case we add other states
       // later like 'forward'
       direction: {
         value: 'left',
-        tandem: tandem.createTandem( 'skaterDirectionProperty' ),
+        tandem: tandem.createTandem( 'directionProperty' ),
         phetioValueType: TString
       },
 
-      //TODO tandem name does not match Property name, see https://github.com/phetsims/energy-skate-park-basics/issues/358
       velocity: {
         value: new Vector2( 0, 0 ),
-        tandem: tandem.createTandem( 'skaterVelocityProperty' ),
+        tandem: tandem.createTandem( 'velocityProperty' ),
         phetioValueType: TVector2
       },
 
-      //TODO tandem name does not match Property name, see https://github.com/phetsims/energy-skate-park-basics/issues/358
       // True if the user is dragging the skater with a pointer
       dragging: {
         value: false,
-        tandem: tandem.createTandem( 'skaterDraggingProperty' ),
+        tandem: tandem.createTandem( 'draggingProperty' ),
         phetioValueType: TBoolean
       },
 
-      //TODO tandem name does not match Property name, see https://github.com/phetsims/energy-skate-park-basics/issues/358
       // Energies are in Joules
       kineticEnergy: {
         value: 0,
-        tandem: tandem.createTandem( 'skaterKineticEnergyProperty' ),
+        tandem: tandem.createTandem( 'kineticEnergyProperty' ),
         phetioValueType: TNumber( { units: 'joules' } )
       },
 
-      //TODO tandem name does not match Property name, see https://github.com/phetsims/energy-skate-park-basics/issues/358
       potentialEnergy: {
         value: 0,
-        tandem: tandem.createTandem( 'skaterPotentialEnergyProperty' ),
+        tandem: tandem.createTandem( 'potentialEnergyProperty' ),
         phetioValueType: TNumber( { units: 'joules' } )
       },
 
-      //TODO tandem name does not match Property name, see https://github.com/phetsims/energy-skate-park-basics/issues/358
       thermalEnergy: {
         value: 0,
-        tandem: tandem.createTandem( 'skaterThermalEnergyProperty' ),
+        tandem: tandem.createTandem( 'thermalEnergyProperty' ),
         phetioValueType: TNumber( { units: 'joules' } )
       },
 
-      //TODO tandem name does not match Property name, see https://github.com/phetsims/energy-skate-park-basics/issues/358
       totalEnergy: {
         value: 0,
-        tandem: tandem.createTandem( 'skaterTotalEnergyProperty' ),
+        tandem: tandem.createTandem( 'totalEnergyProperty' ),
         phetioValueType: TNumber( { units: 'joules' } )
       },
 
-      //TODO tandem name does not match Property name, see https://github.com/phetsims/energy-skate-park-basics/issues/358
       // The skater's angle (about the pivot point at the bottom center), in radians
       angle: {
         value: 0,
-        tandem: tandem.createTandem( 'skaterAngleProperty' ),
+        tandem: tandem.createTandem( 'angleProperty' ),
         phetioValueType: TNumber( { units: 'radians' } )
       },
 
@@ -211,17 +199,17 @@ define( function( require ) {
       }
     } );
 
-    this.link( 'uD', function( uD ) {
+    this.parametricSpeedProperty.link( function( parametricSpeed ) {
 
       // Require the skater to overcome a speed threshold so he won't toggle back and forth rapidly at the bottom of a
       // well with friction, see #51
       var speedThreshold = 0.01;
 
-      if ( uD > speedThreshold ) {
-        self.direction = self.up ? 'right' : 'left';
+      if ( parametricSpeed > speedThreshold ) {
+        self.direction = self.onTopSideOfTrack ? 'right' : 'left';
       }
-      else if ( uD < -speedThreshold ) {
-        self.direction = self.up ? 'left' : 'right';
+      else if ( parametricSpeed < -speedThreshold ) {
+        self.direction = self.onTopSideOfTrack ? 'left' : 'right';
       }
       else {
         // Keep the same direction
@@ -317,10 +305,10 @@ define( function( require ) {
       // If the user is on the same track as where he began (and the track hasn't changed), remain on the track,
       // see #143 and #144
       if ( this.startingTrack && this.track === this.startingTrack && arrayEquals( this.track.copyControlPointSources(), this.startingTrackControlPointSources ) ) {
-        this.u = this.startingU;
+        this.parametricPosition = this.startingU;
         this.angle = this.startingAngle;
-        this.up = this.startingUp;
-        this.uD = 0;
+        this.onTopSideOfTrack = this.startingUp;
+        this.parametricSpeed = 0;
       }
       else {
         this.track = null;
@@ -371,15 +359,15 @@ define( function( require ) {
     released: function( targetTrack, targetU ) {
       this.dragging = false;
       this.velocity = new Vector2( 0, 0 );
-      this.uD = 0;
+      this.parametricSpeed = 0;
       this.track = targetTrack;
-      this.u = targetU;
+      this.parametricPosition = targetU;
       if ( targetTrack ) {
-        this.position = targetTrack.getPoint( this.u );
+        this.position = targetTrack.getPoint( this.parametricPosition );
       }
       this.startingPosition = this.position.copy();
       this.startingU = targetU;
-      this.startingUp = this.up;
+      this.startingUp = this.onTopSideOfTrack;
       this.startingTrack = targetTrack;
 
       // Record the starting track control points to make sure the track hasn't changed during return this.

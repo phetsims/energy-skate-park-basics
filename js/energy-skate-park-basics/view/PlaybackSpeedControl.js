@@ -16,9 +16,6 @@ define( function( require ) {
   var TandemText = require( 'TANDEM/scenery/nodes/TandemText' );
   var PhetFont = require( 'SCENERY_PHET/PhetFont' );
 
-  // phet-io modules
-  var TString = require( 'ifphetio!PHET_IO/types/TString' );
-
   // strings
   var normalString = require( 'string!ENERGY_SKATE_PARK_BASICS/normal' );
   var slowMotionString = require( 'string!ENERGY_SKATE_PARK_BASICS/slow.motion' );
