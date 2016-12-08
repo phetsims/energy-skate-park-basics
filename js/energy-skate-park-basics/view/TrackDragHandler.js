@@ -11,7 +11,7 @@ define( function( require ) {
   // modules
   var energySkateParkBasics = require( 'ENERGY_SKATE_PARK_BASICS/energySkateParkBasics' );
   var inherit = require( 'PHET_CORE/inherit' );
-  var TandemDragHandler = require( 'TANDEM/scenery/input/TandemDragHandler' );
+  var TandemSimpleDragHandler = require( 'TANDEM/scenery/input/TandemSimpleDragHandler' );
   var EnergySkateParkBasicsQueryParameters = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/EnergySkateParkBasicsQueryParameters' );
 
   /**
@@ -70,12 +70,12 @@ define( function( require ) {
         }
       }
     };
-    TandemDragHandler.call( this, trackSegmentDragHandlerOptions );
+    TandemSimpleDragHandler.call( this, trackSegmentDragHandlerOptions );
   }
 
   energySkateParkBasics.register( 'TrackDragHandler', TrackDragHandler );
 
-  return inherit( TandemDragHandler, TrackDragHandler, {
+  return inherit( TandemSimpleDragHandler, TrackDragHandler, {
 
     // When the user drags the track out of the toolbox, if they drag the track by a control point, it still translates
     // the track.  In that case (and only that case), the following methods are called by the ControlPointNode drag

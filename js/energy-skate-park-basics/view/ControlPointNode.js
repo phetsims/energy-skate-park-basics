@@ -13,7 +13,7 @@ define( function( require ) {
   var energySkateParkBasics = require( 'ENERGY_SKATE_PARK_BASICS/energySkateParkBasics' );
   var inherit = require( 'PHET_CORE/inherit' );
   var Circle = require( 'SCENERY/nodes/Circle' );
-  var TandemDragHandler = require( 'TANDEM/scenery/input/TandemDragHandler' );
+  var TandemSimpleDragHandler = require( 'TANDEM/scenery/input/TandemSimpleDragHandler' );
   var ControlPointUI = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/view/ControlPointUI' );
   var TandemEmitter = require( 'TANDEM/axon/TandemEmitter' );
   var EnergySkateParkBasicsQueryParameters = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/EnergySkateParkBasicsQueryParameters' );
@@ -71,7 +71,7 @@ define( function( require ) {
     } );
     var dragEvents = 0;
     var lastControlPointUI = null;
-    var inputListener = new TandemDragHandler( {
+    var inputListener = new TandemSimpleDragHandler( {
       tandem: tandem.createTandem( 'inputListener' ),
       allowTouchSnag: true,
       start: function( event ) {
