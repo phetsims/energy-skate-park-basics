@@ -45,12 +45,12 @@ define( function( require ) {
       {
         value: false,
         node: new TandemImage( attachIcon, { scale: scale, tandem: tandem.createTandem( 'attachIcon' ) } ),
-        tandem: tandem.createTandem( 'attachRadioButton' )
+        tandemName: 'attachRadioButton'
       },
       {
         value: true,
         node: new TandemImage( detachIcon, { scale: scale, tandem: tandem.createTandem( 'detachIcon' ) } ),
-        tandem: tandem.createTandem( 'detachRadioButton' )
+        tandemName: 'detachRadioButton'
       }
     ];
 
@@ -65,7 +65,8 @@ define( function( require ) {
         selectedLineWidth: 2.3,
         selectedStroke: '#3291b8',
         deselectedStroke: 'gray',
-        orientation: 'horizontal'
+        orientation: 'horizontal',
+        tandem: tandem.createTandem( 'RadioButtonGroup' )
       } );
     Panel.call( this, radioButtons, options );
   }

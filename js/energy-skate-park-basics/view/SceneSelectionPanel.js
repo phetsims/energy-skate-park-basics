@@ -50,24 +50,25 @@ define( function( require ) {
       {
         value: 0,
         node: createNode( 0 ),
-        tandem: tandem.createTandem( 'scene1RadioButton' )
+        tandemName: 'scene1RadioButton'
       },
       {
         value: 1,
         node: createNode( 1 ),
-        tandem: tandem.createTandem( 'scene2RadioButton' )
+        tandemName: 'scene2RadioButton'
       },
       {
         value: 2,
         node: createNode( 2 ),
-        tandem: tandem.createTandem( 'scene3RadioButton' )
+        tandemName: 'scene3RadioButton'
       }
     ], {
       orientation: 'vertical',
       buttonContentXMargin: 0,
       buttonContentYMargin: 0,
       cornerRadius: 0,
-      selectedLineWidth: 3
+      selectedLineWidth: 3,
+      tandem: tandem.createTandem( 'RadioButtonGroup' )
     } );
 
     Panel.call( this, content, {
