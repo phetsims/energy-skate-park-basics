@@ -46,6 +46,7 @@ define( function( require ) {
   var TString = require( 'ifphetio!PHET_IO/types/TString' );
   var TBounds2 = require( 'ifphetio!PHET_IO/types/dot/TBounds2' );
   var TEnergySkateParkBasicsModel = require( 'ifphetio!PHET_IO/simulations/energy-skate-park-basics/TEnergySkateParkBasicsModel' );
+  var TTrack = require( 'ifphetio!PHET_IO/simulations/energy-skate-park-basics/TTrack' );
 
   // Reuse empty object for creating SkaterStates to avoid allocations
   var EMPTY_OBJECT = {};
@@ -192,7 +193,9 @@ define( function( require ) {
     // If the mass changes while the sim is paused, trigger an update so the skater image size will update, see #115
     this.skater.property( 'mass' ).link( function() { if ( self.paused ) { self.skater.trigger( 'updated' ); } } );
 
-    this.tracks = new ObservableArray();
+    this.tracks = new ObservableArray( {
+      phetioValueType: TTrack
+    } );
 
     // Proxy for save/load for the tracks for phetio.js
     // TODO: This is all a bit hackish, to serialize the tracks.  Cannot this be made simpler?
