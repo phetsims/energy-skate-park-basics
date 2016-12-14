@@ -237,9 +237,9 @@ define( function( require ) {
     // Switch between selectable tracks
     if ( !model.draggableTracks ) {
 
-      var trackNodes = model.tracks.map( function( track ) {
+      var trackNodes = model.tracks.getArray().map( function( track ) {
         return new TrackNode( model, track, modelViewTransform, self.availableModelBoundsProperty, trackNodeGroupTandem.createNextTandem() );
-      } ).getArray();
+      } );
 
       trackNodes.forEach( function( trackNode ) {
         trackLayer.addChild( trackNode );
@@ -271,7 +271,7 @@ define( function( require ) {
       };
 
       // Create the tracks for the track toolbox
-      var interactiveTrackNodes = model.tracks.map( addTrackNode ).getArray();
+      var interactiveTrackNodes = model.tracks.getArray().map( addTrackNode );
 
       // Add a panel behind the tracks
       var padding = 10;
