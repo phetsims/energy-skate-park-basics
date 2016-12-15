@@ -41,16 +41,21 @@ define( function( require ) {
     }, options );
 
     var scale = 0.32;
+
+    // This is sort of hack to pass through the tandem of the radioButtonGroupMember to its child.
+    var attachRadioButtonTandemName = 'attachRadioButton';
+    var detachRadioButtonTandemName = 'detachRadioButton';
+    var radioButtonGroupTandem = tandem.createTandem( 'radioButtonGroup' );
     var radioButtonsContent = [
       {
         value: false,
-        node: new TandemImage( attachIcon, { scale: scale, tandem: tandem.createTandem( 'attachIcon' ) } ),
-        tandemName: 'attachRadioButton'
+        node: new TandemImage( attachIcon, { scale: scale, tandem: radioButtonGroupTandem.createTandem(attachRadioButtonTandemName).createTandem( 'attachIcon' ) } ),
+        tandemName: attachRadioButtonTandemName
       },
       {
         value: true,
-        node: new TandemImage( detachIcon, { scale: scale, tandem: tandem.createTandem( 'detachIcon' ) } ),
-        tandemName: 'detachRadioButton'
+        node: new TandemImage( detachIcon, { scale: scale, tandem: radioButtonGroupTandem.createTandem(detachRadioButtonTandemName).createTandem( 'detachIcon' ) } ),
+        tandemName: detachRadioButtonTandemName
       }
     ];
 
@@ -66,7 +71,7 @@ define( function( require ) {
         selectedStroke: '#3291b8',
         deselectedStroke: 'gray',
         orientation: 'horizontal',
-        tandem: tandem.createTandem( 'radioButtonGroup' )
+        tandem: radioButtonGroupTandem
       } );
     Panel.call( this, radioButtons, options );
   }
