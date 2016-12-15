@@ -66,7 +66,7 @@ define( function( require ) {
         selectedStroke: '#3291b8',
         deselectedStroke: 'gray',
         orientation: 'horizontal',
-        tandem: tandem.createTandem( 'RadioButtonGroup' )
+        tandem: tandem.createTandem( 'radioButtonGroup' )
       } );
     Panel.call( this, radioButtons, options );
   }
