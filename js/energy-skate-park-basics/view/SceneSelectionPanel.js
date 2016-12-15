@@ -68,7 +68,7 @@ define( function( require ) {
       buttonContentYMargin: 0,
       cornerRadius: 0,
       selectedLineWidth: 3,
-      tandem: tandem.createTandem( 'RadioButtonGroup' )
+      tandem: tandem.createTandem( 'radioButtonGroup' )
     } );
 
     Panel.call( this, content, {
