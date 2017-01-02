@@ -125,7 +125,8 @@ define( function( require ) {
       fill: 'white',
       stroke: 'gray',
       lineWidth: 1,
-      resize: false
+      resize: false,
+      tandem: tandem
     } );
 
     // When the bar graph is shown, update the bars (because they do not get updated when invisible for performance reasons)

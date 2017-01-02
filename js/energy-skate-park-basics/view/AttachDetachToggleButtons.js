@@ -49,12 +49,18 @@ define( function( require ) {
     var radioButtonsContent = [
       {
         value: false,
-        node: new TandemImage( attachIcon, { scale: scale, tandem: radioButtonGroupTandem.createTandem(attachRadioButtonTandemName).createTandem( 'attachIcon' ) } ),
+        node: new TandemImage( attachIcon, {
+          scale: scale,
+          tandem: radioButtonGroupTandem.createTandem( attachRadioButtonTandemName ).createTandem( 'attachIcon' )
+        } ),
         tandemName: attachRadioButtonTandemName
       },
       {
         value: true,
-        node: new TandemImage( detachIcon, { scale: scale, tandem: radioButtonGroupTandem.createTandem(detachRadioButtonTandemName).createTandem( 'detachIcon' ) } ),
+        node: new TandemImage( detachIcon, {
+          scale: scale,
+          tandem: radioButtonGroupTandem.createTandem( detachRadioButtonTandemName ).createTandem( 'detachIcon' )
+        } ),
         tandemName: detachRadioButtonTandemName
       }
     ];
@@ -73,7 +79,9 @@ define( function( require ) {
         orientation: 'horizontal',
         tandem: radioButtonGroupTandem
       } );
-    Panel.call( this, radioButtons, options );
+
+    var panelOptions = _.extend( { tandem: tandem }, options );
+    Panel.call( this, radioButtons, panelOptions );
   }
 
   energySkateParkBasics.register( 'AttachDetachToggleButtons', AttachDetachToggleButtons );

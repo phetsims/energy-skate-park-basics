@@ -74,7 +74,8 @@ define( function( require ) {
     Panel.call( this, content, {
       fill: '#F0F0F0',
       xMargin: 10,
-      stroke: null
+      stroke: null,
+      tandem: tandem
     } );
   }
 
