@@ -26,6 +26,10 @@ define( function( require ) {
    * @constructor
    */
   function ControlPoint( x, y, tandem ) {
+    var self = this;
+
+    // @public (phet-io)
+    this.tandem = tandem;
 
     var properties = {
 
@@ -58,11 +62,22 @@ define( function( require ) {
       } );
 
     tandem.addInstance( this, TControlPoint );
+
+    this.disposeControlPoint = function() {
+      tandem.removeInstance( this );
+      self.positionProperty.unlinkAll();
+      self.positionProperty.dispose();
+    };
   }
 
   energySkateParkBasics.register( 'ControlPoint', ControlPoint );
 
   return inherit( PropertySet, ControlPoint, {
+    dispose: function() {
+      this.disposeControlPoint();
+      PropertySet.prototype.unlinkAll.call( this ); // TODO: should we use fine-grained unlinks?
+      PropertySet.prototype.dispose.call( this );
+    },
     copy: function( tandem ) {
       return new ControlPoint( this.position.x, this.position.y, tandem );
     }
