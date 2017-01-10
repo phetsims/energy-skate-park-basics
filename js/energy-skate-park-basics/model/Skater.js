@@ -24,6 +24,7 @@ define( function( require ) {
   var TBoolean = require( 'ifphetio!PHET_IO/types/TBoolean' );
   var TString = require( 'ifphetio!PHET_IO/types/TString' );
   var TTrack = require( 'ifphetio!PHET_IO/simulations/energy-skate-park-basics/TTrack' );
+  var TTrackReference = require( 'ifphetio!PHET_IO/simulations/energy-skate-park-basics/TTrackReference' );
 
   // Compare two arrays, whose elements have 'equals' methods for comparison
   var arrayEquals = function( a, b ) {
@@ -49,7 +50,7 @@ define( function( require ) {
       track: {
         value: null,
         tandem: tandem.createTandem( 'trackProperty' ),
-        phetioValueType: TTrack
+        phetioValueType: TTrackReference
       },
 
       // Parameter along the parametric spline, unitless since it is in parametric space
