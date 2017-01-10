@@ -26,21 +26,16 @@ define( function( require ) {
    */
   phetioInherit( TObject, 'TTrackReference', TTrackReference, {}, {
 
-    isReadyToDeserialize: function( stateObject ) {
-
-
-      if ( stateObject === null ) {
-        return true;
-      }
-      return phetio.hasInstance( stateObject ); // If someone else deserialized the track, we can use it.
-    },
-
     fromStateObject: function( stateObject ) {
       if ( stateObject === null ) {
         return null;
       }
-      throw new Error( 'not ready yet' );
-      return phetio.getInstance( stateObject );
+      if ( phetio.hasInstance( stateObject ) ) {
+        return phetio.getInstance( stateObject );
+      }
+      else {
+        throw new Error( 'fromStateObject failed' );
+      }
     },
     toStateObject: function( instance ) {
       return instance ? instance.tandem.id : null;
