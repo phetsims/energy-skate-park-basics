@@ -24,6 +24,31 @@ define( function( require ) {
    */
   phetioInherit( TObject, 'TEnergySkateParkBasicsModel', TEnergySkateParkBasicsModel, {}, {
 
+    clearChildInstances: function( instance ) {
+      instance.removeAllTracks();
+    },
+
+    /**
+     * Adds a precipitate particle as specified by the phetioID and state.
+     * @param {EnergySkateParkBasicsModel} energySkateParkBasicsModel
+     * @param {Tandem} tandem
+     * @param {Object} stateObject
+     */
+    addChildInstance: function( energySkateParkBasicsModel, tandem, stateObject ) {
+      // debugger;
+      energySkateParkBasicsModel.addTrack( tandem, stateObject.interactive, stateObject.controlPointTandemIDs );
+
+      // var value = TPrecipitateParticle.fromStateObject( stateObject );
+      //
+      // energySkateParkBasicsModel.particles.push( new phet.beersLawLab.PrecipitateParticle(
+      //   value.solute,
+      //   value.location,
+      //   value.orientation,
+      //   tandem
+      // ) );
+      // energySkateParkBasicsModel.fireChanged();
+    },
+
     // Support null
     fromStateObject: function( arrayOfArrayOfVector ) {
       //
