@@ -37,6 +37,7 @@ define( function( require ) {
   var ObservableArray = require( 'AXON/ObservableArray' );
   var SkaterState = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/model/SkaterState' );
   var Util = require( 'DOT/Util' );
+  var Tandem = require( 'TANDEM/Tandem' );
   var Bounds2 = require( 'DOT/Bounds2' );
   var EnergySkateParkBasicsQueryParameters = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/EnergySkateParkBasicsQueryParameters' );
 
@@ -65,11 +66,11 @@ define( function( require ) {
 
   // Flag to enable debugging for physics issues
   var debug = EnergySkateParkBasicsQueryParameters.debugLog ? function() {
-    console.log.apply( console, arguments );
-  } : null;
+                                                              console.log.apply( console, arguments );
+                                                            } : null;
   var debugAttachDetach = EnergySkateParkBasicsQueryParameters.debugAttachDetach ? function() {
-    console.log.apply( console, arguments );
-  } : null;
+                                                                                   console.log.apply( console, arguments );
+                                                                                 } : null;
 
   // Control points are replenished in the toolbox as they are destroyed (by connecting) in the play area
   // This is the maximum number of control points available to the user.
@@ -81,15 +82,15 @@ define( function( require ) {
   /**
    * Main constructor for the EnergySkateParkBasicsModel
    *
-   * @param {boolean} draggableTracks True if this is screen 2-3, where friction is allowed to be on or off
-   * @param {boolean} frictionAllowed True in screen 3 where the user can drag the tracks
+   * @param {boolean} draggableTracks True in screen 3 where the user can drag the tracks
+   * @param {boolean} frictionAllowed True if this is screen 2-3, where friction is allowed to be on or off
    * @param {Tandem} tandem
    * @constructor
    */
   function EnergySkateParkBasicsModel( draggableTracks, frictionAllowed, tandem ) {
 
-    this.frictionAllowed = frictionAllowed;
     this.draggableTracks = draggableTracks;
+    this.frictionAllowed = frictionAllowed;
 
     var self = this;
 
@@ -194,7 +195,13 @@ define( function( require ) {
     this.skater.property( 'mass' ).link( function() { if ( self.paused ) { self.skater.trigger( 'updated' ); } } );
 
     this.tracks = new ObservableArray( {
-      phetioValueType: TTrack
+      phetioValueType: TTrack,
+      tandem: tandem.createTandem( 'tracks' )
+    } );
+
+    // When tracks are removed, they are no longer used by the application and should be disposed
+    this.tracks.addItemRemovedListener( function( track ) {
+      track.dispose();
     } );
 
     // Proxy for save/load for the tracks for phetio.js
@@ -1441,6 +1448,34 @@ define( function( require ) {
     // Check whether the model contains a track so that input listeners for detached elements can't create bugs, see #230
     containsTrack: function( track ) {
       return this.tracks.contains( track );
+    },
+
+    /**
+     * Called by phet-io to clear out the model state before resoring child tracks.
+     * @public (phet-io)
+     */
+    removeAllTracks: function() {
+
+      // TODO: should we leverage this.draggableTracks and only save the truly dynamic tracks?
+      while ( this.tracks.length > 0 ) {
+        this.tracks.pop();
+      }
+    },
+
+    /**
+     * Add a track, called by phet-io in setState (to restore a state).
+     * TODO: this code should be called by EnergySkateParkBasicsModel too.
+     * @param {Tandem} tandem
+     * @param {boolean} interactive - whether the track can be dragged.
+     */
+    addTrack: function( tandem, interactive, controlPointTandemIDs ) {
+
+      // function Track( events, modelTracks, controlPoints, interactive, parents, availableModelBoundsProperty, tandem ) {
+      var controlPoints = controlPointTandemIDs.map( function( id, index ) {
+        return new ControlPoint( index, 0, new Tandem( id ) ); // TODO: create with correct initial x & y values.
+      } );
+      var newTrack = new Track( this, this.tracks, controlPoints, interactive, [], this.availableModelBoundsProperty, tandem );
+      this.tracks.add( newTrack );
     }
   } );
 } );
