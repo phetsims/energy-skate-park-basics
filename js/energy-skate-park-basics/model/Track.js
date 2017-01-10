@@ -43,6 +43,7 @@ define( function( require ) {
     this.events = events;
     this.parents = parents;
     this.modelTracks = modelTracks;
+    this.tandem = tandem;
     this.availableModelBoundsProperty = availableModelBoundsProperty;
 
     // Keep track of what component (control point or track body) is dragging the track, so that it can't be dragged by
@@ -91,9 +92,11 @@ define( function( require ) {
 
     PropertySet.call( this, null, properties );
 
-    this.property( 'physical' ).link( function() { events.trigger( 'track-changed' ); } );
+    var trackChangedListener = function() { events.trigger( 'track-changed' ); };
+    this.property( 'physical' ).link( trackChangedListener );
 
     this.controlPoints = controlPoints;
+    assert && assert( this.controlPoints, 'control points should be defined' );
 
     this.interactive = interactive;
     this.parametricPosition = new FastArray( this.controlPoints.length );
@@ -117,6 +120,15 @@ define( function( require ) {
       events.trigger( 'track-changed' );
       events.trigger( 'update' );
     } );
+
+    this.disposeTrack = function() {
+      tandem.removeInstance( this );
+      self.property( 'physical' ).unlink( trackChangedListener );
+      self.draggingProperty.unlinkAll();
+      self.controlPoints.forEach( function( controlPoint ) {
+        controlPoint.dispose();
+      } );
+    };
   }
 
   energySkateParkBasics.register( 'Track', Track );
@@ -719,6 +731,11 @@ define( function( require ) {
         }
       }
       return string + '];';
+    },
+
+    dispose: function() {
+      this.disposeTrack();
+      PropertySet.prototype.dispose.call( this );
     }
   } );
 } );
