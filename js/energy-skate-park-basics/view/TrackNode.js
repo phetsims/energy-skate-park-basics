@@ -108,9 +108,9 @@ define( function( require ) {
     track.on( 'update', this.updateTrackShape.bind( this ) );
 
     // In the state.html wrapper, when the state changes, we must update the skater node
-    // phetio.setStateEmitter && phetio.setStateEmitter.addListener( function() {
-    //   self.updateTrackShape();
-    // } );
+    phetio.setStateEmitter && phetio.setStateEmitter.addListener( function() {
+      self.updateTrackShape();
+    } );
   }
 
   energySkateParkBasics.register( 'TrackNode', TrackNode );
