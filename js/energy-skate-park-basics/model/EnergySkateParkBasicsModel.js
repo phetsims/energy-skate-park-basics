@@ -357,6 +357,9 @@ define( function( require ) {
 
       // For the first two screens, make the default track physical
       if ( this.draggableTracks ) {
+        this.tracks.forEach(function(track){
+          track.disposeControlPoints();
+        });
         this.tracks.clear();
         this.addDraggableTracks();
 
@@ -1483,6 +1486,7 @@ define( function( require ) {
      * TODO: this code should be called by EnergySkateParkBasicsModel too.
      * @param {Tandem} tandem
      * @param {boolean} interactive - whether the track can be dragged.
+     * @param controlPointTandemIDs
      */
     addTrack: function( tandem, interactive, controlPointTandemIDs ) {
 
@@ -1493,6 +1497,8 @@ define( function( require ) {
       } );
       var newTrack = new Track( this, this.tracks, controlPoints, interactive, [], this.availableModelBoundsProperty, tandem );
       this.tracks.add( newTrack );
-    }
+      return newTrack;
+    },
+
   } );
 } );
