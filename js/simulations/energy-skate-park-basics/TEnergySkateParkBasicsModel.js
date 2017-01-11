@@ -46,11 +46,8 @@ define( function( require ) {
       if ( isControlPoint ) {
         return false;
       }
-
-      var isTrack = tandem.id.indexOf( 'model.track' ) >= 0;
-      if(isTrack ) {
-        return energySkateParkBasicsModel.addTrack( tandem, stateObject.interactive, stateObject.controlPointTandemIDs );
-      }
+      // If it isn't a ControlPoint, then it is a Track
+      return energySkateParkBasicsModel.addTrack( tandem, stateObject.interactive, stateObject.controlPointTandemIDs );
     }
   } );
 
