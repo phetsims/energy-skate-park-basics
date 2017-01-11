@@ -19,64 +19,38 @@ define( function( require ) {
     assertInstanceOf( instance, phet.energySkateParkBasics.EnergySkateParkBasicsModel );
   };
 
-  /**
-   * Control point or null
-   */
+
   phetioInherit( TObject, 'TEnergySkateParkBasicsModel', TEnergySkateParkBasicsModel, {}, {
 
-    clearChildInstances: function( instance ) {
-      instance.removeAllTracks();
+    /**
+     * Remove all instances of the model's dynamic children.
+     * This will remove all of the tracks from the model.
+     * The ControlPoints are contained in the tracks, and each track will remove its ControlPoints.
+     *
+     * @param {EnergySkateParkBasicsModel} energySkateParkBasicsModel
+     */
+    clearChildInstances: function( energySkateParkBasicsModel ) {
+      energySkateParkBasicsModel.removeAllTracks();
     },
 
     /**
-     * Adds a precipitate particle as specified by the phetioID and state.
+     * Adds a Track as specified by the phetioID and state.
+     * A Track will create its own ControlPoints
      * @param {EnergySkateParkBasicsModel} energySkateParkBasicsModel
      * @param {Tandem} tandem
      * @param {Object} stateObject
      */
     addChildInstance: function( energySkateParkBasicsModel, tandem, stateObject ) {
-      // debugger;
-      energySkateParkBasicsModel.addTrack( tandem, stateObject.interactive, stateObject.controlPointTandemIDs );
+      var isControlPoint = tandem.id.indexOf( 'model.controlPoint' ) >= 0;
+      // Control Points are already being created when the tracks are made, so if the tandem is a controlPoint it's a no-op
+      if ( isControlPoint ) {
+        return false;
+      }
 
-      // var value = TPrecipitateParticle.fromStateObject( stateObject );
-      //
-      // energySkateParkBasicsModel.particles.push( new phet.beersLawLab.PrecipitateParticle(
-      //   value.solute,
-      //   value.location,
-      //   value.orientation,
-      //   tandem
-      // ) );
-      // energySkateParkBasicsModel.fireChanged();
-    },
-
-    // Support null
-    fromStateObject: function( arrayOfArrayOfVector ) {
-      //
-      // for ( var i = 0; i < arrayOfArrayOfVector.length; i++ ) {
-      //   var track = arrayOfArrayOfVector[ i ];
-      //   for ( var j = 0; j < track.length; j++ ) {
-      //     var controlPoint = model.tracks.get( i ).controlPoints[ j ];
-      //
-      //     // Making sure it is different here significantly improves performance in mirror.html
-      //     if ( controlPoint.sourcePosition.x !== track[ j ].x ||
-      //          controlPoint.sourcePosition.y !== track[ j ].y ) {
-      //       controlPoint.sourcePosition = track[ j ];
-      //       model.tracks.get( i ).updateSplines();
-      //       model.tracks.get( i ).trigger( 'update' );
-      //     }
-      //   }
-      // }
-    },
-    toStateObject: function( instance ) {
-      // return instance.tracks.map( function( track ) {
-      //   return {
-      //     getArray: function() {
-      //       return track.controlPoints.map( function( controlPoint ) {
-      //         return controlPoint.sourcePosition;
-      //       } );
-      //     }
-      //   };
-      // } ).getArray(); // This line returns a JS Array, not ObservableArray, required by phetio.js
+      var isTrack = tandem.id.indexOf( 'model.track' ) >= 0;
+      if(isTrack ) {
+        return energySkateParkBasicsModel.addTrack( tandem, stateObject.interactive, stateObject.controlPointTandemIDs );
+      }
     }
   } );
 
