@@ -741,7 +741,7 @@ define( function( require ) {
      */
     disposeControlPoints: function() {
       this.controlPoints.forEach( function( controlPoint ) {
-        controlPoint.dispose()
+        controlPoint.dispose();
       } );
     }
   } );

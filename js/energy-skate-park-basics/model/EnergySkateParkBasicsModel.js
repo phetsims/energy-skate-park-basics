@@ -1486,6 +1486,7 @@ define( function( require ) {
      */
     addTrack: function( tandem, interactive, controlPointTandemIDs ) {
 
+      assert && assert( controlPointTandemIDs, 'controlPointTandemIDs should exist' );
       // function Track( events, modelTracks, controlPoints, interactive, parents, availableModelBoundsProperty, tandem ) {
       var controlPoints = controlPointTandemIDs.map( function( id, index ) {
         return new ControlPoint( index, 0, new Tandem( id ) ); // TODO: create with correct initial x & y values.
