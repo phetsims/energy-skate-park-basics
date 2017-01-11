@@ -1207,12 +1207,15 @@ define( function( require ) {
     // It should be an inner point of a track (not an end point)
     // If there were only 2 points on the track, just delete the entire track
     deleteControlPoint: function( track, controlPointIndex ) {
+
       track.trigger( 'remove' );
       this.tracks.remove( track );
       var trackGroupTandem = this.trackGroupTandem;
 
       if ( track.controlPoints.length > 2 ) {
-        var points = _.without( track.controlPoints, track.controlPoints[ controlPointIndex ] );
+        var controlPointToDelete = track.controlPoints[ controlPointIndex ];
+        var points = _.without( track.controlPoints, controlPointToDelete );
+        controlPointToDelete.dispose();
         var newTrack = new Track( this, this.tracks, points, true, track.getParentsOrSelf(), this.availableModelBoundsProperty,
           trackGroupTandem.createNextTandem() );
         newTrack.physical = true;
@@ -1226,6 +1229,14 @@ define( function( require ) {
         newTrack.bumpAboveGround();
 
         this.tracks.add( newTrack );
+      }
+      else {
+
+        // the entire track is deleted, so we must dispose the other control points
+        for ( var i = 0; i < track.controlPoints.length; i++ ) {
+          var controlPoint = track.controlPoints[ i ];
+          controlPoint.dispose();
+        }
       }
 
       // Trigger track changed first to update the edit enabled properties
@@ -1300,6 +1311,7 @@ define( function( require ) {
         var trackToRemove = this.getNonPhysicalTracks()[ 0 ];
         trackToRemove.trigger( 'remove' );
         this.tracks.remove( trackToRemove );
+        trackToRemove.disposeControlPoints();
       }
     },
 
@@ -1366,9 +1378,11 @@ define( function( require ) {
       newTrack.physical = true;
       newTrack.dropped = true;
 
+      a.disposeControlPoints();
       a.trigger( 'remove' );
       this.tracks.remove( a );
 
+      b.disposeControlPoints();
       b.trigger( 'remove' );
       this.tracks.remove( b );
 
@@ -1451,14 +1465,16 @@ define( function( require ) {
     },
 
     /**
-     * Called by phet-io to clear out the model state before resoring child tracks.
+     * Called by phet-io to clear out the model state before restoring child tracks.
      * @public (phet-io)
      */
     removeAllTracks: function() {
 
       // TODO: should we leverage this.draggableTracks and only save the truly dynamic tracks?
       while ( this.tracks.length > 0 ) {
-        this.tracks.pop();
+        var track = this.tracks.get( 0 );
+        track.disposeControlPoints();
+        this.tracks.remove( track );
       }
     },
 

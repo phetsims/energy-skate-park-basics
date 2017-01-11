@@ -125,9 +125,6 @@ define( function( require ) {
       tandem.removeInstance( this );
       self.property( 'physical' ).unlink( trackChangedListener );
       self.draggingProperty.unlinkAll();
-      self.controlPoints.forEach( function( controlPoint ) {
-        controlPoint.dispose();
-      } );
     };
   }
 
@@ -736,6 +733,16 @@ define( function( require ) {
     dispose: function() {
       this.disposeTrack();
       PropertySet.prototype.dispose.call( this );
+    },
+
+    /**
+     * Dispose all of the control points of the track when they will not be reused in another track
+     * @public
+     */
+    disposeControlPoints: function() {
+      this.controlPoints.forEach( function( controlPoint ) {
+        controlPoint.dispose()
+      } );
     }
   } );
 } );
