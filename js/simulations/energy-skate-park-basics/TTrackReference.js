@@ -39,9 +39,6 @@ define( function( require ) {
     },
     toStateObject: function( instance ) {
       return instance ? instance.tandem.id : null;
-    },
-    setValue: function() {
-      // nothing to do here
     }
   } );
 

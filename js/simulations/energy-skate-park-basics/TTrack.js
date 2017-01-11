@@ -55,9 +55,6 @@ define( function( require ) {
         return instance; /// TODO: Major hack to support data stream, which for unknown reasons was already calling this method with a state object
       }
 
-    },
-    setValue: function() {
-      // nothing to do here
     }
   } );
 
