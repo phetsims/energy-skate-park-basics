@@ -357,9 +357,9 @@ define( function( require ) {
 
       // For the first two screens, make the default track physical
       if ( this.draggableTracks ) {
-        this.tracks.forEach(function(track){
+        this.tracks.forEach( function( track ) {
           track.disposeControlPoints();
-        });
+        } );
         this.tracks.clear();
         this.addDraggableTracks();
 
@@ -1259,6 +1259,7 @@ define( function( require ) {
     // The user has pressed the "delete" button for the specified track's specified control point, and it should be
     // deleted. It should be an inner point of a track (not an end point)
     splitControlPoint: function( track, controlPointIndex, modelAngle ) {
+      var controlPointToSplit = track.controlPoints[ controlPointIndex ];
 
       var trackGroupTandem = this.trackGroupTandem;
 
@@ -1316,6 +1317,9 @@ define( function( require ) {
         this.tracks.remove( trackToRemove );
         trackToRemove.disposeControlPoints();
       }
+
+      // Dispose the control point itself
+      controlPointToSplit.dispose();
     },
 
     /**
