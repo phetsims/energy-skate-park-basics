@@ -79,7 +79,7 @@ define( function( require ) {
       gravity: {
         value: -9.8,
         tandem: tandem.createTandem( 'gravityProperty' ),
-        phetioValueType: TNumber( { units: 'meters/second/second' } )
+        phetioValueType: TNumber( { units: 'meters/second/second', range: { min: -100, max: 1E-6 } } )
       },
 
       position: {
