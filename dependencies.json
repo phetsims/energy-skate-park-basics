@@ -1,5 +1,5 @@
 {
-  "comment": "# energy-skate-park-basics 1.3.0-phetiorc.2 Wed Jan 25 2017 15:55:45 GMT-0700 (MST)",
+  "comment": "# energy-skate-park-basics 1.3.0-phetio Thu Jan 26 2017 11:28:25 GMT-0700 (MST)",
   "assert": {
     "sha": "a707328cc11048787a807714496af23e0bd25be1",
     "branch": "HEAD"
@@ -14,19 +14,19 @@
   },
   "chipper": {
     "sha": "31c713701711693d984b0bd980991b79b8591844",
-    "branch": "energy-skate-park-basics-1.3-phetio"
+    "branch": "HEAD"
   },
   "dot": {
     "sha": "2b15e064999bb86ae5cf6d22ecf014f4144f13f9",
     "branch": "HEAD"
   },
   "energy-skate-park-basics": {
-    "sha": "d7a0b454088193962880f6a918f8b8028c5163ea",
+    "sha": "ced1314580edf0b31fb8f1fc95477fc630eb0af7",
     "branch": "1.3-phetio"
   },
   "joist": {
     "sha": "5a96bba24ac8c3eabd8b376a9cf2637cfd9a27e7",
-    "branch": "energy-skate-park-basics-1.3-phetio"
+    "branch": "HEAD"
   },
   "kite": {
     "sha": "197fef793822240fbc3a0e3b1edfb593c4e6050c",
@@ -38,7 +38,7 @@
   },
   "phet-io": {
     "sha": "5f0546d8b4e338163b147b0aa186b3467bf7c5ea",
-    "branch": "energy-skate-park-basics-1.3-phetio"
+    "branch": "HEAD"
   },
   "phet-io-website": {
     "sha": "87445719c286a73f01a1e1ccef5ea197a480af4d",
