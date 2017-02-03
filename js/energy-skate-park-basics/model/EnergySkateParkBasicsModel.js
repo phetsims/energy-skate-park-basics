@@ -1149,7 +1149,7 @@ define( function( require ) {
     returnSkater: function() {
 
       // if the skater's original track is available, restore her to it, see #143
-      var originalTrackAvailable = _.contains( this.getPhysicalTracks(), this.skater.startingTrack );
+      var originalTrackAvailable = _.includes( this.getPhysicalTracks(), this.skater.startingTrack );
       if ( originalTrackAvailable ) {
         this.skater.track = this.skater.startingTrack;
       }

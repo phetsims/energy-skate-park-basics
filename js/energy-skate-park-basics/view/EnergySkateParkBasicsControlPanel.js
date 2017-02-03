@@ -63,7 +63,7 @@ define( function( require ) {
     };
 
     var sets = [ pieChartSet, barGraphSet, gridSet, speedometerSet ];
-    var maxTextWidth = _.max( sets, function( itemSet ) { return itemSet.label.width; } ).label.width;
+    var maxTextWidth = _.maxBy( sets, function( itemSet ) { return itemSet.label.width; } ).label.width;
 
     // In the absence of any sun (or other) layout packages, just manually space them out so they will have the icons aligned
     var pad = function( itemSet ) {
