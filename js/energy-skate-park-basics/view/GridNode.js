@@ -14,7 +14,7 @@ define( function( require ) {
   var inherit = require( 'PHET_CORE/inherit' );
   var Node = require( 'SCENERY/nodes/Node' );
   var TandemText = require( 'TANDEM/scenery/nodes/TandemText' );
-  var TandemPath = require( 'TANDEM/scenery/nodes/TandemPath' );
+  var Path = require( 'SCENERY/nodes/Path' );
   var Shape = require( 'KITE/Shape' );
   var PhetFont = require( 'SCENERY_PHET/PhetFont' );
   var BackgroundNode = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/view/BackgroundNode' );
@@ -42,12 +42,12 @@ define( function( require ) {
 
     // @private
     this.tandem = tandem;
-    this.thinLinePath = new TandemPath( null, {
+    this.thinLinePath = new Path( null, {
       stroke: '#686868',
       lineWidth: 0.8,
       tandem: this.tandem.createTandem( 'thinLinePath' )
     } );
-    this.thickLinePath = new TandemPath( null, {
+    this.thickLinePath = new Path( null, {
       stroke: '#686868',
       lineWidth: 1.8,
       tandem: this.tandem.createTandem( 'thickLinePath' )

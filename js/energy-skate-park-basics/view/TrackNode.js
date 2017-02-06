@@ -14,7 +14,7 @@ define( function( require ) {
   var energySkateParkBasics = require( 'ENERGY_SKATE_PARK_BASICS/energySkateParkBasics' );
   var inherit = require( 'PHET_CORE/inherit' );
   var Node = require( 'SCENERY/nodes/Node' );
-  var TandemPath = require( 'TANDEM/scenery/nodes/TandemPath' );
+  var Path = require( 'SCENERY/nodes/Path' );
   var Shape = require( 'KITE/Shape' );
   var LineStyles = require( 'KITE/util/LineStyles' );
   var SplineEvaluation = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/model/SplineEvaluation' );
@@ -46,12 +46,12 @@ define( function( require ) {
     this.availableBoundsProperty = availableBoundsProperty;
     var controlPointNodeGroupTandem = tandem.createGroupTandem( 'controlPointNode' );
 
-    this.road = new TandemPath( null, {
+    this.road = new Path( null, {
       fill: 'gray',
       cursor: track.interactive ? 'pointer' : 'default',
       tandem: tandem.createTandem( 'roadPath' )
     } );
-    this.centerLine = new TandemPath( null, {
+    this.centerLine = new Path( null, {
       stroke: 'black',
       lineWidth: 1.2,
       lineDash: [ 11, 8 ],

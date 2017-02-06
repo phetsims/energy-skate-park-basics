@@ -38,7 +38,7 @@ define( function( require ) {
   var GaugeNode = require( 'SCENERY_PHET/GaugeNode' );
   var GaugeNeedleNode = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/view/GaugeNeedleNode' );
   var DerivedProperty = require( 'AXON/DerivedProperty' );
-  var TandemPath = require( 'TANDEM/scenery/nodes/TandemPath' );
+  var Path = require( 'SCENERY/nodes/Path' );
   var PlayPauseButton = require( 'SCENERY_PHET/buttons/PlayPauseButton' );
   var StepForwardButton = require( 'SCENERY_PHET/buttons/StepForwardButton' );
   var Property = require( 'AXON/Property' );
@@ -301,13 +301,13 @@ define( function( require ) {
         var directionUnitVector = Vector2.createPolar( 1, angle );
         var orthogonalUnitVector = directionUnitVector.perpendicular();
         var tip = directionUnitVector.times( headHeight ).plus( tail );
-        return new TandemPath( new Shape().moveToPoint( tail ).lineToPoint( tail.plus( orthogonalUnitVector.times( headWidth / 2 ) ) ).lineToPoint( tip ).lineToPoint( tail.plus( orthogonalUnitVector.times( -headWidth / 2 ) ) ).lineToPoint( tail ).close(), {
+        return new Path( new Shape().moveToPoint( tail ).lineToPoint( tail.plus( orthogonalUnitVector.times( headWidth / 2 ) ) ).lineToPoint( tip ).lineToPoint( tail.plus( orthogonalUnitVector.times( -headWidth / 2 ) ) ).lineToPoint( tail ).close(), {
           fill: 'black',
           tandem: tandem.createTandem( 'arrowHead' )
         } );
       };
 
-      var rightCurve = new TandemPath( new Shape().moveTo( 0, 0 ).quadraticCurveTo( -xControl, yControl, -xTip, yTip ), {
+      var rightCurve = new Path( new Shape().moveTo( 0, 0 ).quadraticCurveTo( -xControl, yControl, -xTip, yTip ), {
         stroke: 'black',
         lineWidth: 3,
         tandem: tandem.createTandem( 'rightCurve' )
@@ -418,7 +418,7 @@ define( function( require ) {
 
     // For debugging the visible bounds
     if ( showAvailableBounds ) {
-      this.viewBoundsPath = new TandemPath( null, {
+      this.viewBoundsPath = new Path( null, {
         pickable: false,
         stroke: 'red',
         lineWidth: 10,

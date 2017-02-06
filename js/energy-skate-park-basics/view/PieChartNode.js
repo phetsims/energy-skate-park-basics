@@ -15,7 +15,7 @@ define( function( require ) {
   var Node = require( 'SCENERY/nodes/Node' );
   var Circle = require( 'SCENERY/nodes/Circle' );
   var Shape = require( 'KITE/Shape' );
-  var TandemPath = require( 'TANDEM/scenery/nodes/TandemPath' );
+  var Path = require( 'SCENERY/nodes/Path' );
   var EnergySkateParkColorScheme = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/view/EnergySkateParkColorScheme' );
   var Bounds2 = require( 'DOT/Bounds2' );
 
@@ -29,13 +29,13 @@ define( function( require ) {
   function PieChartNode( skater, pieChartVisibleProperty, modelViewTransform, tandem ) {
     var self = this;
 
-    var kineticEnergySlice = new TandemPath( null, {
+    var kineticEnergySlice = new Path( null, {
       fill: EnergySkateParkColorScheme.kineticEnergy,
       stroke: 'black',
       lineWidth: 1,
       tandem: tandem.createTandem( 'kineticEnergySlicePath' )
     } );
-    var potentialEnergySlice = new TandemPath( null, {
+    var potentialEnergySlice = new Path( null, {
       fill: EnergySkateParkColorScheme.potentialEnergy,
       stroke: 'black',
       lineWidth: 1,
