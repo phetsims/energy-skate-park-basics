@@ -18,7 +18,7 @@ define( function( require ) {
   var inherit = require( 'PHET_CORE/inherit' );
   var Shape = require( 'KITE/Shape' );
   var Color = require( 'SCENERY/util/Color' );
-  var TandemImage = require( 'TANDEM/scenery/nodes/TandemImage' );
+  var Image = require( 'SCENERY/nodes/Image' );
 
   // images
   var trashCanImage = require( 'image!ENERGY_SKATE_PARK_BASICS/trash-can.png' );
@@ -37,7 +37,7 @@ define( function( require ) {
       cursor: 'pointer'
     }, options );
 
-    var iconImage = new TandemImage( trashCanImage, { scale: 0.22, tandem: tandem.createTandem( 'iconImage' ) } );
+    var iconImage = new Image( trashCanImage, { scale: 0.22, tandem: tandem.createTandem( 'iconImage' ) } );
 
     RectangularPushButton.call( this, {
       content: iconImage,

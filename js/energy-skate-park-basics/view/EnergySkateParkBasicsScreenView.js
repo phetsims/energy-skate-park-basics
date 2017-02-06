@@ -13,7 +13,7 @@ define( function( require ) {
   var AttachDetachToggleButtons = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/view/AttachDetachToggleButtons' );
   var Color = require( 'SCENERY/util/Color' );
   var inherit = require( 'PHET_CORE/inherit' );
-  var TandemImage = require( 'TANDEM/scenery/nodes/TandemImage' );
+  var Image = require( 'SCENERY/nodes/Image' );
   var TandemNode = require( 'TANDEM/scenery/nodes/TandemNode' );
   var Rectangle = require( 'SCENERY/nodes/Rectangle' );
   var Bounds2 = require( 'DOT/Bounds2' );
@@ -371,7 +371,7 @@ define( function( require ) {
     // Buttons to return the skater when she is offscreen, see #219
     var iconScale = 0.4;
     var returnSkaterToPreviousStartingPositionButton = new RectangularPushButton( {
-      content: new TandemImage( skaterIconImage, {
+      content: new Image( skaterIconImage, {
         scale: iconScale,
         tandem: tandem.createTandem( 'skaterIconImage1' )
       } ),
@@ -383,7 +383,7 @@ define( function( require ) {
     } );
 
     var returnSkaterToGroundButton = new RectangularPushButton( {
-      content: new TandemImage( skaterIconImage, {
+      content: new Image( skaterIconImage, {
         scale: iconScale,
         tandem: tandem.createTandem( 'skaterIconImage2' )
       } ),

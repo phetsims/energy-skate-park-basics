@@ -13,7 +13,7 @@ define( function( require ) {
   var inherit = require( 'PHET_CORE/inherit' );
   var TandemNode = require( 'TANDEM/scenery/nodes/TandemNode' );
   var Rectangle = require( 'SCENERY/nodes/Rectangle' );
-  var TandemImage = require( 'TANDEM/scenery/nodes/TandemImage' );
+  var Image = require( 'SCENERY/nodes/Image' );
   var LinearGradient = require( 'SCENERY/util/LinearGradient' );
   var Pattern = require( 'SCENERY/util/Pattern' );
 
@@ -46,7 +46,7 @@ define( function( require ) {
 
     this.cementY = layoutBounds.height - earthHeight;
 
-    this.mountain = new TandemImage( mountainImage, {
+    this.mountain = new Image( mountainImage, {
       bottom: this.cementY,
       tandem: tandem.createTandem( 'mountainImage' )
     } );

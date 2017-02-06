@@ -12,7 +12,7 @@ define( function( require ) {
   // modules
   var energySkateParkBasics = require( 'ENERGY_SKATE_PARK_BASICS/energySkateParkBasics' );
   var inherit = require( 'PHET_CORE/inherit' );
-  var TandemImage = require( 'TANDEM/scenery/nodes/TandemImage' );
+  var Image = require( 'SCENERY/nodes/Image' );
   var Panel = require( 'SUN/Panel' );
   var RadioButtonGroup = require( 'SUN/buttons/RadioButtonGroup' );
 
@@ -49,7 +49,7 @@ define( function( require ) {
     var radioButtonsContent = [
       {
         value: false,
-        node: new TandemImage( attachIcon, {
+        node: new Image( attachIcon, {
           scale: scale,
           tandem: radioButtonGroupTandem.createTandem( attachRadioButtonTandemName ).createTandem( 'attachIcon' )
         } ),
@@ -57,7 +57,7 @@ define( function( require ) {
       },
       {
         value: true,
-        node: new TandemImage( detachIcon, {
+        node: new Image( detachIcon, {
           scale: scale,
           tandem: radioButtonGroupTandem.createTandem( detachRadioButtonTandemName ).createTandem( 'detachIcon' )
         } ),

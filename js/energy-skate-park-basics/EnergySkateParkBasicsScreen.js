@@ -14,7 +14,7 @@ define( function( require ) {
   var EnergySkateParkBasicsScreenView = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/view/EnergySkateParkBasicsScreenView' );
   var inherit = require( 'PHET_CORE/inherit' );
   var Screen = require( 'JOIST/Screen' );
-  var TandemImage = require( 'TANDEM/scenery/nodes/TandemImage' );
+  var Image = require( 'SCENERY/nodes/Image' );
 
   /**
    *
@@ -30,10 +30,10 @@ define( function( require ) {
 
     var options = {
       name: name,
-      homeScreenIcon: new TandemImage( homescreenIcon, {
+      homeScreenIcon: new Image( homescreenIcon, {
         tandem: tandem.createTandem( 'homescreenIcon' )
       } ),
-      navigationBarIcon: new TandemImage( navbarIcon, {
+      navigationBarIcon: new Image( navbarIcon, {
         tandem: tandem.createTandem( 'navbarIcon' )
       } ),
       tandem: tandem
