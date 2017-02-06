@@ -12,7 +12,7 @@ define( function( require ) {
   var energySkateParkBasics = require( 'ENERGY_SKATE_PARK_BASICS/energySkateParkBasics' );
   var inherit = require( 'PHET_CORE/inherit' );
   var VBox = require( 'SCENERY/nodes/VBox' );
-  var TandemText = require( 'TANDEM/scenery/nodes/TandemText' );
+  var Text = require( 'SCENERY/nodes/Text' );
   var PhetFont = require( 'SCENERY_PHET/PhetFont' );
   var HSlider = require( 'SUN/HSlider' );
   var Constants = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/Constants' );
@@ -36,11 +36,11 @@ define( function( require ) {
       font: tickFont,
       maxWidth: 54 // selected by choosing the length of widest English string in ?stringTest=double
     };
-    slider.addMajorTick( frictionRange.min, new TandemText( controlsGravityNoneString, _.extend( { tandem: tandem.createTandem( 'gravityNoneString' ) }, textOptions ) ) );
-    slider.addMajorTick( frictionRange.max, new TandemText( controlsGravityLotsString, _.extend( { tandem: tandem.createTandem( 'gravityLotsString' ) }, textOptions ) ) );
+    slider.addMajorTick( frictionRange.min, new Text( controlsGravityNoneString, _.extend( { tandem: tandem.createTandem( 'gravityNoneString' ) }, textOptions ) ) );
+    slider.addMajorTick( frictionRange.max, new Text( controlsGravityLotsString, _.extend( { tandem: tandem.createTandem( 'gravityLotsString' ) }, textOptions ) ) );
 
     // Space the label above the tick labels so that it won't overlap for i18n
-    var text = new TandemText( controlsFrictionTitleString, {
+    var text = new Text( controlsFrictionTitleString, {
       tandem: tandem.createTandem( 'frictionTitleString' ),
       font: new PhetFont( { weight: 'bold', size: 13 } ),
       maxWidth: 100 // selected by choosing the length of widest English string in ?stringTest=double

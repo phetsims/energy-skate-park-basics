@@ -43,7 +43,7 @@ define( function( require ) {
   var StepForwardButton = require( 'SCENERY_PHET/buttons/StepForwardButton' );
   var Property = require( 'AXON/Property' );
   var RectangularPushButton = require( 'SUN/buttons/RectangularPushButton' );
-  var TandemText = require( 'TANDEM/scenery/nodes/TandemText' );
+  var Text = require( 'SCENERY/nodes/Text' );
   var EnergySkateParkColorScheme = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/view/EnergySkateParkColorScheme' );
   var Util = require( 'SCENERY/util/Util' );
   var EraserButton = require( 'SCENERY_PHET/buttons/EraserButton' );
@@ -193,7 +193,7 @@ define( function( require ) {
 
     // The button to return the skater
     this.returnSkaterButton = new RectangularPushButton( {
-      content: new TandemText( controlsRestartSkaterString, {
+      content: new Text( controlsRestartSkaterString, {
         tandem: tandem.createTandem( 'restartSkaterTextNode' ),
         maxWidth: 100
       } ),

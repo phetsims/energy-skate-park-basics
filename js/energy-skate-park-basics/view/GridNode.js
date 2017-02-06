@@ -13,7 +13,7 @@ define( function( require ) {
   var energySkateParkBasics = require( 'ENERGY_SKATE_PARK_BASICS/energySkateParkBasics' );
   var inherit = require( 'PHET_CORE/inherit' );
   var Node = require( 'SCENERY/nodes/Node' );
-  var TandemText = require( 'TANDEM/scenery/nodes/TandemText' );
+  var Text = require( 'SCENERY/nodes/Text' );
   var Path = require( 'SCENERY/nodes/Path' );
   var Shape = require( 'KITE/Shape' );
   var PhetFont = require( 'SCENERY_PHET/PhetFont' );
@@ -102,7 +102,7 @@ define( function( require ) {
         }
 
         if ( y % 2 === 0 ) {
-          var gridLineLabel = new TandemText( '' + y, {
+          var gridLineLabel = new Text( '' + y, {
             tandem: this.tandem.createTandem( 'gridLineLabel' + y ),
             font: FONT,
             top: viewY,
@@ -114,7 +114,7 @@ define( function( require ) {
           // internationalizable string), so use the 0 text bounds
           // And shift it down a bit so it isn't touching the concrete, see #134
           if ( y === 0 ) {
-            var replacementText = new TandemText( zeroMetersString, {
+            var replacementText = new Text( zeroMetersString, {
               tandem: this.tandem.createTandem( 'zeroMetersStringText' ),
               font: FONT,
               top: viewY + 2,

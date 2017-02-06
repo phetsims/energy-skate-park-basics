@@ -13,7 +13,7 @@ define( function( require ) {
   var inherit = require( 'PHET_CORE/inherit' );
   var VBox = require( 'SCENERY/nodes/VBox' );
   var AquaRadioButton = require( 'SUN/AquaRadioButton' );
-  var TandemText = require( 'TANDEM/scenery/nodes/TandemText' );
+  var Text = require( 'SCENERY/nodes/Text' );
   var PhetFont = require( 'SCENERY_PHET/PhetFont' );
 
   // strings
@@ -32,14 +32,14 @@ define( function( require ) {
    */
   function PlaybackSpeedControl( speedProperty, tandem ) {
 
-    var slowMotionRadioButton = new AquaRadioButton( speedProperty, 'slow', new TandemText( slowMotionString, {
+    var slowMotionRadioButton = new AquaRadioButton( speedProperty, 'slow', new Text( slowMotionString, {
       font: new PhetFont( 15 ),
       tandem: tandem.createTandem( 'slowMotionTextNode' )
     } ), {
       radius: RADIO_BUTTON_RADIUS,
       tandem: tandem.createTandem( 'slowMotionRadioButton' )
     } );
-    var normalSpeedRadioButton = new AquaRadioButton( speedProperty, 'normal', new TandemText( normalString, {
+    var normalSpeedRadioButton = new AquaRadioButton( speedProperty, 'normal', new Text( normalString, {
       font: new PhetFont( 15 ),
       tandem: tandem.createTandem( 'normalSpeedTextNode' )
     } ), {

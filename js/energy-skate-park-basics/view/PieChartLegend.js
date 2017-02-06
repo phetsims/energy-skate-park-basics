@@ -14,7 +14,7 @@ define( function( require ) {
   var Rectangle = require( 'SCENERY/nodes/Rectangle' );
   var VBox = require( 'SCENERY/nodes/VBox' );
   var HBox = require( 'SCENERY/nodes/HBox' );
-  var TandemText = require( 'TANDEM/scenery/nodes/TandemText' );
+  var Text = require( 'SCENERY/nodes/Text' );
   var Panel = require( 'SUN/Panel' );
   var VStrut = require( 'SCENERY/nodes/VStrut' );
   var HStrut = require( 'SCENERY/nodes/HStrut' );
@@ -39,7 +39,7 @@ define( function( require ) {
 
     // The x-coordinate of a bar chart bar
     var createLabel = function( index, title, color, tandemName ) {
-      return new TandemText( title, {
+      return new Text( title, {
         tandem: tandem.createTandem( tandemName ),
         fill: color,
         font: new PhetFont( 12 ),
@@ -88,7 +88,7 @@ define( function( require ) {
       ]
     } );
 
-    var titleNode = new TandemText( energyEnergyString, {
+    var titleNode = new Text( energyEnergyString, {
       tandem: tandem.createTandem( 'titleNode' ),
       fill: 'black',
       font: new PhetFont( 14 ),

@@ -14,7 +14,7 @@ define( function( require ) {
   var inherit = require( 'PHET_CORE/inherit' );
   var Rectangle = require( 'SCENERY/nodes/Rectangle' );
   var Line = require( 'SCENERY/nodes/Line' );
-  var TandemText = require( 'TANDEM/scenery/nodes/TandemText' );
+  var Text = require( 'SCENERY/nodes/Text' );
   var Panel = require( 'SUN/Panel' );
   var ArrowNode = require( 'SCENERY_PHET/ArrowNode' );
   var PhetFont = require( 'SCENERY_PHET/PhetFont' );
@@ -59,7 +59,7 @@ define( function( require ) {
 
     // Create a label that appears under one of the bars
     var createLabel = function( index, title, color, tandemName ) {
-      var text = new TandemText( title, {
+      var text = new Text( title, {
         tandem: tandem.createTandem( tandemName ),
         fill: color,
         font: new PhetFont( 14 ),
@@ -86,7 +86,7 @@ define( function( require ) {
       clearThermalButton.enabled = allowClearingThermalEnergy;
     } );
 
-    var titleNode = new TandemText( energyEnergyString, {
+    var titleNode = new Text( energyEnergyString, {
       tandem: tandem.createTandem( 'titleNode' ),
       x: 5,
       top: 0,
