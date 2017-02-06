@@ -13,7 +13,7 @@ define( function( require ) {
 
   // modules
   var energySkateParkBasics = require( 'ENERGY_SKATE_PARK_BASICS/energySkateParkBasics' );
-  var TandemNode = require( 'TANDEM/scenery/nodes/TandemNode' );
+  var Node = require( 'SCENERY/nodes/Node' );
   var Matrix3 = require( 'DOT/Matrix3' );
   var inherit = require( 'PHET_CORE/inherit' );
   var Util = require( 'DOT/Util' );
@@ -54,7 +54,7 @@ define( function( require ) {
     if ( options && options.renderer && options.renderer === 'webgl' ) {
       needle = needle.toCanvasNodeSynchronous();
     }
-    TandemNode.call( this, {
+    Node.call( this, {
       tandem: tandem,
       children: [ needle ]
     } );
@@ -87,5 +87,5 @@ define( function( require ) {
 
   energySkateParkBasics.register( 'GaugeNeedleNode', GaugeNeedleNode );
 
-  return inherit( TandemNode, GaugeNeedleNode );
+  return inherit( Node, GaugeNeedleNode );
 } );

@@ -15,7 +15,7 @@ define( function( require ) {
   var Rectangle = require( 'SCENERY/nodes/Rectangle' );
   var EnergySkateParkColorScheme = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/view/EnergySkateParkColorScheme' );
   var Property = require( 'AXON/Property' );
-  var TandemNode = require( 'TANDEM/scenery/nodes/TandemNode' );
+  var Node = require( 'SCENERY/nodes/Node' );
   var DerivedProperty = require( 'AXON/DerivedProperty' );
 
   /**
@@ -85,7 +85,7 @@ define( function( require ) {
     var thermalBar = createBar( 2, EnergySkateParkColorScheme.thermalEnergy, skater.thermalEnergyProperty, false );
     var totalBar = createBar( 3, EnergySkateParkColorScheme.totalEnergy, skater.totalEnergyProperty, false );
 
-    TandemNode.call( this, {
+    Node.call( this, {
       tandem: tandem,
 
       // Manually align with the baseline of the bar chart.
@@ -105,5 +105,5 @@ define( function( require ) {
 
   energySkateParkBasics.register( 'BarGraphForeground', BarGraphForeground );
 
-  return inherit( TandemNode, BarGraphForeground );
+  return inherit( Node, BarGraphForeground );
 } );

@@ -11,7 +11,7 @@ define( function( require ) {
   // modules
   var energySkateParkBasics = require( 'ENERGY_SKATE_PARK_BASICS/energySkateParkBasics' );
   var inherit = require( 'PHET_CORE/inherit' );
-  var TandemNode = require( 'TANDEM/scenery/nodes/TandemNode' );
+  var Node = require( 'SCENERY/nodes/Node' );
   var Vector2 = require( 'DOT/Vector2' );
   var FontAwesomeNode = require( 'SUN/FontAwesomeNode' );
   var LinearFunction = require( 'DOT/LinearFunction' );
@@ -55,7 +55,7 @@ define( function( require ) {
     this.sceneNode = sceneNode;
     sceneNode.addInputListener( this.clickToDismissListener );
 
-    TandemNode.call( this, {
+    Node.call( this, {
       tandem: tandem
     } );
 
@@ -114,16 +114,16 @@ define( function( require ) {
 
   energySkateParkBasics.register( 'ControlPointUI', ControlPointUI );
 
-  return inherit( TandemNode, ControlPointUI, {
+  return inherit( Node, ControlPointUI, {
 
     dispose: function() {
-      TandemNode.prototype.dispose.call( this );
+      Node.prototype.dispose.call( this );
       this.disposeControlPointUI();
     },
 
     //Override to additionally remove the attached input listener
     detach: function() {
-      TandemNode.prototype.detach.call( this );
+      Node.prototype.detach.call( this );
       if ( _.indexOf( this.sceneNode.getInputListeners(), this.clickToDismissListener ) !== -1 ) {
         this.sceneNode.removeInputListener( this.clickToDismissListener );
       }

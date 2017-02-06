@@ -14,7 +14,7 @@ define( function( require ) {
   var Color = require( 'SCENERY/util/Color' );
   var inherit = require( 'PHET_CORE/inherit' );
   var Image = require( 'SCENERY/nodes/Image' );
-  var TandemNode = require( 'TANDEM/scenery/nodes/TandemNode' );
+  var Node = require( 'SCENERY/nodes/Node' );
   var Rectangle = require( 'SCENERY/nodes/Rectangle' );
   var Bounds2 = require( 'DOT/Bounds2' );
   var DotRectangle = require( 'DOT/Rectangle' ); // eslint-disable-line require-statement-match
@@ -230,7 +230,7 @@ define( function( require ) {
     this.addChild( speedometerNode );
 
     // Layer which will contain all of the tracks
-    var trackLayer = new TandemNode( {
+    var trackLayer = new Node( {
       tandem: tandem.createTandem( 'trackLayer' )
     } );
 

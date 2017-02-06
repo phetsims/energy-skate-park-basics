@@ -12,7 +12,7 @@ define( function( require ) {
   var energySkateParkBasics = require( 'ENERGY_SKATE_PARK_BASICS/energySkateParkBasics' );
   var Panel = require( 'SUN/Panel' );
   var inherit = require( 'PHET_CORE/inherit' );
-  var TandemNode = require( 'TANDEM/scenery/nodes/TandemNode' );
+  var Node = require( 'SCENERY/nodes/Node' );
   var Property = require( 'AXON/Property' );
   var TrackNode = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/view/TrackNode' );
   var BackgroundNode = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/view/BackgroundNode' );
@@ -38,7 +38,7 @@ define( function( require ) {
       // Fixes: Cursor turns into a hand over the track in the track selection panel, see #204
       trackNode.pickable = false;
 
-      var contentNode = new TandemNode( {
+      var contentNode = new Node( {
         tandem: tandem.createTandem( 'contentNode' + index ),
         children: [ background, trackNode ]
       } );

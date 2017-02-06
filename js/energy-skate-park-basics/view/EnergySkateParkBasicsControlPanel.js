@@ -11,7 +11,7 @@ define( function( require ) {
   // modules
   var energySkateParkBasics = require( 'ENERGY_SKATE_PARK_BASICS/energySkateParkBasics' );
   var inherit = require( 'PHET_CORE/inherit' );
-  var TandemNode = require( 'TANDEM/scenery/nodes/TandemNode' );
+  var Node = require( 'SCENERY/nodes/Node' );
   var VBox = require( 'SCENERY/nodes/VBox' );
   var HBox = require( 'SCENERY/nodes/HBox' );
   var TandemPath = require( 'TANDEM/scenery/nodes/TandemPath' );
@@ -121,7 +121,7 @@ define( function( require ) {
 
     // Create an icon for the bar graph check box
     createBarGraphIcon: function( tandem ) {
-      return new TandemNode( {
+      return new Node( {
         tandem: tandem,
         children: [
           new Rectangle( 0, 0, 20, 20, { fill: 'white', stroke: 'black', lineWidth: 0.5 } ),
@@ -143,7 +143,7 @@ define( function( require ) {
     createPieChartIcon: function( tandem ) {
       var radius = 10;
       var x = new Shape().moveTo( 0, 0 ).ellipticalArc( 0, 0, radius, radius, 0, -Math.PI / 2, 0, false ).lineTo( 0, 0 );
-      return new TandemNode( {
+      return new Node( {
         tandem: tandem,
         children: [
           new Circle( radius, { fill: EnergySkateParkColorScheme.potentialEnergy, lineWidth: 0.5, stroke: 'black' } ),
@@ -157,7 +157,7 @@ define( function( require ) {
 
     // Create an icon for the grid check box
     createGridIcon: function( tandem ) {
-      return new TandemNode( {
+      return new Node( {
         tandem: tandem,
         children: [
           new Rectangle( 0, 0, 20, 20, { fill: 'white', stroke: 'black', lineWidth: 0.5 } ),

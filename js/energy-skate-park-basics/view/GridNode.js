@@ -12,7 +12,7 @@ define( function( require ) {
   // modules
   var energySkateParkBasics = require( 'ENERGY_SKATE_PARK_BASICS/energySkateParkBasics' );
   var inherit = require( 'PHET_CORE/inherit' );
-  var TandemNode = require( 'TANDEM/scenery/nodes/TandemNode' );
+  var Node = require( 'SCENERY/nodes/Node' );
   var TandemText = require( 'TANDEM/scenery/nodes/TandemText' );
   var TandemPath = require( 'TANDEM/scenery/nodes/TandemPath' );
   var Shape = require( 'KITE/Shape' );
@@ -33,7 +33,7 @@ define( function( require ) {
    */
   function GridNode( gridVisibleProperty, modelViewTransform, tandem ) {
     this.modelViewTransform = modelViewTransform;
-    TandemNode.call( this, {
+    Node.call( this, {
       pickable: false,
       tandem: tandem
     } );
@@ -57,7 +57,7 @@ define( function( require ) {
 
   energySkateParkBasics.register( 'GridNode', GridNode );
 
-  return inherit( TandemNode, GridNode, {
+  return inherit( Node, GridNode, {
 
     // Exactly fit the geometry to the screen so no matter what aspect ratio it will always show something.  Perhaps it
     // will improve performance too? Could performance optimize by using visible instead of add/remove child if necessary

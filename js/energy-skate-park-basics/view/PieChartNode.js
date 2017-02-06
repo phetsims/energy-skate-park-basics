@@ -12,7 +12,7 @@ define( function( require ) {
   // modules
   var energySkateParkBasics = require( 'ENERGY_SKATE_PARK_BASICS/energySkateParkBasics' );
   var inherit = require( 'PHET_CORE/inherit' );
-  var TandemNode = require( 'TANDEM/scenery/nodes/TandemNode' );
+  var Node = require( 'SCENERY/nodes/Node' );
   var Circle = require( 'SCENERY/nodes/Circle' );
   var Shape = require( 'KITE/Shape' );
   var TandemPath = require( 'TANDEM/scenery/nodes/TandemPath' );
@@ -52,7 +52,7 @@ define( function( require ) {
       stroke: 'black',
       lineWidth: 1
     } );
-    TandemNode.call( this, {
+    Node.call( this, {
       tandem: tandem,
       children: [ thermalEnergySlice, potentialEnergySlice, kineticEnergySlice ],
       pickable: false
@@ -163,5 +163,5 @@ define( function( require ) {
 
   energySkateParkBasics.register( 'PieChartNode', PieChartNode );
 
-  return inherit( TandemNode, PieChartNode );
+  return inherit( Node, PieChartNode );
 } );
