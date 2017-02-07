@@ -41,16 +41,15 @@ define( function( require ) {
     gridVisibleProperty.linkAttribute( this, 'visible' );
 
     // @private
-    this.tandem = tandem;
     this.thinLinePath = new Path( null, {
       stroke: '#686868',
       lineWidth: 0.8,
-      tandem: this.tandem.createTandem( 'thinLinePath' )
+      tandem: tandem.createTandem( 'thinLinePath' )
     } );
     this.thickLinePath = new Path( null, {
       stroke: '#686868',
       lineWidth: 1.8,
-      tandem: this.tandem.createTandem( 'thickLinePath' )
+      tandem: tandem.createTandem( 'thickLinePath' )
     } );
     this.createdTexts = [];
   }
