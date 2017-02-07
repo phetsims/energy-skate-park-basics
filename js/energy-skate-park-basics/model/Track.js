@@ -122,7 +122,7 @@ define( function( require ) {
     } );
 
     this.disposeTrack = function() {
-      tandem.removeInstance( this );
+      tandem.removeInstance( self );
       self.property( 'physical' ).unlink( trackChangedListener );
       self.draggingProperty.unlinkAll();
     };

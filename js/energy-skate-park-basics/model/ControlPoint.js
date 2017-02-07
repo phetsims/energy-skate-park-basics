@@ -64,7 +64,7 @@ define( function( require ) {
     tandem.addInstance( this, TControlPoint );
 
     this.disposeControlPoint = function() {
-      tandem.removeInstance( this );
+      tandem.removeInstance( self );
       self.positionProperty.unlinkAll();
       self.positionProperty.dispose();
     };
