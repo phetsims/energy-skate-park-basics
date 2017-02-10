@@ -951,17 +951,23 @@ define( function( require ) {
       // Nudge the velocity in the 'up' direction so the skater won't pass through the track, see #207
       var velocity = new Vector2( freeSkater.velocityX, freeSkater.velocityY );
       var upVector = new Vector2( sideVectorX, sideVectorY );
-      var revisedVelocity = velocity.normalized().blend( upVector, 0.01 * sign ).normalized().times( velocity.magnitude() );
-      freeSkater = freeSkater.updateUDVelocity( 0, revisedVelocity.x, revisedVelocity.y );
+      if ( velocity.magnitude() > 0 ) {
+        var blended = velocity.normalized().blend( upVector, 0.01 * sign );
+        if ( blended.magnitude() > 0 ) {
+          var revisedVelocity = blended.normalized().times( velocity.magnitude() );
+          freeSkater = freeSkater.updateUDVelocity( 0, revisedVelocity.x, revisedVelocity.y );
 
-      // Nudge the position away from the track, slightly since it was perfectly centered on the track, see #212
-      // Note this will change the energy of the skater, but only by a tiny amount (that should be undetectable in the
-      // bar chart)
-      var origPosition = freeSkater.getPosition();
-      var newPosition = origPosition.plus( upVector.times( sign * 1E-6 ) );
-      freeSkater = freeSkater.updatePosition( newPosition.x, newPosition.y );
+          // Nudge the position away from the track, slightly since it was perfectly centered on the track, see #212
+          // Note this will change the energy of the skater, but only by a tiny amount (that should be undetectable in the
+          // bar chart)
+          var origPosition = freeSkater.getPosition();
+          var newPosition = origPosition.plus( upVector.times( sign * 1E-6 ) );
+          freeSkater = freeSkater.updatePosition( newPosition.x, newPosition.y );
 
-      debugAttachDetach && debugAttachDetach( 'newdot', revisedVelocity.dot( upVector ) );
+          debugAttachDetach && debugAttachDetach( 'newdot', revisedVelocity.dot( upVector ) );
+          return freeSkater;
+        }
+      }
       return freeSkater;
     },
 
