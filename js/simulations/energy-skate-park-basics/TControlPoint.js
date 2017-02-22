@@ -16,8 +16,8 @@ define( function( require ) {
   var phetio = require( 'PHET_IO/phetio' );
 
   var TControlPoint = function( instance, phetioID ) {
-    TObject.call( this, instance, phetioID );
     assertInstanceOf( instance, phet.energySkateParkBasics.ControlPoint );
+    TObject.call( this, instance, phetioID );
   };
   /**
    * Control point or null

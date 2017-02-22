@@ -15,8 +15,8 @@ define( function( require ) {
   var TObject = require( 'PHET_IO/types/TObject' );
 
   var TTrack = function( instance, phetioID ) {
-    TObject.call( this, instance, phetioID );
     assertInstanceOf( instance, phet.energySkateParkBasics.Track );
+    TObject.call( this, instance, phetioID );
   };
 
   /**

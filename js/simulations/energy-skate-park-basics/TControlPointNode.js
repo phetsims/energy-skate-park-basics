@@ -15,8 +15,8 @@ define( function( require ) {
   var TNode = require( 'PHET_IO/types/scenery/nodes/TNode' );
 
   var TControlPointNode = function( instance, phetioID ) {
-    TObject.call( this, instance, phetioID );
     assertInstanceOf( instance, phet.energySkateParkBasics.ControlPointNode );
+    TObject.call( this, instance, phetioID );
   };
 
   /**
