@@ -25,6 +25,8 @@ define( function( require ) {
   phetioInherit( TObject, 'TTrack', TTrack, {}, {
 
     fromStateObject: function( stateObject ) {
+
+      // TODO: This is sketchy, see // See https://github.com/phetsims/energy-skate-park-basics/issues/366
       return stateObject;
     },
     toStateObject: function( instance ) {
@@ -43,7 +45,9 @@ define( function( require ) {
         };
       }
       else {
-        return instance; /// TODO: Major hack to support data stream, which for unknown reasons was already calling this method with a state object
+        /// TODO: Major hack to support data stream, which for unknown reasons was already calling this method with a state object
+        // See https://github.com/phetsims/energy-skate-park-basics/issues/366
+        return instance;
       }
     }
   } );
