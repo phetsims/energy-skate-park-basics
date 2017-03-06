@@ -26,15 +26,6 @@ define( function( require ) {
 
     fromStateObject: function( stateObject ) {
       return stateObject;
-      // if ( stateObject === null ) {
-      //   return null;
-      // }
-      // // function Track( events, modelTracks, controlPoints, interactive, parents, availableModelBoundsProperty, tandem ) {
-      // var controlPoints = stateObject.controlPointTandemIDs.map( function( id, index ) {
-      //   return new phet.energySkateParkBasics.ControlPoint( index, 0, new phet.tandem.Tandem( id ) ); // TODO: create with correct initial x & y values.
-      // } );
-      // var newTrack = new phet.energySkateParkBasics.Track( this, this.tracks, controlPoints, interactive, [], this.availableModelBoundsProperty, tandem );
-      // return newTrack;
     },
     toStateObject: function( instance ) {
       if ( instance instanceof phet.energySkateParkBasics.Track || instance === null ) {
@@ -54,7 +45,6 @@ define( function( require ) {
       else {
         return instance; /// TODO: Major hack to support data stream, which for unknown reasons was already calling this method with a state object
       }
-
     }
   } );
 
