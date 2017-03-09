@@ -41,6 +41,9 @@ define( function( require ) {
    * @constructor
    */
   function EnergySkateParkBasicsControlPanel( model, tandem ) {
+
+    this.tempTandem = tandem;
+
     var textOptions = {
       font: new PhetFont( 14 ),
       maxWidth: 134 // selected by choosing the length of widest English string in ?stringTest=double
@@ -173,7 +176,10 @@ define( function( require ) {
 
     // Create an icon for the speedometer check box
     createSpeedometerIcon: function() {
-      var node = new GaugeNode( new Property( 0 ), propertiesSpeedString, { min: 0, max: 10 }, { pickable: false } );
+      var node = new GaugeNode( new Property( 0 ), propertiesSpeedString, { min: 0, max: 10 },
+        { pickable: false,
+          tandem: this.tempTandem.createTandem( 'gaugeNode')
+        } );
       node.scale( 20 / node.width );
       return node;
     }
