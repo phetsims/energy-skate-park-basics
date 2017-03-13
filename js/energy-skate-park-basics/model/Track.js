@@ -18,7 +18,7 @@ define( function( require ) {
   var dot = require( 'DOT/dot' );
 
   // phet-io modules
-  var TTrack = require( 'ifphetio!PHET_IO/simulations/energy-skate-park-basics/TTrack' );
+  var TTrack = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/model/TTrack' );
   var TBoolean = require( 'ifphetio!PHET_IO/types/TBoolean' );
   var phetio = require( 'ifphetio!PHET_IO/phetio' );
 

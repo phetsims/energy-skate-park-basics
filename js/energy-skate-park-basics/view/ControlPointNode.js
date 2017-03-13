@@ -19,7 +19,7 @@ define( function( require ) {
   var EnergySkateParkBasicsQueryParameters = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/EnergySkateParkBasicsQueryParameters' );
 
   // phet-io modules
-  var TControlPointNode = require( 'ifphetio!PHET_IO/simulations/energy-skate-park-basics/TControlPointNode' );
+  var TControlPointNode = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/view/TControlPointNode' );
 
   /**
    * @param {TrackNode} trackNode

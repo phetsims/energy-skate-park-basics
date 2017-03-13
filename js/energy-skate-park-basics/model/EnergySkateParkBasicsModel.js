@@ -46,8 +46,8 @@ define( function( require ) {
   var TBoolean = require( 'ifphetio!PHET_IO/types/TBoolean' );
   var TString = require( 'ifphetio!PHET_IO/types/TString' );
   var TBounds2 = require( 'ifphetio!PHET_IO/types/dot/TBounds2' );
-  var TEnergySkateParkBasicsModel = require( 'ifphetio!PHET_IO/simulations/energy-skate-park-basics/TEnergySkateParkBasicsModel' );
-  var TTrack = require( 'ifphetio!PHET_IO/simulations/energy-skate-park-basics/TTrack' );
+  var TEnergySkateParkBasicsModel = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/model/TEnergySkateParkBasicsModel' );
+  var TTrack = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/model/TTrack' );
 
   // Reuse empty object for creating SkaterStates to avoid allocations
   var EMPTY_OBJECT = {};

@@ -16,7 +16,7 @@ define( function( require ) {
 
   // phet-io modules
   var TVector2 = require( 'ifphetio!PHET_IO/types/dot/TVector2' );
-  var TControlPoint = require( 'ifphetio!PHET_IO/simulations/energy-skate-park-basics/TControlPoint' );
+  var TControlPoint = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/model/TControlPoint' );
 
   /**
    *

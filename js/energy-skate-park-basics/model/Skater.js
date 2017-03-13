@@ -23,8 +23,8 @@ define( function( require ) {
   var TNumber = require( 'ifphetio!PHET_IO/types/TNumber' );
   var TBoolean = require( 'ifphetio!PHET_IO/types/TBoolean' );
   var TString = require( 'ifphetio!PHET_IO/types/TString' );
-  var TTrack = require( 'ifphetio!PHET_IO/simulations/energy-skate-park-basics/TTrack' );
-  var TTrackReference = require( 'ifphetio!PHET_IO/simulations/energy-skate-park-basics/TTrackReference' );
+  var TTrack = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/model/TTrack' );
+  var TTrackReference = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/model/TTrackReference' );
 
   // Compare two arrays, whose elements have 'equals' methods for comparison
   var arrayEquals = function( a, b ) {

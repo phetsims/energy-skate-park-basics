@@ -8,11 +8,11 @@ define( function( require ) {
   'use strict';
 
   // modules
-  var assertInstanceOf = require( 'PHET_IO/assertions/assertInstanceOf' );
-  var phetioNamespace = require( 'PHET_IO/phetioNamespace' );
-  var phetioInherit = require( 'PHET_IO/phetioInherit' );
-  var TObject = require( 'PHET_IO/types/TObject' );
-  var TNode = require( 'PHET_IO/types/scenery/nodes/TNode' );
+  var assertInstanceOf = require( 'ifphetio!PHET_IO/assertions/assertInstanceOf' );
+  var energySkateParkBasics = require( 'ENERGY_SKATE_PARK_BASICS/energySkateParkBasics' );
+  var phetioInherit = require( 'ifphetio!PHET_IO/phetioInherit' );
+  var TObject = require( 'ifphetio!PHET_IO/types/TObject' );
+  var TNode = require( 'ifphetio!PHET_IO/types/scenery/nodes/TNode' );
 
   var TControlPointNode = function( instance, phetioID ) {
     assertInstanceOf( instance, phet.energySkateParkBasics.ControlPointNode );
@@ -24,7 +24,7 @@ define( function( require ) {
    */
   phetioInherit( TNode, 'TControlPointNode', TControlPointNode, {}, {} );
 
-  phetioNamespace.register( 'TControlPointNode', TControlPointNode );
+  energySkateParkBasics.register( 'TControlPointNode', TControlPointNode );
 
   return TControlPointNode;
 } );
