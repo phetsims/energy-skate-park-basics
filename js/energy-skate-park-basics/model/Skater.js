@@ -19,7 +19,7 @@ define( function( require ) {
 
   // phet-io modules
   var phetio = require( 'ifphetio!PHET_IO/phetio' );
-  var TVector2 = require( 'ifphetio!PHET_IO/types/dot/TVector2' );
+  var TVector2 = require( 'DOT/TVector2' );
   var TNumber = require( 'ifphetio!PHET_IO/types/TNumber' );
   var TBoolean = require( 'ifphetio!PHET_IO/types/TBoolean' );
   var TString = require( 'ifphetio!PHET_IO/types/TString' );

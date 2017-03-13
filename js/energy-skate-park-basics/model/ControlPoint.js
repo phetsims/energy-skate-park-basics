@@ -13,9 +13,9 @@ define( function( require ) {
   var inherit = require( 'PHET_CORE/inherit' );
   var PropertySet = require( 'AXON/PropertySet' );
   var Vector2 = require( 'DOT/Vector2' );
+  var TVector2 = require( 'DOT/TVector2' );
 
   // phet-io modules
-  var TVector2 = require( 'ifphetio!PHET_IO/types/dot/TVector2' );
   var TControlPoint = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/model/TControlPoint' );
 
   /**
