@@ -193,10 +193,10 @@ define( function( require ) {
 
           controlPointUIShownEmitter.emit();
 
-          if ( lastControlPointUI ) {
-            lastControlPointUI.dispose();
-          }
-          var controlPointUI = new ControlPointUI(
+          lastControlPointUI && lastControlPointUI.detach();
+          lastControlPointUI && lastControlPointUI.dispose();
+
+          lastControlPointUI = new ControlPointUI(
             model,
             track,
             i,
@@ -206,19 +206,17 @@ define( function( require ) {
           );
 
           // If the track was removed, get rid of the buttons
-          track.on( 'remove', function() {
-            controlPointUI.detach();
-            controlPointUI.dispose();
-          } );
+          var removalListener = function() {
+            lastControlPointUI && lastControlPointUI.detach();
+            lastControlPointUI && lastControlPointUI.dispose();
+            lastControlPointUI = null;
+          };
+          track.on( 'remove', removalListener );
 
           // If the track has translated, hide the buttons, see #272
-          track.on( 'translated', function() {
-            controlPointUI.detach();
-            controlPointUI.dispose();
-          } );
-          lastControlPointUI = controlPointUI;
+          track.on( 'translated', removalListener );
 
-          trackNode.parents[ 0 ].addChild( controlPointUI );
+          trackNode.parents[ 0 ].addChild( lastControlPointUI );
         }
 
         if ( EnergySkateParkBasicsQueryParameters.debugTrack ) {
