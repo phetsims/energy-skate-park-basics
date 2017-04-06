@@ -683,7 +683,7 @@ define( function( require ) {
 
     /**
      * Find the minimum radius of curvature along the track, in meters
-     * @return {number} the minimum radius of curvature along the track, in meters.
+     * @returns {number} the minimum radius of curvature along the track, in meters.
      */
     getMinimumRadiusOfCurvature: function() {
       var curvature = { r: 0, x: 0, y: 0 };

@@ -39,7 +39,7 @@ define( function( require ) {
        * Create a new SkaterState
        * @param {Skater|SkaterState} source the initial values to use
        * @param {*} overrides the new values to override in the source
-       * @return {SkaterState} the new SkaterState
+       * @returns {SkaterState} the new SkaterState
        */
       setState: function( source, overrides ) {
 

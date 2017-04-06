@@ -60,7 +60,7 @@ define( function( require ) {
    * @param {number} a
    * @param {number} b
    * @param {number} tolerance
-   * @return {boolean}
+   * @returns {boolean}
    */
   function isApproxEqual( a, b, tolerance ) { return Math.abs( a - b ) <= tolerance; }
 
@@ -493,7 +493,7 @@ define( function( require ) {
      * @param {SkaterState} skaterState the original state of the skater
      * @param {boolean} justLeft true if the skater just fell off or launched off the track: in this case it should not
      * interact with the track.
-     * @return {SkaterState} the new state
+     * @returns {SkaterState} the new state
      */
     stepFreeFall: function( dt, skaterState, justLeft ) {
       var initialEnergy = skaterState.getTotalEnergy();
@@ -691,7 +691,7 @@ define( function( require ) {
      * Split into component-wise to prevent allocations, see #50
      *
      * @param {SkaterState} skaterState the state
-     * @return {number} netForce in the X direction
+     * @returns {number} netForce in the X direction
      */
     getNetForceWithoutNormalX: function( skaterState ) {
       return this.getFrictionForceX( skaterState );
@@ -703,7 +703,7 @@ define( function( require ) {
      * Split into component-wise to prevent allocations, see #50
      *
      * @param {SkaterState} skaterState the state
-     * @return {number} netForce in the Y direction
+     * @returns {number} netForce in the Y direction
      */
     getNetForceWithoutNormalY: function( skaterState ) {
       return skaterState.mass * skaterState.gravity + this.getFrictionForceY( skaterState );
