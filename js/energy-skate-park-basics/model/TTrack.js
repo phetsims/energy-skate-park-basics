@@ -23,6 +23,7 @@ define( function( require ) {
    * The wrapper type for a track.
    */
   phetioInherit( TObject, 'TTrack', TTrack, {}, {
+    documentation: 'A skate track.',
 
     fromStateObject: function( stateObject ) {
 

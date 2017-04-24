@@ -23,6 +23,7 @@ define( function( require ) {
    * Control point or null
    */
   phetioInherit( TObject, 'TControlPoint', TControlPoint, {}, {
+    documentation: 'A control point that can manipulate the track.',
 
     // Support null
     fromStateObject: function( stateObject ) {

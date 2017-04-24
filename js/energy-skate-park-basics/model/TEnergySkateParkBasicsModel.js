@@ -21,6 +21,7 @@ define( function( require ) {
 
 
   phetioInherit( TObject, 'TEnergySkateParkBasicsModel', TEnergySkateParkBasicsModel, {}, {
+    documentation: 'The model for the Skate Park.',
 
     /**
      * Remove all instances of the model's dynamic children.

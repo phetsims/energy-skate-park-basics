@@ -22,7 +22,8 @@ define( function( require ) {
   /**
    * Control point or null
    */
-  phetioInherit( TNode, 'TControlPointNode', TControlPointNode, {}, {} );
+  phetioInherit( TNode, 'TControlPointNode', TControlPointNode, {},
+    { documentation: 'The view element for a control point.' } );
 
   energySkateParkBasics.register( 'TControlPointNode', TControlPointNode );
 
