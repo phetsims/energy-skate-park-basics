@@ -109,6 +109,7 @@ define( function( require ) {
     this.disposeControlPointUI = function() {
       cutButton && cutButton.dispose();
       deleteButton.dispose();
+      tandem.removeInstance( self );
     };
   }
 
@@ -117,8 +118,8 @@ define( function( require ) {
   return inherit( Node, ControlPointUI, {
 
     dispose: function() {
-      Node.prototype.dispose.call( this );
       this.disposeControlPointUI();
+      Node.prototype.dispose.call( this );
     },
 
     //Override to additionally remove the attached input listener
