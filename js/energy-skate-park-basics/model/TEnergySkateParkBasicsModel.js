@@ -14,11 +14,16 @@ define( function( require ) {
   var phetioInherit = require( 'ifphetio!PHET_IO/phetioInherit' );
   var TObject = require( 'ifphetio!PHET_IO/types/TObject' );
 
-  var TEnergySkateParkBasicsModel = function( instance, phetioID ) {
+  /**
+   *
+   * @param instance
+   * @param phetioID
+   * @constructor
+   */
+  function TEnergySkateParkBasicsModel( instance, phetioID ) {
     assertInstanceOf( instance, phet.energySkateParkBasics.EnergySkateParkBasicsModel );
     TObject.call( this, instance, phetioID );
-  };
-
+  }
 
   phetioInherit( TObject, 'TEnergySkateParkBasicsModel', TEnergySkateParkBasicsModel, {}, {
     documentation: 'The model for the Skate Park.',

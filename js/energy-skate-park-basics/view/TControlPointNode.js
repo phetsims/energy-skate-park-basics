@@ -14,10 +14,16 @@ define( function( require ) {
   var TObject = require( 'ifphetio!PHET_IO/types/TObject' );
   var TNode = require( 'SCENERY/nodes/TNode' );
 
-  var TControlPointNode = function( instance, phetioID ) {
+  /**
+   *
+   * @param instance
+   * @param phetioID
+   * @constructor
+   */
+  function TControlPointNode( instance, phetioID ) {
     assertInstanceOf( instance, phet.energySkateParkBasics.ControlPointNode );
     TObject.call( this, instance, phetioID );
-  };
+  }
 
   /**
    * Control point or null

@@ -16,10 +16,16 @@ define( function( require ) {
   var TObject = require( 'ifphetio!PHET_IO/types/TObject' );
   var phetio = require( 'ifphetio!PHET_IO/phetio' );
 
-  var TTrackReference = function( instance, phetioID ) {
+  /**
+   *
+   * @param instance
+   * @param phetioID
+   * @constructor
+   */
+  function TTrackReference( instance, phetioID ) {
     assertInstanceOf( instance, phet.energySkateParkBasics.Track );
     TObject.call( this, instance, phetioID );
-  };
+  }
 
   /**
    * The wrapper type for a track.

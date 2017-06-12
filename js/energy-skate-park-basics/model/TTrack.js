@@ -14,10 +14,16 @@ define( function( require ) {
   var phetioInherit = require( 'ifphetio!PHET_IO/phetioInherit' );
   var TObject = require( 'ifphetio!PHET_IO/types/TObject' );
 
-  var TTrack = function( instance, phetioID ) {
+  /**
+   *
+   * @param instance
+   * @param phetioID
+   * @constructor
+   */
+  function TTrack( instance, phetioID ) {
     assertInstanceOf( instance, phet.energySkateParkBasics.Track );
     TObject.call( this, instance, phetioID );
-  };
+  }
 
   /**
    * The wrapper type for a track.

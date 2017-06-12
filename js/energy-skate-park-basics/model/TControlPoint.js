@@ -15,10 +15,17 @@ define( function( require ) {
   var TObject = require( 'ifphetio!PHET_IO/types/TObject' );
   var phetio = require( 'ifphetio!PHET_IO/phetio' );
 
-  var TControlPoint = function( instance, phetioID ) {
+  /**
+   *
+   * @param instance
+   * @param phetioID
+   * @constructor
+   */
+  function TControlPoint( instance, phetioID ) {
     assertInstanceOf( instance, phet.energySkateParkBasics.ControlPoint );
     TObject.call( this, instance, phetioID );
-  };
+  }
+
   /**
    * Control point or null
    */
