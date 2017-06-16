@@ -167,11 +167,16 @@ define( function( require ) {
       this.trigger( 'reset' );
     },
 
-    // Returns the closest point (Euclidean) and position (parametric) on the track, as an object with {u,point}
-    // also checks 1E-6 beyond each side of the track to see if the skater is beyond the edge of the track
-    // This currently does a flat search, but if more precision is needed, a finer-grained binary search could be done
-    // afterwards. This code is used when dragging the skater (to see if he is dragged near the track) and while the
-    // skater is falling toward the track (to see if he should bounce/attach).
+    /**
+     * Returns the closest point (Euclidean) and position (parametric) on the track, as an object with {u,point}
+     * also checks 1E-6 beyond each side of the track to see if the skater is beyond the edge of the track
+     * This currently does a flat search, but if more precision is needed, a finer-grained binary search could be done
+     * afterwards. This code is used when dragging the skater (to see if he is dragged near the track) and while the
+     * skater is falling toward the track (to see if he should bounce/attach).
+     *
+     * @param {Vector2} point
+     * @returns {{parametricPosition: number, point: Vector2, distance: Number}}
+     */
     getClosestPositionAndParameter: function( point ) {
 
       // Compute the spline points for purposes of getting closest points.
@@ -481,10 +486,16 @@ define( function( require ) {
       return guess - u0;
     },
 
-    // Compute the signed curvature as defined here: http:// en.wikipedia.org/wiki/Curvature#Local_expressions
-    // Used for centripetal force and determining whether the skater flies off the track
-    // Curvature parameter is for storing the result as pass-by-value.
-    // Sorry, see #50 regarding GC
+
+    /**
+     * Compute the signed curvature as defined here: http:// en.wikipedia.org/wiki/Curvature#Local_expressions
+     * Used for centripetal force and determining whether the skater flies off the track
+     * Curvature parameter is for storing the result as pass-by-value.
+     * Sorry, see #50 regarding GC
+     *
+     * @param parametricPosition
+     * @param curvature
+     */
     getCurvature: function( parametricPosition, curvature ) {
 
       if ( this.xSplineDiff === null ) {
