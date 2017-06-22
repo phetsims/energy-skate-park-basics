@@ -79,20 +79,20 @@ define( function( require ) {
     var checkBoxChildren = [
       new CheckBox(
         new HBox( { children: pad( pieChartSet ) } ),
-        model.property( 'pieChartVisible' ),
+        model.pieChartVisibleProperty,
         _.extend( { tandem: tandem.createTandem( 'pieChartCheckBox' ) }, checkBoxItemOptions )
       ),
       new CheckBox(
         new HBox( { children: pad( barGraphSet ) } ),
-        model.property( 'barGraphVisible' ),
+        model.barGraphVisibleProperty,
         _.extend( { tandem: tandem.createTandem( 'barGraphCheckBox' ) }, checkBoxItemOptions ) ),
       new CheckBox(
         new HBox( { children: pad( gridSet ) } ),
-        model.property( 'gridVisible' ),
+        model.gridVisibleProperty,
         _.extend( { tandem: tandem.createTandem( 'gridCheckBox' ) }, checkBoxItemOptions ) ),
       new CheckBox(
         new HBox( { children: pad( speedometerSet ) } ),
-        model.property( 'speedometerVisible' ),
+        model.speedometerVisibleProperty,
         _.extend( { tandem: tandem.createTandem( 'speedometerCheckBox' ) }, checkBoxItemOptions )
       ) ];
     var checkBoxes = new VBox( { align: 'left', spacing: 10, children: checkBoxChildren } );
@@ -103,7 +103,7 @@ define( function( require ) {
     // For 2nd and 3rd screen, show Friction Slider and Mass Slider, see #147
     var children = [ checkBoxes, massControlPanel ];
     if ( model.frictionAllowed ) {
-      children.push( new FrictionControl( model.property( 'friction' ), tandem.createTandem( 'frictionSlider' ) ) );
+      children.push( new FrictionControl( model.frictionProperty, tandem.createTandem( 'frictionSlider' ) ) );
     }
     var content = new VBox( { resize: false, spacing: 6, children: children } );
 

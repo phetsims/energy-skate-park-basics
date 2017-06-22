@@ -57,7 +57,7 @@ define( function( require ) {
       lineDash: [ 11, 8 ],
       tandem: tandem.createTandem( 'centerLineNode' )
     } );
-    model.property( 'detachable' ).link( function( detachable ) {
+    model.detachableProperty.link( function( detachable ) {
       self.centerLine.lineDash = detachable ? [] : [ 11, 8 ];
     } );
 
@@ -171,7 +171,7 @@ define( function( require ) {
       this.centerLine.shape = shape;
 
       // Update the skater if the track is moved while the sim is paused, see #84
-      if ( model.skater.track === track && model.paused ) {
+      if ( model.skater.track === track && model.pausedProperty.value ) {
         model.skater.position = track.getPoint( model.skater.parametricPosition );
         model.skater.angle = model.skater.track.getViewAngleAt( model.skater.parametricPosition ) + (model.skater.onTopSideOfTrack ? 0 : Math.PI);
         model.skater.trigger( 'updated' );

@@ -92,7 +92,7 @@ define( function( require ) {
 
     PropertySet.call( this, null, properties );
 
-    var trackChangedListener = function() { events.trigger( 'track-changed' ); };
+    var trackChangedListener = function() { events.trackChangedEmitter.emit(); };
     this.property( 'physical' ).link( trackChangedListener );
 
     this.controlPoints = controlPoints;
@@ -117,7 +117,7 @@ define( function( require ) {
     phetio.setStateEmitter && phetio.setStateEmitter.addListener( function() {
       self.updateLinSpace();
       self.updateSplines();
-      events.trigger( 'track-changed' );
+      events.trackChangedEmitter.emit();
       events.trigger( 'update' );
     } );
 

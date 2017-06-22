@@ -81,19 +81,21 @@ define( function( require ) {
     this.modelViewTransform = modelViewTransform;
 
     this.availableModelBoundsProperty = new Property( new Bounds2( 0, 0, 0, 0 ) );
-    this.availableModelBoundsProperty.linkAttribute( model, 'availableModelBounds' );
+    this.availableModelBoundsProperty.link( function( bounds ) {
+      model.availableModelBoundsProperty.set( bounds );
+    } );
 
     // The background
     this.backgroundNode = new BackgroundNode( this.layoutBounds, tandem.createTandem( 'backgroundNode' ) );
     this.addChild( this.backgroundNode );
 
-    this.gridNode = new GridNode( model.property( 'gridVisible' ), modelViewTransform, tandem.createTandem( 'gridNode' ) );
+    this.gridNode = new GridNode( model.gridVisibleProperty, modelViewTransform, tandem.createTandem( 'gridNode' ) );
     this.addChild( this.gridNode );
 
     var pieChartLegend = new PieChartLegend(
       model.skater,
       model.clearThermal.bind( model ),
-      model.property( 'pieChartVisible' ),
+      model.pieChartVisibleProperty,
       tandem
     );
     this.addChild( pieChartLegend );
@@ -129,7 +131,7 @@ define( function( require ) {
       return self.availableModelBounds && containsAbove( self.availableModelBounds, position.x, position.y );
     } );
 
-    var barGraphBackground = new BarGraphBackground( model.skater, model.property( 'barGraphVisible' ),
+    var barGraphBackground = new BarGraphBackground( model.skater, model.barGraphVisibleProperty,
       model.clearThermal.bind( model ), tandem.createTandem( 'barGraphBackground' ) );
     this.addChild( barGraphBackground );
 
@@ -143,15 +145,15 @@ define( function( require ) {
     // Put the pie chart legend to the right of the bar chart, see #60, #192
     pieChartLegend.mutate( { top: barGraphBackground.top, left: barGraphBackground.right + 8 } );
 
-    var playingProperty = new Property( !model.property( 'paused' ).value, {
+    var playingProperty = new Property( !model.pausedProperty.value, {
       tandem: tandem.createTandem( 'playingProperty' ),
       phetioValueType: TBoolean
     } );
-    model.property( 'paused' ).link( function( paused ) {
+    model.pausedProperty.link( function( paused ) {
       playingProperty.set( !paused );
     } );
     playingProperty.link( function( playing ) {
-      model.property( 'paused' ).set( !playing );
+      model.pausedProperty.set( !playing );
     } );
     var playPauseButton = new PlayPauseButton( playingProperty, {
       tandem: tandem.createTandem( 'playPauseButton' )
@@ -171,7 +173,7 @@ define( function( require ) {
 
     // Make the step button the same size as the pause button.
     stepButton.mutate( { scale: playPauseButton.height / stepButton.height } );
-    model.property( 'paused' ).linkAttribute( stepButton, 'enabled' );
+    model.pausedProperty.linkAttribute( stepButton, 'enabled' );
 
     this.addChild( playPauseButton.mutate( {
       centerX: this.layoutBounds.centerX,
@@ -207,7 +209,7 @@ define( function( require ) {
     model.skater.linkAttribute( 'moved', self.returnSkaterButton, 'enabled' );
     this.addChild( this.returnSkaterButton );
 
-    this.addChild( new PlaybackSpeedControl( model.property( 'speed' ), tandem.createTandem( 'playbackSpeedControl' ) ).mutate( {
+    this.addChild( new PlaybackSpeedControl( model.speedProperty, tandem.createTandem( 'playbackSpeedControl' ) ).mutate( {
       left: stepButton.right + 20,
       centerY: playPauseButton.centerY
     } ) );
@@ -221,11 +223,11 @@ define( function( require ) {
       },
       {
         // enable/disable updates based on whether the speedometer is visible
-        updateEnabledProperty: model.property( 'speedometerVisible' ),
+        updateEnabledProperty: model.speedometerVisibleProperty,
         pickable: false,
         tandem: tandem.createTandem( 'speedometerNode' )
       } );
-    model.property( 'speedometerVisible' ).linkAttribute( speedometerNode, 'visible' );
+    model.speedometerVisibleProperty.linkAttribute( speedometerNode, 'visible' );
     speedometerNode.centerX = this.layoutBounds.centerX;
     speedometerNode.top = this.layoutBounds.minY + 5;
     this.addChild( speedometerNode );
@@ -246,7 +248,7 @@ define( function( require ) {
         trackLayer.addChild( trackNode );
       } );
 
-      model.property( 'scene' ).link( function( scene ) {
+      model.sceneProperty.link( function( scene ) {
         trackNodes[ 0 ].visible = (scene === 0);
         trackNodes[ 1 ].visible = (scene === 1);
         trackNodes[ 2 ].visible = (scene === 2);
@@ -315,7 +317,7 @@ define( function( require ) {
       } );
       var arrowHead = createArrowhead( Math.PI - Math.PI / 3, new Vector2( -xTip, yTip ) );
 
-      var clearButtonEnabledProperty = model.property( 'clearButtonEnabled' );
+      var clearButtonEnabledProperty = model.clearButtonEnabledProperty;
       clearButtonEnabledProperty.link( function( clearButtonEnabled ) {
         rightCurve.stroke = clearButtonEnabled ? 'black' : 'gray';
         arrowHead.fill = clearButtonEnabled ? 'black' : 'gray';
@@ -355,18 +357,18 @@ define( function( require ) {
     }, tandem.createTandem( 'gaugeNeedleNode' ), {
       renderer: renderer
     } );
-    model.property( 'speedometerVisible' ).linkAttribute( gaugeNeedleNode, 'visible' );
+    model.speedometerVisibleProperty.linkAttribute( gaugeNeedleNode, 'visible' );
     gaugeNeedleNode.x = speedometerNode.x;
     gaugeNeedleNode.y = speedometerNode.y;
     this.addChild( gaugeNeedleNode );
-    this.addChild( new BarGraphForeground( model.skater, barGraphBackground, model.property( 'barGraphVisible' ), renderer,
+    this.addChild( new BarGraphForeground( model.skater, barGraphBackground, model.barGraphVisibleProperty, renderer,
       tandem.createTandem( 'barGraphForeground' )
     ) );
     this.addChild( skaterNode );
 
     var pieChartNode = renderer === 'webgl' ?
-                       new PieChartWebGLNode( model.skater, model.property( 'pieChartVisible' ), modelViewTransform, tandem.createTandem( 'pieChartNode' ) ) :
-                       new PieChartNode( model.skater, model.property( 'pieChartVisible' ), modelViewTransform, tandem.createTandem( 'pieChartNode' ) );
+                       new PieChartWebGLNode( model.skater, model.pieChartVisibleProperty, modelViewTransform, tandem.createTandem( 'pieChartNode' ) ) :
+                       new PieChartNode( model.skater, model.pieChartVisibleProperty, modelViewTransform, tandem.createTandem( 'pieChartNode' ) );
     this.addChild( pieChartNode );
 
     // Buttons to return the skater when she is offscreen, see #219

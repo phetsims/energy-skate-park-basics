@@ -28,7 +28,8 @@ define( function( require ) {
   // modules
   var energySkateParkBasics = require( 'ENERGY_SKATE_PARK_BASICS/energySkateParkBasics' );
   var inherit = require( 'PHET_CORE/inherit' );
-  var PropertySet = require( 'AXON/PropertySet' );
+  var Property = require( 'AXON/Property' );
+  var Emitter = require( 'AXON/Emitter' );
   var Skater = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/model/Skater' );
   var DebugTracks = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/model/DebugTracks' );
   var Track = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/model/Track' );
@@ -66,11 +67,11 @@ define( function( require ) {
 
   // Flag to enable debugging for physics issues
   var debug = EnergySkateParkBasicsQueryParameters.debugLog ? function() {
-                                                              console.log.apply( console, arguments );
-                                                            } : null;
+    console.log.apply( console, arguments );
+  } : null;
   var debugAttachDetach = EnergySkateParkBasicsQueryParameters.debugAttachDetach ? function() {
-                                                                                   console.log.apply( console, arguments );
-                                                                                 } : null;
+    console.log.apply( console, arguments );
+  } : null;
 
   // Control points are replenished in the toolbox as they are destroyed (by connecting) in the play area
   // This is the maximum number of control points available to the user.
@@ -106,80 +107,76 @@ define( function( require ) {
     // Only applies to one frame at a time (for the immediate next update).  See #127 and #135
     this.trackChangePending = false;
 
-    var properties = {
+    // Model for visibility of various view parameters
+    this.pieChartVisibleProperty = new Property( false, {
+      tandem: tandem.createTandem( 'pieChartVisibleProperty' ),
+      phetioValueType: TBoolean
+    } );
+    this.barGraphVisibleProperty = new Property( false, {
+      tandem: tandem.createTandem( 'barGraphVisibleProperty' ),
+      phetioValueType: TBoolean
+    } );
+    this.gridVisibleProperty = new Property( false, {
+      tandem: tandem.createTandem( 'gridVisibleProperty' ),
+      phetioValueType: TBoolean
+    } );
+    this.speedometerVisibleProperty = new Property( false, {
+      tandem: tandem.createTandem( 'speedometerVisibleProperty' ),
+      phetioValueType: TBoolean
+    } );
 
-      // Model for visibility of various view parameters
-      pieChartVisible: {
-        value: false,
-        tandem: tandem.createTandem( 'pieChartVisibleProperty' ),
-        phetioValueType: TBoolean
-      },
-      barGraphVisible: {
-        value: false,
-        tandem: tandem.createTandem( 'barGraphVisibleProperty' ),
-        phetioValueType: TBoolean
-      },
-      gridVisible: {
-        value: false,
-        tandem: tandem.createTandem( 'gridVisibleProperty' ),
-        phetioValueType: TBoolean
-      },
-      speedometerVisible: {
-        value: false,
-        tandem: tandem.createTandem( 'speedometerVisibleProperty' ),
-        phetioValueType: TBoolean
-      },
+    // Enabled/disabled for the track editing buttons
+    this.editButtonEnabledProperty = new Property( false, {
+      tandem: tandem.createTandem( 'editButtonEnabledProperty' ),
+      phetioValueType: TBoolean
+    } );
+    this.clearButtonEnabledProperty = new Property( false, {
+      tandem: tandem.createTandem( 'clearButtonEnabledProperty' ),
+      phetioValueType: TBoolean
+    } );
 
-      // Enabled/disabled for the track editing buttons
-      editButtonEnabled: {
-        value: false,
-        tandem: tandem.createTandem( 'editButtonEnabledProperty' ),
-        phetioValueType: TBoolean
-      },
-      clearButtonEnabled: {
-        value: false,
-        tandem: tandem.createTandem( 'clearButtonEnabledProperty' ),
-        phetioValueType: TBoolean
-      },
+    // Whether the sim is paused or running
+    this.pausedProperty = new Property( false, {
+      tandem: tandem.createTandem( 'pausedProperty' ),
+      phetioValueType: TBoolean
+    } );
 
-      // Whether the sim is paused or running
-      paused: {
-        value: false,
-        tandem: tandem.createTandem( 'pausedProperty' ),
-        phetioValueType: TBoolean
-      },
+    // speed of the model, either 'normal' or 'slow'
+    this.speedProperty = new Property( 'normal', {
+      tandem: tandem.createTandem( 'speedProperty' ),
+      phetioValueType: TString
+    } );
 
-      // speed of the model, either 'normal' or 'slow'
-      speed: {
-        value: 'normal',
-        tandem: tandem.createTandem( 'speedProperty' ),
-        phetioValueType: TString
-      },
+    // Coefficient of friction (unitless) between skater and track
+    this.frictionProperty = new Property( frictionAllowed ? 0.05 : 0, {
+      tandem: tandem.createTandem( 'frictionProperty' ),
+      phetioValueType: TNumber()
+    } );
 
-      // Coefficient of friction (unitless) between skater and track
-      friction: {
-        value: frictionAllowed ? 0.05 : 0,
-        tandem: tandem.createTandem( 'frictionProperty' ),
-        phetioValueType: TNumber()
-      },
+    // Whether the skater should stick to the track like a roller coaster, or be able to fly off like a street
+    this.detachableProperty = new Property( false, {
+      tandem: tandem.createTandem( 'detachableProperty' ),
+      phetioValueType: TBoolean
+    } );
 
-      // Whether the skater should stick to the track like a roller coaster, or be able to fly off like a street
-      detachable: {
-        value: false,
-        tandem: tandem.createTandem( 'detachableProperty' ),
-        phetioValueType: TBoolean
-      },
+    // Will be filled in by the view, used to prevent control points from moving outside the visible model bounds when
+    // adjusted, see #195
+    this.availableModelBoundsProperty = new Property( new Bounds2( 0, 0, 0, 0 ), {
+      tandem: tandem.createTandem( 'availableModelBoundsProperty' ),
+      phetioValueType: TBounds2
+    } );
 
-      // Will be filled in by the view, used to prevent control points from moving outside the visible model bounds when
-      // adjusted, see #195
-      availableModelBounds: {
-        value: new Bounds2( 0, 0, 0, 0 ),
-        tandem: tandem.createTandem( 'availableModelBoundsProperty' ),
-        phetioValueType: TBounds2
-      }
-    };
-
-    PropertySet.call( this, null, properties );
+    Property.preventGetSet( this, 'pieChartVisible' );
+    Property.preventGetSet( this, 'barGraphVisible' );
+    Property.preventGetSet( this, 'gridVisible' );
+    Property.preventGetSet( this, 'speedometerVisible' );
+    Property.preventGetSet( this, 'editButtonEnabled' );
+    Property.preventGetSet( this, 'clearButtonEnabled' );
+    Property.preventGetSet( this, 'paused' );
+    Property.preventGetSet( this, 'speed' );
+    Property.preventGetSet( this, 'friction' );
+    Property.preventGetSet( this, 'detachable' );
+    Property.preventGetSet( this, 'availableModelBounds' );
 
     if ( EnergySkateParkBasicsQueryParameters.debugTrack ) {
       this.frictionProperty.debug( 'friction' );
@@ -192,7 +189,7 @@ define( function( require ) {
     this.skater = new Skater( tandem.createTandem( 'skater' ) );
 
     // If the mass changes while the sim is paused, trigger an update so the skater image size will update, see #115
-    this.skater.property( 'mass' ).link( function() { if ( self.paused ) { self.skater.trigger( 'updated' ); } } );
+    this.skater.property( 'mass' ).link( function() { if ( self.pausedProperty.value ) { self.skater.trigger( 'updated' ); } } );
 
     this.tracks = new ObservableArray( {
       phetioValueType: TTrack,
@@ -237,18 +234,18 @@ define( function( require ) {
           editEnabled = true;
         }
       }
-      self.editButtonEnabled = editEnabled;
-      self.clearButtonEnabled = clearEnabled;
+      self.editButtonEnabledProperty.value = editEnabled;
+      self.clearButtonEnabledProperty.value = clearEnabled;
     };
     this.tracks.addItemAddedListener( updateTrackEditingButtonProperties );
     this.tracks.addItemRemovedListener( updateTrackEditingButtonProperties );
-    this.on( 'track-cut', updateTrackEditingButtonProperties );
-    this.on( 'track-changed', updateTrackEditingButtonProperties );
+    this.trackChangedEmitter = new Emitter();
+    this.trackChangedEmitter.addListener( updateTrackEditingButtonProperties );
 
     if ( !draggableTracks ) {
 
       // For screens 1-2, the index of the selected scene (and track) within the screen
-      this.addProperty( 'scene', 0, {
+      this.sceneProperty = new Property( 0, {
         tandem: tandem.createTandem( 'sceneProperty' ),
         phetioValueType: TNumber( { values: [ 0, 1, 2 ] } ) // TODO: automatically get the number of tracks
       } );
@@ -313,7 +310,7 @@ define( function( require ) {
 
   energySkateParkBasics.register( 'EnergySkateParkBasicsModel', EnergySkateParkBasicsModel );
 
-  return inherit( PropertySet, EnergySkateParkBasicsModel, {
+  return inherit( Object, EnergySkateParkBasicsModel, {
 
     // Add the tracks that will be in the track toolbox for the "Playground" screen
     addDraggableTracks: function() {
@@ -345,9 +342,19 @@ define( function( require ) {
 
     // Reset the model, including the skater, tracks, visualizations, etc.
     reset: function() {
-      var availableModelBounds = this.availableModelBounds;
-      PropertySet.prototype.reset.call( this );
-      this.availableModelBounds = availableModelBounds;
+      var availableModelBounds = this.availableModelBoundsProperty.value;
+      this.pieChartVisibleProperty.reset();
+      this.barGraphVisibleProperty.reset();
+      this.gridVisibleProperty.reset();
+      this.speedometerVisibleProperty.reset();
+      this.editButtonEnabledProperty.reset();
+      this.clearButtonEnabledProperty.reset();
+      this.pausedProperty.reset();
+      this.speedProperty.reset();
+      this.frictionProperty.reset();
+      this.detachableProperty.reset();
+      this.availableModelBoundsProperty.reset();
+      this.availableModelBoundsProperty.value = availableModelBounds;
       this.skater.reset();
 
       this.clearTracks();
@@ -390,7 +397,7 @@ define( function( require ) {
 
       // If the delay makes dt too high, then truncate it.  This helps e.g. when clicking in the address bar on ipad,
       // which gives a huge dt and problems for integration
-      if ( !this.paused && !this.skater.dragging ) {
+      if ( !this.pausedProperty.value && !this.skater.dragging ) {
 
         var initialThermalEnergy = this.skater.thermalEnergy;
 
@@ -410,13 +417,13 @@ define( function( require ) {
         // In either case, 10 subdivisions on iPad3 makes the sim run too slowly, so we may just want to leave it as is
         var updatedState = null;
         modelIterations++;
-        if ( this.speed === 'normal' || modelIterations % 3 === 0 ) {
+        if ( this.speedProperty.value === 'normal' || modelIterations % 3 === 0 ) {
           updatedState = this.stepModel( dt, skaterState );
         }
 
         if ( debug && Math.abs( updatedState.getTotalEnergy() - initialEnergy ) > 1E-6 ) {
           var initialStateCopy = new SkaterState( this.skater, EMPTY_OBJECT );
-          var redo = this.stepModel( this.speed === 'normal' ? dt : dt * 0.25, initialStateCopy );
+          var redo = this.stepModel( this.speedProperty.value === 'normal' ? dt : dt * 0.25, initialStateCopy );
           debug && debug( redo );
         }
         if ( updatedState ) {
@@ -452,14 +459,14 @@ define( function( require ) {
     // The skater moves along the ground with the same coefficient of fraction as the tracks, see #11
     stepGround: function( dt, skaterState ) {
       var x0 = skaterState.positionX;
-      var frictionMagnitude = (this.friction === 0 || skaterState.getSpeed() < 1E-2) ? 0 :
-                              this.friction * skaterState.mass * skaterState.gravity;
+      var frictionMagnitude = (this.frictionProperty.value === 0 || skaterState.getSpeed() < 1E-2) ? 0 :
+                              this.frictionProperty.value * skaterState.mass * skaterState.gravity;
       var acceleration = Math.abs( frictionMagnitude ) * (skaterState.velocityX > 0 ? -1 : 1) / skaterState.mass;
 
       var v1 = skaterState.velocityX + acceleration * dt;
 
       // Exponentially decay the velocity if already nearly zero, see #138
-      if ( this.friction !== 0 && skaterState.getSpeed() < 1E-2 ) {
+      if ( this.frictionProperty.value !== 0 && skaterState.getSpeed() < 1E-2 ) {
         v1 = v1 / 2;
       }
       var x1 = x0 + v1 * dt;
@@ -715,11 +722,11 @@ define( function( require ) {
       // Friction force should not exceed sum of other forces (in the direction of motion), otherwise the friction could
       // start a stopped object moving. Hence we check to see if the object is already stopped and don't add friction
       // in that case
-      if ( this.friction === 0 || skaterState.getSpeed() < 1E-2 ) {
+      if ( this.frictionProperty.value === 0 || skaterState.getSpeed() < 1E-2 ) {
         return 0;
       }
       else {
-        var magnitude = this.friction * this.getNormalForce( skaterState ).magnitude();
+        var magnitude = this.frictionProperty.value * this.getNormalForce( skaterState ).magnitude();
         var angleComponent = Math.cos( skaterState.getVelocity().angle() + Math.PI );
         assert && assert( isFinite( magnitude ), 'magnitude should be finite' );
         assert && assert( isFinite( angleComponent ), 'angleComponent should be finite' );
@@ -733,11 +740,11 @@ define( function( require ) {
       // Friction force should not exceed sum of other forces (in the direction of motion), otherwise the friction could
       // start a stopped object moving.  Hence we check to see if the object is already stopped and don't add friction in
       // that case
-      if ( this.friction === 0 || skaterState.getSpeed() < 1E-2 ) {
+      if ( this.frictionProperty.value === 0 || skaterState.getSpeed() < 1E-2 ) {
         return 0;
       }
       else {
-        var magnitude = this.friction * this.getNormalForce( skaterState ).magnitude();
+        var magnitude = this.frictionProperty.value * this.getNormalForce( skaterState ).magnitude();
         return magnitude * Math.sin( skaterState.getVelocity().angle() + Math.PI );
       }
     },
@@ -807,7 +814,7 @@ define( function( require ) {
 
       // choose velocity by using the unit parallel vector to the track
       var newState = skaterState.updateUUDVelocityPosition( parametricPosition, parametricSpeed, newVelocityX, newVelocityY, newPointX, newPointY );
-      if ( this.friction > 0 ) {
+      if ( this.frictionProperty.value > 0 ) {
 
         // Compute friction force magnitude component-wise to prevent allocations, see #50
         var frictionForceX = this.getFrictionForceX( skaterState );
@@ -883,7 +890,7 @@ define( function( require ) {
 
       var leaveTrack = (netForceRadial < centripetalForce && outsideCircle) || (netForceRadial > centripetalForce && !outsideCircle);
 
-      if ( leaveTrack && this.detachable ) {
+      if ( leaveTrack && this.detachableProperty.value ) {
 
         // Leave the track.  Make sure the velocity is pointing away from the track or keep track of frames away from the
         // track so it doesn't immediately recollide.  Or project a ray and see if a collision is imminent?
@@ -1249,7 +1256,7 @@ define( function( require ) {
       }
 
       // Trigger track changed first to update the edit enabled properties
-      this.trigger( 'track-changed' );
+      this.trackChangedEmitter.emit();
 
       // If the skater was on track, then he should fall off
       if ( this.skater.track === track ) {
@@ -1306,7 +1313,7 @@ define( function( require ) {
       newTrack2.smooth( 0 );
 
       // Trigger track changed first to update the edit enabled properties
-      this.trigger( 'track-changed' );
+      this.trackChangedEmitter.emit();
 
       // If the skater was on track, then he should fall off, see #97
       if ( this.skater.track === track ) {
@@ -1447,7 +1454,7 @@ define( function( require ) {
     // When a track is dragged, update the skater's energy (if the sim was paused), since it wouldn't be handled in the
     // update loop.
     trackModified: function( track ) {
-      if ( this.paused && this.skater.track === track ) {
+      if ( this.pausedProperty.value && this.skater.track === track ) {
         this.skater.updateEnergy();
       }
 

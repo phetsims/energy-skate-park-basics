@@ -34,7 +34,7 @@ define( function( require ) {
         var track = null;
         if ( EnergySkateParkBasicsQueryParameters.testTrackIndex === 1 ) {
 
-          model.detachable = true;
+          model.detachableProperty.value = true;
           // The skater falls through model track
           model.skater.position.set( new Vector2( -5, 8 ) );
           model.skater.released( 0, 0 );
@@ -48,7 +48,7 @@ define( function( require ) {
         // Skater stutters and slows going over the hump
         if ( EnergySkateParkBasicsQueryParameters.testTrackIndex === 2 ) {
 
-          model.detachable = true;
+          model.detachableProperty.value = true;
           // The skater falls through model track
           model.skater.position.set( new Vector2( -5, 7.7 ) );
           model.skater.released( 0, 0 );
@@ -62,7 +62,7 @@ define( function( require ) {
         // Tricky one--handled OK
         if ( EnergySkateParkBasicsQueryParameters.testTrackIndex === 3 ) {
 
-          model.detachable = true;
+          model.detachableProperty.value = true;
           // The skater falls through model track
           model.skater.position.set( new Vector2( -5, 7.7 ) );
           model.skater.released( 0, 0 );
@@ -76,7 +76,7 @@ define( function( require ) {
         // Wide loop, OK
         if ( EnergySkateParkBasicsQueryParameters.testTrackIndex === 4 ) {
 
-          model.detachable = true;
+          model.detachableProperty.value = true;
           // The skater falls through model track
           model.skater.position.set( new Vector2( -5, 7.7 ) );
           model.skater.released( 0, 0 );
@@ -90,7 +90,7 @@ define( function( require ) {
         // Flickering return skater button, PROBLEM
         if ( EnergySkateParkBasicsQueryParameters.testTrackIndex === 5 ) {
 
-          model.detachable = true;
+          model.detachableProperty.value = true;
           // The skater falls through model track
           model.skater.position.set( new Vector2( -5, 7.7 ) );
           model.skater.released( 0, 0 );
@@ -104,7 +104,7 @@ define( function( require ) {
         // Passes through track, PROBLEM
         if ( EnergySkateParkBasicsQueryParameters.testTrackIndex === 6 ) {
 
-          model.detachable = true;
+          model.detachableProperty.value = true;
           // The skater falls through model track
           model.skater.position.set( new Vector2( 5, 7.9 ) );
           model.skater.released( 0, 0 );
@@ -118,7 +118,7 @@ define( function( require ) {
         // Falls through bottom, PROBLEM
         if ( EnergySkateParkBasicsQueryParameters.testTrackIndex === 7 ) {
 
-          model.detachable = true;
+          model.detachableProperty.value = true;
           // The skater falls through model track
           model.skater.position.set( new Vector2( 5, 7.9 ) );
           model.skater.released( 0, 0 );
@@ -132,7 +132,7 @@ define( function( require ) {
         // Falls through loop, PROBLEM
         if ( EnergySkateParkBasicsQueryParameters.testTrackIndex === 8 ) {
 
-          model.detachable = true;
+          model.detachableProperty.value = true;
           // The skater falls through model track
           model.skater.position.set( new Vector2( 5, 7.9 ) );
           model.skater.released( 0, 0 );
@@ -146,11 +146,11 @@ define( function( require ) {
         // Pops upside down in loop, PROBLEM
         if ( EnergySkateParkBasicsQueryParameters.testTrackIndex === 9 ) {
 
-          model.detachable = true;
+          model.detachableProperty.value = true;
           // The skater falls through model track
           model.skater.position.set( new Vector2( 5, 7.9 ) );
           model.skater.released( 0, 0 );
-          model.friction = 0;
+          model.frictionProperty.value = 0;
 
           controlPoints = [ createControlPoint( 5.516659242761692, 5.458287861915368 ), createControlPoint( 2.061781737193762, 0.7625271732714408 ), createControlPoint( 0.09287305122494338, 0.7625271732714408 ), createControlPoint( -3.287706013363029, 3.0472042334050697 ), createControlPoint( -2.2289532293986642, 4.399535077951003 ), createControlPoint( -0.6129621380846331, 4.306662026726059 ), createControlPoint( 0.7429844097995542, 3.3629726075698803 ), createControlPoint( 0.14859688195991083, 2.3227944338505053 ), createControlPoint( -1.4302449888641426, 1.4159674088426304 ), createControlPoint( -4.532204899777283, 0.580109947818132 ), createControlPoint( -6.1185746102449885, 7.75698912376468 ) ];
           track = new Track( model, model.tracks, controlPoints, true, null, model.availableModelBoundsProperty, trackGroupTandem.createNextTandem() );
@@ -160,11 +160,11 @@ define( function( require ) {
 
         if ( EnergySkateParkBasicsQueryParameters.testTrackIndex === 10 ) {
 
-          model.detachable = true;
+          model.detachableProperty.value = true;
           // The skater falls through model track
           model.skater.position.set( new Vector2( 5, 7.9 ) );
           model.skater.released( 0, 0 );
-          model.friction = 0.0363651226158039;
+          model.frictionProperty.value = 0.0363651226158039;
 
           controlPoints = [ createControlPoint( 5.07086859688196, 6.925682071269487 ), createControlPoint( 2.061781737193762, 0.7625271732714408 ), createControlPoint( 0.09287305122494338, 0.7625271732714408 ), createControlPoint( -3.287706013363029, 3.0472042334050697 ), createControlPoint( -2.2289532293986642, 4.399535077951003 ), createControlPoint( -0.6129621380846331, 4.306662026726059 ), createControlPoint( 0.7429844097995542, 3.3629726075698803 ), createControlPoint( 0.14859688195991083, 2.3227944338505053 ), createControlPoint( -1.4302449888641426, 1.4159674088426304 ), createControlPoint( -4.532204899777283, 0.580109947818132 ), createControlPoint( -6.1185746102449885, 7.75698912376468 ) ];
           track = new Track( model, model.tracks, controlPoints, true, null, model.availableModelBoundsProperty, trackGroupTandem.createNextTandem() );
@@ -174,11 +174,11 @@ define( function( require ) {
 
         if ( EnergySkateParkBasicsQueryParameters.testTrackIndex === 11 ) {
 
-          model.detachable = true;
+          model.detachableProperty.value = true;
           // The skater falls through model track
           model.skater.position.set( new Vector2( 5, 7.9 ) );
           model.skater.released( 0, 0 );
-          model.friction = 0.0363651226158039;
+          model.frictionProperty.value = 0.0363651226158039;
 
           controlPoints = [ createControlPoint( 7.049477756286265, 5.232410541586074 ), createControlPoint( 1.8198088164974369, 1.7349575399795614 ), createControlPoint( -0.14909986947138165, 1.7349575399795614 ), createControlPoint( 0.5162088974854928, 1.8286581237911035 ), createControlPoint( -0.4516827852998073, 11.657297387984716 ), createControlPoint( 2.0970986460348158, 5.6886320108087025 ), createControlPoint( -1.8000003436635232, 4.708138438138744 ), createControlPoint( -0.43555125725338684, 5.914473403458605 ), createControlPoint( -2.500386847195358, 4.849792552394775 ), createControlPoint( -4.774177820473608, 1.5525403145262526 ), createControlPoint( -6.339690522243714, 8.797478239845262 ) ];
           track = new Track( model, model.tracks, controlPoints, true, null, model.availableModelBoundsProperty, trackGroupTandem.createNextTandem() );
@@ -188,11 +188,11 @@ define( function( require ) {
 
         if ( EnergySkateParkBasicsQueryParameters.testTrackIndex === 12 ) {
 
-          model.detachable = true;
+          model.detachableProperty.value = true;
           // The skater falls through model track
           model.skater.position.set( new Vector2( 5, 7.9 ) );
           model.skater.released( 0, 0 );
-          model.friction = 0.0363651226158039;
+          model.frictionProperty.value = 0.0363651226158039;
 
           controlPoints = [ createControlPoint( 0.8301088646967347, 3.5809234059097967 ), createControlPoint( 3.411228615863142, 2.4784350699844477 ), createControlPoint( 5.29194401244168, 5.928575038880248 ) ];
           track = new Track( model, model.tracks, controlPoints, true, null, model.availableModelBoundsProperty, trackGroupTandem.createNextTandem() );
@@ -202,11 +202,11 @@ define( function( require ) {
 
         if ( EnergySkateParkBasicsQueryParameters.testTrackIndex === 13 ) {
 
-          model.detachable = false;
+          model.detachableProperty.value = false;
           // The skater falls through model track
           model.skater.position.set( new Vector2( 5, 7.9 ) );
           model.skater.released( 0, 0 );
-          model.friction = 0.0363651226158039;
+          model.frictionProperty.value = 0.0363651226158039;
 
           controlPoints = [ createControlPoint( 0.8301088646967347, 3.5809234059097967 ), createControlPoint( 3.411228615863142, 2.4784350699844477 ), createControlPoint( 5.29194401244168, 5.928575038880248 ) ];
           track = new Track( model, model.tracks, controlPoints, true, null, model.availableModelBoundsProperty, trackGroupTandem.createNextTandem() );
@@ -215,10 +215,10 @@ define( function( require ) {
         }
 
         if ( EnergySkateParkBasicsQueryParameters.testTrackIndex === 14 ) {
-          model.detachable = true;
+          model.detachableProperty.value = true;
           model.skater.position.set( new Vector2( -6.698445595854922, 6.5278756476683935 ) );
           model.skater.released( 0, 0 );
-          model.friction = 0.05;
+          model.frictionProperty.value = 0.05;
 
           var controlPoints1 = [
             createControlPoint( -6.23, -0.85 ),
@@ -252,10 +252,10 @@ define( function( require ) {
 
         //Test decrease in thermal energy, see https://github.com/phetsims/energy-skate-park-basics/issues/141#issuecomment-59395426
         if ( EnergySkateParkBasicsQueryParameters.testTrackIndex === 15 ) {
-          model.detachable = true;
+          model.detachableProperty.value = true;
           model.skater.position.set( new Vector2( -6.698445595854922, 6.5278756476683935 ) );
           model.skater.released( 0, 0 );
-          model.friction = 0;
+          model.frictionProperty.value = 0;
           var track15 = new Track( model, model.tracks, [
             createControlPoint( 0.9873551637279601, 7.856892317380353 ),
             createControlPoint( -0.4621662468513845, 5.9031895465994975 ),
