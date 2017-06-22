@@ -94,28 +94,28 @@ define( function( require ) {
       // On the first drag event, move the track out of the toolbox, see #205
       if ( !this.startedDrag ) {
         this.lastDragPoint = event.pointer.point;
-        track.dragging = true;
+        track.draggingProperty.value = true;
 
         var startingPosition = this.modelViewTransform.modelToViewPosition( track.position );
         this.startOffset = event.currentTarget.globalToParentPoint( event.pointer.point ).minus( startingPosition );
         this.startedDrag = true;
       }
-      track.dragging = true;
+      track.draggingProperty.value = true;
 
       var parentPoint = event.currentTarget.globalToParentPoint( event.pointer.point ).minus( this.startOffset );
       var location = this.modelViewTransform.viewToModelPosition( parentPoint );
 
       // If the user moved it out of the toolbox above y=0, then make it physically interactive
       var bottomControlPointY = track.getBottomControlPointY();
-      if ( !track.physical && bottomControlPointY > 0 ) {
-        track.physical = true;
+      if ( !track.physicalProperty.value && bottomControlPointY > 0 ) {
+        track.physicalProperty.value = true;
       }
 
       // When dragging track, make sure the control points don't go below ground, see #71
       var modelDelta = location.minus( track.position );
       var translatedBottomControlPointY = bottomControlPointY + modelDelta.y;
 
-      if ( track.physical && translatedBottomControlPointY < 0 ) {
+      if ( track.physicalProperty.value && translatedBottomControlPointY < 0 ) {
         location.y += Math.abs( translatedBottomControlPointY );
       }
 
@@ -207,7 +207,7 @@ define( function( require ) {
 
       // Make it so the track can't be dragged underground when dragged by the track itself (not control point), see #166
       // But if the user is dragging the track out of the toolbox, then leave the motion continuous, see #178
-      if ( track.physical ) {
+      if ( track.physicalProperty.value ) {
         track.bumpAboveGround();
       }
 
@@ -230,8 +230,8 @@ define( function( require ) {
         }
 
         track.bumpAboveGround();
-        track.dragging = false;
-        track.dropped = true;
+        track.draggingProperty.value = false;
+        track.droppedProperty.value = true;
 
         if ( EnergySkateParkBasicsQueryParameters.debugTrack ) {
           console.log( track.getDebugString() );

@@ -12,7 +12,8 @@ define( function( require ) {
   // modules
   var energySkateParkBasics = require( 'ENERGY_SKATE_PARK_BASICS/energySkateParkBasics' );
   var inherit = require( 'PHET_CORE/inherit' );
-  var PropertySet = require( 'AXON/PropertySet' );
+  var Property = require( 'AXON/Property' );
+  var Emitter = require( 'AXON/Emitter' );
   var Vector2 = require( 'DOT/Vector2' );
   var SplineEvaluation = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/model/SplineEvaluation' );
   var dot = require( 'DOT/dot' );
@@ -46,6 +47,12 @@ define( function( require ) {
     this.tandem = tandem;
     this.availableModelBoundsProperty = availableModelBoundsProperty;
 
+    this.translatedEmitter = new Emitter();
+    this.resetEmitter = new Emitter();
+    this.smoothedEmitter = new Emitter();
+    this.updateEmitter = new Emitter();
+    this.removeEmitter = new Emitter();
+
     // Keep track of what component (control point or track body) is dragging the track, so that it can't be dragged by
     // two sources, which causes a flicker, see #282
     this.dragSource = null;
@@ -57,43 +64,38 @@ define( function( require ) {
     // positioning and translation, so an exact "position" is irrelevant, see #260
     this._position = new Vector2( 0, 0 );
 
-    var properties = {
+    // True if the track can be interacted with.  For screens 1-2 only one track will be physical (and hence visible).
+    // For screen 3, tracks in the control panel are visible but non-physical until dragged to the play area
+    this.physicalProperty = new Property( false, {
+      tandem: tandem.createTandem( 'physicalProperty' ),
+      phetioValueType: TBoolean
+    } );
 
-      // True if the track can be interacted with.  For screens 1-2 only one track will be physical (and hence visible).
-      // For screen 3, tracks in the control panel are visible but non-physical until dragged to the play area
-      physical: {
-        value: false,
-        tandem: tandem.createTandem( 'physicalProperty' ),
-        phetioValueType: TBoolean
-      },
+    // Flag that shows whether the track has been dragged fully out of the panel
+    this.leftThePanelProperty = new Property( false, {
+      tandem: tandem.createTandem( 'leftThePanelProperty' ),
+      phetioValueType: TBoolean
+    } );
 
-      // Flag that shows whether the track has been dragged fully out of the panel
-      leftThePanel: {
-        value: false,
-        tandem: tandem.createTandem( 'leftThePanelProperty' ),
-        phetioValueType: TBoolean
-      },
+    // Keep track of whether the track is dragging, so performance can be optimized while dragging
+    this.draggingProperty = new Property( false, {
+      tandem: tandem.createTandem( 'draggingProperty' ),
+      phetioValueType: TBoolean
+    } );
 
-      // Keep track of whether the track is dragging, so performance can be optimized while dragging
-      dragging: {
-        value: false,
-        tandem: tandem.createTandem( 'draggingProperty' ),
-        phetioValueType: TBoolean
-      },
-
-      // Flag to indicate whether the user has dragged the track out of the toolbox.  If dragging from the toolbox,
-      // then dragging translates the entire track instead of just a point.
-      dropped: {
-        value: false,
-        tandem: tandem.createTandem( 'droppedProperty' ),
-        phetioValueType: TBoolean
-      }
-    };
-
-    PropertySet.call( this, null, properties );
+    // Flag to indicate whether the user has dragged the track out of the toolbox.  If dragging from the toolbox,
+    // then dragging translates the entire track instead of just a point.
+    this.droppedProperty = new Property( false, {
+      tandem: tandem.createTandem( 'droppedProperty' ),
+      phetioValueType: TBoolean
+    } );
+    Property.preventGetSet( this, 'physical' );
+    Property.preventGetSet( this, 'leftThePanel' );
+    Property.preventGetSet( this, 'dragging' );
+    Property.preventGetSet( this, 'dropped' );
 
     var trackChangedListener = function() { events.trackChangedEmitter.emit(); };
-    this.property( 'physical' ).link( trackChangedListener );
+    this.physicalProperty.link( trackChangedListener );
 
     this.controlPoints = controlPoints;
     assert && assert( this.controlPoints, 'control points should be defined' );
@@ -118,19 +120,19 @@ define( function( require ) {
       self.updateLinSpace();
       self.updateSplines();
       events.trackChangedEmitter.emit();
-      events.trigger( 'update' );
+      events.updateEmitter.emit();
     } );
 
     this.disposeTrack = function() {
       tandem.removeInstance( self );
-      self.property( 'physical' ).unlink( trackChangedListener );
+      self.physicalProperty.unlink( trackChangedListener );
       self.draggingProperty.unlinkAll();
     };
   }
 
   energySkateParkBasics.register( 'Track', Track );
 
-  return inherit( PropertySet, Track, {
+  return inherit( Object, Track, {
 
     // when points change, update the spline instance
     updateSplines: function() {
@@ -157,14 +159,17 @@ define( function( require ) {
       this.ySplineDiffDiff = null;
     },
     reset: function() {
-      PropertySet.prototype.reset.call( this );
+      this.physicalProperty.reset();
+      this.leftThePanelProperty.reset();
+      this.draggingProperty.reset();
+      this.droppedProperty.reset();
       for ( var i = 0; i < this.controlPoints.length; i++ ) {
         this.controlPoints[ i ].reset();
       }
 
       // Broadcast message so that TrackNode can update the shape
       this.updateSplines();
-      this.trigger( 'reset' );
+      this.resetEmitter.emit();
     },
 
     /**
@@ -258,7 +263,7 @@ define( function( require ) {
 
       // Just observing the control points individually would lead to N expensive callbacks (instead of 1)
       // for each of the N points, So we use this broadcast mechanism instead
-      this.trigger( 'translated' );
+      this.translatedEmitter.emit();
     },
 
     // For purposes of showing the skater angle, get the view angle of the track here.  Note this means inverting the y
@@ -321,10 +326,6 @@ define( function( require ) {
     isParameterInBounds: function( parametricPosition ) {
       return parametricPosition >= this.minPoint && parametricPosition <= this.maxPoint;
     },
-
-    // Setter/getter for physical property, mimic the PropertySet pattern instead of using PropertySet multiple inheritance
-    get physical() { return this.physicalProperty.get(); },
-    set physical( p ) {this.physicalProperty.set( p );},
 
     toString: function() {
       var string = '';
@@ -625,7 +626,7 @@ define( function( require ) {
         success = true;
       }
 
-      this.trigger( 'smoothed' );
+      this.smoothedEmitter.emit();
       return success;
     },
 
@@ -743,7 +744,6 @@ define( function( require ) {
 
     dispose: function() {
       this.disposeTrack();
-      PropertySet.prototype.dispose.call( this );
     },
 
     /**

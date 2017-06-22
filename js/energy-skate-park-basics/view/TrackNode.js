@@ -95,7 +95,7 @@ define( function( require ) {
     // Update the track shape when the whole track is translated
     // Just observing the control points individually would lead to N expensive callbacks (instead of 1) for each of the N points
     // So we use this broadcast mechanism instead
-    track.on( 'translated', this.updateTrackShape.bind( this ) );
+    track.translatedEmitter.addListener( this.updateTrackShape.bind( this ) );
 
     track.draggingProperty.link( function( dragging ) {
       if ( !dragging ) {
@@ -103,9 +103,9 @@ define( function( require ) {
       }
     } );
 
-    track.on( 'reset', this.updateTrackShape.bind( this ) );
-    track.on( 'smoothed', this.updateTrackShape.bind( this ) );
-    track.on( 'update', this.updateTrackShape.bind( this ) );
+    track.resetEmitter.addListener( this.updateTrackShape.bind( this ) );
+    track.smoothedEmitter.addListener( this.updateTrackShape.bind( this ) );
+    track.updateEmitter.addListener( this.updateTrackShape.bind( this ) );
 
     // In the state.html wrapper, when the state changes, we must update the skater node
     phetio.setStateEmitter && phetio.setStateEmitter.addListener( function() {
@@ -150,7 +150,7 @@ define( function( require ) {
 
       // Show the track at reduced resolution while dragging so it will be smooth and responsive while dragging
       // (whether updating the entire track, some of the control points or both)
-      var delta = track.dragging ? 3 : 1;
+      var delta = track.draggingProperty.value ? 3 : 1;
       for ( i = 1; i < xPoints.length; i = i + delta ) {
         shape.lineTo( this.modelViewTransform.modelToViewX( xPoints[ i ] ) - tx.x, this.modelViewTransform.modelToViewY( yPoints[ i ] ) - tx.y );
       }

@@ -240,6 +240,7 @@ define( function( require ) {
     this.tracks.addItemAddedListener( updateTrackEditingButtonProperties );
     this.tracks.addItemRemovedListener( updateTrackEditingButtonProperties );
     this.trackChangedEmitter = new Emitter();
+    this.updateEmitter = new Emitter();
     this.trackChangedEmitter.addListener( updateTrackEditingButtonProperties );
 
     if ( !draggableTracks ) {
@@ -287,7 +288,7 @@ define( function( require ) {
       // When the scene changes, also change the tracks.
       this.sceneProperty.link( function( scene ) {
         for ( var i = 0; i < self.tracks.length; i++ ) {
-          self.tracks.get( i ).physical = (i === scene);
+          self.tracks.get( i ).physicalProperty.value = (i === scene);
 
           // Reset the skater when the track is changed, see #179
           self.skater.returnToInitialPosition();
@@ -1180,7 +1181,7 @@ define( function( require ) {
       for ( var i = 0; i < this.tracks.length; i++ ) {
         var track = this.tracks.get( i );
 
-        if ( track.physical ) {
+        if ( track.physicalProperty.value ) {
           physicalTracks.push( track );
         }
       }
@@ -1194,7 +1195,7 @@ define( function( require ) {
       for ( var i = 0; i < this.tracks.length; i++ ) {
         var track = this.tracks.get( i );
 
-        if ( !track.physical ) {
+        if ( !track.physicalProperty.value ) {
           nonphysicalTracks.push( track );
         }
       }
@@ -1224,7 +1225,7 @@ define( function( require ) {
     // If there were only 2 points on the track, just delete the entire track
     deleteControlPoint: function( track, controlPointIndex ) {
 
-      track.trigger( 'remove' );
+      track.removeEmitter.emit();
       this.tracks.remove( track );
       var trackGroupTandem = this.trackGroupTandem;
 
@@ -1234,8 +1235,8 @@ define( function( require ) {
         controlPointToDelete.dispose();
         var newTrack = new Track( this, this.tracks, points, true, track.getParentsOrSelf(), this.availableModelBoundsProperty,
           trackGroupTandem.createNextTandem() );
-        newTrack.physical = true;
-        newTrack.dropped = true;
+        newTrack.physicalProperty.value = true;
+        newTrack.droppedProperty.value = true;
 
         // smooth out the new track, see #177
         var smoothingPoint = controlPointIndex >= newTrack.controlPoints.length ? newTrack.controlPoints.length - 1 : controlPointIndex;
@@ -1296,14 +1297,14 @@ define( function( require ) {
 
       var newTrack1 = new Track( this, this.tracks, points1, true, track.getParentsOrSelf(), this.availableModelBoundsProperty,
         trackGroupTandem.createNextTandem() );
-      newTrack1.physical = true;
-      newTrack1.dropped = true;
+      newTrack1.physicalProperty.value = true;
+      newTrack1.droppedProperty.value = true;
       var newTrack2 = new Track( this, this.tracks, points2, true, track.getParentsOrSelf(), this.availableModelBoundsProperty,
         trackGroupTandem.createNextTandem() );
-      newTrack2.physical = true;
-      newTrack2.dropped = true;
+      newTrack2.physicalProperty.value = true;
+      newTrack2.droppedProperty.value = true;
 
-      track.trigger( 'remove' );
+      track.removeEmitter.emit();
       this.tracks.remove( track );
       this.tracks.add( newTrack1 );
       this.tracks.add( newTrack2 );
@@ -1326,7 +1327,7 @@ define( function( require ) {
         // find a nonphysical track, then remove it
 
         var trackToRemove = this.getNonPhysicalTracks()[ 0 ];
-        trackToRemove.trigger( 'remove' );
+        trackToRemove.removeEmitter.emit();
         this.tracks.remove( trackToRemove );
         trackToRemove.disposeControlPoints();
       }
@@ -1395,15 +1396,15 @@ define( function( require ) {
 
       var newTrack = new Track( this, this.tracks, points, true, a.getParentsOrSelf().concat( b.getParentsOrSelf() ), this.availableModelBoundsProperty,
         trackGroupTandem.createNextTandem() );
-      newTrack.physical = true;
-      newTrack.dropped = true;
+      newTrack.physicalProperty.value = true;
+      newTrack.droppedProperty.value = true;
 
       a.disposeControlPoints();
-      a.trigger( 'remove' );
+      a.removeEmitter.emit();
       this.tracks.remove( a );
 
       b.disposeControlPoints();
-      b.trigger( 'remove' );
+      b.removeEmitter.emit();
       this.tracks.remove( b );
 
       // When tracks are joined, bump the new track above ground so the y value (and potential energy) cannot go negative,

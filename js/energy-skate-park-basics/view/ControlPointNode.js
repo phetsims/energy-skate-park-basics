@@ -81,7 +81,7 @@ define( function( require ) {
         trackNode.moveToFront();
 
         // If control point dragged out of the control panel, translate the entire track, see #130
-        if ( !track.physical || !track.dropped ) {
+        if ( !track.physicalProperty.value || !track.droppedProperty.value ) {
 
           // Only start a track drag if nothing else was dragging the track (which caused a flicker), see #282
           if ( track.dragSource === null ) {
@@ -90,7 +90,7 @@ define( function( require ) {
           }
           return;
         }
-        track.dragging = true;
+        track.draggingProperty.value = true;
         dragEvents = 0;
       },
       drag: function( event ) {
@@ -99,7 +99,7 @@ define( function( require ) {
         if ( !model.containsTrack( track ) ) { return; }
 
         // If control point dragged out of the control panel, translate the entire track, see #130
-        if ( !track.physical || !track.dropped ) {
+        if ( !track.physicalProperty.value || !track.droppedProperty.value ) {
 
           // Only drag a track if nothing else was dragging the track (which caused a flicker), see #282
           if ( track.dragSource === inputListener ) {
@@ -108,7 +108,7 @@ define( function( require ) {
           return;
         }
         dragEvents++;
-        track.dragging = true;
+        track.draggingProperty.value = true;
         var globalPoint = self.globalToParentPoint( event.pointer.point );
 
         // trigger reconstruction of the track shape based on the control points
@@ -168,7 +168,7 @@ define( function( require ) {
         if ( !model.containsTrack( track ) ) { return; }
 
         // If control point dragged out of the control panel, translate the entire track, see #130
-        if ( !track.physical || !track.dropped ) {
+        if ( !track.physicalProperty.value || !track.droppedProperty.value ) {
 
           // Only drop a track if nothing else was dragging the track (which caused a flicker), see #282
           if ( track.dragSource === inputListener ) {
@@ -184,7 +184,7 @@ define( function( require ) {
           model.trackModified( track );
         }
         track.bumpAboveGround();
-        track.dragging = false;
+        track.draggingProperty.value = false;
 
         // Show the 'control point editing' ui, but only if the user didn't drag the control point.
         // Threshold at a few drag events in case the user didn't mean to drag it but accidentally moved it a few pixels.
@@ -211,10 +211,10 @@ define( function( require ) {
             lastControlPointUI && lastControlPointUI.dispose();
             lastControlPointUI = null;
           };
-          track.on( 'remove', removalListener );
+          track.removeEmitter.addListener( removalListener );
 
           // If the track has translated, hide the buttons, see #272
-          track.on( 'translated', removalListener );
+          track.translatedEmitter.addListener( removalListener );
 
           trackNode.parents[ 0 ].addChild( lastControlPointUI );
         }
@@ -225,7 +225,7 @@ define( function( require ) {
       }
     } );
     inputListener.over = function() {
-      if ( track.physical && !track.dragging ) {
+      if ( track.physicalProperty.value && !track.draggingProperty.value ) {
         self.opacity = highlightedOpacity;
         self.fill = highlightedFill;
       }
