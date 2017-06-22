@@ -11,7 +11,8 @@ define( function( require ) {
   // modules
   var energySkateParkBasics = require( 'ENERGY_SKATE_PARK_BASICS/energySkateParkBasics' );
   var inherit = require( 'PHET_CORE/inherit' );
-  var PropertySet = require( 'AXON/PropertySet' );
+  var Property = require( 'AXON/Property' );
+  var DerivedProperty = require( 'AXON/DerivedProperty' );
   var Vector2 = require( 'DOT/Vector2' );
   var TVector2 = require( 'DOT/TVector2' );
 
@@ -31,35 +32,32 @@ define( function( require ) {
     // @public (phet-io)
     this.tandem = tandem;
 
-    var properties = {
+    // Where it would be if it hadn't snapped to another point during dragging
+    this.sourcePositionProperty = new Property( new Vector2( x, y ), {
+      tandem: tandem.createTandem( 'sourcePositionProperty' ),
+      phetioValueType: TVector2
+    } );
 
-      // Where it would be if it hadn't snapped to another point during dragging
-      sourcePosition: {
-        value: new Vector2( x, y ),
-        tandem: tandem.createTandem( 'sourcePositionProperty' ),
-        phetioValueType: TVector2
-      },
+    // Another ControlPoint that this ControlPoint is going to 'snap' to if released.
+    this.snapTargetProperty = new Property( null, {
+      tandem: tandem.createTandem( 'snapTargetProperty' ),
+      phetioValueType: TControlPoint
+    } );
 
-      // Another ControlPoint that this ControlPoint is going to 'snap' to if released.
-      snapTarget: {
-        value: null,
-        tandem: tandem.createTandem( 'snapTargetProperty' ),
-        phetioValueType: TControlPoint
-      }
-    };
-
-    PropertySet.call( this, null, properties );
+    Property.preventGetSet( this, 'sourcePosition' );
+    Property.preventGetSet( this, 'snapTarget' );
 
     // Where it is shown on the screen.  Same as sourcePosition (if not snapped) or snapTarget.position (if snapped).
     // Snapping means temporarily connecting to an adjacent open point before the tracks are joined, to indicate that a
     // connection is possible
-    this.addDerivedProperty( 'position', [ 'sourcePosition', 'snapTarget' ],
+    this.positionProperty = new DerivedProperty( [ this.sourcePositionProperty, this.snapTargetProperty ],
       function( sourcePosition, snapTarget ) {
-        return snapTarget ? snapTarget.position : sourcePosition;
+        return snapTarget ? snapTarget.positionProperty.value : sourcePosition;
       }, {
         tandem: tandem.createTandem( 'positionProperty' ),
         phetioValueType: TVector2
       } );
+    Property.preventGetSet( this, 'position' );
 
     tandem.addInstance( this, TControlPoint );
 
@@ -72,14 +70,12 @@ define( function( require ) {
 
   energySkateParkBasics.register( 'ControlPoint', ControlPoint );
 
-  return inherit( PropertySet, ControlPoint, {
+  return inherit( Object, ControlPoint, {
     dispose: function() {
       this.disposeControlPoint();
-      PropertySet.prototype.unlinkAll.call( this ); // TODO: should we use fine-grained unlinks?
-      PropertySet.prototype.dispose.call( this );
     },
     copy: function( tandem ) {
-      return new ControlPoint( this.position.x, this.position.y, tandem );
+      return new ControlPoint( this.positionProperty.value.x, this.positionProperty.value.y, tandem );
     }
   } );
 } );

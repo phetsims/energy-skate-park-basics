@@ -134,8 +134,8 @@ define( function( require ) {
 
       // Arrays are fixed length, so just overwrite values
       for ( i = 0; i < track.controlPoints.length; i++ ) {
-        this.xArray[ i ] = track.controlPoints[ i ].position.x;
-        this.yArray[ i ] = track.controlPoints[ i ].position.y;
+        this.xArray[ i ] = track.controlPoints[ i ].positionProperty.value.x;
+        this.yArray[ i ] = track.controlPoints[ i ].positionProperty.value.y;
       }
 
       // Compute points for lineTo

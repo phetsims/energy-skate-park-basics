@@ -58,7 +58,7 @@ define( function( require ) {
       lineWidth: 2,
       fill: fill,
       cursor: 'pointer',
-      translation: modelViewTransform.modelToViewPosition( controlPoint.position )
+      translation: modelViewTransform.modelToViewPosition( controlPoint.positionProperty.value )
     } );
 
     // Show a dotted line for the exterior track points, which can be connected to other track
@@ -126,7 +126,7 @@ define( function( require ) {
           pt.y = Math.min( pt.y, availableBounds.maxY );
         }
 
-        controlPoint.sourcePosition = pt;
+        controlPoint.sourcePositionProperty.value = pt;
 
         if ( isEndPoint ) {
           // If one of the control points is close enough to link to another track, do so
@@ -144,7 +144,7 @@ define( function( require ) {
 
               for ( var k = 0; k < otherPoints.length; k++ ) {
                 var otherPoint = otherPoints[ k ];
-                var distance = controlPoint.sourcePosition.distance( otherPoint.position );
+                var distance = controlPoint.sourcePositionProperty.value.distance( otherPoint.positionProperty.value );
 
                 if ( distance < bestDistance ) {
                   bestDistance = distance;
@@ -154,7 +154,7 @@ define( function( require ) {
             }
           }
 
-          controlPoint.snapTarget = bestDistance !== null && bestDistance < 1 ? bestMatch : null;
+          controlPoint.snapTargetProperty.value = bestDistance !== null && bestDistance < 1 ? bestMatch : null;
         }
 
         // When one control point dragged, update the track and the node shape
@@ -176,7 +176,7 @@ define( function( require ) {
           }
           return;
         }
-        if ( isEndPoint && controlPoint.snapTarget ) {
+        if ( isEndPoint && controlPoint.snapTargetProperty.value ) {
           model.joinTracks( track );
         }
         else {

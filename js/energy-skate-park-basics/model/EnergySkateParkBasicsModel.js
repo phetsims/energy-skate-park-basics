@@ -1271,13 +1271,13 @@ define( function( require ) {
 
       var vector = Vector2.createPolar( 0.5, modelAngle );
       var newPoint1 = new ControlPoint(
-        track.controlPoints[ controlPointIndex ].sourcePosition.x - vector.x,
-        track.controlPoints[ controlPointIndex ].sourcePosition.y - vector.y,
+        track.controlPoints[ controlPointIndex ].sourcePositionProperty.value.x - vector.x,
+        track.controlPoints[ controlPointIndex ].sourcePositionProperty.value.y - vector.y,
         this.controlPointGroupTandem.createNextTandem()
       );
       var newPoint2 = new ControlPoint(
-        track.controlPoints[ controlPointIndex ].sourcePosition.x + vector.x,
-        track.controlPoints[ controlPointIndex ].sourcePosition.y + vector.y,
+        track.controlPoints[ controlPointIndex ].sourcePositionProperty.value.x + vector.x,
+        track.controlPoints[ controlPointIndex ].sourcePositionProperty.value.y + vector.y,
         this.controlPointGroupTandem.createNextTandem()
       );
 
@@ -1363,25 +1363,25 @@ define( function( require ) {
 
       // Only include one copy of the snapped point
       // Forward Forward
-      if ( a.controlPoints[ a.controlPoints.length - 1 ].snapTarget === b.controlPoints[ 0 ] ) {
+      if ( a.controlPoints[ a.controlPoints.length - 1 ].snapTargetProperty.value === b.controlPoints[ 0 ] ) {
         firstTrackForward();
         secondTrackForward();
       }
 
       // Forward Backward
-      else if ( a.controlPoints[ a.controlPoints.length - 1 ].snapTarget === b.controlPoints[ b.controlPoints.length - 1 ] ) {
+      else if ( a.controlPoints[ a.controlPoints.length - 1 ].snapTargetProperty.value === b.controlPoints[ b.controlPoints.length - 1 ] ) {
         firstTrackForward();
         secondTrackBackward();
       }
 
       // Backward Forward
-      else if ( a.controlPoints[ 0 ].snapTarget === b.controlPoints[ 0 ] ) {
+      else if ( a.controlPoints[ 0 ].snapTargetProperty.value === b.controlPoints[ 0 ] ) {
         firstTrackBackward();
         secondTrackForward();
       }
 
       // Backward backward
-      else if ( a.controlPoints[ 0 ].snapTarget === b.controlPoints[ b.controlPoints.length - 1 ] ) {
+      else if ( a.controlPoints[ 0 ].snapTargetProperty.value === b.controlPoints[ b.controlPoints.length - 1 ] ) {
         firstTrackBackward();
         secondTrackBackward();
       }

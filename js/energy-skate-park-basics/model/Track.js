@@ -138,8 +138,8 @@ define( function( require ) {
       // Arrays are fixed length, so just overwrite values, see #38
       for ( var i = 0; i < this.controlPoints.length; i++ ) {
         this.parametricPosition[ i ] = i / this.controlPoints.length;
-        this.x[ i ] = this.controlPoints[ i ].position.x;
-        this.y[ i ] = this.controlPoints[ i ].position.y;
+        this.x[ i ] = this.controlPoints[ i ].positionProperty.value.x;
+        this.y[ i ] = this.controlPoints[ i ].positionProperty.value.y;
       }
 
       this.xSpline = numeric.spline( this.parametricPosition, this.x );
@@ -251,7 +251,7 @@ define( function( require ) {
       // move all the control points
       for ( var i = 0; i < this.controlPoints.length; i++ ) {
         var point = this.controlPoints[ i ];
-        point.sourcePosition = point.sourcePosition.plusXY( dx, dy );
+        point.sourcePositionProperty.value = point.sourcePositionProperty.value.plusXY( dx, dy );
       }
 
       this.updateSplines();
@@ -330,7 +330,7 @@ define( function( require ) {
       var string = '';
       for ( var i = 0; i < this.controlPoints.length; i++ ) {
         var point = this.controlPoints[ i ];
-        string = string + '(' + point.position.x + ',' + point.position.y + ')';
+        string = string + '(' + point.positionProperty.value.x + ',' + point.positionProperty.value.y + ')';
       }
       return string;
     },
@@ -338,8 +338,8 @@ define( function( require ) {
     getSnapTarget: function() {
       for ( var i = 0; i < this.controlPoints.length; i++ ) {
         var o = this.controlPoints[ i ];
-        if ( o.snapTarget ) {
-          return o.snapTarget;
+        if ( o.snapTargetProperty.value ) {
+          return o.snapTargetProperty.value;
         }
       }
       return null;
@@ -349,8 +349,8 @@ define( function( require ) {
       var best = Number.POSITIVE_INFINITY;
       var length = this.controlPoints.length;
       for ( var i = 0; i < length; i++ ) {
-        if ( this.controlPoints[ i ].sourcePosition.y < best ) {
-          best = this.controlPoints[ i ].sourcePosition.y;
+        if ( this.controlPoints[ i ].sourcePositionProperty.value.y < best ) {
+          best = this.controlPoints[ i ].sourcePositionProperty.value.y;
         }
       }
       return best;
@@ -360,8 +360,8 @@ define( function( require ) {
       var best = Number.NEGATIVE_INFINITY;
       var length = this.controlPoints.length;
       for ( var i = 0; i < length; i++ ) {
-        if ( this.controlPoints[ i ].sourcePosition.y > best ) {
-          best = this.controlPoints[ i ].sourcePosition.y;
+        if ( this.controlPoints[ i ].sourcePositionProperty.value.y > best ) {
+          best = this.controlPoints[ i ].sourcePositionProperty.value.y;
         }
       }
       return best;
@@ -371,8 +371,8 @@ define( function( require ) {
       var best = Number.POSITIVE_INFINITY;
       var length = this.controlPoints.length;
       for ( var i = 0; i < length; i++ ) {
-        if ( this.controlPoints[ i ].sourcePosition.x < best ) {
-          best = this.controlPoints[ i ].sourcePosition.x;
+        if ( this.controlPoints[ i ].sourcePositionProperty.value.x < best ) {
+          best = this.controlPoints[ i ].sourcePositionProperty.value.x;
         }
       }
       return best;
@@ -382,8 +382,8 @@ define( function( require ) {
       var best = Number.NEGATIVE_INFINITY;
       var length = this.controlPoints.length;
       for ( var i = 0; i < length; i++ ) {
-        if ( this.controlPoints[ i ].sourcePosition.x > best ) {
-          best = this.controlPoints[ i ].sourcePosition.x;
+        if ( this.controlPoints[ i ].sourcePositionProperty.value.x > best ) {
+          best = this.controlPoints[ i ].sourcePositionProperty.value.x;
         }
       }
       return best;
@@ -592,8 +592,8 @@ define( function( require ) {
       var numTries = 0;
 
       // Record the original control point location
-      var originalX = this.controlPoints[ i ].sourcePosition.x;
-      var originalY = this.controlPoints[ i ].sourcePosition.y;
+      var originalX = this.controlPoints[ i ].sourcePositionProperty.value.x;
+      var originalY = this.controlPoints[ i ].sourcePositionProperty.value.y;
 
       // Spiral outward, searching for a point that gives a smooth enough track.
       var distance = 0.01;
@@ -608,7 +608,7 @@ define( function( require ) {
         // Only search within the visible model bounds, see #195
         var containsPoint = availableModelBounds.containsPoint( proposedPosition );
         if ( containsPoint ) {
-          this.controlPoints[ i ].sourcePosition = proposedPosition;
+          this.controlPoints[ i ].sourcePositionProperty.value = proposedPosition;
           this.updateSplines();
         }
         angle = angle + Math.PI / 9;
@@ -618,7 +618,7 @@ define( function( require ) {
 
       // Could not find a better solution, leave the control point where it started.
       if ( numTries >= MAX_TRIES ) {
-        this.controlPoints[ i ].sourcePosition = new Vector2( originalX, originalY );
+        this.controlPoints[ i ].sourcePositionProperty.value = new Vector2( originalX, originalY );
         this.updateSplines();
       }
       else {
@@ -726,14 +726,14 @@ define( function( require ) {
     },
 
     copyControlPointSources: function() {
-      return this.controlPoints.map( function( controlPoint ) {return controlPoint.sourcePosition.copy();} );
+      return this.controlPoints.map( function( controlPoint ) {return controlPoint.sourcePositionProperty.value.copy();} );
     },
 
     getDebugString: function() {
       var string = 'var controlPoints = [';
       for ( var i = 0; i < this.controlPoints.length; i++ ) {
         var controlPoint = this.controlPoints[ i ];
-        string += 'new ControlPoint(' + controlPoint.position.x + ',' + controlPoint.position.y + ')';
+        string += 'new ControlPoint(' + controlPoint.positionProperty.value.x + ',' + controlPoint.positionProperty.value.y + ')';
         if ( i < this.controlPoints.length - 1 ) {
           string += ',';
         }

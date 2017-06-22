@@ -166,7 +166,7 @@ define( function( require ) {
             var point = points[ j ];
             for ( var k = 0; k < otherPoints.length; k++ ) {
               var otherPoint = otherPoints[ k ];
-              var distance = point.sourcePosition.distance( otherPoint.position );
+              var distance = point.sourcePositionProperty.value.distance( otherPoint.positionProperty.value );
               if ( (bestDistance === null && distance > 1E-6) || (distance < bestDistance ) ) {
                 bestDistance = distance;
                 myBestPoint = point;
@@ -178,25 +178,25 @@ define( function( require ) {
       }
 
       if ( bestDistance !== null && bestDistance < 1 ) {
-        if ( myBestPoint.snapTarget !== otherBestPoint ) {
+        if ( myBestPoint.snapTargetProperty.value !== otherBestPoint ) {
           snapTargetChanged = true;
         }
-        myBestPoint.snapTarget = otherBestPoint;
+        myBestPoint.snapTargetProperty.value = otherBestPoint;
 
         // Set the opposite point to be unsnapped, you can only snap one at a time
         var source = (myBestPoint === points[ 0 ] ? points[ 1 ] : points[ 0 ]);
-        if ( source.snapTarget !== null ) {
+        if ( source.snapTargetProperty.value !== null ) {
           snapTargetChanged = true;
         }
-        source.snapTarget = null;
+        source.snapTargetProperty.value = null;
       }
       else {
 
-        if ( points[ 0 ].snapTarget !== null || points[ 1 ].snapTarget !== null ) {
+        if ( points[ 0 ].snapTargetProperty.value !== null || points[ 1 ].snapTargetProperty.value !== null ) {
           snapTargetChanged = true;
         }
-        points[ 0 ].snapTarget = null;
-        points[ 1 ].snapTarget = null;
+        points[ 0 ].snapTargetProperty.value = null;
+        points[ 1 ].snapTargetProperty.value = null;
       }
 
       // It costs about 5fps to do this every frame (on iPad3), so only check if the snapTargets have changed.  See #235
@@ -225,7 +225,7 @@ define( function( require ) {
       // If the user never dragged the object, then there is no track to drop in this case, see #205
       if ( this.startedDrag ) {
         var myPoints = [ track.controlPoints[ 0 ], track.controlPoints[ track.controlPoints.length - 1 ] ];
-        if ( myPoints[ 0 ].snapTarget || myPoints[ 1 ].snapTarget ) {
+        if ( myPoints[ 0 ].snapTargetProperty.value || myPoints[ 1 ].snapTargetProperty.value ) {
           model.joinTracks( track );
         }
 
