@@ -47,7 +47,7 @@ define( function( require ) {
       return 0.4 * Math.sqrt( totalEnergy );
     } );
 
-    var potentialEnergyProportion = skater.toDerivedProperty( [ 'potentialEnergy', 'totalEnergy' ], function( potentialEnergy, totalEnergy ) {
+    var potentialEnergyProportion = new DerivedProperty( [ skater.potentialEnergyProperty, skater.totalEnergyProperty ], function( potentialEnergy, totalEnergy ) {
       var result = totalEnergy === 0 ? 0 : (potentialEnergy / totalEnergy);
       var clamped = result < 0 ? 0 :
                     result > 1 ? 1 :
@@ -56,7 +56,7 @@ define( function( require ) {
       return clamped * Math.PI * 2;
     } );
 
-    var kineticEnergyProportion = skater.toDerivedProperty( [ 'kineticEnergy', 'totalEnergy' ], function( kineticEnergy, totalEnergy ) {
+    var kineticEnergyProportion = new DerivedProperty( [ skater.kineticEnergyProperty, skater.totalEnergyProperty ], function( kineticEnergy, totalEnergy ) {
       var result = totalEnergy === 0 ? 0 : (kineticEnergy / totalEnergy);
       var clamped = result < 0 ? 0 :
                     result > 1 ? 1 :
@@ -65,7 +65,7 @@ define( function( require ) {
       return clamped * Math.PI * 2;
     } );
 
-    var thermalEnergyProportion = skater.toDerivedProperty( [ 'thermalEnergy', 'totalEnergy' ], function( thermalEnergy, totalEnergy ) {
+    var thermalEnergyProportion = new DerivedProperty( [ skater.thermalEnergyProperty, skater.totalEnergyProperty ], function( thermalEnergy, totalEnergy ) {
       var result = totalEnergy === 0 ? 0 : (thermalEnergy / totalEnergy);
       var clamped = result < 0 ? 0 :
                     result > 1 ? 1 :

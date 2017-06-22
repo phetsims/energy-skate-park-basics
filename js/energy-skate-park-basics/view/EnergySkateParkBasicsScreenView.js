@@ -206,7 +206,7 @@ define( function( require ) {
     } );
 
     // Disable the return skater button when the skater is already at his initial coordinates
-    model.skater.linkAttribute( 'moved', self.returnSkaterButton, 'enabled' );
+    model.skater.movedProperty.linkAttribute( self.returnSkaterButton, 'enabled' );
     this.addChild( this.returnSkaterButton );
 
     this.addChild( new PlaybackSpeedControl( model.speedProperty, tandem.createTandem( 'playbackSpeedControl' ) ).mutate( {
@@ -351,7 +351,7 @@ define( function( require ) {
       tandem.createTandem( 'skaterNode' )
     );
 
-    var gaugeNeedleNode = new GaugeNeedleNode( model.skater.property( 'speed' ), {
+    var gaugeNeedleNode = new GaugeNeedleNode( model.skater.speedProperty, {
       min: 0,
       max: 20
     }, tandem.createTandem( 'gaugeNeedleNode' ), {
@@ -390,7 +390,7 @@ define( function( require ) {
         scale: iconScale,
         tandem: tandem.createTandem( 'skaterIconImage2' )
       } ),
-      centerBottom: modelViewTransform.modelToViewPosition( model.skater.startingPosition ),
+      centerBottom: modelViewTransform.modelToViewPosition( model.skater.startingPositionProperty.value ),
       baseColor: '#f4514e', // red for stop, since the skater will be stopped on the ground.
       listener: function() { model.skater.resetPosition(); },
       tandem: tandem.createTandem( 'returnSkaterToGroundButton' )
@@ -409,7 +409,7 @@ define( function( require ) {
 
         // Put the button where the skater will appear.  Nudge it up a bit so the mouse can hit it from the drop site,
         // without being moved at all (to simplify repeat runs).
-        var viewPosition = modelViewTransform.modelToViewPosition( model.skater.startingPosition ).plusXY( 0, 5 );
+        var viewPosition = modelViewTransform.modelToViewPosition( model.skater.startingPositionProperty.value ).plusXY( 0, 5 );
         returnSkaterToPreviousStartingPositionButton.centerBottom = viewPosition;
 
         // If the return skater button went offscreen, move it back on the screen, see #222

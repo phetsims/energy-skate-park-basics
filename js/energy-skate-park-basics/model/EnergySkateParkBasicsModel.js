@@ -189,7 +189,7 @@ define( function( require ) {
     this.skater = new Skater( tandem.createTandem( 'skater' ) );
 
     // If the mass changes while the sim is paused, trigger an update so the skater image size will update, see #115
-    this.skater.property( 'mass' ).link( function() { if ( self.pausedProperty.value ) { self.skater.trigger( 'updated' ); } } );
+    this.skater.massProperty.link( function() { if ( self.pausedProperty.value ) { self.skater.updatedEmitter.emit(); } } );
 
     this.tracks = new ObservableArray( {
       phetioValueType: TTrack,
@@ -295,7 +295,7 @@ define( function( require ) {
         }
 
         // The skater should detach from track when the scene changes.  Code elsewhere also resets the location of the skater.
-        self.skater.track = null;
+        self.skater.trackProperty.value = null;
       } );
     }
     else {
@@ -372,8 +372,8 @@ define( function( require ) {
         this.addDraggableTracks();
 
         // If the skater was on a track, then he should fall off, see #97
-        if ( this.skater.track ) {
-          this.skater.track = null;
+        if ( this.skater.trackProperty.value ) {
+          this.skater.trackProperty.value = null;
         }
       }
     },
@@ -384,7 +384,7 @@ define( function( require ) {
       var dt = 1.0 / 60;
       var result = this.stepModel( dt, skaterState );
       result.setToSkater( this.skater );
-      this.skater.trigger( 'updated' );
+      this.skater.updatedEmitter.emit();
     },
 
     // Step the model, automatically called from Joist
@@ -398,9 +398,9 @@ define( function( require ) {
 
       // If the delay makes dt too high, then truncate it.  This helps e.g. when clicking in the address bar on ipad,
       // which gives a huge dt and problems for integration
-      if ( !this.pausedProperty.value && !this.skater.dragging ) {
+      if ( !this.pausedProperty.value && !this.skater.draggingProperty.value ) {
 
-        var initialThermalEnergy = this.skater.thermalEnergy;
+        var initialThermalEnergy = this.skater.thermalEnergyProperty.value;
 
         // If they switched windows or tabs, just bail on that delta
         if ( dt > 1 || dt <= 0 ) {
@@ -429,10 +429,10 @@ define( function( require ) {
         }
         if ( updatedState ) {
           updatedState.setToSkater( this.skater );
-          this.skater.trigger( 'updated' );
+          this.skater.updatedEmitter.emit();
 
           // Make sure the thermal energy doesn't go negative
-          var finalThermalEnergy = this.skater.thermalEnergy;
+          var finalThermalEnergy = this.skater.thermalEnergyProperty.value;
           var deltaThermalEnergy = finalThermalEnergy - initialThermalEnergy;
           if ( deltaThermalEnergy < 0 ) {
             debug && debug( 'thermal energy wanted to decrease' );
@@ -444,12 +444,12 @@ define( function( require ) {
       this.trackChangePending = false;
 
       // If traveling on the ground, face in the direction of motion, see #181
-      if ( this.skater.track === null && this.skater.position.y === 0 ) {
-        if ( this.skater.velocity.x > 0 ) {
-          this.skater.direction = 'right';
+      if ( this.skater.trackProperty.value === null && this.skater.positionProperty.value.y === 0 ) {
+        if ( this.skater.velocityProperty.value.x > 0 ) {
+          this.skater.directionProperty.value = 'right';
         }
-        if ( this.skater.velocity.x < 0 ) {
-          this.skater.direction = 'left';
+        if ( this.skater.velocityProperty.value.x < 0 ) {
+          this.skater.directionProperty.value = 'left';
         }
         else {
           // skater wasn't moving, so don't change directions
@@ -1163,9 +1163,9 @@ define( function( require ) {
     returnSkater: function() {
 
       // if the skater's original track is available, restore her to it, see #143
-      var originalTrackAvailable = _.includes( this.getPhysicalTracks(), this.skater.startingTrack );
+      var originalTrackAvailable = _.includes( this.getPhysicalTracks(), this.skater.startingTrackProperty.value );
       if ( originalTrackAvailable ) {
-        this.skater.track = this.skater.startingTrack;
+        this.skater.trackProperty.value = this.skater.startingTrackProperty.value;
       }
       this.skater.returnSkater();
     },
@@ -1260,8 +1260,8 @@ define( function( require ) {
       this.trackChangedEmitter.emit();
 
       // If the skater was on track, then he should fall off
-      if ( this.skater.track === track ) {
-        this.skater.track = null;
+      if ( this.skater.trackProperty.value === track ) {
+        this.skater.trackProperty.value = null;
       }
 
       // if the number of control points is low enough, replenish the toolbox
@@ -1317,8 +1317,8 @@ define( function( require ) {
       this.trackChangedEmitter.emit();
 
       // If the skater was on track, then he should fall off, see #97
-      if ( this.skater.track === track ) {
-        this.skater.track = null;
+      if ( this.skater.trackProperty.value === track ) {
+        this.skater.trackProperty.value = null;
       }
 
       // If a control point was split and that makes too many "live" control points total, remove a piece of track from
@@ -1414,37 +1414,37 @@ define( function( require ) {
 
       // Move skater to new track if he was on the old track, by searching for the best fit point on the new track
       // Note: Energy is not conserved when tracks joined since the user has added or removed energy from the system
-      if ( this.skater.track === a || this.skater.track === b ) {
+      if ( this.skater.trackProperty.value === a || this.skater.trackProperty.value === b ) {
 
-        var originalDirectionVector = this.skater.track.getUnitParallelVector( this.skater.parametricPosition ).times( this.skater.parametricSpeed );
+        var originalDirectionVector = this.skater.trackProperty.value.getUnitParallelVector( this.skater.parametricPositionProperty.value ).times( this.skater.parametricSpeedProperty.value );
 
         // Keep track of the skater direction so we can toggle the 'up' flag if the track orientation changed
         var originalNormal = this.skater.upVector;
-        var p = newTrack.getClosestPositionAndParameter( this.skater.position.copy() );
-        this.skater.track = newTrack;
-        this.skater.parametricPosition = p.parametricPosition;
+        var p = newTrack.getClosestPositionAndParameter( this.skater.positionProperty.value.copy() );
+        this.skater.trackProperty.value = newTrack;
+        this.skater.parametricPositionProperty.value = p.parametricPosition;
         var x2 = newTrack.getX( p.parametricPosition );
         var y2 = newTrack.getY( p.parametricPosition );
-        this.skater.position = new Vector2( x2, y2 );
-        this.skater.angle = newTrack.getViewAngleAt( p.parametricPosition ) + (this.skater.onTopSideOfTrack ? 0 : Math.PI);
+        this.skater.positionProperty.value = new Vector2( x2, y2 );
+        this.skater.angleProperty.value = newTrack.getViewAngleAt( p.parametricPosition ) + (this.skater.onTopSideOfTrackProperty.value ? 0 : Math.PI);
 
         // Trigger an initial update now so we can get the right up vector, see #150
-        this.skater.trigger( 'updated' );
+        this.skater.updatedEmitter.emit();
         var newNormal = this.skater.upVector;
 
         // If the skater flipped upside down because the track directionality is different, toggle his 'up' flag
         if ( originalNormal.dot( newNormal ) < 0 ) {
-          this.skater.onTopSideOfTrack = !this.skater.onTopSideOfTrack;
-          this.skater.angle = newTrack.getViewAngleAt( p.parametricPosition ) + (this.skater.onTopSideOfTrack ? 0 : Math.PI);
-          this.skater.trigger( 'updated' );
+          this.skater.onTopSideOfTrackProperty.value = !this.skater.onTopSideOfTrackProperty.value;
+          this.skater.angleProperty.value = newTrack.getViewAngleAt( p.parametricPosition ) + (this.skater.onTopSideOfTrackProperty.value ? 0 : Math.PI);
+          this.skater.updatedEmitter.emit();
         }
 
         // If the skater changed direction of motion because of the track polarity change, flip the parametric velocity
         // 'parametricSpeed' value, see #180
-        var newDirectionVector = this.skater.track.getUnitParallelVector( this.skater.parametricPosition ).times( this.skater.parametricSpeed );
+        var newDirectionVector = this.skater.trackProperty.value.getUnitParallelVector( this.skater.parametricPositionProperty.value ).times( this.skater.parametricSpeedProperty.value );
         debugAttachDetach && debugAttachDetach( newDirectionVector.dot( originalDirectionVector ) );
         if ( newDirectionVector.dot( originalDirectionVector ) < 0 ) {
-          this.skater.parametricSpeed = -this.skater.parametricSpeed;
+          this.skater.parametricSpeedProperty.value = -this.skater.parametricSpeedProperty.value;
         }
       }
 
@@ -1455,7 +1455,7 @@ define( function( require ) {
     // When a track is dragged, update the skater's energy (if the sim was paused), since it wouldn't be handled in the
     // update loop.
     trackModified: function( track ) {
-      if ( this.pausedProperty.value && this.skater.track === track ) {
+      if ( this.pausedProperty.value && this.skater.trackProperty.value === track ) {
         this.skater.updateEnergy();
       }
 

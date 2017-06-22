@@ -72,10 +72,10 @@ define( function( require ) {
 
     // Update the position and angle.  Normally the angle would only change if the position has also changed, so no need
     // for a duplicate callback there.  Uses pooling to avoid allocations, see #50
-    this.skater.on( 'updated', function() {
-      var mass = skater.mass;
-      var position = skater.position;
-      var angle = skater.angle;
+    this.skater.updatedEmitter.addListener( function() {
+      var mass = skater.massProperty.value;
+      var position = skater.positionProperty.value;
+      var angle = skater.angleProperty.value;
 
       var view = modelViewTransform.modelToViewPosition( position );
 
@@ -133,9 +133,9 @@ define( function( require ) {
 
           // Choose the right side of the track, i.e. the side of the track that would have the skater upside up
           var normal = targetTrack.getUnitNormalVector( targetU );
-          skater.onTopSideOfTrack = normal.y > 0;
+          skater.onTopSideOfTrackProperty.value = normal.y > 0;
 
-          skater.angle = targetTrack.getViewAngleAt( targetU ) + (skater.onTopSideOfTrack ? 0 : Math.PI);
+          skater.angleProperty.value = targetTrack.getViewAngleAt( targetU ) + (skater.onTopSideOfTrackProperty.value ? 0 : Math.PI);
 
           closeEnough = true;
         }
@@ -145,27 +145,27 @@ define( function( require ) {
         targetU = null;
 
         // make skater upright if not near the track
-        skater.angle = 0;
-        skater.onTopSideOfTrack = true;
+        skater.angleProperty.value = 0;
+        skater.onTopSideOfTrackProperty.value = true;
 
-        skater.position = position;
+        skater.positionProperty.value = position;
       }
 
       else {
-        skater.position = targetTrack.getPoint( targetU );
+        skater.positionProperty.value = targetTrack.getPoint( targetU );
       }
 
       skater.updateEnergy();
-      skater.trigger( 'updated' );
+      skater.updatedEmitter.emit();
     }
 
     this.addInputListener( new TandemSimpleDragHandler( {
       tandem: tandem.createTandem( 'inputListener' ),
       start: function( event ) {
-        skater.dragging = true;
+        skater.draggingProperty.value = true;
 
         // Clear thermal energy whenever skater is grabbed, see #32
-        skater.thermalEnergy = 0;
+        skater.thermalEnergyProperty.value = 0;
 
         // Jump to the input location when dragged
         dragSkater( event );

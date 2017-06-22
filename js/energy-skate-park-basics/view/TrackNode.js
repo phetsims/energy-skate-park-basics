@@ -171,10 +171,10 @@ define( function( require ) {
       this.centerLine.shape = shape;
 
       // Update the skater if the track is moved while the sim is paused, see #84
-      if ( model.skater.track === track && model.pausedProperty.value ) {
-        model.skater.position = track.getPoint( model.skater.parametricPosition );
-        model.skater.angle = model.skater.track.getViewAngleAt( model.skater.parametricPosition ) + (model.skater.onTopSideOfTrack ? 0 : Math.PI);
-        model.skater.trigger( 'updated' );
+      if ( model.skater.trackProperty.value === track && model.pausedProperty.value ) {
+        model.skater.positionProperty.value = track.getPoint( model.skater.parametricPositionProperty.value );
+        model.skater.angleProperty.value = model.skater.trackProperty.value.getViewAngleAt( model.skater.parametricPositionProperty.value ) + (model.skater.onTopSideOfTrackProperty.value ? 0 : Math.PI);
+        model.skater.updatedEmitter.emit();
       }
     }
   } );

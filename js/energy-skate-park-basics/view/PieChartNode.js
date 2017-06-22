@@ -60,7 +60,7 @@ define( function( require ) {
 
     var updatePieChartLocation = function() {
 
-      var view = modelViewTransform.modelToViewPosition( skater.headPosition );
+      var view = modelViewTransform.modelToViewPosition( skater.headPositionProperty.value );
 
       // Center pie chart over skater's head not his feet so it doesn't look awkward when skating in a parabola
       self.setTranslation( view.x, view.y - 50 );
@@ -77,7 +77,7 @@ define( function( require ) {
       if ( !self.visible ) {
         return;
       }
-      var totalEnergy = skater.totalEnergy;
+      var totalEnergy = skater.totalEnergyProperty.value;
 
       // Guard against negative total energy, which could occur of the user is dragging the track underground, see #166
       if ( totalEnergy < 0 ) {
@@ -91,19 +91,19 @@ define( function( require ) {
       var THRESHOLD = 1E-4;
 
       // if only one component of pie chart, then show as a circle so there are no seams
-      var numberComponents = (skater.potentialEnergy > THRESHOLD ? 1 : 0) +
-                             (skater.kineticEnergy > THRESHOLD ? 1 : 0) +
-                             (skater.thermalEnergy > THRESHOLD ? 1 : 0);
+      var numberComponents = (skater.potentialEnergyProperty.value > THRESHOLD ? 1 : 0) +
+                             (skater.kineticEnergyProperty.value > THRESHOLD ? 1 : 0) +
+                             (skater.thermalEnergyProperty.value > THRESHOLD ? 1 : 0);
 
       // Don't show the pie chart if energies are zero, or if potential energy is negative (underground skater), see #189
-      if ( numberComponents === 0 || skater.potentialEnergy < 0 ) {
+      if ( numberComponents === 0 || skater.potentialEnergyProperty.value < 0 ) {
         potentialEnergySlice.visible = false;
         kineticEnergySlice.visible = false;
         thermalEnergySlice.visible = false;
       }
       else if ( numberComponents === 1 ) {
-        var selectedSlice = skater.potentialEnergy > THRESHOLD ? potentialEnergySlice :
-                            skater.kineticEnergy > THRESHOLD ? kineticEnergySlice :
+        var selectedSlice = skater.potentialEnergyProperty.value > THRESHOLD ? potentialEnergySlice :
+                            skater.kineticEnergyProperty.value > THRESHOLD ? kineticEnergySlice :
                             thermalEnergySlice;
         potentialEnergySlice.visible = false;
         thermalEnergySlice.visible = false;
@@ -124,8 +124,8 @@ define( function( require ) {
         potentialEnergySlice.visible = true;
         kineticEnergySlice.visible = true;
         thermalEnergySlice.visible = true;
-        var fractionPotential = skater.potentialEnergy / skater.totalEnergy;
-        var fractionKinetic = skater.kineticEnergy / skater.totalEnergy;
+        var fractionPotential = skater.potentialEnergyProperty.value / skater.totalEnergyProperty.value;
+        var fractionKinetic = skater.kineticEnergyProperty.value / skater.totalEnergyProperty.value;
 
         // Show one of them in the background instead of pieces for each one for performance
         // Round the radius so it will only update the graphics when it changed by a px or more
@@ -149,7 +149,7 @@ define( function( require ) {
     };
 
     // instead of changing the entire pie chart whenever one energy changes, use trigger to update the whole pie
-    skater.on( 'energy-changed', updatePaths );
+    skater.energyChangedEmitter.addListener( updatePaths );
 
     // Synchronize visibility with the model, and also update when visibility changes because it is guarded against in updatePaths
     pieChartVisibleProperty.link( function( visible ) {

@@ -32,7 +32,13 @@ define( function( require ) {
   }
 
   energySkateParkBasics.register( 'SkaterState', SkaterState );
-  
+
+  var getValue = function( key, source, overrides ) {
+    return key in overrides ? overrides[ key ] :
+           typeof source[ key + 'Property' ] === 'object' ? source[ key + 'Property' ].value :
+           source[ key ];
+  };
+
   return inherit( Object, SkaterState, {
 
       /**
@@ -47,16 +53,14 @@ define( function( require ) {
           overrides = EMPTY_OBJECT;
         }
 
-        // This code is called many times from the physics loop, so must be optimized for speed and memory
-        this.gravity = overrides.gravity || source.gravity;
 
         // Handle the case of a skater passed in (which has a position vector) or a SkaterState passed in, which has a number
-        if ( source.position ) {
-          this.positionX = 'positionX' in overrides ? overrides.positionX : source.position.x;
-          this.positionY = 'positionY' in overrides ? overrides.positionY : source.position.y;
+        if ( source.positionProperty ) {
+          this.positionX = 'positionX' in overrides ? overrides.positionX : source.positionProperty.value.x;
+          this.positionY = 'positionY' in overrides ? overrides.positionY : source.positionProperty.value.y;
 
-          this.velocityX = 'velocityX' in overrides ? overrides.velocityX : source.velocity.x;
-          this.velocityY = 'velocityY' in overrides ? overrides.velocityY : source.velocity.y;
+          this.velocityX = 'velocityX' in overrides ? overrides.velocityX : source.velocityProperty.value.x;
+          this.velocityY = 'velocityY' in overrides ? overrides.velocityY : source.velocityProperty.value.y;
         }
         else {
           this.positionX = 'positionX' in overrides ? overrides.positionX : source.positionX;
@@ -66,16 +70,17 @@ define( function( require ) {
           this.velocityY = 'velocityY' in overrides ? overrides.velocityY : source.velocityY;
         }
 
-        this.mass = overrides.mass || source.mass;
-
+        // This code is called many times from the physics loop, so must be optimized for speed and memory
         // Special handling for values that can be null, false or zero
-        this.track = 'track' in overrides ? overrides.track : source.track;
-        this.angle = 'angle' in overrides ? overrides.angle : source.angle;
-        this.onTopSideOfTrack = 'onTopSideOfTrack' in overrides ? overrides.onTopSideOfTrack : source.onTopSideOfTrack;
-        this.parametricPosition = 'parametricPosition' in overrides ? overrides.parametricPosition : source.parametricPosition;
-        this.parametricSpeed = 'parametricSpeed' in overrides ? overrides.parametricSpeed : source.parametricSpeed;
-        this.dragging = 'dragging' in overrides ? overrides.dragging : source.dragging;
-        this.thermalEnergy = 'thermalEnergy' in overrides ? overrides.thermalEnergy : source.thermalEnergy;
+        this.gravity = getValue( 'gravity', source, overrides );
+        this.mass = getValue( 'mass', source, overrides );
+        this.track = getValue( 'track', source, overrides );
+        this.angle = getValue( 'angle', source, overrides );
+        this.onTopSideOfTrack = getValue( 'onTopSideOfTrack', source, overrides );
+        this.parametricPosition = getValue( 'parametricPosition', source, overrides );
+        this.parametricSpeed = getValue( 'parametricSpeed', source, overrides );
+        this.dragging = getValue( 'dragging', source, overrides );
+        this.thermalEnergy = getValue( 'thermalEnergy', source, overrides );
 
         // Some sanity tests
         assert && assert( isFinite( this.thermalEnergy ) );
@@ -110,22 +115,22 @@ define( function( require ) {
 
       // Only set values that have changed
       setToSkater: function( skater ) {
-        skater.track = this.track;
+        skater.trackProperty.value = this.track;
 
         // Set property values manually to avoid allocations, see #50
-        skater.position.x = this.positionX;
-        skater.position.y = this.positionY;
+        skater.positionProperty.value.x = this.positionX;
+        skater.positionProperty.value.y = this.positionY;
         skater.positionProperty.notifyObserversStatic();
 
-        skater.velocity.x = this.velocityX;
-        skater.velocity.y = this.velocityY;
+        skater.velocityProperty.value.x = this.velocityX;
+        skater.velocityProperty.value.y = this.velocityY;
         skater.velocityProperty.notifyObserversStatic();
 
-        skater.parametricPosition = this.parametricPosition;
-        skater.parametricSpeed = this.parametricSpeed;
-        skater.thermalEnergy = this.thermalEnergy;
-        skater.onTopSideOfTrack = this.onTopSideOfTrack;
-        skater.angle = skater.track ? skater.track.getViewAngleAt( this.parametricPosition ) + (this.onTopSideOfTrack ? 0 : Math.PI) : this.angle;
+        skater.parametricPositionProperty.value = this.parametricPosition;
+        skater.parametricSpeedProperty.value = this.parametricSpeed;
+        skater.thermalEnergyProperty.value = this.thermalEnergy;
+        skater.onTopSideOfTrackProperty.value = this.onTopSideOfTrack;
+        skater.angleProperty.value = skater.trackProperty.value ? skater.trackProperty.value.getViewAngleAt( this.parametricPosition ) + (this.onTopSideOfTrack ? 0 : Math.PI) : this.angle;
         skater.updateEnergy();
       },
 
