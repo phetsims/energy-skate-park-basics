@@ -45,7 +45,7 @@ define( function( require ) {
       disabledBaseColor: 'white',
       cornerRadius: 6,
       listener: callback,
-      buttonAppearanceStrategy: RectangularButtonView.flatAppearanceStrategy,
+      buttonAppearanceStrategy: RectangularButtonView.FlatAppearanceStrategy,
       xMargin: 7,
       yMargin: 3,
       tandem: tandem
