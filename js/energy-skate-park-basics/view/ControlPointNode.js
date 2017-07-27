@@ -236,7 +236,10 @@ define( function( require ) {
     };
     self.addInputListener( inputListener );
 
-    tandem.addInstance( this, TControlPointNode );
+    this.mutate( {
+      tandem: tandem,
+      phetioType: TControlPointNode
+    } );
   }
 
   energySkateParkBasics.register( 'ControlPointNode', ControlPointNode );

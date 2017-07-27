@@ -11,7 +11,6 @@ define( function( require ) {
   var assertInstanceOf = require( 'ifphetio!PHET_IO/assertions/assertInstanceOf' );
   var energySkateParkBasics = require( 'ENERGY_SKATE_PARK_BASICS/energySkateParkBasics' );
   var phetioInherit = require( 'ifphetio!PHET_IO/phetioInherit' );
-  var TObject = require( 'ifphetio!PHET_IO/types/TObject' );
   var TNode = require( 'SCENERY/nodes/TNode' );
 
   /**
@@ -22,7 +21,7 @@ define( function( require ) {
    */
   function TControlPointNode( instance, phetioID ) {
     assertInstanceOf( instance, phet.energySkateParkBasics.ControlPointNode );
-    TObject.call( this, instance, phetioID );
+    TNode.call( this, instance, phetioID );
   }
 
   /**
