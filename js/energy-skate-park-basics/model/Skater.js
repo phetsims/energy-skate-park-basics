@@ -392,7 +392,7 @@ define( function( require ) {
       // Manually trigger notifications to avoid allocations, see #50
       this.headPositionProperty.value.x = this.positionProperty.value.x + vectorX;
       this.headPositionProperty.value.y = this.positionProperty.value.y - vectorY;
-      this.headPositionProperty.notifyObserversStatic();
+      this.headPositionProperty.notifyListenersStatic();
     },
 
     /**
