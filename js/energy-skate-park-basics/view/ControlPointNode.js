@@ -15,7 +15,7 @@ define( function( require ) {
   var Circle = require( 'SCENERY/nodes/Circle' );
   var TandemSimpleDragHandler = require( 'TANDEM/scenery/input/TandemSimpleDragHandler' );
   var ControlPointUI = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/view/ControlPointUI' );
-  var TandemEmitter = require( 'TANDEM/axon/TandemEmitter' );
+  var Emitter = require( 'AXON/Emitter' );
   var EnergySkateParkBasicsQueryParameters = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/EnergySkateParkBasicsQueryParameters' );
 
   // phet-io modules
@@ -34,7 +34,7 @@ define( function( require ) {
     var model = trackNode.model;
     var modelViewTransform = trackNode.modelViewTransform;
     var availableBoundsProperty = trackNode.availableBoundsProperty;
-    var controlPointUIShownEmitter = new TandemEmitter( {
+    var controlPointUIShownEmitter = new Emitter( {
       tandem: tandem.createTandem( 'controlPointUIShownEmitter' ),
       phetioArgumentTypes: []
     } );
