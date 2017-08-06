@@ -59,12 +59,20 @@ define( function( require ) {
       } );
     Property.preventGetSet( this, 'position' );
 
+    console.log( 'registering: ', tandem.id );
     tandem.addInstance( this, TControlPoint );
 
     this.disposeControlPoint = function() {
+      console.log( 'DEregistering: ', tandem.id );
       tandem.removeInstance( self );
       self.positionProperty.unlinkAll();
       self.positionProperty.dispose();
+
+      self.sourcePositionProperty.unlinkAll();
+      self.sourcePositionProperty.dispose();
+
+      self.snapTargetProperty.unlinkAll();
+      self.snapTargetProperty.dispose();
     };
   }
 

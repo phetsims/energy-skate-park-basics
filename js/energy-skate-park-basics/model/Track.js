@@ -127,6 +127,10 @@ define( function( require ) {
       tandem.removeInstance( self );
       self.physicalProperty.unlink( trackChangedListener );
       self.draggingProperty.unlinkAll();
+      self.physicalProperty.dispose();
+      self.leftThePanelProperty.dispose();
+      self.draggingProperty.dispose();
+      self.droppedProperty.dispose();
     };
   }
 
