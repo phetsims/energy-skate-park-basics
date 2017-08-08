@@ -15,7 +15,7 @@ define( function( require ) {
   var inherit = require( 'PHET_CORE/inherit' );
   var Circle = require( 'SCENERY/nodes/Circle' );
   var Image = require( 'SCENERY/nodes/Image' );
-  var TandemSimpleDragHandler = require( 'TANDEM/scenery/input/TandemSimpleDragHandler' );
+  var SimpleDragHandler = require( 'SCENERY/input/SimpleDragHandler' );
   var Matrix3 = require( 'DOT/Matrix3' );
   var LinearFunction = require( 'DOT/LinearFunction' );
   var Node = require( 'SCENERY/nodes/Node' );
@@ -159,7 +159,7 @@ define( function( require ) {
       skater.updatedEmitter.emit();
     }
 
-    this.addInputListener( new TandemSimpleDragHandler( {
+    this.addInputListener( new SimpleDragHandler( {
       tandem: tandem.createTandem( 'inputListener' ),
       start: function( event ) {
         skater.draggingProperty.value = true;
