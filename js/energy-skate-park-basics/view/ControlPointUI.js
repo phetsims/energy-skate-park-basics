@@ -39,8 +39,8 @@ define( function( require ) {
     this.clickToDismissListener = {
       down: function() {
         if ( enableClickToDismissListener ) {
-          if ( _.indexOf( self.sceneNode.getInputListeners(), self.clickToDismissListener ) !== -1 ) {
-            self.sceneNode.removeInputListener( self.clickToDismissListener );
+          if ( _.indexOf( phet.joist.display.getInputListeners(), self.clickToDismissListener ) !== -1 ) {
+            phet.joist.display.removeInputListener( self.clickToDismissListener );
           }
           self.detach();
         }
@@ -49,11 +49,7 @@ define( function( require ) {
         }
       }
     };
-
-    var sceneNode = parentNode.getUniqueTrail().rootNode();
-
-    this.sceneNode = sceneNode;
-    sceneNode.addInputListener( this.clickToDismissListener );
+    phet.joist.display.addInputListener( this.clickToDismissListener );
 
     Node.call( this, {
       tandem: tandem
@@ -125,8 +121,8 @@ define( function( require ) {
     //Override to additionally remove the attached input listener
     detach: function() {
       Node.prototype.detach.call( this );
-      if ( _.indexOf( this.sceneNode.getInputListeners(), this.clickToDismissListener ) !== -1 ) {
-        this.sceneNode.removeInputListener( this.clickToDismissListener );
+      if ( _.indexOf( phet.joist.display.getInputListeners(), this.clickToDismissListener ) !== -1 ) {
+        phet.joist.display.removeInputListener( this.clickToDismissListener );
       }
     }
   } );
