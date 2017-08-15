@@ -19,7 +19,7 @@ define( function( require ) {
   var ArrowNode = require( 'SCENERY_PHET/ArrowNode' );
   var PhetFont = require( 'SCENERY_PHET/PhetFont' );
   var EnergySkateParkColorScheme = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/view/EnergySkateParkColorScheme' );
-  var ClearThermalButton = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/view/ClearThermalButton' );
+  var ClearThermalButton = require( 'SCENERY_PHET/ClearThermalButton' );
 
   // strings
   var energyKineticString = require( 'string!ENERGY_SKATE_PARK_BASICS/energy.kinetic' );
@@ -78,7 +78,9 @@ define( function( require ) {
     var thermalLabel = createLabel( 2, energyThermalString, EnergySkateParkColorScheme.thermalEnergy, 'thermalEnergyLabel' );
     var totalLabel = createLabel( 3, energyTotalString, EnergySkateParkColorScheme.totalEnergy, 'totalEnergyLabel' );
 
-    var clearThermalButton = new ClearThermalButton( clearThermal, skater, tandem.createTandem( 'clearThermalButton' ), {
+    var clearThermalButton = new ClearThermalButton( {
+      tandem: tandem.createTandem( 'clearThermalButton' ),
+      listener: clearThermal,
       centerX: thermalLabel.centerX,
       y: thermalLabel.bottom + 12
     } );
