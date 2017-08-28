@@ -22,9 +22,6 @@ define( function( require ) {
   var TrackDragHandler = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/view/TrackDragHandler' );
   var dot = require( 'DOT/dot' );
 
-  // phet-io modules
-  var phetio = require( 'ifphetio!PHET_IO/phetio' );
-
   // constants
   var FastArray = dot.FastArray;
 

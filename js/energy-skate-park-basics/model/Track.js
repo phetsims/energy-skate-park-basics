@@ -21,7 +21,6 @@ define( function( require ) {
   // phet-io modules
   var TTrack = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/model/TTrack' );
   var TBoolean = require( 'ifphetio!PHET_IO/types/TBoolean' );
-  var phetio = require( 'ifphetio!PHET_IO/phetio' );
 
   // constants
   var FastArray = dot.FastArray;

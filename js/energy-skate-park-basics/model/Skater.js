@@ -20,7 +20,6 @@ define( function( require ) {
   var Constants = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/Constants' );
 
   // phet-io modules
-  var phetio = require( 'ifphetio!PHET_IO/phetio' );
   var TVector2 = require( 'DOT/TVector2' );
   var TNumber = require( 'ifphetio!PHET_IO/types/TNumber' );
   var TBoolean = require( 'ifphetio!PHET_IO/types/TBoolean' );
