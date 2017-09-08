@@ -16,6 +16,7 @@ define( function( require ) {
   var PhetFont = require( 'SCENERY_PHET/PhetFont' );
   var HSlider = require( 'SUN/HSlider' );
   var Constants = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/Constants' );
+  var Range = require( 'DOT/Range' );
 
   // strings
   var controlsMassString = require( 'string!ENERGY_SKATE_PARK_BASICS/controls.mass' );
@@ -28,7 +29,7 @@ define( function( require ) {
    * @constructor
    */
   function MassControlPanel( massProperty, tandem ) {
-    var range = { min: Constants.MIN_MASS, max: Constants.MAX_MASS };
+    var range = new Range( Constants.MIN_MASS, Constants.MAX_MASS );
     var slider = new HSlider( massProperty, range, _.extend( {
       tandem: tandem.createTandem( 'slider' )
     }, Constants.SLIDER_OPTIONS ) );
