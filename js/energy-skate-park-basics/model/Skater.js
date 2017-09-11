@@ -10,22 +10,23 @@ define( function( require ) {
   'use strict';
 
   // modules
+  var DerivedProperty = require( 'AXON/DerivedProperty' );
+  var Emitter = require( 'AXON/Emitter' );
+  var NumberProperty = require( 'AXON/NumberProperty' );
+  var Property = require( 'AXON/Property' );
+  var Util = require( 'DOT/Util' );
+  var Vector2 = require( 'DOT/Vector2' );
+  var Constants = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/Constants' );
   var energySkateParkBasics = require( 'ENERGY_SKATE_PARK_BASICS/energySkateParkBasics' );
   var inherit = require( 'PHET_CORE/inherit' );
-  var Property = require( 'AXON/Property' );
-  var Emitter = require( 'AXON/Emitter' );
-  var DerivedProperty = require( 'AXON/DerivedProperty' );
-  var Vector2 = require( 'DOT/Vector2' );
-  var Util = require( 'DOT/Util' );
-  var Constants = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/Constants' );
 
   // phet-io modules
   var TVector2 = require( 'DOT/TVector2' );
-  var TNumber = require( 'ifphetio!PHET_IO/types/TNumber' );
-  var TBoolean = require( 'ifphetio!PHET_IO/types/TBoolean' );
-  var TString = require( 'ifphetio!PHET_IO/types/TString' );
   var TTrack = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/model/TTrack' );
   var TTrackReference = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/model/TTrackReference' );
+  var TBoolean = require( 'ifphetio!PHET_IO/types/TBoolean' );
+  var TNumber = require( 'ifphetio!PHET_IO/types/TNumber' );
+  var TString = require( 'ifphetio!PHET_IO/types/TString' );
 
   // Compare two arrays, whose elements have 'equals' methods for comparison
   var arrayEquals = function( a, b ) {
@@ -54,14 +55,13 @@ define( function( require ) {
     // Parameter along the parametric spline, unitless since it is in parametric space
     this.parametricPositionProperty = new Property( 0, {
       tandem: tandem.createTandem( 'parametricPositionProperty' ),
-      phetioValueType: TNumber()
+      phetioValueType: TNumber
     } );
 
     // Speed along the parametric spline dimension, formally 'u dot', indicating speed and direction (+/-) along the
     // track spline in meters per second.  Not technically the derivative of 'u' since it is the euclidean speed.
-    this.parametricSpeedProperty = new Property( 0, {
-      tandem: tandem.createTandem( 'parametricSpeedProperty' ),
-      phetioValueType: TNumber()
+    this.parametricSpeedProperty = new NumberProperty( 0, {
+      tandem: tandem.createTandem( 'parametricSpeedProperty' )
     } );
 
     // True if the skater is pointing up on the track, false if attached to underside of track
@@ -71,9 +71,10 @@ define( function( require ) {
     } );
 
     // Gravity magnitude and direction
-    this.gravityProperty = new Property( -9.8, {
+    this.gravityProperty = new NumberProperty( -9.8, {
       tandem: tandem.createTandem( 'gravityProperty' ),
-      phetioValueType: TNumber( { units: 'meters/second/second', range: { min: -100, max: 1E-6 } } )
+      units: 'meters/second/second',
+      range: { min: -100, max: 1E-6 }
     } );
 
     this.positionProperty = new Property( new Vector2( 3.5, 0 ), {
@@ -82,9 +83,9 @@ define( function( require ) {
     } );
 
     // Start in the middle of the MassControlPanel range
-    this.massProperty = new Property( Constants.DEFAULT_MASS, {
+    this.massProperty = new NumberProperty( Constants.DEFAULT_MASS, {
       tandem: tandem.createTandem( 'massProperty' ),
-      phetioValueType: TNumber( { units: 'kilograms' } )
+      units: 'kilograms'
     } );
 
     // Which way the skater is facing, right or left.  Coded as strings instead of boolean in case we add other states
@@ -106,30 +107,30 @@ define( function( require ) {
     } );
 
     // Energies are in Joules
-    this.kineticEnergyProperty = new Property( 0, {
+    this.kineticEnergyProperty = new NumberProperty( 0, {
       tandem: tandem.createTandem( 'kineticEnergyProperty' ),
-      phetioValueType: TNumber( { units: 'joules' } )
+      units: 'joules'
     } );
 
-    this.potentialEnergyProperty = new Property( 0, {
+    this.potentialEnergyProperty = new NumberProperty( 0, {
       tandem: tandem.createTandem( 'potentialEnergyProperty' ),
-      phetioValueType: TNumber( { units: 'joules' } )
+      units: 'joules'
     } );
 
-    this.thermalEnergyProperty = new Property( 0, {
+    this.thermalEnergyProperty = new NumberProperty( 0, {
       tandem: tandem.createTandem( 'thermalEnergyProperty' ),
-      phetioValueType: TNumber( { units: 'joules' } )
+      units: 'joules'
     } );
 
-    this.totalEnergyProperty = new Property( 0, {
+    this.totalEnergyProperty = new NumberProperty( 0, {
       tandem: tandem.createTandem( 'totalEnergyProperty' ),
-      phetioValueType: TNumber( { units: 'joules' } )
+      units: 'joules'
     } );
 
     // The skater's angle (about the pivot point at the bottom center), in radians
-    this.angleProperty = new Property( 0, {
+    this.angleProperty = new NumberProperty( 0, {
       tandem: tandem.createTandem( 'angleProperty' ),
-      phetioValueType: TNumber( { units: 'radians' } )
+      units: 'radians'
     } );
 
     // Returns to this point when pressing "return skater"
@@ -141,7 +142,7 @@ define( function( require ) {
     // Returns to this parametric position along the track when pressing "return skater"
     this.startingUProperty = new Property( 0, {
       tandem: tandem.createTandem( 'startingUProperty' ),
-      phetioValueType: TNumber()
+      phetioValueType: TNumber
     } );
 
     this.startingUpProperty = new Property( true, {
@@ -189,7 +190,8 @@ define( function( require ) {
       return velocity.magnitude();
     }, {
       tandem: tandem.createTandem( 'speedProperty' ),
-      phetioValueType: TNumber( { units: 'meters/second' } )
+      units: 'meters/second',
+      phetioValueType: TNumber
     } );
     Property.preventGetSet( this, 'speed' );
 

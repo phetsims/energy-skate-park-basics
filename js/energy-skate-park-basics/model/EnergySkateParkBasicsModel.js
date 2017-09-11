@@ -26,29 +26,30 @@ define( function( require ) {
   'use strict';
 
   // modules
+  var Emitter = require( 'AXON/Emitter' );
+  var NumberProperty = require( 'AXON/NumberProperty' );
+  var ObservableArray = require( 'AXON/ObservableArray' );
+  var Property = require( 'AXON/Property' );
+  var Bounds2 = require( 'DOT/Bounds2' );
+  var Util = require( 'DOT/Util' );
+  var Vector2 = require( 'DOT/Vector2' );
+  var EnergySkateParkBasicsQueryParameters = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/EnergySkateParkBasicsQueryParameters' );
+  var ControlPoint = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/model/ControlPoint' );
+  var DebugTracks = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/model/DebugTracks' );
+  var Skater = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/model/Skater' );
+  var SkaterState = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/model/SkaterState' );
+  var Track = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/model/Track' );
   var energySkateParkBasics = require( 'ENERGY_SKATE_PARK_BASICS/energySkateParkBasics' );
   var inherit = require( 'PHET_CORE/inherit' );
-  var Property = require( 'AXON/Property' );
-  var Emitter = require( 'AXON/Emitter' );
-  var Skater = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/model/Skater' );
-  var DebugTracks = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/model/DebugTracks' );
-  var Track = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/model/Track' );
-  var ControlPoint = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/model/ControlPoint' );
-  var Vector2 = require( 'DOT/Vector2' );
-  var ObservableArray = require( 'AXON/ObservableArray' );
-  var SkaterState = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/model/SkaterState' );
-  var Util = require( 'DOT/Util' );
   var Tandem = require( 'TANDEM/Tandem' );
-  var Bounds2 = require( 'DOT/Bounds2' );
-  var EnergySkateParkBasicsQueryParameters = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/EnergySkateParkBasicsQueryParameters' );
 
   // phet-io modules
-  var TNumber = require( 'ifphetio!PHET_IO/types/TNumber' );
-  var TBoolean = require( 'ifphetio!PHET_IO/types/TBoolean' );
-  var TString = require( 'ifphetio!PHET_IO/types/TString' );
   var TBounds2 = require( 'DOT/TBounds2' );
   var TEnergySkateParkBasicsModel = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/model/TEnergySkateParkBasicsModel' );
   var TTrack = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/model/TTrack' );
+  var TBoolean = require( 'ifphetio!PHET_IO/types/TBoolean' );
+  var TNumber = require( 'ifphetio!PHET_IO/types/TNumber' );
+  var TString = require( 'ifphetio!PHET_IO/types/TString' );
 
   // Reuse empty object for creating SkaterStates to avoid allocations
   var EMPTY_OBJECT = {};
@@ -148,9 +149,8 @@ define( function( require ) {
     } );
 
     // Coefficient of friction (unitless) between skater and track
-    this.frictionProperty = new Property( frictionAllowed ? 0.05 : 0, {
-      tandem: tandem.createTandem( 'frictionProperty' ),
-      phetioValueType: TNumber()
+    this.frictionProperty = new NumberProperty( frictionAllowed ? 0.05 : 0, {
+      tandem: tandem.createTandem( 'frictionProperty' )
     } );
 
     // Whether the skater should stick to the track like a roller coaster, or be able to fly off like a street
@@ -248,7 +248,8 @@ define( function( require ) {
       // For screens 1-2, the index of the selected scene (and track) within the screen
       this.sceneProperty = new Property( 0, {
         tandem: tandem.createTandem( 'sceneProperty' ),
-        phetioValueType: TNumber( { values: [ 0, 1, 2 ] } ) // TODO: automatically get the number of tracks
+        validValues: [ 0, 1, 2 ],
+        phetioValueType: TNumber// TODO: automatically get the number of tracks
       } );
 
       // Shape types
