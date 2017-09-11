@@ -9,12 +9,12 @@ define( function( require ) {
   'use strict';
 
   // modules
+  var DerivedProperty = require( 'AXON/DerivedProperty' );
   var energySkateParkBasics = require( 'ENERGY_SKATE_PARK_BASICS/energySkateParkBasics' );
   var inherit = require( 'PHET_CORE/inherit' );
   var Property = require( 'AXON/Property' );
-  var DerivedProperty = require( 'AXON/DerivedProperty' );
-  var Vector2 = require( 'DOT/Vector2' );
   var TVector2 = require( 'DOT/TVector2' );
+  var Vector2 = require( 'DOT/Vector2' );
 
   // phet-io modules
   var TControlPoint = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/model/TControlPoint' );

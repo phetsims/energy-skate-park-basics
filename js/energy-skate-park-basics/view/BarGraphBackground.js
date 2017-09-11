@@ -10,23 +10,23 @@ define( function( require ) {
   'use strict';
 
   // modules
-  var energySkateParkBasics = require( 'ENERGY_SKATE_PARK_BASICS/energySkateParkBasics' );
-  var inherit = require( 'PHET_CORE/inherit' );
-  var Rectangle = require( 'SCENERY/nodes/Rectangle' );
-  var Line = require( 'SCENERY/nodes/Line' );
-  var Text = require( 'SCENERY/nodes/Text' );
-  var Panel = require( 'SUN/Panel' );
   var ArrowNode = require( 'SCENERY_PHET/ArrowNode' );
-  var PhetFont = require( 'SCENERY_PHET/PhetFont' );
-  var EnergySkateParkColorScheme = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/view/EnergySkateParkColorScheme' );
   var ClearThermalButton = require( 'SCENERY_PHET/ClearThermalButton' );
+  var energySkateParkBasics = require( 'ENERGY_SKATE_PARK_BASICS/energySkateParkBasics' );
+  var EnergySkateParkColorScheme = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/view/EnergySkateParkColorScheme' );
+  var inherit = require( 'PHET_CORE/inherit' );
+  var Line = require( 'SCENERY/nodes/Line' );
+  var Panel = require( 'SUN/Panel' );
+  var PhetFont = require( 'SCENERY_PHET/PhetFont' );
+  var Rectangle = require( 'SCENERY/nodes/Rectangle' );
+  var Text = require( 'SCENERY/nodes/Text' );
 
   // strings
+  var energyEnergyString = require( 'string!ENERGY_SKATE_PARK_BASICS/energy.energy' );
   var energyKineticString = require( 'string!ENERGY_SKATE_PARK_BASICS/energy.kinetic' );
   var energyPotentialString = require( 'string!ENERGY_SKATE_PARK_BASICS/energy.potential' );
   var energyThermalString = require( 'string!ENERGY_SKATE_PARK_BASICS/energy.thermal' );
   var energyTotalString = require( 'string!ENERGY_SKATE_PARK_BASICS/energy.total' );
-  var energyEnergyString = require( 'string!ENERGY_SKATE_PARK_BASICS/energy.energy' );
 
   /**
    * Constructor for the BarGraph

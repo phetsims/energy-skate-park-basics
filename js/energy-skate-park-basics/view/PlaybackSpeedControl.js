@@ -9,12 +9,12 @@ define( function( require ) {
   'use strict';
 
   // modules
+  var AquaRadioButton = require( 'SUN/AquaRadioButton' );
   var energySkateParkBasics = require( 'ENERGY_SKATE_PARK_BASICS/energySkateParkBasics' );
   var inherit = require( 'PHET_CORE/inherit' );
-  var VBox = require( 'SCENERY/nodes/VBox' );
-  var AquaRadioButton = require( 'SUN/AquaRadioButton' );
-  var Text = require( 'SCENERY/nodes/Text' );
   var PhetFont = require( 'SCENERY_PHET/PhetFont' );
+  var Text = require( 'SCENERY/nodes/Text' );
+  var VBox = require( 'SCENERY/nodes/VBox' );
 
   // strings
   var normalString = require( 'string!ENERGY_SKATE_PARK_BASICS/normal' );

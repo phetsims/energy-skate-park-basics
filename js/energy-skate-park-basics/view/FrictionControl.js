@@ -9,18 +9,18 @@ define( function( require ) {
   'use strict';
 
   // modules
-  var energySkateParkBasics = require( 'ENERGY_SKATE_PARK_BASICS/energySkateParkBasics' );
-  var inherit = require( 'PHET_CORE/inherit' );
-  var VBox = require( 'SCENERY/nodes/VBox' );
-  var Text = require( 'SCENERY/nodes/Text' );
-  var PhetFont = require( 'SCENERY_PHET/PhetFont' );
-  var HSlider = require( 'SUN/HSlider' );
   var Constants = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/Constants' );
+  var energySkateParkBasics = require( 'ENERGY_SKATE_PARK_BASICS/energySkateParkBasics' );
+  var HSlider = require( 'SUN/HSlider' );
+  var inherit = require( 'PHET_CORE/inherit' );
+  var PhetFont = require( 'SCENERY_PHET/PhetFont' );
+  var Text = require( 'SCENERY/nodes/Text' );
+  var VBox = require( 'SCENERY/nodes/VBox' );
 
   // strings
   var controlsFrictionTitleString = require( 'string!ENERGY_SKATE_PARK_BASICS/controls.friction.title' );
-  var controlsGravityNoneString = require( 'string!ENERGY_SKATE_PARK_BASICS/controls.gravity.none' );
   var controlsGravityLotsString = require( 'string!ENERGY_SKATE_PARK_BASICS/controls.gravity.lots' );
+  var controlsGravityNoneString = require( 'string!ENERGY_SKATE_PARK_BASICS/controls.gravity.none' );
 
   /**
    * @param {Property<Number>} frictionProperty the axon property representing the value of the friction

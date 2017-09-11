@@ -11,15 +11,15 @@ define( function( require ) {
   'use strict';
 
   // modules
-  var energySkateParkBasics = require( 'ENERGY_SKATE_PARK_BASICS/energySkateParkBasics' );
-  var inherit = require( 'PHET_CORE/inherit' );
   var Circle = require( 'SCENERY/nodes/Circle' );
-  var Image = require( 'SCENERY/nodes/Image' );
-  var SimpleDragHandler = require( 'SCENERY/input/SimpleDragHandler' );
-  var Matrix3 = require( 'DOT/Matrix3' );
-  var LinearFunction = require( 'DOT/LinearFunction' );
-  var Node = require( 'SCENERY/nodes/Node' );
   var Constants = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/Constants' );
+  var energySkateParkBasics = require( 'ENERGY_SKATE_PARK_BASICS/energySkateParkBasics' );
+  var Image = require( 'SCENERY/nodes/Image' );
+  var inherit = require( 'PHET_CORE/inherit' );
+  var LinearFunction = require( 'DOT/LinearFunction' );
+  var Matrix3 = require( 'DOT/Matrix3' );
+  var Node = require( 'SCENERY/nodes/Node' );
+  var SimpleDragHandler = require( 'SCENERY/input/SimpleDragHandler' );
 
   // images
   var skaterLeftImage = require( 'image!ENERGY_SKATE_PARK_BASICS/skater-left.png' );

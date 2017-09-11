@@ -10,23 +10,23 @@ define( function( require ) {
   'use strict';
 
   // modules
+  var Constants = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/Constants' );
   var DerivedProperty = require( 'AXON/DerivedProperty' );
   var Emitter = require( 'AXON/Emitter' );
+  var energySkateParkBasics = require( 'ENERGY_SKATE_PARK_BASICS/energySkateParkBasics' );
+  var inherit = require( 'PHET_CORE/inherit' );
   var NumberProperty = require( 'AXON/NumberProperty' );
   var Property = require( 'AXON/Property' );
   var Util = require( 'DOT/Util' );
   var Vector2 = require( 'DOT/Vector2' );
-  var Constants = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/Constants' );
-  var energySkateParkBasics = require( 'ENERGY_SKATE_PARK_BASICS/energySkateParkBasics' );
-  var inherit = require( 'PHET_CORE/inherit' );
 
   // phet-io modules
-  var TVector2 = require( 'DOT/TVector2' );
-  var TTrack = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/model/TTrack' );
-  var TTrackReference = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/model/TTrackReference' );
   var TBoolean = require( 'ifphetio!PHET_IO/types/TBoolean' );
   var TNumber = require( 'ifphetio!PHET_IO/types/TNumber' );
   var TString = require( 'ifphetio!PHET_IO/types/TString' );
+  var TTrack = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/model/TTrack' );
+  var TTrackReference = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/model/TTrackReference' );
+  var TVector2 = require( 'DOT/TVector2' );
 
   // Compare two arrays, whose elements have 'equals' methods for comparison
   var arrayEquals = function( a, b ) {

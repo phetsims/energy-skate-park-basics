@@ -10,17 +10,17 @@ define( function( require ) {
   'use strict';
 
   // modules
+  var dot = require( 'DOT/dot' );
+  var Emitter = require( 'AXON/Emitter' );
   var energySkateParkBasics = require( 'ENERGY_SKATE_PARK_BASICS/energySkateParkBasics' );
   var inherit = require( 'PHET_CORE/inherit' );
   var Property = require( 'AXON/Property' );
-  var Emitter = require( 'AXON/Emitter' );
-  var Vector2 = require( 'DOT/Vector2' );
   var SplineEvaluation = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/model/SplineEvaluation' );
-  var dot = require( 'DOT/dot' );
+  var Vector2 = require( 'DOT/Vector2' );
 
   // phet-io modules
-  var TTrack = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/model/TTrack' );
   var TBoolean = require( 'ifphetio!PHET_IO/types/TBoolean' );
+  var TTrack = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/model/TTrack' );
 
   // constants
   var FastArray = dot.FastArray;

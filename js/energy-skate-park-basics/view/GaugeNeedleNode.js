@@ -13,12 +13,12 @@ define( function( require ) {
 
   // modules
   var energySkateParkBasics = require( 'ENERGY_SKATE_PARK_BASICS/energySkateParkBasics' );
-  var Node = require( 'SCENERY/nodes/Node' );
-  var Matrix3 = require( 'DOT/Matrix3' );
   var inherit = require( 'PHET_CORE/inherit' );
-  var Util = require( 'DOT/Util' );
+  var Matrix3 = require( 'DOT/Matrix3' );
+  var Node = require( 'SCENERY/nodes/Node' );
   var Property = require( 'AXON/Property' );
   var Rectangle = require( 'SCENERY/nodes/Rectangle' );
+  var Util = require( 'DOT/Util' );
 
   // constants
   var linear = Util.linear;

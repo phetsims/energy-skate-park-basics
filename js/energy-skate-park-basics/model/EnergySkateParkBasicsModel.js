@@ -26,30 +26,30 @@ define( function( require ) {
   'use strict';
 
   // modules
+  var Bounds2 = require( 'DOT/Bounds2' );
+  var ControlPoint = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/model/ControlPoint' );
+  var DebugTracks = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/model/DebugTracks' );
   var Emitter = require( 'AXON/Emitter' );
+  var energySkateParkBasics = require( 'ENERGY_SKATE_PARK_BASICS/energySkateParkBasics' );
+  var EnergySkateParkBasicsQueryParameters = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/EnergySkateParkBasicsQueryParameters' );
+  var inherit = require( 'PHET_CORE/inherit' );
   var NumberProperty = require( 'AXON/NumberProperty' );
   var ObservableArray = require( 'AXON/ObservableArray' );
   var Property = require( 'AXON/Property' );
-  var Bounds2 = require( 'DOT/Bounds2' );
-  var Util = require( 'DOT/Util' );
-  var Vector2 = require( 'DOT/Vector2' );
-  var EnergySkateParkBasicsQueryParameters = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/EnergySkateParkBasicsQueryParameters' );
-  var ControlPoint = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/model/ControlPoint' );
-  var DebugTracks = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/model/DebugTracks' );
   var Skater = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/model/Skater' );
   var SkaterState = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/model/SkaterState' );
-  var Track = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/model/Track' );
-  var energySkateParkBasics = require( 'ENERGY_SKATE_PARK_BASICS/energySkateParkBasics' );
-  var inherit = require( 'PHET_CORE/inherit' );
   var Tandem = require( 'TANDEM/Tandem' );
+  var Track = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/model/Track' );
+  var Util = require( 'DOT/Util' );
+  var Vector2 = require( 'DOT/Vector2' );
 
   // phet-io modules
+  var TBoolean = require( 'ifphetio!PHET_IO/types/TBoolean' );
   var TBounds2 = require( 'DOT/TBounds2' );
   var TEnergySkateParkBasicsModel = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/model/TEnergySkateParkBasicsModel' );
-  var TTrack = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/model/TTrack' );
-  var TBoolean = require( 'ifphetio!PHET_IO/types/TBoolean' );
   var TNumber = require( 'ifphetio!PHET_IO/types/TNumber' );
   var TString = require( 'ifphetio!PHET_IO/types/TString' );
+  var TTrack = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/model/TTrack' );
 
   // Reuse empty object for creating SkaterStates to avoid allocations
   var EMPTY_OBJECT = {};

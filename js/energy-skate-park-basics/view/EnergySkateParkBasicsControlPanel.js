@@ -9,31 +9,31 @@ define( function( require ) {
   'use strict';
 
   // modules
-  var energySkateParkBasics = require( 'ENERGY_SKATE_PARK_BASICS/energySkateParkBasics' );
-  var inherit = require( 'PHET_CORE/inherit' );
-  var Node = require( 'SCENERY/nodes/Node' );
-  var VBox = require( 'SCENERY/nodes/VBox' );
-  var HBox = require( 'SCENERY/nodes/HBox' );
-  var Path = require( 'SCENERY/nodes/Path' );
-  var Shape = require( 'KITE/Shape' );
-  var Rectangle = require( 'SCENERY/nodes/Rectangle' );
-  var Line = require( 'SCENERY/nodes/Line' );
-  var Circle = require( 'SCENERY/nodes/Circle' );
-  var Panel = require( 'SUN/Panel' );
   var CheckBox = require( 'SUN/CheckBox' );
-  var Text = require( 'SCENERY/nodes/Text' );
-  var MassControlPanel = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/view/MassControlPanel' );
+  var Circle = require( 'SCENERY/nodes/Circle' );
+  var energySkateParkBasics = require( 'ENERGY_SKATE_PARK_BASICS/energySkateParkBasics' );
   var EnergySkateParkColorScheme = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/view/EnergySkateParkColorScheme' );
-  var GaugeNode = require( 'SCENERY_PHET/GaugeNode' );
-  var Property = require( 'AXON/Property' );
   var FrictionControl = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/view/FrictionControl' );
+  var GaugeNode = require( 'SCENERY_PHET/GaugeNode' );
+  var HBox = require( 'SCENERY/nodes/HBox' );
+  var inherit = require( 'PHET_CORE/inherit' );
+  var Line = require( 'SCENERY/nodes/Line' );
+  var MassControlPanel = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/view/MassControlPanel' );
+  var Node = require( 'SCENERY/nodes/Node' );
+  var Panel = require( 'SUN/Panel' );
+  var Path = require( 'SCENERY/nodes/Path' );
   var PhetFont = require( 'SCENERY_PHET/PhetFont' );
+  var Property = require( 'AXON/Property' );
+  var Rectangle = require( 'SCENERY/nodes/Rectangle' );
+  var Shape = require( 'KITE/Shape' );
+  var Text = require( 'SCENERY/nodes/Text' );
+  var VBox = require( 'SCENERY/nodes/VBox' );
 
   // strings
-  var plotsBarGraphString = require( 'string!ENERGY_SKATE_PARK_BASICS/plots.bar-graph' );
-  var pieChartString = require( 'string!ENERGY_SKATE_PARK_BASICS/pieChart' );
-  var propertiesSpeedString = require( 'string!ENERGY_SKATE_PARK_BASICS/properties.speed' );
   var controlsShowGridString = require( 'string!ENERGY_SKATE_PARK_BASICS/controls.show-grid' );
+  var pieChartString = require( 'string!ENERGY_SKATE_PARK_BASICS/pieChart' );
+  var plotsBarGraphString = require( 'string!ENERGY_SKATE_PARK_BASICS/plots.bar-graph' );
+  var propertiesSpeedString = require( 'string!ENERGY_SKATE_PARK_BASICS/properties.speed' );
 
   /**
    * @param {EnergySkateParkBasicsModel} model

@@ -9,24 +9,24 @@ define( function( require ) {
   'use strict';
 
   // modules
-  var energySkateParkBasics = require( 'ENERGY_SKATE_PARK_BASICS/energySkateParkBasics' );
-  var inherit = require( 'PHET_CORE/inherit' );
-  var Rectangle = require( 'SCENERY/nodes/Rectangle' );
-  var VBox = require( 'SCENERY/nodes/VBox' );
-  var HBox = require( 'SCENERY/nodes/HBox' );
-  var Text = require( 'SCENERY/nodes/Text' );
-  var Panel = require( 'SUN/Panel' );
-  var VStrut = require( 'SCENERY/nodes/VStrut' );
-  var HStrut = require( 'SCENERY/nodes/HStrut' );
-  var PhetFont = require( 'SCENERY_PHET/PhetFont' );
-  var EnergySkateParkColorScheme = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/view/EnergySkateParkColorScheme' );
   var ClearThermalButton = require( 'SCENERY_PHET/ClearThermalButton' );
+  var energySkateParkBasics = require( 'ENERGY_SKATE_PARK_BASICS/energySkateParkBasics' );
+  var EnergySkateParkColorScheme = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/view/EnergySkateParkColorScheme' );
+  var HBox = require( 'SCENERY/nodes/HBox' );
+  var HStrut = require( 'SCENERY/nodes/HStrut' );
+  var inherit = require( 'PHET_CORE/inherit' );
+  var Panel = require( 'SUN/Panel' );
+  var PhetFont = require( 'SCENERY_PHET/PhetFont' );
+  var Rectangle = require( 'SCENERY/nodes/Rectangle' );
+  var Text = require( 'SCENERY/nodes/Text' );
+  var VBox = require( 'SCENERY/nodes/VBox' );
+  var VStrut = require( 'SCENERY/nodes/VStrut' );
 
   // strings
+  var energyEnergyString = require( 'string!ENERGY_SKATE_PARK_BASICS/energy.energy' );
   var energyKineticString = require( 'string!ENERGY_SKATE_PARK_BASICS/energy.kinetic' );
   var energyPotentialString = require( 'string!ENERGY_SKATE_PARK_BASICS/energy.potential' );
   var energyThermalString = require( 'string!ENERGY_SKATE_PARK_BASICS/energy.thermal' );
-  var energyEnergyString = require( 'string!ENERGY_SKATE_PARK_BASICS/energy.energy' );
 
   /**
    * @param {Skater} skater the model for the skater

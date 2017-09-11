@@ -11,9 +11,9 @@ define( function( require ) {
   // modules
   var assertInstanceOf = require( 'ifphetio!PHET_IO/assertions/assertInstanceOf' );
   var energySkateParkBasics = require( 'ENERGY_SKATE_PARK_BASICS/energySkateParkBasics' );
+  var phetio = require( 'ifphetio!PHET_IO/phetio' );
   var phetioInherit = require( 'ifphetio!PHET_IO/phetioInherit' );
   var TObject = require( 'ifphetio!PHET_IO/types/TObject' );
-  var phetio = require( 'ifphetio!PHET_IO/phetio' );
 
   /**
    *

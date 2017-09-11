@@ -10,13 +10,13 @@ define( function( require ) {
   'use strict';
 
   // modules
-  var energySkateParkBasics = require( 'ENERGY_SKATE_PARK_BASICS/energySkateParkBasics' );
-  var inherit = require( 'PHET_CORE/inherit' );
-  var WebGLNode = require( 'SCENERY/nodes/WebGLNode' );
   var Bounds2 = require( 'DOT/Bounds2' );
   var Color = require( 'SCENERY/util/Color' );
+  var energySkateParkBasics = require( 'ENERGY_SKATE_PARK_BASICS/energySkateParkBasics' );
+  var inherit = require( 'PHET_CORE/inherit' );
   var ShaderProgram = require( 'SCENERY/util/ShaderProgram' );
   var Shape = require( 'KITE/Shape' );
+  var WebGLNode = require( 'SCENERY/nodes/WebGLNode' );
 
   /**
    * @param {Color} color

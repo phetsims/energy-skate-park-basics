@@ -9,14 +9,14 @@ define( function( require ) {
   'use strict';
 
   // modules
-  var energySkateParkBasics = require( 'ENERGY_SKATE_PARK_BASICS/energySkateParkBasics' );
-  var inherit = require( 'PHET_CORE/inherit' );
-  var Node = require( 'SCENERY/nodes/Node' );
-  var Vector2 = require( 'DOT/Vector2' );
-  var FontAwesomeNode = require( 'SUN/FontAwesomeNode' );
-  var LinearFunction = require( 'DOT/LinearFunction' );
-  var RoundPushButton = require( 'SUN/buttons/RoundPushButton' );
   var Color = require( 'SCENERY/util/Color' );
+  var energySkateParkBasics = require( 'ENERGY_SKATE_PARK_BASICS/energySkateParkBasics' );
+  var FontAwesomeNode = require( 'SUN/FontAwesomeNode' );
+  var inherit = require( 'PHET_CORE/inherit' );
+  var LinearFunction = require( 'DOT/LinearFunction' );
+  var Node = require( 'SCENERY/nodes/Node' );
+  var RoundPushButton = require( 'SUN/buttons/RoundPushButton' );
+  var Vector2 = require( 'DOT/Vector2' );
 
   /**
    * Constructor for the ControlPointUI for a single control point.

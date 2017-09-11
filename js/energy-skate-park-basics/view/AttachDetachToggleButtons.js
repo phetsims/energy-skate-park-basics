@@ -11,15 +11,15 @@ define( function( require ) {
 
   // modules
   var energySkateParkBasics = require( 'ENERGY_SKATE_PARK_BASICS/energySkateParkBasics' );
-  var inherit = require( 'PHET_CORE/inherit' );
   var Image = require( 'SCENERY/nodes/Image' );
+  var inherit = require( 'PHET_CORE/inherit' );
   var Panel = require( 'SUN/Panel' );
   var RadioButtonGroup = require( 'SUN/buttons/RadioButtonGroup' );
 
 
   // images
-  var detachIcon = require( 'image!ENERGY_SKATE_PARK_BASICS/detach.png' );
   var attachIcon = require( 'image!ENERGY_SKATE_PARK_BASICS/attach.png' );
+  var detachIcon = require( 'image!ENERGY_SKATE_PARK_BASICS/detach.png' );
 
   /**
    * Constructor for the AttachDetachToggleButtons
