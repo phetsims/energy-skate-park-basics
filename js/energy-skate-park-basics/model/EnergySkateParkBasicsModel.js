@@ -166,18 +166,6 @@ define( function( require ) {
       phetioValueType: TBounds2
     } );
 
-    Property.preventGetSet( this, 'pieChartVisible' );
-    Property.preventGetSet( this, 'barGraphVisible' );
-    Property.preventGetSet( this, 'gridVisible' );
-    Property.preventGetSet( this, 'speedometerVisible' );
-    Property.preventGetSet( this, 'editButtonEnabled' );
-    Property.preventGetSet( this, 'clearButtonEnabled' );
-    Property.preventGetSet( this, 'paused' );
-    Property.preventGetSet( this, 'speed' );
-    Property.preventGetSet( this, 'friction' );
-    Property.preventGetSet( this, 'detachable' );
-    Property.preventGetSet( this, 'availableModelBounds' );
-
     if ( EnergySkateParkBasicsQueryParameters.debugTrack ) {
       this.frictionProperty.debug( 'friction' );
     }

@@ -88,10 +88,6 @@ define( function( require ) {
       tandem: tandem.createTandem( 'droppedProperty' ),
       phetioValueType: TBoolean
     } );
-    Property.preventGetSet( this, 'physical' );
-    Property.preventGetSet( this, 'leftThePanel' );
-    Property.preventGetSet( this, 'dragging' );
-    Property.preventGetSet( this, 'dropped' );
 
     var trackChangedListener = function() { events.trackChangedEmitter.emit(); };
     this.physicalProperty.link( trackChangedListener );

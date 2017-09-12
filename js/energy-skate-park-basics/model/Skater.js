@@ -162,27 +162,6 @@ define( function( require ) {
       phetioValueType: TVector2
     } );
 
-    Property.preventGetSet( this, 'track' );
-    Property.preventGetSet( this, 'parametricPosition' );
-    Property.preventGetSet( this, 'parametricSpeed' );
-    Property.preventGetSet( this, 'onTopSideOfTrack' );
-    Property.preventGetSet( this, 'gravity' );
-    Property.preventGetSet( this, 'position' );
-    Property.preventGetSet( this, 'mass' );
-    Property.preventGetSet( this, 'direction' );
-    Property.preventGetSet( this, 'velocity' );
-    Property.preventGetSet( this, 'dragging' );
-    Property.preventGetSet( this, 'kineticEnergy' );
-    Property.preventGetSet( this, 'potentialEnergy' );
-    Property.preventGetSet( this, 'thermalEnergy' );
-    Property.preventGetSet( this, 'totalEnergy' );
-    Property.preventGetSet( this, 'angle' );
-    Property.preventGetSet( this, 'startingPosition' );
-    Property.preventGetSet( this, 'startingU' );
-    Property.preventGetSet( this, 'startingUp' );
-    Property.preventGetSet( this, 'startingTrack' );
-    Property.preventGetSet( this, 'headPosition' );
-
     this.updatedEmitter = new Emitter();
     this.energyChangedEmitter = new Emitter();
 
@@ -193,7 +172,6 @@ define( function( require ) {
       units: 'meters/second',
       phetioValueType: TNumber
     } );
-    Property.preventGetSet( this, 'speed' );
 
     // Zero the kinetic energy when dragging, see #22
     this.draggingProperty.link( function( dragging ) {
@@ -229,7 +207,6 @@ define( function( require ) {
         tandem: tandem.createTandem( 'movedProperty' ),
         phetioValueType: TBoolean
       } );
-    Property.preventGetSet( this, 'moved' );
 
     this.massProperty.link( function() { self.updateEnergy(); } );
 
@@ -248,7 +225,6 @@ define( function( require ) {
         tandem: tandem.createTandem( 'allowClearingThermalEnergyProperty' ),
         phetioValueType: TBoolean
       } );
-    Property.preventGetSet( this, 'allowClearingThermalEnergy' );
 
     // In the state.html wrapper, when the state changes, we must update the skater node
     phet.phetIo && phet.phetIo.phetio.setStateEmitter && phet.phetIo.phetio.setStateEmitter.addListener( function() {
