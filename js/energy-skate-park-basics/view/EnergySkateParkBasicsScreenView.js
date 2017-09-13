@@ -71,7 +71,10 @@ define( function( require ) {
     var trackNodeGroupTandem = tandem.createGroupTandem( 'trackNode' );
 
     var self = this;
-    ScreenView.call( self, { layoutBounds: new Bounds2( 0, 0, 834, 504 ) } );
+    ScreenView.call( self, {
+      layoutBounds: new Bounds2( 0, 0, 834, 504 ),
+      tandem: tandem
+    } );
 
     var modelPoint = new Vector2( 0, 0 );
     // earth is 70px high in stage coordinates
@@ -96,7 +99,7 @@ define( function( require ) {
       model.skater,
       model.clearThermal.bind( model ),
       model.pieChartVisibleProperty,
-      tandem
+      tandem.createTandem( 'pieChartLegend' )
     );
     this.addChild( pieChartLegend );
 

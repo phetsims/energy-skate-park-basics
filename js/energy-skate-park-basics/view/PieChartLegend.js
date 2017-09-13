@@ -31,7 +31,7 @@ define( function( require ) {
   /**
    * @param {Skater} skater the model for the skater
    * @param {Function} clearThermal function to be called when the user presses the clear thermal button
-   * @param {Property.<boolean>) pieChartVisibleProperty axon Property indicating whether the pie chart is visible
+   * @param {Property.<boolean>} pieChartVisibleProperty axon Property indicating whether the pie chart is visible
    * @param {Tandem} tandem
    * @constructor
    */
