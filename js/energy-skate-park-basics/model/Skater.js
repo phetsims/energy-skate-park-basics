@@ -245,8 +245,8 @@ define( function( require ) {
     },
 
     reset: function() {
-      // set the angle to zero before calling PropertySet.prototype.reset so that the optimization for
-      // SkaterNode.updatePosition is maintained, without showing the skater at the wrong angle
+      // set the angle to zero first so that the optimization for SkaterNode.updatePosition is maintained,
+      // without showing the skater at the wrong angle
       this.angleProperty.value = 0;
       this.trackProperty.reset();
       this.parametricPositionProperty.reset();
@@ -276,8 +276,8 @@ define( function( require ) {
 
     // Move the skater to her initial position, but leave the friction and mass the same, see #237
     resetPosition: function() {
-      // set the angle to zero before calling PropertySet.prototype.reset so that the optimization for
-      // SkaterNode.updatePosition is maintained, without showing the skater at the wrong angle
+      // set the angle to zero first so that the optimization for SkaterNode.updatePosition is maintained, without
+      // showing the skater at the wrong angle
       this.angleProperty.value = 0;
       var mass = this.massProperty.value;
 
