@@ -193,7 +193,6 @@ define( function( require ) {
 
           controlPointUIShownEmitter.emit();
 
-          lastControlPointUI && lastControlPointUI.detach();
           lastControlPointUI && lastControlPointUI.dispose();
 
           lastControlPointUI = new ControlPointUI(
@@ -207,7 +206,6 @@ define( function( require ) {
 
           // If the track was removed, get rid of the buttons
           var removalListener = function() {
-            lastControlPointUI && lastControlPointUI.detach();
             lastControlPointUI && lastControlPointUI.dispose();
             lastControlPointUI = null;
           };
