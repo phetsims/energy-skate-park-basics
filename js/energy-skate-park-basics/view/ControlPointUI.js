@@ -70,11 +70,7 @@ define( function( require ) {
         tandem: tandem.createTandem( 'cutButton' ),
         content: scissorNode,
         listener: function() {
-
-          // Run outside of the listener callback because buttons cannot be disposed while firing
-          setTimeout( function() {
-            model.splitControlPoint( track, controlPointIndex, modelAngle );
-          }, 0 );
+          model.splitControlPoint( track, controlPointIndex, modelAngle );
         },
         center: modelViewTransform.modelToViewPosition( position ).plus( Vector2.createPolar( 40, angle + Math.PI / 2 ) ),
         radius: 20,
@@ -92,11 +88,7 @@ define( function( require ) {
     var deleteButton = new RoundPushButton( {
       tandem: tandem.createTandem( 'deleteButton' ),
       listener: function() {
-
-        // Run outside of the listener callback because buttons cannot be disposed while firing
-        setTimeout( function() {
-          model.deleteControlPoint( track, controlPointIndex )
-        }, 0 );
+        model.deleteControlPoint( track, controlPointIndex );
       },
       content: deleteNode,
       center: modelViewTransform.modelToViewPosition( position ).plus( Vector2.createPolar( 40, angle - Math.PI / 2 ) ),
