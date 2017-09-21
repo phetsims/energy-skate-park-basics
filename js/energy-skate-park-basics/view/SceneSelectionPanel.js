@@ -1,4 +1,4 @@
-// Copyright 2013-2015, University of Colorado Boulder
+// Copyright 2013-2017, University of Colorado Boulder
 
 /**
  * Panel with radio buttons for choosing one of three tracks, in the first 2 screens of Energy Skate Park: Basics
