@@ -357,7 +357,7 @@ define( function( require ) {
     var gaugeNeedleNode = new GaugeNeedleNode( model.skater.speedProperty, {
       min: 0,
       max: 20
-    }, tandem.createTandem( 'gaugeNeedleNode' ), {
+    }, {
       renderer: renderer
     } );
     model.speedometerVisibleProperty.linkAttribute( gaugeNeedleNode, 'visible' );

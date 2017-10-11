@@ -27,11 +27,10 @@ define( function( require ) {
    * Constructor
    * @param {Property} valueProperty Property.<number> which is portrayed
    * @param {Object} range - contains min and max values that define the range
-   * @param {Tandem} tandem
    * @param {Object} [options] typical Node layout and display options
    * @constructor
    */
-  function GaugeNeedleNode( valueProperty, range, tandem, options ) {
+  function GaugeNeedleNode( valueProperty, range, options ) {
 
     options = _.extend( {
       // Defaults
@@ -55,7 +54,6 @@ define( function( require ) {
       needle = needle.toCanvasNodeSynchronous();
     }
     Node.call( this, {
-      tandem: tandem,
       children: [ needle ]
     } );
 
