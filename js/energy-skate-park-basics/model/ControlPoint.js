@@ -59,13 +59,8 @@ define( function( require ) {
 
     this.disposeControlPoint = function() {
       tandem.removeInstance( self );
-      self.positionProperty.unlinkAll();
       self.positionProperty.dispose();
-
-      self.sourcePositionProperty.unlinkAll();
       self.sourcePositionProperty.dispose();
-
-      self.snapTargetProperty.unlinkAll();
       self.snapTargetProperty.dispose();
     };
   }

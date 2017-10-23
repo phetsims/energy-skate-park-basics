@@ -226,12 +226,8 @@ define( function( require ) {
       if ( this.startedDrag ) {
         var myPoints = [ track.controlPoints[ 0 ], track.controlPoints[ track.controlPoints.length - 1 ] ];
         if ( myPoints[ 0 ].snapTargetProperty.value || myPoints[ 1 ].snapTargetProperty.value ) {
-          model.joinTracks( track );
+          model.joinTracks( track ); // Track will be joined to compatible track, then both will be disposed, and new track created.
         }
-
-        track.bumpAboveGround();
-        track.draggingProperty.value = false;
-        track.droppedProperty.value = true;
 
         if ( EnergySkateParkBasicsQueryParameters.debugTrack ) {
           console.log( track.getDebugString() );

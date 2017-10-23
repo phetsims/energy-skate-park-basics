@@ -120,8 +120,6 @@ define( function( require ) {
 
     this.disposeTrack = function() {
       tandem.removeInstance( self );
-      self.physicalProperty.unlink( trackChangedListener );
-      self.draggingProperty.unlinkAll();
       self.physicalProperty.dispose();
       self.leftThePanelProperty.dispose();
       self.draggingProperty.dispose();
