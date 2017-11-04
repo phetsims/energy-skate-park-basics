@@ -20,7 +20,7 @@ define( function( require ) {
    * @constructor
    */
   function TControlPointNode( instance, phetioID ) {
-    assertInstanceOf( instance, phet.energySkateParkBasics.ControlPointNode );
+    assert && assertInstanceOf( instance, phet.energySkateParkBasics.ControlPointNode );
     TNode.call( this, instance, phetioID );
   }
 

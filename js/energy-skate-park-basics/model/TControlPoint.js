@@ -22,7 +22,7 @@ define( function( require ) {
    * @constructor
    */
   function TControlPoint( instance, phetioID ) {
-    assertInstanceOf( instance, phet.energySkateParkBasics.ControlPoint );
+    assert && assertInstanceOf( instance, phet.energySkateParkBasics.ControlPoint );
     TObject.call( this, instance, phetioID );
   }
 

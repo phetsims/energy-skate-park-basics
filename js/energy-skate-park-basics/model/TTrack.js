@@ -21,7 +21,7 @@ define( function( require ) {
    * @constructor
    */
   function TTrack( instance, phetioID ) {
-    assertInstanceOf( instance, phet.energySkateParkBasics.Track );
+    assert && assertInstanceOf( instance, phet.energySkateParkBasics.Track );
     TObject.call( this, instance, phetioID );
   }
 

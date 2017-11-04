@@ -21,7 +21,7 @@ define( function( require ) {
    * @constructor
    */
   function TEnergySkateParkBasicsModel( instance, phetioID ) {
-    assertInstanceOf( instance, phet.energySkateParkBasics.EnergySkateParkBasicsModel );
+    assert && assertInstanceOf( instance, phet.energySkateParkBasics.EnergySkateParkBasicsModel );
     TObject.call( this, instance, phetioID );
   }
 
