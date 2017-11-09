@@ -44,7 +44,7 @@ define( function( require ) {
       }
     },
     toStateObject: function( instance ) {
-      return instance ? instance.tandem.id : null;
+      return instance ? instance.trackTandem.id : null;
     }
   } );
 

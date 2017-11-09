@@ -43,7 +43,9 @@ define( function( require ) {
     this.events = events;
     this.parents = parents;
     this.modelTracks = modelTracks;
-    this.tandem = tandem;
+
+    // @public (phet-io), see TTrackReference
+    this.trackTandem = tandem;
     this.availableModelBoundsProperty = availableModelBoundsProperty;
 
     this.translatedEmitter = new Emitter();
