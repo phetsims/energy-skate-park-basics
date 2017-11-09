@@ -47,7 +47,7 @@ define( function( require ) {
         return {
           interactive: instance.interactive,
           controlPointTandemIDs: instance.controlPoints.map( function( controlPoint ) {
-            return controlPoint.tandem.id;
+            return controlPoint.controlPointTandem.id;
           } )
         };
       }

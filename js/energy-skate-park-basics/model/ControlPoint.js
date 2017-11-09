@@ -30,7 +30,7 @@ define( function( require ) {
     var self = this;
 
     // @public (phet-io)
-    this.tandem = tandem;
+    this.controlPointTandem = tandem;
 
     // Where it would be if it hadn't snapped to another point during dragging
     this.sourcePositionProperty = new Property( new Vector2( x, y ), {
