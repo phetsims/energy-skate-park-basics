@@ -217,6 +217,12 @@ define( function( require ) {
       var track = this.track;
       var model = this.model;
 
+      // If dropped in the play area, signify that it has been dropped--this will make it so that dragging the control points
+      // reshapes the track instead of translating it
+      if ( track.physicalProperty.value ) {
+        track.droppedProperty.value = true;
+      }
+
       track.dragSource = null;
 
       // Check whether the model contains a track so that input listeners for detached elements can't create bugs, see #230
