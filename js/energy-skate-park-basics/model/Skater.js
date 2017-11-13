@@ -17,6 +17,7 @@ define( function( require ) {
   var inherit = require( 'PHET_CORE/inherit' );
   var NumberProperty = require( 'AXON/NumberProperty' );
   var Property = require( 'AXON/Property' );
+  var Range = require( 'DOT/Range' );
   var Util = require( 'DOT/Util' );
   var Vector2 = require( 'DOT/Vector2' );
 
@@ -61,7 +62,8 @@ define( function( require ) {
     // Speed along the parametric spline dimension, formally 'u dot', indicating speed and direction (+/-) along the
     // track spline in meters per second.  Not technically the derivative of 'u' since it is the euclidean speed.
     this.parametricSpeedProperty = new NumberProperty( 0, {
-      tandem: tandem.createTandem( 'parametricSpeedProperty' )
+      tandem: tandem.createTandem( 'parametricSpeedProperty' ),
+      phetioReadOnly: true
     } );
 
     // True if the skater is pointing up on the track, false if attached to underside of track
@@ -84,6 +86,7 @@ define( function( require ) {
 
     // Start in the middle of the MassControlPanel range
     this.massProperty = new NumberProperty( Constants.DEFAULT_MASS, {
+      range: new Range( Constants.MIN_MASS, Constants.MAX_MASS ),
       tandem: tandem.createTandem( 'massProperty' ),
       units: 'kilograms'
     } );
@@ -109,28 +112,33 @@ define( function( require ) {
     // Energies are in Joules
     this.kineticEnergyProperty = new NumberProperty( 0, {
       tandem: tandem.createTandem( 'kineticEnergyProperty' ),
-      units: 'joules'
+      units: 'joules',
+      phetioReadOnly: true
     } );
 
     this.potentialEnergyProperty = new NumberProperty( 0, {
       tandem: tandem.createTandem( 'potentialEnergyProperty' ),
-      units: 'joules'
+      units: 'joules',
+      phetioReadOnly: true
     } );
 
     this.thermalEnergyProperty = new NumberProperty( 0, {
       tandem: tandem.createTandem( 'thermalEnergyProperty' ),
-      units: 'joules'
+      units: 'joules',
+      phetioReadOnly: true
     } );
 
     this.totalEnergyProperty = new NumberProperty( 0, {
       tandem: tandem.createTandem( 'totalEnergyProperty' ),
-      units: 'joules'
+      units: 'joules',
+      phetioReadOnly: true
     } );
 
     // The skater's angle (about the pivot point at the bottom center), in radians
     this.angleProperty = new NumberProperty( 0, {
       tandem: tandem.createTandem( 'angleProperty' ),
-      units: 'radians'
+      units: 'radians',
+      phetioReadOnly: true
     } );
 
     // Returns to this point when pressing "return skater"
@@ -159,7 +167,8 @@ define( function( require ) {
     // Position of the skater's head, for positioning the pie chart.
     this.headPositionProperty = new Property( new Vector2( 0, 0 ), {
       tandem: tandem.createTandem( 'headPositionProperty' ),
-      phetioValueType: TVector2
+      phetioValueType: TVector2,
+      phetioReadOnly: true
     } );
 
     this.updatedEmitter = new Emitter();

@@ -36,6 +36,7 @@ define( function( require ) {
   var NumberProperty = require( 'AXON/NumberProperty' );
   var ObservableArray = require( 'AXON/ObservableArray' );
   var Property = require( 'AXON/Property' );
+  var Range = require( 'DOT/Range' );
   var Skater = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/model/Skater' );
   var SkaterState = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/model/SkaterState' );
   var Tandem = require( 'TANDEM/Tandem' );
@@ -150,6 +151,7 @@ define( function( require ) {
 
     // Coefficient of friction (unitless) between skater and track
     this.frictionProperty = new NumberProperty( frictionAllowed ? 0.05 : 0, {
+      range: new Range( 0, 0.05 * 2 ), // TODO: duplicated with FrictionControl
       tandem: tandem.createTandem( 'frictionProperty' )
     } );
 
