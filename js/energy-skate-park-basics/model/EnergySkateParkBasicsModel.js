@@ -102,6 +102,8 @@ define( function( require ) {
 
     // @private
     this.controlPointGroupTandem = controlPointGroupTandem;
+
+    // @public
     this.trackGroupTandem = trackGroupTandem;
 
     // Temporary flag that keeps track of whether the track was changed in the step before the physics update.

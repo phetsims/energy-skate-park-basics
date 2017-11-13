@@ -42,6 +42,7 @@ define( function( require ) {
    */
   function EnergySkateParkBasicsControlPanel( model, tandem ) {
 
+    // @private
     this.tempTandem = tandem;
 
     var textOptions = {
