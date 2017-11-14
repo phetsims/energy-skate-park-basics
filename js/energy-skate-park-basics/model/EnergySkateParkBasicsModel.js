@@ -1007,7 +1007,7 @@ define( function( require ) {
     // Binary search to find the parametric coordinate along the track that matches the e0 energy
     searchSplineForEnergy: function( skaterState, u0, u1, e0, numSteps ) {
       var da = ( u1 - u0 ) / numSteps;
-      var bestAlpha = ( u1 - u0 ) / 2;
+      var bestAlpha = ( u1 + u0 ) / 2;
       var p = skaterState.track.getPoint( bestAlpha );
       var bestDE = skaterState.updatePosition( p.x, p.y ).getTotalEnergy();
       for ( var i = 0; i < numSteps; i++ ) {
@@ -1064,11 +1064,11 @@ define( function( require ) {
             var numRecursiveSearches = 10;
             var parametricPosition = newState.parametricPosition;
             var bestAlpha = ( parametricPosition + u0 ) / 2.0;
-            var da = ( parametricPosition - u0 ) / 2;
+            var da = Math.abs( ( parametricPosition - u0 ) / 2 );
             for ( var i = 0; i < numRecursiveSearches; i++ ) {
               var numSteps = 10;
               bestAlpha = this.searchSplineForEnergy( newState, bestAlpha - da, bestAlpha + da, e0, numSteps );
-              da = ( ( bestAlpha - da ) - ( bestAlpha + da ) ) / numSteps;
+              da = Math.abs( ( ( bestAlpha - da ) - ( bestAlpha + da ) ) / numSteps );
             }
 
             var point = newState.track.getPoint( bestAlpha );
@@ -1090,8 +1090,28 @@ define( function( require ) {
               }
               else {
 
-                // TODO: This error case can still occur, especially with friction turned on
+                // This error seems to occur with friction turned on at the top of a hill, see https://github.com/phetsims/energy-skate-park-basics/issues/127
                 debug && debug( 'Changed position, wanted to change velocity, but didn\'t have enough to fix it..., dE=' + ( newState.getTotalEnergy() - e0 ) );
+                if ( newState.thermalEnergy > skaterState.thermalEnergy ) {
+                  var increasedThermalEnergy = newState.thermalEnergy - skaterState.thermalEnergy;
+                  if ( increasedThermalEnergy > dE ) {
+                    var reducedThermalEnergyState = newState.update( { thermalEnergy: newState.thermalEnergy - dE } );
+                    assert && assert( Math.abs( reducedThermalEnergyState.getTotalEnergy() - e0 ) < 1E-6, 'energy should be corrected' );
+                    debug && debug( 'Corrected energy by reducing thermal overestimate' + dE );
+                    return reducedThermalEnergyState;
+                  }
+                  else {
+
+                    // Take as much thermal energy out as possible
+                    var originalThermalEnergyState = newState.update( { thermalEnergy: skaterState.thermalEnergy } );
+                    var correctedState3 = this.correctEnergyReduceVelocity( skaterState, originalThermalEnergyState );
+                    if ( !isApproxEqual( e0, correctedState3.getTotalEnergy(), 1E-8 ) ) {
+                      debug && debug( 'Changed position & Velocity and still had energy error, error[124]' );
+                    }
+                    return correctedState3;
+                  }
+                }
+                return correctedState;
               }
             }
             return correctedState;
