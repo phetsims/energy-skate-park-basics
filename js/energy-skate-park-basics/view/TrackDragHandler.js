@@ -219,9 +219,8 @@ define( function( require ) {
 
       // If dropped in the play area, signify that it has been dropped--this will make it so that dragging the control points
       // reshapes the track instead of translating it
-      if ( track.physicalProperty.value ) {
-        track.droppedProperty.value = true;
-      }
+      track.droppedProperty.value = true;
+      track.bumpAboveGround();
 
       track.dragSource = null;
 
