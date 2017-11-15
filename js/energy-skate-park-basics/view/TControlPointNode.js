@@ -11,7 +11,7 @@ define( function( require ) {
   var assertInstanceOf = require( 'ifphetio!PHET_IO/assertInstanceOf' );
   var energySkateParkBasics = require( 'ENERGY_SKATE_PARK_BASICS/energySkateParkBasics' );
   var phetioInherit = require( 'ifphetio!PHET_IO/phetioInherit' );
-  var TNode = require( 'SCENERY/nodes/TNode' );
+  var NodeIO = require( 'SCENERY/nodes/NodeIO' );
 
   /**
    *
@@ -21,13 +21,13 @@ define( function( require ) {
    */
   function TControlPointNode( instance, phetioID ) {
     assert && assertInstanceOf( instance, phet.energySkateParkBasics.ControlPointNode );
-    TNode.call( this, instance, phetioID );
+    NodeIO.call( this, instance, phetioID );
   }
 
   /**
    * Control point or null
    */
-  phetioInherit( TNode, 'TControlPointNode', TControlPointNode, {},
+  phetioInherit( NodeIO, 'TControlPointNode', TControlPointNode, {},
     { documentation: 'The view element for a control point.' } );
 
   energySkateParkBasics.register( 'TControlPointNode', TControlPointNode );
