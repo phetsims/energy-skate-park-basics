@@ -18,7 +18,7 @@ define( function( require ) {
   var NumberProperty = require( 'AXON/NumberProperty' );
   var Property = require( 'AXON/Property' );
   var Range = require( 'DOT/Range' );
-  var TDerivedProperty = require( 'AXON/TDerivedProperty' );
+  var DerivedPropertyIO = require( 'AXON/DerivedPropertyIO' );
   var PropertyIO = require( 'AXON/PropertyIO' );
   var Util = require( 'DOT/Util' );
   var Vector2 = require( 'DOT/Vector2' );
@@ -181,7 +181,7 @@ define( function( require ) {
     }, {
       tandem: tandem.createTandem( 'speedProperty' ),
       units: 'meters/second',
-      phetioType: TDerivedProperty( TNumber )
+      phetioType: DerivedPropertyIO( TNumber )
     } );
 
     // DerivedZero the kinetic energy when draggingDerived, see #22
@@ -216,7 +216,7 @@ define( function( require ) {
         return !dragging && (x.x !== x0.x || x.y !== x0.y);
       }, {
         tandem: tandem.createTandem( 'movedProperty' ),
-        phetioType: TDerivedProperty( TBoolean )
+        phetioType: DerivedPropertyIO( TBoolean )
       } );
 
     this.massProperty.link( function() { self.updateEnergy(); } );
@@ -234,7 +234,7 @@ define( function( require ) {
         return thermalEnergy > 1E-2;
       }, {
         tandem: tandem.createTandem( 'allowClearingThermalEnergyProperty' ),
-        phetioType: TDerivedProperty( TBoolean )
+        phetioType: DerivedPropertyIO( TBoolean )
       } );
 
     // In the state.html wrapper, when the state changes, we must update the skater node

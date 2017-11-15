@@ -13,7 +13,7 @@ define( function( require ) {
   var energySkateParkBasics = require( 'ENERGY_SKATE_PARK_BASICS/energySkateParkBasics' );
   var inherit = require( 'PHET_CORE/inherit' );
   var Property = require( 'AXON/Property' );
-  var TDerivedProperty = require( 'AXON/TDerivedProperty' );
+  var DerivedPropertyIO = require( 'AXON/DerivedPropertyIO' );
   var PropertyIO = require( 'AXON/PropertyIO' );
   var TVector2 = require( 'DOT/TVector2' );
   var Vector2 = require( 'DOT/Vector2' );
@@ -54,7 +54,7 @@ define( function( require ) {
         return snapTarget ? snapTarget.positionProperty.value : sourcePosition;
       }, {
         tandem: tandem.createTandem( 'positionProperty' ),
-        phetioType: TDerivedProperty( TVector2 )
+        phetioType: DerivedPropertyIO( TVector2 )
       } );
 
     tandem.addInstance( this, { phetioType: TControlPoint } );
