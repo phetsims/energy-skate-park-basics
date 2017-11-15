@@ -51,7 +51,7 @@ define( function( require ) {
   var TBounds2 = require( 'DOT/TBounds2' );
   var TEnergySkateParkBasicsModel = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/model/TEnergySkateParkBasicsModel' );
   var NumberIO = require( 'ifphetio!PHET_IO/types/NumberIO' );
-  var TString = require( 'ifphetio!PHET_IO/types/TString' );
+  var StringIO = require( 'ifphetio!PHET_IO/types/StringIO' );
   var TTrack = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/model/TTrack' );
 
   // Reuse empty object for creating SkaterStates to avoid allocations
@@ -150,7 +150,7 @@ define( function( require ) {
     // speed of the model, either 'normal' or 'slow'
     this.speedProperty = new Property( 'normal', {
       tandem: tandem.createTandem( 'speedProperty' ),
-      phetioType: PropertyIO( TString )
+      phetioType: PropertyIO( StringIO )
     } );
 
     // Coefficient of friction (unitless) between skater and track

@@ -13,7 +13,7 @@ define( function( require ) {
   var energySkateParkBasics = require( 'ENERGY_SKATE_PARK_BASICS/energySkateParkBasics' );
   var phetio = require( 'ifphetio!PHET_IO/phetio' );
   var phetioInherit = require( 'ifphetio!PHET_IO/phetioInherit' );
-  var TObject = require( 'ifphetio!PHET_IO/types/TObject' );
+  var ObjectIO = require( 'ifphetio!PHET_IO/types/ObjectIO' );
 
   /**
    *
@@ -23,13 +23,13 @@ define( function( require ) {
    */
   function TControlPoint( instance, phetioID ) {
     assert && assertInstanceOf( instance, phet.energySkateParkBasics.ControlPoint );
-    TObject.call( this, instance, phetioID );
+    ObjectIO.call( this, instance, phetioID );
   }
 
   /**
    * Control point or null
    */
-  phetioInherit( TObject, 'TControlPoint', TControlPoint, {}, {
+  phetioInherit( ObjectIO, 'TControlPoint', TControlPoint, {}, {
     documentation: 'A control point that can manipulate the track.',
 
     // Support null

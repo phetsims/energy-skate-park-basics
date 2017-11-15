@@ -26,7 +26,7 @@ define( function( require ) {
   // phet-io modules
   var BooleanIO = require( 'ifphetio!PHET_IO/types/BooleanIO' );
   var NumberIO = require( 'ifphetio!PHET_IO/types/NumberIO' );
-  var TString = require( 'ifphetio!PHET_IO/types/TString' );
+  var StringIO = require( 'ifphetio!PHET_IO/types/StringIO' );
   var TTrack = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/model/TTrack' );
   var TTrackReference = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/model/TTrackReference' );
   var TVector2 = require( 'DOT/TVector2' );
@@ -97,7 +97,7 @@ define( function( require ) {
     // later like 'forward'
     this.directionProperty = new Property( 'left', {
       tandem: tandem.createTandem( 'directionProperty' ),
-      phetioType: PropertyIO( TString )
+      phetioType: PropertyIO( StringIO )
     } );
 
     this.velocityProperty = new Property( new Vector2( 0, 0 ), {

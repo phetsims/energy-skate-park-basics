@@ -14,7 +14,7 @@ define( function( require ) {
   var energySkateParkBasics = require( 'ENERGY_SKATE_PARK_BASICS/energySkateParkBasics' );
   var phetio = require( 'ifphetio!PHET_IO/phetio' );
   var phetioInherit = require( 'ifphetio!PHET_IO/phetioInherit' );
-  var TObject = require( 'ifphetio!PHET_IO/types/TObject' );
+  var ObjectIO = require( 'ifphetio!PHET_IO/types/ObjectIO' );
 
   /**
    *
@@ -24,13 +24,13 @@ define( function( require ) {
    */
   function TTrackReference( instance, phetioID ) {
     assert && assertInstanceOf( instance, phet.energySkateParkBasics.Track );
-    TObject.call( this, instance, phetioID );
+    ObjectIO.call( this, instance, phetioID );
   }
 
   /**
    * The wrapper type for a track.
    */
-  phetioInherit( TObject, 'TTrackReference', TTrackReference, {}, {
+  phetioInherit( ObjectIO, 'TTrackReference', TTrackReference, {}, {
 
     fromStateObject: function( stateObject ) {
       if ( stateObject === null ) {

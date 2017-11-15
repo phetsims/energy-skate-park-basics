@@ -12,7 +12,7 @@ define( function( require ) {
   var assertInstanceOf = require( 'ifphetio!PHET_IO/assertInstanceOf' );
   var energySkateParkBasics = require( 'ENERGY_SKATE_PARK_BASICS/energySkateParkBasics' );
   var phetioInherit = require( 'ifphetio!PHET_IO/phetioInherit' );
-  var TObject = require( 'ifphetio!PHET_IO/types/TObject' );
+  var ObjectIO = require( 'ifphetio!PHET_IO/types/ObjectIO' );
 
   /**
    *
@@ -22,13 +22,13 @@ define( function( require ) {
    */
   function TTrack( instance, phetioID ) {
     assert && assertInstanceOf( instance, phet.energySkateParkBasics.Track );
-    TObject.call( this, instance, phetioID );
+    ObjectIO.call( this, instance, phetioID );
   }
 
   /**
    * The wrapper type for a track.
    */
-  phetioInherit( TObject, 'TTrack', TTrack, {}, {
+  phetioInherit( ObjectIO, 'TTrack', TTrack, {}, {
     documentation: 'A skate track.',
 
     fromStateObject: function( stateObject ) {
