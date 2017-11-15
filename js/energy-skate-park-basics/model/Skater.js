@@ -19,7 +19,7 @@ define( function( require ) {
   var Property = require( 'AXON/Property' );
   var Range = require( 'DOT/Range' );
   var TDerivedProperty = require( 'AXON/TDerivedProperty' );
-  var TProperty = require( 'AXON/TProperty' );
+  var PropertyIO = require( 'AXON/PropertyIO' );
   var Util = require( 'DOT/Util' );
   var Vector2 = require( 'DOT/Vector2' );
 
@@ -52,13 +52,13 @@ define( function( require ) {
     // The track the skater is on, or null if free-falling
     this.trackProperty = new Property( null, {
       tandem: tandem.createTandem( 'trackProperty' ),
-      phetioType: TProperty( TTrackReference )
+      phetioType: PropertyIO( TTrackReference )
     } );
 
     // Parameter along the parametric spline, unitless since it is in parametric space
     this.parametricPositionProperty = new Property( 0, {
       tandem: tandem.createTandem( 'parametricPositionProperty' ),
-      phetioType: TProperty( TNumber )
+      phetioType: PropertyIO( TNumber )
     } );
 
     // Speed along the parametric spline dimension, formally 'u dot', indicating speed and direction (+/-) along the
@@ -71,7 +71,7 @@ define( function( require ) {
     // True if the skater is pointing up on the track, false if attached to underside of track
     this.onTopSideOfTrackProperty = new Property( true, {
       tandem: tandem.createTandem( 'onTopSideOfTrackProperty' ),
-      phetioType: TProperty( TBoolean )
+      phetioType: PropertyIO( TBoolean )
     } );
 
     // Gravity magnitude and direction
@@ -83,7 +83,7 @@ define( function( require ) {
 
     this.positionProperty = new Property( new Vector2( 3.5, 0 ), {
       tandem: tandem.createTandem( 'positionProperty' ),
-      phetioType: TProperty( TVector2 )
+      phetioType: PropertyIO( TVector2 )
     } );
 
     // Start in the middle of the MassControlPanel range
@@ -97,18 +97,18 @@ define( function( require ) {
     // later like 'forward'
     this.directionProperty = new Property( 'left', {
       tandem: tandem.createTandem( 'directionProperty' ),
-      phetioType: TProperty( TString )
+      phetioType: PropertyIO( TString )
     } );
 
     this.velocityProperty = new Property( new Vector2( 0, 0 ), {
       tandem: tandem.createTandem( 'velocityProperty' ),
-      phetioType: TProperty( TVector2 )
+      phetioType: PropertyIO( TVector2 )
     } );
 
     // True if the user is dragging the skater with a pointer
     this.draggingProperty = new Property( false, {
       tandem: tandem.createTandem( 'draggingProperty' ),
-      phetioType: TProperty( TBoolean )
+      phetioType: PropertyIO( TBoolean )
     } );
 
     // Energies are in Joules
@@ -146,30 +146,30 @@ define( function( require ) {
     // Returns to this point when pressing "return skater"
     this.startingPositionProperty = new Property( new Vector2( 3.5, 0 ), {
       tandem: tandem.createTandem( 'startingPositionProperty' ),
-      phetioType: TProperty( TVector2 )
+      phetioType: PropertyIO( TVector2 )
     } );
 
     // Returns to this parametric position along the track when pressing "return skater"
     this.startingUProperty = new Property( 0, {
       tandem: tandem.createTandem( 'startingUProperty' ),
-      phetioType: TProperty( TNumber )
+      phetioType: PropertyIO( TNumber )
     } );
 
     this.startingUpProperty = new Property( true, {
       tandem: tandem.createTandem( 'startingUpProperty' ),
-      phetioType: TProperty( TBoolean )
+      phetioType: PropertyIO( TBoolean )
     } );
 
     // Returns to this track when pressing "return skater"
     this.startingTrackProperty = new Property( null, {
       tandem: tandem.createTandem( 'startingTrackProperty' ),
-      phetioType: TProperty( TTrack )
+      phetioType: PropertyIO( TTrack )
     } );
 
     // Position of the skater's head, for positioning the pie chart.
     this.headPositionProperty = new Property( new Vector2( 0, 0 ), {
       tandem: tandem.createTandem( 'headPositionProperty' ),
-      phetioType: TProperty( TVector2 ),
+      phetioType: PropertyIO( TVector2 ),
       phetioReadOnly: true
     } );
 

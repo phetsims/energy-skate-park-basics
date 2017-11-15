@@ -40,7 +40,7 @@ define( function( require ) {
   var Skater = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/model/Skater' );
   var SkaterState = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/model/SkaterState' );
   var Tandem = require( 'TANDEM/Tandem' );
-  var TProperty = require( 'AXON/TProperty' );
+  var PropertyIO = require( 'AXON/PropertyIO' );
   var TObservableArray = require( 'AXON/TObservableArray' );
   var Track = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/model/Track' );
   var Util = require( 'DOT/Util' );
@@ -116,41 +116,41 @@ define( function( require ) {
     // Model for visibility of various view parameters
     this.pieChartVisibleProperty = new Property( false, {
       tandem: tandem.createTandem( 'pieChartVisibleProperty' ),
-      phetioType: TProperty( TBoolean )
+      phetioType: PropertyIO( TBoolean )
     } );
     this.barGraphVisibleProperty = new Property( false, {
       tandem: tandem.createTandem( 'barGraphVisibleProperty' ),
-      phetioType: TProperty( TBoolean )
+      phetioType: PropertyIO( TBoolean )
     } );
     this.gridVisibleProperty = new Property( false, {
       tandem: tandem.createTandem( 'gridVisibleProperty' ),
-      phetioType: TProperty( TBoolean )
+      phetioType: PropertyIO( TBoolean )
     } );
     this.speedometerVisibleProperty = new Property( false, {
       tandem: tandem.createTandem( 'speedometerVisibleProperty' ),
-      phetioType: TProperty( TBoolean )
+      phetioType: PropertyIO( TBoolean )
     } );
 
     // Enabled/disabled for the track editing buttons
     this.editButtonEnabledProperty = new Property( false, {
       tandem: tandem.createTandem( 'editButtonEnabledProperty' ),
-      phetioType: TProperty( TBoolean )
+      phetioType: PropertyIO( TBoolean )
     } );
     this.clearButtonEnabledProperty = new Property( false, {
       tandem: tandem.createTandem( 'clearButtonEnabledProperty' ),
-      phetioType: TProperty( TBoolean )
+      phetioType: PropertyIO( TBoolean )
     } );
 
     // Whether the sim is paused or running
     this.pausedProperty = new Property( false, {
       tandem: tandem.createTandem( 'pausedProperty' ),
-      phetioType: TProperty( TBoolean )
+      phetioType: PropertyIO( TBoolean )
     } );
 
     // speed of the model, either 'normal' or 'slow'
     this.speedProperty = new Property( 'normal', {
       tandem: tandem.createTandem( 'speedProperty' ),
-      phetioType: TProperty( TString )
+      phetioType: PropertyIO( TString )
     } );
 
     // Coefficient of friction (unitless) between skater and track
@@ -162,14 +162,14 @@ define( function( require ) {
     // Whether the skater should stick to the track like a roller coaster, or be able to fly off like a street
     this.detachableProperty = new Property( false, {
       tandem: tandem.createTandem( 'detachableProperty' ),
-      phetioType: TProperty( TBoolean )
+      phetioType: PropertyIO( TBoolean )
     } );
 
     // Will be filled in by the view, used to prevent control points from moving outside the visible model bounds when
     // adjusted, see #195
     this.availableModelBoundsProperty = new Property( new Bounds2( 0, 0, 0, 0 ), {
       tandem: tandem.createTandem( 'availableModelBoundsProperty' ),
-      phetioType: TProperty( TBounds2 )
+      phetioType: PropertyIO( TBounds2 )
     } );
 
     if ( EnergySkateParkBasicsQueryParameters.debugTrack ) {
@@ -243,7 +243,7 @@ define( function( require ) {
       this.sceneProperty = new Property( 0, {
         tandem: tandem.createTandem( 'sceneProperty' ),
         validValues: [ 0, 1, 2 ],
-        phetioType: TProperty( TNumber )// TODO: automatically get the number of tracks
+        phetioType: PropertyIO( TNumber )// TODO: automatically get the number of tracks
       } );
 
       // Shape types
