@@ -50,7 +50,7 @@ define( function( require ) {
   var Vector2 = require( 'DOT/Vector2' );
 
   // phet-io modules
-  var TBoolean = require( 'ifphetio!PHET_IO/types/TBoolean' );
+  var BooleanIO = require( 'ifphetio!PHET_IO/types/BooleanIO' );
 
   // strings
   var controlsRestartSkaterString = require( 'string!ENERGY_SKATE_PARK_BASICS/controls.restart-skater' );
@@ -151,7 +151,7 @@ define( function( require ) {
 
     var playingProperty = new Property( !model.pausedProperty.value, {
       tandem: tandem.createTandem( 'playingProperty' ),
-      phetioType: PropertyIO( TBoolean )
+      phetioType: PropertyIO( BooleanIO )
     } );
     model.pausedProperty.link( function( paused ) {
       playingProperty.set( !paused );

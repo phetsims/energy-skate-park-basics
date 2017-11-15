@@ -20,7 +20,7 @@ define( function( require ) {
   var Vector2 = require( 'DOT/Vector2' );
 
   // phet-io modules
-  var TBoolean = require( 'ifphetio!PHET_IO/types/TBoolean' );
+  var BooleanIO = require( 'ifphetio!PHET_IO/types/BooleanIO' );
   var TTrack = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/model/TTrack' );
 
   // constants
@@ -70,26 +70,26 @@ define( function( require ) {
     // For screen 3, tracks in the control panel are visible but non-physical until dragged to the play area
     this.physicalProperty = new Property( false, {
       tandem: tandem.createTandem( 'physicalProperty' ),
-      phetioType: PropertyIO( TBoolean )
+      phetioType: PropertyIO( BooleanIO )
     } );
 
     // Flag that shows whether the track has been dragged fully out of the panel
     this.leftThePanelProperty = new Property( false, {
       tandem: tandem.createTandem( 'leftThePanelProperty' ),
-      phetioType: PropertyIO( TBoolean )
+      phetioType: PropertyIO( BooleanIO )
     } );
 
     // Keep track of whether the track is dragging, so performance can be optimized while dragging
     this.draggingProperty = new Property( false, {
       tandem: tandem.createTandem( 'draggingProperty' ),
-      phetioType: PropertyIO( TBoolean )
+      phetioType: PropertyIO( BooleanIO )
     } );
 
     // Flag to indicate whether the user has dragged the track out of the toolbox.  If dragging from the toolbox,
     // then dragging translates the entire track instead of just a point.
     this.droppedProperty = new Property( false, {
       tandem: tandem.createTandem( 'droppedProperty' ),
-      phetioType: PropertyIO( TBoolean )
+      phetioType: PropertyIO( BooleanIO )
     } );
 
     var trackChangedListener = function() { events.trackChangedEmitter.emit(); };

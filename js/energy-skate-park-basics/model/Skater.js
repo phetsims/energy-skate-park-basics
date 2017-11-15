@@ -24,8 +24,8 @@ define( function( require ) {
   var Vector2 = require( 'DOT/Vector2' );
 
   // phet-io modules
-  var TBoolean = require( 'ifphetio!PHET_IO/types/TBoolean' );
-  var TNumber = require( 'ifphetio!PHET_IO/types/TNumber' );
+  var BooleanIO = require( 'ifphetio!PHET_IO/types/BooleanIO' );
+  var NumberIO = require( 'ifphetio!PHET_IO/types/NumberIO' );
   var TString = require( 'ifphetio!PHET_IO/types/TString' );
   var TTrack = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/model/TTrack' );
   var TTrackReference = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/model/TTrackReference' );
@@ -58,7 +58,7 @@ define( function( require ) {
     // Parameter along the parametric spline, unitless since it is in parametric space
     this.parametricPositionProperty = new Property( 0, {
       tandem: tandem.createTandem( 'parametricPositionProperty' ),
-      phetioType: PropertyIO( TNumber )
+      phetioType: PropertyIO( NumberIO )
     } );
 
     // Speed along the parametric spline dimension, formally 'u dot', indicating speed and direction (+/-) along the
@@ -71,7 +71,7 @@ define( function( require ) {
     // True if the skater is pointing up on the track, false if attached to underside of track
     this.onTopSideOfTrackProperty = new Property( true, {
       tandem: tandem.createTandem( 'onTopSideOfTrackProperty' ),
-      phetioType: PropertyIO( TBoolean )
+      phetioType: PropertyIO( BooleanIO )
     } );
 
     // Gravity magnitude and direction
@@ -108,7 +108,7 @@ define( function( require ) {
     // True if the user is dragging the skater with a pointer
     this.draggingProperty = new Property( false, {
       tandem: tandem.createTandem( 'draggingProperty' ),
-      phetioType: PropertyIO( TBoolean )
+      phetioType: PropertyIO( BooleanIO )
     } );
 
     // Energies are in Joules
@@ -152,12 +152,12 @@ define( function( require ) {
     // Returns to this parametric position along the track when pressing "return skater"
     this.startingUProperty = new Property( 0, {
       tandem: tandem.createTandem( 'startingUProperty' ),
-      phetioType: PropertyIO( TNumber )
+      phetioType: PropertyIO( NumberIO )
     } );
 
     this.startingUpProperty = new Property( true, {
       tandem: tandem.createTandem( 'startingUpProperty' ),
-      phetioType: PropertyIO( TBoolean )
+      phetioType: PropertyIO( BooleanIO )
     } );
 
     // Returns to this track when pressing "return skater"
@@ -181,7 +181,7 @@ define( function( require ) {
     }, {
       tandem: tandem.createTandem( 'speedProperty' ),
       units: 'meters/second',
-      phetioType: DerivedPropertyIO( TNumber )
+      phetioType: DerivedPropertyIO( NumberIO )
     } );
 
     // DerivedZero the kinetic energy when draggingDerived, see #22
@@ -216,7 +216,7 @@ define( function( require ) {
         return !dragging && (x.x !== x0.x || x.y !== x0.y);
       }, {
         tandem: tandem.createTandem( 'movedProperty' ),
-        phetioType: DerivedPropertyIO( TBoolean )
+        phetioType: DerivedPropertyIO( BooleanIO )
       } );
 
     this.massProperty.link( function() { self.updateEnergy(); } );
@@ -234,7 +234,7 @@ define( function( require ) {
         return thermalEnergy > 1E-2;
       }, {
         tandem: tandem.createTandem( 'allowClearingThermalEnergyProperty' ),
-        phetioType: DerivedPropertyIO( TBoolean )
+        phetioType: DerivedPropertyIO( BooleanIO )
       } );
 
     // In the state.html wrapper, when the state changes, we must update the skater node

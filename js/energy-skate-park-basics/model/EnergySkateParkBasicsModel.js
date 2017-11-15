@@ -41,16 +41,16 @@ define( function( require ) {
   var SkaterState = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/model/SkaterState' );
   var Tandem = require( 'TANDEM/Tandem' );
   var PropertyIO = require( 'AXON/PropertyIO' );
-  var TObservableArray = require( 'AXON/TObservableArray' );
+  var ObservableArrayIO = require( 'AXON/ObservableArrayIO' );
   var Track = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/model/Track' );
   var Util = require( 'DOT/Util' );
   var Vector2 = require( 'DOT/Vector2' );
 
   // phet-io modules
-  var TBoolean = require( 'ifphetio!PHET_IO/types/TBoolean' );
+  var BooleanIO = require( 'ifphetio!PHET_IO/types/BooleanIO' );
   var TBounds2 = require( 'DOT/TBounds2' );
   var TEnergySkateParkBasicsModel = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/model/TEnergySkateParkBasicsModel' );
-  var TNumber = require( 'ifphetio!PHET_IO/types/TNumber' );
+  var NumberIO = require( 'ifphetio!PHET_IO/types/NumberIO' );
   var TString = require( 'ifphetio!PHET_IO/types/TString' );
   var TTrack = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/model/TTrack' );
 
@@ -116,35 +116,35 @@ define( function( require ) {
     // Model for visibility of various view parameters
     this.pieChartVisibleProperty = new Property( false, {
       tandem: tandem.createTandem( 'pieChartVisibleProperty' ),
-      phetioType: PropertyIO( TBoolean )
+      phetioType: PropertyIO( BooleanIO )
     } );
     this.barGraphVisibleProperty = new Property( false, {
       tandem: tandem.createTandem( 'barGraphVisibleProperty' ),
-      phetioType: PropertyIO( TBoolean )
+      phetioType: PropertyIO( BooleanIO )
     } );
     this.gridVisibleProperty = new Property( false, {
       tandem: tandem.createTandem( 'gridVisibleProperty' ),
-      phetioType: PropertyIO( TBoolean )
+      phetioType: PropertyIO( BooleanIO )
     } );
     this.speedometerVisibleProperty = new Property( false, {
       tandem: tandem.createTandem( 'speedometerVisibleProperty' ),
-      phetioType: PropertyIO( TBoolean )
+      phetioType: PropertyIO( BooleanIO )
     } );
 
     // Enabled/disabled for the track editing buttons
     this.editButtonEnabledProperty = new Property( false, {
       tandem: tandem.createTandem( 'editButtonEnabledProperty' ),
-      phetioType: PropertyIO( TBoolean )
+      phetioType: PropertyIO( BooleanIO )
     } );
     this.clearButtonEnabledProperty = new Property( false, {
       tandem: tandem.createTandem( 'clearButtonEnabledProperty' ),
-      phetioType: PropertyIO( TBoolean )
+      phetioType: PropertyIO( BooleanIO )
     } );
 
     // Whether the sim is paused or running
     this.pausedProperty = new Property( false, {
       tandem: tandem.createTandem( 'pausedProperty' ),
-      phetioType: PropertyIO( TBoolean )
+      phetioType: PropertyIO( BooleanIO )
     } );
 
     // speed of the model, either 'normal' or 'slow'
@@ -162,7 +162,7 @@ define( function( require ) {
     // Whether the skater should stick to the track like a roller coaster, or be able to fly off like a street
     this.detachableProperty = new Property( false, {
       tandem: tandem.createTandem( 'detachableProperty' ),
-      phetioType: PropertyIO( TBoolean )
+      phetioType: PropertyIO( BooleanIO )
     } );
 
     // Will be filled in by the view, used to prevent control points from moving outside the visible model bounds when
@@ -186,7 +186,7 @@ define( function( require ) {
     this.skater.massProperty.link( function() { if ( self.pausedProperty.value ) { self.skater.updatedEmitter.emit(); } } );
 
     this.tracks = new ObservableArray( {
-      phetioType: TObservableArray( TTrack ),
+      phetioType: ObservableArrayIO( TTrack ),
       tandem: tandem.createTandem( 'tracks' )
     } );
 
@@ -243,7 +243,7 @@ define( function( require ) {
       this.sceneProperty = new Property( 0, {
         tandem: tandem.createTandem( 'sceneProperty' ),
         validValues: [ 0, 1, 2 ],
-        phetioType: PropertyIO( TNumber )// TODO: automatically get the number of tracks
+        phetioType: PropertyIO( NumberIO )// TODO: automatically get the number of tracks
       } );
 
       // Shape types
