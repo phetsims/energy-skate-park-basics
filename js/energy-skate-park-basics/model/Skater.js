@@ -29,7 +29,7 @@ define( function( require ) {
   var StringIO = require( 'ifphetio!PHET_IO/types/StringIO' );
   var TTrack = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/model/TTrack' );
   var TTrackReference = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/model/TTrackReference' );
-  var TVector2 = require( 'DOT/TVector2' );
+  var Vector2IO = require( 'DOT/Vector2IO' );
 
   // Compare two arrays, whose elements have 'equals' methods for comparison
   var arrayEquals = function( a, b ) {
@@ -83,7 +83,7 @@ define( function( require ) {
 
     this.positionProperty = new Property( new Vector2( 3.5, 0 ), {
       tandem: tandem.createTandem( 'positionProperty' ),
-      phetioType: PropertyIO( TVector2 )
+      phetioType: PropertyIO( Vector2IO )
     } );
 
     // Start in the middle of the MassControlPanel range
@@ -102,7 +102,7 @@ define( function( require ) {
 
     this.velocityProperty = new Property( new Vector2( 0, 0 ), {
       tandem: tandem.createTandem( 'velocityProperty' ),
-      phetioType: PropertyIO( TVector2 )
+      phetioType: PropertyIO( Vector2IO )
     } );
 
     // True if the user is dragging the skater with a pointer
@@ -146,7 +146,7 @@ define( function( require ) {
     // Returns to this point when pressing "return skater"
     this.startingPositionProperty = new Property( new Vector2( 3.5, 0 ), {
       tandem: tandem.createTandem( 'startingPositionProperty' ),
-      phetioType: PropertyIO( TVector2 )
+      phetioType: PropertyIO( Vector2IO )
     } );
 
     // Returns to this parametric position along the track when pressing "return skater"
@@ -169,7 +169,7 @@ define( function( require ) {
     // Position of the skater's head, for positioning the pie chart.
     this.headPositionProperty = new Property( new Vector2( 0, 0 ), {
       tandem: tandem.createTandem( 'headPositionProperty' ),
-      phetioType: PropertyIO( TVector2 ),
+      phetioType: PropertyIO( Vector2IO ),
       phetioReadOnly: true
     } );
 

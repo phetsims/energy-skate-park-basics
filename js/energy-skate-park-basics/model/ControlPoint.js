@@ -15,7 +15,7 @@ define( function( require ) {
   var Property = require( 'AXON/Property' );
   var DerivedPropertyIO = require( 'AXON/DerivedPropertyIO' );
   var PropertyIO = require( 'AXON/PropertyIO' );
-  var TVector2 = require( 'DOT/TVector2' );
+  var Vector2IO = require( 'DOT/Vector2IO' );
   var Vector2 = require( 'DOT/Vector2' );
 
   // phet-io modules
@@ -37,7 +37,7 @@ define( function( require ) {
     // Where it would be if it hadn't snapped to another point during dragging
     this.sourcePositionProperty = new Property( new Vector2( x, y ), {
       tandem: tandem.createTandem( 'sourcePositionProperty' ),
-      phetioType: PropertyIO( TVector2 )
+      phetioType: PropertyIO( Vector2IO )
     } );
 
     // Another ControlPoint that this ControlPoint is going to 'snap' to if released.
@@ -54,7 +54,7 @@ define( function( require ) {
         return snapTarget ? snapTarget.positionProperty.value : sourcePosition;
       }, {
         tandem: tandem.createTandem( 'positionProperty' ),
-        phetioType: DerivedPropertyIO( TVector2 )
+        phetioType: DerivedPropertyIO( Vector2IO )
       } );
 
     tandem.addInstance( this, { phetioType: TControlPoint } );
