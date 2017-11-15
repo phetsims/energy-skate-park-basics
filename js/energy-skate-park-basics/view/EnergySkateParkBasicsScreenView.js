@@ -44,6 +44,7 @@ define( function( require ) {
   var SkaterNode = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/view/SkaterNode' );
   var StepForwardButton = require( 'SCENERY_PHET/buttons/StepForwardButton' );
   var Text = require( 'SCENERY/nodes/Text' );
+  var TProperty = require( 'AXON/TProperty' );
   var TrackNode = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/view/TrackNode' );
   var Util = require( 'SCENERY/util/Util' );
   var Vector2 = require( 'DOT/Vector2' );
@@ -150,7 +151,7 @@ define( function( require ) {
 
     var playingProperty = new Property( !model.pausedProperty.value, {
       tandem: tandem.createTandem( 'playingProperty' ),
-      phetioValueType: TBoolean
+      phetioType: TProperty( TBoolean )
     } );
     model.pausedProperty.link( function( paused ) {
       playingProperty.set( !paused );

@@ -13,6 +13,8 @@ define( function( require ) {
   var energySkateParkBasics = require( 'ENERGY_SKATE_PARK_BASICS/energySkateParkBasics' );
   var inherit = require( 'PHET_CORE/inherit' );
   var Property = require( 'AXON/Property' );
+  var TDerivedProperty = require( 'AXON/TDerivedProperty' );
+  var TProperty = require( 'AXON/TProperty' );
   var TVector2 = require( 'DOT/TVector2' );
   var Vector2 = require( 'DOT/Vector2' );
 
@@ -35,13 +37,13 @@ define( function( require ) {
     // Where it would be if it hadn't snapped to another point during dragging
     this.sourcePositionProperty = new Property( new Vector2( x, y ), {
       tandem: tandem.createTandem( 'sourcePositionProperty' ),
-      phetioValueType: TVector2
+      phetioType: TProperty( TVector2 )
     } );
 
     // Another ControlPoint that this ControlPoint is going to 'snap' to if released.
     this.snapTargetProperty = new Property( null, {
       tandem: tandem.createTandem( 'snapTargetProperty' ),
-      phetioValueType: TControlPoint
+      phetioType: TProperty( TControlPoint )
     } );
 
     // Where it is shown on the screen.  Same as sourcePosition (if not snapped) or snapTarget.position (if snapped).
@@ -52,10 +54,10 @@ define( function( require ) {
         return snapTarget ? snapTarget.positionProperty.value : sourcePosition;
       }, {
         tandem: tandem.createTandem( 'positionProperty' ),
-        phetioValueType: TVector2
+        phetioType: TDerivedProperty( TVector2 )
       } );
 
-    tandem.addInstance( this, TControlPoint );
+    tandem.addInstance( this, { phetioType: TControlPoint } );
 
     this.disposeControlPoint = function() {
       tandem.removeInstance( self );
