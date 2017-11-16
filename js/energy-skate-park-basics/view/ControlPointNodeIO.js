@@ -19,7 +19,7 @@ define( function( require ) {
    * @param phetioID
    * @constructor
    */
-  function TControlPointNode( instance, phetioID ) {
+  function ControlPointNodeIO( instance, phetioID ) {
     assert && assertInstanceOf( instance, phet.energySkateParkBasics.ControlPointNode );
     NodeIO.call( this, instance, phetioID );
   }
@@ -27,10 +27,10 @@ define( function( require ) {
   /**
    * Control point or null
    */
-  phetioInherit( NodeIO, 'TControlPointNode', TControlPointNode, {},
+  phetioInherit( NodeIO, 'ControlPointNodeIO', ControlPointNodeIO, {},
     { documentation: 'The view element for a control point.' } );
 
-  energySkateParkBasics.register( 'TControlPointNode', TControlPointNode );
+  energySkateParkBasics.register( 'ControlPointNodeIO', ControlPointNodeIO );
 
-  return TControlPointNode;
+  return ControlPointNodeIO;
 } );

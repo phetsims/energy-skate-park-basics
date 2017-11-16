@@ -19,7 +19,7 @@ define( function( require ) {
   var SimpleDragHandler = require( 'SCENERY/input/SimpleDragHandler' );
 
   // phet-io modules
-  var TControlPointNode = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/view/TControlPointNode' );
+  var ControlPointNodeIO = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/view/ControlPointNodeIO' );
 
   /**
    * @param {TrackNode} trackNode
@@ -236,7 +236,7 @@ define( function( require ) {
 
     this.mutate( {
       tandem: tandem,
-      phetioType: TControlPointNode
+      phetioType: ControlPointNodeIO
     } );
   }
 
