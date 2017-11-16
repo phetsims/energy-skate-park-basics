@@ -35,13 +35,13 @@ define( function( require ) {
   var inherit = require( 'PHET_CORE/inherit' );
   var NumberProperty = require( 'AXON/NumberProperty' );
   var ObservableArray = require( 'AXON/ObservableArray' );
+  var ObservableArrayIO = require( 'AXON/ObservableArrayIO' );
   var Property = require( 'AXON/Property' );
+  var PropertyIO = require( 'AXON/PropertyIO' );
   var Range = require( 'DOT/Range' );
   var Skater = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/model/Skater' );
   var SkaterState = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/model/SkaterState' );
   var Tandem = require( 'TANDEM/Tandem' );
-  var PropertyIO = require( 'AXON/PropertyIO' );
-  var ObservableArrayIO = require( 'AXON/ObservableArrayIO' );
   var Track = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/model/Track' );
   var Util = require( 'DOT/Util' );
   var Vector2 = require( 'DOT/Vector2' );
