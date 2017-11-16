@@ -27,8 +27,8 @@ define( function( require ) {
   var BooleanIO = require( 'ifphetio!PHET_IO/types/BooleanIO' );
   var NumberIO = require( 'ifphetio!PHET_IO/types/NumberIO' );
   var StringIO = require( 'ifphetio!PHET_IO/types/StringIO' );
-  var TTrack = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/model/TTrack' );
-  var TTrackReference = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/model/TTrackReference' );
+  var TrackIO = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/model/TrackIO' );
+  var TrackReferenceIO = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/model/TrackReferenceIO' );
   var Vector2IO = require( 'DOT/Vector2IO' );
 
   // Compare two arrays, whose elements have 'equals' methods for comparison
@@ -52,7 +52,7 @@ define( function( require ) {
     // The track the skater is on, or null if free-falling
     this.trackProperty = new Property( null, {
       tandem: tandem.createTandem( 'trackProperty' ),
-      phetioType: PropertyIO( TTrackReference )
+      phetioType: PropertyIO( TrackReferenceIO )
     } );
 
     // Parameter along the parametric spline, unitless since it is in parametric space
@@ -163,7 +163,7 @@ define( function( require ) {
     // Returns to this track when pressing "return skater"
     this.startingTrackProperty = new Property( null, {
       tandem: tandem.createTandem( 'startingTrackProperty' ),
-      phetioType: PropertyIO( TTrack )
+      phetioType: PropertyIO( TrackIO )
     } );
 
     // Position of the skater's head, for positioning the pie chart.

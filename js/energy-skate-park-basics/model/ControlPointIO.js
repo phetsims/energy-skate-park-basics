@@ -21,7 +21,7 @@ define( function( require ) {
    * @param phetioID
    * @constructor
    */
-  function TControlPoint( instance, phetioID ) {
+  function ControlPointIO( instance, phetioID ) {
     assert && assertInstanceOf( instance, phet.energySkateParkBasics.ControlPoint );
     ObjectIO.call( this, instance, phetioID );
   }
@@ -29,7 +29,7 @@ define( function( require ) {
   /**
    * Control point or null
    */
-  phetioInherit( ObjectIO, 'TControlPoint', TControlPoint, {}, {
+  phetioInherit( ObjectIO, 'ControlPointIO', ControlPointIO, {}, {
     documentation: 'A control point that can manipulate the track.',
 
     // Support null
@@ -47,7 +47,7 @@ define( function( require ) {
     }
   } );
 
-  energySkateParkBasics.register( 'TControlPoint', TControlPoint );
+  energySkateParkBasics.register( 'ControlPointIO', ControlPointIO );
 
-  return TControlPoint;
+  return ControlPointIO;
 } );

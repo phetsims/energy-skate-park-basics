@@ -19,7 +19,7 @@ define( function( require ) {
   var Vector2 = require( 'DOT/Vector2' );
 
   // phet-io modules
-  var TControlPoint = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/model/TControlPoint' );
+  var ControlPointIO = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/model/ControlPointIO' );
 
   /**
    *
@@ -43,7 +43,7 @@ define( function( require ) {
     // Another ControlPoint that this ControlPoint is going to 'snap' to if released.
     this.snapTargetProperty = new Property( null, {
       tandem: tandem.createTandem( 'snapTargetProperty' ),
-      phetioType: PropertyIO( TControlPoint )
+      phetioType: PropertyIO( ControlPointIO )
     } );
 
     // Where it is shown on the screen.  Same as sourcePosition (if not snapped) or snapTarget.position (if snapped).
@@ -57,7 +57,7 @@ define( function( require ) {
         phetioType: DerivedPropertyIO( Vector2IO )
       } );
 
-    tandem.addInstance( this, { phetioType: TControlPoint } );
+    tandem.addInstance( this, { phetioType: ControlPointIO } );
 
     this.disposeControlPoint = function() {
       tandem.removeInstance( self );

@@ -22,7 +22,7 @@ define( function( require ) {
    * @param phetioID
    * @constructor
    */
-  function TTrackReference( instance, phetioID ) {
+  function TrackReferenceIO( instance, phetioID ) {
     assert && assertInstanceOf( instance, phet.energySkateParkBasics.Track );
     ObjectIO.call( this, instance, phetioID );
   }
@@ -30,7 +30,7 @@ define( function( require ) {
   /**
    * The wrapper type for a track.
    */
-  phetioInherit( ObjectIO, 'TTrackReference', TTrackReference, {}, {
+  phetioInherit( ObjectIO, 'TrackReferenceIO', TrackReferenceIO, {}, {
 
     fromStateObject: function( stateObject ) {
       if ( stateObject === null ) {
@@ -48,7 +48,7 @@ define( function( require ) {
     }
   } );
 
-  energySkateParkBasics.register( 'TTrackReference', TTrackReference );
+  energySkateParkBasics.register( 'TrackReferenceIO', TrackReferenceIO );
 
-  return TTrackReference;
+  return TrackReferenceIO;
 } );

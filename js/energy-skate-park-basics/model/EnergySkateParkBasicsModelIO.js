@@ -20,12 +20,12 @@ define( function( require ) {
    * @param phetioID
    * @constructor
    */
-  function TEnergySkateParkBasicsModel( instance, phetioID ) {
+  function EnergySkateParkBasicsModelIO( instance, phetioID ) {
     assert && assertInstanceOf( instance, phet.energySkateParkBasics.EnergySkateParkBasicsModel );
     ObjectIO.call( this, instance, phetioID );
   }
 
-  phetioInherit( ObjectIO, 'TEnergySkateParkBasicsModel', TEnergySkateParkBasicsModel, {}, {
+  phetioInherit( ObjectIO, 'EnergySkateParkBasicsModelIO', EnergySkateParkBasicsModelIO, {}, {
     documentation: 'The model for the Skate Park.',
 
     /**
@@ -57,7 +57,7 @@ define( function( require ) {
     }
   } );
 
-  energySkateParkBasics.register( 'TEnergySkateParkBasicsModel', TEnergySkateParkBasicsModel );
+  energySkateParkBasics.register( 'EnergySkateParkBasicsModelIO', EnergySkateParkBasicsModelIO );
 
-  return TEnergySkateParkBasicsModel;
+  return EnergySkateParkBasicsModelIO;
 } );

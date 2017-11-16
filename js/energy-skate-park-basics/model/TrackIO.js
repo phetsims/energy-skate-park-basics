@@ -20,7 +20,7 @@ define( function( require ) {
    * @param phetioID
    * @constructor
    */
-  function TTrack( instance, phetioID ) {
+  function TrackIO( instance, phetioID ) {
     assert && assertInstanceOf( instance, phet.energySkateParkBasics.Track );
     ObjectIO.call( this, instance, phetioID );
   }
@@ -28,7 +28,7 @@ define( function( require ) {
   /**
    * The wrapper type for a track.
    */
-  phetioInherit( ObjectIO, 'TTrack', TTrack, {}, {
+  phetioInherit( ObjectIO, 'TrackIO', TrackIO, {}, {
     documentation: 'A skate track.',
 
     fromStateObject: function( stateObject ) {
@@ -59,7 +59,7 @@ define( function( require ) {
     }
   } );
 
-  energySkateParkBasics.register( 'TTrack', TTrack );
+  energySkateParkBasics.register( 'TrackIO', TrackIO );
 
-  return TTrack;
+  return TrackIO;
 } );

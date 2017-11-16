@@ -49,10 +49,10 @@ define( function( require ) {
   // phet-io modules
   var BooleanIO = require( 'ifphetio!PHET_IO/types/BooleanIO' );
   var Bounds2IO = require( 'DOT/Bounds2IO' );
-  var TEnergySkateParkBasicsModel = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/model/TEnergySkateParkBasicsModel' );
+  var EnergySkateParkBasicsModelIO = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/model/EnergySkateParkBasicsModelIO' );
   var NumberIO = require( 'ifphetio!PHET_IO/types/NumberIO' );
   var StringIO = require( 'ifphetio!PHET_IO/types/StringIO' );
-  var TTrack = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/model/TTrack' );
+  var TrackIO = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/model/TrackIO' );
 
   // Reuse empty object for creating SkaterStates to avoid allocations
   var EMPTY_OBJECT = {};
@@ -186,7 +186,7 @@ define( function( require ) {
     this.skater.massProperty.link( function() { if ( self.pausedProperty.value ) { self.skater.updatedEmitter.emit(); } } );
 
     this.tracks = new ObservableArray( {
-      phetioType: ObservableArrayIO( TTrack ),
+      phetioType: ObservableArrayIO( TrackIO ),
       tandem: tandem.createTandem( 'tracks' )
     } );
 
@@ -301,7 +301,7 @@ define( function( require ) {
       DebugTracks.init( this, tandem.createGroupTandem( 'debugTrackControlPoint' ), tandem.createGroupTandem( 'track' ) );
     }
 
-    tandem.addInstance( this, { phetioType: TEnergySkateParkBasicsModel } );
+    tandem.addInstance( this, { phetioType: EnergySkateParkBasicsModelIO } );
   }
 
   energySkateParkBasics.register( 'EnergySkateParkBasicsModel', EnergySkateParkBasicsModel );
