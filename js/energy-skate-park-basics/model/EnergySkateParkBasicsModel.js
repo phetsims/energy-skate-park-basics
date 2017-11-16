@@ -48,7 +48,7 @@ define( function( require ) {
 
   // phet-io modules
   var BooleanIO = require( 'ifphetio!PHET_IO/types/BooleanIO' );
-  var TBounds2 = require( 'DOT/TBounds2' );
+  var Bounds2IO = require( 'DOT/Bounds2IO' );
   var TEnergySkateParkBasicsModel = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/model/TEnergySkateParkBasicsModel' );
   var NumberIO = require( 'ifphetio!PHET_IO/types/NumberIO' );
   var StringIO = require( 'ifphetio!PHET_IO/types/StringIO' );
@@ -169,7 +169,7 @@ define( function( require ) {
     // adjusted, see #195
     this.availableModelBoundsProperty = new Property( new Bounds2( 0, 0, 0, 0 ), {
       tandem: tandem.createTandem( 'availableModelBoundsProperty' ),
-      phetioType: PropertyIO( TBounds2 )
+      phetioType: PropertyIO( Bounds2IO )
     } );
 
     if ( EnergySkateParkBasicsQueryParameters.debugTrack ) {
