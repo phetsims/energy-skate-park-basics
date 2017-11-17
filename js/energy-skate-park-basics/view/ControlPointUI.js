@@ -107,7 +107,6 @@ define( function( require ) {
     this.disposeControlPointUI = function() {
       cutButton && cutButton.dispose();
       deleteButton.dispose();
-      tandem.removeInstance( self );
     };
   }
 
