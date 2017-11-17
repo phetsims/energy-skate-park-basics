@@ -18,20 +18,19 @@ define( function( require ) {
 
   /**
    *
-   * @param instance
+   * @param track
    * @param phetioID
    * @constructor
    */
-  function TrackReferenceIO( instance, phetioID ) {
-    assert && assertInstanceOf( instance, phet.energySkateParkBasics.Track );
-    ObjectIO.call( this, instance, phetioID );
+  function TrackReferenceIO( track, phetioID ) {
+    assert && assertInstanceOf( track, phet.energySkateParkBasics.Track );
+    ObjectIO.call( this, track, phetioID );
   }
 
   /**
    * The wrapper type for a track.
    */
   phetioInherit( ObjectIO, 'TrackReferenceIO', TrackReferenceIO, {}, {
-
     fromStateObject: function( stateObject ) {
       if ( stateObject === null ) {
         return null;
@@ -43,8 +42,9 @@ define( function( require ) {
         throw new Error( 'fromStateObject failed' );
       }
     },
-    toStateObject: function( instance ) {
-      return instance ? instance.trackTandem.id : null;
+    toStateObject: function( track ) {
+      assert && assertInstanceOf( track, phet.energySkateParkBasics.Track );
+      return track ? track.trackTandem.id : null;
     }
   } );
 

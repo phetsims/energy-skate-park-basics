@@ -17,13 +17,13 @@ define( function( require ) {
 
   /**
    *
-   * @param instance
+   * @param controlPoint
    * @param phetioID
    * @constructor
    */
-  function ControlPointIO( instance, phetioID ) {
-    assert && assertInstanceOf( instance, phet.energySkateParkBasics.ControlPoint );
-    ObjectIO.call( this, instance, phetioID );
+  function ControlPointIO( controlPoint, phetioID ) {
+    assert && assertInstanceOf( controlPoint, phet.energySkateParkBasics.ControlPoint );
+    ObjectIO.call( this, controlPoint, phetioID );
   }
 
   /**
@@ -42,8 +42,9 @@ define( function( require ) {
       }
     },
 
-    toStateObject: function( instance ) {
-      return instance ? instance.phetioID : 'null';
+    toStateObject: function( controlPoint ) {
+      assert && assertInstanceOf( controlPoint, phet.energySkateParkBasics.ControlPoint );
+      return controlPoint ? controlPoint.phetioID : 'null';
     }
   } );
 

@@ -15,13 +15,13 @@ define( function( require ) {
 
   /**
    *
-   * @param instance
+   * @param controlPointNode
    * @param phetioID
    * @constructor
    */
-  function ControlPointNodeIO( instance, phetioID ) {
-    assert && assertInstanceOf( instance, phet.energySkateParkBasics.ControlPointNode );
-    NodeIO.call( this, instance, phetioID );
+  function ControlPointNodeIO( controlPointNode, phetioID ) {
+    assert && assertInstanceOf( controlPointNode, phet.energySkateParkBasics.ControlPointNode );
+    NodeIO.call( this, controlPointNode, phetioID );
   }
 
   /**
