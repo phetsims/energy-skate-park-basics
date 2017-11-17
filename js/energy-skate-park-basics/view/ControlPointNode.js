@@ -183,6 +183,10 @@ define( function( require ) {
           track.smoothPointOfHighestCurvature( [ i ] );
           model.trackModified( track );
         }
+
+        // The above steps can dispose a track.  If so, do not try to modify the track further, see https://github.com/phetsims/energy-skate-park-basics/issues/396
+        if ( track.trackDisposed ) { return; }
+
         track.bumpAboveGround();
         track.draggingProperty.value = false;
 

@@ -45,6 +45,9 @@ define( function( require ) {
     this.parents = parents;
     this.modelTracks = modelTracks;
 
+    // @public
+    this.trackDisposed = false;
+
     // @public (phet-io), see TrackReferenceIO
     this.trackTandem = tandem;
     this.availableModelBoundsProperty = availableModelBoundsProperty;
@@ -743,6 +746,7 @@ define( function( require ) {
     },
 
     dispose: function() {
+      this.trackDisposed = true;
       this.disposeTrack();
     },
 
