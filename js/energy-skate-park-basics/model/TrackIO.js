@@ -36,18 +36,18 @@ define( function( require ) {
       // TODO: This is sketchy, see // See https://github.com/phetsims/energy-skate-park-basics/issues/366
       return stateObject;
     },
-    toStateObject: function( instance ) {
+    toStateObject: function( track ) {
       assert && assertInstanceOf( track, phet.energySkateParkBasics.Track );
-      if ( instance instanceof phet.energySkateParkBasics.Track || instance === null ) {
+      if ( track instanceof phet.energySkateParkBasics.Track || track === null ) {
 
         // Since skater.trackProperty is of type Property.<Track|null>, we must support null here.
-        if ( !instance ) {
+        if ( !track ) {
           return null;
         }
-        assert && assert( instance.controlPoints, 'control points should be defined' );
+        assert && assert( track.controlPoints, 'control points should be defined' );
         return {
-          interactive: instance.interactive,
-          controlPointTandemIDs: instance.controlPoints.map( function( controlPoint ) {
+          interactive: track.interactive,
+          controlPointTandemIDs: track.controlPoints.map( function( controlPoint ) {
             return controlPoint.controlPointTandem.id;
           } )
         };
@@ -55,7 +55,7 @@ define( function( require ) {
       else {
         /// TODO: Major hack to support data stream, which for unknown reasons was already calling this method with a state object
         // See https://github.com/phetsims/energy-skate-park-basics/issues/366
-        return instance;
+        return track;
       }
     }
   } );
