@@ -10,6 +10,7 @@ define( function( require ) {
   'use strict';
 
   // modules
+  var BooleanProperty = require( 'AXON/BooleanProperty' );
   var Constants = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/Constants' );
   var DerivedProperty = require( 'AXON/DerivedProperty' );
   var DerivedPropertyIO = require( 'AXON/DerivedPropertyIO' );
@@ -20,16 +21,17 @@ define( function( require ) {
   var Property = require( 'AXON/Property' );
   var PropertyIO = require( 'AXON/PropertyIO' );
   var Range = require( 'DOT/Range' );
+  var TrackIO = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/model/TrackIO' );
+  var TrackReferenceIO = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/model/TrackReferenceIO' );
   var Util = require( 'DOT/Util' );
   var Vector2 = require( 'DOT/Vector2' );
+  var Vector2IO = require( 'DOT/Vector2IO' );
 
   // phet-io modules
   var BooleanIO = require( 'ifphetio!PHET_IO/types/BooleanIO' );
+  var NullableIO = require( 'ifphetio!PHET_IO/types/NullableIO' );
   var NumberIO = require( 'ifphetio!PHET_IO/types/NumberIO' );
   var StringIO = require( 'ifphetio!PHET_IO/types/StringIO' );
-  var TrackIO = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/model/TrackIO' );
-  var TrackReferenceIO = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/model/TrackReferenceIO' );
-  var Vector2IO = require( 'DOT/Vector2IO' );
 
   // Compare two arrays, whose elements have 'equals' methods for comparison
   var arrayEquals = function( a, b ) {
@@ -52,13 +54,13 @@ define( function( require ) {
     // The track the skater is on, or null if free-falling
     this.trackProperty = new Property( null, {
       tandem: tandem.createTandem( 'trackProperty' ),
-      phetioType: PropertyIO( TrackReferenceIO )
+      phetioType: PropertyIO( NullableIO( TrackReferenceIO ) )
     } );
 
     // Parameter along the parametric spline, unitless since it is in parametric space
     this.parametricPositionProperty = new Property( 0, {
       tandem: tandem.createTandem( 'parametricPositionProperty' ),
-      phetioType: PropertyIO( NumberIO )
+      phetioType: PropertyIO( NullableIO( NumberIO ) )
     } );
 
     // Speed along the parametric spline dimension, formally 'u dot', indicating speed and direction (+/-) along the
@@ -152,18 +154,17 @@ define( function( require ) {
     // Returns to this parametric position along the track when pressing "return skater"
     this.startingUProperty = new Property( 0, {
       tandem: tandem.createTandem( 'startingUProperty' ),
-      phetioType: PropertyIO( NumberIO )
+      phetioType: PropertyIO( NullableIO( NumberIO ) )
     } );
 
-    this.startingUpProperty = new Property( true, {
-      tandem: tandem.createTandem( 'startingUpProperty' ),
-      phetioType: PropertyIO( BooleanIO )
+    this.startingUpProperty = new BooleanProperty( true, {
+      tandem: tandem.createTandem( 'startingUpProperty' )
     } );
 
     // Returns to this track when pressing "return skater"
     this.startingTrackProperty = new Property( null, {
       tandem: tandem.createTandem( 'startingTrackProperty' ),
-      phetioType: PropertyIO( TrackIO )
+      phetioType: PropertyIO( NullableIO( TrackIO ) )
     } );
 
     // Position of the skater's head, for positioning the pie chart.

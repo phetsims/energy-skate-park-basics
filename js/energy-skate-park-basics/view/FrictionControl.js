@@ -14,6 +14,7 @@ define( function( require ) {
   var HSlider = require( 'SUN/HSlider' );
   var inherit = require( 'PHET_CORE/inherit' );
   var PhetFont = require( 'SCENERY_PHET/PhetFont' );
+  var Range = require( 'DOT/Range' );
   var Text = require( 'SCENERY/nodes/Text' );
   var VBox = require( 'SCENERY/nodes/VBox' );
 
@@ -28,7 +29,7 @@ define( function( require ) {
    * @constructor
    */
   function FrictionControl( frictionProperty, tandem ) {
-    var frictionRange = { min: 0, max: frictionProperty.value * 2 };
+    var frictionRange = new Range( 0, frictionProperty.value * 2 );
     var slider = new HSlider( frictionProperty, frictionRange, _.extend( { tandem: tandem }, Constants.SLIDER_OPTIONS ) );
     var tickFont = new PhetFont( 10 );
 
