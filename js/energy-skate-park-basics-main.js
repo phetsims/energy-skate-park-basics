@@ -16,7 +16,7 @@ define( function( require ) {
   require( 'SCENERY/util/Color' );
 
   // constants
-  var tandem = Tandem.createRootTandem();
+  var tandem = Tandem.rootTandem;
 
   SimLauncher.launch( function() {
     new EnergySkateParkBasicsSim( tandem ).start();
