@@ -51,9 +51,7 @@ define( function( require ) {
     };
     phet.joist.display.addInputListener( this.clickToDismissListener );
 
-    Node.call( this, {
-      tandem: tandem
-    } );
+    Node.call( this );
 
     var isEndPoint = controlPointIndex === 0 || controlPointIndex === track.controlPoints.length - 1;
     var alpha = new LinearFunction( 0, track.controlPoints.length - 1, track.minPoint, track.maxPoint )( controlPointIndex );
