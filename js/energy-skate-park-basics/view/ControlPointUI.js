@@ -51,7 +51,10 @@ define( function( require ) {
     };
     phet.joist.display.addInputListener( this.clickToDismissListener );
 
-    Node.call( this );
+    Node.call( this, {
+      tandem: tandem,
+      phetioState: false
+    } );
 
     var isEndPoint = controlPointIndex === 0 || controlPointIndex === track.controlPoints.length - 1;
     var alpha = new LinearFunction( 0, track.controlPoints.length - 1, track.minPoint, track.maxPoint )( controlPointIndex );
@@ -66,6 +69,7 @@ define( function( require ) {
       var scissorNode = new FontAwesomeNode( 'cut', { fill: 'black', scale: 0.6, rotation: Math.PI / 2 - angle } );
       var cutButton = new RoundPushButton( {
         tandem: tandem.createTandem( 'cutButton' ),
+        phetioState: false,
         content: scissorNode,
         listener: function() {
           model.splitControlPoint( track, controlPointIndex, modelAngle );
@@ -85,6 +89,7 @@ define( function( require ) {
     var deleteNode = new FontAwesomeNode( 'times_circle', { fill: 'red', scale: 0.6 } );
     var deleteButton = new RoundPushButton( {
       tandem: tandem.createTandem( 'deleteButton' ),
+      phetioState: false,
       listener: function() {
         model.deleteControlPoint( track, controlPointIndex );
       },
