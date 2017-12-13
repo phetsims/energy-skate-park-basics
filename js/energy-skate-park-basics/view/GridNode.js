@@ -32,6 +32,10 @@ define( function( require ) {
    * @constructor
    */
   function GridNode( gridVisibleProperty, modelViewTransform, tandem ) {
+
+    // @private
+    this.gridNodeTandem = tandem;
+
     this.modelViewTransform = modelViewTransform;
     Node.call( this, {
       pickable: false,
@@ -102,7 +106,7 @@ define( function( require ) {
 
         if ( y % 2 === 0 ) {
           var gridLineLabel = new Text( '' + y, {
-            tandem: this.tandem.createTandem( 'gridLineLabel' + y ),
+            tandem: this.gridNodeTandem.createTandem( 'gridLineLabel' + y ),
             font: FONT,
             top: viewY,
             right: originX - 2
@@ -114,7 +118,7 @@ define( function( require ) {
           // And shift it down a bit so it isn't touching the concrete, see #134
           if ( y === 0 ) {
             var replacementText = new Text( zeroMetersString, {
-              tandem: this.tandem.createTandem( 'zeroMetersStringText' ),
+              tandem: this.gridNodeTandem.createTandem( 'zeroMetersStringText' ),
               font: FONT,
               top: viewY + 2,
               x: gridLineLabel.x

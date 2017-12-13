@@ -58,7 +58,9 @@ define( function( require ) {
       lineWidth: 2,
       fill: fill,
       cursor: 'pointer',
-      translation: modelViewTransform.modelToViewPosition( controlPoint.positionProperty.value )
+      translation: modelViewTransform.modelToViewPosition( controlPoint.positionProperty.value ),
+      tandem: tandem,
+      phetioType: ControlPointNodeIO
     } );
 
     // Show a dotted line for the exterior track points, which can be connected to other track
@@ -237,11 +239,6 @@ define( function( require ) {
       self.fill = fill;
     };
     self.addInputListener( inputListener );
-
-    this.mutate( {
-      tandem: tandem,
-      phetioType: ControlPointNodeIO
-    } );
   }
 
   energySkateParkBasics.register( 'ControlPointNode', ControlPointNode );
