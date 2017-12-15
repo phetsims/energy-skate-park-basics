@@ -27,7 +27,7 @@ define( function( require ) {
         // Tracks to help demonstrate issues
 
       var createControlPoint = function( x, y ) {
-        return new ControlPoint( x, y, controlPointGroupTandem.createNextTandem() );
+        return new ControlPoint( x, y, { tandem: controlPointGroupTandem.createNextTandem() } );
       };
 
         var controlPoints = null;

@@ -250,21 +250,21 @@ define( function( require ) {
       // For the double well, move the left well up a bit since the interpolation moves it down by that much, and we
       // don't want the skater to go to y<0 while on the track.  Numbers determined by trial and error.
       var parabola = [
-        new ControlPoint( -4, 6, controlPointGroupTandem.createNextTandem() ),
-        new ControlPoint( 0, 0, controlPointGroupTandem.createNextTandem() ),
-        new ControlPoint( 4, 6, controlPointGroupTandem.createNextTandem() )
+        new ControlPoint( -4, 6, { tandem: controlPointGroupTandem.createNextTandem() } ),
+        new ControlPoint( 0, 0, { tandem: controlPointGroupTandem.createNextTandem() } ),
+        new ControlPoint( 4, 6, { tandem: controlPointGroupTandem.createNextTandem() } )
       ];
       var slope = [
-        new ControlPoint( -4, 6, controlPointGroupTandem.createNextTandem() ),
-        new ControlPoint( -2, 1.2, controlPointGroupTandem.createNextTandem() ),
-        new ControlPoint( 2, 0, controlPointGroupTandem.createNextTandem() )
+        new ControlPoint( -4, 6, { tandem: controlPointGroupTandem.createNextTandem() } ),
+        new ControlPoint( -2, 1.2, { tandem: controlPointGroupTandem.createNextTandem() } ),
+        new ControlPoint( 2, 0, { tandem: controlPointGroupTandem.createNextTandem() } )
       ];
       var doubleWell = [
-        new ControlPoint( -4, 5, controlPointGroupTandem.createNextTandem() ),
-        new ControlPoint( -2, 0.0166015, controlPointGroupTandem.createNextTandem() ),
-        new ControlPoint( 0, 2, controlPointGroupTandem.createNextTandem() ),
-        new ControlPoint( 2, 1, controlPointGroupTandem.createNextTandem() ),
-        new ControlPoint( 4, 5, controlPointGroupTandem.createNextTandem() )
+        new ControlPoint( -4, 5, { tandem: controlPointGroupTandem.createNextTandem() } ),
+        new ControlPoint( -2, 0.0166015, { tandem: controlPointGroupTandem.createNextTandem() } ),
+        new ControlPoint( 0, 2, { tandem: controlPointGroupTandem.createNextTandem() } ),
+        new ControlPoint( 2, 1, { tandem: controlPointGroupTandem.createNextTandem() } ),
+        new ControlPoint( 4, 5, { tandem: controlPointGroupTandem.createNextTandem() } )
       ];
 
       var parabolaTrack = new Track( this, this.tracks, parabola, false, null, this.availableModelBoundsProperty,
@@ -283,7 +283,7 @@ define( function( require ) {
       // When the scene changes, also change the tracks.
       this.sceneProperty.link( function( scene ) {
         for ( var i = 0; i < self.tracks.length; i++ ) {
-          self.tracks.get( i ).physicalProperty.value = (i === scene);
+          self.tracks.get( i ).physicalProperty.value = ( i === scene );
 
           // Reset the skater when the track is changed, see #179
           self.skater.returnToInitialPosition();
@@ -328,9 +328,9 @@ define( function( require ) {
       // eyeballing it for now.
       var offset = new Vector2( -5.1, -0.85 );
       var controlPoints = [
-        new ControlPoint( offset.x - 1, offset.y, controlPointGroupTandem.createNextTandem() ),
-        new ControlPoint( offset.x, offset.y, controlPointGroupTandem.createNextTandem() ),
-        new ControlPoint( offset.x + 1, offset.y, controlPointGroupTandem.createNextTandem() )
+        new ControlPoint( offset.x - 1, offset.y, { tandem: controlPointGroupTandem.createNextTandem() } ),
+        new ControlPoint( offset.x, offset.y, { tandem: controlPointGroupTandem.createNextTandem() } ),
+        new ControlPoint( offset.x + 1, offset.y, { tandem: controlPointGroupTandem.createNextTandem() } )
       ];
       this.tracks.add( new Track( this, this.tracks, controlPoints, true, null, this.availableModelBoundsProperty,
         trackGroupTandem.createNextTandem() ) );
@@ -455,9 +455,9 @@ define( function( require ) {
     // The skater moves along the ground with the same coefficient of fraction as the tracks, see #11
     stepGround: function( dt, skaterState ) {
       var x0 = skaterState.positionX;
-      var frictionMagnitude = (this.frictionProperty.value === 0 || skaterState.getSpeed() < 1E-2) ? 0 :
+      var frictionMagnitude = ( this.frictionProperty.value === 0 || skaterState.getSpeed() < 1E-2 ) ? 0 :
                               this.frictionProperty.value * skaterState.mass * skaterState.gravity;
-      var acceleration = Math.abs( frictionMagnitude ) * (skaterState.velocityX > 0 ? -1 : 1) / skaterState.mass;
+      var acceleration = Math.abs( frictionMagnitude ) * ( skaterState.velocityX > 0 ? -1 : 1 ) / skaterState.mass;
 
       var v1 = skaterState.velocityX + acceleration * dt;
 
@@ -472,7 +472,7 @@ define( function( require ) {
       var updated = skaterState.updatePositionAngleUpVelocity( newPosition.x, newPosition.y, 0, true, v1, 0 );
 
       var newEnergy = updated.getTotalEnergy();
-      return updated.updateThermalEnergy( updated.thermalEnergy + (originalEnergy - newEnergy) );
+      return updated.updateThermalEnergy( updated.thermalEnergy + ( originalEnergy - newEnergy ) );
     },
 
     // No bouncing on the ground, but the code is very similar to attachment part of interactWithTracksWhileFalling
@@ -584,7 +584,7 @@ define( function( require ) {
       // skater's start point, midpoint and end point and choose whichever is closest.  This helps avoid "high curvature"
       // problems like the one identified in #212
       var a = this.getClosestTrackAndPositionAndParameter( skaterState.getPosition(), physicalTracks );
-      var averagePosition = new Vector2( (skaterState.positionX + proposedPosition.x) / 2, (skaterState.positionY + proposedPosition.y) / 2 );
+      var averagePosition = new Vector2( ( skaterState.positionX + proposedPosition.x ) / 2, ( skaterState.positionY + proposedPosition.y ) / 2 );
       var b = this.getClosestTrackAndPositionAndParameter( averagePosition, physicalTracks );
       var c = this.getClosestTrackAndPositionAndParameter( new Vector2( proposedPosition.x, proposedPosition.y ), physicalTracks );
 
@@ -647,7 +647,7 @@ define( function( require ) {
         assert && assert( isFinite( newThermalEnergy ) );
         assert && assert( newThermalEnergy >= 0 );
 
-        var parametricSpeed = (dot > 0 ? +1 : -1) * newSpeed;
+        var parametricSpeed = ( dot > 0 ? +1 : -1 ) * newSpeed;
         var onTopSideOfTrack = beforeVector.dot( normal ) > 0;
 
         debug && debug( 'attach to track, ' + ', ' + parametricPosition + ', ' + track.maxPoint );
@@ -678,7 +678,7 @@ define( function( require ) {
     continueFreeFall: function( skaterState, initialEnergy, proposedPosition, proposedVelocity, dt ) {
 
       // make up for the difference by changing the y value
-      var y = (initialEnergy - 0.5 * skaterState.mass * proposedVelocity.magnitudeSquared() - skaterState.thermalEnergy) / (-1 * skaterState.mass * skaterState.gravity);
+      var y = ( initialEnergy - 0.5 * skaterState.mass * proposedVelocity.magnitudeSquared() - skaterState.thermalEnergy ) / ( -1 * skaterState.mass * skaterState.gravity );
       if ( y <= 0 ) {
         // When falling straight down, stop completely and convert all energy to thermal
         return skaterState.strikeGround( initialEnergy, proposedPosition.x );
@@ -884,7 +884,7 @@ define( function( require ) {
       // Net force in the radial direction is the dot product.  Component-wise to avoid allocations, see #50
       var netForceRadial = netForceWithoutNormalX * curvatureDirectionX + netForceWithoutNormalY * curvatureDirectionY;
 
-      var leaveTrack = (netForceRadial < centripetalForce && outsideCircle) || (netForceRadial > centripetalForce && !outsideCircle);
+      var leaveTrack = ( netForceRadial < centripetalForce && outsideCircle ) || ( netForceRadial > centripetalForce && !outsideCircle );
 
       if ( leaveTrack && this.detachableProperty.value ) {
 
@@ -1129,7 +1129,7 @@ define( function( require ) {
           var v = Math.sqrt( vSq );
 
           // TODO: What if parametricSpeed ===0?
-          var newVelocity = v * (newState.parametricSpeed > 0 ? +1 : -1);
+          var newVelocity = v * ( newState.parametricSpeed > 0 ? +1 : -1 );
           var unitParallelVector = newState.track.getUnitParallelVector( newState.parametricPosition );
           var updatedVelocityX = unitParallelVector.x * newVelocity;
           var updatedVelocityY = unitParallelVector.y * newVelocity;
@@ -1296,12 +1296,12 @@ define( function( require ) {
       var newPoint1 = new ControlPoint(
         track.controlPoints[ controlPointIndex ].sourcePositionProperty.value.x - vector.x,
         track.controlPoints[ controlPointIndex ].sourcePositionProperty.value.y - vector.y,
-        this.controlPointGroupTandem.createNextTandem()
+        { tandem: this.controlPointGroupTandem.createNextTandem() }
       );
       var newPoint2 = new ControlPoint(
         track.controlPoints[ controlPointIndex ].sourcePositionProperty.value.x + vector.x,
         track.controlPoints[ controlPointIndex ].sourcePositionProperty.value.y + vector.y,
-        this.controlPointGroupTandem.createNextTandem()
+        { tandem: this.controlPointGroupTandem.createNextTandem() }
       );
 
       var points1 = track.controlPoints.slice( 0, controlPointIndex );
@@ -1441,7 +1441,7 @@ define( function( require ) {
         var x2 = newTrack.getX( p.parametricPosition );
         var y2 = newTrack.getY( p.parametricPosition );
         this.skater.positionProperty.value = new Vector2( x2, y2 );
-        this.skater.angleProperty.value = newTrack.getViewAngleAt( p.parametricPosition ) + (this.skater.onTopSideOfTrackProperty.value ? 0 : Math.PI);
+        this.skater.angleProperty.value = newTrack.getViewAngleAt( p.parametricPosition ) + ( this.skater.onTopSideOfTrackProperty.value ? 0 : Math.PI );
 
         // Trigger an initial update now so we can get the right up vector, see #150
         this.skater.updatedEmitter.emit();
@@ -1450,7 +1450,7 @@ define( function( require ) {
         // If the skater flipped upside down because the track directionality is different, toggle his 'up' flag
         if ( originalNormal.dot( newNormal ) < 0 ) {
           this.skater.onTopSideOfTrackProperty.value = !this.skater.onTopSideOfTrackProperty.value;
-          this.skater.angleProperty.value = newTrack.getViewAngleAt( p.parametricPosition ) + (this.skater.onTopSideOfTrackProperty.value ? 0 : Math.PI);
+          this.skater.angleProperty.value = newTrack.getViewAngleAt( p.parametricPosition ) + ( this.skater.onTopSideOfTrackProperty.value ? 0 : Math.PI );
           this.skater.updatedEmitter.emit();
         }
 
@@ -1526,7 +1526,7 @@ define( function( require ) {
       assert && assert( controlPointTandemIDs, 'controlPointTandemIDs should exist' );
       // function Track( events, modelTracks, controlPoints, interactive, parents, availableModelBoundsProperty, tandem ) {
       var controlPoints = controlPointTandemIDs.map( function( id, index ) {
-        return new ControlPoint( index, 0, new Tandem( id ) ); // TODO: create with correct initial x & y values.
+        return new ControlPoint( index, 0, { tandem: new Tandem( id ) } ); // TODO: create with correct initial x & y values.
       } );
       var newTrack = new Track( this, this.tracks, controlPoints, interactive, [], this.availableModelBoundsProperty, tandem );
       this.tracks.add( newTrack );

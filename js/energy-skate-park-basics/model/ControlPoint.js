@@ -14,8 +14,10 @@ define( function( require ) {
   var energySkateParkBasics = require( 'ENERGY_SKATE_PARK_BASICS/energySkateParkBasics' );
   var inherit = require( 'PHET_CORE/inherit' );
   var NullableIO = require( 'ifphetio!PHET_IO/types/NullableIO' );
+  var PhetioObject = require( 'TANDEM/PhetioObject' );
   var Property = require( 'AXON/Property' );
   var PropertyIO = require( 'AXON/PropertyIO' );
+  var Tandem = require( 'TANDEM/Tandem' );
   var Vector2 = require( 'DOT/Vector2' );
   var Vector2IO = require( 'DOT/Vector2IO' );
 
@@ -26,11 +28,17 @@ define( function( require ) {
    *
    * @param x
    * @param y
-   * @param {Tandem} tandem
+   * @param {Object} options - required
    * @constructor
    */
-  function ControlPoint( x, y, tandem ) {
+  function ControlPoint( x, y, options ) {
     var self = this;
+
+    options = _.extend( {
+      tandem: Tandem.required,
+      phetioType: ControlPointIO
+    }, options );
+    var tandem = options.tandem;
 
     // @public (phet-io)
     this.controlPointTandem = tandem;
@@ -58,10 +66,10 @@ define( function( require ) {
         phetioType: DerivedPropertyIO( Vector2IO )
       } );
 
-    tandem.addInstance( this, { phetioType: ControlPointIO } );
+    PhetioObject.call( this, options );
 
+    // @private
     this.disposeControlPoint = function() {
-      tandem.removeInstance( self );
       self.positionProperty.dispose();
       self.sourcePositionProperty.dispose();
       self.snapTargetProperty.dispose();
@@ -70,12 +78,19 @@ define( function( require ) {
 
   energySkateParkBasics.register( 'ControlPoint', ControlPoint );
 
-  return inherit( Object, ControlPoint, {
+  return inherit( PhetioObject, ControlPoint, {
+
+    /**
+     * @public
+     */
     dispose: function() {
       this.disposeControlPoint();
+      PhetioObject.prototype.dispose.call( this );
     },
     copy: function( tandem ) {
-      return new ControlPoint( this.positionProperty.value.x, this.positionProperty.value.y, tandem );
+      return new ControlPoint( this.positionProperty.value.x, this.positionProperty.value.y, {
+        tandem: tandem
+      } );
     }
   } );
 } );
