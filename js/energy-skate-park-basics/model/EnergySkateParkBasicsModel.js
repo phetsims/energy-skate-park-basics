@@ -36,6 +36,7 @@ define( function( require ) {
   var NumberProperty = require( 'AXON/NumberProperty' );
   var ObservableArray = require( 'AXON/ObservableArray' );
   var ObservableArrayIO = require( 'AXON/ObservableArrayIO' );
+  var PhetioObject = require( 'TANDEM/PhetioObject' );
   var Property = require( 'AXON/Property' );
   var PropertyIO = require( 'AXON/PropertyIO' );
   var Range = require( 'DOT/Range' );
@@ -300,13 +301,16 @@ define( function( require ) {
     if ( EnergySkateParkBasicsQueryParameters.debugTrack ) {
       DebugTracks.init( this, tandem.createGroupTandem( 'debugTrackControlPoint' ), tandem.createGroupTandem( 'track' ) );
     }
-
-    tandem.addInstance( this, { phetioType: EnergySkateParkBasicsModelIO } );
+    PhetioObject.call( this, {
+      phetioType: EnergySkateParkBasicsModelIO,
+      tandem: tandem,
+      phetioState: false
+    } );
   }
 
   energySkateParkBasics.register( 'EnergySkateParkBasicsModel', EnergySkateParkBasicsModel );
 
-  return inherit( Object, EnergySkateParkBasicsModel, {
+  return inherit( PhetioObject, EnergySkateParkBasicsModel, {
 
     // Add the tracks that will be in the track toolbox for the "Playground" screen
     addDraggableTracks: function() {
