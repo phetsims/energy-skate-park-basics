@@ -35,8 +35,7 @@ define( function( require ) {
     var modelViewTransform = trackNode.modelViewTransform;
     var availableBoundsProperty = trackNode.availableBoundsProperty;
     var controlPointUIShownEmitter = new Emitter( {
-      tandem: tandem.createTandem( 'controlPointUIShownEmitter' ),
-      phetioArgumentTypes: []
+      tandem: tandem.createTandem( 'controlPointUIShownEmitter' )
     } );
 
     var self = this;
