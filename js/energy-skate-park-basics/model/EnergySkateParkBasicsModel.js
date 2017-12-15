@@ -268,12 +268,15 @@ define( function( require ) {
         new ControlPoint( 4, 5, { tandem: controlPointGroupTandem.createNextTandem() } )
       ];
 
-      var parabolaTrack = new Track( this, this.tracks, parabola, false, null, this.availableModelBoundsProperty,
-        tandem.createTandem( 'parabolaTrack' ) );
-      var slopeTrack = new Track( this, this.tracks, slope, false, null, this.availableModelBoundsProperty,
-        tandem.createTandem( 'slopeTrack' ) );
-      var doubleWellTrack = new Track( this, this.tracks, doubleWell, false, null, this.availableModelBoundsProperty,
-        tandem.createTandem( 'doubleWellTrack' ) );
+      var parabolaTrack = new Track( this, this.tracks, parabola, false, null, this.availableModelBoundsProperty, {
+        tandem: tandem.createTandem( 'parabolaTrack' )
+      } );
+      var slopeTrack = new Track( this, this.tracks, slope, false, null, this.availableModelBoundsProperty, {
+        tandem: tandem.createTandem( 'slopeTrack' )
+      } );
+      var doubleWellTrack = new Track( this, this.tracks, doubleWell, false, null, this.availableModelBoundsProperty, {
+        tandem: tandem.createTandem( 'doubleWellTrack' )
+      } );
 
       // Flag to indicate whether the skater transitions from the right edge of this track directly to the ground
       // see #164
@@ -336,8 +339,10 @@ define( function( require ) {
         new ControlPoint( offset.x, offset.y, { tandem: controlPointGroupTandem.createNextTandem() } ),
         new ControlPoint( offset.x + 1, offset.y, { tandem: controlPointGroupTandem.createNextTandem() } )
       ];
-      this.tracks.add( new Track( this, this.tracks, controlPoints, true, null, this.availableModelBoundsProperty,
-        trackGroupTandem.createNextTandem() ) );
+      this.tracks.add( new Track( this, this.tracks, controlPoints, true, null, this.availableModelBoundsProperty, {
+          tandem: trackGroupTandem.createNextTandem()
+        }
+      ) );
     },
 
     // Reset the model, including the skater, tracks, visualizations, etc.
@@ -1252,8 +1257,10 @@ define( function( require ) {
         var controlPointToDelete = track.controlPoints[ controlPointIndex ];
         var points = _.without( track.controlPoints, controlPointToDelete );
         controlPointToDelete.dispose();
-        var newTrack = new Track( this, this.tracks, points, true, track.getParentsOrSelf(), this.availableModelBoundsProperty,
-          trackGroupTandem.createNextTandem() );
+        var newTrack = new Track( this, this.tracks, points, true, track.getParentsOrSelf(), this.availableModelBoundsProperty, {
+            tandem: trackGroupTandem.createNextTandem()
+          }
+        );
         newTrack.physicalProperty.value = true;
         newTrack.droppedProperty.value = true;
 
@@ -1314,12 +1321,14 @@ define( function( require ) {
       points1.push( newPoint1 );
       points2.unshift( newPoint2 );
 
-      var newTrack1 = new Track( this, this.tracks, points1, true, track.getParentsOrSelf(), this.availableModelBoundsProperty,
-        trackGroupTandem.createNextTandem() );
+      var newTrack1 = new Track( this, this.tracks, points1, true, track.getParentsOrSelf(), this.availableModelBoundsProperty, {
+        tandem: trackGroupTandem.createNextTandem()
+      } );
       newTrack1.physicalProperty.value = true;
       newTrack1.droppedProperty.value = true;
-      var newTrack2 = new Track( this, this.tracks, points2, true, track.getParentsOrSelf(), this.availableModelBoundsProperty,
-        trackGroupTandem.createNextTandem() );
+      var newTrack2 = new Track( this, this.tracks, points2, true, track.getParentsOrSelf(), this.availableModelBoundsProperty, {
+        tandem: trackGroupTandem.createNextTandem()
+      } );
       newTrack2.physicalProperty.value = true;
       newTrack2.droppedProperty.value = true;
 
@@ -1413,8 +1422,9 @@ define( function( require ) {
         secondTrackBackward();
       }
 
-      var newTrack = new Track( this, this.tracks, points, true, a.getParentsOrSelf().concat( b.getParentsOrSelf() ), this.availableModelBoundsProperty,
-        trackGroupTandem.createNextTandem() );
+      var newTrack = new Track( this, this.tracks, points, true, a.getParentsOrSelf().concat( b.getParentsOrSelf() ), this.availableModelBoundsProperty, {
+        tandem: trackGroupTandem.createNextTandem()
+      } );
       newTrack.physicalProperty.value = true;
       newTrack.droppedProperty.value = true;
 
@@ -1532,7 +1542,7 @@ define( function( require ) {
       var controlPoints = controlPointTandemIDs.map( function( id, index ) {
         return new ControlPoint( index, 0, { tandem: new Tandem( id ) } ); // TODO: create with correct initial x & y values.
       } );
-      var newTrack = new Track( this, this.tracks, controlPoints, interactive, [], this.availableModelBoundsProperty, tandem );
+      var newTrack = new Track( this, this.tracks, controlPoints, interactive, [], this.availableModelBoundsProperty, { tandem: tandem } );
       this.tracks.add( newTrack );
       return newTrack;
     },

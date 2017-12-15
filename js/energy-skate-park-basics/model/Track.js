@@ -14,9 +14,11 @@ define( function( require ) {
   var Emitter = require( 'AXON/Emitter' );
   var energySkateParkBasics = require( 'ENERGY_SKATE_PARK_BASICS/energySkateParkBasics' );
   var inherit = require( 'PHET_CORE/inherit' );
+  var PhetioObject = require( 'TANDEM/PhetioObject' );
   var Property = require( 'AXON/Property' );
   var PropertyIO = require( 'AXON/PropertyIO' );
   var SplineEvaluation = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/model/SplineEvaluation' );
+  var Tandem = require( 'TANDEM/Tandem' );
   var Vector2 = require( 'DOT/Vector2' );
 
   // phet-io modules
@@ -36,10 +38,16 @@ define( function( require ) {
    * broken apart when dragged back to control panel
    * @param {Property<Bounds2>} availableModelBoundsProperty function that provides the visible model bounds, to prevent the
    * adjusted control point from going offscreen, see #195
-   * @param {Tandem} tandem
+   * @param {Object} options - required for tandem
    * @constructor
    */
-  function Track( events, modelTracks, controlPoints, interactive, parents, availableModelBoundsProperty, tandem ) {
+  function Track( events, modelTracks, controlPoints, interactive, parents, availableModelBoundsProperty, options ) {
+
+    options = _.extend( {
+      tandem: Tandem.required,
+      phetioType: TrackIO
+    }, options );
+    var tandem = options.tandem;
     var self = this;
     this.events = events;
     this.parents = parents;
@@ -114,7 +122,7 @@ define( function( require ) {
     this.updateLinSpace();
     this.updateSplines();
 
-    tandem.addInstance( this, { phetioType: TrackIO } );
+    PhetioObject.call( this, options );
 
     // In the state.html wrapper, when the state changes, we must update the skater node
     phet.phetIo && phet.phetIo.phetio.setStateEmitter && phet.phetIo.phetio.setStateEmitter.addListener( function() {
@@ -135,7 +143,7 @@ define( function( require ) {
 
   energySkateParkBasics.register( 'Track', Track );
 
-  return inherit( Object, Track, {
+  return inherit( PhetioObject, Track, {
 
     // when points change, update the spline instance
     updateSplines: function() {
@@ -226,19 +234,19 @@ define( function( require ) {
         var bottomDistanceSquared = point.distanceSquaredXY( bottomX, bottomY );
 
         if ( topDistanceSquared < bottomDistanceSquared ) {
-          bottomU = bottomU + (topU - bottomU) / 4;  // move halfway up
+          bottomU = bottomU + ( topU - bottomU ) / 4;  // move halfway up
           bottomX = SplineEvaluation.atNumber( this.xSpline, bottomU );
           bottomY = SplineEvaluation.atNumber( this.ySpline, bottomU );
           bestDistanceSquared = topDistanceSquared;
         }
         else {
-          topU = topU - (topU - bottomU) / 4;  // move halfway down
+          topU = topU - ( topU - bottomU ) / 4;  // move halfway down
           topX = SplineEvaluation.atNumber( this.xSpline, topU );
           topY = SplineEvaluation.atNumber( this.ySpline, topU );
           bestDistanceSquared = bottomDistanceSquared;
         }
       }
-      bestU = (topU + bottomU) / 2;
+      bestU = ( topU + bottomU ) / 2;
       bestPoint.x = SplineEvaluation.atNumber( this.xSpline, bestU );
       bestPoint.y = SplineEvaluation.atNumber( this.ySpline, bestU );
 
@@ -313,15 +321,15 @@ define( function( require ) {
 
     updateLinSpace: function() {
       this.minPoint = 0;
-      this.maxPoint = (this.controlPoints.length - 1) / this.controlPoints.length;
+      this.maxPoint = ( this.controlPoints.length - 1 ) / this.controlPoints.length;
       var prePoint = this.minPoint - 1E-6;
       var postPoint = this.maxPoint + 1E-6;
 
       // Store for performance
       // made number of sample points depend on the length of the track, to make it smooth enough no matter how long it is
-      var n = 20 * (this.controlPoints.length - 1);
+      var n = 20 * ( this.controlPoints.length - 1 );
       this.searchLinSpace = numeric.linspace( prePoint, postPoint, n );
-      this.distanceBetweenSamplePoints = (postPoint - prePoint) / n;
+      this.distanceBetweenSamplePoints = ( postPoint - prePoint ) / n;
     },
 
     // Detect whether a parametric point is in bounds of this track, for purposes of telling whether the skater fell
@@ -517,8 +525,8 @@ define( function( require ) {
       var yP = SplineEvaluation.atNumber( this.ySplineDiff, parametricPosition );
       var yPP = SplineEvaluation.atNumber( this.ySplineDiffDiff, parametricPosition );
 
-      var k = (xP * yPP - yP * xPP) /
-              Math.pow( (xP * xP + yP * yP), 3 / 2 );
+      var k = ( xP * yPP - yP * xPP ) /
+              Math.pow( ( xP * xP + yP * yP ), 3 / 2 );
 
       // Using component-wise maths to avoid allocations, see #50
       var centerX = this.getX( parametricPosition );
@@ -684,7 +692,7 @@ define( function( require ) {
       // Search the entire space of the spline.  Larger number of divisions was chosen to prevent large curvatures at a
       // single sampling point.
       var numDivisions = 400;
-      var du = (this.maxPoint - this.minPoint) / numDivisions;
+      var du = ( this.maxPoint - this.minPoint ) / numDivisions;
       for ( var parametricPosition = this.minPoint; parametricPosition < this.maxPoint; parametricPosition += du ) {
         this.getCurvature( parametricPosition, curvature );
         var r = Math.abs( curvature.r );
@@ -707,7 +715,7 @@ define( function( require ) {
       // Search the entire space of the spline.  Larger number of divisions was chosen to prevent large curvatures at a
       // single sampling point.
       var numDivisions = 400;
-      var du = (this.maxPoint - this.minPoint) / numDivisions;
+      var du = ( this.maxPoint - this.minPoint ) / numDivisions;
       for ( var parametricPosition = this.minPoint; parametricPosition < this.maxPoint; parametricPosition += du ) {
         this.getCurvature( parametricPosition, curvature );
         var r = Math.abs( curvature.r );
