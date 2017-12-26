@@ -14,7 +14,6 @@ define( function( require ) {
   var phetioInherit = require( 'ifphetio!PHET_IO/phetioInherit' );
 
   /**
-   *
    * @param {ControlPointNode} controlPointNode
    * @param {string} phetioID
    * @constructor
