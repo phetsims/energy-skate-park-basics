@@ -18,8 +18,8 @@ define( function( require ) {
 
   /**
    *
-   * @param track
-   * @param phetioID
+   * @param {Track} track
+   * @param {string} phetioID
    * @constructor
    */
   function TrackReferenceIO( track, phetioID ) {

@@ -15,8 +15,8 @@ define( function( require ) {
 
   /**
    *
-   * @param controlPointNode
-   * @param phetioID
+   * @param {ControlPointNode} controlPointNode
+   * @param {string} phetioID
    * @constructor
    */
   function ControlPointNodeIO( controlPointNode, phetioID ) {

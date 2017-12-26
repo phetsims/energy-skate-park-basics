@@ -16,8 +16,8 @@ define( function( require ) {
 
   /**
    *
-   * @param energySkateParkBasicsModel
-   * @param phetioID
+   * @param {EnergySkateParkBasicsModel} energySkateParkBasicsModel
+   * @param {string} phetioID
    * @constructor
    */
   function EnergySkateParkBasicsModelIO( energySkateParkBasicsModel, phetioID ) {
