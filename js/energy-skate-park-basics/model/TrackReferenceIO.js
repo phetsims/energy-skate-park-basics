@@ -27,7 +27,7 @@ define( function( require ) {
   }
 
   /**
-   * The wrapper type for a track.
+   * The IO type for a track.
    */
   phetioInherit( ObjectIO, 'TrackReferenceIO', TrackReferenceIO, {}, {
     fromStateObject: function( stateObject ) {

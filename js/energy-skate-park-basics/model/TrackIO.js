@@ -25,7 +25,7 @@ define( function( require ) {
   }
 
   /**
-   * The wrapper type for a track.
+   * The IO type for a track.
    */
   phetioInherit( ObjectIO, 'TrackIO', TrackIO, {}, {
     documentation: 'A skate track.',
