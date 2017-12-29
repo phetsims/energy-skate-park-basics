@@ -48,7 +48,7 @@ define( function( require ) {
      */
     addChildInstance: function( energySkateParkBasicsModel, tandem, stateObject ) {
       assert && assertInstanceOf( energySkateParkBasicsModel, phet.energySkateParkBasics.EnergySkateParkBasicsModel );
-      var isControlPoint = tandem.id.indexOf( 'model.controlPoint' ) >= 0;
+      var isControlPoint = tandem.phetioID.indexOf( 'model.controlPoint' ) >= 0;
       // Control Points are already being created when the tracks are made, so if the tandem is a controlPoint it's a no-op
       if ( isControlPoint ) {
         return false;

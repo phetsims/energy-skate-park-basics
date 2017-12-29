@@ -43,7 +43,7 @@ define( function( require ) {
     },
     toStateObject: function( track ) {
       assert && assertInstanceOf( track, phet.energySkateParkBasics.Track );
-      return track ? track.trackTandem.id : null;
+      return track ? track.trackTandem.phetioID : null;
     }
   } );
 

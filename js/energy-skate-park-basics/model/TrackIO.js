@@ -47,7 +47,7 @@ define( function( require ) {
         return {
           interactive: track.interactive,
           controlPointTandemIDs: track.controlPoints.map( function( controlPoint ) {
-            return controlPoint.controlPointTandem.id;
+            return controlPoint.controlPointTandem.phetioID;
           } )
         };
       }
