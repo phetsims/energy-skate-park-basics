@@ -26,9 +26,6 @@ define( function( require ) {
     ObjectIO.call( this, track, phetioID );
   }
 
-  /**
-   * The IO type for a track.
-   */
   phetioInherit( ObjectIO, 'TrackReferenceIO', TrackReferenceIO, {}, {
     fromStateObject: function( stateObject ) {
       if ( stateObject === null ) {

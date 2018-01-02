@@ -1,6 +1,7 @@
 // Copyright 2017, University of Colorado Boulder
 
 /**
+ * IO type for ControlPoint
  *
  * @author Sam Reid (PhET Interactive Simulations)
  * @author Andrew Adare (PhET Interactive Simulations)
@@ -25,9 +26,6 @@ define( function( require ) {
     ObjectIO.call( this, controlPoint, phetioID );
   }
 
-  /**
-   * Control point or null
-   */
   phetioInherit( ObjectIO, 'ControlPointIO', ControlPointIO, {}, {
     documentation: 'A control point that can manipulate the track.',
 
