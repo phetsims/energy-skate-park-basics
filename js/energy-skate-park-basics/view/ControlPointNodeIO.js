@@ -1,6 +1,7 @@
 // Copyright 2017, University of Colorado Boulder
 
 /**
+ * IO type for ControlPointNode
  *
  * @author Sam Reid (PhET Interactive Simulations)
  */
@@ -26,8 +27,9 @@ define( function( require ) {
   /**
    * Control point or null
    */
-  phetioInherit( NodeIO, 'ControlPointNodeIO', ControlPointNodeIO, {},
-    { documentation: 'The view element for a control point.' } );
+  phetioInherit( NodeIO, 'ControlPointNodeIO', ControlPointNodeIO, {}, {
+    documentation: 'The view element for a control point.'
+  } );
 
   energySkateParkBasics.register( 'ControlPointNodeIO', ControlPointNodeIO );
 
