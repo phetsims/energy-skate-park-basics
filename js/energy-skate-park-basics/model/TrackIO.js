@@ -31,11 +31,6 @@ define( function( require ) {
   phetioInherit( ObjectIO, 'TrackIO', TrackIO, {}, {
     documentation: 'A skate track.',
 
-    fromStateObject: function( stateObject ) {
-
-      // TODO: This is sketchy, see // See https://github.com/phetsims/energy-skate-park-basics/issues/366
-      return stateObject;
-    },
     toStateObject: function( track ) {
       assert && assertInstanceOf( track, phet.energySkateParkBasics.Track );
       if ( track instanceof phet.energySkateParkBasics.Track || track === null ) {
@@ -57,6 +52,13 @@ define( function( require ) {
         // See https://github.com/phetsims/energy-skate-park-basics/issues/366
         return track;
       }
+    },
+
+
+    fromStateObject: function( stateObject ) {
+
+      // TODO: This is sketchy, see // See https://github.com/phetsims/energy-skate-park-basics/issues/366
+      return stateObject;
     }
   } );
 

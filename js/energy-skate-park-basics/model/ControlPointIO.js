@@ -29,6 +29,11 @@ define( function( require ) {
   phetioInherit( ObjectIO, 'ControlPointIO', ControlPointIO, {}, {
     documentation: 'A control point that can manipulate the track.',
 
+    toStateObject: function( controlPoint ) {
+      assert && assertInstanceOf( controlPoint, phet.energySkateParkBasics.ControlPoint );
+      return controlPoint ? controlPoint.phetioID : 'null';
+    },
+
     // Support null
     fromStateObject: function( stateObject ) {
       if ( stateObject === 'null' ) {
@@ -37,11 +42,6 @@ define( function( require ) {
       else {
         return phetio.getWrapper( stateObject ).instance;
       }
-    },
-
-    toStateObject: function( controlPoint ) {
-      assert && assertInstanceOf( controlPoint, phet.energySkateParkBasics.ControlPoint );
-      return controlPoint ? controlPoint.phetioID : 'null';
     }
   } );
 

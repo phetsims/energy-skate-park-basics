@@ -27,6 +27,10 @@ define( function( require ) {
   }
 
   phetioInherit( ObjectIO, 'TrackReferenceIO', TrackReferenceIO, {}, {
+    toStateObject: function( track ) {
+      assert && assertInstanceOf( track, phet.energySkateParkBasics.Track );
+      return track ? track.trackTandem.phetioID : null;
+    },
     fromStateObject: function( stateObject ) {
       if ( stateObject === null ) {
         return null;
@@ -37,10 +41,6 @@ define( function( require ) {
       else {
         throw new Error( 'fromStateObject failed' );
       }
-    },
-    toStateObject: function( track ) {
-      assert && assertInstanceOf( track, phet.energySkateParkBasics.Track );
-      return track ? track.trackTandem.phetioID : null;
     }
   } );
 
