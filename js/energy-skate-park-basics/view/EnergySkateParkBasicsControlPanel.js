@@ -123,7 +123,7 @@ define( function( require ) {
 
   return inherit( Panel, EnergySkateParkBasicsControlPanel, {
 
-    // Create an icon for the bar graph check box
+    // Create an icon for the bar graph checkbox
     createBarGraphIcon: function( tandem ) {
       return new Node( {
         tandem: tandem,
@@ -143,7 +143,7 @@ define( function( require ) {
       } );
     },
 
-    // Create an icon for the pie chart check box
+    // Create an icon for the pie chart checkbox
     createPieChartIcon: function( tandem ) {
       var radius = 10;
       var x = new Shape().moveTo( 0, 0 ).ellipticalArc( 0, 0, radius, radius, 0, -Math.PI / 2, 0, false ).lineTo( 0, 0 );
@@ -159,7 +159,7 @@ define( function( require ) {
       } );
     },
 
-    // Create an icon for the grid check box
+    // Create an icon for the grid checkbox
     createGridIcon: function( tandem ) {
       return new Node( {
         tandem: tandem,
@@ -175,7 +175,7 @@ define( function( require ) {
       } );
     },
 
-    // Create an icon for the speedometer check box
+    // Create an icon for the speedometer checkbox
     createSpeedometerIcon: function() {
       var node = new GaugeNode( new Property( 0 ), propertiesSpeedString, { min: 0, max: 10 },
         { pickable: false,
