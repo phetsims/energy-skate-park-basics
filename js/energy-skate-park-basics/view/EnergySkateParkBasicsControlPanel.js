@@ -9,7 +9,7 @@ define( function( require ) {
   'use strict';
 
   // modules
-  var CheckBox = require( 'SUN/CheckBox' );
+  var Checkbox = require( 'SUN/Checkbox' );
   var Circle = require( 'SCENERY/nodes/Circle' );
   var energySkateParkBasics = require( 'ENERGY_SKATE_PARK_BASICS/energySkateParkBasics' );
   var EnergySkateParkColorScheme = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/view/EnergySkateParkColorScheme' );
@@ -75,34 +75,34 @@ define( function( require ) {
       return [ itemSet.label, new Rectangle( 0, 0, padWidth + 20, 20 ), itemSet.icon ];
     };
 
-    var checkBoxItemOptions = { boxWidth: 18 };
+    var checkboxItemOptions = { boxWidth: 18 };
 
-    var checkBoxChildren = [
-      new CheckBox(
+    var checkboxChildren = [
+      new Checkbox(
         new HBox( { children: pad( pieChartSet ) } ),
         model.pieChartVisibleProperty,
-        _.extend( { tandem: tandem.createTandem( 'pieChartCheckBox' ) }, checkBoxItemOptions )
+        _.extend( { tandem: tandem.createTandem( 'pieChartCheckbox' ) }, checkboxItemOptions )
       ),
-      new CheckBox(
+      new Checkbox(
         new HBox( { children: pad( barGraphSet ) } ),
         model.barGraphVisibleProperty,
-        _.extend( { tandem: tandem.createTandem( 'barGraphCheckBox' ) }, checkBoxItemOptions ) ),
-      new CheckBox(
+        _.extend( { tandem: tandem.createTandem( 'barGraphCheckbox' ) }, checkboxItemOptions ) ),
+      new Checkbox(
         new HBox( { children: pad( gridSet ) } ),
         model.gridVisibleProperty,
-        _.extend( { tandem: tandem.createTandem( 'gridCheckBox' ) }, checkBoxItemOptions ) ),
-      new CheckBox(
+        _.extend( { tandem: tandem.createTandem( 'gridCheckbox' ) }, checkboxItemOptions ) ),
+      new Checkbox(
         new HBox( { children: pad( speedometerSet ) } ),
         model.speedometerVisibleProperty,
-        _.extend( { tandem: tandem.createTandem( 'speedometerCheckBox' ) }, checkBoxItemOptions )
+        _.extend( { tandem: tandem.createTandem( 'speedometerCheckbox' ) }, checkboxItemOptions )
       ) ];
-    var checkBoxes = new VBox( { align: 'left', spacing: 10, children: checkBoxChildren } );
+    var checkboxes = new VBox( { align: 'left', spacing: 10, children: checkboxChildren } );
 
     var massControlPanel = new MassControlPanel( model.skater.massProperty, tandem.createTandem( 'massControlPanel' ) );
 
     // For 1st screen, show MassControlPanel
     // For 2nd and 3rd screen, show Friction Slider and Mass Slider, see #147
-    var children = [ checkBoxes, massControlPanel ];
+    var children = [ checkboxes, massControlPanel ];
     if ( model.frictionAllowed ) {
       children.push( new FrictionControl( model.frictionProperty, tandem.createTandem( 'frictionSlider' ) ) );
     }
