@@ -31,7 +31,7 @@ define( function( require ) {
 
     toStateObject: function( controlPoint ) {
       assert && assertInstanceOf( controlPoint, phet.energySkateParkBasics.ControlPoint );
-      return controlPoint ? controlPoint.phetioID : 'null';
+      return controlPoint ? controlPoint.phetioObjectTandem.phetioID : 'null';
     },
 
     // Support null
