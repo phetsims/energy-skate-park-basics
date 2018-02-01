@@ -29,6 +29,10 @@ define( function( require ) {
   var screenIntroductionString = require( 'string!ENERGY_SKATE_PARK_BASICS/screen.introduction' );
   var screenTrackPlaygroundString = require( 'string!ENERGY_SKATE_PARK_BASICS/screen.trackPlayground' );
 
+  /**
+   * @constructor
+   * @param {Tandem} tandem
+   */
   function EnergySkateParkBasicsSim( tandem ) {
     var options = {
       credits: {

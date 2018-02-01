@@ -48,6 +48,10 @@ define( function( require ) {
     return true;
   };
 
+  /**
+   * @constructor
+   * @param {Tandem} tandem
+   */
   function Skater( tandem ) {
     var self = this;
 

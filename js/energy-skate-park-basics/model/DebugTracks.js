@@ -17,6 +17,9 @@ define( function( require ) {
   var Track = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/model/Track' );
   var Vector2 = require( 'DOT/Vector2' );
 
+  /**
+   * @constructor
+   */
   function DebugTracks() {
   }
 
