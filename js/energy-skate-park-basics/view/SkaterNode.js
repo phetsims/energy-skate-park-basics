@@ -39,6 +39,7 @@ define( function( require ) {
    * the skater is being dragged close to the track
    * @param {function} getPhysicalTracks function that returns the physical tracks in the model, so the skater can try
    * to attach to them while dragging
+   * @param {string} renderer - root renderer for this node, see Node.setRenderer for values
    * @param {Tandem} tandem
    * @constructor
    */
