@@ -95,6 +95,7 @@ define( function( require ) {
    */
   function EnergySkateParkBasicsModel( draggableTracks, frictionAllowed, tandem ) {
 
+    // TODO: visibility annotations
     this.draggableTracks = draggableTracks;
     this.frictionAllowed = frictionAllowed;
 
@@ -496,7 +497,20 @@ define( function( require ) {
       return updated.updateThermalEnergy( updated.thermalEnergy + ( originalEnergy - newEnergy ) );
     },
 
-    // No bouncing on the ground, but the code is very similar to attachment part of interactWithTracksWhileFalling
+    /**
+     * Transition the skater to the ground. New speed for the skater will keep x component of proposed velocity, and
+     * energies are then updated accordingly. Returns a new SkaterState to modify this.skater.
+     *
+     * No bouncing on the ground, but the code is very similar to attachment part of interactWithTracksWileFalling.
+     *
+     * @param {SkaterState} skaterState
+     * @param {number} initialEnergy - energy prior to transitioning to ground
+     * @param {Vector2} proposedPosition
+     * @param {Vector2} proposedVelocity
+     * @param {number} dt
+     *
+     * @return {SkaterState}
+     */
     switchToGround: function( skaterState, initialEnergy, proposedPosition, proposedVelocity, dt ) {
       var segment = new Vector2( 1, 0 );
 
@@ -550,7 +564,16 @@ define( function( require ) {
     },
 
     // Find the closest track to the skater, to see what he can bounce off of or attach to, and return the closest point
-    // on that track took
+    // on that track took.
+    /**
+     * Find the closest track to the skater, to see what he can bounce off or attach to, and return the closest point
+     * that the track took.
+     *
+     * @param {Vector2} position
+     * @param {[].Track} physicalTracks
+     *
+     * @return {Object|null} - collection of { track: {Track}, parametricPosition: {Vector2}, point: {Vector2} }, or null
+     */
     getClosestTrackAndPositionAndParameter: function( position, physicalTracks ) {
       var closestTrack = null;
       var closestMatch = null;
@@ -575,7 +598,18 @@ define( function( require ) {
       }
     },
 
-    // Check to see if the points crossed the track
+    /**
+     * Check to see if the points crossed the track.
+     *
+     * @param {Object} closestTrackAndPositionAndParameter - the object returned by getClosestTrackAndPositionAndParameter()
+     * @param {[].Tracks} physicalTracks - all tracks that the skater can physically interact with
+     * @param {number} beforeX
+     * @param {number} beforeY
+     * @param {number} afterX
+     * @param {number} afterY
+     *
+     * @return {boolean}
+     */
     crossedTrack: function( closestTrackAndPositionAndParameter, physicalTracks, beforeX, beforeY, afterX, afterY ) {
       var track = closestTrackAndPositionAndParameter.track;
       var parametricPosition = closestTrackAndPositionAndParameter.parametricPosition;
@@ -597,7 +631,18 @@ define( function( require ) {
       }
     },
 
-    // Check to see if it should hit or attach to track during free fall
+    /**
+     * Check to see if skater should hit or attach to  track during free fall. Returns a new SkaterState for this.skater
+     *
+     * @param {[].Track]} physicalTracks
+     * @param {SkaterState} skaterState
+     * @param {Vector2} proposedPosition
+     * @param {number} initialEnergy
+     * @param {number} dt
+     * @param {Vector2} proposedVelocity
+     *
+     * @return {SkaterState} 
+     */
     interactWithTracksWhileFalling: function( physicalTracks, skaterState, proposedPosition, initialEnergy, dt, proposedVelocity ) {
 
       // Find the closest track, and see if the skater would cross it in this time step.
@@ -695,7 +740,18 @@ define( function( require ) {
       }
     },
 
-    // Started in free fall and did not interact with a track
+    /**
+     * Started in free fall and did not interact with a track. Returns a new SkaterState for this.skater.
+     * @private
+     *
+     * @param {SkaterState} skaterState
+     * @param {number} initialEnergy
+     * @param {Vector2} proposedPosition
+     * @param {Vector2} proposedVelocity
+     * @param {number} dt
+     *
+     * @return {SkaterState}
+     */
     continueFreeFall: function( skaterState, initialEnergy, proposedPosition, proposedVelocity, dt ) {
 
       // make up for the difference by changing the y value
@@ -714,6 +770,8 @@ define( function( require ) {
      *
      * Split into component-wise to prevent allocations, see #50
      *
+     * @private
+     *
      * @param {SkaterState} skaterState the state
      * @returns {number} netForce in the X direction
      */
@@ -725,6 +783,7 @@ define( function( require ) {
      * Gets the net force but without the normal force.
      *
      * Split into component-wise to prevent allocations, see #50
+     * @private
      *
      * @param {SkaterState} skaterState the state
      * @returns {number} netForce in the Y direction
@@ -733,9 +792,17 @@ define( function( require ) {
       return skaterState.mass * skaterState.gravity + this.getFrictionForceY( skaterState );
     },
 
-    // The only other force on the object in the direction of motion is the gravity force
-    // Component-wise to reduce allocations, see #50
+    /**
+     * The only other force on the object in the direction of motion is the gravity force
+     * Component-wise to reduce allocations, see #50
+     * @private
+     *
+     * @param {SkaterState} skaterState
+     *
+     * @return {number}
+     */
     getFrictionForceX: function( skaterState ) {
+
       // Friction force should not exceed sum of other forces (in the direction of motion), otherwise the friction could
       // start a stopped object moving. Hence we check to see if the object is already stopped and don't add friction
       // in that case
@@ -751,9 +818,16 @@ define( function( require ) {
       }
     },
 
-    // The only other force on the object in the direction of motion is the gravity force
-    // Component-wise to reduce allocations, see #50
+    /**
+     * The only other force on the object in the direction of motion is the gravity force
+     * Component-wise to reduce allocations, see #50
+     * @private
+     * 
+     * @param {SkaterState} skaterState
+     * @return {number}
+     */
     getFrictionForceY: function( skaterState ) {
+
       // Friction force should not exceed sum of other forces (in the direction of motion), otherwise the friction could
       // start a stopped object moving.  Hence we check to see if the object is already stopped and don't add friction in
       // that case
@@ -766,10 +840,15 @@ define( function( require ) {
       }
     },
 
-    // Use a separate pooled curvature variable
+    // Use a separate pooled curvature variable - this value will be modified as the skater moves
     curvatureTemp2: { r: 1, x: 0, y: 0 },
 
-    // Get the normal force (Newtons) on the skater
+    /**
+     * Get the normal force (Newtons) on the skater.
+     *
+     * @param {SkaterState} skaterState
+     * @return {number}
+     */
     getNormalForce: function( skaterState ) {
       skaterState.getCurvature( this.curvatureTemp2 );
       var radiusOfCurvature = Math.min( this.curvatureTemp2.r, 100000 );
@@ -791,8 +870,15 @@ define( function( require ) {
       return n;
     },
 
-    // Use an Euler integration step to move the skater along the track
-    // This code is in an inner loop of the model physics and has been heavily optimized
+    /**
+     * Use an Euler integration step to move the skater along the track. This code is in an inner loop of the model
+     * physics, and has been heavily optimized. Returns a new SkaterState for this.skater.
+     *
+     * @param {number} dt
+     * @param {SkaterState} skaterState
+     *
+     * @return {SkaterState}
+     */
     stepEuler: function( dt, skaterState ) {
       var track = skaterState.track;
       var origEnergy = skaterState.getTotalEnergy();
@@ -878,7 +964,13 @@ define( function( require ) {
 
     curvatureTemp: { r: 1, x: 0, y: 0 },
 
-    // Update the skater as it moves along the track, and fly off the track if it goes over a jump or off the track's end
+    /**
+     * Update the skater as it moves along the track, and fly off the track if it  goes over a jump off the track's end.
+     *
+     * @param {number} dt
+     * @param {SkaterState} skaterState
+     * @return {SkaterState}
+     */
     stepTrack: function( dt, skaterState ) {
 
       skaterState.getCurvature( this.curvatureTemp );
@@ -907,7 +999,7 @@ define( function( require ) {
 
       var leaveTrack = ( netForceRadial < centripetalForce && outsideCircle ) || ( netForceRadial > centripetalForce && !outsideCircle );
 
-      if ( leaveTrack && this.detachableProperty.value ) {
+      if ( leaveTrack && this.s.value ) {
 
         // Leave the track.  Make sure the velocity is pointing away from the track or keep track of frames away from the
         // track so it doesn't immediately recollide.  Or project a ray and see if a collision is imminent?
@@ -965,10 +1057,19 @@ define( function( require ) {
       }
     },
 
-    // When the skater leaves the track, adjust the position and velocity.  This prevents the following problems:
-    // 1. When leaving from the sides, adjust the skater under the track so it won't immediately re-collide
-    // 2. When leaving from the middle of the track (say going over a jump or falling upside-down from a loop),
-    // adjust the skater so it won't fall through or re-collide
+    /**
+     * When the skater leaves the track, adjust the position and velocity. This prevents the following problems:
+     * 1. When leaving from the sides, adjust the skater under the track so it won't immediately re-collide.
+     * 2. When leaving from the middle of the track (say going over a jump or falling upside-down from a loop),
+     * adjust the skater so it won't fall through or re-collide.
+     *
+     * @param {Skater} freeSkater
+     * @param {number} sideVectorX
+     * @param {number} sideVectorY
+     * @param {number} sign
+     *
+     * @return {Skater}
+     */
     nudge: function( freeSkater, sideVectorX, sideVectorY, sign ) {
 
       // angle the velocity down a bit and underset from track so that it won't immediately re-collide
@@ -995,7 +1096,14 @@ define( function( require ) {
       return freeSkater;
     },
 
-    // Try to match the target energy by reducing the velocity of the skaterState
+    /**
+     * Try to match the target energy by reducing the velocity of the skaterState.
+     *
+     * @param {SkaterState} skaterState
+     * @param {SkaterState} targetState
+     *
+     * @return {SkaterState}
+     */
     correctEnergyReduceVelocity: function( skaterState, targetState ) {
 
       // Make a clone we can mutate and return, to protect the input argument
@@ -1027,7 +1135,17 @@ define( function( require ) {
       return newSkaterState;
     },
 
-    // Binary search to find the parametric coordinate along the track that matches the e0 energy
+    /**
+     * Binary search to find the parametric coordinate along the track that matches the e0 energy.
+     *
+     * @param {SkaterState} skaterState
+     * @param {number} u0
+     * @param {number} u1
+     * @param {number} e0
+     * @param {number} numSteps
+     *
+     * @return {number}
+     */
     searchSplineForEnergy: function( skaterState, u0, u1, e0, numSteps ) {
       var da = ( u1 - u0 ) / numSteps;
       var bestAlpha = ( u1 + u0 ) / 2;
