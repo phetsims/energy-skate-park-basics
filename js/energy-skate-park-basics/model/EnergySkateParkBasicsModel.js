@@ -365,6 +365,10 @@ define( function( require ) {
       this.clearTracks();
     },
 
+    /**
+     * Clear all draggable tracks from the screen. For "Intro" and "Friction" screens, this will no-op, only clears
+     * "Playground" screen.
+     */
     clearTracks: function() {
 
       // For the first two screens, make the default track physical
