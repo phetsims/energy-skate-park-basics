@@ -465,7 +465,15 @@ define( function( require ) {
       }
     },
 
-    // The skater moves along the ground with the same coefficient of fraction as the tracks, see #11
+    /**
+     * The skater moves along the ground with the same coefficient of fraction as the tracks, see #11. Returns a
+     * SkaterState that is applied to this.skater.
+     *
+     * @param {number} dt
+     * @param {SkaterState} skaterState
+     *
+     * @return {SkaterState}
+     */
     stepGround: function( dt, skaterState ) {
       var x0 = skaterState.positionX;
       var frictionMagnitude = ( this.frictionProperty.value === 0 || skaterState.getSpeed() < 1E-2 ) ? 0 :
