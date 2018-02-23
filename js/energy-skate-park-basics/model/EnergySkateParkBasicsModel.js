@@ -1164,8 +1164,15 @@ define( function( require ) {
       return bestAlpha;
     },
 
-    // A number of heuristic energy correction steps to ensure energy is conserved while keeping the motion smooth and
-    // accurate.  Copied from the Java version directly (with a few different magic numbers)
+    /**
+     * A number of heuristic energy correction steps to ensure energy is conserved while keeping the motion smooth and
+     * accurate. Copied from the Java version directly (with a few different magic numbers)
+     *
+     * @param {SkaterState} skaterState
+     * @param {SkaterState} newState
+     *
+     * @return {SkaterState}
+     */
     correctEnergy: function( skaterState, newState ) {
       if ( this.trackChangePending ) {
         return newState;
@@ -1301,7 +1308,13 @@ define( function( require ) {
       return vx !== 0 || vy !== 0 ? vy / Math.sqrt( vx * vx + vy * vy ) : vy;
     },
 
-    // Update the skater based on which state it is in
+    /**
+     * Update the skater based on which state.
+     *
+     * @param {number} dt
+     * @param {SkaterState}
+     * @return {SkaterState}
+     */
     stepModel: function( dt, skaterState ) {
       this.time += dt;
 
@@ -1312,8 +1325,12 @@ define( function( require ) {
              skaterState;
     },
 
-    // Return to the place he was last released by the user.  Also restores the track the skater was on so the initial
-    // conditions are the same as the previous release
+    /**
+     * Return to the place he was last released by the user. Also restores the track the skater was on so the initial
+     * conditions are the same as the previous release.
+     * 
+     * @return {SkaterState}
+     */
     returnSkater: function() {
 
       // if the skater's original track is available, restore her to it, see #143
@@ -1342,6 +1359,11 @@ define( function( require ) {
       return physicalTracks;
     },
 
+    /**
+     * Get all tracks that the skater cannot interact with.
+     *
+     * @return {[].Track}
+     */
     getNonPhysicalTracks: function() {
 
       // Use vanilla instead of lodash for speed since this is in an inner loop
@@ -1356,7 +1378,11 @@ define( function( require ) {
       return nonphysicalTracks;
     },
 
-    // Find whatever track is connected to the specified track and join them together to a new track
+    /**
+     * Find whatever track is connected to the specified track and join them together to a new track.
+     *
+     * @param {Track} track
+     */
     joinTracks: function( track ) {
       var connectedPoint = track.getSnapTarget();
       for ( var i = 0; i < this.getPhysicalTracks().length; i++ ) {
@@ -1373,10 +1399,14 @@ define( function( require ) {
       }
     },
 
-    // The user has pressed the "delete" button for the specified track's specified control point, and it should be
-    // deleted.
-    // It should be an inner point of a track (not an end point)
-    // If there were only 2 points on the track, just delete the entire track
+    /**
+     * The user has pressed the "delete" button for the specified track's specified control point, and it should be
+     * deleted. It should be an inner point of a track (not an end point). If there were only 2 points on the track,
+     * just delete the entire track.
+     *
+     * @param {Track} track
+     * @param {number} controlPointIndex [description]
+     */
     deleteControlPoint: function( track, controlPointIndex ) {
 
       track.removeEmitter.emit();
@@ -1426,8 +1456,16 @@ define( function( require ) {
       }
     },
 
-    // The user has pressed the "delete" button for the specified track's specified control point, and it should be
-    // deleted. It should be an inner point of a track (not an end point)
+    /**
+     * The user has pressed the "delete" button for the specified track's specified control point, and it should be
+     * deleted. It should be an inner point of a track (not an endpoint).
+     *
+     * @param {[type]} track [description]
+     * @param {[type]} controlPointIndex [description]
+     * @param {[type]} modelAngle [description]
+     *
+     * @return {[type]} [description]
+     */
     splitControlPoint: function( track, controlPointIndex, modelAngle ) {
       var controlPointToSplit = track.controlPoints[ controlPointIndex ];
 
@@ -1611,8 +1649,12 @@ define( function( require ) {
       newTrack.smoothPointOfHighestCurvature( [] );
     },
 
-    // When a track is dragged, update the skater's energy (if the sim was paused), since it wouldn't be handled in the
-    // update loop.
+    /**
+     * When a track is dragged, update the skater's energy (if the sim was paused), since it wouldn't be handled in the
+     * update loop.
+     *
+     * @param {Track} track
+     */
     trackModified: function( track ) {
       if ( this.pausedProperty.value && this.skater.trackProperty.value === track ) {
         this.skater.updateEnergy();
@@ -1628,6 +1670,7 @@ define( function( require ) {
       return _.reduce( numberOfPointsInEachTrack, function( memo, num ) { return memo + num; }, 0 );
     },
 
+    // Get the number of all control points for this model's tracks
     getNumberOfControlPoints: function() {
       var numberOfPointsInEachTrack = _.map( this.tracks.getArray(), function( track ) {return track.controlPoints.length;} );
       return _.reduce( numberOfPointsInEachTrack, function( memo, num ) { return memo + num; }, 0 );
