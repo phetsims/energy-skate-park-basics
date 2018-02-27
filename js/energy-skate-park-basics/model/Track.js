@@ -19,11 +19,11 @@ define( function( require ) {
   var PropertyIO = require( 'AXON/PropertyIO' );
   var SplineEvaluation = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/model/SplineEvaluation' );
   var Tandem = require( 'TANDEM/Tandem' );
+  var TrackIO = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/model/TrackIO' );
   var Vector2 = require( 'DOT/Vector2' );
 
   // phet-io modules
   var BooleanIO = require( 'ifphetio!PHET_IO/types/BooleanIO' );
-  var TrackIO = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/model/TrackIO' );
 
   // constants
   var FastArray = dot.FastArray;
