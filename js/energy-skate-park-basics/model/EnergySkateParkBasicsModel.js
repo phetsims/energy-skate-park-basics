@@ -999,7 +999,7 @@ define( function( require ) {
 
       var leaveTrack = ( netForceRadial < centripetalForce && outsideCircle ) || ( netForceRadial > centripetalForce && !outsideCircle );
 
-      if ( leaveTrack && this.s.value ) {
+      if ( leaveTrack && this.detachableProperty.value ) {
 
         // Leave the track.  Make sure the velocity is pointing away from the track or keep track of frames away from the
         // track so it doesn't immediately recollide.  Or project a ray and see if a collision is imminent?
