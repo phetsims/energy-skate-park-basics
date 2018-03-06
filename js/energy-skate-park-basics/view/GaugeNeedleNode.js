@@ -50,7 +50,7 @@ define( function( require ) {
     }, options );
     var lineWidth = 3;
     var needle = new Rectangle( 0, -lineWidth / 2, options.radius, lineWidth, { fill: 'red' } );
-    if ( options && options.renderer && options.renderer === 'webgl' ) {
+    if ( options.renderer && options.renderer === 'webgl' ) {
       needle = needle.toCanvasNodeSynchronous();
     }
     Node.call( this, {
