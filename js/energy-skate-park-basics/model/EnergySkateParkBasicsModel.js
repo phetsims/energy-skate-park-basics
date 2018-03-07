@@ -191,27 +191,6 @@ define( function( require ) {
       track.dispose();
     } );
 
-    // Proxy for save/load for the tracks for phetio.js
-    // TODO: This is all a bit hackish, to serialize the tracks.  Cannot this be made simpler?
-    if ( draggableTracks ) {
-      //phetio && phetio.addInstance( 'playgroundScreen.tracks', {
-      //  phetioID: 'playgroundScreen.tracks',
-      //
-      //  // TODO: use get value instead of this function.
-      //  getArray: function() {
-      //  },
-      //
-      //  get value() {
-      //    return this.getArray();
-      //  },
-      //
-      //  // TODO: set value asymmetric from getArray
-      //  set value( arrayOfArrayOfVector ) {
-
-      //  }
-      //} );
-    }
-
     // Determine when to show/hide the track edit buttons (cut track or delete control point)
     var updateTrackEditingButtonProperties = function() {
       var editEnabled = false;
