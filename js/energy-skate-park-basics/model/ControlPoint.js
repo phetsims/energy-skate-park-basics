@@ -49,7 +49,7 @@ define( function( require ) {
       phetioType: PropertyIO( Vector2IO )
     } );
 
-    // Another ControlPoint that this ControlPoint is going to 'snap' to if released.
+    // @public {ControlPoint} - Another ControlPoint that this ControlPoint is going to 'snap' to if released.
     this.snapTargetProperty = new Property( null, {
       tandem: tandem.createTandem( 'snapTargetProperty' ),
       phetioType: PropertyIO( NullableIO( ControlPointIO ) )
@@ -58,6 +58,7 @@ define( function( require ) {
     // Where it is shown on the screen.  Same as sourcePosition (if not snapped) or snapTarget.position (if snapped).
     // Snapping means temporarily connecting to an adjacent open point before the tracks are joined, to indicate that a
     // connection is possible
+    // @public {Vector2}
     this.positionProperty = new DerivedProperty( [ this.sourcePositionProperty, this.snapTargetProperty ],
       function( sourcePosition, snapTarget ) {
         return snapTarget ? snapTarget.positionProperty.value : sourcePosition;
@@ -87,6 +88,7 @@ define( function( require ) {
       this.disposeControlPoint();
       PhetioObject.prototype.dispose.call( this );
     },
+
     copy: function( tandem ) {
       return new ControlPoint( this.positionProperty.value.x, this.positionProperty.value.y, {
         tandem: tandem
