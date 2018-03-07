@@ -61,15 +61,6 @@ define( function( require ) {
   // Thrust is not currently implemented in Energy Skate Park: Basics but may be used in a future version, so left here
   var thrust = new Vector2();
 
-  /**
-   * Determine if two numbers are within tolerance of each other
-   * @param {number} a
-   * @param {number} b
-   * @param {number} tolerance
-   * @returns {boolean}
-   */
-  function isApproxEqual( a, b, tolerance ) { return Math.abs( a - b ) <= tolerance; }
-
   // Flag to enable debugging for physics issues
   var debug = EnergySkateParkBasicsQueryParameters.debugLog ? function() {
     console.log.apply( console, arguments );
@@ -1128,7 +1119,7 @@ define( function( require ) {
         newSkaterState.velocityX = result.x;
         newSkaterState.velocityY = result.y;
 
-        if ( isApproxEqual( e0, newSkaterState.getTotalEnergy(), 1E-8 ) ) {
+        if ( Util.equalsEpsilon( e0, newSkaterState.getTotalEnergy(), 1E-8 ) ) {
           break;
         }
       }
@@ -1199,7 +1190,7 @@ define( function( require ) {
             debug && debug( 'Could fix all energy by changing velocity.' );
             var correctedStateA = this.correctEnergyReduceVelocity( skaterState, newState );
             debug && debug( 'changed velocity: dE=' + ( correctedStateA.getTotalEnergy() - e0 ) );
-            if ( !isApproxEqual( e0, correctedStateA.getTotalEnergy(), 1E-8 ) ) {
+            if ( !Util.equalsEpsilon( e0, correctedStateA.getTotalEnergy(), 1E-8 ) ) {
               debug && debug( 'Energy error[0]' );
             }
             return correctedStateA;
@@ -1222,7 +1213,7 @@ define( function( require ) {
             var point = newState.track.getPoint( bestAlpha );
             var correctedState = newState.updateUPosition( bestAlpha, point.x, point.y );
             debug && debug( 'changed position u: dE=' + ( correctedState.getTotalEnergy() - e0 ) );
-            if ( !isApproxEqual( e0, correctedState.getTotalEnergy(), 1E-8 ) ) {
+            if ( !Util.equalsEpsilon( e0, correctedState.getTotalEnergy(), 1E-8 ) ) {
 
               // amount we could reduce the energy if we deleted all the kinetic energy:
               if ( Math.abs( correctedState.getKineticEnergy() ) > Math.abs( dE ) ) {
@@ -1230,7 +1221,7 @@ define( function( require ) {
                 // TODO: maybe should only do this if all velocity is not converted
                 debug && debug( 'Fixed position some, still need to fix velocity as well.' );
                 var correctedState2 = this.correctEnergyReduceVelocity( skaterState, correctedState );
-                if ( !isApproxEqual( e0, correctedState2.getTotalEnergy(), 1E-8 ) ) {
+                if ( !Util.equalsEpsilon( e0, correctedState2.getTotalEnergy(), 1E-8 ) ) {
                   debug && debug( 'Changed position & Velocity and still had energy error' );
                   debug && debug( 'Energy error[123]' );
                 }
@@ -1253,7 +1244,7 @@ define( function( require ) {
                     // Take as much thermal energy out as possible
                     var originalThermalEnergyState = newState.update( { thermalEnergy: skaterState.thermalEnergy } );
                     var correctedState3 = this.correctEnergyReduceVelocity( skaterState, originalThermalEnergyState );
-                    if ( !isApproxEqual( e0, correctedState3.getTotalEnergy(), 1E-8 ) ) {
+                    if ( !Util.equalsEpsilon( e0, correctedState3.getTotalEnergy(), 1E-8 ) ) {
                       debug && debug( 'Changed position & Velocity and still had energy error, error[124]' );
                     }
                     return correctedState3;
@@ -1282,7 +1273,7 @@ define( function( require ) {
           var fixedState = newState.updateUDVelocity( newVelocity, updatedVelocityX, updatedVelocityY );
           debug && debug( 'Set velocity to match energy, when energy was low: ' );
           debug && debug( 'INC changed velocity: dE=' + ( fixedState.getTotalEnergy() - e0 ) );
-          if ( !isApproxEqual( e0, fixedState.getTotalEnergy(), 1E-8 ) ) {
+          if ( !Util.equalsEpsilon( e0, fixedState.getTotalEnergy(), 1E-8 ) ) {
             new Error( 'Energy error[2]' ).printStackTrace();
           }
           return fixedState;
