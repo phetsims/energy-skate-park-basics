@@ -115,7 +115,7 @@ define( function( require ) {
     // Only applies to one frame at a time (for the immediate next update).  See #127 and #135
     this.trackChangePending = false;
 
-    // Model for visibility of various view parameters
+    // @public - model for visibility of various view parameters
     this.pieChartVisibleProperty = new Property( false, {
       tandem: tandem.createTandem( 'pieChartVisibleProperty' ),
       phetioType: PropertyIO( BooleanIO )
