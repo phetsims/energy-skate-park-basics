@@ -104,6 +104,7 @@ define( function( require ) {
     // Temporary flag that keeps track of whether the track was changed in the step before the physics update.
     // true if the skater's track is being dragged by the user, so that energy conservation no longer applies.
     // Only applies to one frame at a time (for the immediate next update).  See #127 and #135
+    // @private
     this.trackChangePending = false;
 
     // @public - model for visibility of various view parameters
@@ -140,25 +141,25 @@ define( function( require ) {
       phetioType: PropertyIO( BooleanIO )
     } );
 
-    // speed of the model, either 'normal' or 'slow'
+    // @public {string} - speed of the model, either 'normal' or 'slow'
     this.speedProperty = new Property( 'normal', {
       tandem: tandem.createTandem( 'speedProperty' ),
       phetioType: PropertyIO( StringIO )
     } );
 
-    // Coefficient of friction (unitless) between skater and track
+    // @public {number} - Coefficient of friction (unitless) between skater and track
     this.frictionProperty = new NumberProperty( frictionAllowed ? 0.05 : 0, {
       range: new Range( 0, 0.05 * 2 ), // TODO: duplicated with FrictionControl
       tandem: tandem.createTandem( 'frictionProperty' )
     } );
 
-    // Whether the skater should stick to the track like a roller coaster, or be able to fly off like a street
+    // @public {boolean} - Whether the skater should stick to the track like a roller coaster, or be able to fly off like a street
     this.detachableProperty = new Property( false, {
       tandem: tandem.createTandem( 'detachableProperty' ),
       phetioType: PropertyIO( BooleanIO )
     } );
 
-    // Will be filled in by the view, used to prevent control points from moving outside the visible model bounds when
+    // @public - Will be filled in by the view, used to prevent control points from moving outside the visible model bounds when
     // adjusted, see #195
     this.availableModelBoundsProperty = new Property( new Bounds2( 0, 0, 0, 0 ), {
       tandem: tandem.createTandem( 'availableModelBoundsProperty' ),
@@ -169,15 +170,17 @@ define( function( require ) {
       this.frictionProperty.debug( 'friction' );
     }
 
-    // elapsed time in the sim, in seconds.
+    // @private {number} - elapsed time in the sim, in seconds.
     this.time = 0;
 
-    // the skater model instance
+    // @public {Skater} - the skater model instance
     this.skater = new Skater( tandem.createTandem( 'skater' ) );
 
     // If the mass changes while the sim is paused, trigger an update so the skater image size will update, see #115
+    // TODO: Can this me moved into Skater.js?
     this.skater.massProperty.link( function() { if ( self.pausedProperty.value ) { self.skater.updatedEmitter.emit(); } } );
 
+    // @public
     this.tracks = new ObservableArray( {
       phetioType: ObservableArrayIO( TrackIO ),
       tandem: tandem.createTandem( 'tracks' )
