@@ -31,12 +31,22 @@ define( function( require ) {
   phetioInherit( ObjectIO, 'ControlPointIO', ControlPointIO, {}, {
     documentation: 'A control point that can manipulate the track.',
 
+    /**
+     * Encodes a ControlPoint instance to a state.
+     * @param {ControlPoint} controlPoint
+     * @returns {Object}
+     */
     toStateObject: function( controlPoint ) {
       assert && assertInstanceOf( controlPoint, phet.energySkateParkBasics.ControlPoint );
       return controlPoint ? controlPoint.tandem.phetioID : 'null';
     },
 
-    // Support null
+    /**
+     * Decodes a ControlPoint from a state object. Supports null.
+     *
+     * @param {Object} stateObject
+     * @return {ControlPoint}
+     */
     fromStateObject: function( stateObject ) {
       if ( stateObject === 'null' ) {
         return null;
