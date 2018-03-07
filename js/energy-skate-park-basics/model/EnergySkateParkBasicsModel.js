@@ -124,7 +124,7 @@ define( function( require ) {
       phetioType: PropertyIO( BooleanIO )
     } );
 
-    // Enabled/disabled for the track editing buttons
+    // @public - enabled/disabled for the track editing buttons
     this.editButtonEnabledProperty = new Property( false, {
       tandem: tandem.createTandem( 'editButtonEnabledProperty' ),
       phetioType: PropertyIO( BooleanIO )
