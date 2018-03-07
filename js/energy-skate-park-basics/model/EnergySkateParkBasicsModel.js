@@ -95,7 +95,7 @@ define( function( require ) {
    */
   function EnergySkateParkBasicsModel( draggableTracks, frictionAllowed, tandem ) {
 
-    // TODO: visibility annotations
+    // @public (read-only)
     this.draggableTracks = draggableTracks;
     this.frictionAllowed = frictionAllowed;
 
