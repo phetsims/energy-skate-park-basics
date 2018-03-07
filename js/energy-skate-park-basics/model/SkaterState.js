@@ -93,27 +93,59 @@ define( function( require ) {
       return this;
     },
 
-    // Get the total energy in this state.  Computed directly instead of using other methods to (hopefully) improve performance
+    /**
+     * Get the total energy in this state. Computed directly instead of using other methods to (hopefully) improve
+     * performance.
+     *
+     * @return {number}
+     */
     getTotalEnergy: function() {
       return 0.5 * this.mass * (this.velocityX * this.velocityX + this.velocityY * this.velocityY) - this.mass * this.gravity * this.positionY + this.thermalEnergy;
     },
 
+    /**
+     * Get the kinetic energy with KE = 1/2 * m * v^2
+     *
+     * @return {number}
+     */
     getKineticEnergy: function() {
       return 0.5 * this.mass * (this.velocityX * this.velocityX + this.velocityY * this.velocityY);
     },
 
+    /**
+     * Get the potential energy with PE = mgh.
+     *
+     * @return {number}
+     */
     getPotentialEnergy: function() {
       return -this.mass * this.gravity * this.positionY;
     },
 
+    /**
+     * Update and return a new skater state with the values of this skater state and an object that will override
+     * the values.
+     *
+     * @param {Object} overrides
+     * @return {SkaterState}
+     */
     update: function( overrides ) { return new SkaterState( this, overrides ); },
 
-    // Get the curvature at the skater's point on the track, by setting it to the pass-by-reference argument
+    /**
+     * Get the curvature at the skater's point on the track, by setting it to the pass-by-reference argument.
+     * 
+     * @public
+     * @param {Object} curvature - description of curvature at a point, looks like
+     *                             {r: {number}, x: {number}, y: {number} }
+     */
     getCurvature: function( curvature ) {
       this.track.getCurvature( this.parametricPosition, curvature );
     },
 
-    // Only set values that have changed
+    /**
+     * Apply skate to skater. Only set values that have changed.
+     *
+     * @param {Skater} skater
+     */
     setToSkater: function( skater ) {
       skater.trackProperty.value = this.track;
 
@@ -134,17 +166,33 @@ define( function( require ) {
       skater.updateEnergy();
     },
 
-    // Create a new SkaterState with the new values.  Provided as a convenience to avoid allocating options argument
-    // (as in update)
+    /**
+     * Create a new SkaterState with the new values. Provided as a convenience to avoid allocating options argument
+     * (as in update).
+     *
+     * @param {Track} track
+     * @param {number} parametricSpeed
+     * @return {SkaterState} 
+     */
     updateTrackUD: function( track, parametricSpeed ) {
-        var state = new SkaterState( this, EMPTY_OBJECT );
-        state.track = track;
+      var state = new SkaterState( this, EMPTY_OBJECT );
+      state.track = track;
       state.parametricSpeed = parametricSpeed;
-        return state;
-      },
+      return state;
+    },
 
-    // Create a new SkaterState with the new values.  Provided as a convenience to avoid allocating options argument
-    // (as in update)
+    /**
+     * Create a new SkaterState with the new values. Provided as a convenience to avoid allocating options argument
+     * (as in update).
+     *
+     * @param {number} parametricPosition
+     * @param {number} parametricSpeed
+     * @param {number} velocityX
+     * @param {number} velocityY
+     * @param {number} positionX
+     * @param {number} positionY
+     * @return {SkaterState}
+     */
     updateUUDVelocityPosition: function( parametricPosition, parametricSpeed, velocityX, velocityY, positionX, positionY ) {
       var state = new SkaterState( this, EMPTY_OBJECT );
       state.parametricPosition = parametricPosition;
@@ -156,6 +204,17 @@ define( function( require ) {
       return state;
     },
 
+    /**
+     * Update the position, angle, skater side of track, and velocity of the skater state.
+     *
+     * @param {number} positionX
+     * @param {number} positionY
+     * @param {number} angle
+     * @param {number} onTopSideOfTrack
+     * @param {number} velocityX
+     * @param {number} velocityY
+     * @return {SkaterState}
+     */
     updatePositionAngleUpVelocity: function( positionX, positionY, angle, onTopSideOfTrack, velocityX, velocityY ) {
       var state = new SkaterState( this, EMPTY_OBJECT );
       state.angle = angle;
@@ -167,6 +226,12 @@ define( function( require ) {
       return state;
     },
 
+    /**
+     * Update the thermal energy.
+     *
+     * @param {number} thermalEnergy
+     * @return {SkaterState}
+     */
     updateThermalEnergy: function( thermalEnergy ) {
       assert && assert( thermalEnergy >= 0 );
 
@@ -175,6 +240,14 @@ define( function( require ) {
       return state;
     },
 
+    /**
+     * Update the parametric position and position.
+     *
+     * @param {Vector2} parametricPosition
+     * @param {number} positionX
+     * @param {number} positionY
+     * @return {SkaterState}
+     */
     updateUPosition: function( parametricPosition, positionX, positionY ) {
       var state = new SkaterState( this, EMPTY_OBJECT );
       state.parametricPosition = parametricPosition;
@@ -183,6 +256,17 @@ define( function( require ) {
       return state;
     },
 
+    /**
+     * Transition the SkaterState to the ground, updating thermal energy, angle, and velocity components
+     * accordingly.
+     *
+     * @param {number} thermalEnergy
+     * @param {number} velocityX
+     * @param {number} velocityY
+     * @param {number} positionX
+     * @param {number} positionY
+     * @return {SkaterState}
+     */
     switchToGround: function( thermalEnergy, velocityX, velocityY, positionX, positionY ) {
       assert && assert( thermalEnergy >= 0 );
 
@@ -198,6 +282,13 @@ define( function( require ) {
       return state;
     },
 
+    /**
+     * Strike the ground (usually through falling). Velocity is zeroed as the skater hits the ground.
+     * 
+     * @param {number} thermalEnergy
+     * @param {number} positionX
+     * @return {SkaterState}
+     */
     strikeGround: function( thermalEnergy, positionX ) {
       assert && assert( thermalEnergy >= 0 );
 
@@ -212,10 +303,19 @@ define( function( require ) {
       return state;
     },
 
+    /**
+     * Create an exact copy of this SkaterState.
+     * @return {SkaterState}
+     */
     copy: function() {
       return new SkaterState( this, EMPTY_OBJECT );
     },
 
+    /**
+     * Leave the track by zeroing the parametric speed and setting track to null. 
+     *
+     * @return {SkaterState}
+     */
     leaveTrack: function() {
       var state = new SkaterState( this, EMPTY_OBJECT );
       state.parametricSpeed = 0;
@@ -223,6 +323,13 @@ define( function( require ) {
       return state;
     },
 
+    /**
+     * Create a new SkaterState copied from this SkaterState, updating position.
+     *
+     * @param {number} positionX
+     * @param {number} positionY
+     * @return {SkaterState}
+     */
     updatePosition: function( positionX, positionY ) {
       var state = new SkaterState( this, EMPTY_OBJECT );
       state.positionX = positionX;
@@ -230,6 +337,15 @@ define( function( require ) {
       return state;
     },
 
+    /**
+     * Update velocity. Provided as a convenience method to avoid allocating objects with options (as in update).
+     *
+     * @param {number} parametricSpeed
+     * @param {number} velocityX
+     * @param {number} velocityY
+     *
+     * @return {SkaterState}
+     */
     updateUDVelocity: function( parametricSpeed, velocityX, velocityY ) {
       var state = new SkaterState( this, EMPTY_OBJECT );
       state.parametricSpeed = parametricSpeed;
@@ -238,6 +354,17 @@ define( function( require ) {
       return state;
     },
 
+    /**
+     * Return a new skater state. New state is a copy of this SkaterState, with velocity and position updated to
+     * reflect free fall.
+     *
+     * @param {number} velocityX
+     * @param {number} velocityY
+     * @param {number} positionX
+     * @param {number} positionY
+     *
+     * @return {[type]} [description]
+     */
     continueFreeFall: function( velocityX, velocityY, positionX, positionY ) {
       var state = new SkaterState( this, EMPTY_OBJECT );
       state.velocityX = velocityX;
@@ -247,6 +374,20 @@ define( function( require ) {
       return state;
     },
 
+    /**
+     * Return SkaterState to track, creating and returning a new SkaterState. 
+     *
+     * @param {number} thermalEnergy
+     * @param {Track} track
+     * @param {boolean} onTopSideOfTrack
+     * @param {Vector2} parametricPosition
+     * @param {number} parametricSpeed
+     * @param {number} velocityX
+     * @param {number} velocityY
+     * @param {number} positionX
+     * @param {number} positionY
+     * @return {SkaterState}
+     */
     attachToTrack: function( thermalEnergy, track, onTopSideOfTrack, parametricPosition, parametricSpeed, velocityX, velocityY, positionX, positionY ) {
       assert && assert( thermalEnergy >= 0 );
 
@@ -263,17 +404,30 @@ define( function( require ) {
       return state;
     },
 
+    /**
+     * Get the speed of this SkaterState, the magnitude of velocity.
+     * @return {number}
+     */
     getSpeed: function() {
       return Math.sqrt( this.velocityX * this.velocityX + this.velocityY * this.velocityY );
     },
 
+    /**
+     * Return a new Vector2 of this SkaterState's that does not reference this SkaterState's velocity.
+     * @return {Vector2}
+     */
     getVelocity: function() {
       return new Vector2( this.velocityX, this.velocityY );
     },
 
+    // TODO: Pooling support for SkaterState?
     freeToPool: function() {},
 
-    // Create a new Vector2 that contains the positionX/positionY of this SkaterState
+    /**
+     * Create a new Vector2 that contains the positionX/positionY of this SkaterState.
+     *
+     * @return {Vector2}
+     */
     getPosition: function() {
       return new Vector2( this.positionX, this.positionY );
     }
