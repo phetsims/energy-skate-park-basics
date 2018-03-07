@@ -265,11 +265,19 @@ define( function( require ) {
     // Get the vector from feet to head, so that when tracks are joined we can make sure he is still pointing up
     get upVector() { return this.headPositionProperty.value.minus( this.positionProperty.value ); },
 
+    /**
+     * Zero the thermal energy, and update energy distribution accordingly.
+     * @public
+     */
     clearThermal: function() {
       this.thermalEnergyProperty.value = 0.0;
       this.updateEnergy();
     },
 
+    /**
+     * Fully reset this skater.
+     * @public
+     */
     reset: function() {
       
       // set the angle to zero first so that the optimization for SkaterNode.updatePosition is maintained,
@@ -301,7 +309,10 @@ define( function( require ) {
       this.updatedEmitter.emit();
     },
 
-    // Move the skater to her initial position, but leave the friction and mass the same, see #237
+    /**
+     * Move the skater to her initial position, but leave the friction and mass the same, see #237
+     * @public
+     */
     resetPosition: function() {
       // set the angle to zero first so that the optimization for SkaterNode.updatePosition is maintained, without
       // showing the skater at the wrong angle
@@ -336,8 +347,11 @@ define( function( require ) {
       this.updatedEmitter.emit();
     },
 
-    // When the scene (track) is changed, the skater's position & velocity reset, but the mass and other properties
-    // do not reset, see #179
+    /**
+     * When the scene (track) is changed, the skater's position & velocity reset, but the mass and other properties
+     * do not reset, see #179
+     * @public
+     */
     returnToInitialPosition: function() {
 
       // Everything needs to be reset except the mass, see #188
@@ -346,8 +360,11 @@ define( function( require ) {
       this.massProperty.value = mass;
     },
 
-    // Return the skater to the last location it was released by the user (or its starting location)
-    // Including the position on a track (if any)
+    /**
+     * Return the skater to the last location it was released by the user (or its starting location), including the
+     * position on a track (if any).
+     * @public
+     */
     returnSkater: function() {
 
       // If the user is on the same track as where he began (and the track hasn't changed), remain on the track,
@@ -369,8 +386,11 @@ define( function( require ) {
       this.updatedEmitter.emit();
     },
 
-    // Update the energies as a batch.  This is an explicit method instead of linked to all dependencies so that it can
-    // be called in a controlled fashion when multiple dependencies have changed, for performance.
+    /**
+     * Update the energies as a batch. This is an explicit method instead of linked to all dependencies so that it can
+     * be called in a controlled fashion when multiple dependencies have changed, for performance.
+     * @public
+     */
     updateEnergy: function() {
       this.kineticEnergyProperty.value = 0.5 * this.massProperty.value * this.velocityProperty.value.magnitudeSquared();
       this.potentialEnergyProperty.value = -this.massProperty.value * this.positionProperty.value.y * this.gravityProperty.value;
@@ -381,9 +401,13 @@ define( function( require ) {
       this.energyChangedEmitter.emit();
     },
 
-    // Update the head position for showing the pie chart.
-    // Doesn't depend on "up" because it already depends on the angle of the skater.
-    // Would be better if headPosition were a derived property, but created too many allocations, see #50
+    /**
+     * Update the head position for showing the pie chart. Doesn't depend on "up" because it already depends on the
+     * angle of the skater. Would be better if headPosition were a derived property, but created too many allocations,
+     * see #50
+     *
+     * @private
+     */
     updateHeadPosition: function() {
 
       // Center pie chart over skater's head not his feet so it doesn't look awkward when skating in a parabola
