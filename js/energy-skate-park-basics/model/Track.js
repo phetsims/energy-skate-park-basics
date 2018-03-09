@@ -30,6 +30,7 @@ define( function( require ) {
 
   /**
    * Model for a track, which has a fixed number of points.  If you added a point to a Track, you need a new track.
+   * 
    * @param {Events} events event source for sending messages
    * @param {ObservableArray<Track>} modelTracks all model tracks, so this track can add/remove others when joined/split
    * @param {Array<ControlPoint>} controlPoints
@@ -47,6 +48,7 @@ define( function( require ) {
       tandem: Tandem.required,
       phetioType: TrackIO
     }, options );
+
     var tandem = options.tandem;
     var self = this;
     this.events = events;
@@ -60,43 +62,46 @@ define( function( require ) {
     this.trackTandem = tandem;
     this.availableModelBoundsProperty = availableModelBoundsProperty;
 
+    // @public
     this.translatedEmitter = new Emitter();
     this.resetEmitter = new Emitter();
     this.smoothedEmitter = new Emitter();
     this.updateEmitter = new Emitter();
     this.removeEmitter = new Emitter();
 
-    // Keep track of what component (control point or track body) is dragging the track, so that it can't be dragged by
+    // @public {SimpleDragHandler} Keep track of what component (control point or track body) is dragging the track, so
+    // that it can't be dragged by
     // two sources, which causes a flicker, see #282
     this.dragSource = null;
 
-    // Flag to indicate whether the skater transitions from the right edge of this track directly to the ground, see #164
+    // @public - Flag to indicate whether the skater transitions from the right edge of this track directly to the ground, see #164
     this.slopeToGround = false;
 
-    // Use an arbitrary position for translating the track during dragging.  Only used for deltas in relative
+    // @private - Use an arbitrary position for translating the track during dragging.  Only used for deltas in relative
     // positioning and translation, so an exact "position" is irrelevant, see #260
     this._position = new Vector2( 0, 0 );
 
-    // True if the track can be interacted with.  For screens 1-2 only one track will be physical (and hence visible).
-    // For screen 3, tracks in the control panel are visible but non-physical until dragged to the play area
+    // @public {boolean} - True if the track can be interacted with.  For screens 1-2 only one track will be physical
+    // (and hence visible). For screen 3, tracks in the control panel are visible but non-physical until dragged to
+    // the play area
     this.physicalProperty = new Property( false, {
       tandem: tandem.createTandem( 'physicalProperty' ),
       phetioType: PropertyIO( BooleanIO )
     } );
 
-    // Flag that shows whether the track has been dragged fully out of the panel
+    // @private {boolean} - Flag that shows whether the track has been dragged fully out of the panel
     this.leftThePanelProperty = new Property( false, {
       tandem: tandem.createTandem( 'leftThePanelProperty' ),
       phetioType: PropertyIO( BooleanIO )
     } );
 
-    // Keep track of whether the track is dragging, so performance can be optimized while dragging
+    // @public - Keep track of whether the track is dragging, so performance can be optimized while dragging
     this.draggingProperty = new Property( false, {
       tandem: tandem.createTandem( 'draggingProperty' ),
       phetioType: PropertyIO( BooleanIO )
     } );
 
-    // Flag to indicate whether the user has dragged the track out of the toolbox.  If dragging from the toolbox,
+    // @public {boolean} - Flag to indicate whether the user has dragged the track out of the toolbox.  If dragging from the toolbox,
     // then dragging translates the entire track instead of just a point.
     this.droppedProperty = new Property( false, {
       tandem: tandem.createTandem( 'droppedProperty' ),
@@ -109,13 +114,17 @@ define( function( require ) {
     this.controlPoints = controlPoints;
     assert && assert( this.controlPoints, 'control points should be defined' );
 
+    // @public {boolean}
     this.interactive = interactive;
+
+    // @public {FastArray<number>}
     this.parametricPosition = new FastArray( this.controlPoints.length );
     this.x = new FastArray( this.controlPoints.length );
     this.y = new FastArray( this.controlPoints.length );
 
     // Sampling points, which will be initialized and updated in updateLinSpace.  These points are evenly spaced
     // in the track parametric coordinates from just before the track parameter space to just after. See updateLinSpace
+    // @private
     this.searchLinSpace = null;
     this.distanceBetweenSamplePoints = null;
 
@@ -132,6 +141,7 @@ define( function( require ) {
       events.updateEmitter.emit();
     } );
 
+    // @private - make the Track eligible for garbage collection
     this.disposeTrack = function() {
       tandem.removeInstance( self );
       self.physicalProperty.dispose();
@@ -169,6 +179,8 @@ define( function( require ) {
       this.xSplineDiffDiff = null;
       this.ySplineDiffDiff = null;
     },
+
+    // reset the track
     reset: function() {
       this.physicalProperty.reset();
       this.leftThePanelProperty.reset();
@@ -253,14 +265,40 @@ define( function( require ) {
       return { parametricPosition: bestU, point: bestPoint, distance: bestDistanceSquared };
     },
 
+    /**
+     * Get x location at the parametric position.
+     * @public
+     * @param {number} parametricPosition
+     * @return {number}
+     */
     getX: function( parametricPosition ) { return SplineEvaluation.atNumber( this.xSpline, parametricPosition ); },
+
+    /**
+     * Get y location at the parametric position.
+     * @public
+     * @param {number}
+     * @return {number}
+     */
     getY: function( parametricPosition ) { return SplineEvaluation.atNumber( this.ySpline, parametricPosition ); },
+
+    /**
+     * Get the the model location at the parametric position.
+     * @public
+     * @param {number} parametricPosition
+     * @return {Vector2}
+     */
     getPoint: function( parametricPosition ) {
       var x = SplineEvaluation.atNumber( this.xSpline, parametricPosition );
       var y = SplineEvaluation.atNumber( this.ySpline, parametricPosition );
       return new Vector2( x, y );
     },
 
+    /**
+     * Translate the track by moving all control points by dx and dy.
+     * @private
+     * @param {number} dx
+     * @param {number} dy
+     */
     translate: function( dx, dy ) {
       this._position = this._position.plusXY( dx, dy );
 
@@ -277,8 +315,13 @@ define( function( require ) {
       this.translatedEmitter.emit();
     },
 
-    // For purposes of showing the skater angle, get the view angle of the track here.  Note this means inverting the y
-    // values, this is called every step while animating on the track, so it was optimized to avoid new allocations
+    /**
+     * For purposes of showing the skater angle, get the view angle of the track here. Note this means inverting the y
+     * values, this is called every step while animating on the track, so it was optimized to avoid new allocations.
+     * @public
+     * @param {number} parametricPosition
+     * @return {number}
+     */
     getViewAngleAt: function( parametricPosition ) {
       if ( this.xSplineDiff === null ) {
         this.xSplineDiff = this.xSpline.diff();
@@ -287,8 +330,14 @@ define( function( require ) {
       return Math.atan2( -SplineEvaluation.atNumber( this.ySplineDiff, parametricPosition ), SplineEvaluation.atNumber( this.xSplineDiff, parametricPosition ) );
     },
 
-    // Get the model angle at the specified position on the track
+    /**
+     * Get the model angle at the specified position on the track.
+     * @public
+     * @param {number} parametricPosition
+     * @return {number}
+     */
     getModelAngleAt: function( parametricPosition ) {
+
       // load xSplineDiff, ySplineDiff here if not already loaded
       if ( this.xSplineDiff === null ) {
         this.xSplineDiff = this.xSpline.diff();
@@ -297,7 +346,12 @@ define( function( require ) {
       return Math.atan2( SplineEvaluation.atNumber( this.ySplineDiff, parametricPosition ), SplineEvaluation.atNumber( this.xSplineDiff, parametricPosition ) );
     },
 
-    // Get the model unit vector at the specified position on the track
+    /**
+     * Get the model unit vector at the specified position on the track.
+     * @public
+     * @param {number} parametricPosition
+     * @return {number}
+     */
     getUnitNormalVector: function( parametricPosition ) {
 
       // load xSplineDiff, ySplineDiff here if not already loaded
