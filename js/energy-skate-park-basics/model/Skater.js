@@ -173,10 +173,7 @@ define( function( require ) {
     } );
 
     // @public {Track} - Returns to this track when pressing "return skater"
-    this.startingTrackProperty = new Property( null, {
-      tandem: tandem.createTandem( 'startingTrackProperty' ),
-      phetioType: PropertyIO( NullableIO( TrackIO ) )
-    } );
+    this.startingTrackProperty = new Property( null );
 
     // @public {Vector2} - Position of the skater's head, for positioning the pie chart.
     // TODO: Could this be a derived Property?
@@ -228,7 +225,7 @@ define( function( require ) {
     // If this is a performance concern, perhaps it could just be dropped as a feature
     this.movedProperty = new DerivedProperty( [ this.positionProperty, this.startingPositionProperty, this.draggingProperty ],
       function( x, x0, dragging ) {
-        return !dragging && (x.x !== x0.x || x.y !== x0.y);
+        return !dragging && ( x.x !== x0.x || x.y !== x0.y );
       }, {
         tandem: tandem.createTandem( 'movedProperty' ),
         phetioType: DerivedPropertyIO( BooleanIO )
@@ -279,7 +276,7 @@ define( function( require ) {
      * @public
      */
     reset: function() {
-      
+
       // set the angle to zero first so that the optimization for SkaterNode.updatePosition is maintained,
       // without showing the skater at the wrong angle
       this.angleProperty.value = 0;
