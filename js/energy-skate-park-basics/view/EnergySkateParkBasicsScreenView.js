@@ -47,6 +47,7 @@ define( function( require ) {
   var EnergySkateParkColorScheme = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/view/EnergySkateParkColorScheme' );
   var Util = require( 'SCENERY/util/Util' );
   var EraserButton = require( 'SCENERY_PHET/buttons/EraserButton' );
+  var EnergySkateParkBasicsQueryParameters = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/EnergySkateParkBasicsQueryParameters' );
 
   // phet-io modules
   var TBoolean = require( 'ifphetio!PHET_IO/types/TBoolean' );
@@ -462,7 +463,8 @@ define( function( require ) {
       this.availableViewBounds = new DotRectangle( -offsetX, -offsetY, width / scale, this.modelViewTransform.modelToViewY( 0 ) + Math.abs( offsetY ) );
 
       // Float the control panel to the right (but not arbitrarily far because it could get too far from the play area)
-      this.controlPanel.right = Math.min( 890, this.availableViewBounds.maxX ) - 5;
+      var maxFloatAmount = EnergySkateParkBasicsQueryParameters.controlPanelLocation === 'fixed' ? 890 : Number.MAX_VALUE;
+      this.controlPanel.right = Math.min( maxFloatAmount, this.availableViewBounds.maxX ) - 5;
 
       if ( this.attachDetachToggleButtons ) {
         this.attachDetachToggleButtons.centerX = this.controlPanel.centerX;
