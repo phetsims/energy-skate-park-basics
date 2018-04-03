@@ -19,6 +19,7 @@ define( function( require ) {
   var DotRectangle = require( 'DOT/Rectangle' ); // eslint-disable-line require-statement-match
   var energySkateParkBasics = require( 'ENERGY_SKATE_PARK_BASICS/energySkateParkBasics' );
   var EnergySkateParkBasicsControlPanel = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/view/EnergySkateParkBasicsControlPanel' );
+  var EnergySkateParkBasicsQueryParameters = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/EnergySkateParkBasicsQueryParameters' );
   var EnergySkateParkColorScheme = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/view/EnergySkateParkColorScheme' );
   var EraserButton = require( 'SCENERY_PHET/buttons/EraserButton' );
   var GaugeNeedleNode = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/view/GaugeNeedleNode' );
@@ -191,7 +192,7 @@ define( function( require ) {
       centerX: this.controlPanel.centerX,
 
       // Align vertically with other controls, see #134
-      centerY: (modelViewTransform.modelToViewY( 0 ) + this.layoutBounds.maxY) / 2 + 8,
+      centerY: ( modelViewTransform.modelToViewY( 0 ) + this.layoutBounds.maxY ) / 2 + 8,
 
       tandem: tandem.createTandem( 'resetAllButton' )
     } );
@@ -253,9 +254,9 @@ define( function( require ) {
       } );
 
       model.sceneProperty.link( function( scene ) {
-        trackNodes[ 0 ].visible = (scene === 0);
-        trackNodes[ 1 ].visible = (scene === 1);
-        trackNodes[ 2 ].visible = (scene === 2);
+        trackNodes[ 0 ].visible = ( scene === 0 );
+        trackNodes[ 1 ].visible = ( scene === 1 );
+        trackNodes[ 2 ].visible = ( scene === 2 );
       } );
     }
     else {
@@ -284,10 +285,10 @@ define( function( require ) {
       var padding = 10;
 
       var trackCreationPanel = new Rectangle(
-        (interactiveTrackNodes[ 0 ].left - padding / 2),
-        (interactiveTrackNodes[ 0 ].top - padding / 2),
-        (interactiveTrackNodes[ 0 ].width + padding),
-        (interactiveTrackNodes[ 0 ].height + padding),
+        ( interactiveTrackNodes[ 0 ].left - padding / 2 ),
+        ( interactiveTrackNodes[ 0 ].top - padding / 2 ),
+        ( interactiveTrackNodes[ 0 ].width + padding ),
+        ( interactiveTrackNodes[ 0 ].height + padding ),
         6,
         6, {
           fill: 'white',
@@ -454,12 +455,12 @@ define( function( require ) {
 
       // Move to bottom vertically
       if ( scale === width / this.layoutBounds.width ) {
-        offsetY = (height / scale - this.layoutBounds.height);
+        offsetY = ( height / scale - this.layoutBounds.height );
       }
 
       // center horizontally
       else if ( scale === height / this.layoutBounds.height ) {
-        offsetX = (width - this.layoutBounds.width * scale) / 2 / scale;
+        offsetX = ( width - this.layoutBounds.width * scale ) / 2 / scale;
       }
       this.translate( offsetX, offsetY );
 
@@ -469,7 +470,8 @@ define( function( require ) {
       this.availableViewBounds = new DotRectangle( -offsetX, -offsetY, width / scale, this.modelViewTransform.modelToViewY( 0 ) + Math.abs( offsetY ) );
 
       // Float the control panel to the right (but not arbitrarily far because it could get too far from the play area)
-      this.controlPanel.right = Math.min( 890, this.availableViewBounds.maxX ) - 5;
+      var maxFloatAmount = EnergySkateParkBasicsQueryParameters.controlPanelLocation === 'fixed' ? 890 : Number.MAX_VALUE;
+      this.controlPanel.right = Math.min( maxFloatAmount, this.availableViewBounds.maxX ) - 5;
 
       if ( this.attachDetachToggleButtons ) {
         this.attachDetachToggleButtons.centerX = this.controlPanel.centerX;

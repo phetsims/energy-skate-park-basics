@@ -20,6 +20,10 @@ define( function( require ) {
     // Show experimental save & load button
     showSaveAndLoad: { type: 'flag' },
 
+    // By default, the control panels are in a fixed relative location to the sim and cannot float all the way to the
+    // sides, but specifying 'floating' allows them to go all the way to the sides.
+    controlPanelLocation: { type: 'string', defaultValue: 'fixed', validValues: [ 'fixed', 'floating' ] },
+
     // Show a testing track (as indicated by testTrackIndex)
     debugTrack: { type: 'flag' },
 
