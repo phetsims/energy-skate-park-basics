@@ -97,13 +97,14 @@ define( function( require ) {
     this.gridNode = new GridNode( model.gridVisibleProperty, modelViewTransform, tandem.createTandem( 'gridNode' ) );
     this.addChild( this.gridNode );
 
-    var pieChartLegend = new PieChartLegend(
+    // @private - node that shows the energy legend for the pie chart
+    this.pieChartLegend = new PieChartLegend(
       model.skater,
       model.clearThermal.bind( model ),
       model.pieChartVisibleProperty,
       tandem.createTandem( 'pieChartLegend' )
     );
-    this.addChild( pieChartLegend );
+    this.addChild( this.pieChartLegend );
 
     this.controlPanel = new EnergySkateParkBasicsControlPanel( model, tandem.createTandem( 'controlPanel' ) );
     this.addChild( this.controlPanel );
@@ -136,9 +137,10 @@ define( function( require ) {
       return self.availableModelBounds && containsAbove( self.availableModelBounds, position.x, position.y );
     } );
 
-    var barGraphBackground = new BarGraphBackground( model.skater, model.barGraphVisibleProperty,
+    // @private - background for the bar graph (split up to use WebGL for the foreground)
+    this.barGraphBackground = new BarGraphBackground( model.skater, model.barGraphVisibleProperty,
       model.clearThermal.bind( model ), tandem.createTandem( 'barGraphBackground' ) );
-    this.addChild( barGraphBackground );
+    this.addChild( this.barGraphBackground );
 
     if ( !model.draggableTracks ) {
 
@@ -146,9 +148,6 @@ define( function( require ) {
       this.sceneSelectionPanel = new SceneSelectionPanel( model, this, modelViewTransform, tandem.createTandem( 'sceneSelectionPanel' ) );
       this.addChild( this.sceneSelectionPanel );
     }
-
-    // Put the pie chart legend to the right of the bar chart, see #60, #192
-    pieChartLegend.mutate( { top: barGraphBackground.top, left: barGraphBackground.right + 8 } );
 
     var playingProperty = new Property( !model.pausedProperty.value, {
       tandem: tandem.createTandem( 'playingProperty' ),
@@ -366,9 +365,13 @@ define( function( require ) {
     gaugeNeedleNode.x = speedometerNode.x;
     gaugeNeedleNode.y = speedometerNode.y;
     this.addChild( gaugeNeedleNode );
-    this.addChild( new BarGraphForeground( model.skater, barGraphBackground, model.barGraphVisibleProperty, renderer,
+
+    // @private - the foreground of the bar graph (split up to use WebGL)
+    this.barGraphForeground = new BarGraphForeground( model.skater, this.barGraphBackground, model.barGraphVisibleProperty, renderer,
       tandem.createTandem( 'barGraphForeground' )
-    ) );
+    );
+    this.addChild( this.barGraphForeground );
+
     this.addChild( skaterNode );
 
     var pieChartNode = renderer === 'webgl' ?
@@ -488,6 +491,14 @@ define( function( require ) {
       // Compute the visible model bounds so we will know when a model object like the skater has gone offscreen
       this.availableModelBounds = this.modelViewTransform.viewToModelBounds( this.availableViewBounds );
       this.availableModelBoundsProperty.value = this.availableModelBounds;
+
+      if ( EnergySkateParkBasicsQueryParameters.controlPanelLocation === 'floating' ) {
+        this.barGraphBackground.x = this.availableViewBounds.minX + 5;
+        this.barGraphForeground.x = this.availableViewBounds.minX + 19;
+      }
+
+      // Put the pie chart legend to the right of the bar chart, see #60, #192
+      this.pieChartLegend.mutate( { top: this.barGraphBackground.top, left: this.barGraphBackground.right + 8 } );
 
       // Show it for debugging
       if ( showAvailableBounds ) {
