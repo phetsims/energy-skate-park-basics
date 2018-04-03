@@ -21,6 +21,7 @@ define( function( require ) {
   /**
    * Constructor for the BarGraph
    * @param {Skater} skater the model's skater model
+   * @param {Node} barGraphBackground - the background for the Bar Graph, to coordinate locations
    * @param {Property<Boolean>} barGraphVisibleProperty property that indicates whether the bar graph is visible
    * @param {string} barRenderer the renderer type to use for the bars.  For some reason it is not currently inherited.
    * @param {Tandem} tandem
