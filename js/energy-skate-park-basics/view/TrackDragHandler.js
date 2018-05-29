@@ -29,11 +29,6 @@ define( function( require ) {
     this.availableBoundsProperty = trackNode.availableBoundsProperty;
     this.startOffset = null;
 
-    // Keep track of whether the user has started to drag the track.  Click events should not create tracks, only drag
-    // events.  See #205
-    // @private
-    this.startedDrag = false;
-
     // Drag handler for dragging the track segment itself (not one of the control points)
     // Uses a similar strategy as MovableDragHandler but requires a separate implementation because its bounds are
     // determined by the shape of the track (so it cannot go below ground)
@@ -49,9 +44,7 @@ define( function( require ) {
         trackNode.moveToFront();
 
         if ( track.dragSource === null ) {
-          // A new press has started, but the user has not moved the track yet, so do not create it yet.  See #205
           track.dragSource = self;
-
           self.trackDragStarted( event );
         }
       },
@@ -81,7 +74,11 @@ define( function( require ) {
     // the track.  In that case (and only that case), the following methods are called by the ControlPointNode drag
     // handler in order to translate the track.
     trackDragStarted: function( event ) {
-      this.startedDrag = false;
+      var track = this.track;
+      track.draggingProperty.value = true;
+
+      var startingPosition = this.modelViewTransform.modelToViewPosition( track.position );
+      this.startOffset = event.currentTarget.globalToParentPoint( event.pointer.point ).minus( startingPosition );
     },
     trackDragged: function( event ) {
       var snapTargetChanged = false;
@@ -91,14 +88,6 @@ define( function( require ) {
       // Check whether the model contains a track so that input listeners for detached elements can't create bugs, see #230
       if ( !model.containsTrack( track ) ) { return; }
 
-      // On the first drag event, move the track out of the toolbox, see #205
-      if ( !this.startedDrag ) {
-        track.draggingProperty.value = true;
-
-        var startingPosition = this.modelViewTransform.modelToViewPosition( track.position );
-        this.startOffset = event.currentTarget.globalToParentPoint( event.pointer.point ).minus( startingPosition );
-        this.startedDrag = true;
-      }
       track.draggingProperty.value = true;
 
       var parentPoint = event.currentTarget.globalToParentPoint( event.pointer.point ).minus( this.startOffset );
@@ -226,17 +215,14 @@ define( function( require ) {
       // Check whether the model contains a track so that input listeners for detached elements can't create bugs, see #230
       if ( !model.containsTrack( track ) ) { return; }
 
-      // If the user never dragged the object, then there is no track to drop in this case, see #205
-      if ( this.startedDrag ) {
-        var myPoints = [ track.controlPoints[ 0 ], track.controlPoints[ track.controlPoints.length - 1 ] ];
-        if ( myPoints[ 0 ].snapTargetProperty.value || myPoints[ 1 ].snapTargetProperty.value ) {
-          model.joinTracks( track ); // Track will be joined to compatible track, then both will be disposed, and new track created.
-        }
+      // join tracks if there is any control point overlap on release
+      var myPoints = [ track.controlPoints[ 0 ], track.controlPoints[ track.controlPoints.length - 1 ] ];
+      if ( myPoints[ 0 ].snapTargetProperty.value || myPoints[ 1 ].snapTargetProperty.value ) {
+        model.joinTracks( track ); // Track will be joined to compatible track, then both will be disposed, and new track created.
+      }
 
-        if ( EnergySkateParkBasicsQueryParameters.debugTrack ) {
-          console.log( track.getDebugString() );
-        }
-        this.startedDrag = false;
+      if ( EnergySkateParkBasicsQueryParameters.debugTrack ) {
+        console.log( track.getDebugString() );
       }
     }
   } );
