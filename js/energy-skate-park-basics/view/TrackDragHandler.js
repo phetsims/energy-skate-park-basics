@@ -31,6 +31,7 @@ define( function( require ) {
 
     // Keep track of whether the user has started to drag the track.  Click events should not create tracks, only drag
     // events.  See #205
+    // @private
     this.startedDrag = false;
 
     // Drag handler for dragging the track segment itself (not one of the control points)
