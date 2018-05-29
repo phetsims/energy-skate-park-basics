@@ -27,7 +27,6 @@ define( function( require ) {
     this.model = trackNode.model;
     this.modelViewTransform = trackNode.modelViewTransform;
     this.availableBoundsProperty = trackNode.availableBoundsProperty;
-    this.lastDragPoint = null;
     this.startOffset = null;
 
     // Keep track of whether the user has started to drag the track.  Click events should not create tracks, only drag
@@ -93,7 +92,6 @@ define( function( require ) {
 
       // On the first drag event, move the track out of the toolbox, see #205
       if ( !this.startedDrag ) {
-        this.lastDragPoint = event.pointer.point;
         track.draggingProperty.value = true;
 
         var startingPosition = this.modelViewTransform.modelToViewPosition( track.position );
