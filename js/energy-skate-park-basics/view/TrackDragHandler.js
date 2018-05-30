@@ -232,10 +232,11 @@ define( function( require ) {
           model.joinTracks( track ); // Track will be joined to compatible track, then both will be disposed, and new track created.
         }
 
-        // if the track hasn't been disposed (see #393), bump it above ground if user has started dragging,
-        // see #384 and #205
+        // If the track hasn't been disposed (see #393), bump it above ground and make it physical if user has started
+        // dragging, see #384 and #205
         if ( !track.isDisposed ) {
           track.bumpAboveGround();
+          track.physicalProperty.value = true; // for interactivity, but also for #414
         }
 
         if ( EnergySkateParkBasicsQueryParameters.debugTrack ) {
