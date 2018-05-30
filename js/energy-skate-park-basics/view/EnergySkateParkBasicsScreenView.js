@@ -269,7 +269,10 @@ define( function( require ) {
         var itemRemovedListener = function( removed ) {
           if ( removed === track ) {
             trackLayer.removeChild( trackNode );
-            model.tracks.removeItemRemovedListener( itemRemovedListener );// Clean up memory leak
+
+            // Clean up memory leak
+            model.tracks.removeItemRemovedListener( itemRemovedListener );
+            trackNode.dispose();
           }
         };
         model.tracks.addItemRemovedListener( itemRemovedListener );

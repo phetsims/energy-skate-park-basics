@@ -54,9 +54,12 @@ define( function( require ) {
       lineDash: [ 11, 8 ],
       tandem: tandem.createTandem( 'centerLineNode' )
     } );
-    model.detachableProperty.link( function( detachable ) {
+
+    // must be unlinked in dispose
+    var detachableListener = function( detachable ) {
       self.centerLine.lineDash = detachable ? [] : [ 11, 8 ];
-    } );
+    };
+    model.detachableProperty.link( detachableListener );
 
     Node.call( this, {
       children: [ this.road, this.centerLine ],
@@ -108,11 +111,25 @@ define( function( require ) {
     phet.phetIo && phet.phetIo.phetio.setStateEmitter && phet.phetIo.phetio.setStateEmitter.addListener( function() {
       self.updateTrackShape();
     } );
+
+    // @private - only called by dispose
+    this.disposeTrackNode = function() {
+      model.detachableProperty.unlink( detachableListener );
+    };
   }
 
   energySkateParkBasics.register( 'TrackNode', TrackNode );
 
   return inherit( Node, TrackNode, {
+
+    /**
+     * Make eligible for garbage collection.
+     * @public
+     */
+    dispose: function() {
+      this.disposeTrackNode();
+      Node.prototype.dispose.call( this );
+    },
 
     // When a control point has moved, or the track has moved, or the track has been reset, or on initialization
     // update the shape of the track.
