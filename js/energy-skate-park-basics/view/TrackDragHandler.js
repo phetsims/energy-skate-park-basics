@@ -219,7 +219,6 @@ define( function( require ) {
       // If dropped in the play area, signify that it has been dropped--this will make it so that dragging the control points
       // reshapes the track instead of translating it
       track.droppedProperty.value = true;
-      track.bumpAboveGround();
 
       track.dragSource = null;
 
@@ -231,6 +230,12 @@ define( function( require ) {
         var myPoints = [ track.controlPoints[ 0 ], track.controlPoints[ track.controlPoints.length - 1 ] ];
         if ( myPoints[ 0 ].snapTargetProperty.value || myPoints[ 1 ].snapTargetProperty.value ) {
           model.joinTracks( track ); // Track will be joined to compatible track, then both will be disposed, and new track created.
+        }
+
+        // if the track hasn't been disposed (see #393), bump it above ground if user has started dragging,
+        // see #384 and #205
+        if ( !track.isDisposed ) {
+          track.bumpAboveGround();
         }
 
         if ( EnergySkateParkBasicsQueryParameters.debugTrack ) {
