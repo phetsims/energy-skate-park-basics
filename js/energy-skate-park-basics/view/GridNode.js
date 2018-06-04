@@ -106,7 +106,6 @@ define( function( require ) {
 
         if ( y % 2 === 0 ) {
           var gridLineLabel = new Text( '' + y, {
-            tandem: this.gridNodeTandem.createTandem( 'gridLineLabel' + y ),
             font: FONT,
             top: viewY,
             right: originX - 2
