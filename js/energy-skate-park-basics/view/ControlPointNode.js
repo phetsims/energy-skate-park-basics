@@ -34,9 +34,7 @@ define( function( require ) {
     var model = trackNode.model;
     var modelViewTransform = trackNode.modelViewTransform;
     var availableBoundsProperty = trackNode.availableBoundsProperty;
-    var controlPointUIShownEmitter = new Emitter( {
-      tandem: tandem.createTandem( 'controlPointUIShownEmitter' )
-    } );
+    var controlPointUIShownEmitter = new Emitter();
 
     var self = this;
     var controlPoint = track.controlPoints[ i ];
@@ -238,9 +236,19 @@ define( function( require ) {
       self.fill = fill;
     };
     self.addInputListener( inputListener );
+
+    // @private
+    this.disposeControlPointNode = function() {
+      inputListener.dispose();
+    };
   }
 
   energySkateParkBasics.register( 'ControlPointNode', ControlPointNode );
 
-  return inherit( Circle, ControlPointNode );
+  return inherit( Circle, ControlPointNode, {
+    dispose: function() {
+      this.disposeControlPointNode();
+      Circle.prototype.dispose.call( this );
+    }
+  } );
 } );

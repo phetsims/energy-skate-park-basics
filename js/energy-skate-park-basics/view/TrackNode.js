@@ -41,18 +41,15 @@ define( function( require ) {
     this.model = model;
     this.modelViewTransform = modelViewTransform;
     this.availableBoundsProperty = availableBoundsProperty;
-    var controlPointNodeGroupTandem = tandem.createGroupTandem( 'controlPointNode' );
 
     this.road = new Path( null, {
       fill: 'gray',
-      cursor: track.interactive ? 'pointer' : 'default',
-      tandem: tandem.createTandem( 'roadPath' )
+      cursor: track.interactive ? 'pointer' : 'default'
     } );
     this.centerLine = new Path( null, {
       stroke: 'black',
       lineWidth: 1.2,
-      lineDash: [ 11, 8 ],
-      tandem: tandem.createTandem( 'centerLineNode' )
+      lineDash: [ 11, 8 ]
     } );
 
     // must be unlinked in dispose
@@ -71,10 +68,10 @@ define( function( require ) {
     this.yArray = new FastArray( track.controlPoints.length );
 
     // Store for performance
-    this.lastPoint = (track.controlPoints.length - 1) / track.controlPoints.length;
+    this.lastPoint = ( track.controlPoints.length - 1 ) / track.controlPoints.length;
 
     // Sample space, which is recomputed if the track gets longer, to keep it looking smooth no matter how many control points
-    this.linSpace = numeric.linspace( 0, this.lastPoint, 20 * (track.controlPoints.length - 1) );
+    this.linSpace = numeric.linspace( 0, this.lastPoint, 20 * ( track.controlPoints.length - 1 ) );
     this.lengthForLinSpace = track.controlPoints.length;
 
     //If the track is interactive, make it draggable and make the control points visible and draggable
@@ -85,7 +82,9 @@ define( function( require ) {
 
       for ( var i = 0; i < track.controlPoints.length; i++ ) {
         var isEndPoint = i === 0 || i === track.controlPoints.length - 1;
-        self.addChild( new ControlPointNode( self, trackDragHandler, i, isEndPoint, controlPointNodeGroupTandem.createNextTandem() ) );
+        var controlPointNode = new ControlPointNode( this, trackDragHandler, i, isEndPoint, tandem.createTandem( 'controlPointNode' + i ) );
+        self.addChild( controlPointNode );
+
       }
     }
 
@@ -115,6 +114,14 @@ define( function( require ) {
     // @private - only called by dispose
     this.disposeTrackNode = function() {
       model.detachableProperty.unlink( detachableListener );
+      for ( var i = 0; i < self.children.length; i++ ) {
+        var child = self.children[ i ];
+        if ( child instanceof ControlPointNode ) {
+          child.dispose();
+          i--; // Child is removed, we must decrement index so wo don't miss the next child
+        }
+      }
+      trackDragHandler.dispose();
     };
   }
 
@@ -141,8 +148,8 @@ define( function( require ) {
       var i;
       // Update the sample range when the number of control points has changed
       if ( this.lengthForLinSpace !== track.controlPoints.length ) {
-        this.lastPoint = (track.controlPoints.length - 1) / track.controlPoints.length;
-        this.linSpace = numeric.linspace( 0, this.lastPoint, 20 * (track.controlPoints.length - 1) );
+        this.lastPoint = ( track.controlPoints.length - 1 ) / track.controlPoints.length;
+        this.linSpace = numeric.linspace( 0, this.lastPoint, 20 * ( track.controlPoints.length - 1 ) );
         this.lengthForLinSpace = track.controlPoints.length;
       }
 
@@ -187,7 +194,7 @@ define( function( require ) {
       // Update the skater if the track is moved while the sim is paused, see #84
       if ( model.skater.trackProperty.value === track && model.pausedProperty.value ) {
         model.skater.positionProperty.value = track.getPoint( model.skater.parametricPositionProperty.value );
-        model.skater.angleProperty.value = model.skater.trackProperty.value.getViewAngleAt( model.skater.parametricPositionProperty.value ) + (model.skater.onTopSideOfTrackProperty.value ? 0 : Math.PI);
+        model.skater.angleProperty.value = model.skater.trackProperty.value.getViewAngleAt( model.skater.parametricPositionProperty.value ) + ( model.skater.onTopSideOfTrackProperty.value ? 0 : Math.PI );
         model.skater.updatedEmitter.emit();
       }
     }
