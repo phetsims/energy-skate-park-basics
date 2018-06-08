@@ -21,7 +21,7 @@ define( function( require ) {
   var Vector2IO = require( 'DOT/Vector2IO' );
   var ControlPointIO = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/model/ControlPointIO' );
 
-  // phet-io modules
+  // ifphetio
   var NullableIO = require( 'ifphetio!PHET_IO/types/NullableIO' );
 
   /**

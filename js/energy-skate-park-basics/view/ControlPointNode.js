@@ -18,7 +18,7 @@ define( function( require ) {
   var inherit = require( 'PHET_CORE/inherit' );
   var SimpleDragHandler = require( 'SCENERY/input/SimpleDragHandler' );
 
-  // phet-io modules
+  // ifphetio
   var ControlPointNodeIO = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/view/ControlPointNodeIO' );
 
   /**

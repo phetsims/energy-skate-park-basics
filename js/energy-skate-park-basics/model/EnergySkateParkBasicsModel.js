@@ -50,7 +50,7 @@ define( function( require ) {
   var Util = require( 'DOT/Util' );
   var Vector2 = require( 'DOT/Vector2' );
 
-  // phet-io modules
+  // ifphetio
   var BooleanIO = require( 'ifphetio!PHET_IO/types/BooleanIO' );
   var NumberIO = require( 'ifphetio!PHET_IO/types/NumberIO' );
   var StringIO = require( 'ifphetio!PHET_IO/types/StringIO' );
