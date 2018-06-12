@@ -1691,7 +1691,7 @@ define( function( require ) {
       var newTrack = new Track( this, this.tracks, controlPoints, interactive, [], this.availableModelBoundsProperty, { tandem: tandem } );
       this.tracks.add( newTrack );
       return newTrack;
-    },
+    }
 
   } );
 } );
