@@ -114,7 +114,6 @@ define( function( require ) {
         stroke: 'gray',
         lineWidth: 1,
         resize: false,
-        cursor: 'pointer',
         tandem: tandem
       } );
 
