@@ -141,6 +141,14 @@ define( function( require ) {
       events.updateEmitter.emit();
     } );
 
+    // when available bounds change, make sure that control points are within - must be disposed
+    var boundsListener = function( bounds ) {
+      if ( self.droppedProperty.get() ) {
+        self.keepControlPointsInBounds( bounds );
+      }
+    };
+    this.availableModelBoundsProperty.link( boundsListener );
+
     // @private - make the Track eligible for garbage collection
     this.disposeTrack = function() {
       tandem.removeInstance( self );
@@ -148,6 +156,8 @@ define( function( require ) {
       self.leftThePanelProperty.dispose();
       self.draggingProperty.dispose();
       self.droppedProperty.dispose();
+
+      this.availableModelBoundsProperty.unlink( boundsListener );
     };
   }
 
@@ -641,6 +651,30 @@ define( function( require ) {
       if ( lowestY < 0 ) {
         this.translate( 0, -lowestY );
       }
+
+      this.keepControlPointsInBounds( this.availableModelBoundsProperty.get() );
+    },
+
+    /**
+     * If any control points are out of bounds, bump them back in. Useful when the model bounds change, or when
+     * bumping the track above ground.
+     * 
+     * @private
+     */
+    keepControlPointsInBounds: function( bounds ) {
+      for ( var i = 0; i < this.controlPoints.length; i++ ) {
+        var currentLocation = this.controlPoints[ i ].positionProperty.get();
+        if( !bounds.containsPoint( currentLocation ) ) {
+          var newPoint = bounds.getClosestPoint( currentLocation.x, currentLocation.y );
+
+          // set the control point "source" position to the new point - this is the unsnapped position, see
+          // ControlPoint.js
+          this.controlPoints[ i ].sourcePositionProperty.value = newPoint;
+        }
+      }
+
+      this.updateSplines();
+      this.updateEmitter.emit();
     },
 
     /**
