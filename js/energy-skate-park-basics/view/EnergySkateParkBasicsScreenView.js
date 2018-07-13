@@ -341,8 +341,6 @@ define( function( require ) {
       this.addChild( clearButton.mutate( { left: 5, centerY: trackCreationPanel.centerY } ) );
     }
 
-    this.addChild( trackLayer );
-
     // Use WebGL where available, but not on IE, due to https://github.com/phetsims/energy-skate-park-basics/issues/277
     // and https://github.com/phetsims/scenery/issues/285
     var webGLSupported = Util.isWebGLSupported && phet.chipper.queryParameters.webgl;
@@ -375,6 +373,8 @@ define( function( require ) {
     );
     this.addChild( this.barGraphForeground );
 
+    // add skater and track on top of bar graph (foreground and background) to prevent occlusion
+    this.addChild( trackLayer );
     this.addChild( skaterNode );
 
     var pieChartNode = renderer === 'webgl' ?
