@@ -341,10 +341,17 @@ define( function( require ) {
       this.addChild( clearButton.mutate( { left: 5, centerY: trackCreationPanel.centerY } ) );
     }
 
-    this.addChild( trackLayer );
-
-    // Use WebGL where available, but not on IE, due to https://github.com/phetsims/energy-skate-park-basics/issues/277
-    // and https://github.com/phetsims/scenery/issues/285
+    //--------------------------------------------------------------------------
+    // Begin WebGL layer. Children between this and the following WebGL comment
+    // block use WebGL if possible. This layering is done so that Scenery can
+    // place all WebGL content into a single canvas for memory optimization. This
+    // results in a case where the trackLayer is in between the background and 
+    // foreground of the energy bar graph, see #211.
+    // 
+    // Use WebGL where available, but not on IE, due to
+    // https://github.com/phetsims/energy-skate-park-basics/issues/277 and
+    // https://github.com/phetsims/scenery/issues/285 
+    //--------------------------------------------------------------------------
     var webGLSupported = Util.isWebGLSupported && phet.chipper.queryParameters.webgl;
     var renderer = webGLSupported ? 'webgl' : null;
 
@@ -381,6 +388,10 @@ define( function( require ) {
                        new PieChartWebGLNode( model.skater, model.pieChartVisibleProperty, modelViewTransform, tandem.createTandem( 'pieChartNode' ) ) :
                        new PieChartNode( model.skater, model.pieChartVisibleProperty, modelViewTransform, tandem.createTandem( 'pieChartNode' ) );
     this.addChild( pieChartNode );
+
+    //--------------------------------------------------------------------------
+    // End WebGL layer
+    //--------------------------------------------------------------------------
 
     // Buttons to return the skater when she is offscreen, see #219
     var iconScale = 0.4;
