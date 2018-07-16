@@ -237,7 +237,10 @@ define( function( require ) {
         if ( !track.isDisposed && track.controlPoints.filter( function( point ) {return !point.phetioObjectDisposed;} ).length !== 0 ) {
           track.bumpAboveGround();
           track.physicalProperty.value = true; // for interactivity, but also for #414
+
+          track.draggingProperty.value = false;
         }
+
 
         if ( EnergySkateParkBasicsQueryParameters.debugTrack ) {
           console.log( track.getDebugString() );
