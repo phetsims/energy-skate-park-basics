@@ -341,6 +341,8 @@ define( function( require ) {
       this.addChild( clearButton.mutate( { left: 5, centerY: trackCreationPanel.centerY } ) );
     }
 
+    this.addChild( trackLayer );
+
     //--------------------------------------------------------------------------
     // Begin WebGL layer. Children between this and the following WebGL comment
     // block use WebGL if possible. This layering is done so that Scenery can
