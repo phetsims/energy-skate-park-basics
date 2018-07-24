@@ -167,6 +167,9 @@ define( function( require ) {
       // To cut out a piece from the pie, just select the appropriate start/end vertices, then the call is still static.
       var numToDraw = Math.round( 2 + ( this.vertices.length / 2 - 2 ) * extent / ( 2 * Math.PI ) ); // linear between 2 and the maximum
 
+      // possible to have negative potential energy, so make sure stay within array
+      numToDraw = Math.min( numToDraw, this.vertices.length / 2 );
+
       // Make sure to show non-zero energy if the value is above the threshold, see #307
       if ( numToDraw === 2 && this.node.extentProperty.get() > 1E-6 ) {
         numToDraw = 3;
