@@ -160,7 +160,7 @@ define( function( require ) {
       skater.updatedEmitter.emit();
     }
 
-    this.addInputListener( new SimpleDragHandler( {
+    var dragHandler = new SimpleDragHandler( {
       tandem: tandem.createTandem( 'inputListener' ),
       start: function( event ) {
         skater.draggingProperty.value = true;
@@ -178,7 +178,13 @@ define( function( require ) {
         // Record the state of the skater for "return skater"
         skater.released( targetTrack, targetU );
       }
-    } ) );
+    } );
+    this.addInputListener( dragHandler );
+
+    // when the skater is reset, interrupt all dragging - no need to dispose as SkaterNodes are never destroyed
+    skater.resetEmitter.addListener( function() {
+      dragHandler.interrupt();
+    } );
   }
 
   energySkateParkBasics.register( 'SkaterNode', SkaterNode );

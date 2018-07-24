@@ -185,6 +185,7 @@ define( function( require ) {
     // @public
     this.updatedEmitter = new Emitter();
     this.energyChangedEmitter = new Emitter();
+    this.resetEmitter = new Emitter();
 
     // @public {number}
     this.speedProperty = new DerivedProperty( [ this.velocityProperty ], function( velocity ) {
@@ -303,6 +304,9 @@ define( function( require ) {
 
       // Notify the graphics to re-render.  See #223
       this.updatedEmitter.emit();
+
+      // emit reset has completed so we can interrupt input handlers, see #429
+      this.resetEmitter.emit();
     },
 
     /**
