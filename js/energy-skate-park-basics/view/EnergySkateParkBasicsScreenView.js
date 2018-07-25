@@ -35,6 +35,7 @@ define( function( require ) {
   var PieChartWebGLNode = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/view/PieChartWebGLNode' );
   var PlaybackSpeedControl = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/view/PlaybackSpeedControl' );
   var PlayPauseButton = require( 'SCENERY_PHET/buttons/PlayPauseButton' );
+  var platform = require( 'PHET_CORE/platform' );
   var Property = require( 'AXON/Property' );
   var PropertyIO = require( 'AXON/PropertyIO' );
   var Rectangle = require( 'SCENERY/nodes/Rectangle' );
@@ -110,6 +111,11 @@ define( function( require ) {
     this.addChild( this.controlPanel );
     this.controlPanel.right = this.layoutBounds.width - 5;
     this.controlPanel.top = 5;
+
+    // If we are on Edge, render the control panel with SVG so that the rest of the canvas block isn't redrawn every
+    // time we drag a slider thumb, since rootRenderer is canvas in Edge. See
+    // https://github.com/phetsims/energy-skate-park-basics/issues/423
+    platform.edge && this.controlPanel.setRenderer( 'svg' );
 
     // For the playground screen, show attach/detach toggle buttons
     if ( model.draggableTracks ) {
