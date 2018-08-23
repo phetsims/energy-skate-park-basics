@@ -292,7 +292,7 @@ define( function( require ) {
     getY: function( parametricPosition ) { return SplineEvaluation.atNumber( this.ySpline, parametricPosition ); },
 
     /**
-     * Get the the model location at the parametric position.
+     * Get the model location at the parametric position.
      * @public
      * @param {number} parametricPosition
      * @return {Vector2}
