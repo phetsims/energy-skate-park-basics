@@ -28,7 +28,6 @@ define( function( require ) {
    */
   function SkaterState( source, overrides ) {
     this.setState( source, overrides );
-    phetAllocation && phetAllocation( 'SkaterState' );
   }
 
   energySkateParkBasics.register( 'SkaterState', SkaterState );
