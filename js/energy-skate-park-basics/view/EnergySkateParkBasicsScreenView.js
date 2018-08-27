@@ -176,7 +176,7 @@ define( function( require ) {
     } );
 
     var stepButton = new StepForwardButton( {
-      playingProperty: playingProperty,
+      isPlayingProperty: playingProperty,
       listener: function() { model.manualStep(); },
       tandem: tandem.createTandem( 'stepButton' )
     } );
