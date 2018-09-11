@@ -106,7 +106,7 @@ define( function( require ) {
     track.smoothedEmitter.addListener( this.updateTrackShape.bind( this ) );
     track.updateEmitter.addListener( this.updateTrackShape.bind( this ) );
 
-    // In the state.html wrapper, when the state changes, we must update the skater node
+    // In the state wrapper, when the state changes, we must update the skater node
     phet.phetIo && phet.phetIo.phetio.setStateEmitter && phet.phetIo.phetio.setStateEmitter.addListener( function() {
       self.updateTrackShape();
     } );

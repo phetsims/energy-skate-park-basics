@@ -249,7 +249,7 @@ define( function( require ) {
         phetioType: DerivedPropertyIO( BooleanIO )
       } );
 
-    // In the state.html wrapper, when the state changes, we must update the skater node
+    // In the state wrapper, when the state changes, we must update the skater node
     phet.phetIo && phet.phetIo.phetio.setStateEmitter && phet.phetIo.phetio.setStateEmitter.addListener( function() {
       self.updatedEmitter.emit();
     } );
