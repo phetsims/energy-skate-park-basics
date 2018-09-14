@@ -13,6 +13,7 @@ define( function( require ) {
   var EnergySkateParkBasicsQueryParameters = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/EnergySkateParkBasicsQueryParameters' );
   var EnergySkateParkBasicsScreen = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/EnergySkateParkBasicsScreen' );
   var inherit = require( 'PHET_CORE/inherit' );
+  var platform = require( 'PHET_CORE/platform' );
   var Sim = require( 'JOIST/Sim' );
 
   // images
@@ -43,7 +44,13 @@ define( function( require ) {
         qualityAssurance: 'Steele Dalton, Oliver Orejola, Arnab Purkayastha, Bryan Yoelin'
       },
 
-      showSaveAndLoad: EnergySkateParkBasicsQueryParameters.showSaveAndLoad
+      showSaveAndLoad: EnergySkateParkBasicsQueryParameters.showSaveAndLoad,
+
+      // if running the sim on an ipad, do not use the "backing scale" technique
+      // for antialiasing because this method takes up too much memory, see
+      // https://github.com/phetsims/scenery/issues/859 and
+      // https://github.com/phetsims/energy-skate-park-basics/issues/435
+      allowBackingScaleAntialiasing: !platform.mobileSafari
     };
 
     Sim.call( this, energySkateParkBasicsTitleString, [
