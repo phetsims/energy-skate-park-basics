@@ -690,6 +690,7 @@ define( function( require ) {
         var onTopSideOfTrack = beforeVector.dot( normal ) > 0;
 
         debug && debug( 'attach to track, ' + ', ' + parametricPosition + ', ' + track.maxPoint );
+        debug && debug( 'on top side of track: ' + onTopSideOfTrack );
 
         // Double check the velocities and invert parametricSpeed if incorrect, see #172
         // Compute the new velocities same as in stepTrack
