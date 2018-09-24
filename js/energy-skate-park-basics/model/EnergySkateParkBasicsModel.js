@@ -404,7 +404,7 @@ define( function( require ) {
           updatedState = this.stepModel( dt, skaterState );
         }
 
-        if ( debug && Math.abs( updatedState.getTotalEnergy() - initialEnergy ) > 1E-6 ) {
+        if ( debug && updatedState && Math.abs( updatedState.getTotalEnergy() - initialEnergy ) > 1E-6 ) {
           var initialStateCopy = new SkaterState( this.skater, EMPTY_OBJECT );
           var redo = this.stepModel( this.speedProperty.value === 'normal' ? dt : dt * 0.25, initialStateCopy );
           debug && debug( redo );
@@ -522,6 +522,7 @@ define( function( require ) {
 
         // see if it crossed the track
         var physicalTracks = this.getPhysicalTracks();
+        console.log( physicalTracks.length );
 
         // Don't interact with the track if the skater just left the track in this same frame, see #142
         if ( physicalTracks.length && !justLeft ) {
