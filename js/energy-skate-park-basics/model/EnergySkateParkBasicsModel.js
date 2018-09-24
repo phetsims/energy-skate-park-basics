@@ -522,7 +522,6 @@ define( function( require ) {
 
         // see if it crossed the track
         var physicalTracks = this.getPhysicalTracks();
-        console.log( physicalTracks.length );
 
         // Don't interact with the track if the skater just left the track in this same frame, see #142
         if ( physicalTracks.length && !justLeft ) {
