@@ -35,6 +35,7 @@ define( function( require ) {
      * Encodes a ControlPoint instance to a state.
      * @param {ControlPoint} controlPoint
      * @returns {Object}
+     * @override
      */
     toStateObject: function( controlPoint ) {
       assert && assertInstanceOf( controlPoint, phet.energySkateParkBasics.ControlPoint );
@@ -46,6 +47,7 @@ define( function( require ) {
      *
      * @param {Object} stateObject
      * @return {ControlPoint}
+     * @override
      */
     fromStateObject: function( stateObject ) {
       if ( stateObject === 'null' ) {
