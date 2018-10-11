@@ -679,7 +679,7 @@ define( function( require ) {
 
     /**
      * Smooth out the track so it doesn't have any sharp turns, see #177
-     * @param {number} i the index of the control point to adjust
+     * @param {number} i - the index of the control point to adjust
      */
     smooth: function( i ) {
       assert && assert( i >= 0 && i < this.controlPoints.length );
