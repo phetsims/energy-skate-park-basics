@@ -278,6 +278,24 @@ define( function( require ) {
           track15.physicalProperty.value = true;
           model.tracks.add( track15 );
         }
+
+        // particular track where kinks are often showing up
+        if ( EnergySkateParkBasicsQueryParameters.testTrackIndex === 16 ) {
+          var track16 = new Track( model, model.tracks, [
+            createControlPoint( 1.820191238870958,4.290624093634261 ),
+            createControlPoint( 0.820191238870958,4.290624093634261 ),
+            createControlPoint( -1.691887511765076,4.736971728192639 ),
+            createControlPoint( -1.7868867873075325,0.6725482565204757 ),
+            createControlPoint( -2.526604804140229,5.000806128225449 ),
+            createControlPoint( -3.526604804140229,5.000806128225449 ),
+            createControlPoint( -4.526604804140229,5.000806128225449 )
+          ], true, null, model.availableModelBoundsProperty, { tandem: trackGroupTandem.createNextTandem() } );
+
+          model.tracks.add( track16 );
+
+          // now try to smooth it
+          track16.smoothPointOfHighestCurvature( [] );
+        }
       }
     }
   );
