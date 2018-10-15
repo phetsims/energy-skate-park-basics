@@ -179,6 +179,8 @@ define( function( require ) {
           model.joinTracks( track );
         }
         else {
+          
+          // smooth the track, but don't modify the control point being dragged
           track.smoothPointOfHighestCurvature( [ i ] );
           model.trackModified( track );
         }
