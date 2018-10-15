@@ -24,7 +24,7 @@ define( function( require ) {
   /**
    * @param {TrackNode} trackNode
    * @param {TrackDragHandler} trackDragHandler
-   * @param {number} i
+   * @param {number} i - index of the control point in the model array so we can get the model element
    * @param {boolean} isEndPoint
    * @param {Tandem} tandem
    * @constructor
