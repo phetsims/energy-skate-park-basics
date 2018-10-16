@@ -10,12 +10,17 @@ define( function( require ) {
   'use strict';
 
   // modules
+  var Bounds2 = require( 'DOT/Bounds2' );
   var ControlPoint = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/model/ControlPoint' );
   var energySkateParkBasics = require( 'ENERGY_SKATE_PARK_BASICS/energySkateParkBasics' );
   var EnergySkateParkBasicsQueryParameters = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/EnergySkateParkBasicsQueryParameters' );
   var inherit = require( 'PHET_CORE/inherit' );
+  var Property = require( 'AXON/Property' );
   var Track = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/model/Track' );
   var Vector2 = require( 'DOT/Vector2' );
+
+  // constans
+  var DEFAULT_BOUNDS = new Bounds2( -8.34, 0, 8.34, 8.70 );
 
   /**
    * @constructor
@@ -289,7 +294,7 @@ define( function( require ) {
             createControlPoint( -2.526604804140229,5.000806128225449 ),
             createControlPoint( -3.526604804140229,5.000806128225449 ),
             createControlPoint( -4.526604804140229,5.000806128225449 )
-          ], true, null, model.availableModelBoundsProperty, { tandem: trackGroupTandem.createNextTandem() } );
+          ], true, null, new Property( DEFAULT_BOUNDS ), { tandem: trackGroupTandem.createNextTandem() } );
 
           model.tracks.add( track16 );
 

@@ -304,6 +304,19 @@ define( function( require ) {
     },
 
     /**
+     * Get the diff 
+     * @param  {number} parametricPosition
+     * @return {number}
+     */
+    getDiffY: function( parametricPosition ) {
+      if ( this.ySplineDiff === null ) {
+        this.ySplineDiff = this.ySpline.diff();
+      }
+
+      return SplineEvaluation.atNumber( this.ySplineDiff, parametricPosition );
+    },
+
+    /**
      * Translate the track by moving all control points by dx and dy.
      * @private
      * @param {number} dx
@@ -781,19 +794,54 @@ define( function( require ) {
       // single sampling point.
       var numDivisions = 400;
       var du = ( this.maxPoint - this.minPoint ) / numDivisions;
+
+      // if we encounter a local minima or maxima, we will scour that area of the spline in fine detail
+      var fineDivisions = 10;
+      var fineDelta = ( 2 * du ) / fineDivisions;
+      
+      var previousSlopePositive = null;
       for ( var parametricPosition = this.minPoint; parametricPosition < this.maxPoint; parametricPosition += du ) {
-        this.getCurvature( parametricPosition, curvature );
-        var r = Math.abs( curvature.r );
-        if ( r < minRadius ) {
-          minRadius = r;
-          bestU = parametricPosition;
+        var r;
+
+        // If we are near a local extrema, do fine grain searching for radius to get a more accurate value. We are
+        // near a local extrema if the value of the diff spline is zero, and the slope just changed from positive to
+        // negatve.
+        var diffY = this.getDiffY( parametricPosition );
+        var currentSlopePositive = diffY > 0;
+        if ( ( previousSlopePositive !== null ) && ( previousSlopePositive !== currentSlopePositive ) ) {
+          for ( var k = parametricPosition - du; k < parametricPosition + du; k += fineDelta ) {
+            if ( k > this.minPoint && k < this.maxPoint ) {
+              this.getCurvature( k, curvature );
+              r = Math.abs( curvature.r );
+              if ( r < minRadius ) {
+                minRadius = r;
+                bestU = parametricPosition;
+              }
+            }
+          }
         }
+        else {
+
+          // not around local extrema, just test at this division
+          this.getCurvature( parametricPosition, curvature );
+          r = Math.abs( curvature.r );
+          if ( r < minRadius ) {
+            minRadius = r;
+            bestU = parametricPosition;
+          }
+        }
+        
+        previousSlopePositive = currentSlopePositive;
       }
       return bestU;
     },
 
     /**
-     * Find the minimum radius of curvature along the track, in meters
+     * Find the minimum radius of curvature along the track, in meters.
+     *
+     * TODO: Can we search for low radii of curvature just by inspecting local minima/maxima? Maybe then we can reduce
+     * the number samples from 400 down to ~10 per local extrema?
+     * 
      * @returns {number} the minimum radius of curvature along the track, in meters.
      */
     getMinimumRadiusOfCurvature: function() {
@@ -801,16 +849,46 @@ define( function( require ) {
       var minRadius = Number.POSITIVE_INFINITY;
 
       // Search the entire space of the spline.  Larger number of divisions was chosen to prevent large curvatures at a
-      // single sampling point.
+      // single sampling point. Along the way, we will store points where 
       var numDivisions = 400;
       var du = ( this.maxPoint - this.minPoint ) / numDivisions;
+
+      // if we encounter a local minima or maxima, we will scour that area of the spline in fine detail
+      var fineDivisions = 10;
+      var fineDelta = ( 2 * du ) / fineDivisions;
+
+      var previousSlopePositive = null;
       for ( var parametricPosition = this.minPoint; parametricPosition < this.maxPoint; parametricPosition += du ) {
-        this.getCurvature( parametricPosition, curvature );
-        var r = Math.abs( curvature.r );
-        if ( r < minRadius ) {
-          minRadius = r;
+
+        // If we are near a local extrema, do fine grain searching for radius to get a more accurate value. We are
+        // near a local extrema if the value of the diff spline is zero, and the slope just changed from positive to
+        // negatve.
+        var diffY = this.getDiffY( parametricPosition );
+        var currentSlopePositive = diffY > 0;
+        if ( ( previousSlopePositive !== null ) && ( previousSlopePositive !== currentSlopePositive ) ) {
+          for ( var k = parametricPosition - du; k < parametricPosition + du; k += fineDelta ) {
+            if ( k > this.minPoint && k < this.maxPoint ) {
+              this.getCurvature( k, curvature );
+              r = Math.abs( curvature.r );
+              if ( r < minRadius ) {
+                minRadius = r;
+              }
+            }
+          }
         }
+        else {
+
+          // we are not around local extrema, just test at the division
+          this.getCurvature( parametricPosition, curvature );
+          var r = Math.abs( curvature.r );
+          if ( r < minRadius ) {
+            minRadius = r;
+          }
+        }
+
+        previousSlopePositive = currentSlopePositive;
       }
+
       return minRadius;
     },
 
