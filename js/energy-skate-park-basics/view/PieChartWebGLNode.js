@@ -9,6 +9,7 @@ define( function( require ) {
   'use strict';
 
   // modules
+  var Constants = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/Constants' );
   var DerivedProperty = require( 'AXON/DerivedProperty' );
   var energySkateParkBasics = require( 'ENERGY_SKATE_PARK_BASICS/energySkateParkBasics' );
   var EnergySkateParkColorScheme = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/view/EnergySkateParkColorScheme' );
@@ -20,10 +21,11 @@ define( function( require ) {
   /**
    * @param {Skater} skater the skater model
    * @param {Property<Boolean>} pieChartVisibleProperty axon Property indicating whether the pie chart is shown
+   * @param {NumberProperty} graphScaleProperty
    * @param {ModelViewTransform2} modelViewTransform
    * @constructor
    */
-  function PieChartWebGLNode( skater, pieChartVisibleProperty, modelViewTransform, tandem ) {
+  function PieChartWebGLNode( skater, pieChartVisibleProperty, graphScaleProperty, modelViewTransform, tandem ) {
 
     var self = this;
     Node.call( this, {
@@ -125,7 +127,11 @@ define( function( require ) {
     this.addChild( kineticEnergyPiece );
     this.addChild( thermalEnergyPiece );
 
-    pieChartVisibleProperty.linkAttribute( this, 'visible' );
+    // if too small or set to be invisible, hide the pie chart
+    Property.multilink( [ pieChartVisibleProperty, skater.totalEnergyProperty, graphScaleProperty ], function( visible, totalEnergy, graphScale ) {
+      var largeEnough = totalEnergy > Constants.ALLOW_THERMAL_CLEAR_BASIS / graphScale;
+      self.visible = visible && largeEnough;
+    } );
   }
 
   energySkateParkBasics.register( 'PieChartWebGLNode', PieChartWebGLNode );
