@@ -412,7 +412,7 @@ define( function( require ) {
 
     var pieChartNode = renderer === 'webgl' ?
                        new PieChartWebGLNode( model.skater, model.pieChartVisibleProperty, this.graphScaleProperty, modelViewTransform, tandem.createTandem( 'pieChartNode' ) ) :
-                       new PieChartNode( model.skater, model.pieChartVisibleProperty, modelViewTransform, tandem.createTandem( 'pieChartNode' ) );
+                       new PieChartNode( model.skater, model.pieChartVisibleProperty, this.graphScaleProperty, modelViewTransform, tandem.createTandem( 'pieChartNode' ) );
     this.addChild( pieChartNode );
 
     //--------------------------------------------------------------------------

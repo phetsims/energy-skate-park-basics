@@ -12,11 +12,13 @@ define( function( require ) {
   // modules
   var Bounds2 = require( 'DOT/Bounds2' );
   var Circle = require( 'SCENERY/nodes/Circle' );
+  var Constants = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/Constants' );
   var energySkateParkBasics = require( 'ENERGY_SKATE_PARK_BASICS/energySkateParkBasics' );
   var EnergySkateParkColorScheme = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/view/EnergySkateParkColorScheme' );
   var inherit = require( 'PHET_CORE/inherit' );
   var Node = require( 'SCENERY/nodes/Node' );
   var Path = require( 'SCENERY/nodes/Path' );
+  var Property = require( 'AXON/Property' );
   var Shape = require( 'KITE/Shape' );
 
   /**
@@ -26,7 +28,7 @@ define( function( require ) {
    * @param {Tandem} tandem
    * @constructor
    */
-  function PieChartNode( skater, pieChartVisibleProperty, modelViewTransform, tandem ) {
+  function PieChartNode( skater, pieChartVisibleProperty, graphScaleProperty, modelViewTransform, tandem ) {
     var self = this;
 
     var kineticEnergySlice = new Path( null, {
@@ -151,11 +153,22 @@ define( function( require ) {
     // instead of changing the entire pie chart whenever one energy changes, use trigger to update the whole pie
     skater.energyChangedEmitter.addListener( updatePaths );
 
-    // Synchronize visibility with the model, and also update when visibility changes because it is guarded against in updatePaths
-    pieChartVisibleProperty.link( function( visible ) {
-      self.visible = visible;
+    // // Synchronize visibility with the model, and also update when visibility changes because it is guarded against in updatePaths
+    // pieChartVisibleProperty.link( function( visible ) {
+    //   self.visible = visible;
+    //   updatePaths();
+    //   if ( visible ) {
+    //     updatePieChartLocation();
+    //   }
+    // } );
+
+    // if too small or set to be invisible, hide the pie chart
+    Property.multilink( [ pieChartVisibleProperty, skater.totalEnergyProperty, graphScaleProperty ], function( visible, totalEnergy, graphScale ) {
+      var visibleAndLargeEnough = visible && ( totalEnergy > Constants.ALLOW_THERMAL_CLEAR_BASIS / graphScale );
+      self.visible = visibleAndLargeEnough;
+
       updatePaths();
-      if ( visible ) {
+      if ( visibleAndLargeEnough ) {
         updatePieChartLocation();
       }
     } );
