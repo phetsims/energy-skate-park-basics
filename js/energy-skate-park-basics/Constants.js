@@ -21,6 +21,10 @@ define( function( require ) {
       majorTickLength: 15
     },
 
+    // threshold for allowing thermal energy to be cleared, generally used in a function with the graph height scale
+    // factor to determine whether thermal energy can be cleared
+    ALLOW_THERMAL_CLEAR_BASIS: 1E-6,
+
     DEFAULT_MASS: (minMass + maxMass) / 2,
     MIN_MASS: minMass,
     MAX_MASS: maxMass

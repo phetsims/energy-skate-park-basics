@@ -239,16 +239,6 @@ define( function( require ) {
       self.updateHeadPosition();
     } );
 
-    // @public - Enable the "Clear Thermal" buttons but only if the thermal energy exceeds a tiny threshold, so there
-    // aren't visual "false positives", see #306
-    this.allowClearingThermalEnergyProperty = new DerivedProperty( [ this.thermalEnergyProperty ],
-      function( thermalEnergy ) {
-        return thermalEnergy > 1E-2;
-      }, {
-        tandem: tandem.createTandem( 'allowClearingThermalEnergyProperty' ),
-        phetioType: DerivedPropertyIO( BooleanIO )
-      } );
-
     // In the state wrapper, when the state changes, we must update the skater node
     phet.phetIo && phet.phetIo.phetio.setStateEmitter && phet.phetIo.phetio.setStateEmitter.addListener( function() {
       self.updatedEmitter.emit();

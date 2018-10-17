@@ -29,13 +29,13 @@ define( function( require ) {
   var energyThermalString = require( 'string!ENERGY_SKATE_PARK_BASICS/energy.thermal' );
 
   /**
-   * @param {Skater} skater the model for the skater
+   * @param {Property} allowClearingThermalEnergyProperty
    * @param {Function} clearThermal function to be called when the user presses the clear thermal button
    * @param {Property.<boolean>} pieChartVisibleProperty axon Property indicating whether the pie chart is visible
    * @param {Tandem} tandem
    * @constructor
    */
-  function PieChartLegend( skater, clearThermal, pieChartVisibleProperty, tandem ) {
+  function PieChartLegend( allowClearingThermalEnergyProperty, clearThermal, pieChartVisibleProperty, tandem ) {
 
     // The x-coordinate of a bar chart bar
     var createLabel = function( index, title, color, tandemName ) {
@@ -70,7 +70,7 @@ define( function( require ) {
       centerX: thermalLabel.centerX,
       y: thermalLabel.bottom + 15
     } );
-    skater.allowClearingThermalEnergyProperty.link( function( allowClearingThermalEnergy ) {
+    allowClearingThermalEnergyProperty.link( function( allowClearingThermalEnergy ) {
       clearThermalButton.enabled = allowClearingThermalEnergy;
     } );
 

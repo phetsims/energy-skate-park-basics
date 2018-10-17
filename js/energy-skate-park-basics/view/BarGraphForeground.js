@@ -10,6 +10,7 @@ define( function( require ) {
   'use strict';
 
   // modules
+  var Constants = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/Constants' );
   var DerivedProperty = require( 'AXON/DerivedProperty' );
   var energySkateParkBasics = require( 'ENERGY_SKATE_PARK_BASICS/energySkateParkBasics' );
   var EnergySkateParkColorScheme = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/view/EnergySkateParkColorScheme' );
@@ -21,13 +22,14 @@ define( function( require ) {
   /**
    * Constructor for the BarGraph
    * @param {Skater} skater the model's skater model
+   * @param {NumberProperty} graphScaleProperty
    * @param {Node} barGraphBackground - the background for the Bar Graph, to coordinate locations
    * @param {Property<Boolean>} barGraphVisibleProperty property that indicates whether the bar graph is visible
    * @param {string} barRenderer the renderer type to use for the bars.  For some reason it is not currently inherited.
    * @param {Tandem} tandem
    * @constructor
    */
-  function BarGraphForeground( skater, barGraphBackground, barGraphVisibleProperty, barRenderer, tandem ) {
+  function BarGraphForeground( skater, barGraphScaleProperty, barGraphBackground, barGraphVisibleProperty, barRenderer, tandem ) {
 
     var barWidth = barGraphBackground.barWidth;
     var getBarX = barGraphBackground.getBarX;
@@ -39,7 +41,7 @@ define( function( require ) {
       // Convert to graph coordinates
       // However, do not floor for values less than 1 otherwise a nonzero value will show up as zero, see #159
       var barHeightProperty = new DerivedProperty( [ property ], function( value ) {
-        var result = value / 30;
+        var result = value * barGraphScaleProperty.value;
 
         var answer;
 
@@ -55,7 +57,7 @@ define( function( require ) {
         }
         else {
           answer = result > 1 ? Math.floor( result ) :
-                   result < 1E-6 ? 0 :
+                   result < Constants.ALLOW_THERMAL_CLEAR_BASIS ? 0 :
                    1;
         }
 

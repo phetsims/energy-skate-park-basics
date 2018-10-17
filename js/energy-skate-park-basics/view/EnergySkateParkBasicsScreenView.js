@@ -14,9 +14,11 @@ define( function( require ) {
   var BarGraphBackground = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/view/BarGraphBackground' );
   var BarGraphForeground = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/view/BarGraphForeground' );
   var Bounds2 = require( 'DOT/Bounds2' );
+  var Constants = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/Constants' );
   var Color = require( 'SCENERY/util/Color' );
   var DerivedProperty = require( 'AXON/DerivedProperty' );
   var DotRectangle = require( 'DOT/Rectangle' ); // eslint-disable-line require-statement-match
+  var DerivedPropertyIO = require( 'AXON/DerivedPropertyIO' );
   var energySkateParkBasics = require( 'ENERGY_SKATE_PARK_BASICS/energySkateParkBasics' );
   var EnergySkateParkBasicsControlPanel = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/view/EnergySkateParkBasicsControlPanel' );
   var EnergySkateParkBasicsQueryParameters = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/EnergySkateParkBasicsQueryParameters' );
@@ -27,6 +29,7 @@ define( function( require ) {
   var GridNode = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/view/GridNode' );
   var Image = require( 'SCENERY/nodes/Image' );
   var inherit = require( 'PHET_CORE/inherit' );
+  var NumberProperty = require( 'AXON/NumberProperty' );
   var ModelViewTransform2 = require( 'PHETCOMMON/view/ModelViewTransform2' );
   var Node = require( 'SCENERY/nodes/Node' );
   var Path = require( 'SCENERY/nodes/Path' );
@@ -86,6 +89,21 @@ define( function( require ) {
     var modelViewTransform = ModelViewTransform2.createSinglePointScaleInvertedYMapping( modelPoint, viewPoint, scale );
     this.modelViewTransform = modelViewTransform;
 
+    // @public {NumberProperty} - scale applied to physical values to scale bar graphs correctly
+    this.graphScaleProperty = new NumberProperty( 1 / 30, {
+      tandem: tandem.createTandem( 'graphScaleProperty' )
+    } );
+
+    // @public - Enable the "Clear Thermal" buttons but only if the thermal energy exceeds a tiny threshold, so there
+    // aren't visual "false positives", see #306
+    this.allowClearingThermalEnergyProperty = new DerivedProperty( [ model.skater.thermalEnergyProperty ],
+      function( thermalEnergy ) {
+        return thermalEnergy > ( Constants.ALLOW_THERMAL_CLEAR_BASIS / self.graphScaleProperty.value );
+      }, {
+        tandem: tandem.createTandem( 'allowClearingThermalEnergyProperty' ),
+        phetioType: DerivedPropertyIO( BooleanIO )
+      } );
+
     this.availableModelBoundsProperty = new Property( new Bounds2( 0, 0, 0, 0 ) );
     this.availableModelBoundsProperty.link( function( bounds ) {
       model.availableModelBoundsProperty.set( bounds );
@@ -100,7 +118,7 @@ define( function( require ) {
 
     // @private - node that shows the energy legend for the pie chart
     this.pieChartLegend = new PieChartLegend(
-      model.skater,
+      this.allowClearingThermalEnergyProperty,
       model.clearThermal.bind( model ),
       model.pieChartVisibleProperty,
       tandem.createTandem( 'pieChartLegend' )
@@ -144,7 +162,7 @@ define( function( require ) {
     } );
 
     // @private - background for the bar graph (split up to use WebGL for the foreground)
-    this.barGraphBackground = new BarGraphBackground( model.skater, model.barGraphVisibleProperty,
+    this.barGraphBackground = new BarGraphBackground( this.allowClearingThermalEnergyProperty, model.barGraphVisibleProperty,
       model.clearThermal.bind( model ), tandem.createTandem( 'barGraphBackground' ) );
     this.addChild( this.barGraphBackground );
 
@@ -385,7 +403,7 @@ define( function( require ) {
     this.addChild( gaugeNeedleNode );
 
     // @private - the foreground of the bar graph (split up to use WebGL)
-    this.barGraphForeground = new BarGraphForeground( model.skater, this.barGraphBackground, model.barGraphVisibleProperty, renderer,
+    this.barGraphForeground = new BarGraphForeground( model.skater, this.graphScaleProperty, this.barGraphBackground, model.barGraphVisibleProperty, renderer,
       tandem.createTandem( 'barGraphForeground' )
     );
     this.addChild( this.barGraphForeground );
