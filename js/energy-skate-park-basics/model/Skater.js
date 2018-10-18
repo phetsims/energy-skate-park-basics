@@ -27,10 +27,10 @@ define( function( require ) {
   var Vector2IO = require( 'DOT/Vector2IO' );
 
   // ifphetio
-  var BooleanIO = require( 'ifphetio!PHET_IO/types/BooleanIO' );
-  var NullableIO = require( 'ifphetio!PHET_IO/types/NullableIO' );
-  var NumberIO = require( 'ifphetio!PHET_IO/types/NumberIO' );
-  var StringIO = require( 'ifphetio!PHET_IO/types/StringIO' );
+  var BooleanIO = require( 'TANDEM/types/BooleanIO' );
+  var NullableIO = require( 'TANDEM/types/NullableIO' );
+  var NumberIO = require( 'TANDEM/types/NumberIO' );
+  var StringIO = require( 'TANDEM/types/StringIO' );
 
   // Compare two arrays, whose elements have 'equals' methods for comparison
   var arrayEquals = function( a, b ) {
