@@ -53,8 +53,6 @@ define( function( require ) {
   var TrackNode = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/view/TrackNode' );
   var Util = require( 'SCENERY/util/Util' );
   var Vector2 = require( 'DOT/Vector2' );
-
-  // ifphetio
   var BooleanIO = require( 'TANDEM/types/BooleanIO' );
 
   // strings

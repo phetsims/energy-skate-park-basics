@@ -25,8 +25,6 @@ define( function( require ) {
   var Util = require( 'DOT/Util' );
   var Vector2 = require( 'DOT/Vector2' );
   var Vector2IO = require( 'DOT/Vector2IO' );
-
-  // ifphetio
   var BooleanIO = require( 'TANDEM/types/BooleanIO' );
   var NullableIO = require( 'TANDEM/types/NullableIO' );
   var NumberIO = require( 'TANDEM/types/NumberIO' );

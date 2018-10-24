@@ -49,8 +49,6 @@ define( function( require ) {
   var TrackIO = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/model/TrackIO' );
   var Util = require( 'DOT/Util' );
   var Vector2 = require( 'DOT/Vector2' );
-
-  // ifphetio
   var BooleanIO = require( 'TANDEM/types/BooleanIO' );
   var NumberIO = require( 'TANDEM/types/NumberIO' );
   var StringIO = require( 'TANDEM/types/StringIO' );

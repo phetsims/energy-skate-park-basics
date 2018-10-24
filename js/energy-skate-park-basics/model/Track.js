@@ -21,8 +21,6 @@ define( function( require ) {
   var Tandem = require( 'TANDEM/Tandem' );
   var TrackIO = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/model/TrackIO' );
   var Vector2 = require( 'DOT/Vector2' );
-
-  // ifphetio
   var BooleanIO = require( 'TANDEM/types/BooleanIO' );
 
   // constants
