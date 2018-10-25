@@ -82,7 +82,7 @@ define( function( require ) {
     this.gravityProperty = new NumberProperty( -9.8, {
       tandem: tandem.createTandem( 'gravityProperty' ),
       units: 'meters/second/second',
-      range: { min: -100, max: 1E-6 }
+      range: new Range( -100, 1E-6 )
     } );
 
     // @public {Vector2} - the position of the skater
