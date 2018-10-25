@@ -26,6 +26,7 @@ define( function( require ) {
   'use strict';
 
   // modules
+  var BooleanIO = require( 'TANDEM/types/BooleanIO' );
   var Bounds2 = require( 'DOT/Bounds2' );
   var Bounds2IO = require( 'DOT/Bounds2IO' );
   var ControlPoint = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/model/ControlPoint' );
@@ -35,6 +36,7 @@ define( function( require ) {
   var EnergySkateParkBasicsModelIO = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/model/EnergySkateParkBasicsModelIO' );
   var EnergySkateParkBasicsQueryParameters = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/EnergySkateParkBasicsQueryParameters' );
   var inherit = require( 'PHET_CORE/inherit' );
+  var NumberIO = require( 'TANDEM/types/NumberIO' );
   var NumberProperty = require( 'AXON/NumberProperty' );
   var ObservableArray = require( 'AXON/ObservableArray' );
   var ObservableArrayIO = require( 'AXON/ObservableArrayIO' );
@@ -44,14 +46,12 @@ define( function( require ) {
   var Range = require( 'DOT/Range' );
   var Skater = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/model/Skater' );
   var SkaterState = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/model/SkaterState' );
+  var StringIO = require( 'TANDEM/types/StringIO' );
   var Tandem = require( 'TANDEM/Tandem' );
   var Track = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/model/Track' );
   var TrackIO = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/model/TrackIO' );
   var Util = require( 'DOT/Util' );
   var Vector2 = require( 'DOT/Vector2' );
-  var BooleanIO = require( 'TANDEM/types/BooleanIO' );
-  var NumberIO = require( 'TANDEM/types/NumberIO' );
-  var StringIO = require( 'TANDEM/types/StringIO' );
 
   // Reuse empty object for creating SkaterStates to avoid allocations
   var EMPTY_OBJECT = {};
