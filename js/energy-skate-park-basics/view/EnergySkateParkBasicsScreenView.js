@@ -41,6 +41,7 @@ define( function( require ) {
   var platform = require( 'PHET_CORE/platform' );
   var Property = require( 'AXON/Property' );
   var PropertyIO = require( 'AXON/PropertyIO' );
+  var Range = require( 'DOT/Range' );
   var Rectangle = require( 'SCENERY/nodes/Rectangle' );
   var RectangularPushButton = require( 'SUN/buttons/RectangularPushButton' );
   var ResetAllButton = require( 'SCENERY_PHET/buttons/ResetAllButton' );
@@ -242,12 +243,7 @@ define( function( require ) {
 
     var speedometerNode = new GaugeNode(
       // Hide the needle in for the background of the GaugeNode
-      new Property( null ), propertiesSpeedString,
-      {
-        min: 0,
-        max: 20
-      },
-      {
+      new Property( null ), propertiesSpeedString, new Range( 0, 20 ), {
         // enable/disable updates based on whether the speedometer is visible
         updateEnabledProperty: model.speedometerVisibleProperty,
         pickable: false,
@@ -389,10 +385,7 @@ define( function( require ) {
       tandem.createTandem( 'skaterNode' )
     );
 
-    var gaugeNeedleNode = new GaugeNeedleNode( model.skater.speedProperty, {
-      min: 0,
-      max: 20
-    }, {
+    var gaugeNeedleNode = new GaugeNeedleNode( model.skater.speedProperty, new Range( 0, 20 ), {
       renderer: renderer
     } );
     model.speedometerVisibleProperty.linkAttribute( gaugeNeedleNode, 'visible' );
