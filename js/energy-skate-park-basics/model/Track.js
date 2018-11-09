@@ -132,7 +132,7 @@ define( function( require ) {
     PhetioObject.call( this, options );
 
     // In the state wrapper, when the state changes, we must update the skater node
-    phet.phetIo && phet.phetIo.phetio.setStateEmitter && phet.phetIo.phetio.setStateEmitter.addListener( function() {
+    phet.phetIo && phet.phetIo.phetioEngine.setStateEmitter && phet.phetIo.phetioEngine.setStateEmitter.addListener( function() {
       self.updateLinSpace();
       self.updateSplines();
       events.trackChangedEmitter.emit();

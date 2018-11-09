@@ -16,7 +16,7 @@ define( function( require ) {
 
   // ifphetio
   var assertInstanceOf = require( 'ifphetio!PHET_IO/assertInstanceOf' );
-  var phetio = require( 'ifphetio!PHET_IO/phetio' );
+  var phetioEngine = require( 'ifphetio!PHET_IO/phetioEngine' );
 
   /**
    * @param {Track} track
@@ -37,8 +37,8 @@ define( function( require ) {
       if ( stateObject === null ) {
         return null;
       }
-      if ( phetio.hasInstance( stateObject ) ) {
-        return phetio.getInstance( stateObject );
+      if ( phetioEngine.hasInstance( stateObject ) ) {
+        return phetioEngine.getInstance( stateObject );
       }
       else {
         throw new Error( 'fromStateObject failed' );
