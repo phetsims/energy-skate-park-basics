@@ -1,4 +1,4 @@
-// Copyright 2014-2017, University of Colorado Boulder
+// Copyright 2014-2018, University of Colorado Boulder
 
 /**
  * A single slice of a pie chart, as contained in PieChartWebGLNode.  The slices each start at angle=0 and overlap each other, so the

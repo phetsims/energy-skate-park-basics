@@ -1,4 +1,4 @@
-// Copyright 2013-2017, University of Colorado Boulder
+// Copyright 2013-2018, University of Colorado Boulder
 
 /**
  * Scenery node for the pie chart, which moves with the skater and shows a pie chart representation of the energies by
