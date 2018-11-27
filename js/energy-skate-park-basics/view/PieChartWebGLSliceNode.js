@@ -96,6 +96,9 @@ define( function( require ) {
       // Returns the color from the vertex shader
       'void main( void ) {',
       '  gl_FragColor = vColor;',
+
+      // Use premultipled alpha, see https://github.com/phetsims/energy-skate-park/issues/39
+      '  gl_FragColor.rgb *= gl_FragColor.a;',
       '}'
     ].join( '\n' );
 
