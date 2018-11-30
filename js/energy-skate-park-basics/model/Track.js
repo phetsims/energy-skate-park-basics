@@ -28,7 +28,7 @@ define( function( require ) {
 
   /**
    * Model for a track, which has a fixed number of points.  If you added a point to a Track, you need a new track.
-   * 
+   *
    * @param {Events} events event source for sending messages
    * @param {ObservableArray<Track>} modelTracks all model tracks, so this track can add/remove others when joined/split
    * @param {Array<ControlPoint>} controlPoints
@@ -302,7 +302,7 @@ define( function( require ) {
     },
 
     /**
-     * Get the diff 
+     * Get the diff
      * @param  {number} parametricPosition
      * @return {number}
      */
@@ -669,13 +669,13 @@ define( function( require ) {
     /**
      * If any control points are out of bounds, bump them back in. Useful when the model bounds change, or when
      * bumping the track above ground.
-     * 
+     *
      * @private
      */
     keepControlPointsInBounds: function( bounds ) {
       for ( var i = 0; i < this.controlPoints.length; i++ ) {
         var currentLocation = this.controlPoints[ i ].positionProperty.get();
-        if( !bounds.containsPoint( currentLocation ) ) {
+        if ( !bounds.containsPoint( currentLocation ) ) {
           var newPoint = bounds.getClosestPoint( currentLocation.x, currentLocation.y );
 
           // set the control point "source" position to the new point - this is the unsnapped position, see
@@ -796,7 +796,7 @@ define( function( require ) {
       // if we encounter a local minima or maxima, we will scour that area of the spline in fine detail
       var fineDivisions = 10;
       var fineDelta = ( 2 * du ) / fineDivisions;
-      
+
       var previousSlopePositive = null;
       for ( var parametricPosition = this.minPoint; parametricPosition < this.maxPoint; parametricPosition += du ) {
         var r;
@@ -828,7 +828,7 @@ define( function( require ) {
             bestU = parametricPosition;
           }
         }
-        
+
         previousSlopePositive = currentSlopePositive;
       }
       return bestU;
@@ -839,7 +839,7 @@ define( function( require ) {
      *
      * TODO: Can we search for low radii of curvature just by inspecting local minima/maxima? Maybe then we can reduce
      * the number samples from 400 down to ~10 per local extrema?
-     * 
+     *
      * @returns {number} the minimum radius of curvature along the track, in meters.
      */
     getMinimumRadiusOfCurvature: function() {
@@ -920,6 +920,7 @@ define( function( require ) {
     dispose: function() {
       this.trackDisposed = true;
       this.disposeTrack();
+      PhetioObject.prototype.dispose.call( this );
     },
 
     /**
