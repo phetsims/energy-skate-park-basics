@@ -18,6 +18,7 @@ define( function( require ) {
 
   // images
   var iconFrictionHomescreen = require( 'image!ENERGY_SKATE_PARK/icon-friction-homescreen.png' );
+  var iconFrictionNavbar = require( 'image!ENERGY_SKATE_PARK/icon-friction-navbar.png' );
 
   // strings
   var screenFrictionString = require( 'string!ENERGY_SKATE_PARK/screen.friction' );
@@ -31,6 +32,8 @@ define( function( require ) {
     var options = _.extend( {
       name: screenFrictionString,
       homeScreenIcon: new Image( iconFrictionHomescreen ),
+      navigationBarIcon: new Image( iconFrictionNavbar ),
+
       tandem: tandem
     }, options );
 

@@ -18,6 +18,7 @@ define( function( require ) {
 
   // images
   var iconPlaygroundHomescreen = require( 'image!ENERGY_SKATE_PARK/icon-playground-homescreen.png' );
+  var iconPlaygroundNavbar = require( 'image!ENERGY_SKATE_PARK/icon-playground-navbar.png' );
 
   // strings
   var screenTrackPlaygroundString = require( 'string!ENERGY_SKATE_PARK_BASICS/screen.trackPlayground' );
@@ -31,6 +32,8 @@ define( function( require ) {
     var options = _.extend( {
       name: screenTrackPlaygroundString,
       homeScreenIcon: new Image( iconPlaygroundHomescreen ),
+      navigationBarIcon: new Image( iconPlaygroundNavbar ),
+
       tandem: tandem
     }, options );
 

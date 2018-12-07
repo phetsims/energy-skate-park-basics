@@ -18,6 +18,7 @@ define( function( require ) {
 
   // images
   var iconIntroHomescreen = require( 'image!ENERGY_SKATE_PARK/icon-intro-homescreen.png' );
+  var iconIntroNavbar = require( 'image!ENERGY_SKATE_PARK/icon-intro-navbar.png' );
 
   // strings
   var screenIntroductionString = require( 'string!ENERGY_SKATE_PARK/screen.introduction' );
@@ -31,7 +32,8 @@ define( function( require ) {
     var options = _.extend( {
       name: screenIntroductionString,
       tandem: tandem,
-      homeScreenIcon: new Image( iconIntroHomescreen )
+      homeScreenIcon: new Image( iconIntroHomescreen ),
+      navigationBarIcon: new Image( iconIntroNavbar )
     }, options );
 
     Screen.call( this,
