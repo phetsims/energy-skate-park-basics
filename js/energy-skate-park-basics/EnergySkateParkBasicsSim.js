@@ -10,7 +10,7 @@ define( function( require ) {
 
   // modules
   var energySkateParkBasics = require( 'ENERGY_SKATE_PARK_BASICS/energySkateParkBasics' );
-  var EnergySkateParkBasicsQueryParameters = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/EnergySkateParkBasicsQueryParameters' );
+  var EnergySkateParkQueryParameters = require( 'ENERGY_SKATE_PARK/energy-skate-park/EnergySkateParkQueryParameters' );
   var IntroScreen = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/intro/IntroScreen' );
   var FrictionScreen = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/friction/FrictionScreen' );
   var PlaygroundScreen = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/playground/PlaygroundScreen' );
@@ -20,15 +20,13 @@ define( function( require ) {
 
   // strings
   var energySkateParkBasicsTitleString = require( 'string!ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics.title' );
-  // var screenFrictionString = require( 'string!ENERGY_SKATE_PARK_BASICS/screen.friction' );
-  // var screenIntroductionString = require( 'string!ENERGY_SKATE_PARK_BASICS/screen.introduction' );
-  // var screenTrackPlaygroundString = require( 'string!ENERGY_SKATE_PARK_BASICS/screen.trackPlayground' );
 
   /**
    * @constructor
    * @param {Tandem} tandem
    */
   function EnergySkateParkBasicsSim( tandem ) {
+
     var options = {
       credits: {
         leadDesign: 'Ariel Paul, Noah Podolefsky, Sam Reid',
@@ -38,7 +36,7 @@ define( function( require ) {
         qualityAssurance: 'Steele Dalton, Oliver Orejola, Arnab Purkayastha, Bryan Yoelin'
       },
 
-      showSaveAndLoad: EnergySkateParkBasicsQueryParameters.showSaveAndLoad,
+      showSaveAndLoad: EnergySkateParkQueryParameters.showSaveAndLoad,
 
       // if running the sim on an ipad, do not use the "backing scale" technique
       // for antialiasing because this method takes up too much memory, see
