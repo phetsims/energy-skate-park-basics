@@ -12,9 +12,6 @@ define( function( require ) {
   var SimLauncher = require( 'JOIST/SimLauncher' );
   var Tandem = require( 'TANDEM/Tandem' );
 
-  // Fix a circular loading problem when using this in EnergySkateParkColorScheme
-  require( 'SCENERY/util/Color' );
-
   // constants
   var tandem = Tandem.rootTandem;
 
