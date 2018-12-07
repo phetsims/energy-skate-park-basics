@@ -29,6 +29,7 @@ require.config( {
     AXON: '../../axon/js',
     BRAND: '../../brand/' + phet.chipper.brand + '/js',
     DOT: '../../dot/js',
+    ENERGY_SKATE_PARK: '../../energy-skate-park/js',
     ENERGY_SKATE_PARK_BASICS: '.',
     JOIST: '../../joist/js',
     KITE: '../../kite/js',
