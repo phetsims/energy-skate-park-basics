@@ -13,6 +13,7 @@ define( function( require ) {
   var EnergySkateParkBasicsQueryParameters = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/EnergySkateParkBasicsQueryParameters' );
   var IntroScreen = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/intro/IntroScreen' );
   var FrictionScreen = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/friction/FrictionScreen' );
+  var PlaygroundScreen = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/playground/PlaygroundScreen' );
   var inherit = require( 'PHET_CORE/inherit' );
   var platform = require( 'PHET_CORE/platform' );
   var Sim = require( 'JOIST/Sim' );
@@ -50,8 +51,8 @@ define( function( require ) {
 
       // TODO: These will need custom nav bar icons
       new IntroScreen( tandem.createTandem( 'introScreen' ) ),
-      new FrictionScreen( tandem.createTandem( 'frictionScreen' ) )
-      // new EnergySkateParkScreen( screenTrackPlaygroundString, iconPlaygroundHomescreen, true, true, tandem.createTandem( 'playgroundScreen' ) )
+      new FrictionScreen( tandem.createTandem( 'frictionScreen' ) ),
+      new PlaygroundScreen( tandem.createTandem( 'playgroundScreen' ) )
     ], options );
   }
 
