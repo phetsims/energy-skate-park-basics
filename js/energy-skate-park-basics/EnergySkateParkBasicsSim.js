@@ -10,13 +10,11 @@ define( function( require ) {
 
   // modules
   var energySkateParkBasics = require( 'ENERGY_SKATE_PARK_BASICS/energySkateParkBasics' );
-  var EnergySkateParkQueryParameters = require( 'ENERGY_SKATE_PARK/energy-skate-park/EnergySkateParkQueryParameters' );
+  var EnergySkateParkSim = require( 'ENERGY_SKATE_PARK/energy-skate-park/EnergySkateParkSim' );
   var IntroScreen = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/intro/IntroScreen' );
   var FrictionScreen = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/friction/FrictionScreen' );
   var PlaygroundScreen = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/playground/PlaygroundScreen' );
   var inherit = require( 'PHET_CORE/inherit' );
-  var platform = require( 'PHET_CORE/platform' );
-  var Sim = require( 'JOIST/Sim' );
 
   // strings
   var energySkateParkBasicsTitleString = require( 'string!ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics.title' );
@@ -34,27 +32,21 @@ define( function( require ) {
         team: 'Michael Dubson, Bryce Gruneich, Trish Loeblein, Emily B. Moore, Kathy Perkins',
         graphicArts: 'Sharon Siman-Tov, Amanda McGarry',
         qualityAssurance: 'Steele Dalton, Oliver Orejola, Arnab Purkayastha, Bryan Yoelin'
-      },
-
-      showSaveAndLoad: EnergySkateParkQueryParameters.showSaveAndLoad,
-
-      // if running the sim on an ipad, do not use the "backing scale" technique
-      // for antialiasing because this method takes up too much memory, see
-      // https://github.com/phetsims/scenery/issues/859 and
-      // https://github.com/phetsims/energy-skate-park-basics/issues/435
-      allowBackingScaleAntialiasing: !platform.mobileSafari
+      }
     };
 
-    Sim.call( this, energySkateParkBasicsTitleString, [
+    var screens = [
 
       // TODO: These will need custom nav bar icons
       new IntroScreen( tandem.createTandem( 'introScreen' ) ),
       new FrictionScreen( tandem.createTandem( 'frictionScreen' ) ),
       new PlaygroundScreen( tandem.createTandem( 'playgroundScreen' ) )
-    ], options );
+    ];
+
+    EnergySkateParkSim.call( this, energySkateParkBasicsTitleString, screens, tandem, options );
   }
 
   energySkateParkBasics.register( 'EnergySkateParkBasicsSim', EnergySkateParkBasicsSim );
 
-  return inherit( Sim, EnergySkateParkBasicsSim );
+  return inherit( EnergySkateParkSim, EnergySkateParkBasicsSim );
 } );

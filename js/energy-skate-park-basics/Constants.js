@@ -1,7 +1,7 @@
 // Copyright 2013-2018, University of Colorado Boulder
 
 /**
- * Constants used throughout the simulation.
+ * Constants specific to Energy Skate Park: Basics.
  * @author Sam Reid
  */
 define( function( require ) {
@@ -12,7 +12,7 @@ define( function( require ) {
   var energySkateParkBasics = require( 'ENERGY_SKATE_PARK_BASICS/energySkateParkBasics' );
   var Range = require( 'DOT/Range' );
 
-  var minMass = 25;// kg
+  var minMass = 25; // kg
   var maxMass = 100;
 
   var Constants = {
