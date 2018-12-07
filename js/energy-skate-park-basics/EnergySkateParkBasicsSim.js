@@ -36,8 +36,6 @@ define( function( require ) {
     };
 
     var screens = [
-
-      // TODO: These will need custom nav bar icons
       new IntroScreen( tandem.createTandem( 'introScreen' ) ),
       new FrictionScreen( tandem.createTandem( 'frictionScreen' ) ),
       new PlaygroundScreen( tandem.createTandem( 'playgroundScreen' ) )
