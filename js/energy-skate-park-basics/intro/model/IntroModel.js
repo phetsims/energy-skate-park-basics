@@ -9,7 +9,6 @@ define( require => {
   'use strict';
 
   // modules
-  var Constants = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/Constants' );
   var energySkateParkBasics = require( 'ENERGY_SKATE_PARK_BASICS/energySkateParkBasics' );
   var EnergySkateParkTrackSetModel = require( 'ENERGY_SKATE_PARK/energy-skate-park/common/model/EnergySkateParkTrackSetModel' );
   var inherit = require( 'PHET_CORE/inherit' );
@@ -21,14 +20,7 @@ define( require => {
   function IntroModel( tandem ) {
 
     // track set model without friction
-    EnergySkateParkTrackSetModel.call( this, false, tandem.createTandem( 'introModel' ), {
-
-      // TODO: Why is the default being passed to options? Can we remove this?
-      skaterOptions: {
-        defaultMass: Constants.DEFAULT_MASS,
-        massRange: Constants.MASS_RANGE
-      }
-    } );
+    EnergySkateParkTrackSetModel.call( this, false, tandem.createTandem( 'introModel' ) );
 
     this.addTrackSet( EnergySkateParkTrackSetModel.createBasicsTrackSet( this, tandem ) );
   }
