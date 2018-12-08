@@ -14,7 +14,8 @@ define( function( require ) {
   var inherit = require( 'PHET_CORE/inherit' );
 
   /**
-   * @param {EnergySkateParkIntroModel} model
+   * @param {FrictionModel} model
+   * @param {Tandem} tandem
    * @constructor
    */
   function FrictionScreenView( model, tandem ) {

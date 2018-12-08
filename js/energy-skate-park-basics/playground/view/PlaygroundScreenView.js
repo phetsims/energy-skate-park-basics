@@ -13,7 +13,11 @@ define( function( require ) {
   var EnergySkateParkScreenView = require( 'ENERGY_SKATE_PARK/energy-skate-park/common/view/EnergySkateParkScreenView' );
   var inherit = require( 'PHET_CORE/inherit' );
 
-  // constants
+  /**
+   * @param {PlaygroundModel} model
+   * @param {Tandem} tandem
+   * @constructor
+   */
   function PlaygroundScreenView( model, tandem ) {
     EnergySkateParkScreenView.call( this, model, tandem.createTandem( 'graphsScreenView' ), {
       includeReferenceHeightCheckbox: false,
