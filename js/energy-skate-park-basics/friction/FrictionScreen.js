@@ -38,8 +38,8 @@ define( function( require ) {
     }, options );
 
     Screen.call( this,
-      function() { return new FrictionModel( tandem.createTandem( 'introModel' ) ); },
-      function( model ) { return new FrictionScreenView( model, tandem.createTandem( 'introScreenView' ) ); },
+      function() { return new FrictionModel( tandem.createTandem( 'model' ) ); },
+      function( model ) { return new FrictionScreenView( model, tandem.createTandem( 'view' ) ); },
       options
     );
   }

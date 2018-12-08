@@ -37,8 +37,8 @@ define( function( require ) {
     }, options );
 
     Screen.call( this,
-      function() { return new IntroModel( tandem.createTandem( 'introModel' ) ); },
-      function( model ) { return new IntroScreenView( model, tandem.createTandem( 'introScreenView' ) ); },
+      function() { return new IntroModel( tandem.createTandem( 'model' ) ); },
+      function( model ) { return new IntroScreenView( model, tandem.createTandem( 'view' ) ); },
       options
     );
   }

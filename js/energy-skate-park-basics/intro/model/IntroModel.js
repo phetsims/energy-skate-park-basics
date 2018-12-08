@@ -20,7 +20,7 @@ define( require => {
   function IntroModel( tandem ) {
 
     // track set model without friction
-    EnergySkateParkTrackSetModel.call( this, false, tandem.createTandem( 'introModel' ) );
+    EnergySkateParkTrackSetModel.call( this, false, tandem );
 
     this.addTrackSet( EnergySkateParkTrackSetModel.createBasicsTrackSet( this, tandem ) );
   }
