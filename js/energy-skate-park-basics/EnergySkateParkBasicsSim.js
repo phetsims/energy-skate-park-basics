@@ -20,8 +20,8 @@ define( function( require ) {
   var energySkateParkBasicsTitleString = require( 'string!ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics.title' );
 
   /**
-   * @constructor
    * @param {Tandem} tandem
+   * @constructor
    */
   function EnergySkateParkBasicsSim( tandem ) {
 

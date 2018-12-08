@@ -14,8 +14,8 @@ define( function( require ) {
   var inherit = require( 'PHET_CORE/inherit' );
 
   /**
-   * @constructor
    * @param {EnergySkateParkIntroModel} model
+   * @constructor
    */
   function IntroScreenView( model, tandem ) {
     EnergySkateParkScreenView.call( this, model, tandem.createTandem( 'introScreenView' ), {
