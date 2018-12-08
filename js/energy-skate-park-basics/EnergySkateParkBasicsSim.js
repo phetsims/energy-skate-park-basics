@@ -28,7 +28,7 @@ define( function( require ) {
     var options = {
       credits: {
         leadDesign: 'Ariel Paul, Noah Podolefsky, Sam Reid',
-        softwareDevelopment: 'Sam Reid',
+        softwareDevelopment: 'Sam Reid, Jesse Greenberg',
         team: 'Michael Dubson, Bryce Gruneich, Trish Loeblein, Emily B. Moore, Kathy Perkins',
         graphicArts: 'Sharon Siman-Tov, Amanda McGarry',
         qualityAssurance: 'Steele Dalton, Oliver Orejola, Arnab Purkayastha, Bryan Yoelin'
