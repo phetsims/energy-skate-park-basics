@@ -2,7 +2,8 @@
 
 /**
  * Constants specific to Energy Skate Park: Basics.
- * @author Sam Reid
+ *
+ * @author Sam Reid (PhET Interactive Simulations)
  */
 define( function( require ) {
   'use strict';

@@ -2,9 +2,9 @@
 
 /**
  * ScreenView for the Friction screen in Energy Skate Park: Basics.
- * @author Jesse Greenberg
+ *
+ * @author Jesse Greenberg (PhET Interactive Simulations)
  */
-
 define( function( require ) {
   'use strict';
 

@@ -3,7 +3,7 @@
 /**
  * The "Friction" screen of Energy Skate Park: Basics.
  *
- * @author Jesse Greenberg
+ * @author Jesse Greenberg (PhET Interactive Simulations)
  */
 define( function( require ) {
   'use strict';
