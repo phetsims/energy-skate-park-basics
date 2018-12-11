@@ -23,7 +23,11 @@ define( function( require ) {
       includeReferenceHeightCheckbox: false,
 
       includeMassSlider: true,
-      includeGravitySlider: false
+      includeGravitySlider: false,
+
+      barGraphOptions: {
+        includeZoomButtons: false
+      }
     } );
   }
 
