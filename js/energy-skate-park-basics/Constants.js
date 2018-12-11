@@ -15,6 +15,8 @@ define( function( require ) {
 
   var minMass = 25; // kg
   var maxMass = 100;
+  var defaultMass = ( minMass + maxMass ) / 2;
+  var massRange = new Range( minMass, maxMass );
 
   var Constants = {
     SLIDER_OPTIONS: {
@@ -27,10 +29,19 @@ define( function( require ) {
     // factor to determine whether thermal energy can be cleared
     ALLOW_THERMAL_CLEAR_BASIS: 1E-6,
 
-    DEFAULT_MASS: (minMass + maxMass) / 2,
+    DEFAULT_MASS: ( minMass + maxMass ) / 2,
     MIN_MASS: minMass,
     MAX_MASS: maxMass,
-    MASS_RANGE: new Range( minMass, maxMass )
+    MASS_RANGE: new Range( minMass, maxMass ),
+
+    // all options that are consistent for models in the basics simulation - this object should be used by
+    // everything extending the main simulation
+    BASICS_MODEL_OPTIONS: {
+      skaterOptions: {
+        defaultMass: defaultMass,
+        massRange: massRange
+      }
+    }
   };
 
   energySkateParkBasics.register( 'Constants', Constants );

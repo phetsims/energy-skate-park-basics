@@ -27,7 +27,7 @@ define( function( require ) {
       includeMassSlider: true,
 
       barGraphOptions: {
-        includeZoomButtons: false
+        includeZoomButtons: true
       }
     } );
   }
