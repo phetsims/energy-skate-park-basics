@@ -24,10 +24,6 @@ define( function( require ) {
   function FrictionScreenView( model, tandem ) {
     EnergySkateParkScreenView.call( this, model, tandem.createTandem( 'introScreenView' ), {
       includeMeasuringTapePanel: false,
-      includeReferenceHeightCheckbox: false,
-
-      includeGravitySlider: false,
-      includeMassSlider: true,
 
       barGraphOptions: {
         includeZoomButtons: true

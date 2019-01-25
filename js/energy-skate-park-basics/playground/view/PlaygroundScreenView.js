@@ -23,11 +23,6 @@ define( function( require ) {
    */
   function PlaygroundScreenView( model, tandem ) {
     EnergySkateParkScreenView.call( this, model, tandem.createTandem( 'graphsScreenView' ), {
-      includeReferenceHeightCheckbox: false,
-
-      includeMassSlider: true,
-      includeGravitySlider: false,
-
       barGraphOptions: {
         includeZoomButtons: false
       }

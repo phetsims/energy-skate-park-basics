@@ -23,10 +23,6 @@ define( function( require ) {
   function IntroScreenView( model, tandem ) {
     EnergySkateParkScreenView.call( this, model, tandem.createTandem( 'introScreenView' ), {
       includeMeasuringTapePanel: false,
-      includeReferenceHeightCheckbox: false,
-
-      includeMassSlider: true,
-      includeGravitySlider: false,
 
       barGraphOptions: {
         includeZoomButtons: false
