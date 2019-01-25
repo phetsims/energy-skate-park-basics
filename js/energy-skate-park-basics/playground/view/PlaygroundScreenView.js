@@ -27,6 +27,8 @@ define( function( require ) {
     ];
     EnergySkateParkScreenView.call( this, model, playgroundControls, tandem.createTandem( 'graphsScreenView' ), {
       controlPanelOptions: {
+        includeTrackSelection: false,
+
         visibilityControlsOptions: {
           includeReferenceHeightCheckbox: false
         }
