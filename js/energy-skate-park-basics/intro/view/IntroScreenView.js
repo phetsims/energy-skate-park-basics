@@ -9,6 +9,8 @@ define( function( require ) {
   'use strict';
 
   // modules
+  var EnergySkateParkControlPanel = require( 'ENERGY_SKATE_PARK/energy-skate-park/view/EnergySkateParkControlPanel' );
+  var MassSlider = require( 'ENERGY_SKATE_PARK/energy-skate-park/common/view/MassSlider' );
   var energySkateParkBasics = require( 'ENERGY_SKATE_PARK_BASICS/energySkateParkBasics' );
   var EnergySkateParkScreenView = require( 'ENERGY_SKATE_PARK/energy-skate-park/common/view/EnergySkateParkScreenView' );
   var inherit = require( 'PHET_CORE/inherit' );
@@ -30,6 +32,12 @@ define( function( require ) {
         includeZoomButtons: false
       }
     } );
+
+    var introControls = [ new MassSlider( model.skater.massProperty, model.skater.massRange, tandem.createTandem( 'massSlider' ) ) ];
+    this.controlPanel = new EnergySkateParkControlPanel( model, this, introControls, tandem.createTandem( 'controlPanel' ), {
+      includeTrackSelection: true
+    } );
+    this.addToBottomLayer( this.controlPanel );
   }
 
   energySkateParkBasics.register( 'IntroScreenView', IntroScreenView );

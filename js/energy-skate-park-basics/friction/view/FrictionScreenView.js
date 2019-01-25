@@ -11,6 +11,9 @@ define( function( require ) {
   // modules
   var energySkateParkBasics = require( 'ENERGY_SKATE_PARK_BASICS/energySkateParkBasics' );
   var EnergySkateParkScreenView = require( 'ENERGY_SKATE_PARK/energy-skate-park/common/view/EnergySkateParkScreenView' );
+  var EnergySkateParkControlPanel = require( 'ENERGY_SKATE_PARK/energy-skate-park/view/EnergySkateParkControlPanel' );
+  var FrictionSlider = require( 'ENERGY_SKATE_PARK/energy-skate-park/common/view/FrictionSlider' );
+  var MassSlider = require( 'ENERGY_SKATE_PARK/energy-skate-park/common/view/MassSlider' );
   var inherit = require( 'PHET_CORE/inherit' );
 
   /**
@@ -30,6 +33,15 @@ define( function( require ) {
         includeZoomButtons: true
       }
     } );
+
+    var frictionControls = [
+      new MassSlider( model.skater.massProperty, model.skater.massRange, tandem.createTandem( 'massSlider' ) ),
+      new FrictionSlider( model.frictionProperty, tandem.createTandem( 'frictionSlider' ) )
+    ];
+    this.controlPanel = new EnergySkateParkControlPanel( model, this, frictionControls, tandem.createTandem( 'controlPanel' ), {
+      includeTrackSelection: true
+    } );
+    this.addToBottomLayer( this.controlPanel );
   }
 
   energySkateParkBasics.register( 'FrictionScreenView', FrictionScreenView );
