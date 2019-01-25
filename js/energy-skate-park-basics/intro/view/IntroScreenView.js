@@ -24,6 +24,12 @@ define( function( require ) {
     EnergySkateParkScreenView.call( this, model, introControls, tandem.createTandem( 'introScreenView' ), {
       includeMeasuringTapePanel: false,
 
+      controlPanelOptions: {
+        visibilityControlsOptions: {
+          includeReferenceHeightCheckbox: false
+        }
+      },
+
       barGraphOptions: {
         includeZoomButtons: false
       }

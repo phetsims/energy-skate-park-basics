@@ -26,6 +26,11 @@ define( function( require ) {
       new FrictionSlider( model.frictionProperty, tandem.createTandem( 'frictionSlider' ) )
     ];
     EnergySkateParkScreenView.call( this, model, playgroundControls, tandem.createTandem( 'graphsScreenView' ), {
+      controlPanelOptions: {
+        visibilityControlsOptions: {
+          includeReferenceHeightCheckbox: false
+        }
+      },
       barGraphOptions: {
         includeZoomButtons: false
       }
