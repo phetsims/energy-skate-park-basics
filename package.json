@@ -12,7 +12,8 @@
   "phet": {
     "requirejsNamespace": "ENERGY_SKATE_PARK_BASICS",
     "phetLibs": [
-      "energy-skate-park"
+      "energy-skate-park",
+      "griddle"
     ],
     "preload": [
       "../sherpa/lib/numeric-1.2.6.js"

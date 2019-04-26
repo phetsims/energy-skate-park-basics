@@ -31,6 +31,7 @@ require.config( {
     DOT: '../../dot/js',
     ENERGY_SKATE_PARK: '../../energy-skate-park/js',
     ENERGY_SKATE_PARK_BASICS: '.',
+    GRIDDLE: '../../griddle/js',
     JOIST: '../../joist/js',
     KITE: '../../kite/js',
     PHETCOMMON: '../../phetcommon/js',
