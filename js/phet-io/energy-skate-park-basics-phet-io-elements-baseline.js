@@ -1112,6 +1112,17 @@ window.phet.phetio.phetioElementsBaseline =
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO.<StringIO>"
     },
+    "energySkateParkBasics.frictionScreen.model.frictionModel.trackSetModel.speedValueVisibleProperty": {
+      "phetioDocumentation": "",
+      "phetioEventType": "model",
+      "phetioFeatured": false,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": true,
+      "phetioStudioControl": true,
+      "phetioTypeName": "PropertyIO.<BooleanIO>"
+    },
     "energySkateParkBasics.frictionScreen.model.frictionModel.trackSetModel.speedometerVisibleProperty": {
       "phetioDocumentation": "",
       "phetioEventType": "model",
@@ -8845,6 +8856,17 @@ window.phet.phetio.phetioElementsBaseline =
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO.<StringIO>"
     },
+    "energySkateParkBasics.introScreen.model.trackSetModel.speedValueVisibleProperty": {
+      "phetioDocumentation": "",
+      "phetioEventType": "model",
+      "phetioFeatured": false,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": true,
+      "phetioStudioControl": true,
+      "phetioTypeName": "PropertyIO.<BooleanIO>"
+    },
     "energySkateParkBasics.introScreen.model.trackSetModel.speedometerVisibleProperty": {
       "phetioDocumentation": "",
       "phetioEventType": "model",
@@ -15466,6 +15488,17 @@ window.phet.phetio.phetioElementsBaseline =
       "phetioState": true,
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO.<StringIO>"
+    },
+    "energySkateParkBasics.playgroundScreen.model.playgroundModel.speedValueVisibleProperty": {
+      "phetioDocumentation": "",
+      "phetioEventType": "model",
+      "phetioFeatured": false,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": true,
+      "phetioStudioControl": true,
+      "phetioTypeName": "PropertyIO.<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.speedometerVisibleProperty": {
       "phetioDocumentation": "",
