@@ -29,16 +29,8 @@ define( function( require ) {
     ;
     EnergySkateParkScreenView.call( this, model, frictionControls, tandem.createTandem( 'introScreenView' ), {
       includeMeasuringTapePanel: false,
-
-      controlPanelOptions: {
-        visibilityControlsOptions: {
-          includeReferenceHeightCheckbox: false
-        }
-      },
-
-      barGraphOptions: {
-        includeZoomButtons: true
-      }
+      showReferenceHeight: false,
+      showBarGraphZoomButtons: true
     } );
   }
 

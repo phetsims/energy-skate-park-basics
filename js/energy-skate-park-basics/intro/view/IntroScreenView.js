@@ -23,16 +23,8 @@ define( function( require ) {
     var introControls = [ new MassSlider( model.skater.massProperty, model.skater.massRange, tandem.createTandem( 'massSlider' ) ) ];
     EnergySkateParkScreenView.call( this, model, introControls, tandem.createTandem( 'introScreenView' ), {
       includeMeasuringTapePanel: false,
-
-      controlPanelOptions: {
-        visibilityControlsOptions: {
-          includeReferenceHeightCheckbox: false
-        }
-      },
-
-      barGraphOptions: {
-        includeZoomButtons: false
-      }
+      showReferenceHeight: false,
+      showBarGraphZoomButtons: false
     } );
   }
 
