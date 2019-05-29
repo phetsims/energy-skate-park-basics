@@ -1280,7 +1280,7 @@ window.phet.phetio.phetioElementsBaseline =
     "energySkateParkBasics.frictionScreen.view.frictionSlider.enabledProperty": {
       "phetioDocumentation": "",
       "phetioEventType": "model",
-      "phetioFeatured": false,
+      "phetioFeatured": true,
       "phetioHighFrequency": false,
       "phetioPlayback": false,
       "phetioReadOnly": false,
@@ -1643,7 +1643,7 @@ window.phet.phetio.phetioElementsBaseline =
     "energySkateParkBasics.frictionScreen.view.frictionSlider.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
       "phetioEventType": "model",
-      "phetioFeatured": false,
+      "phetioFeatured": true,
       "phetioHighFrequency": false,
       "phetioPlayback": false,
       "phetioReadOnly": false,
@@ -6021,7 +6021,7 @@ window.phet.phetio.phetioElementsBaseline =
     "energySkateParkBasics.frictionScreen.view.massSlider.enabledProperty": {
       "phetioDocumentation": "",
       "phetioEventType": "model",
-      "phetioFeatured": false,
+      "phetioFeatured": true,
       "phetioHighFrequency": false,
       "phetioPlayback": false,
       "phetioReadOnly": false,
@@ -6384,7 +6384,7 @@ window.phet.phetio.phetioElementsBaseline =
     "energySkateParkBasics.frictionScreen.view.massSlider.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
       "phetioEventType": "model",
-      "phetioFeatured": false,
+      "phetioFeatured": true,
       "phetioHighFrequency": false,
       "phetioPlayback": false,
       "phetioReadOnly": false,
@@ -12918,7 +12918,7 @@ window.phet.phetio.phetioElementsBaseline =
     "energySkateParkBasics.introScreen.view.massSlider.enabledProperty": {
       "phetioDocumentation": "",
       "phetioEventType": "model",
-      "phetioFeatured": false,
+      "phetioFeatured": true,
       "phetioHighFrequency": false,
       "phetioPlayback": false,
       "phetioReadOnly": false,
@@ -13281,7 +13281,7 @@ window.phet.phetio.phetioElementsBaseline =
     "energySkateParkBasics.introScreen.view.massSlider.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
       "phetioEventType": "model",
-      "phetioFeatured": false,
+      "phetioFeatured": true,
       "phetioHighFrequency": false,
       "phetioPlayback": false,
       "phetioReadOnly": false,
@@ -13801,7 +13801,7 @@ window.phet.phetio.phetioElementsBaseline =
       "phetioFeatured": false,
       "phetioHighFrequency": false,
       "phetioPlayback": false,
-      "phetioReadOnly": true,
+      "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
       "phetioTypeName": "NodeIO"
@@ -13845,30 +13845,30 @@ window.phet.phetio.phetioElementsBaseline =
       "phetioFeatured": false,
       "phetioHighFrequency": false,
       "phetioPlayback": false,
-      "phetioReadOnly": true,
-      "phetioState": true,
+      "phetioReadOnly": false,
+      "phetioState": false,
       "phetioStudioControl": true,
       "phetioTypeName": "NumberPropertyIO"
     },
     "energySkateParkBasics.navigationBar.phetButton.phetMenu.aboutMenuItem.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
       "phetioEventType": "model",
-      "phetioFeatured": false,
+      "phetioFeatured": true,
       "phetioHighFrequency": false,
       "phetioPlayback": false,
-      "phetioReadOnly": true,
-      "phetioState": true,
+      "phetioReadOnly": false,
+      "phetioState": false,
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
     },
     "energySkateParkBasics.navigationBar.phetButton.phetMenu.aboutMenuItem.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
       "phetioEventType": "model",
-      "phetioFeatured": false,
+      "phetioFeatured": true,
       "phetioHighFrequency": false,
       "phetioPlayback": false,
-      "phetioReadOnly": true,
-      "phetioState": true,
+      "phetioReadOnly": false,
+      "phetioState": false,
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO.<BooleanIO>"
     },
@@ -13923,7 +13923,7 @@ window.phet.phetio.phetioElementsBaseline =
       "phetioHighFrequency": false,
       "phetioPlayback": false,
       "phetioReadOnly": false,
-      "phetioState": true,
+      "phetioState": false,
       "phetioStudioControl": true,
       "phetioTypeName": "NumberPropertyIO"
     },
@@ -13934,18 +13934,18 @@ window.phet.phetio.phetioElementsBaseline =
       "phetioHighFrequency": false,
       "phetioPlayback": false,
       "phetioReadOnly": false,
-      "phetioState": true,
+      "phetioState": false,
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
     },
     "energySkateParkBasics.navigationBar.phetButton.phetMenu.screenshotMenuItem.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
       "phetioEventType": "model",
-      "phetioFeatured": false,
+      "phetioFeatured": true,
       "phetioHighFrequency": false,
       "phetioPlayback": false,
       "phetioReadOnly": false,
-      "phetioState": true,
+      "phetioState": false,
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO.<BooleanIO>"
     },
@@ -15822,7 +15822,7 @@ window.phet.phetio.phetioElementsBaseline =
     "energySkateParkBasics.playgroundScreen.view.frictionSlider.enabledProperty": {
       "phetioDocumentation": "",
       "phetioEventType": "model",
-      "phetioFeatured": false,
+      "phetioFeatured": true,
       "phetioHighFrequency": false,
       "phetioPlayback": false,
       "phetioReadOnly": false,
@@ -16185,7 +16185,7 @@ window.phet.phetio.phetioElementsBaseline =
     "energySkateParkBasics.playgroundScreen.view.frictionSlider.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
       "phetioEventType": "model",
-      "phetioFeatured": false,
+      "phetioFeatured": true,
       "phetioHighFrequency": false,
       "phetioPlayback": false,
       "phetioReadOnly": false,
@@ -22169,7 +22169,7 @@ window.phet.phetio.phetioElementsBaseline =
     "energySkateParkBasics.playgroundScreen.view.massSlider.enabledProperty": {
       "phetioDocumentation": "",
       "phetioEventType": "model",
-      "phetioFeatured": false,
+      "phetioFeatured": true,
       "phetioHighFrequency": false,
       "phetioPlayback": false,
       "phetioReadOnly": false,
@@ -22532,7 +22532,7 @@ window.phet.phetio.phetioElementsBaseline =
     "energySkateParkBasics.playgroundScreen.view.massSlider.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
       "phetioEventType": "model",
-      "phetioFeatured": false,
+      "phetioFeatured": true,
       "phetioHighFrequency": false,
       "phetioPlayback": false,
       "phetioReadOnly": false,
