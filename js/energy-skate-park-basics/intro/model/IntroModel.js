@@ -11,22 +11,19 @@ define( require => {
   // modules
   var Constants = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/Constants' );
   var energySkateParkBasics = require( 'ENERGY_SKATE_PARK_BASICS/energySkateParkBasics' );
-  var EnergySkateParkTrackSetModel = require( 'ENERGY_SKATE_PARK/energy-skate-park/common/model/EnergySkateParkTrackSetModel' );
-  var inherit = require( 'PHET_CORE/inherit' );
+  var EnergySkateParkBasicsTrackSetModel = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/common/model/EnergySkateParkBasicsTrackSetModel' );
 
   /**
    * @param {Tandem} tandem
    * @constructor
    */
-  function IntroModel( tandem ) {
+  class IntroModel extends EnergySkateParkBasicsTrackSetModel {
 
-    // track set model without friction
-    EnergySkateParkTrackSetModel.call( this, false, tandem, Constants.BASICS_MODEL_OPTIONS );
-
-    this.addTrackSet( EnergySkateParkTrackSetModel.createBasicsTrackSet( this, tandem ) );
+    constructor( tandem ) {
+      const includesFriction = false;
+      super( includesFriction, tandem, Constants.BASICS_MODEL_OPTIONS );
+    }
   }
 
-  energySkateParkBasics.register( 'IntroModel', IntroModel );
-
-  return inherit( EnergySkateParkTrackSetModel, IntroModel );
+  return energySkateParkBasics.register( 'IntroModel', IntroModel );
 } );
