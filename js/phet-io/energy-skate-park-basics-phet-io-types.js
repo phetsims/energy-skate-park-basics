@@ -332,6 +332,33 @@ window.phet.phetio.phetioTypes = assert &&
       "supertype": "ObjectIO",
       "typeName": "ActionIO.<Vector2IO, VoidIO>"
     },
+    "ArrayIO.<StringIO>": {
+      "documentation": "A wrapper for the built-in JS array type, with the element type specified.",
+      "events": [],
+      "methodOrder": [],
+      "methods": {},
+      "parameterTypes": [
+        "StringIO"
+      ],
+      "supertype": "ObjectIO",
+      "typeName": "ArrayIO.<StringIO>"
+    },
+    "BooleanIO": {
+      "documentation": "Wrapper for the built-in JS boolean type (true/false)",
+      "events": [],
+      "methodOrder": [],
+      "methods": {},
+      "supertype": "ObjectIO",
+      "typeName": "BooleanIO"
+    },
+    "Bounds2IO": {
+      "documentation": "a 2-dimensional bounds rectangle",
+      "events": [],
+      "methodOrder": [],
+      "methods": {},
+      "supertype": "ObjectIO",
+      "typeName": "Bounds2IO"
+    },
     "ControlPointIO": {
       "documentation": "A control point that can manipulate the track.",
       "events": [],
@@ -347,6 +374,14 @@ window.phet.phetio.phetioTypes = assert &&
       "methods": {},
       "supertype": "NodeIO",
       "typeName": "ControlPointNodeIO"
+    },
+    "DOMEventIO": {
+      "documentation": "A DOM Event",
+      "events": [],
+      "methodOrder": [],
+      "methods": {},
+      "supertype": "ObjectIO",
+      "typeName": "DOMEventIO"
     },
     "DerivedPropertyIO.<BooleanIO>": {
       "documentation": "Like PropertyIO, but not settable.  Instead it is derived from other DerivedPropertyIO or PropertyIO instances",
@@ -439,6 +474,436 @@ window.phet.phetio.phetioTypes = assert &&
       "supertype": "ObjectIO",
       "typeName": "EnergySkateParkModelIO"
     },
+    "EventIO": {
+      "documentation": "An event, with a point",
+      "events": [],
+      "methodOrder": [],
+      "methods": {},
+      "supertype": "ObjectIO",
+      "typeName": "EventIO"
+    },
+    "FocusIO": {
+      "documentation": "A IO type for the instance in the simulation which currently has keyboard focus.",
+      "events": [],
+      "methodOrder": [],
+      "methods": {},
+      "supertype": "ObjectIO",
+      "typeName": "FocusIO"
+    },
+    "FontIO": {
+      "documentation": "Font handling for text drawing. Options:<ul><li><strong>style:</strong> normal      &mdash; normal | italic | oblique </li><li><strong>variant:</strong> normal    &mdash; normal | small-caps </li><li><strong>weight:</strong> normal     &mdash; normal | bold | bolder | lighter | 100 | 200 | 300 | 400 | 500 | 600 | 700 | 800 | 900 </li><li><strong>stretch:</strong> normal    &mdash; normal | ultra-condensed | extra-condensed | condensed | semi-condensed | semi-expanded | expanded | extra-expanded | ultra-expanded </li><li><strong>size:</strong> 10px         &mdash; absolute-size | relative-size | length | percentage -- unitless number interpreted as px. absolute suffixes: cm, mm, in, pt, pc, px. relative suffixes: em, ex, ch, rem, vw, vh, vmin, vmax. </li><li><strong>lineHeight:</strong> normal &mdash; normal | number | length | percentage -- NOTE: Canvas spec forces line-height to normal </li><li><strong>family:</strong> sans-serif &mdash; comma-separated list of families, including generic families (serif, sans-serif, cursive, fantasy, monospace). ideally escape with double-quotes</li></ul>",
+      "events": [],
+      "methodOrder": [],
+      "methods": {},
+      "supertype": "ObjectIO",
+      "typeName": "FontIO"
+    },
+    "FunctionIO.<>": {
+      "documentation": "Wrapper for the built-in JS function type.<br><strong>Arguments:</strong> VoidIO<br><strong>Return Type:</strong> VoidIO",
+      "events": [],
+      "methodOrder": [],
+      "methods": {},
+      "parameterTypes": [],
+      "supertype": "ObjectIO",
+      "typeName": "FunctionIO.<>"
+    },
+    "FunctionIO.<BooleanIO, NullableIO.<BooleanIO>>": {
+      "documentation": "Wrapper for the built-in JS function type.<br><strong>Arguments:</strong> BooleanIO, NullableIO.<BooleanIO><br><strong>Return Type:</strong> VoidIO",
+      "events": [],
+      "methodOrder": [],
+      "methods": {},
+      "parameterTypes": [
+        "BooleanIO",
+        "NullableIO.<BooleanIO>"
+      ],
+      "supertype": "ObjectIO",
+      "typeName": "FunctionIO.<BooleanIO, NullableIO.<BooleanIO>>"
+    },
+    "FunctionIO.<BooleanIO>": {
+      "documentation": "Wrapper for the built-in JS function type.<br><strong>Arguments:</strong> BooleanIO<br><strong>Return Type:</strong> VoidIO",
+      "events": [],
+      "methodOrder": [],
+      "methods": {},
+      "parameterTypes": [
+        "BooleanIO"
+      ],
+      "supertype": "ObjectIO",
+      "typeName": "FunctionIO.<BooleanIO>"
+    },
+    "FunctionIO.<Bounds2IO, NullableIO.<Bounds2IO>>": {
+      "documentation": "Wrapper for the built-in JS function type.<br><strong>Arguments:</strong> Bounds2IO, NullableIO.<Bounds2IO><br><strong>Return Type:</strong> VoidIO",
+      "events": [],
+      "methodOrder": [],
+      "methods": {},
+      "parameterTypes": [
+        "Bounds2IO",
+        "NullableIO.<Bounds2IO>"
+      ],
+      "supertype": "ObjectIO",
+      "typeName": "FunctionIO.<Bounds2IO, NullableIO.<Bounds2IO>>"
+    },
+    "FunctionIO.<Bounds2IO>": {
+      "documentation": "Wrapper for the built-in JS function type.<br><strong>Arguments:</strong> Bounds2IO<br><strong>Return Type:</strong> VoidIO",
+      "events": [],
+      "methodOrder": [],
+      "methods": {},
+      "parameterTypes": [
+        "Bounds2IO"
+      ],
+      "supertype": "ObjectIO",
+      "typeName": "FunctionIO.<Bounds2IO>"
+    },
+    "FunctionIO.<DOMEventIO>": {
+      "documentation": "Wrapper for the built-in JS function type.<br><strong>Arguments:</strong> DOMEventIO<br><strong>Return Type:</strong> VoidIO",
+      "events": [],
+      "methodOrder": [],
+      "methods": {},
+      "parameterTypes": [
+        "DOMEventIO"
+      ],
+      "supertype": "ObjectIO",
+      "typeName": "FunctionIO.<DOMEventIO>"
+    },
+    "FunctionIO.<EventIO, VoidIO, VoidIO>": {
+      "documentation": "Wrapper for the built-in JS function type.<br><strong>Arguments:</strong> EventIO, VoidIO, VoidIO<br><strong>Return Type:</strong> VoidIO",
+      "events": [],
+      "methodOrder": [],
+      "methods": {},
+      "parameterTypes": [
+        "EventIO",
+        "VoidIO",
+        "VoidIO"
+      ],
+      "supertype": "ObjectIO",
+      "typeName": "FunctionIO.<EventIO, VoidIO, VoidIO>"
+    },
+    "FunctionIO.<EventIO>": {
+      "documentation": "Wrapper for the built-in JS function type.<br><strong>Arguments:</strong> EventIO<br><strong>Return Type:</strong> VoidIO",
+      "events": [],
+      "methodOrder": [],
+      "methods": {},
+      "parameterTypes": [
+        "EventIO"
+      ],
+      "supertype": "ObjectIO",
+      "typeName": "FunctionIO.<EventIO>"
+    },
+    "FunctionIO.<NullableIO.<BooleanIO>, NullableIO.<NullableIO.<BooleanIO>>>": {
+      "documentation": "Wrapper for the built-in JS function type.<br><strong>Arguments:</strong> NullableIO.<BooleanIO>, NullableIO.<NullableIO.<BooleanIO>><br><strong>Return Type:</strong> VoidIO",
+      "events": [],
+      "methodOrder": [],
+      "methods": {},
+      "parameterTypes": [
+        "NullableIO.<BooleanIO>",
+        "NullableIO.<NullableIO.<BooleanIO>>"
+      ],
+      "supertype": "ObjectIO",
+      "typeName": "FunctionIO.<NullableIO.<BooleanIO>, NullableIO.<NullableIO.<BooleanIO>>>"
+    },
+    "FunctionIO.<NullableIO.<BooleanIO>>": {
+      "documentation": "Wrapper for the built-in JS function type.<br><strong>Arguments:</strong> NullableIO.<BooleanIO><br><strong>Return Type:</strong> VoidIO",
+      "events": [],
+      "methodOrder": [],
+      "methods": {},
+      "parameterTypes": [
+        "NullableIO.<BooleanIO>"
+      ],
+      "supertype": "ObjectIO",
+      "typeName": "FunctionIO.<NullableIO.<BooleanIO>>"
+    },
+    "FunctionIO.<NullableIO.<ControlPointIO>, NullableIO.<NullableIO.<ControlPointIO>>>": {
+      "documentation": "Wrapper for the built-in JS function type.<br><strong>Arguments:</strong> NullableIO.<ControlPointIO>, NullableIO.<NullableIO.<ControlPointIO>><br><strong>Return Type:</strong> VoidIO",
+      "events": [],
+      "methodOrder": [],
+      "methods": {},
+      "parameterTypes": [
+        "NullableIO.<ControlPointIO>",
+        "NullableIO.<NullableIO.<ControlPointIO>>"
+      ],
+      "supertype": "ObjectIO",
+      "typeName": "FunctionIO.<NullableIO.<ControlPointIO>, NullableIO.<NullableIO.<ControlPointIO>>>"
+    },
+    "FunctionIO.<NullableIO.<ControlPointIO>>": {
+      "documentation": "Wrapper for the built-in JS function type.<br><strong>Arguments:</strong> NullableIO.<ControlPointIO><br><strong>Return Type:</strong> VoidIO",
+      "events": [],
+      "methodOrder": [],
+      "methods": {},
+      "parameterTypes": [
+        "NullableIO.<ControlPointIO>"
+      ],
+      "supertype": "ObjectIO",
+      "typeName": "FunctionIO.<NullableIO.<ControlPointIO>>"
+    },
+    "FunctionIO.<NullableIO.<EventIO>, VoidIO>": {
+      "documentation": "Wrapper for the built-in JS function type.<br><strong>Arguments:</strong> NullableIO.<EventIO>, VoidIO<br><strong>Return Type:</strong> VoidIO",
+      "events": [],
+      "methodOrder": [],
+      "methods": {},
+      "parameterTypes": [
+        "NullableIO.<EventIO>",
+        "VoidIO"
+      ],
+      "supertype": "ObjectIO",
+      "typeName": "FunctionIO.<NullableIO.<EventIO>, VoidIO>"
+    },
+    "FunctionIO.<NullableIO.<FocusIO>, NullableIO.<NullableIO.<FocusIO>>>": {
+      "documentation": "Wrapper for the built-in JS function type.<br><strong>Arguments:</strong> NullableIO.<FocusIO>, NullableIO.<NullableIO.<FocusIO>><br><strong>Return Type:</strong> VoidIO",
+      "events": [],
+      "methodOrder": [],
+      "methods": {},
+      "parameterTypes": [
+        "NullableIO.<FocusIO>",
+        "NullableIO.<NullableIO.<FocusIO>>"
+      ],
+      "supertype": "ObjectIO",
+      "typeName": "FunctionIO.<NullableIO.<FocusIO>, NullableIO.<NullableIO.<FocusIO>>>"
+    },
+    "FunctionIO.<NullableIO.<FocusIO>>": {
+      "documentation": "Wrapper for the built-in JS function type.<br><strong>Arguments:</strong> NullableIO.<FocusIO><br><strong>Return Type:</strong> VoidIO",
+      "events": [],
+      "methodOrder": [],
+      "methods": {},
+      "parameterTypes": [
+        "NullableIO.<FocusIO>"
+      ],
+      "supertype": "ObjectIO",
+      "typeName": "FunctionIO.<NullableIO.<FocusIO>>"
+    },
+    "FunctionIO.<NullableIO.<NumberIO>, NullableIO.<NullableIO.<NumberIO>>>": {
+      "documentation": "Wrapper for the built-in JS function type.<br><strong>Arguments:</strong> NullableIO.<NumberIO>, NullableIO.<NullableIO.<NumberIO>><br><strong>Return Type:</strong> VoidIO",
+      "events": [],
+      "methodOrder": [],
+      "methods": {},
+      "parameterTypes": [
+        "NullableIO.<NumberIO>",
+        "NullableIO.<NullableIO.<NumberIO>>"
+      ],
+      "supertype": "ObjectIO",
+      "typeName": "FunctionIO.<NullableIO.<NumberIO>, NullableIO.<NullableIO.<NumberIO>>>"
+    },
+    "FunctionIO.<NullableIO.<NumberIO>>": {
+      "documentation": "Wrapper for the built-in JS function type.<br><strong>Arguments:</strong> NullableIO.<NumberIO><br><strong>Return Type:</strong> VoidIO",
+      "events": [],
+      "methodOrder": [],
+      "methods": {},
+      "parameterTypes": [
+        "NullableIO.<NumberIO>"
+      ],
+      "supertype": "ObjectIO",
+      "typeName": "FunctionIO.<NullableIO.<NumberIO>>"
+    },
+    "FunctionIO.<NullableIO.<TrackReferenceIO>, NullableIO.<NullableIO.<TrackReferenceIO>>>": {
+      "documentation": "Wrapper for the built-in JS function type.<br><strong>Arguments:</strong> NullableIO.<TrackReferenceIO>, NullableIO.<NullableIO.<TrackReferenceIO>><br><strong>Return Type:</strong> VoidIO",
+      "events": [],
+      "methodOrder": [],
+      "methods": {},
+      "parameterTypes": [
+        "NullableIO.<TrackReferenceIO>",
+        "NullableIO.<NullableIO.<TrackReferenceIO>>"
+      ],
+      "supertype": "ObjectIO",
+      "typeName": "FunctionIO.<NullableIO.<TrackReferenceIO>, NullableIO.<NullableIO.<TrackReferenceIO>>>"
+    },
+    "FunctionIO.<NullableIO.<TrackReferenceIO>>": {
+      "documentation": "Wrapper for the built-in JS function type.<br><strong>Arguments:</strong> NullableIO.<TrackReferenceIO><br><strong>Return Type:</strong> VoidIO",
+      "events": [],
+      "methodOrder": [],
+      "methods": {},
+      "parameterTypes": [
+        "NullableIO.<TrackReferenceIO>"
+      ],
+      "supertype": "ObjectIO",
+      "typeName": "FunctionIO.<NullableIO.<TrackReferenceIO>>"
+    },
+    "FunctionIO.<NumberIO, NullableIO.<NumberIO>>": {
+      "documentation": "Wrapper for the built-in JS function type.<br><strong>Arguments:</strong> NumberIO, NullableIO.<NumberIO><br><strong>Return Type:</strong> VoidIO",
+      "events": [],
+      "methodOrder": [],
+      "methods": {},
+      "parameterTypes": [
+        "NumberIO",
+        "NullableIO.<NumberIO>"
+      ],
+      "supertype": "ObjectIO",
+      "typeName": "FunctionIO.<NumberIO, NullableIO.<NumberIO>>"
+    },
+    "FunctionIO.<NumberIO, NumberIO>": {
+      "documentation": "Wrapper for the built-in JS function type.<br><strong>Arguments:</strong> NumberIO, NumberIO<br><strong>Return Type:</strong> VoidIO",
+      "events": [],
+      "methodOrder": [],
+      "methods": {},
+      "parameterTypes": [
+        "NumberIO",
+        "NumberIO"
+      ],
+      "supertype": "ObjectIO",
+      "typeName": "FunctionIO.<NumberIO, NumberIO>"
+    },
+    "FunctionIO.<NumberIO, Vector2IO, DOMEventIO>": {
+      "documentation": "Wrapper for the built-in JS function type.<br><strong>Arguments:</strong> NumberIO, Vector2IO, DOMEventIO<br><strong>Return Type:</strong> VoidIO",
+      "events": [],
+      "methodOrder": [],
+      "methods": {},
+      "parameterTypes": [
+        "NumberIO",
+        "Vector2IO",
+        "DOMEventIO"
+      ],
+      "supertype": "ObjectIO",
+      "typeName": "FunctionIO.<NumberIO, Vector2IO, DOMEventIO>"
+    },
+    "FunctionIO.<NumberIO>": {
+      "documentation": "Wrapper for the built-in JS function type.<br><strong>Arguments:</strong> NumberIO<br><strong>Return Type:</strong> VoidIO",
+      "events": [],
+      "methodOrder": [],
+      "methods": {},
+      "parameterTypes": [
+        "NumberIO"
+      ],
+      "supertype": "ObjectIO",
+      "typeName": "FunctionIO.<NumberIO>"
+    },
+    "FunctionIO.<ObjectIO>": {
+      "documentation": "Wrapper for the built-in JS function type.<br><strong>Arguments:</strong> ObjectIO<br><strong>Return Type:</strong> VoidIO",
+      "events": [],
+      "methodOrder": [],
+      "methods": {},
+      "parameterTypes": [
+        "ObjectIO"
+      ],
+      "supertype": "ObjectIO",
+      "typeName": "FunctionIO.<ObjectIO>"
+    },
+    "FunctionIO.<RangeIO, NullableIO.<RangeIO>>": {
+      "documentation": "Wrapper for the built-in JS function type.<br><strong>Arguments:</strong> RangeIO, NullableIO.<RangeIO><br><strong>Return Type:</strong> VoidIO",
+      "events": [],
+      "methodOrder": [],
+      "methods": {},
+      "parameterTypes": [
+        "RangeIO",
+        "NullableIO.<RangeIO>"
+      ],
+      "supertype": "ObjectIO",
+      "typeName": "FunctionIO.<RangeIO, NullableIO.<RangeIO>>"
+    },
+    "FunctionIO.<RangeIO>": {
+      "documentation": "Wrapper for the built-in JS function type.<br><strong>Arguments:</strong> RangeIO<br><strong>Return Type:</strong> VoidIO",
+      "events": [],
+      "methodOrder": [],
+      "methods": {},
+      "parameterTypes": [
+        "RangeIO"
+      ],
+      "supertype": "ObjectIO",
+      "typeName": "FunctionIO.<RangeIO>"
+    },
+    "FunctionIO.<StringIO, NullableIO.<StringIO>>": {
+      "documentation": "Wrapper for the built-in JS function type.<br><strong>Arguments:</strong> StringIO, NullableIO.<StringIO><br><strong>Return Type:</strong> VoidIO",
+      "events": [],
+      "methodOrder": [],
+      "methods": {},
+      "parameterTypes": [
+        "StringIO",
+        "NullableIO.<StringIO>"
+      ],
+      "supertype": "ObjectIO",
+      "typeName": "FunctionIO.<StringIO, NullableIO.<StringIO>>"
+    },
+    "FunctionIO.<StringIO, ObjectIO, ObjectIO, ObjectIO>": {
+      "documentation": "Wrapper for the built-in JS function type.<br><strong>Arguments:</strong> StringIO, ObjectIO, ObjectIO, ObjectIO<br><strong>Return Type:</strong> VoidIO",
+      "events": [],
+      "methodOrder": [],
+      "methods": {},
+      "parameterTypes": [
+        "StringIO",
+        "ObjectIO",
+        "ObjectIO",
+        "ObjectIO"
+      ],
+      "supertype": "ObjectIO",
+      "typeName": "FunctionIO.<StringIO, ObjectIO, ObjectIO, ObjectIO>"
+    },
+    "FunctionIO.<StringIO, StringIO>": {
+      "documentation": "Wrapper for the built-in JS function type.<br><strong>Arguments:</strong> StringIO, StringIO<br><strong>Return Type:</strong> VoidIO",
+      "events": [],
+      "methodOrder": [],
+      "methods": {},
+      "parameterTypes": [
+        "StringIO",
+        "StringIO"
+      ],
+      "supertype": "ObjectIO",
+      "typeName": "FunctionIO.<StringIO, StringIO>"
+    },
+    "FunctionIO.<StringIO>": {
+      "documentation": "Wrapper for the built-in JS function type.<br><strong>Arguments:</strong> StringIO<br><strong>Return Type:</strong> VoidIO",
+      "events": [],
+      "methodOrder": [],
+      "methods": {},
+      "parameterTypes": [
+        "StringIO"
+      ],
+      "supertype": "ObjectIO",
+      "typeName": "FunctionIO.<StringIO>"
+    },
+    "FunctionIO.<TrackIO>": {
+      "documentation": "Wrapper for the built-in JS function type.<br><strong>Arguments:</strong> TrackIO<br><strong>Return Type:</strong> VoidIO",
+      "events": [],
+      "methodOrder": [],
+      "methods": {},
+      "parameterTypes": [
+        "TrackIO"
+      ],
+      "supertype": "ObjectIO",
+      "typeName": "FunctionIO.<TrackIO>"
+    },
+    "FunctionIO.<Vector2IO, DOMEventIO>": {
+      "documentation": "Wrapper for the built-in JS function type.<br><strong>Arguments:</strong> Vector2IO, DOMEventIO<br><strong>Return Type:</strong> VoidIO",
+      "events": [],
+      "methodOrder": [],
+      "methods": {},
+      "parameterTypes": [
+        "Vector2IO",
+        "DOMEventIO"
+      ],
+      "supertype": "ObjectIO",
+      "typeName": "FunctionIO.<Vector2IO, DOMEventIO>"
+    },
+    "FunctionIO.<Vector2IO, NullableIO.<Vector2IO>>": {
+      "documentation": "Wrapper for the built-in JS function type.<br><strong>Arguments:</strong> Vector2IO, NullableIO.<Vector2IO><br><strong>Return Type:</strong> VoidIO",
+      "events": [],
+      "methodOrder": [],
+      "methods": {},
+      "parameterTypes": [
+        "Vector2IO",
+        "NullableIO.<Vector2IO>"
+      ],
+      "supertype": "ObjectIO",
+      "typeName": "FunctionIO.<Vector2IO, NullableIO.<Vector2IO>>"
+    },
+    "FunctionIO.<Vector2IO, VoidIO>": {
+      "documentation": "Wrapper for the built-in JS function type.<br><strong>Arguments:</strong> Vector2IO, VoidIO<br><strong>Return Type:</strong> VoidIO",
+      "events": [],
+      "methodOrder": [],
+      "methods": {},
+      "parameterTypes": [
+        "Vector2IO",
+        "VoidIO"
+      ],
+      "supertype": "ObjectIO",
+      "typeName": "FunctionIO.<Vector2IO, VoidIO>"
+    },
+    "FunctionIO.<Vector2IO>": {
+      "documentation": "Wrapper for the built-in JS function type.<br><strong>Arguments:</strong> Vector2IO<br><strong>Return Type:</strong> VoidIO",
+      "events": [],
+      "methodOrder": [],
+      "methods": {},
+      "parameterTypes": [
+        "Vector2IO"
+      ],
+      "supertype": "ObjectIO",
+      "typeName": "FunctionIO.<Vector2IO>"
+    },
     "LinkedElementIO": {
       "documentation": "A LinkedElement",
       "events": [],
@@ -454,6 +919,179 @@ window.phet.phetio.phetioTypes = assert &&
       "methods": {},
       "supertype": "ObjectIO",
       "typeName": "NodeIO"
+    },
+    "NullableIO.<BooleanIO>": {
+      "documentation": "A wrapper to wrap another IOType, adding support for null.",
+      "events": [],
+      "methodOrder": [],
+      "methods": {},
+      "parameterTypes": [
+        "BooleanIO"
+      ],
+      "supertype": "ObjectIO",
+      "typeName": "NullableIO.<BooleanIO>"
+    },
+    "NullableIO.<Bounds2IO>": {
+      "documentation": "A wrapper to wrap another IOType, adding support for null.",
+      "events": [],
+      "methodOrder": [],
+      "methods": {},
+      "parameterTypes": [
+        "Bounds2IO"
+      ],
+      "supertype": "ObjectIO",
+      "typeName": "NullableIO.<Bounds2IO>"
+    },
+    "NullableIO.<ControlPointIO>": {
+      "documentation": "A wrapper to wrap another IOType, adding support for null.",
+      "events": [],
+      "methodOrder": [],
+      "methods": {},
+      "parameterTypes": [
+        "ControlPointIO"
+      ],
+      "supertype": "ObjectIO",
+      "typeName": "NullableIO.<ControlPointIO>"
+    },
+    "NullableIO.<EventIO>": {
+      "documentation": "A wrapper to wrap another IOType, adding support for null.",
+      "events": [],
+      "methodOrder": [],
+      "methods": {},
+      "parameterTypes": [
+        "EventIO"
+      ],
+      "supertype": "ObjectIO",
+      "typeName": "NullableIO.<EventIO>"
+    },
+    "NullableIO.<FocusIO>": {
+      "documentation": "A wrapper to wrap another IOType, adding support for null.",
+      "events": [],
+      "methodOrder": [],
+      "methods": {},
+      "parameterTypes": [
+        "FocusIO"
+      ],
+      "supertype": "ObjectIO",
+      "typeName": "NullableIO.<FocusIO>"
+    },
+    "NullableIO.<NullableIO.<BooleanIO>>": {
+      "documentation": "A wrapper to wrap another IOType, adding support for null.",
+      "events": [],
+      "methodOrder": [],
+      "methods": {},
+      "parameterTypes": [
+        "NullableIO.<BooleanIO>"
+      ],
+      "supertype": "ObjectIO",
+      "typeName": "NullableIO.<NullableIO.<BooleanIO>>"
+    },
+    "NullableIO.<NullableIO.<ControlPointIO>>": {
+      "documentation": "A wrapper to wrap another IOType, adding support for null.",
+      "events": [],
+      "methodOrder": [],
+      "methods": {},
+      "parameterTypes": [
+        "NullableIO.<ControlPointIO>"
+      ],
+      "supertype": "ObjectIO",
+      "typeName": "NullableIO.<NullableIO.<ControlPointIO>>"
+    },
+    "NullableIO.<NullableIO.<FocusIO>>": {
+      "documentation": "A wrapper to wrap another IOType, adding support for null.",
+      "events": [],
+      "methodOrder": [],
+      "methods": {},
+      "parameterTypes": [
+        "NullableIO.<FocusIO>"
+      ],
+      "supertype": "ObjectIO",
+      "typeName": "NullableIO.<NullableIO.<FocusIO>>"
+    },
+    "NullableIO.<NullableIO.<NumberIO>>": {
+      "documentation": "A wrapper to wrap another IOType, adding support for null.",
+      "events": [],
+      "methodOrder": [],
+      "methods": {},
+      "parameterTypes": [
+        "NullableIO.<NumberIO>"
+      ],
+      "supertype": "ObjectIO",
+      "typeName": "NullableIO.<NullableIO.<NumberIO>>"
+    },
+    "NullableIO.<NullableIO.<TrackReferenceIO>>": {
+      "documentation": "A wrapper to wrap another IOType, adding support for null.",
+      "events": [],
+      "methodOrder": [],
+      "methods": {},
+      "parameterTypes": [
+        "NullableIO.<TrackReferenceIO>"
+      ],
+      "supertype": "ObjectIO",
+      "typeName": "NullableIO.<NullableIO.<TrackReferenceIO>>"
+    },
+    "NullableIO.<NumberIO>": {
+      "documentation": "A wrapper to wrap another IOType, adding support for null.",
+      "events": [],
+      "methodOrder": [],
+      "methods": {},
+      "parameterTypes": [
+        "NumberIO"
+      ],
+      "supertype": "ObjectIO",
+      "typeName": "NullableIO.<NumberIO>"
+    },
+    "NullableIO.<RangeIO>": {
+      "documentation": "A wrapper to wrap another IOType, adding support for null.",
+      "events": [],
+      "methodOrder": [],
+      "methods": {},
+      "parameterTypes": [
+        "RangeIO"
+      ],
+      "supertype": "ObjectIO",
+      "typeName": "NullableIO.<RangeIO>"
+    },
+    "NullableIO.<StringIO>": {
+      "documentation": "A wrapper to wrap another IOType, adding support for null.",
+      "events": [],
+      "methodOrder": [],
+      "methods": {},
+      "parameterTypes": [
+        "StringIO"
+      ],
+      "supertype": "ObjectIO",
+      "typeName": "NullableIO.<StringIO>"
+    },
+    "NullableIO.<TrackReferenceIO>": {
+      "documentation": "A wrapper to wrap another IOType, adding support for null.",
+      "events": [],
+      "methodOrder": [],
+      "methods": {},
+      "parameterTypes": [
+        "TrackReferenceIO"
+      ],
+      "supertype": "ObjectIO",
+      "typeName": "NullableIO.<TrackReferenceIO>"
+    },
+    "NullableIO.<Vector2IO>": {
+      "documentation": "A wrapper to wrap another IOType, adding support for null.",
+      "events": [],
+      "methodOrder": [],
+      "methods": {},
+      "parameterTypes": [
+        "Vector2IO"
+      ],
+      "supertype": "ObjectIO",
+      "typeName": "NullableIO.<Vector2IO>"
+    },
+    "NumberIO": {
+      "documentation": "Wrapper for the built-in JS number type (floating point, but also represents integers)",
+      "events": [],
+      "methodOrder": [],
+      "methods": {},
+      "supertype": "ObjectIO",
+      "typeName": "NumberIO"
     },
     "NumberPropertyIO": {
       "documentation": "Extends PropertyIO to add values for the numeric range ( min, max ) and numberType ( 'FloatingPoint' | 'Integer' )",
@@ -543,6 +1181,7 @@ window.phet.phetio.phetioTypes = assert &&
         "addEventListener",
         "getScreenshotDataURL",
         "getPhetioIDs",
+        "getPhetioTypes",
         "getValues",
         "getState",
         "setState",
@@ -613,6 +1252,11 @@ window.phet.phetio.phetioTypes = assert &&
         },
         "getPhetioIDs": {
           "documentation": "Gets a list of all of the PhET-iO elements.",
+          "parameterTypes": [],
+          "returnType": "ArrayIO.<StringIO>"
+        },
+        "getPhetioTypes": {
+          "documentation": "Gets a list of all of the PhET-iO types. This list includes types that have no PhET-iO elements associated with it, but may be a supertype, or a method parameter or return type.",
           "parameterTypes": [],
           "returnType": "ArrayIO.<StringIO>"
         },
@@ -1310,6 +1954,14 @@ window.phet.phetio.phetioTypes = assert &&
       "supertype": "ObjectIO",
       "typeName": "PropertyIO.<Vector2IO>"
     },
+    "RangeIO": {
+      "documentation": "A range with \"min\" and a \"max\" members.",
+      "events": [],
+      "methodOrder": [],
+      "methods": {},
+      "supertype": "ObjectIO",
+      "typeName": "RangeIO"
+    },
     "SliderIO": {
       "documentation": "A traditional slider component, with a knob and possibly tick marks",
       "events": [],
@@ -1334,6 +1986,14 @@ window.phet.phetio.phetioTypes = assert &&
       },
       "supertype": "NodeIO",
       "typeName": "SliderIO"
+    },
+    "StringIO": {
+      "documentation": "Wrapper for the built-in JS string type",
+      "events": [],
+      "methodOrder": [],
+      "methods": {},
+      "supertype": "ObjectIO",
+      "typeName": "StringIO"
     },
     "TextIO": {
       "documentation": "Text that is displayed in the simulation. TextIO has a nested PropertyIO.&lt;String&gt; for the current string value.",
@@ -1387,5 +2047,29 @@ window.phet.phetio.phetioTypes = assert &&
       "methods": {},
       "supertype": "ObjectIO",
       "typeName": "TrackIO"
+    },
+    "TrackReferenceIO": {
+      "documentation": "The root of the wrapper object hierarchy.",
+      "events": [],
+      "methodOrder": [],
+      "methods": {},
+      "supertype": "ObjectIO",
+      "typeName": "TrackReferenceIO"
+    },
+    "Vector2IO": {
+      "documentation": "A numerical object with x and y properties, like {x:3,y:4}",
+      "events": [],
+      "methodOrder": [],
+      "methods": {},
+      "supertype": "ObjectIO",
+      "typeName": "Vector2IO"
+    },
+    "VoidIO": {
+      "documentation": "Type for which there is no instance, usually to mark functions without a return value",
+      "events": [],
+      "methodOrder": [],
+      "methods": {},
+      "supertype": "ObjectIO",
+      "typeName": "VoidIO"
     }
   };
