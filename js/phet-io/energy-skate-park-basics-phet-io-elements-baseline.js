@@ -848,17 +848,6 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO.<Vector2IO>"
     },
-    "energySkateParkBasics.frictionScreen.model.frictionModel.trackSetModel.detachableProperty": {
-      "phetioDocumentation": "",
-      "phetioEventType": "model",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": true,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
-    },
     "energySkateParkBasics.frictionScreen.model.frictionModel.trackSetModel.editButtonEnabledProperty": {
       "phetioDocumentation": "",
       "phetioEventType": "model",
@@ -1234,6 +1223,17 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "PropertyIO.<BooleanIO>"
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.trackSetModel.speedometerVisibleProperty": {
+      "phetioDocumentation": "",
+      "phetioEventType": "model",
+      "phetioFeatured": false,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": true,
+      "phetioStudioControl": true,
+      "phetioTypeName": "PropertyIO.<BooleanIO>"
+    },
+    "energySkateParkBasics.frictionScreen.model.frictionModel.trackSetModel.stickingToTrackProperty": {
       "phetioDocumentation": "",
       "phetioEventType": "model",
       "phetioFeatured": false,
@@ -9450,17 +9450,6 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO.<Vector2IO>"
     },
-    "energySkateParkBasics.introScreen.model.trackSetModel.detachableProperty": {
-      "phetioDocumentation": "",
-      "phetioEventType": "model",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": true,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
-    },
     "energySkateParkBasics.introScreen.model.trackSetModel.editButtonEnabledProperty": {
       "phetioDocumentation": "",
       "phetioEventType": "model",
@@ -9836,6 +9825,17 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "PropertyIO.<BooleanIO>"
     },
     "energySkateParkBasics.introScreen.model.trackSetModel.speedometerVisibleProperty": {
+      "phetioDocumentation": "",
+      "phetioEventType": "model",
+      "phetioFeatured": false,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": true,
+      "phetioStudioControl": true,
+      "phetioTypeName": "PropertyIO.<BooleanIO>"
+    },
+    "energySkateParkBasics.introScreen.model.trackSetModel.stickingToTrackProperty": {
       "phetioDocumentation": "",
       "phetioEventType": "model",
       "phetioFeatured": false,
@@ -15170,17 +15170,6 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO.<Vector2IO>"
     },
-    "energySkateParkBasics.playgroundScreen.model.playgroundModel.detachableProperty": {
-      "phetioDocumentation": "",
-      "phetioEventType": "model",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": true,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
-    },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.editButtonEnabledProperty": {
       "phetioDocumentation": "",
       "phetioEventType": "model",
@@ -15556,6 +15545,17 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "PropertyIO.<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.speedometerVisibleProperty": {
+      "phetioDocumentation": "",
+      "phetioEventType": "model",
+      "phetioFeatured": false,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": true,
+      "phetioStudioControl": true,
+      "phetioTypeName": "PropertyIO.<BooleanIO>"
+    },
+    "energySkateParkBasics.playgroundScreen.model.playgroundModel.stickingToTrackProperty": {
       "phetioDocumentation": "",
       "phetioEventType": "model",
       "phetioFeatured": false,
