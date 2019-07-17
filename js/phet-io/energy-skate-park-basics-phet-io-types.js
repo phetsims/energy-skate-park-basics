@@ -482,14 +482,6 @@ window.phet.phetio.phetioTypes = assert &&
       "supertype": "ObjectIO",
       "typeName": "EventIO"
     },
-    "FocusIO": {
-      "documentation": "A IO type for the instance in the simulation which currently has keyboard focus.",
-      "events": [],
-      "methodOrder": [],
-      "methods": {},
-      "supertype": "ObjectIO",
-      "typeName": "FocusIO"
-    },
     "FontIO": {
       "documentation": "Font handling for text drawing. Options:<ul><li><strong>style:</strong> normal      &mdash; normal | italic | oblique </li><li><strong>variant:</strong> normal    &mdash; normal | small-caps </li><li><strong>weight:</strong> normal     &mdash; normal | bold | bolder | lighter | 100 | 200 | 300 | 400 | 500 | 600 | 700 | 800 | 900 </li><li><strong>stretch:</strong> normal    &mdash; normal | ultra-condensed | extra-condensed | condensed | semi-condensed | semi-expanded | expanded | extra-expanded | ultra-expanded </li><li><strong>size:</strong> 10px         &mdash; absolute-size | relative-size | length | percentage -- unitless number interpreted as px. absolute suffixes: cm, mm, in, pt, pc, px. relative suffixes: em, ex, ch, rem, vw, vh, vmin, vmax. </li><li><strong>lineHeight:</strong> normal &mdash; normal | number | length | percentage -- NOTE: Canvas spec forces line-height to normal </li><li><strong>family:</strong> sans-serif &mdash; comma-separated list of families, including generic families (serif, sans-serif, cursive, fantasy, monospace). ideally escape with double-quotes</li></ul>",
       "events": [],
@@ -930,17 +922,6 @@ window.phet.phetio.phetioTypes = assert &&
       "supertype": "ObjectIO",
       "typeName": "NullableIO.<BooleanIO>"
     },
-    "NullableIO.<Bounds2IO>": {
-      "documentation": "A wrapper to wrap another IOType, adding support for null.",
-      "events": [],
-      "methodOrder": [],
-      "methods": {},
-      "parameterTypes": [
-        "Bounds2IO"
-      ],
-      "supertype": "ObjectIO",
-      "typeName": "NullableIO.<Bounds2IO>"
-    },
     "NullableIO.<ControlPointIO>": {
       "documentation": "A wrapper to wrap another IOType, adding support for null.",
       "events": [],
@@ -974,61 +955,6 @@ window.phet.phetio.phetioTypes = assert &&
       "supertype": "ObjectIO",
       "typeName": "NullableIO.<FocusIO>"
     },
-    "NullableIO.<NullableIO.<BooleanIO>>": {
-      "documentation": "A wrapper to wrap another IOType, adding support for null.",
-      "events": [],
-      "methodOrder": [],
-      "methods": {},
-      "parameterTypes": [
-        "NullableIO.<BooleanIO>"
-      ],
-      "supertype": "ObjectIO",
-      "typeName": "NullableIO.<NullableIO.<BooleanIO>>"
-    },
-    "NullableIO.<NullableIO.<ControlPointIO>>": {
-      "documentation": "A wrapper to wrap another IOType, adding support for null.",
-      "events": [],
-      "methodOrder": [],
-      "methods": {},
-      "parameterTypes": [
-        "NullableIO.<ControlPointIO>"
-      ],
-      "supertype": "ObjectIO",
-      "typeName": "NullableIO.<NullableIO.<ControlPointIO>>"
-    },
-    "NullableIO.<NullableIO.<FocusIO>>": {
-      "documentation": "A wrapper to wrap another IOType, adding support for null.",
-      "events": [],
-      "methodOrder": [],
-      "methods": {},
-      "parameterTypes": [
-        "NullableIO.<FocusIO>"
-      ],
-      "supertype": "ObjectIO",
-      "typeName": "NullableIO.<NullableIO.<FocusIO>>"
-    },
-    "NullableIO.<NullableIO.<NumberIO>>": {
-      "documentation": "A wrapper to wrap another IOType, adding support for null.",
-      "events": [],
-      "methodOrder": [],
-      "methods": {},
-      "parameterTypes": [
-        "NullableIO.<NumberIO>"
-      ],
-      "supertype": "ObjectIO",
-      "typeName": "NullableIO.<NullableIO.<NumberIO>>"
-    },
-    "NullableIO.<NullableIO.<TrackReferenceIO>>": {
-      "documentation": "A wrapper to wrap another IOType, adding support for null.",
-      "events": [],
-      "methodOrder": [],
-      "methods": {},
-      "parameterTypes": [
-        "NullableIO.<TrackReferenceIO>"
-      ],
-      "supertype": "ObjectIO",
-      "typeName": "NullableIO.<NullableIO.<TrackReferenceIO>>"
-    },
     "NullableIO.<NumberIO>": {
       "documentation": "A wrapper to wrap another IOType, adding support for null.",
       "events": [],
@@ -1039,17 +965,6 @@ window.phet.phetio.phetioTypes = assert &&
       ],
       "supertype": "ObjectIO",
       "typeName": "NullableIO.<NumberIO>"
-    },
-    "NullableIO.<RangeIO>": {
-      "documentation": "A wrapper to wrap another IOType, adding support for null.",
-      "events": [],
-      "methodOrder": [],
-      "methods": {},
-      "parameterTypes": [
-        "RangeIO"
-      ],
-      "supertype": "ObjectIO",
-      "typeName": "NullableIO.<RangeIO>"
     },
     "NullableIO.<StringIO>": {
       "documentation": "A wrapper to wrap another IOType, adding support for null.",
@@ -1072,17 +987,6 @@ window.phet.phetio.phetioTypes = assert &&
       ],
       "supertype": "ObjectIO",
       "typeName": "NullableIO.<TrackReferenceIO>"
-    },
-    "NullableIO.<Vector2IO>": {
-      "documentation": "A wrapper to wrap another IOType, adding support for null.",
-      "events": [],
-      "methodOrder": [],
-      "methods": {},
-      "parameterTypes": [
-        "Vector2IO"
-      ],
-      "supertype": "ObjectIO",
-      "typeName": "NullableIO.<Vector2IO>"
     },
     "NumberIO": {
       "documentation": "Wrapper for the built-in JS number type (floating point, but also represents integers)",
@@ -2035,14 +1939,6 @@ window.phet.phetio.phetioTypes = assert &&
       "methods": {},
       "supertype": "ObjectIO",
       "typeName": "TrackIO"
-    },
-    "TrackReferenceIO": {
-      "documentation": "The root of the wrapper object hierarchy.",
-      "events": [],
-      "methodOrder": [],
-      "methods": {},
-      "supertype": "ObjectIO",
-      "typeName": "TrackReferenceIO"
     },
     "Vector2IO": {
       "documentation": "A numerical object with x and y properties, like {x:3,y:4}",
