@@ -3,6 +3,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
   {
     "energySkateParkBasics.frictionScreen.activeProperty": {
       "phetioDocumentation": "Indicates whether the screen is active.  For single-screen simulations, the screen is always active.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -14,6 +15,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.doubleWellTrack": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -25,6 +27,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.doubleWellTrack.draggingProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -36,6 +39,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.doubleWellTrack.droppedProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -47,6 +51,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.doubleWellTrack.leftThePanelProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -58,6 +63,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.doubleWellTrack.physicalProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -69,6 +75,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.parabolaTrack": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -80,6 +87,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.parabolaTrack.draggingProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -91,6 +99,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.parabolaTrack.droppedProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -102,6 +111,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.parabolaTrack.leftThePanelProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -113,6 +123,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.parabolaTrack.physicalProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -124,6 +135,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.sceneProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -135,6 +147,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.slopeTrack": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -146,6 +159,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.slopeTrack.draggingProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -157,6 +171,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.slopeTrack.droppedProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -168,6 +183,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.slopeTrack.leftThePanelProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -179,6 +195,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.slopeTrack.physicalProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -190,6 +207,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.trackSetModel": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -201,6 +219,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.trackSetModel.availableModelBoundsProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -212,6 +231,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.trackSetModel.barGraphScaleProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -223,6 +243,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.trackSetModel.barGraphVisibleProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -234,6 +255,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.trackSetModel.clearButtonEnabledProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -245,6 +267,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.trackSetModel.controlPoint~0": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -256,6 +279,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.trackSetModel.controlPoint~0.draggingProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -267,6 +291,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.trackSetModel.controlPoint~0.positionProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -278,6 +303,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.trackSetModel.controlPoint~0.snapTargetProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -289,6 +315,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.trackSetModel.controlPoint~0.sourcePositionProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -300,6 +327,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.trackSetModel.controlPoint~1": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -311,6 +339,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.trackSetModel.controlPoint~1.draggingProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -322,6 +351,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.trackSetModel.controlPoint~1.positionProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -333,6 +363,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.trackSetModel.controlPoint~1.snapTargetProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -344,6 +375,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.trackSetModel.controlPoint~1.sourcePositionProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -355,6 +387,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.trackSetModel.controlPoint~10": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -366,6 +399,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.trackSetModel.controlPoint~10.draggingProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -377,6 +411,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.trackSetModel.controlPoint~10.positionProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -388,6 +423,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.trackSetModel.controlPoint~10.snapTargetProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -399,6 +435,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.trackSetModel.controlPoint~10.sourcePositionProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -410,6 +447,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.trackSetModel.controlPoint~2": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -421,6 +459,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.trackSetModel.controlPoint~2.draggingProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -432,6 +471,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.trackSetModel.controlPoint~2.positionProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -443,6 +483,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.trackSetModel.controlPoint~2.snapTargetProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -454,6 +495,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.trackSetModel.controlPoint~2.sourcePositionProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -465,6 +507,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.trackSetModel.controlPoint~3": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -476,6 +519,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.trackSetModel.controlPoint~3.draggingProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -487,6 +531,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.trackSetModel.controlPoint~3.positionProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -498,6 +543,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.trackSetModel.controlPoint~3.snapTargetProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -509,6 +555,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.trackSetModel.controlPoint~3.sourcePositionProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -520,6 +567,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.trackSetModel.controlPoint~4": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -531,6 +579,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.trackSetModel.controlPoint~4.draggingProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -542,6 +591,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.trackSetModel.controlPoint~4.positionProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -553,6 +603,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.trackSetModel.controlPoint~4.snapTargetProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -564,6 +615,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.trackSetModel.controlPoint~4.sourcePositionProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -575,6 +627,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.trackSetModel.controlPoint~5": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -586,6 +639,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.trackSetModel.controlPoint~5.draggingProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -597,6 +651,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.trackSetModel.controlPoint~5.positionProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -608,6 +663,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.trackSetModel.controlPoint~5.snapTargetProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -619,6 +675,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.trackSetModel.controlPoint~5.sourcePositionProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -630,6 +687,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.trackSetModel.controlPoint~6": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -641,6 +699,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.trackSetModel.controlPoint~6.draggingProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -652,6 +711,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.trackSetModel.controlPoint~6.positionProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -663,6 +723,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.trackSetModel.controlPoint~6.snapTargetProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -674,6 +735,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.trackSetModel.controlPoint~6.sourcePositionProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -685,6 +747,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.trackSetModel.controlPoint~7": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -696,6 +759,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.trackSetModel.controlPoint~7.draggingProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -707,6 +771,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.trackSetModel.controlPoint~7.positionProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -718,6 +783,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.trackSetModel.controlPoint~7.snapTargetProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -729,6 +795,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.trackSetModel.controlPoint~7.sourcePositionProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -740,6 +807,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.trackSetModel.controlPoint~8": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -751,6 +819,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.trackSetModel.controlPoint~8.draggingProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -762,6 +831,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.trackSetModel.controlPoint~8.positionProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -773,6 +843,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.trackSetModel.controlPoint~8.snapTargetProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -784,6 +855,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.trackSetModel.controlPoint~8.sourcePositionProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -795,6 +867,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.trackSetModel.controlPoint~9": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -806,6 +879,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.trackSetModel.controlPoint~9.draggingProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -817,6 +891,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.trackSetModel.controlPoint~9.positionProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -828,6 +903,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.trackSetModel.controlPoint~9.snapTargetProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -839,6 +915,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.trackSetModel.controlPoint~9.sourcePositionProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -850,6 +927,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.trackSetModel.editButtonEnabledProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -861,6 +939,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.trackSetModel.frictionProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -872,6 +951,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.trackSetModel.gridVisibleProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -883,6 +963,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.trackSetModel.measuringTapeBasePositionProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -894,6 +975,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.trackSetModel.measuringTapeTipPositionProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -905,6 +987,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.trackSetModel.measuringTapeVisibleProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -916,6 +999,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.trackSetModel.pausedProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -927,6 +1011,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.trackSetModel.pieChartVisibleProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -938,6 +1023,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.trackSetModel.referenceHeightVisibleProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -949,6 +1035,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.trackSetModel.skater.allowClearingThermalEnergyProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -960,6 +1047,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.trackSetModel.skater.angleProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -971,6 +1059,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.trackSetModel.skater.directionProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -982,6 +1071,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.trackSetModel.skater.draggingProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -993,6 +1083,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.trackSetModel.skater.gravityMagnitudeProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -1004,6 +1095,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.trackSetModel.skater.headPositionProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -1015,6 +1107,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.trackSetModel.skater.kineticEnergyProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -1026,6 +1119,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.trackSetModel.skater.massProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -1037,6 +1131,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.trackSetModel.skater.movedProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -1048,6 +1143,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.trackSetModel.skater.onTopSideOfTrackProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -1059,6 +1155,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.trackSetModel.skater.parametricPositionProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -1070,6 +1167,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.trackSetModel.skater.parametricSpeedProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -1081,6 +1179,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.trackSetModel.skater.positionProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -1092,6 +1191,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.trackSetModel.skater.potentialEnergyProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -1103,6 +1203,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.trackSetModel.skater.referenceHeightProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -1114,6 +1215,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.trackSetModel.skater.speedProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -1125,6 +1227,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.trackSetModel.skater.startingPositionProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -1136,6 +1239,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.trackSetModel.skater.startingUProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -1147,6 +1251,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.trackSetModel.skater.startingUpProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -1158,6 +1263,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.trackSetModel.skater.thermalEnergyProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -1169,6 +1275,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.trackSetModel.skater.totalEnergyProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -1180,6 +1287,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.trackSetModel.skater.trackProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -1191,6 +1299,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.trackSetModel.skater.velocityProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -1202,6 +1311,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.trackSetModel.speedProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -1213,6 +1323,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.trackSetModel.speedValueVisibleProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -1224,6 +1335,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.trackSetModel.speedometerVisibleProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -1235,6 +1347,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.trackSetModel.stickingToTrackProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -1246,6 +1359,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.trackSetModel.tracks": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -1257,6 +1371,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.trackSetModel.tracks.lengthProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -1268,6 +1383,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.frictionSlider": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -1279,6 +1395,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.frictionSlider.enabledProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": true,
       "phetioHighFrequency": false,
@@ -1290,6 +1407,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.frictionSlider.enabledRangeProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -1301,6 +1419,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.frictionSlider.maxLabel": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -1312,6 +1431,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.frictionSlider.maxLabel.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -1323,6 +1443,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.frictionSlider.maxLabel.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -1334,6 +1455,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.frictionSlider.maxLabel.textProperty": {
       "phetioDocumentation": "Property for the displayed text",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -1345,6 +1467,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.frictionSlider.maxLabel.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -1356,6 +1479,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.frictionSlider.minLabel": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -1367,6 +1491,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.frictionSlider.minLabel.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -1378,6 +1503,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.frictionSlider.minLabel.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -1389,6 +1515,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.frictionSlider.minLabel.textProperty": {
       "phetioDocumentation": "Property for the displayed text",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -1400,6 +1527,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.frictionSlider.minLabel.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -1411,6 +1539,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.frictionSlider.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -1422,6 +1551,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.frictionSlider.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -1433,6 +1563,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.frictionSlider.thumb": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -1444,6 +1575,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.frictionSlider.thumb.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -1455,6 +1587,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.frictionSlider.thumb.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -1466,6 +1599,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.frictionSlider.thumb.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -1477,6 +1611,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.frictionSlider.thumbInputListener": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -1488,6 +1623,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.frictionSlider.thumbInputListener.dragAction": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": true,
@@ -1499,6 +1635,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.frictionSlider.thumbInputListener.dragEndAction": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -1510,6 +1647,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.frictionSlider.thumbInputListener.dragStartAction": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -1521,6 +1659,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.frictionSlider.thumbInputListener.isDraggingProperty": {
       "phetioDocumentation": "Indicates whether the object is dragging",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -1532,6 +1671,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.frictionSlider.titleString": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -1543,6 +1683,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.frictionSlider.titleString.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -1554,6 +1695,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.frictionSlider.titleString.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -1565,6 +1707,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.frictionSlider.titleString.textProperty": {
       "phetioDocumentation": "Property for the displayed text",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -1576,6 +1719,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.frictionSlider.titleString.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -1587,6 +1731,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.frictionSlider.track.trackInputListener": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -1598,6 +1743,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.frictionSlider.track.trackInputListener.dragAction": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": true,
@@ -1609,6 +1755,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.frictionSlider.track.trackInputListener.dragEndAction": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -1620,6 +1767,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.frictionSlider.track.trackInputListener.dragStartAction": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -1631,6 +1779,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.frictionSlider.track.trackInputListener.isDraggingProperty": {
       "phetioDocumentation": "Indicates whether the object is dragging",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -1642,6 +1791,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.frictionSlider.valueProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -1653,6 +1803,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.frictionSlider.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": true,
       "phetioHighFrequency": false,
@@ -1664,6 +1815,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -1675,6 +1827,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.backgroundNode": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -1686,6 +1839,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.backgroundNode.mountainImage": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -1697,6 +1851,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.backgroundNode.mountainImage.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -1708,6 +1863,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.backgroundNode.mountainImage.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -1719,6 +1875,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.backgroundNode.mountainImage.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -1730,6 +1887,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.backgroundNode.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -1741,6 +1899,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.backgroundNode.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -1752,6 +1911,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.backgroundNode.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -1763,6 +1923,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -1774,6 +1935,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -1785,6 +1947,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -1796,6 +1959,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.sceneSelectionRadioButtonGroup": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -1807,6 +1971,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.sceneSelectionRadioButtonGroup.contentNode0": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -1818,6 +1983,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.sceneSelectionRadioButtonGroup.contentNode0.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -1829,6 +1995,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.sceneSelectionRadioButtonGroup.contentNode0.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -1840,6 +2007,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.sceneSelectionRadioButtonGroup.contentNode0.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -1851,6 +2019,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.sceneSelectionRadioButtonGroup.contentNode1": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -1862,6 +2031,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.sceneSelectionRadioButtonGroup.contentNode1.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -1873,6 +2043,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.sceneSelectionRadioButtonGroup.contentNode1.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -1884,6 +2055,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.sceneSelectionRadioButtonGroup.contentNode1.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -1895,6 +2067,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.sceneSelectionRadioButtonGroup.contentNode2": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -1906,6 +2079,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.sceneSelectionRadioButtonGroup.contentNode2.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -1917,6 +2091,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.sceneSelectionRadioButtonGroup.contentNode2.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -1928,6 +2103,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.sceneSelectionRadioButtonGroup.contentNode2.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -1939,6 +2115,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.sceneSelectionRadioButtonGroup.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -1950,6 +2127,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.sceneSelectionRadioButtonGroup.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -1961,6 +2139,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.sceneSelectionRadioButtonGroup.scene1RadioButton": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -1972,6 +2151,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.sceneSelectionRadioButtonGroup.scene1RadioButton.enabledProperty": {
       "phetioDocumentation": "When disabled, the button is grayed out and cannot be pressed",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": true,
       "phetioHighFrequency": false,
@@ -1983,6 +2163,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.sceneSelectionRadioButtonGroup.scene1RadioButton.firedEmitter": {
       "phetioDocumentation": "Emits when the radio button is pressed",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -1994,6 +2175,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.sceneSelectionRadioButtonGroup.scene1RadioButton.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -2005,6 +2187,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.sceneSelectionRadioButtonGroup.scene1RadioButton.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -2016,6 +2199,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.sceneSelectionRadioButtonGroup.scene1RadioButton.pressListener.pressAction": {
       "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event.",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -2027,6 +2211,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.sceneSelectionRadioButtonGroup.scene1RadioButton.pressListener.releaseAction": {
       "phetioDocumentation": "Executes whenever a release occurs.",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -2038,6 +2223,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.sceneSelectionRadioButtonGroup.scene1RadioButton.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": true,
       "phetioHighFrequency": false,
@@ -2049,6 +2235,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.sceneSelectionRadioButtonGroup.scene2RadioButton": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -2060,6 +2247,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.sceneSelectionRadioButtonGroup.scene2RadioButton.enabledProperty": {
       "phetioDocumentation": "When disabled, the button is grayed out and cannot be pressed",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": true,
       "phetioHighFrequency": false,
@@ -2071,6 +2259,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.sceneSelectionRadioButtonGroup.scene2RadioButton.firedEmitter": {
       "phetioDocumentation": "Emits when the radio button is pressed",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -2082,6 +2271,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.sceneSelectionRadioButtonGroup.scene2RadioButton.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -2093,6 +2283,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.sceneSelectionRadioButtonGroup.scene2RadioButton.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -2104,6 +2295,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.sceneSelectionRadioButtonGroup.scene2RadioButton.pressListener.pressAction": {
       "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event.",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -2115,6 +2307,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.sceneSelectionRadioButtonGroup.scene2RadioButton.pressListener.releaseAction": {
       "phetioDocumentation": "Executes whenever a release occurs.",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -2126,6 +2319,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.sceneSelectionRadioButtonGroup.scene2RadioButton.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": true,
       "phetioHighFrequency": false,
@@ -2137,6 +2331,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.sceneSelectionRadioButtonGroup.scene3RadioButton": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -2148,6 +2343,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.sceneSelectionRadioButtonGroup.scene3RadioButton.enabledProperty": {
       "phetioDocumentation": "When disabled, the button is grayed out and cannot be pressed",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": true,
       "phetioHighFrequency": false,
@@ -2159,6 +2355,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.sceneSelectionRadioButtonGroup.scene3RadioButton.firedEmitter": {
       "phetioDocumentation": "Emits when the radio button is pressed",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -2170,6 +2367,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.sceneSelectionRadioButtonGroup.scene3RadioButton.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -2181,6 +2379,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.sceneSelectionRadioButtonGroup.scene3RadioButton.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -2192,6 +2391,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.sceneSelectionRadioButtonGroup.scene3RadioButton.pressListener.pressAction": {
       "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event.",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -2203,6 +2403,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.sceneSelectionRadioButtonGroup.scene3RadioButton.pressListener.releaseAction": {
       "phetioDocumentation": "Executes whenever a release occurs.",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -2214,6 +2415,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.sceneSelectionRadioButtonGroup.scene3RadioButton.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": true,
       "phetioHighFrequency": false,
@@ -2225,6 +2427,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.sceneSelectionRadioButtonGroup.trackNode0": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -2236,6 +2439,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.sceneSelectionRadioButtonGroup.trackNode0.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -2247,6 +2451,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.sceneSelectionRadioButtonGroup.trackNode0.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -2258,6 +2463,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.sceneSelectionRadioButtonGroup.trackNode0.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -2269,6 +2475,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.sceneSelectionRadioButtonGroup.trackNode1": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -2280,6 +2487,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.sceneSelectionRadioButtonGroup.trackNode1.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -2291,6 +2499,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.sceneSelectionRadioButtonGroup.trackNode1.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -2302,6 +2511,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.sceneSelectionRadioButtonGroup.trackNode1.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -2313,6 +2523,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.sceneSelectionRadioButtonGroup.trackNode2": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -2324,6 +2535,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.sceneSelectionRadioButtonGroup.trackNode2.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -2335,6 +2547,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.sceneSelectionRadioButtonGroup.trackNode2.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -2346,6 +2559,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.sceneSelectionRadioButtonGroup.trackNode2.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -2357,6 +2571,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.sceneSelectionRadioButtonGroup.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": true,
       "phetioHighFrequency": false,
@@ -2368,6 +2583,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.visibilityControls.barGraphCheckbox": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -2379,6 +2595,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.visibilityControls.barGraphCheckbox.enabledProperty": {
       "phetioDocumentation": "When disabled, the checkbox is grayed out and cannot be pressed.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": true,
       "phetioHighFrequency": false,
@@ -2390,6 +2607,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.visibilityControls.barGraphCheckbox.itemLabel": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -2401,6 +2619,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.visibilityControls.barGraphCheckbox.itemLabel.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -2412,6 +2631,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.visibilityControls.barGraphCheckbox.itemLabel.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -2423,6 +2643,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.visibilityControls.barGraphCheckbox.itemLabel.textProperty": {
       "phetioDocumentation": "Property for the displayed text",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -2434,6 +2655,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.visibilityControls.barGraphCheckbox.itemLabel.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -2445,6 +2667,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.visibilityControls.barGraphCheckbox.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -2456,6 +2679,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.visibilityControls.barGraphCheckbox.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -2467,6 +2691,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.visibilityControls.barGraphCheckbox.property": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -2478,6 +2703,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.visibilityControls.barGraphCheckbox.toggleAction": {
       "phetioDocumentation": "Emits when user input causes the checkbox to toggle, emitting a single arg: the new boolean value of the checkbox state.",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -2489,6 +2715,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.visibilityControls.barGraphCheckbox.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": true,
       "phetioHighFrequency": false,
@@ -2500,6 +2727,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.visibilityControls.barGraphIcon": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -2511,6 +2739,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.visibilityControls.barGraphIcon.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -2522,6 +2751,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.visibilityControls.barGraphIcon.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -2533,6 +2763,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.visibilityControls.barGraphIcon.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -2544,6 +2775,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.visibilityControls.gridCheckbox": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -2555,6 +2787,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.visibilityControls.gridCheckbox.enabledProperty": {
       "phetioDocumentation": "When disabled, the checkbox is grayed out and cannot be pressed.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": true,
       "phetioHighFrequency": false,
@@ -2566,6 +2799,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.visibilityControls.gridCheckbox.itemLabel": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -2577,6 +2811,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.visibilityControls.gridCheckbox.itemLabel.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -2588,6 +2823,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.visibilityControls.gridCheckbox.itemLabel.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -2599,6 +2835,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.visibilityControls.gridCheckbox.itemLabel.textProperty": {
       "phetioDocumentation": "Property for the displayed text",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -2610,6 +2847,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.visibilityControls.gridCheckbox.itemLabel.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -2621,6 +2859,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.visibilityControls.gridCheckbox.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -2632,6 +2871,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.visibilityControls.gridCheckbox.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -2643,6 +2883,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.visibilityControls.gridCheckbox.property": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -2654,6 +2895,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.visibilityControls.gridCheckbox.toggleAction": {
       "phetioDocumentation": "Emits when user input causes the checkbox to toggle, emitting a single arg: the new boolean value of the checkbox state.",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -2665,6 +2907,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.visibilityControls.gridCheckbox.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": true,
       "phetioHighFrequency": false,
@@ -2676,6 +2919,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.visibilityControls.gridIcon": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -2687,6 +2931,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.visibilityControls.gridIcon.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -2698,6 +2943,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.visibilityControls.gridIcon.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -2709,6 +2955,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.visibilityControls.gridIcon.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -2720,6 +2967,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.visibilityControls.pieChartCheckbox": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -2731,6 +2979,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.visibilityControls.pieChartCheckbox.enabledProperty": {
       "phetioDocumentation": "When disabled, the checkbox is grayed out and cannot be pressed.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": true,
       "phetioHighFrequency": false,
@@ -2742,6 +2991,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.visibilityControls.pieChartCheckbox.itemLabel": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -2753,6 +3003,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.visibilityControls.pieChartCheckbox.itemLabel.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -2764,6 +3015,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.visibilityControls.pieChartCheckbox.itemLabel.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -2775,6 +3027,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.visibilityControls.pieChartCheckbox.itemLabel.textProperty": {
       "phetioDocumentation": "Property for the displayed text",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -2786,6 +3039,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.visibilityControls.pieChartCheckbox.itemLabel.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -2797,6 +3051,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.visibilityControls.pieChartCheckbox.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -2808,6 +3063,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.visibilityControls.pieChartCheckbox.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -2819,6 +3075,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.visibilityControls.pieChartCheckbox.property": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -2830,6 +3087,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.visibilityControls.pieChartCheckbox.toggleAction": {
       "phetioDocumentation": "Emits when user input causes the checkbox to toggle, emitting a single arg: the new boolean value of the checkbox state.",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -2841,6 +3099,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.visibilityControls.pieChartCheckbox.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": true,
       "phetioHighFrequency": false,
@@ -2852,6 +3111,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.visibilityControls.pieChartIcon": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -2863,6 +3123,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.visibilityControls.pieChartIcon.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -2874,6 +3135,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.visibilityControls.pieChartIcon.path": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -2885,6 +3147,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.visibilityControls.pieChartIcon.path.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -2896,6 +3159,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.visibilityControls.pieChartIcon.path.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -2907,6 +3171,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.visibilityControls.pieChartIcon.path.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -2918,6 +3183,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.visibilityControls.pieChartIcon.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -2929,6 +3195,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.visibilityControls.pieChartIcon.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -2940,6 +3207,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.visibilityControls.speedIcon.gaugeNode": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -2951,6 +3219,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.visibilityControls.speedIcon.gaugeNode.foregroundNode": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -2962,6 +3231,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.visibilityControls.speedIcon.gaugeNode.foregroundNode.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -2973,6 +3243,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.visibilityControls.speedIcon.gaugeNode.foregroundNode.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -2984,6 +3255,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.visibilityControls.speedIcon.gaugeNode.foregroundNode.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -2995,6 +3267,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.visibilityControls.speedIcon.gaugeNode.labelNode": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -3006,6 +3279,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.visibilityControls.speedIcon.gaugeNode.labelNode.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -3017,6 +3291,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.visibilityControls.speedIcon.gaugeNode.labelNode.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -3028,6 +3303,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.visibilityControls.speedIcon.gaugeNode.labelNode.textProperty": {
       "phetioDocumentation": "Property for the displayed text",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -3039,6 +3315,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.visibilityControls.speedIcon.gaugeNode.labelNode.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -3050,6 +3327,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.visibilityControls.speedIcon.gaugeNode.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -3061,6 +3339,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.visibilityControls.speedIcon.gaugeNode.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -3072,6 +3351,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.visibilityControls.speedIcon.gaugeNode.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -3083,6 +3363,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.visibilityControls.speedometerCheckbox": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -3094,6 +3375,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.visibilityControls.speedometerCheckbox.enabledProperty": {
       "phetioDocumentation": "When disabled, the checkbox is grayed out and cannot be pressed.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": true,
       "phetioHighFrequency": false,
@@ -3105,6 +3387,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.visibilityControls.speedometerCheckbox.itemLabel": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -3116,6 +3399,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.visibilityControls.speedometerCheckbox.itemLabel.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -3127,6 +3411,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.visibilityControls.speedometerCheckbox.itemLabel.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -3138,6 +3423,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.visibilityControls.speedometerCheckbox.itemLabel.textProperty": {
       "phetioDocumentation": "Property for the displayed text",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -3149,6 +3435,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.visibilityControls.speedometerCheckbox.itemLabel.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -3160,6 +3447,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.visibilityControls.speedometerCheckbox.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -3171,6 +3459,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.visibilityControls.speedometerCheckbox.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -3182,6 +3471,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.visibilityControls.speedometerCheckbox.property": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -3193,6 +3483,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.visibilityControls.speedometerCheckbox.toggleAction": {
       "phetioDocumentation": "Emits when user input causes the checkbox to toggle, emitting a single arg: the new boolean value of the checkbox state.",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -3204,6 +3495,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.visibilityControls.speedometerCheckbox.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": true,
       "phetioHighFrequency": false,
@@ -3215,6 +3507,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -3226,6 +3519,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.energyBarGraph.clearThermalButton": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -3237,6 +3531,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.energyBarGraph.clearThermalButton.arrowPath": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -3248,6 +3543,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.energyBarGraph.clearThermalButton.arrowPath.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -3259,6 +3555,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.energyBarGraph.clearThermalButton.arrowPath.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -3270,6 +3567,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.energyBarGraph.clearThermalButton.arrowPath.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -3281,6 +3579,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.energyBarGraph.clearThermalButton.enabledProperty": {
       "phetioDocumentation": "When disabled, the button is grayed out and cannot be pressed",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": true,
       "phetioHighFrequency": false,
@@ -3292,6 +3591,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.energyBarGraph.clearThermalButton.firedEmitter": {
       "phetioDocumentation": "Emits when the button is fired",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -3303,6 +3603,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.energyBarGraph.clearThermalButton.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -3314,6 +3615,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.energyBarGraph.clearThermalButton.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -3325,6 +3627,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.energyBarGraph.clearThermalButton.pressListener.pressAction": {
       "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event.",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -3336,6 +3639,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.energyBarGraph.clearThermalButton.pressListener.releaseAction": {
       "phetioDocumentation": "Executes whenever a release occurs.",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -3347,6 +3651,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.energyBarGraph.clearThermalButton.trashPath": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -3358,6 +3663,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.energyBarGraph.clearThermalButton.trashPath.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -3369,6 +3675,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.energyBarGraph.clearThermalButton.trashPath.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -3380,6 +3687,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.energyBarGraph.clearThermalButton.trashPath.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -3391,6 +3699,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.energyBarGraph.clearThermalButton.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": true,
       "phetioHighFrequency": false,
@@ -3402,6 +3711,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.energyBarGraph.zoomInButton": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -3413,6 +3723,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.energyBarGraph.zoomInButton.enabledProperty": {
       "phetioDocumentation": "When disabled, the button is grayed out and cannot be pressed",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": true,
       "phetioHighFrequency": false,
@@ -3424,6 +3735,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.energyBarGraph.zoomInButton.firedEmitter": {
       "phetioDocumentation": "Emits when the button is fired",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -3435,6 +3747,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.energyBarGraph.zoomInButton.glassNode": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -3446,6 +3759,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.energyBarGraph.zoomInButton.glassNode.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -3457,6 +3771,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.energyBarGraph.zoomInButton.glassNode.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -3468,6 +3783,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.energyBarGraph.zoomInButton.glassNode.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -3479,6 +3795,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.energyBarGraph.zoomInButton.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -3490,6 +3807,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.energyBarGraph.zoomInButton.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -3501,6 +3819,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.energyBarGraph.zoomInButton.pressListener.pressAction": {
       "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event.",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -3512,6 +3831,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.energyBarGraph.zoomInButton.pressListener.releaseAction": {
       "phetioDocumentation": "Executes whenever a release occurs.",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -3523,6 +3843,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.energyBarGraph.zoomInButton.signNode": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -3534,6 +3855,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.energyBarGraph.zoomInButton.signNode.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -3545,6 +3867,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.energyBarGraph.zoomInButton.signNode.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -3556,6 +3879,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.energyBarGraph.zoomInButton.signNode.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -3567,6 +3891,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.energyBarGraph.zoomInButton.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": true,
       "phetioHighFrequency": false,
@@ -3578,6 +3903,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.energyBarGraph.zoomOutButton": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -3589,6 +3915,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.energyBarGraph.zoomOutButton.enabledProperty": {
       "phetioDocumentation": "When disabled, the button is grayed out and cannot be pressed",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": true,
       "phetioHighFrequency": false,
@@ -3600,6 +3927,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.energyBarGraph.zoomOutButton.firedEmitter": {
       "phetioDocumentation": "Emits when the button is fired",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -3611,6 +3939,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.energyBarGraph.zoomOutButton.glassNode": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -3622,6 +3951,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.energyBarGraph.zoomOutButton.glassNode.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -3633,6 +3963,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.energyBarGraph.zoomOutButton.glassNode.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -3644,6 +3975,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.energyBarGraph.zoomOutButton.glassNode.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -3655,6 +3987,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.energyBarGraph.zoomOutButton.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -3666,6 +3999,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.energyBarGraph.zoomOutButton.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -3677,6 +4011,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.energyBarGraph.zoomOutButton.pressListener.pressAction": {
       "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event.",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -3688,6 +4023,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.energyBarGraph.zoomOutButton.pressListener.releaseAction": {
       "phetioDocumentation": "Executes whenever a release occurs.",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -3699,6 +4035,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.energyBarGraph.zoomOutButton.signNode": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -3710,6 +4047,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.energyBarGraph.zoomOutButton.signNode.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -3721,6 +4059,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.energyBarGraph.zoomOutButton.signNode.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -3732,6 +4071,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.energyBarGraph.zoomOutButton.signNode.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -3743,6 +4083,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.energyBarGraph.zoomOutButton.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": true,
       "phetioHighFrequency": false,
@@ -3754,6 +4095,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.gridNode": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -3765,6 +4107,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.gridNode.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -3776,6 +4119,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.gridNode.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -3787,6 +4131,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.gridNode.thickLinePath": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -3798,6 +4143,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.gridNode.thickLinePath.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -3809,6 +4155,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.gridNode.thickLinePath.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -3820,6 +4167,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.gridNode.thickLinePath.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -3831,6 +4179,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.gridNode.thinLinePath": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -3842,6 +4191,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.gridNode.thinLinePath.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -3853,6 +4203,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.gridNode.thinLinePath.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -3864,6 +4215,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.gridNode.thinLinePath.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -3875,6 +4227,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.gridNode.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -3886,6 +4239,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -3897,6 +4251,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -3908,6 +4263,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.pieChartLegend": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -3919,6 +4275,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.pieChartLegend.clearThermalButton": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -3930,6 +4287,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.pieChartLegend.clearThermalButton.arrowPath": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -3941,6 +4299,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.pieChartLegend.clearThermalButton.arrowPath.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -3952,6 +4311,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.pieChartLegend.clearThermalButton.arrowPath.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -3963,6 +4323,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.pieChartLegend.clearThermalButton.arrowPath.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -3974,6 +4335,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.pieChartLegend.clearThermalButton.enabledProperty": {
       "phetioDocumentation": "When disabled, the button is grayed out and cannot be pressed",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": true,
       "phetioHighFrequency": false,
@@ -3985,6 +4347,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.pieChartLegend.clearThermalButton.firedEmitter": {
       "phetioDocumentation": "Emits when the button is fired",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -3996,6 +4359,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.pieChartLegend.clearThermalButton.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -4007,6 +4371,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.pieChartLegend.clearThermalButton.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -4018,6 +4383,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.pieChartLegend.clearThermalButton.pressListener.pressAction": {
       "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event.",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -4029,6 +4395,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.pieChartLegend.clearThermalButton.pressListener.releaseAction": {
       "phetioDocumentation": "Executes whenever a release occurs.",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -4040,6 +4407,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.pieChartLegend.clearThermalButton.trashPath": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -4051,6 +4419,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.pieChartLegend.clearThermalButton.trashPath.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -4062,6 +4431,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.pieChartLegend.clearThermalButton.trashPath.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -4073,6 +4443,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.pieChartLegend.clearThermalButton.trashPath.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -4084,6 +4455,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.pieChartLegend.clearThermalButton.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": true,
       "phetioHighFrequency": false,
@@ -4095,6 +4467,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.pieChartLegend.kineticEnergyLabel": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -4106,6 +4479,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.pieChartLegend.kineticEnergyLabel.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -4117,6 +4491,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.pieChartLegend.kineticEnergyLabel.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -4128,6 +4503,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.pieChartLegend.kineticEnergyLabel.textProperty": {
       "phetioDocumentation": "Property for the displayed text",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -4139,6 +4515,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.pieChartLegend.kineticEnergyLabel.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -4150,6 +4527,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.pieChartLegend.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -4161,6 +4539,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.pieChartLegend.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -4172,6 +4551,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.pieChartLegend.potentialEnergyLabel": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -4183,6 +4563,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.pieChartLegend.potentialEnergyLabel.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -4194,6 +4575,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.pieChartLegend.potentialEnergyLabel.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -4205,6 +4587,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.pieChartLegend.potentialEnergyLabel.textProperty": {
       "phetioDocumentation": "Property for the displayed text",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -4216,6 +4599,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.pieChartLegend.potentialEnergyLabel.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -4227,6 +4611,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.pieChartLegend.thermalEnergyLabel": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -4238,6 +4623,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.pieChartLegend.thermalEnergyLabel.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -4249,6 +4635,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.pieChartLegend.thermalEnergyLabel.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -4260,6 +4647,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.pieChartLegend.thermalEnergyLabel.textProperty": {
       "phetioDocumentation": "Property for the displayed text",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -4271,6 +4659,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.pieChartLegend.thermalEnergyLabel.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -4282,6 +4671,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.pieChartLegend.titleNode": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -4293,6 +4683,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.pieChartLegend.titleNode.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -4304,6 +4695,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.pieChartLegend.titleNode.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -4315,6 +4707,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.pieChartLegend.titleNode.textProperty": {
       "phetioDocumentation": "Property for the displayed text",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -4326,6 +4719,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.pieChartLegend.titleNode.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -4337,6 +4731,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.pieChartLegend.totalEnergyLabel": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -4348,6 +4743,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.pieChartLegend.totalEnergyLabel.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -4359,6 +4755,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.pieChartLegend.totalEnergyLabel.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -4370,6 +4767,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.pieChartLegend.totalEnergyLabel.textProperty": {
       "phetioDocumentation": "Property for the displayed text",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -4381,6 +4779,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.pieChartLegend.totalEnergyLabel.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -4392,6 +4791,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.pieChartLegend.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -4403,6 +4803,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.pieChartNode": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -4414,6 +4815,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.pieChartNode.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -4425,6 +4827,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.pieChartNode.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -4436,6 +4839,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.pieChartNode.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -4447,6 +4851,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.playPauseButton": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -4458,6 +4863,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.playPauseButton.enabledProperty": {
       "phetioDocumentation": "When disabled, the button is grayed out and cannot be pressed",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": true,
       "phetioHighFrequency": false,
@@ -4469,6 +4875,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.playPauseButton.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -4480,6 +4887,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.playPauseButton.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -4491,6 +4899,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.playPauseButton.pressListener.pressAction": {
       "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event.",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -4502,6 +4911,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.playPauseButton.pressListener.releaseAction": {
       "phetioDocumentation": "Executes whenever a release occurs.",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -4513,6 +4923,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.playPauseButton.property": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -4524,6 +4935,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.playPauseButton.toggleNode": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -4535,6 +4947,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.playPauseButton.toggleNode.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -4546,6 +4959,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.playPauseButton.toggleNode.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -4557,6 +4971,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.playPauseButton.toggleNode.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -4568,6 +4983,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.playPauseButton.toggledEmitter": {
       "phetioDocumentation": "Emits when the button is toggled",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -4579,6 +4995,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.playPauseButton.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": true,
       "phetioHighFrequency": false,
@@ -4590,6 +5007,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.playbackSpeedControl.normalSpeedButton": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -4601,6 +5019,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.playbackSpeedControl.normalSpeedButton.enabledProperty": {
       "phetioDocumentation": "Determines whether the AquaRadioButton is enabled (pressable) or disabled (grayed-out)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -4612,6 +5031,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.playbackSpeedControl.normalSpeedButton.inputListener.firedEmitter": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -4623,6 +5043,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.playbackSpeedControl.normalSpeedButton.inputListener.pressAction": {
       "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event.",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -4634,6 +5055,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.playbackSpeedControl.normalSpeedButton.inputListener.releaseAction": {
       "phetioDocumentation": "Executes whenever a release occurs.",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -4645,6 +5067,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.playbackSpeedControl.normalSpeedButton.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -4656,6 +5079,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.playbackSpeedControl.normalSpeedButton.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -4667,6 +5091,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.playbackSpeedControl.normalSpeedButton.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -4678,6 +5103,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.playbackSpeedControl.normalSpeedTextNode": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -4689,6 +5115,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.playbackSpeedControl.normalSpeedTextNode.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -4700,6 +5127,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.playbackSpeedControl.normalSpeedTextNode.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -4711,6 +5139,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.playbackSpeedControl.normalSpeedTextNode.textProperty": {
       "phetioDocumentation": "Property for the displayed text",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -4722,6 +5151,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.playbackSpeedControl.normalSpeedTextNode.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -4733,6 +5163,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.playbackSpeedControl.slowMotionRadioButton": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -4744,6 +5175,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.playbackSpeedControl.slowMotionRadioButton.enabledProperty": {
       "phetioDocumentation": "Determines whether the AquaRadioButton is enabled (pressable) or disabled (grayed-out)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -4755,6 +5187,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.playbackSpeedControl.slowMotionRadioButton.inputListener.firedEmitter": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -4766,6 +5199,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.playbackSpeedControl.slowMotionRadioButton.inputListener.pressAction": {
       "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event.",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -4777,6 +5211,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.playbackSpeedControl.slowMotionRadioButton.inputListener.releaseAction": {
       "phetioDocumentation": "Executes whenever a release occurs.",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -4788,6 +5223,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.playbackSpeedControl.slowMotionRadioButton.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -4799,6 +5235,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.playbackSpeedControl.slowMotionRadioButton.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -4810,6 +5247,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.playbackSpeedControl.slowMotionRadioButton.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -4821,6 +5259,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.playbackSpeedControl.slowMotionTextNode": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -4832,6 +5271,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.playbackSpeedControl.slowMotionTextNode.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -4843,6 +5283,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.playbackSpeedControl.slowMotionTextNode.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -4854,6 +5295,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.playbackSpeedControl.slowMotionTextNode.textProperty": {
       "phetioDocumentation": "Property for the displayed text",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -4865,6 +5307,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.playbackSpeedControl.slowMotionTextNode.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -4876,6 +5319,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.playingProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -4887,6 +5331,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.referenceHeightLine.dragListener.dragAction": {
       "phetioDocumentation": "Emits whenever a drag occurs with an EventIO argument.",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": true,
@@ -4898,6 +5343,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.referenceHeightLine.dragListener.pressAction": {
       "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event.",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -4909,6 +5355,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.referenceHeightLine.dragListener.releaseAction": {
       "phetioDocumentation": "Executes whenever a release occurs.",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -4920,6 +5367,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.resetAllButton": {
       "phetioDocumentation": "The orange, round button that can be used to restore the initial state",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -4931,6 +5379,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.resetAllButton.enabledProperty": {
       "phetioDocumentation": "When disabled, the button is grayed out and cannot be pressed",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": true,
       "phetioHighFrequency": false,
@@ -4942,6 +5391,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.resetAllButton.firedEmitter": {
       "phetioDocumentation": "Emits when the button is fired",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -4953,6 +5403,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.resetAllButton.isFiringProperty": {
       "phetioDocumentation": "Temporarily becomes true while the Reset All button is firing.  Commonly used to disable audio effects during reset.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -4964,6 +5415,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.resetAllButton.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -4975,6 +5427,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.resetAllButton.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -4986,6 +5439,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.resetAllButton.pressListener.pressAction": {
       "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event.",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -4997,6 +5451,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.resetAllButton.pressListener.releaseAction": {
       "phetioDocumentation": "Executes whenever a release occurs.",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -5008,6 +5463,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.resetAllButton.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": true,
       "phetioHighFrequency": false,
@@ -5019,6 +5475,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.restartSkaterTextNode": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -5030,6 +5487,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.restartSkaterTextNode.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -5041,6 +5499,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.restartSkaterTextNode.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -5052,6 +5511,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.restartSkaterTextNode.textProperty": {
       "phetioDocumentation": "Property for the displayed text",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -5063,6 +5523,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.restartSkaterTextNode.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -5074,6 +5535,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.returnSkaterButton": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -5085,6 +5547,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.returnSkaterButton.enabledProperty": {
       "phetioDocumentation": "When disabled, the button is grayed out and cannot be pressed",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": true,
       "phetioHighFrequency": false,
@@ -5096,6 +5559,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.returnSkaterButton.firedEmitter": {
       "phetioDocumentation": "Emits when the button is fired",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -5107,6 +5571,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.returnSkaterButton.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -5118,6 +5583,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.returnSkaterButton.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -5129,6 +5595,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.returnSkaterButton.pressListener.pressAction": {
       "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event.",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -5140,6 +5607,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.returnSkaterButton.pressListener.releaseAction": {
       "phetioDocumentation": "Executes whenever a release occurs.",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -5151,6 +5619,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.returnSkaterButton.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": true,
       "phetioHighFrequency": false,
@@ -5162,6 +5631,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.returnSkaterToGroundButton": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -5173,6 +5643,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.returnSkaterToGroundButton.enabledProperty": {
       "phetioDocumentation": "When disabled, the button is grayed out and cannot be pressed",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": true,
       "phetioHighFrequency": false,
@@ -5184,6 +5655,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.returnSkaterToGroundButton.firedEmitter": {
       "phetioDocumentation": "Emits when the button is fired",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -5195,6 +5667,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.returnSkaterToGroundButton.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -5206,6 +5679,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.returnSkaterToGroundButton.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -5217,6 +5691,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.returnSkaterToGroundButton.pressListener.pressAction": {
       "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event.",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -5228,6 +5703,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.returnSkaterToGroundButton.pressListener.releaseAction": {
       "phetioDocumentation": "Executes whenever a release occurs.",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -5239,6 +5715,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.returnSkaterToGroundButton.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": true,
       "phetioHighFrequency": false,
@@ -5250,6 +5727,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.returnSkaterToPreviousStartingPositionButton": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -5261,6 +5739,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.returnSkaterToPreviousStartingPositionButton.enabledProperty": {
       "phetioDocumentation": "When disabled, the button is grayed out and cannot be pressed",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": true,
       "phetioHighFrequency": false,
@@ -5272,6 +5751,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.returnSkaterToPreviousStartingPositionButton.firedEmitter": {
       "phetioDocumentation": "Emits when the button is fired",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -5283,6 +5763,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.returnSkaterToPreviousStartingPositionButton.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -5294,6 +5775,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.returnSkaterToPreviousStartingPositionButton.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -5305,6 +5787,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.returnSkaterToPreviousStartingPositionButton.pressListener.pressAction": {
       "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event.",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -5316,6 +5799,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.returnSkaterToPreviousStartingPositionButton.pressListener.releaseAction": {
       "phetioDocumentation": "Executes whenever a release occurs.",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -5327,6 +5811,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.returnSkaterToPreviousStartingPositionButton.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": true,
       "phetioHighFrequency": false,
@@ -5338,6 +5823,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.skaterIconImage1": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -5349,6 +5835,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.skaterIconImage1.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -5360,6 +5847,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.skaterIconImage1.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -5371,6 +5859,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.skaterIconImage1.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -5382,6 +5871,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.skaterIconImage2": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -5393,6 +5883,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.skaterIconImage2.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -5404,6 +5895,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.skaterIconImage2.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -5415,6 +5907,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.skaterIconImage2.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -5426,6 +5919,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.skaterNode": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -5437,6 +5931,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.skaterNode.inputListener": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -5448,6 +5943,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.skaterNode.inputListener.dragAction": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": true,
@@ -5459,6 +5955,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.skaterNode.inputListener.dragEndAction": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -5470,6 +5967,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.skaterNode.inputListener.dragStartAction": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -5481,6 +5979,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.skaterNode.inputListener.isDraggingProperty": {
       "phetioDocumentation": "Indicates whether the object is dragging",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -5492,6 +5991,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.skaterNode.leftSkaterImageNode": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -5503,6 +6003,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.skaterNode.leftSkaterImageNode.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -5514,6 +6015,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.skaterNode.leftSkaterImageNode.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -5525,6 +6027,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.skaterNode.leftSkaterImageNode.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -5536,6 +6039,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.skaterNode.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -5547,6 +6051,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.skaterNode.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -5558,6 +6063,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.skaterNode.rightSkaterImageNode": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -5569,6 +6075,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.skaterNode.rightSkaterImageNode.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -5580,6 +6087,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.skaterNode.rightSkaterImageNode.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -5591,6 +6099,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.skaterNode.rightSkaterImageNode.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -5602,6 +6111,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.skaterNode.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -5613,6 +6123,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.speedometerNode": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -5624,6 +6135,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.speedometerNode.foregroundNode": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -5635,6 +6147,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.speedometerNode.foregroundNode.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -5646,6 +6159,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.speedometerNode.foregroundNode.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -5657,6 +6171,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.speedometerNode.foregroundNode.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -5668,6 +6183,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.speedometerNode.labelNode": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -5679,6 +6195,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.speedometerNode.labelNode.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -5690,6 +6207,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.speedometerNode.labelNode.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -5701,6 +6219,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.speedometerNode.labelNode.textProperty": {
       "phetioDocumentation": "Property for the displayed text",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -5712,6 +6231,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.speedometerNode.labelNode.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -5723,6 +6243,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.speedometerNode.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -5734,6 +6255,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.speedometerNode.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -5745,6 +6267,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.speedometerNode.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -5756,6 +6279,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.stepButton": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -5767,6 +6291,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.stepButton.enabledProperty": {
       "phetioDocumentation": "When disabled, the button is grayed out and cannot be pressed",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": true,
       "phetioHighFrequency": false,
@@ -5778,6 +6303,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.stepButton.firedEmitter": {
       "phetioDocumentation": "Emits when the button is fired",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -5789,6 +6315,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.stepButton.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -5800,6 +6327,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.stepButton.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -5811,6 +6339,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.stepButton.pressListener.pressAction": {
       "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event.",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -5822,6 +6351,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.stepButton.pressListener.releaseAction": {
       "phetioDocumentation": "Executes whenever a release occurs.",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -5833,6 +6363,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.stepButton.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": true,
       "phetioHighFrequency": false,
@@ -5844,6 +6375,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.trackLayer": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -5855,6 +6387,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.trackLayer.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -5866,6 +6399,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.trackLayer.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -5877,6 +6411,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.trackLayer.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -5888,6 +6423,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.trackNode~0": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -5899,6 +6435,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.trackNode~0.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -5910,6 +6447,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.trackNode~0.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -5921,6 +6459,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.trackNode~0.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -5932,6 +6471,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.trackNode~1": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -5943,6 +6483,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.trackNode~1.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -5954,6 +6495,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.trackNode~1.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -5965,6 +6507,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.trackNode~1.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -5976,6 +6519,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.trackNode~2": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -5987,6 +6531,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.trackNode~2.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -5998,6 +6543,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.trackNode~2.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -6009,6 +6555,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.trackNode~2.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -6020,6 +6567,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -6031,6 +6579,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.massSlider": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -6042,6 +6591,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.massSlider.enabledProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": true,
       "phetioHighFrequency": false,
@@ -6053,6 +6603,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.massSlider.enabledRangeProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -6064,6 +6615,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.massSlider.maxLabel": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -6075,6 +6627,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.massSlider.maxLabel.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -6086,6 +6639,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.massSlider.maxLabel.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -6097,6 +6651,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.massSlider.maxLabel.textProperty": {
       "phetioDocumentation": "Property for the displayed text",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -6108,6 +6663,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.massSlider.maxLabel.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -6119,6 +6675,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.massSlider.minLabel": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -6130,6 +6687,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.massSlider.minLabel.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -6141,6 +6699,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.massSlider.minLabel.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -6152,6 +6711,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.massSlider.minLabel.textProperty": {
       "phetioDocumentation": "Property for the displayed text",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -6163,6 +6723,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.massSlider.minLabel.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -6174,6 +6735,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.massSlider.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -6185,6 +6747,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.massSlider.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -6196,6 +6759,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.massSlider.thumb": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -6207,6 +6771,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.massSlider.thumb.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -6218,6 +6783,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.massSlider.thumb.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -6229,6 +6795,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.massSlider.thumb.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -6240,6 +6807,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.massSlider.thumbInputListener": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -6251,6 +6819,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.massSlider.thumbInputListener.dragAction": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": true,
@@ -6262,6 +6831,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.massSlider.thumbInputListener.dragEndAction": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -6273,6 +6843,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.massSlider.thumbInputListener.dragStartAction": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -6284,6 +6855,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.massSlider.thumbInputListener.isDraggingProperty": {
       "phetioDocumentation": "Indicates whether the object is dragging",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -6295,6 +6867,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.massSlider.titleString": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -6306,6 +6879,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.massSlider.titleString.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -6317,6 +6891,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.massSlider.titleString.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -6328,6 +6903,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.massSlider.titleString.textProperty": {
       "phetioDocumentation": "Property for the displayed text",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -6339,6 +6915,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.massSlider.titleString.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -6350,6 +6927,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.massSlider.track.trackInputListener": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -6361,6 +6939,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.massSlider.track.trackInputListener.dragAction": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": true,
@@ -6372,6 +6951,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.massSlider.track.trackInputListener.dragEndAction": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -6383,6 +6963,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.massSlider.track.trackInputListener.dragStartAction": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -6394,6 +6975,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.massSlider.track.trackInputListener.isDraggingProperty": {
       "phetioDocumentation": "Indicates whether the object is dragging",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -6405,6 +6987,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.massSlider.valueProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -6416,6 +6999,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.view.massSlider.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": true,
       "phetioHighFrequency": false,
@@ -6427,6 +7011,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.general.activeProperty": {
       "phetioDocumentation": "Determines whether the entire simulation is running and processing user input. Setting this property to false pauses the simulation, and prevents user interaction.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": true,
       "phetioHighFrequency": false,
@@ -6438,6 +7023,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.general.barrierRectangle": {
       "phetioDocumentation": "Semi-transparent barrier used to block input events when a dialog is shown, also fades out the background",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -6449,6 +7035,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.general.barrierRectangle.inputListener.firedEmitter": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -6460,6 +7047,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.general.barrierRectangle.inputListener.pressAction": {
       "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event.",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -6471,6 +7059,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.general.barrierRectangle.inputListener.releaseAction": {
       "phetioDocumentation": "Executes whenever a release occurs.",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -6482,6 +7071,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.general.barrierRectangle.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -6493,6 +7083,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.general.barrierRectangle.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -6504,6 +7095,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.general.barrierRectangle.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -6515,6 +7107,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.general.browserTabVisibleProperty": {
       "phetioDocumentation": "Indicates whether the browser tab containing the simulation is currently visible",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -6526,6 +7119,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.general.controller.input.mouseDownAction": {
       "phetioDocumentation": "Emits when a mouse button is pressed",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -6537,6 +7131,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.general.controller.input.mouseMovedAction": {
       "phetioDocumentation": "Emits when the mouse is moved",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": true,
@@ -6548,6 +7143,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.general.controller.input.mouseOutAction": {
       "phetioDocumentation": "Emits when the mouse moves out of the display",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -6559,6 +7155,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.general.controller.input.mouseOverAction": {
       "phetioDocumentation": "Emits when the mouse is moved over a Node",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -6570,6 +7167,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.general.controller.input.mouseUpAction": {
       "phetioDocumentation": "Emits when a mouse button is released",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -6581,6 +7179,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.general.controller.input.penCancelAction": {
       "phetioDocumentation": "Emits when a pen is canceled",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -6592,6 +7191,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.general.controller.input.penEndAction": {
       "phetioDocumentation": "Emits when a pen is lifted",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -6603,6 +7203,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.general.controller.input.penMoveAction": {
       "phetioDocumentation": "Emits when a pen is moved",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": true,
@@ -6614,6 +7215,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.general.controller.input.penStartAction": {
       "phetioDocumentation": "Emits when a pen touches the screen",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -6625,6 +7227,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.general.controller.input.touchCancelAction": {
       "phetioDocumentation": "Emits when a touch is canceled",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -6636,6 +7239,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.general.controller.input.touchEndAction": {
       "phetioDocumentation": "Emits when a touch ends",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -6647,6 +7251,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.general.controller.input.touchMoveAction": {
       "phetioDocumentation": "Emits when a touch moves",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": true,
@@ -6658,6 +7263,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.general.controller.input.touchStartAction": {
       "phetioDocumentation": "Emits when a touch begins",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -6669,6 +7275,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.general.controller.input.validatePointersAction": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": true,
@@ -6680,6 +7287,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.general.controller.input.wheelScrollAction": {
       "phetioDocumentation": "Emits when the mouse wheel scrolls",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": true,
@@ -6691,6 +7299,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.general.focusProperty": {
       "phetioDocumentation": "Stores the current focus for the simulation, null if there is not focus. This is not updated based on mouse or touch input, only keyboard and other alternative inputs.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -6702,6 +7311,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.general.navigationBar.frictionScreenButton": {
       "phetioDocumentation": "Button in the navigation bar that selects the 'frictionScreen' screen",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -6713,6 +7323,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.general.navigationBar.frictionScreenButton.enabledProperty": {
       "phetioDocumentation": "When disabled, the button is grayed out and cannot be pressed",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": true,
       "phetioHighFrequency": false,
@@ -6724,6 +7335,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.general.navigationBar.frictionScreenButton.firedEmitter": {
       "phetioDocumentation": "Emits when the button is fired",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -6735,6 +7347,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.general.navigationBar.frictionScreenButton.icon": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -6746,6 +7359,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.general.navigationBar.frictionScreenButton.icon.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -6757,6 +7371,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.general.navigationBar.frictionScreenButton.icon.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -6768,6 +7383,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.general.navigationBar.frictionScreenButton.icon.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -6779,6 +7395,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.general.navigationBar.frictionScreenButton.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -6790,6 +7407,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.general.navigationBar.frictionScreenButton.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -6801,6 +7419,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.general.navigationBar.frictionScreenButton.pressListener.pressAction": {
       "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event.",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -6812,6 +7431,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.general.navigationBar.frictionScreenButton.pressListener.releaseAction": {
       "phetioDocumentation": "Executes whenever a release occurs.",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -6823,6 +7443,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.general.navigationBar.frictionScreenButton.text": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -6834,6 +7455,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.general.navigationBar.frictionScreenButton.text.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -6845,6 +7467,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.general.navigationBar.frictionScreenButton.text.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -6856,6 +7479,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.general.navigationBar.frictionScreenButton.text.textProperty": {
       "phetioDocumentation": "Property for the displayed text",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -6867,6 +7491,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.general.navigationBar.frictionScreenButton.text.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -6878,6 +7503,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.general.navigationBar.frictionScreenButton.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -6889,6 +7515,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.general.navigationBar.homeButton": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -6900,6 +7527,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.general.navigationBar.homeButton.enabledProperty": {
       "phetioDocumentation": "When disabled, the button is grayed out and cannot be pressed",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": true,
       "phetioHighFrequency": false,
@@ -6911,6 +7539,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.general.navigationBar.homeButton.firedEmitter": {
       "phetioDocumentation": "Emits when the button is fired",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -6922,6 +7551,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.general.navigationBar.homeButton.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -6933,6 +7563,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.general.navigationBar.homeButton.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -6944,6 +7575,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.general.navigationBar.homeButton.pressListener.pressAction": {
       "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event.",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -6955,6 +7587,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.general.navigationBar.homeButton.pressListener.releaseAction": {
       "phetioDocumentation": "Executes whenever a release occurs.",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -6966,6 +7599,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.general.navigationBar.homeButton.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -6977,6 +7611,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.general.navigationBar.introScreenButton": {
       "phetioDocumentation": "Button in the navigation bar that selects the 'introScreen' screen",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -6988,6 +7623,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.general.navigationBar.introScreenButton.enabledProperty": {
       "phetioDocumentation": "When disabled, the button is grayed out and cannot be pressed",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": true,
       "phetioHighFrequency": false,
@@ -6999,6 +7635,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.general.navigationBar.introScreenButton.firedEmitter": {
       "phetioDocumentation": "Emits when the button is fired",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -7010,6 +7647,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.general.navigationBar.introScreenButton.icon": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -7021,6 +7659,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.general.navigationBar.introScreenButton.icon.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -7032,6 +7671,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.general.navigationBar.introScreenButton.icon.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -7043,6 +7683,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.general.navigationBar.introScreenButton.icon.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -7054,6 +7695,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.general.navigationBar.introScreenButton.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -7065,6 +7707,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.general.navigationBar.introScreenButton.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -7076,6 +7719,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.general.navigationBar.introScreenButton.pressListener.pressAction": {
       "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event.",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -7087,6 +7731,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.general.navigationBar.introScreenButton.pressListener.releaseAction": {
       "phetioDocumentation": "Executes whenever a release occurs.",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -7098,6 +7743,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.general.navigationBar.introScreenButton.text": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -7109,6 +7755,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.general.navigationBar.introScreenButton.text.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -7120,6 +7767,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.general.navigationBar.introScreenButton.text.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -7131,6 +7779,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.general.navigationBar.introScreenButton.text.textProperty": {
       "phetioDocumentation": "Property for the displayed text",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -7142,6 +7791,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.general.navigationBar.introScreenButton.text.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -7153,6 +7803,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.general.navigationBar.introScreenButton.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -7164,6 +7815,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.general.navigationBar.phetButton": {
       "phetioDocumentation": "The button that appears at the right side of the navigation bar, which shows a menu when pressed",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -7175,6 +7827,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.general.navigationBar.phetButton.enabledProperty": {
       "phetioDocumentation": "When disabled, the button is grayed out and cannot be pressed",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": true,
       "phetioHighFrequency": false,
@@ -7186,6 +7839,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.general.navigationBar.phetButton.firedEmitter": {
       "phetioDocumentation": "Emits when the button is fired",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -7197,6 +7851,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.general.navigationBar.phetButton.phetMenu": {
       "phetioDocumentation": "This menu is displayed when the PhET button is pressed.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -7208,6 +7863,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.general.navigationBar.phetButton.phetMenu.aboutMenuItem": {
       "phetioDocumentation": "This menu item shows a dialog with information about the simulation.",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -7219,6 +7875,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.general.navigationBar.phetButton.phetMenu.aboutMenuItem.inputListener.firedEmitter": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -7230,6 +7887,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.general.navigationBar.phetButton.phetMenu.aboutMenuItem.inputListener.pressAction": {
       "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event.",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -7241,6 +7899,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.general.navigationBar.phetButton.phetMenu.aboutMenuItem.inputListener.releaseAction": {
       "phetioDocumentation": "Executes whenever a release occurs.",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -7252,6 +7911,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.general.navigationBar.phetButton.phetMenu.aboutMenuItem.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -7263,6 +7923,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.general.navigationBar.phetButton.phetMenu.aboutMenuItem.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": true,
       "phetioHighFrequency": false,
@@ -7274,6 +7935,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.general.navigationBar.phetButton.phetMenu.aboutMenuItem.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": true,
       "phetioHighFrequency": false,
@@ -7285,6 +7947,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.general.navigationBar.phetButton.phetMenu.screenshotMenuItem": {
       "phetioDocumentation": "This menu item captures a screenshot from the simulation and saves it to the file system.",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -7296,6 +7959,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.general.navigationBar.phetButton.phetMenu.screenshotMenuItem.inputListener.firedEmitter": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -7307,6 +7971,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.general.navigationBar.phetButton.phetMenu.screenshotMenuItem.inputListener.pressAction": {
       "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event.",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -7318,6 +7983,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.general.navigationBar.phetButton.phetMenu.screenshotMenuItem.inputListener.releaseAction": {
       "phetioDocumentation": "Executes whenever a release occurs.",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -7329,6 +7995,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.general.navigationBar.phetButton.phetMenu.screenshotMenuItem.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -7340,6 +8007,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.general.navigationBar.phetButton.phetMenu.screenshotMenuItem.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -7351,6 +8019,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.general.navigationBar.phetButton.phetMenu.screenshotMenuItem.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": true,
       "phetioHighFrequency": false,
@@ -7362,6 +8031,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.general.navigationBar.phetButton.pickableProperty": {
       "phetioDocumentation": "Set whether the phetButton will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -7373,6 +8043,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.general.navigationBar.phetButton.pressListener.pressAction": {
       "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event.",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -7384,6 +8055,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.general.navigationBar.phetButton.pressListener.releaseAction": {
       "phetioDocumentation": "Executes whenever a release occurs.",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -7395,6 +8067,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.general.navigationBar.playgroundScreenButton": {
       "phetioDocumentation": "Button in the navigation bar that selects the 'playgroundScreen' screen",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -7406,6 +8079,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.general.navigationBar.playgroundScreenButton.enabledProperty": {
       "phetioDocumentation": "When disabled, the button is grayed out and cannot be pressed",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": true,
       "phetioHighFrequency": false,
@@ -7417,6 +8091,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.general.navigationBar.playgroundScreenButton.firedEmitter": {
       "phetioDocumentation": "Emits when the button is fired",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -7428,6 +8103,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.general.navigationBar.playgroundScreenButton.icon": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -7439,6 +8115,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.general.navigationBar.playgroundScreenButton.icon.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -7450,6 +8127,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.general.navigationBar.playgroundScreenButton.icon.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -7461,6 +8139,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.general.navigationBar.playgroundScreenButton.icon.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -7472,6 +8151,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.general.navigationBar.playgroundScreenButton.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -7483,6 +8163,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.general.navigationBar.playgroundScreenButton.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -7494,6 +8175,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.general.navigationBar.playgroundScreenButton.pressListener.pressAction": {
       "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event.",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -7505,6 +8187,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.general.navigationBar.playgroundScreenButton.pressListener.releaseAction": {
       "phetioDocumentation": "Executes whenever a release occurs.",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -7516,6 +8199,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.general.navigationBar.playgroundScreenButton.text": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -7527,6 +8211,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.general.navigationBar.playgroundScreenButton.text.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -7538,6 +8223,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.general.navigationBar.playgroundScreenButton.text.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -7549,6 +8235,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.general.navigationBar.playgroundScreenButton.text.textProperty": {
       "phetioDocumentation": "Property for the displayed text",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -7560,6 +8247,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.general.navigationBar.playgroundScreenButton.text.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -7571,6 +8259,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.general.navigationBar.playgroundScreenButton.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -7582,6 +8271,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.general.navigationBar.titleTextNode": {
       "phetioDocumentation": "Displays the title of the simulation in the navigation bar (bottom left)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -7593,6 +8283,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.general.navigationBar.titleTextNode.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -7604,6 +8295,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.general.navigationBar.titleTextNode.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -7615,6 +8307,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.general.navigationBar.titleTextNode.textProperty": {
       "phetioDocumentation": "Property for the displayed text",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -7626,6 +8319,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.general.navigationBar.titleTextNode.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -7637,6 +8331,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.general.phetioCommandProcessor": {
       "phetioDocumentation": "Processes messages from the wrapper frame and returns the results. This serves as the source of PhET-iO data stream messages when commands are invoked from the wrapper.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -7648,6 +8343,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.general.resizeAction": {
       "phetioDocumentation": "Executes when the sim is resized",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -7659,6 +8355,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.general.screenIndexProperty": {
       "phetioDocumentation": "Indicates which screen is selected (0-indexed)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": true,
       "phetioHighFrequency": false,
@@ -7670,6 +8367,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.general.showHomeScreenProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": true,
       "phetioHighFrequency": false,
@@ -7681,6 +8379,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.general.soundEnabledProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -7692,6 +8391,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.general.stepSimulationAction": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": true,
@@ -7703,6 +8403,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.homeScreen.activeProperty": {
       "phetioDocumentation": "Indicates whether the screen is active.  For single-screen simulations, the screen is always active.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -7714,6 +8415,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.homeScreen.view": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -7725,6 +8427,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.homeScreen.view.frictionScreenLargeButton": {
       "phetioDocumentation": "A pressable button in the simulation, in the home screen",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -7736,6 +8439,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.homeScreen.view.frictionScreenLargeButton.inputListener.firedEmitter": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -7747,6 +8451,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.homeScreen.view.frictionScreenLargeButton.inputListener.pressAction": {
       "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event.",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -7758,6 +8463,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.homeScreen.view.frictionScreenLargeButton.inputListener.releaseAction": {
       "phetioDocumentation": "Executes whenever a release occurs.",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -7769,6 +8475,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.homeScreen.view.frictionScreenLargeButton.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -7780,6 +8487,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.homeScreen.view.frictionScreenLargeButton.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -7791,6 +8499,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.homeScreen.view.frictionScreenLargeButton.text": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -7802,6 +8511,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.homeScreen.view.frictionScreenLargeButton.text.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -7813,6 +8523,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.homeScreen.view.frictionScreenLargeButton.text.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -7824,6 +8535,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.homeScreen.view.frictionScreenLargeButton.text.textProperty": {
       "phetioDocumentation": "Property for the displayed text",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -7835,6 +8547,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.homeScreen.view.frictionScreenLargeButton.text.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -7846,6 +8559,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.homeScreen.view.frictionScreenLargeButton.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -7857,6 +8571,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.homeScreen.view.frictionScreenSmallButton": {
       "phetioDocumentation": "A pressable button in the simulation, in the home screen",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -7868,6 +8583,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.homeScreen.view.frictionScreenSmallButton.inputListener.firedEmitter": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -7879,6 +8595,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.homeScreen.view.frictionScreenSmallButton.inputListener.pressAction": {
       "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event.",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -7890,6 +8607,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.homeScreen.view.frictionScreenSmallButton.inputListener.releaseAction": {
       "phetioDocumentation": "Executes whenever a release occurs.",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -7901,6 +8619,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.homeScreen.view.frictionScreenSmallButton.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -7912,6 +8631,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.homeScreen.view.frictionScreenSmallButton.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -7923,6 +8643,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.homeScreen.view.frictionScreenSmallButton.text": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -7934,6 +8655,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.homeScreen.view.frictionScreenSmallButton.text.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -7945,6 +8667,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.homeScreen.view.frictionScreenSmallButton.text.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -7956,6 +8679,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.homeScreen.view.frictionScreenSmallButton.text.textProperty": {
       "phetioDocumentation": "Property for the displayed text",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -7967,6 +8691,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.homeScreen.view.frictionScreenSmallButton.text.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -7978,6 +8703,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.homeScreen.view.frictionScreenSmallButton.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -7989,6 +8715,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.homeScreen.view.introScreenLargeButton": {
       "phetioDocumentation": "A pressable button in the simulation, in the home screen",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -8000,6 +8727,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.homeScreen.view.introScreenLargeButton.inputListener.firedEmitter": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -8011,6 +8739,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.homeScreen.view.introScreenLargeButton.inputListener.pressAction": {
       "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event.",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -8022,6 +8751,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.homeScreen.view.introScreenLargeButton.inputListener.releaseAction": {
       "phetioDocumentation": "Executes whenever a release occurs.",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -8033,6 +8763,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.homeScreen.view.introScreenLargeButton.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -8044,6 +8775,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.homeScreen.view.introScreenLargeButton.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -8055,6 +8787,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.homeScreen.view.introScreenLargeButton.text": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -8066,6 +8799,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.homeScreen.view.introScreenLargeButton.text.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -8077,6 +8811,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.homeScreen.view.introScreenLargeButton.text.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -8088,6 +8823,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.homeScreen.view.introScreenLargeButton.text.textProperty": {
       "phetioDocumentation": "Property for the displayed text",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -8099,6 +8835,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.homeScreen.view.introScreenLargeButton.text.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -8110,6 +8847,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.homeScreen.view.introScreenLargeButton.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -8121,6 +8859,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.homeScreen.view.introScreenSmallButton": {
       "phetioDocumentation": "A pressable button in the simulation, in the home screen",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -8132,6 +8871,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.homeScreen.view.introScreenSmallButton.inputListener.firedEmitter": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -8143,6 +8883,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.homeScreen.view.introScreenSmallButton.inputListener.pressAction": {
       "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event.",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -8154,6 +8895,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.homeScreen.view.introScreenSmallButton.inputListener.releaseAction": {
       "phetioDocumentation": "Executes whenever a release occurs.",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -8165,6 +8907,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.homeScreen.view.introScreenSmallButton.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -8176,6 +8919,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.homeScreen.view.introScreenSmallButton.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -8187,6 +8931,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.homeScreen.view.introScreenSmallButton.text": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -8198,6 +8943,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.homeScreen.view.introScreenSmallButton.text.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -8209,6 +8955,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.homeScreen.view.introScreenSmallButton.text.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -8220,6 +8967,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.homeScreen.view.introScreenSmallButton.text.textProperty": {
       "phetioDocumentation": "Property for the displayed text",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -8231,6 +8979,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.homeScreen.view.introScreenSmallButton.text.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -8242,6 +8991,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.homeScreen.view.introScreenSmallButton.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -8253,6 +9003,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.homeScreen.view.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -8264,6 +9015,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.homeScreen.view.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -8275,6 +9027,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.homeScreen.view.playgroundScreenLargeButton": {
       "phetioDocumentation": "A pressable button in the simulation, in the home screen",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -8286,6 +9039,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.homeScreen.view.playgroundScreenLargeButton.inputListener.firedEmitter": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -8297,6 +9051,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.homeScreen.view.playgroundScreenLargeButton.inputListener.pressAction": {
       "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event.",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -8308,6 +9063,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.homeScreen.view.playgroundScreenLargeButton.inputListener.releaseAction": {
       "phetioDocumentation": "Executes whenever a release occurs.",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -8319,6 +9075,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.homeScreen.view.playgroundScreenLargeButton.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -8330,6 +9087,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.homeScreen.view.playgroundScreenLargeButton.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -8341,6 +9099,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.homeScreen.view.playgroundScreenLargeButton.text": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -8352,6 +9111,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.homeScreen.view.playgroundScreenLargeButton.text.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -8363,6 +9123,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.homeScreen.view.playgroundScreenLargeButton.text.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -8374,6 +9135,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.homeScreen.view.playgroundScreenLargeButton.text.textProperty": {
       "phetioDocumentation": "Property for the displayed text",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -8385,6 +9147,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.homeScreen.view.playgroundScreenLargeButton.text.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -8396,6 +9159,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.homeScreen.view.playgroundScreenLargeButton.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -8407,6 +9171,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.homeScreen.view.playgroundScreenSmallButton": {
       "phetioDocumentation": "A pressable button in the simulation, in the home screen",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -8418,6 +9183,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.homeScreen.view.playgroundScreenSmallButton.inputListener.firedEmitter": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -8429,6 +9195,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.homeScreen.view.playgroundScreenSmallButton.inputListener.pressAction": {
       "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event.",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -8440,6 +9207,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.homeScreen.view.playgroundScreenSmallButton.inputListener.releaseAction": {
       "phetioDocumentation": "Executes whenever a release occurs.",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -8451,6 +9219,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.homeScreen.view.playgroundScreenSmallButton.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -8462,6 +9231,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.homeScreen.view.playgroundScreenSmallButton.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -8473,6 +9243,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.homeScreen.view.playgroundScreenSmallButton.text": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -8484,6 +9255,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.homeScreen.view.playgroundScreenSmallButton.text.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -8495,6 +9267,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.homeScreen.view.playgroundScreenSmallButton.text.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -8506,6 +9279,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.homeScreen.view.playgroundScreenSmallButton.text.textProperty": {
       "phetioDocumentation": "Property for the displayed text",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -8517,6 +9291,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.homeScreen.view.playgroundScreenSmallButton.text.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -8528,6 +9303,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.homeScreen.view.playgroundScreenSmallButton.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -8539,6 +9315,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.homeScreen.view.title": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -8550,6 +9327,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.homeScreen.view.title.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -8561,6 +9339,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.homeScreen.view.title.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -8572,6 +9351,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.homeScreen.view.title.textProperty": {
       "phetioDocumentation": "Property for the displayed text",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -8583,6 +9363,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.homeScreen.view.title.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -8594,6 +9375,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.homeScreen.view.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -8605,6 +9387,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.activeProperty": {
       "phetioDocumentation": "Indicates whether the screen is active.  For single-screen simulations, the screen is always active.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -8616,6 +9399,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.model.doubleWellTrack": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -8627,6 +9411,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.model.doubleWellTrack.draggingProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -8638,6 +9423,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.model.doubleWellTrack.droppedProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -8649,6 +9435,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.model.doubleWellTrack.leftThePanelProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -8660,6 +9447,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.model.doubleWellTrack.physicalProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -8671,6 +9459,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.model.parabolaTrack": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -8682,6 +9471,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.model.parabolaTrack.draggingProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -8693,6 +9483,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.model.parabolaTrack.droppedProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -8704,6 +9495,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.model.parabolaTrack.leftThePanelProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -8715,6 +9507,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.model.parabolaTrack.physicalProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -8726,6 +9519,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.model.sceneProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -8737,6 +9531,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.model.slopeTrack": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -8748,6 +9543,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.model.slopeTrack.draggingProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -8759,6 +9555,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.model.slopeTrack.droppedProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -8770,6 +9567,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.model.slopeTrack.leftThePanelProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -8781,6 +9579,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.model.slopeTrack.physicalProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -8792,6 +9591,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.model.trackSetModel": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -8803,6 +9603,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.model.trackSetModel.availableModelBoundsProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -8814,6 +9615,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.model.trackSetModel.barGraphScaleProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -8825,6 +9627,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.model.trackSetModel.barGraphVisibleProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -8836,6 +9639,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.model.trackSetModel.clearButtonEnabledProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -8847,6 +9651,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.model.trackSetModel.controlPoint~0": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -8858,6 +9663,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.model.trackSetModel.controlPoint~0.draggingProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -8869,6 +9675,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.model.trackSetModel.controlPoint~0.positionProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -8880,6 +9687,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.model.trackSetModel.controlPoint~0.snapTargetProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -8891,6 +9699,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.model.trackSetModel.controlPoint~0.sourcePositionProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -8902,6 +9711,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.model.trackSetModel.controlPoint~1": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -8913,6 +9723,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.model.trackSetModel.controlPoint~1.draggingProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -8924,6 +9735,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.model.trackSetModel.controlPoint~1.positionProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -8935,6 +9747,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.model.trackSetModel.controlPoint~1.snapTargetProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -8946,6 +9759,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.model.trackSetModel.controlPoint~1.sourcePositionProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -8957,6 +9771,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.model.trackSetModel.controlPoint~10": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -8968,6 +9783,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.model.trackSetModel.controlPoint~10.draggingProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -8979,6 +9795,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.model.trackSetModel.controlPoint~10.positionProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -8990,6 +9807,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.model.trackSetModel.controlPoint~10.snapTargetProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -9001,6 +9819,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.model.trackSetModel.controlPoint~10.sourcePositionProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -9012,6 +9831,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.model.trackSetModel.controlPoint~2": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -9023,6 +9843,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.model.trackSetModel.controlPoint~2.draggingProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -9034,6 +9855,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.model.trackSetModel.controlPoint~2.positionProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -9045,6 +9867,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.model.trackSetModel.controlPoint~2.snapTargetProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -9056,6 +9879,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.model.trackSetModel.controlPoint~2.sourcePositionProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -9067,6 +9891,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.model.trackSetModel.controlPoint~3": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -9078,6 +9903,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.model.trackSetModel.controlPoint~3.draggingProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -9089,6 +9915,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.model.trackSetModel.controlPoint~3.positionProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -9100,6 +9927,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.model.trackSetModel.controlPoint~3.snapTargetProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -9111,6 +9939,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.model.trackSetModel.controlPoint~3.sourcePositionProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -9122,6 +9951,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.model.trackSetModel.controlPoint~4": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -9133,6 +9963,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.model.trackSetModel.controlPoint~4.draggingProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -9144,6 +9975,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.model.trackSetModel.controlPoint~4.positionProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -9155,6 +9987,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.model.trackSetModel.controlPoint~4.snapTargetProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -9166,6 +9999,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.model.trackSetModel.controlPoint~4.sourcePositionProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -9177,6 +10011,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.model.trackSetModel.controlPoint~5": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -9188,6 +10023,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.model.trackSetModel.controlPoint~5.draggingProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -9199,6 +10035,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.model.trackSetModel.controlPoint~5.positionProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -9210,6 +10047,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.model.trackSetModel.controlPoint~5.snapTargetProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -9221,6 +10059,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.model.trackSetModel.controlPoint~5.sourcePositionProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -9232,6 +10071,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.model.trackSetModel.controlPoint~6": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -9243,6 +10083,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.model.trackSetModel.controlPoint~6.draggingProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -9254,6 +10095,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.model.trackSetModel.controlPoint~6.positionProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -9265,6 +10107,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.model.trackSetModel.controlPoint~6.snapTargetProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -9276,6 +10119,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.model.trackSetModel.controlPoint~6.sourcePositionProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -9287,6 +10131,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.model.trackSetModel.controlPoint~7": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -9298,6 +10143,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.model.trackSetModel.controlPoint~7.draggingProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -9309,6 +10155,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.model.trackSetModel.controlPoint~7.positionProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -9320,6 +10167,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.model.trackSetModel.controlPoint~7.snapTargetProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -9331,6 +10179,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.model.trackSetModel.controlPoint~7.sourcePositionProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -9342,6 +10191,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.model.trackSetModel.controlPoint~8": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -9353,6 +10203,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.model.trackSetModel.controlPoint~8.draggingProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -9364,6 +10215,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.model.trackSetModel.controlPoint~8.positionProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -9375,6 +10227,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.model.trackSetModel.controlPoint~8.snapTargetProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -9386,6 +10239,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.model.trackSetModel.controlPoint~8.sourcePositionProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -9397,6 +10251,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.model.trackSetModel.controlPoint~9": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -9408,6 +10263,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.model.trackSetModel.controlPoint~9.draggingProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -9419,6 +10275,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.model.trackSetModel.controlPoint~9.positionProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -9430,6 +10287,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.model.trackSetModel.controlPoint~9.snapTargetProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -9441,6 +10299,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.model.trackSetModel.controlPoint~9.sourcePositionProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -9452,6 +10311,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.model.trackSetModel.editButtonEnabledProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -9463,6 +10323,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.model.trackSetModel.frictionProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -9474,6 +10335,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.model.trackSetModel.gridVisibleProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -9485,6 +10347,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.model.trackSetModel.measuringTapeBasePositionProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -9496,6 +10359,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.model.trackSetModel.measuringTapeTipPositionProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -9507,6 +10371,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.model.trackSetModel.measuringTapeVisibleProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -9518,6 +10383,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.model.trackSetModel.pausedProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -9529,6 +10395,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.model.trackSetModel.pieChartVisibleProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -9540,6 +10407,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.model.trackSetModel.referenceHeightVisibleProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -9551,6 +10419,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.model.trackSetModel.skater.allowClearingThermalEnergyProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -9562,6 +10431,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.model.trackSetModel.skater.angleProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -9573,6 +10443,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.model.trackSetModel.skater.directionProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -9584,6 +10455,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.model.trackSetModel.skater.draggingProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -9595,6 +10467,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.model.trackSetModel.skater.gravityMagnitudeProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -9606,6 +10479,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.model.trackSetModel.skater.headPositionProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -9617,6 +10491,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.model.trackSetModel.skater.kineticEnergyProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -9628,6 +10503,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.model.trackSetModel.skater.massProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -9639,6 +10515,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.model.trackSetModel.skater.movedProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -9650,6 +10527,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.model.trackSetModel.skater.onTopSideOfTrackProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -9661,6 +10539,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.model.trackSetModel.skater.parametricPositionProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -9672,6 +10551,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.model.trackSetModel.skater.parametricSpeedProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -9683,6 +10563,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.model.trackSetModel.skater.positionProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -9694,6 +10575,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.model.trackSetModel.skater.potentialEnergyProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -9705,6 +10587,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.model.trackSetModel.skater.referenceHeightProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -9716,6 +10599,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.model.trackSetModel.skater.speedProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -9727,6 +10611,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.model.trackSetModel.skater.startingPositionProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -9738,6 +10623,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.model.trackSetModel.skater.startingUProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -9749,6 +10635,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.model.trackSetModel.skater.startingUpProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -9760,6 +10647,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.model.trackSetModel.skater.thermalEnergyProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -9771,6 +10659,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.model.trackSetModel.skater.totalEnergyProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -9782,6 +10671,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.model.trackSetModel.skater.trackProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -9793,6 +10683,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.model.trackSetModel.skater.velocityProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -9804,6 +10695,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.model.trackSetModel.speedProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -9815,6 +10707,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.model.trackSetModel.speedValueVisibleProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -9826,6 +10719,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.model.trackSetModel.speedometerVisibleProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -9837,6 +10731,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.model.trackSetModel.stickingToTrackProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -9848,6 +10743,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.model.trackSetModel.tracks": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -9859,6 +10755,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.model.trackSetModel.tracks.lengthProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -9870,6 +10767,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -9881,6 +10779,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.backgroundNode": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -9892,6 +10791,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.backgroundNode.mountainImage": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -9903,6 +10803,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.backgroundNode.mountainImage.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -9914,6 +10815,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.backgroundNode.mountainImage.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -9925,6 +10827,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.backgroundNode.mountainImage.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -9936,6 +10839,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.backgroundNode.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -9947,6 +10851,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.backgroundNode.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -9958,6 +10863,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.backgroundNode.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -9969,6 +10875,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -9980,6 +10887,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -9991,6 +10899,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -10002,6 +10911,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.sceneSelectionRadioButtonGroup": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -10013,6 +10923,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.sceneSelectionRadioButtonGroup.contentNode0": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -10024,6 +10935,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.sceneSelectionRadioButtonGroup.contentNode0.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -10035,6 +10947,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.sceneSelectionRadioButtonGroup.contentNode0.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -10046,6 +10959,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.sceneSelectionRadioButtonGroup.contentNode0.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -10057,6 +10971,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.sceneSelectionRadioButtonGroup.contentNode1": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -10068,6 +10983,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.sceneSelectionRadioButtonGroup.contentNode1.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -10079,6 +10995,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.sceneSelectionRadioButtonGroup.contentNode1.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -10090,6 +11007,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.sceneSelectionRadioButtonGroup.contentNode1.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -10101,6 +11019,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.sceneSelectionRadioButtonGroup.contentNode2": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -10112,6 +11031,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.sceneSelectionRadioButtonGroup.contentNode2.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -10123,6 +11043,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.sceneSelectionRadioButtonGroup.contentNode2.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -10134,6 +11055,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.sceneSelectionRadioButtonGroup.contentNode2.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -10145,6 +11067,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.sceneSelectionRadioButtonGroup.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -10156,6 +11079,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.sceneSelectionRadioButtonGroup.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -10167,6 +11091,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.sceneSelectionRadioButtonGroup.scene1RadioButton": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -10178,6 +11103,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.sceneSelectionRadioButtonGroup.scene1RadioButton.enabledProperty": {
       "phetioDocumentation": "When disabled, the button is grayed out and cannot be pressed",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": true,
       "phetioHighFrequency": false,
@@ -10189,6 +11115,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.sceneSelectionRadioButtonGroup.scene1RadioButton.firedEmitter": {
       "phetioDocumentation": "Emits when the radio button is pressed",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -10200,6 +11127,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.sceneSelectionRadioButtonGroup.scene1RadioButton.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -10211,6 +11139,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.sceneSelectionRadioButtonGroup.scene1RadioButton.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -10222,6 +11151,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.sceneSelectionRadioButtonGroup.scene1RadioButton.pressListener.pressAction": {
       "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event.",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -10233,6 +11163,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.sceneSelectionRadioButtonGroup.scene1RadioButton.pressListener.releaseAction": {
       "phetioDocumentation": "Executes whenever a release occurs.",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -10244,6 +11175,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.sceneSelectionRadioButtonGroup.scene1RadioButton.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": true,
       "phetioHighFrequency": false,
@@ -10255,6 +11187,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.sceneSelectionRadioButtonGroup.scene2RadioButton": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -10266,6 +11199,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.sceneSelectionRadioButtonGroup.scene2RadioButton.enabledProperty": {
       "phetioDocumentation": "When disabled, the button is grayed out and cannot be pressed",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": true,
       "phetioHighFrequency": false,
@@ -10277,6 +11211,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.sceneSelectionRadioButtonGroup.scene2RadioButton.firedEmitter": {
       "phetioDocumentation": "Emits when the radio button is pressed",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -10288,6 +11223,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.sceneSelectionRadioButtonGroup.scene2RadioButton.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -10299,6 +11235,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.sceneSelectionRadioButtonGroup.scene2RadioButton.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -10310,6 +11247,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.sceneSelectionRadioButtonGroup.scene2RadioButton.pressListener.pressAction": {
       "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event.",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -10321,6 +11259,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.sceneSelectionRadioButtonGroup.scene2RadioButton.pressListener.releaseAction": {
       "phetioDocumentation": "Executes whenever a release occurs.",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -10332,6 +11271,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.sceneSelectionRadioButtonGroup.scene2RadioButton.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": true,
       "phetioHighFrequency": false,
@@ -10343,6 +11283,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.sceneSelectionRadioButtonGroup.scene3RadioButton": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -10354,6 +11295,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.sceneSelectionRadioButtonGroup.scene3RadioButton.enabledProperty": {
       "phetioDocumentation": "When disabled, the button is grayed out and cannot be pressed",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": true,
       "phetioHighFrequency": false,
@@ -10365,6 +11307,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.sceneSelectionRadioButtonGroup.scene3RadioButton.firedEmitter": {
       "phetioDocumentation": "Emits when the radio button is pressed",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -10376,6 +11319,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.sceneSelectionRadioButtonGroup.scene3RadioButton.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -10387,6 +11331,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.sceneSelectionRadioButtonGroup.scene3RadioButton.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -10398,6 +11343,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.sceneSelectionRadioButtonGroup.scene3RadioButton.pressListener.pressAction": {
       "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event.",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -10409,6 +11355,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.sceneSelectionRadioButtonGroup.scene3RadioButton.pressListener.releaseAction": {
       "phetioDocumentation": "Executes whenever a release occurs.",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -10420,6 +11367,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.sceneSelectionRadioButtonGroup.scene3RadioButton.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": true,
       "phetioHighFrequency": false,
@@ -10431,6 +11379,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.sceneSelectionRadioButtonGroup.trackNode0": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -10442,6 +11391,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.sceneSelectionRadioButtonGroup.trackNode0.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -10453,6 +11403,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.sceneSelectionRadioButtonGroup.trackNode0.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -10464,6 +11415,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.sceneSelectionRadioButtonGroup.trackNode0.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -10475,6 +11427,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.sceneSelectionRadioButtonGroup.trackNode1": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -10486,6 +11439,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.sceneSelectionRadioButtonGroup.trackNode1.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -10497,6 +11451,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.sceneSelectionRadioButtonGroup.trackNode1.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -10508,6 +11463,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.sceneSelectionRadioButtonGroup.trackNode1.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -10519,6 +11475,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.sceneSelectionRadioButtonGroup.trackNode2": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -10530,6 +11487,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.sceneSelectionRadioButtonGroup.trackNode2.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -10541,6 +11499,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.sceneSelectionRadioButtonGroup.trackNode2.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -10552,6 +11511,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.sceneSelectionRadioButtonGroup.trackNode2.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -10563,6 +11523,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.sceneSelectionRadioButtonGroup.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": true,
       "phetioHighFrequency": false,
@@ -10574,6 +11535,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.visibilityControls.barGraphCheckbox": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -10585,6 +11547,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.visibilityControls.barGraphCheckbox.enabledProperty": {
       "phetioDocumentation": "When disabled, the checkbox is grayed out and cannot be pressed.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": true,
       "phetioHighFrequency": false,
@@ -10596,6 +11559,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.visibilityControls.barGraphCheckbox.itemLabel": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -10607,6 +11571,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.visibilityControls.barGraphCheckbox.itemLabel.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -10618,6 +11583,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.visibilityControls.barGraphCheckbox.itemLabel.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -10629,6 +11595,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.visibilityControls.barGraphCheckbox.itemLabel.textProperty": {
       "phetioDocumentation": "Property for the displayed text",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -10640,6 +11607,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.visibilityControls.barGraphCheckbox.itemLabel.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -10651,6 +11619,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.visibilityControls.barGraphCheckbox.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -10662,6 +11631,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.visibilityControls.barGraphCheckbox.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -10673,6 +11643,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.visibilityControls.barGraphCheckbox.property": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -10684,6 +11655,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.visibilityControls.barGraphCheckbox.toggleAction": {
       "phetioDocumentation": "Emits when user input causes the checkbox to toggle, emitting a single arg: the new boolean value of the checkbox state.",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -10695,6 +11667,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.visibilityControls.barGraphCheckbox.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": true,
       "phetioHighFrequency": false,
@@ -10706,6 +11679,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.visibilityControls.barGraphIcon": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -10717,6 +11691,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.visibilityControls.barGraphIcon.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -10728,6 +11703,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.visibilityControls.barGraphIcon.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -10739,6 +11715,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.visibilityControls.barGraphIcon.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -10750,6 +11727,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.visibilityControls.gridCheckbox": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -10761,6 +11739,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.visibilityControls.gridCheckbox.enabledProperty": {
       "phetioDocumentation": "When disabled, the checkbox is grayed out and cannot be pressed.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": true,
       "phetioHighFrequency": false,
@@ -10772,6 +11751,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.visibilityControls.gridCheckbox.itemLabel": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -10783,6 +11763,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.visibilityControls.gridCheckbox.itemLabel.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -10794,6 +11775,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.visibilityControls.gridCheckbox.itemLabel.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -10805,6 +11787,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.visibilityControls.gridCheckbox.itemLabel.textProperty": {
       "phetioDocumentation": "Property for the displayed text",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -10816,6 +11799,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.visibilityControls.gridCheckbox.itemLabel.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -10827,6 +11811,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.visibilityControls.gridCheckbox.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -10838,6 +11823,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.visibilityControls.gridCheckbox.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -10849,6 +11835,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.visibilityControls.gridCheckbox.property": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -10860,6 +11847,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.visibilityControls.gridCheckbox.toggleAction": {
       "phetioDocumentation": "Emits when user input causes the checkbox to toggle, emitting a single arg: the new boolean value of the checkbox state.",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -10871,6 +11859,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.visibilityControls.gridCheckbox.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": true,
       "phetioHighFrequency": false,
@@ -10882,6 +11871,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.visibilityControls.gridIcon": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -10893,6 +11883,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.visibilityControls.gridIcon.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -10904,6 +11895,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.visibilityControls.gridIcon.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -10915,6 +11907,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.visibilityControls.gridIcon.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -10926,6 +11919,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.visibilityControls.pieChartCheckbox": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -10937,6 +11931,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.visibilityControls.pieChartCheckbox.enabledProperty": {
       "phetioDocumentation": "When disabled, the checkbox is grayed out and cannot be pressed.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": true,
       "phetioHighFrequency": false,
@@ -10948,6 +11943,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.visibilityControls.pieChartCheckbox.itemLabel": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -10959,6 +11955,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.visibilityControls.pieChartCheckbox.itemLabel.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -10970,6 +11967,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.visibilityControls.pieChartCheckbox.itemLabel.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -10981,6 +11979,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.visibilityControls.pieChartCheckbox.itemLabel.textProperty": {
       "phetioDocumentation": "Property for the displayed text",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -10992,6 +11991,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.visibilityControls.pieChartCheckbox.itemLabel.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -11003,6 +12003,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.visibilityControls.pieChartCheckbox.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -11014,6 +12015,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.visibilityControls.pieChartCheckbox.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -11025,6 +12027,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.visibilityControls.pieChartCheckbox.property": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -11036,6 +12039,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.visibilityControls.pieChartCheckbox.toggleAction": {
       "phetioDocumentation": "Emits when user input causes the checkbox to toggle, emitting a single arg: the new boolean value of the checkbox state.",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -11047,6 +12051,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.visibilityControls.pieChartCheckbox.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": true,
       "phetioHighFrequency": false,
@@ -11058,6 +12063,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.visibilityControls.pieChartIcon": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -11069,6 +12075,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.visibilityControls.pieChartIcon.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -11080,6 +12087,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.visibilityControls.pieChartIcon.path": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -11091,6 +12099,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.visibilityControls.pieChartIcon.path.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -11102,6 +12111,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.visibilityControls.pieChartIcon.path.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -11113,6 +12123,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.visibilityControls.pieChartIcon.path.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -11124,6 +12135,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.visibilityControls.pieChartIcon.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -11135,6 +12147,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.visibilityControls.pieChartIcon.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -11146,6 +12159,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.visibilityControls.speedIcon.gaugeNode": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -11157,6 +12171,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.visibilityControls.speedIcon.gaugeNode.foregroundNode": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -11168,6 +12183,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.visibilityControls.speedIcon.gaugeNode.foregroundNode.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -11179,6 +12195,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.visibilityControls.speedIcon.gaugeNode.foregroundNode.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -11190,6 +12207,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.visibilityControls.speedIcon.gaugeNode.foregroundNode.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -11201,6 +12219,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.visibilityControls.speedIcon.gaugeNode.labelNode": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -11212,6 +12231,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.visibilityControls.speedIcon.gaugeNode.labelNode.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -11223,6 +12243,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.visibilityControls.speedIcon.gaugeNode.labelNode.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -11234,6 +12255,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.visibilityControls.speedIcon.gaugeNode.labelNode.textProperty": {
       "phetioDocumentation": "Property for the displayed text",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -11245,6 +12267,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.visibilityControls.speedIcon.gaugeNode.labelNode.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -11256,6 +12279,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.visibilityControls.speedIcon.gaugeNode.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -11267,6 +12291,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.visibilityControls.speedIcon.gaugeNode.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -11278,6 +12303,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.visibilityControls.speedIcon.gaugeNode.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -11289,6 +12315,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.visibilityControls.speedometerCheckbox": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -11300,6 +12327,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.visibilityControls.speedometerCheckbox.enabledProperty": {
       "phetioDocumentation": "When disabled, the checkbox is grayed out and cannot be pressed.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": true,
       "phetioHighFrequency": false,
@@ -11311,6 +12339,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.visibilityControls.speedometerCheckbox.itemLabel": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -11322,6 +12351,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.visibilityControls.speedometerCheckbox.itemLabel.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -11333,6 +12363,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.visibilityControls.speedometerCheckbox.itemLabel.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -11344,6 +12375,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.visibilityControls.speedometerCheckbox.itemLabel.textProperty": {
       "phetioDocumentation": "Property for the displayed text",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -11355,6 +12387,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.visibilityControls.speedometerCheckbox.itemLabel.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -11366,6 +12399,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.visibilityControls.speedometerCheckbox.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -11377,6 +12411,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.visibilityControls.speedometerCheckbox.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -11388,6 +12423,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.visibilityControls.speedometerCheckbox.property": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -11399,6 +12435,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.visibilityControls.speedometerCheckbox.toggleAction": {
       "phetioDocumentation": "Emits when user input causes the checkbox to toggle, emitting a single arg: the new boolean value of the checkbox state.",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -11410,6 +12447,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.visibilityControls.speedometerCheckbox.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": true,
       "phetioHighFrequency": false,
@@ -11421,6 +12459,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -11432,6 +12471,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.energyBarGraph.clearThermalButton": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -11443,6 +12483,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.energyBarGraph.clearThermalButton.arrowPath": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -11454,6 +12495,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.energyBarGraph.clearThermalButton.arrowPath.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -11465,6 +12507,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.energyBarGraph.clearThermalButton.arrowPath.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -11476,6 +12519,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.energyBarGraph.clearThermalButton.arrowPath.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -11487,6 +12531,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.energyBarGraph.clearThermalButton.enabledProperty": {
       "phetioDocumentation": "When disabled, the button is grayed out and cannot be pressed",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": true,
       "phetioHighFrequency": false,
@@ -11498,6 +12543,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.energyBarGraph.clearThermalButton.firedEmitter": {
       "phetioDocumentation": "Emits when the button is fired",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -11509,6 +12555,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.energyBarGraph.clearThermalButton.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -11520,6 +12567,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.energyBarGraph.clearThermalButton.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -11531,6 +12579,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.energyBarGraph.clearThermalButton.pressListener.pressAction": {
       "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event.",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -11542,6 +12591,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.energyBarGraph.clearThermalButton.pressListener.releaseAction": {
       "phetioDocumentation": "Executes whenever a release occurs.",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -11553,6 +12603,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.energyBarGraph.clearThermalButton.trashPath": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -11564,6 +12615,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.energyBarGraph.clearThermalButton.trashPath.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -11575,6 +12627,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.energyBarGraph.clearThermalButton.trashPath.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -11586,6 +12639,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.energyBarGraph.clearThermalButton.trashPath.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -11597,6 +12651,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.energyBarGraph.clearThermalButton.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": true,
       "phetioHighFrequency": false,
@@ -11608,6 +12663,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.gridNode": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -11619,6 +12675,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.gridNode.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -11630,6 +12687,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.gridNode.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -11641,6 +12699,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.gridNode.thickLinePath": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -11652,6 +12711,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.gridNode.thickLinePath.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -11663,6 +12723,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.gridNode.thickLinePath.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -11674,6 +12735,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.gridNode.thickLinePath.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -11685,6 +12747,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.gridNode.thinLinePath": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -11696,6 +12759,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.gridNode.thinLinePath.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -11707,6 +12771,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.gridNode.thinLinePath.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -11718,6 +12783,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.gridNode.thinLinePath.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -11729,6 +12795,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.gridNode.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -11740,6 +12807,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -11751,6 +12819,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -11762,6 +12831,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.pieChartLegend": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -11773,6 +12843,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.pieChartLegend.clearThermalButton": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -11784,6 +12855,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.pieChartLegend.clearThermalButton.arrowPath": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -11795,6 +12867,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.pieChartLegend.clearThermalButton.arrowPath.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -11806,6 +12879,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.pieChartLegend.clearThermalButton.arrowPath.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -11817,6 +12891,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.pieChartLegend.clearThermalButton.arrowPath.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -11828,6 +12903,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.pieChartLegend.clearThermalButton.enabledProperty": {
       "phetioDocumentation": "When disabled, the button is grayed out and cannot be pressed",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": true,
       "phetioHighFrequency": false,
@@ -11839,6 +12915,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.pieChartLegend.clearThermalButton.firedEmitter": {
       "phetioDocumentation": "Emits when the button is fired",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -11850,6 +12927,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.pieChartLegend.clearThermalButton.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -11861,6 +12939,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.pieChartLegend.clearThermalButton.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -11872,6 +12951,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.pieChartLegend.clearThermalButton.pressListener.pressAction": {
       "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event.",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -11883,6 +12963,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.pieChartLegend.clearThermalButton.pressListener.releaseAction": {
       "phetioDocumentation": "Executes whenever a release occurs.",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -11894,6 +12975,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.pieChartLegend.clearThermalButton.trashPath": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -11905,6 +12987,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.pieChartLegend.clearThermalButton.trashPath.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -11916,6 +12999,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.pieChartLegend.clearThermalButton.trashPath.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -11927,6 +13011,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.pieChartLegend.clearThermalButton.trashPath.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -11938,6 +13023,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.pieChartLegend.clearThermalButton.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": true,
       "phetioHighFrequency": false,
@@ -11949,6 +13035,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.pieChartLegend.kineticEnergyLabel": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -11960,6 +13047,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.pieChartLegend.kineticEnergyLabel.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -11971,6 +13059,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.pieChartLegend.kineticEnergyLabel.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -11982,6 +13071,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.pieChartLegend.kineticEnergyLabel.textProperty": {
       "phetioDocumentation": "Property for the displayed text",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -11993,6 +13083,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.pieChartLegend.kineticEnergyLabel.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -12004,6 +13095,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.pieChartLegend.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -12015,6 +13107,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.pieChartLegend.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -12026,6 +13119,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.pieChartLegend.potentialEnergyLabel": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -12037,6 +13131,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.pieChartLegend.potentialEnergyLabel.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -12048,6 +13143,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.pieChartLegend.potentialEnergyLabel.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -12059,6 +13155,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.pieChartLegend.potentialEnergyLabel.textProperty": {
       "phetioDocumentation": "Property for the displayed text",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -12070,6 +13167,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.pieChartLegend.potentialEnergyLabel.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -12081,6 +13179,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.pieChartLegend.thermalEnergyLabel": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -12092,6 +13191,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.pieChartLegend.thermalEnergyLabel.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -12103,6 +13203,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.pieChartLegend.thermalEnergyLabel.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -12114,6 +13215,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.pieChartLegend.thermalEnergyLabel.textProperty": {
       "phetioDocumentation": "Property for the displayed text",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -12125,6 +13227,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.pieChartLegend.thermalEnergyLabel.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -12136,6 +13239,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.pieChartLegend.titleNode": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -12147,6 +13251,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.pieChartLegend.titleNode.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -12158,6 +13263,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.pieChartLegend.titleNode.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -12169,6 +13275,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.pieChartLegend.titleNode.textProperty": {
       "phetioDocumentation": "Property for the displayed text",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -12180,6 +13287,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.pieChartLegend.titleNode.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -12191,6 +13299,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.pieChartLegend.totalEnergyLabel": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -12202,6 +13311,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.pieChartLegend.totalEnergyLabel.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -12213,6 +13323,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.pieChartLegend.totalEnergyLabel.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -12224,6 +13335,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.pieChartLegend.totalEnergyLabel.textProperty": {
       "phetioDocumentation": "Property for the displayed text",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -12235,6 +13347,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.pieChartLegend.totalEnergyLabel.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -12246,6 +13359,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.pieChartLegend.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -12257,6 +13371,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.pieChartNode": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -12268,6 +13383,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.pieChartNode.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -12279,6 +13395,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.pieChartNode.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -12290,6 +13407,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.pieChartNode.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -12301,6 +13419,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.playPauseButton": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -12312,6 +13431,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.playPauseButton.enabledProperty": {
       "phetioDocumentation": "When disabled, the button is grayed out and cannot be pressed",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": true,
       "phetioHighFrequency": false,
@@ -12323,6 +13443,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.playPauseButton.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -12334,6 +13455,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.playPauseButton.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -12345,6 +13467,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.playPauseButton.pressListener.pressAction": {
       "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event.",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -12356,6 +13479,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.playPauseButton.pressListener.releaseAction": {
       "phetioDocumentation": "Executes whenever a release occurs.",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -12367,6 +13491,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.playPauseButton.property": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -12378,6 +13503,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.playPauseButton.toggleNode": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -12389,6 +13515,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.playPauseButton.toggleNode.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -12400,6 +13527,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.playPauseButton.toggleNode.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -12411,6 +13539,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.playPauseButton.toggleNode.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -12422,6 +13551,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.playPauseButton.toggledEmitter": {
       "phetioDocumentation": "Emits when the button is toggled",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -12433,6 +13563,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.playPauseButton.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": true,
       "phetioHighFrequency": false,
@@ -12444,6 +13575,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.playbackSpeedControl.normalSpeedButton": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -12455,6 +13587,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.playbackSpeedControl.normalSpeedButton.enabledProperty": {
       "phetioDocumentation": "Determines whether the AquaRadioButton is enabled (pressable) or disabled (grayed-out)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -12466,6 +13599,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.playbackSpeedControl.normalSpeedButton.inputListener.firedEmitter": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -12477,6 +13611,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.playbackSpeedControl.normalSpeedButton.inputListener.pressAction": {
       "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event.",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -12488,6 +13623,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.playbackSpeedControl.normalSpeedButton.inputListener.releaseAction": {
       "phetioDocumentation": "Executes whenever a release occurs.",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -12499,6 +13635,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.playbackSpeedControl.normalSpeedButton.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -12510,6 +13647,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.playbackSpeedControl.normalSpeedButton.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -12521,6 +13659,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.playbackSpeedControl.normalSpeedButton.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -12532,6 +13671,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.playbackSpeedControl.normalSpeedTextNode": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -12543,6 +13683,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.playbackSpeedControl.normalSpeedTextNode.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -12554,6 +13695,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.playbackSpeedControl.normalSpeedTextNode.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -12565,6 +13707,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.playbackSpeedControl.normalSpeedTextNode.textProperty": {
       "phetioDocumentation": "Property for the displayed text",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -12576,6 +13719,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.playbackSpeedControl.normalSpeedTextNode.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -12587,6 +13731,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.playbackSpeedControl.slowMotionRadioButton": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -12598,6 +13743,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.playbackSpeedControl.slowMotionRadioButton.enabledProperty": {
       "phetioDocumentation": "Determines whether the AquaRadioButton is enabled (pressable) or disabled (grayed-out)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -12609,6 +13755,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.playbackSpeedControl.slowMotionRadioButton.inputListener.firedEmitter": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -12620,6 +13767,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.playbackSpeedControl.slowMotionRadioButton.inputListener.pressAction": {
       "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event.",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -12631,6 +13779,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.playbackSpeedControl.slowMotionRadioButton.inputListener.releaseAction": {
       "phetioDocumentation": "Executes whenever a release occurs.",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -12642,6 +13791,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.playbackSpeedControl.slowMotionRadioButton.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -12653,6 +13803,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.playbackSpeedControl.slowMotionRadioButton.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -12664,6 +13815,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.playbackSpeedControl.slowMotionRadioButton.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -12675,6 +13827,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.playbackSpeedControl.slowMotionTextNode": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -12686,6 +13839,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.playbackSpeedControl.slowMotionTextNode.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -12697,6 +13851,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.playbackSpeedControl.slowMotionTextNode.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -12708,6 +13863,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.playbackSpeedControl.slowMotionTextNode.textProperty": {
       "phetioDocumentation": "Property for the displayed text",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -12719,6 +13875,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.playbackSpeedControl.slowMotionTextNode.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -12730,6 +13887,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.playingProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -12741,6 +13899,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.referenceHeightLine.dragListener.dragAction": {
       "phetioDocumentation": "Emits whenever a drag occurs with an EventIO argument.",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": true,
@@ -12752,6 +13911,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.referenceHeightLine.dragListener.pressAction": {
       "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event.",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -12763,6 +13923,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.referenceHeightLine.dragListener.releaseAction": {
       "phetioDocumentation": "Executes whenever a release occurs.",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -12774,6 +13935,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.resetAllButton": {
       "phetioDocumentation": "The orange, round button that can be used to restore the initial state",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -12785,6 +13947,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.resetAllButton.enabledProperty": {
       "phetioDocumentation": "When disabled, the button is grayed out and cannot be pressed",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": true,
       "phetioHighFrequency": false,
@@ -12796,6 +13959,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.resetAllButton.firedEmitter": {
       "phetioDocumentation": "Emits when the button is fired",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -12807,6 +13971,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.resetAllButton.isFiringProperty": {
       "phetioDocumentation": "Temporarily becomes true while the Reset All button is firing.  Commonly used to disable audio effects during reset.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -12818,6 +13983,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.resetAllButton.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -12829,6 +13995,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.resetAllButton.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -12840,6 +14007,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.resetAllButton.pressListener.pressAction": {
       "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event.",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -12851,6 +14019,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.resetAllButton.pressListener.releaseAction": {
       "phetioDocumentation": "Executes whenever a release occurs.",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -12862,6 +14031,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.resetAllButton.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": true,
       "phetioHighFrequency": false,
@@ -12873,6 +14043,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.restartSkaterTextNode": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -12884,6 +14055,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.restartSkaterTextNode.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -12895,6 +14067,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.restartSkaterTextNode.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -12906,6 +14079,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.restartSkaterTextNode.textProperty": {
       "phetioDocumentation": "Property for the displayed text",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -12917,6 +14091,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.restartSkaterTextNode.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -12928,6 +14103,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.returnSkaterButton": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -12939,6 +14115,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.returnSkaterButton.enabledProperty": {
       "phetioDocumentation": "When disabled, the button is grayed out and cannot be pressed",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": true,
       "phetioHighFrequency": false,
@@ -12950,6 +14127,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.returnSkaterButton.firedEmitter": {
       "phetioDocumentation": "Emits when the button is fired",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -12961,6 +14139,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.returnSkaterButton.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -12972,6 +14151,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.returnSkaterButton.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -12983,6 +14163,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.returnSkaterButton.pressListener.pressAction": {
       "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event.",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -12994,6 +14175,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.returnSkaterButton.pressListener.releaseAction": {
       "phetioDocumentation": "Executes whenever a release occurs.",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -13005,6 +14187,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.returnSkaterButton.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": true,
       "phetioHighFrequency": false,
@@ -13016,6 +14199,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.returnSkaterToGroundButton": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -13027,6 +14211,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.returnSkaterToGroundButton.enabledProperty": {
       "phetioDocumentation": "When disabled, the button is grayed out and cannot be pressed",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": true,
       "phetioHighFrequency": false,
@@ -13038,6 +14223,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.returnSkaterToGroundButton.firedEmitter": {
       "phetioDocumentation": "Emits when the button is fired",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -13049,6 +14235,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.returnSkaterToGroundButton.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -13060,6 +14247,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.returnSkaterToGroundButton.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -13071,6 +14259,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.returnSkaterToGroundButton.pressListener.pressAction": {
       "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event.",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -13082,6 +14271,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.returnSkaterToGroundButton.pressListener.releaseAction": {
       "phetioDocumentation": "Executes whenever a release occurs.",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -13093,6 +14283,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.returnSkaterToGroundButton.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": true,
       "phetioHighFrequency": false,
@@ -13104,6 +14295,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.returnSkaterToPreviousStartingPositionButton": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -13115,6 +14307,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.returnSkaterToPreviousStartingPositionButton.enabledProperty": {
       "phetioDocumentation": "When disabled, the button is grayed out and cannot be pressed",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": true,
       "phetioHighFrequency": false,
@@ -13126,6 +14319,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.returnSkaterToPreviousStartingPositionButton.firedEmitter": {
       "phetioDocumentation": "Emits when the button is fired",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -13137,6 +14331,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.returnSkaterToPreviousStartingPositionButton.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -13148,6 +14343,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.returnSkaterToPreviousStartingPositionButton.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -13159,6 +14355,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.returnSkaterToPreviousStartingPositionButton.pressListener.pressAction": {
       "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event.",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -13170,6 +14367,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.returnSkaterToPreviousStartingPositionButton.pressListener.releaseAction": {
       "phetioDocumentation": "Executes whenever a release occurs.",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -13181,6 +14379,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.returnSkaterToPreviousStartingPositionButton.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": true,
       "phetioHighFrequency": false,
@@ -13192,6 +14391,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.skaterIconImage1": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -13203,6 +14403,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.skaterIconImage1.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -13214,6 +14415,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.skaterIconImage1.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -13225,6 +14427,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.skaterIconImage1.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -13236,6 +14439,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.skaterIconImage2": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -13247,6 +14451,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.skaterIconImage2.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -13258,6 +14463,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.skaterIconImage2.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -13269,6 +14475,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.skaterIconImage2.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -13280,6 +14487,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.skaterNode": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -13291,6 +14499,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.skaterNode.inputListener": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -13302,6 +14511,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.skaterNode.inputListener.dragAction": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": true,
@@ -13313,6 +14523,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.skaterNode.inputListener.dragEndAction": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -13324,6 +14535,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.skaterNode.inputListener.dragStartAction": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -13335,6 +14547,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.skaterNode.inputListener.isDraggingProperty": {
       "phetioDocumentation": "Indicates whether the object is dragging",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -13346,6 +14559,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.skaterNode.leftSkaterImageNode": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -13357,6 +14571,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.skaterNode.leftSkaterImageNode.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -13368,6 +14583,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.skaterNode.leftSkaterImageNode.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -13379,6 +14595,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.skaterNode.leftSkaterImageNode.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -13390,6 +14607,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.skaterNode.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -13401,6 +14619,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.skaterNode.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -13412,6 +14631,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.skaterNode.rightSkaterImageNode": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -13423,6 +14643,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.skaterNode.rightSkaterImageNode.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -13434,6 +14655,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.skaterNode.rightSkaterImageNode.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -13445,6 +14667,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.skaterNode.rightSkaterImageNode.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -13456,6 +14679,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.skaterNode.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -13467,6 +14691,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.speedometerNode": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -13478,6 +14703,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.speedometerNode.foregroundNode": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -13489,6 +14715,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.speedometerNode.foregroundNode.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -13500,6 +14727,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.speedometerNode.foregroundNode.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -13511,6 +14739,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.speedometerNode.foregroundNode.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -13522,6 +14751,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.speedometerNode.labelNode": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -13533,6 +14763,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.speedometerNode.labelNode.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -13544,6 +14775,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.speedometerNode.labelNode.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -13555,6 +14787,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.speedometerNode.labelNode.textProperty": {
       "phetioDocumentation": "Property for the displayed text",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -13566,6 +14799,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.speedometerNode.labelNode.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -13577,6 +14811,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.speedometerNode.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -13588,6 +14823,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.speedometerNode.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -13599,6 +14835,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.speedometerNode.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -13610,6 +14847,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.stepButton": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -13621,6 +14859,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.stepButton.enabledProperty": {
       "phetioDocumentation": "When disabled, the button is grayed out and cannot be pressed",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": true,
       "phetioHighFrequency": false,
@@ -13632,6 +14871,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.stepButton.firedEmitter": {
       "phetioDocumentation": "Emits when the button is fired",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -13643,6 +14883,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.stepButton.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -13654,6 +14895,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.stepButton.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -13665,6 +14907,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.stepButton.pressListener.pressAction": {
       "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event.",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -13676,6 +14919,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.stepButton.pressListener.releaseAction": {
       "phetioDocumentation": "Executes whenever a release occurs.",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -13687,6 +14931,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.stepButton.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": true,
       "phetioHighFrequency": false,
@@ -13698,6 +14943,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.trackLayer": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -13709,6 +14955,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.trackLayer.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -13720,6 +14967,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.trackLayer.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -13731,6 +14979,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.trackLayer.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -13742,6 +14991,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.trackNode~0": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -13753,6 +15003,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.trackNode~0.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -13764,6 +15015,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.trackNode~0.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -13775,6 +15027,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.trackNode~0.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -13786,6 +15039,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.trackNode~1": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -13797,6 +15051,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.trackNode~1.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -13808,6 +15063,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.trackNode~1.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -13819,6 +15075,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.trackNode~1.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -13830,6 +15087,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.trackNode~2": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -13841,6 +15099,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.trackNode~2.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -13852,6 +15111,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.trackNode~2.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -13863,6 +15123,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.trackNode~2.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -13874,6 +15135,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.introScreenView.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -13885,6 +15147,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.massSlider": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -13896,6 +15159,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.massSlider.enabledProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": true,
       "phetioHighFrequency": false,
@@ -13907,6 +15171,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.massSlider.enabledRangeProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -13918,6 +15183,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.massSlider.maxLabel": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -13929,6 +15195,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.massSlider.maxLabel.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -13940,6 +15207,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.massSlider.maxLabel.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -13951,6 +15219,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.massSlider.maxLabel.textProperty": {
       "phetioDocumentation": "Property for the displayed text",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -13962,6 +15231,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.massSlider.maxLabel.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -13973,6 +15243,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.massSlider.minLabel": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -13984,6 +15255,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.massSlider.minLabel.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -13995,6 +15267,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.massSlider.minLabel.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -14006,6 +15279,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.massSlider.minLabel.textProperty": {
       "phetioDocumentation": "Property for the displayed text",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -14017,6 +15291,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.massSlider.minLabel.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -14028,6 +15303,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.massSlider.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -14039,6 +15315,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.massSlider.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -14050,6 +15327,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.massSlider.thumb": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -14061,6 +15339,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.massSlider.thumb.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -14072,6 +15351,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.massSlider.thumb.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -14083,6 +15363,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.massSlider.thumb.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -14094,6 +15375,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.massSlider.thumbInputListener": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -14105,6 +15387,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.massSlider.thumbInputListener.dragAction": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": true,
@@ -14116,6 +15399,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.massSlider.thumbInputListener.dragEndAction": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -14127,6 +15411,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.massSlider.thumbInputListener.dragStartAction": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -14138,6 +15423,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.massSlider.thumbInputListener.isDraggingProperty": {
       "phetioDocumentation": "Indicates whether the object is dragging",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -14149,6 +15435,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.massSlider.titleString": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -14160,6 +15447,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.massSlider.titleString.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -14171,6 +15459,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.massSlider.titleString.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -14182,6 +15471,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.massSlider.titleString.textProperty": {
       "phetioDocumentation": "Property for the displayed text",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -14193,6 +15483,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.massSlider.titleString.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -14204,6 +15495,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.massSlider.track.trackInputListener": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -14215,6 +15507,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.massSlider.track.trackInputListener.dragAction": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": true,
@@ -14226,6 +15519,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.massSlider.track.trackInputListener.dragEndAction": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -14237,6 +15531,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.massSlider.track.trackInputListener.dragStartAction": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -14248,6 +15543,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.massSlider.track.trackInputListener.isDraggingProperty": {
       "phetioDocumentation": "Indicates whether the object is dragging",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -14259,6 +15555,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.massSlider.valueProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -14270,6 +15567,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.view.massSlider.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": true,
       "phetioHighFrequency": false,
@@ -14281,6 +15579,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.activeProperty": {
       "phetioDocumentation": "Indicates whether the screen is active.  For single-screen simulations, the screen is always active.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -14292,6 +15591,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -14303,6 +15603,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.availableModelBoundsProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -14314,6 +15615,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.barGraphScaleProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -14325,6 +15627,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.barGraphVisibleProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -14336,6 +15639,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.clearButtonEnabledProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -14347,6 +15651,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.controlPoint~0": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -14358,6 +15663,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.controlPoint~0.draggingProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -14369,6 +15675,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.controlPoint~0.positionProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -14380,6 +15687,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.controlPoint~0.snapTargetProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -14391,6 +15699,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.controlPoint~0.sourcePositionProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -14402,6 +15711,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.controlPoint~1": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -14413,6 +15723,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.controlPoint~1.draggingProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -14424,6 +15735,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.controlPoint~1.positionProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -14435,6 +15747,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.controlPoint~1.snapTargetProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -14446,6 +15759,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.controlPoint~1.sourcePositionProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -14457,6 +15771,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.controlPoint~10": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -14468,6 +15783,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.controlPoint~10.draggingProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -14479,6 +15795,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.controlPoint~10.positionProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -14490,6 +15807,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.controlPoint~10.snapTargetProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -14501,6 +15819,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.controlPoint~10.sourcePositionProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -14512,6 +15831,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.controlPoint~11": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -14523,6 +15843,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.controlPoint~11.draggingProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -14534,6 +15855,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.controlPoint~11.positionProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -14545,6 +15867,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.controlPoint~11.snapTargetProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -14556,6 +15879,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.controlPoint~11.sourcePositionProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -14567,6 +15891,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.controlPoint~12": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -14578,6 +15903,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.controlPoint~12.draggingProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -14589,6 +15915,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.controlPoint~12.positionProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -14600,6 +15927,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.controlPoint~12.snapTargetProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -14611,6 +15939,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.controlPoint~12.sourcePositionProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -14622,6 +15951,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.controlPoint~13": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -14633,6 +15963,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.controlPoint~13.draggingProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -14644,6 +15975,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.controlPoint~13.positionProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -14655,6 +15987,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.controlPoint~13.snapTargetProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -14666,6 +15999,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.controlPoint~13.sourcePositionProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -14677,6 +16011,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.controlPoint~14": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -14688,6 +16023,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.controlPoint~14.draggingProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -14699,6 +16035,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.controlPoint~14.positionProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -14710,6 +16047,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.controlPoint~14.snapTargetProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -14721,6 +16059,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.controlPoint~14.sourcePositionProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -14732,6 +16071,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.controlPoint~2": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -14743,6 +16083,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.controlPoint~2.draggingProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -14754,6 +16095,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.controlPoint~2.positionProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -14765,6 +16107,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.controlPoint~2.snapTargetProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -14776,6 +16119,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.controlPoint~2.sourcePositionProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -14787,6 +16131,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.controlPoint~3": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -14798,6 +16143,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.controlPoint~3.draggingProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -14809,6 +16155,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.controlPoint~3.positionProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -14820,6 +16167,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.controlPoint~3.snapTargetProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -14831,6 +16179,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.controlPoint~3.sourcePositionProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -14842,6 +16191,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.controlPoint~4": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -14853,6 +16203,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.controlPoint~4.draggingProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -14864,6 +16215,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.controlPoint~4.positionProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -14875,6 +16227,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.controlPoint~4.snapTargetProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -14886,6 +16239,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.controlPoint~4.sourcePositionProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -14897,6 +16251,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.controlPoint~5": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -14908,6 +16263,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.controlPoint~5.draggingProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -14919,6 +16275,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.controlPoint~5.positionProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -14930,6 +16287,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.controlPoint~5.snapTargetProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -14941,6 +16299,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.controlPoint~5.sourcePositionProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -14952,6 +16311,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.controlPoint~6": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -14963,6 +16323,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.controlPoint~6.draggingProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -14974,6 +16335,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.controlPoint~6.positionProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -14985,6 +16347,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.controlPoint~6.snapTargetProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -14996,6 +16359,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.controlPoint~6.sourcePositionProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -15007,6 +16371,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.controlPoint~7": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -15018,6 +16383,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.controlPoint~7.draggingProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -15029,6 +16395,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.controlPoint~7.positionProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -15040,6 +16407,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.controlPoint~7.snapTargetProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -15051,6 +16419,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.controlPoint~7.sourcePositionProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -15062,6 +16431,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.controlPoint~8": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -15073,6 +16443,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.controlPoint~8.draggingProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -15084,6 +16455,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.controlPoint~8.positionProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -15095,6 +16467,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.controlPoint~8.snapTargetProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -15106,6 +16479,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.controlPoint~8.sourcePositionProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -15117,6 +16491,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.controlPoint~9": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -15128,6 +16503,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.controlPoint~9.draggingProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -15139,6 +16515,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.controlPoint~9.positionProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -15150,6 +16527,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.controlPoint~9.snapTargetProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -15161,6 +16539,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.controlPoint~9.sourcePositionProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -15172,6 +16551,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.editButtonEnabledProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -15183,6 +16563,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.frictionProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -15194,6 +16575,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.gridVisibleProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -15205,6 +16587,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.measuringTapeBasePositionProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -15216,6 +16599,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.measuringTapeTipPositionProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -15227,6 +16611,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.measuringTapeVisibleProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -15238,6 +16623,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.pausedProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -15249,6 +16635,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.pieChartVisibleProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -15260,6 +16647,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.referenceHeightVisibleProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -15271,6 +16659,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.skater.allowClearingThermalEnergyProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -15282,6 +16671,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.skater.angleProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -15293,6 +16683,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.skater.directionProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -15304,6 +16695,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.skater.draggingProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -15315,6 +16707,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.skater.gravityMagnitudeProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -15326,6 +16719,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.skater.headPositionProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -15337,6 +16731,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.skater.kineticEnergyProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -15348,6 +16743,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.skater.massProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -15359,6 +16755,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.skater.movedProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -15370,6 +16767,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.skater.onTopSideOfTrackProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -15381,6 +16779,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.skater.parametricPositionProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -15392,6 +16791,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.skater.parametricSpeedProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -15403,6 +16803,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.skater.positionProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -15414,6 +16815,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.skater.potentialEnergyProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -15425,6 +16827,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.skater.referenceHeightProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -15436,6 +16839,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.skater.speedProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -15447,6 +16851,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.skater.startingPositionProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -15458,6 +16863,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.skater.startingUProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -15469,6 +16875,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.skater.startingUpProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -15480,6 +16887,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.skater.thermalEnergyProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -15491,6 +16899,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.skater.totalEnergyProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -15502,6 +16911,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.skater.trackProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -15513,6 +16923,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.skater.velocityProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -15524,6 +16935,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.speedProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -15535,6 +16947,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.speedValueVisibleProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -15546,6 +16959,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.speedometerVisibleProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -15557,6 +16971,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.stickingToTrackProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -15568,6 +16983,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.tracks": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -15579,6 +16995,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.tracks.lengthProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -15590,6 +17007,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.track~0": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -15601,6 +17019,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.track~0.draggingProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -15612,6 +17031,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.track~0.droppedProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -15623,6 +17043,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.track~0.leftThePanelProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -15634,6 +17055,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.track~0.physicalProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -15645,6 +17067,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.track~1": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -15656,6 +17079,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.track~1.draggingProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -15667,6 +17091,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.track~1.droppedProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -15678,6 +17103,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.track~1.leftThePanelProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -15689,6 +17115,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.track~1.physicalProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -15700,6 +17127,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.track~2": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -15711,6 +17139,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.track~2.draggingProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -15722,6 +17151,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.track~2.droppedProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -15733,6 +17163,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.track~2.leftThePanelProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -15744,6 +17175,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.track~2.physicalProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -15755,6 +17187,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.track~3": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -15766,6 +17199,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.track~3.draggingProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -15777,6 +17211,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.track~3.droppedProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -15788,6 +17223,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.track~3.leftThePanelProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -15799,6 +17235,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.track~3.physicalProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -15810,6 +17247,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.track~4": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -15821,6 +17259,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.track~4.draggingProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -15832,6 +17271,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.track~4.droppedProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -15843,6 +17283,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.track~4.leftThePanelProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -15854,6 +17295,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.track~4.physicalProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -15865,6 +17307,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.frictionSlider": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -15876,6 +17319,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.frictionSlider.enabledProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": true,
       "phetioHighFrequency": false,
@@ -15887,6 +17331,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.frictionSlider.enabledRangeProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -15898,6 +17343,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.frictionSlider.maxLabel": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -15909,6 +17355,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.frictionSlider.maxLabel.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -15920,6 +17367,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.frictionSlider.maxLabel.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -15931,6 +17379,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.frictionSlider.maxLabel.textProperty": {
       "phetioDocumentation": "Property for the displayed text",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -15942,6 +17391,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.frictionSlider.maxLabel.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -15953,6 +17403,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.frictionSlider.minLabel": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -15964,6 +17415,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.frictionSlider.minLabel.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -15975,6 +17427,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.frictionSlider.minLabel.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -15986,6 +17439,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.frictionSlider.minLabel.textProperty": {
       "phetioDocumentation": "Property for the displayed text",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -15997,6 +17451,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.frictionSlider.minLabel.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -16008,6 +17463,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.frictionSlider.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -16019,6 +17475,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.frictionSlider.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -16030,6 +17487,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.frictionSlider.thumb": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -16041,6 +17499,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.frictionSlider.thumb.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -16052,6 +17511,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.frictionSlider.thumb.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -16063,6 +17523,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.frictionSlider.thumb.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -16074,6 +17535,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.frictionSlider.thumbInputListener": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -16085,6 +17547,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.frictionSlider.thumbInputListener.dragAction": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": true,
@@ -16096,6 +17559,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.frictionSlider.thumbInputListener.dragEndAction": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -16107,6 +17571,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.frictionSlider.thumbInputListener.dragStartAction": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -16118,6 +17583,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.frictionSlider.thumbInputListener.isDraggingProperty": {
       "phetioDocumentation": "Indicates whether the object is dragging",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -16129,6 +17595,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.frictionSlider.titleString": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -16140,6 +17607,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.frictionSlider.titleString.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -16151,6 +17619,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.frictionSlider.titleString.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -16162,6 +17631,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.frictionSlider.titleString.textProperty": {
       "phetioDocumentation": "Property for the displayed text",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -16173,6 +17643,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.frictionSlider.titleString.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -16184,6 +17655,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.frictionSlider.track.trackInputListener": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -16195,6 +17667,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.frictionSlider.track.trackInputListener.dragAction": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": true,
@@ -16206,6 +17679,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.frictionSlider.track.trackInputListener.dragEndAction": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -16217,6 +17691,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.frictionSlider.track.trackInputListener.dragStartAction": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -16228,6 +17703,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.frictionSlider.track.trackInputListener.isDraggingProperty": {
       "phetioDocumentation": "Indicates whether the object is dragging",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -16239,6 +17715,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.frictionSlider.valueProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -16250,6 +17727,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.frictionSlider.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": true,
       "phetioHighFrequency": false,
@@ -16261,6 +17739,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -16272,6 +17751,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.arrowHead": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -16283,6 +17763,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.arrowHead.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -16294,6 +17775,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.arrowHead.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -16305,6 +17787,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.arrowHead.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -16316,6 +17799,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.attachDetachToggleButtons": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -16327,6 +17811,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.attachDetachToggleButtons.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -16338,6 +17823,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.attachDetachToggleButtons.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -16349,6 +17835,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.attachDetachToggleButtons.radioButtonGroup": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -16360,6 +17847,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.attachDetachToggleButtons.radioButtonGroup.attachRadioButton": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -16371,6 +17859,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.attachDetachToggleButtons.radioButtonGroup.attachRadioButton.attachIcon": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -16382,6 +17871,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.attachDetachToggleButtons.radioButtonGroup.attachRadioButton.attachIcon.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -16393,6 +17883,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.attachDetachToggleButtons.radioButtonGroup.attachRadioButton.attachIcon.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -16404,6 +17895,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.attachDetachToggleButtons.radioButtonGroup.attachRadioButton.attachIcon.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -16415,6 +17907,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.attachDetachToggleButtons.radioButtonGroup.attachRadioButton.enabledProperty": {
       "phetioDocumentation": "When disabled, the button is grayed out and cannot be pressed",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": true,
       "phetioHighFrequency": false,
@@ -16426,6 +17919,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.attachDetachToggleButtons.radioButtonGroup.attachRadioButton.firedEmitter": {
       "phetioDocumentation": "Emits when the radio button is pressed",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -16437,6 +17931,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.attachDetachToggleButtons.radioButtonGroup.attachRadioButton.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -16448,6 +17943,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.attachDetachToggleButtons.radioButtonGroup.attachRadioButton.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -16459,6 +17955,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.attachDetachToggleButtons.radioButtonGroup.attachRadioButton.pressListener.pressAction": {
       "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event.",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -16470,6 +17967,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.attachDetachToggleButtons.radioButtonGroup.attachRadioButton.pressListener.releaseAction": {
       "phetioDocumentation": "Executes whenever a release occurs.",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -16481,6 +17979,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.attachDetachToggleButtons.radioButtonGroup.attachRadioButton.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": true,
       "phetioHighFrequency": false,
@@ -16492,6 +17991,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.attachDetachToggleButtons.radioButtonGroup.detachRadioButton": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -16503,6 +18003,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.attachDetachToggleButtons.radioButtonGroup.detachRadioButton.detachIcon": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -16514,6 +18015,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.attachDetachToggleButtons.radioButtonGroup.detachRadioButton.detachIcon.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -16525,6 +18027,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.attachDetachToggleButtons.radioButtonGroup.detachRadioButton.detachIcon.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -16536,6 +18039,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.attachDetachToggleButtons.radioButtonGroup.detachRadioButton.detachIcon.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -16547,6 +18051,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.attachDetachToggleButtons.radioButtonGroup.detachRadioButton.enabledProperty": {
       "phetioDocumentation": "When disabled, the button is grayed out and cannot be pressed",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": true,
       "phetioHighFrequency": false,
@@ -16558,6 +18063,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.attachDetachToggleButtons.radioButtonGroup.detachRadioButton.firedEmitter": {
       "phetioDocumentation": "Emits when the radio button is pressed",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -16569,6 +18075,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.attachDetachToggleButtons.radioButtonGroup.detachRadioButton.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -16580,6 +18087,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.attachDetachToggleButtons.radioButtonGroup.detachRadioButton.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -16591,6 +18099,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.attachDetachToggleButtons.radioButtonGroup.detachRadioButton.pressListener.pressAction": {
       "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event.",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -16602,6 +18111,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.attachDetachToggleButtons.radioButtonGroup.detachRadioButton.pressListener.releaseAction": {
       "phetioDocumentation": "Executes whenever a release occurs.",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -16613,6 +18123,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.attachDetachToggleButtons.radioButtonGroup.detachRadioButton.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": true,
       "phetioHighFrequency": false,
@@ -16624,6 +18135,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.attachDetachToggleButtons.radioButtonGroup.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -16635,6 +18147,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.attachDetachToggleButtons.radioButtonGroup.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -16646,6 +18159,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.attachDetachToggleButtons.radioButtonGroup.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": true,
       "phetioHighFrequency": false,
@@ -16657,6 +18171,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.attachDetachToggleButtons.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -16668,6 +18183,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.backgroundNode": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -16679,6 +18195,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.backgroundNode.mountainImage": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -16690,6 +18207,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.backgroundNode.mountainImage.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -16701,6 +18219,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.backgroundNode.mountainImage.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -16712,6 +18231,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.backgroundNode.mountainImage.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -16723,6 +18243,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.backgroundNode.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -16734,6 +18255,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.backgroundNode.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -16745,6 +18267,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.backgroundNode.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -16756,6 +18279,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.clearButton": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -16767,6 +18291,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.clearButton.enabledProperty": {
       "phetioDocumentation": "When disabled, the button is grayed out and cannot be pressed",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": true,
       "phetioHighFrequency": false,
@@ -16778,6 +18303,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.clearButton.firedEmitter": {
       "phetioDocumentation": "Emits when the button is fired",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -16789,6 +18315,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.clearButton.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -16800,6 +18327,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.clearButton.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -16811,6 +18339,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.clearButton.pressListener.pressAction": {
       "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event.",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -16822,6 +18351,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.clearButton.pressListener.releaseAction": {
       "phetioDocumentation": "Executes whenever a release occurs.",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -16833,6 +18363,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.clearButton.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": true,
       "phetioHighFrequency": false,
@@ -16844,6 +18375,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -16855,6 +18387,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -16866,6 +18399,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -16877,6 +18411,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.visibilityControls.barGraphCheckbox": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -16888,6 +18423,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.visibilityControls.barGraphCheckbox.enabledProperty": {
       "phetioDocumentation": "When disabled, the checkbox is grayed out and cannot be pressed.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": true,
       "phetioHighFrequency": false,
@@ -16899,6 +18435,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.visibilityControls.barGraphCheckbox.itemLabel": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -16910,6 +18447,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.visibilityControls.barGraphCheckbox.itemLabel.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -16921,6 +18459,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.visibilityControls.barGraphCheckbox.itemLabel.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -16932,6 +18471,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.visibilityControls.barGraphCheckbox.itemLabel.textProperty": {
       "phetioDocumentation": "Property for the displayed text",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -16943,6 +18483,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.visibilityControls.barGraphCheckbox.itemLabel.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -16954,6 +18495,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.visibilityControls.barGraphCheckbox.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -16965,6 +18507,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.visibilityControls.barGraphCheckbox.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -16976,6 +18519,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.visibilityControls.barGraphCheckbox.property": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -16987,6 +18531,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.visibilityControls.barGraphCheckbox.toggleAction": {
       "phetioDocumentation": "Emits when user input causes the checkbox to toggle, emitting a single arg: the new boolean value of the checkbox state.",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -16998,6 +18543,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.visibilityControls.barGraphCheckbox.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": true,
       "phetioHighFrequency": false,
@@ -17009,6 +18555,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.visibilityControls.barGraphIcon": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -17020,6 +18567,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.visibilityControls.barGraphIcon.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -17031,6 +18579,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.visibilityControls.barGraphIcon.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -17042,6 +18591,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.visibilityControls.barGraphIcon.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -17053,6 +18603,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.visibilityControls.gridCheckbox": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -17064,6 +18615,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.visibilityControls.gridCheckbox.enabledProperty": {
       "phetioDocumentation": "When disabled, the checkbox is grayed out and cannot be pressed.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": true,
       "phetioHighFrequency": false,
@@ -17075,6 +18627,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.visibilityControls.gridCheckbox.itemLabel": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -17086,6 +18639,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.visibilityControls.gridCheckbox.itemLabel.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -17097,6 +18651,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.visibilityControls.gridCheckbox.itemLabel.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -17108,6 +18663,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.visibilityControls.gridCheckbox.itemLabel.textProperty": {
       "phetioDocumentation": "Property for the displayed text",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -17119,6 +18675,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.visibilityControls.gridCheckbox.itemLabel.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -17130,6 +18687,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.visibilityControls.gridCheckbox.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -17141,6 +18699,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.visibilityControls.gridCheckbox.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -17152,6 +18711,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.visibilityControls.gridCheckbox.property": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -17163,6 +18723,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.visibilityControls.gridCheckbox.toggleAction": {
       "phetioDocumentation": "Emits when user input causes the checkbox to toggle, emitting a single arg: the new boolean value of the checkbox state.",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -17174,6 +18735,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.visibilityControls.gridCheckbox.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": true,
       "phetioHighFrequency": false,
@@ -17185,6 +18747,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.visibilityControls.gridIcon": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -17196,6 +18759,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.visibilityControls.gridIcon.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -17207,6 +18771,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.visibilityControls.gridIcon.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -17218,6 +18783,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.visibilityControls.gridIcon.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -17229,6 +18795,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.visibilityControls.pieChartCheckbox": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -17240,6 +18807,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.visibilityControls.pieChartCheckbox.enabledProperty": {
       "phetioDocumentation": "When disabled, the checkbox is grayed out and cannot be pressed.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": true,
       "phetioHighFrequency": false,
@@ -17251,6 +18819,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.visibilityControls.pieChartCheckbox.itemLabel": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -17262,6 +18831,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.visibilityControls.pieChartCheckbox.itemLabel.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -17273,6 +18843,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.visibilityControls.pieChartCheckbox.itemLabel.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -17284,6 +18855,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.visibilityControls.pieChartCheckbox.itemLabel.textProperty": {
       "phetioDocumentation": "Property for the displayed text",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -17295,6 +18867,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.visibilityControls.pieChartCheckbox.itemLabel.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -17306,6 +18879,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.visibilityControls.pieChartCheckbox.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -17317,6 +18891,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.visibilityControls.pieChartCheckbox.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -17328,6 +18903,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.visibilityControls.pieChartCheckbox.property": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -17339,6 +18915,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.visibilityControls.pieChartCheckbox.toggleAction": {
       "phetioDocumentation": "Emits when user input causes the checkbox to toggle, emitting a single arg: the new boolean value of the checkbox state.",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -17350,6 +18927,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.visibilityControls.pieChartCheckbox.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": true,
       "phetioHighFrequency": false,
@@ -17361,6 +18939,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.visibilityControls.pieChartIcon": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -17372,6 +18951,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.visibilityControls.pieChartIcon.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -17383,6 +18963,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.visibilityControls.pieChartIcon.path": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -17394,6 +18975,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.visibilityControls.pieChartIcon.path.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -17405,6 +18987,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.visibilityControls.pieChartIcon.path.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -17416,6 +18999,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.visibilityControls.pieChartIcon.path.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -17427,6 +19011,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.visibilityControls.pieChartIcon.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -17438,6 +19023,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.visibilityControls.pieChartIcon.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -17449,6 +19035,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.visibilityControls.speedIcon.gaugeNode": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -17460,6 +19047,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.visibilityControls.speedIcon.gaugeNode.foregroundNode": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -17471,6 +19059,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.visibilityControls.speedIcon.gaugeNode.foregroundNode.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -17482,6 +19071,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.visibilityControls.speedIcon.gaugeNode.foregroundNode.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -17493,6 +19083,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.visibilityControls.speedIcon.gaugeNode.foregroundNode.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -17504,6 +19095,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.visibilityControls.speedIcon.gaugeNode.labelNode": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -17515,6 +19107,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.visibilityControls.speedIcon.gaugeNode.labelNode.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -17526,6 +19119,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.visibilityControls.speedIcon.gaugeNode.labelNode.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -17537,6 +19131,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.visibilityControls.speedIcon.gaugeNode.labelNode.textProperty": {
       "phetioDocumentation": "Property for the displayed text",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -17548,6 +19143,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.visibilityControls.speedIcon.gaugeNode.labelNode.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -17559,6 +19155,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.visibilityControls.speedIcon.gaugeNode.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -17570,6 +19167,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.visibilityControls.speedIcon.gaugeNode.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -17581,6 +19179,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.visibilityControls.speedIcon.gaugeNode.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -17592,6 +19191,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.visibilityControls.speedometerCheckbox": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -17603,6 +19203,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.visibilityControls.speedometerCheckbox.enabledProperty": {
       "phetioDocumentation": "When disabled, the checkbox is grayed out and cannot be pressed.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": true,
       "phetioHighFrequency": false,
@@ -17614,6 +19215,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.visibilityControls.speedometerCheckbox.itemLabel": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -17625,6 +19227,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.visibilityControls.speedometerCheckbox.itemLabel.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -17636,6 +19239,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.visibilityControls.speedometerCheckbox.itemLabel.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -17647,6 +19251,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.visibilityControls.speedometerCheckbox.itemLabel.textProperty": {
       "phetioDocumentation": "Property for the displayed text",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -17658,6 +19263,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.visibilityControls.speedometerCheckbox.itemLabel.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -17669,6 +19275,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.visibilityControls.speedometerCheckbox.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -17680,6 +19287,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.visibilityControls.speedometerCheckbox.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -17691,6 +19299,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.visibilityControls.speedometerCheckbox.property": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -17702,6 +19311,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.visibilityControls.speedometerCheckbox.toggleAction": {
       "phetioDocumentation": "Emits when user input causes the checkbox to toggle, emitting a single arg: the new boolean value of the checkbox state.",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -17713,6 +19323,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.visibilityControls.speedometerCheckbox.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": true,
       "phetioHighFrequency": false,
@@ -17724,6 +19335,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -17735,6 +19347,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.energyBarGraph.clearThermalButton": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -17746,6 +19359,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.energyBarGraph.clearThermalButton.arrowPath": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -17757,6 +19371,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.energyBarGraph.clearThermalButton.arrowPath.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -17768,6 +19383,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.energyBarGraph.clearThermalButton.arrowPath.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -17779,6 +19395,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.energyBarGraph.clearThermalButton.arrowPath.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -17790,6 +19407,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.energyBarGraph.clearThermalButton.enabledProperty": {
       "phetioDocumentation": "When disabled, the button is grayed out and cannot be pressed",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": true,
       "phetioHighFrequency": false,
@@ -17801,6 +19419,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.energyBarGraph.clearThermalButton.firedEmitter": {
       "phetioDocumentation": "Emits when the button is fired",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -17812,6 +19431,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.energyBarGraph.clearThermalButton.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -17823,6 +19443,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.energyBarGraph.clearThermalButton.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -17834,6 +19455,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.energyBarGraph.clearThermalButton.pressListener.pressAction": {
       "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event.",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -17845,6 +19467,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.energyBarGraph.clearThermalButton.pressListener.releaseAction": {
       "phetioDocumentation": "Executes whenever a release occurs.",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -17856,6 +19479,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.energyBarGraph.clearThermalButton.trashPath": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -17867,6 +19491,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.energyBarGraph.clearThermalButton.trashPath.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -17878,6 +19503,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.energyBarGraph.clearThermalButton.trashPath.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -17889,6 +19515,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.energyBarGraph.clearThermalButton.trashPath.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -17900,6 +19527,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.energyBarGraph.clearThermalButton.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": true,
       "phetioHighFrequency": false,
@@ -17911,6 +19539,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.gridNode": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -17922,6 +19551,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.gridNode.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -17933,6 +19563,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.gridNode.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -17944,6 +19575,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.gridNode.thickLinePath": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -17955,6 +19587,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.gridNode.thickLinePath.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -17966,6 +19599,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.gridNode.thickLinePath.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -17977,6 +19611,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.gridNode.thickLinePath.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -17988,6 +19623,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.gridNode.thinLinePath": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -17999,6 +19635,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.gridNode.thinLinePath.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -18010,6 +19647,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.gridNode.thinLinePath.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -18021,6 +19659,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.gridNode.thinLinePath.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -18032,6 +19671,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.gridNode.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -18043,6 +19683,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.measuringTapeNode": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -18054,6 +19695,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.measuringTapeNode.baseDragHandler": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -18065,6 +19707,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.measuringTapeNode.baseDragHandler.dragAction": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": true,
@@ -18076,6 +19719,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.measuringTapeNode.baseDragHandler.dragEndAction": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -18087,6 +19731,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.measuringTapeNode.baseDragHandler.dragStartAction": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -18098,6 +19743,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.measuringTapeNode.baseDragHandler.isDraggingProperty": {
       "phetioDocumentation": "Indicates whether the object is dragging",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -18109,6 +19755,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.measuringTapeNode.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -18120,6 +19767,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.measuringTapeNode.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -18131,6 +19779,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.measuringTapeNode.tipDragHandler": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -18142,6 +19791,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.measuringTapeNode.tipDragHandler.dragAction": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": true,
@@ -18153,6 +19803,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.measuringTapeNode.tipDragHandler.dragEndAction": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -18164,6 +19815,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.measuringTapeNode.tipDragHandler.dragStartAction": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -18175,6 +19827,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.measuringTapeNode.tipDragHandler.isDraggingProperty": {
       "phetioDocumentation": "Indicates whether the object is dragging",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -18186,6 +19839,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.measuringTapeNode.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -18197,6 +19851,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -18208,6 +19863,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -18219,6 +19875,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.pieChartLegend": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -18230,6 +19887,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.pieChartLegend.clearThermalButton": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -18241,6 +19899,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.pieChartLegend.clearThermalButton.arrowPath": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -18252,6 +19911,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.pieChartLegend.clearThermalButton.arrowPath.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -18263,6 +19923,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.pieChartLegend.clearThermalButton.arrowPath.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -18274,6 +19935,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.pieChartLegend.clearThermalButton.arrowPath.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -18285,6 +19947,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.pieChartLegend.clearThermalButton.enabledProperty": {
       "phetioDocumentation": "When disabled, the button is grayed out and cannot be pressed",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": true,
       "phetioHighFrequency": false,
@@ -18296,6 +19959,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.pieChartLegend.clearThermalButton.firedEmitter": {
       "phetioDocumentation": "Emits when the button is fired",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -18307,6 +19971,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.pieChartLegend.clearThermalButton.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -18318,6 +19983,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.pieChartLegend.clearThermalButton.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -18329,6 +19995,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.pieChartLegend.clearThermalButton.pressListener.pressAction": {
       "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event.",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -18340,6 +20007,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.pieChartLegend.clearThermalButton.pressListener.releaseAction": {
       "phetioDocumentation": "Executes whenever a release occurs.",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -18351,6 +20019,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.pieChartLegend.clearThermalButton.trashPath": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -18362,6 +20031,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.pieChartLegend.clearThermalButton.trashPath.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -18373,6 +20043,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.pieChartLegend.clearThermalButton.trashPath.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -18384,6 +20055,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.pieChartLegend.clearThermalButton.trashPath.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -18395,6 +20067,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.pieChartLegend.clearThermalButton.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": true,
       "phetioHighFrequency": false,
@@ -18406,6 +20079,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.pieChartLegend.kineticEnergyLabel": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -18417,6 +20091,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.pieChartLegend.kineticEnergyLabel.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -18428,6 +20103,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.pieChartLegend.kineticEnergyLabel.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -18439,6 +20115,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.pieChartLegend.kineticEnergyLabel.textProperty": {
       "phetioDocumentation": "Property for the displayed text",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -18450,6 +20127,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.pieChartLegend.kineticEnergyLabel.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -18461,6 +20139,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.pieChartLegend.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -18472,6 +20151,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.pieChartLegend.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -18483,6 +20163,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.pieChartLegend.potentialEnergyLabel": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -18494,6 +20175,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.pieChartLegend.potentialEnergyLabel.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -18505,6 +20187,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.pieChartLegend.potentialEnergyLabel.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -18516,6 +20199,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.pieChartLegend.potentialEnergyLabel.textProperty": {
       "phetioDocumentation": "Property for the displayed text",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -18527,6 +20211,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.pieChartLegend.potentialEnergyLabel.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -18538,6 +20223,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.pieChartLegend.thermalEnergyLabel": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -18549,6 +20235,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.pieChartLegend.thermalEnergyLabel.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -18560,6 +20247,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.pieChartLegend.thermalEnergyLabel.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -18571,6 +20259,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.pieChartLegend.thermalEnergyLabel.textProperty": {
       "phetioDocumentation": "Property for the displayed text",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -18582,6 +20271,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.pieChartLegend.thermalEnergyLabel.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -18593,6 +20283,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.pieChartLegend.titleNode": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -18604,6 +20295,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.pieChartLegend.titleNode.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -18615,6 +20307,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.pieChartLegend.titleNode.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -18626,6 +20319,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.pieChartLegend.titleNode.textProperty": {
       "phetioDocumentation": "Property for the displayed text",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -18637,6 +20331,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.pieChartLegend.titleNode.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -18648,6 +20343,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.pieChartLegend.totalEnergyLabel": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -18659,6 +20355,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.pieChartLegend.totalEnergyLabel.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -18670,6 +20367,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.pieChartLegend.totalEnergyLabel.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -18681,6 +20379,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.pieChartLegend.totalEnergyLabel.textProperty": {
       "phetioDocumentation": "Property for the displayed text",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -18692,6 +20391,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.pieChartLegend.totalEnergyLabel.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -18703,6 +20403,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.pieChartLegend.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -18714,6 +20415,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.pieChartNode": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -18725,6 +20427,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.pieChartNode.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -18736,6 +20439,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.pieChartNode.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -18747,6 +20451,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.pieChartNode.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -18758,6 +20463,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.playPauseButton": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -18769,6 +20475,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.playPauseButton.enabledProperty": {
       "phetioDocumentation": "When disabled, the button is grayed out and cannot be pressed",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": true,
       "phetioHighFrequency": false,
@@ -18780,6 +20487,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.playPauseButton.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -18791,6 +20499,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.playPauseButton.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -18802,6 +20511,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.playPauseButton.pressListener.pressAction": {
       "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event.",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -18813,6 +20523,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.playPauseButton.pressListener.releaseAction": {
       "phetioDocumentation": "Executes whenever a release occurs.",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -18824,6 +20535,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.playPauseButton.property": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -18835,6 +20547,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.playPauseButton.toggleNode": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -18846,6 +20559,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.playPauseButton.toggleNode.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -18857,6 +20571,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.playPauseButton.toggleNode.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -18868,6 +20583,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.playPauseButton.toggleNode.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -18879,6 +20595,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.playPauseButton.toggledEmitter": {
       "phetioDocumentation": "Emits when the button is toggled",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -18890,6 +20607,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.playPauseButton.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": true,
       "phetioHighFrequency": false,
@@ -18901,6 +20619,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.playbackSpeedControl.normalSpeedButton": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -18912,6 +20631,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.playbackSpeedControl.normalSpeedButton.enabledProperty": {
       "phetioDocumentation": "Determines whether the AquaRadioButton is enabled (pressable) or disabled (grayed-out)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -18923,6 +20643,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.playbackSpeedControl.normalSpeedButton.inputListener.firedEmitter": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -18934,6 +20655,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.playbackSpeedControl.normalSpeedButton.inputListener.pressAction": {
       "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event.",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -18945,6 +20667,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.playbackSpeedControl.normalSpeedButton.inputListener.releaseAction": {
       "phetioDocumentation": "Executes whenever a release occurs.",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -18956,6 +20679,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.playbackSpeedControl.normalSpeedButton.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -18967,6 +20691,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.playbackSpeedControl.normalSpeedButton.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -18978,6 +20703,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.playbackSpeedControl.normalSpeedButton.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -18989,6 +20715,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.playbackSpeedControl.normalSpeedTextNode": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -19000,6 +20727,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.playbackSpeedControl.normalSpeedTextNode.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -19011,6 +20739,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.playbackSpeedControl.normalSpeedTextNode.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -19022,6 +20751,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.playbackSpeedControl.normalSpeedTextNode.textProperty": {
       "phetioDocumentation": "Property for the displayed text",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -19033,6 +20763,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.playbackSpeedControl.normalSpeedTextNode.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -19044,6 +20775,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.playbackSpeedControl.slowMotionRadioButton": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -19055,6 +20787,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.playbackSpeedControl.slowMotionRadioButton.enabledProperty": {
       "phetioDocumentation": "Determines whether the AquaRadioButton is enabled (pressable) or disabled (grayed-out)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -19066,6 +20799,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.playbackSpeedControl.slowMotionRadioButton.inputListener.firedEmitter": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -19077,6 +20811,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.playbackSpeedControl.slowMotionRadioButton.inputListener.pressAction": {
       "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event.",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -19088,6 +20823,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.playbackSpeedControl.slowMotionRadioButton.inputListener.releaseAction": {
       "phetioDocumentation": "Executes whenever a release occurs.",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -19099,6 +20835,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.playbackSpeedControl.slowMotionRadioButton.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -19110,6 +20847,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.playbackSpeedControl.slowMotionRadioButton.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -19121,6 +20859,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.playbackSpeedControl.slowMotionRadioButton.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -19132,6 +20871,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.playbackSpeedControl.slowMotionTextNode": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -19143,6 +20883,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.playbackSpeedControl.slowMotionTextNode.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -19154,6 +20895,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.playbackSpeedControl.slowMotionTextNode.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -19165,6 +20907,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.playbackSpeedControl.slowMotionTextNode.textProperty": {
       "phetioDocumentation": "Property for the displayed text",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -19176,6 +20919,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.playbackSpeedControl.slowMotionTextNode.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -19187,6 +20931,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.playingProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -19198,6 +20943,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.referenceHeightLine.dragListener.dragAction": {
       "phetioDocumentation": "Emits whenever a drag occurs with an EventIO argument.",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": true,
@@ -19209,6 +20955,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.referenceHeightLine.dragListener.pressAction": {
       "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event.",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -19220,6 +20967,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.referenceHeightLine.dragListener.releaseAction": {
       "phetioDocumentation": "Executes whenever a release occurs.",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -19231,6 +20979,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.resetAllButton": {
       "phetioDocumentation": "The orange, round button that can be used to restore the initial state",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -19242,6 +20991,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.resetAllButton.enabledProperty": {
       "phetioDocumentation": "When disabled, the button is grayed out and cannot be pressed",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": true,
       "phetioHighFrequency": false,
@@ -19253,6 +21003,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.resetAllButton.firedEmitter": {
       "phetioDocumentation": "Emits when the button is fired",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -19264,6 +21015,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.resetAllButton.isFiringProperty": {
       "phetioDocumentation": "Temporarily becomes true while the Reset All button is firing.  Commonly used to disable audio effects during reset.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -19275,6 +21027,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.resetAllButton.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -19286,6 +21039,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.resetAllButton.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -19297,6 +21051,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.resetAllButton.pressListener.pressAction": {
       "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event.",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -19308,6 +21063,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.resetAllButton.pressListener.releaseAction": {
       "phetioDocumentation": "Executes whenever a release occurs.",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -19319,6 +21075,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.resetAllButton.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": true,
       "phetioHighFrequency": false,
@@ -19330,6 +21087,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.restartSkaterTextNode": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -19341,6 +21099,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.restartSkaterTextNode.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -19352,6 +21111,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.restartSkaterTextNode.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -19363,6 +21123,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.restartSkaterTextNode.textProperty": {
       "phetioDocumentation": "Property for the displayed text",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -19374,6 +21135,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.restartSkaterTextNode.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -19385,6 +21147,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.returnSkaterButton": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -19396,6 +21159,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.returnSkaterButton.enabledProperty": {
       "phetioDocumentation": "When disabled, the button is grayed out and cannot be pressed",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": true,
       "phetioHighFrequency": false,
@@ -19407,6 +21171,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.returnSkaterButton.firedEmitter": {
       "phetioDocumentation": "Emits when the button is fired",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -19418,6 +21183,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.returnSkaterButton.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -19429,6 +21195,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.returnSkaterButton.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -19440,6 +21207,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.returnSkaterButton.pressListener.pressAction": {
       "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event.",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -19451,6 +21219,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.returnSkaterButton.pressListener.releaseAction": {
       "phetioDocumentation": "Executes whenever a release occurs.",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -19462,6 +21231,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.returnSkaterButton.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": true,
       "phetioHighFrequency": false,
@@ -19473,6 +21243,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.returnSkaterToGroundButton": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -19484,6 +21255,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.returnSkaterToGroundButton.enabledProperty": {
       "phetioDocumentation": "When disabled, the button is grayed out and cannot be pressed",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": true,
       "phetioHighFrequency": false,
@@ -19495,6 +21267,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.returnSkaterToGroundButton.firedEmitter": {
       "phetioDocumentation": "Emits when the button is fired",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -19506,6 +21279,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.returnSkaterToGroundButton.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -19517,6 +21291,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.returnSkaterToGroundButton.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -19528,6 +21303,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.returnSkaterToGroundButton.pressListener.pressAction": {
       "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event.",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -19539,6 +21315,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.returnSkaterToGroundButton.pressListener.releaseAction": {
       "phetioDocumentation": "Executes whenever a release occurs.",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -19550,6 +21327,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.returnSkaterToGroundButton.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": true,
       "phetioHighFrequency": false,
@@ -19561,6 +21339,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.returnSkaterToPreviousStartingPositionButton": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -19572,6 +21351,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.returnSkaterToPreviousStartingPositionButton.enabledProperty": {
       "phetioDocumentation": "When disabled, the button is grayed out and cannot be pressed",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": true,
       "phetioHighFrequency": false,
@@ -19583,6 +21363,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.returnSkaterToPreviousStartingPositionButton.firedEmitter": {
       "phetioDocumentation": "Emits when the button is fired",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -19594,6 +21375,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.returnSkaterToPreviousStartingPositionButton.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -19605,6 +21387,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.returnSkaterToPreviousStartingPositionButton.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -19616,6 +21399,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.returnSkaterToPreviousStartingPositionButton.pressListener.pressAction": {
       "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event.",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -19627,6 +21411,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.returnSkaterToPreviousStartingPositionButton.pressListener.releaseAction": {
       "phetioDocumentation": "Executes whenever a release occurs.",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -19638,6 +21423,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.returnSkaterToPreviousStartingPositionButton.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": true,
       "phetioHighFrequency": false,
@@ -19649,6 +21435,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.rightCurve": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -19660,6 +21447,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.rightCurve.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -19671,6 +21459,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.rightCurve.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -19682,6 +21471,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.rightCurve.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -19693,6 +21483,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.skaterIconImage1": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -19704,6 +21495,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.skaterIconImage1.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -19715,6 +21507,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.skaterIconImage1.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -19726,6 +21519,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.skaterIconImage1.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -19737,6 +21531,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.skaterIconImage2": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -19748,6 +21543,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.skaterIconImage2.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -19759,6 +21555,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.skaterIconImage2.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -19770,6 +21567,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.skaterIconImage2.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -19781,6 +21579,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.skaterNode": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -19792,6 +21591,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.skaterNode.inputListener": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -19803,6 +21603,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.skaterNode.inputListener.dragAction": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": true,
@@ -19814,6 +21615,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.skaterNode.inputListener.dragEndAction": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -19825,6 +21627,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.skaterNode.inputListener.dragStartAction": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -19836,6 +21639,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.skaterNode.inputListener.isDraggingProperty": {
       "phetioDocumentation": "Indicates whether the object is dragging",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -19847,6 +21651,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.skaterNode.leftSkaterImageNode": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -19858,6 +21663,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.skaterNode.leftSkaterImageNode.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -19869,6 +21675,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.skaterNode.leftSkaterImageNode.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -19880,6 +21687,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.skaterNode.leftSkaterImageNode.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -19891,6 +21699,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.skaterNode.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -19902,6 +21711,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.skaterNode.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -19913,6 +21723,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.skaterNode.rightSkaterImageNode": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -19924,6 +21735,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.skaterNode.rightSkaterImageNode.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -19935,6 +21747,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.skaterNode.rightSkaterImageNode.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -19946,6 +21759,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.skaterNode.rightSkaterImageNode.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -19957,6 +21771,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.skaterNode.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -19968,6 +21783,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.speedometerNode": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -19979,6 +21795,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.speedometerNode.foregroundNode": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -19990,6 +21807,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.speedometerNode.foregroundNode.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -20001,6 +21819,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.speedometerNode.foregroundNode.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -20012,6 +21831,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.speedometerNode.foregroundNode.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -20023,6 +21843,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.speedometerNode.labelNode": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -20034,6 +21855,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.speedometerNode.labelNode.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -20045,6 +21867,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.speedometerNode.labelNode.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -20056,6 +21879,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.speedometerNode.labelNode.textProperty": {
       "phetioDocumentation": "Property for the displayed text",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -20067,6 +21891,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.speedometerNode.labelNode.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -20078,6 +21903,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.speedometerNode.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -20089,6 +21915,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.speedometerNode.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -20100,6 +21927,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.speedometerNode.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -20111,6 +21939,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.stepButton": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -20122,6 +21951,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.stepButton.enabledProperty": {
       "phetioDocumentation": "When disabled, the button is grayed out and cannot be pressed",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": true,
       "phetioHighFrequency": false,
@@ -20133,6 +21963,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.stepButton.firedEmitter": {
       "phetioDocumentation": "Emits when the button is fired",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -20144,6 +21975,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.stepButton.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -20155,6 +21987,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.stepButton.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -20166,6 +21999,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.stepButton.pressListener.pressAction": {
       "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event.",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -20177,6 +22011,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.stepButton.pressListener.releaseAction": {
       "phetioDocumentation": "Executes whenever a release occurs.",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -20188,6 +22023,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.stepButton.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": true,
       "phetioHighFrequency": false,
@@ -20199,6 +22035,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackLayer": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -20210,6 +22047,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackLayer.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -20221,6 +22059,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackLayer.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -20232,6 +22071,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackLayer.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -20243,6 +22083,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~0": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -20254,6 +22095,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~0.controlPointNode0": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -20265,6 +22107,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~0.controlPointNode0.inputListener": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -20276,6 +22119,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~0.controlPointNode0.inputListener.dragAction": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": true,
@@ -20287,6 +22131,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~0.controlPointNode0.inputListener.dragEndAction": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -20298,6 +22143,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~0.controlPointNode0.inputListener.dragStartAction": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -20309,6 +22155,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~0.controlPointNode0.inputListener.isDraggingProperty": {
       "phetioDocumentation": "Indicates whether the object is dragging",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -20320,6 +22167,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~0.controlPointNode0.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -20331,6 +22179,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~0.controlPointNode0.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -20342,6 +22191,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~0.controlPointNode0.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -20353,6 +22203,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~0.controlPointNode1": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -20364,6 +22215,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~0.controlPointNode1.inputListener": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -20375,6 +22227,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~0.controlPointNode1.inputListener.dragAction": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": true,
@@ -20386,6 +22239,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~0.controlPointNode1.inputListener.dragEndAction": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -20397,6 +22251,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~0.controlPointNode1.inputListener.dragStartAction": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -20408,6 +22263,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~0.controlPointNode1.inputListener.isDraggingProperty": {
       "phetioDocumentation": "Indicates whether the object is dragging",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -20419,6 +22275,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~0.controlPointNode1.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -20430,6 +22287,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~0.controlPointNode1.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -20441,6 +22299,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~0.controlPointNode1.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -20452,6 +22311,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~0.controlPointNode2": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -20463,6 +22323,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~0.controlPointNode2.inputListener": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -20474,6 +22335,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~0.controlPointNode2.inputListener.dragAction": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": true,
@@ -20485,6 +22347,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~0.controlPointNode2.inputListener.dragEndAction": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -20496,6 +22359,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~0.controlPointNode2.inputListener.dragStartAction": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -20507,6 +22371,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~0.controlPointNode2.inputListener.isDraggingProperty": {
       "phetioDocumentation": "Indicates whether the object is dragging",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -20518,6 +22383,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~0.controlPointNode2.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -20529,6 +22395,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~0.controlPointNode2.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -20540,6 +22407,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~0.controlPointNode2.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -20551,6 +22419,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~0.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -20562,6 +22431,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~0.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -20573,6 +22443,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~0.trackDragHandler.inputListener": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -20584,6 +22455,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~0.trackDragHandler.inputListener.dragAction": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": true,
@@ -20595,6 +22467,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~0.trackDragHandler.inputListener.dragEndAction": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -20606,6 +22479,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~0.trackDragHandler.inputListener.dragStartAction": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -20617,6 +22491,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~0.trackDragHandler.inputListener.isDraggingProperty": {
       "phetioDocumentation": "Indicates whether the object is dragging",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -20628,6 +22503,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~0.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -20639,6 +22515,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~1": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -20650,6 +22527,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~1.controlPointNode0": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -20661,6 +22539,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~1.controlPointNode0.inputListener": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -20672,6 +22551,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~1.controlPointNode0.inputListener.dragAction": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": true,
@@ -20683,6 +22563,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~1.controlPointNode0.inputListener.dragEndAction": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -20694,6 +22575,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~1.controlPointNode0.inputListener.dragStartAction": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -20705,6 +22587,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~1.controlPointNode0.inputListener.isDraggingProperty": {
       "phetioDocumentation": "Indicates whether the object is dragging",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -20716,6 +22599,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~1.controlPointNode0.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -20727,6 +22611,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~1.controlPointNode0.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -20738,6 +22623,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~1.controlPointNode0.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -20749,6 +22635,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~1.controlPointNode1": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -20760,6 +22647,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~1.controlPointNode1.inputListener": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -20771,6 +22659,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~1.controlPointNode1.inputListener.dragAction": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": true,
@@ -20782,6 +22671,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~1.controlPointNode1.inputListener.dragEndAction": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -20793,6 +22683,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~1.controlPointNode1.inputListener.dragStartAction": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -20804,6 +22695,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~1.controlPointNode1.inputListener.isDraggingProperty": {
       "phetioDocumentation": "Indicates whether the object is dragging",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -20815,6 +22707,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~1.controlPointNode1.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -20826,6 +22719,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~1.controlPointNode1.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -20837,6 +22731,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~1.controlPointNode1.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -20848,6 +22743,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~1.controlPointNode2": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -20859,6 +22755,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~1.controlPointNode2.inputListener": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -20870,6 +22767,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~1.controlPointNode2.inputListener.dragAction": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": true,
@@ -20881,6 +22779,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~1.controlPointNode2.inputListener.dragEndAction": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -20892,6 +22791,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~1.controlPointNode2.inputListener.dragStartAction": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -20903,6 +22803,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~1.controlPointNode2.inputListener.isDraggingProperty": {
       "phetioDocumentation": "Indicates whether the object is dragging",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -20914,6 +22815,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~1.controlPointNode2.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -20925,6 +22827,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~1.controlPointNode2.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -20936,6 +22839,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~1.controlPointNode2.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -20947,6 +22851,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~1.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -20958,6 +22863,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~1.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -20969,6 +22875,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~1.trackDragHandler.inputListener": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -20980,6 +22887,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~1.trackDragHandler.inputListener.dragAction": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": true,
@@ -20991,6 +22899,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~1.trackDragHandler.inputListener.dragEndAction": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -21002,6 +22911,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~1.trackDragHandler.inputListener.dragStartAction": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -21013,6 +22923,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~1.trackDragHandler.inputListener.isDraggingProperty": {
       "phetioDocumentation": "Indicates whether the object is dragging",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -21024,6 +22935,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~1.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -21035,6 +22947,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~2": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -21046,6 +22959,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~2.controlPointNode0": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -21057,6 +22971,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~2.controlPointNode0.inputListener": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -21068,6 +22983,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~2.controlPointNode0.inputListener.dragAction": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": true,
@@ -21079,6 +22995,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~2.controlPointNode0.inputListener.dragEndAction": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -21090,6 +23007,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~2.controlPointNode0.inputListener.dragStartAction": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -21101,6 +23019,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~2.controlPointNode0.inputListener.isDraggingProperty": {
       "phetioDocumentation": "Indicates whether the object is dragging",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -21112,6 +23031,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~2.controlPointNode0.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -21123,6 +23043,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~2.controlPointNode0.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -21134,6 +23055,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~2.controlPointNode0.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -21145,6 +23067,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~2.controlPointNode1": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -21156,6 +23079,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~2.controlPointNode1.inputListener": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -21167,6 +23091,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~2.controlPointNode1.inputListener.dragAction": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": true,
@@ -21178,6 +23103,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~2.controlPointNode1.inputListener.dragEndAction": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -21189,6 +23115,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~2.controlPointNode1.inputListener.dragStartAction": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -21200,6 +23127,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~2.controlPointNode1.inputListener.isDraggingProperty": {
       "phetioDocumentation": "Indicates whether the object is dragging",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -21211,6 +23139,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~2.controlPointNode1.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -21222,6 +23151,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~2.controlPointNode1.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -21233,6 +23163,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~2.controlPointNode1.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -21244,6 +23175,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~2.controlPointNode2": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -21255,6 +23187,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~2.controlPointNode2.inputListener": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -21266,6 +23199,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~2.controlPointNode2.inputListener.dragAction": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": true,
@@ -21277,6 +23211,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~2.controlPointNode2.inputListener.dragEndAction": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -21288,6 +23223,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~2.controlPointNode2.inputListener.dragStartAction": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -21299,6 +23235,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~2.controlPointNode2.inputListener.isDraggingProperty": {
       "phetioDocumentation": "Indicates whether the object is dragging",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -21310,6 +23247,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~2.controlPointNode2.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -21321,6 +23259,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~2.controlPointNode2.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -21332,6 +23271,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~2.controlPointNode2.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -21343,6 +23283,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~2.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -21354,6 +23295,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~2.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -21365,6 +23307,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~2.trackDragHandler.inputListener": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -21376,6 +23319,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~2.trackDragHandler.inputListener.dragAction": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": true,
@@ -21387,6 +23331,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~2.trackDragHandler.inputListener.dragEndAction": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -21398,6 +23343,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~2.trackDragHandler.inputListener.dragStartAction": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -21409,6 +23355,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~2.trackDragHandler.inputListener.isDraggingProperty": {
       "phetioDocumentation": "Indicates whether the object is dragging",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -21420,6 +23367,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~2.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -21431,6 +23379,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~3": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -21442,6 +23391,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~3.controlPointNode0": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -21453,6 +23403,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~3.controlPointNode0.inputListener": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -21464,6 +23415,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~3.controlPointNode0.inputListener.dragAction": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": true,
@@ -21475,6 +23427,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~3.controlPointNode0.inputListener.dragEndAction": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -21486,6 +23439,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~3.controlPointNode0.inputListener.dragStartAction": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -21497,6 +23451,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~3.controlPointNode0.inputListener.isDraggingProperty": {
       "phetioDocumentation": "Indicates whether the object is dragging",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -21508,6 +23463,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~3.controlPointNode0.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -21519,6 +23475,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~3.controlPointNode0.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -21530,6 +23487,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~3.controlPointNode0.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -21541,6 +23499,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~3.controlPointNode1": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -21552,6 +23511,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~3.controlPointNode1.inputListener": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -21563,6 +23523,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~3.controlPointNode1.inputListener.dragAction": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": true,
@@ -21574,6 +23535,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~3.controlPointNode1.inputListener.dragEndAction": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -21585,6 +23547,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~3.controlPointNode1.inputListener.dragStartAction": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -21596,6 +23559,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~3.controlPointNode1.inputListener.isDraggingProperty": {
       "phetioDocumentation": "Indicates whether the object is dragging",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -21607,6 +23571,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~3.controlPointNode1.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -21618,6 +23583,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~3.controlPointNode1.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -21629,6 +23595,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~3.controlPointNode1.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -21640,6 +23607,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~3.controlPointNode2": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -21651,6 +23619,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~3.controlPointNode2.inputListener": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -21662,6 +23631,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~3.controlPointNode2.inputListener.dragAction": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": true,
@@ -21673,6 +23643,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~3.controlPointNode2.inputListener.dragEndAction": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -21684,6 +23655,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~3.controlPointNode2.inputListener.dragStartAction": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -21695,6 +23667,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~3.controlPointNode2.inputListener.isDraggingProperty": {
       "phetioDocumentation": "Indicates whether the object is dragging",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -21706,6 +23679,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~3.controlPointNode2.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -21717,6 +23691,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~3.controlPointNode2.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -21728,6 +23703,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~3.controlPointNode2.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -21739,6 +23715,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~3.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -21750,6 +23727,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~3.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -21761,6 +23739,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~3.trackDragHandler.inputListener": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -21772,6 +23751,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~3.trackDragHandler.inputListener.dragAction": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": true,
@@ -21783,6 +23763,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~3.trackDragHandler.inputListener.dragEndAction": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -21794,6 +23775,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~3.trackDragHandler.inputListener.dragStartAction": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -21805,6 +23787,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~3.trackDragHandler.inputListener.isDraggingProperty": {
       "phetioDocumentation": "Indicates whether the object is dragging",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -21816,6 +23799,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~3.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -21827,6 +23811,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~4": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -21838,6 +23823,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~4.controlPointNode0": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -21849,6 +23835,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~4.controlPointNode0.inputListener": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -21860,6 +23847,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~4.controlPointNode0.inputListener.dragAction": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": true,
@@ -21871,6 +23859,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~4.controlPointNode0.inputListener.dragEndAction": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -21882,6 +23871,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~4.controlPointNode0.inputListener.dragStartAction": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -21893,6 +23883,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~4.controlPointNode0.inputListener.isDraggingProperty": {
       "phetioDocumentation": "Indicates whether the object is dragging",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -21904,6 +23895,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~4.controlPointNode0.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -21915,6 +23907,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~4.controlPointNode0.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -21926,6 +23919,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~4.controlPointNode0.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -21937,6 +23931,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~4.controlPointNode1": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -21948,6 +23943,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~4.controlPointNode1.inputListener": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -21959,6 +23955,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~4.controlPointNode1.inputListener.dragAction": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": true,
@@ -21970,6 +23967,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~4.controlPointNode1.inputListener.dragEndAction": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -21981,6 +23979,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~4.controlPointNode1.inputListener.dragStartAction": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -21992,6 +23991,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~4.controlPointNode1.inputListener.isDraggingProperty": {
       "phetioDocumentation": "Indicates whether the object is dragging",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -22003,6 +24003,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~4.controlPointNode1.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -22014,6 +24015,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~4.controlPointNode1.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -22025,6 +24027,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~4.controlPointNode1.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -22036,6 +24039,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~4.controlPointNode2": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -22047,6 +24051,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~4.controlPointNode2.inputListener": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -22058,6 +24063,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~4.controlPointNode2.inputListener.dragAction": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": true,
@@ -22069,6 +24075,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~4.controlPointNode2.inputListener.dragEndAction": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -22080,6 +24087,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~4.controlPointNode2.inputListener.dragStartAction": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -22091,6 +24099,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~4.controlPointNode2.inputListener.isDraggingProperty": {
       "phetioDocumentation": "Indicates whether the object is dragging",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -22102,6 +24111,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~4.controlPointNode2.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -22113,6 +24123,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~4.controlPointNode2.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -22124,6 +24135,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~4.controlPointNode2.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -22135,6 +24147,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~4.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -22146,6 +24159,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~4.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -22157,6 +24171,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~4.trackDragHandler.inputListener": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -22168,6 +24183,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~4.trackDragHandler.inputListener.dragAction": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": true,
@@ -22179,6 +24195,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~4.trackDragHandler.inputListener.dragEndAction": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -22190,6 +24207,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~4.trackDragHandler.inputListener.dragStartAction": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -22201,6 +24219,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~4.trackDragHandler.inputListener.isDraggingProperty": {
       "phetioDocumentation": "Indicates whether the object is dragging",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -22212,6 +24231,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~4.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -22223,6 +24243,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -22234,6 +24255,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.massSlider": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -22245,6 +24267,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.massSlider.enabledProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": true,
       "phetioHighFrequency": false,
@@ -22256,6 +24279,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.massSlider.enabledRangeProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -22267,6 +24291,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.massSlider.maxLabel": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -22278,6 +24303,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.massSlider.maxLabel.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -22289,6 +24315,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.massSlider.maxLabel.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -22300,6 +24327,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.massSlider.maxLabel.textProperty": {
       "phetioDocumentation": "Property for the displayed text",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -22311,6 +24339,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.massSlider.maxLabel.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -22322,6 +24351,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.massSlider.minLabel": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -22333,6 +24363,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.massSlider.minLabel.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -22344,6 +24375,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.massSlider.minLabel.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -22355,6 +24387,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.massSlider.minLabel.textProperty": {
       "phetioDocumentation": "Property for the displayed text",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -22366,6 +24399,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.massSlider.minLabel.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -22377,6 +24411,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.massSlider.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -22388,6 +24423,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.massSlider.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -22399,6 +24435,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.massSlider.thumb": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -22410,6 +24447,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.massSlider.thumb.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -22421,6 +24459,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.massSlider.thumb.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -22432,6 +24471,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.massSlider.thumb.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -22443,6 +24483,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.massSlider.thumbInputListener": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -22454,6 +24495,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.massSlider.thumbInputListener.dragAction": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": true,
@@ -22465,6 +24507,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.massSlider.thumbInputListener.dragEndAction": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -22476,6 +24519,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.massSlider.thumbInputListener.dragStartAction": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -22487,6 +24531,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.massSlider.thumbInputListener.isDraggingProperty": {
       "phetioDocumentation": "Indicates whether the object is dragging",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -22498,6 +24543,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.massSlider.titleString": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -22509,6 +24555,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.massSlider.titleString.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -22520,6 +24567,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.massSlider.titleString.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -22531,6 +24579,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.massSlider.titleString.textProperty": {
       "phetioDocumentation": "Property for the displayed text",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -22542,6 +24591,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.massSlider.titleString.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -22553,6 +24603,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.massSlider.track.trackInputListener": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "user",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -22564,6 +24615,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.massSlider.track.trackInputListener.dragAction": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": true,
@@ -22575,6 +24627,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.massSlider.track.trackInputListener.dragEndAction": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -22586,6 +24639,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.massSlider.track.trackInputListener.dragStartAction": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -22597,6 +24651,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.massSlider.track.trackInputListener.isDraggingProperty": {
       "phetioDocumentation": "Indicates whether the object is dragging",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -22608,6 +24663,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.massSlider.valueProperty": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -22619,6 +24675,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.view.massSlider.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": true,
       "phetioHighFrequency": false,
@@ -22630,6 +24687,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "phetioEngine": {
       "phetioDocumentation": "Central point for PhET-iO interoperability",
+      "phetioDynamicElement": false,
       "phetioEventType": "model",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
