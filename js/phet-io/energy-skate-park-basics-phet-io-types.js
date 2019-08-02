@@ -936,7 +936,7 @@ window.phet.phetio.phetioTypes = assert &&
       "supertype": null,
       "typeName": "ObjectIO"
     },
-    "ObservableArrayIO": {
+    "ObservableArrayIO.<TrackIO>": {
       "documentation": "An array that sends notifications when its values have changed.",
       "events": [
         "itemAdded",
@@ -964,8 +964,11 @@ window.phet.phetio.phetioTypes = assert &&
           "returnType": "NumberIO"
         }
       },
+      "parameterTypes": [
+        "TrackIO"
+      ],
       "supertype": "ObjectIO",
-      "typeName": "ObservableArrayIO"
+      "typeName": "ObservableArrayIO.<TrackIO>"
     },
     "PhetButtonIO": {
       "documentation": "The PhET Button in the bottom right of the screen",

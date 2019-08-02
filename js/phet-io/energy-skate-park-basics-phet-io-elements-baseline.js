@@ -1367,7 +1367,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "ObservableArrayIO"
+      "phetioTypeName": "ObservableArrayIO.<TrackIO>"
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.trackSetModel.tracks.lengthProperty": {
       "phetioDocumentation": "",
@@ -10751,7 +10751,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "ObservableArrayIO"
+      "phetioTypeName": "ObservableArrayIO.<TrackIO>"
     },
     "energySkateParkBasics.introScreen.model.trackSetModel.tracks.lengthProperty": {
       "phetioDocumentation": "",
@@ -16991,7 +16991,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "ObservableArrayIO"
+      "phetioTypeName": "ObservableArrayIO.<TrackIO>"
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.tracks.lengthProperty": {
       "phetioDocumentation": "",
