@@ -21,7 +21,7 @@ define( function( require ) {
   var iconFrictionNavbar = require( 'image!ENERGY_SKATE_PARK/icon-friction-navbar.png' );
 
   // strings
-  var screenFrictionString = require( 'string!ENERGY_SKATE_PARK/screen.friction' );
+  var screenFrictionString = require( 'string!ENERGY_SKATE_PARK_BASICS/screen.friction' );
 
   /**
    * @param {Tandem} tandem
