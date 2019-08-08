@@ -260,6 +260,14 @@ window.phet.phetio.phetioTypes = assert &&
       "supertype": "ObjectIO",
       "typeName": "ControlPointIO"
     },
+    "ControlPointNodeIO": {
+      "documentation": "The view element for a control point.",
+      "events": [],
+      "methodOrder": [],
+      "methods": {},
+      "supertype": "NodeIO",
+      "typeName": "ControlPointNodeIO"
+    },
     "DOMEventIO": {
       "documentation": "A DOM Event",
       "events": [],
