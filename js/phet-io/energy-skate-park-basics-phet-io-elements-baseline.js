@@ -1391,10 +1391,22 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "SliderIO"
+      "phetioTypeName": "NumberControlIO"
     },
-    "energySkateParkBasics.frictionScreen.view.frictionSlider.enabledProperty": {
+    "energySkateParkBasics.frictionScreen.view.frictionSlider.leftArrowButton": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
+      "phetioEventType": "MODEL",
+      "phetioFeatured": false,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": false,
+      "phetioStudioControl": true,
+      "phetioTypeName": "NodeIO"
+    },
+    "energySkateParkBasics.frictionScreen.view.frictionSlider.leftArrowButton.enabledProperty": {
+      "phetioDocumentation": "When disabled, the button is grayed out and cannot be pressed",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
       "phetioFeatured": true,
@@ -1405,8 +1417,20 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO.<BooleanIO>"
     },
-    "energySkateParkBasics.frictionScreen.view.frictionSlider.enabledRangeProperty": {
-      "phetioDocumentation": "",
+    "energySkateParkBasics.frictionScreen.view.frictionSlider.leftArrowButton.firedEmitter": {
+      "phetioDocumentation": "Emits when the button is fired No arguments.",
+      "phetioDynamicElement": false,
+      "phetioEventType": "USER",
+      "phetioFeatured": false,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": false,
+      "phetioStudioControl": true,
+      "phetioTypeName": "EmitterIO.<>"
+    },
+    "energySkateParkBasics.frictionScreen.view.frictionSlider.leftArrowButton.opacityProperty": {
+      "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
       "phetioFeatured": false,
@@ -1415,7 +1439,55 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<RangeIO>"
+      "phetioTypeName": "NumberPropertyIO"
+    },
+    "energySkateParkBasics.frictionScreen.view.frictionSlider.leftArrowButton.pickableProperty": {
+      "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
+      "phetioEventType": "MODEL",
+      "phetioFeatured": false,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": true,
+      "phetioStudioControl": true,
+      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+    },
+    "energySkateParkBasics.frictionScreen.view.frictionSlider.leftArrowButton.pressListener.pressAction": {
+      "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br><ol><li>event: EventIO</li></ol>",
+      "phetioDynamicElement": false,
+      "phetioEventType": "USER",
+      "phetioFeatured": false,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": false,
+      "phetioStudioControl": true,
+      "phetioTypeName": "ActionIO.<EventIO>"
+    },
+    "energySkateParkBasics.frictionScreen.view.frictionSlider.leftArrowButton.pressListener.releaseAction": {
+      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br><ol><li>event: NullableIO.<EventIO></li></ol>",
+      "phetioDynamicElement": false,
+      "phetioEventType": "USER",
+      "phetioFeatured": false,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": false,
+      "phetioStudioControl": true,
+      "phetioTypeName": "ActionIO.<NullableIO.<EventIO>>"
+    },
+    "energySkateParkBasics.frictionScreen.view.frictionSlider.leftArrowButton.visibleProperty": {
+      "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
+      "phetioEventType": "MODEL",
+      "phetioFeatured": true,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": true,
+      "phetioStudioControl": true,
+      "phetioTypeName": "PropertyIO.<BooleanIO>"
     },
     "energySkateParkBasics.frictionScreen.view.frictionSlider.maxLabel": {
       "phetioDocumentation": "",
@@ -1537,6 +1609,114 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO.<BooleanIO>"
     },
+    "energySkateParkBasics.frictionScreen.view.frictionSlider.numberDisplay": {
+      "phetioDocumentation": "",
+      "phetioDynamicElement": false,
+      "phetioEventType": "MODEL",
+      "phetioFeatured": false,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": false,
+      "phetioStudioControl": true,
+      "phetioTypeName": "NumberDisplayIO"
+    },
+    "energySkateParkBasics.frictionScreen.view.frictionSlider.numberDisplay.opacityProperty": {
+      "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
+      "phetioEventType": "MODEL",
+      "phetioFeatured": false,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": true,
+      "phetioStudioControl": true,
+      "phetioTypeName": "NumberPropertyIO"
+    },
+    "energySkateParkBasics.frictionScreen.view.frictionSlider.numberDisplay.pickableProperty": {
+      "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
+      "phetioEventType": "MODEL",
+      "phetioFeatured": false,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": true,
+      "phetioStudioControl": true,
+      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+    },
+    "energySkateParkBasics.frictionScreen.view.frictionSlider.numberDisplay.valueNode": {
+      "phetioDocumentation": "",
+      "phetioDynamicElement": false,
+      "phetioEventType": "MODEL",
+      "phetioFeatured": false,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": false,
+      "phetioStudioControl": true,
+      "phetioTypeName": "TextIO"
+    },
+    "energySkateParkBasics.frictionScreen.view.frictionSlider.numberDisplay.valueNode.opacityProperty": {
+      "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
+      "phetioEventType": "MODEL",
+      "phetioFeatured": false,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": true,
+      "phetioStudioControl": true,
+      "phetioTypeName": "NumberPropertyIO"
+    },
+    "energySkateParkBasics.frictionScreen.view.frictionSlider.numberDisplay.valueNode.pickableProperty": {
+      "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
+      "phetioEventType": "MODEL",
+      "phetioFeatured": false,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": true,
+      "phetioStudioControl": true,
+      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+    },
+    "energySkateParkBasics.frictionScreen.view.frictionSlider.numberDisplay.valueNode.textProperty": {
+      "phetioDocumentation": "Property for the displayed text",
+      "phetioDynamicElement": false,
+      "phetioEventType": "MODEL",
+      "phetioFeatured": false,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": true,
+      "phetioStudioControl": true,
+      "phetioTypeName": "PropertyIO.<StringIO>"
+    },
+    "energySkateParkBasics.frictionScreen.view.frictionSlider.numberDisplay.valueNode.visibleProperty": {
+      "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
+      "phetioEventType": "MODEL",
+      "phetioFeatured": false,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": true,
+      "phetioStudioControl": true,
+      "phetioTypeName": "PropertyIO.<BooleanIO>"
+    },
+    "energySkateParkBasics.frictionScreen.view.frictionSlider.numberDisplay.visibleProperty": {
+      "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
+      "phetioEventType": "MODEL",
+      "phetioFeatured": false,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": true,
+      "phetioStudioControl": true,
+      "phetioTypeName": "PropertyIO.<BooleanIO>"
+    },
     "energySkateParkBasics.frictionScreen.view.frictionSlider.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
       "phetioDynamicElement": false,
@@ -1561,7 +1741,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
     },
-    "energySkateParkBasics.frictionScreen.view.frictionSlider.thumb": {
+    "energySkateParkBasics.frictionScreen.view.frictionSlider.rightArrowButton": {
       "phetioDocumentation": "",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -1573,7 +1753,31 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "NodeIO"
     },
-    "energySkateParkBasics.frictionScreen.view.frictionSlider.thumb.opacityProperty": {
+    "energySkateParkBasics.frictionScreen.view.frictionSlider.rightArrowButton.enabledProperty": {
+      "phetioDocumentation": "When disabled, the button is grayed out and cannot be pressed",
+      "phetioDynamicElement": false,
+      "phetioEventType": "MODEL",
+      "phetioFeatured": true,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": true,
+      "phetioStudioControl": true,
+      "phetioTypeName": "PropertyIO.<BooleanIO>"
+    },
+    "energySkateParkBasics.frictionScreen.view.frictionSlider.rightArrowButton.firedEmitter": {
+      "phetioDocumentation": "Emits when the button is fired No arguments.",
+      "phetioDynamicElement": false,
+      "phetioEventType": "USER",
+      "phetioFeatured": false,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": false,
+      "phetioStudioControl": true,
+      "phetioTypeName": "EmitterIO.<>"
+    },
+    "energySkateParkBasics.frictionScreen.view.frictionSlider.rightArrowButton.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -1585,7 +1789,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "NumberPropertyIO"
     },
-    "energySkateParkBasics.frictionScreen.view.frictionSlider.thumb.pickableProperty": {
+    "energySkateParkBasics.frictionScreen.view.frictionSlider.rightArrowButton.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -1597,20 +1801,8 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
     },
-    "energySkateParkBasics.frictionScreen.view.frictionSlider.thumb.visibleProperty": {
-      "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": true,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
-    },
-    "energySkateParkBasics.frictionScreen.view.frictionSlider.thumbInputListener": {
-      "phetioDocumentation": "",
+    "energySkateParkBasics.frictionScreen.view.frictionSlider.rightArrowButton.pressListener.pressAction": {
+      "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br><ol><li>event: EventIO</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -1619,57 +1811,33 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ObjectIO"
+      "phetioTypeName": "ActionIO.<EventIO>"
     },
-    "energySkateParkBasics.frictionScreen.view.frictionSlider.thumbInputListener.dragAction": {
-      "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag in view coordinates</li></ol>",
+    "energySkateParkBasics.frictionScreen.view.frictionSlider.rightArrowButton.pressListener.releaseAction": {
+      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br><ol><li>event: NullableIO.<EventIO></li></ol>",
       "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": true,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<Vector2IO>"
-    },
-    "energySkateParkBasics.frictionScreen.view.frictionSlider.thumbInputListener.dragEndAction": {
-      "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag end in view coordinates</li></ol>",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
+      "phetioEventType": "USER",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
       "phetioPlayback": false,
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<Vector2IO>"
+      "phetioTypeName": "ActionIO.<NullableIO.<EventIO>>"
     },
-    "energySkateParkBasics.frictionScreen.view.frictionSlider.thumbInputListener.dragStartAction": {
-      "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag start in view coordinates</li></ol>",
+    "energySkateParkBasics.frictionScreen.view.frictionSlider.rightArrowButton.visibleProperty": {
+      "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
-      "phetioFeatured": false,
+      "phetioFeatured": true,
       "phetioHighFrequency": false,
       "phetioPlayback": false,
       "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<Vector2IO>"
-    },
-    "energySkateParkBasics.frictionScreen.view.frictionSlider.thumbInputListener.isDraggingProperty": {
-      "phetioDocumentation": "Indicates whether the object is dragging",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": true,
-      "phetioState": false,
+      "phetioState": true,
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO.<BooleanIO>"
     },
-    "energySkateParkBasics.frictionScreen.view.frictionSlider.titleString": {
+    "energySkateParkBasics.frictionScreen.view.frictionSlider.slider": {
       "phetioDocumentation": "",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -1679,9 +1847,33 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "TextIO"
+      "phetioTypeName": "SliderIO"
     },
-    "energySkateParkBasics.frictionScreen.view.frictionSlider.titleString.opacityProperty": {
+    "energySkateParkBasics.frictionScreen.view.frictionSlider.slider.enabledProperty": {
+      "phetioDocumentation": "",
+      "phetioDynamicElement": false,
+      "phetioEventType": "MODEL",
+      "phetioFeatured": true,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": true,
+      "phetioStudioControl": true,
+      "phetioTypeName": "PropertyIO.<BooleanIO>"
+    },
+    "energySkateParkBasics.frictionScreen.view.frictionSlider.slider.enabledRangeProperty": {
+      "phetioDocumentation": "",
+      "phetioDynamicElement": false,
+      "phetioEventType": "MODEL",
+      "phetioFeatured": false,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": true,
+      "phetioStudioControl": true,
+      "phetioTypeName": "PropertyIO.<RangeIO>"
+    },
+    "energySkateParkBasics.frictionScreen.view.frictionSlider.slider.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -1693,7 +1885,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "NumberPropertyIO"
     },
-    "energySkateParkBasics.frictionScreen.view.frictionSlider.titleString.pickableProperty": {
+    "energySkateParkBasics.frictionScreen.view.frictionSlider.slider.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -1705,8 +1897,20 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
     },
-    "energySkateParkBasics.frictionScreen.view.frictionSlider.titleString.textProperty": {
-      "phetioDocumentation": "Property for the displayed text",
+    "energySkateParkBasics.frictionScreen.view.frictionSlider.slider.thumb": {
+      "phetioDocumentation": "",
+      "phetioDynamicElement": false,
+      "phetioEventType": "MODEL",
+      "phetioFeatured": false,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": false,
+      "phetioStudioControl": true,
+      "phetioTypeName": "NodeIO"
+    },
+    "energySkateParkBasics.frictionScreen.view.frictionSlider.slider.thumb.opacityProperty": {
+      "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
       "phetioFeatured": false,
@@ -1715,9 +1919,21 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<StringIO>"
+      "phetioTypeName": "NumberPropertyIO"
     },
-    "energySkateParkBasics.frictionScreen.view.frictionSlider.titleString.visibleProperty": {
+    "energySkateParkBasics.frictionScreen.view.frictionSlider.slider.thumb.pickableProperty": {
+      "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
+      "phetioEventType": "MODEL",
+      "phetioFeatured": false,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": true,
+      "phetioStudioControl": true,
+      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+    },
+    "energySkateParkBasics.frictionScreen.view.frictionSlider.slider.thumb.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -1729,7 +1945,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO.<BooleanIO>"
     },
-    "energySkateParkBasics.frictionScreen.view.frictionSlider.track.trackInputListener": {
+    "energySkateParkBasics.frictionScreen.view.frictionSlider.slider.thumbInputListener": {
       "phetioDocumentation": "",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
@@ -1741,7 +1957,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "ObjectIO"
     },
-    "energySkateParkBasics.frictionScreen.view.frictionSlider.track.trackInputListener.dragAction": {
+    "energySkateParkBasics.frictionScreen.view.frictionSlider.slider.thumbInputListener.dragAction": {
       "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag in view coordinates</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -1753,7 +1969,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "ActionIO.<Vector2IO>"
     },
-    "energySkateParkBasics.frictionScreen.view.frictionSlider.track.trackInputListener.dragEndAction": {
+    "energySkateParkBasics.frictionScreen.view.frictionSlider.slider.thumbInputListener.dragEndAction": {
       "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag end in view coordinates</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -1765,7 +1981,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "ActionIO.<Vector2IO>"
     },
-    "energySkateParkBasics.frictionScreen.view.frictionSlider.track.trackInputListener.dragStartAction": {
+    "energySkateParkBasics.frictionScreen.view.frictionSlider.slider.thumbInputListener.dragStartAction": {
       "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag start in view coordinates</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -1777,7 +1993,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "ActionIO.<Vector2IO>"
     },
-    "energySkateParkBasics.frictionScreen.view.frictionSlider.track.trackInputListener.isDraggingProperty": {
+    "energySkateParkBasics.frictionScreen.view.frictionSlider.slider.thumbInputListener.isDraggingProperty": {
       "phetioDocumentation": "Indicates whether the object is dragging",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -1789,7 +2005,67 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO.<BooleanIO>"
     },
-    "energySkateParkBasics.frictionScreen.view.frictionSlider.valueProperty": {
+    "energySkateParkBasics.frictionScreen.view.frictionSlider.slider.track.trackInputListener": {
+      "phetioDocumentation": "",
+      "phetioDynamicElement": false,
+      "phetioEventType": "USER",
+      "phetioFeatured": false,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": false,
+      "phetioStudioControl": true,
+      "phetioTypeName": "ObjectIO"
+    },
+    "energySkateParkBasics.frictionScreen.view.frictionSlider.slider.track.trackInputListener.dragAction": {
+      "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag in view coordinates</li></ol>",
+      "phetioDynamicElement": false,
+      "phetioEventType": "MODEL",
+      "phetioFeatured": false,
+      "phetioHighFrequency": true,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": false,
+      "phetioStudioControl": true,
+      "phetioTypeName": "ActionIO.<Vector2IO>"
+    },
+    "energySkateParkBasics.frictionScreen.view.frictionSlider.slider.track.trackInputListener.dragEndAction": {
+      "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag end in view coordinates</li></ol>",
+      "phetioDynamicElement": false,
+      "phetioEventType": "MODEL",
+      "phetioFeatured": false,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": false,
+      "phetioStudioControl": true,
+      "phetioTypeName": "ActionIO.<Vector2IO>"
+    },
+    "energySkateParkBasics.frictionScreen.view.frictionSlider.slider.track.trackInputListener.dragStartAction": {
+      "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag start in view coordinates</li></ol>",
+      "phetioDynamicElement": false,
+      "phetioEventType": "MODEL",
+      "phetioFeatured": false,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": false,
+      "phetioStudioControl": true,
+      "phetioTypeName": "ActionIO.<Vector2IO>"
+    },
+    "energySkateParkBasics.frictionScreen.view.frictionSlider.slider.track.trackInputListener.isDraggingProperty": {
+      "phetioDocumentation": "Indicates whether the object is dragging",
+      "phetioDynamicElement": false,
+      "phetioEventType": "MODEL",
+      "phetioFeatured": false,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": true,
+      "phetioState": false,
+      "phetioStudioControl": true,
+      "phetioTypeName": "PropertyIO.<BooleanIO>"
+    },
+    "energySkateParkBasics.frictionScreen.view.frictionSlider.slider.valueProperty": {
       "phetioDocumentation": "",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -1801,11 +2077,83 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "LinkedElementIO"
     },
-    "energySkateParkBasics.frictionScreen.view.frictionSlider.visibleProperty": {
+    "energySkateParkBasics.frictionScreen.view.frictionSlider.slider.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
       "phetioFeatured": true,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": true,
+      "phetioStudioControl": true,
+      "phetioTypeName": "PropertyIO.<BooleanIO>"
+    },
+    "energySkateParkBasics.frictionScreen.view.frictionSlider.titleNode": {
+      "phetioDocumentation": "",
+      "phetioDynamicElement": false,
+      "phetioEventType": "MODEL",
+      "phetioFeatured": false,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": false,
+      "phetioStudioControl": true,
+      "phetioTypeName": "TextIO"
+    },
+    "energySkateParkBasics.frictionScreen.view.frictionSlider.titleNode.opacityProperty": {
+      "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
+      "phetioEventType": "MODEL",
+      "phetioFeatured": false,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": true,
+      "phetioStudioControl": true,
+      "phetioTypeName": "NumberPropertyIO"
+    },
+    "energySkateParkBasics.frictionScreen.view.frictionSlider.titleNode.pickableProperty": {
+      "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
+      "phetioEventType": "MODEL",
+      "phetioFeatured": false,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": true,
+      "phetioStudioControl": true,
+      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+    },
+    "energySkateParkBasics.frictionScreen.view.frictionSlider.titleNode.textProperty": {
+      "phetioDocumentation": "Property for the displayed text",
+      "phetioDynamicElement": false,
+      "phetioEventType": "MODEL",
+      "phetioFeatured": false,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": true,
+      "phetioStudioControl": true,
+      "phetioTypeName": "PropertyIO.<StringIO>"
+    },
+    "energySkateParkBasics.frictionScreen.view.frictionSlider.titleNode.visibleProperty": {
+      "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
+      "phetioEventType": "MODEL",
+      "phetioFeatured": false,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": true,
+      "phetioStudioControl": true,
+      "phetioTypeName": "PropertyIO.<BooleanIO>"
+    },
+    "energySkateParkBasics.frictionScreen.view.frictionSlider.visibleProperty": {
+      "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
+      "phetioEventType": "MODEL",
+      "phetioFeatured": false,
       "phetioHighFrequency": false,
       "phetioPlayback": false,
       "phetioReadOnly": false,
@@ -6421,150 +6769,6 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO.<BooleanIO>"
     },
-    "energySkateParkBasics.frictionScreen.view.introScreenView.trackNode~0": {
-      "phetioDocumentation": "",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "NodeIO"
-    },
-    "energySkateParkBasics.frictionScreen.view.introScreenView.trackNode~0.opacityProperty": {
-      "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "NumberPropertyIO"
-    },
-    "energySkateParkBasics.frictionScreen.view.introScreenView.trackNode~0.pickableProperty": {
-      "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
-    },
-    "energySkateParkBasics.frictionScreen.view.introScreenView.trackNode~0.visibleProperty": {
-      "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
-    },
-    "energySkateParkBasics.frictionScreen.view.introScreenView.trackNode~1": {
-      "phetioDocumentation": "",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "NodeIO"
-    },
-    "energySkateParkBasics.frictionScreen.view.introScreenView.trackNode~1.opacityProperty": {
-      "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "NumberPropertyIO"
-    },
-    "energySkateParkBasics.frictionScreen.view.introScreenView.trackNode~1.pickableProperty": {
-      "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
-    },
-    "energySkateParkBasics.frictionScreen.view.introScreenView.trackNode~1.visibleProperty": {
-      "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
-    },
-    "energySkateParkBasics.frictionScreen.view.introScreenView.trackNode~2": {
-      "phetioDocumentation": "",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "NodeIO"
-    },
-    "energySkateParkBasics.frictionScreen.view.introScreenView.trackNode~2.opacityProperty": {
-      "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "NumberPropertyIO"
-    },
-    "energySkateParkBasics.frictionScreen.view.introScreenView.trackNode~2.pickableProperty": {
-      "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
-    },
-    "energySkateParkBasics.frictionScreen.view.introScreenView.trackNode~2.visibleProperty": {
-      "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
-    },
     "energySkateParkBasics.frictionScreen.view.introScreenView.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
       "phetioDynamicElement": false,
@@ -6587,10 +6791,22 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "SliderIO"
+      "phetioTypeName": "NumberControlIO"
     },
-    "energySkateParkBasics.frictionScreen.view.massSlider.enabledProperty": {
+    "energySkateParkBasics.frictionScreen.view.massSlider.leftArrowButton": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
+      "phetioEventType": "MODEL",
+      "phetioFeatured": false,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": false,
+      "phetioStudioControl": true,
+      "phetioTypeName": "NodeIO"
+    },
+    "energySkateParkBasics.frictionScreen.view.massSlider.leftArrowButton.enabledProperty": {
+      "phetioDocumentation": "When disabled, the button is grayed out and cannot be pressed",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
       "phetioFeatured": true,
@@ -6601,8 +6817,20 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO.<BooleanIO>"
     },
-    "energySkateParkBasics.frictionScreen.view.massSlider.enabledRangeProperty": {
-      "phetioDocumentation": "",
+    "energySkateParkBasics.frictionScreen.view.massSlider.leftArrowButton.firedEmitter": {
+      "phetioDocumentation": "Emits when the button is fired No arguments.",
+      "phetioDynamicElement": false,
+      "phetioEventType": "USER",
+      "phetioFeatured": false,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": false,
+      "phetioStudioControl": true,
+      "phetioTypeName": "EmitterIO.<>"
+    },
+    "energySkateParkBasics.frictionScreen.view.massSlider.leftArrowButton.opacityProperty": {
+      "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
       "phetioFeatured": false,
@@ -6611,7 +6839,55 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<RangeIO>"
+      "phetioTypeName": "NumberPropertyIO"
+    },
+    "energySkateParkBasics.frictionScreen.view.massSlider.leftArrowButton.pickableProperty": {
+      "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
+      "phetioEventType": "MODEL",
+      "phetioFeatured": false,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": true,
+      "phetioStudioControl": true,
+      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+    },
+    "energySkateParkBasics.frictionScreen.view.massSlider.leftArrowButton.pressListener.pressAction": {
+      "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br><ol><li>event: EventIO</li></ol>",
+      "phetioDynamicElement": false,
+      "phetioEventType": "USER",
+      "phetioFeatured": false,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": false,
+      "phetioStudioControl": true,
+      "phetioTypeName": "ActionIO.<EventIO>"
+    },
+    "energySkateParkBasics.frictionScreen.view.massSlider.leftArrowButton.pressListener.releaseAction": {
+      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br><ol><li>event: NullableIO.<EventIO></li></ol>",
+      "phetioDynamicElement": false,
+      "phetioEventType": "USER",
+      "phetioFeatured": false,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": false,
+      "phetioStudioControl": true,
+      "phetioTypeName": "ActionIO.<NullableIO.<EventIO>>"
+    },
+    "energySkateParkBasics.frictionScreen.view.massSlider.leftArrowButton.visibleProperty": {
+      "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
+      "phetioEventType": "MODEL",
+      "phetioFeatured": true,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": true,
+      "phetioStudioControl": true,
+      "phetioTypeName": "PropertyIO.<BooleanIO>"
     },
     "energySkateParkBasics.frictionScreen.view.massSlider.maxLabel": {
       "phetioDocumentation": "",
@@ -6733,6 +7009,114 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO.<BooleanIO>"
     },
+    "energySkateParkBasics.frictionScreen.view.massSlider.numberDisplay": {
+      "phetioDocumentation": "",
+      "phetioDynamicElement": false,
+      "phetioEventType": "MODEL",
+      "phetioFeatured": false,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": false,
+      "phetioStudioControl": true,
+      "phetioTypeName": "NumberDisplayIO"
+    },
+    "energySkateParkBasics.frictionScreen.view.massSlider.numberDisplay.opacityProperty": {
+      "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
+      "phetioEventType": "MODEL",
+      "phetioFeatured": false,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": true,
+      "phetioStudioControl": true,
+      "phetioTypeName": "NumberPropertyIO"
+    },
+    "energySkateParkBasics.frictionScreen.view.massSlider.numberDisplay.pickableProperty": {
+      "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
+      "phetioEventType": "MODEL",
+      "phetioFeatured": false,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": true,
+      "phetioStudioControl": true,
+      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+    },
+    "energySkateParkBasics.frictionScreen.view.massSlider.numberDisplay.valueNode": {
+      "phetioDocumentation": "",
+      "phetioDynamicElement": false,
+      "phetioEventType": "MODEL",
+      "phetioFeatured": false,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": false,
+      "phetioStudioControl": true,
+      "phetioTypeName": "TextIO"
+    },
+    "energySkateParkBasics.frictionScreen.view.massSlider.numberDisplay.valueNode.opacityProperty": {
+      "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
+      "phetioEventType": "MODEL",
+      "phetioFeatured": false,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": true,
+      "phetioStudioControl": true,
+      "phetioTypeName": "NumberPropertyIO"
+    },
+    "energySkateParkBasics.frictionScreen.view.massSlider.numberDisplay.valueNode.pickableProperty": {
+      "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
+      "phetioEventType": "MODEL",
+      "phetioFeatured": false,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": true,
+      "phetioStudioControl": true,
+      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+    },
+    "energySkateParkBasics.frictionScreen.view.massSlider.numberDisplay.valueNode.textProperty": {
+      "phetioDocumentation": "Property for the displayed text",
+      "phetioDynamicElement": false,
+      "phetioEventType": "MODEL",
+      "phetioFeatured": false,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": true,
+      "phetioStudioControl": true,
+      "phetioTypeName": "PropertyIO.<StringIO>"
+    },
+    "energySkateParkBasics.frictionScreen.view.massSlider.numberDisplay.valueNode.visibleProperty": {
+      "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
+      "phetioEventType": "MODEL",
+      "phetioFeatured": false,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": true,
+      "phetioStudioControl": true,
+      "phetioTypeName": "PropertyIO.<BooleanIO>"
+    },
+    "energySkateParkBasics.frictionScreen.view.massSlider.numberDisplay.visibleProperty": {
+      "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
+      "phetioEventType": "MODEL",
+      "phetioFeatured": false,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": true,
+      "phetioStudioControl": true,
+      "phetioTypeName": "PropertyIO.<BooleanIO>"
+    },
     "energySkateParkBasics.frictionScreen.view.massSlider.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
       "phetioDynamicElement": false,
@@ -6757,7 +7141,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
     },
-    "energySkateParkBasics.frictionScreen.view.massSlider.thumb": {
+    "energySkateParkBasics.frictionScreen.view.massSlider.rightArrowButton": {
       "phetioDocumentation": "",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -6769,7 +7153,31 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "NodeIO"
     },
-    "energySkateParkBasics.frictionScreen.view.massSlider.thumb.opacityProperty": {
+    "energySkateParkBasics.frictionScreen.view.massSlider.rightArrowButton.enabledProperty": {
+      "phetioDocumentation": "When disabled, the button is grayed out and cannot be pressed",
+      "phetioDynamicElement": false,
+      "phetioEventType": "MODEL",
+      "phetioFeatured": true,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": true,
+      "phetioStudioControl": true,
+      "phetioTypeName": "PropertyIO.<BooleanIO>"
+    },
+    "energySkateParkBasics.frictionScreen.view.massSlider.rightArrowButton.firedEmitter": {
+      "phetioDocumentation": "Emits when the button is fired No arguments.",
+      "phetioDynamicElement": false,
+      "phetioEventType": "USER",
+      "phetioFeatured": false,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": false,
+      "phetioStudioControl": true,
+      "phetioTypeName": "EmitterIO.<>"
+    },
+    "energySkateParkBasics.frictionScreen.view.massSlider.rightArrowButton.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -6781,7 +7189,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "NumberPropertyIO"
     },
-    "energySkateParkBasics.frictionScreen.view.massSlider.thumb.pickableProperty": {
+    "energySkateParkBasics.frictionScreen.view.massSlider.rightArrowButton.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -6793,20 +7201,8 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
     },
-    "energySkateParkBasics.frictionScreen.view.massSlider.thumb.visibleProperty": {
-      "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": true,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
-    },
-    "energySkateParkBasics.frictionScreen.view.massSlider.thumbInputListener": {
-      "phetioDocumentation": "",
+    "energySkateParkBasics.frictionScreen.view.massSlider.rightArrowButton.pressListener.pressAction": {
+      "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br><ol><li>event: EventIO</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -6815,57 +7211,33 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ObjectIO"
+      "phetioTypeName": "ActionIO.<EventIO>"
     },
-    "energySkateParkBasics.frictionScreen.view.massSlider.thumbInputListener.dragAction": {
-      "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag in view coordinates</li></ol>",
+    "energySkateParkBasics.frictionScreen.view.massSlider.rightArrowButton.pressListener.releaseAction": {
+      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br><ol><li>event: NullableIO.<EventIO></li></ol>",
       "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": true,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<Vector2IO>"
-    },
-    "energySkateParkBasics.frictionScreen.view.massSlider.thumbInputListener.dragEndAction": {
-      "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag end in view coordinates</li></ol>",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
+      "phetioEventType": "USER",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
       "phetioPlayback": false,
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<Vector2IO>"
+      "phetioTypeName": "ActionIO.<NullableIO.<EventIO>>"
     },
-    "energySkateParkBasics.frictionScreen.view.massSlider.thumbInputListener.dragStartAction": {
-      "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag start in view coordinates</li></ol>",
+    "energySkateParkBasics.frictionScreen.view.massSlider.rightArrowButton.visibleProperty": {
+      "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
-      "phetioFeatured": false,
+      "phetioFeatured": true,
       "phetioHighFrequency": false,
       "phetioPlayback": false,
       "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<Vector2IO>"
-    },
-    "energySkateParkBasics.frictionScreen.view.massSlider.thumbInputListener.isDraggingProperty": {
-      "phetioDocumentation": "Indicates whether the object is dragging",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": true,
-      "phetioState": false,
+      "phetioState": true,
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO.<BooleanIO>"
     },
-    "energySkateParkBasics.frictionScreen.view.massSlider.titleString": {
+    "energySkateParkBasics.frictionScreen.view.massSlider.slider": {
       "phetioDocumentation": "",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -6875,9 +7247,33 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "TextIO"
+      "phetioTypeName": "SliderIO"
     },
-    "energySkateParkBasics.frictionScreen.view.massSlider.titleString.opacityProperty": {
+    "energySkateParkBasics.frictionScreen.view.massSlider.slider.enabledProperty": {
+      "phetioDocumentation": "",
+      "phetioDynamicElement": false,
+      "phetioEventType": "MODEL",
+      "phetioFeatured": true,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": true,
+      "phetioStudioControl": true,
+      "phetioTypeName": "PropertyIO.<BooleanIO>"
+    },
+    "energySkateParkBasics.frictionScreen.view.massSlider.slider.enabledRangeProperty": {
+      "phetioDocumentation": "",
+      "phetioDynamicElement": false,
+      "phetioEventType": "MODEL",
+      "phetioFeatured": false,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": true,
+      "phetioStudioControl": true,
+      "phetioTypeName": "PropertyIO.<RangeIO>"
+    },
+    "energySkateParkBasics.frictionScreen.view.massSlider.slider.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -6889,7 +7285,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "NumberPropertyIO"
     },
-    "energySkateParkBasics.frictionScreen.view.massSlider.titleString.pickableProperty": {
+    "energySkateParkBasics.frictionScreen.view.massSlider.slider.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -6901,8 +7297,20 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
     },
-    "energySkateParkBasics.frictionScreen.view.massSlider.titleString.textProperty": {
-      "phetioDocumentation": "Property for the displayed text",
+    "energySkateParkBasics.frictionScreen.view.massSlider.slider.thumb": {
+      "phetioDocumentation": "",
+      "phetioDynamicElement": false,
+      "phetioEventType": "MODEL",
+      "phetioFeatured": false,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": false,
+      "phetioStudioControl": true,
+      "phetioTypeName": "NodeIO"
+    },
+    "energySkateParkBasics.frictionScreen.view.massSlider.slider.thumb.opacityProperty": {
+      "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
       "phetioFeatured": false,
@@ -6911,9 +7319,21 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<StringIO>"
+      "phetioTypeName": "NumberPropertyIO"
     },
-    "energySkateParkBasics.frictionScreen.view.massSlider.titleString.visibleProperty": {
+    "energySkateParkBasics.frictionScreen.view.massSlider.slider.thumb.pickableProperty": {
+      "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
+      "phetioEventType": "MODEL",
+      "phetioFeatured": false,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": true,
+      "phetioStudioControl": true,
+      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+    },
+    "energySkateParkBasics.frictionScreen.view.massSlider.slider.thumb.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -6925,7 +7345,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO.<BooleanIO>"
     },
-    "energySkateParkBasics.frictionScreen.view.massSlider.track.trackInputListener": {
+    "energySkateParkBasics.frictionScreen.view.massSlider.slider.thumbInputListener": {
       "phetioDocumentation": "",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
@@ -6937,7 +7357,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "ObjectIO"
     },
-    "energySkateParkBasics.frictionScreen.view.massSlider.track.trackInputListener.dragAction": {
+    "energySkateParkBasics.frictionScreen.view.massSlider.slider.thumbInputListener.dragAction": {
       "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag in view coordinates</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -6949,7 +7369,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "ActionIO.<Vector2IO>"
     },
-    "energySkateParkBasics.frictionScreen.view.massSlider.track.trackInputListener.dragEndAction": {
+    "energySkateParkBasics.frictionScreen.view.massSlider.slider.thumbInputListener.dragEndAction": {
       "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag end in view coordinates</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -6961,7 +7381,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "ActionIO.<Vector2IO>"
     },
-    "energySkateParkBasics.frictionScreen.view.massSlider.track.trackInputListener.dragStartAction": {
+    "energySkateParkBasics.frictionScreen.view.massSlider.slider.thumbInputListener.dragStartAction": {
       "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag start in view coordinates</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -6973,7 +7393,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "ActionIO.<Vector2IO>"
     },
-    "energySkateParkBasics.frictionScreen.view.massSlider.track.trackInputListener.isDraggingProperty": {
+    "energySkateParkBasics.frictionScreen.view.massSlider.slider.thumbInputListener.isDraggingProperty": {
       "phetioDocumentation": "Indicates whether the object is dragging",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -6985,7 +7405,67 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO.<BooleanIO>"
     },
-    "energySkateParkBasics.frictionScreen.view.massSlider.valueProperty": {
+    "energySkateParkBasics.frictionScreen.view.massSlider.slider.track.trackInputListener": {
+      "phetioDocumentation": "",
+      "phetioDynamicElement": false,
+      "phetioEventType": "USER",
+      "phetioFeatured": false,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": false,
+      "phetioStudioControl": true,
+      "phetioTypeName": "ObjectIO"
+    },
+    "energySkateParkBasics.frictionScreen.view.massSlider.slider.track.trackInputListener.dragAction": {
+      "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag in view coordinates</li></ol>",
+      "phetioDynamicElement": false,
+      "phetioEventType": "MODEL",
+      "phetioFeatured": false,
+      "phetioHighFrequency": true,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": false,
+      "phetioStudioControl": true,
+      "phetioTypeName": "ActionIO.<Vector2IO>"
+    },
+    "energySkateParkBasics.frictionScreen.view.massSlider.slider.track.trackInputListener.dragEndAction": {
+      "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag end in view coordinates</li></ol>",
+      "phetioDynamicElement": false,
+      "phetioEventType": "MODEL",
+      "phetioFeatured": false,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": false,
+      "phetioStudioControl": true,
+      "phetioTypeName": "ActionIO.<Vector2IO>"
+    },
+    "energySkateParkBasics.frictionScreen.view.massSlider.slider.track.trackInputListener.dragStartAction": {
+      "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag start in view coordinates</li></ol>",
+      "phetioDynamicElement": false,
+      "phetioEventType": "MODEL",
+      "phetioFeatured": false,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": false,
+      "phetioStudioControl": true,
+      "phetioTypeName": "ActionIO.<Vector2IO>"
+    },
+    "energySkateParkBasics.frictionScreen.view.massSlider.slider.track.trackInputListener.isDraggingProperty": {
+      "phetioDocumentation": "Indicates whether the object is dragging",
+      "phetioDynamicElement": false,
+      "phetioEventType": "MODEL",
+      "phetioFeatured": false,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": true,
+      "phetioState": false,
+      "phetioStudioControl": true,
+      "phetioTypeName": "PropertyIO.<BooleanIO>"
+    },
+    "energySkateParkBasics.frictionScreen.view.massSlider.slider.valueProperty": {
       "phetioDocumentation": "",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -6997,11 +7477,83 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "LinkedElementIO"
     },
-    "energySkateParkBasics.frictionScreen.view.massSlider.visibleProperty": {
+    "energySkateParkBasics.frictionScreen.view.massSlider.slider.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
       "phetioFeatured": true,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": true,
+      "phetioStudioControl": true,
+      "phetioTypeName": "PropertyIO.<BooleanIO>"
+    },
+    "energySkateParkBasics.frictionScreen.view.massSlider.titleNode": {
+      "phetioDocumentation": "",
+      "phetioDynamicElement": false,
+      "phetioEventType": "MODEL",
+      "phetioFeatured": false,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": false,
+      "phetioStudioControl": true,
+      "phetioTypeName": "TextIO"
+    },
+    "energySkateParkBasics.frictionScreen.view.massSlider.titleNode.opacityProperty": {
+      "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
+      "phetioEventType": "MODEL",
+      "phetioFeatured": false,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": true,
+      "phetioStudioControl": true,
+      "phetioTypeName": "NumberPropertyIO"
+    },
+    "energySkateParkBasics.frictionScreen.view.massSlider.titleNode.pickableProperty": {
+      "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
+      "phetioEventType": "MODEL",
+      "phetioFeatured": false,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": true,
+      "phetioStudioControl": true,
+      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+    },
+    "energySkateParkBasics.frictionScreen.view.massSlider.titleNode.textProperty": {
+      "phetioDocumentation": "Property for the displayed text",
+      "phetioDynamicElement": false,
+      "phetioEventType": "MODEL",
+      "phetioFeatured": false,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": true,
+      "phetioStudioControl": true,
+      "phetioTypeName": "PropertyIO.<StringIO>"
+    },
+    "energySkateParkBasics.frictionScreen.view.massSlider.titleNode.visibleProperty": {
+      "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
+      "phetioEventType": "MODEL",
+      "phetioFeatured": false,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": true,
+      "phetioStudioControl": true,
+      "phetioTypeName": "PropertyIO.<BooleanIO>"
+    },
+    "energySkateParkBasics.frictionScreen.view.massSlider.visibleProperty": {
+      "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
+      "phetioEventType": "MODEL",
+      "phetioFeatured": false,
       "phetioHighFrequency": false,
       "phetioPlayback": false,
       "phetioReadOnly": false,
@@ -14989,150 +15541,6 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO.<BooleanIO>"
     },
-    "energySkateParkBasics.introScreen.view.introScreenView.trackNode~0": {
-      "phetioDocumentation": "",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "NodeIO"
-    },
-    "energySkateParkBasics.introScreen.view.introScreenView.trackNode~0.opacityProperty": {
-      "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "NumberPropertyIO"
-    },
-    "energySkateParkBasics.introScreen.view.introScreenView.trackNode~0.pickableProperty": {
-      "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
-    },
-    "energySkateParkBasics.introScreen.view.introScreenView.trackNode~0.visibleProperty": {
-      "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
-    },
-    "energySkateParkBasics.introScreen.view.introScreenView.trackNode~1": {
-      "phetioDocumentation": "",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "NodeIO"
-    },
-    "energySkateParkBasics.introScreen.view.introScreenView.trackNode~1.opacityProperty": {
-      "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "NumberPropertyIO"
-    },
-    "energySkateParkBasics.introScreen.view.introScreenView.trackNode~1.pickableProperty": {
-      "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
-    },
-    "energySkateParkBasics.introScreen.view.introScreenView.trackNode~1.visibleProperty": {
-      "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
-    },
-    "energySkateParkBasics.introScreen.view.introScreenView.trackNode~2": {
-      "phetioDocumentation": "",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "NodeIO"
-    },
-    "energySkateParkBasics.introScreen.view.introScreenView.trackNode~2.opacityProperty": {
-      "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "NumberPropertyIO"
-    },
-    "energySkateParkBasics.introScreen.view.introScreenView.trackNode~2.pickableProperty": {
-      "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
-    },
-    "energySkateParkBasics.introScreen.view.introScreenView.trackNode~2.visibleProperty": {
-      "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
-    },
     "energySkateParkBasics.introScreen.view.introScreenView.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
       "phetioDynamicElement": false,
@@ -15155,10 +15563,22 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "SliderIO"
+      "phetioTypeName": "NumberControlIO"
     },
-    "energySkateParkBasics.introScreen.view.massSlider.enabledProperty": {
+    "energySkateParkBasics.introScreen.view.massSlider.leftArrowButton": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
+      "phetioEventType": "MODEL",
+      "phetioFeatured": false,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": false,
+      "phetioStudioControl": true,
+      "phetioTypeName": "NodeIO"
+    },
+    "energySkateParkBasics.introScreen.view.massSlider.leftArrowButton.enabledProperty": {
+      "phetioDocumentation": "When disabled, the button is grayed out and cannot be pressed",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
       "phetioFeatured": true,
@@ -15169,8 +15589,20 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO.<BooleanIO>"
     },
-    "energySkateParkBasics.introScreen.view.massSlider.enabledRangeProperty": {
-      "phetioDocumentation": "",
+    "energySkateParkBasics.introScreen.view.massSlider.leftArrowButton.firedEmitter": {
+      "phetioDocumentation": "Emits when the button is fired No arguments.",
+      "phetioDynamicElement": false,
+      "phetioEventType": "USER",
+      "phetioFeatured": false,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": false,
+      "phetioStudioControl": true,
+      "phetioTypeName": "EmitterIO.<>"
+    },
+    "energySkateParkBasics.introScreen.view.massSlider.leftArrowButton.opacityProperty": {
+      "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
       "phetioFeatured": false,
@@ -15179,7 +15611,55 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<RangeIO>"
+      "phetioTypeName": "NumberPropertyIO"
+    },
+    "energySkateParkBasics.introScreen.view.massSlider.leftArrowButton.pickableProperty": {
+      "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
+      "phetioEventType": "MODEL",
+      "phetioFeatured": false,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": true,
+      "phetioStudioControl": true,
+      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+    },
+    "energySkateParkBasics.introScreen.view.massSlider.leftArrowButton.pressListener.pressAction": {
+      "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br><ol><li>event: EventIO</li></ol>",
+      "phetioDynamicElement": false,
+      "phetioEventType": "USER",
+      "phetioFeatured": false,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": false,
+      "phetioStudioControl": true,
+      "phetioTypeName": "ActionIO.<EventIO>"
+    },
+    "energySkateParkBasics.introScreen.view.massSlider.leftArrowButton.pressListener.releaseAction": {
+      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br><ol><li>event: NullableIO.<EventIO></li></ol>",
+      "phetioDynamicElement": false,
+      "phetioEventType": "USER",
+      "phetioFeatured": false,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": false,
+      "phetioStudioControl": true,
+      "phetioTypeName": "ActionIO.<NullableIO.<EventIO>>"
+    },
+    "energySkateParkBasics.introScreen.view.massSlider.leftArrowButton.visibleProperty": {
+      "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
+      "phetioEventType": "MODEL",
+      "phetioFeatured": true,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": true,
+      "phetioStudioControl": true,
+      "phetioTypeName": "PropertyIO.<BooleanIO>"
     },
     "energySkateParkBasics.introScreen.view.massSlider.maxLabel": {
       "phetioDocumentation": "",
@@ -15301,6 +15781,114 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO.<BooleanIO>"
     },
+    "energySkateParkBasics.introScreen.view.massSlider.numberDisplay": {
+      "phetioDocumentation": "",
+      "phetioDynamicElement": false,
+      "phetioEventType": "MODEL",
+      "phetioFeatured": false,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": false,
+      "phetioStudioControl": true,
+      "phetioTypeName": "NumberDisplayIO"
+    },
+    "energySkateParkBasics.introScreen.view.massSlider.numberDisplay.opacityProperty": {
+      "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
+      "phetioEventType": "MODEL",
+      "phetioFeatured": false,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": true,
+      "phetioStudioControl": true,
+      "phetioTypeName": "NumberPropertyIO"
+    },
+    "energySkateParkBasics.introScreen.view.massSlider.numberDisplay.pickableProperty": {
+      "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
+      "phetioEventType": "MODEL",
+      "phetioFeatured": false,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": true,
+      "phetioStudioControl": true,
+      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+    },
+    "energySkateParkBasics.introScreen.view.massSlider.numberDisplay.valueNode": {
+      "phetioDocumentation": "",
+      "phetioDynamicElement": false,
+      "phetioEventType": "MODEL",
+      "phetioFeatured": false,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": false,
+      "phetioStudioControl": true,
+      "phetioTypeName": "TextIO"
+    },
+    "energySkateParkBasics.introScreen.view.massSlider.numberDisplay.valueNode.opacityProperty": {
+      "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
+      "phetioEventType": "MODEL",
+      "phetioFeatured": false,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": true,
+      "phetioStudioControl": true,
+      "phetioTypeName": "NumberPropertyIO"
+    },
+    "energySkateParkBasics.introScreen.view.massSlider.numberDisplay.valueNode.pickableProperty": {
+      "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
+      "phetioEventType": "MODEL",
+      "phetioFeatured": false,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": true,
+      "phetioStudioControl": true,
+      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+    },
+    "energySkateParkBasics.introScreen.view.massSlider.numberDisplay.valueNode.textProperty": {
+      "phetioDocumentation": "Property for the displayed text",
+      "phetioDynamicElement": false,
+      "phetioEventType": "MODEL",
+      "phetioFeatured": false,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": true,
+      "phetioStudioControl": true,
+      "phetioTypeName": "PropertyIO.<StringIO>"
+    },
+    "energySkateParkBasics.introScreen.view.massSlider.numberDisplay.valueNode.visibleProperty": {
+      "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
+      "phetioEventType": "MODEL",
+      "phetioFeatured": false,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": true,
+      "phetioStudioControl": true,
+      "phetioTypeName": "PropertyIO.<BooleanIO>"
+    },
+    "energySkateParkBasics.introScreen.view.massSlider.numberDisplay.visibleProperty": {
+      "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
+      "phetioEventType": "MODEL",
+      "phetioFeatured": false,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": true,
+      "phetioStudioControl": true,
+      "phetioTypeName": "PropertyIO.<BooleanIO>"
+    },
     "energySkateParkBasics.introScreen.view.massSlider.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
       "phetioDynamicElement": false,
@@ -15325,7 +15913,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
     },
-    "energySkateParkBasics.introScreen.view.massSlider.thumb": {
+    "energySkateParkBasics.introScreen.view.massSlider.rightArrowButton": {
       "phetioDocumentation": "",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -15337,7 +15925,31 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "NodeIO"
     },
-    "energySkateParkBasics.introScreen.view.massSlider.thumb.opacityProperty": {
+    "energySkateParkBasics.introScreen.view.massSlider.rightArrowButton.enabledProperty": {
+      "phetioDocumentation": "When disabled, the button is grayed out and cannot be pressed",
+      "phetioDynamicElement": false,
+      "phetioEventType": "MODEL",
+      "phetioFeatured": true,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": true,
+      "phetioStudioControl": true,
+      "phetioTypeName": "PropertyIO.<BooleanIO>"
+    },
+    "energySkateParkBasics.introScreen.view.massSlider.rightArrowButton.firedEmitter": {
+      "phetioDocumentation": "Emits when the button is fired No arguments.",
+      "phetioDynamicElement": false,
+      "phetioEventType": "USER",
+      "phetioFeatured": false,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": false,
+      "phetioStudioControl": true,
+      "phetioTypeName": "EmitterIO.<>"
+    },
+    "energySkateParkBasics.introScreen.view.massSlider.rightArrowButton.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -15349,7 +15961,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "NumberPropertyIO"
     },
-    "energySkateParkBasics.introScreen.view.massSlider.thumb.pickableProperty": {
+    "energySkateParkBasics.introScreen.view.massSlider.rightArrowButton.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -15361,20 +15973,8 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
     },
-    "energySkateParkBasics.introScreen.view.massSlider.thumb.visibleProperty": {
-      "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": true,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
-    },
-    "energySkateParkBasics.introScreen.view.massSlider.thumbInputListener": {
-      "phetioDocumentation": "",
+    "energySkateParkBasics.introScreen.view.massSlider.rightArrowButton.pressListener.pressAction": {
+      "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br><ol><li>event: EventIO</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -15383,57 +15983,33 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ObjectIO"
+      "phetioTypeName": "ActionIO.<EventIO>"
     },
-    "energySkateParkBasics.introScreen.view.massSlider.thumbInputListener.dragAction": {
-      "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag in view coordinates</li></ol>",
+    "energySkateParkBasics.introScreen.view.massSlider.rightArrowButton.pressListener.releaseAction": {
+      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br><ol><li>event: NullableIO.<EventIO></li></ol>",
       "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": true,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<Vector2IO>"
-    },
-    "energySkateParkBasics.introScreen.view.massSlider.thumbInputListener.dragEndAction": {
-      "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag end in view coordinates</li></ol>",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
+      "phetioEventType": "USER",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
       "phetioPlayback": false,
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<Vector2IO>"
+      "phetioTypeName": "ActionIO.<NullableIO.<EventIO>>"
     },
-    "energySkateParkBasics.introScreen.view.massSlider.thumbInputListener.dragStartAction": {
-      "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag start in view coordinates</li></ol>",
+    "energySkateParkBasics.introScreen.view.massSlider.rightArrowButton.visibleProperty": {
+      "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
-      "phetioFeatured": false,
+      "phetioFeatured": true,
       "phetioHighFrequency": false,
       "phetioPlayback": false,
       "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<Vector2IO>"
-    },
-    "energySkateParkBasics.introScreen.view.massSlider.thumbInputListener.isDraggingProperty": {
-      "phetioDocumentation": "Indicates whether the object is dragging",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": true,
-      "phetioState": false,
+      "phetioState": true,
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO.<BooleanIO>"
     },
-    "energySkateParkBasics.introScreen.view.massSlider.titleString": {
+    "energySkateParkBasics.introScreen.view.massSlider.slider": {
       "phetioDocumentation": "",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -15443,9 +16019,33 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "TextIO"
+      "phetioTypeName": "SliderIO"
     },
-    "energySkateParkBasics.introScreen.view.massSlider.titleString.opacityProperty": {
+    "energySkateParkBasics.introScreen.view.massSlider.slider.enabledProperty": {
+      "phetioDocumentation": "",
+      "phetioDynamicElement": false,
+      "phetioEventType": "MODEL",
+      "phetioFeatured": true,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": true,
+      "phetioStudioControl": true,
+      "phetioTypeName": "PropertyIO.<BooleanIO>"
+    },
+    "energySkateParkBasics.introScreen.view.massSlider.slider.enabledRangeProperty": {
+      "phetioDocumentation": "",
+      "phetioDynamicElement": false,
+      "phetioEventType": "MODEL",
+      "phetioFeatured": false,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": true,
+      "phetioStudioControl": true,
+      "phetioTypeName": "PropertyIO.<RangeIO>"
+    },
+    "energySkateParkBasics.introScreen.view.massSlider.slider.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -15457,7 +16057,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "NumberPropertyIO"
     },
-    "energySkateParkBasics.introScreen.view.massSlider.titleString.pickableProperty": {
+    "energySkateParkBasics.introScreen.view.massSlider.slider.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -15469,8 +16069,20 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
     },
-    "energySkateParkBasics.introScreen.view.massSlider.titleString.textProperty": {
-      "phetioDocumentation": "Property for the displayed text",
+    "energySkateParkBasics.introScreen.view.massSlider.slider.thumb": {
+      "phetioDocumentation": "",
+      "phetioDynamicElement": false,
+      "phetioEventType": "MODEL",
+      "phetioFeatured": false,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": false,
+      "phetioStudioControl": true,
+      "phetioTypeName": "NodeIO"
+    },
+    "energySkateParkBasics.introScreen.view.massSlider.slider.thumb.opacityProperty": {
+      "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
       "phetioFeatured": false,
@@ -15479,9 +16091,21 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<StringIO>"
+      "phetioTypeName": "NumberPropertyIO"
     },
-    "energySkateParkBasics.introScreen.view.massSlider.titleString.visibleProperty": {
+    "energySkateParkBasics.introScreen.view.massSlider.slider.thumb.pickableProperty": {
+      "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
+      "phetioEventType": "MODEL",
+      "phetioFeatured": false,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": true,
+      "phetioStudioControl": true,
+      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+    },
+    "energySkateParkBasics.introScreen.view.massSlider.slider.thumb.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -15493,7 +16117,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO.<BooleanIO>"
     },
-    "energySkateParkBasics.introScreen.view.massSlider.track.trackInputListener": {
+    "energySkateParkBasics.introScreen.view.massSlider.slider.thumbInputListener": {
       "phetioDocumentation": "",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
@@ -15505,7 +16129,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "ObjectIO"
     },
-    "energySkateParkBasics.introScreen.view.massSlider.track.trackInputListener.dragAction": {
+    "energySkateParkBasics.introScreen.view.massSlider.slider.thumbInputListener.dragAction": {
       "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag in view coordinates</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -15517,7 +16141,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "ActionIO.<Vector2IO>"
     },
-    "energySkateParkBasics.introScreen.view.massSlider.track.trackInputListener.dragEndAction": {
+    "energySkateParkBasics.introScreen.view.massSlider.slider.thumbInputListener.dragEndAction": {
       "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag end in view coordinates</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -15529,7 +16153,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "ActionIO.<Vector2IO>"
     },
-    "energySkateParkBasics.introScreen.view.massSlider.track.trackInputListener.dragStartAction": {
+    "energySkateParkBasics.introScreen.view.massSlider.slider.thumbInputListener.dragStartAction": {
       "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag start in view coordinates</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -15541,7 +16165,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "ActionIO.<Vector2IO>"
     },
-    "energySkateParkBasics.introScreen.view.massSlider.track.trackInputListener.isDraggingProperty": {
+    "energySkateParkBasics.introScreen.view.massSlider.slider.thumbInputListener.isDraggingProperty": {
       "phetioDocumentation": "Indicates whether the object is dragging",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -15553,7 +16177,67 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO.<BooleanIO>"
     },
-    "energySkateParkBasics.introScreen.view.massSlider.valueProperty": {
+    "energySkateParkBasics.introScreen.view.massSlider.slider.track.trackInputListener": {
+      "phetioDocumentation": "",
+      "phetioDynamicElement": false,
+      "phetioEventType": "USER",
+      "phetioFeatured": false,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": false,
+      "phetioStudioControl": true,
+      "phetioTypeName": "ObjectIO"
+    },
+    "energySkateParkBasics.introScreen.view.massSlider.slider.track.trackInputListener.dragAction": {
+      "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag in view coordinates</li></ol>",
+      "phetioDynamicElement": false,
+      "phetioEventType": "MODEL",
+      "phetioFeatured": false,
+      "phetioHighFrequency": true,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": false,
+      "phetioStudioControl": true,
+      "phetioTypeName": "ActionIO.<Vector2IO>"
+    },
+    "energySkateParkBasics.introScreen.view.massSlider.slider.track.trackInputListener.dragEndAction": {
+      "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag end in view coordinates</li></ol>",
+      "phetioDynamicElement": false,
+      "phetioEventType": "MODEL",
+      "phetioFeatured": false,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": false,
+      "phetioStudioControl": true,
+      "phetioTypeName": "ActionIO.<Vector2IO>"
+    },
+    "energySkateParkBasics.introScreen.view.massSlider.slider.track.trackInputListener.dragStartAction": {
+      "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag start in view coordinates</li></ol>",
+      "phetioDynamicElement": false,
+      "phetioEventType": "MODEL",
+      "phetioFeatured": false,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": false,
+      "phetioStudioControl": true,
+      "phetioTypeName": "ActionIO.<Vector2IO>"
+    },
+    "energySkateParkBasics.introScreen.view.massSlider.slider.track.trackInputListener.isDraggingProperty": {
+      "phetioDocumentation": "Indicates whether the object is dragging",
+      "phetioDynamicElement": false,
+      "phetioEventType": "MODEL",
+      "phetioFeatured": false,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": true,
+      "phetioState": false,
+      "phetioStudioControl": true,
+      "phetioTypeName": "PropertyIO.<BooleanIO>"
+    },
+    "energySkateParkBasics.introScreen.view.massSlider.slider.valueProperty": {
       "phetioDocumentation": "",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -15565,11 +16249,83 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "LinkedElementIO"
     },
-    "energySkateParkBasics.introScreen.view.massSlider.visibleProperty": {
+    "energySkateParkBasics.introScreen.view.massSlider.slider.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
       "phetioFeatured": true,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": true,
+      "phetioStudioControl": true,
+      "phetioTypeName": "PropertyIO.<BooleanIO>"
+    },
+    "energySkateParkBasics.introScreen.view.massSlider.titleNode": {
+      "phetioDocumentation": "",
+      "phetioDynamicElement": false,
+      "phetioEventType": "MODEL",
+      "phetioFeatured": false,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": false,
+      "phetioStudioControl": true,
+      "phetioTypeName": "TextIO"
+    },
+    "energySkateParkBasics.introScreen.view.massSlider.titleNode.opacityProperty": {
+      "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
+      "phetioEventType": "MODEL",
+      "phetioFeatured": false,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": true,
+      "phetioStudioControl": true,
+      "phetioTypeName": "NumberPropertyIO"
+    },
+    "energySkateParkBasics.introScreen.view.massSlider.titleNode.pickableProperty": {
+      "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
+      "phetioEventType": "MODEL",
+      "phetioFeatured": false,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": true,
+      "phetioStudioControl": true,
+      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+    },
+    "energySkateParkBasics.introScreen.view.massSlider.titleNode.textProperty": {
+      "phetioDocumentation": "Property for the displayed text",
+      "phetioDynamicElement": false,
+      "phetioEventType": "MODEL",
+      "phetioFeatured": false,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": true,
+      "phetioStudioControl": true,
+      "phetioTypeName": "PropertyIO.<StringIO>"
+    },
+    "energySkateParkBasics.introScreen.view.massSlider.titleNode.visibleProperty": {
+      "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
+      "phetioEventType": "MODEL",
+      "phetioFeatured": false,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": true,
+      "phetioStudioControl": true,
+      "phetioTypeName": "PropertyIO.<BooleanIO>"
+    },
+    "energySkateParkBasics.introScreen.view.massSlider.visibleProperty": {
+      "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
+      "phetioEventType": "MODEL",
+      "phetioFeatured": false,
       "phetioHighFrequency": false,
       "phetioPlayback": false,
       "phetioReadOnly": false,
@@ -17315,10 +18071,22 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "SliderIO"
+      "phetioTypeName": "NumberControlIO"
     },
-    "energySkateParkBasics.playgroundScreen.view.frictionSlider.enabledProperty": {
+    "energySkateParkBasics.playgroundScreen.view.frictionSlider.leftArrowButton": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
+      "phetioEventType": "MODEL",
+      "phetioFeatured": false,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": false,
+      "phetioStudioControl": true,
+      "phetioTypeName": "NodeIO"
+    },
+    "energySkateParkBasics.playgroundScreen.view.frictionSlider.leftArrowButton.enabledProperty": {
+      "phetioDocumentation": "When disabled, the button is grayed out and cannot be pressed",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
       "phetioFeatured": true,
@@ -17329,8 +18097,20 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO.<BooleanIO>"
     },
-    "energySkateParkBasics.playgroundScreen.view.frictionSlider.enabledRangeProperty": {
-      "phetioDocumentation": "",
+    "energySkateParkBasics.playgroundScreen.view.frictionSlider.leftArrowButton.firedEmitter": {
+      "phetioDocumentation": "Emits when the button is fired No arguments.",
+      "phetioDynamicElement": false,
+      "phetioEventType": "USER",
+      "phetioFeatured": false,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": false,
+      "phetioStudioControl": true,
+      "phetioTypeName": "EmitterIO.<>"
+    },
+    "energySkateParkBasics.playgroundScreen.view.frictionSlider.leftArrowButton.opacityProperty": {
+      "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
       "phetioFeatured": false,
@@ -17339,7 +18119,55 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<RangeIO>"
+      "phetioTypeName": "NumberPropertyIO"
+    },
+    "energySkateParkBasics.playgroundScreen.view.frictionSlider.leftArrowButton.pickableProperty": {
+      "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
+      "phetioEventType": "MODEL",
+      "phetioFeatured": false,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": true,
+      "phetioStudioControl": true,
+      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+    },
+    "energySkateParkBasics.playgroundScreen.view.frictionSlider.leftArrowButton.pressListener.pressAction": {
+      "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br><ol><li>event: EventIO</li></ol>",
+      "phetioDynamicElement": false,
+      "phetioEventType": "USER",
+      "phetioFeatured": false,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": false,
+      "phetioStudioControl": true,
+      "phetioTypeName": "ActionIO.<EventIO>"
+    },
+    "energySkateParkBasics.playgroundScreen.view.frictionSlider.leftArrowButton.pressListener.releaseAction": {
+      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br><ol><li>event: NullableIO.<EventIO></li></ol>",
+      "phetioDynamicElement": false,
+      "phetioEventType": "USER",
+      "phetioFeatured": false,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": false,
+      "phetioStudioControl": true,
+      "phetioTypeName": "ActionIO.<NullableIO.<EventIO>>"
+    },
+    "energySkateParkBasics.playgroundScreen.view.frictionSlider.leftArrowButton.visibleProperty": {
+      "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
+      "phetioEventType": "MODEL",
+      "phetioFeatured": true,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": true,
+      "phetioStudioControl": true,
+      "phetioTypeName": "PropertyIO.<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.frictionSlider.maxLabel": {
       "phetioDocumentation": "",
@@ -17461,6 +18289,114 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO.<BooleanIO>"
     },
+    "energySkateParkBasics.playgroundScreen.view.frictionSlider.numberDisplay": {
+      "phetioDocumentation": "",
+      "phetioDynamicElement": false,
+      "phetioEventType": "MODEL",
+      "phetioFeatured": false,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": false,
+      "phetioStudioControl": true,
+      "phetioTypeName": "NumberDisplayIO"
+    },
+    "energySkateParkBasics.playgroundScreen.view.frictionSlider.numberDisplay.opacityProperty": {
+      "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
+      "phetioEventType": "MODEL",
+      "phetioFeatured": false,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": true,
+      "phetioStudioControl": true,
+      "phetioTypeName": "NumberPropertyIO"
+    },
+    "energySkateParkBasics.playgroundScreen.view.frictionSlider.numberDisplay.pickableProperty": {
+      "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
+      "phetioEventType": "MODEL",
+      "phetioFeatured": false,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": true,
+      "phetioStudioControl": true,
+      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+    },
+    "energySkateParkBasics.playgroundScreen.view.frictionSlider.numberDisplay.valueNode": {
+      "phetioDocumentation": "",
+      "phetioDynamicElement": false,
+      "phetioEventType": "MODEL",
+      "phetioFeatured": false,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": false,
+      "phetioStudioControl": true,
+      "phetioTypeName": "TextIO"
+    },
+    "energySkateParkBasics.playgroundScreen.view.frictionSlider.numberDisplay.valueNode.opacityProperty": {
+      "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
+      "phetioEventType": "MODEL",
+      "phetioFeatured": false,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": true,
+      "phetioStudioControl": true,
+      "phetioTypeName": "NumberPropertyIO"
+    },
+    "energySkateParkBasics.playgroundScreen.view.frictionSlider.numberDisplay.valueNode.pickableProperty": {
+      "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
+      "phetioEventType": "MODEL",
+      "phetioFeatured": false,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": true,
+      "phetioStudioControl": true,
+      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+    },
+    "energySkateParkBasics.playgroundScreen.view.frictionSlider.numberDisplay.valueNode.textProperty": {
+      "phetioDocumentation": "Property for the displayed text",
+      "phetioDynamicElement": false,
+      "phetioEventType": "MODEL",
+      "phetioFeatured": false,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": true,
+      "phetioStudioControl": true,
+      "phetioTypeName": "PropertyIO.<StringIO>"
+    },
+    "energySkateParkBasics.playgroundScreen.view.frictionSlider.numberDisplay.valueNode.visibleProperty": {
+      "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
+      "phetioEventType": "MODEL",
+      "phetioFeatured": false,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": true,
+      "phetioStudioControl": true,
+      "phetioTypeName": "PropertyIO.<BooleanIO>"
+    },
+    "energySkateParkBasics.playgroundScreen.view.frictionSlider.numberDisplay.visibleProperty": {
+      "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
+      "phetioEventType": "MODEL",
+      "phetioFeatured": false,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": true,
+      "phetioStudioControl": true,
+      "phetioTypeName": "PropertyIO.<BooleanIO>"
+    },
     "energySkateParkBasics.playgroundScreen.view.frictionSlider.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
       "phetioDynamicElement": false,
@@ -17485,7 +18421,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
     },
-    "energySkateParkBasics.playgroundScreen.view.frictionSlider.thumb": {
+    "energySkateParkBasics.playgroundScreen.view.frictionSlider.rightArrowButton": {
       "phetioDocumentation": "",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -17497,7 +18433,31 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "NodeIO"
     },
-    "energySkateParkBasics.playgroundScreen.view.frictionSlider.thumb.opacityProperty": {
+    "energySkateParkBasics.playgroundScreen.view.frictionSlider.rightArrowButton.enabledProperty": {
+      "phetioDocumentation": "When disabled, the button is grayed out and cannot be pressed",
+      "phetioDynamicElement": false,
+      "phetioEventType": "MODEL",
+      "phetioFeatured": true,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": true,
+      "phetioStudioControl": true,
+      "phetioTypeName": "PropertyIO.<BooleanIO>"
+    },
+    "energySkateParkBasics.playgroundScreen.view.frictionSlider.rightArrowButton.firedEmitter": {
+      "phetioDocumentation": "Emits when the button is fired No arguments.",
+      "phetioDynamicElement": false,
+      "phetioEventType": "USER",
+      "phetioFeatured": false,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": false,
+      "phetioStudioControl": true,
+      "phetioTypeName": "EmitterIO.<>"
+    },
+    "energySkateParkBasics.playgroundScreen.view.frictionSlider.rightArrowButton.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -17509,7 +18469,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "NumberPropertyIO"
     },
-    "energySkateParkBasics.playgroundScreen.view.frictionSlider.thumb.pickableProperty": {
+    "energySkateParkBasics.playgroundScreen.view.frictionSlider.rightArrowButton.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -17521,20 +18481,8 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
     },
-    "energySkateParkBasics.playgroundScreen.view.frictionSlider.thumb.visibleProperty": {
-      "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": true,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
-    },
-    "energySkateParkBasics.playgroundScreen.view.frictionSlider.thumbInputListener": {
-      "phetioDocumentation": "",
+    "energySkateParkBasics.playgroundScreen.view.frictionSlider.rightArrowButton.pressListener.pressAction": {
+      "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br><ol><li>event: EventIO</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -17543,57 +18491,33 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ObjectIO"
+      "phetioTypeName": "ActionIO.<EventIO>"
     },
-    "energySkateParkBasics.playgroundScreen.view.frictionSlider.thumbInputListener.dragAction": {
-      "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag in view coordinates</li></ol>",
+    "energySkateParkBasics.playgroundScreen.view.frictionSlider.rightArrowButton.pressListener.releaseAction": {
+      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br><ol><li>event: NullableIO.<EventIO></li></ol>",
       "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": true,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<Vector2IO>"
-    },
-    "energySkateParkBasics.playgroundScreen.view.frictionSlider.thumbInputListener.dragEndAction": {
-      "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag end in view coordinates</li></ol>",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
+      "phetioEventType": "USER",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
       "phetioPlayback": false,
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<Vector2IO>"
+      "phetioTypeName": "ActionIO.<NullableIO.<EventIO>>"
     },
-    "energySkateParkBasics.playgroundScreen.view.frictionSlider.thumbInputListener.dragStartAction": {
-      "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag start in view coordinates</li></ol>",
+    "energySkateParkBasics.playgroundScreen.view.frictionSlider.rightArrowButton.visibleProperty": {
+      "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
-      "phetioFeatured": false,
+      "phetioFeatured": true,
       "phetioHighFrequency": false,
       "phetioPlayback": false,
       "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<Vector2IO>"
-    },
-    "energySkateParkBasics.playgroundScreen.view.frictionSlider.thumbInputListener.isDraggingProperty": {
-      "phetioDocumentation": "Indicates whether the object is dragging",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": true,
-      "phetioState": false,
+      "phetioState": true,
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO.<BooleanIO>"
     },
-    "energySkateParkBasics.playgroundScreen.view.frictionSlider.titleString": {
+    "energySkateParkBasics.playgroundScreen.view.frictionSlider.slider": {
       "phetioDocumentation": "",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -17603,9 +18527,33 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "TextIO"
+      "phetioTypeName": "SliderIO"
     },
-    "energySkateParkBasics.playgroundScreen.view.frictionSlider.titleString.opacityProperty": {
+    "energySkateParkBasics.playgroundScreen.view.frictionSlider.slider.enabledProperty": {
+      "phetioDocumentation": "",
+      "phetioDynamicElement": false,
+      "phetioEventType": "MODEL",
+      "phetioFeatured": true,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": true,
+      "phetioStudioControl": true,
+      "phetioTypeName": "PropertyIO.<BooleanIO>"
+    },
+    "energySkateParkBasics.playgroundScreen.view.frictionSlider.slider.enabledRangeProperty": {
+      "phetioDocumentation": "",
+      "phetioDynamicElement": false,
+      "phetioEventType": "MODEL",
+      "phetioFeatured": false,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": true,
+      "phetioStudioControl": true,
+      "phetioTypeName": "PropertyIO.<RangeIO>"
+    },
+    "energySkateParkBasics.playgroundScreen.view.frictionSlider.slider.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -17617,7 +18565,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "NumberPropertyIO"
     },
-    "energySkateParkBasics.playgroundScreen.view.frictionSlider.titleString.pickableProperty": {
+    "energySkateParkBasics.playgroundScreen.view.frictionSlider.slider.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -17629,8 +18577,20 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
     },
-    "energySkateParkBasics.playgroundScreen.view.frictionSlider.titleString.textProperty": {
-      "phetioDocumentation": "Property for the displayed text",
+    "energySkateParkBasics.playgroundScreen.view.frictionSlider.slider.thumb": {
+      "phetioDocumentation": "",
+      "phetioDynamicElement": false,
+      "phetioEventType": "MODEL",
+      "phetioFeatured": false,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": false,
+      "phetioStudioControl": true,
+      "phetioTypeName": "NodeIO"
+    },
+    "energySkateParkBasics.playgroundScreen.view.frictionSlider.slider.thumb.opacityProperty": {
+      "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
       "phetioFeatured": false,
@@ -17639,9 +18599,21 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<StringIO>"
+      "phetioTypeName": "NumberPropertyIO"
     },
-    "energySkateParkBasics.playgroundScreen.view.frictionSlider.titleString.visibleProperty": {
+    "energySkateParkBasics.playgroundScreen.view.frictionSlider.slider.thumb.pickableProperty": {
+      "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
+      "phetioEventType": "MODEL",
+      "phetioFeatured": false,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": true,
+      "phetioStudioControl": true,
+      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+    },
+    "energySkateParkBasics.playgroundScreen.view.frictionSlider.slider.thumb.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -17653,7 +18625,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO.<BooleanIO>"
     },
-    "energySkateParkBasics.playgroundScreen.view.frictionSlider.track.trackInputListener": {
+    "energySkateParkBasics.playgroundScreen.view.frictionSlider.slider.thumbInputListener": {
       "phetioDocumentation": "",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
@@ -17665,7 +18637,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "ObjectIO"
     },
-    "energySkateParkBasics.playgroundScreen.view.frictionSlider.track.trackInputListener.dragAction": {
+    "energySkateParkBasics.playgroundScreen.view.frictionSlider.slider.thumbInputListener.dragAction": {
       "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag in view coordinates</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -17677,7 +18649,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "ActionIO.<Vector2IO>"
     },
-    "energySkateParkBasics.playgroundScreen.view.frictionSlider.track.trackInputListener.dragEndAction": {
+    "energySkateParkBasics.playgroundScreen.view.frictionSlider.slider.thumbInputListener.dragEndAction": {
       "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag end in view coordinates</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -17689,7 +18661,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "ActionIO.<Vector2IO>"
     },
-    "energySkateParkBasics.playgroundScreen.view.frictionSlider.track.trackInputListener.dragStartAction": {
+    "energySkateParkBasics.playgroundScreen.view.frictionSlider.slider.thumbInputListener.dragStartAction": {
       "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag start in view coordinates</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -17701,7 +18673,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "ActionIO.<Vector2IO>"
     },
-    "energySkateParkBasics.playgroundScreen.view.frictionSlider.track.trackInputListener.isDraggingProperty": {
+    "energySkateParkBasics.playgroundScreen.view.frictionSlider.slider.thumbInputListener.isDraggingProperty": {
       "phetioDocumentation": "Indicates whether the object is dragging",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -17713,7 +18685,67 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO.<BooleanIO>"
     },
-    "energySkateParkBasics.playgroundScreen.view.frictionSlider.valueProperty": {
+    "energySkateParkBasics.playgroundScreen.view.frictionSlider.slider.track.trackInputListener": {
+      "phetioDocumentation": "",
+      "phetioDynamicElement": false,
+      "phetioEventType": "USER",
+      "phetioFeatured": false,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": false,
+      "phetioStudioControl": true,
+      "phetioTypeName": "ObjectIO"
+    },
+    "energySkateParkBasics.playgroundScreen.view.frictionSlider.slider.track.trackInputListener.dragAction": {
+      "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag in view coordinates</li></ol>",
+      "phetioDynamicElement": false,
+      "phetioEventType": "MODEL",
+      "phetioFeatured": false,
+      "phetioHighFrequency": true,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": false,
+      "phetioStudioControl": true,
+      "phetioTypeName": "ActionIO.<Vector2IO>"
+    },
+    "energySkateParkBasics.playgroundScreen.view.frictionSlider.slider.track.trackInputListener.dragEndAction": {
+      "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag end in view coordinates</li></ol>",
+      "phetioDynamicElement": false,
+      "phetioEventType": "MODEL",
+      "phetioFeatured": false,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": false,
+      "phetioStudioControl": true,
+      "phetioTypeName": "ActionIO.<Vector2IO>"
+    },
+    "energySkateParkBasics.playgroundScreen.view.frictionSlider.slider.track.trackInputListener.dragStartAction": {
+      "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag start in view coordinates</li></ol>",
+      "phetioDynamicElement": false,
+      "phetioEventType": "MODEL",
+      "phetioFeatured": false,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": false,
+      "phetioStudioControl": true,
+      "phetioTypeName": "ActionIO.<Vector2IO>"
+    },
+    "energySkateParkBasics.playgroundScreen.view.frictionSlider.slider.track.trackInputListener.isDraggingProperty": {
+      "phetioDocumentation": "Indicates whether the object is dragging",
+      "phetioDynamicElement": false,
+      "phetioEventType": "MODEL",
+      "phetioFeatured": false,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": true,
+      "phetioState": false,
+      "phetioStudioControl": true,
+      "phetioTypeName": "PropertyIO.<BooleanIO>"
+    },
+    "energySkateParkBasics.playgroundScreen.view.frictionSlider.slider.valueProperty": {
       "phetioDocumentation": "",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -17725,11 +18757,83 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "LinkedElementIO"
     },
-    "energySkateParkBasics.playgroundScreen.view.frictionSlider.visibleProperty": {
+    "energySkateParkBasics.playgroundScreen.view.frictionSlider.slider.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
       "phetioFeatured": true,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": true,
+      "phetioStudioControl": true,
+      "phetioTypeName": "PropertyIO.<BooleanIO>"
+    },
+    "energySkateParkBasics.playgroundScreen.view.frictionSlider.titleNode": {
+      "phetioDocumentation": "",
+      "phetioDynamicElement": false,
+      "phetioEventType": "MODEL",
+      "phetioFeatured": false,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": false,
+      "phetioStudioControl": true,
+      "phetioTypeName": "TextIO"
+    },
+    "energySkateParkBasics.playgroundScreen.view.frictionSlider.titleNode.opacityProperty": {
+      "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
+      "phetioEventType": "MODEL",
+      "phetioFeatured": false,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": true,
+      "phetioStudioControl": true,
+      "phetioTypeName": "NumberPropertyIO"
+    },
+    "energySkateParkBasics.playgroundScreen.view.frictionSlider.titleNode.pickableProperty": {
+      "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
+      "phetioEventType": "MODEL",
+      "phetioFeatured": false,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": true,
+      "phetioStudioControl": true,
+      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+    },
+    "energySkateParkBasics.playgroundScreen.view.frictionSlider.titleNode.textProperty": {
+      "phetioDocumentation": "Property for the displayed text",
+      "phetioDynamicElement": false,
+      "phetioEventType": "MODEL",
+      "phetioFeatured": false,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": true,
+      "phetioStudioControl": true,
+      "phetioTypeName": "PropertyIO.<StringIO>"
+    },
+    "energySkateParkBasics.playgroundScreen.view.frictionSlider.titleNode.visibleProperty": {
+      "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
+      "phetioEventType": "MODEL",
+      "phetioFeatured": false,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": true,
+      "phetioStudioControl": true,
+      "phetioTypeName": "PropertyIO.<BooleanIO>"
+    },
+    "energySkateParkBasics.playgroundScreen.view.frictionSlider.visibleProperty": {
+      "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
+      "phetioEventType": "MODEL",
+      "phetioFeatured": false,
       "phetioHighFrequency": false,
       "phetioPlayback": false,
       "phetioReadOnly": false,
@@ -17748,438 +18852,6 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioState": false,
       "phetioStudioControl": true,
       "phetioTypeName": "NodeIO"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.arrowHead": {
-      "phetioDocumentation": "",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "NodeIO"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.arrowHead.opacityProperty": {
-      "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": true,
-      "phetioStudioControl": true,
-      "phetioTypeName": "NumberPropertyIO"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.arrowHead.pickableProperty": {
-      "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": true,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.arrowHead.visibleProperty": {
-      "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": true,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.attachDetachToggleButtons": {
-      "phetioDocumentation": "",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "NodeIO"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.attachDetachToggleButtons.opacityProperty": {
-      "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": true,
-      "phetioStudioControl": true,
-      "phetioTypeName": "NumberPropertyIO"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.attachDetachToggleButtons.pickableProperty": {
-      "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": true,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.attachDetachToggleButtons.radioButtonGroup": {
-      "phetioDocumentation": "",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "NodeIO"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.attachDetachToggleButtons.radioButtonGroup.attachRadioButton": {
-      "phetioDocumentation": "",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "NodeIO"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.attachDetachToggleButtons.radioButtonGroup.attachRadioButton.attachIcon": {
-      "phetioDocumentation": "",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "NodeIO"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.attachDetachToggleButtons.radioButtonGroup.attachRadioButton.attachIcon.opacityProperty": {
-      "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": true,
-      "phetioStudioControl": true,
-      "phetioTypeName": "NumberPropertyIO"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.attachDetachToggleButtons.radioButtonGroup.attachRadioButton.attachIcon.pickableProperty": {
-      "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": true,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.attachDetachToggleButtons.radioButtonGroup.attachRadioButton.attachIcon.visibleProperty": {
-      "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": true,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.attachDetachToggleButtons.radioButtonGroup.attachRadioButton.enabledProperty": {
-      "phetioDocumentation": "When disabled, the button is grayed out and cannot be pressed",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": true,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": true,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.attachDetachToggleButtons.radioButtonGroup.attachRadioButton.firedEmitter": {
-      "phetioDocumentation": "Emits when the radio button is pressed No arguments.",
-      "phetioDynamicElement": false,
-      "phetioEventType": "USER",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "EmitterIO.<>"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.attachDetachToggleButtons.radioButtonGroup.attachRadioButton.opacityProperty": {
-      "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": true,
-      "phetioStudioControl": true,
-      "phetioTypeName": "NumberPropertyIO"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.attachDetachToggleButtons.radioButtonGroup.attachRadioButton.pickableProperty": {
-      "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": true,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.attachDetachToggleButtons.radioButtonGroup.attachRadioButton.pressListener.pressAction": {
-      "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br><ol><li>event: EventIO</li></ol>",
-      "phetioDynamicElement": false,
-      "phetioEventType": "USER",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<EventIO>"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.attachDetachToggleButtons.radioButtonGroup.attachRadioButton.pressListener.releaseAction": {
-      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br><ol><li>event: NullableIO.<EventIO></li></ol>",
-      "phetioDynamicElement": false,
-      "phetioEventType": "USER",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<NullableIO.<EventIO>>"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.attachDetachToggleButtons.radioButtonGroup.attachRadioButton.visibleProperty": {
-      "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": true,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": true,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.attachDetachToggleButtons.radioButtonGroup.detachRadioButton": {
-      "phetioDocumentation": "",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "NodeIO"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.attachDetachToggleButtons.radioButtonGroup.detachRadioButton.detachIcon": {
-      "phetioDocumentation": "",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "NodeIO"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.attachDetachToggleButtons.radioButtonGroup.detachRadioButton.detachIcon.opacityProperty": {
-      "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": true,
-      "phetioStudioControl": true,
-      "phetioTypeName": "NumberPropertyIO"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.attachDetachToggleButtons.radioButtonGroup.detachRadioButton.detachIcon.pickableProperty": {
-      "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": true,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.attachDetachToggleButtons.radioButtonGroup.detachRadioButton.detachIcon.visibleProperty": {
-      "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": true,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.attachDetachToggleButtons.radioButtonGroup.detachRadioButton.enabledProperty": {
-      "phetioDocumentation": "When disabled, the button is grayed out and cannot be pressed",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": true,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": true,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.attachDetachToggleButtons.radioButtonGroup.detachRadioButton.firedEmitter": {
-      "phetioDocumentation": "Emits when the radio button is pressed No arguments.",
-      "phetioDynamicElement": false,
-      "phetioEventType": "USER",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "EmitterIO.<>"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.attachDetachToggleButtons.radioButtonGroup.detachRadioButton.opacityProperty": {
-      "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": true,
-      "phetioStudioControl": true,
-      "phetioTypeName": "NumberPropertyIO"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.attachDetachToggleButtons.radioButtonGroup.detachRadioButton.pickableProperty": {
-      "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": true,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.attachDetachToggleButtons.radioButtonGroup.detachRadioButton.pressListener.pressAction": {
-      "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br><ol><li>event: EventIO</li></ol>",
-      "phetioDynamicElement": false,
-      "phetioEventType": "USER",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<EventIO>"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.attachDetachToggleButtons.radioButtonGroup.detachRadioButton.pressListener.releaseAction": {
-      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br><ol><li>event: NullableIO.<EventIO></li></ol>",
-      "phetioDynamicElement": false,
-      "phetioEventType": "USER",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<NullableIO.<EventIO>>"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.attachDetachToggleButtons.radioButtonGroup.detachRadioButton.visibleProperty": {
-      "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": true,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": true,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.attachDetachToggleButtons.radioButtonGroup.opacityProperty": {
-      "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": true,
-      "phetioStudioControl": true,
-      "phetioTypeName": "NumberPropertyIO"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.attachDetachToggleButtons.radioButtonGroup.pickableProperty": {
-      "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": true,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.attachDetachToggleButtons.radioButtonGroup.visibleProperty": {
-      "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": true,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": true,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.attachDetachToggleButtons.visibleProperty": {
-      "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": true,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.backgroundNode": {
       "phetioDocumentation": "",
@@ -18270,102 +18942,6 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
       "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": true,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.clearButton": {
-      "phetioDocumentation": "",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "NodeIO"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.clearButton.enabledProperty": {
-      "phetioDocumentation": "When disabled, the button is grayed out and cannot be pressed",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": true,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": true,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.clearButton.firedEmitter": {
-      "phetioDocumentation": "Emits when the button is fired No arguments.",
-      "phetioDynamicElement": false,
-      "phetioEventType": "USER",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "EmitterIO.<>"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.clearButton.opacityProperty": {
-      "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": true,
-      "phetioStudioControl": true,
-      "phetioTypeName": "NumberPropertyIO"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.clearButton.pickableProperty": {
-      "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": true,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.clearButton.pressListener.pressAction": {
-      "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br><ol><li>event: EventIO</li></ol>",
-      "phetioDynamicElement": false,
-      "phetioEventType": "USER",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<EventIO>"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.clearButton.pressListener.releaseAction": {
-      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br><ol><li>event: NullableIO.<EventIO></li></ol>",
-      "phetioDynamicElement": false,
-      "phetioEventType": "USER",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<NullableIO.<EventIO>>"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.clearButton.visibleProperty": {
-      "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": true,
       "phetioHighFrequency": false,
       "phetioPlayback": false,
       "phetioReadOnly": false,
@@ -21433,54 +22009,6 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO.<BooleanIO>"
     },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.rightCurve": {
-      "phetioDocumentation": "",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "NodeIO"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.rightCurve.opacityProperty": {
-      "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": true,
-      "phetioStudioControl": true,
-      "phetioTypeName": "NumberPropertyIO"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.rightCurve.pickableProperty": {
-      "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": true,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.rightCurve.visibleProperty": {
-      "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": true,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
-    },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.skaterIconImage1": {
       "phetioDocumentation": "",
       "phetioDynamicElement": false,
@@ -22081,2166 +22609,6 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO.<BooleanIO>"
     },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~0": {
-      "phetioDocumentation": "",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "NodeIO"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~0.controlPointNode0": {
-      "phetioDocumentation": "",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "ControlPointNodeIO"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~0.controlPointNode0.inputListener": {
-      "phetioDocumentation": "",
-      "phetioDynamicElement": false,
-      "phetioEventType": "USER",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "ObjectIO"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~0.controlPointNode0.inputListener.dragAction": {
-      "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag in view coordinates</li></ol>",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": true,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<Vector2IO>"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~0.controlPointNode0.inputListener.dragEndAction": {
-      "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag end in view coordinates</li></ol>",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<Vector2IO>"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~0.controlPointNode0.inputListener.dragStartAction": {
-      "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag start in view coordinates</li></ol>",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<Vector2IO>"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~0.controlPointNode0.inputListener.isDraggingProperty": {
-      "phetioDocumentation": "Indicates whether the object is dragging",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": true,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~0.controlPointNode0.opacityProperty": {
-      "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "NumberPropertyIO"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~0.controlPointNode0.pickableProperty": {
-      "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~0.controlPointNode0.visibleProperty": {
-      "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~0.controlPointNode1": {
-      "phetioDocumentation": "",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "ControlPointNodeIO"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~0.controlPointNode1.inputListener": {
-      "phetioDocumentation": "",
-      "phetioDynamicElement": false,
-      "phetioEventType": "USER",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "ObjectIO"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~0.controlPointNode1.inputListener.dragAction": {
-      "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag in view coordinates</li></ol>",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": true,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<Vector2IO>"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~0.controlPointNode1.inputListener.dragEndAction": {
-      "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag end in view coordinates</li></ol>",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<Vector2IO>"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~0.controlPointNode1.inputListener.dragStartAction": {
-      "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag start in view coordinates</li></ol>",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<Vector2IO>"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~0.controlPointNode1.inputListener.isDraggingProperty": {
-      "phetioDocumentation": "Indicates whether the object is dragging",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": true,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~0.controlPointNode1.opacityProperty": {
-      "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "NumberPropertyIO"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~0.controlPointNode1.pickableProperty": {
-      "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~0.controlPointNode1.visibleProperty": {
-      "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~0.controlPointNode2": {
-      "phetioDocumentation": "",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "ControlPointNodeIO"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~0.controlPointNode2.inputListener": {
-      "phetioDocumentation": "",
-      "phetioDynamicElement": false,
-      "phetioEventType": "USER",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "ObjectIO"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~0.controlPointNode2.inputListener.dragAction": {
-      "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag in view coordinates</li></ol>",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": true,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<Vector2IO>"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~0.controlPointNode2.inputListener.dragEndAction": {
-      "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag end in view coordinates</li></ol>",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<Vector2IO>"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~0.controlPointNode2.inputListener.dragStartAction": {
-      "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag start in view coordinates</li></ol>",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<Vector2IO>"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~0.controlPointNode2.inputListener.isDraggingProperty": {
-      "phetioDocumentation": "Indicates whether the object is dragging",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": true,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~0.controlPointNode2.opacityProperty": {
-      "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "NumberPropertyIO"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~0.controlPointNode2.pickableProperty": {
-      "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~0.controlPointNode2.visibleProperty": {
-      "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~0.opacityProperty": {
-      "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "NumberPropertyIO"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~0.pickableProperty": {
-      "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~0.trackDragHandler.inputListener": {
-      "phetioDocumentation": "",
-      "phetioDynamicElement": false,
-      "phetioEventType": "USER",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "ObjectIO"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~0.trackDragHandler.inputListener.dragAction": {
-      "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag in view coordinates</li></ol>",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": true,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<Vector2IO>"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~0.trackDragHandler.inputListener.dragEndAction": {
-      "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag end in view coordinates</li></ol>",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<Vector2IO>"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~0.trackDragHandler.inputListener.dragStartAction": {
-      "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag start in view coordinates</li></ol>",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<Vector2IO>"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~0.trackDragHandler.inputListener.isDraggingProperty": {
-      "phetioDocumentation": "Indicates whether the object is dragging",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": true,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~0.visibleProperty": {
-      "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~1": {
-      "phetioDocumentation": "",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "NodeIO"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~1.controlPointNode0": {
-      "phetioDocumentation": "",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "ControlPointNodeIO"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~1.controlPointNode0.inputListener": {
-      "phetioDocumentation": "",
-      "phetioDynamicElement": false,
-      "phetioEventType": "USER",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "ObjectIO"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~1.controlPointNode0.inputListener.dragAction": {
-      "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag in view coordinates</li></ol>",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": true,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<Vector2IO>"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~1.controlPointNode0.inputListener.dragEndAction": {
-      "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag end in view coordinates</li></ol>",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<Vector2IO>"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~1.controlPointNode0.inputListener.dragStartAction": {
-      "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag start in view coordinates</li></ol>",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<Vector2IO>"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~1.controlPointNode0.inputListener.isDraggingProperty": {
-      "phetioDocumentation": "Indicates whether the object is dragging",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": true,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~1.controlPointNode0.opacityProperty": {
-      "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "NumberPropertyIO"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~1.controlPointNode0.pickableProperty": {
-      "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~1.controlPointNode0.visibleProperty": {
-      "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~1.controlPointNode1": {
-      "phetioDocumentation": "",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "ControlPointNodeIO"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~1.controlPointNode1.inputListener": {
-      "phetioDocumentation": "",
-      "phetioDynamicElement": false,
-      "phetioEventType": "USER",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "ObjectIO"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~1.controlPointNode1.inputListener.dragAction": {
-      "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag in view coordinates</li></ol>",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": true,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<Vector2IO>"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~1.controlPointNode1.inputListener.dragEndAction": {
-      "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag end in view coordinates</li></ol>",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<Vector2IO>"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~1.controlPointNode1.inputListener.dragStartAction": {
-      "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag start in view coordinates</li></ol>",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<Vector2IO>"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~1.controlPointNode1.inputListener.isDraggingProperty": {
-      "phetioDocumentation": "Indicates whether the object is dragging",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": true,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~1.controlPointNode1.opacityProperty": {
-      "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "NumberPropertyIO"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~1.controlPointNode1.pickableProperty": {
-      "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~1.controlPointNode1.visibleProperty": {
-      "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~1.controlPointNode2": {
-      "phetioDocumentation": "",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "ControlPointNodeIO"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~1.controlPointNode2.inputListener": {
-      "phetioDocumentation": "",
-      "phetioDynamicElement": false,
-      "phetioEventType": "USER",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "ObjectIO"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~1.controlPointNode2.inputListener.dragAction": {
-      "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag in view coordinates</li></ol>",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": true,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<Vector2IO>"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~1.controlPointNode2.inputListener.dragEndAction": {
-      "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag end in view coordinates</li></ol>",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<Vector2IO>"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~1.controlPointNode2.inputListener.dragStartAction": {
-      "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag start in view coordinates</li></ol>",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<Vector2IO>"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~1.controlPointNode2.inputListener.isDraggingProperty": {
-      "phetioDocumentation": "Indicates whether the object is dragging",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": true,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~1.controlPointNode2.opacityProperty": {
-      "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "NumberPropertyIO"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~1.controlPointNode2.pickableProperty": {
-      "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~1.controlPointNode2.visibleProperty": {
-      "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~1.opacityProperty": {
-      "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "NumberPropertyIO"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~1.pickableProperty": {
-      "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~1.trackDragHandler.inputListener": {
-      "phetioDocumentation": "",
-      "phetioDynamicElement": false,
-      "phetioEventType": "USER",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "ObjectIO"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~1.trackDragHandler.inputListener.dragAction": {
-      "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag in view coordinates</li></ol>",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": true,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<Vector2IO>"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~1.trackDragHandler.inputListener.dragEndAction": {
-      "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag end in view coordinates</li></ol>",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<Vector2IO>"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~1.trackDragHandler.inputListener.dragStartAction": {
-      "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag start in view coordinates</li></ol>",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<Vector2IO>"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~1.trackDragHandler.inputListener.isDraggingProperty": {
-      "phetioDocumentation": "Indicates whether the object is dragging",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": true,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~1.visibleProperty": {
-      "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~2": {
-      "phetioDocumentation": "",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "NodeIO"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~2.controlPointNode0": {
-      "phetioDocumentation": "",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "ControlPointNodeIO"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~2.controlPointNode0.inputListener": {
-      "phetioDocumentation": "",
-      "phetioDynamicElement": false,
-      "phetioEventType": "USER",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "ObjectIO"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~2.controlPointNode0.inputListener.dragAction": {
-      "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag in view coordinates</li></ol>",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": true,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<Vector2IO>"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~2.controlPointNode0.inputListener.dragEndAction": {
-      "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag end in view coordinates</li></ol>",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<Vector2IO>"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~2.controlPointNode0.inputListener.dragStartAction": {
-      "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag start in view coordinates</li></ol>",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<Vector2IO>"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~2.controlPointNode0.inputListener.isDraggingProperty": {
-      "phetioDocumentation": "Indicates whether the object is dragging",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": true,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~2.controlPointNode0.opacityProperty": {
-      "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "NumberPropertyIO"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~2.controlPointNode0.pickableProperty": {
-      "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~2.controlPointNode0.visibleProperty": {
-      "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~2.controlPointNode1": {
-      "phetioDocumentation": "",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "ControlPointNodeIO"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~2.controlPointNode1.inputListener": {
-      "phetioDocumentation": "",
-      "phetioDynamicElement": false,
-      "phetioEventType": "USER",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "ObjectIO"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~2.controlPointNode1.inputListener.dragAction": {
-      "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag in view coordinates</li></ol>",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": true,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<Vector2IO>"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~2.controlPointNode1.inputListener.dragEndAction": {
-      "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag end in view coordinates</li></ol>",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<Vector2IO>"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~2.controlPointNode1.inputListener.dragStartAction": {
-      "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag start in view coordinates</li></ol>",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<Vector2IO>"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~2.controlPointNode1.inputListener.isDraggingProperty": {
-      "phetioDocumentation": "Indicates whether the object is dragging",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": true,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~2.controlPointNode1.opacityProperty": {
-      "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "NumberPropertyIO"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~2.controlPointNode1.pickableProperty": {
-      "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~2.controlPointNode1.visibleProperty": {
-      "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~2.controlPointNode2": {
-      "phetioDocumentation": "",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "ControlPointNodeIO"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~2.controlPointNode2.inputListener": {
-      "phetioDocumentation": "",
-      "phetioDynamicElement": false,
-      "phetioEventType": "USER",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "ObjectIO"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~2.controlPointNode2.inputListener.dragAction": {
-      "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag in view coordinates</li></ol>",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": true,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<Vector2IO>"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~2.controlPointNode2.inputListener.dragEndAction": {
-      "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag end in view coordinates</li></ol>",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<Vector2IO>"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~2.controlPointNode2.inputListener.dragStartAction": {
-      "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag start in view coordinates</li></ol>",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<Vector2IO>"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~2.controlPointNode2.inputListener.isDraggingProperty": {
-      "phetioDocumentation": "Indicates whether the object is dragging",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": true,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~2.controlPointNode2.opacityProperty": {
-      "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "NumberPropertyIO"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~2.controlPointNode2.pickableProperty": {
-      "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~2.controlPointNode2.visibleProperty": {
-      "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~2.opacityProperty": {
-      "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "NumberPropertyIO"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~2.pickableProperty": {
-      "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~2.trackDragHandler.inputListener": {
-      "phetioDocumentation": "",
-      "phetioDynamicElement": false,
-      "phetioEventType": "USER",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "ObjectIO"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~2.trackDragHandler.inputListener.dragAction": {
-      "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag in view coordinates</li></ol>",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": true,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<Vector2IO>"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~2.trackDragHandler.inputListener.dragEndAction": {
-      "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag end in view coordinates</li></ol>",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<Vector2IO>"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~2.trackDragHandler.inputListener.dragStartAction": {
-      "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag start in view coordinates</li></ol>",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<Vector2IO>"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~2.trackDragHandler.inputListener.isDraggingProperty": {
-      "phetioDocumentation": "Indicates whether the object is dragging",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": true,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~2.visibleProperty": {
-      "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~3": {
-      "phetioDocumentation": "",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "NodeIO"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~3.controlPointNode0": {
-      "phetioDocumentation": "",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "ControlPointNodeIO"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~3.controlPointNode0.inputListener": {
-      "phetioDocumentation": "",
-      "phetioDynamicElement": false,
-      "phetioEventType": "USER",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "ObjectIO"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~3.controlPointNode0.inputListener.dragAction": {
-      "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag in view coordinates</li></ol>",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": true,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<Vector2IO>"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~3.controlPointNode0.inputListener.dragEndAction": {
-      "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag end in view coordinates</li></ol>",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<Vector2IO>"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~3.controlPointNode0.inputListener.dragStartAction": {
-      "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag start in view coordinates</li></ol>",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<Vector2IO>"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~3.controlPointNode0.inputListener.isDraggingProperty": {
-      "phetioDocumentation": "Indicates whether the object is dragging",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": true,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~3.controlPointNode0.opacityProperty": {
-      "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "NumberPropertyIO"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~3.controlPointNode0.pickableProperty": {
-      "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~3.controlPointNode0.visibleProperty": {
-      "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~3.controlPointNode1": {
-      "phetioDocumentation": "",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "ControlPointNodeIO"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~3.controlPointNode1.inputListener": {
-      "phetioDocumentation": "",
-      "phetioDynamicElement": false,
-      "phetioEventType": "USER",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "ObjectIO"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~3.controlPointNode1.inputListener.dragAction": {
-      "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag in view coordinates</li></ol>",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": true,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<Vector2IO>"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~3.controlPointNode1.inputListener.dragEndAction": {
-      "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag end in view coordinates</li></ol>",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<Vector2IO>"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~3.controlPointNode1.inputListener.dragStartAction": {
-      "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag start in view coordinates</li></ol>",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<Vector2IO>"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~3.controlPointNode1.inputListener.isDraggingProperty": {
-      "phetioDocumentation": "Indicates whether the object is dragging",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": true,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~3.controlPointNode1.opacityProperty": {
-      "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "NumberPropertyIO"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~3.controlPointNode1.pickableProperty": {
-      "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~3.controlPointNode1.visibleProperty": {
-      "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~3.controlPointNode2": {
-      "phetioDocumentation": "",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "ControlPointNodeIO"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~3.controlPointNode2.inputListener": {
-      "phetioDocumentation": "",
-      "phetioDynamicElement": false,
-      "phetioEventType": "USER",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "ObjectIO"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~3.controlPointNode2.inputListener.dragAction": {
-      "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag in view coordinates</li></ol>",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": true,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<Vector2IO>"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~3.controlPointNode2.inputListener.dragEndAction": {
-      "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag end in view coordinates</li></ol>",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<Vector2IO>"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~3.controlPointNode2.inputListener.dragStartAction": {
-      "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag start in view coordinates</li></ol>",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<Vector2IO>"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~3.controlPointNode2.inputListener.isDraggingProperty": {
-      "phetioDocumentation": "Indicates whether the object is dragging",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": true,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~3.controlPointNode2.opacityProperty": {
-      "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "NumberPropertyIO"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~3.controlPointNode2.pickableProperty": {
-      "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~3.controlPointNode2.visibleProperty": {
-      "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~3.opacityProperty": {
-      "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "NumberPropertyIO"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~3.pickableProperty": {
-      "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~3.trackDragHandler.inputListener": {
-      "phetioDocumentation": "",
-      "phetioDynamicElement": false,
-      "phetioEventType": "USER",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "ObjectIO"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~3.trackDragHandler.inputListener.dragAction": {
-      "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag in view coordinates</li></ol>",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": true,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<Vector2IO>"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~3.trackDragHandler.inputListener.dragEndAction": {
-      "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag end in view coordinates</li></ol>",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<Vector2IO>"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~3.trackDragHandler.inputListener.dragStartAction": {
-      "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag start in view coordinates</li></ol>",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<Vector2IO>"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~3.trackDragHandler.inputListener.isDraggingProperty": {
-      "phetioDocumentation": "Indicates whether the object is dragging",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": true,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~3.visibleProperty": {
-      "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~4": {
-      "phetioDocumentation": "",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "NodeIO"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~4.controlPointNode0": {
-      "phetioDocumentation": "",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "ControlPointNodeIO"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~4.controlPointNode0.inputListener": {
-      "phetioDocumentation": "",
-      "phetioDynamicElement": false,
-      "phetioEventType": "USER",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "ObjectIO"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~4.controlPointNode0.inputListener.dragAction": {
-      "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag in view coordinates</li></ol>",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": true,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<Vector2IO>"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~4.controlPointNode0.inputListener.dragEndAction": {
-      "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag end in view coordinates</li></ol>",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<Vector2IO>"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~4.controlPointNode0.inputListener.dragStartAction": {
-      "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag start in view coordinates</li></ol>",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<Vector2IO>"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~4.controlPointNode0.inputListener.isDraggingProperty": {
-      "phetioDocumentation": "Indicates whether the object is dragging",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": true,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~4.controlPointNode0.opacityProperty": {
-      "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "NumberPropertyIO"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~4.controlPointNode0.pickableProperty": {
-      "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~4.controlPointNode0.visibleProperty": {
-      "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~4.controlPointNode1": {
-      "phetioDocumentation": "",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "ControlPointNodeIO"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~4.controlPointNode1.inputListener": {
-      "phetioDocumentation": "",
-      "phetioDynamicElement": false,
-      "phetioEventType": "USER",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "ObjectIO"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~4.controlPointNode1.inputListener.dragAction": {
-      "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag in view coordinates</li></ol>",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": true,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<Vector2IO>"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~4.controlPointNode1.inputListener.dragEndAction": {
-      "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag end in view coordinates</li></ol>",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<Vector2IO>"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~4.controlPointNode1.inputListener.dragStartAction": {
-      "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag start in view coordinates</li></ol>",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<Vector2IO>"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~4.controlPointNode1.inputListener.isDraggingProperty": {
-      "phetioDocumentation": "Indicates whether the object is dragging",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": true,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~4.controlPointNode1.opacityProperty": {
-      "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "NumberPropertyIO"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~4.controlPointNode1.pickableProperty": {
-      "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~4.controlPointNode1.visibleProperty": {
-      "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~4.controlPointNode2": {
-      "phetioDocumentation": "",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "ControlPointNodeIO"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~4.controlPointNode2.inputListener": {
-      "phetioDocumentation": "",
-      "phetioDynamicElement": false,
-      "phetioEventType": "USER",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "ObjectIO"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~4.controlPointNode2.inputListener.dragAction": {
-      "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag in view coordinates</li></ol>",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": true,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<Vector2IO>"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~4.controlPointNode2.inputListener.dragEndAction": {
-      "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag end in view coordinates</li></ol>",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<Vector2IO>"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~4.controlPointNode2.inputListener.dragStartAction": {
-      "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag start in view coordinates</li></ol>",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<Vector2IO>"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~4.controlPointNode2.inputListener.isDraggingProperty": {
-      "phetioDocumentation": "Indicates whether the object is dragging",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": true,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~4.controlPointNode2.opacityProperty": {
-      "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "NumberPropertyIO"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~4.controlPointNode2.pickableProperty": {
-      "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~4.controlPointNode2.visibleProperty": {
-      "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~4.opacityProperty": {
-      "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "NumberPropertyIO"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~4.pickableProperty": {
-      "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~4.trackDragHandler.inputListener": {
-      "phetioDocumentation": "",
-      "phetioDynamicElement": false,
-      "phetioEventType": "USER",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "ObjectIO"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~4.trackDragHandler.inputListener.dragAction": {
-      "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag in view coordinates</li></ol>",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": true,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<Vector2IO>"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~4.trackDragHandler.inputListener.dragEndAction": {
-      "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag end in view coordinates</li></ol>",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<Vector2IO>"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~4.trackDragHandler.inputListener.dragStartAction": {
-      "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag start in view coordinates</li></ol>",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<Vector2IO>"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~4.trackDragHandler.inputListener.isDraggingProperty": {
-      "phetioDocumentation": "Indicates whether the object is dragging",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": true,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~4.visibleProperty": {
-      "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
-    },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
       "phetioDynamicElement": false,
@@ -24263,10 +22631,22 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "SliderIO"
+      "phetioTypeName": "NumberControlIO"
     },
-    "energySkateParkBasics.playgroundScreen.view.massSlider.enabledProperty": {
+    "energySkateParkBasics.playgroundScreen.view.massSlider.leftArrowButton": {
       "phetioDocumentation": "",
+      "phetioDynamicElement": false,
+      "phetioEventType": "MODEL",
+      "phetioFeatured": false,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": false,
+      "phetioStudioControl": true,
+      "phetioTypeName": "NodeIO"
+    },
+    "energySkateParkBasics.playgroundScreen.view.massSlider.leftArrowButton.enabledProperty": {
+      "phetioDocumentation": "When disabled, the button is grayed out and cannot be pressed",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
       "phetioFeatured": true,
@@ -24277,8 +22657,20 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO.<BooleanIO>"
     },
-    "energySkateParkBasics.playgroundScreen.view.massSlider.enabledRangeProperty": {
-      "phetioDocumentation": "",
+    "energySkateParkBasics.playgroundScreen.view.massSlider.leftArrowButton.firedEmitter": {
+      "phetioDocumentation": "Emits when the button is fired No arguments.",
+      "phetioDynamicElement": false,
+      "phetioEventType": "USER",
+      "phetioFeatured": false,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": false,
+      "phetioStudioControl": true,
+      "phetioTypeName": "EmitterIO.<>"
+    },
+    "energySkateParkBasics.playgroundScreen.view.massSlider.leftArrowButton.opacityProperty": {
+      "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
       "phetioFeatured": false,
@@ -24287,7 +22679,55 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<RangeIO>"
+      "phetioTypeName": "NumberPropertyIO"
+    },
+    "energySkateParkBasics.playgroundScreen.view.massSlider.leftArrowButton.pickableProperty": {
+      "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
+      "phetioEventType": "MODEL",
+      "phetioFeatured": false,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": true,
+      "phetioStudioControl": true,
+      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+    },
+    "energySkateParkBasics.playgroundScreen.view.massSlider.leftArrowButton.pressListener.pressAction": {
+      "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br><ol><li>event: EventIO</li></ol>",
+      "phetioDynamicElement": false,
+      "phetioEventType": "USER",
+      "phetioFeatured": false,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": false,
+      "phetioStudioControl": true,
+      "phetioTypeName": "ActionIO.<EventIO>"
+    },
+    "energySkateParkBasics.playgroundScreen.view.massSlider.leftArrowButton.pressListener.releaseAction": {
+      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br><ol><li>event: NullableIO.<EventIO></li></ol>",
+      "phetioDynamicElement": false,
+      "phetioEventType": "USER",
+      "phetioFeatured": false,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": false,
+      "phetioStudioControl": true,
+      "phetioTypeName": "ActionIO.<NullableIO.<EventIO>>"
+    },
+    "energySkateParkBasics.playgroundScreen.view.massSlider.leftArrowButton.visibleProperty": {
+      "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
+      "phetioEventType": "MODEL",
+      "phetioFeatured": true,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": true,
+      "phetioStudioControl": true,
+      "phetioTypeName": "PropertyIO.<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.massSlider.maxLabel": {
       "phetioDocumentation": "",
@@ -24409,6 +22849,114 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO.<BooleanIO>"
     },
+    "energySkateParkBasics.playgroundScreen.view.massSlider.numberDisplay": {
+      "phetioDocumentation": "",
+      "phetioDynamicElement": false,
+      "phetioEventType": "MODEL",
+      "phetioFeatured": false,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": false,
+      "phetioStudioControl": true,
+      "phetioTypeName": "NumberDisplayIO"
+    },
+    "energySkateParkBasics.playgroundScreen.view.massSlider.numberDisplay.opacityProperty": {
+      "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
+      "phetioEventType": "MODEL",
+      "phetioFeatured": false,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": true,
+      "phetioStudioControl": true,
+      "phetioTypeName": "NumberPropertyIO"
+    },
+    "energySkateParkBasics.playgroundScreen.view.massSlider.numberDisplay.pickableProperty": {
+      "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
+      "phetioEventType": "MODEL",
+      "phetioFeatured": false,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": true,
+      "phetioStudioControl": true,
+      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+    },
+    "energySkateParkBasics.playgroundScreen.view.massSlider.numberDisplay.valueNode": {
+      "phetioDocumentation": "",
+      "phetioDynamicElement": false,
+      "phetioEventType": "MODEL",
+      "phetioFeatured": false,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": false,
+      "phetioStudioControl": true,
+      "phetioTypeName": "TextIO"
+    },
+    "energySkateParkBasics.playgroundScreen.view.massSlider.numberDisplay.valueNode.opacityProperty": {
+      "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
+      "phetioEventType": "MODEL",
+      "phetioFeatured": false,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": true,
+      "phetioStudioControl": true,
+      "phetioTypeName": "NumberPropertyIO"
+    },
+    "energySkateParkBasics.playgroundScreen.view.massSlider.numberDisplay.valueNode.pickableProperty": {
+      "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
+      "phetioEventType": "MODEL",
+      "phetioFeatured": false,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": true,
+      "phetioStudioControl": true,
+      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+    },
+    "energySkateParkBasics.playgroundScreen.view.massSlider.numberDisplay.valueNode.textProperty": {
+      "phetioDocumentation": "Property for the displayed text",
+      "phetioDynamicElement": false,
+      "phetioEventType": "MODEL",
+      "phetioFeatured": false,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": true,
+      "phetioStudioControl": true,
+      "phetioTypeName": "PropertyIO.<StringIO>"
+    },
+    "energySkateParkBasics.playgroundScreen.view.massSlider.numberDisplay.valueNode.visibleProperty": {
+      "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
+      "phetioEventType": "MODEL",
+      "phetioFeatured": false,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": true,
+      "phetioStudioControl": true,
+      "phetioTypeName": "PropertyIO.<BooleanIO>"
+    },
+    "energySkateParkBasics.playgroundScreen.view.massSlider.numberDisplay.visibleProperty": {
+      "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
+      "phetioEventType": "MODEL",
+      "phetioFeatured": false,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": true,
+      "phetioStudioControl": true,
+      "phetioTypeName": "PropertyIO.<BooleanIO>"
+    },
     "energySkateParkBasics.playgroundScreen.view.massSlider.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
       "phetioDynamicElement": false,
@@ -24433,7 +22981,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
     },
-    "energySkateParkBasics.playgroundScreen.view.massSlider.thumb": {
+    "energySkateParkBasics.playgroundScreen.view.massSlider.rightArrowButton": {
       "phetioDocumentation": "",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -24445,7 +22993,31 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "NodeIO"
     },
-    "energySkateParkBasics.playgroundScreen.view.massSlider.thumb.opacityProperty": {
+    "energySkateParkBasics.playgroundScreen.view.massSlider.rightArrowButton.enabledProperty": {
+      "phetioDocumentation": "When disabled, the button is grayed out and cannot be pressed",
+      "phetioDynamicElement": false,
+      "phetioEventType": "MODEL",
+      "phetioFeatured": true,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": true,
+      "phetioStudioControl": true,
+      "phetioTypeName": "PropertyIO.<BooleanIO>"
+    },
+    "energySkateParkBasics.playgroundScreen.view.massSlider.rightArrowButton.firedEmitter": {
+      "phetioDocumentation": "Emits when the button is fired No arguments.",
+      "phetioDynamicElement": false,
+      "phetioEventType": "USER",
+      "phetioFeatured": false,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": false,
+      "phetioStudioControl": true,
+      "phetioTypeName": "EmitterIO.<>"
+    },
+    "energySkateParkBasics.playgroundScreen.view.massSlider.rightArrowButton.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -24457,7 +23029,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "NumberPropertyIO"
     },
-    "energySkateParkBasics.playgroundScreen.view.massSlider.thumb.pickableProperty": {
+    "energySkateParkBasics.playgroundScreen.view.massSlider.rightArrowButton.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -24469,20 +23041,8 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
     },
-    "energySkateParkBasics.playgroundScreen.view.massSlider.thumb.visibleProperty": {
-      "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": true,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
-    },
-    "energySkateParkBasics.playgroundScreen.view.massSlider.thumbInputListener": {
-      "phetioDocumentation": "",
+    "energySkateParkBasics.playgroundScreen.view.massSlider.rightArrowButton.pressListener.pressAction": {
+      "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br><ol><li>event: EventIO</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -24491,57 +23051,33 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ObjectIO"
+      "phetioTypeName": "ActionIO.<EventIO>"
     },
-    "energySkateParkBasics.playgroundScreen.view.massSlider.thumbInputListener.dragAction": {
-      "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag in view coordinates</li></ol>",
+    "energySkateParkBasics.playgroundScreen.view.massSlider.rightArrowButton.pressListener.releaseAction": {
+      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br><ol><li>event: NullableIO.<EventIO></li></ol>",
       "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": true,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<Vector2IO>"
-    },
-    "energySkateParkBasics.playgroundScreen.view.massSlider.thumbInputListener.dragEndAction": {
-      "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag end in view coordinates</li></ol>",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
+      "phetioEventType": "USER",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
       "phetioPlayback": false,
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<Vector2IO>"
+      "phetioTypeName": "ActionIO.<NullableIO.<EventIO>>"
     },
-    "energySkateParkBasics.playgroundScreen.view.massSlider.thumbInputListener.dragStartAction": {
-      "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag start in view coordinates</li></ol>",
+    "energySkateParkBasics.playgroundScreen.view.massSlider.rightArrowButton.visibleProperty": {
+      "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
-      "phetioFeatured": false,
+      "phetioFeatured": true,
       "phetioHighFrequency": false,
       "phetioPlayback": false,
       "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<Vector2IO>"
-    },
-    "energySkateParkBasics.playgroundScreen.view.massSlider.thumbInputListener.isDraggingProperty": {
-      "phetioDocumentation": "Indicates whether the object is dragging",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": true,
-      "phetioState": false,
+      "phetioState": true,
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO.<BooleanIO>"
     },
-    "energySkateParkBasics.playgroundScreen.view.massSlider.titleString": {
+    "energySkateParkBasics.playgroundScreen.view.massSlider.slider": {
       "phetioDocumentation": "",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -24551,9 +23087,33 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "TextIO"
+      "phetioTypeName": "SliderIO"
     },
-    "energySkateParkBasics.playgroundScreen.view.massSlider.titleString.opacityProperty": {
+    "energySkateParkBasics.playgroundScreen.view.massSlider.slider.enabledProperty": {
+      "phetioDocumentation": "",
+      "phetioDynamicElement": false,
+      "phetioEventType": "MODEL",
+      "phetioFeatured": true,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": true,
+      "phetioStudioControl": true,
+      "phetioTypeName": "PropertyIO.<BooleanIO>"
+    },
+    "energySkateParkBasics.playgroundScreen.view.massSlider.slider.enabledRangeProperty": {
+      "phetioDocumentation": "",
+      "phetioDynamicElement": false,
+      "phetioEventType": "MODEL",
+      "phetioFeatured": false,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": true,
+      "phetioStudioControl": true,
+      "phetioTypeName": "PropertyIO.<RangeIO>"
+    },
+    "energySkateParkBasics.playgroundScreen.view.massSlider.slider.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -24565,7 +23125,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "NumberPropertyIO"
     },
-    "energySkateParkBasics.playgroundScreen.view.massSlider.titleString.pickableProperty": {
+    "energySkateParkBasics.playgroundScreen.view.massSlider.slider.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -24577,8 +23137,20 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
     },
-    "energySkateParkBasics.playgroundScreen.view.massSlider.titleString.textProperty": {
-      "phetioDocumentation": "Property for the displayed text",
+    "energySkateParkBasics.playgroundScreen.view.massSlider.slider.thumb": {
+      "phetioDocumentation": "",
+      "phetioDynamicElement": false,
+      "phetioEventType": "MODEL",
+      "phetioFeatured": false,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": false,
+      "phetioStudioControl": true,
+      "phetioTypeName": "NodeIO"
+    },
+    "energySkateParkBasics.playgroundScreen.view.massSlider.slider.thumb.opacityProperty": {
+      "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
       "phetioFeatured": false,
@@ -24587,9 +23159,21 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<StringIO>"
+      "phetioTypeName": "NumberPropertyIO"
     },
-    "energySkateParkBasics.playgroundScreen.view.massSlider.titleString.visibleProperty": {
+    "energySkateParkBasics.playgroundScreen.view.massSlider.slider.thumb.pickableProperty": {
+      "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
+      "phetioEventType": "MODEL",
+      "phetioFeatured": false,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": true,
+      "phetioStudioControl": true,
+      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+    },
+    "energySkateParkBasics.playgroundScreen.view.massSlider.slider.thumb.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -24601,7 +23185,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO.<BooleanIO>"
     },
-    "energySkateParkBasics.playgroundScreen.view.massSlider.track.trackInputListener": {
+    "energySkateParkBasics.playgroundScreen.view.massSlider.slider.thumbInputListener": {
       "phetioDocumentation": "",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
@@ -24613,7 +23197,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "ObjectIO"
     },
-    "energySkateParkBasics.playgroundScreen.view.massSlider.track.trackInputListener.dragAction": {
+    "energySkateParkBasics.playgroundScreen.view.massSlider.slider.thumbInputListener.dragAction": {
       "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag in view coordinates</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -24625,7 +23209,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "ActionIO.<Vector2IO>"
     },
-    "energySkateParkBasics.playgroundScreen.view.massSlider.track.trackInputListener.dragEndAction": {
+    "energySkateParkBasics.playgroundScreen.view.massSlider.slider.thumbInputListener.dragEndAction": {
       "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag end in view coordinates</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -24637,7 +23221,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "ActionIO.<Vector2IO>"
     },
-    "energySkateParkBasics.playgroundScreen.view.massSlider.track.trackInputListener.dragStartAction": {
+    "energySkateParkBasics.playgroundScreen.view.massSlider.slider.thumbInputListener.dragStartAction": {
       "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag start in view coordinates</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -24649,7 +23233,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "ActionIO.<Vector2IO>"
     },
-    "energySkateParkBasics.playgroundScreen.view.massSlider.track.trackInputListener.isDraggingProperty": {
+    "energySkateParkBasics.playgroundScreen.view.massSlider.slider.thumbInputListener.isDraggingProperty": {
       "phetioDocumentation": "Indicates whether the object is dragging",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -24661,7 +23245,67 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO.<BooleanIO>"
     },
-    "energySkateParkBasics.playgroundScreen.view.massSlider.valueProperty": {
+    "energySkateParkBasics.playgroundScreen.view.massSlider.slider.track.trackInputListener": {
+      "phetioDocumentation": "",
+      "phetioDynamicElement": false,
+      "phetioEventType": "USER",
+      "phetioFeatured": false,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": false,
+      "phetioStudioControl": true,
+      "phetioTypeName": "ObjectIO"
+    },
+    "energySkateParkBasics.playgroundScreen.view.massSlider.slider.track.trackInputListener.dragAction": {
+      "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag in view coordinates</li></ol>",
+      "phetioDynamicElement": false,
+      "phetioEventType": "MODEL",
+      "phetioFeatured": false,
+      "phetioHighFrequency": true,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": false,
+      "phetioStudioControl": true,
+      "phetioTypeName": "ActionIO.<Vector2IO>"
+    },
+    "energySkateParkBasics.playgroundScreen.view.massSlider.slider.track.trackInputListener.dragEndAction": {
+      "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag end in view coordinates</li></ol>",
+      "phetioDynamicElement": false,
+      "phetioEventType": "MODEL",
+      "phetioFeatured": false,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": false,
+      "phetioStudioControl": true,
+      "phetioTypeName": "ActionIO.<Vector2IO>"
+    },
+    "energySkateParkBasics.playgroundScreen.view.massSlider.slider.track.trackInputListener.dragStartAction": {
+      "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag start in view coordinates</li></ol>",
+      "phetioDynamicElement": false,
+      "phetioEventType": "MODEL",
+      "phetioFeatured": false,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": false,
+      "phetioStudioControl": true,
+      "phetioTypeName": "ActionIO.<Vector2IO>"
+    },
+    "energySkateParkBasics.playgroundScreen.view.massSlider.slider.track.trackInputListener.isDraggingProperty": {
+      "phetioDocumentation": "Indicates whether the object is dragging",
+      "phetioDynamicElement": false,
+      "phetioEventType": "MODEL",
+      "phetioFeatured": false,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": true,
+      "phetioState": false,
+      "phetioStudioControl": true,
+      "phetioTypeName": "PropertyIO.<BooleanIO>"
+    },
+    "energySkateParkBasics.playgroundScreen.view.massSlider.slider.valueProperty": {
       "phetioDocumentation": "",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -24673,11 +23317,83 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "LinkedElementIO"
     },
-    "energySkateParkBasics.playgroundScreen.view.massSlider.visibleProperty": {
+    "energySkateParkBasics.playgroundScreen.view.massSlider.slider.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
       "phetioFeatured": true,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": true,
+      "phetioStudioControl": true,
+      "phetioTypeName": "PropertyIO.<BooleanIO>"
+    },
+    "energySkateParkBasics.playgroundScreen.view.massSlider.titleNode": {
+      "phetioDocumentation": "",
+      "phetioDynamicElement": false,
+      "phetioEventType": "MODEL",
+      "phetioFeatured": false,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": false,
+      "phetioStudioControl": true,
+      "phetioTypeName": "TextIO"
+    },
+    "energySkateParkBasics.playgroundScreen.view.massSlider.titleNode.opacityProperty": {
+      "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
+      "phetioEventType": "MODEL",
+      "phetioFeatured": false,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": true,
+      "phetioStudioControl": true,
+      "phetioTypeName": "NumberPropertyIO"
+    },
+    "energySkateParkBasics.playgroundScreen.view.massSlider.titleNode.pickableProperty": {
+      "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
+      "phetioEventType": "MODEL",
+      "phetioFeatured": false,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": true,
+      "phetioStudioControl": true,
+      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+    },
+    "energySkateParkBasics.playgroundScreen.view.massSlider.titleNode.textProperty": {
+      "phetioDocumentation": "Property for the displayed text",
+      "phetioDynamicElement": false,
+      "phetioEventType": "MODEL",
+      "phetioFeatured": false,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": true,
+      "phetioStudioControl": true,
+      "phetioTypeName": "PropertyIO.<StringIO>"
+    },
+    "energySkateParkBasics.playgroundScreen.view.massSlider.titleNode.visibleProperty": {
+      "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
+      "phetioEventType": "MODEL",
+      "phetioFeatured": false,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": true,
+      "phetioStudioControl": true,
+      "phetioTypeName": "PropertyIO.<BooleanIO>"
+    },
+    "energySkateParkBasics.playgroundScreen.view.massSlider.visibleProperty": {
+      "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
+      "phetioEventType": "MODEL",
+      "phetioFeatured": false,
       "phetioHighFrequency": false,
       "phetioPlayback": false,
       "phetioReadOnly": false,
