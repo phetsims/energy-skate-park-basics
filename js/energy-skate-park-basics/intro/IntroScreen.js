@@ -21,7 +21,7 @@ define( function( require ) {
   var iconIntroNavbar = require( 'image!ENERGY_SKATE_PARK/icon-intro-navbar.png' );
 
   // strings
-  var screenIntroductionString = require( 'string!ENERGY_SKATE_PARK/screen.introduction' );
+  var screenIntroductionString = require( 'string!ENERGY_SKATE_PARK_BASICS/screen.introduction' );
 
   /**
    * @param {Tandem} tandem

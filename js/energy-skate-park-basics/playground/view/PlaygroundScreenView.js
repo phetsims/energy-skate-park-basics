@@ -3,6 +3,7 @@
 /**
  * ScreenView for the Playground screen of Energy Skate Park: Basics.
  *
+ * @author Sam Reid (PhET Interactive Simulations)
  * @author Jesse Greenberg (PhET Interactive Simulations)
  */
 define( function( require ) {
@@ -10,7 +11,7 @@ define( function( require ) {
 
   // modules
   var energySkateParkBasics = require( 'ENERGY_SKATE_PARK_BASICS/energySkateParkBasics' );
-  var EnergySkateParkScreenView = require( 'ENERGY_SKATE_PARK/energy-skate-park/common/view/EnergySkateParkScreenView' );
+  var EnergySkateParkPlaygroundScreenView = require( 'ENERGY_SKATE_PARK/energy-skate-park/common/view/EnergySkateParkPlaygroundScreenView' );
   var FrictionSlider = require( 'ENERGY_SKATE_PARK/energy-skate-park/common/view/FrictionSlider' );
   var MassSlider = require( 'ENERGY_SKATE_PARK/energy-skate-park/common/view/MassSlider' );
   var inherit = require( 'PHET_CORE/inherit' );
@@ -25,14 +26,15 @@ define( function( require ) {
       new MassSlider( model.skater.massProperty, model.skater.massRange, tandem.createTandem( 'massSlider' ) ),
       new FrictionSlider( model.frictionProperty, tandem.createTandem( 'frictionSlider' ) )
     ];
-    EnergySkateParkScreenView.call( this, model, playgroundControls, tandem.createTandem( 'graphsScreenView' ), {
+    EnergySkateParkPlaygroundScreenView.call( this, model, playgroundControls, tandem.createTandem( 'graphsScreenView' ), {
       showTrackButtons: false,
       showReferenceHeight: false,
-      showBarGraphZoomButtons: false     
+      showBarGraphZoomButtons: false,
+      showAttachDetachRadioButtons: true
     } );
   }
 
   energySkateParkBasics.register( 'PlaygroundScreenView', PlaygroundScreenView );
 
-  return inherit( EnergySkateParkScreenView, PlaygroundScreenView, {} );
+  return inherit( EnergySkateParkPlaygroundScreenView, PlaygroundScreenView );
 } );
