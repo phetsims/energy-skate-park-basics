@@ -1,5 +1,5 @@
 {
-  "comment": "# energy-skate-park-basics 1.4.0-rc.1 Fri Jul 26 2019 15:33:48 GMT-0600 (Mountain Daylight Time)",
+  "comment": "# energy-skate-park-basics 1.4.0-rc.1 Mon Aug 19 2019 13:25:19 GMT-0600 (Mountain Daylight Time)",
   "assert": {
     "sha": "928741cfc8fe804334d5b35292140314511f8678",
     "branch": "HEAD"
@@ -21,12 +21,12 @@
     "branch": "HEAD"
   },
   "energy-skate-park-basics": {
-    "sha": "85a524bc651396bc12d979cd4896d3a71b20e145",
+    "sha": "8696fb9e1433b22059f290152ba41430e9e8fd7b",
     "branch": "1.4"
   },
   "joist": {
-    "sha": "90497d3add061bf702ab853343d40baa3ca5a17f",
-    "branch": "HEAD"
+    "sha": "f8518c086cfcdce59e2b84c230614fc27a4dace2",
+    "branch": "energy-skate-park-basics-1.4"
   },
   "kite": {
     "sha": "aa585660d740c023ee3f2f6f3cc993a096e69804",
@@ -38,7 +38,7 @@
   },
   "phetcommon": {
     "sha": "3f29a0fcade723cb2e70292311d5e9fd0c60bb7b",
-    "branch": "energy-skate-park-basics-1.4"
+    "branch": "HEAD"
   },
   "query-string-machine": {
     "sha": "c74e454ec68033a9546b8181d4d962eb8ceef81f",
@@ -49,8 +49,8 @@
     "branch": "HEAD"
   },
   "scenery-phet": {
-    "sha": "f8b1c99668d3f2afbedbb88165bf51cd8124805f",
-    "branch": "HEAD"
+    "sha": "a8b3751d270f343dbcdf1f6cca5a0207ad6d598a",
+    "branch": "energy-skate-park-basics-1.4"
   },
   "sherpa": {
     "sha": "f0d5f7504e8bfc00109989c890bd84ec21ba2128",
