@@ -1454,7 +1454,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
     },
     "energySkateParkBasics.frictionScreen.view.frictionSlider.leftArrowButton.pressListener.pressAction": {
-      "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br><ol><li>event: EventIO</li></ol>",
+      "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br/><ol><li>event: EventIO</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -1466,7 +1466,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "ActionIO.<EventIO>"
     },
     "energySkateParkBasics.frictionScreen.view.frictionSlider.leftArrowButton.pressListener.releaseAction": {
-      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br><ol><li>event: NullableIO.<EventIO></li></ol>",
+      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO.<EventIO></li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -1802,7 +1802,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
     },
     "energySkateParkBasics.frictionScreen.view.frictionSlider.rightArrowButton.pressListener.pressAction": {
-      "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br><ol><li>event: EventIO</li></ol>",
+      "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br/><ol><li>event: EventIO</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -1814,7 +1814,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "ActionIO.<EventIO>"
     },
     "energySkateParkBasics.frictionScreen.view.frictionSlider.rightArrowButton.pressListener.releaseAction": {
-      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br><ol><li>event: NullableIO.<EventIO></li></ol>",
+      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO.<EventIO></li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -1958,7 +1958,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "ObjectIO"
     },
     "energySkateParkBasics.frictionScreen.view.frictionSlider.slider.thumbInputListener.dragAction": {
-      "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag in view coordinates</li></ol>",
+      "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO. the position of the drag in view coordinates</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
       "phetioFeatured": false,
@@ -1970,7 +1970,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "ActionIO.<Vector2IO>"
     },
     "energySkateParkBasics.frictionScreen.view.frictionSlider.slider.thumbInputListener.dragEndAction": {
-      "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag end in view coordinates</li></ol>",
+      "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO. the position of the drag end in view coordinates</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
       "phetioFeatured": false,
@@ -1982,7 +1982,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "ActionIO.<Vector2IO>"
     },
     "energySkateParkBasics.frictionScreen.view.frictionSlider.slider.thumbInputListener.dragStartAction": {
-      "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag start in view coordinates</li></ol>",
+      "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO. the position of the drag start in view coordinates</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
       "phetioFeatured": false,
@@ -2018,7 +2018,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "ObjectIO"
     },
     "energySkateParkBasics.frictionScreen.view.frictionSlider.slider.track.trackInputListener.dragAction": {
-      "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag in view coordinates</li></ol>",
+      "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO. the position of the drag in view coordinates</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
       "phetioFeatured": false,
@@ -2030,7 +2030,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "ActionIO.<Vector2IO>"
     },
     "energySkateParkBasics.frictionScreen.view.frictionSlider.slider.track.trackInputListener.dragEndAction": {
-      "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag end in view coordinates</li></ol>",
+      "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO. the position of the drag end in view coordinates</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
       "phetioFeatured": false,
@@ -2042,7 +2042,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "ActionIO.<Vector2IO>"
     },
     "energySkateParkBasics.frictionScreen.view.frictionSlider.slider.track.trackInputListener.dragStartAction": {
-      "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag start in view coordinates</li></ol>",
+      "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO. the position of the drag start in view coordinates</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
       "phetioFeatured": false,
@@ -2546,7 +2546,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.sceneSelectionRadioButtonGroup.scene1RadioButton.pressListener.pressAction": {
-      "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br><ol><li>event: EventIO</li></ol>",
+      "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br/><ol><li>event: EventIO</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -2558,7 +2558,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "ActionIO.<EventIO>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.sceneSelectionRadioButtonGroup.scene1RadioButton.pressListener.releaseAction": {
-      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br><ol><li>event: NullableIO.<EventIO></li></ol>",
+      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO.<EventIO></li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -2642,7 +2642,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.sceneSelectionRadioButtonGroup.scene2RadioButton.pressListener.pressAction": {
-      "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br><ol><li>event: EventIO</li></ol>",
+      "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br/><ol><li>event: EventIO</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -2654,7 +2654,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "ActionIO.<EventIO>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.sceneSelectionRadioButtonGroup.scene2RadioButton.pressListener.releaseAction": {
-      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br><ol><li>event: NullableIO.<EventIO></li></ol>",
+      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO.<EventIO></li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -2738,7 +2738,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.sceneSelectionRadioButtonGroup.scene3RadioButton.pressListener.pressAction": {
-      "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br><ol><li>event: EventIO</li></ol>",
+      "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br/><ol><li>event: EventIO</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -2750,7 +2750,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "ActionIO.<EventIO>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.sceneSelectionRadioButtonGroup.scene3RadioButton.pressListener.releaseAction": {
-      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br><ol><li>event: NullableIO.<EventIO></li></ol>",
+      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO.<EventIO></li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -3050,7 +3050,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "LinkedElementIO"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.visibilityControls.barGraphCheckbox.toggleAction": {
-      "phetioDocumentation": "Emits when user input causes the checkbox to toggle, emitting a single arg: the new boolean value of the checkbox state. The arguments are:<br><ol><li>isChecked: BooleanIO</li></ol>",
+      "phetioDocumentation": "Emits when user input causes the checkbox to toggle, emitting a single arg: the new boolean value of the checkbox state. The arguments are:<br/><ol><li>isChecked: BooleanIO</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -3242,7 +3242,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "LinkedElementIO"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.visibilityControls.gridCheckbox.toggleAction": {
-      "phetioDocumentation": "Emits when user input causes the checkbox to toggle, emitting a single arg: the new boolean value of the checkbox state. The arguments are:<br><ol><li>isChecked: BooleanIO</li></ol>",
+      "phetioDocumentation": "Emits when user input causes the checkbox to toggle, emitting a single arg: the new boolean value of the checkbox state. The arguments are:<br/><ol><li>isChecked: BooleanIO</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -3434,7 +3434,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "LinkedElementIO"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.visibilityControls.pieChartCheckbox.toggleAction": {
-      "phetioDocumentation": "Emits when user input causes the checkbox to toggle, emitting a single arg: the new boolean value of the checkbox state. The arguments are:<br><ol><li>isChecked: BooleanIO</li></ol>",
+      "phetioDocumentation": "Emits when user input causes the checkbox to toggle, emitting a single arg: the new boolean value of the checkbox state. The arguments are:<br/><ol><li>isChecked: BooleanIO</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -3830,7 +3830,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "LinkedElementIO"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.visibilityControls.speedometerCheckbox.toggleAction": {
-      "phetioDocumentation": "Emits when user input causes the checkbox to toggle, emitting a single arg: the new boolean value of the checkbox state. The arguments are:<br><ol><li>isChecked: BooleanIO</li></ol>",
+      "phetioDocumentation": "Emits when user input causes the checkbox to toggle, emitting a single arg: the new boolean value of the checkbox state. The arguments are:<br/><ol><li>isChecked: BooleanIO</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -3974,7 +3974,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.energyBargGraphPanel.energyBarGraph.clearThermalButton.pressListener.pressAction": {
-      "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br><ol><li>event: EventIO</li></ol>",
+      "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br/><ol><li>event: EventIO</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -3986,7 +3986,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "ActionIO.<EventIO>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.energyBargGraphPanel.energyBarGraph.clearThermalButton.pressListener.releaseAction": {
-      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br><ol><li>event: NullableIO.<EventIO></li></ol>",
+      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO.<EventIO></li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -4166,7 +4166,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.energyBargGraphPanel.energyBarGraph.zoomInButton.pressListener.pressAction": {
-      "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br><ol><li>event: EventIO</li></ol>",
+      "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br/><ol><li>event: EventIO</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -4178,7 +4178,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "ActionIO.<EventIO>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.energyBargGraphPanel.energyBarGraph.zoomInButton.pressListener.releaseAction": {
-      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br><ol><li>event: NullableIO.<EventIO></li></ol>",
+      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO.<EventIO></li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -4358,7 +4358,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.energyBargGraphPanel.energyBarGraph.zoomOutButton.pressListener.pressAction": {
-      "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br><ol><li>event: EventIO</li></ol>",
+      "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br/><ol><li>event: EventIO</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -4370,7 +4370,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "ActionIO.<EventIO>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.energyBargGraphPanel.energyBarGraph.zoomOutButton.pressListener.releaseAction": {
-      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br><ol><li>event: NullableIO.<EventIO></li></ol>",
+      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO.<EventIO></li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -4730,7 +4730,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.pieChartLegend.clearThermalButton.pressListener.pressAction": {
-      "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br><ol><li>event: EventIO</li></ol>",
+      "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br/><ol><li>event: EventIO</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -4742,7 +4742,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "ActionIO.<EventIO>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.pieChartLegend.clearThermalButton.pressListener.releaseAction": {
-      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br><ol><li>event: NullableIO.<EventIO></li></ol>",
+      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO.<EventIO></li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -5246,7 +5246,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.playPauseButton.pressListener.pressAction": {
-      "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br><ol><li>event: EventIO</li></ol>",
+      "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br/><ol><li>event: EventIO</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -5258,7 +5258,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "ActionIO.<EventIO>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.playPauseButton.pressListener.releaseAction": {
-      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br><ol><li>event: NullableIO.<EventIO></li></ol>",
+      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO.<EventIO></li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -5390,7 +5390,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "EmitterIO.<>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.playbackSpeedControl.normalSpeedButton.inputListener.pressAction": {
-      "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br><ol><li>event: EventIO</li></ol>",
+      "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br/><ol><li>event: EventIO</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -5402,7 +5402,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "ActionIO.<EventIO>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.playbackSpeedControl.normalSpeedButton.inputListener.releaseAction": {
-      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br><ol><li>event: NullableIO.<EventIO></li></ol>",
+      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO.<EventIO></li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -5546,7 +5546,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "EmitterIO.<>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.playbackSpeedControl.slowMotionRadioButton.inputListener.pressAction": {
-      "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br><ol><li>event: EventIO</li></ol>",
+      "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br/><ol><li>event: EventIO</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -5558,7 +5558,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "ActionIO.<EventIO>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.playbackSpeedControl.slowMotionRadioButton.inputListener.releaseAction": {
-      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br><ol><li>event: NullableIO.<EventIO></li></ol>",
+      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO.<EventIO></li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -5678,7 +5678,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "PropertyIO.<BooleanIO>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.referenceHeightLine.dragListener.dragAction": {
-      "phetioDocumentation": "Emits whenever a drag occurs with an EventIO argument. The arguments are:<br><ol><li>event: EventIO</li></ol>",
+      "phetioDocumentation": "Emits whenever a drag occurs with an EventIO argument. The arguments are:<br/><ol><li>event: EventIO</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -5690,7 +5690,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "ActionIO.<EventIO>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.referenceHeightLine.dragListener.pressAction": {
-      "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br><ol><li>event: EventIO</li></ol>",
+      "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br/><ol><li>event: EventIO</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -5702,7 +5702,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "ActionIO.<EventIO>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.referenceHeightLine.dragListener.releaseAction": {
-      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br><ol><li>event: NullableIO.<EventIO></li></ol>",
+      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO.<EventIO></li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -5786,7 +5786,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.resetAllButton.pressListener.pressAction": {
-      "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br><ol><li>event: EventIO</li></ol>",
+      "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br/><ol><li>event: EventIO</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -5798,7 +5798,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "ActionIO.<EventIO>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.resetAllButton.pressListener.releaseAction": {
-      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br><ol><li>event: NullableIO.<EventIO></li></ol>",
+      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO.<EventIO></li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -5942,7 +5942,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.returnSkaterButton.pressListener.pressAction": {
-      "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br><ol><li>event: EventIO</li></ol>",
+      "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br/><ol><li>event: EventIO</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -5954,7 +5954,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "ActionIO.<EventIO>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.returnSkaterButton.pressListener.releaseAction": {
-      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br><ol><li>event: NullableIO.<EventIO></li></ol>",
+      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO.<EventIO></li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -6038,7 +6038,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.returnSkaterToGroundButton.pressListener.pressAction": {
-      "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br><ol><li>event: EventIO</li></ol>",
+      "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br/><ol><li>event: EventIO</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -6050,7 +6050,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "ActionIO.<EventIO>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.returnSkaterToGroundButton.pressListener.releaseAction": {
-      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br><ol><li>event: NullableIO.<EventIO></li></ol>",
+      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO.<EventIO></li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -6134,7 +6134,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.returnSkaterToPreviousStartingPositionButton.pressListener.pressAction": {
-      "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br><ol><li>event: EventIO</li></ol>",
+      "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br/><ol><li>event: EventIO</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -6146,7 +6146,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "ActionIO.<EventIO>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.returnSkaterToPreviousStartingPositionButton.pressListener.releaseAction": {
-      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br><ol><li>event: NullableIO.<EventIO></li></ol>",
+      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO.<EventIO></li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -6290,7 +6290,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "ObjectIO"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.skaterNode.inputListener.dragAction": {
-      "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag in view coordinates</li></ol>",
+      "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO. the position of the drag in view coordinates</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
       "phetioFeatured": false,
@@ -6302,7 +6302,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "ActionIO.<Vector2IO>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.skaterNode.inputListener.dragEndAction": {
-      "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag end in view coordinates</li></ol>",
+      "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO. the position of the drag end in view coordinates</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
       "phetioFeatured": false,
@@ -6314,7 +6314,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "ActionIO.<Vector2IO>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.skaterNode.inputListener.dragStartAction": {
-      "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag start in view coordinates</li></ol>",
+      "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO. the position of the drag start in view coordinates</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
       "phetioFeatured": false,
@@ -6686,7 +6686,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.stepButton.pressListener.pressAction": {
-      "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br><ol><li>event: EventIO</li></ol>",
+      "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br/><ol><li>event: EventIO</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -6698,7 +6698,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "ActionIO.<EventIO>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.stepButton.pressListener.releaseAction": {
-      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br><ol><li>event: NullableIO.<EventIO></li></ol>",
+      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO.<EventIO></li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -6854,7 +6854,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
     },
     "energySkateParkBasics.frictionScreen.view.massSlider.leftArrowButton.pressListener.pressAction": {
-      "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br><ol><li>event: EventIO</li></ol>",
+      "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br/><ol><li>event: EventIO</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -6866,7 +6866,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "ActionIO.<EventIO>"
     },
     "energySkateParkBasics.frictionScreen.view.massSlider.leftArrowButton.pressListener.releaseAction": {
-      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br><ol><li>event: NullableIO.<EventIO></li></ol>",
+      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO.<EventIO></li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -7202,7 +7202,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
     },
     "energySkateParkBasics.frictionScreen.view.massSlider.rightArrowButton.pressListener.pressAction": {
-      "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br><ol><li>event: EventIO</li></ol>",
+      "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br/><ol><li>event: EventIO</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -7214,7 +7214,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "ActionIO.<EventIO>"
     },
     "energySkateParkBasics.frictionScreen.view.massSlider.rightArrowButton.pressListener.releaseAction": {
-      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br><ol><li>event: NullableIO.<EventIO></li></ol>",
+      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO.<EventIO></li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -7358,7 +7358,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "ObjectIO"
     },
     "energySkateParkBasics.frictionScreen.view.massSlider.slider.thumbInputListener.dragAction": {
-      "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag in view coordinates</li></ol>",
+      "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO. the position of the drag in view coordinates</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
       "phetioFeatured": false,
@@ -7370,7 +7370,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "ActionIO.<Vector2IO>"
     },
     "energySkateParkBasics.frictionScreen.view.massSlider.slider.thumbInputListener.dragEndAction": {
-      "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag end in view coordinates</li></ol>",
+      "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO. the position of the drag end in view coordinates</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
       "phetioFeatured": false,
@@ -7382,7 +7382,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "ActionIO.<Vector2IO>"
     },
     "energySkateParkBasics.frictionScreen.view.massSlider.slider.thumbInputListener.dragStartAction": {
-      "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag start in view coordinates</li></ol>",
+      "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO. the position of the drag start in view coordinates</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
       "phetioFeatured": false,
@@ -7418,7 +7418,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "ObjectIO"
     },
     "energySkateParkBasics.frictionScreen.view.massSlider.slider.track.trackInputListener.dragAction": {
-      "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag in view coordinates</li></ol>",
+      "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO. the position of the drag in view coordinates</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
       "phetioFeatured": false,
@@ -7430,7 +7430,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "ActionIO.<Vector2IO>"
     },
     "energySkateParkBasics.frictionScreen.view.massSlider.slider.track.trackInputListener.dragEndAction": {
-      "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag end in view coordinates</li></ol>",
+      "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO. the position of the drag end in view coordinates</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
       "phetioFeatured": false,
@@ -7442,7 +7442,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "ActionIO.<Vector2IO>"
     },
     "energySkateParkBasics.frictionScreen.view.massSlider.slider.track.trackInputListener.dragStartAction": {
-      "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag start in view coordinates</li></ol>",
+      "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO. the position of the drag start in view coordinates</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
       "phetioFeatured": false,
@@ -7598,7 +7598,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "EmitterIO.<>"
     },
     "energySkateParkBasics.general.barrierRectangle.inputListener.pressAction": {
-      "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br><ol><li>event: EventIO</li></ol>",
+      "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br/><ol><li>event: EventIO</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -7610,7 +7610,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "ActionIO.<EventIO>"
     },
     "energySkateParkBasics.general.barrierRectangle.inputListener.releaseAction": {
-      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br><ol><li>event: NullableIO.<EventIO></li></ol>",
+      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO.<EventIO></li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -7670,7 +7670,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "PropertyIO.<BooleanIO>"
     },
     "energySkateParkBasics.general.controller.input.mouseDownAction": {
-      "phetioDocumentation": "Emits when a mouse button is pressed The arguments are:<br><ol><li>point: Vector2IO</li>\n<li>event: DOMEventIO</li></ol>",
+      "phetioDocumentation": "Emits when a mouse button is pressed The arguments are:<br/><ol><li>point: Vector2IO</li><br/><li>event: DOMEventIO</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -7682,7 +7682,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "ActionIO.<Vector2IO, DOMEventIO>"
     },
     "energySkateParkBasics.general.controller.input.mouseMovedAction": {
-      "phetioDocumentation": "Emits when the mouse is moved The arguments are:<br><ol><li>point: Vector2IO</li>\n<li>event: DOMEventIO</li></ol>",
+      "phetioDocumentation": "Emits when the mouse is moved The arguments are:<br/><ol><li>point: Vector2IO</li><br/><li>event: DOMEventIO</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -7694,7 +7694,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "ActionIO.<Vector2IO, DOMEventIO>"
     },
     "energySkateParkBasics.general.controller.input.mouseOutAction": {
-      "phetioDocumentation": "Emits when the mouse moves out of the display The arguments are:<br><ol><li>point: Vector2IO</li>\n<li>event: DOMEventIO</li></ol>",
+      "phetioDocumentation": "Emits when the mouse moves out of the display The arguments are:<br/><ol><li>point: Vector2IO</li><br/><li>event: DOMEventIO</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -7706,7 +7706,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "ActionIO.<Vector2IO, DOMEventIO>"
     },
     "energySkateParkBasics.general.controller.input.mouseOverAction": {
-      "phetioDocumentation": "Emits when the mouse is moved over a Node The arguments are:<br><ol><li>point: Vector2IO</li>\n<li>event: DOMEventIO</li></ol>",
+      "phetioDocumentation": "Emits when the mouse is moved over a Node The arguments are:<br/><ol><li>point: Vector2IO</li><br/><li>event: DOMEventIO</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -7718,7 +7718,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "ActionIO.<Vector2IO, DOMEventIO>"
     },
     "energySkateParkBasics.general.controller.input.mouseUpAction": {
-      "phetioDocumentation": "Emits when a mouse button is released The arguments are:<br><ol><li>point: Vector2IO</li>\n<li>event: DOMEventIO</li></ol>",
+      "phetioDocumentation": "Emits when a mouse button is released The arguments are:<br/><ol><li>point: Vector2IO</li><br/><li>event: DOMEventIO</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -7730,7 +7730,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "ActionIO.<Vector2IO, DOMEventIO>"
     },
     "energySkateParkBasics.general.controller.input.penCancelAction": {
-      "phetioDocumentation": "Emits when a pen is canceled The arguments are:<br><ol><li>id: NumberIO</li>\n<li>point: Vector2IO</li>\n<li>event: DOMEventIO</li></ol>",
+      "phetioDocumentation": "Emits when a pen is canceled The arguments are:<br/><ol><li>id: NumberIO</li><br/><li>point: Vector2IO</li><br/><li>event: DOMEventIO</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -7742,7 +7742,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "ActionIO.<NumberIO, Vector2IO, DOMEventIO>"
     },
     "energySkateParkBasics.general.controller.input.penEndAction": {
-      "phetioDocumentation": "Emits when a pen is lifted The arguments are:<br><ol><li>id: NumberIO</li>\n<li>point: Vector2IO</li>\n<li>event: DOMEventIO</li></ol>",
+      "phetioDocumentation": "Emits when a pen is lifted The arguments are:<br/><ol><li>id: NumberIO</li><br/><li>point: Vector2IO</li><br/><li>event: DOMEventIO</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -7754,7 +7754,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "ActionIO.<NumberIO, Vector2IO, DOMEventIO>"
     },
     "energySkateParkBasics.general.controller.input.penMoveAction": {
-      "phetioDocumentation": "Emits when a pen is moved The arguments are:<br><ol><li>id: NumberIO</li>\n<li>point: Vector2IO</li>\n<li>event: DOMEventIO</li></ol>",
+      "phetioDocumentation": "Emits when a pen is moved The arguments are:<br/><ol><li>id: NumberIO</li><br/><li>point: Vector2IO</li><br/><li>event: DOMEventIO</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -7766,7 +7766,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "ActionIO.<NumberIO, Vector2IO, DOMEventIO>"
     },
     "energySkateParkBasics.general.controller.input.penStartAction": {
-      "phetioDocumentation": "Emits when a pen touches the screen The arguments are:<br><ol><li>id: NumberIO</li>\n<li>point: Vector2IO</li>\n<li>event: DOMEventIO</li></ol>",
+      "phetioDocumentation": "Emits when a pen touches the screen The arguments are:<br/><ol><li>id: NumberIO</li><br/><li>point: Vector2IO</li><br/><li>event: DOMEventIO</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -7778,7 +7778,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "ActionIO.<NumberIO, Vector2IO, DOMEventIO>"
     },
     "energySkateParkBasics.general.controller.input.touchCancelAction": {
-      "phetioDocumentation": "Emits when a touch is canceled The arguments are:<br><ol><li>id: NumberIO</li>\n<li>point: Vector2IO</li>\n<li>event: DOMEventIO</li></ol>",
+      "phetioDocumentation": "Emits when a touch is canceled The arguments are:<br/><ol><li>id: NumberIO</li><br/><li>point: Vector2IO</li><br/><li>event: DOMEventIO</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -7790,7 +7790,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "ActionIO.<NumberIO, Vector2IO, DOMEventIO>"
     },
     "energySkateParkBasics.general.controller.input.touchEndAction": {
-      "phetioDocumentation": "Emits when a touch ends The arguments are:<br><ol><li>id: NumberIO</li>\n<li>point: Vector2IO</li>\n<li>event: DOMEventIO</li></ol>",
+      "phetioDocumentation": "Emits when a touch ends The arguments are:<br/><ol><li>id: NumberIO</li><br/><li>point: Vector2IO</li><br/><li>event: DOMEventIO</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -7802,7 +7802,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "ActionIO.<NumberIO, Vector2IO, DOMEventIO>"
     },
     "energySkateParkBasics.general.controller.input.touchMoveAction": {
-      "phetioDocumentation": "Emits when a touch moves The arguments are:<br><ol><li>id: NumberIO</li>\n<li>point: Vector2IO</li>\n<li>event: DOMEventIO</li></ol>",
+      "phetioDocumentation": "Emits when a touch moves The arguments are:<br/><ol><li>id: NumberIO</li><br/><li>point: Vector2IO</li><br/><li>event: DOMEventIO</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -7814,7 +7814,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "ActionIO.<NumberIO, Vector2IO, DOMEventIO>"
     },
     "energySkateParkBasics.general.controller.input.touchStartAction": {
-      "phetioDocumentation": "Emits when a touch begins The arguments are:<br><ol><li>id: NumberIO</li>\n<li>point: Vector2IO</li>\n<li>event: DOMEventIO</li></ol>",
+      "phetioDocumentation": "Emits when a touch begins The arguments are:<br/><ol><li>id: NumberIO</li><br/><li>point: Vector2IO</li><br/><li>event: DOMEventIO</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -7838,7 +7838,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "ActionIO.<>"
     },
     "energySkateParkBasics.general.controller.input.wheelScrollAction": {
-      "phetioDocumentation": "Emits when the mouse wheel scrolls The arguments are:<br><ol><li>event: DOMEventIO</li></ol>",
+      "phetioDocumentation": "Emits when the mouse wheel scrolls The arguments are:<br/><ol><li>event: DOMEventIO</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -7970,7 +7970,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
     },
     "energySkateParkBasics.general.navigationBar.frictionScreenButton.pressListener.pressAction": {
-      "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br><ol><li>event: EventIO</li></ol>",
+      "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br/><ol><li>event: EventIO</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -7982,7 +7982,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "ActionIO.<EventIO>"
     },
     "energySkateParkBasics.general.navigationBar.frictionScreenButton.pressListener.releaseAction": {
-      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br><ol><li>event: NullableIO.<EventIO></li></ol>",
+      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO.<EventIO></li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -8126,7 +8126,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
     },
     "energySkateParkBasics.general.navigationBar.homeButton.pressListener.pressAction": {
-      "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br><ol><li>event: EventIO</li></ol>",
+      "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br/><ol><li>event: EventIO</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -8138,7 +8138,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "ActionIO.<EventIO>"
     },
     "energySkateParkBasics.general.navigationBar.homeButton.pressListener.releaseAction": {
-      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br><ol><li>event: NullableIO.<EventIO></li></ol>",
+      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO.<EventIO></li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -8270,7 +8270,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
     },
     "energySkateParkBasics.general.navigationBar.introScreenButton.pressListener.pressAction": {
-      "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br><ol><li>event: EventIO</li></ol>",
+      "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br/><ol><li>event: EventIO</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -8282,7 +8282,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "ActionIO.<EventIO>"
     },
     "energySkateParkBasics.general.navigationBar.introScreenButton.pressListener.releaseAction": {
-      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br><ol><li>event: NullableIO.<EventIO></li></ol>",
+      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO.<EventIO></li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -8438,7 +8438,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "EmitterIO.<>"
     },
     "energySkateParkBasics.general.navigationBar.phetButton.phetMenu.aboutMenuItem.inputListener.pressAction": {
-      "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br><ol><li>event: EventIO</li></ol>",
+      "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br/><ol><li>event: EventIO</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -8450,7 +8450,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "ActionIO.<EventIO>"
     },
     "energySkateParkBasics.general.navigationBar.phetButton.phetMenu.aboutMenuItem.inputListener.releaseAction": {
-      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br><ol><li>event: NullableIO.<EventIO></li></ol>",
+      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO.<EventIO></li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -8522,7 +8522,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "EmitterIO.<>"
     },
     "energySkateParkBasics.general.navigationBar.phetButton.phetMenu.screenshotMenuItem.inputListener.pressAction": {
-      "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br><ol><li>event: EventIO</li></ol>",
+      "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br/><ol><li>event: EventIO</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -8534,7 +8534,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "ActionIO.<EventIO>"
     },
     "energySkateParkBasics.general.navigationBar.phetButton.phetMenu.screenshotMenuItem.inputListener.releaseAction": {
-      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br><ol><li>event: NullableIO.<EventIO></li></ol>",
+      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO.<EventIO></li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -8594,7 +8594,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
     },
     "energySkateParkBasics.general.navigationBar.phetButton.pressListener.pressAction": {
-      "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br><ol><li>event: EventIO</li></ol>",
+      "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br/><ol><li>event: EventIO</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -8606,7 +8606,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "ActionIO.<EventIO>"
     },
     "energySkateParkBasics.general.navigationBar.phetButton.pressListener.releaseAction": {
-      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br><ol><li>event: NullableIO.<EventIO></li></ol>",
+      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO.<EventIO></li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -8726,7 +8726,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
     },
     "energySkateParkBasics.general.navigationBar.playgroundScreenButton.pressListener.pressAction": {
-      "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br><ol><li>event: EventIO</li></ol>",
+      "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br/><ol><li>event: EventIO</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -8738,7 +8738,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "ActionIO.<EventIO>"
     },
     "energySkateParkBasics.general.navigationBar.playgroundScreenButton.pressListener.releaseAction": {
-      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br><ol><li>event: NullableIO.<EventIO></li></ol>",
+      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO.<EventIO></li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -8894,7 +8894,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "PhetioCommandProcessorIO"
     },
     "energySkateParkBasics.general.resizeAction": {
-      "phetioDocumentation": "Executes when the sim is resized The arguments are:<br><ol><li>width: NumberIO</li>\n<li>height: NumberIO</li></ol>",
+      "phetioDocumentation": "Executes when the sim is resized The arguments are:<br/><ol><li>width: NumberIO</li><br/><li>height: NumberIO</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
       "phetioFeatured": false,
@@ -8942,7 +8942,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "PropertyIO.<BooleanIO>"
     },
     "energySkateParkBasics.general.stepSimulationAction": {
-      "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>dt: NumberIO</li></ol>",
+      "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>dt: NumberIO</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
       "phetioFeatured": false,
@@ -9002,7 +9002,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "EmitterIO.<>"
     },
     "energySkateParkBasics.homeScreen.view.frictionScreenLargeButton.inputListener.pressAction": {
-      "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br><ol><li>event: EventIO</li></ol>",
+      "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br/><ol><li>event: EventIO</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -9014,7 +9014,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "ActionIO.<EventIO>"
     },
     "energySkateParkBasics.homeScreen.view.frictionScreenLargeButton.inputListener.releaseAction": {
-      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br><ol><li>event: NullableIO.<EventIO></li></ol>",
+      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO.<EventIO></li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -9146,7 +9146,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "EmitterIO.<>"
     },
     "energySkateParkBasics.homeScreen.view.frictionScreenSmallButton.inputListener.pressAction": {
-      "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br><ol><li>event: EventIO</li></ol>",
+      "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br/><ol><li>event: EventIO</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -9158,7 +9158,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "ActionIO.<EventIO>"
     },
     "energySkateParkBasics.homeScreen.view.frictionScreenSmallButton.inputListener.releaseAction": {
-      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br><ol><li>event: NullableIO.<EventIO></li></ol>",
+      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO.<EventIO></li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -9290,7 +9290,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "EmitterIO.<>"
     },
     "energySkateParkBasics.homeScreen.view.introScreenLargeButton.inputListener.pressAction": {
-      "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br><ol><li>event: EventIO</li></ol>",
+      "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br/><ol><li>event: EventIO</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -9302,7 +9302,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "ActionIO.<EventIO>"
     },
     "energySkateParkBasics.homeScreen.view.introScreenLargeButton.inputListener.releaseAction": {
-      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br><ol><li>event: NullableIO.<EventIO></li></ol>",
+      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO.<EventIO></li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -9434,7 +9434,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "EmitterIO.<>"
     },
     "energySkateParkBasics.homeScreen.view.introScreenSmallButton.inputListener.pressAction": {
-      "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br><ol><li>event: EventIO</li></ol>",
+      "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br/><ol><li>event: EventIO</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -9446,7 +9446,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "ActionIO.<EventIO>"
     },
     "energySkateParkBasics.homeScreen.view.introScreenSmallButton.inputListener.releaseAction": {
-      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br><ol><li>event: NullableIO.<EventIO></li></ol>",
+      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO.<EventIO></li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -9602,7 +9602,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "EmitterIO.<>"
     },
     "energySkateParkBasics.homeScreen.view.playgroundScreenLargeButton.inputListener.pressAction": {
-      "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br><ol><li>event: EventIO</li></ol>",
+      "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br/><ol><li>event: EventIO</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -9614,7 +9614,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "ActionIO.<EventIO>"
     },
     "energySkateParkBasics.homeScreen.view.playgroundScreenLargeButton.inputListener.releaseAction": {
-      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br><ol><li>event: NullableIO.<EventIO></li></ol>",
+      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO.<EventIO></li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -9746,7 +9746,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "EmitterIO.<>"
     },
     "energySkateParkBasics.homeScreen.view.playgroundScreenSmallButton.inputListener.pressAction": {
-      "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br><ol><li>event: EventIO</li></ol>",
+      "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br/><ol><li>event: EventIO</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -9758,7 +9758,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "ActionIO.<EventIO>"
     },
     "energySkateParkBasics.homeScreen.view.playgroundScreenSmallButton.inputListener.releaseAction": {
-      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br><ol><li>event: NullableIO.<EventIO></li></ol>",
+      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO.<EventIO></li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -11702,7 +11702,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.sceneSelectionRadioButtonGroup.scene1RadioButton.pressListener.pressAction": {
-      "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br><ol><li>event: EventIO</li></ol>",
+      "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br/><ol><li>event: EventIO</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -11714,7 +11714,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "ActionIO.<EventIO>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.sceneSelectionRadioButtonGroup.scene1RadioButton.pressListener.releaseAction": {
-      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br><ol><li>event: NullableIO.<EventIO></li></ol>",
+      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO.<EventIO></li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -11798,7 +11798,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.sceneSelectionRadioButtonGroup.scene2RadioButton.pressListener.pressAction": {
-      "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br><ol><li>event: EventIO</li></ol>",
+      "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br/><ol><li>event: EventIO</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -11810,7 +11810,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "ActionIO.<EventIO>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.sceneSelectionRadioButtonGroup.scene2RadioButton.pressListener.releaseAction": {
-      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br><ol><li>event: NullableIO.<EventIO></li></ol>",
+      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO.<EventIO></li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -11894,7 +11894,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.sceneSelectionRadioButtonGroup.scene3RadioButton.pressListener.pressAction": {
-      "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br><ol><li>event: EventIO</li></ol>",
+      "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br/><ol><li>event: EventIO</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -11906,7 +11906,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "ActionIO.<EventIO>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.sceneSelectionRadioButtonGroup.scene3RadioButton.pressListener.releaseAction": {
-      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br><ol><li>event: NullableIO.<EventIO></li></ol>",
+      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO.<EventIO></li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -12206,7 +12206,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "LinkedElementIO"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.visibilityControls.barGraphCheckbox.toggleAction": {
-      "phetioDocumentation": "Emits when user input causes the checkbox to toggle, emitting a single arg: the new boolean value of the checkbox state. The arguments are:<br><ol><li>isChecked: BooleanIO</li></ol>",
+      "phetioDocumentation": "Emits when user input causes the checkbox to toggle, emitting a single arg: the new boolean value of the checkbox state. The arguments are:<br/><ol><li>isChecked: BooleanIO</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -12398,7 +12398,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "LinkedElementIO"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.visibilityControls.gridCheckbox.toggleAction": {
-      "phetioDocumentation": "Emits when user input causes the checkbox to toggle, emitting a single arg: the new boolean value of the checkbox state. The arguments are:<br><ol><li>isChecked: BooleanIO</li></ol>",
+      "phetioDocumentation": "Emits when user input causes the checkbox to toggle, emitting a single arg: the new boolean value of the checkbox state. The arguments are:<br/><ol><li>isChecked: BooleanIO</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -12590,7 +12590,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "LinkedElementIO"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.visibilityControls.pieChartCheckbox.toggleAction": {
-      "phetioDocumentation": "Emits when user input causes the checkbox to toggle, emitting a single arg: the new boolean value of the checkbox state. The arguments are:<br><ol><li>isChecked: BooleanIO</li></ol>",
+      "phetioDocumentation": "Emits when user input causes the checkbox to toggle, emitting a single arg: the new boolean value of the checkbox state. The arguments are:<br/><ol><li>isChecked: BooleanIO</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -12986,7 +12986,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "LinkedElementIO"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.visibilityControls.speedometerCheckbox.toggleAction": {
-      "phetioDocumentation": "Emits when user input causes the checkbox to toggle, emitting a single arg: the new boolean value of the checkbox state. The arguments are:<br><ol><li>isChecked: BooleanIO</li></ol>",
+      "phetioDocumentation": "Emits when user input causes the checkbox to toggle, emitting a single arg: the new boolean value of the checkbox state. The arguments are:<br/><ol><li>isChecked: BooleanIO</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -13130,7 +13130,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.energyBargGraphPanel.energyBarGraph.clearThermalButton.pressListener.pressAction": {
-      "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br><ol><li>event: EventIO</li></ol>",
+      "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br/><ol><li>event: EventIO</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -13142,7 +13142,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "ActionIO.<EventIO>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.energyBargGraphPanel.energyBarGraph.clearThermalButton.pressListener.releaseAction": {
-      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br><ol><li>event: NullableIO.<EventIO></li></ol>",
+      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO.<EventIO></li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -13322,7 +13322,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.energyBargGraphPanel.energyBarGraph.zoomInButton.pressListener.pressAction": {
-      "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br><ol><li>event: EventIO</li></ol>",
+      "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br/><ol><li>event: EventIO</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -13334,7 +13334,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "ActionIO.<EventIO>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.energyBargGraphPanel.energyBarGraph.zoomInButton.pressListener.releaseAction": {
-      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br><ol><li>event: NullableIO.<EventIO></li></ol>",
+      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO.<EventIO></li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -13514,7 +13514,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.energyBargGraphPanel.energyBarGraph.zoomOutButton.pressListener.pressAction": {
-      "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br><ol><li>event: EventIO</li></ol>",
+      "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br/><ol><li>event: EventIO</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -13526,7 +13526,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "ActionIO.<EventIO>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.energyBargGraphPanel.energyBarGraph.zoomOutButton.pressListener.releaseAction": {
-      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br><ol><li>event: NullableIO.<EventIO></li></ol>",
+      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO.<EventIO></li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -13886,7 +13886,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.pieChartLegend.clearThermalButton.pressListener.pressAction": {
-      "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br><ol><li>event: EventIO</li></ol>",
+      "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br/><ol><li>event: EventIO</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -13898,7 +13898,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "ActionIO.<EventIO>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.pieChartLegend.clearThermalButton.pressListener.releaseAction": {
-      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br><ol><li>event: NullableIO.<EventIO></li></ol>",
+      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO.<EventIO></li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -14402,7 +14402,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.playPauseButton.pressListener.pressAction": {
-      "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br><ol><li>event: EventIO</li></ol>",
+      "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br/><ol><li>event: EventIO</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -14414,7 +14414,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "ActionIO.<EventIO>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.playPauseButton.pressListener.releaseAction": {
-      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br><ol><li>event: NullableIO.<EventIO></li></ol>",
+      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO.<EventIO></li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -14546,7 +14546,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "EmitterIO.<>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.playbackSpeedControl.normalSpeedButton.inputListener.pressAction": {
-      "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br><ol><li>event: EventIO</li></ol>",
+      "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br/><ol><li>event: EventIO</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -14558,7 +14558,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "ActionIO.<EventIO>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.playbackSpeedControl.normalSpeedButton.inputListener.releaseAction": {
-      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br><ol><li>event: NullableIO.<EventIO></li></ol>",
+      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO.<EventIO></li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -14702,7 +14702,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "EmitterIO.<>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.playbackSpeedControl.slowMotionRadioButton.inputListener.pressAction": {
-      "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br><ol><li>event: EventIO</li></ol>",
+      "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br/><ol><li>event: EventIO</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -14714,7 +14714,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "ActionIO.<EventIO>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.playbackSpeedControl.slowMotionRadioButton.inputListener.releaseAction": {
-      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br><ol><li>event: NullableIO.<EventIO></li></ol>",
+      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO.<EventIO></li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -14834,7 +14834,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "PropertyIO.<BooleanIO>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.referenceHeightLine.dragListener.dragAction": {
-      "phetioDocumentation": "Emits whenever a drag occurs with an EventIO argument. The arguments are:<br><ol><li>event: EventIO</li></ol>",
+      "phetioDocumentation": "Emits whenever a drag occurs with an EventIO argument. The arguments are:<br/><ol><li>event: EventIO</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -14846,7 +14846,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "ActionIO.<EventIO>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.referenceHeightLine.dragListener.pressAction": {
-      "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br><ol><li>event: EventIO</li></ol>",
+      "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br/><ol><li>event: EventIO</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -14858,7 +14858,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "ActionIO.<EventIO>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.referenceHeightLine.dragListener.releaseAction": {
-      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br><ol><li>event: NullableIO.<EventIO></li></ol>",
+      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO.<EventIO></li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -14942,7 +14942,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.resetAllButton.pressListener.pressAction": {
-      "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br><ol><li>event: EventIO</li></ol>",
+      "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br/><ol><li>event: EventIO</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -14954,7 +14954,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "ActionIO.<EventIO>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.resetAllButton.pressListener.releaseAction": {
-      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br><ol><li>event: NullableIO.<EventIO></li></ol>",
+      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO.<EventIO></li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -15098,7 +15098,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.returnSkaterButton.pressListener.pressAction": {
-      "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br><ol><li>event: EventIO</li></ol>",
+      "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br/><ol><li>event: EventIO</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -15110,7 +15110,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "ActionIO.<EventIO>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.returnSkaterButton.pressListener.releaseAction": {
-      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br><ol><li>event: NullableIO.<EventIO></li></ol>",
+      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO.<EventIO></li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -15194,7 +15194,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.returnSkaterToGroundButton.pressListener.pressAction": {
-      "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br><ol><li>event: EventIO</li></ol>",
+      "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br/><ol><li>event: EventIO</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -15206,7 +15206,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "ActionIO.<EventIO>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.returnSkaterToGroundButton.pressListener.releaseAction": {
-      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br><ol><li>event: NullableIO.<EventIO></li></ol>",
+      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO.<EventIO></li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -15290,7 +15290,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.returnSkaterToPreviousStartingPositionButton.pressListener.pressAction": {
-      "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br><ol><li>event: EventIO</li></ol>",
+      "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br/><ol><li>event: EventIO</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -15302,7 +15302,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "ActionIO.<EventIO>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.returnSkaterToPreviousStartingPositionButton.pressListener.releaseAction": {
-      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br><ol><li>event: NullableIO.<EventIO></li></ol>",
+      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO.<EventIO></li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -15446,7 +15446,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "ObjectIO"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.skaterNode.inputListener.dragAction": {
-      "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag in view coordinates</li></ol>",
+      "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO. the position of the drag in view coordinates</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
       "phetioFeatured": false,
@@ -15458,7 +15458,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "ActionIO.<Vector2IO>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.skaterNode.inputListener.dragEndAction": {
-      "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag end in view coordinates</li></ol>",
+      "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO. the position of the drag end in view coordinates</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
       "phetioFeatured": false,
@@ -15470,7 +15470,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "ActionIO.<Vector2IO>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.skaterNode.inputListener.dragStartAction": {
-      "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag start in view coordinates</li></ol>",
+      "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO. the position of the drag start in view coordinates</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
       "phetioFeatured": false,
@@ -15842,7 +15842,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.stepButton.pressListener.pressAction": {
-      "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br><ol><li>event: EventIO</li></ol>",
+      "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br/><ol><li>event: EventIO</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -15854,7 +15854,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "ActionIO.<EventIO>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.stepButton.pressListener.releaseAction": {
-      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br><ol><li>event: NullableIO.<EventIO></li></ol>",
+      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO.<EventIO></li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -16010,7 +16010,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
     },
     "energySkateParkBasics.introScreen.view.massSlider.leftArrowButton.pressListener.pressAction": {
-      "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br><ol><li>event: EventIO</li></ol>",
+      "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br/><ol><li>event: EventIO</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -16022,7 +16022,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "ActionIO.<EventIO>"
     },
     "energySkateParkBasics.introScreen.view.massSlider.leftArrowButton.pressListener.releaseAction": {
-      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br><ol><li>event: NullableIO.<EventIO></li></ol>",
+      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO.<EventIO></li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -16358,7 +16358,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
     },
     "energySkateParkBasics.introScreen.view.massSlider.rightArrowButton.pressListener.pressAction": {
-      "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br><ol><li>event: EventIO</li></ol>",
+      "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br/><ol><li>event: EventIO</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -16370,7 +16370,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "ActionIO.<EventIO>"
     },
     "energySkateParkBasics.introScreen.view.massSlider.rightArrowButton.pressListener.releaseAction": {
-      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br><ol><li>event: NullableIO.<EventIO></li></ol>",
+      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO.<EventIO></li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -16514,7 +16514,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "ObjectIO"
     },
     "energySkateParkBasics.introScreen.view.massSlider.slider.thumbInputListener.dragAction": {
-      "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag in view coordinates</li></ol>",
+      "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO. the position of the drag in view coordinates</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
       "phetioFeatured": false,
@@ -16526,7 +16526,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "ActionIO.<Vector2IO>"
     },
     "energySkateParkBasics.introScreen.view.massSlider.slider.thumbInputListener.dragEndAction": {
-      "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag end in view coordinates</li></ol>",
+      "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO. the position of the drag end in view coordinates</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
       "phetioFeatured": false,
@@ -16538,7 +16538,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "ActionIO.<Vector2IO>"
     },
     "energySkateParkBasics.introScreen.view.massSlider.slider.thumbInputListener.dragStartAction": {
-      "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag start in view coordinates</li></ol>",
+      "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO. the position of the drag start in view coordinates</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
       "phetioFeatured": false,
@@ -16574,7 +16574,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "ObjectIO"
     },
     "energySkateParkBasics.introScreen.view.massSlider.slider.track.trackInputListener.dragAction": {
-      "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag in view coordinates</li></ol>",
+      "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO. the position of the drag in view coordinates</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
       "phetioFeatured": false,
@@ -16586,7 +16586,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "ActionIO.<Vector2IO>"
     },
     "energySkateParkBasics.introScreen.view.massSlider.slider.track.trackInputListener.dragEndAction": {
-      "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag end in view coordinates</li></ol>",
+      "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO. the position of the drag end in view coordinates</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
       "phetioFeatured": false,
@@ -16598,7 +16598,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "ActionIO.<Vector2IO>"
     },
     "energySkateParkBasics.introScreen.view.massSlider.slider.track.trackInputListener.dragStartAction": {
-      "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag start in view coordinates</li></ol>",
+      "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO. the position of the drag start in view coordinates</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
       "phetioFeatured": false,
@@ -18518,7 +18518,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
     },
     "energySkateParkBasics.playgroundScreen.view.frictionSlider.leftArrowButton.pressListener.pressAction": {
-      "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br><ol><li>event: EventIO</li></ol>",
+      "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br/><ol><li>event: EventIO</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -18530,7 +18530,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "ActionIO.<EventIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.frictionSlider.leftArrowButton.pressListener.releaseAction": {
-      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br><ol><li>event: NullableIO.<EventIO></li></ol>",
+      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO.<EventIO></li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -18866,7 +18866,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
     },
     "energySkateParkBasics.playgroundScreen.view.frictionSlider.rightArrowButton.pressListener.pressAction": {
-      "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br><ol><li>event: EventIO</li></ol>",
+      "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br/><ol><li>event: EventIO</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -18878,7 +18878,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "ActionIO.<EventIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.frictionSlider.rightArrowButton.pressListener.releaseAction": {
-      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br><ol><li>event: NullableIO.<EventIO></li></ol>",
+      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO.<EventIO></li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -19022,7 +19022,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "ObjectIO"
     },
     "energySkateParkBasics.playgroundScreen.view.frictionSlider.slider.thumbInputListener.dragAction": {
-      "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag in view coordinates</li></ol>",
+      "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO. the position of the drag in view coordinates</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
       "phetioFeatured": false,
@@ -19034,7 +19034,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "ActionIO.<Vector2IO>"
     },
     "energySkateParkBasics.playgroundScreen.view.frictionSlider.slider.thumbInputListener.dragEndAction": {
-      "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag end in view coordinates</li></ol>",
+      "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO. the position of the drag end in view coordinates</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
       "phetioFeatured": false,
@@ -19046,7 +19046,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "ActionIO.<Vector2IO>"
     },
     "energySkateParkBasics.playgroundScreen.view.frictionSlider.slider.thumbInputListener.dragStartAction": {
-      "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag start in view coordinates</li></ol>",
+      "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO. the position of the drag start in view coordinates</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
       "phetioFeatured": false,
@@ -19082,7 +19082,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "ObjectIO"
     },
     "energySkateParkBasics.playgroundScreen.view.frictionSlider.slider.track.trackInputListener.dragAction": {
-      "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag in view coordinates</li></ol>",
+      "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO. the position of the drag in view coordinates</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
       "phetioFeatured": false,
@@ -19094,7 +19094,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "ActionIO.<Vector2IO>"
     },
     "energySkateParkBasics.playgroundScreen.view.frictionSlider.slider.track.trackInputListener.dragEndAction": {
-      "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag end in view coordinates</li></ol>",
+      "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO. the position of the drag end in view coordinates</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
       "phetioFeatured": false,
@@ -19106,7 +19106,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "ActionIO.<Vector2IO>"
     },
     "energySkateParkBasics.playgroundScreen.view.frictionSlider.slider.track.trackInputListener.dragStartAction": {
-      "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag start in view coordinates</li></ol>",
+      "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO. the position of the drag start in view coordinates</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
       "phetioFeatured": false,
@@ -19394,7 +19394,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.attachDetachToggleButtons.radioButtonGroup.attachRadioButton.pressListener.pressAction": {
-      "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br><ol><li>event: EventIO</li></ol>",
+      "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br/><ol><li>event: EventIO</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -19406,7 +19406,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "ActionIO.<EventIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.attachDetachToggleButtons.radioButtonGroup.attachRadioButton.pressListener.releaseAction": {
-      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br><ol><li>event: NullableIO.<EventIO></li></ol>",
+      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO.<EventIO></li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -19538,7 +19538,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.attachDetachToggleButtons.radioButtonGroup.detachRadioButton.pressListener.pressAction": {
-      "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br><ol><li>event: EventIO</li></ol>",
+      "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br/><ol><li>event: EventIO</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -19550,7 +19550,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "ActionIO.<EventIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.attachDetachToggleButtons.radioButtonGroup.detachRadioButton.pressListener.releaseAction": {
-      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br><ol><li>event: NullableIO.<EventIO></li></ol>",
+      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO.<EventIO></li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -19778,7 +19778,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.clearButton.pressListener.pressAction": {
-      "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br><ol><li>event: EventIO</li></ol>",
+      "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br/><ol><li>event: EventIO</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -19790,7 +19790,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "ActionIO.<EventIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.clearButton.pressListener.releaseAction": {
-      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br><ol><li>event: NullableIO.<EventIO></li></ol>",
+      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO.<EventIO></li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -19970,7 +19970,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "LinkedElementIO"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.visibilityControls.barGraphCheckbox.toggleAction": {
-      "phetioDocumentation": "Emits when user input causes the checkbox to toggle, emitting a single arg: the new boolean value of the checkbox state. The arguments are:<br><ol><li>isChecked: BooleanIO</li></ol>",
+      "phetioDocumentation": "Emits when user input causes the checkbox to toggle, emitting a single arg: the new boolean value of the checkbox state. The arguments are:<br/><ol><li>isChecked: BooleanIO</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -20162,7 +20162,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "LinkedElementIO"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.visibilityControls.gridCheckbox.toggleAction": {
-      "phetioDocumentation": "Emits when user input causes the checkbox to toggle, emitting a single arg: the new boolean value of the checkbox state. The arguments are:<br><ol><li>isChecked: BooleanIO</li></ol>",
+      "phetioDocumentation": "Emits when user input causes the checkbox to toggle, emitting a single arg: the new boolean value of the checkbox state. The arguments are:<br/><ol><li>isChecked: BooleanIO</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -20354,7 +20354,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "LinkedElementIO"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.visibilityControls.pieChartCheckbox.toggleAction": {
-      "phetioDocumentation": "Emits when user input causes the checkbox to toggle, emitting a single arg: the new boolean value of the checkbox state. The arguments are:<br><ol><li>isChecked: BooleanIO</li></ol>",
+      "phetioDocumentation": "Emits when user input causes the checkbox to toggle, emitting a single arg: the new boolean value of the checkbox state. The arguments are:<br/><ol><li>isChecked: BooleanIO</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -20750,7 +20750,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "LinkedElementIO"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.visibilityControls.speedometerCheckbox.toggleAction": {
-      "phetioDocumentation": "Emits when user input causes the checkbox to toggle, emitting a single arg: the new boolean value of the checkbox state. The arguments are:<br><ol><li>isChecked: BooleanIO</li></ol>",
+      "phetioDocumentation": "Emits when user input causes the checkbox to toggle, emitting a single arg: the new boolean value of the checkbox state. The arguments are:<br/><ol><li>isChecked: BooleanIO</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -20894,7 +20894,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.energyBargGraphPanel.energyBarGraph.clearThermalButton.pressListener.pressAction": {
-      "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br><ol><li>event: EventIO</li></ol>",
+      "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br/><ol><li>event: EventIO</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -20906,7 +20906,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "ActionIO.<EventIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.energyBargGraphPanel.energyBarGraph.clearThermalButton.pressListener.releaseAction": {
-      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br><ol><li>event: NullableIO.<EventIO></li></ol>",
+      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO.<EventIO></li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -21086,7 +21086,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.energyBargGraphPanel.energyBarGraph.zoomInButton.pressListener.pressAction": {
-      "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br><ol><li>event: EventIO</li></ol>",
+      "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br/><ol><li>event: EventIO</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -21098,7 +21098,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "ActionIO.<EventIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.energyBargGraphPanel.energyBarGraph.zoomInButton.pressListener.releaseAction": {
-      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br><ol><li>event: NullableIO.<EventIO></li></ol>",
+      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO.<EventIO></li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -21278,7 +21278,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.energyBargGraphPanel.energyBarGraph.zoomOutButton.pressListener.pressAction": {
-      "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br><ol><li>event: EventIO</li></ol>",
+      "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br/><ol><li>event: EventIO</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -21290,7 +21290,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "ActionIO.<EventIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.energyBargGraphPanel.energyBarGraph.zoomOutButton.pressListener.releaseAction": {
-      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br><ol><li>event: NullableIO.<EventIO></li></ol>",
+      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO.<EventIO></li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -21530,7 +21530,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "ObjectIO"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.measuringTapeNode.baseDragHandler.dragAction": {
-      "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag in view coordinates</li></ol>",
+      "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO. the position of the drag in view coordinates</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
       "phetioFeatured": false,
@@ -21542,7 +21542,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "ActionIO.<Vector2IO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.measuringTapeNode.baseDragHandler.dragEndAction": {
-      "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag end in view coordinates</li></ol>",
+      "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO. the position of the drag end in view coordinates</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
       "phetioFeatured": false,
@@ -21554,7 +21554,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "ActionIO.<Vector2IO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.measuringTapeNode.baseDragHandler.dragStartAction": {
-      "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag start in view coordinates</li></ol>",
+      "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO. the position of the drag start in view coordinates</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
       "phetioFeatured": false,
@@ -21614,7 +21614,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "ObjectIO"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.measuringTapeNode.tipDragHandler.dragAction": {
-      "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag in view coordinates</li></ol>",
+      "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO. the position of the drag in view coordinates</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
       "phetioFeatured": false,
@@ -21626,7 +21626,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "ActionIO.<Vector2IO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.measuringTapeNode.tipDragHandler.dragEndAction": {
-      "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag end in view coordinates</li></ol>",
+      "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO. the position of the drag end in view coordinates</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
       "phetioFeatured": false,
@@ -21638,7 +21638,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "ActionIO.<Vector2IO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.measuringTapeNode.tipDragHandler.dragStartAction": {
-      "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag start in view coordinates</li></ol>",
+      "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO. the position of the drag start in view coordinates</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
       "phetioFeatured": false,
@@ -21818,7 +21818,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.pieChartLegend.clearThermalButton.pressListener.pressAction": {
-      "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br><ol><li>event: EventIO</li></ol>",
+      "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br/><ol><li>event: EventIO</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -21830,7 +21830,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "ActionIO.<EventIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.pieChartLegend.clearThermalButton.pressListener.releaseAction": {
-      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br><ol><li>event: NullableIO.<EventIO></li></ol>",
+      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO.<EventIO></li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -22334,7 +22334,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.playPauseButton.pressListener.pressAction": {
-      "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br><ol><li>event: EventIO</li></ol>",
+      "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br/><ol><li>event: EventIO</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -22346,7 +22346,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "ActionIO.<EventIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.playPauseButton.pressListener.releaseAction": {
-      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br><ol><li>event: NullableIO.<EventIO></li></ol>",
+      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO.<EventIO></li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -22478,7 +22478,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "EmitterIO.<>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.playbackSpeedControl.normalSpeedButton.inputListener.pressAction": {
-      "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br><ol><li>event: EventIO</li></ol>",
+      "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br/><ol><li>event: EventIO</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -22490,7 +22490,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "ActionIO.<EventIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.playbackSpeedControl.normalSpeedButton.inputListener.releaseAction": {
-      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br><ol><li>event: NullableIO.<EventIO></li></ol>",
+      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO.<EventIO></li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -22634,7 +22634,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "EmitterIO.<>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.playbackSpeedControl.slowMotionRadioButton.inputListener.pressAction": {
-      "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br><ol><li>event: EventIO</li></ol>",
+      "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br/><ol><li>event: EventIO</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -22646,7 +22646,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "ActionIO.<EventIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.playbackSpeedControl.slowMotionRadioButton.inputListener.releaseAction": {
-      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br><ol><li>event: NullableIO.<EventIO></li></ol>",
+      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO.<EventIO></li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -22766,7 +22766,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "PropertyIO.<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.referenceHeightLine.dragListener.dragAction": {
-      "phetioDocumentation": "Emits whenever a drag occurs with an EventIO argument. The arguments are:<br><ol><li>event: EventIO</li></ol>",
+      "phetioDocumentation": "Emits whenever a drag occurs with an EventIO argument. The arguments are:<br/><ol><li>event: EventIO</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -22778,7 +22778,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "ActionIO.<EventIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.referenceHeightLine.dragListener.pressAction": {
-      "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br><ol><li>event: EventIO</li></ol>",
+      "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br/><ol><li>event: EventIO</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -22790,7 +22790,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "ActionIO.<EventIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.referenceHeightLine.dragListener.releaseAction": {
-      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br><ol><li>event: NullableIO.<EventIO></li></ol>",
+      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO.<EventIO></li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -22874,7 +22874,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.resetAllButton.pressListener.pressAction": {
-      "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br><ol><li>event: EventIO</li></ol>",
+      "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br/><ol><li>event: EventIO</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -22886,7 +22886,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "ActionIO.<EventIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.resetAllButton.pressListener.releaseAction": {
-      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br><ol><li>event: NullableIO.<EventIO></li></ol>",
+      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO.<EventIO></li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -23030,7 +23030,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.returnSkaterButton.pressListener.pressAction": {
-      "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br><ol><li>event: EventIO</li></ol>",
+      "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br/><ol><li>event: EventIO</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -23042,7 +23042,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "ActionIO.<EventIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.returnSkaterButton.pressListener.releaseAction": {
-      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br><ol><li>event: NullableIO.<EventIO></li></ol>",
+      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO.<EventIO></li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -23126,7 +23126,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.returnSkaterToGroundButton.pressListener.pressAction": {
-      "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br><ol><li>event: EventIO</li></ol>",
+      "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br/><ol><li>event: EventIO</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -23138,7 +23138,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "ActionIO.<EventIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.returnSkaterToGroundButton.pressListener.releaseAction": {
-      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br><ol><li>event: NullableIO.<EventIO></li></ol>",
+      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO.<EventIO></li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -23222,7 +23222,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.returnSkaterToPreviousStartingPositionButton.pressListener.pressAction": {
-      "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br><ol><li>event: EventIO</li></ol>",
+      "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br/><ol><li>event: EventIO</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -23234,7 +23234,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "ActionIO.<EventIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.returnSkaterToPreviousStartingPositionButton.pressListener.releaseAction": {
-      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br><ol><li>event: NullableIO.<EventIO></li></ol>",
+      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO.<EventIO></li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -23378,7 +23378,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "ObjectIO"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.skaterNode.inputListener.dragAction": {
-      "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag in view coordinates</li></ol>",
+      "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO. the position of the drag in view coordinates</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
       "phetioFeatured": false,
@@ -23390,7 +23390,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "ActionIO.<Vector2IO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.skaterNode.inputListener.dragEndAction": {
-      "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag end in view coordinates</li></ol>",
+      "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO. the position of the drag end in view coordinates</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
       "phetioFeatured": false,
@@ -23402,7 +23402,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "ActionIO.<Vector2IO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.skaterNode.inputListener.dragStartAction": {
-      "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag start in view coordinates</li></ol>",
+      "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO. the position of the drag start in view coordinates</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
       "phetioFeatured": false,
@@ -23774,7 +23774,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.stepButton.pressListener.pressAction": {
-      "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br><ol><li>event: EventIO</li></ol>",
+      "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br/><ol><li>event: EventIO</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -23786,7 +23786,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "ActionIO.<EventIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.stepButton.pressListener.releaseAction": {
-      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br><ol><li>event: NullableIO.<EventIO></li></ol>",
+      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO.<EventIO></li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -23894,7 +23894,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "ObjectIO"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~0.controlPointNode0.inputListener.dragAction": {
-      "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag in view coordinates</li></ol>",
+      "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO. the position of the drag in view coordinates</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
       "phetioFeatured": false,
@@ -23906,7 +23906,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "ActionIO.<Vector2IO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~0.controlPointNode0.inputListener.dragEndAction": {
-      "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag end in view coordinates</li></ol>",
+      "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO. the position of the drag end in view coordinates</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
       "phetioFeatured": false,
@@ -23918,7 +23918,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "ActionIO.<Vector2IO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~0.controlPointNode0.inputListener.dragStartAction": {
-      "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag start in view coordinates</li></ol>",
+      "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO. the position of the drag start in view coordinates</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
       "phetioFeatured": false,
@@ -24002,7 +24002,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "ObjectIO"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~0.controlPointNode1.inputListener.dragAction": {
-      "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag in view coordinates</li></ol>",
+      "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO. the position of the drag in view coordinates</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
       "phetioFeatured": false,
@@ -24014,7 +24014,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "ActionIO.<Vector2IO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~0.controlPointNode1.inputListener.dragEndAction": {
-      "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag end in view coordinates</li></ol>",
+      "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO. the position of the drag end in view coordinates</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
       "phetioFeatured": false,
@@ -24026,7 +24026,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "ActionIO.<Vector2IO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~0.controlPointNode1.inputListener.dragStartAction": {
-      "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag start in view coordinates</li></ol>",
+      "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO. the position of the drag start in view coordinates</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
       "phetioFeatured": false,
@@ -24110,7 +24110,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "ObjectIO"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~0.controlPointNode2.inputListener.dragAction": {
-      "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag in view coordinates</li></ol>",
+      "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO. the position of the drag in view coordinates</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
       "phetioFeatured": false,
@@ -24122,7 +24122,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "ActionIO.<Vector2IO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~0.controlPointNode2.inputListener.dragEndAction": {
-      "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag end in view coordinates</li></ol>",
+      "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO. the position of the drag end in view coordinates</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
       "phetioFeatured": false,
@@ -24134,7 +24134,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "ActionIO.<Vector2IO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~0.controlPointNode2.inputListener.dragStartAction": {
-      "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag start in view coordinates</li></ol>",
+      "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO. the position of the drag start in view coordinates</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
       "phetioFeatured": false,
@@ -24230,7 +24230,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "ObjectIO"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~0.trackDragHandler.inputListener.dragAction": {
-      "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag in view coordinates</li></ol>",
+      "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO. the position of the drag in view coordinates</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
       "phetioFeatured": false,
@@ -24242,7 +24242,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "ActionIO.<Vector2IO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~0.trackDragHandler.inputListener.dragEndAction": {
-      "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag end in view coordinates</li></ol>",
+      "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO. the position of the drag end in view coordinates</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
       "phetioFeatured": false,
@@ -24254,7 +24254,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "ActionIO.<Vector2IO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~0.trackDragHandler.inputListener.dragStartAction": {
-      "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag start in view coordinates</li></ol>",
+      "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO. the position of the drag start in view coordinates</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
       "phetioFeatured": false,
@@ -24326,7 +24326,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "ObjectIO"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~1.controlPointNode0.inputListener.dragAction": {
-      "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag in view coordinates</li></ol>",
+      "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO. the position of the drag in view coordinates</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
       "phetioFeatured": false,
@@ -24338,7 +24338,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "ActionIO.<Vector2IO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~1.controlPointNode0.inputListener.dragEndAction": {
-      "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag end in view coordinates</li></ol>",
+      "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO. the position of the drag end in view coordinates</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
       "phetioFeatured": false,
@@ -24350,7 +24350,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "ActionIO.<Vector2IO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~1.controlPointNode0.inputListener.dragStartAction": {
-      "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag start in view coordinates</li></ol>",
+      "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO. the position of the drag start in view coordinates</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
       "phetioFeatured": false,
@@ -24434,7 +24434,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "ObjectIO"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~1.controlPointNode1.inputListener.dragAction": {
-      "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag in view coordinates</li></ol>",
+      "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO. the position of the drag in view coordinates</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
       "phetioFeatured": false,
@@ -24446,7 +24446,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "ActionIO.<Vector2IO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~1.controlPointNode1.inputListener.dragEndAction": {
-      "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag end in view coordinates</li></ol>",
+      "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO. the position of the drag end in view coordinates</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
       "phetioFeatured": false,
@@ -24458,7 +24458,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "ActionIO.<Vector2IO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~1.controlPointNode1.inputListener.dragStartAction": {
-      "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag start in view coordinates</li></ol>",
+      "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO. the position of the drag start in view coordinates</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
       "phetioFeatured": false,
@@ -24542,7 +24542,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "ObjectIO"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~1.controlPointNode2.inputListener.dragAction": {
-      "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag in view coordinates</li></ol>",
+      "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO. the position of the drag in view coordinates</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
       "phetioFeatured": false,
@@ -24554,7 +24554,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "ActionIO.<Vector2IO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~1.controlPointNode2.inputListener.dragEndAction": {
-      "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag end in view coordinates</li></ol>",
+      "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO. the position of the drag end in view coordinates</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
       "phetioFeatured": false,
@@ -24566,7 +24566,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "ActionIO.<Vector2IO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~1.controlPointNode2.inputListener.dragStartAction": {
-      "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag start in view coordinates</li></ol>",
+      "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO. the position of the drag start in view coordinates</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
       "phetioFeatured": false,
@@ -24662,7 +24662,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "ObjectIO"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~1.trackDragHandler.inputListener.dragAction": {
-      "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag in view coordinates</li></ol>",
+      "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO. the position of the drag in view coordinates</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
       "phetioFeatured": false,
@@ -24674,7 +24674,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "ActionIO.<Vector2IO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~1.trackDragHandler.inputListener.dragEndAction": {
-      "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag end in view coordinates</li></ol>",
+      "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO. the position of the drag end in view coordinates</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
       "phetioFeatured": false,
@@ -24686,7 +24686,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "ActionIO.<Vector2IO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~1.trackDragHandler.inputListener.dragStartAction": {
-      "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag start in view coordinates</li></ol>",
+      "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO. the position of the drag start in view coordinates</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
       "phetioFeatured": false,
@@ -24758,7 +24758,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "ObjectIO"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~2.controlPointNode0.inputListener.dragAction": {
-      "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag in view coordinates</li></ol>",
+      "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO. the position of the drag in view coordinates</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
       "phetioFeatured": false,
@@ -24770,7 +24770,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "ActionIO.<Vector2IO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~2.controlPointNode0.inputListener.dragEndAction": {
-      "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag end in view coordinates</li></ol>",
+      "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO. the position of the drag end in view coordinates</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
       "phetioFeatured": false,
@@ -24782,7 +24782,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "ActionIO.<Vector2IO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~2.controlPointNode0.inputListener.dragStartAction": {
-      "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag start in view coordinates</li></ol>",
+      "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO. the position of the drag start in view coordinates</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
       "phetioFeatured": false,
@@ -24866,7 +24866,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "ObjectIO"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~2.controlPointNode1.inputListener.dragAction": {
-      "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag in view coordinates</li></ol>",
+      "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO. the position of the drag in view coordinates</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
       "phetioFeatured": false,
@@ -24878,7 +24878,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "ActionIO.<Vector2IO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~2.controlPointNode1.inputListener.dragEndAction": {
-      "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag end in view coordinates</li></ol>",
+      "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO. the position of the drag end in view coordinates</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
       "phetioFeatured": false,
@@ -24890,7 +24890,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "ActionIO.<Vector2IO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~2.controlPointNode1.inputListener.dragStartAction": {
-      "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag start in view coordinates</li></ol>",
+      "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO. the position of the drag start in view coordinates</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
       "phetioFeatured": false,
@@ -24974,7 +24974,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "ObjectIO"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~2.controlPointNode2.inputListener.dragAction": {
-      "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag in view coordinates</li></ol>",
+      "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO. the position of the drag in view coordinates</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
       "phetioFeatured": false,
@@ -24986,7 +24986,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "ActionIO.<Vector2IO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~2.controlPointNode2.inputListener.dragEndAction": {
-      "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag end in view coordinates</li></ol>",
+      "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO. the position of the drag end in view coordinates</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
       "phetioFeatured": false,
@@ -24998,7 +24998,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "ActionIO.<Vector2IO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~2.controlPointNode2.inputListener.dragStartAction": {
-      "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag start in view coordinates</li></ol>",
+      "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO. the position of the drag start in view coordinates</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
       "phetioFeatured": false,
@@ -25094,7 +25094,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "ObjectIO"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~2.trackDragHandler.inputListener.dragAction": {
-      "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag in view coordinates</li></ol>",
+      "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO. the position of the drag in view coordinates</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
       "phetioFeatured": false,
@@ -25106,7 +25106,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "ActionIO.<Vector2IO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~2.trackDragHandler.inputListener.dragEndAction": {
-      "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag end in view coordinates</li></ol>",
+      "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO. the position of the drag end in view coordinates</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
       "phetioFeatured": false,
@@ -25118,7 +25118,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "ActionIO.<Vector2IO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~2.trackDragHandler.inputListener.dragStartAction": {
-      "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag start in view coordinates</li></ol>",
+      "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO. the position of the drag start in view coordinates</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
       "phetioFeatured": false,
@@ -25190,7 +25190,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "ObjectIO"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~3.controlPointNode0.inputListener.dragAction": {
-      "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag in view coordinates</li></ol>",
+      "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO. the position of the drag in view coordinates</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
       "phetioFeatured": false,
@@ -25202,7 +25202,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "ActionIO.<Vector2IO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~3.controlPointNode0.inputListener.dragEndAction": {
-      "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag end in view coordinates</li></ol>",
+      "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO. the position of the drag end in view coordinates</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
       "phetioFeatured": false,
@@ -25214,7 +25214,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "ActionIO.<Vector2IO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~3.controlPointNode0.inputListener.dragStartAction": {
-      "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag start in view coordinates</li></ol>",
+      "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO. the position of the drag start in view coordinates</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
       "phetioFeatured": false,
@@ -25298,7 +25298,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "ObjectIO"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~3.controlPointNode1.inputListener.dragAction": {
-      "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag in view coordinates</li></ol>",
+      "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO. the position of the drag in view coordinates</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
       "phetioFeatured": false,
@@ -25310,7 +25310,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "ActionIO.<Vector2IO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~3.controlPointNode1.inputListener.dragEndAction": {
-      "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag end in view coordinates</li></ol>",
+      "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO. the position of the drag end in view coordinates</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
       "phetioFeatured": false,
@@ -25322,7 +25322,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "ActionIO.<Vector2IO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~3.controlPointNode1.inputListener.dragStartAction": {
-      "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag start in view coordinates</li></ol>",
+      "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO. the position of the drag start in view coordinates</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
       "phetioFeatured": false,
@@ -25406,7 +25406,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "ObjectIO"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~3.controlPointNode2.inputListener.dragAction": {
-      "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag in view coordinates</li></ol>",
+      "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO. the position of the drag in view coordinates</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
       "phetioFeatured": false,
@@ -25418,7 +25418,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "ActionIO.<Vector2IO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~3.controlPointNode2.inputListener.dragEndAction": {
-      "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag end in view coordinates</li></ol>",
+      "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO. the position of the drag end in view coordinates</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
       "phetioFeatured": false,
@@ -25430,7 +25430,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "ActionIO.<Vector2IO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~3.controlPointNode2.inputListener.dragStartAction": {
-      "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag start in view coordinates</li></ol>",
+      "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO. the position of the drag start in view coordinates</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
       "phetioFeatured": false,
@@ -25526,7 +25526,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "ObjectIO"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~3.trackDragHandler.inputListener.dragAction": {
-      "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag in view coordinates</li></ol>",
+      "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO. the position of the drag in view coordinates</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
       "phetioFeatured": false,
@@ -25538,7 +25538,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "ActionIO.<Vector2IO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~3.trackDragHandler.inputListener.dragEndAction": {
-      "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag end in view coordinates</li></ol>",
+      "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO. the position of the drag end in view coordinates</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
       "phetioFeatured": false,
@@ -25550,7 +25550,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "ActionIO.<Vector2IO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~3.trackDragHandler.inputListener.dragStartAction": {
-      "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag start in view coordinates</li></ol>",
+      "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO. the position of the drag start in view coordinates</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
       "phetioFeatured": false,
@@ -25622,7 +25622,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "ObjectIO"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~4.controlPointNode0.inputListener.dragAction": {
-      "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag in view coordinates</li></ol>",
+      "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO. the position of the drag in view coordinates</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
       "phetioFeatured": false,
@@ -25634,7 +25634,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "ActionIO.<Vector2IO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~4.controlPointNode0.inputListener.dragEndAction": {
-      "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag end in view coordinates</li></ol>",
+      "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO. the position of the drag end in view coordinates</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
       "phetioFeatured": false,
@@ -25646,7 +25646,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "ActionIO.<Vector2IO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~4.controlPointNode0.inputListener.dragStartAction": {
-      "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag start in view coordinates</li></ol>",
+      "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO. the position of the drag start in view coordinates</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
       "phetioFeatured": false,
@@ -25730,7 +25730,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "ObjectIO"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~4.controlPointNode1.inputListener.dragAction": {
-      "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag in view coordinates</li></ol>",
+      "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO. the position of the drag in view coordinates</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
       "phetioFeatured": false,
@@ -25742,7 +25742,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "ActionIO.<Vector2IO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~4.controlPointNode1.inputListener.dragEndAction": {
-      "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag end in view coordinates</li></ol>",
+      "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO. the position of the drag end in view coordinates</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
       "phetioFeatured": false,
@@ -25754,7 +25754,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "ActionIO.<Vector2IO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~4.controlPointNode1.inputListener.dragStartAction": {
-      "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag start in view coordinates</li></ol>",
+      "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO. the position of the drag start in view coordinates</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
       "phetioFeatured": false,
@@ -25838,7 +25838,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "ObjectIO"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~4.controlPointNode2.inputListener.dragAction": {
-      "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag in view coordinates</li></ol>",
+      "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO. the position of the drag in view coordinates</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
       "phetioFeatured": false,
@@ -25850,7 +25850,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "ActionIO.<Vector2IO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~4.controlPointNode2.inputListener.dragEndAction": {
-      "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag end in view coordinates</li></ol>",
+      "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO. the position of the drag end in view coordinates</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
       "phetioFeatured": false,
@@ -25862,7 +25862,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "ActionIO.<Vector2IO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~4.controlPointNode2.inputListener.dragStartAction": {
-      "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag start in view coordinates</li></ol>",
+      "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO. the position of the drag start in view coordinates</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
       "phetioFeatured": false,
@@ -25958,7 +25958,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "ObjectIO"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~4.trackDragHandler.inputListener.dragAction": {
-      "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag in view coordinates</li></ol>",
+      "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO. the position of the drag in view coordinates</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
       "phetioFeatured": false,
@@ -25970,7 +25970,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "ActionIO.<Vector2IO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~4.trackDragHandler.inputListener.dragEndAction": {
-      "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag end in view coordinates</li></ol>",
+      "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO. the position of the drag end in view coordinates</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
       "phetioFeatured": false,
@@ -25982,7 +25982,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "ActionIO.<Vector2IO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~4.trackDragHandler.inputListener.dragStartAction": {
-      "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag start in view coordinates</li></ol>",
+      "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO. the position of the drag start in view coordinates</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
       "phetioFeatured": false,
@@ -26102,7 +26102,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
     },
     "energySkateParkBasics.playgroundScreen.view.massSlider.leftArrowButton.pressListener.pressAction": {
-      "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br><ol><li>event: EventIO</li></ol>",
+      "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br/><ol><li>event: EventIO</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -26114,7 +26114,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "ActionIO.<EventIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.massSlider.leftArrowButton.pressListener.releaseAction": {
-      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br><ol><li>event: NullableIO.<EventIO></li></ol>",
+      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO.<EventIO></li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -26450,7 +26450,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
     },
     "energySkateParkBasics.playgroundScreen.view.massSlider.rightArrowButton.pressListener.pressAction": {
-      "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br><ol><li>event: EventIO</li></ol>",
+      "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br/><ol><li>event: EventIO</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -26462,7 +26462,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "ActionIO.<EventIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.massSlider.rightArrowButton.pressListener.releaseAction": {
-      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br><ol><li>event: NullableIO.<EventIO></li></ol>",
+      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO.<EventIO></li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -26606,7 +26606,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "ObjectIO"
     },
     "energySkateParkBasics.playgroundScreen.view.massSlider.slider.thumbInputListener.dragAction": {
-      "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag in view coordinates</li></ol>",
+      "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO. the position of the drag in view coordinates</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
       "phetioFeatured": false,
@@ -26618,7 +26618,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "ActionIO.<Vector2IO>"
     },
     "energySkateParkBasics.playgroundScreen.view.massSlider.slider.thumbInputListener.dragEndAction": {
-      "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag end in view coordinates</li></ol>",
+      "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO. the position of the drag end in view coordinates</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
       "phetioFeatured": false,
@@ -26630,7 +26630,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "ActionIO.<Vector2IO>"
     },
     "energySkateParkBasics.playgroundScreen.view.massSlider.slider.thumbInputListener.dragStartAction": {
-      "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag start in view coordinates</li></ol>",
+      "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO. the position of the drag start in view coordinates</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
       "phetioFeatured": false,
@@ -26666,7 +26666,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "ObjectIO"
     },
     "energySkateParkBasics.playgroundScreen.view.massSlider.slider.track.trackInputListener.dragAction": {
-      "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag in view coordinates</li></ol>",
+      "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO. the position of the drag in view coordinates</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
       "phetioFeatured": false,
@@ -26678,7 +26678,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "ActionIO.<Vector2IO>"
     },
     "energySkateParkBasics.playgroundScreen.view.massSlider.slider.track.trackInputListener.dragEndAction": {
-      "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag end in view coordinates</li></ol>",
+      "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO. the position of the drag end in view coordinates</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
       "phetioFeatured": false,
@@ -26690,7 +26690,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "ActionIO.<Vector2IO>"
     },
     "energySkateParkBasics.playgroundScreen.view.massSlider.slider.track.trackInputListener.dragStartAction": {
-      "phetioDocumentation": "A function that executes. The arguments are:<br><ol><li>point: Vector2IO. the position of the drag start in view coordinates</li></ol>",
+      "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO. the position of the drag start in view coordinates</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
       "phetioFeatured": false,
