@@ -10,7 +10,7 @@ define( function( require ) {
 
   // modules
   var energySkateParkBasics = require( 'ENERGY_SKATE_PARK_BASICS/energySkateParkBasics' );
-  var EnergySkateParkSim = require( 'ENERGY_SKATE_PARK/energy-skate-park/EnergySkateParkSim' );
+  var EnergySkateParkSim = require( 'ENERGY_SKATE_PARK/energy-skate-park/common/EnergySkateParkSim' );
   var FrictionScreen = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/friction/FrictionScreen' );
   var inherit = require( 'PHET_CORE/inherit' );
   var IntroScreen = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/intro/IntroScreen' );
