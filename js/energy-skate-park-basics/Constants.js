@@ -5,13 +5,13 @@
  *
  * @author Sam Reid (PhET Interactive Simulations)
  */
-define( function( require ) {
+define( require => {
   'use strict';
 
   // modules
-  var Dimension2 = require( 'DOT/Dimension2' );
-  var energySkateParkBasics = require( 'ENERGY_SKATE_PARK_BASICS/energySkateParkBasics' );
-  var Range = require( 'DOT/Range' );
+  const Dimension2 = require( 'DOT/Dimension2' );
+  const energySkateParkBasics = require( 'ENERGY_SKATE_PARK_BASICS/energySkateParkBasics' );
+  const Range = require( 'DOT/Range' );
 
   var minMass = 25; // kg
   var maxMass = 100;

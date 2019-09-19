@@ -5,23 +5,23 @@
  *
  * @author Jesse Greenberg (PhET Interactive Simulations)
  */
-define( function( require ) {
+define( require => {
   'use strict';
 
   // modules
-  var energySkateParkBasics = require( 'ENERGY_SKATE_PARK_BASICS/energySkateParkBasics' );
-  var Image = require( 'SCENERY/nodes/Image' );
-  var inherit = require( 'PHET_CORE/inherit' );
-  var PlaygroundModel = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/playground/model/PlaygroundModel' );
-  var PlaygroundScreenView = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/playground/view/PlaygroundScreenView' );
-  var Screen = require( 'JOIST/Screen' );
+  const energySkateParkBasics = require( 'ENERGY_SKATE_PARK_BASICS/energySkateParkBasics' );
+  const Image = require( 'SCENERY/nodes/Image' );
+  const inherit = require( 'PHET_CORE/inherit' );
+  const PlaygroundModel = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/playground/model/PlaygroundModel' );
+  const PlaygroundScreenView = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/playground/view/PlaygroundScreenView' );
+  const Screen = require( 'JOIST/Screen' );
 
   // images
-  var iconPlaygroundHomescreen = require( 'image!ENERGY_SKATE_PARK/icon-playground-homescreen.png' );
-  var iconPlaygroundNavbar = require( 'image!ENERGY_SKATE_PARK/icon-playground-navbar.png' );
+  const iconPlaygroundHomescreen = require( 'image!ENERGY_SKATE_PARK/icon-playground-homescreen.png' );
+  const iconPlaygroundNavbar = require( 'image!ENERGY_SKATE_PARK/icon-playground-navbar.png' );
 
   // strings
-  var screenTrackPlaygroundString = require( 'string!ENERGY_SKATE_PARK_BASICS/screen.trackPlayground' );
+  const screenTrackPlaygroundString = require( 'string!ENERGY_SKATE_PARK_BASICS/screen.trackPlayground' );
 
   /**
    * @param {Tandem} tandem
