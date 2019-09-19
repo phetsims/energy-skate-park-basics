@@ -11,7 +11,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": true,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.doubleWellTrack": {
       "phetioDocumentation": "",
@@ -35,7 +35,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.doubleWellTrack.droppedProperty": {
       "phetioDocumentation": "",
@@ -47,7 +47,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.doubleWellTrack.leftThePanelProperty": {
       "phetioDocumentation": "",
@@ -59,7 +59,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.doubleWellTrack.physicalProperty": {
       "phetioDocumentation": "",
@@ -71,7 +71,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.parabolaTrack": {
       "phetioDocumentation": "",
@@ -95,7 +95,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.parabolaTrack.droppedProperty": {
       "phetioDocumentation": "",
@@ -107,7 +107,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.parabolaTrack.leftThePanelProperty": {
       "phetioDocumentation": "",
@@ -119,7 +119,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.parabolaTrack.physicalProperty": {
       "phetioDocumentation": "",
@@ -131,7 +131,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.sceneProperty": {
       "phetioDocumentation": "",
@@ -143,7 +143,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NumberIO>"
+      "phetioTypeName": "PropertyIO<NumberIO>"
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.slopeTrack": {
       "phetioDocumentation": "",
@@ -167,7 +167,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.slopeTrack.droppedProperty": {
       "phetioDocumentation": "",
@@ -179,7 +179,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.slopeTrack.leftThePanelProperty": {
       "phetioDocumentation": "",
@@ -191,7 +191,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.slopeTrack.physicalProperty": {
       "phetioDocumentation": "",
@@ -203,7 +203,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.trackSetModel": {
       "phetioDocumentation": "",
@@ -227,7 +227,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<Bounds2IO>"
+      "phetioTypeName": "PropertyIO<Bounds2IO>"
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.trackSetModel.barGraphScaleProperty": {
       "phetioDocumentation": "",
@@ -251,7 +251,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.trackSetModel.clearButtonEnabledProperty": {
       "phetioDocumentation": "",
@@ -263,7 +263,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.trackSetModel.controlPoint~0": {
       "phetioDocumentation": "",
@@ -287,7 +287,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.trackSetModel.controlPoint~0.positionProperty": {
       "phetioDocumentation": "",
@@ -299,7 +299,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": true,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "DerivedPropertyIO.<Vector2IO>"
+      "phetioTypeName": "DerivedPropertyIO<Vector2IO>"
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.trackSetModel.controlPoint~0.snapTargetProperty": {
       "phetioDocumentation": "",
@@ -311,7 +311,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<ControlPointIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<ControlPointIO>>"
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.trackSetModel.controlPoint~0.sourcePositionProperty": {
       "phetioDocumentation": "",
@@ -323,7 +323,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<Vector2IO>"
+      "phetioTypeName": "PropertyIO<Vector2IO>"
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.trackSetModel.controlPoint~1": {
       "phetioDocumentation": "",
@@ -347,7 +347,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.trackSetModel.controlPoint~1.positionProperty": {
       "phetioDocumentation": "",
@@ -359,7 +359,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": true,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "DerivedPropertyIO.<Vector2IO>"
+      "phetioTypeName": "DerivedPropertyIO<Vector2IO>"
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.trackSetModel.controlPoint~1.snapTargetProperty": {
       "phetioDocumentation": "",
@@ -371,7 +371,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<ControlPointIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<ControlPointIO>>"
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.trackSetModel.controlPoint~1.sourcePositionProperty": {
       "phetioDocumentation": "",
@@ -383,7 +383,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<Vector2IO>"
+      "phetioTypeName": "PropertyIO<Vector2IO>"
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.trackSetModel.controlPoint~10": {
       "phetioDocumentation": "",
@@ -407,7 +407,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.trackSetModel.controlPoint~10.positionProperty": {
       "phetioDocumentation": "",
@@ -419,7 +419,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": true,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "DerivedPropertyIO.<Vector2IO>"
+      "phetioTypeName": "DerivedPropertyIO<Vector2IO>"
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.trackSetModel.controlPoint~10.snapTargetProperty": {
       "phetioDocumentation": "",
@@ -431,7 +431,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<ControlPointIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<ControlPointIO>>"
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.trackSetModel.controlPoint~10.sourcePositionProperty": {
       "phetioDocumentation": "",
@@ -443,7 +443,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<Vector2IO>"
+      "phetioTypeName": "PropertyIO<Vector2IO>"
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.trackSetModel.controlPoint~2": {
       "phetioDocumentation": "",
@@ -467,7 +467,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.trackSetModel.controlPoint~2.positionProperty": {
       "phetioDocumentation": "",
@@ -479,7 +479,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": true,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "DerivedPropertyIO.<Vector2IO>"
+      "phetioTypeName": "DerivedPropertyIO<Vector2IO>"
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.trackSetModel.controlPoint~2.snapTargetProperty": {
       "phetioDocumentation": "",
@@ -491,7 +491,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<ControlPointIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<ControlPointIO>>"
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.trackSetModel.controlPoint~2.sourcePositionProperty": {
       "phetioDocumentation": "",
@@ -503,7 +503,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<Vector2IO>"
+      "phetioTypeName": "PropertyIO<Vector2IO>"
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.trackSetModel.controlPoint~3": {
       "phetioDocumentation": "",
@@ -527,7 +527,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.trackSetModel.controlPoint~3.positionProperty": {
       "phetioDocumentation": "",
@@ -539,7 +539,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": true,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "DerivedPropertyIO.<Vector2IO>"
+      "phetioTypeName": "DerivedPropertyIO<Vector2IO>"
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.trackSetModel.controlPoint~3.snapTargetProperty": {
       "phetioDocumentation": "",
@@ -551,7 +551,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<ControlPointIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<ControlPointIO>>"
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.trackSetModel.controlPoint~3.sourcePositionProperty": {
       "phetioDocumentation": "",
@@ -563,7 +563,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<Vector2IO>"
+      "phetioTypeName": "PropertyIO<Vector2IO>"
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.trackSetModel.controlPoint~4": {
       "phetioDocumentation": "",
@@ -587,7 +587,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.trackSetModel.controlPoint~4.positionProperty": {
       "phetioDocumentation": "",
@@ -599,7 +599,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": true,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "DerivedPropertyIO.<Vector2IO>"
+      "phetioTypeName": "DerivedPropertyIO<Vector2IO>"
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.trackSetModel.controlPoint~4.snapTargetProperty": {
       "phetioDocumentation": "",
@@ -611,7 +611,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<ControlPointIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<ControlPointIO>>"
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.trackSetModel.controlPoint~4.sourcePositionProperty": {
       "phetioDocumentation": "",
@@ -623,7 +623,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<Vector2IO>"
+      "phetioTypeName": "PropertyIO<Vector2IO>"
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.trackSetModel.controlPoint~5": {
       "phetioDocumentation": "",
@@ -647,7 +647,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.trackSetModel.controlPoint~5.positionProperty": {
       "phetioDocumentation": "",
@@ -659,7 +659,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": true,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "DerivedPropertyIO.<Vector2IO>"
+      "phetioTypeName": "DerivedPropertyIO<Vector2IO>"
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.trackSetModel.controlPoint~5.snapTargetProperty": {
       "phetioDocumentation": "",
@@ -671,7 +671,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<ControlPointIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<ControlPointIO>>"
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.trackSetModel.controlPoint~5.sourcePositionProperty": {
       "phetioDocumentation": "",
@@ -683,7 +683,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<Vector2IO>"
+      "phetioTypeName": "PropertyIO<Vector2IO>"
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.trackSetModel.controlPoint~6": {
       "phetioDocumentation": "",
@@ -707,7 +707,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.trackSetModel.controlPoint~6.positionProperty": {
       "phetioDocumentation": "",
@@ -719,7 +719,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": true,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "DerivedPropertyIO.<Vector2IO>"
+      "phetioTypeName": "DerivedPropertyIO<Vector2IO>"
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.trackSetModel.controlPoint~6.snapTargetProperty": {
       "phetioDocumentation": "",
@@ -731,7 +731,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<ControlPointIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<ControlPointIO>>"
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.trackSetModel.controlPoint~6.sourcePositionProperty": {
       "phetioDocumentation": "",
@@ -743,7 +743,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<Vector2IO>"
+      "phetioTypeName": "PropertyIO<Vector2IO>"
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.trackSetModel.controlPoint~7": {
       "phetioDocumentation": "",
@@ -767,7 +767,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.trackSetModel.controlPoint~7.positionProperty": {
       "phetioDocumentation": "",
@@ -779,7 +779,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": true,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "DerivedPropertyIO.<Vector2IO>"
+      "phetioTypeName": "DerivedPropertyIO<Vector2IO>"
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.trackSetModel.controlPoint~7.snapTargetProperty": {
       "phetioDocumentation": "",
@@ -791,7 +791,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<ControlPointIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<ControlPointIO>>"
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.trackSetModel.controlPoint~7.sourcePositionProperty": {
       "phetioDocumentation": "",
@@ -803,7 +803,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<Vector2IO>"
+      "phetioTypeName": "PropertyIO<Vector2IO>"
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.trackSetModel.controlPoint~8": {
       "phetioDocumentation": "",
@@ -827,7 +827,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.trackSetModel.controlPoint~8.positionProperty": {
       "phetioDocumentation": "",
@@ -839,7 +839,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": true,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "DerivedPropertyIO.<Vector2IO>"
+      "phetioTypeName": "DerivedPropertyIO<Vector2IO>"
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.trackSetModel.controlPoint~8.snapTargetProperty": {
       "phetioDocumentation": "",
@@ -851,7 +851,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<ControlPointIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<ControlPointIO>>"
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.trackSetModel.controlPoint~8.sourcePositionProperty": {
       "phetioDocumentation": "",
@@ -863,7 +863,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<Vector2IO>"
+      "phetioTypeName": "PropertyIO<Vector2IO>"
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.trackSetModel.controlPoint~9": {
       "phetioDocumentation": "",
@@ -887,7 +887,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.trackSetModel.controlPoint~9.positionProperty": {
       "phetioDocumentation": "",
@@ -899,7 +899,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": true,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "DerivedPropertyIO.<Vector2IO>"
+      "phetioTypeName": "DerivedPropertyIO<Vector2IO>"
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.trackSetModel.controlPoint~9.snapTargetProperty": {
       "phetioDocumentation": "",
@@ -911,7 +911,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<ControlPointIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<ControlPointIO>>"
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.trackSetModel.controlPoint~9.sourcePositionProperty": {
       "phetioDocumentation": "",
@@ -923,7 +923,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<Vector2IO>"
+      "phetioTypeName": "PropertyIO<Vector2IO>"
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.trackSetModel.editButtonEnabledProperty": {
       "phetioDocumentation": "",
@@ -935,7 +935,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.trackSetModel.frictionProperty": {
       "phetioDocumentation": "",
@@ -959,7 +959,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.trackSetModel.measuringTapeBasePositionProperty": {
       "phetioDocumentation": "",
@@ -971,7 +971,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<Vector2IO>"
+      "phetioTypeName": "PropertyIO<Vector2IO>"
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.trackSetModel.measuringTapeTipPositionProperty": {
       "phetioDocumentation": "",
@@ -983,7 +983,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<Vector2IO>"
+      "phetioTypeName": "PropertyIO<Vector2IO>"
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.trackSetModel.measuringTapeVisibleProperty": {
       "phetioDocumentation": "",
@@ -995,7 +995,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.trackSetModel.pausedProperty": {
       "phetioDocumentation": "",
@@ -1007,7 +1007,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.trackSetModel.pieChartVisibleProperty": {
       "phetioDocumentation": "",
@@ -1019,7 +1019,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.trackSetModel.referenceHeightVisibleProperty": {
       "phetioDocumentation": "",
@@ -1031,7 +1031,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.trackSetModel.skater.allowClearingThermalEnergyProperty": {
       "phetioDocumentation": "",
@@ -1043,7 +1043,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": true,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "DerivedPropertyIO.<BooleanIO>"
+      "phetioTypeName": "DerivedPropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.trackSetModel.skater.angleProperty": {
       "phetioDocumentation": "",
@@ -1067,7 +1067,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<StringIO>"
+      "phetioTypeName": "PropertyIO<StringIO>"
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.trackSetModel.skater.draggingProperty": {
       "phetioDocumentation": "",
@@ -1079,7 +1079,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.trackSetModel.skater.gravityMagnitudeProperty": {
       "phetioDocumentation": "",
@@ -1103,7 +1103,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": true,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<Vector2IO>"
+      "phetioTypeName": "PropertyIO<Vector2IO>"
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.trackSetModel.skater.kineticEnergyProperty": {
       "phetioDocumentation": "",
@@ -1139,7 +1139,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": true,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "DerivedPropertyIO.<BooleanIO>"
+      "phetioTypeName": "DerivedPropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.trackSetModel.skater.onTopSideOfTrackProperty": {
       "phetioDocumentation": "",
@@ -1151,7 +1151,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.trackSetModel.skater.parametricPositionProperty": {
       "phetioDocumentation": "",
@@ -1163,7 +1163,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<NumberIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<NumberIO>>"
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.trackSetModel.skater.parametricSpeedProperty": {
       "phetioDocumentation": "",
@@ -1187,7 +1187,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<Vector2IO>"
+      "phetioTypeName": "PropertyIO<Vector2IO>"
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.trackSetModel.skater.potentialEnergyProperty": {
       "phetioDocumentation": "",
@@ -1223,7 +1223,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": true,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "DerivedPropertyIO.<NumberIO>"
+      "phetioTypeName": "DerivedPropertyIO<NumberIO>"
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.trackSetModel.skater.startingPositionProperty": {
       "phetioDocumentation": "",
@@ -1235,7 +1235,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<Vector2IO>"
+      "phetioTypeName": "PropertyIO<Vector2IO>"
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.trackSetModel.skater.startingUProperty": {
       "phetioDocumentation": "",
@@ -1247,7 +1247,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<NumberIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<NumberIO>>"
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.trackSetModel.skater.startingUpProperty": {
       "phetioDocumentation": "",
@@ -1259,7 +1259,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.trackSetModel.skater.thermalEnergyProperty": {
       "phetioDocumentation": "",
@@ -1295,7 +1295,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<TrackReferenceIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<TrackReferenceIO>>"
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.trackSetModel.skater.velocityProperty": {
       "phetioDocumentation": "",
@@ -1307,7 +1307,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<Vector2IO>"
+      "phetioTypeName": "PropertyIO<Vector2IO>"
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.trackSetModel.speedProperty": {
       "phetioDocumentation": "",
@@ -1319,7 +1319,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<StringIO>"
+      "phetioTypeName": "PropertyIO<StringIO>"
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.trackSetModel.speedValueVisibleProperty": {
       "phetioDocumentation": "",
@@ -1331,7 +1331,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.trackSetModel.speedometerVisibleProperty": {
       "phetioDocumentation": "",
@@ -1343,7 +1343,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.trackSetModel.stickingToTrackProperty": {
       "phetioDocumentation": "",
@@ -1355,7 +1355,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.trackSetModel.tracks": {
       "phetioDocumentation": "",
@@ -1367,7 +1367,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "ObservableArrayIO.<TrackIO>"
+      "phetioTypeName": "ObservableArrayIO<TrackIO>"
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.trackSetModel.tracks.lengthProperty": {
       "phetioDocumentation": "",
@@ -1415,7 +1415,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.frictionScreen.view.frictionSlider.leftArrowButton.firedEmitter": {
       "phetioDocumentation": "Emits when the button is fired No arguments.",
@@ -1427,7 +1427,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "EmitterIO.<>"
+      "phetioTypeName": "EmitterIO<>"
     },
     "energySkateParkBasics.frictionScreen.view.frictionSlider.leftArrowButton.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
@@ -1451,7 +1451,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.frictionScreen.view.frictionSlider.leftArrowButton.pressListener.pressAction": {
       "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br/><ol><li>event: EventIO</li></ol>",
@@ -1463,10 +1463,10 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<EventIO>"
+      "phetioTypeName": "ActionIO<EventIO>"
     },
     "energySkateParkBasics.frictionScreen.view.frictionSlider.leftArrowButton.pressListener.releaseAction": {
-      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO.<EventIO></li></ol>",
+      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO<EventIO></li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -1475,7 +1475,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<NullableIO.<EventIO>>"
+      "phetioTypeName": "ActionIO<NullableIO<EventIO>>"
     },
     "energySkateParkBasics.frictionScreen.view.frictionSlider.leftArrowButton.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -1487,7 +1487,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.frictionScreen.view.frictionSlider.maxLabel": {
       "phetioDocumentation": "",
@@ -1523,7 +1523,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.frictionScreen.view.frictionSlider.maxLabel.textProperty": {
       "phetioDocumentation": "Property for the displayed text",
@@ -1535,7 +1535,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<StringIO>"
+      "phetioTypeName": "PropertyIO<StringIO>"
     },
     "energySkateParkBasics.frictionScreen.view.frictionSlider.maxLabel.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -1547,7 +1547,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.frictionScreen.view.frictionSlider.minLabel": {
       "phetioDocumentation": "",
@@ -1583,7 +1583,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.frictionScreen.view.frictionSlider.minLabel.textProperty": {
       "phetioDocumentation": "Property for the displayed text",
@@ -1595,7 +1595,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<StringIO>"
+      "phetioTypeName": "PropertyIO<StringIO>"
     },
     "energySkateParkBasics.frictionScreen.view.frictionSlider.minLabel.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -1607,7 +1607,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.frictionScreen.view.frictionSlider.numberDisplay": {
       "phetioDocumentation": "",
@@ -1643,7 +1643,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.frictionScreen.view.frictionSlider.numberDisplay.valueText": {
       "phetioDocumentation": "",
@@ -1679,7 +1679,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": true,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.frictionScreen.view.frictionSlider.numberDisplay.valueText.textProperty": {
       "phetioDocumentation": "Property for the displayed text",
@@ -1691,7 +1691,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": true,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<StringIO>"
+      "phetioTypeName": "PropertyIO<StringIO>"
     },
     "energySkateParkBasics.frictionScreen.view.frictionSlider.numberDisplay.valueText.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -1703,7 +1703,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": true,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.frictionScreen.view.frictionSlider.numberDisplay.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -1715,7 +1715,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.frictionScreen.view.frictionSlider.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
@@ -1739,7 +1739,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.frictionScreen.view.frictionSlider.rightArrowButton": {
       "phetioDocumentation": "",
@@ -1763,7 +1763,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.frictionScreen.view.frictionSlider.rightArrowButton.firedEmitter": {
       "phetioDocumentation": "Emits when the button is fired No arguments.",
@@ -1775,7 +1775,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "EmitterIO.<>"
+      "phetioTypeName": "EmitterIO<>"
     },
     "energySkateParkBasics.frictionScreen.view.frictionSlider.rightArrowButton.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
@@ -1799,7 +1799,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.frictionScreen.view.frictionSlider.rightArrowButton.pressListener.pressAction": {
       "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br/><ol><li>event: EventIO</li></ol>",
@@ -1811,10 +1811,10 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<EventIO>"
+      "phetioTypeName": "ActionIO<EventIO>"
     },
     "energySkateParkBasics.frictionScreen.view.frictionSlider.rightArrowButton.pressListener.releaseAction": {
-      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO.<EventIO></li></ol>",
+      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO<EventIO></li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -1823,7 +1823,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<NullableIO.<EventIO>>"
+      "phetioTypeName": "ActionIO<NullableIO<EventIO>>"
     },
     "energySkateParkBasics.frictionScreen.view.frictionSlider.rightArrowButton.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -1835,7 +1835,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.frictionScreen.view.frictionSlider.slider": {
       "phetioDocumentation": "",
@@ -1859,7 +1859,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.frictionScreen.view.frictionSlider.slider.enabledRangeProperty": {
       "phetioDocumentation": "",
@@ -1871,7 +1871,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<RangeIO>"
+      "phetioTypeName": "PropertyIO<RangeIO>"
     },
     "energySkateParkBasics.frictionScreen.view.frictionSlider.slider.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
@@ -1895,7 +1895,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.frictionScreen.view.frictionSlider.slider.thumb": {
       "phetioDocumentation": "",
@@ -1931,7 +1931,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.frictionScreen.view.frictionSlider.slider.thumb.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -1943,7 +1943,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.frictionScreen.view.frictionSlider.slider.thumbInputListener": {
       "phetioDocumentation": "",
@@ -1967,7 +1967,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<Vector2IO>"
+      "phetioTypeName": "ActionIO<Vector2IO>"
     },
     "energySkateParkBasics.frictionScreen.view.frictionSlider.slider.thumbInputListener.dragEndAction": {
       "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO. the position of the drag end in view coordinates</li></ol>",
@@ -1979,7 +1979,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<Vector2IO>"
+      "phetioTypeName": "ActionIO<Vector2IO>"
     },
     "energySkateParkBasics.frictionScreen.view.frictionSlider.slider.thumbInputListener.dragStartAction": {
       "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO. the position of the drag start in view coordinates</li></ol>",
@@ -1991,7 +1991,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<Vector2IO>"
+      "phetioTypeName": "ActionIO<Vector2IO>"
     },
     "energySkateParkBasics.frictionScreen.view.frictionSlider.slider.thumbInputListener.isDraggingProperty": {
       "phetioDocumentation": "Indicates whether the object is dragging",
@@ -2003,7 +2003,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": true,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.frictionScreen.view.frictionSlider.slider.track.trackInputListener": {
       "phetioDocumentation": "",
@@ -2027,7 +2027,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<Vector2IO>"
+      "phetioTypeName": "ActionIO<Vector2IO>"
     },
     "energySkateParkBasics.frictionScreen.view.frictionSlider.slider.track.trackInputListener.dragEndAction": {
       "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO. the position of the drag end in view coordinates</li></ol>",
@@ -2039,7 +2039,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<Vector2IO>"
+      "phetioTypeName": "ActionIO<Vector2IO>"
     },
     "energySkateParkBasics.frictionScreen.view.frictionSlider.slider.track.trackInputListener.dragStartAction": {
       "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO. the position of the drag start in view coordinates</li></ol>",
@@ -2051,7 +2051,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<Vector2IO>"
+      "phetioTypeName": "ActionIO<Vector2IO>"
     },
     "energySkateParkBasics.frictionScreen.view.frictionSlider.slider.track.trackInputListener.isDraggingProperty": {
       "phetioDocumentation": "Indicates whether the object is dragging",
@@ -2063,7 +2063,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": true,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.frictionScreen.view.frictionSlider.slider.valueProperty": {
       "phetioDocumentation": "",
@@ -2087,7 +2087,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.frictionScreen.view.frictionSlider.titleNode": {
       "phetioDocumentation": "",
@@ -2123,7 +2123,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.frictionScreen.view.frictionSlider.titleNode.textProperty": {
       "phetioDocumentation": "Property for the displayed text",
@@ -2135,7 +2135,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<StringIO>"
+      "phetioTypeName": "PropertyIO<StringIO>"
     },
     "energySkateParkBasics.frictionScreen.view.frictionSlider.titleNode.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -2147,7 +2147,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.frictionScreen.view.frictionSlider.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -2159,7 +2159,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView": {
       "phetioDocumentation": "",
@@ -2219,7 +2219,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.backgroundNode.mountainImage.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -2231,7 +2231,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.backgroundNode.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
@@ -2255,7 +2255,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.backgroundNode.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -2267,7 +2267,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel": {
       "phetioDocumentation": "",
@@ -2303,7 +2303,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.sceneSelectionRadioButtonGroup": {
       "phetioDocumentation": "",
@@ -2351,7 +2351,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.sceneSelectionRadioButtonGroup.contentNode0.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -2363,7 +2363,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.sceneSelectionRadioButtonGroup.contentNode1": {
       "phetioDocumentation": "",
@@ -2399,7 +2399,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.sceneSelectionRadioButtonGroup.contentNode1.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -2411,7 +2411,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.sceneSelectionRadioButtonGroup.contentNode2": {
       "phetioDocumentation": "",
@@ -2447,7 +2447,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.sceneSelectionRadioButtonGroup.contentNode2.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -2459,7 +2459,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.sceneSelectionRadioButtonGroup.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
@@ -2483,7 +2483,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.sceneSelectionRadioButtonGroup.scene1RadioButton": {
       "phetioDocumentation": "",
@@ -2507,7 +2507,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.sceneSelectionRadioButtonGroup.scene1RadioButton.firedEmitter": {
       "phetioDocumentation": "Emits when the radio button is pressed No arguments.",
@@ -2519,7 +2519,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "EmitterIO.<>"
+      "phetioTypeName": "EmitterIO<>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.sceneSelectionRadioButtonGroup.scene1RadioButton.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
@@ -2543,7 +2543,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.sceneSelectionRadioButtonGroup.scene1RadioButton.pressListener.pressAction": {
       "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br/><ol><li>event: EventIO</li></ol>",
@@ -2555,10 +2555,10 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<EventIO>"
+      "phetioTypeName": "ActionIO<EventIO>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.sceneSelectionRadioButtonGroup.scene1RadioButton.pressListener.releaseAction": {
-      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO.<EventIO></li></ol>",
+      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO<EventIO></li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -2567,7 +2567,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<NullableIO.<EventIO>>"
+      "phetioTypeName": "ActionIO<NullableIO<EventIO>>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.sceneSelectionRadioButtonGroup.scene1RadioButton.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -2579,7 +2579,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.sceneSelectionRadioButtonGroup.scene2RadioButton": {
       "phetioDocumentation": "",
@@ -2603,7 +2603,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.sceneSelectionRadioButtonGroup.scene2RadioButton.firedEmitter": {
       "phetioDocumentation": "Emits when the radio button is pressed No arguments.",
@@ -2615,7 +2615,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "EmitterIO.<>"
+      "phetioTypeName": "EmitterIO<>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.sceneSelectionRadioButtonGroup.scene2RadioButton.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
@@ -2639,7 +2639,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.sceneSelectionRadioButtonGroup.scene2RadioButton.pressListener.pressAction": {
       "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br/><ol><li>event: EventIO</li></ol>",
@@ -2651,10 +2651,10 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<EventIO>"
+      "phetioTypeName": "ActionIO<EventIO>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.sceneSelectionRadioButtonGroup.scene2RadioButton.pressListener.releaseAction": {
-      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO.<EventIO></li></ol>",
+      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO<EventIO></li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -2663,7 +2663,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<NullableIO.<EventIO>>"
+      "phetioTypeName": "ActionIO<NullableIO<EventIO>>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.sceneSelectionRadioButtonGroup.scene2RadioButton.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -2675,7 +2675,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.sceneSelectionRadioButtonGroup.scene3RadioButton": {
       "phetioDocumentation": "",
@@ -2699,7 +2699,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.sceneSelectionRadioButtonGroup.scene3RadioButton.firedEmitter": {
       "phetioDocumentation": "Emits when the radio button is pressed No arguments.",
@@ -2711,7 +2711,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "EmitterIO.<>"
+      "phetioTypeName": "EmitterIO<>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.sceneSelectionRadioButtonGroup.scene3RadioButton.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
@@ -2735,7 +2735,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.sceneSelectionRadioButtonGroup.scene3RadioButton.pressListener.pressAction": {
       "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br/><ol><li>event: EventIO</li></ol>",
@@ -2747,10 +2747,10 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<EventIO>"
+      "phetioTypeName": "ActionIO<EventIO>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.sceneSelectionRadioButtonGroup.scene3RadioButton.pressListener.releaseAction": {
-      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO.<EventIO></li></ol>",
+      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO<EventIO></li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -2759,7 +2759,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<NullableIO.<EventIO>>"
+      "phetioTypeName": "ActionIO<NullableIO<EventIO>>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.sceneSelectionRadioButtonGroup.scene3RadioButton.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -2771,7 +2771,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.sceneSelectionRadioButtonGroup.trackNode0": {
       "phetioDocumentation": "",
@@ -2807,7 +2807,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.sceneSelectionRadioButtonGroup.trackNode0.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -2819,7 +2819,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.sceneSelectionRadioButtonGroup.trackNode1": {
       "phetioDocumentation": "",
@@ -2855,7 +2855,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.sceneSelectionRadioButtonGroup.trackNode1.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -2867,7 +2867,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.sceneSelectionRadioButtonGroup.trackNode2": {
       "phetioDocumentation": "",
@@ -2903,7 +2903,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.sceneSelectionRadioButtonGroup.trackNode2.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -2915,7 +2915,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.sceneSelectionRadioButtonGroup.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -2927,199 +2927,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
-    },
-    "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.visibilityControls.barGraphCheckbox": {
-      "phetioDocumentation": "",
-      "phetioDynamicElement": false,
-      "phetioEventType": "USER",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "NodeIO"
-    },
-    "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.visibilityControls.barGraphCheckbox.enabledProperty": {
-      "phetioDocumentation": "When disabled, the checkbox is grayed out and cannot be pressed.",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": true,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": true,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
-    },
-    "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.visibilityControls.barGraphCheckbox.itemLabel": {
-      "phetioDocumentation": "",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "TextIO"
-    },
-    "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.visibilityControls.barGraphCheckbox.itemLabel.opacityProperty": {
-      "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": true,
-      "phetioStudioControl": true,
-      "phetioTypeName": "NumberPropertyIO"
-    },
-    "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.visibilityControls.barGraphCheckbox.itemLabel.pickableProperty": {
-      "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": true,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
-    },
-    "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.visibilityControls.barGraphCheckbox.itemLabel.textProperty": {
-      "phetioDocumentation": "Property for the displayed text",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": true,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<StringIO>"
-    },
-    "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.visibilityControls.barGraphCheckbox.itemLabel.visibleProperty": {
-      "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": true,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
-    },
-    "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.visibilityControls.barGraphCheckbox.opacityProperty": {
-      "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": true,
-      "phetioStudioControl": true,
-      "phetioTypeName": "NumberPropertyIO"
-    },
-    "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.visibilityControls.barGraphCheckbox.pickableProperty": {
-      "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": true,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
-    },
-    "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.visibilityControls.barGraphCheckbox.property": {
-      "phetioDocumentation": "",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": true,
-      "phetioState": true,
-      "phetioStudioControl": true,
-      "phetioTypeName": "LinkedElementIO"
-    },
-    "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.visibilityControls.barGraphCheckbox.toggleAction": {
-      "phetioDocumentation": "Emits when user input causes the checkbox to toggle, emitting a single arg: the new boolean value of the checkbox state. The arguments are:<br/><ol><li>isChecked: BooleanIO</li></ol>",
-      "phetioDynamicElement": false,
-      "phetioEventType": "USER",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<BooleanIO>"
-    },
-    "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.visibilityControls.barGraphCheckbox.visibleProperty": {
-      "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": true,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": true,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
-    },
-    "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.visibilityControls.barGraphIcon": {
-      "phetioDocumentation": "",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "NodeIO"
-    },
-    "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.visibilityControls.barGraphIcon.opacityProperty": {
-      "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": true,
-      "phetioStudioControl": true,
-      "phetioTypeName": "NumberPropertyIO"
-    },
-    "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.visibilityControls.barGraphIcon.pickableProperty": {
-      "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": true,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
-    },
-    "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.visibilityControls.barGraphIcon.visibleProperty": {
-      "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": true,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.visibilityControls.gridCheckbox": {
       "phetioDocumentation": "",
@@ -3143,7 +2951,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.visibilityControls.gridCheckbox.itemLabel": {
       "phetioDocumentation": "",
@@ -3179,7 +2987,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.visibilityControls.gridCheckbox.itemLabel.textProperty": {
       "phetioDocumentation": "Property for the displayed text",
@@ -3191,7 +2999,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<StringIO>"
+      "phetioTypeName": "PropertyIO<StringIO>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.visibilityControls.gridCheckbox.itemLabel.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -3203,7 +3011,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.visibilityControls.gridCheckbox.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
@@ -3227,7 +3035,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.visibilityControls.gridCheckbox.property": {
       "phetioDocumentation": "",
@@ -3251,7 +3059,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<BooleanIO>"
+      "phetioTypeName": "ActionIO<BooleanIO>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.visibilityControls.gridCheckbox.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -3263,7 +3071,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.visibilityControls.gridIcon": {
       "phetioDocumentation": "",
@@ -3299,7 +3107,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.visibilityControls.gridIcon.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -3311,7 +3119,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.visibilityControls.pieChartCheckbox": {
       "phetioDocumentation": "",
@@ -3335,7 +3143,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.visibilityControls.pieChartCheckbox.itemLabel": {
       "phetioDocumentation": "",
@@ -3371,7 +3179,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.visibilityControls.pieChartCheckbox.itemLabel.textProperty": {
       "phetioDocumentation": "Property for the displayed text",
@@ -3383,7 +3191,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<StringIO>"
+      "phetioTypeName": "PropertyIO<StringIO>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.visibilityControls.pieChartCheckbox.itemLabel.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -3395,7 +3203,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.visibilityControls.pieChartCheckbox.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
@@ -3419,7 +3227,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.visibilityControls.pieChartCheckbox.property": {
       "phetioDocumentation": "",
@@ -3443,7 +3251,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<BooleanIO>"
+      "phetioTypeName": "ActionIO<BooleanIO>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.visibilityControls.pieChartCheckbox.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -3455,7 +3263,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.visibilityControls.pieChartIcon": {
       "phetioDocumentation": "",
@@ -3515,7 +3323,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.visibilityControls.pieChartIcon.path.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -3527,7 +3335,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.visibilityControls.pieChartIcon.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
@@ -3539,7 +3347,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.visibilityControls.pieChartIcon.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -3551,7 +3359,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.visibilityControls.speedIcon.gaugeNode": {
       "phetioDocumentation": "",
@@ -3599,7 +3407,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.visibilityControls.speedIcon.gaugeNode.foregroundNode.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -3611,7 +3419,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.visibilityControls.speedIcon.gaugeNode.labelNode": {
       "phetioDocumentation": "",
@@ -3647,7 +3455,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.visibilityControls.speedIcon.gaugeNode.labelNode.textProperty": {
       "phetioDocumentation": "Property for the displayed text",
@@ -3659,7 +3467,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<StringIO>"
+      "phetioTypeName": "PropertyIO<StringIO>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.visibilityControls.speedIcon.gaugeNode.labelNode.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -3671,7 +3479,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.visibilityControls.speedIcon.gaugeNode.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
@@ -3695,7 +3503,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.visibilityControls.speedIcon.gaugeNode.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -3707,7 +3515,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.visibilityControls.speedometerCheckbox": {
       "phetioDocumentation": "",
@@ -3731,7 +3539,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.visibilityControls.speedometerCheckbox.itemLabel": {
       "phetioDocumentation": "",
@@ -3767,7 +3575,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.visibilityControls.speedometerCheckbox.itemLabel.textProperty": {
       "phetioDocumentation": "Property for the displayed text",
@@ -3779,7 +3587,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<StringIO>"
+      "phetioTypeName": "PropertyIO<StringIO>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.visibilityControls.speedometerCheckbox.itemLabel.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -3791,7 +3599,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.visibilityControls.speedometerCheckbox.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
@@ -3815,7 +3623,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.visibilityControls.speedometerCheckbox.property": {
       "phetioDocumentation": "",
@@ -3839,7 +3647,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<BooleanIO>"
+      "phetioTypeName": "ActionIO<BooleanIO>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.visibilityControls.speedometerCheckbox.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -3851,7 +3659,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -3863,9 +3671,21 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
-    "energySkateParkBasics.frictionScreen.view.introScreenView.energyBargGraphPanel.energyBarGraph.clearThermalButton": {
+    "energySkateParkBasics.frictionScreen.view.introScreenView.energyBarGraphAccordionBox": {
+      "phetioDocumentation": "",
+      "phetioDynamicElement": false,
+      "phetioEventType": "USER",
+      "phetioFeatured": false,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": false,
+      "phetioStudioControl": true,
+      "phetioTypeName": "AccordionBoxIO"
+    },
+    "energySkateParkBasics.frictionScreen.view.introScreenView.energyBarGraphAccordionBox.barGraphIcon": {
       "phetioDocumentation": "",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -3877,19 +3697,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "NodeIO"
     },
-    "energySkateParkBasics.frictionScreen.view.introScreenView.energyBargGraphPanel.energyBarGraph.clearThermalButton.arrowPath": {
-      "phetioDocumentation": "",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "NodeIO"
-    },
-    "energySkateParkBasics.frictionScreen.view.introScreenView.energyBargGraphPanel.energyBarGraph.clearThermalButton.arrowPath.opacityProperty": {
+    "energySkateParkBasics.frictionScreen.view.introScreenView.energyBarGraphAccordionBox.barGraphIcon.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -3901,7 +3709,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "NumberPropertyIO"
     },
-    "energySkateParkBasics.frictionScreen.view.introScreenView.energyBargGraphPanel.energyBarGraph.clearThermalButton.arrowPath.pickableProperty": {
+    "energySkateParkBasics.frictionScreen.view.introScreenView.energyBarGraphAccordionBox.barGraphIcon.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -3911,9 +3719,9 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
-    "energySkateParkBasics.frictionScreen.view.introScreenView.energyBargGraphPanel.energyBarGraph.clearThermalButton.arrowPath.visibleProperty": {
+    "energySkateParkBasics.frictionScreen.view.introScreenView.energyBarGraphAccordionBox.barGraphIcon.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -3923,9 +3731,69 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
-    "energySkateParkBasics.frictionScreen.view.introScreenView.energyBargGraphPanel.energyBarGraph.clearThermalButton.enabledProperty": {
+    "energySkateParkBasics.frictionScreen.view.introScreenView.energyBarGraphAccordionBox.energyBarGraph.clearThermalButton": {
+      "phetioDocumentation": "",
+      "phetioDynamicElement": false,
+      "phetioEventType": "MODEL",
+      "phetioFeatured": false,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": false,
+      "phetioStudioControl": true,
+      "phetioTypeName": "NodeIO"
+    },
+    "energySkateParkBasics.frictionScreen.view.introScreenView.energyBarGraphAccordionBox.energyBarGraph.clearThermalButton.arrowPath": {
+      "phetioDocumentation": "",
+      "phetioDynamicElement": false,
+      "phetioEventType": "MODEL",
+      "phetioFeatured": false,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": false,
+      "phetioStudioControl": true,
+      "phetioTypeName": "NodeIO"
+    },
+    "energySkateParkBasics.frictionScreen.view.introScreenView.energyBarGraphAccordionBox.energyBarGraph.clearThermalButton.arrowPath.opacityProperty": {
+      "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
+      "phetioEventType": "MODEL",
+      "phetioFeatured": false,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": true,
+      "phetioStudioControl": true,
+      "phetioTypeName": "NumberPropertyIO"
+    },
+    "energySkateParkBasics.frictionScreen.view.introScreenView.energyBarGraphAccordionBox.energyBarGraph.clearThermalButton.arrowPath.pickableProperty": {
+      "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
+      "phetioEventType": "MODEL",
+      "phetioFeatured": false,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": true,
+      "phetioStudioControl": true,
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
+    },
+    "energySkateParkBasics.frictionScreen.view.introScreenView.energyBarGraphAccordionBox.energyBarGraph.clearThermalButton.arrowPath.visibleProperty": {
+      "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
+      "phetioEventType": "MODEL",
+      "phetioFeatured": false,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": true,
+      "phetioStudioControl": true,
+      "phetioTypeName": "PropertyIO<BooleanIO>"
+    },
+    "energySkateParkBasics.frictionScreen.view.introScreenView.energyBarGraphAccordionBox.energyBarGraph.clearThermalButton.enabledProperty": {
       "phetioDocumentation": "When disabled, the button is grayed out and cannot be pressed",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -3935,9 +3803,9 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
-    "energySkateParkBasics.frictionScreen.view.introScreenView.energyBargGraphPanel.energyBarGraph.clearThermalButton.firedEmitter": {
+    "energySkateParkBasics.frictionScreen.view.introScreenView.energyBarGraphAccordionBox.energyBarGraph.clearThermalButton.firedEmitter": {
       "phetioDocumentation": "Emits when the button is fired No arguments.",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
@@ -3947,9 +3815,9 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "EmitterIO.<>"
+      "phetioTypeName": "EmitterIO<>"
     },
-    "energySkateParkBasics.frictionScreen.view.introScreenView.energyBargGraphPanel.energyBarGraph.clearThermalButton.opacityProperty": {
+    "energySkateParkBasics.frictionScreen.view.introScreenView.energyBarGraphAccordionBox.energyBarGraph.clearThermalButton.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -3961,7 +3829,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "NumberPropertyIO"
     },
-    "energySkateParkBasics.frictionScreen.view.introScreenView.energyBargGraphPanel.energyBarGraph.clearThermalButton.pickableProperty": {
+    "energySkateParkBasics.frictionScreen.view.introScreenView.energyBarGraphAccordionBox.energyBarGraph.clearThermalButton.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -3971,9 +3839,9 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
-    "energySkateParkBasics.frictionScreen.view.introScreenView.energyBargGraphPanel.energyBarGraph.clearThermalButton.pressListener.pressAction": {
+    "energySkateParkBasics.frictionScreen.view.introScreenView.energyBarGraphAccordionBox.energyBarGraph.clearThermalButton.pressListener.pressAction": {
       "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br/><ol><li>event: EventIO</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
@@ -3983,10 +3851,10 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<EventIO>"
+      "phetioTypeName": "ActionIO<EventIO>"
     },
-    "energySkateParkBasics.frictionScreen.view.introScreenView.energyBargGraphPanel.energyBarGraph.clearThermalButton.pressListener.releaseAction": {
-      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO.<EventIO></li></ol>",
+    "energySkateParkBasics.frictionScreen.view.introScreenView.energyBarGraphAccordionBox.energyBarGraph.clearThermalButton.pressListener.releaseAction": {
+      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO<EventIO></li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -3995,9 +3863,9 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<NullableIO.<EventIO>>"
+      "phetioTypeName": "ActionIO<NullableIO<EventIO>>"
     },
-    "energySkateParkBasics.frictionScreen.view.introScreenView.energyBargGraphPanel.energyBarGraph.clearThermalButton.trashPath": {
+    "energySkateParkBasics.frictionScreen.view.introScreenView.energyBarGraphAccordionBox.energyBarGraph.clearThermalButton.trashPath": {
       "phetioDocumentation": "",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -4009,7 +3877,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "NodeIO"
     },
-    "energySkateParkBasics.frictionScreen.view.introScreenView.energyBargGraphPanel.energyBarGraph.clearThermalButton.trashPath.opacityProperty": {
+    "energySkateParkBasics.frictionScreen.view.introScreenView.energyBarGraphAccordionBox.energyBarGraph.clearThermalButton.trashPath.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -4021,7 +3889,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "NumberPropertyIO"
     },
-    "energySkateParkBasics.frictionScreen.view.introScreenView.energyBargGraphPanel.energyBarGraph.clearThermalButton.trashPath.pickableProperty": {
+    "energySkateParkBasics.frictionScreen.view.introScreenView.energyBarGraphAccordionBox.energyBarGraph.clearThermalButton.trashPath.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -4031,9 +3899,9 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
-    "energySkateParkBasics.frictionScreen.view.introScreenView.energyBargGraphPanel.energyBarGraph.clearThermalButton.trashPath.visibleProperty": {
+    "energySkateParkBasics.frictionScreen.view.introScreenView.energyBarGraphAccordionBox.energyBarGraph.clearThermalButton.trashPath.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -4043,9 +3911,9 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
-    "energySkateParkBasics.frictionScreen.view.introScreenView.energyBargGraphPanel.energyBarGraph.clearThermalButton.visibleProperty": {
+    "energySkateParkBasics.frictionScreen.view.introScreenView.energyBarGraphAccordionBox.energyBarGraph.clearThermalButton.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -4055,9 +3923,9 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
-    "energySkateParkBasics.frictionScreen.view.introScreenView.energyBargGraphPanel.energyBarGraph.zoomInButton": {
+    "energySkateParkBasics.frictionScreen.view.introScreenView.energyBarGraphAccordionBox.energyBarGraph.zoomInButton": {
       "phetioDocumentation": "",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -4069,7 +3937,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "NodeIO"
     },
-    "energySkateParkBasics.frictionScreen.view.introScreenView.energyBargGraphPanel.energyBarGraph.zoomInButton.enabledProperty": {
+    "energySkateParkBasics.frictionScreen.view.introScreenView.energyBarGraphAccordionBox.energyBarGraph.zoomInButton.enabledProperty": {
       "phetioDocumentation": "When disabled, the button is grayed out and cannot be pressed",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -4079,9 +3947,9 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
-    "energySkateParkBasics.frictionScreen.view.introScreenView.energyBargGraphPanel.energyBarGraph.zoomInButton.firedEmitter": {
+    "energySkateParkBasics.frictionScreen.view.introScreenView.energyBarGraphAccordionBox.energyBarGraph.zoomInButton.firedEmitter": {
       "phetioDocumentation": "Emits when the button is fired No arguments.",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
@@ -4091,9 +3959,9 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "EmitterIO.<>"
+      "phetioTypeName": "EmitterIO<>"
     },
-    "energySkateParkBasics.frictionScreen.view.introScreenView.energyBargGraphPanel.energyBarGraph.zoomInButton.glassNode": {
+    "energySkateParkBasics.frictionScreen.view.introScreenView.energyBarGraphAccordionBox.energyBarGraph.zoomInButton.glassNode": {
       "phetioDocumentation": "",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -4105,7 +3973,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "NodeIO"
     },
-    "energySkateParkBasics.frictionScreen.view.introScreenView.energyBargGraphPanel.energyBarGraph.zoomInButton.glassNode.opacityProperty": {
+    "energySkateParkBasics.frictionScreen.view.introScreenView.energyBarGraphAccordionBox.energyBarGraph.zoomInButton.glassNode.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -4117,7 +3985,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "NumberPropertyIO"
     },
-    "energySkateParkBasics.frictionScreen.view.introScreenView.energyBargGraphPanel.energyBarGraph.zoomInButton.glassNode.pickableProperty": {
+    "energySkateParkBasics.frictionScreen.view.introScreenView.energyBarGraphAccordionBox.energyBarGraph.zoomInButton.glassNode.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -4127,9 +3995,9 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
-    "energySkateParkBasics.frictionScreen.view.introScreenView.energyBargGraphPanel.energyBarGraph.zoomInButton.glassNode.visibleProperty": {
+    "energySkateParkBasics.frictionScreen.view.introScreenView.energyBarGraphAccordionBox.energyBarGraph.zoomInButton.glassNode.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -4139,9 +4007,9 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
-    "energySkateParkBasics.frictionScreen.view.introScreenView.energyBargGraphPanel.energyBarGraph.zoomInButton.opacityProperty": {
+    "energySkateParkBasics.frictionScreen.view.introScreenView.energyBarGraphAccordionBox.energyBarGraph.zoomInButton.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -4153,7 +4021,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "NumberPropertyIO"
     },
-    "energySkateParkBasics.frictionScreen.view.introScreenView.energyBargGraphPanel.energyBarGraph.zoomInButton.pickableProperty": {
+    "energySkateParkBasics.frictionScreen.view.introScreenView.energyBarGraphAccordionBox.energyBarGraph.zoomInButton.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -4163,9 +4031,9 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
-    "energySkateParkBasics.frictionScreen.view.introScreenView.energyBargGraphPanel.energyBarGraph.zoomInButton.pressListener.pressAction": {
+    "energySkateParkBasics.frictionScreen.view.introScreenView.energyBarGraphAccordionBox.energyBarGraph.zoomInButton.pressListener.pressAction": {
       "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br/><ol><li>event: EventIO</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
@@ -4175,10 +4043,10 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<EventIO>"
+      "phetioTypeName": "ActionIO<EventIO>"
     },
-    "energySkateParkBasics.frictionScreen.view.introScreenView.energyBargGraphPanel.energyBarGraph.zoomInButton.pressListener.releaseAction": {
-      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO.<EventIO></li></ol>",
+    "energySkateParkBasics.frictionScreen.view.introScreenView.energyBarGraphAccordionBox.energyBarGraph.zoomInButton.pressListener.releaseAction": {
+      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO<EventIO></li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -4187,9 +4055,9 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<NullableIO.<EventIO>>"
+      "phetioTypeName": "ActionIO<NullableIO<EventIO>>"
     },
-    "energySkateParkBasics.frictionScreen.view.introScreenView.energyBargGraphPanel.energyBarGraph.zoomInButton.signNode": {
+    "energySkateParkBasics.frictionScreen.view.introScreenView.energyBarGraphAccordionBox.energyBarGraph.zoomInButton.signNode": {
       "phetioDocumentation": "",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -4201,7 +4069,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "NodeIO"
     },
-    "energySkateParkBasics.frictionScreen.view.introScreenView.energyBargGraphPanel.energyBarGraph.zoomInButton.signNode.opacityProperty": {
+    "energySkateParkBasics.frictionScreen.view.introScreenView.energyBarGraphAccordionBox.energyBarGraph.zoomInButton.signNode.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -4213,7 +4081,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "NumberPropertyIO"
     },
-    "energySkateParkBasics.frictionScreen.view.introScreenView.energyBargGraphPanel.energyBarGraph.zoomInButton.signNode.pickableProperty": {
+    "energySkateParkBasics.frictionScreen.view.introScreenView.energyBarGraphAccordionBox.energyBarGraph.zoomInButton.signNode.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -4223,9 +4091,9 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
-    "energySkateParkBasics.frictionScreen.view.introScreenView.energyBargGraphPanel.energyBarGraph.zoomInButton.signNode.visibleProperty": {
+    "energySkateParkBasics.frictionScreen.view.introScreenView.energyBarGraphAccordionBox.energyBarGraph.zoomInButton.signNode.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -4235,9 +4103,9 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
-    "energySkateParkBasics.frictionScreen.view.introScreenView.energyBargGraphPanel.energyBarGraph.zoomInButton.visibleProperty": {
+    "energySkateParkBasics.frictionScreen.view.introScreenView.energyBarGraphAccordionBox.energyBarGraph.zoomInButton.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -4247,9 +4115,9 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
-    "energySkateParkBasics.frictionScreen.view.introScreenView.energyBargGraphPanel.energyBarGraph.zoomOutButton": {
+    "energySkateParkBasics.frictionScreen.view.introScreenView.energyBarGraphAccordionBox.energyBarGraph.zoomOutButton": {
       "phetioDocumentation": "",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -4261,7 +4129,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "NodeIO"
     },
-    "energySkateParkBasics.frictionScreen.view.introScreenView.energyBargGraphPanel.energyBarGraph.zoomOutButton.enabledProperty": {
+    "energySkateParkBasics.frictionScreen.view.introScreenView.energyBarGraphAccordionBox.energyBarGraph.zoomOutButton.enabledProperty": {
       "phetioDocumentation": "When disabled, the button is grayed out and cannot be pressed",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -4271,9 +4139,9 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
-    "energySkateParkBasics.frictionScreen.view.introScreenView.energyBargGraphPanel.energyBarGraph.zoomOutButton.firedEmitter": {
+    "energySkateParkBasics.frictionScreen.view.introScreenView.energyBarGraphAccordionBox.energyBarGraph.zoomOutButton.firedEmitter": {
       "phetioDocumentation": "Emits when the button is fired No arguments.",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
@@ -4283,9 +4151,9 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "EmitterIO.<>"
+      "phetioTypeName": "EmitterIO<>"
     },
-    "energySkateParkBasics.frictionScreen.view.introScreenView.energyBargGraphPanel.energyBarGraph.zoomOutButton.glassNode": {
+    "energySkateParkBasics.frictionScreen.view.introScreenView.energyBarGraphAccordionBox.energyBarGraph.zoomOutButton.glassNode": {
       "phetioDocumentation": "",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -4297,7 +4165,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "NodeIO"
     },
-    "energySkateParkBasics.frictionScreen.view.introScreenView.energyBargGraphPanel.energyBarGraph.zoomOutButton.glassNode.opacityProperty": {
+    "energySkateParkBasics.frictionScreen.view.introScreenView.energyBarGraphAccordionBox.energyBarGraph.zoomOutButton.glassNode.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -4309,7 +4177,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "NumberPropertyIO"
     },
-    "energySkateParkBasics.frictionScreen.view.introScreenView.energyBargGraphPanel.energyBarGraph.zoomOutButton.glassNode.pickableProperty": {
+    "energySkateParkBasics.frictionScreen.view.introScreenView.energyBarGraphAccordionBox.energyBarGraph.zoomOutButton.glassNode.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -4319,9 +4187,9 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
-    "energySkateParkBasics.frictionScreen.view.introScreenView.energyBargGraphPanel.energyBarGraph.zoomOutButton.glassNode.visibleProperty": {
+    "energySkateParkBasics.frictionScreen.view.introScreenView.energyBarGraphAccordionBox.energyBarGraph.zoomOutButton.glassNode.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -4331,9 +4199,9 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
-    "energySkateParkBasics.frictionScreen.view.introScreenView.energyBargGraphPanel.energyBarGraph.zoomOutButton.opacityProperty": {
+    "energySkateParkBasics.frictionScreen.view.introScreenView.energyBarGraphAccordionBox.energyBarGraph.zoomOutButton.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -4345,7 +4213,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "NumberPropertyIO"
     },
-    "energySkateParkBasics.frictionScreen.view.introScreenView.energyBargGraphPanel.energyBarGraph.zoomOutButton.pickableProperty": {
+    "energySkateParkBasics.frictionScreen.view.introScreenView.energyBarGraphAccordionBox.energyBarGraph.zoomOutButton.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -4355,9 +4223,9 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
-    "energySkateParkBasics.frictionScreen.view.introScreenView.energyBargGraphPanel.energyBarGraph.zoomOutButton.pressListener.pressAction": {
+    "energySkateParkBasics.frictionScreen.view.introScreenView.energyBarGraphAccordionBox.energyBarGraph.zoomOutButton.pressListener.pressAction": {
       "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br/><ol><li>event: EventIO</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
@@ -4367,10 +4235,10 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<EventIO>"
+      "phetioTypeName": "ActionIO<EventIO>"
     },
-    "energySkateParkBasics.frictionScreen.view.introScreenView.energyBargGraphPanel.energyBarGraph.zoomOutButton.pressListener.releaseAction": {
-      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO.<EventIO></li></ol>",
+    "energySkateParkBasics.frictionScreen.view.introScreenView.energyBarGraphAccordionBox.energyBarGraph.zoomOutButton.pressListener.releaseAction": {
+      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO<EventIO></li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -4379,9 +4247,9 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<NullableIO.<EventIO>>"
+      "phetioTypeName": "ActionIO<NullableIO<EventIO>>"
     },
-    "energySkateParkBasics.frictionScreen.view.introScreenView.energyBargGraphPanel.energyBarGraph.zoomOutButton.signNode": {
+    "energySkateParkBasics.frictionScreen.view.introScreenView.energyBarGraphAccordionBox.energyBarGraph.zoomOutButton.signNode": {
       "phetioDocumentation": "",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -4393,7 +4261,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "NodeIO"
     },
-    "energySkateParkBasics.frictionScreen.view.introScreenView.energyBargGraphPanel.energyBarGraph.zoomOutButton.signNode.opacityProperty": {
+    "energySkateParkBasics.frictionScreen.view.introScreenView.energyBarGraphAccordionBox.energyBarGraph.zoomOutButton.signNode.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -4405,7 +4273,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "NumberPropertyIO"
     },
-    "energySkateParkBasics.frictionScreen.view.introScreenView.energyBargGraphPanel.energyBarGraph.zoomOutButton.signNode.pickableProperty": {
+    "energySkateParkBasics.frictionScreen.view.introScreenView.energyBarGraphAccordionBox.energyBarGraph.zoomOutButton.signNode.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -4415,9 +4283,9 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
-    "energySkateParkBasics.frictionScreen.view.introScreenView.energyBargGraphPanel.energyBarGraph.zoomOutButton.signNode.visibleProperty": {
+    "energySkateParkBasics.frictionScreen.view.introScreenView.energyBarGraphAccordionBox.energyBarGraph.zoomOutButton.signNode.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -4427,9 +4295,9 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
-    "energySkateParkBasics.frictionScreen.view.introScreenView.energyBargGraphPanel.energyBarGraph.zoomOutButton.visibleProperty": {
+    "energySkateParkBasics.frictionScreen.view.introScreenView.energyBarGraphAccordionBox.energyBarGraph.zoomOutButton.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -4439,7 +4307,151 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
+    },
+    "energySkateParkBasics.frictionScreen.view.introScreenView.energyBarGraphAccordionBox.expandCollapseButton": {
+      "phetioDocumentation": "",
+      "phetioDynamicElement": false,
+      "phetioEventType": "MODEL",
+      "phetioFeatured": false,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": false,
+      "phetioStudioControl": true,
+      "phetioTypeName": "ToggleButtonIO"
+    },
+    "energySkateParkBasics.frictionScreen.view.introScreenView.energyBarGraphAccordionBox.expandCollapseButton.enabledProperty": {
+      "phetioDocumentation": "When disabled, the button is grayed out and cannot be pressed",
+      "phetioDynamicElement": false,
+      "phetioEventType": "MODEL",
+      "phetioFeatured": true,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": true,
+      "phetioStudioControl": true,
+      "phetioTypeName": "PropertyIO<BooleanIO>"
+    },
+    "energySkateParkBasics.frictionScreen.view.introScreenView.energyBarGraphAccordionBox.expandCollapseButton.opacityProperty": {
+      "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
+      "phetioEventType": "MODEL",
+      "phetioFeatured": false,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": true,
+      "phetioStudioControl": true,
+      "phetioTypeName": "NumberPropertyIO"
+    },
+    "energySkateParkBasics.frictionScreen.view.introScreenView.energyBarGraphAccordionBox.expandCollapseButton.pickableProperty": {
+      "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
+      "phetioEventType": "MODEL",
+      "phetioFeatured": false,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": true,
+      "phetioStudioControl": true,
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
+    },
+    "energySkateParkBasics.frictionScreen.view.introScreenView.energyBarGraphAccordionBox.expandCollapseButton.pressListener.pressAction": {
+      "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br/><ol><li>event: EventIO</li></ol>",
+      "phetioDynamicElement": false,
+      "phetioEventType": "USER",
+      "phetioFeatured": false,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": false,
+      "phetioStudioControl": true,
+      "phetioTypeName": "ActionIO<EventIO>"
+    },
+    "energySkateParkBasics.frictionScreen.view.introScreenView.energyBarGraphAccordionBox.expandCollapseButton.pressListener.releaseAction": {
+      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO<EventIO></li></ol>",
+      "phetioDynamicElement": false,
+      "phetioEventType": "USER",
+      "phetioFeatured": false,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": false,
+      "phetioStudioControl": true,
+      "phetioTypeName": "ActionIO<NullableIO<EventIO>>"
+    },
+    "energySkateParkBasics.frictionScreen.view.introScreenView.energyBarGraphAccordionBox.expandCollapseButton.property": {
+      "phetioDocumentation": "",
+      "phetioDynamicElement": false,
+      "phetioEventType": "MODEL",
+      "phetioFeatured": false,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": true,
+      "phetioState": true,
+      "phetioStudioControl": true,
+      "phetioTypeName": "LinkedElementIO"
+    },
+    "energySkateParkBasics.frictionScreen.view.introScreenView.energyBarGraphAccordionBox.expandCollapseButton.toggledEmitter": {
+      "phetioDocumentation": "Emits when the button is toggled No arguments.",
+      "phetioDynamicElement": false,
+      "phetioEventType": "USER",
+      "phetioFeatured": false,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": false,
+      "phetioStudioControl": true,
+      "phetioTypeName": "EmitterIO<>"
+    },
+    "energySkateParkBasics.frictionScreen.view.introScreenView.energyBarGraphAccordionBox.expandCollapseButton.visibleProperty": {
+      "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
+      "phetioEventType": "MODEL",
+      "phetioFeatured": true,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": true,
+      "phetioStudioControl": true,
+      "phetioTypeName": "PropertyIO<BooleanIO>"
+    },
+    "energySkateParkBasics.frictionScreen.view.introScreenView.energyBarGraphAccordionBox.opacityProperty": {
+      "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
+      "phetioEventType": "MODEL",
+      "phetioFeatured": false,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": true,
+      "phetioStudioControl": true,
+      "phetioTypeName": "NumberPropertyIO"
+    },
+    "energySkateParkBasics.frictionScreen.view.introScreenView.energyBarGraphAccordionBox.pickableProperty": {
+      "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
+      "phetioEventType": "MODEL",
+      "phetioFeatured": false,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": true,
+      "phetioStudioControl": true,
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
+    },
+    "energySkateParkBasics.frictionScreen.view.introScreenView.energyBarGraphAccordionBox.visibleProperty": {
+      "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
+      "phetioEventType": "MODEL",
+      "phetioFeatured": true,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": true,
+      "phetioStudioControl": true,
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.gridNode": {
       "phetioDocumentation": "",
@@ -4475,7 +4487,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.gridNode.thickLinePath": {
       "phetioDocumentation": "",
@@ -4511,7 +4523,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.gridNode.thickLinePath.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -4523,7 +4535,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.gridNode.thinLinePath": {
       "phetioDocumentation": "",
@@ -4559,7 +4571,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.gridNode.thinLinePath.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -4571,7 +4583,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.gridNode.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -4583,7 +4595,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
@@ -4607,7 +4619,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.pieChartLegend": {
       "phetioDocumentation": "",
@@ -4667,7 +4679,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.pieChartLegend.clearThermalButton.arrowPath.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -4679,7 +4691,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.pieChartLegend.clearThermalButton.enabledProperty": {
       "phetioDocumentation": "When disabled, the button is grayed out and cannot be pressed",
@@ -4691,7 +4703,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.pieChartLegend.clearThermalButton.firedEmitter": {
       "phetioDocumentation": "Emits when the button is fired No arguments.",
@@ -4703,7 +4715,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "EmitterIO.<>"
+      "phetioTypeName": "EmitterIO<>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.pieChartLegend.clearThermalButton.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
@@ -4727,7 +4739,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.pieChartLegend.clearThermalButton.pressListener.pressAction": {
       "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br/><ol><li>event: EventIO</li></ol>",
@@ -4739,10 +4751,10 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<EventIO>"
+      "phetioTypeName": "ActionIO<EventIO>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.pieChartLegend.clearThermalButton.pressListener.releaseAction": {
-      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO.<EventIO></li></ol>",
+      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO<EventIO></li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -4751,7 +4763,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<NullableIO.<EventIO>>"
+      "phetioTypeName": "ActionIO<NullableIO<EventIO>>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.pieChartLegend.clearThermalButton.trashPath": {
       "phetioDocumentation": "",
@@ -4787,7 +4799,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.pieChartLegend.clearThermalButton.trashPath.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -4799,7 +4811,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.pieChartLegend.clearThermalButton.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -4811,7 +4823,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.pieChartLegend.kineticEnergyLabel": {
       "phetioDocumentation": "",
@@ -4847,7 +4859,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.pieChartLegend.kineticEnergyLabel.textProperty": {
       "phetioDocumentation": "Property for the displayed text",
@@ -4859,7 +4871,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<StringIO>"
+      "phetioTypeName": "PropertyIO<StringIO>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.pieChartLegend.kineticEnergyLabel.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -4871,7 +4883,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.pieChartLegend.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
@@ -4895,7 +4907,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.pieChartLegend.potentialEnergyLabel": {
       "phetioDocumentation": "",
@@ -4931,7 +4943,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.pieChartLegend.potentialEnergyLabel.textProperty": {
       "phetioDocumentation": "Property for the displayed text",
@@ -4943,7 +4955,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<StringIO>"
+      "phetioTypeName": "PropertyIO<StringIO>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.pieChartLegend.potentialEnergyLabel.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -4955,7 +4967,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.pieChartLegend.thermalEnergyLabel": {
       "phetioDocumentation": "",
@@ -4991,7 +5003,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.pieChartLegend.thermalEnergyLabel.textProperty": {
       "phetioDocumentation": "Property for the displayed text",
@@ -5003,7 +5015,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<StringIO>"
+      "phetioTypeName": "PropertyIO<StringIO>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.pieChartLegend.thermalEnergyLabel.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -5015,7 +5027,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.pieChartLegend.titleNode": {
       "phetioDocumentation": "",
@@ -5051,7 +5063,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.pieChartLegend.titleNode.textProperty": {
       "phetioDocumentation": "Property for the displayed text",
@@ -5063,7 +5075,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<StringIO>"
+      "phetioTypeName": "PropertyIO<StringIO>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.pieChartLegend.titleNode.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -5075,7 +5087,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.pieChartLegend.totalEnergyLabel": {
       "phetioDocumentation": "",
@@ -5111,7 +5123,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.pieChartLegend.totalEnergyLabel.textProperty": {
       "phetioDocumentation": "Property for the displayed text",
@@ -5123,7 +5135,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<StringIO>"
+      "phetioTypeName": "PropertyIO<StringIO>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.pieChartLegend.totalEnergyLabel.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -5135,7 +5147,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.pieChartLegend.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -5147,7 +5159,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.pieChartNode": {
       "phetioDocumentation": "",
@@ -5183,7 +5195,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.pieChartNode.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -5195,7 +5207,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.playPauseButton": {
       "phetioDocumentation": "",
@@ -5219,7 +5231,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.playPauseButton.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
@@ -5243,7 +5255,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.playPauseButton.pressListener.pressAction": {
       "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br/><ol><li>event: EventIO</li></ol>",
@@ -5255,10 +5267,10 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<EventIO>"
+      "phetioTypeName": "ActionIO<EventIO>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.playPauseButton.pressListener.releaseAction": {
-      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO.<EventIO></li></ol>",
+      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO<EventIO></li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -5267,7 +5279,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<NullableIO.<EventIO>>"
+      "phetioTypeName": "ActionIO<NullableIO<EventIO>>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.playPauseButton.property": {
       "phetioDocumentation": "",
@@ -5315,7 +5327,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.playPauseButton.toggleNode.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -5327,7 +5339,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.playPauseButton.toggledEmitter": {
       "phetioDocumentation": "Emits when the button is toggled No arguments.",
@@ -5339,7 +5351,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "EmitterIO.<>"
+      "phetioTypeName": "EmitterIO<>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.playPauseButton.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -5351,7 +5363,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.playbackSpeedControl.normalSpeedButton": {
       "phetioDocumentation": "",
@@ -5375,7 +5387,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.playbackSpeedControl.normalSpeedButton.inputListener.firedEmitter": {
       "phetioDocumentation": "A function that executes. No arguments.",
@@ -5387,7 +5399,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "EmitterIO.<>"
+      "phetioTypeName": "EmitterIO<>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.playbackSpeedControl.normalSpeedButton.inputListener.pressAction": {
       "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br/><ol><li>event: EventIO</li></ol>",
@@ -5399,10 +5411,10 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<EventIO>"
+      "phetioTypeName": "ActionIO<EventIO>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.playbackSpeedControl.normalSpeedButton.inputListener.releaseAction": {
-      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO.<EventIO></li></ol>",
+      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO<EventIO></li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -5411,7 +5423,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<NullableIO.<EventIO>>"
+      "phetioTypeName": "ActionIO<NullableIO<EventIO>>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.playbackSpeedControl.normalSpeedButton.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
@@ -5435,7 +5447,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.playbackSpeedControl.normalSpeedButton.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -5447,7 +5459,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.playbackSpeedControl.normalSpeedTextNode": {
       "phetioDocumentation": "",
@@ -5483,7 +5495,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.playbackSpeedControl.normalSpeedTextNode.textProperty": {
       "phetioDocumentation": "Property for the displayed text",
@@ -5495,7 +5507,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<StringIO>"
+      "phetioTypeName": "PropertyIO<StringIO>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.playbackSpeedControl.normalSpeedTextNode.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -5507,7 +5519,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.playbackSpeedControl.slowMotionRadioButton": {
       "phetioDocumentation": "",
@@ -5531,7 +5543,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.playbackSpeedControl.slowMotionRadioButton.inputListener.firedEmitter": {
       "phetioDocumentation": "A function that executes. No arguments.",
@@ -5543,7 +5555,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "EmitterIO.<>"
+      "phetioTypeName": "EmitterIO<>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.playbackSpeedControl.slowMotionRadioButton.inputListener.pressAction": {
       "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br/><ol><li>event: EventIO</li></ol>",
@@ -5555,10 +5567,10 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<EventIO>"
+      "phetioTypeName": "ActionIO<EventIO>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.playbackSpeedControl.slowMotionRadioButton.inputListener.releaseAction": {
-      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO.<EventIO></li></ol>",
+      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO<EventIO></li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -5567,7 +5579,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<NullableIO.<EventIO>>"
+      "phetioTypeName": "ActionIO<NullableIO<EventIO>>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.playbackSpeedControl.slowMotionRadioButton.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
@@ -5591,7 +5603,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.playbackSpeedControl.slowMotionRadioButton.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -5603,7 +5615,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.playbackSpeedControl.slowMotionTextNode": {
       "phetioDocumentation": "",
@@ -5639,7 +5651,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.playbackSpeedControl.slowMotionTextNode.textProperty": {
       "phetioDocumentation": "Property for the displayed text",
@@ -5651,7 +5663,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<StringIO>"
+      "phetioTypeName": "PropertyIO<StringIO>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.playbackSpeedControl.slowMotionTextNode.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -5663,7 +5675,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.playingProperty": {
       "phetioDocumentation": "",
@@ -5675,7 +5687,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.referenceHeightLine.dragListener.dragAction": {
       "phetioDocumentation": "Emits whenever a drag occurs with an EventIO argument. The arguments are:<br/><ol><li>event: EventIO</li></ol>",
@@ -5687,7 +5699,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<EventIO>"
+      "phetioTypeName": "ActionIO<EventIO>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.referenceHeightLine.dragListener.pressAction": {
       "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br/><ol><li>event: EventIO</li></ol>",
@@ -5699,10 +5711,10 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<EventIO>"
+      "phetioTypeName": "ActionIO<EventIO>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.referenceHeightLine.dragListener.releaseAction": {
-      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO.<EventIO></li></ol>",
+      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO<EventIO></li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -5711,7 +5723,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<NullableIO.<EventIO>>"
+      "phetioTypeName": "ActionIO<NullableIO<EventIO>>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.resetAllButton": {
       "phetioDocumentation": "The orange, round button that can be used to restore the initial state",
@@ -5723,7 +5735,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "NodeIO"
+      "phetioTypeName": "ResetAllButtonIO"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.resetAllButton.enabledProperty": {
       "phetioDocumentation": "When disabled, the button is grayed out and cannot be pressed",
@@ -5735,7 +5747,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.resetAllButton.firedEmitter": {
       "phetioDocumentation": "Emits when the button is fired No arguments.",
@@ -5747,7 +5759,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "EmitterIO.<>"
+      "phetioTypeName": "EmitterIO<>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.resetAllButton.isFiringProperty": {
       "phetioDocumentation": "Temporarily becomes true while the Reset All button is firing.  Commonly used to disable audio effects during reset.",
@@ -5759,7 +5771,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": true,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "DerivedPropertyIO.<BooleanIO>"
+      "phetioTypeName": "DerivedPropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.resetAllButton.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
@@ -5783,7 +5795,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.resetAllButton.pressListener.pressAction": {
       "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br/><ol><li>event: EventIO</li></ol>",
@@ -5795,10 +5807,10 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<EventIO>"
+      "phetioTypeName": "ActionIO<EventIO>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.resetAllButton.pressListener.releaseAction": {
-      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO.<EventIO></li></ol>",
+      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO<EventIO></li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -5807,7 +5819,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<NullableIO.<EventIO>>"
+      "phetioTypeName": "ActionIO<NullableIO<EventIO>>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.resetAllButton.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -5819,7 +5831,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.restartSkaterTextNode": {
       "phetioDocumentation": "",
@@ -5855,7 +5867,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.restartSkaterTextNode.textProperty": {
       "phetioDocumentation": "Property for the displayed text",
@@ -5867,7 +5879,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<StringIO>"
+      "phetioTypeName": "PropertyIO<StringIO>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.restartSkaterTextNode.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -5879,7 +5891,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.returnSkaterButton": {
       "phetioDocumentation": "",
@@ -5903,7 +5915,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.returnSkaterButton.firedEmitter": {
       "phetioDocumentation": "Emits when the button is fired No arguments.",
@@ -5915,7 +5927,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "EmitterIO.<>"
+      "phetioTypeName": "EmitterIO<>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.returnSkaterButton.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
@@ -5939,7 +5951,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.returnSkaterButton.pressListener.pressAction": {
       "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br/><ol><li>event: EventIO</li></ol>",
@@ -5951,10 +5963,10 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<EventIO>"
+      "phetioTypeName": "ActionIO<EventIO>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.returnSkaterButton.pressListener.releaseAction": {
-      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO.<EventIO></li></ol>",
+      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO<EventIO></li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -5963,7 +5975,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<NullableIO.<EventIO>>"
+      "phetioTypeName": "ActionIO<NullableIO<EventIO>>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.returnSkaterButton.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -5975,7 +5987,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.returnSkaterToGroundButton": {
       "phetioDocumentation": "",
@@ -5999,7 +6011,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.returnSkaterToGroundButton.firedEmitter": {
       "phetioDocumentation": "Emits when the button is fired No arguments.",
@@ -6011,7 +6023,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "EmitterIO.<>"
+      "phetioTypeName": "EmitterIO<>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.returnSkaterToGroundButton.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
@@ -6035,7 +6047,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.returnSkaterToGroundButton.pressListener.pressAction": {
       "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br/><ol><li>event: EventIO</li></ol>",
@@ -6047,10 +6059,10 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<EventIO>"
+      "phetioTypeName": "ActionIO<EventIO>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.returnSkaterToGroundButton.pressListener.releaseAction": {
-      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO.<EventIO></li></ol>",
+      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO<EventIO></li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -6059,7 +6071,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<NullableIO.<EventIO>>"
+      "phetioTypeName": "ActionIO<NullableIO<EventIO>>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.returnSkaterToGroundButton.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -6071,7 +6083,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.returnSkaterToPreviousStartingPositionButton": {
       "phetioDocumentation": "",
@@ -6095,7 +6107,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.returnSkaterToPreviousStartingPositionButton.firedEmitter": {
       "phetioDocumentation": "Emits when the button is fired No arguments.",
@@ -6107,7 +6119,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "EmitterIO.<>"
+      "phetioTypeName": "EmitterIO<>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.returnSkaterToPreviousStartingPositionButton.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
@@ -6131,7 +6143,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.returnSkaterToPreviousStartingPositionButton.pressListener.pressAction": {
       "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br/><ol><li>event: EventIO</li></ol>",
@@ -6143,10 +6155,10 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<EventIO>"
+      "phetioTypeName": "ActionIO<EventIO>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.returnSkaterToPreviousStartingPositionButton.pressListener.releaseAction": {
-      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO.<EventIO></li></ol>",
+      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO<EventIO></li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -6155,7 +6167,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<NullableIO.<EventIO>>"
+      "phetioTypeName": "ActionIO<NullableIO<EventIO>>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.returnSkaterToPreviousStartingPositionButton.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -6167,7 +6179,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.skaterIconImage1": {
       "phetioDocumentation": "",
@@ -6203,7 +6215,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.skaterIconImage1.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -6215,7 +6227,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.skaterIconImage2": {
       "phetioDocumentation": "",
@@ -6251,7 +6263,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.skaterIconImage2.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -6263,7 +6275,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.skaterNode": {
       "phetioDocumentation": "",
@@ -6299,7 +6311,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<Vector2IO>"
+      "phetioTypeName": "ActionIO<Vector2IO>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.skaterNode.inputListener.dragEndAction": {
       "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO. the position of the drag end in view coordinates</li></ol>",
@@ -6311,7 +6323,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<Vector2IO>"
+      "phetioTypeName": "ActionIO<Vector2IO>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.skaterNode.inputListener.dragStartAction": {
       "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO. the position of the drag start in view coordinates</li></ol>",
@@ -6323,7 +6335,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<Vector2IO>"
+      "phetioTypeName": "ActionIO<Vector2IO>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.skaterNode.inputListener.isDraggingProperty": {
       "phetioDocumentation": "Indicates whether the object is dragging",
@@ -6335,7 +6347,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": true,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.skaterNode.leftSkaterImageNode": {
       "phetioDocumentation": "",
@@ -6371,7 +6383,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.skaterNode.leftSkaterImageNode.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -6383,7 +6395,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.skaterNode.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
@@ -6407,7 +6419,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.skaterNode.rightSkaterImageNode": {
       "phetioDocumentation": "",
@@ -6443,7 +6455,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.skaterNode.rightSkaterImageNode.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -6455,7 +6467,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.skaterNode.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -6467,7 +6479,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.speedometerNode": {
       "phetioDocumentation": "",
@@ -6515,7 +6527,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.speedometerNode.foregroundNode.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -6527,7 +6539,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.speedometerNode.labelNode": {
       "phetioDocumentation": "",
@@ -6563,7 +6575,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.speedometerNode.labelNode.textProperty": {
       "phetioDocumentation": "Property for the displayed text",
@@ -6575,7 +6587,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<StringIO>"
+      "phetioTypeName": "PropertyIO<StringIO>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.speedometerNode.labelNode.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -6587,7 +6599,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.speedometerNode.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
@@ -6611,7 +6623,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.speedometerNode.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -6623,7 +6635,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.stepButton": {
       "phetioDocumentation": "",
@@ -6647,7 +6659,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.stepButton.firedEmitter": {
       "phetioDocumentation": "Emits when the button is fired No arguments.",
@@ -6659,7 +6671,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "EmitterIO.<>"
+      "phetioTypeName": "EmitterIO<>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.stepButton.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
@@ -6683,7 +6695,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.stepButton.pressListener.pressAction": {
       "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br/><ol><li>event: EventIO</li></ol>",
@@ -6695,10 +6707,10 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<EventIO>"
+      "phetioTypeName": "ActionIO<EventIO>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.stepButton.pressListener.releaseAction": {
-      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO.<EventIO></li></ol>",
+      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO<EventIO></li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -6707,7 +6719,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<NullableIO.<EventIO>>"
+      "phetioTypeName": "ActionIO<NullableIO<EventIO>>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.stepButton.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -6719,7 +6731,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.trackLayer": {
       "phetioDocumentation": "",
@@ -6755,7 +6767,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.trackLayer.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -6767,7 +6779,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -6779,7 +6791,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.frictionScreen.view.massSlider": {
       "phetioDocumentation": "",
@@ -6815,7 +6827,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.frictionScreen.view.massSlider.leftArrowButton.firedEmitter": {
       "phetioDocumentation": "Emits when the button is fired No arguments.",
@@ -6827,7 +6839,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "EmitterIO.<>"
+      "phetioTypeName": "EmitterIO<>"
     },
     "energySkateParkBasics.frictionScreen.view.massSlider.leftArrowButton.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
@@ -6851,7 +6863,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.frictionScreen.view.massSlider.leftArrowButton.pressListener.pressAction": {
       "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br/><ol><li>event: EventIO</li></ol>",
@@ -6863,10 +6875,10 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<EventIO>"
+      "phetioTypeName": "ActionIO<EventIO>"
     },
     "energySkateParkBasics.frictionScreen.view.massSlider.leftArrowButton.pressListener.releaseAction": {
-      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO.<EventIO></li></ol>",
+      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO<EventIO></li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -6875,7 +6887,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<NullableIO.<EventIO>>"
+      "phetioTypeName": "ActionIO<NullableIO<EventIO>>"
     },
     "energySkateParkBasics.frictionScreen.view.massSlider.leftArrowButton.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -6887,7 +6899,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.frictionScreen.view.massSlider.maxLabel": {
       "phetioDocumentation": "",
@@ -6923,7 +6935,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.frictionScreen.view.massSlider.maxLabel.textProperty": {
       "phetioDocumentation": "Property for the displayed text",
@@ -6935,7 +6947,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<StringIO>"
+      "phetioTypeName": "PropertyIO<StringIO>"
     },
     "energySkateParkBasics.frictionScreen.view.massSlider.maxLabel.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -6947,7 +6959,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.frictionScreen.view.massSlider.minLabel": {
       "phetioDocumentation": "",
@@ -6983,7 +6995,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.frictionScreen.view.massSlider.minLabel.textProperty": {
       "phetioDocumentation": "Property for the displayed text",
@@ -6995,7 +7007,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<StringIO>"
+      "phetioTypeName": "PropertyIO<StringIO>"
     },
     "energySkateParkBasics.frictionScreen.view.massSlider.minLabel.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -7007,7 +7019,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.frictionScreen.view.massSlider.numberDisplay": {
       "phetioDocumentation": "",
@@ -7043,7 +7055,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.frictionScreen.view.massSlider.numberDisplay.valueText": {
       "phetioDocumentation": "",
@@ -7079,7 +7091,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": true,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.frictionScreen.view.massSlider.numberDisplay.valueText.textProperty": {
       "phetioDocumentation": "Property for the displayed text",
@@ -7091,7 +7103,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": true,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<StringIO>"
+      "phetioTypeName": "PropertyIO<StringIO>"
     },
     "energySkateParkBasics.frictionScreen.view.massSlider.numberDisplay.valueText.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -7103,7 +7115,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": true,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.frictionScreen.view.massSlider.numberDisplay.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -7115,7 +7127,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.frictionScreen.view.massSlider.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
@@ -7139,7 +7151,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.frictionScreen.view.massSlider.rightArrowButton": {
       "phetioDocumentation": "",
@@ -7163,7 +7175,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.frictionScreen.view.massSlider.rightArrowButton.firedEmitter": {
       "phetioDocumentation": "Emits when the button is fired No arguments.",
@@ -7175,7 +7187,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "EmitterIO.<>"
+      "phetioTypeName": "EmitterIO<>"
     },
     "energySkateParkBasics.frictionScreen.view.massSlider.rightArrowButton.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
@@ -7199,7 +7211,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.frictionScreen.view.massSlider.rightArrowButton.pressListener.pressAction": {
       "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br/><ol><li>event: EventIO</li></ol>",
@@ -7211,10 +7223,10 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<EventIO>"
+      "phetioTypeName": "ActionIO<EventIO>"
     },
     "energySkateParkBasics.frictionScreen.view.massSlider.rightArrowButton.pressListener.releaseAction": {
-      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO.<EventIO></li></ol>",
+      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO<EventIO></li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -7223,7 +7235,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<NullableIO.<EventIO>>"
+      "phetioTypeName": "ActionIO<NullableIO<EventIO>>"
     },
     "energySkateParkBasics.frictionScreen.view.massSlider.rightArrowButton.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -7235,7 +7247,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.frictionScreen.view.massSlider.slider": {
       "phetioDocumentation": "",
@@ -7259,7 +7271,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.frictionScreen.view.massSlider.slider.enabledRangeProperty": {
       "phetioDocumentation": "",
@@ -7271,7 +7283,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<RangeIO>"
+      "phetioTypeName": "PropertyIO<RangeIO>"
     },
     "energySkateParkBasics.frictionScreen.view.massSlider.slider.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
@@ -7295,7 +7307,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.frictionScreen.view.massSlider.slider.thumb": {
       "phetioDocumentation": "",
@@ -7331,7 +7343,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.frictionScreen.view.massSlider.slider.thumb.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -7343,7 +7355,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.frictionScreen.view.massSlider.slider.thumbInputListener": {
       "phetioDocumentation": "",
@@ -7367,7 +7379,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<Vector2IO>"
+      "phetioTypeName": "ActionIO<Vector2IO>"
     },
     "energySkateParkBasics.frictionScreen.view.massSlider.slider.thumbInputListener.dragEndAction": {
       "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO. the position of the drag end in view coordinates</li></ol>",
@@ -7379,7 +7391,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<Vector2IO>"
+      "phetioTypeName": "ActionIO<Vector2IO>"
     },
     "energySkateParkBasics.frictionScreen.view.massSlider.slider.thumbInputListener.dragStartAction": {
       "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO. the position of the drag start in view coordinates</li></ol>",
@@ -7391,7 +7403,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<Vector2IO>"
+      "phetioTypeName": "ActionIO<Vector2IO>"
     },
     "energySkateParkBasics.frictionScreen.view.massSlider.slider.thumbInputListener.isDraggingProperty": {
       "phetioDocumentation": "Indicates whether the object is dragging",
@@ -7403,7 +7415,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": true,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.frictionScreen.view.massSlider.slider.track.trackInputListener": {
       "phetioDocumentation": "",
@@ -7427,7 +7439,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<Vector2IO>"
+      "phetioTypeName": "ActionIO<Vector2IO>"
     },
     "energySkateParkBasics.frictionScreen.view.massSlider.slider.track.trackInputListener.dragEndAction": {
       "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO. the position of the drag end in view coordinates</li></ol>",
@@ -7439,7 +7451,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<Vector2IO>"
+      "phetioTypeName": "ActionIO<Vector2IO>"
     },
     "energySkateParkBasics.frictionScreen.view.massSlider.slider.track.trackInputListener.dragStartAction": {
       "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO. the position of the drag start in view coordinates</li></ol>",
@@ -7451,7 +7463,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<Vector2IO>"
+      "phetioTypeName": "ActionIO<Vector2IO>"
     },
     "energySkateParkBasics.frictionScreen.view.massSlider.slider.track.trackInputListener.isDraggingProperty": {
       "phetioDocumentation": "Indicates whether the object is dragging",
@@ -7463,7 +7475,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": true,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.frictionScreen.view.massSlider.slider.valueProperty": {
       "phetioDocumentation": "",
@@ -7487,7 +7499,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.frictionScreen.view.massSlider.titleNode": {
       "phetioDocumentation": "",
@@ -7523,7 +7535,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.frictionScreen.view.massSlider.titleNode.textProperty": {
       "phetioDocumentation": "Property for the displayed text",
@@ -7535,7 +7547,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<StringIO>"
+      "phetioTypeName": "PropertyIO<StringIO>"
     },
     "energySkateParkBasics.frictionScreen.view.massSlider.titleNode.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -7547,7 +7559,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.frictionScreen.view.massSlider.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -7559,7 +7571,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.general.activeProperty": {
       "phetioDocumentation": "Determines whether the entire simulation is running and processing user input. Setting this property to false pauses the simulation, and prevents user interaction.",
@@ -7571,7 +7583,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.general.barrierRectangle": {
       "phetioDocumentation": "Semi-transparent barrier used to block input events when a dialog is shown, also fades out the background",
@@ -7595,7 +7607,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "EmitterIO.<>"
+      "phetioTypeName": "EmitterIO<>"
     },
     "energySkateParkBasics.general.barrierRectangle.inputListener.pressAction": {
       "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br/><ol><li>event: EventIO</li></ol>",
@@ -7607,10 +7619,10 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<EventIO>"
+      "phetioTypeName": "ActionIO<EventIO>"
     },
     "energySkateParkBasics.general.barrierRectangle.inputListener.releaseAction": {
-      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO.<EventIO></li></ol>",
+      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO<EventIO></li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -7619,7 +7631,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<NullableIO.<EventIO>>"
+      "phetioTypeName": "ActionIO<NullableIO<EventIO>>"
     },
     "energySkateParkBasics.general.barrierRectangle.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
@@ -7643,7 +7655,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": true,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.general.barrierRectangle.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -7655,7 +7667,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": true,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.general.browserTabVisibleProperty": {
       "phetioDocumentation": "Indicates whether the browser tab containing the simulation is currently visible",
@@ -7667,7 +7679,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": true,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.general.controller.input.mouseDownAction": {
       "phetioDocumentation": "Emits when a mouse button is pressed The arguments are:<br/><ol><li>point: Vector2IO</li><br/><li>event: DOMEventIO</li></ol>",
@@ -7679,7 +7691,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<Vector2IO, DOMEventIO>"
+      "phetioTypeName": "ActionIO<Vector2IO, DOMEventIO>"
     },
     "energySkateParkBasics.general.controller.input.mouseMovedAction": {
       "phetioDocumentation": "Emits when the mouse is moved The arguments are:<br/><ol><li>point: Vector2IO</li><br/><li>event: DOMEventIO</li></ol>",
@@ -7691,7 +7703,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<Vector2IO, DOMEventIO>"
+      "phetioTypeName": "ActionIO<Vector2IO, DOMEventIO>"
     },
     "energySkateParkBasics.general.controller.input.mouseOutAction": {
       "phetioDocumentation": "Emits when the mouse moves out of the display The arguments are:<br/><ol><li>point: Vector2IO</li><br/><li>event: DOMEventIO</li></ol>",
@@ -7703,7 +7715,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<Vector2IO, DOMEventIO>"
+      "phetioTypeName": "ActionIO<Vector2IO, DOMEventIO>"
     },
     "energySkateParkBasics.general.controller.input.mouseOverAction": {
       "phetioDocumentation": "Emits when the mouse is moved over a Node The arguments are:<br/><ol><li>point: Vector2IO</li><br/><li>event: DOMEventIO</li></ol>",
@@ -7715,7 +7727,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<Vector2IO, DOMEventIO>"
+      "phetioTypeName": "ActionIO<Vector2IO, DOMEventIO>"
     },
     "energySkateParkBasics.general.controller.input.mouseUpAction": {
       "phetioDocumentation": "Emits when a mouse button is released The arguments are:<br/><ol><li>point: Vector2IO</li><br/><li>event: DOMEventIO</li></ol>",
@@ -7727,7 +7739,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<Vector2IO, DOMEventIO>"
+      "phetioTypeName": "ActionIO<Vector2IO, DOMEventIO>"
     },
     "energySkateParkBasics.general.controller.input.penCancelAction": {
       "phetioDocumentation": "Emits when a pen is canceled The arguments are:<br/><ol><li>id: NumberIO</li><br/><li>point: Vector2IO</li><br/><li>event: DOMEventIO</li></ol>",
@@ -7739,7 +7751,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<NumberIO, Vector2IO, DOMEventIO>"
+      "phetioTypeName": "ActionIO<NumberIO, Vector2IO, DOMEventIO>"
     },
     "energySkateParkBasics.general.controller.input.penEndAction": {
       "phetioDocumentation": "Emits when a pen is lifted The arguments are:<br/><ol><li>id: NumberIO</li><br/><li>point: Vector2IO</li><br/><li>event: DOMEventIO</li></ol>",
@@ -7751,7 +7763,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<NumberIO, Vector2IO, DOMEventIO>"
+      "phetioTypeName": "ActionIO<NumberIO, Vector2IO, DOMEventIO>"
     },
     "energySkateParkBasics.general.controller.input.penMoveAction": {
       "phetioDocumentation": "Emits when a pen is moved The arguments are:<br/><ol><li>id: NumberIO</li><br/><li>point: Vector2IO</li><br/><li>event: DOMEventIO</li></ol>",
@@ -7763,7 +7775,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<NumberIO, Vector2IO, DOMEventIO>"
+      "phetioTypeName": "ActionIO<NumberIO, Vector2IO, DOMEventIO>"
     },
     "energySkateParkBasics.general.controller.input.penStartAction": {
       "phetioDocumentation": "Emits when a pen touches the screen The arguments are:<br/><ol><li>id: NumberIO</li><br/><li>point: Vector2IO</li><br/><li>event: DOMEventIO</li></ol>",
@@ -7775,7 +7787,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<NumberIO, Vector2IO, DOMEventIO>"
+      "phetioTypeName": "ActionIO<NumberIO, Vector2IO, DOMEventIO>"
     },
     "energySkateParkBasics.general.controller.input.touchCancelAction": {
       "phetioDocumentation": "Emits when a touch is canceled The arguments are:<br/><ol><li>id: NumberIO</li><br/><li>point: Vector2IO</li><br/><li>event: DOMEventIO</li></ol>",
@@ -7787,7 +7799,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<NumberIO, Vector2IO, DOMEventIO>"
+      "phetioTypeName": "ActionIO<NumberIO, Vector2IO, DOMEventIO>"
     },
     "energySkateParkBasics.general.controller.input.touchEndAction": {
       "phetioDocumentation": "Emits when a touch ends The arguments are:<br/><ol><li>id: NumberIO</li><br/><li>point: Vector2IO</li><br/><li>event: DOMEventIO</li></ol>",
@@ -7799,7 +7811,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<NumberIO, Vector2IO, DOMEventIO>"
+      "phetioTypeName": "ActionIO<NumberIO, Vector2IO, DOMEventIO>"
     },
     "energySkateParkBasics.general.controller.input.touchMoveAction": {
       "phetioDocumentation": "Emits when a touch moves The arguments are:<br/><ol><li>id: NumberIO</li><br/><li>point: Vector2IO</li><br/><li>event: DOMEventIO</li></ol>",
@@ -7811,7 +7823,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<NumberIO, Vector2IO, DOMEventIO>"
+      "phetioTypeName": "ActionIO<NumberIO, Vector2IO, DOMEventIO>"
     },
     "energySkateParkBasics.general.controller.input.touchStartAction": {
       "phetioDocumentation": "Emits when a touch begins The arguments are:<br/><ol><li>id: NumberIO</li><br/><li>point: Vector2IO</li><br/><li>event: DOMEventIO</li></ol>",
@@ -7823,7 +7835,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<NumberIO, Vector2IO, DOMEventIO>"
+      "phetioTypeName": "ActionIO<NumberIO, Vector2IO, DOMEventIO>"
     },
     "energySkateParkBasics.general.controller.input.validatePointersAction": {
       "phetioDocumentation": "A function that executes. No arguments.",
@@ -7835,7 +7847,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<>"
+      "phetioTypeName": "ActionIO<>"
     },
     "energySkateParkBasics.general.controller.input.wheelScrollAction": {
       "phetioDocumentation": "Emits when the mouse wheel scrolls The arguments are:<br/><ol><li>event: DOMEventIO</li></ol>",
@@ -7847,7 +7859,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<DOMEventIO>"
+      "phetioTypeName": "ActionIO<DOMEventIO>"
     },
     "energySkateParkBasics.general.focusProperty": {
       "phetioDocumentation": "Stores the current focus for the simulation, null if there is not focus. This is not updated based on mouse or touch input, only keyboard and other alternative inputs.",
@@ -7859,7 +7871,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": true,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<FocusIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<FocusIO>>"
     },
     "energySkateParkBasics.general.navigationBar.frictionScreenButton": {
       "phetioDocumentation": "Button in the navigation bar that selects the 'frictionScreen' screen",
@@ -7883,7 +7895,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.general.navigationBar.frictionScreenButton.firedEmitter": {
       "phetioDocumentation": "Emits when the button is fired No arguments.",
@@ -7895,7 +7907,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "EmitterIO.<>"
+      "phetioTypeName": "EmitterIO<>"
     },
     "energySkateParkBasics.general.navigationBar.frictionScreenButton.icon": {
       "phetioDocumentation": "",
@@ -7931,7 +7943,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.general.navigationBar.frictionScreenButton.icon.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -7943,7 +7955,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.general.navigationBar.frictionScreenButton.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
@@ -7967,7 +7979,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.general.navigationBar.frictionScreenButton.pressListener.pressAction": {
       "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br/><ol><li>event: EventIO</li></ol>",
@@ -7979,10 +7991,10 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<EventIO>"
+      "phetioTypeName": "ActionIO<EventIO>"
     },
     "energySkateParkBasics.general.navigationBar.frictionScreenButton.pressListener.releaseAction": {
-      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO.<EventIO></li></ol>",
+      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO<EventIO></li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -7991,7 +8003,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<NullableIO.<EventIO>>"
+      "phetioTypeName": "ActionIO<NullableIO<EventIO>>"
     },
     "energySkateParkBasics.general.navigationBar.frictionScreenButton.text": {
       "phetioDocumentation": "",
@@ -8027,7 +8039,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.general.navigationBar.frictionScreenButton.text.textProperty": {
       "phetioDocumentation": "Property for the displayed text",
@@ -8039,7 +8051,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<StringIO>"
+      "phetioTypeName": "PropertyIO<StringIO>"
     },
     "energySkateParkBasics.general.navigationBar.frictionScreenButton.text.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -8051,7 +8063,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.general.navigationBar.frictionScreenButton.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -8063,7 +8075,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.general.navigationBar.homeButton": {
       "phetioDocumentation": "",
@@ -8087,7 +8099,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.general.navigationBar.homeButton.firedEmitter": {
       "phetioDocumentation": "Emits when the button is fired No arguments.",
@@ -8099,7 +8111,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "EmitterIO.<>"
+      "phetioTypeName": "EmitterIO<>"
     },
     "energySkateParkBasics.general.navigationBar.homeButton.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
@@ -8123,7 +8135,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.general.navigationBar.homeButton.pressListener.pressAction": {
       "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br/><ol><li>event: EventIO</li></ol>",
@@ -8135,10 +8147,10 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<EventIO>"
+      "phetioTypeName": "ActionIO<EventIO>"
     },
     "energySkateParkBasics.general.navigationBar.homeButton.pressListener.releaseAction": {
-      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO.<EventIO></li></ol>",
+      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO<EventIO></li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -8147,7 +8159,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<NullableIO.<EventIO>>"
+      "phetioTypeName": "ActionIO<NullableIO<EventIO>>"
     },
     "energySkateParkBasics.general.navigationBar.homeButton.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -8159,7 +8171,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.general.navigationBar.introScreenButton": {
       "phetioDocumentation": "Button in the navigation bar that selects the 'introScreen' screen",
@@ -8183,7 +8195,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.general.navigationBar.introScreenButton.firedEmitter": {
       "phetioDocumentation": "Emits when the button is fired No arguments.",
@@ -8195,7 +8207,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "EmitterIO.<>"
+      "phetioTypeName": "EmitterIO<>"
     },
     "energySkateParkBasics.general.navigationBar.introScreenButton.icon": {
       "phetioDocumentation": "",
@@ -8231,7 +8243,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.general.navigationBar.introScreenButton.icon.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -8243,7 +8255,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.general.navigationBar.introScreenButton.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
@@ -8267,7 +8279,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.general.navigationBar.introScreenButton.pressListener.pressAction": {
       "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br/><ol><li>event: EventIO</li></ol>",
@@ -8279,10 +8291,10 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<EventIO>"
+      "phetioTypeName": "ActionIO<EventIO>"
     },
     "energySkateParkBasics.general.navigationBar.introScreenButton.pressListener.releaseAction": {
-      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO.<EventIO></li></ol>",
+      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO<EventIO></li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -8291,7 +8303,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<NullableIO.<EventIO>>"
+      "phetioTypeName": "ActionIO<NullableIO<EventIO>>"
     },
     "energySkateParkBasics.general.navigationBar.introScreenButton.text": {
       "phetioDocumentation": "",
@@ -8327,7 +8339,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.general.navigationBar.introScreenButton.text.textProperty": {
       "phetioDocumentation": "Property for the displayed text",
@@ -8339,7 +8351,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<StringIO>"
+      "phetioTypeName": "PropertyIO<StringIO>"
     },
     "energySkateParkBasics.general.navigationBar.introScreenButton.text.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -8351,7 +8363,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.general.navigationBar.introScreenButton.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -8363,7 +8375,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.general.navigationBar.phetButton": {
       "phetioDocumentation": "The button that appears at the right side of the navigation bar, which shows a menu when pressed",
@@ -8387,7 +8399,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.general.navigationBar.phetButton.firedEmitter": {
       "phetioDocumentation": "Emits when the button is fired No arguments.",
@@ -8399,7 +8411,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "EmitterIO.<>"
+      "phetioTypeName": "EmitterIO<>"
     },
     "energySkateParkBasics.general.navigationBar.phetButton.phetMenu": {
       "phetioDocumentation": "This menu is displayed when the PhET button is pressed.",
@@ -8435,7 +8447,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "EmitterIO.<>"
+      "phetioTypeName": "EmitterIO<>"
     },
     "energySkateParkBasics.general.navigationBar.phetButton.phetMenu.aboutMenuItem.inputListener.pressAction": {
       "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br/><ol><li>event: EventIO</li></ol>",
@@ -8447,10 +8459,10 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<EventIO>"
+      "phetioTypeName": "ActionIO<EventIO>"
     },
     "energySkateParkBasics.general.navigationBar.phetButton.phetMenu.aboutMenuItem.inputListener.releaseAction": {
-      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO.<EventIO></li></ol>",
+      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO<EventIO></li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -8459,7 +8471,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<NullableIO.<EventIO>>"
+      "phetioTypeName": "ActionIO<NullableIO<EventIO>>"
     },
     "energySkateParkBasics.general.navigationBar.phetButton.phetMenu.aboutMenuItem.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
@@ -8483,7 +8495,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.general.navigationBar.phetButton.phetMenu.aboutMenuItem.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -8495,7 +8507,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.general.navigationBar.phetButton.phetMenu.screenshotMenuItem": {
       "phetioDocumentation": "This menu item captures a screenshot from the simulation and saves it to the file system.",
@@ -8519,7 +8531,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "EmitterIO.<>"
+      "phetioTypeName": "EmitterIO<>"
     },
     "energySkateParkBasics.general.navigationBar.phetButton.phetMenu.screenshotMenuItem.inputListener.pressAction": {
       "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br/><ol><li>event: EventIO</li></ol>",
@@ -8531,10 +8543,10 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<EventIO>"
+      "phetioTypeName": "ActionIO<EventIO>"
     },
     "energySkateParkBasics.general.navigationBar.phetButton.phetMenu.screenshotMenuItem.inputListener.releaseAction": {
-      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO.<EventIO></li></ol>",
+      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO<EventIO></li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -8543,7 +8555,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<NullableIO.<EventIO>>"
+      "phetioTypeName": "ActionIO<NullableIO<EventIO>>"
     },
     "energySkateParkBasics.general.navigationBar.phetButton.phetMenu.screenshotMenuItem.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
@@ -8567,7 +8579,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.general.navigationBar.phetButton.phetMenu.screenshotMenuItem.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -8579,7 +8591,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.general.navigationBar.phetButton.pickableProperty": {
       "phetioDocumentation": "Set whether the phetButton will be pickable (and hence interactive), see the NodeIO documentation for more details",
@@ -8591,7 +8603,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.general.navigationBar.phetButton.pressListener.pressAction": {
       "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br/><ol><li>event: EventIO</li></ol>",
@@ -8603,10 +8615,10 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<EventIO>"
+      "phetioTypeName": "ActionIO<EventIO>"
     },
     "energySkateParkBasics.general.navigationBar.phetButton.pressListener.releaseAction": {
-      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO.<EventIO></li></ol>",
+      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO<EventIO></li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -8615,7 +8627,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<NullableIO.<EventIO>>"
+      "phetioTypeName": "ActionIO<NullableIO<EventIO>>"
     },
     "energySkateParkBasics.general.navigationBar.playgroundScreenButton": {
       "phetioDocumentation": "Button in the navigation bar that selects the 'playgroundScreen' screen",
@@ -8639,7 +8651,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.general.navigationBar.playgroundScreenButton.firedEmitter": {
       "phetioDocumentation": "Emits when the button is fired No arguments.",
@@ -8651,7 +8663,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "EmitterIO.<>"
+      "phetioTypeName": "EmitterIO<>"
     },
     "energySkateParkBasics.general.navigationBar.playgroundScreenButton.icon": {
       "phetioDocumentation": "",
@@ -8687,7 +8699,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.general.navigationBar.playgroundScreenButton.icon.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -8699,7 +8711,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.general.navigationBar.playgroundScreenButton.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
@@ -8723,7 +8735,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.general.navigationBar.playgroundScreenButton.pressListener.pressAction": {
       "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br/><ol><li>event: EventIO</li></ol>",
@@ -8735,10 +8747,10 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<EventIO>"
+      "phetioTypeName": "ActionIO<EventIO>"
     },
     "energySkateParkBasics.general.navigationBar.playgroundScreenButton.pressListener.releaseAction": {
-      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO.<EventIO></li></ol>",
+      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO<EventIO></li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -8747,7 +8759,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<NullableIO.<EventIO>>"
+      "phetioTypeName": "ActionIO<NullableIO<EventIO>>"
     },
     "energySkateParkBasics.general.navigationBar.playgroundScreenButton.text": {
       "phetioDocumentation": "",
@@ -8783,7 +8795,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.general.navigationBar.playgroundScreenButton.text.textProperty": {
       "phetioDocumentation": "Property for the displayed text",
@@ -8795,7 +8807,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<StringIO>"
+      "phetioTypeName": "PropertyIO<StringIO>"
     },
     "energySkateParkBasics.general.navigationBar.playgroundScreenButton.text.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -8807,7 +8819,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.general.navigationBar.playgroundScreenButton.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -8819,7 +8831,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.general.navigationBar.titleTextNode": {
       "phetioDocumentation": "Displays the title of the simulation in the navigation bar (bottom left)",
@@ -8855,7 +8867,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.general.navigationBar.titleTextNode.textProperty": {
       "phetioDocumentation": "Property for the displayed text",
@@ -8867,7 +8879,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<StringIO>"
+      "phetioTypeName": "PropertyIO<StringIO>"
     },
     "energySkateParkBasics.general.navigationBar.titleTextNode.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -8879,7 +8891,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.general.phetioCommandProcessor": {
       "phetioDocumentation": "Processes messages from the wrapper frame and returns the results. This serves as the source of PhET-iO data stream messages when commands are invoked from the wrapper.",
@@ -8903,7 +8915,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<NumberIO, NumberIO>"
+      "phetioTypeName": "ActionIO<NumberIO, NumberIO>"
     },
     "energySkateParkBasics.general.screenIndexProperty": {
       "phetioDocumentation": "Indicates which screen is selected (0-indexed)",
@@ -8927,7 +8939,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.general.soundEnabledProperty": {
       "phetioDocumentation": "",
@@ -8939,7 +8951,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.general.stepSimulationAction": {
       "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>dt: NumberIO</li></ol>",
@@ -8951,7 +8963,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<NumberIO>"
+      "phetioTypeName": "ActionIO<NumberIO>"
     },
     "energySkateParkBasics.homeScreen.activeProperty": {
       "phetioDocumentation": "Indicates whether the screen is active.  For single-screen simulations, the screen is always active.",
@@ -8963,7 +8975,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": true,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.homeScreen.view": {
       "phetioDocumentation": "",
@@ -8999,7 +9011,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "EmitterIO.<>"
+      "phetioTypeName": "EmitterIO<>"
     },
     "energySkateParkBasics.homeScreen.view.frictionScreenLargeButton.inputListener.pressAction": {
       "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br/><ol><li>event: EventIO</li></ol>",
@@ -9011,10 +9023,10 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<EventIO>"
+      "phetioTypeName": "ActionIO<EventIO>"
     },
     "energySkateParkBasics.homeScreen.view.frictionScreenLargeButton.inputListener.releaseAction": {
-      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO.<EventIO></li></ol>",
+      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO<EventIO></li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -9023,7 +9035,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<NullableIO.<EventIO>>"
+      "phetioTypeName": "ActionIO<NullableIO<EventIO>>"
     },
     "energySkateParkBasics.homeScreen.view.frictionScreenLargeButton.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
@@ -9047,7 +9059,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.homeScreen.view.frictionScreenLargeButton.text": {
       "phetioDocumentation": "",
@@ -9083,7 +9095,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.homeScreen.view.frictionScreenLargeButton.text.textProperty": {
       "phetioDocumentation": "Property for the displayed text",
@@ -9095,7 +9107,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<StringIO>"
+      "phetioTypeName": "PropertyIO<StringIO>"
     },
     "energySkateParkBasics.homeScreen.view.frictionScreenLargeButton.text.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -9107,7 +9119,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.homeScreen.view.frictionScreenLargeButton.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -9119,7 +9131,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.homeScreen.view.frictionScreenSmallButton": {
       "phetioDocumentation": "A pressable button in the simulation, in the home screen",
@@ -9143,7 +9155,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "EmitterIO.<>"
+      "phetioTypeName": "EmitterIO<>"
     },
     "energySkateParkBasics.homeScreen.view.frictionScreenSmallButton.inputListener.pressAction": {
       "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br/><ol><li>event: EventIO</li></ol>",
@@ -9155,10 +9167,10 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<EventIO>"
+      "phetioTypeName": "ActionIO<EventIO>"
     },
     "energySkateParkBasics.homeScreen.view.frictionScreenSmallButton.inputListener.releaseAction": {
-      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO.<EventIO></li></ol>",
+      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO<EventIO></li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -9167,7 +9179,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<NullableIO.<EventIO>>"
+      "phetioTypeName": "ActionIO<NullableIO<EventIO>>"
     },
     "energySkateParkBasics.homeScreen.view.frictionScreenSmallButton.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
@@ -9191,7 +9203,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.homeScreen.view.frictionScreenSmallButton.text": {
       "phetioDocumentation": "",
@@ -9227,7 +9239,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.homeScreen.view.frictionScreenSmallButton.text.textProperty": {
       "phetioDocumentation": "Property for the displayed text",
@@ -9239,7 +9251,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<StringIO>"
+      "phetioTypeName": "PropertyIO<StringIO>"
     },
     "energySkateParkBasics.homeScreen.view.frictionScreenSmallButton.text.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -9251,7 +9263,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.homeScreen.view.frictionScreenSmallButton.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -9263,7 +9275,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.homeScreen.view.introScreenLargeButton": {
       "phetioDocumentation": "A pressable button in the simulation, in the home screen",
@@ -9287,7 +9299,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "EmitterIO.<>"
+      "phetioTypeName": "EmitterIO<>"
     },
     "energySkateParkBasics.homeScreen.view.introScreenLargeButton.inputListener.pressAction": {
       "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br/><ol><li>event: EventIO</li></ol>",
@@ -9299,10 +9311,10 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<EventIO>"
+      "phetioTypeName": "ActionIO<EventIO>"
     },
     "energySkateParkBasics.homeScreen.view.introScreenLargeButton.inputListener.releaseAction": {
-      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO.<EventIO></li></ol>",
+      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO<EventIO></li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -9311,7 +9323,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<NullableIO.<EventIO>>"
+      "phetioTypeName": "ActionIO<NullableIO<EventIO>>"
     },
     "energySkateParkBasics.homeScreen.view.introScreenLargeButton.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
@@ -9335,7 +9347,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.homeScreen.view.introScreenLargeButton.text": {
       "phetioDocumentation": "",
@@ -9371,7 +9383,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.homeScreen.view.introScreenLargeButton.text.textProperty": {
       "phetioDocumentation": "Property for the displayed text",
@@ -9383,7 +9395,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<StringIO>"
+      "phetioTypeName": "PropertyIO<StringIO>"
     },
     "energySkateParkBasics.homeScreen.view.introScreenLargeButton.text.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -9395,7 +9407,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.homeScreen.view.introScreenLargeButton.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -9407,7 +9419,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.homeScreen.view.introScreenSmallButton": {
       "phetioDocumentation": "A pressable button in the simulation, in the home screen",
@@ -9431,7 +9443,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "EmitterIO.<>"
+      "phetioTypeName": "EmitterIO<>"
     },
     "energySkateParkBasics.homeScreen.view.introScreenSmallButton.inputListener.pressAction": {
       "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br/><ol><li>event: EventIO</li></ol>",
@@ -9443,10 +9455,10 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<EventIO>"
+      "phetioTypeName": "ActionIO<EventIO>"
     },
     "energySkateParkBasics.homeScreen.view.introScreenSmallButton.inputListener.releaseAction": {
-      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO.<EventIO></li></ol>",
+      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO<EventIO></li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -9455,7 +9467,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<NullableIO.<EventIO>>"
+      "phetioTypeName": "ActionIO<NullableIO<EventIO>>"
     },
     "energySkateParkBasics.homeScreen.view.introScreenSmallButton.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
@@ -9479,7 +9491,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.homeScreen.view.introScreenSmallButton.text": {
       "phetioDocumentation": "",
@@ -9515,7 +9527,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.homeScreen.view.introScreenSmallButton.text.textProperty": {
       "phetioDocumentation": "Property for the displayed text",
@@ -9527,7 +9539,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<StringIO>"
+      "phetioTypeName": "PropertyIO<StringIO>"
     },
     "energySkateParkBasics.homeScreen.view.introScreenSmallButton.text.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -9539,7 +9551,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.homeScreen.view.introScreenSmallButton.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -9551,7 +9563,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.homeScreen.view.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
@@ -9575,7 +9587,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.homeScreen.view.playgroundScreenLargeButton": {
       "phetioDocumentation": "A pressable button in the simulation, in the home screen",
@@ -9599,7 +9611,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "EmitterIO.<>"
+      "phetioTypeName": "EmitterIO<>"
     },
     "energySkateParkBasics.homeScreen.view.playgroundScreenLargeButton.inputListener.pressAction": {
       "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br/><ol><li>event: EventIO</li></ol>",
@@ -9611,10 +9623,10 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<EventIO>"
+      "phetioTypeName": "ActionIO<EventIO>"
     },
     "energySkateParkBasics.homeScreen.view.playgroundScreenLargeButton.inputListener.releaseAction": {
-      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO.<EventIO></li></ol>",
+      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO<EventIO></li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -9623,7 +9635,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<NullableIO.<EventIO>>"
+      "phetioTypeName": "ActionIO<NullableIO<EventIO>>"
     },
     "energySkateParkBasics.homeScreen.view.playgroundScreenLargeButton.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
@@ -9647,7 +9659,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.homeScreen.view.playgroundScreenLargeButton.text": {
       "phetioDocumentation": "",
@@ -9683,7 +9695,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.homeScreen.view.playgroundScreenLargeButton.text.textProperty": {
       "phetioDocumentation": "Property for the displayed text",
@@ -9695,7 +9707,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<StringIO>"
+      "phetioTypeName": "PropertyIO<StringIO>"
     },
     "energySkateParkBasics.homeScreen.view.playgroundScreenLargeButton.text.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -9707,7 +9719,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.homeScreen.view.playgroundScreenLargeButton.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -9719,7 +9731,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.homeScreen.view.playgroundScreenSmallButton": {
       "phetioDocumentation": "A pressable button in the simulation, in the home screen",
@@ -9743,7 +9755,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "EmitterIO.<>"
+      "phetioTypeName": "EmitterIO<>"
     },
     "energySkateParkBasics.homeScreen.view.playgroundScreenSmallButton.inputListener.pressAction": {
       "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br/><ol><li>event: EventIO</li></ol>",
@@ -9755,10 +9767,10 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<EventIO>"
+      "phetioTypeName": "ActionIO<EventIO>"
     },
     "energySkateParkBasics.homeScreen.view.playgroundScreenSmallButton.inputListener.releaseAction": {
-      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO.<EventIO></li></ol>",
+      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO<EventIO></li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -9767,7 +9779,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<NullableIO.<EventIO>>"
+      "phetioTypeName": "ActionIO<NullableIO<EventIO>>"
     },
     "energySkateParkBasics.homeScreen.view.playgroundScreenSmallButton.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
@@ -9791,7 +9803,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.homeScreen.view.playgroundScreenSmallButton.text": {
       "phetioDocumentation": "",
@@ -9827,7 +9839,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.homeScreen.view.playgroundScreenSmallButton.text.textProperty": {
       "phetioDocumentation": "Property for the displayed text",
@@ -9839,7 +9851,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<StringIO>"
+      "phetioTypeName": "PropertyIO<StringIO>"
     },
     "energySkateParkBasics.homeScreen.view.playgroundScreenSmallButton.text.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -9851,7 +9863,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.homeScreen.view.playgroundScreenSmallButton.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -9863,7 +9875,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.homeScreen.view.title": {
       "phetioDocumentation": "",
@@ -9899,7 +9911,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.homeScreen.view.title.textProperty": {
       "phetioDocumentation": "Property for the displayed text",
@@ -9911,7 +9923,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<StringIO>"
+      "phetioTypeName": "PropertyIO<StringIO>"
     },
     "energySkateParkBasics.homeScreen.view.title.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -9923,7 +9935,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.homeScreen.view.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -9935,7 +9947,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.introScreen.activeProperty": {
       "phetioDocumentation": "Indicates whether the screen is active.  For single-screen simulations, the screen is always active.",
@@ -9947,7 +9959,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": true,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.introScreen.model.doubleWellTrack": {
       "phetioDocumentation": "",
@@ -9971,7 +9983,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.introScreen.model.doubleWellTrack.droppedProperty": {
       "phetioDocumentation": "",
@@ -9983,7 +9995,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.introScreen.model.doubleWellTrack.leftThePanelProperty": {
       "phetioDocumentation": "",
@@ -9995,7 +10007,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.introScreen.model.doubleWellTrack.physicalProperty": {
       "phetioDocumentation": "",
@@ -10007,7 +10019,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.introScreen.model.parabolaTrack": {
       "phetioDocumentation": "",
@@ -10031,7 +10043,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.introScreen.model.parabolaTrack.droppedProperty": {
       "phetioDocumentation": "",
@@ -10043,7 +10055,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.introScreen.model.parabolaTrack.leftThePanelProperty": {
       "phetioDocumentation": "",
@@ -10055,7 +10067,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.introScreen.model.parabolaTrack.physicalProperty": {
       "phetioDocumentation": "",
@@ -10067,7 +10079,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.introScreen.model.sceneProperty": {
       "phetioDocumentation": "",
@@ -10079,7 +10091,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NumberIO>"
+      "phetioTypeName": "PropertyIO<NumberIO>"
     },
     "energySkateParkBasics.introScreen.model.slopeTrack": {
       "phetioDocumentation": "",
@@ -10103,7 +10115,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.introScreen.model.slopeTrack.droppedProperty": {
       "phetioDocumentation": "",
@@ -10115,7 +10127,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.introScreen.model.slopeTrack.leftThePanelProperty": {
       "phetioDocumentation": "",
@@ -10127,7 +10139,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.introScreen.model.slopeTrack.physicalProperty": {
       "phetioDocumentation": "",
@@ -10139,7 +10151,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.introScreen.model.trackSetModel": {
       "phetioDocumentation": "",
@@ -10163,7 +10175,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<Bounds2IO>"
+      "phetioTypeName": "PropertyIO<Bounds2IO>"
     },
     "energySkateParkBasics.introScreen.model.trackSetModel.barGraphScaleProperty": {
       "phetioDocumentation": "",
@@ -10187,7 +10199,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.introScreen.model.trackSetModel.clearButtonEnabledProperty": {
       "phetioDocumentation": "",
@@ -10199,7 +10211,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.introScreen.model.trackSetModel.controlPoint~0": {
       "phetioDocumentation": "",
@@ -10223,7 +10235,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.introScreen.model.trackSetModel.controlPoint~0.positionProperty": {
       "phetioDocumentation": "",
@@ -10235,7 +10247,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": true,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "DerivedPropertyIO.<Vector2IO>"
+      "phetioTypeName": "DerivedPropertyIO<Vector2IO>"
     },
     "energySkateParkBasics.introScreen.model.trackSetModel.controlPoint~0.snapTargetProperty": {
       "phetioDocumentation": "",
@@ -10247,7 +10259,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<ControlPointIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<ControlPointIO>>"
     },
     "energySkateParkBasics.introScreen.model.trackSetModel.controlPoint~0.sourcePositionProperty": {
       "phetioDocumentation": "",
@@ -10259,7 +10271,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<Vector2IO>"
+      "phetioTypeName": "PropertyIO<Vector2IO>"
     },
     "energySkateParkBasics.introScreen.model.trackSetModel.controlPoint~1": {
       "phetioDocumentation": "",
@@ -10283,7 +10295,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.introScreen.model.trackSetModel.controlPoint~1.positionProperty": {
       "phetioDocumentation": "",
@@ -10295,7 +10307,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": true,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "DerivedPropertyIO.<Vector2IO>"
+      "phetioTypeName": "DerivedPropertyIO<Vector2IO>"
     },
     "energySkateParkBasics.introScreen.model.trackSetModel.controlPoint~1.snapTargetProperty": {
       "phetioDocumentation": "",
@@ -10307,7 +10319,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<ControlPointIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<ControlPointIO>>"
     },
     "energySkateParkBasics.introScreen.model.trackSetModel.controlPoint~1.sourcePositionProperty": {
       "phetioDocumentation": "",
@@ -10319,7 +10331,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<Vector2IO>"
+      "phetioTypeName": "PropertyIO<Vector2IO>"
     },
     "energySkateParkBasics.introScreen.model.trackSetModel.controlPoint~10": {
       "phetioDocumentation": "",
@@ -10343,7 +10355,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.introScreen.model.trackSetModel.controlPoint~10.positionProperty": {
       "phetioDocumentation": "",
@@ -10355,7 +10367,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": true,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "DerivedPropertyIO.<Vector2IO>"
+      "phetioTypeName": "DerivedPropertyIO<Vector2IO>"
     },
     "energySkateParkBasics.introScreen.model.trackSetModel.controlPoint~10.snapTargetProperty": {
       "phetioDocumentation": "",
@@ -10367,7 +10379,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<ControlPointIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<ControlPointIO>>"
     },
     "energySkateParkBasics.introScreen.model.trackSetModel.controlPoint~10.sourcePositionProperty": {
       "phetioDocumentation": "",
@@ -10379,7 +10391,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<Vector2IO>"
+      "phetioTypeName": "PropertyIO<Vector2IO>"
     },
     "energySkateParkBasics.introScreen.model.trackSetModel.controlPoint~2": {
       "phetioDocumentation": "",
@@ -10403,7 +10415,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.introScreen.model.trackSetModel.controlPoint~2.positionProperty": {
       "phetioDocumentation": "",
@@ -10415,7 +10427,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": true,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "DerivedPropertyIO.<Vector2IO>"
+      "phetioTypeName": "DerivedPropertyIO<Vector2IO>"
     },
     "energySkateParkBasics.introScreen.model.trackSetModel.controlPoint~2.snapTargetProperty": {
       "phetioDocumentation": "",
@@ -10427,7 +10439,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<ControlPointIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<ControlPointIO>>"
     },
     "energySkateParkBasics.introScreen.model.trackSetModel.controlPoint~2.sourcePositionProperty": {
       "phetioDocumentation": "",
@@ -10439,7 +10451,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<Vector2IO>"
+      "phetioTypeName": "PropertyIO<Vector2IO>"
     },
     "energySkateParkBasics.introScreen.model.trackSetModel.controlPoint~3": {
       "phetioDocumentation": "",
@@ -10463,7 +10475,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.introScreen.model.trackSetModel.controlPoint~3.positionProperty": {
       "phetioDocumentation": "",
@@ -10475,7 +10487,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": true,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "DerivedPropertyIO.<Vector2IO>"
+      "phetioTypeName": "DerivedPropertyIO<Vector2IO>"
     },
     "energySkateParkBasics.introScreen.model.trackSetModel.controlPoint~3.snapTargetProperty": {
       "phetioDocumentation": "",
@@ -10487,7 +10499,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<ControlPointIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<ControlPointIO>>"
     },
     "energySkateParkBasics.introScreen.model.trackSetModel.controlPoint~3.sourcePositionProperty": {
       "phetioDocumentation": "",
@@ -10499,7 +10511,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<Vector2IO>"
+      "phetioTypeName": "PropertyIO<Vector2IO>"
     },
     "energySkateParkBasics.introScreen.model.trackSetModel.controlPoint~4": {
       "phetioDocumentation": "",
@@ -10523,7 +10535,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.introScreen.model.trackSetModel.controlPoint~4.positionProperty": {
       "phetioDocumentation": "",
@@ -10535,7 +10547,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": true,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "DerivedPropertyIO.<Vector2IO>"
+      "phetioTypeName": "DerivedPropertyIO<Vector2IO>"
     },
     "energySkateParkBasics.introScreen.model.trackSetModel.controlPoint~4.snapTargetProperty": {
       "phetioDocumentation": "",
@@ -10547,7 +10559,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<ControlPointIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<ControlPointIO>>"
     },
     "energySkateParkBasics.introScreen.model.trackSetModel.controlPoint~4.sourcePositionProperty": {
       "phetioDocumentation": "",
@@ -10559,7 +10571,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<Vector2IO>"
+      "phetioTypeName": "PropertyIO<Vector2IO>"
     },
     "energySkateParkBasics.introScreen.model.trackSetModel.controlPoint~5": {
       "phetioDocumentation": "",
@@ -10583,7 +10595,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.introScreen.model.trackSetModel.controlPoint~5.positionProperty": {
       "phetioDocumentation": "",
@@ -10595,7 +10607,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": true,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "DerivedPropertyIO.<Vector2IO>"
+      "phetioTypeName": "DerivedPropertyIO<Vector2IO>"
     },
     "energySkateParkBasics.introScreen.model.trackSetModel.controlPoint~5.snapTargetProperty": {
       "phetioDocumentation": "",
@@ -10607,7 +10619,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<ControlPointIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<ControlPointIO>>"
     },
     "energySkateParkBasics.introScreen.model.trackSetModel.controlPoint~5.sourcePositionProperty": {
       "phetioDocumentation": "",
@@ -10619,7 +10631,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<Vector2IO>"
+      "phetioTypeName": "PropertyIO<Vector2IO>"
     },
     "energySkateParkBasics.introScreen.model.trackSetModel.controlPoint~6": {
       "phetioDocumentation": "",
@@ -10643,7 +10655,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.introScreen.model.trackSetModel.controlPoint~6.positionProperty": {
       "phetioDocumentation": "",
@@ -10655,7 +10667,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": true,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "DerivedPropertyIO.<Vector2IO>"
+      "phetioTypeName": "DerivedPropertyIO<Vector2IO>"
     },
     "energySkateParkBasics.introScreen.model.trackSetModel.controlPoint~6.snapTargetProperty": {
       "phetioDocumentation": "",
@@ -10667,7 +10679,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<ControlPointIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<ControlPointIO>>"
     },
     "energySkateParkBasics.introScreen.model.trackSetModel.controlPoint~6.sourcePositionProperty": {
       "phetioDocumentation": "",
@@ -10679,7 +10691,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<Vector2IO>"
+      "phetioTypeName": "PropertyIO<Vector2IO>"
     },
     "energySkateParkBasics.introScreen.model.trackSetModel.controlPoint~7": {
       "phetioDocumentation": "",
@@ -10703,7 +10715,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.introScreen.model.trackSetModel.controlPoint~7.positionProperty": {
       "phetioDocumentation": "",
@@ -10715,7 +10727,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": true,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "DerivedPropertyIO.<Vector2IO>"
+      "phetioTypeName": "DerivedPropertyIO<Vector2IO>"
     },
     "energySkateParkBasics.introScreen.model.trackSetModel.controlPoint~7.snapTargetProperty": {
       "phetioDocumentation": "",
@@ -10727,7 +10739,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<ControlPointIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<ControlPointIO>>"
     },
     "energySkateParkBasics.introScreen.model.trackSetModel.controlPoint~7.sourcePositionProperty": {
       "phetioDocumentation": "",
@@ -10739,7 +10751,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<Vector2IO>"
+      "phetioTypeName": "PropertyIO<Vector2IO>"
     },
     "energySkateParkBasics.introScreen.model.trackSetModel.controlPoint~8": {
       "phetioDocumentation": "",
@@ -10763,7 +10775,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.introScreen.model.trackSetModel.controlPoint~8.positionProperty": {
       "phetioDocumentation": "",
@@ -10775,7 +10787,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": true,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "DerivedPropertyIO.<Vector2IO>"
+      "phetioTypeName": "DerivedPropertyIO<Vector2IO>"
     },
     "energySkateParkBasics.introScreen.model.trackSetModel.controlPoint~8.snapTargetProperty": {
       "phetioDocumentation": "",
@@ -10787,7 +10799,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<ControlPointIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<ControlPointIO>>"
     },
     "energySkateParkBasics.introScreen.model.trackSetModel.controlPoint~8.sourcePositionProperty": {
       "phetioDocumentation": "",
@@ -10799,7 +10811,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<Vector2IO>"
+      "phetioTypeName": "PropertyIO<Vector2IO>"
     },
     "energySkateParkBasics.introScreen.model.trackSetModel.controlPoint~9": {
       "phetioDocumentation": "",
@@ -10823,7 +10835,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.introScreen.model.trackSetModel.controlPoint~9.positionProperty": {
       "phetioDocumentation": "",
@@ -10835,7 +10847,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": true,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "DerivedPropertyIO.<Vector2IO>"
+      "phetioTypeName": "DerivedPropertyIO<Vector2IO>"
     },
     "energySkateParkBasics.introScreen.model.trackSetModel.controlPoint~9.snapTargetProperty": {
       "phetioDocumentation": "",
@@ -10847,7 +10859,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<ControlPointIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<ControlPointIO>>"
     },
     "energySkateParkBasics.introScreen.model.trackSetModel.controlPoint~9.sourcePositionProperty": {
       "phetioDocumentation": "",
@@ -10859,7 +10871,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<Vector2IO>"
+      "phetioTypeName": "PropertyIO<Vector2IO>"
     },
     "energySkateParkBasics.introScreen.model.trackSetModel.editButtonEnabledProperty": {
       "phetioDocumentation": "",
@@ -10871,7 +10883,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.introScreen.model.trackSetModel.frictionProperty": {
       "phetioDocumentation": "",
@@ -10895,7 +10907,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.introScreen.model.trackSetModel.measuringTapeBasePositionProperty": {
       "phetioDocumentation": "",
@@ -10907,7 +10919,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<Vector2IO>"
+      "phetioTypeName": "PropertyIO<Vector2IO>"
     },
     "energySkateParkBasics.introScreen.model.trackSetModel.measuringTapeTipPositionProperty": {
       "phetioDocumentation": "",
@@ -10919,7 +10931,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<Vector2IO>"
+      "phetioTypeName": "PropertyIO<Vector2IO>"
     },
     "energySkateParkBasics.introScreen.model.trackSetModel.measuringTapeVisibleProperty": {
       "phetioDocumentation": "",
@@ -10931,7 +10943,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.introScreen.model.trackSetModel.pausedProperty": {
       "phetioDocumentation": "",
@@ -10943,7 +10955,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.introScreen.model.trackSetModel.pieChartVisibleProperty": {
       "phetioDocumentation": "",
@@ -10955,7 +10967,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.introScreen.model.trackSetModel.referenceHeightVisibleProperty": {
       "phetioDocumentation": "",
@@ -10967,7 +10979,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.introScreen.model.trackSetModel.skater.allowClearingThermalEnergyProperty": {
       "phetioDocumentation": "",
@@ -10979,7 +10991,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": true,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "DerivedPropertyIO.<BooleanIO>"
+      "phetioTypeName": "DerivedPropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.introScreen.model.trackSetModel.skater.angleProperty": {
       "phetioDocumentation": "",
@@ -11003,7 +11015,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<StringIO>"
+      "phetioTypeName": "PropertyIO<StringIO>"
     },
     "energySkateParkBasics.introScreen.model.trackSetModel.skater.draggingProperty": {
       "phetioDocumentation": "",
@@ -11015,7 +11027,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.introScreen.model.trackSetModel.skater.gravityMagnitudeProperty": {
       "phetioDocumentation": "",
@@ -11039,7 +11051,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": true,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<Vector2IO>"
+      "phetioTypeName": "PropertyIO<Vector2IO>"
     },
     "energySkateParkBasics.introScreen.model.trackSetModel.skater.kineticEnergyProperty": {
       "phetioDocumentation": "",
@@ -11075,7 +11087,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": true,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "DerivedPropertyIO.<BooleanIO>"
+      "phetioTypeName": "DerivedPropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.introScreen.model.trackSetModel.skater.onTopSideOfTrackProperty": {
       "phetioDocumentation": "",
@@ -11087,7 +11099,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.introScreen.model.trackSetModel.skater.parametricPositionProperty": {
       "phetioDocumentation": "",
@@ -11099,7 +11111,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<NumberIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<NumberIO>>"
     },
     "energySkateParkBasics.introScreen.model.trackSetModel.skater.parametricSpeedProperty": {
       "phetioDocumentation": "",
@@ -11123,7 +11135,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<Vector2IO>"
+      "phetioTypeName": "PropertyIO<Vector2IO>"
     },
     "energySkateParkBasics.introScreen.model.trackSetModel.skater.potentialEnergyProperty": {
       "phetioDocumentation": "",
@@ -11159,7 +11171,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": true,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "DerivedPropertyIO.<NumberIO>"
+      "phetioTypeName": "DerivedPropertyIO<NumberIO>"
     },
     "energySkateParkBasics.introScreen.model.trackSetModel.skater.startingPositionProperty": {
       "phetioDocumentation": "",
@@ -11171,7 +11183,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<Vector2IO>"
+      "phetioTypeName": "PropertyIO<Vector2IO>"
     },
     "energySkateParkBasics.introScreen.model.trackSetModel.skater.startingUProperty": {
       "phetioDocumentation": "",
@@ -11183,7 +11195,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<NumberIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<NumberIO>>"
     },
     "energySkateParkBasics.introScreen.model.trackSetModel.skater.startingUpProperty": {
       "phetioDocumentation": "",
@@ -11195,7 +11207,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.introScreen.model.trackSetModel.skater.thermalEnergyProperty": {
       "phetioDocumentation": "",
@@ -11231,7 +11243,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<TrackReferenceIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<TrackReferenceIO>>"
     },
     "energySkateParkBasics.introScreen.model.trackSetModel.skater.velocityProperty": {
       "phetioDocumentation": "",
@@ -11243,7 +11255,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<Vector2IO>"
+      "phetioTypeName": "PropertyIO<Vector2IO>"
     },
     "energySkateParkBasics.introScreen.model.trackSetModel.speedProperty": {
       "phetioDocumentation": "",
@@ -11255,7 +11267,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<StringIO>"
+      "phetioTypeName": "PropertyIO<StringIO>"
     },
     "energySkateParkBasics.introScreen.model.trackSetModel.speedValueVisibleProperty": {
       "phetioDocumentation": "",
@@ -11267,7 +11279,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.introScreen.model.trackSetModel.speedometerVisibleProperty": {
       "phetioDocumentation": "",
@@ -11279,7 +11291,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.introScreen.model.trackSetModel.stickingToTrackProperty": {
       "phetioDocumentation": "",
@@ -11291,7 +11303,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.introScreen.model.trackSetModel.tracks": {
       "phetioDocumentation": "",
@@ -11303,7 +11315,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "ObservableArrayIO.<TrackIO>"
+      "phetioTypeName": "ObservableArrayIO<TrackIO>"
     },
     "energySkateParkBasics.introScreen.model.trackSetModel.tracks.lengthProperty": {
       "phetioDocumentation": "",
@@ -11375,7 +11387,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.backgroundNode.mountainImage.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -11387,7 +11399,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.backgroundNode.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
@@ -11411,7 +11423,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.backgroundNode.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -11423,7 +11435,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel": {
       "phetioDocumentation": "",
@@ -11459,7 +11471,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.sceneSelectionRadioButtonGroup": {
       "phetioDocumentation": "",
@@ -11507,7 +11519,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.sceneSelectionRadioButtonGroup.contentNode0.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -11519,7 +11531,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.sceneSelectionRadioButtonGroup.contentNode1": {
       "phetioDocumentation": "",
@@ -11555,7 +11567,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.sceneSelectionRadioButtonGroup.contentNode1.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -11567,7 +11579,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.sceneSelectionRadioButtonGroup.contentNode2": {
       "phetioDocumentation": "",
@@ -11603,7 +11615,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.sceneSelectionRadioButtonGroup.contentNode2.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -11615,7 +11627,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.sceneSelectionRadioButtonGroup.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
@@ -11639,7 +11651,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.sceneSelectionRadioButtonGroup.scene1RadioButton": {
       "phetioDocumentation": "",
@@ -11663,7 +11675,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.sceneSelectionRadioButtonGroup.scene1RadioButton.firedEmitter": {
       "phetioDocumentation": "Emits when the radio button is pressed No arguments.",
@@ -11675,7 +11687,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "EmitterIO.<>"
+      "phetioTypeName": "EmitterIO<>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.sceneSelectionRadioButtonGroup.scene1RadioButton.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
@@ -11699,7 +11711,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.sceneSelectionRadioButtonGroup.scene1RadioButton.pressListener.pressAction": {
       "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br/><ol><li>event: EventIO</li></ol>",
@@ -11711,10 +11723,10 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<EventIO>"
+      "phetioTypeName": "ActionIO<EventIO>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.sceneSelectionRadioButtonGroup.scene1RadioButton.pressListener.releaseAction": {
-      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO.<EventIO></li></ol>",
+      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO<EventIO></li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -11723,7 +11735,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<NullableIO.<EventIO>>"
+      "phetioTypeName": "ActionIO<NullableIO<EventIO>>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.sceneSelectionRadioButtonGroup.scene1RadioButton.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -11735,7 +11747,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.sceneSelectionRadioButtonGroup.scene2RadioButton": {
       "phetioDocumentation": "",
@@ -11759,7 +11771,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.sceneSelectionRadioButtonGroup.scene2RadioButton.firedEmitter": {
       "phetioDocumentation": "Emits when the radio button is pressed No arguments.",
@@ -11771,7 +11783,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "EmitterIO.<>"
+      "phetioTypeName": "EmitterIO<>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.sceneSelectionRadioButtonGroup.scene2RadioButton.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
@@ -11795,7 +11807,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.sceneSelectionRadioButtonGroup.scene2RadioButton.pressListener.pressAction": {
       "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br/><ol><li>event: EventIO</li></ol>",
@@ -11807,10 +11819,10 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<EventIO>"
+      "phetioTypeName": "ActionIO<EventIO>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.sceneSelectionRadioButtonGroup.scene2RadioButton.pressListener.releaseAction": {
-      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO.<EventIO></li></ol>",
+      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO<EventIO></li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -11819,7 +11831,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<NullableIO.<EventIO>>"
+      "phetioTypeName": "ActionIO<NullableIO<EventIO>>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.sceneSelectionRadioButtonGroup.scene2RadioButton.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -11831,7 +11843,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.sceneSelectionRadioButtonGroup.scene3RadioButton": {
       "phetioDocumentation": "",
@@ -11855,7 +11867,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.sceneSelectionRadioButtonGroup.scene3RadioButton.firedEmitter": {
       "phetioDocumentation": "Emits when the radio button is pressed No arguments.",
@@ -11867,7 +11879,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "EmitterIO.<>"
+      "phetioTypeName": "EmitterIO<>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.sceneSelectionRadioButtonGroup.scene3RadioButton.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
@@ -11891,7 +11903,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.sceneSelectionRadioButtonGroup.scene3RadioButton.pressListener.pressAction": {
       "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br/><ol><li>event: EventIO</li></ol>",
@@ -11903,10 +11915,10 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<EventIO>"
+      "phetioTypeName": "ActionIO<EventIO>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.sceneSelectionRadioButtonGroup.scene3RadioButton.pressListener.releaseAction": {
-      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO.<EventIO></li></ol>",
+      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO<EventIO></li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -11915,7 +11927,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<NullableIO.<EventIO>>"
+      "phetioTypeName": "ActionIO<NullableIO<EventIO>>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.sceneSelectionRadioButtonGroup.scene3RadioButton.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -11927,7 +11939,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.sceneSelectionRadioButtonGroup.trackNode0": {
       "phetioDocumentation": "",
@@ -11963,7 +11975,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.sceneSelectionRadioButtonGroup.trackNode0.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -11975,7 +11987,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.sceneSelectionRadioButtonGroup.trackNode1": {
       "phetioDocumentation": "",
@@ -12011,7 +12023,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.sceneSelectionRadioButtonGroup.trackNode1.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -12023,7 +12035,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.sceneSelectionRadioButtonGroup.trackNode2": {
       "phetioDocumentation": "",
@@ -12059,7 +12071,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.sceneSelectionRadioButtonGroup.trackNode2.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -12071,7 +12083,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.sceneSelectionRadioButtonGroup.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -12083,199 +12095,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
-    },
-    "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.visibilityControls.barGraphCheckbox": {
-      "phetioDocumentation": "",
-      "phetioDynamicElement": false,
-      "phetioEventType": "USER",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "NodeIO"
-    },
-    "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.visibilityControls.barGraphCheckbox.enabledProperty": {
-      "phetioDocumentation": "When disabled, the checkbox is grayed out and cannot be pressed.",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": true,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": true,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
-    },
-    "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.visibilityControls.barGraphCheckbox.itemLabel": {
-      "phetioDocumentation": "",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "TextIO"
-    },
-    "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.visibilityControls.barGraphCheckbox.itemLabel.opacityProperty": {
-      "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": true,
-      "phetioStudioControl": true,
-      "phetioTypeName": "NumberPropertyIO"
-    },
-    "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.visibilityControls.barGraphCheckbox.itemLabel.pickableProperty": {
-      "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": true,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
-    },
-    "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.visibilityControls.barGraphCheckbox.itemLabel.textProperty": {
-      "phetioDocumentation": "Property for the displayed text",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": true,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<StringIO>"
-    },
-    "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.visibilityControls.barGraphCheckbox.itemLabel.visibleProperty": {
-      "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": true,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
-    },
-    "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.visibilityControls.barGraphCheckbox.opacityProperty": {
-      "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": true,
-      "phetioStudioControl": true,
-      "phetioTypeName": "NumberPropertyIO"
-    },
-    "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.visibilityControls.barGraphCheckbox.pickableProperty": {
-      "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": true,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
-    },
-    "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.visibilityControls.barGraphCheckbox.property": {
-      "phetioDocumentation": "",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": true,
-      "phetioState": true,
-      "phetioStudioControl": true,
-      "phetioTypeName": "LinkedElementIO"
-    },
-    "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.visibilityControls.barGraphCheckbox.toggleAction": {
-      "phetioDocumentation": "Emits when user input causes the checkbox to toggle, emitting a single arg: the new boolean value of the checkbox state. The arguments are:<br/><ol><li>isChecked: BooleanIO</li></ol>",
-      "phetioDynamicElement": false,
-      "phetioEventType": "USER",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<BooleanIO>"
-    },
-    "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.visibilityControls.barGraphCheckbox.visibleProperty": {
-      "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": true,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": true,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
-    },
-    "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.visibilityControls.barGraphIcon": {
-      "phetioDocumentation": "",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "NodeIO"
-    },
-    "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.visibilityControls.barGraphIcon.opacityProperty": {
-      "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": true,
-      "phetioStudioControl": true,
-      "phetioTypeName": "NumberPropertyIO"
-    },
-    "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.visibilityControls.barGraphIcon.pickableProperty": {
-      "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": true,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
-    },
-    "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.visibilityControls.barGraphIcon.visibleProperty": {
-      "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": true,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.visibilityControls.gridCheckbox": {
       "phetioDocumentation": "",
@@ -12299,7 +12119,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.visibilityControls.gridCheckbox.itemLabel": {
       "phetioDocumentation": "",
@@ -12335,7 +12155,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.visibilityControls.gridCheckbox.itemLabel.textProperty": {
       "phetioDocumentation": "Property for the displayed text",
@@ -12347,7 +12167,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<StringIO>"
+      "phetioTypeName": "PropertyIO<StringIO>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.visibilityControls.gridCheckbox.itemLabel.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -12359,7 +12179,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.visibilityControls.gridCheckbox.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
@@ -12383,7 +12203,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.visibilityControls.gridCheckbox.property": {
       "phetioDocumentation": "",
@@ -12407,7 +12227,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<BooleanIO>"
+      "phetioTypeName": "ActionIO<BooleanIO>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.visibilityControls.gridCheckbox.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -12419,7 +12239,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.visibilityControls.gridIcon": {
       "phetioDocumentation": "",
@@ -12455,7 +12275,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.visibilityControls.gridIcon.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -12467,7 +12287,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.visibilityControls.pieChartCheckbox": {
       "phetioDocumentation": "",
@@ -12491,7 +12311,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.visibilityControls.pieChartCheckbox.itemLabel": {
       "phetioDocumentation": "",
@@ -12527,7 +12347,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.visibilityControls.pieChartCheckbox.itemLabel.textProperty": {
       "phetioDocumentation": "Property for the displayed text",
@@ -12539,7 +12359,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<StringIO>"
+      "phetioTypeName": "PropertyIO<StringIO>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.visibilityControls.pieChartCheckbox.itemLabel.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -12551,7 +12371,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.visibilityControls.pieChartCheckbox.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
@@ -12575,7 +12395,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.visibilityControls.pieChartCheckbox.property": {
       "phetioDocumentation": "",
@@ -12599,7 +12419,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<BooleanIO>"
+      "phetioTypeName": "ActionIO<BooleanIO>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.visibilityControls.pieChartCheckbox.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -12611,7 +12431,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.visibilityControls.pieChartIcon": {
       "phetioDocumentation": "",
@@ -12671,7 +12491,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.visibilityControls.pieChartIcon.path.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -12683,7 +12503,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.visibilityControls.pieChartIcon.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
@@ -12695,7 +12515,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.visibilityControls.pieChartIcon.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -12707,7 +12527,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.visibilityControls.speedIcon.gaugeNode": {
       "phetioDocumentation": "",
@@ -12755,7 +12575,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.visibilityControls.speedIcon.gaugeNode.foregroundNode.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -12767,7 +12587,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.visibilityControls.speedIcon.gaugeNode.labelNode": {
       "phetioDocumentation": "",
@@ -12803,7 +12623,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.visibilityControls.speedIcon.gaugeNode.labelNode.textProperty": {
       "phetioDocumentation": "Property for the displayed text",
@@ -12815,7 +12635,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<StringIO>"
+      "phetioTypeName": "PropertyIO<StringIO>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.visibilityControls.speedIcon.gaugeNode.labelNode.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -12827,7 +12647,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.visibilityControls.speedIcon.gaugeNode.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
@@ -12851,7 +12671,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.visibilityControls.speedIcon.gaugeNode.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -12863,7 +12683,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.visibilityControls.speedometerCheckbox": {
       "phetioDocumentation": "",
@@ -12887,7 +12707,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.visibilityControls.speedometerCheckbox.itemLabel": {
       "phetioDocumentation": "",
@@ -12923,7 +12743,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.visibilityControls.speedometerCheckbox.itemLabel.textProperty": {
       "phetioDocumentation": "Property for the displayed text",
@@ -12935,7 +12755,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<StringIO>"
+      "phetioTypeName": "PropertyIO<StringIO>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.visibilityControls.speedometerCheckbox.itemLabel.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -12947,7 +12767,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.visibilityControls.speedometerCheckbox.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
@@ -12971,7 +12791,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.visibilityControls.speedometerCheckbox.property": {
       "phetioDocumentation": "",
@@ -12995,7 +12815,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<BooleanIO>"
+      "phetioTypeName": "ActionIO<BooleanIO>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.visibilityControls.speedometerCheckbox.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -13007,7 +12827,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -13019,9 +12839,21 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
-    "energySkateParkBasics.introScreen.view.introScreenView.energyBargGraphPanel.energyBarGraph.clearThermalButton": {
+    "energySkateParkBasics.introScreen.view.introScreenView.energyBarGraphAccordionBox": {
+      "phetioDocumentation": "",
+      "phetioDynamicElement": false,
+      "phetioEventType": "USER",
+      "phetioFeatured": false,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": false,
+      "phetioStudioControl": true,
+      "phetioTypeName": "AccordionBoxIO"
+    },
+    "energySkateParkBasics.introScreen.view.introScreenView.energyBarGraphAccordionBox.barGraphIcon": {
       "phetioDocumentation": "",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -13033,19 +12865,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "NodeIO"
     },
-    "energySkateParkBasics.introScreen.view.introScreenView.energyBargGraphPanel.energyBarGraph.clearThermalButton.arrowPath": {
-      "phetioDocumentation": "",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "NodeIO"
-    },
-    "energySkateParkBasics.introScreen.view.introScreenView.energyBargGraphPanel.energyBarGraph.clearThermalButton.arrowPath.opacityProperty": {
+    "energySkateParkBasics.introScreen.view.introScreenView.energyBarGraphAccordionBox.barGraphIcon.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -13057,7 +12877,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "NumberPropertyIO"
     },
-    "energySkateParkBasics.introScreen.view.introScreenView.energyBargGraphPanel.energyBarGraph.clearThermalButton.arrowPath.pickableProperty": {
+    "energySkateParkBasics.introScreen.view.introScreenView.energyBarGraphAccordionBox.barGraphIcon.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -13067,9 +12887,9 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
-    "energySkateParkBasics.introScreen.view.introScreenView.energyBargGraphPanel.energyBarGraph.clearThermalButton.arrowPath.visibleProperty": {
+    "energySkateParkBasics.introScreen.view.introScreenView.energyBarGraphAccordionBox.barGraphIcon.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -13079,9 +12899,69 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
-    "energySkateParkBasics.introScreen.view.introScreenView.energyBargGraphPanel.energyBarGraph.clearThermalButton.enabledProperty": {
+    "energySkateParkBasics.introScreen.view.introScreenView.energyBarGraphAccordionBox.energyBarGraph.clearThermalButton": {
+      "phetioDocumentation": "",
+      "phetioDynamicElement": false,
+      "phetioEventType": "MODEL",
+      "phetioFeatured": false,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": false,
+      "phetioStudioControl": true,
+      "phetioTypeName": "NodeIO"
+    },
+    "energySkateParkBasics.introScreen.view.introScreenView.energyBarGraphAccordionBox.energyBarGraph.clearThermalButton.arrowPath": {
+      "phetioDocumentation": "",
+      "phetioDynamicElement": false,
+      "phetioEventType": "MODEL",
+      "phetioFeatured": false,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": false,
+      "phetioStudioControl": true,
+      "phetioTypeName": "NodeIO"
+    },
+    "energySkateParkBasics.introScreen.view.introScreenView.energyBarGraphAccordionBox.energyBarGraph.clearThermalButton.arrowPath.opacityProperty": {
+      "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
+      "phetioEventType": "MODEL",
+      "phetioFeatured": false,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": true,
+      "phetioStudioControl": true,
+      "phetioTypeName": "NumberPropertyIO"
+    },
+    "energySkateParkBasics.introScreen.view.introScreenView.energyBarGraphAccordionBox.energyBarGraph.clearThermalButton.arrowPath.pickableProperty": {
+      "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
+      "phetioEventType": "MODEL",
+      "phetioFeatured": false,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": true,
+      "phetioStudioControl": true,
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
+    },
+    "energySkateParkBasics.introScreen.view.introScreenView.energyBarGraphAccordionBox.energyBarGraph.clearThermalButton.arrowPath.visibleProperty": {
+      "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
+      "phetioEventType": "MODEL",
+      "phetioFeatured": false,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": true,
+      "phetioStudioControl": true,
+      "phetioTypeName": "PropertyIO<BooleanIO>"
+    },
+    "energySkateParkBasics.introScreen.view.introScreenView.energyBarGraphAccordionBox.energyBarGraph.clearThermalButton.enabledProperty": {
       "phetioDocumentation": "When disabled, the button is grayed out and cannot be pressed",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -13091,9 +12971,9 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
-    "energySkateParkBasics.introScreen.view.introScreenView.energyBargGraphPanel.energyBarGraph.clearThermalButton.firedEmitter": {
+    "energySkateParkBasics.introScreen.view.introScreenView.energyBarGraphAccordionBox.energyBarGraph.clearThermalButton.firedEmitter": {
       "phetioDocumentation": "Emits when the button is fired No arguments.",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
@@ -13103,9 +12983,9 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "EmitterIO.<>"
+      "phetioTypeName": "EmitterIO<>"
     },
-    "energySkateParkBasics.introScreen.view.introScreenView.energyBargGraphPanel.energyBarGraph.clearThermalButton.opacityProperty": {
+    "energySkateParkBasics.introScreen.view.introScreenView.energyBarGraphAccordionBox.energyBarGraph.clearThermalButton.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -13117,7 +12997,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "NumberPropertyIO"
     },
-    "energySkateParkBasics.introScreen.view.introScreenView.energyBargGraphPanel.energyBarGraph.clearThermalButton.pickableProperty": {
+    "energySkateParkBasics.introScreen.view.introScreenView.energyBarGraphAccordionBox.energyBarGraph.clearThermalButton.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -13127,9 +13007,9 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
-    "energySkateParkBasics.introScreen.view.introScreenView.energyBargGraphPanel.energyBarGraph.clearThermalButton.pressListener.pressAction": {
+    "energySkateParkBasics.introScreen.view.introScreenView.energyBarGraphAccordionBox.energyBarGraph.clearThermalButton.pressListener.pressAction": {
       "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br/><ol><li>event: EventIO</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
@@ -13139,10 +13019,10 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<EventIO>"
+      "phetioTypeName": "ActionIO<EventIO>"
     },
-    "energySkateParkBasics.introScreen.view.introScreenView.energyBargGraphPanel.energyBarGraph.clearThermalButton.pressListener.releaseAction": {
-      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO.<EventIO></li></ol>",
+    "energySkateParkBasics.introScreen.view.introScreenView.energyBarGraphAccordionBox.energyBarGraph.clearThermalButton.pressListener.releaseAction": {
+      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO<EventIO></li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -13151,9 +13031,9 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<NullableIO.<EventIO>>"
+      "phetioTypeName": "ActionIO<NullableIO<EventIO>>"
     },
-    "energySkateParkBasics.introScreen.view.introScreenView.energyBargGraphPanel.energyBarGraph.clearThermalButton.trashPath": {
+    "energySkateParkBasics.introScreen.view.introScreenView.energyBarGraphAccordionBox.energyBarGraph.clearThermalButton.trashPath": {
       "phetioDocumentation": "",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -13165,7 +13045,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "NodeIO"
     },
-    "energySkateParkBasics.introScreen.view.introScreenView.energyBargGraphPanel.energyBarGraph.clearThermalButton.trashPath.opacityProperty": {
+    "energySkateParkBasics.introScreen.view.introScreenView.energyBarGraphAccordionBox.energyBarGraph.clearThermalButton.trashPath.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -13177,7 +13057,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "NumberPropertyIO"
     },
-    "energySkateParkBasics.introScreen.view.introScreenView.energyBargGraphPanel.energyBarGraph.clearThermalButton.trashPath.pickableProperty": {
+    "energySkateParkBasics.introScreen.view.introScreenView.energyBarGraphAccordionBox.energyBarGraph.clearThermalButton.trashPath.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -13187,9 +13067,9 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
-    "energySkateParkBasics.introScreen.view.introScreenView.energyBargGraphPanel.energyBarGraph.clearThermalButton.trashPath.visibleProperty": {
+    "energySkateParkBasics.introScreen.view.introScreenView.energyBarGraphAccordionBox.energyBarGraph.clearThermalButton.trashPath.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -13199,9 +13079,9 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
-    "energySkateParkBasics.introScreen.view.introScreenView.energyBargGraphPanel.energyBarGraph.clearThermalButton.visibleProperty": {
+    "energySkateParkBasics.introScreen.view.introScreenView.energyBarGraphAccordionBox.energyBarGraph.clearThermalButton.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -13211,9 +13091,9 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
-    "energySkateParkBasics.introScreen.view.introScreenView.energyBargGraphPanel.energyBarGraph.zoomInButton": {
+    "energySkateParkBasics.introScreen.view.introScreenView.energyBarGraphAccordionBox.expandCollapseButton": {
       "phetioDocumentation": "",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -13223,9 +13103,9 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "NodeIO"
+      "phetioTypeName": "ToggleButtonIO"
     },
-    "energySkateParkBasics.introScreen.view.introScreenView.energyBargGraphPanel.energyBarGraph.zoomInButton.enabledProperty": {
+    "energySkateParkBasics.introScreen.view.introScreenView.energyBarGraphAccordionBox.expandCollapseButton.enabledProperty": {
       "phetioDocumentation": "When disabled, the button is grayed out and cannot be pressed",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -13235,33 +13115,9 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
-    "energySkateParkBasics.introScreen.view.introScreenView.energyBargGraphPanel.energyBarGraph.zoomInButton.firedEmitter": {
-      "phetioDocumentation": "Emits when the button is fired No arguments.",
-      "phetioDynamicElement": false,
-      "phetioEventType": "USER",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "EmitterIO.<>"
-    },
-    "energySkateParkBasics.introScreen.view.introScreenView.energyBargGraphPanel.energyBarGraph.zoomInButton.glassNode": {
-      "phetioDocumentation": "",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "NodeIO"
-    },
-    "energySkateParkBasics.introScreen.view.introScreenView.energyBargGraphPanel.energyBarGraph.zoomInButton.glassNode.opacityProperty": {
+    "energySkateParkBasics.introScreen.view.introScreenView.energyBarGraphAccordionBox.expandCollapseButton.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -13273,7 +13129,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "NumberPropertyIO"
     },
-    "energySkateParkBasics.introScreen.view.introScreenView.energyBargGraphPanel.energyBarGraph.zoomInButton.glassNode.pickableProperty": {
+    "energySkateParkBasics.introScreen.view.introScreenView.energyBarGraphAccordionBox.expandCollapseButton.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -13283,45 +13139,9 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
-    "energySkateParkBasics.introScreen.view.introScreenView.energyBargGraphPanel.energyBarGraph.zoomInButton.glassNode.visibleProperty": {
-      "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": true,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
-    },
-    "energySkateParkBasics.introScreen.view.introScreenView.energyBargGraphPanel.energyBarGraph.zoomInButton.opacityProperty": {
-      "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": true,
-      "phetioStudioControl": true,
-      "phetioTypeName": "NumberPropertyIO"
-    },
-    "energySkateParkBasics.introScreen.view.introScreenView.energyBargGraphPanel.energyBarGraph.zoomInButton.pickableProperty": {
-      "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": true,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
-    },
-    "energySkateParkBasics.introScreen.view.introScreenView.energyBargGraphPanel.energyBarGraph.zoomInButton.pressListener.pressAction": {
+    "energySkateParkBasics.introScreen.view.introScreenView.energyBarGraphAccordionBox.expandCollapseButton.pressListener.pressAction": {
       "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br/><ol><li>event: EventIO</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
@@ -13331,10 +13151,10 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<EventIO>"
+      "phetioTypeName": "ActionIO<EventIO>"
     },
-    "energySkateParkBasics.introScreen.view.introScreenView.energyBargGraphPanel.energyBarGraph.zoomInButton.pressListener.releaseAction": {
-      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO.<EventIO></li></ol>",
+    "energySkateParkBasics.introScreen.view.introScreenView.energyBarGraphAccordionBox.expandCollapseButton.pressListener.releaseAction": {
+      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO<EventIO></li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -13343,57 +13163,33 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<NullableIO.<EventIO>>"
+      "phetioTypeName": "ActionIO<NullableIO<EventIO>>"
     },
-    "energySkateParkBasics.introScreen.view.introScreenView.energyBargGraphPanel.energyBarGraph.zoomInButton.signNode": {
+    "energySkateParkBasics.introScreen.view.introScreenView.energyBarGraphAccordionBox.expandCollapseButton.property": {
       "phetioDocumentation": "",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
       "phetioPlayback": false,
+      "phetioReadOnly": true,
+      "phetioState": true,
+      "phetioStudioControl": true,
+      "phetioTypeName": "LinkedElementIO"
+    },
+    "energySkateParkBasics.introScreen.view.introScreenView.energyBarGraphAccordionBox.expandCollapseButton.toggledEmitter": {
+      "phetioDocumentation": "Emits when the button is toggled No arguments.",
+      "phetioDynamicElement": false,
+      "phetioEventType": "USER",
+      "phetioFeatured": false,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "NodeIO"
+      "phetioTypeName": "EmitterIO<>"
     },
-    "energySkateParkBasics.introScreen.view.introScreenView.energyBargGraphPanel.energyBarGraph.zoomInButton.signNode.opacityProperty": {
-      "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": true,
-      "phetioStudioControl": true,
-      "phetioTypeName": "NumberPropertyIO"
-    },
-    "energySkateParkBasics.introScreen.view.introScreenView.energyBargGraphPanel.energyBarGraph.zoomInButton.signNode.pickableProperty": {
-      "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": true,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
-    },
-    "energySkateParkBasics.introScreen.view.introScreenView.energyBargGraphPanel.energyBarGraph.zoomInButton.signNode.visibleProperty": {
-      "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": true,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
-    },
-    "energySkateParkBasics.introScreen.view.introScreenView.energyBargGraphPanel.energyBarGraph.zoomInButton.visibleProperty": {
+    "energySkateParkBasics.introScreen.view.introScreenView.energyBarGraphAccordionBox.expandCollapseButton.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -13403,57 +13199,9 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
-    "energySkateParkBasics.introScreen.view.introScreenView.energyBargGraphPanel.energyBarGraph.zoomOutButton": {
-      "phetioDocumentation": "",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "NodeIO"
-    },
-    "energySkateParkBasics.introScreen.view.introScreenView.energyBargGraphPanel.energyBarGraph.zoomOutButton.enabledProperty": {
-      "phetioDocumentation": "When disabled, the button is grayed out and cannot be pressed",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": true,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": true,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
-    },
-    "energySkateParkBasics.introScreen.view.introScreenView.energyBargGraphPanel.energyBarGraph.zoomOutButton.firedEmitter": {
-      "phetioDocumentation": "Emits when the button is fired No arguments.",
-      "phetioDynamicElement": false,
-      "phetioEventType": "USER",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "EmitterIO.<>"
-    },
-    "energySkateParkBasics.introScreen.view.introScreenView.energyBargGraphPanel.energyBarGraph.zoomOutButton.glassNode": {
-      "phetioDocumentation": "",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "NodeIO"
-    },
-    "energySkateParkBasics.introScreen.view.introScreenView.energyBargGraphPanel.energyBarGraph.zoomOutButton.glassNode.opacityProperty": {
+    "energySkateParkBasics.introScreen.view.introScreenView.energyBarGraphAccordionBox.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -13465,7 +13213,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "NumberPropertyIO"
     },
-    "energySkateParkBasics.introScreen.view.introScreenView.energyBargGraphPanel.energyBarGraph.zoomOutButton.glassNode.pickableProperty": {
+    "energySkateParkBasics.introScreen.view.introScreenView.energyBarGraphAccordionBox.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -13475,117 +13223,9 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
-    "energySkateParkBasics.introScreen.view.introScreenView.energyBargGraphPanel.energyBarGraph.zoomOutButton.glassNode.visibleProperty": {
-      "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": true,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
-    },
-    "energySkateParkBasics.introScreen.view.introScreenView.energyBargGraphPanel.energyBarGraph.zoomOutButton.opacityProperty": {
-      "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": true,
-      "phetioStudioControl": true,
-      "phetioTypeName": "NumberPropertyIO"
-    },
-    "energySkateParkBasics.introScreen.view.introScreenView.energyBargGraphPanel.energyBarGraph.zoomOutButton.pickableProperty": {
-      "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": true,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
-    },
-    "energySkateParkBasics.introScreen.view.introScreenView.energyBargGraphPanel.energyBarGraph.zoomOutButton.pressListener.pressAction": {
-      "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br/><ol><li>event: EventIO</li></ol>",
-      "phetioDynamicElement": false,
-      "phetioEventType": "USER",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<EventIO>"
-    },
-    "energySkateParkBasics.introScreen.view.introScreenView.energyBargGraphPanel.energyBarGraph.zoomOutButton.pressListener.releaseAction": {
-      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO.<EventIO></li></ol>",
-      "phetioDynamicElement": false,
-      "phetioEventType": "USER",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<NullableIO.<EventIO>>"
-    },
-    "energySkateParkBasics.introScreen.view.introScreenView.energyBargGraphPanel.energyBarGraph.zoomOutButton.signNode": {
-      "phetioDocumentation": "",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "NodeIO"
-    },
-    "energySkateParkBasics.introScreen.view.introScreenView.energyBargGraphPanel.energyBarGraph.zoomOutButton.signNode.opacityProperty": {
-      "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": true,
-      "phetioStudioControl": true,
-      "phetioTypeName": "NumberPropertyIO"
-    },
-    "energySkateParkBasics.introScreen.view.introScreenView.energyBargGraphPanel.energyBarGraph.zoomOutButton.signNode.pickableProperty": {
-      "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": true,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
-    },
-    "energySkateParkBasics.introScreen.view.introScreenView.energyBargGraphPanel.energyBarGraph.zoomOutButton.signNode.visibleProperty": {
-      "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": true,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
-    },
-    "energySkateParkBasics.introScreen.view.introScreenView.energyBargGraphPanel.energyBarGraph.zoomOutButton.visibleProperty": {
+    "energySkateParkBasics.introScreen.view.introScreenView.energyBarGraphAccordionBox.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -13595,7 +13235,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.gridNode": {
       "phetioDocumentation": "",
@@ -13631,7 +13271,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.gridNode.thickLinePath": {
       "phetioDocumentation": "",
@@ -13667,7 +13307,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.gridNode.thickLinePath.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -13679,7 +13319,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.gridNode.thinLinePath": {
       "phetioDocumentation": "",
@@ -13715,7 +13355,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.gridNode.thinLinePath.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -13727,7 +13367,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.gridNode.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -13739,7 +13379,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
@@ -13763,7 +13403,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.pieChartLegend": {
       "phetioDocumentation": "",
@@ -13823,7 +13463,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.pieChartLegend.clearThermalButton.arrowPath.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -13835,7 +13475,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.pieChartLegend.clearThermalButton.enabledProperty": {
       "phetioDocumentation": "When disabled, the button is grayed out and cannot be pressed",
@@ -13847,7 +13487,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.pieChartLegend.clearThermalButton.firedEmitter": {
       "phetioDocumentation": "Emits when the button is fired No arguments.",
@@ -13859,7 +13499,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "EmitterIO.<>"
+      "phetioTypeName": "EmitterIO<>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.pieChartLegend.clearThermalButton.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
@@ -13883,7 +13523,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.pieChartLegend.clearThermalButton.pressListener.pressAction": {
       "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br/><ol><li>event: EventIO</li></ol>",
@@ -13895,10 +13535,10 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<EventIO>"
+      "phetioTypeName": "ActionIO<EventIO>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.pieChartLegend.clearThermalButton.pressListener.releaseAction": {
-      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO.<EventIO></li></ol>",
+      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO<EventIO></li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -13907,7 +13547,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<NullableIO.<EventIO>>"
+      "phetioTypeName": "ActionIO<NullableIO<EventIO>>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.pieChartLegend.clearThermalButton.trashPath": {
       "phetioDocumentation": "",
@@ -13943,7 +13583,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.pieChartLegend.clearThermalButton.trashPath.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -13955,7 +13595,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.pieChartLegend.clearThermalButton.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -13967,7 +13607,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.pieChartLegend.kineticEnergyLabel": {
       "phetioDocumentation": "",
@@ -14003,7 +13643,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.pieChartLegend.kineticEnergyLabel.textProperty": {
       "phetioDocumentation": "Property for the displayed text",
@@ -14015,7 +13655,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<StringIO>"
+      "phetioTypeName": "PropertyIO<StringIO>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.pieChartLegend.kineticEnergyLabel.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -14027,7 +13667,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.pieChartLegend.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
@@ -14051,7 +13691,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.pieChartLegend.potentialEnergyLabel": {
       "phetioDocumentation": "",
@@ -14087,7 +13727,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.pieChartLegend.potentialEnergyLabel.textProperty": {
       "phetioDocumentation": "Property for the displayed text",
@@ -14099,7 +13739,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<StringIO>"
+      "phetioTypeName": "PropertyIO<StringIO>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.pieChartLegend.potentialEnergyLabel.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -14111,7 +13751,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.pieChartLegend.thermalEnergyLabel": {
       "phetioDocumentation": "",
@@ -14147,7 +13787,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.pieChartLegend.thermalEnergyLabel.textProperty": {
       "phetioDocumentation": "Property for the displayed text",
@@ -14159,7 +13799,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<StringIO>"
+      "phetioTypeName": "PropertyIO<StringIO>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.pieChartLegend.thermalEnergyLabel.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -14171,7 +13811,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.pieChartLegend.titleNode": {
       "phetioDocumentation": "",
@@ -14207,7 +13847,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.pieChartLegend.titleNode.textProperty": {
       "phetioDocumentation": "Property for the displayed text",
@@ -14219,7 +13859,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<StringIO>"
+      "phetioTypeName": "PropertyIO<StringIO>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.pieChartLegend.titleNode.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -14231,7 +13871,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.pieChartLegend.totalEnergyLabel": {
       "phetioDocumentation": "",
@@ -14267,7 +13907,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.pieChartLegend.totalEnergyLabel.textProperty": {
       "phetioDocumentation": "Property for the displayed text",
@@ -14279,7 +13919,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<StringIO>"
+      "phetioTypeName": "PropertyIO<StringIO>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.pieChartLegend.totalEnergyLabel.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -14291,7 +13931,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.pieChartLegend.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -14303,7 +13943,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.pieChartNode": {
       "phetioDocumentation": "",
@@ -14339,7 +13979,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.pieChartNode.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -14351,7 +13991,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.playPauseButton": {
       "phetioDocumentation": "",
@@ -14375,7 +14015,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.playPauseButton.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
@@ -14399,7 +14039,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.playPauseButton.pressListener.pressAction": {
       "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br/><ol><li>event: EventIO</li></ol>",
@@ -14411,10 +14051,10 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<EventIO>"
+      "phetioTypeName": "ActionIO<EventIO>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.playPauseButton.pressListener.releaseAction": {
-      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO.<EventIO></li></ol>",
+      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO<EventIO></li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -14423,7 +14063,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<NullableIO.<EventIO>>"
+      "phetioTypeName": "ActionIO<NullableIO<EventIO>>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.playPauseButton.property": {
       "phetioDocumentation": "",
@@ -14471,7 +14111,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.playPauseButton.toggleNode.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -14483,7 +14123,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.playPauseButton.toggledEmitter": {
       "phetioDocumentation": "Emits when the button is toggled No arguments.",
@@ -14495,7 +14135,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "EmitterIO.<>"
+      "phetioTypeName": "EmitterIO<>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.playPauseButton.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -14507,7 +14147,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.playbackSpeedControl.normalSpeedButton": {
       "phetioDocumentation": "",
@@ -14531,7 +14171,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.playbackSpeedControl.normalSpeedButton.inputListener.firedEmitter": {
       "phetioDocumentation": "A function that executes. No arguments.",
@@ -14543,7 +14183,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "EmitterIO.<>"
+      "phetioTypeName": "EmitterIO<>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.playbackSpeedControl.normalSpeedButton.inputListener.pressAction": {
       "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br/><ol><li>event: EventIO</li></ol>",
@@ -14555,10 +14195,10 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<EventIO>"
+      "phetioTypeName": "ActionIO<EventIO>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.playbackSpeedControl.normalSpeedButton.inputListener.releaseAction": {
-      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO.<EventIO></li></ol>",
+      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO<EventIO></li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -14567,7 +14207,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<NullableIO.<EventIO>>"
+      "phetioTypeName": "ActionIO<NullableIO<EventIO>>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.playbackSpeedControl.normalSpeedButton.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
@@ -14591,7 +14231,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.playbackSpeedControl.normalSpeedButton.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -14603,7 +14243,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.playbackSpeedControl.normalSpeedTextNode": {
       "phetioDocumentation": "",
@@ -14639,7 +14279,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.playbackSpeedControl.normalSpeedTextNode.textProperty": {
       "phetioDocumentation": "Property for the displayed text",
@@ -14651,7 +14291,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<StringIO>"
+      "phetioTypeName": "PropertyIO<StringIO>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.playbackSpeedControl.normalSpeedTextNode.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -14663,7 +14303,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.playbackSpeedControl.slowMotionRadioButton": {
       "phetioDocumentation": "",
@@ -14687,7 +14327,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.playbackSpeedControl.slowMotionRadioButton.inputListener.firedEmitter": {
       "phetioDocumentation": "A function that executes. No arguments.",
@@ -14699,7 +14339,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "EmitterIO.<>"
+      "phetioTypeName": "EmitterIO<>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.playbackSpeedControl.slowMotionRadioButton.inputListener.pressAction": {
       "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br/><ol><li>event: EventIO</li></ol>",
@@ -14711,10 +14351,10 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<EventIO>"
+      "phetioTypeName": "ActionIO<EventIO>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.playbackSpeedControl.slowMotionRadioButton.inputListener.releaseAction": {
-      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO.<EventIO></li></ol>",
+      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO<EventIO></li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -14723,7 +14363,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<NullableIO.<EventIO>>"
+      "phetioTypeName": "ActionIO<NullableIO<EventIO>>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.playbackSpeedControl.slowMotionRadioButton.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
@@ -14747,7 +14387,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.playbackSpeedControl.slowMotionRadioButton.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -14759,7 +14399,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.playbackSpeedControl.slowMotionTextNode": {
       "phetioDocumentation": "",
@@ -14795,7 +14435,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.playbackSpeedControl.slowMotionTextNode.textProperty": {
       "phetioDocumentation": "Property for the displayed text",
@@ -14807,7 +14447,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<StringIO>"
+      "phetioTypeName": "PropertyIO<StringIO>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.playbackSpeedControl.slowMotionTextNode.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -14819,7 +14459,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.playingProperty": {
       "phetioDocumentation": "",
@@ -14831,7 +14471,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.referenceHeightLine.dragListener.dragAction": {
       "phetioDocumentation": "Emits whenever a drag occurs with an EventIO argument. The arguments are:<br/><ol><li>event: EventIO</li></ol>",
@@ -14843,7 +14483,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<EventIO>"
+      "phetioTypeName": "ActionIO<EventIO>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.referenceHeightLine.dragListener.pressAction": {
       "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br/><ol><li>event: EventIO</li></ol>",
@@ -14855,10 +14495,10 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<EventIO>"
+      "phetioTypeName": "ActionIO<EventIO>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.referenceHeightLine.dragListener.releaseAction": {
-      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO.<EventIO></li></ol>",
+      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO<EventIO></li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -14867,7 +14507,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<NullableIO.<EventIO>>"
+      "phetioTypeName": "ActionIO<NullableIO<EventIO>>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.resetAllButton": {
       "phetioDocumentation": "The orange, round button that can be used to restore the initial state",
@@ -14879,7 +14519,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "NodeIO"
+      "phetioTypeName": "ResetAllButtonIO"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.resetAllButton.enabledProperty": {
       "phetioDocumentation": "When disabled, the button is grayed out and cannot be pressed",
@@ -14891,7 +14531,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.resetAllButton.firedEmitter": {
       "phetioDocumentation": "Emits when the button is fired No arguments.",
@@ -14903,7 +14543,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "EmitterIO.<>"
+      "phetioTypeName": "EmitterIO<>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.resetAllButton.isFiringProperty": {
       "phetioDocumentation": "Temporarily becomes true while the Reset All button is firing.  Commonly used to disable audio effects during reset.",
@@ -14915,7 +14555,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": true,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "DerivedPropertyIO.<BooleanIO>"
+      "phetioTypeName": "DerivedPropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.resetAllButton.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
@@ -14939,7 +14579,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.resetAllButton.pressListener.pressAction": {
       "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br/><ol><li>event: EventIO</li></ol>",
@@ -14951,10 +14591,10 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<EventIO>"
+      "phetioTypeName": "ActionIO<EventIO>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.resetAllButton.pressListener.releaseAction": {
-      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO.<EventIO></li></ol>",
+      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO<EventIO></li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -14963,7 +14603,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<NullableIO.<EventIO>>"
+      "phetioTypeName": "ActionIO<NullableIO<EventIO>>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.resetAllButton.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -14975,7 +14615,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.restartSkaterTextNode": {
       "phetioDocumentation": "",
@@ -15011,7 +14651,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.restartSkaterTextNode.textProperty": {
       "phetioDocumentation": "Property for the displayed text",
@@ -15023,7 +14663,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<StringIO>"
+      "phetioTypeName": "PropertyIO<StringIO>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.restartSkaterTextNode.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -15035,7 +14675,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.returnSkaterButton": {
       "phetioDocumentation": "",
@@ -15059,7 +14699,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.returnSkaterButton.firedEmitter": {
       "phetioDocumentation": "Emits when the button is fired No arguments.",
@@ -15071,7 +14711,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "EmitterIO.<>"
+      "phetioTypeName": "EmitterIO<>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.returnSkaterButton.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
@@ -15095,7 +14735,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.returnSkaterButton.pressListener.pressAction": {
       "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br/><ol><li>event: EventIO</li></ol>",
@@ -15107,10 +14747,10 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<EventIO>"
+      "phetioTypeName": "ActionIO<EventIO>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.returnSkaterButton.pressListener.releaseAction": {
-      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO.<EventIO></li></ol>",
+      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO<EventIO></li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -15119,7 +14759,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<NullableIO.<EventIO>>"
+      "phetioTypeName": "ActionIO<NullableIO<EventIO>>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.returnSkaterButton.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -15131,7 +14771,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.returnSkaterToGroundButton": {
       "phetioDocumentation": "",
@@ -15155,7 +14795,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.returnSkaterToGroundButton.firedEmitter": {
       "phetioDocumentation": "Emits when the button is fired No arguments.",
@@ -15167,7 +14807,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "EmitterIO.<>"
+      "phetioTypeName": "EmitterIO<>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.returnSkaterToGroundButton.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
@@ -15191,7 +14831,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.returnSkaterToGroundButton.pressListener.pressAction": {
       "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br/><ol><li>event: EventIO</li></ol>",
@@ -15203,10 +14843,10 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<EventIO>"
+      "phetioTypeName": "ActionIO<EventIO>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.returnSkaterToGroundButton.pressListener.releaseAction": {
-      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO.<EventIO></li></ol>",
+      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO<EventIO></li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -15215,7 +14855,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<NullableIO.<EventIO>>"
+      "phetioTypeName": "ActionIO<NullableIO<EventIO>>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.returnSkaterToGroundButton.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -15227,7 +14867,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.returnSkaterToPreviousStartingPositionButton": {
       "phetioDocumentation": "",
@@ -15251,7 +14891,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.returnSkaterToPreviousStartingPositionButton.firedEmitter": {
       "phetioDocumentation": "Emits when the button is fired No arguments.",
@@ -15263,7 +14903,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "EmitterIO.<>"
+      "phetioTypeName": "EmitterIO<>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.returnSkaterToPreviousStartingPositionButton.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
@@ -15287,7 +14927,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.returnSkaterToPreviousStartingPositionButton.pressListener.pressAction": {
       "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br/><ol><li>event: EventIO</li></ol>",
@@ -15299,10 +14939,10 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<EventIO>"
+      "phetioTypeName": "ActionIO<EventIO>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.returnSkaterToPreviousStartingPositionButton.pressListener.releaseAction": {
-      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO.<EventIO></li></ol>",
+      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO<EventIO></li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -15311,7 +14951,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<NullableIO.<EventIO>>"
+      "phetioTypeName": "ActionIO<NullableIO<EventIO>>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.returnSkaterToPreviousStartingPositionButton.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -15323,7 +14963,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.skaterIconImage1": {
       "phetioDocumentation": "",
@@ -15359,7 +14999,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.skaterIconImage1.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -15371,7 +15011,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.skaterIconImage2": {
       "phetioDocumentation": "",
@@ -15407,7 +15047,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.skaterIconImage2.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -15419,7 +15059,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.skaterNode": {
       "phetioDocumentation": "",
@@ -15455,7 +15095,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<Vector2IO>"
+      "phetioTypeName": "ActionIO<Vector2IO>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.skaterNode.inputListener.dragEndAction": {
       "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO. the position of the drag end in view coordinates</li></ol>",
@@ -15467,7 +15107,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<Vector2IO>"
+      "phetioTypeName": "ActionIO<Vector2IO>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.skaterNode.inputListener.dragStartAction": {
       "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO. the position of the drag start in view coordinates</li></ol>",
@@ -15479,7 +15119,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<Vector2IO>"
+      "phetioTypeName": "ActionIO<Vector2IO>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.skaterNode.inputListener.isDraggingProperty": {
       "phetioDocumentation": "Indicates whether the object is dragging",
@@ -15491,7 +15131,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": true,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.skaterNode.leftSkaterImageNode": {
       "phetioDocumentation": "",
@@ -15527,7 +15167,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.skaterNode.leftSkaterImageNode.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -15539,7 +15179,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.skaterNode.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
@@ -15563,7 +15203,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.skaterNode.rightSkaterImageNode": {
       "phetioDocumentation": "",
@@ -15599,7 +15239,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.skaterNode.rightSkaterImageNode.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -15611,7 +15251,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.skaterNode.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -15623,7 +15263,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.speedometerNode": {
       "phetioDocumentation": "",
@@ -15671,7 +15311,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.speedometerNode.foregroundNode.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -15683,7 +15323,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.speedometerNode.labelNode": {
       "phetioDocumentation": "",
@@ -15719,7 +15359,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.speedometerNode.labelNode.textProperty": {
       "phetioDocumentation": "Property for the displayed text",
@@ -15731,7 +15371,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<StringIO>"
+      "phetioTypeName": "PropertyIO<StringIO>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.speedometerNode.labelNode.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -15743,7 +15383,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.speedometerNode.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
@@ -15767,7 +15407,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.speedometerNode.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -15779,7 +15419,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.stepButton": {
       "phetioDocumentation": "",
@@ -15803,7 +15443,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.stepButton.firedEmitter": {
       "phetioDocumentation": "Emits when the button is fired No arguments.",
@@ -15815,7 +15455,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "EmitterIO.<>"
+      "phetioTypeName": "EmitterIO<>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.stepButton.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
@@ -15839,7 +15479,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.stepButton.pressListener.pressAction": {
       "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br/><ol><li>event: EventIO</li></ol>",
@@ -15851,10 +15491,10 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<EventIO>"
+      "phetioTypeName": "ActionIO<EventIO>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.stepButton.pressListener.releaseAction": {
-      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO.<EventIO></li></ol>",
+      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO<EventIO></li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -15863,7 +15503,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<NullableIO.<EventIO>>"
+      "phetioTypeName": "ActionIO<NullableIO<EventIO>>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.stepButton.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -15875,7 +15515,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.trackLayer": {
       "phetioDocumentation": "",
@@ -15911,7 +15551,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.trackLayer.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -15923,7 +15563,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -15935,7 +15575,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.introScreen.view.massSlider": {
       "phetioDocumentation": "",
@@ -15971,7 +15611,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.introScreen.view.massSlider.leftArrowButton.firedEmitter": {
       "phetioDocumentation": "Emits when the button is fired No arguments.",
@@ -15983,7 +15623,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "EmitterIO.<>"
+      "phetioTypeName": "EmitterIO<>"
     },
     "energySkateParkBasics.introScreen.view.massSlider.leftArrowButton.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
@@ -16007,7 +15647,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.introScreen.view.massSlider.leftArrowButton.pressListener.pressAction": {
       "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br/><ol><li>event: EventIO</li></ol>",
@@ -16019,10 +15659,10 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<EventIO>"
+      "phetioTypeName": "ActionIO<EventIO>"
     },
     "energySkateParkBasics.introScreen.view.massSlider.leftArrowButton.pressListener.releaseAction": {
-      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO.<EventIO></li></ol>",
+      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO<EventIO></li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -16031,7 +15671,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<NullableIO.<EventIO>>"
+      "phetioTypeName": "ActionIO<NullableIO<EventIO>>"
     },
     "energySkateParkBasics.introScreen.view.massSlider.leftArrowButton.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -16043,7 +15683,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.introScreen.view.massSlider.maxLabel": {
       "phetioDocumentation": "",
@@ -16079,7 +15719,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.introScreen.view.massSlider.maxLabel.textProperty": {
       "phetioDocumentation": "Property for the displayed text",
@@ -16091,7 +15731,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<StringIO>"
+      "phetioTypeName": "PropertyIO<StringIO>"
     },
     "energySkateParkBasics.introScreen.view.massSlider.maxLabel.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -16103,7 +15743,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.introScreen.view.massSlider.minLabel": {
       "phetioDocumentation": "",
@@ -16139,7 +15779,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.introScreen.view.massSlider.minLabel.textProperty": {
       "phetioDocumentation": "Property for the displayed text",
@@ -16151,7 +15791,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<StringIO>"
+      "phetioTypeName": "PropertyIO<StringIO>"
     },
     "energySkateParkBasics.introScreen.view.massSlider.minLabel.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -16163,7 +15803,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.introScreen.view.massSlider.numberDisplay": {
       "phetioDocumentation": "",
@@ -16199,7 +15839,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.introScreen.view.massSlider.numberDisplay.valueText": {
       "phetioDocumentation": "",
@@ -16235,7 +15875,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": true,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.introScreen.view.massSlider.numberDisplay.valueText.textProperty": {
       "phetioDocumentation": "Property for the displayed text",
@@ -16247,7 +15887,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": true,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<StringIO>"
+      "phetioTypeName": "PropertyIO<StringIO>"
     },
     "energySkateParkBasics.introScreen.view.massSlider.numberDisplay.valueText.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -16259,7 +15899,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": true,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.introScreen.view.massSlider.numberDisplay.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -16271,7 +15911,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.introScreen.view.massSlider.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
@@ -16295,7 +15935,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.introScreen.view.massSlider.rightArrowButton": {
       "phetioDocumentation": "",
@@ -16319,7 +15959,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.introScreen.view.massSlider.rightArrowButton.firedEmitter": {
       "phetioDocumentation": "Emits when the button is fired No arguments.",
@@ -16331,7 +15971,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "EmitterIO.<>"
+      "phetioTypeName": "EmitterIO<>"
     },
     "energySkateParkBasics.introScreen.view.massSlider.rightArrowButton.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
@@ -16355,7 +15995,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.introScreen.view.massSlider.rightArrowButton.pressListener.pressAction": {
       "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br/><ol><li>event: EventIO</li></ol>",
@@ -16367,10 +16007,10 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<EventIO>"
+      "phetioTypeName": "ActionIO<EventIO>"
     },
     "energySkateParkBasics.introScreen.view.massSlider.rightArrowButton.pressListener.releaseAction": {
-      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO.<EventIO></li></ol>",
+      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO<EventIO></li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -16379,7 +16019,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<NullableIO.<EventIO>>"
+      "phetioTypeName": "ActionIO<NullableIO<EventIO>>"
     },
     "energySkateParkBasics.introScreen.view.massSlider.rightArrowButton.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -16391,7 +16031,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.introScreen.view.massSlider.slider": {
       "phetioDocumentation": "",
@@ -16415,7 +16055,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.introScreen.view.massSlider.slider.enabledRangeProperty": {
       "phetioDocumentation": "",
@@ -16427,7 +16067,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<RangeIO>"
+      "phetioTypeName": "PropertyIO<RangeIO>"
     },
     "energySkateParkBasics.introScreen.view.massSlider.slider.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
@@ -16451,7 +16091,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.introScreen.view.massSlider.slider.thumb": {
       "phetioDocumentation": "",
@@ -16487,7 +16127,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.introScreen.view.massSlider.slider.thumb.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -16499,7 +16139,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.introScreen.view.massSlider.slider.thumbInputListener": {
       "phetioDocumentation": "",
@@ -16523,7 +16163,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<Vector2IO>"
+      "phetioTypeName": "ActionIO<Vector2IO>"
     },
     "energySkateParkBasics.introScreen.view.massSlider.slider.thumbInputListener.dragEndAction": {
       "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO. the position of the drag end in view coordinates</li></ol>",
@@ -16535,7 +16175,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<Vector2IO>"
+      "phetioTypeName": "ActionIO<Vector2IO>"
     },
     "energySkateParkBasics.introScreen.view.massSlider.slider.thumbInputListener.dragStartAction": {
       "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO. the position of the drag start in view coordinates</li></ol>",
@@ -16547,7 +16187,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<Vector2IO>"
+      "phetioTypeName": "ActionIO<Vector2IO>"
     },
     "energySkateParkBasics.introScreen.view.massSlider.slider.thumbInputListener.isDraggingProperty": {
       "phetioDocumentation": "Indicates whether the object is dragging",
@@ -16559,7 +16199,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": true,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.introScreen.view.massSlider.slider.track.trackInputListener": {
       "phetioDocumentation": "",
@@ -16583,7 +16223,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<Vector2IO>"
+      "phetioTypeName": "ActionIO<Vector2IO>"
     },
     "energySkateParkBasics.introScreen.view.massSlider.slider.track.trackInputListener.dragEndAction": {
       "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO. the position of the drag end in view coordinates</li></ol>",
@@ -16595,7 +16235,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<Vector2IO>"
+      "phetioTypeName": "ActionIO<Vector2IO>"
     },
     "energySkateParkBasics.introScreen.view.massSlider.slider.track.trackInputListener.dragStartAction": {
       "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO. the position of the drag start in view coordinates</li></ol>",
@@ -16607,7 +16247,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<Vector2IO>"
+      "phetioTypeName": "ActionIO<Vector2IO>"
     },
     "energySkateParkBasics.introScreen.view.massSlider.slider.track.trackInputListener.isDraggingProperty": {
       "phetioDocumentation": "Indicates whether the object is dragging",
@@ -16619,7 +16259,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": true,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.introScreen.view.massSlider.slider.valueProperty": {
       "phetioDocumentation": "",
@@ -16643,7 +16283,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.introScreen.view.massSlider.titleNode": {
       "phetioDocumentation": "",
@@ -16679,7 +16319,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.introScreen.view.massSlider.titleNode.textProperty": {
       "phetioDocumentation": "Property for the displayed text",
@@ -16691,7 +16331,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<StringIO>"
+      "phetioTypeName": "PropertyIO<StringIO>"
     },
     "energySkateParkBasics.introScreen.view.massSlider.titleNode.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -16703,7 +16343,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.introScreen.view.massSlider.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -16715,7 +16355,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.activeProperty": {
       "phetioDocumentation": "Indicates whether the screen is active.  For single-screen simulations, the screen is always active.",
@@ -16727,7 +16367,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": true,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel": {
       "phetioDocumentation": "",
@@ -16751,7 +16391,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<Bounds2IO>"
+      "phetioTypeName": "PropertyIO<Bounds2IO>"
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.barGraphScaleProperty": {
       "phetioDocumentation": "",
@@ -16775,7 +16415,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.clearButtonEnabledProperty": {
       "phetioDocumentation": "",
@@ -16787,7 +16427,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.controlPoint~0": {
       "phetioDocumentation": "",
@@ -16811,7 +16451,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.controlPoint~0.positionProperty": {
       "phetioDocumentation": "",
@@ -16823,7 +16463,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": true,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "DerivedPropertyIO.<Vector2IO>"
+      "phetioTypeName": "DerivedPropertyIO<Vector2IO>"
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.controlPoint~0.snapTargetProperty": {
       "phetioDocumentation": "",
@@ -16835,7 +16475,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<ControlPointIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<ControlPointIO>>"
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.controlPoint~0.sourcePositionProperty": {
       "phetioDocumentation": "",
@@ -16847,7 +16487,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<Vector2IO>"
+      "phetioTypeName": "PropertyIO<Vector2IO>"
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.controlPoint~1": {
       "phetioDocumentation": "",
@@ -16871,7 +16511,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.controlPoint~1.positionProperty": {
       "phetioDocumentation": "",
@@ -16883,7 +16523,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": true,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "DerivedPropertyIO.<Vector2IO>"
+      "phetioTypeName": "DerivedPropertyIO<Vector2IO>"
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.controlPoint~1.snapTargetProperty": {
       "phetioDocumentation": "",
@@ -16895,7 +16535,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<ControlPointIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<ControlPointIO>>"
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.controlPoint~1.sourcePositionProperty": {
       "phetioDocumentation": "",
@@ -16907,7 +16547,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<Vector2IO>"
+      "phetioTypeName": "PropertyIO<Vector2IO>"
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.controlPoint~10": {
       "phetioDocumentation": "",
@@ -16931,7 +16571,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.controlPoint~10.positionProperty": {
       "phetioDocumentation": "",
@@ -16943,7 +16583,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": true,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "DerivedPropertyIO.<Vector2IO>"
+      "phetioTypeName": "DerivedPropertyIO<Vector2IO>"
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.controlPoint~10.snapTargetProperty": {
       "phetioDocumentation": "",
@@ -16955,7 +16595,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<ControlPointIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<ControlPointIO>>"
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.controlPoint~10.sourcePositionProperty": {
       "phetioDocumentation": "",
@@ -16967,7 +16607,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<Vector2IO>"
+      "phetioTypeName": "PropertyIO<Vector2IO>"
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.controlPoint~11": {
       "phetioDocumentation": "",
@@ -16991,7 +16631,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.controlPoint~11.positionProperty": {
       "phetioDocumentation": "",
@@ -17003,7 +16643,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": true,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "DerivedPropertyIO.<Vector2IO>"
+      "phetioTypeName": "DerivedPropertyIO<Vector2IO>"
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.controlPoint~11.snapTargetProperty": {
       "phetioDocumentation": "",
@@ -17015,7 +16655,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<ControlPointIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<ControlPointIO>>"
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.controlPoint~11.sourcePositionProperty": {
       "phetioDocumentation": "",
@@ -17027,7 +16667,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<Vector2IO>"
+      "phetioTypeName": "PropertyIO<Vector2IO>"
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.controlPoint~12": {
       "phetioDocumentation": "",
@@ -17051,7 +16691,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.controlPoint~12.positionProperty": {
       "phetioDocumentation": "",
@@ -17063,7 +16703,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": true,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "DerivedPropertyIO.<Vector2IO>"
+      "phetioTypeName": "DerivedPropertyIO<Vector2IO>"
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.controlPoint~12.snapTargetProperty": {
       "phetioDocumentation": "",
@@ -17075,7 +16715,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<ControlPointIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<ControlPointIO>>"
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.controlPoint~12.sourcePositionProperty": {
       "phetioDocumentation": "",
@@ -17087,7 +16727,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<Vector2IO>"
+      "phetioTypeName": "PropertyIO<Vector2IO>"
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.controlPoint~13": {
       "phetioDocumentation": "",
@@ -17111,7 +16751,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.controlPoint~13.positionProperty": {
       "phetioDocumentation": "",
@@ -17123,7 +16763,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": true,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "DerivedPropertyIO.<Vector2IO>"
+      "phetioTypeName": "DerivedPropertyIO<Vector2IO>"
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.controlPoint~13.snapTargetProperty": {
       "phetioDocumentation": "",
@@ -17135,7 +16775,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<ControlPointIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<ControlPointIO>>"
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.controlPoint~13.sourcePositionProperty": {
       "phetioDocumentation": "",
@@ -17147,7 +16787,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<Vector2IO>"
+      "phetioTypeName": "PropertyIO<Vector2IO>"
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.controlPoint~14": {
       "phetioDocumentation": "",
@@ -17171,7 +16811,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.controlPoint~14.positionProperty": {
       "phetioDocumentation": "",
@@ -17183,7 +16823,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": true,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "DerivedPropertyIO.<Vector2IO>"
+      "phetioTypeName": "DerivedPropertyIO<Vector2IO>"
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.controlPoint~14.snapTargetProperty": {
       "phetioDocumentation": "",
@@ -17195,7 +16835,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<ControlPointIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<ControlPointIO>>"
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.controlPoint~14.sourcePositionProperty": {
       "phetioDocumentation": "",
@@ -17207,7 +16847,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<Vector2IO>"
+      "phetioTypeName": "PropertyIO<Vector2IO>"
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.controlPoint~2": {
       "phetioDocumentation": "",
@@ -17231,7 +16871,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.controlPoint~2.positionProperty": {
       "phetioDocumentation": "",
@@ -17243,7 +16883,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": true,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "DerivedPropertyIO.<Vector2IO>"
+      "phetioTypeName": "DerivedPropertyIO<Vector2IO>"
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.controlPoint~2.snapTargetProperty": {
       "phetioDocumentation": "",
@@ -17255,7 +16895,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<ControlPointIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<ControlPointIO>>"
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.controlPoint~2.sourcePositionProperty": {
       "phetioDocumentation": "",
@@ -17267,7 +16907,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<Vector2IO>"
+      "phetioTypeName": "PropertyIO<Vector2IO>"
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.controlPoint~3": {
       "phetioDocumentation": "",
@@ -17291,7 +16931,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.controlPoint~3.positionProperty": {
       "phetioDocumentation": "",
@@ -17303,7 +16943,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": true,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "DerivedPropertyIO.<Vector2IO>"
+      "phetioTypeName": "DerivedPropertyIO<Vector2IO>"
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.controlPoint~3.snapTargetProperty": {
       "phetioDocumentation": "",
@@ -17315,7 +16955,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<ControlPointIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<ControlPointIO>>"
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.controlPoint~3.sourcePositionProperty": {
       "phetioDocumentation": "",
@@ -17327,7 +16967,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<Vector2IO>"
+      "phetioTypeName": "PropertyIO<Vector2IO>"
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.controlPoint~4": {
       "phetioDocumentation": "",
@@ -17351,7 +16991,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.controlPoint~4.positionProperty": {
       "phetioDocumentation": "",
@@ -17363,7 +17003,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": true,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "DerivedPropertyIO.<Vector2IO>"
+      "phetioTypeName": "DerivedPropertyIO<Vector2IO>"
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.controlPoint~4.snapTargetProperty": {
       "phetioDocumentation": "",
@@ -17375,7 +17015,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<ControlPointIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<ControlPointIO>>"
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.controlPoint~4.sourcePositionProperty": {
       "phetioDocumentation": "",
@@ -17387,7 +17027,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<Vector2IO>"
+      "phetioTypeName": "PropertyIO<Vector2IO>"
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.controlPoint~5": {
       "phetioDocumentation": "",
@@ -17411,7 +17051,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.controlPoint~5.positionProperty": {
       "phetioDocumentation": "",
@@ -17423,7 +17063,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": true,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "DerivedPropertyIO.<Vector2IO>"
+      "phetioTypeName": "DerivedPropertyIO<Vector2IO>"
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.controlPoint~5.snapTargetProperty": {
       "phetioDocumentation": "",
@@ -17435,7 +17075,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<ControlPointIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<ControlPointIO>>"
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.controlPoint~5.sourcePositionProperty": {
       "phetioDocumentation": "",
@@ -17447,7 +17087,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<Vector2IO>"
+      "phetioTypeName": "PropertyIO<Vector2IO>"
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.controlPoint~6": {
       "phetioDocumentation": "",
@@ -17471,7 +17111,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.controlPoint~6.positionProperty": {
       "phetioDocumentation": "",
@@ -17483,7 +17123,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": true,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "DerivedPropertyIO.<Vector2IO>"
+      "phetioTypeName": "DerivedPropertyIO<Vector2IO>"
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.controlPoint~6.snapTargetProperty": {
       "phetioDocumentation": "",
@@ -17495,7 +17135,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<ControlPointIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<ControlPointIO>>"
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.controlPoint~6.sourcePositionProperty": {
       "phetioDocumentation": "",
@@ -17507,7 +17147,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<Vector2IO>"
+      "phetioTypeName": "PropertyIO<Vector2IO>"
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.controlPoint~7": {
       "phetioDocumentation": "",
@@ -17531,7 +17171,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.controlPoint~7.positionProperty": {
       "phetioDocumentation": "",
@@ -17543,7 +17183,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": true,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "DerivedPropertyIO.<Vector2IO>"
+      "phetioTypeName": "DerivedPropertyIO<Vector2IO>"
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.controlPoint~7.snapTargetProperty": {
       "phetioDocumentation": "",
@@ -17555,7 +17195,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<ControlPointIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<ControlPointIO>>"
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.controlPoint~7.sourcePositionProperty": {
       "phetioDocumentation": "",
@@ -17567,7 +17207,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<Vector2IO>"
+      "phetioTypeName": "PropertyIO<Vector2IO>"
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.controlPoint~8": {
       "phetioDocumentation": "",
@@ -17591,7 +17231,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.controlPoint~8.positionProperty": {
       "phetioDocumentation": "",
@@ -17603,7 +17243,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": true,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "DerivedPropertyIO.<Vector2IO>"
+      "phetioTypeName": "DerivedPropertyIO<Vector2IO>"
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.controlPoint~8.snapTargetProperty": {
       "phetioDocumentation": "",
@@ -17615,7 +17255,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<ControlPointIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<ControlPointIO>>"
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.controlPoint~8.sourcePositionProperty": {
       "phetioDocumentation": "",
@@ -17627,7 +17267,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<Vector2IO>"
+      "phetioTypeName": "PropertyIO<Vector2IO>"
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.controlPoint~9": {
       "phetioDocumentation": "",
@@ -17651,7 +17291,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.controlPoint~9.positionProperty": {
       "phetioDocumentation": "",
@@ -17663,7 +17303,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": true,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "DerivedPropertyIO.<Vector2IO>"
+      "phetioTypeName": "DerivedPropertyIO<Vector2IO>"
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.controlPoint~9.snapTargetProperty": {
       "phetioDocumentation": "",
@@ -17675,7 +17315,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<ControlPointIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<ControlPointIO>>"
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.controlPoint~9.sourcePositionProperty": {
       "phetioDocumentation": "",
@@ -17687,7 +17327,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<Vector2IO>"
+      "phetioTypeName": "PropertyIO<Vector2IO>"
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.editButtonEnabledProperty": {
       "phetioDocumentation": "",
@@ -17699,7 +17339,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.frictionProperty": {
       "phetioDocumentation": "",
@@ -17723,7 +17363,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.measuringTapeBasePositionProperty": {
       "phetioDocumentation": "",
@@ -17735,7 +17375,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<Vector2IO>"
+      "phetioTypeName": "PropertyIO<Vector2IO>"
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.measuringTapeTipPositionProperty": {
       "phetioDocumentation": "",
@@ -17747,7 +17387,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<Vector2IO>"
+      "phetioTypeName": "PropertyIO<Vector2IO>"
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.measuringTapeVisibleProperty": {
       "phetioDocumentation": "",
@@ -17759,7 +17399,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.pausedProperty": {
       "phetioDocumentation": "",
@@ -17771,7 +17411,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.pieChartVisibleProperty": {
       "phetioDocumentation": "",
@@ -17783,7 +17423,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.referenceHeightVisibleProperty": {
       "phetioDocumentation": "",
@@ -17795,7 +17435,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.skater.allowClearingThermalEnergyProperty": {
       "phetioDocumentation": "",
@@ -17807,7 +17447,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": true,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "DerivedPropertyIO.<BooleanIO>"
+      "phetioTypeName": "DerivedPropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.skater.angleProperty": {
       "phetioDocumentation": "",
@@ -17831,7 +17471,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<StringIO>"
+      "phetioTypeName": "PropertyIO<StringIO>"
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.skater.draggingProperty": {
       "phetioDocumentation": "",
@@ -17843,7 +17483,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.skater.gravityMagnitudeProperty": {
       "phetioDocumentation": "",
@@ -17867,7 +17507,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": true,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<Vector2IO>"
+      "phetioTypeName": "PropertyIO<Vector2IO>"
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.skater.kineticEnergyProperty": {
       "phetioDocumentation": "",
@@ -17903,7 +17543,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": true,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "DerivedPropertyIO.<BooleanIO>"
+      "phetioTypeName": "DerivedPropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.skater.onTopSideOfTrackProperty": {
       "phetioDocumentation": "",
@@ -17915,7 +17555,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.skater.parametricPositionProperty": {
       "phetioDocumentation": "",
@@ -17927,7 +17567,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<NumberIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<NumberIO>>"
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.skater.parametricSpeedProperty": {
       "phetioDocumentation": "",
@@ -17951,7 +17591,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<Vector2IO>"
+      "phetioTypeName": "PropertyIO<Vector2IO>"
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.skater.potentialEnergyProperty": {
       "phetioDocumentation": "",
@@ -17987,7 +17627,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": true,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "DerivedPropertyIO.<NumberIO>"
+      "phetioTypeName": "DerivedPropertyIO<NumberIO>"
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.skater.startingPositionProperty": {
       "phetioDocumentation": "",
@@ -17999,7 +17639,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<Vector2IO>"
+      "phetioTypeName": "PropertyIO<Vector2IO>"
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.skater.startingUProperty": {
       "phetioDocumentation": "",
@@ -18011,7 +17651,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<NumberIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<NumberIO>>"
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.skater.startingUpProperty": {
       "phetioDocumentation": "",
@@ -18023,7 +17663,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.skater.thermalEnergyProperty": {
       "phetioDocumentation": "",
@@ -18059,7 +17699,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<TrackReferenceIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<TrackReferenceIO>>"
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.skater.velocityProperty": {
       "phetioDocumentation": "",
@@ -18071,7 +17711,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<Vector2IO>"
+      "phetioTypeName": "PropertyIO<Vector2IO>"
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.speedProperty": {
       "phetioDocumentation": "",
@@ -18083,7 +17723,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<StringIO>"
+      "phetioTypeName": "PropertyIO<StringIO>"
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.speedValueVisibleProperty": {
       "phetioDocumentation": "",
@@ -18095,7 +17735,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.speedometerVisibleProperty": {
       "phetioDocumentation": "",
@@ -18107,7 +17747,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.stickingToTrackProperty": {
       "phetioDocumentation": "",
@@ -18119,7 +17759,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.tracks": {
       "phetioDocumentation": "",
@@ -18131,7 +17771,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "ObservableArrayIO.<TrackIO>"
+      "phetioTypeName": "ObservableArrayIO<TrackIO>"
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.tracks.lengthProperty": {
       "phetioDocumentation": "",
@@ -18167,7 +17807,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.track~0.droppedProperty": {
       "phetioDocumentation": "",
@@ -18179,7 +17819,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.track~0.leftThePanelProperty": {
       "phetioDocumentation": "",
@@ -18191,7 +17831,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.track~0.physicalProperty": {
       "phetioDocumentation": "",
@@ -18203,7 +17843,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.track~1": {
       "phetioDocumentation": "",
@@ -18227,7 +17867,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.track~1.droppedProperty": {
       "phetioDocumentation": "",
@@ -18239,7 +17879,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.track~1.leftThePanelProperty": {
       "phetioDocumentation": "",
@@ -18251,7 +17891,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.track~1.physicalProperty": {
       "phetioDocumentation": "",
@@ -18263,7 +17903,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.track~2": {
       "phetioDocumentation": "",
@@ -18287,7 +17927,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.track~2.droppedProperty": {
       "phetioDocumentation": "",
@@ -18299,7 +17939,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.track~2.leftThePanelProperty": {
       "phetioDocumentation": "",
@@ -18311,7 +17951,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.track~2.physicalProperty": {
       "phetioDocumentation": "",
@@ -18323,7 +17963,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.track~3": {
       "phetioDocumentation": "",
@@ -18347,7 +17987,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.track~3.droppedProperty": {
       "phetioDocumentation": "",
@@ -18359,7 +17999,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.track~3.leftThePanelProperty": {
       "phetioDocumentation": "",
@@ -18371,7 +18011,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.track~3.physicalProperty": {
       "phetioDocumentation": "",
@@ -18383,7 +18023,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.track~4": {
       "phetioDocumentation": "",
@@ -18407,7 +18047,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.track~4.droppedProperty": {
       "phetioDocumentation": "",
@@ -18419,7 +18059,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.track~4.leftThePanelProperty": {
       "phetioDocumentation": "",
@@ -18431,7 +18071,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.track~4.physicalProperty": {
       "phetioDocumentation": "",
@@ -18443,7 +18083,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.frictionSlider": {
       "phetioDocumentation": "",
@@ -18479,7 +18119,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.frictionSlider.leftArrowButton.firedEmitter": {
       "phetioDocumentation": "Emits when the button is fired No arguments.",
@@ -18491,7 +18131,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "EmitterIO.<>"
+      "phetioTypeName": "EmitterIO<>"
     },
     "energySkateParkBasics.playgroundScreen.view.frictionSlider.leftArrowButton.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
@@ -18515,7 +18155,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.playgroundScreen.view.frictionSlider.leftArrowButton.pressListener.pressAction": {
       "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br/><ol><li>event: EventIO</li></ol>",
@@ -18527,10 +18167,10 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<EventIO>"
+      "phetioTypeName": "ActionIO<EventIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.frictionSlider.leftArrowButton.pressListener.releaseAction": {
-      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO.<EventIO></li></ol>",
+      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO<EventIO></li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -18539,7 +18179,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<NullableIO.<EventIO>>"
+      "phetioTypeName": "ActionIO<NullableIO<EventIO>>"
     },
     "energySkateParkBasics.playgroundScreen.view.frictionSlider.leftArrowButton.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -18551,7 +18191,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.frictionSlider.maxLabel": {
       "phetioDocumentation": "",
@@ -18587,7 +18227,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.playgroundScreen.view.frictionSlider.maxLabel.textProperty": {
       "phetioDocumentation": "Property for the displayed text",
@@ -18599,7 +18239,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<StringIO>"
+      "phetioTypeName": "PropertyIO<StringIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.frictionSlider.maxLabel.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -18611,7 +18251,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.frictionSlider.minLabel": {
       "phetioDocumentation": "",
@@ -18647,7 +18287,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.playgroundScreen.view.frictionSlider.minLabel.textProperty": {
       "phetioDocumentation": "Property for the displayed text",
@@ -18659,7 +18299,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<StringIO>"
+      "phetioTypeName": "PropertyIO<StringIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.frictionSlider.minLabel.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -18671,7 +18311,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.frictionSlider.numberDisplay": {
       "phetioDocumentation": "",
@@ -18707,7 +18347,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.playgroundScreen.view.frictionSlider.numberDisplay.valueText": {
       "phetioDocumentation": "",
@@ -18743,7 +18383,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": true,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.playgroundScreen.view.frictionSlider.numberDisplay.valueText.textProperty": {
       "phetioDocumentation": "Property for the displayed text",
@@ -18755,7 +18395,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": true,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<StringIO>"
+      "phetioTypeName": "PropertyIO<StringIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.frictionSlider.numberDisplay.valueText.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -18767,7 +18407,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": true,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.frictionSlider.numberDisplay.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -18779,7 +18419,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.frictionSlider.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
@@ -18803,7 +18443,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.playgroundScreen.view.frictionSlider.rightArrowButton": {
       "phetioDocumentation": "",
@@ -18827,7 +18467,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.frictionSlider.rightArrowButton.firedEmitter": {
       "phetioDocumentation": "Emits when the button is fired No arguments.",
@@ -18839,7 +18479,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "EmitterIO.<>"
+      "phetioTypeName": "EmitterIO<>"
     },
     "energySkateParkBasics.playgroundScreen.view.frictionSlider.rightArrowButton.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
@@ -18863,7 +18503,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.playgroundScreen.view.frictionSlider.rightArrowButton.pressListener.pressAction": {
       "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br/><ol><li>event: EventIO</li></ol>",
@@ -18875,10 +18515,10 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<EventIO>"
+      "phetioTypeName": "ActionIO<EventIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.frictionSlider.rightArrowButton.pressListener.releaseAction": {
-      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO.<EventIO></li></ol>",
+      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO<EventIO></li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -18887,7 +18527,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<NullableIO.<EventIO>>"
+      "phetioTypeName": "ActionIO<NullableIO<EventIO>>"
     },
     "energySkateParkBasics.playgroundScreen.view.frictionSlider.rightArrowButton.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -18899,7 +18539,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.frictionSlider.slider": {
       "phetioDocumentation": "",
@@ -18923,7 +18563,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.frictionSlider.slider.enabledRangeProperty": {
       "phetioDocumentation": "",
@@ -18935,7 +18575,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<RangeIO>"
+      "phetioTypeName": "PropertyIO<RangeIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.frictionSlider.slider.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
@@ -18959,7 +18599,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.playgroundScreen.view.frictionSlider.slider.thumb": {
       "phetioDocumentation": "",
@@ -18995,7 +18635,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.playgroundScreen.view.frictionSlider.slider.thumb.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -19007,7 +18647,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.frictionSlider.slider.thumbInputListener": {
       "phetioDocumentation": "",
@@ -19031,7 +18671,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<Vector2IO>"
+      "phetioTypeName": "ActionIO<Vector2IO>"
     },
     "energySkateParkBasics.playgroundScreen.view.frictionSlider.slider.thumbInputListener.dragEndAction": {
       "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO. the position of the drag end in view coordinates</li></ol>",
@@ -19043,7 +18683,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<Vector2IO>"
+      "phetioTypeName": "ActionIO<Vector2IO>"
     },
     "energySkateParkBasics.playgroundScreen.view.frictionSlider.slider.thumbInputListener.dragStartAction": {
       "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO. the position of the drag start in view coordinates</li></ol>",
@@ -19055,7 +18695,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<Vector2IO>"
+      "phetioTypeName": "ActionIO<Vector2IO>"
     },
     "energySkateParkBasics.playgroundScreen.view.frictionSlider.slider.thumbInputListener.isDraggingProperty": {
       "phetioDocumentation": "Indicates whether the object is dragging",
@@ -19067,7 +18707,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": true,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.frictionSlider.slider.track.trackInputListener": {
       "phetioDocumentation": "",
@@ -19091,7 +18731,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<Vector2IO>"
+      "phetioTypeName": "ActionIO<Vector2IO>"
     },
     "energySkateParkBasics.playgroundScreen.view.frictionSlider.slider.track.trackInputListener.dragEndAction": {
       "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO. the position of the drag end in view coordinates</li></ol>",
@@ -19103,7 +18743,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<Vector2IO>"
+      "phetioTypeName": "ActionIO<Vector2IO>"
     },
     "energySkateParkBasics.playgroundScreen.view.frictionSlider.slider.track.trackInputListener.dragStartAction": {
       "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO. the position of the drag start in view coordinates</li></ol>",
@@ -19115,7 +18755,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<Vector2IO>"
+      "phetioTypeName": "ActionIO<Vector2IO>"
     },
     "energySkateParkBasics.playgroundScreen.view.frictionSlider.slider.track.trackInputListener.isDraggingProperty": {
       "phetioDocumentation": "Indicates whether the object is dragging",
@@ -19127,7 +18767,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": true,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.frictionSlider.slider.valueProperty": {
       "phetioDocumentation": "",
@@ -19151,7 +18791,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.frictionSlider.titleNode": {
       "phetioDocumentation": "",
@@ -19187,7 +18827,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.playgroundScreen.view.frictionSlider.titleNode.textProperty": {
       "phetioDocumentation": "Property for the displayed text",
@@ -19199,7 +18839,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<StringIO>"
+      "phetioTypeName": "PropertyIO<StringIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.frictionSlider.titleNode.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -19211,7 +18851,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.frictionSlider.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -19223,7 +18863,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView": {
       "phetioDocumentation": "",
@@ -19271,7 +18911,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.attachDetachToggleButtons.radioButtonGroup": {
       "phetioDocumentation": "",
@@ -19331,7 +18971,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.attachDetachToggleButtons.radioButtonGroup.attachRadioButton.attachIcon.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -19343,7 +18983,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.attachDetachToggleButtons.radioButtonGroup.attachRadioButton.enabledProperty": {
       "phetioDocumentation": "When disabled, the button is grayed out and cannot be pressed",
@@ -19355,7 +18995,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.attachDetachToggleButtons.radioButtonGroup.attachRadioButton.firedEmitter": {
       "phetioDocumentation": "Emits when the radio button is pressed No arguments.",
@@ -19367,7 +19007,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "EmitterIO.<>"
+      "phetioTypeName": "EmitterIO<>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.attachDetachToggleButtons.radioButtonGroup.attachRadioButton.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
@@ -19391,7 +19031,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.attachDetachToggleButtons.radioButtonGroup.attachRadioButton.pressListener.pressAction": {
       "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br/><ol><li>event: EventIO</li></ol>",
@@ -19403,10 +19043,10 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<EventIO>"
+      "phetioTypeName": "ActionIO<EventIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.attachDetachToggleButtons.radioButtonGroup.attachRadioButton.pressListener.releaseAction": {
-      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO.<EventIO></li></ol>",
+      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO<EventIO></li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -19415,7 +19055,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<NullableIO.<EventIO>>"
+      "phetioTypeName": "ActionIO<NullableIO<EventIO>>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.attachDetachToggleButtons.radioButtonGroup.attachRadioButton.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -19427,7 +19067,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.attachDetachToggleButtons.radioButtonGroup.detachRadioButton": {
       "phetioDocumentation": "",
@@ -19475,7 +19115,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.attachDetachToggleButtons.radioButtonGroup.detachRadioButton.detachIcon.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -19487,7 +19127,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.attachDetachToggleButtons.radioButtonGroup.detachRadioButton.enabledProperty": {
       "phetioDocumentation": "When disabled, the button is grayed out and cannot be pressed",
@@ -19499,7 +19139,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.attachDetachToggleButtons.radioButtonGroup.detachRadioButton.firedEmitter": {
       "phetioDocumentation": "Emits when the radio button is pressed No arguments.",
@@ -19511,7 +19151,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "EmitterIO.<>"
+      "phetioTypeName": "EmitterIO<>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.attachDetachToggleButtons.radioButtonGroup.detachRadioButton.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
@@ -19535,7 +19175,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.attachDetachToggleButtons.radioButtonGroup.detachRadioButton.pressListener.pressAction": {
       "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br/><ol><li>event: EventIO</li></ol>",
@@ -19547,10 +19187,10 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<EventIO>"
+      "phetioTypeName": "ActionIO<EventIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.attachDetachToggleButtons.radioButtonGroup.detachRadioButton.pressListener.releaseAction": {
-      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO.<EventIO></li></ol>",
+      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO<EventIO></li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -19559,7 +19199,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<NullableIO.<EventIO>>"
+      "phetioTypeName": "ActionIO<NullableIO<EventIO>>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.attachDetachToggleButtons.radioButtonGroup.detachRadioButton.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -19571,7 +19211,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.attachDetachToggleButtons.radioButtonGroup.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
@@ -19595,7 +19235,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.attachDetachToggleButtons.radioButtonGroup.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -19607,7 +19247,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.attachDetachToggleButtons.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -19619,7 +19259,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.backgroundNode": {
       "phetioDocumentation": "",
@@ -19667,7 +19307,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.backgroundNode.mountainImage.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -19679,7 +19319,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.backgroundNode.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
@@ -19703,7 +19343,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.backgroundNode.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -19715,7 +19355,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.clearButton": {
       "phetioDocumentation": "",
@@ -19739,7 +19379,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.clearButton.firedEmitter": {
       "phetioDocumentation": "Emits when the button is fired No arguments.",
@@ -19751,7 +19391,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "EmitterIO.<>"
+      "phetioTypeName": "EmitterIO<>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.clearButton.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
@@ -19775,7 +19415,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.clearButton.pressListener.pressAction": {
       "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br/><ol><li>event: EventIO</li></ol>",
@@ -19787,10 +19427,10 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<EventIO>"
+      "phetioTypeName": "ActionIO<EventIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.clearButton.pressListener.releaseAction": {
-      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO.<EventIO></li></ol>",
+      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO<EventIO></li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -19799,7 +19439,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<NullableIO.<EventIO>>"
+      "phetioTypeName": "ActionIO<NullableIO<EventIO>>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.clearButton.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -19811,7 +19451,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel": {
       "phetioDocumentation": "",
@@ -19847,199 +19487,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.visibilityControls.barGraphCheckbox": {
-      "phetioDocumentation": "",
-      "phetioDynamicElement": false,
-      "phetioEventType": "USER",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "NodeIO"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.visibilityControls.barGraphCheckbox.enabledProperty": {
-      "phetioDocumentation": "When disabled, the checkbox is grayed out and cannot be pressed.",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": true,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": true,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.visibilityControls.barGraphCheckbox.itemLabel": {
-      "phetioDocumentation": "",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "TextIO"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.visibilityControls.barGraphCheckbox.itemLabel.opacityProperty": {
-      "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": true,
-      "phetioStudioControl": true,
-      "phetioTypeName": "NumberPropertyIO"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.visibilityControls.barGraphCheckbox.itemLabel.pickableProperty": {
-      "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": true,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.visibilityControls.barGraphCheckbox.itemLabel.textProperty": {
-      "phetioDocumentation": "Property for the displayed text",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": true,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<StringIO>"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.visibilityControls.barGraphCheckbox.itemLabel.visibleProperty": {
-      "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": true,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.visibilityControls.barGraphCheckbox.opacityProperty": {
-      "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": true,
-      "phetioStudioControl": true,
-      "phetioTypeName": "NumberPropertyIO"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.visibilityControls.barGraphCheckbox.pickableProperty": {
-      "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": true,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.visibilityControls.barGraphCheckbox.property": {
-      "phetioDocumentation": "",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": true,
-      "phetioState": true,
-      "phetioStudioControl": true,
-      "phetioTypeName": "LinkedElementIO"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.visibilityControls.barGraphCheckbox.toggleAction": {
-      "phetioDocumentation": "Emits when user input causes the checkbox to toggle, emitting a single arg: the new boolean value of the checkbox state. The arguments are:<br/><ol><li>isChecked: BooleanIO</li></ol>",
-      "phetioDynamicElement": false,
-      "phetioEventType": "USER",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<BooleanIO>"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.visibilityControls.barGraphCheckbox.visibleProperty": {
-      "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": true,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": true,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.visibilityControls.barGraphIcon": {
-      "phetioDocumentation": "",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "NodeIO"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.visibilityControls.barGraphIcon.opacityProperty": {
-      "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": true,
-      "phetioStudioControl": true,
-      "phetioTypeName": "NumberPropertyIO"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.visibilityControls.barGraphIcon.pickableProperty": {
-      "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": true,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.visibilityControls.barGraphIcon.visibleProperty": {
-      "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": true,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.visibilityControls.gridCheckbox": {
       "phetioDocumentation": "",
@@ -20063,7 +19511,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.visibilityControls.gridCheckbox.itemLabel": {
       "phetioDocumentation": "",
@@ -20099,7 +19547,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.visibilityControls.gridCheckbox.itemLabel.textProperty": {
       "phetioDocumentation": "Property for the displayed text",
@@ -20111,7 +19559,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<StringIO>"
+      "phetioTypeName": "PropertyIO<StringIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.visibilityControls.gridCheckbox.itemLabel.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -20123,7 +19571,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.visibilityControls.gridCheckbox.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
@@ -20147,7 +19595,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.visibilityControls.gridCheckbox.property": {
       "phetioDocumentation": "",
@@ -20171,7 +19619,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<BooleanIO>"
+      "phetioTypeName": "ActionIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.visibilityControls.gridCheckbox.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -20183,7 +19631,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.visibilityControls.gridIcon": {
       "phetioDocumentation": "",
@@ -20219,7 +19667,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.visibilityControls.gridIcon.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -20231,7 +19679,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.visibilityControls.pieChartCheckbox": {
       "phetioDocumentation": "",
@@ -20255,7 +19703,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.visibilityControls.pieChartCheckbox.itemLabel": {
       "phetioDocumentation": "",
@@ -20291,7 +19739,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.visibilityControls.pieChartCheckbox.itemLabel.textProperty": {
       "phetioDocumentation": "Property for the displayed text",
@@ -20303,7 +19751,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<StringIO>"
+      "phetioTypeName": "PropertyIO<StringIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.visibilityControls.pieChartCheckbox.itemLabel.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -20315,7 +19763,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.visibilityControls.pieChartCheckbox.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
@@ -20339,7 +19787,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.visibilityControls.pieChartCheckbox.property": {
       "phetioDocumentation": "",
@@ -20363,7 +19811,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<BooleanIO>"
+      "phetioTypeName": "ActionIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.visibilityControls.pieChartCheckbox.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -20375,7 +19823,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.visibilityControls.pieChartIcon": {
       "phetioDocumentation": "",
@@ -20435,7 +19883,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.visibilityControls.pieChartIcon.path.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -20447,7 +19895,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.visibilityControls.pieChartIcon.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
@@ -20459,7 +19907,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.visibilityControls.pieChartIcon.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -20471,7 +19919,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.visibilityControls.speedIcon.gaugeNode": {
       "phetioDocumentation": "",
@@ -20519,7 +19967,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.visibilityControls.speedIcon.gaugeNode.foregroundNode.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -20531,7 +19979,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.visibilityControls.speedIcon.gaugeNode.labelNode": {
       "phetioDocumentation": "",
@@ -20567,7 +20015,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.visibilityControls.speedIcon.gaugeNode.labelNode.textProperty": {
       "phetioDocumentation": "Property for the displayed text",
@@ -20579,7 +20027,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<StringIO>"
+      "phetioTypeName": "PropertyIO<StringIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.visibilityControls.speedIcon.gaugeNode.labelNode.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -20591,7 +20039,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.visibilityControls.speedIcon.gaugeNode.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
@@ -20615,7 +20063,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.visibilityControls.speedIcon.gaugeNode.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -20627,7 +20075,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.visibilityControls.speedometerCheckbox": {
       "phetioDocumentation": "",
@@ -20651,7 +20099,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.visibilityControls.speedometerCheckbox.itemLabel": {
       "phetioDocumentation": "",
@@ -20687,7 +20135,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.visibilityControls.speedometerCheckbox.itemLabel.textProperty": {
       "phetioDocumentation": "Property for the displayed text",
@@ -20699,7 +20147,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<StringIO>"
+      "phetioTypeName": "PropertyIO<StringIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.visibilityControls.speedometerCheckbox.itemLabel.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -20711,7 +20159,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.visibilityControls.speedometerCheckbox.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
@@ -20735,7 +20183,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.visibilityControls.speedometerCheckbox.property": {
       "phetioDocumentation": "",
@@ -20759,7 +20207,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<BooleanIO>"
+      "phetioTypeName": "ActionIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.visibilityControls.speedometerCheckbox.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -20771,7 +20219,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -20783,9 +20231,21 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.energyBargGraphPanel.energyBarGraph.clearThermalButton": {
+    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.energyBarGraphAccordionBox": {
+      "phetioDocumentation": "",
+      "phetioDynamicElement": false,
+      "phetioEventType": "USER",
+      "phetioFeatured": false,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": false,
+      "phetioStudioControl": true,
+      "phetioTypeName": "AccordionBoxIO"
+    },
+    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.energyBarGraphAccordionBox.barGraphIcon": {
       "phetioDocumentation": "",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -20797,19 +20257,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "NodeIO"
     },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.energyBargGraphPanel.energyBarGraph.clearThermalButton.arrowPath": {
-      "phetioDocumentation": "",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "NodeIO"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.energyBargGraphPanel.energyBarGraph.clearThermalButton.arrowPath.opacityProperty": {
+    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.energyBarGraphAccordionBox.barGraphIcon.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -20821,7 +20269,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "NumberPropertyIO"
     },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.energyBargGraphPanel.energyBarGraph.clearThermalButton.arrowPath.pickableProperty": {
+    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.energyBarGraphAccordionBox.barGraphIcon.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -20831,9 +20279,9 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.energyBargGraphPanel.energyBarGraph.clearThermalButton.arrowPath.visibleProperty": {
+    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.energyBarGraphAccordionBox.barGraphIcon.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -20843,9 +20291,69 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.energyBargGraphPanel.energyBarGraph.clearThermalButton.enabledProperty": {
+    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.energyBarGraphAccordionBox.energyBarGraph.clearThermalButton": {
+      "phetioDocumentation": "",
+      "phetioDynamicElement": false,
+      "phetioEventType": "MODEL",
+      "phetioFeatured": false,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": false,
+      "phetioStudioControl": true,
+      "phetioTypeName": "NodeIO"
+    },
+    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.energyBarGraphAccordionBox.energyBarGraph.clearThermalButton.arrowPath": {
+      "phetioDocumentation": "",
+      "phetioDynamicElement": false,
+      "phetioEventType": "MODEL",
+      "phetioFeatured": false,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": false,
+      "phetioStudioControl": true,
+      "phetioTypeName": "NodeIO"
+    },
+    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.energyBarGraphAccordionBox.energyBarGraph.clearThermalButton.arrowPath.opacityProperty": {
+      "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
+      "phetioEventType": "MODEL",
+      "phetioFeatured": false,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": true,
+      "phetioStudioControl": true,
+      "phetioTypeName": "NumberPropertyIO"
+    },
+    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.energyBarGraphAccordionBox.energyBarGraph.clearThermalButton.arrowPath.pickableProperty": {
+      "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
+      "phetioEventType": "MODEL",
+      "phetioFeatured": false,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": true,
+      "phetioStudioControl": true,
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
+    },
+    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.energyBarGraphAccordionBox.energyBarGraph.clearThermalButton.arrowPath.visibleProperty": {
+      "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
+      "phetioEventType": "MODEL",
+      "phetioFeatured": false,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": true,
+      "phetioStudioControl": true,
+      "phetioTypeName": "PropertyIO<BooleanIO>"
+    },
+    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.energyBarGraphAccordionBox.energyBarGraph.clearThermalButton.enabledProperty": {
       "phetioDocumentation": "When disabled, the button is grayed out and cannot be pressed",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -20855,9 +20363,9 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.energyBargGraphPanel.energyBarGraph.clearThermalButton.firedEmitter": {
+    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.energyBarGraphAccordionBox.energyBarGraph.clearThermalButton.firedEmitter": {
       "phetioDocumentation": "Emits when the button is fired No arguments.",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
@@ -20867,9 +20375,9 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "EmitterIO.<>"
+      "phetioTypeName": "EmitterIO<>"
     },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.energyBargGraphPanel.energyBarGraph.clearThermalButton.opacityProperty": {
+    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.energyBarGraphAccordionBox.energyBarGraph.clearThermalButton.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -20881,7 +20389,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "NumberPropertyIO"
     },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.energyBargGraphPanel.energyBarGraph.clearThermalButton.pickableProperty": {
+    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.energyBarGraphAccordionBox.energyBarGraph.clearThermalButton.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -20891,9 +20399,9 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.energyBargGraphPanel.energyBarGraph.clearThermalButton.pressListener.pressAction": {
+    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.energyBarGraphAccordionBox.energyBarGraph.clearThermalButton.pressListener.pressAction": {
       "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br/><ol><li>event: EventIO</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
@@ -20903,10 +20411,10 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<EventIO>"
+      "phetioTypeName": "ActionIO<EventIO>"
     },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.energyBargGraphPanel.energyBarGraph.clearThermalButton.pressListener.releaseAction": {
-      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO.<EventIO></li></ol>",
+    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.energyBarGraphAccordionBox.energyBarGraph.clearThermalButton.pressListener.releaseAction": {
+      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO<EventIO></li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -20915,9 +20423,9 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<NullableIO.<EventIO>>"
+      "phetioTypeName": "ActionIO<NullableIO<EventIO>>"
     },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.energyBargGraphPanel.energyBarGraph.clearThermalButton.trashPath": {
+    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.energyBarGraphAccordionBox.energyBarGraph.clearThermalButton.trashPath": {
       "phetioDocumentation": "",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -20929,7 +20437,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "NodeIO"
     },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.energyBargGraphPanel.energyBarGraph.clearThermalButton.trashPath.opacityProperty": {
+    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.energyBarGraphAccordionBox.energyBarGraph.clearThermalButton.trashPath.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -20941,7 +20449,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "NumberPropertyIO"
     },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.energyBargGraphPanel.energyBarGraph.clearThermalButton.trashPath.pickableProperty": {
+    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.energyBarGraphAccordionBox.energyBarGraph.clearThermalButton.trashPath.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -20951,9 +20459,9 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.energyBargGraphPanel.energyBarGraph.clearThermalButton.trashPath.visibleProperty": {
+    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.energyBarGraphAccordionBox.energyBarGraph.clearThermalButton.trashPath.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -20963,9 +20471,9 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.energyBargGraphPanel.energyBarGraph.clearThermalButton.visibleProperty": {
+    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.energyBarGraphAccordionBox.energyBarGraph.clearThermalButton.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -20975,9 +20483,9 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.energyBargGraphPanel.energyBarGraph.zoomInButton": {
+    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.energyBarGraphAccordionBox.expandCollapseButton": {
       "phetioDocumentation": "",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -20987,9 +20495,9 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "NodeIO"
+      "phetioTypeName": "ToggleButtonIO"
     },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.energyBargGraphPanel.energyBarGraph.zoomInButton.enabledProperty": {
+    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.energyBarGraphAccordionBox.expandCollapseButton.enabledProperty": {
       "phetioDocumentation": "When disabled, the button is grayed out and cannot be pressed",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -20999,33 +20507,9 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.energyBargGraphPanel.energyBarGraph.zoomInButton.firedEmitter": {
-      "phetioDocumentation": "Emits when the button is fired No arguments.",
-      "phetioDynamicElement": false,
-      "phetioEventType": "USER",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "EmitterIO.<>"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.energyBargGraphPanel.energyBarGraph.zoomInButton.glassNode": {
-      "phetioDocumentation": "",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "NodeIO"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.energyBargGraphPanel.energyBarGraph.zoomInButton.glassNode.opacityProperty": {
+    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.energyBarGraphAccordionBox.expandCollapseButton.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -21037,7 +20521,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "NumberPropertyIO"
     },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.energyBargGraphPanel.energyBarGraph.zoomInButton.glassNode.pickableProperty": {
+    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.energyBarGraphAccordionBox.expandCollapseButton.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -21047,45 +20531,9 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.energyBargGraphPanel.energyBarGraph.zoomInButton.glassNode.visibleProperty": {
-      "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": true,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.energyBargGraphPanel.energyBarGraph.zoomInButton.opacityProperty": {
-      "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": true,
-      "phetioStudioControl": true,
-      "phetioTypeName": "NumberPropertyIO"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.energyBargGraphPanel.energyBarGraph.zoomInButton.pickableProperty": {
-      "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": true,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.energyBargGraphPanel.energyBarGraph.zoomInButton.pressListener.pressAction": {
+    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.energyBarGraphAccordionBox.expandCollapseButton.pressListener.pressAction": {
       "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br/><ol><li>event: EventIO</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
@@ -21095,10 +20543,10 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<EventIO>"
+      "phetioTypeName": "ActionIO<EventIO>"
     },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.energyBargGraphPanel.energyBarGraph.zoomInButton.pressListener.releaseAction": {
-      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO.<EventIO></li></ol>",
+    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.energyBarGraphAccordionBox.expandCollapseButton.pressListener.releaseAction": {
+      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO<EventIO></li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -21107,57 +20555,33 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<NullableIO.<EventIO>>"
+      "phetioTypeName": "ActionIO<NullableIO<EventIO>>"
     },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.energyBargGraphPanel.energyBarGraph.zoomInButton.signNode": {
+    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.energyBarGraphAccordionBox.expandCollapseButton.property": {
       "phetioDocumentation": "",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
       "phetioPlayback": false,
+      "phetioReadOnly": true,
+      "phetioState": true,
+      "phetioStudioControl": true,
+      "phetioTypeName": "LinkedElementIO"
+    },
+    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.energyBarGraphAccordionBox.expandCollapseButton.toggledEmitter": {
+      "phetioDocumentation": "Emits when the button is toggled No arguments.",
+      "phetioDynamicElement": false,
+      "phetioEventType": "USER",
+      "phetioFeatured": false,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "NodeIO"
+      "phetioTypeName": "EmitterIO<>"
     },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.energyBargGraphPanel.energyBarGraph.zoomInButton.signNode.opacityProperty": {
-      "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": true,
-      "phetioStudioControl": true,
-      "phetioTypeName": "NumberPropertyIO"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.energyBargGraphPanel.energyBarGraph.zoomInButton.signNode.pickableProperty": {
-      "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": true,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.energyBargGraphPanel.energyBarGraph.zoomInButton.signNode.visibleProperty": {
-      "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": true,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.energyBargGraphPanel.energyBarGraph.zoomInButton.visibleProperty": {
+    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.energyBarGraphAccordionBox.expandCollapseButton.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -21167,57 +20591,9 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.energyBargGraphPanel.energyBarGraph.zoomOutButton": {
-      "phetioDocumentation": "",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "NodeIO"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.energyBargGraphPanel.energyBarGraph.zoomOutButton.enabledProperty": {
-      "phetioDocumentation": "When disabled, the button is grayed out and cannot be pressed",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": true,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": true,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.energyBargGraphPanel.energyBarGraph.zoomOutButton.firedEmitter": {
-      "phetioDocumentation": "Emits when the button is fired No arguments.",
-      "phetioDynamicElement": false,
-      "phetioEventType": "USER",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "EmitterIO.<>"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.energyBargGraphPanel.energyBarGraph.zoomOutButton.glassNode": {
-      "phetioDocumentation": "",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "NodeIO"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.energyBargGraphPanel.energyBarGraph.zoomOutButton.glassNode.opacityProperty": {
+    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.energyBarGraphAccordionBox.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -21229,7 +20605,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "NumberPropertyIO"
     },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.energyBargGraphPanel.energyBarGraph.zoomOutButton.glassNode.pickableProperty": {
+    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.energyBarGraphAccordionBox.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -21239,117 +20615,9 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.energyBargGraphPanel.energyBarGraph.zoomOutButton.glassNode.visibleProperty": {
-      "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": true,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.energyBargGraphPanel.energyBarGraph.zoomOutButton.opacityProperty": {
-      "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": true,
-      "phetioStudioControl": true,
-      "phetioTypeName": "NumberPropertyIO"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.energyBargGraphPanel.energyBarGraph.zoomOutButton.pickableProperty": {
-      "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": true,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.energyBargGraphPanel.energyBarGraph.zoomOutButton.pressListener.pressAction": {
-      "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br/><ol><li>event: EventIO</li></ol>",
-      "phetioDynamicElement": false,
-      "phetioEventType": "USER",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<EventIO>"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.energyBargGraphPanel.energyBarGraph.zoomOutButton.pressListener.releaseAction": {
-      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO.<EventIO></li></ol>",
-      "phetioDynamicElement": false,
-      "phetioEventType": "USER",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<NullableIO.<EventIO>>"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.energyBargGraphPanel.energyBarGraph.zoomOutButton.signNode": {
-      "phetioDocumentation": "",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "NodeIO"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.energyBargGraphPanel.energyBarGraph.zoomOutButton.signNode.opacityProperty": {
-      "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": true,
-      "phetioStudioControl": true,
-      "phetioTypeName": "NumberPropertyIO"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.energyBargGraphPanel.energyBarGraph.zoomOutButton.signNode.pickableProperty": {
-      "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": true,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.energyBargGraphPanel.energyBarGraph.zoomOutButton.signNode.visibleProperty": {
-      "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": true,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.energyBargGraphPanel.energyBarGraph.zoomOutButton.visibleProperty": {
+    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.energyBarGraphAccordionBox.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -21359,7 +20627,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.gridNode": {
       "phetioDocumentation": "",
@@ -21395,7 +20663,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.gridNode.thickLinePath": {
       "phetioDocumentation": "",
@@ -21431,7 +20699,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.gridNode.thickLinePath.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -21443,7 +20711,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.gridNode.thinLinePath": {
       "phetioDocumentation": "",
@@ -21479,7 +20747,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.gridNode.thinLinePath.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -21491,7 +20759,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.gridNode.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -21503,7 +20771,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.measuringTapeNode": {
       "phetioDocumentation": "",
@@ -21539,7 +20807,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<Vector2IO>"
+      "phetioTypeName": "ActionIO<Vector2IO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.measuringTapeNode.baseDragHandler.dragEndAction": {
       "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO. the position of the drag end in view coordinates</li></ol>",
@@ -21551,7 +20819,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<Vector2IO>"
+      "phetioTypeName": "ActionIO<Vector2IO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.measuringTapeNode.baseDragHandler.dragStartAction": {
       "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO. the position of the drag start in view coordinates</li></ol>",
@@ -21563,7 +20831,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<Vector2IO>"
+      "phetioTypeName": "ActionIO<Vector2IO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.measuringTapeNode.baseDragHandler.isDraggingProperty": {
       "phetioDocumentation": "Indicates whether the object is dragging",
@@ -21575,7 +20843,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": true,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.measuringTapeNode.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
@@ -21599,7 +20867,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.measuringTapeNode.tipDragHandler": {
       "phetioDocumentation": "",
@@ -21623,7 +20891,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<Vector2IO>"
+      "phetioTypeName": "ActionIO<Vector2IO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.measuringTapeNode.tipDragHandler.dragEndAction": {
       "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO. the position of the drag end in view coordinates</li></ol>",
@@ -21635,7 +20903,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<Vector2IO>"
+      "phetioTypeName": "ActionIO<Vector2IO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.measuringTapeNode.tipDragHandler.dragStartAction": {
       "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO. the position of the drag start in view coordinates</li></ol>",
@@ -21647,7 +20915,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<Vector2IO>"
+      "phetioTypeName": "ActionIO<Vector2IO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.measuringTapeNode.tipDragHandler.isDraggingProperty": {
       "phetioDocumentation": "Indicates whether the object is dragging",
@@ -21659,7 +20927,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": true,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.measuringTapeNode.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -21671,7 +20939,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
@@ -21695,7 +20963,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.pieChartLegend": {
       "phetioDocumentation": "",
@@ -21755,7 +21023,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.pieChartLegend.clearThermalButton.arrowPath.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -21767,7 +21035,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.pieChartLegend.clearThermalButton.enabledProperty": {
       "phetioDocumentation": "When disabled, the button is grayed out and cannot be pressed",
@@ -21779,7 +21047,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.pieChartLegend.clearThermalButton.firedEmitter": {
       "phetioDocumentation": "Emits when the button is fired No arguments.",
@@ -21791,7 +21059,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "EmitterIO.<>"
+      "phetioTypeName": "EmitterIO<>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.pieChartLegend.clearThermalButton.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
@@ -21815,7 +21083,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.pieChartLegend.clearThermalButton.pressListener.pressAction": {
       "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br/><ol><li>event: EventIO</li></ol>",
@@ -21827,10 +21095,10 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<EventIO>"
+      "phetioTypeName": "ActionIO<EventIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.pieChartLegend.clearThermalButton.pressListener.releaseAction": {
-      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO.<EventIO></li></ol>",
+      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO<EventIO></li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -21839,7 +21107,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<NullableIO.<EventIO>>"
+      "phetioTypeName": "ActionIO<NullableIO<EventIO>>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.pieChartLegend.clearThermalButton.trashPath": {
       "phetioDocumentation": "",
@@ -21875,7 +21143,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.pieChartLegend.clearThermalButton.trashPath.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -21887,7 +21155,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.pieChartLegend.clearThermalButton.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -21899,7 +21167,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.pieChartLegend.kineticEnergyLabel": {
       "phetioDocumentation": "",
@@ -21935,7 +21203,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.pieChartLegend.kineticEnergyLabel.textProperty": {
       "phetioDocumentation": "Property for the displayed text",
@@ -21947,7 +21215,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<StringIO>"
+      "phetioTypeName": "PropertyIO<StringIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.pieChartLegend.kineticEnergyLabel.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -21959,7 +21227,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.pieChartLegend.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
@@ -21983,7 +21251,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.pieChartLegend.potentialEnergyLabel": {
       "phetioDocumentation": "",
@@ -22019,7 +21287,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.pieChartLegend.potentialEnergyLabel.textProperty": {
       "phetioDocumentation": "Property for the displayed text",
@@ -22031,7 +21299,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<StringIO>"
+      "phetioTypeName": "PropertyIO<StringIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.pieChartLegend.potentialEnergyLabel.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -22043,7 +21311,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.pieChartLegend.thermalEnergyLabel": {
       "phetioDocumentation": "",
@@ -22079,7 +21347,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.pieChartLegend.thermalEnergyLabel.textProperty": {
       "phetioDocumentation": "Property for the displayed text",
@@ -22091,7 +21359,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<StringIO>"
+      "phetioTypeName": "PropertyIO<StringIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.pieChartLegend.thermalEnergyLabel.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -22103,7 +21371,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.pieChartLegend.titleNode": {
       "phetioDocumentation": "",
@@ -22139,7 +21407,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.pieChartLegend.titleNode.textProperty": {
       "phetioDocumentation": "Property for the displayed text",
@@ -22151,7 +21419,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<StringIO>"
+      "phetioTypeName": "PropertyIO<StringIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.pieChartLegend.titleNode.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -22163,7 +21431,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.pieChartLegend.totalEnergyLabel": {
       "phetioDocumentation": "",
@@ -22199,7 +21467,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.pieChartLegend.totalEnergyLabel.textProperty": {
       "phetioDocumentation": "Property for the displayed text",
@@ -22211,7 +21479,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<StringIO>"
+      "phetioTypeName": "PropertyIO<StringIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.pieChartLegend.totalEnergyLabel.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -22223,7 +21491,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.pieChartLegend.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -22235,7 +21503,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.pieChartNode": {
       "phetioDocumentation": "",
@@ -22271,7 +21539,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.pieChartNode.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -22283,7 +21551,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.playPauseButton": {
       "phetioDocumentation": "",
@@ -22307,7 +21575,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.playPauseButton.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
@@ -22331,7 +21599,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.playPauseButton.pressListener.pressAction": {
       "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br/><ol><li>event: EventIO</li></ol>",
@@ -22343,10 +21611,10 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<EventIO>"
+      "phetioTypeName": "ActionIO<EventIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.playPauseButton.pressListener.releaseAction": {
-      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO.<EventIO></li></ol>",
+      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO<EventIO></li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -22355,7 +21623,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<NullableIO.<EventIO>>"
+      "phetioTypeName": "ActionIO<NullableIO<EventIO>>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.playPauseButton.property": {
       "phetioDocumentation": "",
@@ -22403,7 +21671,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.playPauseButton.toggleNode.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -22415,7 +21683,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.playPauseButton.toggledEmitter": {
       "phetioDocumentation": "Emits when the button is toggled No arguments.",
@@ -22427,7 +21695,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "EmitterIO.<>"
+      "phetioTypeName": "EmitterIO<>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.playPauseButton.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -22439,7 +21707,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.playbackSpeedControl.normalSpeedButton": {
       "phetioDocumentation": "",
@@ -22463,7 +21731,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.playbackSpeedControl.normalSpeedButton.inputListener.firedEmitter": {
       "phetioDocumentation": "A function that executes. No arguments.",
@@ -22475,7 +21743,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "EmitterIO.<>"
+      "phetioTypeName": "EmitterIO<>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.playbackSpeedControl.normalSpeedButton.inputListener.pressAction": {
       "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br/><ol><li>event: EventIO</li></ol>",
@@ -22487,10 +21755,10 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<EventIO>"
+      "phetioTypeName": "ActionIO<EventIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.playbackSpeedControl.normalSpeedButton.inputListener.releaseAction": {
-      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO.<EventIO></li></ol>",
+      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO<EventIO></li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -22499,7 +21767,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<NullableIO.<EventIO>>"
+      "phetioTypeName": "ActionIO<NullableIO<EventIO>>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.playbackSpeedControl.normalSpeedButton.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
@@ -22523,7 +21791,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.playbackSpeedControl.normalSpeedButton.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -22535,7 +21803,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.playbackSpeedControl.normalSpeedTextNode": {
       "phetioDocumentation": "",
@@ -22571,7 +21839,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.playbackSpeedControl.normalSpeedTextNode.textProperty": {
       "phetioDocumentation": "Property for the displayed text",
@@ -22583,7 +21851,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<StringIO>"
+      "phetioTypeName": "PropertyIO<StringIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.playbackSpeedControl.normalSpeedTextNode.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -22595,7 +21863,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.playbackSpeedControl.slowMotionRadioButton": {
       "phetioDocumentation": "",
@@ -22619,7 +21887,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.playbackSpeedControl.slowMotionRadioButton.inputListener.firedEmitter": {
       "phetioDocumentation": "A function that executes. No arguments.",
@@ -22631,7 +21899,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "EmitterIO.<>"
+      "phetioTypeName": "EmitterIO<>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.playbackSpeedControl.slowMotionRadioButton.inputListener.pressAction": {
       "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br/><ol><li>event: EventIO</li></ol>",
@@ -22643,10 +21911,10 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<EventIO>"
+      "phetioTypeName": "ActionIO<EventIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.playbackSpeedControl.slowMotionRadioButton.inputListener.releaseAction": {
-      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO.<EventIO></li></ol>",
+      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO<EventIO></li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -22655,7 +21923,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<NullableIO.<EventIO>>"
+      "phetioTypeName": "ActionIO<NullableIO<EventIO>>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.playbackSpeedControl.slowMotionRadioButton.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
@@ -22679,7 +21947,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.playbackSpeedControl.slowMotionRadioButton.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -22691,7 +21959,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.playbackSpeedControl.slowMotionTextNode": {
       "phetioDocumentation": "",
@@ -22727,7 +21995,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.playbackSpeedControl.slowMotionTextNode.textProperty": {
       "phetioDocumentation": "Property for the displayed text",
@@ -22739,7 +22007,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<StringIO>"
+      "phetioTypeName": "PropertyIO<StringIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.playbackSpeedControl.slowMotionTextNode.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -22751,7 +22019,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.playingProperty": {
       "phetioDocumentation": "",
@@ -22763,7 +22031,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.referenceHeightLine.dragListener.dragAction": {
       "phetioDocumentation": "Emits whenever a drag occurs with an EventIO argument. The arguments are:<br/><ol><li>event: EventIO</li></ol>",
@@ -22775,7 +22043,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<EventIO>"
+      "phetioTypeName": "ActionIO<EventIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.referenceHeightLine.dragListener.pressAction": {
       "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br/><ol><li>event: EventIO</li></ol>",
@@ -22787,10 +22055,10 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<EventIO>"
+      "phetioTypeName": "ActionIO<EventIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.referenceHeightLine.dragListener.releaseAction": {
-      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO.<EventIO></li></ol>",
+      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO<EventIO></li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -22799,7 +22067,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<NullableIO.<EventIO>>"
+      "phetioTypeName": "ActionIO<NullableIO<EventIO>>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.resetAllButton": {
       "phetioDocumentation": "The orange, round button that can be used to restore the initial state",
@@ -22811,7 +22079,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "NodeIO"
+      "phetioTypeName": "ResetAllButtonIO"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.resetAllButton.enabledProperty": {
       "phetioDocumentation": "When disabled, the button is grayed out and cannot be pressed",
@@ -22823,7 +22091,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.resetAllButton.firedEmitter": {
       "phetioDocumentation": "Emits when the button is fired No arguments.",
@@ -22835,7 +22103,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "EmitterIO.<>"
+      "phetioTypeName": "EmitterIO<>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.resetAllButton.isFiringProperty": {
       "phetioDocumentation": "Temporarily becomes true while the Reset All button is firing.  Commonly used to disable audio effects during reset.",
@@ -22847,7 +22115,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": true,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "DerivedPropertyIO.<BooleanIO>"
+      "phetioTypeName": "DerivedPropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.resetAllButton.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
@@ -22871,7 +22139,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.resetAllButton.pressListener.pressAction": {
       "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br/><ol><li>event: EventIO</li></ol>",
@@ -22883,10 +22151,10 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<EventIO>"
+      "phetioTypeName": "ActionIO<EventIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.resetAllButton.pressListener.releaseAction": {
-      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO.<EventIO></li></ol>",
+      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO<EventIO></li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -22895,7 +22163,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<NullableIO.<EventIO>>"
+      "phetioTypeName": "ActionIO<NullableIO<EventIO>>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.resetAllButton.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -22907,7 +22175,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.restartSkaterTextNode": {
       "phetioDocumentation": "",
@@ -22943,7 +22211,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.restartSkaterTextNode.textProperty": {
       "phetioDocumentation": "Property for the displayed text",
@@ -22955,7 +22223,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<StringIO>"
+      "phetioTypeName": "PropertyIO<StringIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.restartSkaterTextNode.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -22967,7 +22235,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.returnSkaterButton": {
       "phetioDocumentation": "",
@@ -22991,7 +22259,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.returnSkaterButton.firedEmitter": {
       "phetioDocumentation": "Emits when the button is fired No arguments.",
@@ -23003,7 +22271,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "EmitterIO.<>"
+      "phetioTypeName": "EmitterIO<>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.returnSkaterButton.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
@@ -23027,7 +22295,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.returnSkaterButton.pressListener.pressAction": {
       "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br/><ol><li>event: EventIO</li></ol>",
@@ -23039,10 +22307,10 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<EventIO>"
+      "phetioTypeName": "ActionIO<EventIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.returnSkaterButton.pressListener.releaseAction": {
-      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO.<EventIO></li></ol>",
+      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO<EventIO></li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -23051,7 +22319,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<NullableIO.<EventIO>>"
+      "phetioTypeName": "ActionIO<NullableIO<EventIO>>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.returnSkaterButton.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -23063,7 +22331,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.returnSkaterToGroundButton": {
       "phetioDocumentation": "",
@@ -23087,7 +22355,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.returnSkaterToGroundButton.firedEmitter": {
       "phetioDocumentation": "Emits when the button is fired No arguments.",
@@ -23099,7 +22367,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "EmitterIO.<>"
+      "phetioTypeName": "EmitterIO<>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.returnSkaterToGroundButton.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
@@ -23123,7 +22391,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.returnSkaterToGroundButton.pressListener.pressAction": {
       "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br/><ol><li>event: EventIO</li></ol>",
@@ -23135,10 +22403,10 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<EventIO>"
+      "phetioTypeName": "ActionIO<EventIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.returnSkaterToGroundButton.pressListener.releaseAction": {
-      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO.<EventIO></li></ol>",
+      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO<EventIO></li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -23147,7 +22415,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<NullableIO.<EventIO>>"
+      "phetioTypeName": "ActionIO<NullableIO<EventIO>>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.returnSkaterToGroundButton.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -23159,7 +22427,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.returnSkaterToPreviousStartingPositionButton": {
       "phetioDocumentation": "",
@@ -23183,7 +22451,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.returnSkaterToPreviousStartingPositionButton.firedEmitter": {
       "phetioDocumentation": "Emits when the button is fired No arguments.",
@@ -23195,7 +22463,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "EmitterIO.<>"
+      "phetioTypeName": "EmitterIO<>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.returnSkaterToPreviousStartingPositionButton.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
@@ -23219,7 +22487,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.returnSkaterToPreviousStartingPositionButton.pressListener.pressAction": {
       "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br/><ol><li>event: EventIO</li></ol>",
@@ -23231,10 +22499,10 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<EventIO>"
+      "phetioTypeName": "ActionIO<EventIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.returnSkaterToPreviousStartingPositionButton.pressListener.releaseAction": {
-      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO.<EventIO></li></ol>",
+      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO<EventIO></li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -23243,7 +22511,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<NullableIO.<EventIO>>"
+      "phetioTypeName": "ActionIO<NullableIO<EventIO>>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.returnSkaterToPreviousStartingPositionButton.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -23255,7 +22523,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.skaterIconImage1": {
       "phetioDocumentation": "",
@@ -23291,7 +22559,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.skaterIconImage1.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -23303,7 +22571,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.skaterIconImage2": {
       "phetioDocumentation": "",
@@ -23339,7 +22607,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.skaterIconImage2.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -23351,7 +22619,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.skaterNode": {
       "phetioDocumentation": "",
@@ -23387,7 +22655,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<Vector2IO>"
+      "phetioTypeName": "ActionIO<Vector2IO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.skaterNode.inputListener.dragEndAction": {
       "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO. the position of the drag end in view coordinates</li></ol>",
@@ -23399,7 +22667,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<Vector2IO>"
+      "phetioTypeName": "ActionIO<Vector2IO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.skaterNode.inputListener.dragStartAction": {
       "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO. the position of the drag start in view coordinates</li></ol>",
@@ -23411,7 +22679,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<Vector2IO>"
+      "phetioTypeName": "ActionIO<Vector2IO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.skaterNode.inputListener.isDraggingProperty": {
       "phetioDocumentation": "Indicates whether the object is dragging",
@@ -23423,7 +22691,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": true,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.skaterNode.leftSkaterImageNode": {
       "phetioDocumentation": "",
@@ -23459,7 +22727,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.skaterNode.leftSkaterImageNode.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -23471,7 +22739,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.skaterNode.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
@@ -23495,7 +22763,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.skaterNode.rightSkaterImageNode": {
       "phetioDocumentation": "",
@@ -23531,7 +22799,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.skaterNode.rightSkaterImageNode.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -23543,7 +22811,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.skaterNode.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -23555,7 +22823,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.speedometerNode": {
       "phetioDocumentation": "",
@@ -23603,7 +22871,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.speedometerNode.foregroundNode.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -23615,7 +22883,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.speedometerNode.labelNode": {
       "phetioDocumentation": "",
@@ -23651,7 +22919,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.speedometerNode.labelNode.textProperty": {
       "phetioDocumentation": "Property for the displayed text",
@@ -23663,7 +22931,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<StringIO>"
+      "phetioTypeName": "PropertyIO<StringIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.speedometerNode.labelNode.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -23675,7 +22943,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.speedometerNode.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
@@ -23699,7 +22967,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.speedometerNode.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -23711,7 +22979,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.stepButton": {
       "phetioDocumentation": "",
@@ -23735,7 +23003,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.stepButton.firedEmitter": {
       "phetioDocumentation": "Emits when the button is fired No arguments.",
@@ -23747,7 +23015,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "EmitterIO.<>"
+      "phetioTypeName": "EmitterIO<>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.stepButton.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
@@ -23771,7 +23039,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.stepButton.pressListener.pressAction": {
       "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br/><ol><li>event: EventIO</li></ol>",
@@ -23783,10 +23051,10 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<EventIO>"
+      "phetioTypeName": "ActionIO<EventIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.stepButton.pressListener.releaseAction": {
-      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO.<EventIO></li></ol>",
+      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO<EventIO></li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -23795,7 +23063,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<NullableIO.<EventIO>>"
+      "phetioTypeName": "ActionIO<NullableIO<EventIO>>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.stepButton.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -23807,7 +23075,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackLayer": {
       "phetioDocumentation": "",
@@ -23843,7 +23111,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackLayer.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -23855,7 +23123,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~0": {
       "phetioDocumentation": "",
@@ -23903,7 +23171,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<Vector2IO>"
+      "phetioTypeName": "ActionIO<Vector2IO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~0.controlPointNode0.inputListener.dragEndAction": {
       "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO. the position of the drag end in view coordinates</li></ol>",
@@ -23915,7 +23183,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<Vector2IO>"
+      "phetioTypeName": "ActionIO<Vector2IO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~0.controlPointNode0.inputListener.dragStartAction": {
       "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO. the position of the drag start in view coordinates</li></ol>",
@@ -23927,7 +23195,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<Vector2IO>"
+      "phetioTypeName": "ActionIO<Vector2IO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~0.controlPointNode0.inputListener.isDraggingProperty": {
       "phetioDocumentation": "Indicates whether the object is dragging",
@@ -23939,7 +23207,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": true,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~0.controlPointNode0.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
@@ -23963,7 +23231,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~0.controlPointNode0.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -23975,7 +23243,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~0.controlPointNode1": {
       "phetioDocumentation": "",
@@ -24011,7 +23279,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<Vector2IO>"
+      "phetioTypeName": "ActionIO<Vector2IO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~0.controlPointNode1.inputListener.dragEndAction": {
       "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO. the position of the drag end in view coordinates</li></ol>",
@@ -24023,7 +23291,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<Vector2IO>"
+      "phetioTypeName": "ActionIO<Vector2IO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~0.controlPointNode1.inputListener.dragStartAction": {
       "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO. the position of the drag start in view coordinates</li></ol>",
@@ -24035,7 +23303,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<Vector2IO>"
+      "phetioTypeName": "ActionIO<Vector2IO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~0.controlPointNode1.inputListener.isDraggingProperty": {
       "phetioDocumentation": "Indicates whether the object is dragging",
@@ -24047,7 +23315,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": true,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~0.controlPointNode1.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
@@ -24071,7 +23339,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~0.controlPointNode1.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -24083,7 +23351,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~0.controlPointNode2": {
       "phetioDocumentation": "",
@@ -24119,7 +23387,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<Vector2IO>"
+      "phetioTypeName": "ActionIO<Vector2IO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~0.controlPointNode2.inputListener.dragEndAction": {
       "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO. the position of the drag end in view coordinates</li></ol>",
@@ -24131,7 +23399,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<Vector2IO>"
+      "phetioTypeName": "ActionIO<Vector2IO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~0.controlPointNode2.inputListener.dragStartAction": {
       "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO. the position of the drag start in view coordinates</li></ol>",
@@ -24143,7 +23411,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<Vector2IO>"
+      "phetioTypeName": "ActionIO<Vector2IO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~0.controlPointNode2.inputListener.isDraggingProperty": {
       "phetioDocumentation": "Indicates whether the object is dragging",
@@ -24155,7 +23423,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": true,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~0.controlPointNode2.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
@@ -24179,7 +23447,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~0.controlPointNode2.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -24191,7 +23459,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~0.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
@@ -24215,7 +23483,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~0.trackDragHandler.inputListener": {
       "phetioDocumentation": "",
@@ -24239,7 +23507,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<Vector2IO>"
+      "phetioTypeName": "ActionIO<Vector2IO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~0.trackDragHandler.inputListener.dragEndAction": {
       "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO. the position of the drag end in view coordinates</li></ol>",
@@ -24251,7 +23519,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<Vector2IO>"
+      "phetioTypeName": "ActionIO<Vector2IO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~0.trackDragHandler.inputListener.dragStartAction": {
       "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO. the position of the drag start in view coordinates</li></ol>",
@@ -24263,7 +23531,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<Vector2IO>"
+      "phetioTypeName": "ActionIO<Vector2IO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~0.trackDragHandler.inputListener.isDraggingProperty": {
       "phetioDocumentation": "Indicates whether the object is dragging",
@@ -24275,7 +23543,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": true,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~0.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -24287,7 +23555,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~1": {
       "phetioDocumentation": "",
@@ -24335,7 +23603,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<Vector2IO>"
+      "phetioTypeName": "ActionIO<Vector2IO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~1.controlPointNode0.inputListener.dragEndAction": {
       "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO. the position of the drag end in view coordinates</li></ol>",
@@ -24347,7 +23615,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<Vector2IO>"
+      "phetioTypeName": "ActionIO<Vector2IO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~1.controlPointNode0.inputListener.dragStartAction": {
       "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO. the position of the drag start in view coordinates</li></ol>",
@@ -24359,7 +23627,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<Vector2IO>"
+      "phetioTypeName": "ActionIO<Vector2IO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~1.controlPointNode0.inputListener.isDraggingProperty": {
       "phetioDocumentation": "Indicates whether the object is dragging",
@@ -24371,7 +23639,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": true,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~1.controlPointNode0.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
@@ -24395,7 +23663,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~1.controlPointNode0.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -24407,7 +23675,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~1.controlPointNode1": {
       "phetioDocumentation": "",
@@ -24443,7 +23711,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<Vector2IO>"
+      "phetioTypeName": "ActionIO<Vector2IO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~1.controlPointNode1.inputListener.dragEndAction": {
       "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO. the position of the drag end in view coordinates</li></ol>",
@@ -24455,7 +23723,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<Vector2IO>"
+      "phetioTypeName": "ActionIO<Vector2IO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~1.controlPointNode1.inputListener.dragStartAction": {
       "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO. the position of the drag start in view coordinates</li></ol>",
@@ -24467,7 +23735,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<Vector2IO>"
+      "phetioTypeName": "ActionIO<Vector2IO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~1.controlPointNode1.inputListener.isDraggingProperty": {
       "phetioDocumentation": "Indicates whether the object is dragging",
@@ -24479,7 +23747,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": true,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~1.controlPointNode1.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
@@ -24503,7 +23771,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~1.controlPointNode1.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -24515,7 +23783,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~1.controlPointNode2": {
       "phetioDocumentation": "",
@@ -24551,7 +23819,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<Vector2IO>"
+      "phetioTypeName": "ActionIO<Vector2IO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~1.controlPointNode2.inputListener.dragEndAction": {
       "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO. the position of the drag end in view coordinates</li></ol>",
@@ -24563,7 +23831,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<Vector2IO>"
+      "phetioTypeName": "ActionIO<Vector2IO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~1.controlPointNode2.inputListener.dragStartAction": {
       "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO. the position of the drag start in view coordinates</li></ol>",
@@ -24575,7 +23843,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<Vector2IO>"
+      "phetioTypeName": "ActionIO<Vector2IO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~1.controlPointNode2.inputListener.isDraggingProperty": {
       "phetioDocumentation": "Indicates whether the object is dragging",
@@ -24587,7 +23855,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": true,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~1.controlPointNode2.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
@@ -24611,7 +23879,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~1.controlPointNode2.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -24623,7 +23891,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~1.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
@@ -24647,7 +23915,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~1.trackDragHandler.inputListener": {
       "phetioDocumentation": "",
@@ -24671,7 +23939,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<Vector2IO>"
+      "phetioTypeName": "ActionIO<Vector2IO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~1.trackDragHandler.inputListener.dragEndAction": {
       "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO. the position of the drag end in view coordinates</li></ol>",
@@ -24683,7 +23951,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<Vector2IO>"
+      "phetioTypeName": "ActionIO<Vector2IO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~1.trackDragHandler.inputListener.dragStartAction": {
       "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO. the position of the drag start in view coordinates</li></ol>",
@@ -24695,7 +23963,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<Vector2IO>"
+      "phetioTypeName": "ActionIO<Vector2IO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~1.trackDragHandler.inputListener.isDraggingProperty": {
       "phetioDocumentation": "Indicates whether the object is dragging",
@@ -24707,7 +23975,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": true,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~1.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -24719,7 +23987,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~2": {
       "phetioDocumentation": "",
@@ -24767,7 +24035,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<Vector2IO>"
+      "phetioTypeName": "ActionIO<Vector2IO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~2.controlPointNode0.inputListener.dragEndAction": {
       "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO. the position of the drag end in view coordinates</li></ol>",
@@ -24779,7 +24047,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<Vector2IO>"
+      "phetioTypeName": "ActionIO<Vector2IO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~2.controlPointNode0.inputListener.dragStartAction": {
       "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO. the position of the drag start in view coordinates</li></ol>",
@@ -24791,7 +24059,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<Vector2IO>"
+      "phetioTypeName": "ActionIO<Vector2IO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~2.controlPointNode0.inputListener.isDraggingProperty": {
       "phetioDocumentation": "Indicates whether the object is dragging",
@@ -24803,7 +24071,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": true,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~2.controlPointNode0.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
@@ -24827,7 +24095,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~2.controlPointNode0.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -24839,7 +24107,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~2.controlPointNode1": {
       "phetioDocumentation": "",
@@ -24875,7 +24143,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<Vector2IO>"
+      "phetioTypeName": "ActionIO<Vector2IO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~2.controlPointNode1.inputListener.dragEndAction": {
       "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO. the position of the drag end in view coordinates</li></ol>",
@@ -24887,7 +24155,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<Vector2IO>"
+      "phetioTypeName": "ActionIO<Vector2IO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~2.controlPointNode1.inputListener.dragStartAction": {
       "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO. the position of the drag start in view coordinates</li></ol>",
@@ -24899,7 +24167,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<Vector2IO>"
+      "phetioTypeName": "ActionIO<Vector2IO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~2.controlPointNode1.inputListener.isDraggingProperty": {
       "phetioDocumentation": "Indicates whether the object is dragging",
@@ -24911,7 +24179,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": true,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~2.controlPointNode1.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
@@ -24935,7 +24203,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~2.controlPointNode1.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -24947,7 +24215,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~2.controlPointNode2": {
       "phetioDocumentation": "",
@@ -24983,7 +24251,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<Vector2IO>"
+      "phetioTypeName": "ActionIO<Vector2IO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~2.controlPointNode2.inputListener.dragEndAction": {
       "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO. the position of the drag end in view coordinates</li></ol>",
@@ -24995,7 +24263,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<Vector2IO>"
+      "phetioTypeName": "ActionIO<Vector2IO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~2.controlPointNode2.inputListener.dragStartAction": {
       "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO. the position of the drag start in view coordinates</li></ol>",
@@ -25007,7 +24275,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<Vector2IO>"
+      "phetioTypeName": "ActionIO<Vector2IO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~2.controlPointNode2.inputListener.isDraggingProperty": {
       "phetioDocumentation": "Indicates whether the object is dragging",
@@ -25019,7 +24287,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": true,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~2.controlPointNode2.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
@@ -25043,7 +24311,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~2.controlPointNode2.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -25055,7 +24323,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~2.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
@@ -25079,7 +24347,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~2.trackDragHandler.inputListener": {
       "phetioDocumentation": "",
@@ -25103,7 +24371,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<Vector2IO>"
+      "phetioTypeName": "ActionIO<Vector2IO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~2.trackDragHandler.inputListener.dragEndAction": {
       "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO. the position of the drag end in view coordinates</li></ol>",
@@ -25115,7 +24383,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<Vector2IO>"
+      "phetioTypeName": "ActionIO<Vector2IO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~2.trackDragHandler.inputListener.dragStartAction": {
       "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO. the position of the drag start in view coordinates</li></ol>",
@@ -25127,7 +24395,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<Vector2IO>"
+      "phetioTypeName": "ActionIO<Vector2IO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~2.trackDragHandler.inputListener.isDraggingProperty": {
       "phetioDocumentation": "Indicates whether the object is dragging",
@@ -25139,7 +24407,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": true,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~2.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -25151,7 +24419,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~3": {
       "phetioDocumentation": "",
@@ -25199,7 +24467,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<Vector2IO>"
+      "phetioTypeName": "ActionIO<Vector2IO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~3.controlPointNode0.inputListener.dragEndAction": {
       "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO. the position of the drag end in view coordinates</li></ol>",
@@ -25211,7 +24479,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<Vector2IO>"
+      "phetioTypeName": "ActionIO<Vector2IO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~3.controlPointNode0.inputListener.dragStartAction": {
       "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO. the position of the drag start in view coordinates</li></ol>",
@@ -25223,7 +24491,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<Vector2IO>"
+      "phetioTypeName": "ActionIO<Vector2IO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~3.controlPointNode0.inputListener.isDraggingProperty": {
       "phetioDocumentation": "Indicates whether the object is dragging",
@@ -25235,7 +24503,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": true,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~3.controlPointNode0.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
@@ -25259,7 +24527,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~3.controlPointNode0.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -25271,7 +24539,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~3.controlPointNode1": {
       "phetioDocumentation": "",
@@ -25307,7 +24575,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<Vector2IO>"
+      "phetioTypeName": "ActionIO<Vector2IO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~3.controlPointNode1.inputListener.dragEndAction": {
       "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO. the position of the drag end in view coordinates</li></ol>",
@@ -25319,7 +24587,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<Vector2IO>"
+      "phetioTypeName": "ActionIO<Vector2IO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~3.controlPointNode1.inputListener.dragStartAction": {
       "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO. the position of the drag start in view coordinates</li></ol>",
@@ -25331,7 +24599,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<Vector2IO>"
+      "phetioTypeName": "ActionIO<Vector2IO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~3.controlPointNode1.inputListener.isDraggingProperty": {
       "phetioDocumentation": "Indicates whether the object is dragging",
@@ -25343,7 +24611,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": true,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~3.controlPointNode1.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
@@ -25367,7 +24635,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~3.controlPointNode1.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -25379,7 +24647,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~3.controlPointNode2": {
       "phetioDocumentation": "",
@@ -25415,7 +24683,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<Vector2IO>"
+      "phetioTypeName": "ActionIO<Vector2IO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~3.controlPointNode2.inputListener.dragEndAction": {
       "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO. the position of the drag end in view coordinates</li></ol>",
@@ -25427,7 +24695,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<Vector2IO>"
+      "phetioTypeName": "ActionIO<Vector2IO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~3.controlPointNode2.inputListener.dragStartAction": {
       "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO. the position of the drag start in view coordinates</li></ol>",
@@ -25439,7 +24707,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<Vector2IO>"
+      "phetioTypeName": "ActionIO<Vector2IO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~3.controlPointNode2.inputListener.isDraggingProperty": {
       "phetioDocumentation": "Indicates whether the object is dragging",
@@ -25451,7 +24719,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": true,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~3.controlPointNode2.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
@@ -25475,7 +24743,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~3.controlPointNode2.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -25487,7 +24755,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~3.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
@@ -25511,7 +24779,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~3.trackDragHandler.inputListener": {
       "phetioDocumentation": "",
@@ -25535,7 +24803,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<Vector2IO>"
+      "phetioTypeName": "ActionIO<Vector2IO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~3.trackDragHandler.inputListener.dragEndAction": {
       "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO. the position of the drag end in view coordinates</li></ol>",
@@ -25547,7 +24815,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<Vector2IO>"
+      "phetioTypeName": "ActionIO<Vector2IO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~3.trackDragHandler.inputListener.dragStartAction": {
       "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO. the position of the drag start in view coordinates</li></ol>",
@@ -25559,7 +24827,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<Vector2IO>"
+      "phetioTypeName": "ActionIO<Vector2IO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~3.trackDragHandler.inputListener.isDraggingProperty": {
       "phetioDocumentation": "Indicates whether the object is dragging",
@@ -25571,7 +24839,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": true,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~3.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -25583,7 +24851,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~4": {
       "phetioDocumentation": "",
@@ -25631,7 +24899,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<Vector2IO>"
+      "phetioTypeName": "ActionIO<Vector2IO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~4.controlPointNode0.inputListener.dragEndAction": {
       "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO. the position of the drag end in view coordinates</li></ol>",
@@ -25643,7 +24911,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<Vector2IO>"
+      "phetioTypeName": "ActionIO<Vector2IO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~4.controlPointNode0.inputListener.dragStartAction": {
       "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO. the position of the drag start in view coordinates</li></ol>",
@@ -25655,7 +24923,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<Vector2IO>"
+      "phetioTypeName": "ActionIO<Vector2IO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~4.controlPointNode0.inputListener.isDraggingProperty": {
       "phetioDocumentation": "Indicates whether the object is dragging",
@@ -25667,7 +24935,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": true,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~4.controlPointNode0.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
@@ -25691,7 +24959,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~4.controlPointNode0.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -25703,7 +24971,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~4.controlPointNode1": {
       "phetioDocumentation": "",
@@ -25739,7 +25007,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<Vector2IO>"
+      "phetioTypeName": "ActionIO<Vector2IO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~4.controlPointNode1.inputListener.dragEndAction": {
       "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO. the position of the drag end in view coordinates</li></ol>",
@@ -25751,7 +25019,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<Vector2IO>"
+      "phetioTypeName": "ActionIO<Vector2IO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~4.controlPointNode1.inputListener.dragStartAction": {
       "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO. the position of the drag start in view coordinates</li></ol>",
@@ -25763,7 +25031,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<Vector2IO>"
+      "phetioTypeName": "ActionIO<Vector2IO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~4.controlPointNode1.inputListener.isDraggingProperty": {
       "phetioDocumentation": "Indicates whether the object is dragging",
@@ -25775,7 +25043,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": true,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~4.controlPointNode1.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
@@ -25799,7 +25067,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~4.controlPointNode1.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -25811,7 +25079,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~4.controlPointNode2": {
       "phetioDocumentation": "",
@@ -25847,7 +25115,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<Vector2IO>"
+      "phetioTypeName": "ActionIO<Vector2IO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~4.controlPointNode2.inputListener.dragEndAction": {
       "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO. the position of the drag end in view coordinates</li></ol>",
@@ -25859,7 +25127,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<Vector2IO>"
+      "phetioTypeName": "ActionIO<Vector2IO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~4.controlPointNode2.inputListener.dragStartAction": {
       "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO. the position of the drag start in view coordinates</li></ol>",
@@ -25871,7 +25139,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<Vector2IO>"
+      "phetioTypeName": "ActionIO<Vector2IO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~4.controlPointNode2.inputListener.isDraggingProperty": {
       "phetioDocumentation": "Indicates whether the object is dragging",
@@ -25883,7 +25151,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": true,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~4.controlPointNode2.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
@@ -25907,7 +25175,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~4.controlPointNode2.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -25919,7 +25187,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~4.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
@@ -25943,7 +25211,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~4.trackDragHandler.inputListener": {
       "phetioDocumentation": "",
@@ -25967,7 +25235,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<Vector2IO>"
+      "phetioTypeName": "ActionIO<Vector2IO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~4.trackDragHandler.inputListener.dragEndAction": {
       "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO. the position of the drag end in view coordinates</li></ol>",
@@ -25979,7 +25247,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<Vector2IO>"
+      "phetioTypeName": "ActionIO<Vector2IO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~4.trackDragHandler.inputListener.dragStartAction": {
       "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO. the position of the drag start in view coordinates</li></ol>",
@@ -25991,7 +25259,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<Vector2IO>"
+      "phetioTypeName": "ActionIO<Vector2IO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~4.trackDragHandler.inputListener.isDraggingProperty": {
       "phetioDocumentation": "Indicates whether the object is dragging",
@@ -26003,7 +25271,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": true,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.trackNode.track~4.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -26015,7 +25283,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -26027,7 +25295,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.massSlider": {
       "phetioDocumentation": "",
@@ -26063,7 +25331,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.massSlider.leftArrowButton.firedEmitter": {
       "phetioDocumentation": "Emits when the button is fired No arguments.",
@@ -26075,7 +25343,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "EmitterIO.<>"
+      "phetioTypeName": "EmitterIO<>"
     },
     "energySkateParkBasics.playgroundScreen.view.massSlider.leftArrowButton.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
@@ -26099,7 +25367,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.playgroundScreen.view.massSlider.leftArrowButton.pressListener.pressAction": {
       "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br/><ol><li>event: EventIO</li></ol>",
@@ -26111,10 +25379,10 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<EventIO>"
+      "phetioTypeName": "ActionIO<EventIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.massSlider.leftArrowButton.pressListener.releaseAction": {
-      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO.<EventIO></li></ol>",
+      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO<EventIO></li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -26123,7 +25391,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<NullableIO.<EventIO>>"
+      "phetioTypeName": "ActionIO<NullableIO<EventIO>>"
     },
     "energySkateParkBasics.playgroundScreen.view.massSlider.leftArrowButton.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -26135,7 +25403,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.massSlider.maxLabel": {
       "phetioDocumentation": "",
@@ -26171,7 +25439,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.playgroundScreen.view.massSlider.maxLabel.textProperty": {
       "phetioDocumentation": "Property for the displayed text",
@@ -26183,7 +25451,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<StringIO>"
+      "phetioTypeName": "PropertyIO<StringIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.massSlider.maxLabel.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -26195,7 +25463,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.massSlider.minLabel": {
       "phetioDocumentation": "",
@@ -26231,7 +25499,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.playgroundScreen.view.massSlider.minLabel.textProperty": {
       "phetioDocumentation": "Property for the displayed text",
@@ -26243,7 +25511,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<StringIO>"
+      "phetioTypeName": "PropertyIO<StringIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.massSlider.minLabel.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -26255,7 +25523,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.massSlider.numberDisplay": {
       "phetioDocumentation": "",
@@ -26291,7 +25559,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.playgroundScreen.view.massSlider.numberDisplay.valueText": {
       "phetioDocumentation": "",
@@ -26327,7 +25595,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": true,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.playgroundScreen.view.massSlider.numberDisplay.valueText.textProperty": {
       "phetioDocumentation": "Property for the displayed text",
@@ -26339,7 +25607,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": true,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<StringIO>"
+      "phetioTypeName": "PropertyIO<StringIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.massSlider.numberDisplay.valueText.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -26351,7 +25619,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": true,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.massSlider.numberDisplay.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -26363,7 +25631,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.massSlider.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
@@ -26387,7 +25655,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.playgroundScreen.view.massSlider.rightArrowButton": {
       "phetioDocumentation": "",
@@ -26411,7 +25679,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.massSlider.rightArrowButton.firedEmitter": {
       "phetioDocumentation": "Emits when the button is fired No arguments.",
@@ -26423,7 +25691,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "EmitterIO.<>"
+      "phetioTypeName": "EmitterIO<>"
     },
     "energySkateParkBasics.playgroundScreen.view.massSlider.rightArrowButton.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
@@ -26447,7 +25715,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.playgroundScreen.view.massSlider.rightArrowButton.pressListener.pressAction": {
       "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the Event. The arguments are:<br/><ol><li>event: EventIO</li></ol>",
@@ -26459,10 +25727,10 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<EventIO>"
+      "phetioTypeName": "ActionIO<EventIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.massSlider.rightArrowButton.pressListener.releaseAction": {
-      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO.<EventIO></li></ol>",
+      "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO<EventIO></li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
       "phetioFeatured": false,
@@ -26471,7 +25739,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<NullableIO.<EventIO>>"
+      "phetioTypeName": "ActionIO<NullableIO<EventIO>>"
     },
     "energySkateParkBasics.playgroundScreen.view.massSlider.rightArrowButton.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -26483,7 +25751,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.massSlider.slider": {
       "phetioDocumentation": "",
@@ -26507,7 +25775,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.massSlider.slider.enabledRangeProperty": {
       "phetioDocumentation": "",
@@ -26519,7 +25787,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<RangeIO>"
+      "phetioTypeName": "PropertyIO<RangeIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.massSlider.slider.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
@@ -26543,7 +25811,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.playgroundScreen.view.massSlider.slider.thumb": {
       "phetioDocumentation": "",
@@ -26579,7 +25847,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.playgroundScreen.view.massSlider.slider.thumb.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -26591,7 +25859,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.massSlider.slider.thumbInputListener": {
       "phetioDocumentation": "",
@@ -26615,7 +25883,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<Vector2IO>"
+      "phetioTypeName": "ActionIO<Vector2IO>"
     },
     "energySkateParkBasics.playgroundScreen.view.massSlider.slider.thumbInputListener.dragEndAction": {
       "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO. the position of the drag end in view coordinates</li></ol>",
@@ -26627,7 +25895,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<Vector2IO>"
+      "phetioTypeName": "ActionIO<Vector2IO>"
     },
     "energySkateParkBasics.playgroundScreen.view.massSlider.slider.thumbInputListener.dragStartAction": {
       "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO. the position of the drag start in view coordinates</li></ol>",
@@ -26639,7 +25907,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<Vector2IO>"
+      "phetioTypeName": "ActionIO<Vector2IO>"
     },
     "energySkateParkBasics.playgroundScreen.view.massSlider.slider.thumbInputListener.isDraggingProperty": {
       "phetioDocumentation": "Indicates whether the object is dragging",
@@ -26651,7 +25919,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": true,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.massSlider.slider.track.trackInputListener": {
       "phetioDocumentation": "",
@@ -26675,7 +25943,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<Vector2IO>"
+      "phetioTypeName": "ActionIO<Vector2IO>"
     },
     "energySkateParkBasics.playgroundScreen.view.massSlider.slider.track.trackInputListener.dragEndAction": {
       "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO. the position of the drag end in view coordinates</li></ol>",
@@ -26687,7 +25955,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<Vector2IO>"
+      "phetioTypeName": "ActionIO<Vector2IO>"
     },
     "energySkateParkBasics.playgroundScreen.view.massSlider.slider.track.trackInputListener.dragStartAction": {
       "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO. the position of the drag start in view coordinates</li></ol>",
@@ -26699,7 +25967,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO.<Vector2IO>"
+      "phetioTypeName": "ActionIO<Vector2IO>"
     },
     "energySkateParkBasics.playgroundScreen.view.massSlider.slider.track.trackInputListener.isDraggingProperty": {
       "phetioDocumentation": "Indicates whether the object is dragging",
@@ -26711,7 +25979,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": true,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.massSlider.slider.valueProperty": {
       "phetioDocumentation": "",
@@ -26735,7 +26003,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.massSlider.titleNode": {
       "phetioDocumentation": "",
@@ -26771,7 +26039,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<NullableIO.<BooleanIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
     "energySkateParkBasics.playgroundScreen.view.massSlider.titleNode.textProperty": {
       "phetioDocumentation": "Property for the displayed text",
@@ -26783,7 +26051,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<StringIO>"
+      "phetioTypeName": "PropertyIO<StringIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.massSlider.titleNode.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -26795,7 +26063,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.massSlider.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
@@ -26807,7 +26075,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO.<BooleanIO>"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "phetioEngine": {
       "phetioDocumentation": "Central point for PhET-iO interoperability",
