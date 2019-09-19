@@ -13,7 +13,7 @@ define( require => {
   const Tandem = require( 'TANDEM/Tandem' );
 
   // constants
-  var tandem = Tandem.rootTandem;
+  const tandem = Tandem.rootTandem;
 
   SimLauncher.launch( function() {
     new EnergySkateParkBasicsSim( tandem ).start();

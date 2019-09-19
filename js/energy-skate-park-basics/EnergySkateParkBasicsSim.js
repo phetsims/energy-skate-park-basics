@@ -25,7 +25,7 @@ define( require => {
    */
   function EnergySkateParkBasicsSim( tandem ) {
 
-    var options = {
+    const options = {
       credits: {
         leadDesign: 'Ariel Paul, Noah Podolefsky, Sam Reid',
         softwareDevelopment: 'Sam Reid, Jesse Greenberg',
@@ -35,7 +35,7 @@ define( require => {
       }
     };
 
-    var screens = [
+    const screens = [
       new IntroScreen( tandem.createTandem( 'introScreen' ) ),
       new FrictionScreen( tandem.createTandem( 'frictionScreen' ) ),
       new PlaygroundScreen( tandem.createTandem( 'playgroundScreen' ) )

@@ -13,12 +13,12 @@ define( require => {
   const energySkateParkBasics = require( 'ENERGY_SKATE_PARK_BASICS/energySkateParkBasics' );
   const Range = require( 'DOT/Range' );
 
-  var minMass = 25; // kg
-  var maxMass = 100;
-  var defaultMass = ( minMass + maxMass ) / 2;
-  var massRange = new Range( minMass, maxMass );
+  const minMass = 25; // kg
+  const maxMass = 100;
+  const defaultMass = ( minMass + maxMass ) / 2;
+  const massRange = new Range( minMass, maxMass );
 
-  var Constants = {
+  const Constants = {
     SLIDER_OPTIONS: {
       thumbSize: new Dimension2( 13, 30 ),
       tickLabelSpacing: 0,

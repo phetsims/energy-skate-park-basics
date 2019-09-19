@@ -20,7 +20,7 @@ define( require => {
    * @constructor
    */
   function IntroScreenView( model, tandem ) {
-    var introControls = [ new MassSlider( model.skater.massProperty, model.skater.massRange, tandem.createTandem( 'massSlider' ) ) ];
+    const introControls = [ new MassSlider( model.skater.massProperty, model.skater.massRange, tandem.createTandem( 'massSlider' ) ) ];
     EnergySkateParkScreenView.call( this, model, introControls, tandem.createTandem( 'introScreenView' ), {
       showMeasuringTape: false,
       showReferenceHeight: false,

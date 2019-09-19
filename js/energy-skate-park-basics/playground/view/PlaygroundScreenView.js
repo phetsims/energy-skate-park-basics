@@ -22,7 +22,7 @@ define( require => {
    * @constructor
    */
   function PlaygroundScreenView( model, tandem ) {
-    var playgroundControls = [
+    const playgroundControls = [
       new MassSlider( model.skater.massProperty, model.skater.massRange, tandem.createTandem( 'massSlider' ) ),
       new FrictionSlider( model.frictionProperty, tandem.createTandem( 'frictionSlider' ) )
     ];

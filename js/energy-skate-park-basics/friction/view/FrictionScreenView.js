@@ -22,7 +22,7 @@ define( require => {
    */
   function FrictionScreenView( model, tandem ) {
 
-    var frictionControls = [
+    const frictionControls = [
       new MassSlider( model.skater.massProperty, model.skater.massRange, tandem.createTandem( 'massSlider' ) ),
       new FrictionSlider( model.frictionProperty, tandem.createTandem( 'frictionSlider' ) )
     ]
