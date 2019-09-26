@@ -13,7 +13,6 @@ define( require => {
   const FrictionModel = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/friction/model/FrictionModel' );
   const FrictionScreenView = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/friction/view/FrictionScreenView' );
   const Image = require( 'SCENERY/nodes/Image' );
-  const inherit = require( 'PHET_CORE/inherit' );
   const Screen = require( 'JOIST/Screen' );
 
   // images
@@ -27,24 +26,28 @@ define( require => {
    * @param {Tandem} tandem
    * @constructor
    */
-  function FrictionScreen( tandem ) {
+  class FrictionScreen extends Screen {
 
-    var options = _.extend( {
-      name: screenFrictionString,
-      homeScreenIcon: new Image( iconFrictionHomescreen ),
-      navigationBarIcon: new Image( iconFrictionNavbar ),
+    /**
+     * @param {Tandem} tandem
+     * @param {Object} options
+     */
+    constructor( tandem, options ) {
+      options = _.extend( {
+        name: screenFrictionString,
+        homeScreenIcon: new Image( iconFrictionHomescreen ),
+        navigationBarIcon: new Image( iconFrictionNavbar ),
 
-      tandem: tandem
-    }, options );
+        tandem: tandem
+      }, options );
 
-    Screen.call( this,
-      function() { return new FrictionModel( tandem.createTandem( 'model' ) ); },
-      function( model ) { return new FrictionScreenView( model, tandem.createTandem( 'view' ) ); },
-      options
-    );
+      super(
+        () => { return new FrictionModel( tandem.createTandem( 'model' ) ); },
+        model => { return new FrictionScreenView( model, tandem.createTandem( 'view' ) ); },
+        options
+      );
+    }
   }
 
-  energySkateParkBasics.register( 'FrictionScreen', FrictionScreen );
-
-  return inherit( Screen, FrictionScreen );
+  return energySkateParkBasics.register( 'FrictionScreen', FrictionScreen );
 } );

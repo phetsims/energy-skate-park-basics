@@ -13,11 +13,11 @@ define( require => {
   const energySkateParkBasics = require( 'ENERGY_SKATE_PARK_BASICS/energySkateParkBasics' );
   const EnergySkateParkBasicsTrackSetModel = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/common/model/EnergySkateParkBasicsTrackSetModel' );
 
-  /**
-   * @param {Tandem} tandem
-   * @constructor
-   */
   class FrictionModel extends EnergySkateParkBasicsTrackSetModel {
+
+    /**
+     * @param {Tandem} tandem
+     */
     constructor( tandem ) {
       const includeFriction = true;
       super( includeFriction, tandem.createTandem( 'frictionModel' ), Constants.BASICS_MODEL_OPTIONS );

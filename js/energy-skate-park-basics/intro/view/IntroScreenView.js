@@ -12,23 +12,22 @@ define( require => {
   const MassSlider = require( 'ENERGY_SKATE_PARK/energy-skate-park/common/view/MassSlider' );
   const energySkateParkBasics = require( 'ENERGY_SKATE_PARK_BASICS/energySkateParkBasics' );
   const EnergySkateParkScreenView = require( 'ENERGY_SKATE_PARK/energy-skate-park/common/view/EnergySkateParkScreenView' );
-  const inherit = require( 'PHET_CORE/inherit' );
 
-  /**
-   * @param {IntroModel} model
-   * @param {Tandem} tandem
-   * @constructor
-   */
-  function IntroScreenView( model, tandem ) {
-    const introControls = [ new MassSlider( model.skater.massProperty, model.skater.massRange, tandem.createTandem( 'massSlider' ) ) ];
-    EnergySkateParkScreenView.call( this, model, introControls, tandem.createTandem( 'introScreenView' ), {
-      showMeasuringTape: false,
-      showReferenceHeight: false,
-      showBarGraphZoomButtons: false
-    } );
+  class IntroScreenView extends EnergySkateParkScreenView {
+
+    /**
+     * @param {IntroModel} model
+     * @param  {Tandem} tandem
+     */
+    constructor( model, tandem ) {
+      const introControls = [ new MassSlider( model.skater.massProperty, model.skater.massRange, tandem.createTandem( 'massSlider' ) ) ];
+      super( model, introControls, tandem.createTandem( 'introScreenView' ), {
+        showMeasuringTape: false,
+        showReferenceHeight: false,
+        showBarGraphZoomButtons: false
+      } );
+    }
   }
 
-  energySkateParkBasics.register( 'IntroScreenView', IntroScreenView );
-
-  return inherit( EnergySkateParkScreenView, IntroScreenView );
+  return energySkateParkBasics.register( 'IntroScreenView', IntroScreenView );
 } );

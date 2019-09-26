@@ -14,27 +14,27 @@ define( require => {
   const EnergySkateParkPlaygroundScreenView = require( 'ENERGY_SKATE_PARK/energy-skate-park/common/view/EnergySkateParkPlaygroundScreenView' );
   const FrictionSlider = require( 'ENERGY_SKATE_PARK/energy-skate-park/common/view/FrictionSlider' );
   const MassSlider = require( 'ENERGY_SKATE_PARK/energy-skate-park/common/view/MassSlider' );
-  const inherit = require( 'PHET_CORE/inherit' );
 
-  /**
-   * @param {PlaygroundModel} model
-   * @param {Tandem} tandem
-   * @constructor
-   */
-  function PlaygroundScreenView( model, tandem ) {
-    const playgroundControls = [
-      new MassSlider( model.skater.massProperty, model.skater.massRange, tandem.createTandem( 'massSlider' ) ),
-      new FrictionSlider( model.frictionProperty, tandem.createTandem( 'frictionSlider' ) )
-    ];
-    EnergySkateParkPlaygroundScreenView.call( this, model, playgroundControls, tandem.createTandem( 'graphsScreenView' ), {
-      showTrackButtons: false,
-      showReferenceHeight: false,
-      showBarGraphZoomButtons: false,
-      showAttachDetachRadioButtons: true
-    } );
+  class PlaygroundScreenView extends EnergySkateParkPlaygroundScreenView {
+
+    /**
+     * @param   {EnergySkateParkPlaygroundModel} model
+     * @param   {Tandem} tandem
+     */
+    constructor( model, tandem ) {
+      const playgroundControls = [
+        new MassSlider( model.skater.massProperty, model.skater.massRange, tandem.createTandem( 'massSlider' ) ),
+        new FrictionSlider( model.frictionProperty, tandem.createTandem( 'frictionSlider' ) )
+      ];
+      super( model, playgroundControls, tandem.createTandem( 'graphsScreenView' ), {
+        showTrackButtons: false,
+        showReferenceHeight: false,
+        showBarGraphZoomButtons: false,
+        showAttachDetachRadioButtons: true
+      } );
+    }
   }
 
-  energySkateParkBasics.register( 'PlaygroundScreenView', PlaygroundScreenView );
+  return energySkateParkBasics.register( 'PlaygroundScreenView', PlaygroundScreenView );
 
-  return inherit( EnergySkateParkPlaygroundScreenView, PlaygroundScreenView );
 } );

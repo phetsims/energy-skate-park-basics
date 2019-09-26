@@ -23,25 +23,22 @@ define( require => {
   // strings
   const screenTrackPlaygroundString = require( 'string!ENERGY_SKATE_PARK_BASICS/screen.trackPlayground' );
 
-  /**
-   * @param {Tandem} tandem
-   * @constructor
-   */
-  function PlaygroundScreen( tandem ) {
+  class PlaygroundScreen extends Screen {
+    constructor( tandem, options ) {
+      options = _.extend( {
+        name: screenTrackPlaygroundString,
+        homeScreenIcon: new Image( iconPlaygroundHomescreen ),
+        navigationBarIcon: new Image( iconPlaygroundNavbar ),
 
-    var options = _.extend( {
-      name: screenTrackPlaygroundString,
-      homeScreenIcon: new Image( iconPlaygroundHomescreen ),
-      navigationBarIcon: new Image( iconPlaygroundNavbar ),
+        tandem: tandem
+      }, options );
 
-      tandem: tandem
-    }, options );
-
-    Screen.call( this,
-      function() { return new PlaygroundModel( tandem.createTandem( 'model' ) ); },
-      function( model ) { return new PlaygroundScreenView( model, tandem.createTandem( 'view' ) ); },
-      options
-    );
+      super(
+        () => { return new PlaygroundModel( tandem.createTandem( 'model' ) ); },
+        model => { return new PlaygroundScreenView( model, tandem.createTandem( 'view' ) ); },
+        options
+      );
+    }
   }
 
   energySkateParkBasics.register( 'PlaygroundScreen', PlaygroundScreen );
