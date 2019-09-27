@@ -11,7 +11,6 @@ define( require => {
   // modules
   const energySkateParkBasics = require( 'ENERGY_SKATE_PARK_BASICS/energySkateParkBasics' );
   const Image = require( 'SCENERY/nodes/Image' );
-  const inherit = require( 'PHET_CORE/inherit' );
   const PlaygroundModel = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/playground/model/PlaygroundModel' );
   const PlaygroundScreenView = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/playground/view/PlaygroundScreenView' );
   const Screen = require( 'JOIST/Screen' );
@@ -41,7 +40,5 @@ define( require => {
     }
   }
 
-  energySkateParkBasics.register( 'PlaygroundScreen', PlaygroundScreen );
-
-  return inherit( Screen, PlaygroundScreen );
+  return energySkateParkBasics.register( 'PlaygroundScreen', PlaygroundScreen );
 } );
