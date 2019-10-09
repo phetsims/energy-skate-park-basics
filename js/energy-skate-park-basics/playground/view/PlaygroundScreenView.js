@@ -30,7 +30,11 @@ define( require => {
         showTrackButtons: false,
         showReferenceHeight: false,
         showBarGraphZoomButtons: false,
-        showAttachDetachRadioButtons: true
+        showAttachDetachRadioButtons: true,
+        showSeparateVisibilityControlsPanel: false,
+        visibilityControlsOptions: {
+          showGridCheckbox: true
+        }
       } );
     }
   }

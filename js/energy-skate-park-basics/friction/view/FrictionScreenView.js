@@ -29,7 +29,11 @@ define( require => {
       super( model, frictionControls, tandem.createTandem( 'introScreenView' ), {
         showMeasuringTape: false,
         showReferenceHeight: false,
-        showBarGraphZoomButtons: true
+        showBarGraphZoomButtons: true,
+        showSeparateVisibilityControlsPanel: false,
+        visibilityControlsOptions: {
+          showGridCheckbox: true
+        }
       } );
     }
   }

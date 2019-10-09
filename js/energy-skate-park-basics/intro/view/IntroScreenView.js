@@ -24,7 +24,11 @@ define( require => {
       super( model, introControls, tandem.createTandem( 'introScreenView' ), {
         showMeasuringTape: false,
         showReferenceHeight: false,
-        showBarGraphZoomButtons: false
+        showBarGraphZoomButtons: false,
+        showSeparateVisibilityControlsPanel: false,
+        visibilityControlsOptions: {
+          showGridCheckbox: true
+        }
       } );
     }
   }
