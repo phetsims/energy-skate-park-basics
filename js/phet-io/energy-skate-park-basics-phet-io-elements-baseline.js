@@ -13,21 +13,9 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO<BooleanIO>"
     },
-    "energySkateParkBasics.frictionScreen.model.frictionModel.doubleWellTrack": {
-      "phetioDocumentation": "",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "TrackIO"
-    },
     "energySkateParkBasics.frictionScreen.model.frictionModel.doubleWellTrack.draggingProperty": {
       "phetioDocumentation": "",
-      "phetioDynamicElement": false,
+      "phetioDynamicElement": true,
       "phetioEventType": "MODEL",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -39,7 +27,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.doubleWellTrack.droppedProperty": {
       "phetioDocumentation": "",
-      "phetioDynamicElement": false,
+      "phetioDynamicElement": true,
       "phetioEventType": "MODEL",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -51,7 +39,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.doubleWellTrack.leftThePanelProperty": {
       "phetioDocumentation": "",
-      "phetioDynamicElement": false,
+      "phetioDynamicElement": true,
       "phetioEventType": "MODEL",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -63,7 +51,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.doubleWellTrack.physicalProperty": {
       "phetioDocumentation": "",
-      "phetioDynamicElement": false,
+      "phetioDynamicElement": true,
       "phetioEventType": "MODEL",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -73,21 +61,9 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO<BooleanIO>"
     },
-    "energySkateParkBasics.frictionScreen.model.frictionModel.parabolaTrack": {
-      "phetioDocumentation": "",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "TrackIO"
-    },
     "energySkateParkBasics.frictionScreen.model.frictionModel.parabolaTrack.draggingProperty": {
       "phetioDocumentation": "",
-      "phetioDynamicElement": false,
+      "phetioDynamicElement": true,
       "phetioEventType": "MODEL",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -99,7 +75,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.parabolaTrack.droppedProperty": {
       "phetioDocumentation": "",
-      "phetioDynamicElement": false,
+      "phetioDynamicElement": true,
       "phetioEventType": "MODEL",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -111,7 +87,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.parabolaTrack.leftThePanelProperty": {
       "phetioDocumentation": "",
-      "phetioDynamicElement": false,
+      "phetioDynamicElement": true,
       "phetioEventType": "MODEL",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -123,7 +99,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.parabolaTrack.physicalProperty": {
       "phetioDocumentation": "",
-      "phetioDynamicElement": false,
+      "phetioDynamicElement": true,
       "phetioEventType": "MODEL",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -145,21 +121,9 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO<NumberIO>"
     },
-    "energySkateParkBasics.frictionScreen.model.frictionModel.slopeTrack": {
-      "phetioDocumentation": "",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "TrackIO"
-    },
     "energySkateParkBasics.frictionScreen.model.frictionModel.slopeTrack.draggingProperty": {
       "phetioDocumentation": "",
-      "phetioDynamicElement": false,
+      "phetioDynamicElement": true,
       "phetioEventType": "MODEL",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -171,7 +135,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.slopeTrack.droppedProperty": {
       "phetioDocumentation": "",
-      "phetioDynamicElement": false,
+      "phetioDynamicElement": true,
       "phetioEventType": "MODEL",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -183,7 +147,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.slopeTrack.leftThePanelProperty": {
       "phetioDocumentation": "",
-      "phetioDynamicElement": false,
+      "phetioDynamicElement": true,
       "phetioEventType": "MODEL",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -195,7 +159,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.slopeTrack.physicalProperty": {
       "phetioDocumentation": "",
-      "phetioDynamicElement": false,
+      "phetioDynamicElement": true,
       "phetioEventType": "MODEL",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -1295,7 +1259,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO<NullableIO<TrackReferenceIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<ReferenceIO>>"
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.trackSetModel.skater.velocityProperty": {
       "phetioDocumentation": "",
@@ -1367,7 +1331,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "ObservableArrayIO<TrackIO>"
+      "phetioTypeName": "ObservableArrayIO<ReferenceIO>"
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.trackSetModel.tracks.lengthProperty": {
       "phetioDocumentation": "",
@@ -9961,21 +9925,9 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO<BooleanIO>"
     },
-    "energySkateParkBasics.introScreen.model.doubleWellTrack": {
-      "phetioDocumentation": "",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "TrackIO"
-    },
     "energySkateParkBasics.introScreen.model.doubleWellTrack.draggingProperty": {
       "phetioDocumentation": "",
-      "phetioDynamicElement": false,
+      "phetioDynamicElement": true,
       "phetioEventType": "MODEL",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -9987,7 +9939,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.model.doubleWellTrack.droppedProperty": {
       "phetioDocumentation": "",
-      "phetioDynamicElement": false,
+      "phetioDynamicElement": true,
       "phetioEventType": "MODEL",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -9999,7 +9951,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.model.doubleWellTrack.leftThePanelProperty": {
       "phetioDocumentation": "",
-      "phetioDynamicElement": false,
+      "phetioDynamicElement": true,
       "phetioEventType": "MODEL",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -10011,7 +9963,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.model.doubleWellTrack.physicalProperty": {
       "phetioDocumentation": "",
-      "phetioDynamicElement": false,
+      "phetioDynamicElement": true,
       "phetioEventType": "MODEL",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -10021,21 +9973,9 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO<BooleanIO>"
     },
-    "energySkateParkBasics.introScreen.model.parabolaTrack": {
-      "phetioDocumentation": "",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "TrackIO"
-    },
     "energySkateParkBasics.introScreen.model.parabolaTrack.draggingProperty": {
       "phetioDocumentation": "",
-      "phetioDynamicElement": false,
+      "phetioDynamicElement": true,
       "phetioEventType": "MODEL",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -10047,7 +9987,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.model.parabolaTrack.droppedProperty": {
       "phetioDocumentation": "",
-      "phetioDynamicElement": false,
+      "phetioDynamicElement": true,
       "phetioEventType": "MODEL",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -10059,7 +9999,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.model.parabolaTrack.leftThePanelProperty": {
       "phetioDocumentation": "",
-      "phetioDynamicElement": false,
+      "phetioDynamicElement": true,
       "phetioEventType": "MODEL",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -10071,7 +10011,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.model.parabolaTrack.physicalProperty": {
       "phetioDocumentation": "",
-      "phetioDynamicElement": false,
+      "phetioDynamicElement": true,
       "phetioEventType": "MODEL",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -10093,21 +10033,9 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO<NumberIO>"
     },
-    "energySkateParkBasics.introScreen.model.slopeTrack": {
-      "phetioDocumentation": "",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "TrackIO"
-    },
     "energySkateParkBasics.introScreen.model.slopeTrack.draggingProperty": {
       "phetioDocumentation": "",
-      "phetioDynamicElement": false,
+      "phetioDynamicElement": true,
       "phetioEventType": "MODEL",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -10119,7 +10047,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.model.slopeTrack.droppedProperty": {
       "phetioDocumentation": "",
-      "phetioDynamicElement": false,
+      "phetioDynamicElement": true,
       "phetioEventType": "MODEL",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -10131,7 +10059,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.model.slopeTrack.leftThePanelProperty": {
       "phetioDocumentation": "",
-      "phetioDynamicElement": false,
+      "phetioDynamicElement": true,
       "phetioEventType": "MODEL",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -10143,7 +10071,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.introScreen.model.slopeTrack.physicalProperty": {
       "phetioDocumentation": "",
-      "phetioDynamicElement": false,
+      "phetioDynamicElement": true,
       "phetioEventType": "MODEL",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -11243,7 +11171,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO<NullableIO<TrackReferenceIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<ReferenceIO>>"
     },
     "energySkateParkBasics.introScreen.model.trackSetModel.skater.velocityProperty": {
       "phetioDocumentation": "",
@@ -11315,7 +11243,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "ObservableArrayIO<TrackIO>"
+      "phetioTypeName": "ObservableArrayIO<ReferenceIO>"
     },
     "energySkateParkBasics.introScreen.model.trackSetModel.tracks.lengthProperty": {
       "phetioDocumentation": "",
@@ -17699,7 +17627,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO<NullableIO<TrackReferenceIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<ReferenceIO>>"
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.skater.velocityProperty": {
       "phetioDocumentation": "",
@@ -17771,7 +17699,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "ObservableArrayIO<TrackIO>"
+      "phetioTypeName": "ObservableArrayIO<ReferenceIO>"
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.tracks.lengthProperty": {
       "phetioDocumentation": "",
@@ -17785,21 +17713,9 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "NumberPropertyIO"
     },
-    "energySkateParkBasics.playgroundScreen.model.playgroundModel.track~0": {
-      "phetioDocumentation": "",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": true,
-      "phetioStudioControl": true,
-      "phetioTypeName": "TrackIO"
-    },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.track~0.draggingProperty": {
       "phetioDocumentation": "",
-      "phetioDynamicElement": false,
+      "phetioDynamicElement": true,
       "phetioEventType": "MODEL",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -17811,7 +17727,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.track~0.droppedProperty": {
       "phetioDocumentation": "",
-      "phetioDynamicElement": false,
+      "phetioDynamicElement": true,
       "phetioEventType": "MODEL",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -17823,7 +17739,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.track~0.leftThePanelProperty": {
       "phetioDocumentation": "",
-      "phetioDynamicElement": false,
+      "phetioDynamicElement": true,
       "phetioEventType": "MODEL",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -17835,7 +17751,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.track~0.physicalProperty": {
       "phetioDocumentation": "",
-      "phetioDynamicElement": false,
+      "phetioDynamicElement": true,
       "phetioEventType": "MODEL",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -17845,21 +17761,9 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO<BooleanIO>"
     },
-    "energySkateParkBasics.playgroundScreen.model.playgroundModel.track~1": {
-      "phetioDocumentation": "",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": true,
-      "phetioStudioControl": true,
-      "phetioTypeName": "TrackIO"
-    },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.track~1.draggingProperty": {
       "phetioDocumentation": "",
-      "phetioDynamicElement": false,
+      "phetioDynamicElement": true,
       "phetioEventType": "MODEL",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -17871,7 +17775,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.track~1.droppedProperty": {
       "phetioDocumentation": "",
-      "phetioDynamicElement": false,
+      "phetioDynamicElement": true,
       "phetioEventType": "MODEL",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -17883,7 +17787,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.track~1.leftThePanelProperty": {
       "phetioDocumentation": "",
-      "phetioDynamicElement": false,
+      "phetioDynamicElement": true,
       "phetioEventType": "MODEL",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -17895,7 +17799,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.track~1.physicalProperty": {
       "phetioDocumentation": "",
-      "phetioDynamicElement": false,
+      "phetioDynamicElement": true,
       "phetioEventType": "MODEL",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -17905,21 +17809,9 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO<BooleanIO>"
     },
-    "energySkateParkBasics.playgroundScreen.model.playgroundModel.track~2": {
-      "phetioDocumentation": "",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": true,
-      "phetioStudioControl": true,
-      "phetioTypeName": "TrackIO"
-    },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.track~2.draggingProperty": {
       "phetioDocumentation": "",
-      "phetioDynamicElement": false,
+      "phetioDynamicElement": true,
       "phetioEventType": "MODEL",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -17931,7 +17823,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.track~2.droppedProperty": {
       "phetioDocumentation": "",
-      "phetioDynamicElement": false,
+      "phetioDynamicElement": true,
       "phetioEventType": "MODEL",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -17943,7 +17835,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.track~2.leftThePanelProperty": {
       "phetioDocumentation": "",
-      "phetioDynamicElement": false,
+      "phetioDynamicElement": true,
       "phetioEventType": "MODEL",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -17955,7 +17847,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.track~2.physicalProperty": {
       "phetioDocumentation": "",
-      "phetioDynamicElement": false,
+      "phetioDynamicElement": true,
       "phetioEventType": "MODEL",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -17965,21 +17857,9 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO<BooleanIO>"
     },
-    "energySkateParkBasics.playgroundScreen.model.playgroundModel.track~3": {
-      "phetioDocumentation": "",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": true,
-      "phetioStudioControl": true,
-      "phetioTypeName": "TrackIO"
-    },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.track~3.draggingProperty": {
       "phetioDocumentation": "",
-      "phetioDynamicElement": false,
+      "phetioDynamicElement": true,
       "phetioEventType": "MODEL",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -17991,7 +17871,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.track~3.droppedProperty": {
       "phetioDocumentation": "",
-      "phetioDynamicElement": false,
+      "phetioDynamicElement": true,
       "phetioEventType": "MODEL",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -18003,7 +17883,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.track~3.leftThePanelProperty": {
       "phetioDocumentation": "",
-      "phetioDynamicElement": false,
+      "phetioDynamicElement": true,
       "phetioEventType": "MODEL",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -18015,7 +17895,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.track~3.physicalProperty": {
       "phetioDocumentation": "",
-      "phetioDynamicElement": false,
+      "phetioDynamicElement": true,
       "phetioEventType": "MODEL",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -18025,21 +17905,9 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO<BooleanIO>"
     },
-    "energySkateParkBasics.playgroundScreen.model.playgroundModel.track~4": {
-      "phetioDocumentation": "",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": true,
-      "phetioStudioControl": true,
-      "phetioTypeName": "TrackIO"
-    },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.track~4.draggingProperty": {
       "phetioDocumentation": "",
-      "phetioDynamicElement": false,
+      "phetioDynamicElement": true,
       "phetioEventType": "MODEL",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -18051,7 +17919,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.track~4.droppedProperty": {
       "phetioDocumentation": "",
-      "phetioDynamicElement": false,
+      "phetioDynamicElement": true,
       "phetioEventType": "MODEL",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -18063,7 +17931,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.track~4.leftThePanelProperty": {
       "phetioDocumentation": "",
-      "phetioDynamicElement": false,
+      "phetioDynamicElement": true,
       "phetioEventType": "MODEL",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
@@ -18075,7 +17943,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.track~4.physicalProperty": {
       "phetioDocumentation": "",
-      "phetioDynamicElement": false,
+      "phetioDynamicElement": true,
       "phetioEventType": "MODEL",
       "phetioFeatured": false,
       "phetioHighFrequency": false,

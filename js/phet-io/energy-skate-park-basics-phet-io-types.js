@@ -488,18 +488,18 @@ window.phet.phetio.phetioTypes = assert &&
       "supertype": "ObjectIO",
       "typeName": "FunctionIO(NullableIO<NumberIO>,NullableIO<NullableIO<NumberIO>>)=>VoidIO"
     },
-    "FunctionIO(NullableIO<TrackReferenceIO>,NullableIO<NullableIO<TrackReferenceIO>>)=>VoidIO": {
-      "documentation": "Wrapper for the built-in JS function type.<br><strong>Arguments:</strong> NullableIO<TrackReferenceIO>, NullableIO<NullableIO<TrackReferenceIO>><br><strong>Return Type:</strong> VoidIO",
+    "FunctionIO(NullableIO<ReferenceIO>,NullableIO<NullableIO<ReferenceIO>>)=>VoidIO": {
+      "documentation": "Wrapper for the built-in JS function type.<br><strong>Arguments:</strong> NullableIO<ReferenceIO>, NullableIO<NullableIO<ReferenceIO>><br><strong>Return Type:</strong> VoidIO",
       "events": [],
       "methodOrder": [],
       "methods": {},
       "parameterTypes": [
-        "NullableIO<TrackReferenceIO>",
-        "NullableIO<NullableIO<TrackReferenceIO>>",
+        "NullableIO<ReferenceIO>",
+        "NullableIO<NullableIO<ReferenceIO>>",
         "VoidIO"
       ],
       "supertype": "ObjectIO",
-      "typeName": "FunctionIO(NullableIO<TrackReferenceIO>,NullableIO<NullableIO<TrackReferenceIO>>)=>VoidIO"
+      "typeName": "FunctionIO(NullableIO<ReferenceIO>,NullableIO<NullableIO<ReferenceIO>>)=>VoidIO"
     },
     "FunctionIO(NumberIO,NullableIO<NumberIO>)=>VoidIO": {
       "documentation": "Wrapper for the built-in JS function type.<br><strong>Arguments:</strong> NumberIO, NullableIO<NumberIO><br><strong>Return Type:</strong> VoidIO",
@@ -538,6 +538,18 @@ window.phet.phetio.phetioTypes = assert &&
       ],
       "supertype": "ObjectIO",
       "typeName": "FunctionIO(RangeIO,NullableIO<RangeIO>)=>VoidIO"
+    },
+    "FunctionIO(ReferenceIO)=>VoidIO": {
+      "documentation": "Wrapper for the built-in JS function type.<br><strong>Arguments:</strong> ReferenceIO<br><strong>Return Type:</strong> VoidIO",
+      "events": [],
+      "methodOrder": [],
+      "methods": {},
+      "parameterTypes": [
+        "ReferenceIO",
+        "VoidIO"
+      ],
+      "supertype": "ObjectIO",
+      "typeName": "FunctionIO(ReferenceIO)=>VoidIO"
     },
     "FunctionIO(StringIO,NullableIO<StringIO>)=>VoidIO": {
       "documentation": "Wrapper for the built-in JS function type.<br><strong>Arguments:</strong> StringIO, NullableIO<StringIO><br><strong>Return Type:</strong> VoidIO",
@@ -578,18 +590,6 @@ window.phet.phetio.phetioTypes = assert &&
       ],
       "supertype": "ObjectIO",
       "typeName": "FunctionIO(StringIO,StringIO)=>VoidIO"
-    },
-    "FunctionIO(TrackIO)=>VoidIO": {
-      "documentation": "Wrapper for the built-in JS function type.<br><strong>Arguments:</strong> TrackIO<br><strong>Return Type:</strong> VoidIO",
-      "events": [],
-      "methodOrder": [],
-      "methods": {},
-      "parameterTypes": [
-        "TrackIO",
-        "VoidIO"
-      ],
-      "supertype": "ObjectIO",
-      "typeName": "FunctionIO(TrackIO)=>VoidIO"
     },
     "FunctionIO(Vector2IO,NullableIO<Vector2IO>)=>VoidIO": {
       "documentation": "Wrapper for the built-in JS function type.<br><strong>Arguments:</strong> Vector2IO, NullableIO<Vector2IO><br><strong>Return Type:</strong> VoidIO",
@@ -719,16 +719,16 @@ window.phet.phetio.phetioTypes = assert &&
       "supertype": "ObjectIO",
       "typeName": "NullableIO<NullableIO<NumberIO>>"
     },
-    "NullableIO<NullableIO<TrackReferenceIO>>": {
+    "NullableIO<NullableIO<ReferenceIO>>": {
       "documentation": "A wrapper to wrap another IOType, adding support for null.",
       "events": [],
       "methodOrder": [],
       "methods": {},
       "parameterTypes": [
-        "NullableIO<TrackReferenceIO>"
+        "NullableIO<ReferenceIO>"
       ],
       "supertype": "ObjectIO",
-      "typeName": "NullableIO<NullableIO<TrackReferenceIO>>"
+      "typeName": "NullableIO<NullableIO<ReferenceIO>>"
     },
     "NullableIO<NumberIO>": {
       "documentation": "A wrapper to wrap another IOType, adding support for null.",
@@ -752,6 +752,17 @@ window.phet.phetio.phetioTypes = assert &&
       "supertype": "ObjectIO",
       "typeName": "NullableIO<RangeIO>"
     },
+    "NullableIO<ReferenceIO>": {
+      "documentation": "A wrapper to wrap another IOType, adding support for null.",
+      "events": [],
+      "methodOrder": [],
+      "methods": {},
+      "parameterTypes": [
+        "ReferenceIO"
+      ],
+      "supertype": "ObjectIO",
+      "typeName": "NullableIO<ReferenceIO>"
+    },
     "NullableIO<StringIO>": {
       "documentation": "A wrapper to wrap another IOType, adding support for null.",
       "events": [],
@@ -762,17 +773,6 @@ window.phet.phetio.phetioTypes = assert &&
       ],
       "supertype": "ObjectIO",
       "typeName": "NullableIO<StringIO>"
-    },
-    "NullableIO<TrackReferenceIO>": {
-      "documentation": "A wrapper to wrap another IOType, adding support for null.",
-      "events": [],
-      "methodOrder": [],
-      "methods": {},
-      "parameterTypes": [
-        "TrackReferenceIO"
-      ],
-      "supertype": "ObjectIO",
-      "typeName": "NullableIO<TrackReferenceIO>"
     },
     "NullableIO<Vector2IO>": {
       "documentation": "A wrapper to wrap another IOType, adding support for null.",
@@ -858,7 +858,7 @@ window.phet.phetio.phetioTypes = assert &&
       "supertype": null,
       "typeName": "ObjectIO"
     },
-    "ObservableArrayIO<TrackIO>": {
+    "ObservableArrayIO<ReferenceIO>": {
       "documentation": "An array that sends notifications when its values have changed.",
       "events": [
         "itemAdded",
@@ -869,14 +869,14 @@ window.phet.phetio.phetioTypes = assert &&
         "addItemAddedListener": {
           "documentation": "Add a listener that is called when an item is added to the observable array.",
           "parameterTypes": [
-            "FunctionIO(TrackIO)=>VoidIO"
+            "FunctionIO(ReferenceIO)=>VoidIO"
           ],
           "returnType": "VoidIO"
         },
         "addItemRemovedListener": {
           "documentation": "Add a listener that is called when an item is removed from the observable array.",
           "parameterTypes": [
-            "FunctionIO(TrackIO)=>VoidIO"
+            "FunctionIO(ReferenceIO)=>VoidIO"
           ],
           "returnType": "VoidIO"
         },
@@ -887,10 +887,10 @@ window.phet.phetio.phetioTypes = assert &&
         }
       },
       "parameterTypes": [
-        "TrackIO"
+        "ReferenceIO"
       ],
       "supertype": "ObjectIO",
-      "typeName": "ObservableArrayIO<TrackIO>"
+      "typeName": "ObservableArrayIO<ReferenceIO>"
     },
     "PhetButtonIO": {
       "documentation": "The PhET Button in the bottom right of the screen",
@@ -1395,7 +1395,7 @@ window.phet.phetio.phetioTypes = assert &&
       "supertype": "ObjectIO",
       "typeName": "PropertyIO<NullableIO<NumberIO>>"
     },
-    "PropertyIO<NullableIO<TrackReferenceIO>>": {
+    "PropertyIO<NullableIO<ReferenceIO>>": {
       "documentation": "Observable values that send out notifications when the value changes. This differs from the traditional listener pattern in that added listeners also receive a callback with the current value when the listeners are registered. This is a widely-used pattern in PhET-iO simulations.",
       "events": [
         "changed"
@@ -1408,19 +1408,19 @@ window.phet.phetio.phetioTypes = assert &&
         "getValue": {
           "documentation": "Gets the current value.",
           "parameterTypes": [],
-          "returnType": "NullableIO<TrackReferenceIO>"
+          "returnType": "NullableIO<ReferenceIO>"
         },
         "lazyLink": {
           "documentation": "Adds a listener which will be called when the value changes. This method is like \"link\", but without the current-value callback on registration. The listener takes two arguments, the new value and the previous value.",
           "parameterTypes": [
-            "FunctionIO(NullableIO<TrackReferenceIO>,NullableIO<NullableIO<TrackReferenceIO>>)=>VoidIO"
+            "FunctionIO(NullableIO<ReferenceIO>,NullableIO<NullableIO<ReferenceIO>>)=>VoidIO"
           ],
           "returnType": "VoidIO"
         },
         "link": {
           "documentation": "Adds a listener which will be called when the value changes. On registration, the listener is also called with the current value. The listener takes two arguments, the new value and the previous value.",
           "parameterTypes": [
-            "FunctionIO(NullableIO<TrackReferenceIO>,NullableIO<NullableIO<TrackReferenceIO>>)=>VoidIO"
+            "FunctionIO(NullableIO<ReferenceIO>,NullableIO<NullableIO<ReferenceIO>>)=>VoidIO"
           ],
           "returnType": "VoidIO"
         },
@@ -1428,16 +1428,16 @@ window.phet.phetio.phetioTypes = assert &&
           "documentation": "Sets the value of the Property. If the value differs from the previous value, listeners are notified with the new value.",
           "invocableForReadOnlyElements": false,
           "parameterTypes": [
-            "NullableIO<TrackReferenceIO>"
+            "NullableIO<ReferenceIO>"
           ],
           "returnType": "VoidIO"
         }
       },
       "parameterTypes": [
-        "NullableIO<TrackReferenceIO>"
+        "NullableIO<ReferenceIO>"
       ],
       "supertype": "ObjectIO",
-      "typeName": "PropertyIO<NullableIO<TrackReferenceIO>>"
+      "typeName": "PropertyIO<NullableIO<ReferenceIO>>"
     },
     "PropertyIO<NumberIO>": {
       "documentation": "Observable values that send out notifications when the value changes. This differs from the traditional listener pattern in that added listeners also receive a callback with the current value when the listeners are registered. This is a widely-used pattern in PhET-iO simulations.",
@@ -1623,6 +1623,14 @@ window.phet.phetio.phetioTypes = assert &&
       "supertype": "ObjectIO",
       "typeName": "RangeIO"
     },
+    "ReferenceIO": {
+      "documentation": "Uses reference identity for toStateObject/fromStateObject",
+      "events": [],
+      "methodOrder": [],
+      "methods": {},
+      "supertype": "ObjectIO",
+      "typeName": "ReferenceIO"
+    },
     "ResetAllButtonIO": {
       "documentation": "Button that performs an action while it is being pressed, and stops the action when released",
       "events": [
@@ -1720,14 +1728,6 @@ window.phet.phetio.phetioTypes = assert &&
       "methods": {},
       "supertype": "ObjectIO",
       "typeName": "TrackIO"
-    },
-    "TrackReferenceIO": {
-      "documentation": "A Track serialization that only holds a phetioID of a Track in the sim, not the serialized state.",
-      "events": [],
-      "methodOrder": [],
-      "methods": {},
-      "supertype": "ObjectIO",
-      "typeName": "TrackReferenceIO"
     },
     "Vector2IO": {
       "documentation": "A numerical object with x and y properties, like {x:3,y:4}",
