@@ -40,7 +40,9 @@ define( require => {
       skaterOptions: {
         defaultMass: defaultMass,
         massRange: massRange
-      }
+      },
+
+      defaultSpeedValueVisible: false
     }
   };
 
