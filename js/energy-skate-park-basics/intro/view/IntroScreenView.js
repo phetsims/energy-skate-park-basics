@@ -11,9 +11,9 @@ define( require => {
   // modules
   const MassSlider = require( 'ENERGY_SKATE_PARK/energy-skate-park/common/view/MassSlider' );
   const energySkateParkBasics = require( 'ENERGY_SKATE_PARK_BASICS/energySkateParkBasics' );
-  const EnergySkateParkScreenView = require( 'ENERGY_SKATE_PARK/energy-skate-park/common/view/EnergySkateParkScreenView' );
+  const EnergySkateParkTrackSetScreenView = require( 'ENERGY_SKATE_PARK/energy-skate-park/common/view/EnergySkateParkTrackSetScreenView' );
 
-  class IntroScreenView extends EnergySkateParkScreenView {
+  class IntroScreenView extends EnergySkateParkTrackSetScreenView {
 
     /**
      * @param {IntroModel} model
