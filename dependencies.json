@@ -1,5 +1,5 @@
 {
-  "comment": "# energy-skate-park-basics 1.3.13-phetio Mon Oct 14 2019 13:41:41 GMT-0600 (Mountain Daylight Time)",
+  "comment": "# energy-skate-park-basics 1.3.13-phetio Tue Oct 15 2019 13:30:20 GMT-0600 (Mountain Daylight Time)",
   "assert": {
     "sha": "a707328cc11048787a807714496af23e0bd25be1",
     "branch": "HEAD"
@@ -21,7 +21,7 @@
     "branch": "HEAD"
   },
   "energy-skate-park-basics": {
-    "sha": "bdc54c5990b3107f2db35c54c337034b44c14a2e",
+    "sha": "973b0bed83497a9cc1f6b34370f7c2f1822f1c39",
     "branch": "1.3-phetio"
   },
   "joist": {
@@ -33,7 +33,7 @@
     "branch": "HEAD"
   },
   "phet-core": {
-    "sha": "d832d96a302e450457c0d52478ce6466d1a7f359",
+    "sha": "4737ad1048cd1a397a0c3d243cd8f53906871d02",
     "branch": "energy-skate-park-basics-1.3-phetio"
   },
   "phet-io": {
