@@ -29,6 +29,7 @@ define( require => {
       super( model, playgroundControls, tandem.createTandem( 'graphsScreenView' ), {
         showTrackButtons: false,
         showReferenceHeight: false,
+        showToolbox: false,
         showBarGraphZoomButtons: false,
         showAttachDetachRadioButtons: true,
         showSeparateVisibilityControlsPanel: false,

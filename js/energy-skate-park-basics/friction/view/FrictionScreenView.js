@@ -27,7 +27,7 @@ define( require => {
         new FrictionSlider( model.frictionProperty, tandem.createTandem( 'frictionSlider' ) )
       ];
       super( model, frictionControls, tandem.createTandem( 'introScreenView' ), {
-        showMeasuringTape: false,
+        showToolbox: false,
         showReferenceHeight: false,
         showBarGraphZoomButtons: true,
         showSeparateVisibilityControlsPanel: false,

@@ -22,7 +22,7 @@ define( require => {
     constructor( model, tandem ) {
       const introControls = [ new MassSlider( model.skater.massProperty, model.skater.massRange, tandem.createTandem( 'massSlider' ) ) ];
       super( model, introControls, tandem.createTandem( 'introScreenView' ), {
-        showMeasuringTape: false,
+        showToolbox: false,
         showReferenceHeight: false,
         showBarGraphZoomButtons: false,
         showSeparateVisibilityControlsPanel: false,
