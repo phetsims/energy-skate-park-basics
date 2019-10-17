@@ -13,6 +13,7 @@ define( require => {
   const FrictionModel = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/friction/model/FrictionModel' );
   const FrictionScreenView = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/friction/view/FrictionScreenView' );
   const Image = require( 'SCENERY/nodes/Image' );
+  const merge = require( 'PHET_CORE/merge' );
   const Screen = require( 'JOIST/Screen' );
 
   // images
@@ -33,7 +34,7 @@ define( require => {
      * @param {Object} options
      */
     constructor( tandem, options ) {
-      options = _.extend( {
+      options = merge( {
         name: screenFrictionString,
         homeScreenIcon: new Image( iconFrictionHomescreen ),
         navigationBarIcon: new Image( iconFrictionNavbar ),

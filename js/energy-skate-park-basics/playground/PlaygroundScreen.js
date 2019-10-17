@@ -11,6 +11,7 @@ define( require => {
   // modules
   const energySkateParkBasics = require( 'ENERGY_SKATE_PARK_BASICS/energySkateParkBasics' );
   const Image = require( 'SCENERY/nodes/Image' );
+  const merge = require( 'PHET_CORE/merge' );
   const PlaygroundModel = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/playground/model/PlaygroundModel' );
   const PlaygroundScreenView = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/playground/view/PlaygroundScreenView' );
   const Screen = require( 'JOIST/Screen' );
@@ -24,7 +25,7 @@ define( require => {
 
   class PlaygroundScreen extends Screen {
     constructor( tandem, options ) {
-      options = _.extend( {
+      options = merge( {
         name: screenTrackPlaygroundString,
         homeScreenIcon: new Image( iconPlaygroundHomescreen ),
         navigationBarIcon: new Image( iconPlaygroundNavbar ),
