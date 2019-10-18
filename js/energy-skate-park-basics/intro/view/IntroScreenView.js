@@ -11,9 +11,9 @@ define( require => {
   // modules
   const MassSlider = require( 'ENERGY_SKATE_PARK/energy-skate-park/common/view/MassSlider' );
   const energySkateParkBasics = require( 'ENERGY_SKATE_PARK_BASICS/energySkateParkBasics' );
-  const EnergySkateParkTrackSetScreenView = require( 'ENERGY_SKATE_PARK/energy-skate-park/common/view/EnergySkateParkTrackSetScreenView' );
+  const EnergySkateParkBasicsTrackSetScreenView = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/common/view/EnergySkateParkBasicsTrackSetScreenView' );
 
-  class IntroScreenView extends EnergySkateParkTrackSetScreenView {
+  class IntroScreenView extends EnergySkateParkBasicsTrackSetScreenView {
 
     /**
      * @param {IntroModel} model
@@ -21,15 +21,7 @@ define( require => {
      */
     constructor( model, tandem ) {
       const introControls = [ new MassSlider( model.skater.massProperty, model.skater.massRange, tandem.createTandem( 'massSlider' ) ) ];
-      super( model, introControls, tandem.createTandem( 'introScreenView' ), {
-        showToolbox: false,
-        showReferenceHeight: false,
-        showBarGraphZoomButtons: false,
-        showSeparateVisibilityControlsPanel: false,
-        visibilityControlsOptions: {
-          showGridCheckbox: true
-        }
-      } );
+      super( model, introControls, tandem.createTandem( 'introScreenView' ) );
     }
   }
 
