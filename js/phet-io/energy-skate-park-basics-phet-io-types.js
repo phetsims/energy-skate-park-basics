@@ -1,17 +1,6 @@
 /* eslint-disable */
 window.phet.phetio.phetioTypes = assert &&
   {
-    "AccordionBoxIO": {
-      "documentation": "A traditional accordionBox",
-      "events": [
-        "expanded",
-        "collapsed"
-      ],
-      "methodOrder": [],
-      "methods": {},
-      "supertype": "NodeIO",
-      "typeName": "AccordionBoxIO"
-    },
     "ActionIO<>": {
       "documentation": "Executes when an event occurs.",
       "events": [
