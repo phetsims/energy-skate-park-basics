@@ -36,7 +36,8 @@ define( require => {
         showAttachDetachRadioButtons: true,
         showSeparateVisibilityControlsPanel: false,
         visibilityControlsOptions: {
-          showGridCheckbox: true
+          showGridCheckbox: true,
+          showBarGraphCheckbox: true
         },
 
         // energy-skate-park-basics uses its own bar graph in a panel
@@ -49,6 +50,7 @@ define( require => {
         }
       } );
       this.addChild( this.barGraphPanel );
+      model.barGraphVisibleProperty.linkAttribute( this.barGraphPanel, 'visible' );
     }
 
     /**
