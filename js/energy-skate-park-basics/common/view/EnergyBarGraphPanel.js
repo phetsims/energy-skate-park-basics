@@ -9,8 +9,9 @@ define( require => {
   'use strict';
 
   // modules
-  const energySkateParkBasics = require( 'ENERGY_SKATE_PARK_BASICS/energySkateParkBasics' );
   const EnergyBarGraph = require( 'ENERGY_SKATE_PARK/energy-skate-park/common/view/EnergyBarGraph' );
+  const energySkateParkBasics = require( 'ENERGY_SKATE_PARK_BASICS/energySkateParkBasics' );
+  const merge = require( 'PHET_CORE/merge' );
   const Panel = require( 'SUN/Panel' );
   const VBox = require( 'SCENERY/nodes/VBox' );
 
@@ -23,7 +24,7 @@ define( require => {
      */
     constructor( model, tandem, options ) {
 
-      options = _.extend( {
+      options = merge( {
 
         // {null|*} options for the bar graph itself, passed on to EnergyBarGraph
         barGraphOptions: null

@@ -9,9 +9,10 @@ define( require => {
   'use strict';
 
   // modules
+  const EnergyBarGraphPanel = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/common/view/EnergyBarGraphPanel' );
   const energySkateParkBasics = require( 'ENERGY_SKATE_PARK_BASICS/energySkateParkBasics' );
   const EnergySkateParkTrackSetScreenView = require( 'ENERGY_SKATE_PARK/energy-skate-park/common/view/EnergySkateParkTrackSetScreenView' );
-  const EnergyBarGraphPanel = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/common/view/EnergyBarGraphPanel' );
+  const merge = require( 'PHET_CORE/merge' );
   const Vector2 = require( 'DOT/Vector2' );
 
   class EnergySkateParkBasicsTrackSetScreenView extends EnergySkateParkTrackSetScreenView {
@@ -23,7 +24,7 @@ define( require => {
      * @param {Object} options
      */
     constructor( model, controls, tandem, options ) {
-      options= _.extend( {
+      options = merge( {
         showToolbox: false,
         showReferenceHeight: false,
         showSeparateVisibilityControlsPanel: false,
