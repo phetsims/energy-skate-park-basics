@@ -34,8 +34,8 @@ define( require => {
       }, options );
 
       super(
-        () => { return new PlaygroundModel( tandem.createTandem( 'model' ) ); },
-        model => { return new PlaygroundScreenView( model, tandem.createTandem( 'view' ) ); },
+        () => new PlaygroundModel( tandem.createTandem( 'model' ) ),
+        model => new PlaygroundScreenView( model, tandem.createTandem( 'view' ) ),
         options
       );
     }

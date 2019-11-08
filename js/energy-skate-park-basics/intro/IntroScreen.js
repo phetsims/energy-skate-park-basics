@@ -37,8 +37,8 @@ define( require => {
       }, options );
 
       super(
-        () => { return new IntroModel( tandem.createTandem( 'model' ) ); },
-        model => { return new IntroScreenView( model, tandem.createTandem( 'view' ) ); },
+        () => new IntroModel( tandem.createTandem( 'model' ) ),
+        model => new IntroScreenView( model, tandem.createTandem( 'view' ) ),
         options
       );
     }

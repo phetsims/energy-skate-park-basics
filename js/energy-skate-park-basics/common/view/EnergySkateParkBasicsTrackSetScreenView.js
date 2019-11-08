@@ -35,7 +35,7 @@ define( require => {
 
         // energy-skate-park-basics uses its own panel for the graph
         showBarGraph: false
-      } );
+      }, options );
 
       super( model, controls, tandem, options );
 
