@@ -43,8 +43,8 @@ define( require => {
       }, options );
 
       super(
-        () => { return new FrictionModel( tandem.createTandem( 'model' ) ); },
-        model => { return new FrictionScreenView( model, tandem.createTandem( 'view' ) ); },
+        () => new FrictionModel( tandem.createTandem( 'model' ) ),
+        model => new FrictionScreenView( model, tandem.createTandem( 'view' ) ),
         options
       );
     }
