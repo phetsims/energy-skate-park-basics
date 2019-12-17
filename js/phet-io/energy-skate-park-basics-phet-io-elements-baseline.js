@@ -1470,7 +1470,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO<BooleanIO>"
     },
-    "energySkateParkBasics.frictionScreen.model.frictionModel.trackSetModel.timeProperty": {
+    "energySkateParkBasics.frictionScreen.model.frictionModel.trackSetModel.stopwatch.isRunningProperty": {
       "phetioDocumentation": "",
       "phetioDynamicElement": false,
       "phetioDynamicElementArchetype": false,
@@ -1481,9 +1481,22 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "NumberPropertyIO"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
-    "energySkateParkBasics.frictionScreen.model.frictionModel.trackSetModel.timerPositionProperty": {
+    "energySkateParkBasics.frictionScreen.model.frictionModel.trackSetModel.stopwatch.isVisibleProperty": {
+      "phetioDocumentation": "",
+      "phetioDynamicElement": false,
+      "phetioDynamicElementArchetype": false,
+      "phetioEventType": "MODEL",
+      "phetioFeatured": false,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": true,
+      "phetioStudioControl": true,
+      "phetioTypeName": "PropertyIO<BooleanIO>"
+    },
+    "energySkateParkBasics.frictionScreen.model.frictionModel.trackSetModel.stopwatch.positionProperty": {
       "phetioDocumentation": "",
       "phetioDynamicElement": false,
       "phetioDynamicElementArchetype": false,
@@ -1496,31 +1509,18 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO<Vector2IO>"
     },
-    "energySkateParkBasics.frictionScreen.model.frictionModel.trackSetModel.timerRunningProperty": {
+    "energySkateParkBasics.frictionScreen.model.frictionModel.trackSetModel.stopwatch.timeProperty": {
       "phetioDocumentation": "",
       "phetioDynamicElement": false,
       "phetioDynamicElementArchetype": false,
       "phetioEventType": "MODEL",
       "phetioFeatured": false,
-      "phetioHighFrequency": false,
+      "phetioHighFrequency": true,
       "phetioPlayback": false,
-      "phetioReadOnly": false,
+      "phetioReadOnly": true,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO<BooleanIO>"
-    },
-    "energySkateParkBasics.frictionScreen.model.frictionModel.trackSetModel.timerVisibleProperty": {
-      "phetioDocumentation": "",
-      "phetioDynamicElement": false,
-      "phetioDynamicElementArchetype": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": true,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO<BooleanIO>"
+      "phetioTypeName": "NumberPropertyIO"
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.trackSetModel.tracks": {
       "phetioDocumentation": "",
@@ -12494,7 +12494,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO<BooleanIO>"
     },
-    "energySkateParkBasics.introScreen.model.trackSetModel.timeProperty": {
+    "energySkateParkBasics.introScreen.model.trackSetModel.stopwatch.isRunningProperty": {
       "phetioDocumentation": "",
       "phetioDynamicElement": false,
       "phetioDynamicElementArchetype": false,
@@ -12505,9 +12505,22 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "NumberPropertyIO"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
-    "energySkateParkBasics.introScreen.model.trackSetModel.timerPositionProperty": {
+    "energySkateParkBasics.introScreen.model.trackSetModel.stopwatch.isVisibleProperty": {
+      "phetioDocumentation": "",
+      "phetioDynamicElement": false,
+      "phetioDynamicElementArchetype": false,
+      "phetioEventType": "MODEL",
+      "phetioFeatured": false,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": true,
+      "phetioStudioControl": true,
+      "phetioTypeName": "PropertyIO<BooleanIO>"
+    },
+    "energySkateParkBasics.introScreen.model.trackSetModel.stopwatch.positionProperty": {
       "phetioDocumentation": "",
       "phetioDynamicElement": false,
       "phetioDynamicElementArchetype": false,
@@ -12520,31 +12533,18 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO<Vector2IO>"
     },
-    "energySkateParkBasics.introScreen.model.trackSetModel.timerRunningProperty": {
+    "energySkateParkBasics.introScreen.model.trackSetModel.stopwatch.timeProperty": {
       "phetioDocumentation": "",
       "phetioDynamicElement": false,
       "phetioDynamicElementArchetype": false,
       "phetioEventType": "MODEL",
       "phetioFeatured": false,
-      "phetioHighFrequency": false,
+      "phetioHighFrequency": true,
       "phetioPlayback": false,
-      "phetioReadOnly": false,
+      "phetioReadOnly": true,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO<BooleanIO>"
-    },
-    "energySkateParkBasics.introScreen.model.trackSetModel.timerVisibleProperty": {
-      "phetioDocumentation": "",
-      "phetioDynamicElement": false,
-      "phetioDynamicElementArchetype": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": true,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO<BooleanIO>"
+      "phetioTypeName": "NumberPropertyIO"
     },
     "energySkateParkBasics.introScreen.model.trackSetModel.tracks": {
       "phetioDocumentation": "",
@@ -19774,7 +19774,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO<BooleanIO>"
     },
-    "energySkateParkBasics.playgroundScreen.model.playgroundModel.timeProperty": {
+    "energySkateParkBasics.playgroundScreen.model.playgroundModel.stopwatch.isRunningProperty": {
       "phetioDocumentation": "",
       "phetioDynamicElement": false,
       "phetioDynamicElementArchetype": false,
@@ -19785,9 +19785,22 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "NumberPropertyIO"
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
-    "energySkateParkBasics.playgroundScreen.model.playgroundModel.timerPositionProperty": {
+    "energySkateParkBasics.playgroundScreen.model.playgroundModel.stopwatch.isVisibleProperty": {
+      "phetioDocumentation": "",
+      "phetioDynamicElement": false,
+      "phetioDynamicElementArchetype": false,
+      "phetioEventType": "MODEL",
+      "phetioFeatured": false,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": true,
+      "phetioStudioControl": true,
+      "phetioTypeName": "PropertyIO<BooleanIO>"
+    },
+    "energySkateParkBasics.playgroundScreen.model.playgroundModel.stopwatch.positionProperty": {
       "phetioDocumentation": "",
       "phetioDynamicElement": false,
       "phetioDynamicElementArchetype": false,
@@ -19800,31 +19813,18 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO<Vector2IO>"
     },
-    "energySkateParkBasics.playgroundScreen.model.playgroundModel.timerRunningProperty": {
+    "energySkateParkBasics.playgroundScreen.model.playgroundModel.stopwatch.timeProperty": {
       "phetioDocumentation": "",
       "phetioDynamicElement": false,
       "phetioDynamicElementArchetype": false,
       "phetioEventType": "MODEL",
       "phetioFeatured": false,
-      "phetioHighFrequency": false,
+      "phetioHighFrequency": true,
       "phetioPlayback": false,
-      "phetioReadOnly": false,
+      "phetioReadOnly": true,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO<BooleanIO>"
-    },
-    "energySkateParkBasics.playgroundScreen.model.playgroundModel.timerVisibleProperty": {
-      "phetioDocumentation": "",
-      "phetioDynamicElement": false,
-      "phetioDynamicElementArchetype": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": true,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO<BooleanIO>"
+      "phetioTypeName": "NumberPropertyIO"
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.tracks": {
       "phetioDocumentation": "",
