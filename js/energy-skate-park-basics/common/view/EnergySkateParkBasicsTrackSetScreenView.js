@@ -13,6 +13,7 @@ define( require => {
   const energySkateParkBasics = require( 'ENERGY_SKATE_PARK_BASICS/energySkateParkBasics' );
   const EnergySkateParkTrackSetScreenView = require( 'ENERGY_SKATE_PARK/energy-skate-park/common/view/EnergySkateParkTrackSetScreenView' );
   const merge = require( 'PHET_CORE/merge' );
+  const Range = require( 'DOT/Range' );
   const Vector2 = require( 'DOT/Vector2' );
 
   class EnergySkateParkBasicsTrackSetScreenView extends EnergySkateParkTrackSetScreenView {
@@ -41,7 +42,8 @@ define( require => {
 
       this.barGraphPanel = new EnergyBarGraphPanel( model, tandem.createTandem( 'barGraphPanel' ), {
         barGraphOptions: {
-          showBarGraphZoomButtons: false
+          showBarGraphZoomButtons: false,
+          graphRange: new Range( 0, 265 )
         }
       } );
       this.addChild( this.barGraphPanel );

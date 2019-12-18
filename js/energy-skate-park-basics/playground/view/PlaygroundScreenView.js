@@ -15,6 +15,7 @@ define( require => {
   const FrictionSlider = require( 'ENERGY_SKATE_PARK/energy-skate-park/common/view/FrictionSlider' );
   const EnergyBarGraphPanel = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/common/view/EnergyBarGraphPanel' );
   const MassSlider = require( 'ENERGY_SKATE_PARK/energy-skate-park/common/view/MassSlider' );
+  const Range = require( 'DOT/Range' );
   const Vector2 = require( 'DOT/Vector2' );
 
   class PlaygroundScreenView extends EnergySkateParkPlaygroundScreenView {
@@ -46,7 +47,8 @@ define( require => {
 
       this.barGraphPanel = new EnergyBarGraphPanel( model, tandem.createTandem( 'barGraphPanel' ), {
         barGraphOptions: {
-          showBarGraphZoomButtons: false
+          showBarGraphZoomButtons: false,
+          graphRange: new Range( 0, 265 )
         }
       } );
       this.addChild( this.barGraphPanel );
