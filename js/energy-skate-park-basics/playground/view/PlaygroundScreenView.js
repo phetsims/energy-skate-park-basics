@@ -57,11 +57,9 @@ define( require => {
 
     /**
      * Special layout for the basics screen view, positions the bar graph panel.
-     * @param {number} width
-     * @param {number} height
      */
-    layout( width, height ) {
-      super.layout( width, height );
+    floatInterface() {
+      super.floatInterface();
       this.barGraphPanel.leftTop = new Vector2( this.fixedLeft, 5 );
     }
   }
