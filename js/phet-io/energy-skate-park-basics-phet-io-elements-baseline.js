@@ -1470,6 +1470,19 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO<BooleanIO>"
     },
+    "energySkateParkBasics.frictionScreen.model.frictionModel.trackSetModel.stopwatch": {
+      "phetioDocumentation": "",
+      "phetioDynamicElement": false,
+      "phetioDynamicElementArchetype": false,
+      "phetioEventType": "MODEL",
+      "phetioFeatured": false,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": true,
+      "phetioStudioControl": true,
+      "phetioTypeName": "ReferenceIO"
+    },
     "energySkateParkBasics.frictionScreen.model.frictionModel.trackSetModel.stopwatch.isRunningProperty": {
       "phetioDocumentation": "",
       "phetioDynamicElement": false,
@@ -12507,6 +12520,19 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO<BooleanIO>"
     },
+    "energySkateParkBasics.introScreen.model.trackSetModel.stopwatch": {
+      "phetioDocumentation": "",
+      "phetioDynamicElement": false,
+      "phetioDynamicElementArchetype": false,
+      "phetioEventType": "MODEL",
+      "phetioFeatured": false,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": true,
+      "phetioStudioControl": true,
+      "phetioTypeName": "ReferenceIO"
+    },
     "energySkateParkBasics.introScreen.model.trackSetModel.stopwatch.isRunningProperty": {
       "phetioDocumentation": "",
       "phetioDynamicElement": false,
@@ -19799,6 +19825,19 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioState": true,
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO<BooleanIO>"
+    },
+    "energySkateParkBasics.playgroundScreen.model.playgroundModel.stopwatch": {
+      "phetioDocumentation": "",
+      "phetioDynamicElement": false,
+      "phetioDynamicElementArchetype": false,
+      "phetioEventType": "MODEL",
+      "phetioFeatured": false,
+      "phetioHighFrequency": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": true,
+      "phetioStudioControl": true,
+      "phetioTypeName": "ReferenceIO"
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.stopwatch.isRunningProperty": {
       "phetioDocumentation": "",
