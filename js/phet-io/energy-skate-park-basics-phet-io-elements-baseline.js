@@ -6592,7 +6592,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO<BooleanIO>"
     },
-    "energySkateParkBasics.frictionScreen.view.introScreenView.timeControlNode.speedRadioButtonGroup.normal.inputListener.firedEmitter": {
+    "energySkateParkBasics.frictionScreen.view.introScreenView.timeControlNode.speedRadioButtonGroup.normal.fireListener.firedEmitter": {
       "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>event: NullableIO<SceneryEventIO></li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
@@ -6605,7 +6605,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "EmitterIO<NullableIO<SceneryEventIO>>"
     },
-    "energySkateParkBasics.frictionScreen.view.introScreenView.timeControlNode.speedRadioButtonGroup.normal.inputListener.pressAction": {
+    "energySkateParkBasics.frictionScreen.view.introScreenView.timeControlNode.speedRadioButtonGroup.normal.fireListener.pressAction": {
       "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the SceneryEvent. The arguments are:<br/><ol><li>event: SceneryEventIO</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
@@ -6618,7 +6618,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "ActionIO<SceneryEventIO>"
     },
-    "energySkateParkBasics.frictionScreen.view.introScreenView.timeControlNode.speedRadioButtonGroup.normal.inputListener.releaseAction": {
+    "energySkateParkBasics.frictionScreen.view.introScreenView.timeControlNode.speedRadioButtonGroup.normal.fireListener.releaseAction": {
       "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO<SceneryEventIO></li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
@@ -6735,7 +6735,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO<BooleanIO>"
     },
-    "energySkateParkBasics.frictionScreen.view.introScreenView.timeControlNode.speedRadioButtonGroup.slow.inputListener.firedEmitter": {
+    "energySkateParkBasics.frictionScreen.view.introScreenView.timeControlNode.speedRadioButtonGroup.slow.fireListener.firedEmitter": {
       "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>event: NullableIO<SceneryEventIO></li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
@@ -6748,7 +6748,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "EmitterIO<NullableIO<SceneryEventIO>>"
     },
-    "energySkateParkBasics.frictionScreen.view.introScreenView.timeControlNode.speedRadioButtonGroup.slow.inputListener.pressAction": {
+    "energySkateParkBasics.frictionScreen.view.introScreenView.timeControlNode.speedRadioButtonGroup.slow.fireListener.pressAction": {
       "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the SceneryEvent. The arguments are:<br/><ol><li>event: SceneryEventIO</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
@@ -6761,7 +6761,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "ActionIO<SceneryEventIO>"
     },
-    "energySkateParkBasics.frictionScreen.view.introScreenView.timeControlNode.speedRadioButtonGroup.slow.inputListener.releaseAction": {
+    "energySkateParkBasics.frictionScreen.view.introScreenView.timeControlNode.speedRadioButtonGroup.slow.fireListener.releaseAction": {
       "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO<SceneryEventIO></li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
@@ -16719,7 +16719,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO<BooleanIO>"
     },
-    "energySkateParkBasics.introScreen.view.introScreenView.timeControlNode.speedRadioButtonGroup.normal.inputListener.firedEmitter": {
+    "energySkateParkBasics.introScreen.view.introScreenView.timeControlNode.speedRadioButtonGroup.normal.fireListener.firedEmitter": {
       "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>event: NullableIO<SceneryEventIO></li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
@@ -16732,7 +16732,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "EmitterIO<NullableIO<SceneryEventIO>>"
     },
-    "energySkateParkBasics.introScreen.view.introScreenView.timeControlNode.speedRadioButtonGroup.normal.inputListener.pressAction": {
+    "energySkateParkBasics.introScreen.view.introScreenView.timeControlNode.speedRadioButtonGroup.normal.fireListener.pressAction": {
       "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the SceneryEvent. The arguments are:<br/><ol><li>event: SceneryEventIO</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
@@ -16745,7 +16745,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "ActionIO<SceneryEventIO>"
     },
-    "energySkateParkBasics.introScreen.view.introScreenView.timeControlNode.speedRadioButtonGroup.normal.inputListener.releaseAction": {
+    "energySkateParkBasics.introScreen.view.introScreenView.timeControlNode.speedRadioButtonGroup.normal.fireListener.releaseAction": {
       "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO<SceneryEventIO></li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
@@ -16862,7 +16862,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO<BooleanIO>"
     },
-    "energySkateParkBasics.introScreen.view.introScreenView.timeControlNode.speedRadioButtonGroup.slow.inputListener.firedEmitter": {
+    "energySkateParkBasics.introScreen.view.introScreenView.timeControlNode.speedRadioButtonGroup.slow.fireListener.firedEmitter": {
       "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>event: NullableIO<SceneryEventIO></li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
@@ -16875,7 +16875,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "EmitterIO<NullableIO<SceneryEventIO>>"
     },
-    "energySkateParkBasics.introScreen.view.introScreenView.timeControlNode.speedRadioButtonGroup.slow.inputListener.pressAction": {
+    "energySkateParkBasics.introScreen.view.introScreenView.timeControlNode.speedRadioButtonGroup.slow.fireListener.pressAction": {
       "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the SceneryEvent. The arguments are:<br/><ol><li>event: SceneryEventIO</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
@@ -16888,7 +16888,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "ActionIO<SceneryEventIO>"
     },
-    "energySkateParkBasics.introScreen.view.introScreenView.timeControlNode.speedRadioButtonGroup.slow.inputListener.releaseAction": {
+    "energySkateParkBasics.introScreen.view.introScreenView.timeControlNode.speedRadioButtonGroup.slow.fireListener.releaseAction": {
       "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO<SceneryEventIO></li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
@@ -24961,7 +24961,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO<BooleanIO>"
     },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.timeControlNode.speedRadioButtonGroup.normal.inputListener.firedEmitter": {
+    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.timeControlNode.speedRadioButtonGroup.normal.fireListener.firedEmitter": {
       "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>event: NullableIO<SceneryEventIO></li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
@@ -24974,7 +24974,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "EmitterIO<NullableIO<SceneryEventIO>>"
     },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.timeControlNode.speedRadioButtonGroup.normal.inputListener.pressAction": {
+    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.timeControlNode.speedRadioButtonGroup.normal.fireListener.pressAction": {
       "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the SceneryEvent. The arguments are:<br/><ol><li>event: SceneryEventIO</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
@@ -24987,7 +24987,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "ActionIO<SceneryEventIO>"
     },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.timeControlNode.speedRadioButtonGroup.normal.inputListener.releaseAction": {
+    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.timeControlNode.speedRadioButtonGroup.normal.fireListener.releaseAction": {
       "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO<SceneryEventIO></li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
@@ -25104,7 +25104,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO<BooleanIO>"
     },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.timeControlNode.speedRadioButtonGroup.slow.inputListener.firedEmitter": {
+    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.timeControlNode.speedRadioButtonGroup.slow.fireListener.firedEmitter": {
       "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>event: NullableIO<SceneryEventIO></li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
@@ -25117,7 +25117,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "EmitterIO<NullableIO<SceneryEventIO>>"
     },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.timeControlNode.speedRadioButtonGroup.slow.inputListener.pressAction": {
+    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.timeControlNode.speedRadioButtonGroup.slow.fireListener.pressAction": {
       "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the SceneryEvent. The arguments are:<br/><ol><li>event: SceneryEventIO</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
@@ -25130,7 +25130,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "ActionIO<SceneryEventIO>"
     },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.timeControlNode.speedRadioButtonGroup.slow.inputListener.releaseAction": {
+    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.timeControlNode.speedRadioButtonGroup.slow.fireListener.releaseAction": {
       "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO<SceneryEventIO></li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
