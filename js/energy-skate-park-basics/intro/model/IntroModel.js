@@ -12,6 +12,7 @@ define( require => {
   const Constants = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/Constants' );
   const energySkateParkBasics = require( 'ENERGY_SKATE_PARK_BASICS/energySkateParkBasics' );
   const EnergySkateParkBasicsTrackSetModel = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/common/model/EnergySkateParkBasicsTrackSetModel' );
+  const merge = require( 'PHET_CORE/merge' );
 
 
   class IntroModel extends EnergySkateParkBasicsTrackSetModel {
@@ -21,8 +22,7 @@ define( require => {
      * @constructor
      */
     constructor( tandem ) {
-      const includesFriction = false;
-      super( includesFriction, tandem, Constants.BASICS_MODEL_OPTIONS );
+      super( tandem, merge( {}, Constants.BASICS_MODEL_OPTIONS, { includeFriction: false } ) );
     }
   }
 

@@ -19,9 +19,7 @@ define( require => {
      * @param {Tandem} tandem
      */
     constructor( tandem ) {
-
-      // track set model with friction
-      super( true, tandem.createTandem( 'playgroundModel' ), Constants.BASICS_MODEL_OPTIONS );
+      super( tandem.createTandem( 'playgroundModel' ), Constants.BASICS_MODEL_OPTIONS );
     }
   }
 

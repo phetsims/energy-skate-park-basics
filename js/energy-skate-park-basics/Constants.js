@@ -41,7 +41,6 @@ define( require => {
         defaultMass: defaultMass,
         massRange: massRange
       },
-
       defaultSpeedValueVisible: false
     }
   };

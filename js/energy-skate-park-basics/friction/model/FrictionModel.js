@@ -19,8 +19,7 @@ define( require => {
      * @param {Tandem} tandem
      */
     constructor( tandem ) {
-      const includeFriction = true;
-      super( includeFriction, tandem.createTandem( 'frictionModel' ), Constants.BASICS_MODEL_OPTIONS );
+      super( tandem.createTandem( 'frictionModel' ), Constants.BASICS_MODEL_OPTIONS );
     }
   }
 
