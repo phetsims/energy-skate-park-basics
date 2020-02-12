@@ -9,7 +9,6 @@ define( require => {
   'use strict';
 
   // modules
-  const MassSlider = require( 'ENERGY_SKATE_PARK/energy-skate-park/common/view/MassSlider' );
   const energySkateParkBasics = require( 'ENERGY_SKATE_PARK_BASICS/energySkateParkBasics' );
   const EnergySkateParkBasicsTrackSetScreenView = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/common/view/EnergySkateParkBasicsTrackSetScreenView' );
 
@@ -20,8 +19,7 @@ define( require => {
      * @param  {Tandem} tandem
      */
     constructor( model, tandem ) {
-      const introControls = [ new MassSlider( model.skater.massProperty, model.skater.massRange, tandem.createTandem( 'massSlider' ) ) ];
-      super( model, introControls, tandem.createTandem( 'introScreenView' ) );
+      super( model, tandem.createTandem( 'introScreenView' ) );
     }
   }
 

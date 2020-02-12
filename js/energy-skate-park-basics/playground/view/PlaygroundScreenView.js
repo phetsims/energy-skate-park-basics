@@ -12,9 +12,7 @@ define( require => {
   // modules
   const energySkateParkBasics = require( 'ENERGY_SKATE_PARK_BASICS/energySkateParkBasics' );
   const EnergySkateParkPlaygroundScreenView = require( 'ENERGY_SKATE_PARK/energy-skate-park/common/view/EnergySkateParkPlaygroundScreenView' );
-  const FrictionSlider = require( 'ENERGY_SKATE_PARK/energy-skate-park/common/view/FrictionSlider' );
   const EnergyBarGraphPanel = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/common/view/EnergyBarGraphPanel' );
-  const MassSlider = require( 'ENERGY_SKATE_PARK/energy-skate-park/common/view/MassSlider' );
   const Range = require( 'DOT/Range' );
   const Vector2 = require( 'DOT/Vector2' );
 
@@ -25,20 +23,19 @@ define( require => {
      * @param   {Tandem} tandem
      */
     constructor( model, tandem ) {
-      const playgroundControls = [
-        new MassSlider( model.skater.massProperty, model.skater.massRange, tandem.createTandem( 'massSlider' ) ),
-        new FrictionSlider( model.frictionProperty, tandem.createTandem( 'frictionSlider' ) )
-      ];
-      super( model, playgroundControls, tandem.createTandem( 'graphsScreenView' ), {
-        showTrackButtons: false,
+      super( model, tandem.createTandem( 'graphsScreenView' ), {
         showReferenceHeight: false,
         showToolbox: false,
         showBarGraphZoomButtons: false,
         showAttachDetachRadioButtons: true,
         showSeparateVisibilityControlsPanel: false,
-        visibilityControlsOptions: {
-          showGridCheckbox: true,
-          showBarGraphCheckbox: true
+        controlPanelOptions: {
+          showTrackButtons: false,
+          showGravityControls: false,
+          visibilityControlsOptions: {
+            showGridCheckbox: true,
+            showBarGraphCheckbox: true
+          }
         },
 
         // energy-skate-park-basics uses its own bar graph in a panel

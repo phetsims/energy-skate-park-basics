@@ -11,8 +11,6 @@ define( require => {
   // modules
   const energySkateParkBasics = require( 'ENERGY_SKATE_PARK_BASICS/energySkateParkBasics' );
   const EnergySkateParkBasicsTrackSetScreenView = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/common/view/EnergySkateParkBasicsTrackSetScreenView' );
-  const FrictionSlider = require( 'ENERGY_SKATE_PARK/energy-skate-park/common/view/FrictionSlider' );
-  const MassSlider = require( 'ENERGY_SKATE_PARK/energy-skate-park/common/view/MassSlider' );
 
   class FrictionScreenView extends EnergySkateParkBasicsTrackSetScreenView {
 
@@ -22,11 +20,12 @@ define( require => {
      * @constructor
      */
     constructor( model, tandem ) {
-      const frictionControls = [
-        new MassSlider( model.skater.massProperty, model.skater.massRange, tandem.createTandem( 'massSlider' ) ),
-        new FrictionSlider( model.frictionProperty, tandem.createTandem( 'frictionSlider' ) )
-      ];
-      super( model, frictionControls, tandem.createTandem( 'introScreenView' ) );
+      super( model, tandem.createTandem( 'introScreenView' ), {
+        controlPanelOptions: {
+          showGravityControls: false,
+          showFrictionControls: true
+        }
+      } );
     }
   }
 

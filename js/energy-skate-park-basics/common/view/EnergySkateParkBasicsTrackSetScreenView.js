@@ -24,21 +24,29 @@ define( require => {
      * @param {Tandem} tandem
      * @param {Object} [options]
      */
-    constructor( model, controls, tandem, options ) {
+    constructor( model, tandem, options ) {
       options = merge( {
         showToolbox: false,
         showReferenceHeight: false,
         showSeparateVisibilityControlsPanel: false,
-        visibilityControlsOptions: {
-          showGridCheckbox: true,
-          showBarGraphCheckbox: true
+        controlPanelOptions: {
+          visibilityControlsOptions: {
+            showGridCheckbox: true,
+            showBarGraphCheckbox: true
+          },
+          showGravityControls: false,
+          showFrictionControls: false,
+          massControlsOptions: {
+            includeMassSlider: true,
+            includeMassNumberControl: false
+          }
         },
 
         // energy-skate-park-basics uses its own panel for the graph
         showBarGraph: false
       }, options );
 
-      super( model, controls, tandem, options );
+      super( model, tandem, options );
 
       this.barGraphPanel = new EnergyBarGraphPanel( model, tandem.createTandem( 'barGraphPanel' ), {
         barGraphOptions: {
