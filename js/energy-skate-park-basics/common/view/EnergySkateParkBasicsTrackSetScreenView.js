@@ -1,10 +1,10 @@
 // Copyright 2019-2020, University of Colorado Boulder
 
 /**
- * TODO: Type Documentation
+ * The EnergySkateParkTrackSetScreenView used in screens in energy-skate-park-basics. Sets options for that
+ * supertype that are shared between the intro and friction screens.
  * @author Jesse Greenberg
  */
-
 define( require => {
   'use strict';
 
