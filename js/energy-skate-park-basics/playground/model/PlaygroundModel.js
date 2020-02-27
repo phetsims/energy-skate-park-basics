@@ -5,23 +5,21 @@
  *
  * @author Jesse Greenberg (PhET Interactive Simulations)
  */
-define( require => {
-  'use strict';
 
-  // modules
-  const Constants = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/Constants' );
-  const energySkateParkBasics = require( 'ENERGY_SKATE_PARK_BASICS/energySkateParkBasics' );
-  const EnergySkateParkPlaygroundModel = require( 'ENERGY_SKATE_PARK/energy-skate-park/common/model/EnergySkateParkPlaygroundModel' );
+import EnergySkateParkPlaygroundModel
+  from '../../../../../energy-skate-park/js/energy-skate-park/common/model/EnergySkateParkPlaygroundModel.js';
+import energySkateParkBasics from '../../../energySkateParkBasics.js';
+import Constants from '../../Constants.js';
 
-  class PlaygroundModel extends EnergySkateParkPlaygroundModel {
+class PlaygroundModel extends EnergySkateParkPlaygroundModel {
 
-    /**
-     * @param {Tandem} tandem
-     */
-    constructor( tandem ) {
-      super( tandem.createTandem( 'playgroundModel' ), Constants.BASICS_MODEL_OPTIONS );
-    }
+  /**
+   * @param {Tandem} tandem
+   */
+  constructor( tandem ) {
+    super( tandem.createTandem( 'playgroundModel' ), Constants.BASICS_MODEL_OPTIONS );
   }
+}
 
-  return energySkateParkBasics.register( 'PlaygroundModel', PlaygroundModel );
-} );
+energySkateParkBasics.register( 'PlaygroundModel', PlaygroundModel );
+export default PlaygroundModel;

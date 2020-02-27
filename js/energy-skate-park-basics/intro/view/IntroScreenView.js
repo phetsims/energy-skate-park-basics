@@ -5,23 +5,20 @@
  *
  * @author Jesse Greenberg (PhET Interactive Simulations)
  */
-define( require => {
-  'use strict';
 
-  // modules
-  const energySkateParkBasics = require( 'ENERGY_SKATE_PARK_BASICS/energySkateParkBasics' );
-  const EnergySkateParkBasicsTrackSetScreenView = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/common/view/EnergySkateParkBasicsTrackSetScreenView' );
+import energySkateParkBasics from '../../../energySkateParkBasics.js';
+import EnergySkateParkBasicsTrackSetScreenView from '../../common/view/EnergySkateParkBasicsTrackSetScreenView.js';
 
-  class IntroScreenView extends EnergySkateParkBasicsTrackSetScreenView {
+class IntroScreenView extends EnergySkateParkBasicsTrackSetScreenView {
 
-    /**
-     * @param {IntroModel} model
-     * @param  {Tandem} tandem
-     */
-    constructor( model, tandem ) {
-      super( model, tandem.createTandem( 'introScreenView' ) );
-    }
+  /**
+   * @param {IntroModel} model
+   * @param  {Tandem} tandem
+   */
+  constructor( model, tandem ) {
+    super( model, tandem.createTandem( 'introScreenView' ) );
   }
+}
 
-  return energySkateParkBasics.register( 'IntroScreenView', IntroScreenView );
-} );
+energySkateParkBasics.register( 'IntroScreenView', IntroScreenView );
+export default IntroScreenView;

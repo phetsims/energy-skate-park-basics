@@ -5,50 +5,45 @@
  *
  * @author Jesse Greenberg (PhET Interactive Simulations)
  */
-define( require => {
-  'use strict';
 
-  // modules
-  const energySkateParkBasics = require( 'ENERGY_SKATE_PARK_BASICS/energySkateParkBasics' );
-  const FrictionModel = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/friction/model/FrictionModel' );
-  const FrictionScreenView = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/friction/view/FrictionScreenView' );
-  const Image = require( 'SCENERY/nodes/Image' );
-  const merge = require( 'PHET_CORE/merge' );
-  const Screen = require( 'JOIST/Screen' );
+import iconFrictionHomescreen from '../../../../energy-skate-park/images/icon-friction-homescreen_png.js';
+import iconFrictionNavbar from '../../../../energy-skate-park/images/icon-friction-navbar_png.js';
+import Screen from '../../../../joist/js/Screen.js';
+import merge from '../../../../phet-core/js/merge.js';
+import Image from '../../../../scenery/js/nodes/Image.js';
+import energySkateParkBasicsStrings from '../../energy-skate-park-basics-strings.js';
+import energySkateParkBasics from '../../energySkateParkBasics.js';
+import FrictionModel from './model/FrictionModel.js';
+import FrictionScreenView from './view/FrictionScreenView.js';
 
-  // images
-  const iconFrictionHomescreen = require( 'image!ENERGY_SKATE_PARK/icon-friction-homescreen.png' );
-  const iconFrictionNavbar = require( 'image!ENERGY_SKATE_PARK/icon-friction-navbar.png' );
+const screenFrictionString = energySkateParkBasicsStrings.screen.friction;
 
-  // strings
-  const screenFrictionString = require( 'string!ENERGY_SKATE_PARK_BASICS/screen.friction' );
+/**
+ * @param {Tandem} tandem
+ * @constructor
+ */
+class FrictionScreen extends Screen {
 
   /**
    * @param {Tandem} tandem
-   * @constructor
+   * @param {Object} [options]
    */
-  class FrictionScreen extends Screen {
+  constructor( tandem, options ) {
+    options = merge( {
+      name: screenFrictionString,
+      homeScreenIcon: new Image( iconFrictionHomescreen ),
+      navigationBarIcon: new Image( iconFrictionNavbar ),
 
-    /**
-     * @param {Tandem} tandem
-     * @param {Object} [options]
-     */
-    constructor( tandem, options ) {
-      options = merge( {
-        name: screenFrictionString,
-        homeScreenIcon: new Image( iconFrictionHomescreen ),
-        navigationBarIcon: new Image( iconFrictionNavbar ),
+      tandem: tandem
+    }, options );
 
-        tandem: tandem
-      }, options );
-
-      super(
-        () => new FrictionModel( tandem.createTandem( 'model' ) ),
-        model => new FrictionScreenView( model, tandem.createTandem( 'view' ) ),
-        options
-      );
-    }
+    super(
+      () => new FrictionModel( tandem.createTandem( 'model' ) ),
+      model => new FrictionScreenView( model, tandem.createTandem( 'view' ) ),
+      options
+    );
   }
+}
 
-  return energySkateParkBasics.register( 'FrictionScreen', FrictionScreen );
-} );
+energySkateParkBasics.register( 'FrictionScreen', FrictionScreen );
+export default FrictionScreen;

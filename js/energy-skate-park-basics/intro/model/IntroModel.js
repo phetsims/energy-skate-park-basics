@@ -5,26 +5,22 @@
  *
  * @author Jesse Greenberg (PhET Interactive Simulations)
  */
-define( require => {
-  'use strict';
 
-  // modules
-  const Constants = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/Constants' );
-  const energySkateParkBasics = require( 'ENERGY_SKATE_PARK_BASICS/energySkateParkBasics' );
-  const EnergySkateParkBasicsTrackSetModel = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/common/model/EnergySkateParkBasicsTrackSetModel' );
-  const merge = require( 'PHET_CORE/merge' );
+import merge from '../../../../../phet-core/js/merge.js';
+import energySkateParkBasics from '../../../energySkateParkBasics.js';
+import EnergySkateParkBasicsTrackSetModel from '../../common/model/EnergySkateParkBasicsTrackSetModel.js';
+import Constants from '../../Constants.js';
 
+class IntroModel extends EnergySkateParkBasicsTrackSetModel {
 
-  class IntroModel extends EnergySkateParkBasicsTrackSetModel {
-
-    /**
-     * @param {Tandem} tandem
-     * @constructor
-     */
-    constructor( tandem ) {
-      super( tandem, merge( {}, Constants.BASICS_MODEL_OPTIONS, { includeFriction: false } ) );
-    }
+  /**
+   * @param {Tandem} tandem
+   * @constructor
+   */
+  constructor( tandem ) {
+    super( tandem, merge( {}, Constants.BASICS_MODEL_OPTIONS, { includeFriction: false } ) );
   }
+}
 
-  return energySkateParkBasics.register( 'IntroModel', IntroModel );
-} );
+energySkateParkBasics.register( 'IntroModel', IntroModel );
+export default IntroModel;

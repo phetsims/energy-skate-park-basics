@@ -5,44 +5,39 @@
  *
  * @author Jesse Greenberg (PhET Interactive Simulations)
  */
-define( require => {
-  'use strict';
 
-  // modules
-  const energySkateParkBasics = require( 'ENERGY_SKATE_PARK_BASICS/energySkateParkBasics' );
-  const Image = require( 'SCENERY/nodes/Image' );
-  const IntroModel = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/intro/model/IntroModel' );
-  const IntroScreenView = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/intro/view/IntroScreenView' );
-  const merge = require( 'PHET_CORE/merge' );
-  const Screen = require( 'JOIST/Screen' );
+import iconIntroHomescreen from '../../../../energy-skate-park/images/icon-intro-homescreen_png.js';
+import iconIntroNavbar from '../../../../energy-skate-park/images/icon-intro-navbar_png.js';
+import Screen from '../../../../joist/js/Screen.js';
+import merge from '../../../../phet-core/js/merge.js';
+import Image from '../../../../scenery/js/nodes/Image.js';
+import energySkateParkBasicsStrings from '../../energy-skate-park-basics-strings.js';
+import energySkateParkBasics from '../../energySkateParkBasics.js';
+import IntroModel from './model/IntroModel.js';
+import IntroScreenView from './view/IntroScreenView.js';
 
-  // images
-  const iconIntroHomescreen = require( 'image!ENERGY_SKATE_PARK/icon-intro-homescreen.png' );
-  const iconIntroNavbar = require( 'image!ENERGY_SKATE_PARK/icon-intro-navbar.png' );
+const screenIntroductionString = energySkateParkBasicsStrings.screen.introduction;
 
-  // strings
-  const screenIntroductionString = require( 'string!ENERGY_SKATE_PARK_BASICS/screen.introduction' );
+/**
+ * @param {Tandem} tandem
+ * @constructor
+ */
+class IntroScreen extends Screen {
+  constructor( tandem, options ) {
+    options = merge( {
+      name: screenIntroductionString,
+      tandem: tandem,
+      homeScreenIcon: new Image( iconIntroHomescreen ),
+      navigationBarIcon: new Image( iconIntroNavbar )
+    }, options );
 
-  /**
-   * @param {Tandem} tandem
-   * @constructor
-   */
-  class IntroScreen extends Screen {
-    constructor( tandem, options ) {
-      options = merge( {
-        name: screenIntroductionString,
-        tandem: tandem,
-        homeScreenIcon: new Image( iconIntroHomescreen ),
-        navigationBarIcon: new Image( iconIntroNavbar )
-      }, options );
-
-      super(
-        () => new IntroModel( tandem.createTandem( 'model' ) ),
-        model => new IntroScreenView( model, tandem.createTandem( 'view' ) ),
-        options
-      );
-    }
+    super(
+      () => new IntroModel( tandem.createTandem( 'model' ) ),
+      model => new IntroScreenView( model, tandem.createTandem( 'view' ) ),
+      options
+    );
   }
+}
 
-  return energySkateParkBasics.register( 'IntroScreen', IntroScreen );
-} );
+energySkateParkBasics.register( 'IntroScreen', IntroScreen );
+export default IntroScreen;

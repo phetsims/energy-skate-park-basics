@@ -5,41 +5,36 @@
  *
  * @author Jesse Greenberg (PhET Interactive Simulations)
  */
-define( require => {
-  'use strict';
 
-  // modules
-  const energySkateParkBasics = require( 'ENERGY_SKATE_PARK_BASICS/energySkateParkBasics' );
-  const Image = require( 'SCENERY/nodes/Image' );
-  const merge = require( 'PHET_CORE/merge' );
-  const PlaygroundModel = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/playground/model/PlaygroundModel' );
-  const PlaygroundScreenView = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/playground/view/PlaygroundScreenView' );
-  const Screen = require( 'JOIST/Screen' );
+import iconPlaygroundHomescreen from '../../../../energy-skate-park/images/icon-playground-homescreen_png.js';
+import iconPlaygroundNavbar from '../../../../energy-skate-park/images/icon-playground-navbar_png.js';
+import Screen from '../../../../joist/js/Screen.js';
+import merge from '../../../../phet-core/js/merge.js';
+import Image from '../../../../scenery/js/nodes/Image.js';
+import energySkateParkBasicsStrings from '../../energy-skate-park-basics-strings.js';
+import energySkateParkBasics from '../../energySkateParkBasics.js';
+import PlaygroundModel from './model/PlaygroundModel.js';
+import PlaygroundScreenView from './view/PlaygroundScreenView.js';
 
-  // images
-  const iconPlaygroundHomescreen = require( 'image!ENERGY_SKATE_PARK/icon-playground-homescreen.png' );
-  const iconPlaygroundNavbar = require( 'image!ENERGY_SKATE_PARK/icon-playground-navbar.png' );
+const screenTrackPlaygroundString = energySkateParkBasicsStrings.screen.trackPlayground;
 
-  // strings
-  const screenTrackPlaygroundString = require( 'string!ENERGY_SKATE_PARK_BASICS/screen.trackPlayground' );
+class PlaygroundScreen extends Screen {
+  constructor( tandem, options ) {
+    options = merge( {
+      name: screenTrackPlaygroundString,
+      homeScreenIcon: new Image( iconPlaygroundHomescreen ),
+      navigationBarIcon: new Image( iconPlaygroundNavbar ),
 
-  class PlaygroundScreen extends Screen {
-    constructor( tandem, options ) {
-      options = merge( {
-        name: screenTrackPlaygroundString,
-        homeScreenIcon: new Image( iconPlaygroundHomescreen ),
-        navigationBarIcon: new Image( iconPlaygroundNavbar ),
+      tandem: tandem
+    }, options );
 
-        tandem: tandem
-      }, options );
-
-      super(
-        () => new PlaygroundModel( tandem.createTandem( 'model' ) ),
-        model => new PlaygroundScreenView( model, tandem.createTandem( 'view' ) ),
-        options
-      );
-    }
+    super(
+      () => new PlaygroundModel( tandem.createTandem( 'model' ) ),
+      model => new PlaygroundScreenView( model, tandem.createTandem( 'view' ) ),
+      options
+    );
   }
+}
 
-  return energySkateParkBasics.register( 'PlaygroundScreen', PlaygroundScreen );
-} );
+energySkateParkBasics.register( 'PlaygroundScreen', PlaygroundScreen );
+export default PlaygroundScreen;

@@ -5,48 +5,45 @@
  *
  * @author Sam Reid (PhET Interactive Simulations)
  */
-define( require => {
-  'use strict';
 
-  // modules
-  const energySkateParkBasics = require( 'ENERGY_SKATE_PARK_BASICS/energySkateParkBasics' );
-  const EnergySkateParkSim = require( 'ENERGY_SKATE_PARK/energy-skate-park/common/EnergySkateParkSim' );
-  const FrictionScreen = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/friction/FrictionScreen' );
-  const IntroScreen = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/intro/IntroScreen' );
-  const PlaygroundScreen = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/playground/PlaygroundScreen' );
+import EnergySkateParkSim from '../../../energy-skate-park/js/energy-skate-park/common/EnergySkateParkSim.js';
+import energySkateParkBasicsStrings from '../energy-skate-park-basics-strings.js';
+import energySkateParkBasics from '../energySkateParkBasics.js';
+import FrictionScreen from './friction/FrictionScreen.js';
+import IntroScreen from './intro/IntroScreen.js';
+import PlaygroundScreen from './playground/PlaygroundScreen.js';
 
-  // strings
-  const energySkateParkBasicsTitleString = require( 'string!ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics.title' );
+const energySkateParkBasicsTitleString = energySkateParkBasicsStrings[ 'energy-skate-park-basics' ].title;
+
+/**
+ * @param {Tandem} tandem
+ * @constructor
+ */
+class EnergySkateParkBasicsSim extends EnergySkateParkSim {
 
   /**
    * @param {Tandem} tandem
-   * @constructor
    */
-  class EnergySkateParkBasicsSim extends EnergySkateParkSim {
+  constructor( tandem ) {
+    const options = {
+      credits: {
+        leadDesign: 'Ariel Paul, Noah Podolefsky, Sam Reid',
+        softwareDevelopment: 'Sam Reid, Jesse Greenberg',
+        team: 'Michael Dubson, Bryce Gruneich, Trish Loeblein, Emily B. Moore, Kathy Perkins',
+        graphicArts: 'Sharon Siman-Tov, Amanda McGarry',
+        qualityAssurance: 'Steele Dalton, Oliver Orejola, Arnab Purkayastha, Bryan Yoelin'
+      }
+    };
 
-    /**
-     * @param {Tandem} tandem
-     */
-    constructor( tandem ) {
-      const options = {
-        credits: {
-          leadDesign: 'Ariel Paul, Noah Podolefsky, Sam Reid',
-          softwareDevelopment: 'Sam Reid, Jesse Greenberg',
-          team: 'Michael Dubson, Bryce Gruneich, Trish Loeblein, Emily B. Moore, Kathy Perkins',
-          graphicArts: 'Sharon Siman-Tov, Amanda McGarry',
-          qualityAssurance: 'Steele Dalton, Oliver Orejola, Arnab Purkayastha, Bryan Yoelin'
-        }
-      };
+    const screens = [
+      new IntroScreen( tandem.createTandem( 'introScreen' ) ),
+      new FrictionScreen( tandem.createTandem( 'frictionScreen' ) ),
+      new PlaygroundScreen( tandem.createTandem( 'playgroundScreen' ) )
+    ];
 
-      const screens = [
-        new IntroScreen( tandem.createTandem( 'introScreen' ) ),
-        new FrictionScreen( tandem.createTandem( 'frictionScreen' ) ),
-        new PlaygroundScreen( tandem.createTandem( 'playgroundScreen' ) )
-      ];
-
-      super( energySkateParkBasicsTitleString, screens, tandem, options );
-    }
+    super( energySkateParkBasicsTitleString, screens, tandem, options );
   }
+}
 
-  return energySkateParkBasics.register( 'EnergySkateParkBasicsSim', EnergySkateParkBasicsSim );
-} );
+energySkateParkBasics.register( 'EnergySkateParkBasicsSim', EnergySkateParkBasicsSim );
+export default EnergySkateParkBasicsSim;

@@ -5,23 +5,20 @@
  *
  * @author Jesse Greenberg (PhET Interactive Simulations)
  */
-define( require => {
-  'use strict';
 
-  // modules
-  const Constants = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/Constants' );
-  const energySkateParkBasics = require( 'ENERGY_SKATE_PARK_BASICS/energySkateParkBasics' );
-  const EnergySkateParkBasicsTrackSetModel = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/common/model/EnergySkateParkBasicsTrackSetModel' );
+import energySkateParkBasics from '../../../energySkateParkBasics.js';
+import EnergySkateParkBasicsTrackSetModel from '../../common/model/EnergySkateParkBasicsTrackSetModel.js';
+import Constants from '../../Constants.js';
 
-  class FrictionModel extends EnergySkateParkBasicsTrackSetModel {
+class FrictionModel extends EnergySkateParkBasicsTrackSetModel {
 
-    /**
-     * @param {Tandem} tandem
-     */
-    constructor( tandem ) {
-      super( tandem.createTandem( 'frictionModel' ), Constants.BASICS_MODEL_OPTIONS );
-    }
+  /**
+   * @param {Tandem} tandem
+   */
+  constructor( tandem ) {
+    super( tandem.createTandem( 'frictionModel' ), Constants.BASICS_MODEL_OPTIONS );
   }
+}
 
-  return energySkateParkBasics.register( 'FrictionModel', FrictionModel );
-} );
+energySkateParkBasics.register( 'FrictionModel', FrictionModel );
+export default FrictionModel;

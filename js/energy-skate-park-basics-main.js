@@ -5,17 +5,14 @@
  *
  * @author Sam Reid (PhET Interactive Simulations)
  */
-define( require => {
-  'use strict';
 
-  const EnergySkateParkBasicsSim = require( 'ENERGY_SKATE_PARK_BASICS/energy-skate-park-basics/EnergySkateParkBasicsSim' );
-  const SimLauncher = require( 'JOIST/SimLauncher' );
-  const Tandem = require( 'TANDEM/Tandem' );
+import SimLauncher from '../../joist/js/SimLauncher.js';
+import Tandem from '../../tandem/js/Tandem.js';
+import EnergySkateParkBasicsSim from './energy-skate-park-basics/EnergySkateParkBasicsSim.js';
 
-  // constants
-  const tandem = Tandem.ROOT;
+// constants
+const tandem = Tandem.ROOT;
 
-  SimLauncher.launch( () => {
-    new EnergySkateParkBasicsSim( tandem ).start();
-  } );
+SimLauncher.launch( () => {
+  new EnergySkateParkBasicsSim( tandem ).start();
 } );
