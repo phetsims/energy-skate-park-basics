@@ -19,32 +19,8 @@
 
   window.phet = window.phet || {};
   window.phet.chipper = window.phet.chipper || {};
-  window.phet.chipper.packageObject = {
-    "name": "energy-skate-park-basics",
-    "version": "1.4.0-dev.1",
-    "license": "GPL-3.0",
-    "repository": { "type": "git", "url": "https://github.com/phetsims/energy-skate-park-basics.git" },
-    "devDependencies": { "grunt": "~1.0.0" },
-    "phet": {
-      "requirejsNamespace": "ENERGY_SKATE_PARK_BASICS",
-      "phetLibs": [ "energy-skate-park", "griddle" ],
-      "preload": [ "../sherpa/lib/numeric-1.2.6.js" ],
-      "runnable": true,
-      "supportedBrands": [ "phet", "phet-io", "adapted-from-phet" ],
-      "simulation": true
-    },
-    "eslintConfig": { "extends": "../chipper/eslint/sim_eslintrc.js" }
-  };
-  window.phet.chipper.stringRepos = [ {
-    "repo": "energy-skate-park",
-    "requirejsNamespace": "ENERGY_SKATE_PARK"
-  }, { "repo": "energy-skate-park-basics", "requirejsNamespace": "ENERGY_SKATE_PARK_BASICS" }, {
-    "repo": "griddle",
-    "requirejsNamespace": "GRIDDLE"
-  }, { "repo": "joist", "requirejsNamespace": "JOIST" }, {
-    "repo": "scenery-phet",
-    "requirejsNamespace": "SCENERY_PHET"
-  }, { "repo": "sun", "requirejsNamespace": "SUN" }, { "repo": "tambo", "requirejsNamespace": "TAMBO" } ];
+  window.phet.chipper.packageObject = {"name":"energy-skate-park-basics","version":"1.4.0-dev.1","license":"GPL-3.0","repository":{"type":"git","url":"https://github.com/phetsims/energy-skate-park-basics.git"},"devDependencies":{"grunt":"~1.0.0"},"phet":{"requirejsNamespace":"ENERGY_SKATE_PARK_BASICS","phetLibs":["energy-skate-park","griddle"],"preload":["../sherpa/lib/numeric-1.2.6.js"],"runnable":true,"supportedBrands":["phet","phet-io","adapted-from-phet"],"simulation":true},"eslintConfig":{"extends":"../chipper/eslint/sim_eslintrc.js"}};
+  window.phet.chipper.stringRepos = [{"repo":"energy-skate-park","requirejsNamespace":"ENERGY_SKATE_PARK"},{"repo":"energy-skate-park-basics","requirejsNamespace":"ENERGY_SKATE_PARK_BASICS"},{"repo":"griddle","requirejsNamespace":"GRIDDLE"},{"repo":"joist","requirejsNamespace":"JOIST"},{"repo":"scenery-phet","requirejsNamespace":"SCENERY_PHET"},{"repo":"sun","requirejsNamespace":"SUN"},{"repo":"tambo","requirejsNamespace":"TAMBO"}];
 
   // Identify the brand (assume generated brand if not provided with query parameters)
   const brandMatch = location.search.match( /brand=([^&]+)/ );
