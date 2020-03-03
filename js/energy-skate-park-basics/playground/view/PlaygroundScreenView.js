@@ -17,8 +17,8 @@ import EnergyBarGraphPanel from '../../common/view/EnergyBarGraphPanel.js';
 class PlaygroundScreenView extends EnergySkateParkPlaygroundScreenView {
 
   /**
-   * @param   {EnergySkateParkPlaygroundModel} model
-   * @param   {Tandem} tandem
+   * @param {EnergySkateParkPlaygroundModel} model
+   * @param {Tandem} tandem
    */
   constructor( model, tandem ) {
     super( model, tandem.createTandem( 'graphsScreenView' ), {
