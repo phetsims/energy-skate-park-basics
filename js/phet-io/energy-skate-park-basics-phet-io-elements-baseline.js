@@ -6213,7 +6213,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ResetAllButtonIO"
+      "phetioTypeName": "NodeIO"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.resetAllButton.enabledProperty": {
       "phetioDocumentation": "When disabled, the button is grayed out and cannot be pressed",
@@ -16184,7 +16184,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ResetAllButtonIO"
+      "phetioTypeName": "NodeIO"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.resetAllButton.enabledProperty": {
       "phetioDocumentation": "When disabled, the button is grayed out and cannot be pressed",
@@ -24296,7 +24296,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ResetAllButtonIO"
+      "phetioTypeName": "NodeIO"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.resetAllButton.enabledProperty": {
       "phetioDocumentation": "When disabled, the button is grayed out and cannot be pressed",
