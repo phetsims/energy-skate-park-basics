@@ -6,6 +6,7 @@
  * @author Jesse Greenberg
  */
 
+import Constants from '../../../../../energy-skate-park/js/energy-skate-park/common/Constants.js';
 import EnergyBarGraph from '../../../../../energy-skate-park/js/energy-skate-park/common/view/EnergyBarGraph.js';
 import merge from '../../../../../phet-core/js/merge.js';
 import VBox from '../../../../../scenery/js/nodes/VBox.js';
@@ -25,7 +26,7 @@ class EnergyBarGraphPanel extends Panel {
 
       // {null|*} options for the bar graph itself, passed on to EnergyBarGraph
       barGraphOptions: null
-    }, options );
+    }, Constants.PANEL_OPTIONS, options );
 
     const label = EnergyBarGraph.createLabel();
     const energyBarGraph = new EnergyBarGraph( model.skater, model.barGraphScaleProperty, model.barGraphVisibleProperty, tandem.createTandem( 'energyBarGraph' ), options.barGraphOptions );
