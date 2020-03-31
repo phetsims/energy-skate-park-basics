@@ -7,7 +7,7 @@
  */
 
 import EnergySkateParkSim from '../../../energy-skate-park/js/energy-skate-park/common/EnergySkateParkSim.js';
-import energySkateParkBasicsStrings from '../energy-skate-park-basics-strings.js';
+import energySkateParkBasicsStrings from '../energySkateParkBasicsStrings.js';
 import energySkateParkBasics from '../energySkateParkBasics.js';
 import FrictionScreen from './friction/FrictionScreen.js';
 import IntroScreen from './intro/IntroScreen.js';

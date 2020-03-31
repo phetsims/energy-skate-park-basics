@@ -11,7 +11,7 @@ import iconIntroNavbar from '../../../../energy-skate-park/images/icon-intro-nav
 import Screen from '../../../../joist/js/Screen.js';
 import merge from '../../../../phet-core/js/merge.js';
 import Image from '../../../../scenery/js/nodes/Image.js';
-import energySkateParkBasicsStrings from '../../energy-skate-park-basics-strings.js';
+import energySkateParkBasicsStrings from '../../energySkateParkBasicsStrings.js';
 import energySkateParkBasics from '../../energySkateParkBasics.js';
 import IntroModel from './model/IntroModel.js';
 import IntroScreenView from './view/IntroScreenView.js';
