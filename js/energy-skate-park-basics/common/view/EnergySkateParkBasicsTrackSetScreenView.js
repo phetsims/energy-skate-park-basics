@@ -58,10 +58,14 @@ class EnergySkateParkBasicsTrackSetScreenView extends EnergySkateParkTrackSetScr
 
   /**
    * Special layout for the basics screen view, positions the bar graph panel.
+   * @public
+   *
+   * @param {number}
+   * @param {number}
    * @override
    */
-  floatInterface() {
-    super.floatInterface();
+  layout( width, height ) {
+    super.layout( width, height );
     this.barGraphPanel.leftTop = new Vector2( this.fixedLeft, 5 );
   }
 }

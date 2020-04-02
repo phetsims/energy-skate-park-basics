@@ -59,9 +59,14 @@ class PlaygroundScreenView extends EnergySkateParkPlaygroundScreenView {
 
   /**
    * Special layout for the basics screen view, positions the bar graph panel.
+   * @public
+   *
+   * @param {number} width
+   * @param {number} height
+   * @override
    */
-  floatInterface() {
-    super.floatInterface();
+  layout( width, height ) {
+    super.layout( width, height );
     this.barGraphPanel.leftTop = new Vector2( this.fixedLeft, 5 );
   }
 }
