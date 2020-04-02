@@ -4330,7 +4330,7 @@ window.phet.preloads.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO<BooleanIO>"
     },
-    "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.visibilityControls.barGraphCheckbox": {
+    "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.visibilityControls": {
       "phetioDocumentation": "",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
@@ -4342,149 +4342,6 @@ window.phet.preloads.phetio.phetioElementsBaseline = assert &&
       "phetioState": false,
       "phetioStudioControl": true,
       "phetioTypeName": "NodeIO"
-    },
-    "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.visibilityControls.barGraphCheckbox.enabledProperty": {
-      "phetioDocumentation": "When disabled, the checkbox is grayed out and cannot be pressed.",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": true,
-      "phetioHighFrequency": false,
-      "phetioIsArchetype": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": true,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO<BooleanIO>"
-    },
-    "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.visibilityControls.barGraphCheckbox.itemLabel": {
-      "phetioDocumentation": "",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioIsArchetype": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "TextIO"
-    },
-    "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.visibilityControls.barGraphCheckbox.itemLabel.opacityProperty": {
-      "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioIsArchetype": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": true,
-      "phetioStudioControl": true,
-      "phetioTypeName": "NumberPropertyIO"
-    },
-    "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.visibilityControls.barGraphCheckbox.itemLabel.pickableProperty": {
-      "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioIsArchetype": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": true,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
-    },
-    "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.visibilityControls.barGraphCheckbox.itemLabel.textProperty": {
-      "phetioDocumentation": "Property for the displayed text",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioIsArchetype": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": true,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO<StringIO>"
-    },
-    "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.visibilityControls.barGraphCheckbox.itemLabel.visibleProperty": {
-      "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioIsArchetype": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": true,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO<BooleanIO>"
-    },
-    "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.visibilityControls.barGraphCheckbox.opacityProperty": {
-      "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioIsArchetype": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": true,
-      "phetioStudioControl": true,
-      "phetioTypeName": "NumberPropertyIO"
-    },
-    "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.visibilityControls.barGraphCheckbox.pickableProperty": {
-      "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioIsArchetype": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": true,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
-    },
-    "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.visibilityControls.barGraphCheckbox.property": {
-      "phetioDocumentation": "",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioIsArchetype": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": true,
-      "phetioState": true,
-      "phetioStudioControl": true,
-      "phetioTypeName": "LinkedElementIO"
-    },
-    "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.visibilityControls.barGraphCheckbox.toggleAction": {
-      "phetioDocumentation": "Emits when user input causes the checkbox to toggle, emitting a single arg: the new boolean value of the checkbox state. No arguments.",
-      "phetioDynamicElement": false,
-      "phetioEventType": "USER",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioIsArchetype": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO<>"
-    },
-    "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.visibilityControls.barGraphCheckbox.visibleProperty": {
-      "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": true,
-      "phetioHighFrequency": false,
-      "phetioIsArchetype": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": true,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.visibilityControls.barGraphIcon": {
       "phetioDocumentation": "",
@@ -4538,151 +4395,8 @@ window.phet.preloads.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO<BooleanIO>"
     },
-    "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.visibilityControls.gridCheckbox": {
-      "phetioDocumentation": "",
-      "phetioDynamicElement": false,
-      "phetioEventType": "USER",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioIsArchetype": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "NodeIO"
-    },
-    "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.visibilityControls.gridCheckbox.enabledProperty": {
+    "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.visibilityControls.enabledProperty": {
       "phetioDocumentation": "When disabled, the checkbox is grayed out and cannot be pressed.",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": true,
-      "phetioHighFrequency": false,
-      "phetioIsArchetype": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": true,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO<BooleanIO>"
-    },
-    "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.visibilityControls.gridCheckbox.itemLabel": {
-      "phetioDocumentation": "",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioIsArchetype": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "TextIO"
-    },
-    "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.visibilityControls.gridCheckbox.itemLabel.opacityProperty": {
-      "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioIsArchetype": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": true,
-      "phetioStudioControl": true,
-      "phetioTypeName": "NumberPropertyIO"
-    },
-    "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.visibilityControls.gridCheckbox.itemLabel.pickableProperty": {
-      "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioIsArchetype": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": true,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
-    },
-    "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.visibilityControls.gridCheckbox.itemLabel.textProperty": {
-      "phetioDocumentation": "Property for the displayed text",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioIsArchetype": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": true,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO<StringIO>"
-    },
-    "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.visibilityControls.gridCheckbox.itemLabel.visibleProperty": {
-      "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioIsArchetype": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": true,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO<BooleanIO>"
-    },
-    "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.visibilityControls.gridCheckbox.opacityProperty": {
-      "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioIsArchetype": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": true,
-      "phetioStudioControl": true,
-      "phetioTypeName": "NumberPropertyIO"
-    },
-    "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.visibilityControls.gridCheckbox.pickableProperty": {
-      "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioIsArchetype": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": true,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
-    },
-    "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.visibilityControls.gridCheckbox.property": {
-      "phetioDocumentation": "",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioIsArchetype": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": true,
-      "phetioState": true,
-      "phetioStudioControl": true,
-      "phetioTypeName": "LinkedElementIO"
-    },
-    "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.visibilityControls.gridCheckbox.toggleAction": {
-      "phetioDocumentation": "Emits when user input causes the checkbox to toggle, emitting a single arg: the new boolean value of the checkbox state. No arguments.",
-      "phetioDynamicElement": false,
-      "phetioEventType": "USER",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioIsArchetype": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO<>"
-    },
-    "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.visibilityControls.gridCheckbox.visibleProperty": {
-      "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
       "phetioFeatured": true,
@@ -4746,46 +4460,7 @@ window.phet.preloads.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO<BooleanIO>"
     },
-    "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.visibilityControls.pieChartCheckbox": {
-      "phetioDocumentation": "",
-      "phetioDynamicElement": false,
-      "phetioEventType": "USER",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioIsArchetype": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "NodeIO"
-    },
-    "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.visibilityControls.pieChartCheckbox.enabledProperty": {
-      "phetioDocumentation": "When disabled, the checkbox is grayed out and cannot be pressed.",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": true,
-      "phetioHighFrequency": false,
-      "phetioIsArchetype": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": true,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO<BooleanIO>"
-    },
-    "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.visibilityControls.pieChartCheckbox.itemLabel": {
-      "phetioDocumentation": "",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioIsArchetype": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "TextIO"
-    },
-    "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.visibilityControls.pieChartCheckbox.itemLabel.opacityProperty": {
+    "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.visibilityControls.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -4798,7 +4473,7 @@ window.phet.preloads.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "NumberPropertyIO"
     },
-    "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.visibilityControls.pieChartCheckbox.itemLabel.pickableProperty": {
+    "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.visibilityControls.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -4810,97 +4485,6 @@ window.phet.preloads.phetio.phetioElementsBaseline = assert &&
       "phetioState": true,
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
-    },
-    "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.visibilityControls.pieChartCheckbox.itemLabel.textProperty": {
-      "phetioDocumentation": "Property for the displayed text",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioIsArchetype": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": true,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO<StringIO>"
-    },
-    "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.visibilityControls.pieChartCheckbox.itemLabel.visibleProperty": {
-      "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioIsArchetype": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": true,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO<BooleanIO>"
-    },
-    "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.visibilityControls.pieChartCheckbox.opacityProperty": {
-      "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioIsArchetype": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": true,
-      "phetioStudioControl": true,
-      "phetioTypeName": "NumberPropertyIO"
-    },
-    "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.visibilityControls.pieChartCheckbox.pickableProperty": {
-      "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioIsArchetype": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": true,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
-    },
-    "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.visibilityControls.pieChartCheckbox.property": {
-      "phetioDocumentation": "",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioIsArchetype": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": true,
-      "phetioState": true,
-      "phetioStudioControl": true,
-      "phetioTypeName": "LinkedElementIO"
-    },
-    "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.visibilityControls.pieChartCheckbox.toggleAction": {
-      "phetioDocumentation": "Emits when user input causes the checkbox to toggle, emitting a single arg: the new boolean value of the checkbox state. No arguments.",
-      "phetioDynamicElement": false,
-      "phetioEventType": "USER",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioIsArchetype": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO<>"
-    },
-    "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.visibilityControls.pieChartCheckbox.visibleProperty": {
-      "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": true,
-      "phetioHighFrequency": false,
-      "phetioIsArchetype": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": true,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.visibilityControls.pieChartIcon": {
       "phetioDocumentation": "",
@@ -5005,6 +4589,19 @@ window.phet.preloads.phetio.phetioElementsBaseline = assert &&
       "phetioState": true,
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO<BooleanIO>"
+    },
+    "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.visibilityControls.property": {
+      "phetioDocumentation": "",
+      "phetioDynamicElement": false,
+      "phetioEventType": "MODEL",
+      "phetioFeatured": false,
+      "phetioHighFrequency": false,
+      "phetioIsArchetype": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": true,
+      "phetioState": true,
+      "phetioStudioControl": true,
+      "phetioTypeName": "LinkedElementIO"
     },
     "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.visibilityControls.speedIcon.gaugeNode": {
       "phetioDocumentation": "",
@@ -5175,33 +4772,7 @@ window.phet.preloads.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO<BooleanIO>"
     },
-    "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.visibilityControls.speedometerCheckbox": {
-      "phetioDocumentation": "",
-      "phetioDynamicElement": false,
-      "phetioEventType": "USER",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioIsArchetype": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "NodeIO"
-    },
-    "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.visibilityControls.speedometerCheckbox.enabledProperty": {
-      "phetioDocumentation": "When disabled, the checkbox is grayed out and cannot be pressed.",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": true,
-      "phetioHighFrequency": false,
-      "phetioIsArchetype": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": true,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO<BooleanIO>"
-    },
-    "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.visibilityControls.speedometerCheckbox.itemLabel": {
+    "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.visibilityControls.text": {
       "phetioDocumentation": "",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -5214,7 +4785,7 @@ window.phet.preloads.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "TextIO"
     },
-    "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.visibilityControls.speedometerCheckbox.itemLabel.opacityProperty": {
+    "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.visibilityControls.text.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -5227,7 +4798,7 @@ window.phet.preloads.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "NumberPropertyIO"
     },
-    "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.visibilityControls.speedometerCheckbox.itemLabel.pickableProperty": {
+    "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.visibilityControls.text.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -5240,7 +4811,7 @@ window.phet.preloads.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
-    "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.visibilityControls.speedometerCheckbox.itemLabel.textProperty": {
+    "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.visibilityControls.text.textProperty": {
       "phetioDocumentation": "Property for the displayed text",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -5253,7 +4824,7 @@ window.phet.preloads.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO<StringIO>"
     },
-    "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.visibilityControls.speedometerCheckbox.itemLabel.visibleProperty": {
+    "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.visibilityControls.text.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -5266,46 +4837,7 @@ window.phet.preloads.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO<BooleanIO>"
     },
-    "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.visibilityControls.speedometerCheckbox.opacityProperty": {
-      "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioIsArchetype": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": true,
-      "phetioStudioControl": true,
-      "phetioTypeName": "NumberPropertyIO"
-    },
-    "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.visibilityControls.speedometerCheckbox.pickableProperty": {
-      "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioIsArchetype": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": true,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
-    },
-    "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.visibilityControls.speedometerCheckbox.property": {
-      "phetioDocumentation": "",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioIsArchetype": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": true,
-      "phetioState": true,
-      "phetioStudioControl": true,
-      "phetioTypeName": "LinkedElementIO"
-    },
-    "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.visibilityControls.speedometerCheckbox.toggleAction": {
+    "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.visibilityControls.toggleAction": {
       "phetioDocumentation": "Emits when user input causes the checkbox to toggle, emitting a single arg: the new boolean value of the checkbox state. No arguments.",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
@@ -5318,7 +4850,7 @@ window.phet.preloads.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "ActionIO<>"
     },
-    "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.visibilityControls.speedometerCheckbox.visibleProperty": {
+    "energySkateParkBasics.frictionScreen.view.introScreenView.controlPanel.visibilityControls.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -14340,7 +13872,7 @@ window.phet.preloads.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO<BooleanIO>"
     },
-    "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.visibilityControls.barGraphCheckbox": {
+    "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.visibilityControls": {
       "phetioDocumentation": "",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
@@ -14352,149 +13884,6 @@ window.phet.preloads.phetio.phetioElementsBaseline = assert &&
       "phetioState": false,
       "phetioStudioControl": true,
       "phetioTypeName": "NodeIO"
-    },
-    "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.visibilityControls.barGraphCheckbox.enabledProperty": {
-      "phetioDocumentation": "When disabled, the checkbox is grayed out and cannot be pressed.",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": true,
-      "phetioHighFrequency": false,
-      "phetioIsArchetype": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": true,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO<BooleanIO>"
-    },
-    "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.visibilityControls.barGraphCheckbox.itemLabel": {
-      "phetioDocumentation": "",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioIsArchetype": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "TextIO"
-    },
-    "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.visibilityControls.barGraphCheckbox.itemLabel.opacityProperty": {
-      "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioIsArchetype": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": true,
-      "phetioStudioControl": true,
-      "phetioTypeName": "NumberPropertyIO"
-    },
-    "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.visibilityControls.barGraphCheckbox.itemLabel.pickableProperty": {
-      "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioIsArchetype": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": true,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
-    },
-    "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.visibilityControls.barGraphCheckbox.itemLabel.textProperty": {
-      "phetioDocumentation": "Property for the displayed text",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioIsArchetype": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": true,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO<StringIO>"
-    },
-    "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.visibilityControls.barGraphCheckbox.itemLabel.visibleProperty": {
-      "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioIsArchetype": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": true,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO<BooleanIO>"
-    },
-    "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.visibilityControls.barGraphCheckbox.opacityProperty": {
-      "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioIsArchetype": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": true,
-      "phetioStudioControl": true,
-      "phetioTypeName": "NumberPropertyIO"
-    },
-    "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.visibilityControls.barGraphCheckbox.pickableProperty": {
-      "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioIsArchetype": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": true,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
-    },
-    "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.visibilityControls.barGraphCheckbox.property": {
-      "phetioDocumentation": "",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioIsArchetype": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": true,
-      "phetioState": true,
-      "phetioStudioControl": true,
-      "phetioTypeName": "LinkedElementIO"
-    },
-    "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.visibilityControls.barGraphCheckbox.toggleAction": {
-      "phetioDocumentation": "Emits when user input causes the checkbox to toggle, emitting a single arg: the new boolean value of the checkbox state. No arguments.",
-      "phetioDynamicElement": false,
-      "phetioEventType": "USER",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioIsArchetype": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO<>"
-    },
-    "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.visibilityControls.barGraphCheckbox.visibleProperty": {
-      "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": true,
-      "phetioHighFrequency": false,
-      "phetioIsArchetype": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": true,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.visibilityControls.barGraphIcon": {
       "phetioDocumentation": "",
@@ -14548,151 +13937,8 @@ window.phet.preloads.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO<BooleanIO>"
     },
-    "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.visibilityControls.gridCheckbox": {
-      "phetioDocumentation": "",
-      "phetioDynamicElement": false,
-      "phetioEventType": "USER",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioIsArchetype": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "NodeIO"
-    },
-    "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.visibilityControls.gridCheckbox.enabledProperty": {
+    "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.visibilityControls.enabledProperty": {
       "phetioDocumentation": "When disabled, the checkbox is grayed out and cannot be pressed.",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": true,
-      "phetioHighFrequency": false,
-      "phetioIsArchetype": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": true,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO<BooleanIO>"
-    },
-    "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.visibilityControls.gridCheckbox.itemLabel": {
-      "phetioDocumentation": "",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioIsArchetype": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "TextIO"
-    },
-    "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.visibilityControls.gridCheckbox.itemLabel.opacityProperty": {
-      "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioIsArchetype": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": true,
-      "phetioStudioControl": true,
-      "phetioTypeName": "NumberPropertyIO"
-    },
-    "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.visibilityControls.gridCheckbox.itemLabel.pickableProperty": {
-      "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioIsArchetype": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": true,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
-    },
-    "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.visibilityControls.gridCheckbox.itemLabel.textProperty": {
-      "phetioDocumentation": "Property for the displayed text",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioIsArchetype": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": true,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO<StringIO>"
-    },
-    "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.visibilityControls.gridCheckbox.itemLabel.visibleProperty": {
-      "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioIsArchetype": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": true,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO<BooleanIO>"
-    },
-    "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.visibilityControls.gridCheckbox.opacityProperty": {
-      "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioIsArchetype": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": true,
-      "phetioStudioControl": true,
-      "phetioTypeName": "NumberPropertyIO"
-    },
-    "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.visibilityControls.gridCheckbox.pickableProperty": {
-      "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioIsArchetype": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": true,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
-    },
-    "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.visibilityControls.gridCheckbox.property": {
-      "phetioDocumentation": "",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioIsArchetype": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": true,
-      "phetioState": true,
-      "phetioStudioControl": true,
-      "phetioTypeName": "LinkedElementIO"
-    },
-    "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.visibilityControls.gridCheckbox.toggleAction": {
-      "phetioDocumentation": "Emits when user input causes the checkbox to toggle, emitting a single arg: the new boolean value of the checkbox state. No arguments.",
-      "phetioDynamicElement": false,
-      "phetioEventType": "USER",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioIsArchetype": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO<>"
-    },
-    "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.visibilityControls.gridCheckbox.visibleProperty": {
-      "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
       "phetioFeatured": true,
@@ -14756,46 +14002,7 @@ window.phet.preloads.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO<BooleanIO>"
     },
-    "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.visibilityControls.pieChartCheckbox": {
-      "phetioDocumentation": "",
-      "phetioDynamicElement": false,
-      "phetioEventType": "USER",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioIsArchetype": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "NodeIO"
-    },
-    "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.visibilityControls.pieChartCheckbox.enabledProperty": {
-      "phetioDocumentation": "When disabled, the checkbox is grayed out and cannot be pressed.",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": true,
-      "phetioHighFrequency": false,
-      "phetioIsArchetype": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": true,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO<BooleanIO>"
-    },
-    "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.visibilityControls.pieChartCheckbox.itemLabel": {
-      "phetioDocumentation": "",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioIsArchetype": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "TextIO"
-    },
-    "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.visibilityControls.pieChartCheckbox.itemLabel.opacityProperty": {
+    "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.visibilityControls.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -14808,7 +14015,7 @@ window.phet.preloads.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "NumberPropertyIO"
     },
-    "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.visibilityControls.pieChartCheckbox.itemLabel.pickableProperty": {
+    "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.visibilityControls.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -14820,97 +14027,6 @@ window.phet.preloads.phetio.phetioElementsBaseline = assert &&
       "phetioState": true,
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
-    },
-    "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.visibilityControls.pieChartCheckbox.itemLabel.textProperty": {
-      "phetioDocumentation": "Property for the displayed text",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioIsArchetype": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": true,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO<StringIO>"
-    },
-    "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.visibilityControls.pieChartCheckbox.itemLabel.visibleProperty": {
-      "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioIsArchetype": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": true,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO<BooleanIO>"
-    },
-    "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.visibilityControls.pieChartCheckbox.opacityProperty": {
-      "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioIsArchetype": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": true,
-      "phetioStudioControl": true,
-      "phetioTypeName": "NumberPropertyIO"
-    },
-    "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.visibilityControls.pieChartCheckbox.pickableProperty": {
-      "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioIsArchetype": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": true,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
-    },
-    "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.visibilityControls.pieChartCheckbox.property": {
-      "phetioDocumentation": "",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioIsArchetype": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": true,
-      "phetioState": true,
-      "phetioStudioControl": true,
-      "phetioTypeName": "LinkedElementIO"
-    },
-    "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.visibilityControls.pieChartCheckbox.toggleAction": {
-      "phetioDocumentation": "Emits when user input causes the checkbox to toggle, emitting a single arg: the new boolean value of the checkbox state. No arguments.",
-      "phetioDynamicElement": false,
-      "phetioEventType": "USER",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioIsArchetype": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO<>"
-    },
-    "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.visibilityControls.pieChartCheckbox.visibleProperty": {
-      "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": true,
-      "phetioHighFrequency": false,
-      "phetioIsArchetype": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": true,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.visibilityControls.pieChartIcon": {
       "phetioDocumentation": "",
@@ -15015,6 +14131,19 @@ window.phet.preloads.phetio.phetioElementsBaseline = assert &&
       "phetioState": true,
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO<BooleanIO>"
+    },
+    "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.visibilityControls.property": {
+      "phetioDocumentation": "",
+      "phetioDynamicElement": false,
+      "phetioEventType": "MODEL",
+      "phetioFeatured": false,
+      "phetioHighFrequency": false,
+      "phetioIsArchetype": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": true,
+      "phetioState": true,
+      "phetioStudioControl": true,
+      "phetioTypeName": "LinkedElementIO"
     },
     "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.visibilityControls.speedIcon.gaugeNode": {
       "phetioDocumentation": "",
@@ -15185,33 +14314,7 @@ window.phet.preloads.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO<BooleanIO>"
     },
-    "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.visibilityControls.speedometerCheckbox": {
-      "phetioDocumentation": "",
-      "phetioDynamicElement": false,
-      "phetioEventType": "USER",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioIsArchetype": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "NodeIO"
-    },
-    "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.visibilityControls.speedometerCheckbox.enabledProperty": {
-      "phetioDocumentation": "When disabled, the checkbox is grayed out and cannot be pressed.",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": true,
-      "phetioHighFrequency": false,
-      "phetioIsArchetype": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": true,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO<BooleanIO>"
-    },
-    "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.visibilityControls.speedometerCheckbox.itemLabel": {
+    "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.visibilityControls.text": {
       "phetioDocumentation": "",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -15224,7 +14327,7 @@ window.phet.preloads.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "TextIO"
     },
-    "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.visibilityControls.speedometerCheckbox.itemLabel.opacityProperty": {
+    "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.visibilityControls.text.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -15237,7 +14340,7 @@ window.phet.preloads.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "NumberPropertyIO"
     },
-    "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.visibilityControls.speedometerCheckbox.itemLabel.pickableProperty": {
+    "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.visibilityControls.text.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -15250,7 +14353,7 @@ window.phet.preloads.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
-    "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.visibilityControls.speedometerCheckbox.itemLabel.textProperty": {
+    "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.visibilityControls.text.textProperty": {
       "phetioDocumentation": "Property for the displayed text",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -15263,7 +14366,7 @@ window.phet.preloads.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO<StringIO>"
     },
-    "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.visibilityControls.speedometerCheckbox.itemLabel.visibleProperty": {
+    "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.visibilityControls.text.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -15276,46 +14379,7 @@ window.phet.preloads.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO<BooleanIO>"
     },
-    "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.visibilityControls.speedometerCheckbox.opacityProperty": {
-      "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioIsArchetype": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": true,
-      "phetioStudioControl": true,
-      "phetioTypeName": "NumberPropertyIO"
-    },
-    "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.visibilityControls.speedometerCheckbox.pickableProperty": {
-      "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioIsArchetype": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": true,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
-    },
-    "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.visibilityControls.speedometerCheckbox.property": {
-      "phetioDocumentation": "",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioIsArchetype": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": true,
-      "phetioState": true,
-      "phetioStudioControl": true,
-      "phetioTypeName": "LinkedElementIO"
-    },
-    "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.visibilityControls.speedometerCheckbox.toggleAction": {
+    "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.visibilityControls.toggleAction": {
       "phetioDocumentation": "Emits when user input causes the checkbox to toggle, emitting a single arg: the new boolean value of the checkbox state. No arguments.",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
@@ -15328,7 +14392,7 @@ window.phet.preloads.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "ActionIO<>"
     },
-    "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.visibilityControls.speedometerCheckbox.visibleProperty": {
+    "energySkateParkBasics.introScreen.view.introScreenView.controlPanel.visibilityControls.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -19852,7 +18916,7 @@ window.phet.preloads.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "NodeIO"
     },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.energySkateParkMassControls.massNumberControl": {
+    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.energySkateParkMassControls.massSlider": {
       "phetioDocumentation": "",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -19865,7 +18929,7 @@ window.phet.preloads.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "NumberControlIO"
     },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.energySkateParkMassControls.massNumberControl.leftArrowButton": {
+    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.energySkateParkMassControls.massSlider.leftArrowButton": {
       "phetioDocumentation": "",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -19878,7 +18942,7 @@ window.phet.preloads.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "NodeIO"
     },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.energySkateParkMassControls.massNumberControl.leftArrowButton.enabledProperty": {
+    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.energySkateParkMassControls.massSlider.leftArrowButton.enabledProperty": {
       "phetioDocumentation": "When disabled, the button is grayed out and cannot be pressed",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -19891,7 +18955,7 @@ window.phet.preloads.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO<BooleanIO>"
     },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.energySkateParkMassControls.massNumberControl.leftArrowButton.firedEmitter": {
+    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.energySkateParkMassControls.massSlider.leftArrowButton.firedEmitter": {
       "phetioDocumentation": "Emits when the button is fired No arguments.",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
@@ -19904,7 +18968,7 @@ window.phet.preloads.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "EmitterIO<>"
     },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.energySkateParkMassControls.massNumberControl.leftArrowButton.opacityProperty": {
+    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.energySkateParkMassControls.massSlider.leftArrowButton.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -19917,7 +18981,7 @@ window.phet.preloads.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "NumberPropertyIO"
     },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.energySkateParkMassControls.massNumberControl.leftArrowButton.pickableProperty": {
+    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.energySkateParkMassControls.massSlider.leftArrowButton.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -19930,7 +18994,7 @@ window.phet.preloads.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.energySkateParkMassControls.massNumberControl.leftArrowButton.pressListener.pressAction": {
+    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.energySkateParkMassControls.massSlider.leftArrowButton.pressListener.pressAction": {
       "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the SceneryEvent. The arguments are:<br/><ol><li>event: SceneryEventIO</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
@@ -19943,7 +19007,7 @@ window.phet.preloads.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "ActionIO<SceneryEventIO>"
     },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.energySkateParkMassControls.massNumberControl.leftArrowButton.pressListener.releaseAction": {
+    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.energySkateParkMassControls.massSlider.leftArrowButton.pressListener.releaseAction": {
       "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO<SceneryEventIO></li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
@@ -19956,7 +19020,7 @@ window.phet.preloads.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "ActionIO<NullableIO<SceneryEventIO>>"
     },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.energySkateParkMassControls.massNumberControl.leftArrowButton.visibleProperty": {
+    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.energySkateParkMassControls.massSlider.leftArrowButton.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -19969,7 +19033,137 @@ window.phet.preloads.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO<BooleanIO>"
     },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.energySkateParkMassControls.massNumberControl.numberDisplay": {
+    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.energySkateParkMassControls.massSlider.maxLabel": {
+      "phetioDocumentation": "",
+      "phetioDynamicElement": false,
+      "phetioEventType": "MODEL",
+      "phetioFeatured": false,
+      "phetioHighFrequency": false,
+      "phetioIsArchetype": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": false,
+      "phetioStudioControl": true,
+      "phetioTypeName": "TextIO"
+    },
+    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.energySkateParkMassControls.massSlider.maxLabel.opacityProperty": {
+      "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
+      "phetioEventType": "MODEL",
+      "phetioFeatured": false,
+      "phetioHighFrequency": false,
+      "phetioIsArchetype": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": true,
+      "phetioStudioControl": true,
+      "phetioTypeName": "NumberPropertyIO"
+    },
+    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.energySkateParkMassControls.massSlider.maxLabel.pickableProperty": {
+      "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
+      "phetioEventType": "MODEL",
+      "phetioFeatured": false,
+      "phetioHighFrequency": false,
+      "phetioIsArchetype": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": true,
+      "phetioStudioControl": true,
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
+    },
+    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.energySkateParkMassControls.massSlider.maxLabel.textProperty": {
+      "phetioDocumentation": "Property for the displayed text",
+      "phetioDynamicElement": false,
+      "phetioEventType": "MODEL",
+      "phetioFeatured": false,
+      "phetioHighFrequency": false,
+      "phetioIsArchetype": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": true,
+      "phetioStudioControl": true,
+      "phetioTypeName": "PropertyIO<StringIO>"
+    },
+    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.energySkateParkMassControls.massSlider.maxLabel.visibleProperty": {
+      "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
+      "phetioEventType": "MODEL",
+      "phetioFeatured": false,
+      "phetioHighFrequency": false,
+      "phetioIsArchetype": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": true,
+      "phetioStudioControl": true,
+      "phetioTypeName": "PropertyIO<BooleanIO>"
+    },
+    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.energySkateParkMassControls.massSlider.minLabel": {
+      "phetioDocumentation": "",
+      "phetioDynamicElement": false,
+      "phetioEventType": "MODEL",
+      "phetioFeatured": false,
+      "phetioHighFrequency": false,
+      "phetioIsArchetype": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": false,
+      "phetioStudioControl": true,
+      "phetioTypeName": "TextIO"
+    },
+    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.energySkateParkMassControls.massSlider.minLabel.opacityProperty": {
+      "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
+      "phetioEventType": "MODEL",
+      "phetioFeatured": false,
+      "phetioHighFrequency": false,
+      "phetioIsArchetype": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": true,
+      "phetioStudioControl": true,
+      "phetioTypeName": "NumberPropertyIO"
+    },
+    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.energySkateParkMassControls.massSlider.minLabel.pickableProperty": {
+      "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
+      "phetioEventType": "MODEL",
+      "phetioFeatured": false,
+      "phetioHighFrequency": false,
+      "phetioIsArchetype": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": true,
+      "phetioStudioControl": true,
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
+    },
+    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.energySkateParkMassControls.massSlider.minLabel.textProperty": {
+      "phetioDocumentation": "Property for the displayed text",
+      "phetioDynamicElement": false,
+      "phetioEventType": "MODEL",
+      "phetioFeatured": false,
+      "phetioHighFrequency": false,
+      "phetioIsArchetype": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": true,
+      "phetioStudioControl": true,
+      "phetioTypeName": "PropertyIO<StringIO>"
+    },
+    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.energySkateParkMassControls.massSlider.minLabel.visibleProperty": {
+      "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
+      "phetioEventType": "MODEL",
+      "phetioFeatured": false,
+      "phetioHighFrequency": false,
+      "phetioIsArchetype": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": true,
+      "phetioStudioControl": true,
+      "phetioTypeName": "PropertyIO<BooleanIO>"
+    },
+    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.energySkateParkMassControls.massSlider.numberDisplay": {
       "phetioDocumentation": "",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -19982,7 +19176,7 @@ window.phet.preloads.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "NumberDisplayIO"
     },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.energySkateParkMassControls.massNumberControl.numberDisplay.opacityProperty": {
+    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.energySkateParkMassControls.massSlider.numberDisplay.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -19995,7 +19189,7 @@ window.phet.preloads.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "NumberPropertyIO"
     },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.energySkateParkMassControls.massNumberControl.numberDisplay.pickableProperty": {
+    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.energySkateParkMassControls.massSlider.numberDisplay.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -20008,7 +19202,7 @@ window.phet.preloads.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.energySkateParkMassControls.massNumberControl.numberDisplay.valueText": {
+    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.energySkateParkMassControls.massSlider.numberDisplay.valueText": {
       "phetioDocumentation": "",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -20021,7 +19215,7 @@ window.phet.preloads.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "TextIO"
     },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.energySkateParkMassControls.massNumberControl.numberDisplay.valueText.opacityProperty": {
+    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.energySkateParkMassControls.massSlider.numberDisplay.valueText.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -20034,7 +19228,7 @@ window.phet.preloads.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "NumberPropertyIO"
     },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.energySkateParkMassControls.massNumberControl.numberDisplay.valueText.pickableProperty": {
+    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.energySkateParkMassControls.massSlider.numberDisplay.valueText.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -20047,7 +19241,7 @@ window.phet.preloads.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.energySkateParkMassControls.massNumberControl.numberDisplay.valueText.textProperty": {
+    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.energySkateParkMassControls.massSlider.numberDisplay.valueText.textProperty": {
       "phetioDocumentation": "Property for the displayed text",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -20060,7 +19254,7 @@ window.phet.preloads.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO<StringIO>"
     },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.energySkateParkMassControls.massNumberControl.numberDisplay.valueText.visibleProperty": {
+    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.energySkateParkMassControls.massSlider.numberDisplay.valueText.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -20073,7 +19267,7 @@ window.phet.preloads.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO<BooleanIO>"
     },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.energySkateParkMassControls.massNumberControl.numberDisplay.visibleProperty": {
+    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.energySkateParkMassControls.massSlider.numberDisplay.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -20086,7 +19280,7 @@ window.phet.preloads.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO<BooleanIO>"
     },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.energySkateParkMassControls.massNumberControl.opacityProperty": {
+    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.energySkateParkMassControls.massSlider.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -20099,7 +19293,7 @@ window.phet.preloads.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "NumberPropertyIO"
     },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.energySkateParkMassControls.massNumberControl.pickableProperty": {
+    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.energySkateParkMassControls.massSlider.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -20112,7 +19306,7 @@ window.phet.preloads.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.energySkateParkMassControls.massNumberControl.rightArrowButton": {
+    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.energySkateParkMassControls.massSlider.rightArrowButton": {
       "phetioDocumentation": "",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -20125,7 +19319,7 @@ window.phet.preloads.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "NodeIO"
     },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.energySkateParkMassControls.massNumberControl.rightArrowButton.enabledProperty": {
+    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.energySkateParkMassControls.massSlider.rightArrowButton.enabledProperty": {
       "phetioDocumentation": "When disabled, the button is grayed out and cannot be pressed",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -20138,7 +19332,7 @@ window.phet.preloads.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO<BooleanIO>"
     },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.energySkateParkMassControls.massNumberControl.rightArrowButton.firedEmitter": {
+    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.energySkateParkMassControls.massSlider.rightArrowButton.firedEmitter": {
       "phetioDocumentation": "Emits when the button is fired No arguments.",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
@@ -20151,7 +19345,7 @@ window.phet.preloads.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "EmitterIO<>"
     },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.energySkateParkMassControls.massNumberControl.rightArrowButton.opacityProperty": {
+    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.energySkateParkMassControls.massSlider.rightArrowButton.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -20164,7 +19358,7 @@ window.phet.preloads.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "NumberPropertyIO"
     },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.energySkateParkMassControls.massNumberControl.rightArrowButton.pickableProperty": {
+    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.energySkateParkMassControls.massSlider.rightArrowButton.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -20177,7 +19371,7 @@ window.phet.preloads.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.energySkateParkMassControls.massNumberControl.rightArrowButton.pressListener.pressAction": {
+    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.energySkateParkMassControls.massSlider.rightArrowButton.pressListener.pressAction": {
       "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the SceneryEvent. The arguments are:<br/><ol><li>event: SceneryEventIO</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
@@ -20190,7 +19384,7 @@ window.phet.preloads.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "ActionIO<SceneryEventIO>"
     },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.energySkateParkMassControls.massNumberControl.rightArrowButton.pressListener.releaseAction": {
+    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.energySkateParkMassControls.massSlider.rightArrowButton.pressListener.releaseAction": {
       "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO<SceneryEventIO></li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
@@ -20203,7 +19397,7 @@ window.phet.preloads.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "ActionIO<NullableIO<SceneryEventIO>>"
     },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.energySkateParkMassControls.massNumberControl.rightArrowButton.visibleProperty": {
+    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.energySkateParkMassControls.massSlider.rightArrowButton.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -20216,7 +19410,7 @@ window.phet.preloads.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO<BooleanIO>"
     },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.energySkateParkMassControls.massNumberControl.slider": {
+    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.energySkateParkMassControls.massSlider.slider": {
       "phetioDocumentation": "",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -20229,7 +19423,7 @@ window.phet.preloads.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "SliderIO"
     },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.energySkateParkMassControls.massNumberControl.slider.enabledProperty": {
+    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.energySkateParkMassControls.massSlider.slider.enabledProperty": {
       "phetioDocumentation": "",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -20242,7 +19436,7 @@ window.phet.preloads.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO<BooleanIO>"
     },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.energySkateParkMassControls.massNumberControl.slider.enabledRangeProperty": {
+    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.energySkateParkMassControls.massSlider.slider.enabledRangeProperty": {
       "phetioDocumentation": "Sliders support two ranges: the outer range which specifies the min and max of the track and the enabledRangeProperty, which determines how low and high the thumb can be dragged within the track.",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -20255,7 +19449,7 @@ window.phet.preloads.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO<RangeIO>"
     },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.energySkateParkMassControls.massNumberControl.slider.opacityProperty": {
+    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.energySkateParkMassControls.massSlider.slider.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -20268,7 +19462,7 @@ window.phet.preloads.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "NumberPropertyIO"
     },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.energySkateParkMassControls.massNumberControl.slider.pickableProperty": {
+    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.energySkateParkMassControls.massSlider.slider.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -20281,7 +19475,7 @@ window.phet.preloads.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.energySkateParkMassControls.massNumberControl.slider.thumb": {
+    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.energySkateParkMassControls.massSlider.slider.thumb": {
       "phetioDocumentation": "",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -20294,7 +19488,7 @@ window.phet.preloads.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "NodeIO"
     },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.energySkateParkMassControls.massNumberControl.slider.thumb.opacityProperty": {
+    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.energySkateParkMassControls.massSlider.slider.thumb.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -20307,7 +19501,7 @@ window.phet.preloads.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "NumberPropertyIO"
     },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.energySkateParkMassControls.massNumberControl.slider.thumb.pickableProperty": {
+    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.energySkateParkMassControls.massSlider.slider.thumb.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -20320,7 +19514,7 @@ window.phet.preloads.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.energySkateParkMassControls.massNumberControl.slider.thumb.visibleProperty": {
+    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.energySkateParkMassControls.massSlider.slider.thumb.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -20333,7 +19527,7 @@ window.phet.preloads.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO<BooleanIO>"
     },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.energySkateParkMassControls.massNumberControl.slider.thumbInputListener": {
+    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.energySkateParkMassControls.massSlider.slider.thumbInputListener": {
       "phetioDocumentation": "",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
@@ -20346,7 +19540,7 @@ window.phet.preloads.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "ObjectIO"
     },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.energySkateParkMassControls.massNumberControl.slider.thumbInputListener.dragAction": {
+    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.energySkateParkMassControls.massSlider.slider.thumbInputListener.dragAction": {
       "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO - the position of the drag in view coordinates</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -20359,7 +19553,7 @@ window.phet.preloads.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "ActionIO<Vector2IO>"
     },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.energySkateParkMassControls.massNumberControl.slider.thumbInputListener.dragEndAction": {
+    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.energySkateParkMassControls.massSlider.slider.thumbInputListener.dragEndAction": {
       "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO - the position of the drag end in view coordinates</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -20372,7 +19566,7 @@ window.phet.preloads.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "ActionIO<Vector2IO>"
     },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.energySkateParkMassControls.massNumberControl.slider.thumbInputListener.dragStartAction": {
+    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.energySkateParkMassControls.massSlider.slider.thumbInputListener.dragStartAction": {
       "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO - the position of the drag start in view coordinates</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -20385,7 +19579,7 @@ window.phet.preloads.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "ActionIO<Vector2IO>"
     },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.energySkateParkMassControls.massNumberControl.slider.thumbInputListener.isDraggingProperty": {
+    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.energySkateParkMassControls.massSlider.slider.thumbInputListener.isDraggingProperty": {
       "phetioDocumentation": "Indicates whether the object is dragging",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -20398,7 +19592,7 @@ window.phet.preloads.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO<BooleanIO>"
     },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.energySkateParkMassControls.massNumberControl.slider.track.trackInputListener": {
+    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.energySkateParkMassControls.massSlider.slider.track.trackInputListener": {
       "phetioDocumentation": "",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
@@ -20411,7 +19605,7 @@ window.phet.preloads.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "ObjectIO"
     },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.energySkateParkMassControls.massNumberControl.slider.track.trackInputListener.dragAction": {
+    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.energySkateParkMassControls.massSlider.slider.track.trackInputListener.dragAction": {
       "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO - the position of the drag in view coordinates</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -20424,7 +19618,7 @@ window.phet.preloads.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "ActionIO<Vector2IO>"
     },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.energySkateParkMassControls.massNumberControl.slider.track.trackInputListener.dragEndAction": {
+    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.energySkateParkMassControls.massSlider.slider.track.trackInputListener.dragEndAction": {
       "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO - the position of the drag end in view coordinates</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -20437,7 +19631,7 @@ window.phet.preloads.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "ActionIO<Vector2IO>"
     },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.energySkateParkMassControls.massNumberControl.slider.track.trackInputListener.dragStartAction": {
+    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.energySkateParkMassControls.massSlider.slider.track.trackInputListener.dragStartAction": {
       "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO - the position of the drag start in view coordinates</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -20450,7 +19644,7 @@ window.phet.preloads.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "ActionIO<Vector2IO>"
     },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.energySkateParkMassControls.massNumberControl.slider.track.trackInputListener.isDraggingProperty": {
+    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.energySkateParkMassControls.massSlider.slider.track.trackInputListener.isDraggingProperty": {
       "phetioDocumentation": "Indicates whether the object is dragging",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -20463,7 +19657,7 @@ window.phet.preloads.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO<BooleanIO>"
     },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.energySkateParkMassControls.massNumberControl.slider.valueProperty": {
+    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.energySkateParkMassControls.massSlider.slider.valueProperty": {
       "phetioDocumentation": "",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -20476,7 +19670,7 @@ window.phet.preloads.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "LinkedElementIO"
     },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.energySkateParkMassControls.massNumberControl.slider.visibleProperty": {
+    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.energySkateParkMassControls.massSlider.slider.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -20489,7 +19683,7 @@ window.phet.preloads.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO<BooleanIO>"
     },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.energySkateParkMassControls.massNumberControl.titleNode": {
+    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.energySkateParkMassControls.massSlider.titleNode": {
       "phetioDocumentation": "",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -20502,7 +19696,7 @@ window.phet.preloads.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "TextIO"
     },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.energySkateParkMassControls.massNumberControl.titleNode.opacityProperty": {
+    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.energySkateParkMassControls.massSlider.titleNode.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -20515,7 +19709,7 @@ window.phet.preloads.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "NumberPropertyIO"
     },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.energySkateParkMassControls.massNumberControl.titleNode.pickableProperty": {
+    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.energySkateParkMassControls.massSlider.titleNode.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -20528,7 +19722,7 @@ window.phet.preloads.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.energySkateParkMassControls.massNumberControl.titleNode.textProperty": {
+    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.energySkateParkMassControls.massSlider.titleNode.textProperty": {
       "phetioDocumentation": "Property for the displayed text",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -20541,7 +19735,7 @@ window.phet.preloads.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO<StringIO>"
     },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.energySkateParkMassControls.massNumberControl.titleNode.visibleProperty": {
+    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.energySkateParkMassControls.massSlider.titleNode.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -20554,7 +19748,7 @@ window.phet.preloads.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO<BooleanIO>"
     },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.energySkateParkMassControls.massNumberControl.visibleProperty": {
+    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.energySkateParkMassControls.massSlider.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -21438,7 +20632,7 @@ window.phet.preloads.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.visibilityControls.barGraphCheckbox": {
+    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.visibilityControls": {
       "phetioDocumentation": "",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
@@ -21450,149 +20644,6 @@ window.phet.preloads.phetio.phetioElementsBaseline = assert &&
       "phetioState": false,
       "phetioStudioControl": true,
       "phetioTypeName": "NodeIO"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.visibilityControls.barGraphCheckbox.enabledProperty": {
-      "phetioDocumentation": "When disabled, the checkbox is grayed out and cannot be pressed.",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": true,
-      "phetioHighFrequency": false,
-      "phetioIsArchetype": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": true,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO<BooleanIO>"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.visibilityControls.barGraphCheckbox.itemLabel": {
-      "phetioDocumentation": "",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioIsArchetype": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "TextIO"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.visibilityControls.barGraphCheckbox.itemLabel.opacityProperty": {
-      "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioIsArchetype": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": true,
-      "phetioStudioControl": true,
-      "phetioTypeName": "NumberPropertyIO"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.visibilityControls.barGraphCheckbox.itemLabel.pickableProperty": {
-      "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioIsArchetype": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": true,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.visibilityControls.barGraphCheckbox.itemLabel.textProperty": {
-      "phetioDocumentation": "Property for the displayed text",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioIsArchetype": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": true,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO<StringIO>"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.visibilityControls.barGraphCheckbox.itemLabel.visibleProperty": {
-      "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioIsArchetype": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": true,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO<BooleanIO>"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.visibilityControls.barGraphCheckbox.opacityProperty": {
-      "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioIsArchetype": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": true,
-      "phetioStudioControl": true,
-      "phetioTypeName": "NumberPropertyIO"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.visibilityControls.barGraphCheckbox.pickableProperty": {
-      "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioIsArchetype": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": true,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.visibilityControls.barGraphCheckbox.property": {
-      "phetioDocumentation": "",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioIsArchetype": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": true,
-      "phetioState": true,
-      "phetioStudioControl": true,
-      "phetioTypeName": "LinkedElementIO"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.visibilityControls.barGraphCheckbox.toggleAction": {
-      "phetioDocumentation": "Emits when user input causes the checkbox to toggle, emitting a single arg: the new boolean value of the checkbox state. No arguments.",
-      "phetioDynamicElement": false,
-      "phetioEventType": "USER",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioIsArchetype": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO<>"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.visibilityControls.barGraphCheckbox.visibleProperty": {
-      "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": true,
-      "phetioHighFrequency": false,
-      "phetioIsArchetype": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": true,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.visibilityControls.barGraphIcon": {
       "phetioDocumentation": "",
@@ -21646,151 +20697,8 @@ window.phet.preloads.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO<BooleanIO>"
     },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.visibilityControls.gridCheckbox": {
-      "phetioDocumentation": "",
-      "phetioDynamicElement": false,
-      "phetioEventType": "USER",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioIsArchetype": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "NodeIO"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.visibilityControls.gridCheckbox.enabledProperty": {
+    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.visibilityControls.enabledProperty": {
       "phetioDocumentation": "When disabled, the checkbox is grayed out and cannot be pressed.",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": true,
-      "phetioHighFrequency": false,
-      "phetioIsArchetype": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": true,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO<BooleanIO>"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.visibilityControls.gridCheckbox.itemLabel": {
-      "phetioDocumentation": "",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioIsArchetype": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "TextIO"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.visibilityControls.gridCheckbox.itemLabel.opacityProperty": {
-      "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioIsArchetype": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": true,
-      "phetioStudioControl": true,
-      "phetioTypeName": "NumberPropertyIO"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.visibilityControls.gridCheckbox.itemLabel.pickableProperty": {
-      "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioIsArchetype": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": true,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.visibilityControls.gridCheckbox.itemLabel.textProperty": {
-      "phetioDocumentation": "Property for the displayed text",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioIsArchetype": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": true,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO<StringIO>"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.visibilityControls.gridCheckbox.itemLabel.visibleProperty": {
-      "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioIsArchetype": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": true,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO<BooleanIO>"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.visibilityControls.gridCheckbox.opacityProperty": {
-      "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioIsArchetype": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": true,
-      "phetioStudioControl": true,
-      "phetioTypeName": "NumberPropertyIO"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.visibilityControls.gridCheckbox.pickableProperty": {
-      "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioIsArchetype": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": true,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.visibilityControls.gridCheckbox.property": {
-      "phetioDocumentation": "",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioIsArchetype": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": true,
-      "phetioState": true,
-      "phetioStudioControl": true,
-      "phetioTypeName": "LinkedElementIO"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.visibilityControls.gridCheckbox.toggleAction": {
-      "phetioDocumentation": "Emits when user input causes the checkbox to toggle, emitting a single arg: the new boolean value of the checkbox state. No arguments.",
-      "phetioDynamicElement": false,
-      "phetioEventType": "USER",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioIsArchetype": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO<>"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.visibilityControls.gridCheckbox.visibleProperty": {
-      "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
       "phetioFeatured": true,
@@ -21854,46 +20762,7 @@ window.phet.preloads.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO<BooleanIO>"
     },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.visibilityControls.pieChartCheckbox": {
-      "phetioDocumentation": "",
-      "phetioDynamicElement": false,
-      "phetioEventType": "USER",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioIsArchetype": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "NodeIO"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.visibilityControls.pieChartCheckbox.enabledProperty": {
-      "phetioDocumentation": "When disabled, the checkbox is grayed out and cannot be pressed.",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": true,
-      "phetioHighFrequency": false,
-      "phetioIsArchetype": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": true,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO<BooleanIO>"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.visibilityControls.pieChartCheckbox.itemLabel": {
-      "phetioDocumentation": "",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioIsArchetype": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "TextIO"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.visibilityControls.pieChartCheckbox.itemLabel.opacityProperty": {
+    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.visibilityControls.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -21906,7 +20775,7 @@ window.phet.preloads.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "NumberPropertyIO"
     },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.visibilityControls.pieChartCheckbox.itemLabel.pickableProperty": {
+    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.visibilityControls.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -21918,97 +20787,6 @@ window.phet.preloads.phetio.phetioElementsBaseline = assert &&
       "phetioState": true,
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.visibilityControls.pieChartCheckbox.itemLabel.textProperty": {
-      "phetioDocumentation": "Property for the displayed text",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioIsArchetype": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": true,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO<StringIO>"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.visibilityControls.pieChartCheckbox.itemLabel.visibleProperty": {
-      "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioIsArchetype": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": true,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO<BooleanIO>"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.visibilityControls.pieChartCheckbox.opacityProperty": {
-      "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioIsArchetype": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": true,
-      "phetioStudioControl": true,
-      "phetioTypeName": "NumberPropertyIO"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.visibilityControls.pieChartCheckbox.pickableProperty": {
-      "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioIsArchetype": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": true,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.visibilityControls.pieChartCheckbox.property": {
-      "phetioDocumentation": "",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioIsArchetype": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": true,
-      "phetioState": true,
-      "phetioStudioControl": true,
-      "phetioTypeName": "LinkedElementIO"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.visibilityControls.pieChartCheckbox.toggleAction": {
-      "phetioDocumentation": "Emits when user input causes the checkbox to toggle, emitting a single arg: the new boolean value of the checkbox state. No arguments.",
-      "phetioDynamicElement": false,
-      "phetioEventType": "USER",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioIsArchetype": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO<>"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.visibilityControls.pieChartCheckbox.visibleProperty": {
-      "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": true,
-      "phetioHighFrequency": false,
-      "phetioIsArchetype": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": true,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.visibilityControls.pieChartIcon": {
       "phetioDocumentation": "",
@@ -22113,6 +20891,19 @@ window.phet.preloads.phetio.phetioElementsBaseline = assert &&
       "phetioState": true,
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO<BooleanIO>"
+    },
+    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.visibilityControls.property": {
+      "phetioDocumentation": "",
+      "phetioDynamicElement": false,
+      "phetioEventType": "MODEL",
+      "phetioFeatured": false,
+      "phetioHighFrequency": false,
+      "phetioIsArchetype": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": true,
+      "phetioState": true,
+      "phetioStudioControl": true,
+      "phetioTypeName": "LinkedElementIO"
     },
     "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.visibilityControls.speedIcon.gaugeNode": {
       "phetioDocumentation": "",
@@ -22283,33 +21074,7 @@ window.phet.preloads.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO<BooleanIO>"
     },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.visibilityControls.speedometerCheckbox": {
-      "phetioDocumentation": "",
-      "phetioDynamicElement": false,
-      "phetioEventType": "USER",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioIsArchetype": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "NodeIO"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.visibilityControls.speedometerCheckbox.enabledProperty": {
-      "phetioDocumentation": "When disabled, the checkbox is grayed out and cannot be pressed.",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": true,
-      "phetioHighFrequency": false,
-      "phetioIsArchetype": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": true,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO<BooleanIO>"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.visibilityControls.speedometerCheckbox.itemLabel": {
+    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.visibilityControls.text": {
       "phetioDocumentation": "",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -22322,7 +21087,7 @@ window.phet.preloads.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "TextIO"
     },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.visibilityControls.speedometerCheckbox.itemLabel.opacityProperty": {
+    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.visibilityControls.text.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -22335,7 +21100,7 @@ window.phet.preloads.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "NumberPropertyIO"
     },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.visibilityControls.speedometerCheckbox.itemLabel.pickableProperty": {
+    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.visibilityControls.text.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -22348,7 +21113,7 @@ window.phet.preloads.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.visibilityControls.speedometerCheckbox.itemLabel.textProperty": {
+    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.visibilityControls.text.textProperty": {
       "phetioDocumentation": "Property for the displayed text",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -22361,7 +21126,7 @@ window.phet.preloads.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO<StringIO>"
     },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.visibilityControls.speedometerCheckbox.itemLabel.visibleProperty": {
+    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.visibilityControls.text.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -22374,46 +21139,7 @@ window.phet.preloads.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO<BooleanIO>"
     },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.visibilityControls.speedometerCheckbox.opacityProperty": {
-      "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioIsArchetype": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": true,
-      "phetioStudioControl": true,
-      "phetioTypeName": "NumberPropertyIO"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.visibilityControls.speedometerCheckbox.pickableProperty": {
-      "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioIsArchetype": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": false,
-      "phetioState": true,
-      "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.visibilityControls.speedometerCheckbox.property": {
-      "phetioDocumentation": "",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": false,
-      "phetioIsArchetype": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": true,
-      "phetioState": true,
-      "phetioStudioControl": true,
-      "phetioTypeName": "LinkedElementIO"
-    },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.visibilityControls.speedometerCheckbox.toggleAction": {
+    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.visibilityControls.toggleAction": {
       "phetioDocumentation": "Emits when user input causes the checkbox to toggle, emitting a single arg: the new boolean value of the checkbox state. No arguments.",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
@@ -22426,7 +21152,7 @@ window.phet.preloads.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "ActionIO<>"
     },
-    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.visibilityControls.speedometerCheckbox.visibleProperty": {
+    "energySkateParkBasics.playgroundScreen.view.graphsScreenView.controlPanel.visibilityControls.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
