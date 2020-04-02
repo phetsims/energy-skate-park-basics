@@ -10,7 +10,7 @@
 import Range from '../../../../../dot/js/Range.js';
 import Vector2 from '../../../../../dot/js/Vector2.js';
 import EnergySkateParkPlaygroundScreenView
-  from '../../../../../energy-skate-park/js/energy-skate-park/common/view/EnergySkateParkPlaygroundScreenView.js';
+  from '../../../../../energy-skate-park/js/energy-skate-park/playground/view/EnergySkateParkPlaygroundScreenView.js';
 import energySkateParkBasics from '../../../energySkateParkBasics.js';
 import EnergyBarGraphPanel from '../../common/view/EnergyBarGraphPanel.js';
 
@@ -21,6 +21,7 @@ class PlaygroundScreenView extends EnergySkateParkPlaygroundScreenView {
    * @param {Tandem} tandem
    */
   constructor( model, tandem ) {
+
     super( model, tandem.createTandem( 'graphsScreenView' ), {
       showReferenceHeight: false,
       showToolbox: false,
@@ -32,7 +33,13 @@ class PlaygroundScreenView extends EnergySkateParkPlaygroundScreenView {
         showGravityControls: false,
         visibilityControlsOptions: {
           showGridCheckbox: true,
-          showBarGraphCheckbox: true
+          showBarGraphCheckbox: true,
+          showStickToTrackCheckbox: false
+        },
+        massControlsOptions: {
+          includeMassSlider: true,
+          includeMassNumberControl: false,
+          includeSkaterComboBox: false
         }
       },
 

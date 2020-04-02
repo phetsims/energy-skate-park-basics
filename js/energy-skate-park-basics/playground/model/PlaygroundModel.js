@@ -7,7 +7,7 @@
  */
 
 import EnergySkateParkPlaygroundModel
-  from '../../../../../energy-skate-park/js/energy-skate-park/common/model/EnergySkateParkPlaygroundModel.js';
+  from '../../../../../energy-skate-park/js/energy-skate-park/playground/model/EnergySkateParkPlaygroundModel.js';
 import energySkateParkBasics from '../../../energySkateParkBasics.js';
 import Constants from '../../Constants.js';
 
