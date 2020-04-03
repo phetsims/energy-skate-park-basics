@@ -7,8 +7,7 @@
  * @author Jesse Greenberg
  */
 
-import EnergySkateParkTrackSetModel
-  from '../../../../../energy-skate-park/js/energy-skate-park/common/model/EnergySkateParkTrackSetModel.js';
+import EnergySkateParkTrackSetModel from '../../../../../energy-skate-park/js/energy-skate-park/common/model/EnergySkateParkTrackSetModel.js';
 import energySkateParkBasics from '../../../energySkateParkBasics.js';
 
 class EnergySkateParkBasicsTrackSetModel extends EnergySkateParkTrackSetModel {

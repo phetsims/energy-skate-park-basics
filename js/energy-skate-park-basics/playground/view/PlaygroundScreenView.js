@@ -9,8 +9,7 @@
 
 import Range from '../../../../../dot/js/Range.js';
 import Vector2 from '../../../../../dot/js/Vector2.js';
-import EnergySkateParkPlaygroundScreenView
-  from '../../../../../energy-skate-park/js/energy-skate-park/playground/view/EnergySkateParkPlaygroundScreenView.js';
+import EnergySkateParkPlaygroundScreenView from '../../../../../energy-skate-park/js/energy-skate-park/playground/view/EnergySkateParkPlaygroundScreenView.js';
 import energySkateParkBasics from '../../../energySkateParkBasics.js';
 import EnergyBarGraphPanel from '../../common/view/EnergyBarGraphPanel.js';
 
