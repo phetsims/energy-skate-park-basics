@@ -14,7 +14,6 @@ class FrictionScreenView extends EnergySkateParkBasicsTrackSetScreenView {
   /**
    * @param {FrictionModel} model
    * @param {Tandem} tandem
-   * @constructor
    */
   constructor( model, tandem ) {
     super( model, tandem.createTandem( 'introScreenView' ), {

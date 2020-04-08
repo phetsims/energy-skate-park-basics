@@ -15,7 +15,6 @@ class IntroModel extends EnergySkateParkBasicsTrackSetModel {
 
   /**
    * @param {Tandem} tandem
-   * @constructor
    */
   constructor( tandem ) {
     super( tandem, merge( {}, Constants.BASICS_MODEL_OPTIONS, { includeFriction: false } ) );

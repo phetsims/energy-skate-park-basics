@@ -17,7 +17,6 @@ const energySkateParkBasicsTitleString = energySkateParkBasicsStrings[ 'energy-s
 
 /**
  * @param {Tandem} tandem
- * @constructor
  */
 class EnergySkateParkBasicsSim extends EnergySkateParkSim {
 

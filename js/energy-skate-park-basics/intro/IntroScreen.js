@@ -20,7 +20,6 @@ const screenIntroductionString = energySkateParkBasicsStrings.screen.introductio
 
 /**
  * @param {Tandem} tandem
- * @constructor
  */
 class IntroScreen extends Screen {
   constructor( tandem, options ) {

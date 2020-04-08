@@ -20,7 +20,6 @@ const screenFrictionString = energySkateParkBasicsStrings.screen.friction;
 
 /**
  * @param {Tandem} tandem
- * @constructor
  */
 class FrictionScreen extends Screen {
 
