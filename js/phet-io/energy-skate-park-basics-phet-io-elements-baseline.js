@@ -1429,7 +1429,7 @@ window.phet.preloads.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO<NullableIO<ReferenceIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<ReferenceIO<TrackIO>>>"
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.trackSetModel.skater.velocityProperty": {
       "phetioDocumentation": "",
@@ -1494,7 +1494,7 @@ window.phet.preloads.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "ReferenceIO"
+      "phetioTypeName": "ReferenceIO<ObjectIO>"
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.trackSetModel.stopwatch.isRunningProperty": {
       "phetioDocumentation": "",
@@ -1559,7 +1559,7 @@ window.phet.preloads.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "ObservableArrayIO<ReferenceIO>"
+      "phetioTypeName": "ObservableArrayIO<ReferenceIO<TrackIO>>"
     },
     "energySkateParkBasics.frictionScreen.model.frictionModel.trackSetModel.tracks.lengthProperty": {
       "phetioDocumentation": "",
@@ -12180,7 +12180,7 @@ window.phet.preloads.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO<NullableIO<ReferenceIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<ReferenceIO<TrackIO>>>"
     },
     "energySkateParkBasics.introScreen.model.trackSetModel.skater.velocityProperty": {
       "phetioDocumentation": "",
@@ -12245,7 +12245,7 @@ window.phet.preloads.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "ReferenceIO"
+      "phetioTypeName": "ReferenceIO<ObjectIO>"
     },
     "energySkateParkBasics.introScreen.model.trackSetModel.stopwatch.isRunningProperty": {
       "phetioDocumentation": "",
@@ -12310,7 +12310,7 @@ window.phet.preloads.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "ObservableArrayIO<ReferenceIO>"
+      "phetioTypeName": "ObservableArrayIO<ReferenceIO<TrackIO>>"
     },
     "energySkateParkBasics.introScreen.model.trackSetModel.tracks.lengthProperty": {
       "phetioDocumentation": "",
@@ -18550,7 +18550,7 @@ window.phet.preloads.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "PropertyIO<NullableIO<ReferenceIO>>"
+      "phetioTypeName": "PropertyIO<NullableIO<ReferenceIO<TrackIO>>>"
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.skater.velocityProperty": {
       "phetioDocumentation": "",
@@ -18615,7 +18615,7 @@ window.phet.preloads.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "ReferenceIO"
+      "phetioTypeName": "ReferenceIO<ObjectIO>"
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.stopwatch.isRunningProperty": {
       "phetioDocumentation": "",
@@ -18680,7 +18680,7 @@ window.phet.preloads.phetio.phetioElementsBaseline = assert &&
       "phetioReadOnly": false,
       "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "ObservableArrayIO<ReferenceIO>"
+      "phetioTypeName": "ObservableArrayIO<ReferenceIO<TrackIO>>"
     },
     "energySkateParkBasics.playgroundScreen.model.playgroundModel.tracks.lengthProperty": {
       "phetioDocumentation": "",
