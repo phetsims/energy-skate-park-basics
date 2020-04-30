@@ -39,7 +39,8 @@ class PlaygroundScreenView extends EnergySkateParkPlaygroundScreenView {
           includeMassSlider: true,
           includeMassNumberControl: false,
           includeSkaterComboBox: false
-        }
+        },
+        showSkaterControls: false
       },
 
       // energy-skate-park-basics uses its own bar graph in a panel
