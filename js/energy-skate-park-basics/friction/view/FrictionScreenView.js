@@ -20,7 +20,8 @@ class FrictionScreenView extends EnergySkateParkBasicsTrackSetScreenView {
       controlPanelOptions: {
         showGravityControls: false,
         showFrictionControls: true
-      }
+      },
+      drawSkaterPath: false
     } );
   }
 }

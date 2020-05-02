@@ -16,7 +16,9 @@ class IntroScreenView extends EnergySkateParkBasicsTrackSetScreenView {
    * @param  {Tandem} tandem
    */
   constructor( model, tandem ) {
-    super( model, tandem.createTandem( 'introScreenView' ) );
+    super( model, tandem.createTandem( 'introScreenView' ), {
+      drawSkaterPath: false
+    } );
   }
 }
 
