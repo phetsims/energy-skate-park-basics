@@ -6,8 +6,7 @@
  * @author Jesse Greenberg (PhET Interactive Simulations)
  */
 
-import iconPlaygroundHomescreen from '../../../../energy-skate-park/images/icon-playground-homescreen_png.js';
-import iconPlaygroundNavbar from '../../../../energy-skate-park/images/icon-playground-navbar_png.js';
+import iconPlaygroundHomescreen from '../../../../energy-skate-park-basics/images/icon-playground-homescreen_png.js';
 import Screen from '../../../../joist/js/Screen.js';
 import merge from '../../../../phet-core/js/merge.js';
 import Image from '../../../../scenery/js/nodes/Image.js';
@@ -23,7 +22,6 @@ class PlaygroundScreen extends Screen {
     options = merge( {
       name: screenTrackPlaygroundString,
       homeScreenIcon: new Image( iconPlaygroundHomescreen ),
-      navigationBarIcon: new Image( iconPlaygroundNavbar ),
 
       tandem: tandem
     }, options );

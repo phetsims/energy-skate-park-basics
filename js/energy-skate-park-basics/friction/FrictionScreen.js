@@ -6,8 +6,7 @@
  * @author Jesse Greenberg (PhET Interactive Simulations)
  */
 
-import iconFrictionHomescreen from '../../../../energy-skate-park/images/icon-friction-homescreen_png.js';
-import iconFrictionNavbar from '../../../../energy-skate-park/images/icon-friction-navbar_png.js';
+import iconFrictionHomescreen from '../../../../energy-skate-park-basics/images/icon-friction-homescreen_png.js';
 import Screen from '../../../../joist/js/Screen.js';
 import merge from '../../../../phet-core/js/merge.js';
 import Image from '../../../../scenery/js/nodes/Image.js';
@@ -31,7 +30,6 @@ class FrictionScreen extends Screen {
     options = merge( {
       name: screenFrictionString,
       homeScreenIcon: new Image( iconFrictionHomescreen ),
-      navigationBarIcon: new Image( iconFrictionNavbar ),
 
       tandem: tandem
     }, options );
