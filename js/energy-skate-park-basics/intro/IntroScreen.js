@@ -8,6 +8,7 @@
 
 import iconIntroHomescreen from '../../../../energy-skate-park-basics/images/icon-intro-homescreen_png.js';
 import Screen from '../../../../joist/js/Screen.js';
+import ScreenIcon from '../../../../joist/js/ScreenIcon.js';
 import merge from '../../../../phet-core/js/merge.js';
 import Image from '../../../../scenery/js/nodes/Image.js';
 import energySkateParkBasicsStrings from '../../energySkateParkBasicsStrings.js';
@@ -25,7 +26,10 @@ class IntroScreen extends Screen {
     options = merge( {
       name: screenIntroductionString,
       tandem: tandem,
-      homeScreenIcon: new Image( iconIntroHomescreen )
+      homeScreenIcon: new ScreenIcon( new Image( iconIntroHomescreen ), {
+        maxIconWidthProportion: 1,
+        maxIconHeightProportion: 1
+      } )
     }, options );
 
     super(

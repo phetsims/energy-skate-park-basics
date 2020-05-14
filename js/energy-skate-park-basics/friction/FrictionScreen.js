@@ -8,6 +8,7 @@
 
 import iconFrictionHomescreen from '../../../../energy-skate-park-basics/images/icon-friction-homescreen_png.js';
 import Screen from '../../../../joist/js/Screen.js';
+import ScreenIcon from '../../../../joist/js/ScreenIcon.js';
 import merge from '../../../../phet-core/js/merge.js';
 import Image from '../../../../scenery/js/nodes/Image.js';
 import energySkateParkBasicsStrings from '../../energySkateParkBasicsStrings.js';
@@ -29,7 +30,10 @@ class FrictionScreen extends Screen {
   constructor( tandem, options ) {
     options = merge( {
       name: screenFrictionString,
-      homeScreenIcon: new Image( iconFrictionHomescreen ),
+      homeScreenIcon: new ScreenIcon( new Image( iconFrictionHomescreen ), {
+        maxIconWidthProportion: 1,
+        maxIconHeightProportion: 1
+      } ),
 
       tandem: tandem
     }, options );
