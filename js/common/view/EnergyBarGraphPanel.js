@@ -6,12 +6,12 @@
  * @author Jesse Greenberg
  */
 
-import Constants from '../../../../../energy-skate-park/js/energy-skate-park/common/Constants.js';
-import EnergyBarGraph from '../../../../../energy-skate-park/js/energy-skate-park/common/view/EnergyBarGraph.js';
-import merge from '../../../../../phet-core/js/merge.js';
-import VBox from '../../../../../scenery/js/nodes/VBox.js';
-import Panel from '../../../../../sun/js/Panel.js';
-import energySkateParkBasics from '../../../energySkateParkBasics.js';
+import Constants from '../../../../energy-skate-park/js/common/Constants.js';
+import EnergyBarGraph from '../../../../energy-skate-park/js/common/view/EnergyBarGraph.js';
+import merge from '../../../../phet-core/js/merge.js';
+import VBox from '../../../../scenery/js/nodes/VBox.js';
+import Panel from '../../../../sun/js/Panel.js';
+import energySkateParkBasics from '../../energySkateParkBasics.js';
 
 class EnergyBarGraphPanel extends Panel {
 

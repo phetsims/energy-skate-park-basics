@@ -6,9 +6,9 @@
  * @author Sam Reid (PhET Interactive Simulations)
  */
 
-import Dimension2 from '../../../dot/js/Dimension2.js';
-import Range from '../../../dot/js/Range.js';
-import energySkateParkBasics from '../energySkateParkBasics.js';
+import Dimension2 from '../../dot/js/Dimension2.js';
+import Range from '../../dot/js/Range.js';
+import energySkateParkBasics from './energySkateParkBasics.js';
 
 const minMass = 25; // kg
 const maxMass = 100;

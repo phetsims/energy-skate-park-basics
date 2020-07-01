@@ -6,8 +6,8 @@
  * @author Jesse Greenberg (PhET Interactive Simulations)
  */
 
-import merge from '../../../../../phet-core/js/merge.js';
-import energySkateParkBasics from '../../../energySkateParkBasics.js';
+import merge from '../../../../phet-core/js/merge.js';
+import energySkateParkBasics from '../../energySkateParkBasics.js';
 import EnergySkateParkBasicsTrackSetModel from '../../common/model/EnergySkateParkBasicsTrackSetModel.js';
 import Constants from '../../Constants.js';
 

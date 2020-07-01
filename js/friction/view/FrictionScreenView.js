@@ -6,7 +6,7 @@
  * @author Jesse Greenberg (PhET Interactive Simulations)
  */
 
-import energySkateParkBasics from '../../../energySkateParkBasics.js';
+import energySkateParkBasics from '../../energySkateParkBasics.js';
 import EnergySkateParkBasicsTrackSetScreenView from '../../common/view/EnergySkateParkBasicsTrackSetScreenView.js';
 
 class FrictionScreenView extends EnergySkateParkBasicsTrackSetScreenView {

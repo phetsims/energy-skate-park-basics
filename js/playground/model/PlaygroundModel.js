@@ -6,8 +6,8 @@
  * @author Jesse Greenberg (PhET Interactive Simulations)
  */
 
-import EnergySkateParkPlaygroundModel from '../../../../../energy-skate-park/js/energy-skate-park/playground/model/EnergySkateParkPlaygroundModel.js';
-import energySkateParkBasics from '../../../energySkateParkBasics.js';
+import EnergySkateParkPlaygroundModel from '../../../../energy-skate-park/js/playground/model/EnergySkateParkPlaygroundModel.js';
+import energySkateParkBasics from '../../energySkateParkBasics.js';
 import Constants from '../../Constants.js';
 
 class PlaygroundModel extends EnergySkateParkPlaygroundModel {
