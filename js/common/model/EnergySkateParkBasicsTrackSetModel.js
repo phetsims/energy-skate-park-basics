@@ -16,7 +16,7 @@ class EnergySkateParkBasicsTrackSetModel extends EnergySkateParkTrackSetModel {
 
   /**
    * @param {Tandem} tandem
-   * // REVIEW: jsdoc
+   * @param {Object} [options]
    */
   constructor( tandem, options ) {
     options = merge( {
