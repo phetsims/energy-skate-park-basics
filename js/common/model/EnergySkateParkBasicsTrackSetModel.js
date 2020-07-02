@@ -8,6 +8,8 @@
  */
 
 import EnergySkateParkTrackSetModel from '../../../../energy-skate-park/js/common/model/EnergySkateParkTrackSetModel.js';
+import PremadeTracks from '../../../../energy-skate-park/js/common/model/PremadeTracks.js';
+import merge from '../../../../phet-core/js/merge.js';
 import energySkateParkBasics from '../../energySkateParkBasics.js';
 
 class EnergySkateParkBasicsTrackSetModel extends EnergySkateParkTrackSetModel {
@@ -17,8 +19,15 @@ class EnergySkateParkBasicsTrackSetModel extends EnergySkateParkTrackSetModel {
    * // REVIEW: jsdoc
    */
   constructor( tandem, options ) {
+    options = merge( {
+      trackTypes: [
+        PremadeTracks.TrackType.PARABOLA,
+        PremadeTracks.TrackType.SLOPE,
+        PremadeTracks.TrackType.DOUBLE_WELL
+      ]
+    }, options );
+
     super( tandem, options );
-    this.addTrackSet( EnergySkateParkTrackSetModel.createBasicTrackSet( this, tandem ) );
   }
 }
 
