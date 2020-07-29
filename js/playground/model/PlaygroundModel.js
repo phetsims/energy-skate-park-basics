@@ -8,7 +8,7 @@
 
 import EnergySkateParkPlaygroundModel from '../../../../energy-skate-park/js/playground/model/EnergySkateParkPlaygroundModel.js';
 import energySkateParkBasics from '../../energySkateParkBasics.js';
-import Constants from '../../Constants.js';
+import EnergySkateParkBasicsConstants from '../../EnergySkateParkBasicsConstants.js';
 
 class PlaygroundModel extends EnergySkateParkPlaygroundModel {
 
@@ -16,7 +16,7 @@ class PlaygroundModel extends EnergySkateParkPlaygroundModel {
    * @param {Tandem} tandem
    */
   constructor( tandem ) {
-    super( tandem.createTandem( 'playgroundModel' ), Constants.BASICS_MODEL_OPTIONS );
+    super( tandem.createTandem( 'playgroundModel' ), EnergySkateParkBasicsConstants.BASICS_MODEL_OPTIONS );
   }
 }
 

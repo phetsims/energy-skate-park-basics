@@ -8,7 +8,7 @@
 
 import energySkateParkBasics from '../../energySkateParkBasics.js';
 import EnergySkateParkBasicsTrackSetModel from '../../common/model/EnergySkateParkBasicsTrackSetModel.js';
-import Constants from '../../Constants.js';
+import EnergySkateParkBasicsConstants from '../../EnergySkateParkBasicsConstants.js';
 
 class FrictionModel extends EnergySkateParkBasicsTrackSetModel {
 
@@ -16,7 +16,7 @@ class FrictionModel extends EnergySkateParkBasicsTrackSetModel {
    * @param {Tandem} tandem
    */
   constructor( tandem ) {
-    super( tandem.createTandem( 'frictionModel' ), Constants.BASICS_MODEL_OPTIONS );
+    super( tandem.createTandem( 'frictionModel' ), EnergySkateParkBasicsConstants.BASICS_MODEL_OPTIONS );
   }
 }
 

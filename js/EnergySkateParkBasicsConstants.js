@@ -1,7 +1,7 @@
 // Copyright 2013-2020, University of Colorado Boulder
 
 /**
- * Constants specific to Energy Skate Park: Basics.
+ * EnergySkateParkBasicsConstants specific to Energy Skate Park: Basics.
  *
  * @author Sam Reid (PhET Interactive Simulations)
  */
@@ -16,7 +16,7 @@ const defaultMass = ( minMass + maxMass ) / 2;
 const massRange = new Range( minMass, maxMass );
 
 // REVIEW: This should be prefixed with teh simulation name: EnergySkateParkBasicsConstants
-const Constants = {
+const EnergySkateParkBasicsConstants = {
   SLIDER_OPTIONS: {
     thumbSize: new Dimension2( 13, 30 ),
     tickLabelSpacing: 0,
@@ -43,6 +43,6 @@ const Constants = {
   }
 };
 
-energySkateParkBasics.register( 'Constants', Constants );
+energySkateParkBasics.register( 'EnergySkateParkBasicsConstants', EnergySkateParkBasicsConstants );
 
-export default Constants;
+export default EnergySkateParkBasicsConstants;

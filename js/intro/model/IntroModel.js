@@ -9,7 +9,7 @@
 import merge from '../../../../phet-core/js/merge.js';
 import energySkateParkBasics from '../../energySkateParkBasics.js';
 import EnergySkateParkBasicsTrackSetModel from '../../common/model/EnergySkateParkBasicsTrackSetModel.js';
-import Constants from '../../Constants.js';
+import EnergySkateParkBasicsConstants from '../../EnergySkateParkBasicsConstants.js';
 
 class IntroModel extends EnergySkateParkBasicsTrackSetModel {
 
@@ -17,7 +17,7 @@ class IntroModel extends EnergySkateParkBasicsTrackSetModel {
    * @param {Tandem} tandem
    */
   constructor( tandem ) {
-    super( tandem, merge( {}, Constants.BASICS_MODEL_OPTIONS ) );
+    super( tandem, merge( {}, EnergySkateParkBasicsConstants.BASICS_MODEL_OPTIONS ) );
   }
 }
 
