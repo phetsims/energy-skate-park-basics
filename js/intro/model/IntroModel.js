@@ -17,7 +17,11 @@ class IntroModel extends EnergySkateParkBasicsTrackSetModel {
    * @param {Tandem} tandem
    */
   constructor( tandem ) {
-    super( tandem, merge( {}, EnergySkateParkBasicsConstants.BASICS_MODEL_OPTIONS ) );
+    super( tandem, merge( {}, EnergySkateParkBasicsConstants.BASICS_MODEL_OPTIONS, {
+
+      // the "intro" screen of basics has no friction
+      defaultFriction: 0
+    } ) );
   }
 }
 

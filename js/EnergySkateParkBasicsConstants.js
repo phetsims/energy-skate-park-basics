@@ -8,6 +8,7 @@
 
 import Dimension2 from '../../dot/js/Dimension2.js';
 import Range from '../../dot/js/Range.js';
+import EnergySkateParkConstants from '../../energy-skate-park/js/common/EnergySkateParkConstants.js';
 import energySkateParkBasics from './energySkateParkBasics.js';
 
 const minMass = 25; // kg
@@ -39,7 +40,10 @@ const EnergySkateParkBasicsConstants = {
       defaultMass: defaultMass,
       massRange: massRange
     },
-    defaultSpeedValueVisible: false
+    defaultSpeedValueVisible: false,
+
+    // by default, most basics screens have half value of friction on startup
+    defaultFriction: ( EnergySkateParkConstants.MAX_FRICTION - EnergySkateParkConstants.MIN_FRICTION ) / 2
   }
 };
 
