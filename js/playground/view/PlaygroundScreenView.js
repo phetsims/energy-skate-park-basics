@@ -10,8 +10,8 @@
 import Range from '../../../../dot/js/Range.js';
 import Vector2 from '../../../../dot/js/Vector2.js';
 import EnergySkateParkPlaygroundScreenView from '../../../../energy-skate-park/js/playground/view/EnergySkateParkPlaygroundScreenView.js';
-import energySkateParkBasics from '../../energySkateParkBasics.js';
 import EnergyBarGraphPanel from '../../common/view/EnergyBarGraphPanel.js';
+import energySkateParkBasics from '../../energySkateParkBasics.js';
 
 class PlaygroundScreenView extends EnergySkateParkPlaygroundScreenView {
 
@@ -21,7 +21,7 @@ class PlaygroundScreenView extends EnergySkateParkPlaygroundScreenView {
    */
   constructor( model, tandem ) {
 
-    super( model, tandem.createTandem( 'graphsScreenView' ), {
+    super( model, tandem, {
       showReferenceHeight: false,
       showToolbox: false,
       showBarGraphZoomButtons: false,
