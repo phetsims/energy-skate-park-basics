@@ -9,7 +9,7 @@
 import EnergySkateParkConstants from '../../../../energy-skate-park/js/common/EnergySkateParkConstants.js';
 import EnergyBarGraph from '../../../../energy-skate-park/js/common/view/EnergyBarGraph.js';
 import merge from '../../../../phet-core/js/merge.js';
-import VBox from '../../../../scenery/js/nodes/VBox.js';
+import { VBox } from '../../../../scenery/js/imports.js';
 import Panel from '../../../../sun/js/Panel.js';
 import energySkateParkBasics from '../../energySkateParkBasics.js';
 

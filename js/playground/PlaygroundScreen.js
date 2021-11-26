@@ -10,7 +10,7 @@ import iconPlaygroundHomescreen from '../../images/icon-playground-homescreen_pn
 import Screen from '../../../joist/js/Screen.js';
 import ScreenIcon from '../../../joist/js/ScreenIcon.js';
 import merge from '../../../phet-core/js/merge.js';
-import Image from '../../../scenery/js/nodes/Image.js';
+import { Image } from '../../../scenery/js/imports.js';
 import energySkateParkBasicsStrings from '../energySkateParkBasicsStrings.js';
 import energySkateParkBasics from '../energySkateParkBasics.js';
 import PlaygroundModel from './model/PlaygroundModel.js';
