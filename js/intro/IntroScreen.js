@@ -6,7 +6,7 @@
  * @author Jesse Greenberg (PhET Interactive Simulations)
  */
 
-import iconIntroHomescreen from '../../images/icon-intro-homescreen_png.js';
+import iconIntroHomescreen_png from '../../images/iconIntroHomescreen_png.js';
 import Screen from '../../../joist/js/Screen.js';
 import ScreenIcon from '../../../joist/js/ScreenIcon.js';
 import merge from '../../../phet-core/js/merge.js';
@@ -26,7 +26,7 @@ class IntroScreen extends Screen {
     options = merge( {
       name: screenIntroductionString,
       tandem: tandem,
-      homeScreenIcon: new ScreenIcon( new Image( iconIntroHomescreen ), {
+      homeScreenIcon: new ScreenIcon( new Image( iconIntroHomescreen_png ), {
         maxIconWidthProportion: 1,
         maxIconHeightProportion: 1
       } )

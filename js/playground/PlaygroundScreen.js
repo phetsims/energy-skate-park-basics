@@ -6,7 +6,7 @@
  * @author Jesse Greenberg (PhET Interactive Simulations)
  */
 
-import iconPlaygroundHomescreen from '../../images/icon-playground-homescreen_png.js';
+import iconPlaygroundHomescreen_png from '../../images/iconPlaygroundHomescreen_png.js';
 import Screen from '../../../joist/js/Screen.js';
 import ScreenIcon from '../../../joist/js/ScreenIcon.js';
 import merge from '../../../phet-core/js/merge.js';
@@ -22,7 +22,7 @@ class PlaygroundScreen extends Screen {
   constructor( tandem, options ) {
     options = merge( {
       name: screenTrackPlaygroundString,
-      homeScreenIcon: new ScreenIcon( new Image( iconPlaygroundHomescreen ), {
+      homeScreenIcon: new ScreenIcon( new Image( iconPlaygroundHomescreen_png ), {
         maxIconWidthProportion: 1,
         maxIconHeightProportion: 1
       } ),

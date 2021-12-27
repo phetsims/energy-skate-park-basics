@@ -6,7 +6,7 @@
  * @author Jesse Greenberg (PhET Interactive Simulations)
  */
 
-import iconFrictionHomescreen from '../../images/icon-friction-homescreen_png.js';
+import iconFrictionHomescreen_png from '../../images/iconFrictionHomescreen_png.js';
 import Screen from '../../../joist/js/Screen.js';
 import ScreenIcon from '../../../joist/js/ScreenIcon.js';
 import merge from '../../../phet-core/js/merge.js';
@@ -30,7 +30,7 @@ class FrictionScreen extends Screen {
   constructor( tandem, options ) {
     options = merge( {
       name: screenFrictionString,
-      homeScreenIcon: new ScreenIcon( new Image( iconFrictionHomescreen ), {
+      homeScreenIcon: new ScreenIcon( new Image( iconFrictionHomescreen_png ), {
         maxIconWidthProportion: 1,
         maxIconHeightProportion: 1
       } ),
