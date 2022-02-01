@@ -1,11 +1,11 @@
 {
-  "comment": "# energy-skate-park-basics 1.2.0-phetiorc.4 Mon Oct 31 2016 16:53:34 GMT-0600 (MDT)",
+  "comment": "# energy-skate-park-basics 1.2.3-phetio Thu Nov 03 2016 18:56:25 GMT-0600 (MDT)",
   "assert": {
     "sha": "845be6b591cb746b0b05b7023208aef2e49a8855",
     "branch": "master"
   },
   "axon": {
-    "sha": "9cb5f64c18cfda46133deb6db17e084dca0c6e54",
+    "sha": "ae6c9fcaf1d96aabdadb17a007d9eeff37cb6fc7",
     "branch": "master"
   },
   "brand": {
@@ -13,7 +13,7 @@
     "branch": "master"
   },
   "chipper": {
-    "sha": "78b153cccea9738203e7deda4fe91c0d8d95a654",
+    "sha": "135e20644856fc923f67360d19084638be1b280d",
     "branch": "master"
   },
   "dot": {
@@ -21,11 +21,11 @@
     "branch": "master"
   },
   "energy-skate-park-basics": {
-    "sha": "9e43c3c88a393a7e5ecf6ea4461ceb38bdf645c9",
+    "sha": "1b46145027979f1e9d8b678314f6642411e18674",
     "branch": "1.2-phetio"
   },
   "joist": {
-    "sha": "c2fb8bb6bd195310efaa9ed2ddd88bd9c41d2d7a",
+    "sha": "b8a63f2e955dde0b959bf728a66932b33424aa24",
     "branch": "master"
   },
   "kite": {
@@ -37,11 +37,11 @@
     "branch": "master"
   },
   "phet-io": {
-    "sha": "d357636ddedd39706e86aa2c7e1126e867a3ab24",
+    "sha": "6352e95738b27ebba901b66bb776cb81d554d55e",
     "branch": "master"
   },
   "phet-io-website": {
-    "sha": "5984ea01ad40336f62779cb9586f974811499636",
+    "sha": "528402554ab49e7dd2eb5de3044cd90ab8100e8f",
     "branch": "master"
   },
   "phetcommon": {
@@ -49,11 +49,11 @@
     "branch": "master"
   },
   "query-string-machine": {
-    "sha": "45841a72d88d4860a6867ed49d373800eb29f168",
+    "sha": "53531ef190ec03d090c8eb123833b20d976b0a04",
     "branch": "master"
   },
   "scenery": {
-    "sha": "60ae8f182b1cee8d0eced458114c4cef04c27701",
+    "sha": "2a1b78887e5769a27093d176a1fa6e630b18ae5b",
     "branch": "master"
   },
   "scenery-phet": {
