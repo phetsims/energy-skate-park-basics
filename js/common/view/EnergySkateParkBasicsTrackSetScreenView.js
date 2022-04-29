@@ -36,8 +36,7 @@ class EnergySkateParkBasicsTrackSetScreenView extends EnergySkateParkTrackSetScr
         massControlsOptions: {
           includeMassSlider: true,
           includeMassNumberControl: false
-        },
-        showSkaterControls: false
+        }
       },
 
       // energy-skate-park-basics uses its own panel for the graph
