@@ -9,46 +9,46 @@ import energySkateParkBasics from './energySkateParkBasics.js';
 
 type StringsType = {
   'properties': {
-    'speed': string
-  },
-  'small': string,
+    'speed': string;
+  };
+  'small': string;
   'screen': {
-    'trackPlayground': string,
-    'friction': string,
-    'introduction': string
-  },
+    'trackPlayground': string;
+    'friction': string;
+    'introduction': string;
+  };
   'controls': {
-    'mass': string,
-    'show-grid': string,
+    'mass': string;
+    'show-grid': string;
     'gravity': {
-      'lots': string,
-      'none': string
-    },
+      'lots': string;
+      'none': string;
+    };
     'friction': {
-      'title': string
-    },
-    'restart-skater': string
-  },
+      'title': string;
+    };
+    'restart-skater': string;
+  };
   'energy-skate-park-basics': {
-    'title': string
-  },
+    'title': string;
+  };
   'slow': {
-    'motion': string
-  },
+    'motion': string;
+  };
   'energy': {
-    'thermal': string,
-    'total': string,
-    'kinetic': string,
-    'potential': string,
-    'energy': string
-  },
+    'thermal': string;
+    'total': string;
+    'kinetic': string;
+    'potential': string;
+    'energy': string;
+  };
   'plots': {
-    'bar-graph': string
-  },
-  'pieChart': string,
-  'large': string,
-  'normal': string,
-  'zeroMeters': string
+    'bar-graph': string;
+  };
+  'pieChart': string;
+  'large': string;
+  'normal': string;
+  'zeroMeters': string;
 };
 
 const energySkateParkBasicsStrings = getStringModule( 'ENERGY_SKATE_PARK_BASICS' ) as StringsType;
