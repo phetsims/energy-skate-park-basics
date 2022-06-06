@@ -13,10 +13,11 @@ import EnergySkateParkBasicsConstants from '../../EnergySkateParkBasicsConstants
 class PlaygroundModel extends EnergySkateParkPlaygroundModel {
 
   /**
+   * @param {EnergySkateParkPreferencesModel} preferencesModel
    * @param {Tandem} tandem
    */
-  constructor( tandem ) {
-    super( tandem.createTandem( 'playgroundModel' ), EnergySkateParkBasicsConstants.BASICS_MODEL_OPTIONS );
+  constructor( preferencesModel, tandem ) {
+    super( preferencesModel, tandem.createTandem( 'playgroundModel' ), EnergySkateParkBasicsConstants.BASICS_MODEL_OPTIONS );
   }
 }
 

@@ -19,7 +19,13 @@ import PlaygroundScreenView from './view/PlaygroundScreenView.js';
 const screenTrackPlaygroundString = energySkateParkBasicsStrings.screen.trackPlayground;
 
 class PlaygroundScreen extends Screen {
-  constructor( tandem, options ) {
+
+  /**
+   * @param {EnergySkateParkPreferencesModel} preferencesModel
+   * @param {Tandem} tandem
+   * @param {Object} [options]
+   */
+  constructor( preferencesModel, tandem, options ) {
     options = merge( {
       name: screenTrackPlaygroundString,
       homeScreenIcon: new ScreenIcon( new Image( iconPlaygroundHomescreen_png ), {
@@ -31,7 +37,7 @@ class PlaygroundScreen extends Screen {
     }, options );
 
     super(
-      () => new PlaygroundModel( tandem.createTandem( 'model' ) ),
+      () => new PlaygroundModel( preferencesModel, tandem.createTandem( 'model' ) ),
       model => new PlaygroundScreenView( model, tandem.createTandem( 'view' ) ),
       options
     );

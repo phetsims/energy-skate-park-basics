@@ -14,10 +14,11 @@ import EnergySkateParkBasicsConstants from '../../EnergySkateParkBasicsConstants
 class IntroModel extends EnergySkateParkBasicsTrackSetModel {
 
   /**
+   * @param {EnergySkateParkPreferencesModel} preferencesModel
    * @param {Tandem} tandem
    */
-  constructor( tandem ) {
-    super( tandem, merge( {}, EnergySkateParkBasicsConstants.BASICS_MODEL_OPTIONS, {
+  constructor( preferencesModel, tandem ) {
+    super( preferencesModel, tandem, merge( {}, EnergySkateParkBasicsConstants.BASICS_MODEL_OPTIONS, {
 
       // the "intro" screen of basics has no friction
       defaultFriction: 0

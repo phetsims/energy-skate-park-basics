@@ -15,10 +15,11 @@ import energySkateParkBasics from '../../energySkateParkBasics.js';
 class EnergySkateParkBasicsTrackSetModel extends EnergySkateParkTrackSetModel {
 
   /**
+   * @param {EnergySkateParkPreferencesModel} preferencesModel
    * @param {Tandem} tandem
    * @param {Object} [options]
    */
-  constructor( tandem, options ) {
+  constructor( preferencesModel, tandem, options ) {
     options = merge( {
       trackTypes: [
         PremadeTracks.TrackType.PARABOLA,
@@ -27,7 +28,7 @@ class EnergySkateParkBasicsTrackSetModel extends EnergySkateParkTrackSetModel {
       ]
     }, options );
 
-    super( tandem, options );
+    super( preferencesModel, tandem, options );
   }
 }
 

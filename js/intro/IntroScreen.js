@@ -19,10 +19,11 @@ import IntroScreenView from './view/IntroScreenView.js';
 const screenIntroductionString = energySkateParkBasicsStrings.screen.introduction;
 
 /**
+ * @param {EnergySkateParkPreferencesModel} preferencesModel
  * @param {Tandem} tandem
  */
 class IntroScreen extends Screen {
-  constructor( tandem, options ) {
+  constructor( preferencesModel, tandem, options ) {
     options = merge( {
       name: screenIntroductionString,
       tandem: tandem,
@@ -33,7 +34,7 @@ class IntroScreen extends Screen {
     }, options );
 
     super(
-      () => new IntroModel( tandem.createTandem( 'model' ) ),
+      () => new IntroModel( preferencesModel, tandem.createTandem( 'model' ) ),
       model => new IntroScreenView( model, tandem.createTandem( 'view' ) ),
       options
     );

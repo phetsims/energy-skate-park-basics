@@ -18,16 +18,14 @@ import FrictionScreenView from './view/FrictionScreenView.js';
 
 const screenFrictionString = energySkateParkBasicsStrings.screen.friction;
 
-/**
- * @param {Tandem} tandem
- */
 class FrictionScreen extends Screen {
 
   /**
+   * @param {EnergySkateParkPreferencesModel} preferencesModel
    * @param {Tandem} tandem
    * @param {Object} [options]
    */
-  constructor( tandem, options ) {
+  constructor( preferencesModel, tandem, options ) {
     options = merge( {
       name: screenFrictionString,
       homeScreenIcon: new ScreenIcon( new Image( iconFrictionHomescreen_png ), {
@@ -39,7 +37,7 @@ class FrictionScreen extends Screen {
     }, options );
 
     super(
-      () => new FrictionModel( tandem.createTandem( 'model' ) ),
+      () => new FrictionModel( preferencesModel, tandem.createTandem( 'model' ) ),
       model => new FrictionScreenView( model, tandem.createTandem( 'view' ) ),
       options
     );

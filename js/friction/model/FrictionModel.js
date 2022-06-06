@@ -13,10 +13,11 @@ import EnergySkateParkBasicsConstants from '../../EnergySkateParkBasicsConstants
 class FrictionModel extends EnergySkateParkBasicsTrackSetModel {
 
   /**
+   * @param {EnergySkateParkPreferencesModel} preferencesModel
    * @param {Tandem} tandem
    */
-  constructor( tandem ) {
-    super( tandem.createTandem( 'frictionModel' ), EnergySkateParkBasicsConstants.BASICS_MODEL_OPTIONS );
+  constructor( preferencesModel, tandem ) {
+    super( preferencesModel, tandem.createTandem( 'frictionModel' ), EnergySkateParkBasicsConstants.BASICS_MODEL_OPTIONS );
   }
 }
 

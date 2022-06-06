@@ -7,13 +7,19 @@
  */
 
 import EnergySkateParkSim from '../../energy-skate-park/js/common/EnergySkateParkSim.js';
-import energySkateParkBasicsStrings from './energySkateParkBasicsStrings.js';
+import EnergySkateParkPreferencesModel from '../../energy-skate-park/js/common/model/EnergySkateParkPreferencesModel.js';
 import energySkateParkBasics from './energySkateParkBasics.js';
+import energySkateParkBasicsStrings from './energySkateParkBasicsStrings.js';
 import FrictionScreen from './friction/FrictionScreen.js';
 import IntroScreen from './intro/IntroScreen.js';
 import PlaygroundScreen from './playground/PlaygroundScreen.js';
+import Tandem from '../../tandem/js/Tandem.js';
+import PreferencesConfiguration from '../../joist/js/preferences/PreferencesConfiguration.js';
+import EnergySkateParkPreferencesNode from '../../energy-skate-park/js/common/view/EnergySkateParkPreferencesNode.js';
 
 const energySkateParkBasicsTitleString = energySkateParkBasicsStrings[ 'energy-skate-park-basics' ].title;
+
+const energySkateParkPreferencesModel = new EnergySkateParkPreferencesModel( Tandem.GENERAL_MODEL.createTandem( 'preferencesModel' ) );
 
 /**
  * @param {Tandem} tandem
@@ -25,6 +31,13 @@ class EnergySkateParkBasicsSim extends EnergySkateParkSim {
    */
   constructor( tandem ) {
     const options = {
+      preferencesConfiguration: new PreferencesConfiguration( {
+        generalOptions: {
+          simControls: new EnergySkateParkPreferencesNode( energySkateParkPreferencesModel, Tandem.GENERAL_VIEW.createTandem( 'preferencesNode' ), {
+            includeAccelerationUnitsControl: false
+          } )
+        }
+      } ),
       credits: {
         leadDesign: 'Ariel Paul, Noah Podolefsky, Sam Reid',
         softwareDevelopment: 'Sam Reid, Jesse Greenberg',
@@ -35,9 +48,9 @@ class EnergySkateParkBasicsSim extends EnergySkateParkSim {
     };
 
     const screens = [
-      new IntroScreen( tandem.createTandem( 'introScreen' ) ),
-      new FrictionScreen( tandem.createTandem( 'frictionScreen' ) ),
-      new PlaygroundScreen( tandem.createTandem( 'playgroundScreen' ) )
+      new IntroScreen( energySkateParkPreferencesModel, tandem.createTandem( 'introScreen' ) ),
+      new FrictionScreen( energySkateParkPreferencesModel, tandem.createTandem( 'frictionScreen' ) ),
+      new PlaygroundScreen( energySkateParkPreferencesModel, tandem.createTandem( 'playgroundScreen' ) )
     ];
 
     super( energySkateParkBasicsTitleString, screens, tandem, options );
