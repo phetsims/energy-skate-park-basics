@@ -15,7 +15,7 @@ import IntroScreen from './intro/IntroScreen.js';
 import PlaygroundScreen from './playground/PlaygroundScreen.js';
 import Tandem from '../../tandem/js/Tandem.js';
 import PreferencesConfiguration from '../../joist/js/preferences/PreferencesConfiguration.js';
-import EnergySkateParkPreferencesNode from '../../energy-skate-park/js/common/view/EnergySkateParkPreferencesNode.js';
+import EnergySkateParkLocalizationNode from '../../energy-skate-park/js/common/view/EnergySkateParkLocalizationNode.js';
 
 const energySkateParkBasicsTitleString = energySkateParkBasicsStrings[ 'energy-skate-park-basics' ].title;
 
@@ -33,9 +33,7 @@ class EnergySkateParkBasicsSim extends EnergySkateParkSim {
     const options = {
       preferencesConfiguration: new PreferencesConfiguration( {
         generalOptions: {
-          simControls: new EnergySkateParkPreferencesNode( energySkateParkPreferencesModel, Tandem.GENERAL_VIEW.createTandem( 'preferencesNode' ), {
-            includeAccelerationUnitsControl: false
-          } )
+          createLocalizationControls: () => new EnergySkateParkLocalizationNode( energySkateParkPreferencesModel, Tandem.GENERAL_VIEW.createTandem( 'preferencesNode' ) )
         }
       } ),
       credits: {
