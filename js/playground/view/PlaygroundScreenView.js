@@ -7,10 +7,7 @@
  * @author Jesse Greenberg (PhET Interactive Simulations)
  */
 
-import Range from '../../../../dot/js/Range.js';
-import Vector2 from '../../../../dot/js/Vector2.js';
 import EnergySkateParkPlaygroundScreenView from '../../../../energy-skate-park/js/playground/view/EnergySkateParkPlaygroundScreenView.js';
-import EnergyBarGraphPanel from '../../common/view/EnergyBarGraphPanel.js';
 import energySkateParkBasics from '../../energySkateParkBasics.js';
 
 class PlaygroundScreenView extends EnergySkateParkPlaygroundScreenView {
@@ -32,7 +29,6 @@ class PlaygroundScreenView extends EnergySkateParkPlaygroundScreenView {
         showGravityControls: false,
         visibilityControlsOptions: {
           showGridCheckbox: true,
-          showBarGraphCheckbox: true,
           showStickToTrackCheckbox: false
         },
         massControlsOptions: {
@@ -40,33 +36,8 @@ class PlaygroundScreenView extends EnergySkateParkPlaygroundScreenView {
           includeMassNumberControl: false,
           includeSkaterComboBox: false
         }
-      },
-
-      // energy-skate-park-basics uses its own bar graph in a panel
-      showBarGraph: false
-    } );
-
-    this.barGraphPanel = new EnergyBarGraphPanel( model, tandem.createTandem( 'barGraphPanel' ), {
-      barGraphOptions: {
-        showBarGraphZoomButtons: false,
-        graphRange: new Range( 0, 265 )
       }
     } );
-    this.addChild( this.barGraphPanel );
-    model.barGraphVisibleProperty.linkAttribute( this.barGraphPanel, 'visible' );
-  }
-
-  /**
-   * Special layout for the basics screen view, positions the bar graph panel.
-   * @public
-   *
-   * @param {number} width
-   * @param {number} height
-   * @override
-   */
-  layout( width, height ) {
-    super.layout( width, height );
-    this.barGraphPanel.leftTop = new Vector2( this.fixedLeft, 5 );
   }
 }
 
