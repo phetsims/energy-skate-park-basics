@@ -33,7 +33,7 @@ class EnergySkateParkBasicsSim extends EnergySkateParkSim {
     const options = {
       preferencesConfiguration: new PreferencesConfiguration( {
         generalOptions: {
-          createLocalizationControls: () => new EnergySkateParkLocalizationNode( energySkateParkPreferencesModel, Tandem.GENERAL_VIEW.createTandem( 'preferencesNode' ) )
+          createLocalizationControls: tandem => new EnergySkateParkLocalizationNode( energySkateParkPreferencesModel, tandem.createTandem( 'preferencesNode' ) )
         }
       } ),
       credits: {
