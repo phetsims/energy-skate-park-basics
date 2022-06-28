@@ -33,8 +33,7 @@ class PlaygroundScreenView extends EnergySkateParkPlaygroundScreenView {
         },
         massControlsOptions: {
           includeMassSlider: true,
-          includeMassNumberControl: false,
-          includeSkaterComboBox: false
+          includeMassNumberControl: false
         }
       }
     } );
