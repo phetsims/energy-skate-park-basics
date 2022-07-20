@@ -6,8 +6,8 @@
  * @author Jesse Greenberg (PhET Interactive Simulations)
  */
 
-import energySkateParkBasics from '../../energySkateParkBasics.js';
 import EnergySkateParkBasicsTrackSetModel from '../../common/model/EnergySkateParkBasicsTrackSetModel.js';
+import energySkateParkBasics from '../../energySkateParkBasics.js';
 import EnergySkateParkBasicsConstants from '../../EnergySkateParkBasicsConstants.js';
 
 class FrictionModel extends EnergySkateParkBasicsTrackSetModel {

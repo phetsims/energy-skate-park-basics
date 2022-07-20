@@ -6,13 +6,13 @@
  * @author Jesse Greenberg (PhET Interactive Simulations)
  */
 
-import iconPlaygroundHomescreen_png from '../../images/iconPlaygroundHomescreen_png.js';
 import Screen from '../../../joist/js/Screen.js';
 import ScreenIcon from '../../../joist/js/ScreenIcon.js';
 import merge from '../../../phet-core/js/merge.js';
 import { Image } from '../../../scenery/js/imports.js';
-import energySkateParkBasicsStrings from '../energySkateParkBasicsStrings.js';
+import iconPlaygroundHomescreen_png from '../../images/iconPlaygroundHomescreen_png.js';
 import energySkateParkBasics from '../energySkateParkBasics.js';
+import energySkateParkBasicsStrings from '../energySkateParkBasicsStrings.js';
 import PlaygroundModel from './model/PlaygroundModel.js';
 import PlaygroundScreenView from './view/PlaygroundScreenView.js';
 

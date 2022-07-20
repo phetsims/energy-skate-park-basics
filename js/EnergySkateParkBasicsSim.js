@@ -8,14 +8,14 @@
 
 import EnergySkateParkSim from '../../energy-skate-park/js/common/EnergySkateParkSim.js';
 import EnergySkateParkPreferencesModel from '../../energy-skate-park/js/common/model/EnergySkateParkPreferencesModel.js';
+import EnergySkateParkLocalizationNode from '../../energy-skate-park/js/common/view/EnergySkateParkLocalizationNode.js';
+import PreferencesConfiguration from '../../joist/js/preferences/PreferencesConfiguration.js';
+import Tandem from '../../tandem/js/Tandem.js';
 import energySkateParkBasics from './energySkateParkBasics.js';
 import energySkateParkBasicsStrings from './energySkateParkBasicsStrings.js';
 import FrictionScreen from './friction/FrictionScreen.js';
 import IntroScreen from './intro/IntroScreen.js';
 import PlaygroundScreen from './playground/PlaygroundScreen.js';
-import Tandem from '../../tandem/js/Tandem.js';
-import PreferencesConfiguration from '../../joist/js/preferences/PreferencesConfiguration.js';
-import EnergySkateParkLocalizationNode from '../../energy-skate-park/js/common/view/EnergySkateParkLocalizationNode.js';
 
 const energySkateParkBasicsTitleString = energySkateParkBasicsStrings[ 'energy-skate-park-basics' ].title;
 

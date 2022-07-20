@@ -7,8 +7,8 @@
  */
 
 import merge from '../../../../phet-core/js/merge.js';
-import energySkateParkBasics from '../../energySkateParkBasics.js';
 import EnergySkateParkBasicsTrackSetModel from '../../common/model/EnergySkateParkBasicsTrackSetModel.js';
+import energySkateParkBasics from '../../energySkateParkBasics.js';
 import EnergySkateParkBasicsConstants from '../../EnergySkateParkBasicsConstants.js';
 
 class IntroModel extends EnergySkateParkBasicsTrackSetModel {
