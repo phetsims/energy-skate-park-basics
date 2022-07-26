@@ -19,7 +19,7 @@ import PlaygroundScreen from './playground/PlaygroundScreen.js';
 
 const energySkateParkBasicsTitleString = energySkateParkBasicsStrings[ 'energy-skate-park-basics' ].title;
 
-const energySkateParkPreferencesModel = new EnergySkateParkPreferencesModel( Tandem.GENERAL_MODEL.createTandem( 'preferencesModel' ) );
+const energySkateParkPreferencesModel = new EnergySkateParkPreferencesModel( Tandem.GLOBAL_MODEL.createTandem( 'energySkateParkPreferencesModel' ) );
 
 /**
  * @param {Tandem} tandem
