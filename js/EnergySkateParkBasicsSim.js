@@ -33,7 +33,6 @@ class EnergySkateParkBasicsSim extends EnergySkateParkSim {
     const options = {
       preferencesConfiguration: new PreferencesConfiguration( {
         localizationOptions: {
-          supportsRegionAndCultureSwitching: true,
           regionAndCultureDescriptors: SkaterImages.SKATER_SET_DESCRIPTORS
         }
       } ),
