@@ -8,11 +8,11 @@
 
 import EnergySkateParkSim from '../../energy-skate-park/js/common/EnergySkateParkSim.js';
 import EnergySkateParkPreferencesModel from '../../energy-skate-park/js/common/model/EnergySkateParkPreferencesModel.js';
-import EnergySkateParkLocalizationNode from '../../energy-skate-park/js/common/view/EnergySkateParkLocalizationNode.js';
 import PreferencesConfiguration from '../../joist/js/preferences/PreferencesConfiguration.js';
 import Tandem from '../../tandem/js/Tandem.js';
 import energySkateParkBasics from './energySkateParkBasics.js';
 import energySkateParkBasicsStrings from './energySkateParkBasicsStrings.js';
+import SkaterImages from '../../energy-skate-park/js/common/view/SkaterImages.js';
 import FrictionScreen from './friction/FrictionScreen.js';
 import IntroScreen from './intro/IntroScreen.js';
 import PlaygroundScreen from './playground/PlaygroundScreen.js';
@@ -32,8 +32,9 @@ class EnergySkateParkBasicsSim extends EnergySkateParkSim {
   constructor( tandem ) {
     const options = {
       preferencesConfiguration: new PreferencesConfiguration( {
-        generalOptions: {
-          createLocalizationControls: tandem => new EnergySkateParkLocalizationNode( energySkateParkPreferencesModel, tandem.createTandem( 'preferencesNode' ) )
+        localizationOptions: {
+          supportsCharacterSwitching: true,
+          characterDescriptors: SkaterImages.SKATER_SET_DESCRIPTORS
         }
       } ),
       credits: {
