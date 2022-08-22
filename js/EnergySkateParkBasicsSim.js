@@ -8,7 +8,7 @@
 
 import EnergySkateParkSim from '../../energy-skate-park/js/common/EnergySkateParkSim.js';
 import EnergySkateParkPreferencesModel from '../../energy-skate-park/js/common/model/EnergySkateParkPreferencesModel.js';
-import PreferencesConfiguration from '../../joist/js/preferences/PreferencesConfiguration.js';
+import PreferencesModel from '../../joist/js/preferences/PreferencesModel.js';
 import Tandem from '../../tandem/js/Tandem.js';
 import energySkateParkBasics from './energySkateParkBasics.js';
 import energySkateParkBasicsStrings from './energySkateParkBasicsStrings.js';
@@ -31,7 +31,7 @@ class EnergySkateParkBasicsSim extends EnergySkateParkSim {
    */
   constructor( tandem ) {
     const options = {
-      preferencesConfiguration: new PreferencesConfiguration( {
+      preferencesModel: new PreferencesModel( {
         localizationOptions: {
           regionAndCultureDescriptors: SkaterImages.SKATER_SET_DESCRIPTORS
         }
