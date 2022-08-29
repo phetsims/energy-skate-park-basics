@@ -11,68 +11,68 @@ import energySkateParkBasics from './energySkateParkBasics.js';
 type StringsType = {
   'properties': {
     'speed': string;
-    'speedProperty': TReadOnlyProperty<string>;
+    'speedStringProperty': TReadOnlyProperty<string>;
   };
   'small': string;
-  'smallProperty': TReadOnlyProperty<string>;
+  'smallStringProperty': TReadOnlyProperty<string>;
   'screen': {
     'trackPlayground': string;
-    'trackPlaygroundProperty': TReadOnlyProperty<string>;
+    'trackPlaygroundStringProperty': TReadOnlyProperty<string>;
     'friction': string;
-    'frictionProperty': TReadOnlyProperty<string>;
+    'frictionStringProperty': TReadOnlyProperty<string>;
     'introduction': string;
-    'introductionProperty': TReadOnlyProperty<string>;
+    'introductionStringProperty': TReadOnlyProperty<string>;
   };
   'controls': {
     'mass': string;
-    'massProperty': TReadOnlyProperty<string>;
+    'massStringProperty': TReadOnlyProperty<string>;
     'show-grid': string;
-    'show-gridProperty': TReadOnlyProperty<string>;
+    'show-gridStringProperty': TReadOnlyProperty<string>;
     'gravity': {
       'lots': string;
-      'lotsProperty': TReadOnlyProperty<string>;
+      'lotsStringProperty': TReadOnlyProperty<string>;
       'none': string;
-      'noneProperty': TReadOnlyProperty<string>;
+      'noneStringProperty': TReadOnlyProperty<string>;
     };
     'friction': {
       'title': string;
-      'titleProperty': TReadOnlyProperty<string>;
+      'titleStringProperty': TReadOnlyProperty<string>;
     };
     'restart-skater': string;
-    'restart-skaterProperty': TReadOnlyProperty<string>;
+    'restart-skaterStringProperty': TReadOnlyProperty<string>;
   };
   'energy-skate-park-basics': {
     'title': string;
-    'titleProperty': TReadOnlyProperty<string>;
+    'titleStringProperty': TReadOnlyProperty<string>;
   };
   'slow': {
     'motion': string;
-    'motionProperty': TReadOnlyProperty<string>;
+    'motionStringProperty': TReadOnlyProperty<string>;
   };
   'energy': {
     'thermal': string;
-    'thermalProperty': TReadOnlyProperty<string>;
+    'thermalStringProperty': TReadOnlyProperty<string>;
     'total': string;
-    'totalProperty': TReadOnlyProperty<string>;
+    'totalStringProperty': TReadOnlyProperty<string>;
     'kinetic': string;
-    'kineticProperty': TReadOnlyProperty<string>;
+    'kineticStringProperty': TReadOnlyProperty<string>;
     'potential': string;
-    'potentialProperty': TReadOnlyProperty<string>;
+    'potentialStringProperty': TReadOnlyProperty<string>;
     'energy': string;
-    'energyProperty': TReadOnlyProperty<string>;
+    'energyStringProperty': TReadOnlyProperty<string>;
   };
   'plots': {
     'bar-graph': string;
-    'bar-graphProperty': TReadOnlyProperty<string>;
+    'bar-graphStringProperty': TReadOnlyProperty<string>;
   };
   'pieChart': string;
-  'pieChartProperty': TReadOnlyProperty<string>;
+  'pieChartStringProperty': TReadOnlyProperty<string>;
   'large': string;
-  'largeProperty': TReadOnlyProperty<string>;
+  'largeStringProperty': TReadOnlyProperty<string>;
   'normal': string;
-  'normalProperty': TReadOnlyProperty<string>;
+  'normalStringProperty': TReadOnlyProperty<string>;
   'zeroMeters': string;
-  'zeroMetersProperty': TReadOnlyProperty<string>;
+  'zeroMetersStringProperty': TReadOnlyProperty<string>;
 };
 
 const energySkateParkBasicsStrings = getStringModule( 'ENERGY_SKATE_PARK_BASICS' ) as StringsType;
