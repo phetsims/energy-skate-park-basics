@@ -17,7 +17,7 @@ import FrictionScreen from './friction/FrictionScreen.js';
 import IntroScreen from './intro/IntroScreen.js';
 import PlaygroundScreen from './playground/PlaygroundScreen.js';
 
-const energySkateParkBasicsTitleString = energySkateParkBasicsStrings[ 'energy-skate-park-basics' ].title;
+const energySkateParkBasicsTitleStringProperty = energySkateParkBasicsStrings[ 'energy-skate-park-basics' ].titleStringProperty;
 
 const energySkateParkPreferencesModel = new EnergySkateParkPreferencesModel( Tandem.PREFERENCES.createTandem( 'energySkateParkPreferencesModel' ) );
 
@@ -51,7 +51,7 @@ class EnergySkateParkBasicsSim extends EnergySkateParkSim {
       new PlaygroundScreen( energySkateParkPreferencesModel, tandem.createTandem( 'playgroundScreen' ) )
     ];
 
-    super( energySkateParkBasicsTitleString, screens, tandem, options );
+    super( energySkateParkBasicsTitleStringProperty, screens, tandem, options );
   }
 }
 
