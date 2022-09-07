@@ -12,11 +12,11 @@ import merge from '../../../phet-core/js/merge.js';
 import { Image } from '../../../scenery/js/imports.js';
 import iconFrictionHomescreen_png from '../../images/iconFrictionHomescreen_png.js';
 import energySkateParkBasics from '../energySkateParkBasics.js';
-import energySkateParkBasicsStrings from '../energySkateParkBasicsStrings.js';
+import EnergySkateParkBasicsStrings from '../EnergySkateParkBasicsStrings.js';
 import FrictionModel from './model/FrictionModel.js';
 import FrictionScreenView from './view/FrictionScreenView.js';
 
-const screenFrictionString = energySkateParkBasicsStrings.screen.friction;
+const screenFrictionString = EnergySkateParkBasicsStrings.screen.friction;
 
 class FrictionScreen extends Screen {
 

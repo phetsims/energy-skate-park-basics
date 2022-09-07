@@ -75,8 +75,8 @@ type StringsType = {
   'zeroMetersStringProperty': TReadOnlyProperty<string>;
 };
 
-const energySkateParkBasicsStrings = getStringModule( 'ENERGY_SKATE_PARK_BASICS' ) as StringsType;
+const EnergySkateParkBasicsStrings = getStringModule( 'ENERGY_SKATE_PARK_BASICS' ) as StringsType;
 
-energySkateParkBasics.register( 'energySkateParkBasicsStrings', energySkateParkBasicsStrings );
+energySkateParkBasics.register( 'EnergySkateParkBasicsStrings', EnergySkateParkBasicsStrings );
 
-export default energySkateParkBasicsStrings;
+export default EnergySkateParkBasicsStrings;

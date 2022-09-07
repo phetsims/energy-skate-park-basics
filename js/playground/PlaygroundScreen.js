@@ -12,11 +12,11 @@ import merge from '../../../phet-core/js/merge.js';
 import { Image } from '../../../scenery/js/imports.js';
 import iconPlaygroundHomescreen_png from '../../images/iconPlaygroundHomescreen_png.js';
 import energySkateParkBasics from '../energySkateParkBasics.js';
-import energySkateParkBasicsStrings from '../energySkateParkBasicsStrings.js';
+import EnergySkateParkBasicsStrings from '../EnergySkateParkBasicsStrings.js';
 import PlaygroundModel from './model/PlaygroundModel.js';
 import PlaygroundScreenView from './view/PlaygroundScreenView.js';
 
-const screenTrackPlaygroundString = energySkateParkBasicsStrings.screen.trackPlayground;
+const screenTrackPlaygroundString = EnergySkateParkBasicsStrings.screen.trackPlayground;
 
 class PlaygroundScreen extends Screen {
 

@@ -11,13 +11,13 @@ import EnergySkateParkPreferencesModel from '../../energy-skate-park/js/common/m
 import PreferencesModel from '../../joist/js/preferences/PreferencesModel.js';
 import Tandem from '../../tandem/js/Tandem.js';
 import energySkateParkBasics from './energySkateParkBasics.js';
-import energySkateParkBasicsStrings from './energySkateParkBasicsStrings.js';
+import EnergySkateParkBasicsStrings from './EnergySkateParkBasicsStrings.js';
 import SkaterImages from '../../energy-skate-park/js/common/view/SkaterImages.js';
 import FrictionScreen from './friction/FrictionScreen.js';
 import IntroScreen from './intro/IntroScreen.js';
 import PlaygroundScreen from './playground/PlaygroundScreen.js';
 
-const energySkateParkBasicsTitleStringProperty = energySkateParkBasicsStrings[ 'energy-skate-park-basics' ].titleStringProperty;
+const energySkateParkBasicsTitleStringProperty = EnergySkateParkBasicsStrings[ 'energy-skate-park-basics' ].titleStringProperty;
 
 const energySkateParkPreferencesModel = new EnergySkateParkPreferencesModel( Tandem.PREFERENCES.createTandem( 'energySkateParkPreferencesModel' ) );
 

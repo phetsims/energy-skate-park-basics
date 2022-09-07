@@ -12,11 +12,11 @@ import merge from '../../../phet-core/js/merge.js';
 import { Image } from '../../../scenery/js/imports.js';
 import iconIntroHomescreen_png from '../../images/iconIntroHomescreen_png.js';
 import energySkateParkBasics from '../energySkateParkBasics.js';
-import energySkateParkBasicsStrings from '../energySkateParkBasicsStrings.js';
+import EnergySkateParkBasicsStrings from '../EnergySkateParkBasicsStrings.js';
 import IntroModel from './model/IntroModel.js';
 import IntroScreenView from './view/IntroScreenView.js';
 
-const screenIntroductionString = energySkateParkBasicsStrings.screen.introduction;
+const screenIntroductionString = EnergySkateParkBasicsStrings.screen.introduction;
 
 /**
  * @param {EnergySkateParkPreferencesModel} preferencesModel
