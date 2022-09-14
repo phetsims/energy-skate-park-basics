@@ -16,8 +16,6 @@ import EnergySkateParkBasicsStrings from '../EnergySkateParkBasicsStrings.js';
 import FrictionModel from './model/FrictionModel.js';
 import FrictionScreenView from './view/FrictionScreenView.js';
 
-const screenFrictionString = EnergySkateParkBasicsStrings.screen.friction;
-
 class FrictionScreen extends Screen {
 
   /**
@@ -27,7 +25,7 @@ class FrictionScreen extends Screen {
    */
   constructor( preferencesModel, tandem, options ) {
     options = merge( {
-      name: screenFrictionString,
+      name: EnergySkateParkBasicsStrings.screen.frictionStringProperty,
       homeScreenIcon: new ScreenIcon( new Image( iconFrictionHomescreen_png ), {
         maxIconWidthProportion: 1,
         maxIconHeightProportion: 1
