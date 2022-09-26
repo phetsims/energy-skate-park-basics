@@ -5,74 +5,74 @@
  */
 /* eslint-disable */
 import getStringModule from '../../chipper/js/getStringModule.js';
-import TReadOnlyProperty from '../../axon/js/TReadOnlyProperty.js';
+import LinkableProperty from '../../axon/js/LinkableProperty.js';
 import energySkateParkBasics from './energySkateParkBasics.js';
 
 type StringsType = {
   'properties': {
     'speed': string;
-    'speedStringProperty': TReadOnlyProperty<string>;
+    'speedStringProperty': LinkableProperty<string>;
   };
   'small': string;
-  'smallStringProperty': TReadOnlyProperty<string>;
+  'smallStringProperty': LinkableProperty<string>;
   'screen': {
     'trackPlayground': string;
-    'trackPlaygroundStringProperty': TReadOnlyProperty<string>;
+    'trackPlaygroundStringProperty': LinkableProperty<string>;
     'friction': string;
-    'frictionStringProperty': TReadOnlyProperty<string>;
+    'frictionStringProperty': LinkableProperty<string>;
     'introduction': string;
-    'introductionStringProperty': TReadOnlyProperty<string>;
+    'introductionStringProperty': LinkableProperty<string>;
   };
   'controls': {
     'mass': string;
-    'massStringProperty': TReadOnlyProperty<string>;
+    'massStringProperty': LinkableProperty<string>;
     'show-grid': string;
-    'show-gridStringProperty': TReadOnlyProperty<string>;
+    'show-gridStringProperty': LinkableProperty<string>;
     'gravity': {
       'lots': string;
-      'lotsStringProperty': TReadOnlyProperty<string>;
+      'lotsStringProperty': LinkableProperty<string>;
       'none': string;
-      'noneStringProperty': TReadOnlyProperty<string>;
+      'noneStringProperty': LinkableProperty<string>;
     };
     'friction': {
       'title': string;
-      'titleStringProperty': TReadOnlyProperty<string>;
+      'titleStringProperty': LinkableProperty<string>;
     };
     'restart-skater': string;
-    'restart-skaterStringProperty': TReadOnlyProperty<string>;
+    'restart-skaterStringProperty': LinkableProperty<string>;
   };
   'energy-skate-park-basics': {
     'title': string;
-    'titleStringProperty': TReadOnlyProperty<string>;
+    'titleStringProperty': LinkableProperty<string>;
   };
   'slow': {
     'motion': string;
-    'motionStringProperty': TReadOnlyProperty<string>;
+    'motionStringProperty': LinkableProperty<string>;
   };
   'energy': {
     'thermal': string;
-    'thermalStringProperty': TReadOnlyProperty<string>;
+    'thermalStringProperty': LinkableProperty<string>;
     'total': string;
-    'totalStringProperty': TReadOnlyProperty<string>;
+    'totalStringProperty': LinkableProperty<string>;
     'kinetic': string;
-    'kineticStringProperty': TReadOnlyProperty<string>;
+    'kineticStringProperty': LinkableProperty<string>;
     'potential': string;
-    'potentialStringProperty': TReadOnlyProperty<string>;
+    'potentialStringProperty': LinkableProperty<string>;
     'energy': string;
-    'energyStringProperty': TReadOnlyProperty<string>;
+    'energyStringProperty': LinkableProperty<string>;
   };
   'plots': {
     'bar-graph': string;
-    'bar-graphStringProperty': TReadOnlyProperty<string>;
+    'bar-graphStringProperty': LinkableProperty<string>;
   };
   'pieChart': string;
-  'pieChartStringProperty': TReadOnlyProperty<string>;
+  'pieChartStringProperty': LinkableProperty<string>;
   'large': string;
-  'largeStringProperty': TReadOnlyProperty<string>;
+  'largeStringProperty': LinkableProperty<string>;
   'normal': string;
-  'normalStringProperty': TReadOnlyProperty<string>;
+  'normalStringProperty': LinkableProperty<string>;
   'zeroMeters': string;
-  'zeroMetersStringProperty': TReadOnlyProperty<string>;
+  'zeroMetersStringProperty': LinkableProperty<string>;
 };
 
 const EnergySkateParkBasicsStrings = getStringModule( 'ENERGY_SKATE_PARK_BASICS' ) as StringsType;
