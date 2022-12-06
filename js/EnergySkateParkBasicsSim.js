@@ -33,7 +33,8 @@ class EnergySkateParkBasicsSim extends EnergySkateParkSim {
     const options = {
       preferencesModel: new PreferencesModel( {
         localizationOptions: {
-          characterSets: SkaterImages.SKATER_CHARACTER_SETS
+          characterSets: SkaterImages.SKATER_CHARACTER_SETS,
+          supportsMultipleLocales: false
         }
       } ),
       credits: {
