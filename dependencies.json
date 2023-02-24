@@ -21,7 +21,7 @@
     "branch": "HEAD"
   },
   "energy-skate-park-basics": {
-    "sha": "0811660946b7482b38f6cbacf3e1e5c2757d9fe3",
+    "sha": "489f56c3cb77035b1379f0a415f01a4e950c01ef",
     "branch": "1.3-phetio"
   },
   "joist": {
@@ -45,7 +45,7 @@
     "branch": "HEAD"
   },
   "phetcommon": {
-    "sha": "64a99f332cdb167d5010bfe5781821ea91e9dffb",
+    "sha": "60e0cc15a8b5f7b0aa04c58f123e770cca68fbf5",
     "branch": "HEAD"
   },
   "phetmarks": {
