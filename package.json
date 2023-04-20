@@ -11,6 +11,7 @@
   },
   "phet": {
     "requirejsNamespace": "ENERGY_SKATE_PARK_BASICS",
+    "ignoreForAutomatedMaintenanceReleases": true,
     "preload": [
       "../sherpa/lib/numeric-1.2.6.js"
     ]
