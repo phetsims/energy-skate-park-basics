@@ -29,7 +29,12 @@
       "validation": false
     },
     "supportsOutputJS": true,
-    "published": true
+    "published": true,
+    "screenNameKeys": [
+      "ENERGY_SKATE_PARK_BASICS/screen.introduction",
+      "ENERGY_SKATE_PARK_BASICS/screen.friction",
+      "ENERGY_SKATE_PARK_BASICS/screen.trackPlayground"
+    ]
   },
   "eslintConfig": {
     "extends": "../chipper/eslint/sim_eslintrc.js"
