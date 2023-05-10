@@ -22,6 +22,11 @@
       "preload": [
         "../phet-io/js/api/energy-skate-park-basics-api.js"
       ]
-    }
+    },
+    "screenNameKeys": [
+      "ENERGY_SKATE_PARK_BASICS/screen.introduction",
+      "ENERGY_SKATE_PARK_BASICS/screen.friction",
+      "ENERGY_SKATE_PARK_BASICS/screen.trackPlayground"
+    ]
   }
 }
