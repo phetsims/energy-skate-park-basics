@@ -5,74 +5,74 @@
  */
 /* eslint-disable */
 import getStringModule from '../../chipper/js/getStringModule.js';
-import LinkableProperty from '../../axon/js/LinkableProperty.js';
+import type LocalizedStringProperty from '../../chipper/js/LocalizedStringProperty.js';
 import energySkateParkBasics from './energySkateParkBasics.js';
 
 type StringsType = {
   'properties': {
     'speed': string;
-    'speedStringProperty': LinkableProperty<string>;
+    'speedStringProperty': LocalizedStringProperty;
   };
   'small': string;
-  'smallStringProperty': LinkableProperty<string>;
+  'smallStringProperty': LocalizedStringProperty;
   'screen': {
     'trackPlayground': string;
-    'trackPlaygroundStringProperty': LinkableProperty<string>;
+    'trackPlaygroundStringProperty': LocalizedStringProperty;
     'friction': string;
-    'frictionStringProperty': LinkableProperty<string>;
+    'frictionStringProperty': LocalizedStringProperty;
     'introduction': string;
-    'introductionStringProperty': LinkableProperty<string>;
+    'introductionStringProperty': LocalizedStringProperty;
   };
   'controls': {
     'mass': string;
-    'massStringProperty': LinkableProperty<string>;
+    'massStringProperty': LocalizedStringProperty;
     'show-grid': string;
-    'show-gridStringProperty': LinkableProperty<string>;
+    'show-gridStringProperty': LocalizedStringProperty;
     'gravity': {
       'lots': string;
-      'lotsStringProperty': LinkableProperty<string>;
+      'lotsStringProperty': LocalizedStringProperty;
       'none': string;
-      'noneStringProperty': LinkableProperty<string>;
+      'noneStringProperty': LocalizedStringProperty;
     };
     'friction': {
       'title': string;
-      'titleStringProperty': LinkableProperty<string>;
+      'titleStringProperty': LocalizedStringProperty;
     };
     'restart-skater': string;
-    'restart-skaterStringProperty': LinkableProperty<string>;
+    'restart-skaterStringProperty': LocalizedStringProperty;
   };
   'energy-skate-park-basics': {
     'title': string;
-    'titleStringProperty': LinkableProperty<string>;
+    'titleStringProperty': LocalizedStringProperty;
   };
   'slow': {
     'motion': string;
-    'motionStringProperty': LinkableProperty<string>;
+    'motionStringProperty': LocalizedStringProperty;
   };
   'energy': {
     'thermal': string;
-    'thermalStringProperty': LinkableProperty<string>;
+    'thermalStringProperty': LocalizedStringProperty;
     'total': string;
-    'totalStringProperty': LinkableProperty<string>;
+    'totalStringProperty': LocalizedStringProperty;
     'kinetic': string;
-    'kineticStringProperty': LinkableProperty<string>;
+    'kineticStringProperty': LocalizedStringProperty;
     'potential': string;
-    'potentialStringProperty': LinkableProperty<string>;
+    'potentialStringProperty': LocalizedStringProperty;
     'energy': string;
-    'energyStringProperty': LinkableProperty<string>;
+    'energyStringProperty': LocalizedStringProperty;
   };
   'plots': {
     'bar-graph': string;
-    'bar-graphStringProperty': LinkableProperty<string>;
+    'bar-graphStringProperty': LocalizedStringProperty;
   };
   'pieChart': string;
-  'pieChartStringProperty': LinkableProperty<string>;
+  'pieChartStringProperty': LocalizedStringProperty;
   'large': string;
-  'largeStringProperty': LinkableProperty<string>;
+  'largeStringProperty': LocalizedStringProperty;
   'normal': string;
-  'normalStringProperty': LinkableProperty<string>;
+  'normalStringProperty': LocalizedStringProperty;
   'zeroMeters': string;
-  'zeroMetersStringProperty': LinkableProperty<string>;
+  'zeroMetersStringProperty': LocalizedStringProperty;
 };
 
 const EnergySkateParkBasicsStrings = getStringModule( 'ENERGY_SKATE_PARK_BASICS' ) as StringsType;
