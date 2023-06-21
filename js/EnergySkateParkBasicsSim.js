@@ -8,11 +8,11 @@
 
 import EnergySkateParkSim from '../../energy-skate-park/js/common/EnergySkateParkSim.js';
 import EnergySkateParkPreferencesModel from '../../energy-skate-park/js/common/model/EnergySkateParkPreferencesModel.js';
+import SkaterImages from '../../energy-skate-park/js/common/view/SkaterImages.js';
 import PreferencesModel from '../../joist/js/preferences/PreferencesModel.js';
 import Tandem from '../../tandem/js/Tandem.js';
 import energySkateParkBasics from './energySkateParkBasics.js';
 import EnergySkateParkBasicsStrings from './EnergySkateParkBasicsStrings.js';
-import SkaterImages from '../../energy-skate-park/js/common/view/SkaterImages.js';
 import FrictionScreen from './friction/FrictionScreen.js';
 import IntroScreen from './intro/IntroScreen.js';
 import PlaygroundScreen from './playground/PlaygroundScreen.js';
@@ -33,8 +33,7 @@ class EnergySkateParkBasicsSim extends EnergySkateParkSim {
     const options = {
       preferencesModel: new PreferencesModel( {
         localizationOptions: {
-          characterSets: SkaterImages.SKATER_CHARACTER_SETS,
-          supportsDynamicLocales: false
+          characterSets: SkaterImages.SKATER_CHARACTER_SETS
         }
       } ),
       credits: {
