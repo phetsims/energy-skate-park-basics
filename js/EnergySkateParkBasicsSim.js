@@ -20,7 +20,7 @@ const energySkateParkBasicsTitleStringProperty = EnergySkateParkBasicsStrings[ '
 
 const preferencesModel = new PreferencesModel( {
   localizationOptions: {
-    characterSets: SkaterImages.SKATER_PORTAYALS
+    portrayals: SkaterImages.SKATER_PORTAYALS
   }
 } );
 const energySkateParkPreferencesModel = new EnergySkateParkPreferencesModel( preferencesModel.localizationModel.regionAndCulturePortrayalProperty );
