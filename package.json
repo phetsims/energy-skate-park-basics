@@ -33,7 +33,10 @@
       "supportedRegionsAndCultures": [
         "usa",
         "africa",
-        "africaModest"
+        "africaModest",
+        "asia",
+        "latinAmerica",
+        "oceania"
       ]
     },
     "supportsOutputJS": true,
