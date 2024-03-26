@@ -8,8 +8,6 @@
 
 import EnergySkateParkSim from '../../energy-skate-park/js/common/EnergySkateParkSim.js';
 import EnergySkateParkPreferencesModel from '../../energy-skate-park/js/common/model/EnergySkateParkPreferencesModel.js';
-import SkaterImages from '../../energy-skate-park/js/common/view/SkaterImages.js';
-import PreferencesModel from '../../joist/js/preferences/PreferencesModel.js';
 import energySkateParkBasics from './energySkateParkBasics.js';
 import EnergySkateParkBasicsStrings from './EnergySkateParkBasicsStrings.js';
 import FrictionScreen from './friction/FrictionScreen.js';
@@ -18,12 +16,7 @@ import PlaygroundScreen from './playground/PlaygroundScreen.js';
 
 const energySkateParkBasicsTitleStringProperty = EnergySkateParkBasicsStrings[ 'energy-skate-park-basics' ].titleStringProperty;
 
-const preferencesModel = new PreferencesModel( {
-  localizationOptions: {
-    portrayals: SkaterImages.SKATER_PORTAYALS
-  }
-} );
-const energySkateParkPreferencesModel = new EnergySkateParkPreferencesModel( preferencesModel.localizationModel.regionAndCulturePortrayalProperty );
+const energySkateParkPreferencesModel = new EnergySkateParkPreferencesModel();
 
 /**
  * @param {Tandem} tandem
@@ -35,7 +28,6 @@ class EnergySkateParkBasicsSim extends EnergySkateParkSim {
    */
   constructor( tandem ) {
     const options = {
-      preferencesModel: preferencesModel,
       credits: {
         leadDesign: 'Ariel Paul, Noah Podolefsky, Sam Reid',
         softwareDevelopment: 'Sam Reid, Jesse Greenberg',
