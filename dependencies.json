@@ -1,5 +1,5 @@
 {
-  "comment": "# energy-skate-park-basics 1.1.34-rc.1 Thu May 16 2024 00:07:49 GMT-0600 (Mountain Daylight Time)",
+  "comment": "# energy-skate-park-basics 1.1.34-rc.2 Fri May 24 2024 15:45:41 GMT-0600 (Mountain Daylight Time)",
   "assert": {
     "sha": "7d27130a4d27da15aa7f8a21bbfb9245288c1b44",
     "branch": "HEAD"
@@ -21,7 +21,7 @@
     "branch": "HEAD"
   },
   "energy-skate-park-basics": {
-    "sha": "06ff25b57ab67a11ca603cb43799f7515b1ba751",
+    "sha": "1caac52b45650e4819c557c26e8aed57ef46b5f4",
     "branch": "1.1"
   },
   "joist": {
