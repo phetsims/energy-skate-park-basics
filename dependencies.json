@@ -1,5 +1,5 @@
 {
-  "comment": "# energy-skate-park-basics 1.3.30-phetiorc.1 Tue Jul 09 2024 18:41:11 GMT-0600 (Mountain Daylight Time)",
+  "comment": "# energy-skate-park-basics 1.3.30-phetiorc.2 Wed Jul 10 2024 13:07:55 GMT-0600 (Mountain Daylight Time)",
   "assert": {
     "sha": "a707328cc11048787a807714496af23e0bd25be1",
     "branch": "HEAD"
@@ -21,7 +21,7 @@
     "branch": "HEAD"
   },
   "energy-skate-park-basics": {
-    "sha": "0cb00a32d4931cb5d79f9b369275f9b769f43748",
+    "sha": "da208234cc1ef880d13d27f5b05f3d4c6db323c4",
     "branch": "1.3-phetio"
   },
   "joist": {
