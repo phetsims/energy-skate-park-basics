@@ -46,8 +46,5 @@
       "ENERGY_SKATE_PARK_BASICS/screen.friction",
       "ENERGY_SKATE_PARK_BASICS/screen.trackPlayground"
     ]
-  },
-  "eslintConfig": {
-    "extends": "../chipper/eslint/sim_eslintrc.js"
   }
 }
