@@ -19,7 +19,7 @@ import EnergySkateParkBasicsStrings from '../EnergySkateParkBasicsStrings.js';
 import PlaygroundModel from './model/PlaygroundModel.js';
 import PlaygroundScreenView from './view/PlaygroundScreenView.js';
 
-class PlaygroundScreen extends Screen<PlaygroundModel, PlaygroundScreenView> {
+export default class PlaygroundScreen extends Screen<PlaygroundModel, PlaygroundScreenView> {
 
   public constructor( preferencesModel: EnergySkateParkPreferencesModel, tandem: Tandem, options?: IntentionalAny ) {
 
@@ -43,4 +43,3 @@ class PlaygroundScreen extends Screen<PlaygroundModel, PlaygroundScreenView> {
 }
 
 energySkateParkBasics.register( 'PlaygroundScreen', PlaygroundScreen );
-export default PlaygroundScreen;

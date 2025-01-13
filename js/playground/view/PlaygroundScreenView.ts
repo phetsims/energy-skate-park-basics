@@ -12,7 +12,7 @@ import EnergySkateParkPlaygroundScreenView from '../../../../energy-skate-park/j
 import Tandem from '../../../../tandem/js/Tandem.js';
 import energySkateParkBasics from '../../energySkateParkBasics.js';
 
-class PlaygroundScreenView extends EnergySkateParkPlaygroundScreenView {
+export default class PlaygroundScreenView extends EnergySkateParkPlaygroundScreenView {
 
   public constructor( model: EnergySkateParkPlaygroundModel, tandem: Tandem ) {
 
@@ -39,4 +39,3 @@ class PlaygroundScreenView extends EnergySkateParkPlaygroundScreenView {
 }
 
 energySkateParkBasics.register( 'PlaygroundScreenView', PlaygroundScreenView );
-export default PlaygroundScreenView;

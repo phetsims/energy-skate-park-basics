@@ -12,12 +12,10 @@ import Tandem from '../../../../tandem/js/Tandem.js';
 import energySkateParkBasics from '../../energySkateParkBasics.js';
 import EnergySkateParkBasicsConstants from '../../EnergySkateParkBasicsConstants.js';
 
-class PlaygroundModel extends EnergySkateParkPlaygroundModel {
-
+export default class PlaygroundModel extends EnergySkateParkPlaygroundModel {
   public constructor( preferencesModel: EnergySkateParkPreferencesModel, tandem: Tandem ) {
     super( preferencesModel, tandem.createTandem( 'playgroundModel' ), EnergySkateParkBasicsConstants.BASICS_MODEL_OPTIONS );
   }
 }
 
 energySkateParkBasics.register( 'PlaygroundModel', PlaygroundModel );
-export default PlaygroundModel;

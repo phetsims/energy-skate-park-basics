@@ -19,7 +19,7 @@ import EnergySkateParkBasicsStrings from '../EnergySkateParkBasicsStrings.js';
 import FrictionModel from './model/FrictionModel.js';
 import FrictionScreenView from './view/FrictionScreenView.js';
 
-class FrictionScreen extends Screen<FrictionModel, FrictionScreenView> {
+export default class FrictionScreen extends Screen<FrictionModel, FrictionScreenView> {
 
   public constructor( preferencesModel: EnergySkateParkPreferencesModel, tandem: Tandem, options?: IntentionalAny ) {
     // eslint-disable-next-line phet/bad-typescript-text
@@ -42,4 +42,3 @@ class FrictionScreen extends Screen<FrictionModel, FrictionScreenView> {
 }
 
 energySkateParkBasics.register( 'FrictionScreen', FrictionScreen );
-export default FrictionScreen;

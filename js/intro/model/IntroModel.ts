@@ -13,7 +13,7 @@ import EnergySkateParkBasicsTrackSetModel from '../../common/model/EnergySkatePa
 import energySkateParkBasics from '../../energySkateParkBasics.js';
 import EnergySkateParkBasicsConstants from '../../EnergySkateParkBasicsConstants.js';
 
-class IntroModel extends EnergySkateParkBasicsTrackSetModel {
+export default class IntroModel extends EnergySkateParkBasicsTrackSetModel {
 
   public constructor( preferencesModel: EnergySkateParkPreferencesModel, tandem: Tandem ) {
     super( preferencesModel, tandem, merge( {}, EnergySkateParkBasicsConstants.BASICS_MODEL_OPTIONS, {
@@ -25,4 +25,3 @@ class IntroModel extends EnergySkateParkBasicsTrackSetModel {
 }
 
 energySkateParkBasics.register( 'IntroModel', IntroModel );
-export default IntroModel;

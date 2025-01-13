@@ -13,7 +13,7 @@ import IntentionalAny from '../../../../phet-core/js/types/IntentionalAny.js';
 import Tandem from '../../../../tandem/js/Tandem.js';
 import energySkateParkBasics from '../../energySkateParkBasics.js';
 
-class EnergySkateParkBasicsTrackSetScreenView extends EnergySkateParkTrackSetScreenView {
+export default class EnergySkateParkBasicsTrackSetScreenView extends EnergySkateParkTrackSetScreenView {
 
   public constructor( model: EnergySkateParkTrackSetModel, tandem: Tandem, options?: IntentionalAny ) {
 
@@ -40,4 +40,3 @@ class EnergySkateParkBasicsTrackSetScreenView extends EnergySkateParkTrackSetScr
 }
 
 energySkateParkBasics.register( 'EnergySkateParkBasicsTrackSetScreenView', EnergySkateParkBasicsTrackSetScreenView );
-export default EnergySkateParkBasicsTrackSetScreenView;

@@ -11,7 +11,7 @@ import EnergySkateParkBasicsTrackSetScreenView from '../../common/view/EnergySka
 import energySkateParkBasics from '../../energySkateParkBasics.js';
 import FrictionModel from '../model/FrictionModel.js';
 
-class FrictionScreenView extends EnergySkateParkBasicsTrackSetScreenView {
+export default class FrictionScreenView extends EnergySkateParkBasicsTrackSetScreenView {
 
   public constructor( model: FrictionModel, tandem: Tandem ) {
     super( model, tandem, {
@@ -25,4 +25,3 @@ class FrictionScreenView extends EnergySkateParkBasicsTrackSetScreenView {
 }
 
 energySkateParkBasics.register( 'FrictionScreenView', FrictionScreenView );
-export default FrictionScreenView;

@@ -16,7 +16,7 @@ import Panel from '../../../../sun/js/Panel.js';
 import Tandem from '../../../../tandem/js/Tandem.js';
 import energySkateParkBasics from '../../energySkateParkBasics.js';
 
-class EnergyBarGraphPanel extends Panel {
+export default class EnergyBarGraphPanel extends Panel {
 
   public constructor( model: EnergySkateParkModel, tandem: Tandem, options?: IntentionalAny ) {
 
@@ -38,4 +38,3 @@ class EnergyBarGraphPanel extends Panel {
 }
 
 energySkateParkBasics.register( 'EnergyBarGraphPanel', EnergyBarGraphPanel );
-export default EnergyBarGraphPanel;

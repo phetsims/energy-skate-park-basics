@@ -15,7 +15,7 @@ import IntentionalAny from '../../../../phet-core/js/types/IntentionalAny.js';
 import Tandem from '../../../../tandem/js/Tandem.js';
 import energySkateParkBasics from '../../energySkateParkBasics.js';
 
-class EnergySkateParkBasicsTrackSetModel extends EnergySkateParkTrackSetModel {
+export default class EnergySkateParkBasicsTrackSetModel extends EnergySkateParkTrackSetModel {
 
   public constructor( preferencesModel: EnergySkateParkPreferencesModel, tandem: Tandem, options?: IntentionalAny ) {
 
@@ -33,4 +33,3 @@ class EnergySkateParkBasicsTrackSetModel extends EnergySkateParkTrackSetModel {
 }
 
 energySkateParkBasics.register( 'EnergySkateParkBasicsTrackSetModel', EnergySkateParkBasicsTrackSetModel );
-export default EnergySkateParkBasicsTrackSetModel;

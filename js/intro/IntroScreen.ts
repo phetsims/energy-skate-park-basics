@@ -19,7 +19,7 @@ import EnergySkateParkBasicsStrings from '../EnergySkateParkBasicsStrings.js';
 import IntroModel from './model/IntroModel.js';
 import IntroScreenView from './view/IntroScreenView.js';
 
-class IntroScreen extends Screen<IntroModel, IntroScreenView> {
+export default class IntroScreen extends Screen<IntroModel, IntroScreenView> {
   public constructor( preferencesModel: EnergySkateParkPreferencesModel, tandem: Tandem, options?: IntentionalAny ) {
 
     // eslint-disable-next-line phet/bad-typescript-text
@@ -41,4 +41,3 @@ class IntroScreen extends Screen<IntroModel, IntroScreenView> {
 }
 
 energySkateParkBasics.register( 'IntroScreen', IntroScreen );
-export default IntroScreen;

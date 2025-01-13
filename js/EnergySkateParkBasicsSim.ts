@@ -19,7 +19,7 @@ const energySkateParkBasicsTitleStringProperty = EnergySkateParkBasicsStrings[ '
 
 const energySkateParkPreferencesModel = new EnergySkateParkPreferencesModel();
 
-class EnergySkateParkBasicsSim extends EnergySkateParkSim {
+export default class EnergySkateParkBasicsSim extends EnergySkateParkSim {
 
   public constructor( tandem: Tandem ) {
     const options = {
@@ -43,4 +43,3 @@ class EnergySkateParkBasicsSim extends EnergySkateParkSim {
 }
 
 energySkateParkBasics.register( 'EnergySkateParkBasicsSim', EnergySkateParkBasicsSim );
-export default EnergySkateParkBasicsSim;
