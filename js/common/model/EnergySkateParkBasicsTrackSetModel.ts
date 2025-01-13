@@ -7,19 +7,19 @@
  * @author Jesse Greenberg
  */
 
+import EnergySkateParkPreferencesModel from '../../../../energy-skate-park/js/common/model/EnergySkateParkPreferencesModel.js';
 import EnergySkateParkTrackSetModel from '../../../../energy-skate-park/js/common/model/EnergySkateParkTrackSetModel.js';
 import PremadeTracks from '../../../../energy-skate-park/js/common/model/PremadeTracks.js';
 import merge from '../../../../phet-core/js/merge.js';
+import IntentionalAny from '../../../../phet-core/js/types/IntentionalAny.js';
+import Tandem from '../../../../tandem/js/Tandem.js';
 import energySkateParkBasics from '../../energySkateParkBasics.js';
 
 class EnergySkateParkBasicsTrackSetModel extends EnergySkateParkTrackSetModel {
 
-  /**
-   * @param {EnergySkateParkPreferencesModel} preferencesModel
-   * @param {Tandem} tandem
-   * @param {Object} [options]
-   */
-  constructor( preferencesModel, tandem, options ) {
+  public constructor( preferencesModel: EnergySkateParkPreferencesModel, tandem: Tandem, options?: IntentionalAny ) {
+
+    // eslint-disable-next-line phet/bad-typescript-text
     options = merge( {
       trackTypes: [
         PremadeTracks.TrackType.PARABOLA,

@@ -6,16 +6,14 @@
  * @author Jesse Greenberg (PhET Interactive Simulations)
  */
 
+import Tandem from '../../../../tandem/js/Tandem.js';
 import EnergySkateParkBasicsTrackSetScreenView from '../../common/view/EnergySkateParkBasicsTrackSetScreenView.js';
 import energySkateParkBasics from '../../energySkateParkBasics.js';
+import IntroModel from '../model/IntroModel.js';
 
 class IntroScreenView extends EnergySkateParkBasicsTrackSetScreenView {
 
-  /**
-   * @param {IntroModel} model
-   * @param  {Tandem} tandem
-   */
-  constructor( model, tandem ) {
+  public constructor( model: IntroModel, tandem: Tandem ) {
     super( model, tandem, {
       drawSkaterPath: false
     } );

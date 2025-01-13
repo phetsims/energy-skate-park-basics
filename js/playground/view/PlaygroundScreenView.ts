@@ -7,16 +7,14 @@
  * @author Jesse Greenberg (PhET Interactive Simulations)
  */
 
+import EnergySkateParkPlaygroundModel from '../../../../energy-skate-park/js/playground/model/EnergySkateParkPlaygroundModel.js';
 import EnergySkateParkPlaygroundScreenView from '../../../../energy-skate-park/js/playground/view/EnergySkateParkPlaygroundScreenView.js';
+import Tandem from '../../../../tandem/js/Tandem.js';
 import energySkateParkBasics from '../../energySkateParkBasics.js';
 
 class PlaygroundScreenView extends EnergySkateParkPlaygroundScreenView {
 
-  /**
-   * @param {EnergySkateParkPlaygroundModel} model
-   * @param {Tandem} tandem
-   */
-  constructor( model, tandem ) {
+  public constructor( model: EnergySkateParkPlaygroundModel, tandem: Tandem ) {
 
     super( model, tandem, {
       showReferenceHeight: false,

@@ -6,19 +6,18 @@
  * @author Jesse Greenberg
  */
 
+import EnergySkateParkTrackSetModel from '../../../../energy-skate-park/js/common/model/EnergySkateParkTrackSetModel.js';
 import EnergySkateParkTrackSetScreenView from '../../../../energy-skate-park/js/common/view/EnergySkateParkTrackSetScreenView.js';
 import merge from '../../../../phet-core/js/merge.js';
+import IntentionalAny from '../../../../phet-core/js/types/IntentionalAny.js';
+import Tandem from '../../../../tandem/js/Tandem.js';
 import energySkateParkBasics from '../../energySkateParkBasics.js';
 
 class EnergySkateParkBasicsTrackSetScreenView extends EnergySkateParkTrackSetScreenView {
 
-  /**
-   * @param {EnergySkateParkTrackSetModel} model
-   * @param {Array.<PhysicalNumberControl|PhysicalComboBox} controls
-   * @param {Tandem} tandem
-   * @param {Object} [options]
-   */
-  constructor( model, tandem, options ) {
+  public constructor( model: EnergySkateParkTrackSetModel, tandem: Tandem, options?: IntentionalAny ) {
+
+    // eslint-disable-next-line phet/bad-typescript-text
     options = merge( {
       showToolbox: false,
       showReferenceHeight: false,

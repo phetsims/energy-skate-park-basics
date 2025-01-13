@@ -6,16 +6,14 @@
  * @author Jesse Greenberg (PhET Interactive Simulations)
  */
 
+import Tandem from '../../../../tandem/js/Tandem.js';
 import EnergySkateParkBasicsTrackSetScreenView from '../../common/view/EnergySkateParkBasicsTrackSetScreenView.js';
 import energySkateParkBasics from '../../energySkateParkBasics.js';
+import FrictionModel from '../model/FrictionModel.js';
 
 class FrictionScreenView extends EnergySkateParkBasicsTrackSetScreenView {
 
-  /**
-   * @param {FrictionModel} model
-   * @param {Tandem} tandem
-   */
-  constructor( model, tandem ) {
+  public constructor( model: FrictionModel, tandem: Tandem ) {
     super( model, tandem, {
       controlPanelOptions: {
         showGravityControls: false,

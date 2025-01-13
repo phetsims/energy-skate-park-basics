@@ -8,6 +8,7 @@
 
 import EnergySkateParkSim from '../../energy-skate-park/js/common/EnergySkateParkSim.js';
 import EnergySkateParkPreferencesModel from '../../energy-skate-park/js/common/model/EnergySkateParkPreferencesModel.js';
+import Tandem from '../../tandem/js/Tandem.js';
 import energySkateParkBasics from './energySkateParkBasics.js';
 import EnergySkateParkBasicsStrings from './EnergySkateParkBasicsStrings.js';
 import FrictionScreen from './friction/FrictionScreen.js';
@@ -18,15 +19,9 @@ const energySkateParkBasicsTitleStringProperty = EnergySkateParkBasicsStrings[ '
 
 const energySkateParkPreferencesModel = new EnergySkateParkPreferencesModel();
 
-/**
- * @param {Tandem} tandem
- */
 class EnergySkateParkBasicsSim extends EnergySkateParkSim {
 
-  /**
-   * @param {Tandem} tandem
-   */
-  constructor( tandem ) {
+  public constructor( tandem: Tandem ) {
     const options = {
       credits: {
         leadDesign: 'Ariel Paul, Noah Podolefsky, Sam Reid',

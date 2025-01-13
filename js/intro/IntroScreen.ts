@@ -6,22 +6,23 @@
  * @author Jesse Greenberg (PhET Interactive Simulations)
  */
 
+import EnergySkateParkPreferencesModel from '../../../energy-skate-park/js/common/model/EnergySkateParkPreferencesModel.js';
 import Screen from '../../../joist/js/Screen.js';
 import ScreenIcon from '../../../joist/js/ScreenIcon.js';
 import merge from '../../../phet-core/js/merge.js';
+import IntentionalAny from '../../../phet-core/js/types/IntentionalAny.js';
 import { Image } from '../../../scenery/js/imports.js';
+import Tandem from '../../../tandem/js/Tandem.js';
 import iconIntroHomescreen_png from '../../images/iconIntroHomescreen_png.js';
 import energySkateParkBasics from '../energySkateParkBasics.js';
 import EnergySkateParkBasicsStrings from '../EnergySkateParkBasicsStrings.js';
 import IntroModel from './model/IntroModel.js';
 import IntroScreenView from './view/IntroScreenView.js';
 
-/**
- * @param {EnergySkateParkPreferencesModel} preferencesModel
- * @param {Tandem} tandem
- */
-class IntroScreen extends Screen {
-  constructor( preferencesModel, tandem, options ) {
+class IntroScreen extends Screen<IntroModel, IntroScreenView> {
+  public constructor( preferencesModel: EnergySkateParkPreferencesModel, tandem: Tandem, options?: IntentionalAny ) {
+
+    // eslint-disable-next-line phet/bad-typescript-text
     options = merge( {
       name: EnergySkateParkBasicsStrings.screen.introductionStringProperty,
       tandem: tandem,
