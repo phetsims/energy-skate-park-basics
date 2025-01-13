@@ -38,7 +38,7 @@ export default class EnergySkateParkBasicsSim extends EnergySkateParkSim {
       new PlaygroundScreen( energySkateParkPreferencesModel, tandem.createTandem( 'playgroundScreen' ) )
     ];
 
-    super( energySkateParkBasicsTitleStringProperty, screens, tandem, options );
+    super( energySkateParkBasicsTitleStringProperty, screens, options );
   }
 }
 
