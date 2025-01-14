@@ -1,4 +1,4 @@
-// Copyright 2019-2021, University of Colorado Boulder
+// Copyright 2019-2025, University of Colorado Boulder
 
 /**
  * The Energy bar graph in Energy Skate Park, wrapped in a panel.

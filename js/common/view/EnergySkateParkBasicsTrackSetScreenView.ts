@@ -1,4 +1,4 @@
-// Copyright 2019-2022, University of Colorado Boulder
+// Copyright 2019-2025, University of Colorado Boulder
 
 /**
  * The EnergySkateParkTrackSetScreenView used in screens in energy-skate-park-basics. Sets options for that

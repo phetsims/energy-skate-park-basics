@@ -1,4 +1,4 @@
-// Copyright 2019-2022, University of Colorado Boulder
+// Copyright 2019-2025, University of Colorado Boulder
 
 /**
  * A track set model for Energy Skate Park: Basics. Extends EnergySkateParkTrackSetModel, but assembles the
