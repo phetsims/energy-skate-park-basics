@@ -11,7 +11,7 @@ import Screen from '../../../joist/js/Screen.js';
 import ScreenIcon from '../../../joist/js/ScreenIcon.js';
 import merge from '../../../phet-core/js/merge.js';
 import IntentionalAny from '../../../phet-core/js/types/IntentionalAny.js';
-import { Image } from '../../../scenery/js/imports.js';
+import Image from '../../../scenery/js/nodes/Image.js';
 import Tandem from '../../../tandem/js/Tandem.js';
 import iconPlaygroundHomescreen_png from '../../images/iconPlaygroundHomescreen_png.js';
 import energySkateParkBasics from '../energySkateParkBasics.js';

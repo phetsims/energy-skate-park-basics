@@ -11,7 +11,7 @@ import EnergySkateParkModel from '../../../../energy-skate-park/js/common/model/
 import EnergyBarGraph from '../../../../energy-skate-park/js/common/view/EnergyBarGraph.js';
 import merge from '../../../../phet-core/js/merge.js';
 import IntentionalAny from '../../../../phet-core/js/types/IntentionalAny.js';
-import { VBox } from '../../../../scenery/js/imports.js';
+import VBox from '../../../../scenery/js/layout/nodes/VBox.js';
 import Panel from '../../../../sun/js/Panel.js';
 import Tandem from '../../../../tandem/js/Tandem.js';
 import energySkateParkBasics from '../../energySkateParkBasics.js';
