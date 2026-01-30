@@ -8,17 +8,21 @@
 
 import EnergySkateParkTrackSetModel from '../../../../energy-skate-park/js/common/model/EnergySkateParkTrackSetModel.js';
 import EnergySkateParkTrackSetScreenView from '../../../../energy-skate-park/js/common/view/EnergySkateParkTrackSetScreenView.js';
-import merge from '../../../../phet-core/js/merge.js';
+import optionize, { EmptySelfOptions } from '../../../../phet-core/js/optionize.js';
 import IntentionalAny from '../../../../phet-core/js/types/IntentionalAny.js';
 import Tandem from '../../../../tandem/js/Tandem.js';
 import energySkateParkBasics from '../../energySkateParkBasics.js';
 
+type SelfOptions = EmptySelfOptions;
+
+// Parent class uses IntentionalAny for options
+type EnergySkateParkBasicsTrackSetScreenViewOptions = SelfOptions & IntentionalAny;
+
 export default class EnergySkateParkBasicsTrackSetScreenView extends EnergySkateParkTrackSetScreenView {
 
-  public constructor( model: EnergySkateParkTrackSetModel, tandem: Tandem, options?: IntentionalAny ) {
+  public constructor( model: EnergySkateParkTrackSetModel, tandem: Tandem, providedOptions?: EnergySkateParkBasicsTrackSetScreenViewOptions ) {
 
-    // eslint-disable-next-line phet/bad-typescript-text
-    options = merge( {
+    const options = optionize<EnergySkateParkBasicsTrackSetScreenViewOptions, SelfOptions, IntentionalAny>()( {
       showToolbox: false,
       showReferenceHeight: false,
       showSeparateVisibilityControlsPanel: false,
@@ -33,7 +37,7 @@ export default class EnergySkateParkBasicsTrackSetScreenView extends EnergySkate
           includeMassNumberControl: false
         }
       }
-    }, options );
+    }, providedOptions );
 
     super( model, tandem, options );
   }

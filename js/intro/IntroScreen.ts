@@ -7,10 +7,10 @@
  */
 
 import EnergySkateParkPreferencesModel from '../../../energy-skate-park/js/common/model/EnergySkateParkPreferencesModel.js';
-import Screen from '../../../joist/js/Screen.js';
+import Screen, { ScreenOptions } from '../../../joist/js/Screen.js';
 import ScreenIcon from '../../../joist/js/ScreenIcon.js';
-import merge from '../../../phet-core/js/merge.js';
-import IntentionalAny from '../../../phet-core/js/types/IntentionalAny.js';
+import optionize, { EmptySelfOptions } from '../../../phet-core/js/optionize.js';
+import WithOptional from '../../../phet-core/js/types/WithOptional.js';
 import Image from '../../../scenery/js/nodes/Image.js';
 import Tandem from '../../../tandem/js/Tandem.js';
 import iconIntroHomescreen_png from '../../images/iconIntroHomescreen_png.js';
@@ -19,18 +19,21 @@ import EnergySkateParkBasicsStrings from '../EnergySkateParkBasicsStrings.js';
 import IntroModel from './model/IntroModel.js';
 import IntroScreenView from './view/IntroScreenView.js';
 
-export default class IntroScreen extends Screen<IntroModel, IntroScreenView> {
-  public constructor( preferencesModel: EnergySkateParkPreferencesModel, tandem: Tandem, options?: IntentionalAny ) {
+type SelfOptions = EmptySelfOptions;
 
-    // eslint-disable-next-line phet/bad-typescript-text
-    options = merge( {
+type IntroScreenOptions = SelfOptions & WithOptional<ScreenOptions, 'tandem'>;
+
+export default class IntroScreen extends Screen<IntroModel, IntroScreenView> {
+  public constructor( preferencesModel: EnergySkateParkPreferencesModel, tandem: Tandem, providedOptions?: IntroScreenOptions ) {
+
+    const options = optionize<IntroScreenOptions, SelfOptions, ScreenOptions>()( {
       name: EnergySkateParkBasicsStrings.screen.introductionStringProperty,
       tandem: tandem,
       homeScreenIcon: new ScreenIcon( new Image( iconIntroHomescreen_png ), {
         maxIconWidthProportion: 1,
         maxIconHeightProportion: 1
       } )
-    }, options );
+    }, providedOptions );
 
     super(
       () => new IntroModel( preferencesModel, tandem.createTandem( 'model' ) ),

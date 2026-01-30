@@ -8,25 +8,27 @@
  */
 
 import EnergySkateParkPreferencesModel from '../../../../energy-skate-park/js/common/model/EnergySkateParkPreferencesModel.js';
-import EnergySkateParkTrackSetModel from '../../../../energy-skate-park/js/common/model/EnergySkateParkTrackSetModel.js';
+import EnergySkateParkTrackSetModel, { EnergySkateParkTrackSetModelOptions } from '../../../../energy-skate-park/js/common/model/EnergySkateParkTrackSetModel.js';
 import PremadeTracks from '../../../../energy-skate-park/js/common/model/PremadeTracks.js';
-import merge from '../../../../phet-core/js/merge.js';
-import IntentionalAny from '../../../../phet-core/js/types/IntentionalAny.js';
+import optionize, { EmptySelfOptions } from '../../../../phet-core/js/optionize.js';
 import Tandem from '../../../../tandem/js/Tandem.js';
 import energySkateParkBasics from '../../energySkateParkBasics.js';
 
+type SelfOptions = EmptySelfOptions;
+
+type EnergySkateParkBasicsTrackSetModelOptions = SelfOptions & EnergySkateParkTrackSetModelOptions;
+
 export default class EnergySkateParkBasicsTrackSetModel extends EnergySkateParkTrackSetModel {
 
-  public constructor( preferencesModel: EnergySkateParkPreferencesModel, tandem: Tandem, options?: IntentionalAny ) {
+  public constructor( preferencesModel: EnergySkateParkPreferencesModel, tandem: Tandem, providedOptions?: EnergySkateParkBasicsTrackSetModelOptions ) {
 
-    // eslint-disable-next-line phet/bad-typescript-text
-    options = merge( {
+    const options = optionize<EnergySkateParkBasicsTrackSetModelOptions, SelfOptions, EnergySkateParkTrackSetModelOptions>()( {
       trackTypes: [
         PremadeTracks.TrackType.PARABOLA,
         PremadeTracks.TrackType.SLOPE,
         PremadeTracks.TrackType.DOUBLE_WELL
       ]
-    }, options );
+    }, providedOptions );
 
     super( preferencesModel, tandem, options );
   }

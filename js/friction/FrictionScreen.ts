@@ -7,10 +7,10 @@
  */
 
 import EnergySkateParkPreferencesModel from '../../../energy-skate-park/js/common/model/EnergySkateParkPreferencesModel.js';
-import Screen from '../../../joist/js/Screen.js';
+import Screen, { ScreenOptions } from '../../../joist/js/Screen.js';
 import ScreenIcon from '../../../joist/js/ScreenIcon.js';
-import merge from '../../../phet-core/js/merge.js';
-import IntentionalAny from '../../../phet-core/js/types/IntentionalAny.js';
+import optionize, { EmptySelfOptions } from '../../../phet-core/js/optionize.js';
+import WithOptional from '../../../phet-core/js/types/WithOptional.js';
 import Image from '../../../scenery/js/nodes/Image.js';
 import Tandem from '../../../tandem/js/Tandem.js';
 import iconFrictionHomescreen_png from '../../images/iconFrictionHomescreen_png.js';
@@ -19,11 +19,15 @@ import EnergySkateParkBasicsStrings from '../EnergySkateParkBasicsStrings.js';
 import FrictionModel from './model/FrictionModel.js';
 import FrictionScreenView from './view/FrictionScreenView.js';
 
+type SelfOptions = EmptySelfOptions;
+
+type FrictionScreenOptions = SelfOptions & WithOptional<ScreenOptions, 'tandem'>;
+
 export default class FrictionScreen extends Screen<FrictionModel, FrictionScreenView> {
 
-  public constructor( preferencesModel: EnergySkateParkPreferencesModel, tandem: Tandem, options?: IntentionalAny ) {
-    // eslint-disable-next-line phet/bad-typescript-text
-    options = merge( {
+  public constructor( preferencesModel: EnergySkateParkPreferencesModel, tandem: Tandem, providedOptions?: FrictionScreenOptions ) {
+
+    const options = optionize<FrictionScreenOptions, SelfOptions, ScreenOptions>()( {
       name: EnergySkateParkBasicsStrings.screen.frictionStringProperty,
       homeScreenIcon: new ScreenIcon( new Image( iconFrictionHomescreen_png ), {
         maxIconWidthProportion: 1,
@@ -31,7 +35,7 @@ export default class FrictionScreen extends Screen<FrictionModel, FrictionScreen
       } ),
 
       tandem: tandem
-    }, options );
+    }, providedOptions );
 
     super(
       () => new FrictionModel( preferencesModel, tandem.createTandem( 'model' ) ),
