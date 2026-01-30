@@ -7,22 +7,21 @@
  */
 
 import EnergySkateParkTrackSetModel from '../../../../energy-skate-park/js/common/model/EnergySkateParkTrackSetModel.js';
+import { EnergySkateParkSaveSampleScreenViewOptions } from '../../../../energy-skate-park/js/common/view/EnergySkateParkSaveSampleScreenView.js';
 import EnergySkateParkTrackSetScreenView from '../../../../energy-skate-park/js/common/view/EnergySkateParkTrackSetScreenView.js';
 import optionize, { EmptySelfOptions } from '../../../../phet-core/js/optionize.js';
-import IntentionalAny from '../../../../phet-core/js/types/IntentionalAny.js';
 import Tandem from '../../../../tandem/js/Tandem.js';
 import energySkateParkBasics from '../../energySkateParkBasics.js';
 
 type SelfOptions = EmptySelfOptions;
 
-// Parent class uses IntentionalAny for options
-type EnergySkateParkBasicsTrackSetScreenViewOptions = SelfOptions & IntentionalAny;
+type EnergySkateParkBasicsTrackSetScreenViewOptions = SelfOptions & EnergySkateParkSaveSampleScreenViewOptions;
 
 export default class EnergySkateParkBasicsTrackSetScreenView extends EnergySkateParkTrackSetScreenView {
 
   public constructor( model: EnergySkateParkTrackSetModel, tandem: Tandem, providedOptions?: EnergySkateParkBasicsTrackSetScreenViewOptions ) {
 
-    const options = optionize<EnergySkateParkBasicsTrackSetScreenViewOptions, SelfOptions, IntentionalAny>()( {
+    const options = optionize<EnergySkateParkBasicsTrackSetScreenViewOptions, SelfOptions, EnergySkateParkSaveSampleScreenViewOptions>()( {
       showToolbox: false,
       showReferenceHeight: false,
       showSeparateVisibilityControlsPanel: false,
