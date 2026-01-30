@@ -13,68 +13,45 @@ import energySkateParkBasics from './energySkateParkBasics.js';
 
 type StringsType = {
   'properties': {
-    'speed': string;
     'speedStringProperty': LocalizedStringProperty;
   };
-  'small': string;
   'smallStringProperty': LocalizedStringProperty;
   'screen': {
-    'trackPlayground': string;
     'trackPlaygroundStringProperty': LocalizedStringProperty;
-    'friction': string;
     'frictionStringProperty': LocalizedStringProperty;
-    'introduction': string;
     'introductionStringProperty': LocalizedStringProperty;
   };
   'controls': {
-    'mass': string;
     'massStringProperty': LocalizedStringProperty;
-    'show-grid': string;
     'show-gridStringProperty': LocalizedStringProperty;
     'gravity': {
-      'lots': string;
       'lotsStringProperty': LocalizedStringProperty;
-      'none': string;
       'noneStringProperty': LocalizedStringProperty;
     };
     'friction': {
-      'title': string;
       'titleStringProperty': LocalizedStringProperty;
     };
-    'restart-skater': string;
     'restart-skaterStringProperty': LocalizedStringProperty;
   };
   'energy-skate-park-basics': {
-    'title': string;
     'titleStringProperty': LocalizedStringProperty;
   };
   'slow': {
-    'motion': string;
     'motionStringProperty': LocalizedStringProperty;
   };
   'energy': {
-    'thermal': string;
     'thermalStringProperty': LocalizedStringProperty;
-    'total': string;
     'totalStringProperty': LocalizedStringProperty;
-    'kinetic': string;
     'kineticStringProperty': LocalizedStringProperty;
-    'potential': string;
     'potentialStringProperty': LocalizedStringProperty;
-    'energy': string;
     'energyStringProperty': LocalizedStringProperty;
   };
   'plots': {
-    'bar-graph': string;
     'bar-graphStringProperty': LocalizedStringProperty;
   };
-  'pieChart': string;
   'pieChartStringProperty': LocalizedStringProperty;
-  'large': string;
   'largeStringProperty': LocalizedStringProperty;
-  'normal': string;
   'normalStringProperty': LocalizedStringProperty;
-  'zeroMeters': string;
   'zeroMetersStringProperty': LocalizedStringProperty;
 };
 
