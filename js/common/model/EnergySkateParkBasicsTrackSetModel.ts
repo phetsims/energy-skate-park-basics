@@ -9,7 +9,6 @@
 
 import EnergySkateParkPreferencesModel from '../../../../energy-skate-park/js/common/model/EnergySkateParkPreferencesModel.js';
 import EnergySkateParkTrackSetModel, { EnergySkateParkTrackSetModelOptions } from '../../../../energy-skate-park/js/common/model/EnergySkateParkTrackSetModel.js';
-import PremadeTracks from '../../../../energy-skate-park/js/common/model/PremadeTracks.js';
 import optionize, { EmptySelfOptions } from '../../../../phet-core/js/optionize.js';
 import Tandem from '../../../../tandem/js/Tandem.js';
 import energySkateParkBasics from '../../energySkateParkBasics.js';
@@ -24,9 +23,9 @@ export default class EnergySkateParkBasicsTrackSetModel extends EnergySkateParkT
 
     const options = optionize<EnergySkateParkBasicsTrackSetModelOptions, SelfOptions, EnergySkateParkTrackSetModelOptions>()( {
       trackTypes: [
-        PremadeTracks.TrackType.PARABOLA,
-        PremadeTracks.TrackType.SLOPE,
-        PremadeTracks.TrackType.DOUBLE_WELL
+        'PARABOLA',
+        'SLOPE',
+        'DOUBLE_WELL'
       ]
     }, providedOptions );
 
