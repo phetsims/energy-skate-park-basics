@@ -20,14 +20,13 @@ export default class PlaygroundScreenView extends EnergySkateParkPlaygroundScree
       showReferenceHeight: false,
       showToolbox: false,
       showBarGraphZoomButtons: false,
-      showAttachDetachRadioButtons: true,
       showSeparateVisibilityControlsPanel: false,
       controlPanelOptions: {
         showTrackButtons: false,
         showGravityControls: false,
         visibilityControlsOptions: {
           showGridCheckbox: true,
-          showStickToTrackCheckbox: false
+          showStickToTrackCheckbox: true
         },
         massControlsOptions: {
           includeMassSlider: true,
