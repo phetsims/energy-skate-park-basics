@@ -1,26 +1,26 @@
 {
-  "iconFrictionHomescreen.png": {
+  "frictionScreenIcon.png": {
     "text": [
-      "Copyright 2002-2015 University of Colorado Boulder"
+      "Copyright 2026 University of Colorado Boulder"
     ],
     "projectURL": "https://phet.colorado.edu",
     "license": "contact phethelp@colorado.edu",
-    "notes": "created by Bryce Gruneich"
+    "notes": "created by Amy Rouinfar"
   },
-  "iconIntroHomescreen.png": {
+  "introScreenIcon.png": {
     "text": [
-      "Copyright 2002-2015 University of Colorado Boulder"
+      "Copyright 2026 University of Colorado Boulder"
     ],
     "projectURL": "https://phet.colorado.edu",
     "license": "contact phethelp@colorado.edu",
-    "notes": "created by Bryce Gruneich"
+    "notes": "created by Amy Rouinfar"
   },
-  "iconPlaygroundHomescreen.png": {
+  "playgroundScreenIcon.png": {
     "text": [
-      "Copyright 2002-2015 University of Colorado Boulder"
+      "Copyright 2026 University of Colorado Boulder"
     ],
     "projectURL": "https://phet.colorado.edu",
     "license": "contact phethelp@colorado.edu",
-    "notes": "created by Bryce Gruneich"
+    "notes": "created by Amy Rouinfar"
   }
 }
