@@ -30,12 +30,12 @@ other important information.
 git clone https://github.com/phetsims/assert.git
 git clone https://github.com/phetsims/axon.git
 git clone https://github.com/phetsims/babel.git
+git clone https://github.com/phetsims/bamboo.git
 git clone https://github.com/phetsims/brand.git
 git clone https://github.com/phetsims/chipper.git
 git clone https://github.com/phetsims/dot.git
 git clone https://github.com/phetsims/energy-skate-park.git
 git clone https://github.com/phetsims/energy-skate-park-basics.git
-git clone https://github.com/phetsims/griddle.git
 git clone https://github.com/phetsims/joist.git
 git clone https://github.com/phetsims/kite.git
 git clone https://github.com/phetsims/perennial.git perennial-alias

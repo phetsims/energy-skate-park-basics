@@ -13,7 +13,7 @@
     "requirejsNamespace": "ENERGY_SKATE_PARK_BASICS",
     "phetLibs": [
       "energy-skate-park",
-      "griddle"
+      "bamboo"
     ],
     "preload": [
       "../sherpa/lib/numeric-1.2.6.js"
