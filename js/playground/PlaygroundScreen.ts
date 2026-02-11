@@ -7,6 +7,7 @@
  */
 
 import EnergySkateParkPreferencesModel from '../../../energy-skate-park/js/common/model/EnergySkateParkPreferencesModel.js';
+import EnergySkateParkFluent from '../../../energy-skate-park/js/EnergySkateParkFluent.js';
 import Screen, { ScreenOptions } from '../../../joist/js/Screen.js';
 import optionize, { EmptySelfOptions } from '../../../phet-core/js/optionize.js';
 import WithOptional from '../../../phet-core/js/types/WithOptional.js';
@@ -28,6 +29,7 @@ export default class PlaygroundScreen extends Screen<PlaygroundModel, Playground
     const options = optionize<PlaygroundScreenOptions, SelfOptions, ScreenOptions>()( {
       name: EnergySkateParkBasicsStrings.screen.trackPlaygroundStringProperty,
       homeScreenIcon: new PlaygroundScreenIcon(),
+      screenButtonsHelpText: EnergySkateParkFluent.a11y.screenButtons.playground.accessibleHelpTextStringProperty,
 
       tandem: tandem
     }, providedOptions );
