@@ -24,7 +24,7 @@ export default class EnergySkateParkBasicsTrackSetModel extends EnergySkateParkT
     const options = optionize<EnergySkateParkBasicsTrackSetModelOptions, SelfOptions, EnergySkateParkTrackSetModelOptions>()( {
       trackTypes: [
         'PARABOLA',
-        'SLOPE',
+        'RAMP',
         'DOUBLE_WELL'
       ]
     }, providedOptions );
