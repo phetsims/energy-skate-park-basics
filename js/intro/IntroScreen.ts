@@ -7,6 +7,7 @@
  */
 
 import EnergySkateParkPreferencesModel from '../../../energy-skate-park/js/common/model/EnergySkateParkPreferencesModel.js';
+import EnergySkateParkKeyboardHelpContent from '../../../energy-skate-park/js/common/view/EnergySkateParkKeyboardHelpContent.js';
 import EnergySkateParkFluent from '../../../energy-skate-park/js/EnergySkateParkFluent.js';
 import Screen, { ScreenOptions } from '../../../joist/js/Screen.js';
 import optionize, { EmptySelfOptions } from '../../../phet-core/js/optionize.js';
@@ -29,7 +30,8 @@ export default class IntroScreen extends Screen<IntroModel, IntroScreenView> {
       name: EnergySkateParkBasicsStrings.screen.introductionStringProperty,
       tandem: tandem,
       homeScreenIcon: new IntroScreenIcon(),
-      screenButtonsHelpText: EnergySkateParkFluent.a11y.screenButtons.intro.accessibleHelpTextStringProperty
+      screenButtonsHelpText: EnergySkateParkFluent.a11y.screenButtons.intro.accessibleHelpTextStringProperty,
+      createKeyboardHelpNode: () => new EnergySkateParkKeyboardHelpContent()
     }, providedOptions );
 
     super(

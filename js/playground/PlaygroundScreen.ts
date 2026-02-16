@@ -7,6 +7,7 @@
  */
 
 import EnergySkateParkPreferencesModel from '../../../energy-skate-park/js/common/model/EnergySkateParkPreferencesModel.js';
+import EnergySkateParkKeyboardHelpContent from '../../../energy-skate-park/js/common/view/EnergySkateParkKeyboardHelpContent.js';
 import EnergySkateParkFluent from '../../../energy-skate-park/js/EnergySkateParkFluent.js';
 import Screen, { ScreenOptions } from '../../../joist/js/Screen.js';
 import optionize, { EmptySelfOptions } from '../../../phet-core/js/optionize.js';
@@ -30,6 +31,10 @@ export default class PlaygroundScreen extends Screen<PlaygroundModel, Playground
       name: EnergySkateParkBasicsStrings.screen.trackPlaygroundStringProperty,
       homeScreenIcon: new PlaygroundScreenIcon(),
       screenButtonsHelpText: EnergySkateParkFluent.a11y.screenButtons.playground.accessibleHelpTextStringProperty,
+      createKeyboardHelpNode: () => new EnergySkateParkKeyboardHelpContent( {
+        includeTrackControls: true,
+        includeConnectTrackEndpoints: true
+      } ),
 
       tandem: tandem
     }, providedOptions );
