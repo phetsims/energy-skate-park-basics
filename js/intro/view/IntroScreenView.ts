@@ -7,6 +7,7 @@
  */
 
 import Tandem from '../../../../tandem/js/Tandem.js';
+import EnergySkateParkScreenSummaryContent from '../../../../energy-skate-park/js/common/view/EnergySkateParkScreenSummaryContent.js';
 import EnergySkateParkBasicsTrackSetScreenView from '../../common/view/EnergySkateParkBasicsTrackSetScreenView.js';
 import energySkateParkBasics from '../../energySkateParkBasics.js';
 import IntroModel from '../model/IntroModel.js';
@@ -15,7 +16,8 @@ export default class IntroScreenView extends EnergySkateParkBasicsTrackSetScreen
 
   public constructor( model: IntroModel, tandem: Tandem ) {
     super( model, tandem, {
-      drawSkaterPath: false
+      drawSkaterPath: false,
+      screenSummaryContent: new EnergySkateParkScreenSummaryContent( model, 'intro' )
     } );
   }
 }
