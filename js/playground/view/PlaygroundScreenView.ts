@@ -21,6 +21,9 @@ export default class PlaygroundScreenView extends EnergySkateParkPlaygroundScree
       showToolbox: false,
       showBarGraphZoomButtons: false,
       showSeparateVisibilityControlsPanel: false,
+      pieChartLegendOptions: {
+        includeTotal: false
+      },
       controlPanelOptions: {
         showTrackButtons: false,
         showGravityControls: false,

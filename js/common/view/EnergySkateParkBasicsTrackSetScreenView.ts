@@ -25,6 +25,9 @@ export default class EnergySkateParkBasicsTrackSetScreenView extends EnergySkate
       showToolbox: false,
       showReferenceHeight: false,
       showSeparateVisibilityControlsPanel: false,
+      pieChartLegendOptions: {
+        includeTotal: false
+      },
       controlPanelOptions: {
         visibilityControlsOptions: {
           showGridCheckbox: true
