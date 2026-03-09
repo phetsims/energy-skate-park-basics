@@ -14,7 +14,7 @@ import EnergySkateParkBasicsConstants from '../../EnergySkateParkBasicsConstants
 
 export default class PlaygroundModel extends EnergySkateParkPlaygroundModel {
   public constructor( preferencesModel: EnergySkateParkPreferencesModel, tandem: Tandem ) {
-    super( preferencesModel, tandem.createTandem( 'playgroundModel' ), EnergySkateParkBasicsConstants.BASICS_MODEL_OPTIONS );
+    super( preferencesModel, tandem, EnergySkateParkBasicsConstants.BASICS_MODEL_OPTIONS );
   }
 }
 
