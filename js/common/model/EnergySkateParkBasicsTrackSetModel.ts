@@ -4,7 +4,7 @@
  * A track set model for Energy Skate Park: Basics. Extends EnergySkateParkTrackSetModel, but assembles the
  * appropriate tracks for the basics version of the sim.
  *
- * @author Jesse Greenberg
+ * @author Jesse Greenberg (PhET Interactive Simulations)
  */
 
 import EnergySkateParkPreferencesModel from '../../../../energy-skate-park/js/common/model/EnergySkateParkPreferencesModel.js';
