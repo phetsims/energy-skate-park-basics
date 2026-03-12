@@ -1,0 +1,8 @@
+energy-skate-park-basics.title: 'Energy Skate Park: Basics'
+screen.introduction:    Intro
+screen.friction:        Friction
+screen.trackPlayground: Playground
+a11y:
+  screenButtons:
+    friction:
+      accessibleHelpText: Experiment with adding friction to the tracks.

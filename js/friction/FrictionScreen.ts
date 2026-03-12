@@ -8,7 +8,7 @@
 
 import EnergySkateParkPreferencesModel from '../../../energy-skate-park/js/common/model/EnergySkateParkPreferencesModel.js';
 import EnergySkateParkKeyboardHelpContent from '../../../energy-skate-park/js/common/view/EnergySkateParkKeyboardHelpContent.js';
-import EnergySkateParkFluent from '../../../energy-skate-park/js/EnergySkateParkFluent.js';
+import EnergySkateParkBasicsFluent from '../EnergySkateParkBasicsFluent.js';
 import Screen, { ScreenOptions } from '../../../joist/js/Screen.js';
 import optionize, { EmptySelfOptions } from '../../../phet-core/js/optionize.js';
 import WithOptional from '../../../phet-core/js/types/WithOptional.js';
@@ -30,7 +30,7 @@ export default class FrictionScreen extends Screen<FrictionModel, FrictionScreen
     const options = optionize<FrictionScreenOptions, SelfOptions, ScreenOptions>()( {
       name: EnergySkateParkBasicsStrings.screen.frictionStringProperty,
       homeScreenIcon: new FrictionScreenIcon(),
-      screenButtonsHelpText: EnergySkateParkFluent.a11y.screenButtons.friction.accessibleHelpTextStringProperty,
+      screenButtonsHelpText: EnergySkateParkBasicsFluent.a11y.screenButtons.friction.accessibleHelpTextStringProperty,
       createKeyboardHelpNode: () => new EnergySkateParkKeyboardHelpContent(),
 
       tandem: tandem

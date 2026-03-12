@@ -12,47 +12,21 @@ import type LocalizedStringProperty from '../../chipper/js/browser/LocalizedStri
 import energySkateParkBasics from './energySkateParkBasics.js';
 
 type StringsType = {
-  'properties': {
-    'speedStringProperty': LocalizedStringProperty;
-  };
-  'smallStringProperty': LocalizedStringProperty;
-  'screen': {
-    'trackPlaygroundStringProperty': LocalizedStringProperty;
-    'frictionStringProperty': LocalizedStringProperty;
-    'introductionStringProperty': LocalizedStringProperty;
-  };
-  'controls': {
-    'massStringProperty': LocalizedStringProperty;
-    'show-gridStringProperty': LocalizedStringProperty;
-    'gravity': {
-      'lotsStringProperty': LocalizedStringProperty;
-      'noneStringProperty': LocalizedStringProperty;
-    };
-    'friction': {
-      'titleStringProperty': LocalizedStringProperty;
-    };
-    'restart-skaterStringProperty': LocalizedStringProperty;
-  };
   'energy-skate-park-basics': {
     'titleStringProperty': LocalizedStringProperty;
   };
-  'slow': {
-    'motionStringProperty': LocalizedStringProperty;
+  'screen': {
+    'introductionStringProperty': LocalizedStringProperty;
+    'frictionStringProperty': LocalizedStringProperty;
+    'trackPlaygroundStringProperty': LocalizedStringProperty;
   };
-  'energy': {
-    'thermalStringProperty': LocalizedStringProperty;
-    'totalStringProperty': LocalizedStringProperty;
-    'kineticStringProperty': LocalizedStringProperty;
-    'potentialStringProperty': LocalizedStringProperty;
-    'energyStringProperty': LocalizedStringProperty;
-  };
-  'plots': {
-    'bar-graphStringProperty': LocalizedStringProperty;
-  };
-  'pieChartStringProperty': LocalizedStringProperty;
-  'largeStringProperty': LocalizedStringProperty;
-  'normalStringProperty': LocalizedStringProperty;
-  'zeroMetersStringProperty': LocalizedStringProperty;
+  'a11y': {
+    'screenButtons': {
+      'friction': {
+        'accessibleHelpTextStringProperty': LocalizedStringProperty;
+      }
+    }
+  }
 };
 
 const EnergySkateParkBasicsStrings = getStringModule( 'ENERGY_SKATE_PARK_BASICS' ) as StringsType;
