@@ -34,7 +34,7 @@ export default class EnergyBarGraphPanel extends Panel {
     );
 
     const label = EnergyBarGraph.createLabel();
-    const energyBarGraph = new EnergyBarGraph( model.skater, model.barGraphScaleProperty, model.barGraphVisibleProperty, tandem.createTandem( 'energyBarGraph' ), options.barGraphOptions );
+    const energyBarGraph = new EnergyBarGraph( model.skater, model.barGraphScaleProperty, model.barGraphVisibleProperty, model.preferencesModel.showPatternsProperty, tandem.createTandem( 'energyBarGraph' ), options.barGraphOptions );
     const labelledGraph = new VBox( {
       children: [ label, energyBarGraph ]
     } );
