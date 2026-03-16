@@ -6,8 +6,10 @@
  * @author Sam Reid (PhET Interactive Simulations)
  */
 
+import PreferencesModel from '../../joist/js/preferences/PreferencesModel.js';
 import EnergySkateParkSim from '../../energy-skate-park/js/common/EnergySkateParkSim.js';
 import EnergySkateParkPreferencesModel from '../../energy-skate-park/js/common/model/EnergySkateParkPreferencesModel.js';
+import EnergySkateParkVisualPreferencesNode from '../../energy-skate-park/js/common/view/EnergySkateParkVisualPreferencesNode.js';
 import Tandem from '../../tandem/js/Tandem.js';
 import energySkateParkBasics from './energySkateParkBasics.js';
 import EnergySkateParkBasicsStrings from './EnergySkateParkBasicsStrings.js';
@@ -19,10 +21,19 @@ const energySkateParkBasicsTitleStringProperty = EnergySkateParkBasicsStrings[ '
 
 const energySkateParkPreferencesModel = new EnergySkateParkPreferencesModel();
 
+const preferencesModel = new PreferencesModel( {
+  visualOptions: {
+    customPreferences: [ {
+      createContent: tandem => new EnergySkateParkVisualPreferencesNode( energySkateParkPreferencesModel, tandem.createTandem( 'visualPreferences' ) )
+    } ]
+  }
+} );
+
 export default class EnergySkateParkBasicsSim extends EnergySkateParkSim {
 
   public constructor( tandem: Tandem ) {
     const options = {
+      preferencesModel: preferencesModel,
       credits: {
         leadDesign: 'Ariel Paul, Noah Podolefsky, Sam Reid',
         softwareDevelopment: 'Sam Reid, Jesse Greenberg',
