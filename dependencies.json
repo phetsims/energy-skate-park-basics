@@ -13,7 +13,7 @@
     "branch": "HEAD"
   },
   "chipper": {
-    "sha": "8e3bdee75224c12ded9de5e8967b304603ac18cf",
+    "sha": "4948e1bb4dd68dcff3f7bc18364ad5a69e83d330",
     "branch": "HEAD"
   },
   "dot": {
@@ -21,7 +21,7 @@
     "branch": "HEAD"
   },
   "energy-skate-park-basics": {
-    "sha": "6bd4274967283da1670daa1bd10e1603f5a0412d",
+    "sha": "7b07fa53c9e2d0036a8c4b29179f5735c6e90cdc",
     "branch": "1.3-phetio"
   },
   "joist": {
