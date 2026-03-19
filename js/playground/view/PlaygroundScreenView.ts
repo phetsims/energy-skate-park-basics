@@ -10,7 +10,6 @@
 import EnergySkateParkPlaygroundModel from '../../../../energy-skate-park/js/playground/model/EnergySkateParkPlaygroundModel.js';
 import EnergySkateParkPlaygroundScreenView from '../../../../energy-skate-park/js/playground/view/EnergySkateParkPlaygroundScreenView.js';
 import Tandem from '../../../../tandem/js/Tandem.js';
-import energySkateParkBasics from '../../energySkateParkBasics.js';
 
 export default class PlaygroundScreenView extends EnergySkateParkPlaygroundScreenView {
 
@@ -39,5 +38,3 @@ export default class PlaygroundScreenView extends EnergySkateParkPlaygroundScree
     } );
   }
 }
-
-energySkateParkBasics.register( 'PlaygroundScreenView', PlaygroundScreenView );

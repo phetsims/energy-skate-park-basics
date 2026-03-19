@@ -11,7 +11,6 @@ import { EnergySkateParkSaveSampleScreenViewOptions } from '../../../../energy-s
 import EnergySkateParkTrackSetScreenView from '../../../../energy-skate-park/js/common/view/EnergySkateParkTrackSetScreenView.js';
 import optionize, { EmptySelfOptions } from '../../../../phet-core/js/optionize.js';
 import Tandem from '../../../../tandem/js/Tandem.js';
-import energySkateParkBasics from '../../energySkateParkBasics.js';
 
 type SelfOptions = EmptySelfOptions;
 
@@ -44,5 +43,3 @@ export default class EnergySkateParkBasicsTrackSetScreenView extends EnergySkate
     super( model, tandem, options );
   }
 }
-
-energySkateParkBasics.register( 'EnergySkateParkBasicsTrackSetScreenView', EnergySkateParkBasicsTrackSetScreenView );

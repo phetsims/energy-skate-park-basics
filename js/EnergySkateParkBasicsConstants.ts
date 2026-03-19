@@ -9,7 +9,6 @@
 import Dimension2 from '../../dot/js/Dimension2.js';
 import Range from '../../dot/js/Range.js';
 import EnergySkateParkConstants from '../../energy-skate-park/js/common/EnergySkateParkConstants.js';
-import energySkateParkBasics from './energySkateParkBasics.js';
 
 const minMass = 25; // kg
 const maxMass = 100;
@@ -46,7 +45,5 @@ const EnergySkateParkBasicsConstants = {
     defaultFriction: ( EnergySkateParkConstants.MAX_FRICTION - EnergySkateParkConstants.MIN_FRICTION ) / 2
   }
 };
-
-energySkateParkBasics.register( 'EnergySkateParkBasicsConstants', EnergySkateParkBasicsConstants );
 
 export default EnergySkateParkBasicsConstants;

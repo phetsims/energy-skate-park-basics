@@ -11,7 +11,6 @@ import EnergySkateParkPreferencesModel from '../../../../energy-skate-park/js/co
 import EnergySkateParkTrackSetModel, { EnergySkateParkTrackSetModelOptions } from '../../../../energy-skate-park/js/common/model/EnergySkateParkTrackSetModel.js';
 import optionize, { EmptySelfOptions } from '../../../../phet-core/js/optionize.js';
 import Tandem from '../../../../tandem/js/Tandem.js';
-import energySkateParkBasics from '../../energySkateParkBasics.js';
 
 type SelfOptions = EmptySelfOptions;
 
@@ -32,5 +31,3 @@ export default class EnergySkateParkBasicsTrackSetModel extends EnergySkateParkT
     super( preferencesModel, tandem, options );
   }
 }
-
-energySkateParkBasics.register( 'EnergySkateParkBasicsTrackSetModel', EnergySkateParkBasicsTrackSetModel );

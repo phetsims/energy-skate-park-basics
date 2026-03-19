@@ -11,7 +11,6 @@ import EnergySkateParkSim from '../../energy-skate-park/js/common/EnergySkatePar
 import EnergySkateParkPreferencesModel from '../../energy-skate-park/js/common/model/EnergySkateParkPreferencesModel.js';
 import EnergySkateParkVisualPreferencesNode from '../../energy-skate-park/js/common/view/EnergySkateParkVisualPreferencesNode.js';
 import Tandem from '../../tandem/js/Tandem.js';
-import energySkateParkBasics from './energySkateParkBasics.js';
 import EnergySkateParkBasicsStrings from './EnergySkateParkBasicsStrings.js';
 import FrictionScreen from './friction/FrictionScreen.js';
 import IntroScreen from './intro/IntroScreen.js';
@@ -52,5 +51,3 @@ export default class EnergySkateParkBasicsSim extends EnergySkateParkSim {
     super( energySkateParkBasicsTitleStringProperty, screens, options );
   }
 }
-
-energySkateParkBasics.register( 'EnergySkateParkBasicsSim', EnergySkateParkBasicsSim );

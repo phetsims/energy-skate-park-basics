@@ -9,7 +9,6 @@
 import EnergySkateParkPreferencesModel from '../../../../energy-skate-park/js/common/model/EnergySkateParkPreferencesModel.js';
 import Tandem from '../../../../tandem/js/Tandem.js';
 import EnergySkateParkBasicsTrackSetModel from '../../common/model/EnergySkateParkBasicsTrackSetModel.js';
-import energySkateParkBasics from '../../energySkateParkBasics.js';
 import EnergySkateParkBasicsConstants from '../../EnergySkateParkBasicsConstants.js';
 
 export default class FrictionModel extends EnergySkateParkBasicsTrackSetModel {
@@ -18,5 +17,3 @@ export default class FrictionModel extends EnergySkateParkBasicsTrackSetModel {
     super( preferencesModel, tandem, EnergySkateParkBasicsConstants.BASICS_MODEL_OPTIONS );
   }
 }
-
-energySkateParkBasics.register( 'FrictionModel', FrictionModel );

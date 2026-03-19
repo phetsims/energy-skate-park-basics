@@ -13,7 +13,6 @@ import Screen, { ScreenOptions } from '../../../joist/js/Screen.js';
 import optionize, { EmptySelfOptions } from '../../../phet-core/js/optionize.js';
 import WithOptional from '../../../phet-core/js/types/WithOptional.js';
 import Tandem from '../../../tandem/js/Tandem.js';
-import energySkateParkBasics from '../energySkateParkBasics.js';
 import EnergySkateParkBasicsStrings from '../EnergySkateParkBasicsStrings.js';
 import PlaygroundModel from './model/PlaygroundModel.js';
 import PlaygroundScreenIcon from './view/PlaygroundScreenIcon.js';
@@ -46,5 +45,3 @@ export default class PlaygroundScreen extends Screen<PlaygroundModel, Playground
     );
   }
 }
-
-energySkateParkBasics.register( 'PlaygroundScreen', PlaygroundScreen );

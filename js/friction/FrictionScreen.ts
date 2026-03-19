@@ -13,7 +13,6 @@ import Screen, { ScreenOptions } from '../../../joist/js/Screen.js';
 import optionize, { EmptySelfOptions } from '../../../phet-core/js/optionize.js';
 import WithOptional from '../../../phet-core/js/types/WithOptional.js';
 import Tandem from '../../../tandem/js/Tandem.js';
-import energySkateParkBasics from '../energySkateParkBasics.js';
 import EnergySkateParkBasicsStrings from '../EnergySkateParkBasicsStrings.js';
 import FrictionModel from './model/FrictionModel.js';
 import FrictionScreenIcon from './view/FrictionScreenIcon.js';
@@ -43,5 +42,3 @@ export default class FrictionScreen extends Screen<FrictionModel, FrictionScreen
     );
   }
 }
-
-energySkateParkBasics.register( 'FrictionScreen', FrictionScreen );

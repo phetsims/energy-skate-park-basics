@@ -13,7 +13,6 @@ import { optionize4 } from '../../../../phet-core/js/optionize.js';
 import VBox from '../../../../scenery/js/layout/nodes/VBox.js';
 import Panel, { PanelOptions } from '../../../../sun/js/Panel.js';
 import Tandem from '../../../../tandem/js/Tandem.js';
-import energySkateParkBasics from '../../energySkateParkBasics.js';
 
 type SelfOptions = {
   // options for the bar graph itself, passed on to EnergyBarGraph
@@ -42,5 +41,3 @@ export default class EnergyBarGraphPanel extends Panel {
     super( labelledGraph, options );
   }
 }
-
-energySkateParkBasics.register( 'EnergyBarGraphPanel', EnergyBarGraphPanel );

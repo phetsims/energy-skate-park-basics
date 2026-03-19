@@ -9,7 +9,6 @@
 import Tandem from '../../../../tandem/js/Tandem.js';
 import EnergySkateParkScreenSummaryContent from '../../../../energy-skate-park/js/common/view/EnergySkateParkScreenSummaryContent.js';
 import EnergySkateParkBasicsTrackSetScreenView from '../../common/view/EnergySkateParkBasicsTrackSetScreenView.js';
-import energySkateParkBasics from '../../energySkateParkBasics.js';
 import FrictionModel from '../model/FrictionModel.js';
 
 export default class FrictionScreenView extends EnergySkateParkBasicsTrackSetScreenView {
@@ -25,5 +24,3 @@ export default class FrictionScreenView extends EnergySkateParkBasicsTrackSetScr
     } );
   }
 }
-
-energySkateParkBasics.register( 'FrictionScreenView', FrictionScreenView );
