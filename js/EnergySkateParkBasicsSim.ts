@@ -7,6 +7,7 @@
  */
 
 import PreferencesModel from '../../joist/js/preferences/PreferencesModel.js';
+import EnergySkateParkConstants from '../../energy-skate-park/js/common/EnergySkateParkConstants.js';
 import EnergySkateParkSim from '../../energy-skate-park/js/common/EnergySkateParkSim.js';
 import EnergySkateParkPreferencesModel from '../../energy-skate-park/js/common/model/EnergySkateParkPreferencesModel.js';
 import EnergySkateParkVisualPreferencesNode from '../../energy-skate-park/js/common/view/EnergySkateParkVisualPreferencesNode.js';
@@ -33,13 +34,7 @@ export default class EnergySkateParkBasicsSim extends EnergySkateParkSim {
   public constructor( tandem: Tandem ) {
     const options = {
       preferencesModel: preferencesModel,
-      credits: {
-        leadDesign: 'Ariel Paul, Noah Podolefsky, Sam Reid',
-        softwareDevelopment: 'Sam Reid, Jesse Greenberg',
-        team: 'Michael Dubson, Bryce Gruneich, Trish Loeblein, Emily B. Moore, Kathy Perkins',
-        graphicArts: 'Sharon Siman-Tov, Amanda McGarry',
-        qualityAssurance: 'Steele Dalton, Oliver Orejola, Arnab Purkayastha, Bryan Yoelin'
-      }
+      credits: EnergySkateParkConstants.CREDITS
     };
 
     const screens = [
