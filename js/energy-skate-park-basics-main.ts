@@ -16,8 +16,6 @@ simLauncher.launch( () => {
   new EnergySkateParkBasicsSim( tandem ).start();
 } );
 
-// Test comment 15-poly
-
 // Test comment 1
 
 // Test comment 2
@@ -42,3 +40,5 @@ simLauncher.launch( () => {
 
 // Test comment 14-mono
 // Test comment 14-poly
+
+// Test comment 15-mono
