@@ -10,7 +10,6 @@ import simLauncher from '../../joist/js/simLauncher.js';
 import Tandem from '../../tandem/js/Tandem.js';
 import EnergySkateParkBasicsSim from './EnergySkateParkBasicsSim.js';
 
-// constants
 const tandem = Tandem.ROOT;
 
 simLauncher.launch( () => {
