@@ -15,7 +15,6 @@ const maxMass = 100;
 const defaultMass = ( minMass + maxMass ) / 2;
 const massRange = new Range( minMass, maxMass );
 
-// REVIEW: This should be prefixed with teh simulation name: EnergySkateParkBasicsConstants
 const EnergySkateParkBasicsConstants = {
   SLIDER_OPTIONS: {
     thumbSize: new Dimension2( 13, 30 ),
