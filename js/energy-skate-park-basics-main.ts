@@ -15,6 +15,3 @@ const tandem = Tandem.ROOT;
 simLauncher.launch( () => {
   new EnergySkateParkBasicsSim( tandem ).start();
 } );
-
-// test comment
-// test comment 2
