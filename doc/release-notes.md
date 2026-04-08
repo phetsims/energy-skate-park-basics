@@ -29,11 +29,29 @@ For an exemplar, see https://github.com/phetsims/balancing-chemical-equations/bl
 *
 -->
 
-## 1.4 ({{PUBLICATION_DATE}})
+## 1.5 (2026-MM-DD)
 
 ### New Features
+* TypeScript implementation
+* Dynamic Locale: see _Preferences > Localization > Languages_ 
+* Region and Culture: see _Preferences > Localization > Region and Culture_
 * Alternative Input
 * Interactive Highlights: see _Preferences > Visual > Interactive Highlights_
-* Basic Sound
+* Basic Sounds
 * Core Description
+* PhET-iO support for PhET Studio
 
+### Other Changes
+* Now versioned with Energy Skate Park (shares the same SHAs).
+* Unified the design with Energy Skate Park.
+  * Energy Bar Graph now an AccordionBox
+  * Stick to Track now a Checkbox
+  * Updated Track Selection icons
+  * Added Skater Selection RadioButtonGroup
+* Improved color contrast.
+  
+  
+
+## 1.1 (2016-04-11)
+
+## 1.0 (2014-11-10)
