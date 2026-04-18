@@ -52,7 +52,6 @@ For an exemplar, see https://github.com/phetsims/balancing-chemical-equations/bl
   * Added Skater Selection RadioButtonGroup
 * Improved color contrast.
 
-
 ## 1.1 (2016-04-11)
 
 ## 1.0 (2014-11-10)
