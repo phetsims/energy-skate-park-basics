@@ -39,6 +39,8 @@ const EnergySkateParkBasicsConstants = {
       massRange: massRange
     },
     defaultSpeedValueVisible: false,
+    instrumentToolProperties: false,
+    instrumentReferenceHeightProperties: false,
 
     // by default, most basics screens have half value of friction on startup
     defaultFriction: ( EnergySkateParkConstants.MAX_FRICTION - EnergySkateParkConstants.MIN_FRICTION ) / 2
