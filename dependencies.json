@@ -1,5 +1,5 @@
 {
-  "comment": "# energy-skate-park-basics 1.5.0-rc.3 Fri May 01 2026 21:52:35 GMT-0600 (Mountain Daylight Time)",
+  "comment": "# energy-skate-park-basics 1.5.0-rc.4 Fri May 01 2026 21:55:30 GMT-0600 (Mountain Daylight Time)",
   "assert": {
     "sha": "51cb1f03d29ea7ba229d27533e544e789d5a2a31",
     "branch": "HEAD"
@@ -26,10 +26,10 @@
   },
   "energy-skate-park": {
     "sha": "bc28fa56968f4ae502c92d7b06d66a3d2d4770ad",
-    "branch": "energy-skate-park-basics-1.5"
+    "branch": "HEAD"
   },
   "energy-skate-park-basics": {
-    "sha": "0280d6815a6d97e79a3013cac8c76daf2f36c20d",
+    "sha": "bd2ec8410c95edb7fe556b7367adda56685f5f1b",
     "branch": "1.5"
   },
   "griddle": {
@@ -58,7 +58,7 @@
   },
   "phet-io-sim-specific": {
     "sha": "0972a24cf30c66fee64ef3051130ca5b71a94bc6",
-    "branch": "energy-skate-park-basics-1.5"
+    "branch": "HEAD"
   },
   "phet-io-wrappers": {
     "sha": "696f404867622676b34f01aaf00be625d85dceb0",
