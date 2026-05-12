@@ -1,5 +1,5 @@
 {
-  "comment": "# energy-skate-park-basics 1.5.0-rc.4 Tue May 12 2026 08:02:20 GMT-0600 (Mountain Daylight Time)",
+  "comment": "# energy-skate-park-basics 1.5.0-rc.5 Tue May 12 2026 08:05:30 GMT-0600 (Mountain Daylight Time)",
   "assert": {
     "sha": "51cb1f03d29ea7ba229d27533e544e789d5a2a31",
     "branch": "HEAD"
@@ -18,7 +18,7 @@
   },
   "chipper": {
     "sha": "d72ec98c3097068944affd077f833cb47edf0237",
-    "branch": "energy-skate-park-basics-1.5"
+    "branch": "HEAD"
   },
   "dot": {
     "sha": "f248be38a13ed00972ab2f492a268804260e1a6c",
@@ -26,10 +26,10 @@
   },
   "energy-skate-park": {
     "sha": "192154c5297197ec7266a728c7ffdc7d633fc49d",
-    "branch": "energy-skate-park-basics-1.5"
+    "branch": "HEAD"
   },
   "energy-skate-park-basics": {
-    "sha": "cbeeac5eec299a340a8c301cef742cc219d21942",
+    "sha": "1abeaef4235d7f4db745f4ba8fde3a055fa6d5f8",
     "branch": "1.5"
   },
   "griddle": {
@@ -58,7 +58,7 @@
   },
   "phet-io-sim-specific": {
     "sha": "f825d608351fd868ec023895cd0b62a6b22ddf5e",
-    "branch": "energy-skate-park-basics-1.5"
+    "branch": "HEAD"
   },
   "phet-io-wrappers": {
     "sha": "696f404867622676b34f01aaf00be625d85dceb0",
@@ -82,7 +82,7 @@
   },
   "scenery-phet": {
     "sha": "cfaf262c4359e80b5567627837524ffd8f1cd6b8",
-    "branch": "energy-skate-park-basics-1.5"
+    "branch": "HEAD"
   },
   "sherpa": {
     "sha": "afb4baa298ee00cb42afdc8785fa6ad1ac8d6f54",
