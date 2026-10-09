@@ -9,7 +9,7 @@ Instructions:
 * Developer and designer should collaborate on what to include for any release beyond 1.0. 
 * For each new version, add a section to the top of these release notes - reverse chronological order, with the most-recent version at the top.
 
-For an exemplar, see https://github.com/phetsims/balancing-chemical-equations/blob/main/doc/release-notes.md
+For an exemplar, see [release-notes.md](../../balancing-chemical-equations/doc/release-notes.md)
 -->
 
 <!-- 
@@ -28,6 +28,12 @@ For an exemplar, see https://github.com/phetsims/balancing-chemical-equations/bl
 * ⚠️ Use this icon for a change that is breaking, removes a feature, etc. 
 *
 -->
+
+
+_Energy Skate Park: Basics_ is now versioned with _Energy Skate Park_. Please refer to the release notes for
+_Energy Skate Park_ at [totality/energy-skate-park/doc/release-notes.md](https://github.com/phetsims/totality/blob/main/energy-skate-park/doc/release-notes.md).
+
+## 1.6 (2026-10-02)
 
 ## 1.5 (2026-05-14)
 
